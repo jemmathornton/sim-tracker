@@ -11,7 +11,7 @@
    "desc": "Nature rules this island, from the active volcano to the flowing waterfall and down into the depths of the secluded cave. This remote destination in the Sulani island chain is the place for exploring the beauty of nature.",
    "lots": [
     {"lot": "Admiral's Wreckage", "myName": "Admiral's Wreckage", "type": "Community Space", "size": "50x50", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["+PLCKxlfEeuO3QW7hdRP0w==", "AIotNBlgEeuPAwW7hdRP0w==", "+1U+KRlfEeuO4gW7hdRP0w==", "/bCtIBlfEeuO7QW7hdRP0w=="], "versions": [{"label": "Market", "upload": "/bCtIBlfEeuO7QW7hdRP0w=="}, {"label": "Garden", "upload": "+1U+KRlfEeuO4gW7hdRP0w=="}, {"label": "Makers", "upload": "AIotNBlgEeuPAwW7hdRP0w=="}, {"label": "Community space", "upload": "+PLCKxlfEeuO3QW7hdRP0w=="}], "traits": ["Eco Lot", "Great Soil"], "challenges": ["Reduce and Recycle"]},
-    {"lot": "Caldera Camp", "myName": "Caldera Camp", "type": "Residential", "size": "30x20", "residents": "Mine", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["bTN95hlYEeuNKWEZzJ8AzQ==", "0KoS+A73EeqDHDQshgnHrQ=="], "traits": ["Eco Lot"], "challenges": ["Volcanic Activity", "Off-the-Grid"]},
+    {"lot": "Caldera Camp", "myName": "Caldera Camp", "type": "Residential", "size": "30x20", "residents": "Mine", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["bTN95hlYEeuNKWEZzJ8AzQ=="], "traits": ["Eco Lot"], "challenges": ["Volcanic Activity", "Off-the-Grid"]},
     {"lot": "Key Point", "myName": "Key Point", "type": "To be decided", "size": "40x30", "residents": null, "built": false, "shared": false, "screenshots": false, "simsMade": false}
    ]
   },

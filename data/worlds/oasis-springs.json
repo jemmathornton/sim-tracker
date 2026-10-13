@@ -10,10 +10,10 @@
    "name": "Bedrock Strait",
    "desc": "Residents of this delightfully kitschy neighbourhood take pride in their billboards and lawn gnomes. And who wouldn't love getting to say hello to Barry the Brontosaurus every morning?",
    "lots": [
-    {"lot": "Sandtrap Flat", "myName": "Sandtrap Flat", "type": "Residential", "size": "30x20", "residents": "2 Bedroom", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["k+ArWsHmEe2CoYnwBMy2Ww==", "SJqRgD27EemF5Xldy2Ruvw=="], "traits": ["Natural Light", "Penny Pixies"], "challenges": ["Quake Zone"]},
+    {"lot": "Sandtrap Flat", "myName": "Sandtrap Flat", "type": "Residential", "size": "30x20", "residents": "2 Bedroom", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["k+ArWsHmEe2CoYnwBMy2Ww=="], "traits": ["Natural Light", "Penny Pixies"], "challenges": ["Quake Zone"]},
     {"lot": "Nookstone", "myName": "Nookstone", "type": "Residential", "size": "20x15", "residents": "Leah-Moon Cadberry+", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["UZsaW3zJSzmBiMnwHmQ0Kw==", "pO69ST24EemJ1Xldy2Ruvw=="], "traits": ["Science Lair", "Homey", "Bracing Breezes"]},
     {"lot": "Pebble Burrow", "myName": "Pebble Burrow", "type": "Residential", "size": "30x20", "residents": "2 Bedroom", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["wa3+U+DCEemKKyZ9R8et5A=="], "traits": ["Homey", "Sunny Aspect"], "challenges": ["Quake Zone"]},
-    {"lot": "Slipshod Mesquite", "myName": "De Costadas", "type": "Restaurant", "size": "40x30", "residents": "De Costa", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["mItnq8rfRW2dSUiQsM1RIw==", "JJv0rPbqEeaPG9F92RUZ9w=="], "traits": ["Chef's Kitchen", "Homey", "Romantic Aura"]},
+    {"lot": "Slipshod Mesquite", "myName": "De Costadas", "type": "Restaurant", "size": "40x30", "residents": "De Costa", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["mItnq8rfRW2dSUiQsM1RIw=="], "traits": ["Chef's Kitchen", "Homey", "Romantic Aura"]},
     {"lot": "Agave Abode", "myName": "Agave Abode", "type": "Residential", "size": "20x15", "residents": "Lothario *WithUpdates*", "built": true, "shared": true, "screenshots": false, "simsMade": false, "displayName": "Agave Abode", "gallery": ["y+FpyTStEeqB4aX7uid5MQ=="], "traits": ["Sunny Aspect", "Homey"], "challenges": ["Quake Zone"]}
    ]
   },

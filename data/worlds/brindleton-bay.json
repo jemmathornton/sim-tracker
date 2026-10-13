@@ -14,7 +14,7 @@
     {"lot": "Brindleton Pawspital", "myName": "Brindleton Pawspital", "type": "Vet Clinic", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "It's A Good House", "myName": "It's A Good House", "type": "Residential", "size": "40x40", "residents": "Hecking", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Domus Familiaris", "myName": "Domus Familiaris", "type": "Residential", "size": "30x30", "residents": "Large 3 Bedroom", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["zmRNX/egEeqEegj3LsIbeA=="], "traits": ["Good Schools", "Gnomes", "Peace and Quiet"]},
-    {"lot": "Sporting Space", "myName": "Brindleton Boathouse", "type": "Residential", "size": "30x20", "residents": "Newbie?", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["A/9iCxIxEeqI+SSV4rtE9w==", "/gt2zD29EemDcnldy2Ruvw=="], "traits": ["Dog Hangout", "Home Studio", "Homey"], "galleryLead": "A/9iCxIxEeqI+SSV4rtE9w=="}
+    {"lot": "Sporting Space", "myName": "Brindleton Boathouse", "type": "Residential", "size": "30x20", "residents": "Newbie?", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["A/9iCxIxEeqI+SSV4rtE9w=="], "traits": ["Dog Hangout", "Home Studio", "Homey"]}
    ]
   },
   {
