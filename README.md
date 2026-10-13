@@ -13,7 +13,7 @@ What's in this folder:
 - `site` – the app itself
 - `data` – everything the app shows (worlds, lots, households, Gallery numbers)
 - `tools` – the scripts Claude runs (build, Gallery refresh, spreadsheet import, screenshots)
-- `for-jemma` – things for you to look at (gridded maps for placing neighbourhoods)
+- `for-jemma` – things for you to look at (gridded maps for placing neighbourhoods; or open `tools/map-squares.html` and click instead)
 - `TODO.md` – what's still open, including what's waiting for you
 - `live-site`, `old-chat-build`, `old-chat-notes`, `research` – from the claude.ai chat, kept for reference
 - `part1/2/3.zip` – already unpacked here; you can delete them

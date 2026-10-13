@@ -39,7 +39,7 @@ Read `HANDOVER.md` once for the full story, then `TODO.md` for everything still 
 - To check: start the `app` preview (`.claude/launch.json`, port 8001), run the contents of `tools/check_pages.js` in the page (expect no problems), and look at the changed pages at 1280px. Add a new `?v=` to the address if the browser shows an old copy.
 - Gallery: `tools/gallery_refresh.py` (about 7 minutes; rebuilds the site). Runs by itself every Sunday 08:54 as the Windows task "Jemma's Sim World - weekly Gallery refresh"; log in `logs/gallery-refresh.log`. A new upload is linked to a lot only when its title names exactly one lot; anything else goes in `data/gallery/unlinked.json` for her.
 - Her spreadsheet: `tools/import_spreadsheet.py` reports (reads a temporary copy, changes nothing); `--apply` copies her spreadsheet edits into `data/` and rebuilds. App-side changes are never overwritten; clashes are listed.
-- Screenshots: `tools/screenshots.py` (a new Builds folder needs a line in its FOLDERS list). Maps: `tools/extract_map.py`. Gridded maps for neighbourhood spots: `tools/map_grids.py`. App icon: `tools/make_icons.py`; shortcuts: `tools/make_shortcuts.ps1`.
+- Screenshots: `tools/screenshots.py` (a new Builds folder needs a line in its FOLDERS list). Maps: `tools/extract_map.py`. Neighbourhood map spots: she answers on `tools/map-squares.html` (clickable, opens straight from the folder) or from the pictures `tools/map_grids.py` makes in `for-jemma/map-grids/`; `tools/set_map_spots.py` puts her answers into `data/` as `mapSpot`. App icon: `tools/make_icons.py`; shortcuts: `tools/make_shortcuts.ps1`.
 - The project is a git repo: commit after each piece of work (`data.js` included, so the folder always works as it is).
 
 ## People and accounts

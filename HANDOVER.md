@@ -19,7 +19,7 @@ Written 13 Oct 2026. §1–§6 below are the state of the project at the moment 
 
 **First Gallery refresh (13 Oct):** run from her PC with no sign-in or browser (EA's API answers directly; comments too). 221 uploads; 2 new since 11 Oct: "Hallow Slough (SoupShell)" (linked to Hallow Slough, the 4th copy in TODO §1) and "Bubble World" (left unlinked: a bonus build placed on The Old Salt House lot). Three hashtags now show her own capitals (#SimsieSharkShell).
 
-**New on the site:** Stats page, at the bottom: "On the Gallery" (totals at each weekly check, and the builds that gained most since the check before). App icon: Lucide "home" in brass on the sidebar purple.
+**New on the site:** Stats page, at the bottom: "On the Gallery" (totals at each weekly check, and the builds that gained most since the check before). App icon: Lucide "home" in brass on the sidebar purple. Added the same evening by a second session (merged): a search box at the top of the sidebar (lots by any of their names, households, Sims, neighbourhoods, worlds); a "Packs used" block on world pages; "Shared" month on Gallery cards (decoded from upload ids, 2016 to early 2023 only); build and Gallery-check dates in the home footer; and `tools/map-squares.html` + `tools/set_map_spots.py` for the map spots.
 
 §2 below describes the chat's generator, now in `old-chat-build/` (retired). §4: the refresh no longer needs a browser tab.
 
