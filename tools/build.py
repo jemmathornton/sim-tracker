@@ -197,7 +197,17 @@ def build():
     return {"worlds": out, "households": households, "stats": stats,
             "familyLinks": family_links, "tenants": tenants, "nameFix": name_fix, "nbPt": nb_pt, "csVersions": cs_versions,
             "galleryHistory": gallery_history(lot_of),
-            "meta": {"built": date.today().isoformat(), "galleryChecked": checked}}
+            "meta": {"built": date.today().isoformat(), "galleryChecked": checked, "game": game_version()}}
+
+
+def game_version():
+    """The installed game's version (e.g. 1.128.90), from the game's own Default.ini; None if the game isn't on this PC."""
+    p = os.path.join('C:' + os.sep, 'Program Files', 'EA Games', 'The Sims 4', 'Game', 'Bin', 'Default.ini')
+    try:
+        m = re.search(r'^gameversion\s*=\s*(\d+\.\d+\.\d+)', open(p, encoding='utf-8', errors='replace').read(), re.M)
+        return m.group(1) if m else None
+    except OSError:
+        return None
 
 
 def missing_pictures(data):
@@ -224,11 +234,24 @@ def write(data):
     return p
 
 
+def stamp_page():
+    """Put a fingerprint of each code file into index.html (site.css?v=1a2b3c), so browsers fetch fresh copies after a change."""
+    import hashlib
+    p = os.path.join(SITE, 'index.html'); page = open(p, encoding='utf-8').read()
+    def fp(m):
+        f = os.path.join(SITE, m.group(2))
+        return f'{m.group(1)}{m.group(2)}?v={hashlib.md5(open(f, "rb").read()).hexdigest()[:8]}"' if os.path.exists(f) else m.group(0)
+    new = re.sub(r'((?:href|src)=")((?:js/[\w.-]+\.js)|site\.css)(?:\?v=\w+)?"', fp, page)
+    if new != page:
+        with open(p, 'w', encoding='utf-8', newline='\n') as f: f.write(new)
+
+
 if __name__ == '__main__':
     d = build()
     gone = missing_pictures(d)
     if gone: sys.exit("Pictures missing from site/: " + ", ".join(gone[:10]) + (" …" if len(gone) > 10 else ""))
     p = write(d)
+    stamp_page()
     lots = sum(len(h['lots']) for w in d['worlds'] for h in w['hoods'])
     print(f"Wrote {os.path.relpath(p)}: {len(d['worlds'])} worlds, {lots} lots on the site, {len(d['stats'])} in the plan, "
           f"{sum(1 for w in d['worlds'] for h in w['hoods'] for l in h['lots'] if l['gallery'])} with Gallery uploads")

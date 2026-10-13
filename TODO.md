@@ -15,7 +15,7 @@ Every open item carried over from the claude.ai project on 13 Oct 2026: the note
 - [x] [Claude] `live_overrides.json` folded into the app's data and retired
 - [ ] [Jemma] If the spreadsheet stays your main copy: 55 decisions (names, lot types, sizes, built/shared ticks) plus the 13 Oct spelling fixes are in the app but not in the spreadsheet yet. Claude can list them, or make a filled-in copy of the spreadsheet for you to check (your file is never changed without asking)
 - [ ] [Jemma] Have a look at the new bits: Stats page → "On the Gallery" at the bottom (keep it there? wording?), and the app icon (Lucide house, brass on purple)
-- [ ] [Jemma] Bubble World (new upload, 82 favourites / 647 downloads) is on The Old Salt House lot but left unlinked as a bonus build (§5). Link it to the lot instead?
+- [ ] [Jemma] Bubble World (82 favourites / 647 downloads) sits on The Old Salt House lot; left unlinked for now (13 Oct: "leave it for now"), until the bonus builds are decided (§5)
 - [ ] [Jemma] part1/2/3.zip in the project folder are already unpacked; they can be deleted
 
 ## 1. Repeated Gallery uploads (settled 13 Oct)
@@ -98,7 +98,7 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
 
 ## 6. From the 13 Oct lot check (research/missing-lots-check.md)
 
-- [ ] [Jemma] Add the 4 missing secret lots? Sylvan Glade (Willow Creek, 15×10), Forgotten Grotto (Oasis Springs, 15×10), Hermit's House (Granite Falls, 30×20), Mt. Komorebi Peak (20×20, type "Mount Komorebi Summit"). Selvadorada's jungle areas / Omiscan Temple suggested to leave out
+- [x] The 4 missing secret lots added 13 Oct (not built yet): Sylvan Glade (Foundry Cove), Forgotten Grotto (Desert Bloom Park, her choice), Hermit's House (Granite Falls Forest, type Hermit's Hut), Mt. Komorebi Peak (Yukimatsu, type Mount Komorebi Summit). Selvadorada's jungle areas / Omiscan Temple left out
 - [x] In-game spellings fixed 13 Oct, each checked against the game's own text: Piccola Luce, The Summer Home, Avenida de la Eternidad, Plaza Mariposa, Creek Side Corner, Champion's Grove, 1313 21 Chic Street (her name column had the same typo on three; fixed too). Her spreadsheet still has the old spellings; the import reads them as the new ones (`data/spreadsheet/renamed.json`)
 - [ ] [Jemma] Club Eternity (Ravenwood): plan says 30×30; two sources say 30×20. Check in game
 - Innisgreen is on the site as not owned; nothing to do unless she buys Enchanted by Nature. Batuu only if she owns Journey to Batuu.
@@ -122,7 +122,7 @@ Site ideas, quick wins (no input needed):
 - [ ] One-word world status on home tiles: Not started / Started / Almost / Complete (she agrees the cut-offs)
 - [x] "Shared on the Gallery: <month year>" from the date hidden in 169 upload ids (13 Oct: "Shared" on each lot's Gallery card, e.g. Jan 2017; 124 of the 168 lots with uploads. Ids from 2023 on are random, so newer uploads show no date)
 - [x] "Data as of" footer line: spreadsheet date, last Gallery refresh, game patch (13 Oct: home page footer shows the build date and the Gallery check date)
-- [ ] [Jemma] Add the game patch to that line? Which one are the maps and lots checked against?
+- [x] Game version added to the home footer (13 Oct), read from the installed game at each build
 - [x] Site-wide search (lots, households, Gallery titles, in-game names) (13 Oct: box at the top of the sidebar; also finds Sims, neighbourhoods and worlds)
 - [x] Jump links at the top of long world pages, one per neighbourhood (already there: each world's header lists its neighbourhoods as links, and world pages now show neighbourhood cards rather than one long list)
 

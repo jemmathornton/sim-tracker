@@ -21,7 +21,8 @@
    "name": "Granite Falls Forest",
    "desc": "Experience the true perfection of nature by exploring the lush and beautiful Granite Falls Forest.",
    "lots": [
-    {"lot": "Granite Falls Forest", "myName": "Granite Falls Forest", "type": "National Park", "size": "50x50", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
+    {"lot": "Granite Falls Forest", "myName": "Granite Falls Forest", "type": "National Park", "size": "50x50", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "Hermit's House", "myName": null, "type": "Hermit's Hut", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ]
   }
  ]

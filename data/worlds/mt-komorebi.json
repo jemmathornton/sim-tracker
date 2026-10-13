@@ -36,7 +36,8 @@
     {"lot": "5-1-1 Kiyomatsu", "myName": "5-1-1 Kiyomatsu", "type": "Vacation Rental", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["DalrQoxKT2WT8gFfb+JCuA=="], "traits": ["Convivial", "Bracing Breezes", "Natural Well"]},
     {"lot": "5-1-2 Kiyomatsu", "myName": "5-1-2 Kiyomatsu", "type": "Vacation Rental", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["N+vsiXPfSiyLfiA9VWRa3Q=="]},
     {"lot": "Sutefani Onsen Bathhouse", "myName": "Sutefani Onsen Bathhouse", "type": "Onsen Bathhouse", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
-    {"lot": "Kiyomatsu Point", "myName": "Kiyomatsu Point", "type": "Custom Venue", "size": "50x50", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
+    {"lot": "Kiyomatsu Point", "myName": "Kiyomatsu Point", "type": "Custom Venue", "size": "50x50", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "Mt. Komorebi Peak", "myName": null, "type": "Mount Komorebi Summit", "size": "20x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ]
   }
  ]
