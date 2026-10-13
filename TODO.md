@@ -8,11 +8,11 @@ Every open item carried over from the claude.ai project on 13 Oct 2026: the note
 
 - [ ] [Jemma] Decide what "an actual app" means: local website, hosted site (private or public), or desktop app (see HANDOVER.md §5)
 - [ ] [Jemma] Decide whether the World Plans spreadsheet stays the place she edits, or the app takes over
-- [ ] [Claude] Rebuild the current site in the new setup, matching the live page (`live-site/`) page for page before changing anything
-- [ ] [Claude] Turn Gallery pictures from `/_blob/<id>` into normal files named by lot
+- [x] [Claude] Rebuild the current site in the new setup, matching the live page (`live-site/`) page for page before changing anything (13 Oct: `data/` + `tools/build.py` + `site/`; `tools/one-off/compare_with_live.py` finds no differences other than the Gallery refresh)
+- [x] [Claude] Turn Gallery pictures from `/_blob/<id>` into normal files named by lot (`site/gallery/<world>/<lot>.jpg`)
 - [ ] [Claude] Rebuild the weekly Gallery refresh (favourites, downloads, comments) for the app; then [Jemma] turn off the "Weekly Gallery stats refresh" scheduled task in claude.ai
-- [ ] [Jemma + Claude] Move the changes in `build/live_overrides.json` into the spreadsheet (needs her OK to edit it) or into the app's own data, then retire the overrides file. This includes the lot types and names decided 12-13 Oct (HANDOVER.md §6) and keeping "(own)" in Residents
-- [ ] [Claude] Run the Gallery refresh after the first rebuild (the overrides pin numbers for 16 lots; the rest are from 11 Oct)
+- [x] [Jemma + Claude] Move the changes in `build/live_overrides.json` into the spreadsheet (needs her OK to edit it) or into the app's own data, then retire the overrides file. This includes the lot types and names decided 12-13 Oct (HANDOVER.md §6) and keeping "(own)" in Residents. Done in the app's data (`data/worlds/`); the new build doesn't use the overrides file. The spreadsheet itself still lacks these changes, which depends on the decision above about where she edits
+- [x] [Claude] Run the Gallery refresh after the first rebuild (the overrides pin numbers for 16 lots; the rest are from 11 Oct). Done 13 Oct
 
 ## 1. Repeated Gallery uploads (parked)
 
@@ -89,7 +89,9 @@ Also uploaded twice but not in the plan: 930 Medina Studios and Jameson. The Inn
 
 ## 4. Neighbourhood map spots
 
-- [ ] [Claude → Jemma] For each of the 24 worlds other than Willow Creek: make a gridded copy of the map (8 columns A–H × 6 rows 1–6), she names the square for each neighbourhood, then add the spots to `NB_PT`. Until then those cards show the whole map.
+- [x] [Claude] Gridded maps for the 24 worlds other than Willow Creek: `tools/map-squares.html` (open it straight from the folder). Columns A–H, rows 1–6; click the spot or type the square for each neighbourhood, then press Copy answers
+- [ ] [Jemma] Place the neighbourhoods on that page and paste the answers to Claude
+- [ ] [Claude] Apply them with `python tools/set_map_spots.py <answers file>`, then `python tools/build.py`. Until then those cards show the whole map.
 
 ## 5. Lot types, groups and names
 
@@ -131,16 +133,19 @@ Newer lot types and where they could go (research/lot-types-reference.md):
 - Keep in mind for empty lots: Cemetery, Playground, Recreation Center, Karaoke Bar, Onsen, Pool, Spa, Arts Center, Beach. Newer lot traits: Clandestine, Regal Residence, Fairy Passage, On Hallowed Grounds
 
 Site ideas, quick wins (no input needed):
-- [ ] Packs needed per world in each world header (from the lots' pack lists)
+- [x] Packs needed per world (13 Oct: a "Packs used" block on each world page, below the neighbourhoods, with how many builds use each pack)
 - [ ] One-word world status on home tiles: Not started / Started / Almost / Complete (she agrees the cut-offs)
-- [ ] "Shared on the Gallery: <month year>" from the date hidden in 169 upload ids
-- [ ] "Data as of" footer line: spreadsheet date, last Gallery refresh, game patch
-- [ ] Site-wide search (lots, households, Gallery titles, in-game names)
-- [ ] Jump links at the top of long world pages, one per neighbourhood
+- [x] "Shared on the Gallery: <month year>" from the date hidden in 169 upload ids (13 Oct: "Shared" on each lot's Gallery card, e.g. Jan 2017; 124 of the 168 lots with uploads. Ids from 2023 on are random, so newer uploads show no date)
+- [x] "Data as of" footer line: spreadsheet date, last Gallery refresh, game patch (13 Oct: home page footer shows the build date and the Gallery check date)
+- [ ] [Jemma] Add the game patch to that line? Which one are the maps and lots checked against?
+- [x] Site-wide search (lots, households, Gallery titles, in-game names) (13 Oct: box at the top of the sidebar; also finds Sims, neighbourhoods and worlds)
+- [x] Jump links at the top of long world pages, one per neighbourhood (already there: each world's header lists its neighbourhoods as links, and world pages now show neighbourhood cards rather than one long list)
+
+- [ ] [Jemma] Look over the 13 Oct additions and change any wording or placement: the Packs used block (world pages), "Shared" on Gallery cards, the footer dates (home), the search box (sidebar)
 
 Site ideas, bigger:
 - [ ] What's new page (dated changelog)
-- [ ] Gallery numbers over time (keep each weekly refresh), top builds and biggest gains
+- [x] Gallery numbers over time (keep each weekly refresh), top builds and biggest gains (13 Oct: "On the Gallery" block on the Stats page)
 - [ ] Automatic Checks panel (spreadsheet vs Gallery mismatches, missing sizes or types, duplicate names)
 - [ ] Empty homes and units page, built with the rentals per-unit view
 - [ ] Before and after pictures on rebuilt EA lots (needs her screenshots of the originals)
