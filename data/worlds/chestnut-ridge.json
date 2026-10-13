@@ -33,7 +33,7 @@
    "desc": "Lauded as one of the go-to regions for Horse Riding, the Gulch is chockfull of gorgeous trails and stunning outlooks.",
    "lots": [
     {"lot": "Canyon Crossing", "myName": "Canyon Crossing", "type": "Residential", "size": "20x20", "residents": "Gooseman", "built": false, "shared": false, "screenshots": false, "simsMade": false},
-    {"lot": "Palomino Junction", "myName": "Palomino Junction", "type": "Residential (Ranch)", "size": "50x50", "residents": "Palumbo", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["RZD6nwFCTjqQAXMiXhbgMg==", "/wcmTH3JSeeGjHDL4sZ7oA=="], "traits": ["Bracing Breezes", "Great Acoustics", "Homey"], "challenges": ["Wild Prairie Grass"]},
+    {"lot": "Palomino Junction", "myName": "Palomino Junction", "type": "Residential (Ranch)", "size": "50x50", "residents": "Palumbo", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["RZD6nwFCTjqQAXMiXhbgMg=="], "traits": ["Bracing Breezes", "Great Acoustics", "Homey"], "challenges": ["Wild Prairie Grass"]},
     {"lot": "Big Sky Reach", "myName": "Big Sky Reach", "type": "Vacation Rental", "size": "20x15", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["W6J+tA4mQGS/Zrj6G+qdpw=="], "traits": ["Peace and Quiet", "Sunny Aspect"]}
    ]
   }
