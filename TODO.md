@@ -62,12 +62,13 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
 - [ ] [Jemma] Decide each rental's households unit by unit, and landlords for the 17 rentals without one
 - [ ] [Jemma] A "Rental units" tab in World Plans (World · Rental · Unit · Beds · Baths · Household · Landlord)? She was "not sure yet, discuss more"
 - [ ] [Jemma] How to show unit counts like "(4)"
-- [ ] [Jemma] Confirm unit counts. Her Building #2 save (13 Oct) has: Taka Soi 15 = 2 (08 and 09), Manzanita Terrace = 3, Sequoia Cottage = 2, Sungai Point = 3, Isda Riverfront = 2, 3 Cobblebottom Street = 2 (3A, 3B), and the plan's counts for Rio Verde 6, Fern Park Flats 5, Midtown Meadows 5, Tail's End 4, Inner Circle 4, Upland Trailer Park 4, Old Torget House 3. Abandoned Views, Specter Row and Lighthouse Lookout aren't split into units in the save yet
+- [ ] [Jemma] Confirm unit counts: Taka Soi 15 = 2 (game: units 08 and 09, Cahyaputris in 09, 08 empty); Manzanita Terrace = 3 (her Gallery text, and her save). Her Building #2 save matches the plan for the shared rentals Rio Verde 6, Fern Park Flats 5, Tail's End 4, Inner Circle 4, Upland Trailer Park 4, Old Torget House 3 (research/rentals-and-apartments.md). Unshared rentals aren't read from the save (her rule)
+- [ ] [Jemma] Mossy Lane (plan 4 units), Spring Steppes (4), Rockridge Springs (3) and Slip 42 (2) are shared but still one home in her save, not split into units. Split them in game later, or change the plan's counts?
 - [ ] [Claude] Once decided: show each rental's units on its page and neighbourhood card, a household or "Empty" per unit, bedrooms and bathrooms per unit where known
 
 ## 3. Apartments
 
-- [ ] [Jemma] Bathrooms for every apartment except 920 Medina Studios (2, from screenshots). Her save only has counts for units she has visited (e.g. Stonestreet Apartments #3 2 bed / 1 bath, Pinecrest Apartments #402 2 / 1, 17 Bright Cliff 2 / 1, 18 Bright Cliff 2 / 2, 12 and 13 Lakeview 1 / 1); the ones below show nothing there, so they still need checking in game
+- [ ] [Jemma] Bathrooms for every apartment except 920 Medina Studios (2, from screenshots). Her save has no room counts for units she has rebuilt; the only shared one with numbers is Stonestreet Apartments #3: 2 bedrooms, **1 bathroom** (show it?). The rest still need checking in game
 - [ ] [Jemma] 1010 Alto Apartments: bedrooms unknown
 - [ ] [Jemma] 18 Culpepper House: Gallery says two bedrooms, plan says 1 Bed (site shows 2)
 - [ ] [Jemma] 920 Medina Studios: shown as 2 bedrooms (master + child room); are Child Bedroom 1 and 2 two rooms?
@@ -76,6 +77,7 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
 ## 4. Neighbourhood map spots
 
 - [x] [Claude] Gridded maps for the 24 worlds other than Willow Creek: pictures in `for-jemma/map-grids/` (each lists that world's neighbourhoods underneath), or the clickable `tools/map-squares.html` (click the spot or type the square for each neighbourhood, then Copy answers)
+- [x] [Claude] Tried suggesting squares from the game's own map data (13–14 Oct): it can't place neighbourhoods on the map pictures, so no suggestions (research/map-squares.md)
 - [ ] [Jemma] Name the square for each neighbourhood (e.g. "Newcrest: Bridgeview C4"), or paste the answers from the clickable page; Claude then adds them as `mapSpot` with `tools/set_map_spots.py` (takes either). Until then those cards show the whole map
 
 ## 5. Lot types, groups and names
@@ -85,7 +87,7 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
 - [ ] [Jemma] 14 lot types are really place names. Suggested changes (tick the ones to make):
   - [ ] Darby's Den: "UoB Commons" → **UBrite Commons** (type on her Gallery upload)
   - [ ] Boba & Thrift (Planet Honey Pop!, Boba Ippai, Town Square Stores, 18 Celebration Way, Chee-wit Chee-waa Kanto, Thrift 'n' Fish) → **Thrift and Bubble Tea Store** (official name, as on two of her uploads)
-  - [ ] Myshuno Meadows: "Central Park" → **Park**
+  - [ ] Myshuno Meadows: "Central Park" → **Center Park** (the game's own lot type for it, checked 14 Oct; plain Park is a different type)
   - [ ] Belomisia Trailhead: "Campground" → **National Park**
   - [ ] The Magic Realm: keep as a special lot, or **Generic** (her upload's type)?
   - [ ] Plumbob Pictures (secret lot): the game calls it the **Acting Studio** (confirmed in the game's own text, 13 Oct)
@@ -100,12 +102,19 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
 
 - [x] The 4 missing secret lots added 13 Oct (not built yet): Sylvan Glade (Foundry Cove), Forgotten Grotto (Desert Bloom Park, her choice), Hermit's House (Granite Falls Forest, type Hermit's Hut), Mt. Komorebi Peak (Yukimatsu, type Mount Komorebi Summit). Selvadorada's jungle areas / Omiscan Temple left out
 - [x] In-game spellings fixed 13 Oct, each checked against the game's own text: Piccola Luce, The Summer Home, Avenida de la Eternidad, Plaza Mariposa, Creek Side Corner, Champion's Grove, 1313 21 Chic Street (her name column had the same typo on three; fixed too). Her spreadsheet still has the old spellings; the import reads them as the new ones (`data/spreadsheet/renamed.json`)
-- [ ] [Jemma] Club Eternity (Ravenwood): plan says 30×30; two sources say 30×20. Check in game
-- [ ] [Jemma] Innisgreen (Enchanted by Nature, not owned): the research lists its 14 lots (research/missing-lots-check.md). Your other not-owned worlds have their lots in the plan and on Stats; add Innisgreen's too, as not owned?
-- [ ] [Jemma] Harbor Quarter Gym (her UoW Students Union, Windenburg): the research says the game's lot is 30×30; the chat decided on 12 Oct it stays 30×20. Keep 30×20 (e.g. if you resized it), or check in game?
+- [x] Club Eternity (Ravenwood): the game's own files say 30×30, as in the plan (14 Oct); nothing to change
+- [ ] [Jemma] Innisgreen (Enchanted by Nature, not owned): the research lists its 14 lots (research/missing-lots-check.md); the game's own files confirm all 14, sizes included (14 Oct). Your other not-owned worlds have their lots in the plan and on Stats; add Innisgreen's too, as not owned?
+- [ ] [Jemma] Harbor Quarter Gym (her UoW Students Union, Windenburg): the game's own files say 30×30 (EA's original size, 14 Oct); the chat decided on 12 Oct it stays 30×20. Keep 30×20 (e.g. if you resized it), or change to 30×30?
+- [ ] [Jemma] The Magic Realm: the game's own files say **50×40**; the plan has 40×40. Change it?
+- [ ] [Jemma] Selvadorada's Omiscan Temple (50×50) and Omiscan Royal Baths (40×30) are real lots in the game files, and Mt. Komorebi's two hidden lots are Mt. Komorebi Base Camp and The Croft Icefall (20×15 each). Add any of them to the plan?
 - [x] Checked in the game's own text (13 Oct): "Plateau Place" (her spelling) is right, not "Plateau Palace"
 - [x] Batuu: Journey to Batuu isn't installed, so nothing to add
-- Left as the research suggested: Selvadorada's jungle areas and Omiscan Temple (not real lots, no sizes); Mt. Komorebi's two unnamed hidden stages; The Magic Realm's 40×40 (no source gives a size); Netherworld Department stays 30×30 (her confirmed size)
+- Left as the research suggested: Selvadorada's jungle areas (not lots in the game either); Netherworld Department stays 30×30 (her confirmed size; the game's file has it at 20×20)
+
+From the overnight check of the plan against the game's own files and her save, 14 Oct (research/plan-vs-game.md; 380 of 388 lots match by name, sizes match except the two above, neighbourhoods are the game's own):
+- [ ] [Jemma] Lot types: for 17 shared lots the Gallery upload's type differs from the plan's (e.g. Llama Picturehouse: plan Small Business, Gallery Bar; Mid-NoWhere: plan Park, Gallery Generic; Brooks Bridge Borough: Gallery Haunted House Residential; Raffia Quinta, Cottage Am See, Rustic Residence: Gallery Tiny Home). Table in research/plan-vs-game.md. Which should the site follow?
+- [ ] [Jemma] Apartment sizes: the plan has "N/A"; the game gives each building's size (list in research/plan-vs-game.md). Show them?
+- Name differences with the game (Magnolia Blossom Park, Desert Bloom Park, Isle of Volpe, The Grimtooth Bar & Bunker): the plan's names read better; noted only
 
 ## 7. Parked until she asks
 
@@ -150,7 +159,7 @@ From the research but not on the list until 13 Oct (suggestions only):
 - [ ] "New since you looked" markers on lots with new comments or favourites (13 Oct: no preference yet)
 - [ ] Timeline of builds by the month they were shared, on the home page (13 Oct: no preference yet)
 - [ ] Newest Gallery comments on the Stats page
-- [ ] World extras beyond festivals: climate/weather and landmarks per world
+- [ ] World extras beyond festivals: climate/weather and landmarks per world (data ready, research/world-extras.md)
 - [ ] [Claude] A checklist for adding a new world or pack (map, colours, gridded map, lots, households); no input needed
 - [ ] Spreadsheet columns for the new fields (lot traits, beds, eco state), if the spreadsheet stays her main copy (needs her OK to change her file)
 - [x] **Chosen 13 Oct:** Lot traits per lot. Done for 159 of the 168 shared lots, read from her "Building #2" save (lot pages show "Lot traits" and "Lot challenges"; names are the game's own)
@@ -158,6 +167,6 @@ From the research but not on the list until 13 Oct (suggestions only):
 - [ ] [Jemma] Anchorpoint Works is now called "On Point" in the game. Should the site say On Point? (Its Gallery upload is still called Anchorpoint Works, which wins unless you say otherwise)
 - [ ] [Jemma] Bedlington Barn (Cavalier Cove; "Barn Conversion" in the game): built and shared yet? The spreadsheet says built, not shared, and that's what the site shows. Desert Bloom Park has no traits set in the game
 - [ ] [Jemma] Household basics, relationships and family tree need Sims, which aren't to come from the Building saves: which save (if any) should they come from, or will you give them?
-- [ ] **Chosen 13 Oct:** Neighbourhood eco footprint and festivals/events per world
+- [ ] **Chosen 13 Oct:** Neighbourhood eco footprint and festivals/events per world. Data now read from the game (research/world-extras.md): festivals in 9 worlds by neighbourhood, 12 neighbourhoods that don't start Neutral. [Jemma] where and how to show them (ideas at the end of that note)
 
 Things to avoid (from the research): tracking every Sim in detail, values that change every session, EA pack logos as icons, anything AI-generated, percentages outside Stats.

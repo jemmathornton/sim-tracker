@@ -23,6 +23,8 @@ Written 13 Oct 2026. §1–§6 below are the state of the project at the moment 
 
 **Later on 13 Oct, with Jemma:** lot traits and lot challenges on lot pages, read from her "Building" saves with the game's own names (tools/lot_traits.py; shared lots only, lots only). Repeated Gallery uploads settled: one upload per lot, the latest, except versions she keeps on purpose (Community Spaces, rental + regular, Britechester B&B). Bedlington Boathouse untangled (both uploads are Brindleton Boathouse on Sporting Space; the Cavalier Cove lot is her Bedlington Barn). Six in-game spellings fixed, four secret lots added, game version in the footer.
 
+**Overnight 13–14 Oct (research only, nothing on the site changed):** her plan checked against the game's own files and her newest Building save (research/plan-vs-game.md), world extras read from the game's tuning: weather, festivals by neighbourhood, starting eco footprint, highlights (research/world-extras.md), rentals and apartments from her save (research/rentals-and-apartments.md), and an attempt at map squares from the game's map data, which can't place neighbourhoods (research/map-squares.md). Scripts in `tools/research/`, their output in `research/data/`. Findings that need her are in TODO.md. Two to-do notes had used save details from unshared rentals and apartments; those were taken out (her rule).
+
 §2 below describes the chat's generator, now in `old-chat-build/` (retired). §4: the refresh no longer needs a browser tab.
 
 ## 1. What exists today

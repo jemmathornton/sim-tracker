@@ -31,7 +31,7 @@ Read `HANDOVER.md` once for the full story, then `TODO.md` for everything still 
 - `tools/` – the scripts (see below). `tools/one-off/` – the 13 Oct move from the chat, kept for the record (they refuse to run again).
 - `for-jemma/` – things for her to look at (e.g. `map-grids/`).
 - `live-site/` – snapshot of the old claude.ai page on 13 Oct (reference). `old-chat-build/` – the chat's generator and data (retired; `live_overrides.json` is folded into `data/`).
-- `research/`, `old-chat-notes/` – reference only.
+- `research/`, `old-chat-notes/` – reference only. `research/data/` holds what the `tools/research/` scripts read from the game and her save.
 - Jemma's PC folders that matter (read only): Mods\20thCenturyPlumbob Maps (map packages), Documents\Builds (screenshot folders per build), Downloads (`World Plans (fixed).xlsx` is current; `... - backup 12 Oct.xlsx` is from before the Kopf fix), Sims 4 Screenshots, Pictures, Videos, ansel, Documents\Sims4.
 
 ## How to work here
@@ -42,6 +42,7 @@ Read `HANDOVER.md` once for the full story, then `TODO.md` for everything still 
 - Gallery: `tools/gallery_refresh.py` (about 7 minutes; rebuilds the site). Runs by itself every Sunday 08:54 as the Windows task "Jemma's Sim World - weekly Gallery refresh"; log in `logs/gallery-refresh.log`. A new upload is linked to a lot only when its title names exactly one lot; anything else goes in `data/gallery/unlinked.json` for her.
 - Her spreadsheet: `tools/import_spreadsheet.py` reports (reads a temporary copy, changes nothing); `--apply` copies her spreadsheet edits into `data/` and rebuilds. App-side changes are never overwritten; clashes are listed.
 - Lot traits and lot challenges: `tools/lot_traits.py` (report; `--apply` writes `traits`/`challenges` on shared lots and rebuilds; `--game` re-reads trait names after a game update). It reads her newest "Building" save and the game's own files through `tools/sims4files.py` (package files, save layout, English text); names are cached in `data/game/lot-traits.json`. Lots named differently in her save go in its `SAVE_NAMES` list, only once she has confirmed them.
+- Research from the game's own files (report only, never changes `data/`): `tools/research/game_lots.py` and `world_files.py` (every lot's name, description, size and area), `game_venues.py` (lot type names), `plan_vs_game.py` (her plan against them, plus lot types from her newest Building save and the Gallery; shared lots only), `world_extras.py` (weather, festivals, starting eco footprint, highlights; `tuning.py` reads the game's tuning). Write-ups in `research/*.md`. Rerun after a game update or a new pack.
 - Screenshots: `tools/screenshots.py` (a new Builds folder needs a line in its FOLDERS list). Maps: `tools/extract_map.py`. Neighbourhood map spots: she answers on `tools/map-squares.html` (clickable, opens straight from the folder) or from the pictures `tools/map_grids.py` makes in `for-jemma/map-grids/`; `tools/set_map_spots.py` puts her answers into `data/` as `mapSpot`. App icon: `tools/make_icons.py`; shortcuts: `tools/make_shortcuts.ps1`.
 - The project is a git repo: commit after each piece of work (`data.js` included, so the folder always works as it is).
 

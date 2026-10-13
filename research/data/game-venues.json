@@ -1,0 +1,341 @@
+{
+ "_note": "Lot types (venues) in the game, by the game's id, with their display names. From the game's own files.",
+ "venues": {
+  "14467596456533263872": {
+   "name": "Bar",
+   "tuning": "venue_bar"
+  },
+  "15004528772806287196": {
+   "name": "Sylvan Glade",
+   "tuning": "venue_HiddenGlade"
+  },
+  "137212242806275584": {
+   "name": "Generic",
+   "tuning": "venue_generic"
+  },
+  "8013585594455009038": {
+   "name": "Forgotten Grotto",
+   "tuning": "venue_HiddenCave"
+  },
+  "1004273252698292569": {
+   "name": "Park",
+   "tuning": "venue_park"
+  },
+  "9199874835966321189": {
+   "name": "Residential",
+   "tuning": "venue_residential"
+  },
+  "14412837649824287284": {
+   "name": "Generic",
+   "tuning": "venue_VisitorsAllowed"
+  },
+  "10978703245831780935": {
+   "name": "Lounge",
+   "tuning": "venue_lounge"
+  },
+  "9062092596425276869": {
+   "name": "Nightclub",
+   "tuning": "venue_club"
+  },
+  "14462824576067774414": {
+   "name": "Gym",
+   "tuning": "venue_gym"
+  },
+  "6985233094742415382": {
+   "name": "Library",
+   "tuning": "venue_library"
+  },
+  "17118486300993891057": {
+   "name": "Museum",
+   "tuning": "venue_museum"
+  },
+  "111611": {
+   "name": "Alien Party Lot",
+   "tuning": "venue_HiddenAlienWorld"
+  },
+  "107487": {
+   "name": "FutureSim Labs",
+   "tuning": "venue_ScientistLab"
+  },
+  "110576": {
+   "name": "Medical Clinic",
+   "tuning": "venue_DoctorClinic"
+  },
+  "109774": {
+   "name": "Police Station",
+   "tuning": "venue_PoliceStation"
+  },
+  "105157": {
+   "name": "Retail",
+   "tuning": "venue_retail"
+  },
+  "123132": {
+   "name": "Ancient Ruins",
+   "tuning": "venue_Ruins"
+  },
+  "125223": {
+   "name": "Chalet Gardens",
+   "tuning": "venue_ChaletGardens"
+  },
+  "125071": {
+   "name": "Island Bluff",
+   "tuning": "venue_OceanBluff"
+  },
+  "122247": {
+   "name": "Café",
+   "tuning": "venue_cafe"
+  },
+  "138380": {
+   "name": "Center Park",
+   "tuning": "venue_MyshunoMeadows"
+  },
+  "149495": {
+   "name": "Penthouse",
+   "tuning": "Venue_Penthouse"
+  },
+  "137844": {
+   "name": "Karaoke Bar",
+   "tuning": "venue_karaoke"
+  },
+  "144206": {
+   "name": "Arts Center",
+   "tuning": "venue_artscenter"
+  },
+  "158847": {
+   "name": "Vet Clinic",
+   "tuning": "venue_Vet"
+  },
+  "190058": {
+   "name": "Acting Studio",
+   "tuning": "venue_ActingStudio"
+  },
+  "227304": {
+   "name": "Penthouse",
+   "tuning": "Venue_Penthouse"
+  },
+  "218857": {
+   "name": "UBrite Commons",
+   "tuning": "venue_University_StudentCommons_Arts"
+  },
+  "218858": {
+   "name": "Foxbury Commons",
+   "tuning": "venue_University_StudentCommons_Science"
+  },
+  "208182": {
+   "name": "University Housing",
+   "tuning": "venue_rentable_universityHousing"
+  },
+  "231465": {
+   "name": "Maker Space",
+   "tuning": "subVenue_MakerSpace"
+  },
+  "223944": {
+   "name": "Community Space",
+   "tuning": "venue_CommunityLot"
+  },
+  "223945": {
+   "name": "Marketplace",
+   "tuning": "subVenue_Market"
+  },
+  "223946": {
+   "name": "Community Garden",
+   "tuning": "subVenue_Garden"
+  },
+  "247473": {
+   "name": "Onsen Bathhouse",
+   "tuning": "venue_Onsen"
+  },
+  "247118": {
+   "name": "Mount Komorebi Summit",
+   "tuning": "venue_MountainExcursion"
+  },
+  "278997": {
+   "name": "Thrift and Bubble Tea Store",
+   "tuning": "venue_ThriftStore"
+  },
+  "281066": {
+   "name": "High School Graduation",
+   "tuning": "subVenue_Auditorium_Graduation"
+  },
+  "281068": {
+   "name": "Formal Dance",
+   "tuning": "subVenue_Auditorium_FormalDance"
+  },
+  "281069": {
+   "name": "Auditorium",
+   "tuning": "venue_Auditorium"
+  },
+  "278305": {
+   "name": "High School",
+   "tuning": "venue_HighSchool"
+  },
+  "292915": {
+   "name": "Career Day Auditorium",
+   "tuning": "subVenue_Auditorium_CareerDay"
+  },
+  "314133": {
+   "name": "Recreation Center",
+   "tuning": "venue_RecCenter"
+  },
+  "341299": {
+   "name": "Residential Rental",
+   "tuning": "venue_MultiUnit"
+  },
+  "377555": {
+   "name": "Cemetery",
+   "tuning": "venue_Cemetery"
+  },
+  "382810": {
+   "name": "HeadlessQuarters",
+   "tuning": "venue_GrimLot"
+  },
+  "394911": {
+   "name": "Small Business Venue",
+   "tuning": "venue_SmallBusiness"
+  },
+  "455703": {
+   "name": "Custom Venue",
+   "tuning": "customVenue_Venue"
+  },
+  "471898": {
+   "name": "Backroom",
+   "tuning": "venue_Backroom"
+  },
+  "474643": {
+   "name": "Community Market",
+   "tuning": "venue_DambeleMarket"
+  },
+  "105591": {
+   "name": "Hermit's Hut",
+   "tuning": "venue_Hermit"
+  },
+  "103675": {
+   "name": "Vacation Rental - Granite Falls",
+   "tuning": "venue_rentable_cabin"
+  },
+  "118135": {
+   "name": "Spa",
+   "tuning": "venue_RelaxationCenter"
+  },
+  "130713": {
+   "name": "Restaurant",
+   "tuning": "venue_Restaurant"
+  },
+  "175123": {
+   "name": "Omiscan Royal Baths",
+   "tuning": "venue_NaturalPool"
+  },
+  "173833": {
+   "name": "Vacation Rental - Selvadorada",
+   "tuning": "venue_Rentable_Jungle"
+  },
+  "173492": {
+   "name": "Temple",
+   "tuning": "venue_Temple"
+  },
+  "202003": {
+   "name": "Secret Lab",
+   "tuning": "venue_SecretLab"
+  },
+  "212896": {
+   "name": "The Magic Realm",
+   "tuning": "venue_MagicHQ"
+  },
+  "229251": {
+   "name": "Tiny Home Residential",
+   "tuning": "venue_residential_tinyhome"
+  },
+  "252380": {
+   "name": "Haunted House Residential",
+   "tuning": "venue_residential_HauntedHouse"
+  },
+  "28614": {
+   "name": "Residential",
+   "tuning": "venue_residential"
+  },
+  "9279": {
+   "name": "Generic",
+   "tuning": "venue_generic"
+  },
+  "273016": {
+   "name": "Wedding Venue",
+   "tuning": "venue_wedding"
+  },
+  "239458": {
+   "name": "Vacation Rental",
+   "tuning": "venue_rentable_vacation_generic"
+  },
+  "205126": {
+   "name": "Beach",
+   "tuning": "venue_beach"
+  },
+  "468880": {
+   "name": "Playground",
+   "tuning": "venue_Playground"
+  },
+  "123794": {
+   "name": "Pool",
+   "tuning": "venue_pool"
+  },
+  "98817": {
+   "name": "Generic",
+   "tuning": "venue_VisitorsAllowed"
+  },
+  "107453": {
+   "name": "National Park",
+   "tuning": "venue_ForestPark"
+  },
+  "98132": {
+   "name": "Sylvan Glade",
+   "tuning": "venue_HiddenGlade"
+  },
+  "98133": {
+   "name": "Forgotten Grotto",
+   "tuning": "venue_HiddenCave"
+  },
+  "16873": {
+   "name": "Gym",
+   "tuning": "venue_gym"
+  },
+  "16874": {
+   "name": "Library",
+   "tuning": "venue_library"
+  },
+  "16875": {
+   "name": "Lounge",
+   "tuning": "venue_lounge"
+  },
+  "16876": {
+   "name": "Museum",
+   "tuning": "venue_museum"
+  },
+  "16869": {
+   "name": "Bar",
+   "tuning": "venue_bar"
+  },
+  "16870": {
+   "name": "Nightclub",
+   "tuning": "venue_club"
+  },
+  "25847": {
+   "name": "Park",
+   "tuning": "venue_park"
+  },
+  "365833": {
+   "name": "Penthouse",
+   "tuning": "Venue_Penthouse"
+  },
+  "233449": {
+   "name": "Oga's Cantina",
+   "tuning": "venue_OgasCantina"
+  },
+  "231964": {
+   "name": "First Order Cargo",
+   "tuning": "venue_FirstOrderOutpost"
+  },
+  "231965": {
+   "name": "Resistance Encampment",
+   "tuning": "venue_ResistanceCamp"
+  }
+ }
+}

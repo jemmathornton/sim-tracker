@@ -1,0 +1,3301 @@
+{
+ "_note": "Every lot in the game's files (by game lot id): its name, description and size. From tools/research/game_lots.py.",
+ "lots": {
+  "1256108016": {
+   "name": "Object Test Lot",
+   "description": "",
+   "size": "35x35",
+   "lot_description_id": 21155,
+   "name_record": 21185,
+   "pack": "Base"
+  },
+  "2498350432": {
+   "name": "Chiron One Lot Cliff Test World",
+   "description": "",
+   "size": "40x40",
+   "lot_description_id": 21176,
+   "name_record": 21186,
+   "pack": "Base"
+  },
+  "2498753296": {
+   "name": "Chiron OneLot_Hill test World",
+   "description": "",
+   "size": "40x40",
+   "lot_description_id": 21177,
+   "name_record": 21187,
+   "pack": "Base"
+  },
+  "4262304960": {
+   "name": "sqeEmptyLotArea Test World",
+   "description": "",
+   "size": "40x30",
+   "lot_description_id": 21152,
+   "name_record": 21190,
+   "pack": "Base"
+  },
+  "2160428400": {
+   "name": "sqeGameplayProfileArea3 TestWorld",
+   "description": "",
+   "size": "30x20",
+   "lot_description_id": 21153,
+   "name_record": 21191,
+   "pack": "Base"
+  },
+  "1544807168": {
+   "name": "Hallow Slough",
+   "description": "An expansive lot in a much-sought-after enclave, this is your potential paradise.",
+   "size": "30x20",
+   "lot_description_id": 20640,
+   "name_record": 21310,
+   "pack": "Base"
+  },
+  "7505088": {
+   "name": "Cypress Terrace",
+   "description": "A large property with classical styling, this is the quintessential Garden Estates home.",
+   "size": "40x30",
+   "lot_description_id": 20631,
+   "name_record": 21313,
+   "pack": "Base"
+  },
+  "571964304": {
+   "name": "Potters Splay",
+   "description": "With this large waterfront lot, your only limit is your imagination.",
+   "size": "30x20",
+   "lot_description_id": 20632,
+   "name_record": 21317,
+   "pack": "Base"
+  },
+  "994751168": {
+   "name": "Streamlet Single",
+   "description": "A simple starter home for a singleton or a couple.",
+   "size": "20x15",
+   "lot_description_id": 20644,
+   "name_record": 21332,
+   "pack": "Base"
+  },
+  "1064509568": {
+   "name": "Crick Cabana",
+   "description": "This small shotgun-style home is perfect for a small family.",
+   "size": "20x15",
+   "lot_description_id": 20647,
+   "name_record": 21334,
+   "pack": "Base"
+  },
+  "2880306736": {
+   "name": "Slipshod Mesquite",
+   "description": "",
+   "size": "40x30",
+   "lot_description_id": 23282,
+   "name_record": 23298,
+   "pack": "Base"
+  },
+  "2891968416": {
+   "name": "Sandtrap Flat",
+   "description": "",
+   "size": "30x20",
+   "lot_description_id": 23283,
+   "name_record": 23299,
+   "pack": "Base"
+  },
+  "1662175776": {
+   "name": "Nookstone",
+   "description": "",
+   "size": "20x15",
+   "lot_description_id": 23285,
+   "name_record": 23301,
+   "pack": "Base"
+  },
+  "2896445168": {
+   "name": "Pebble Burrow",
+   "description": "",
+   "size": "30x20",
+   "lot_description_id": 23286,
+   "name_record": 23302,
+   "pack": "Base"
+  },
+  "1802450800": {
+   "name": "Vista Quarry",
+   "description": "",
+   "size": "30x20",
+   "lot_description_id": 23293,
+   "name_record": 23305,
+   "pack": "Base"
+  },
+  "2984780224": {
+   "name": "Cacti Casa",
+   "description": "",
+   "size": "40x30",
+   "lot_description_id": 23295,
+   "name_record": 23307,
+   "pack": "Base"
+  },
+  "1802561584": {
+   "name": "Dusty Turf",
+   "description": "",
+   "size": "30x20",
+   "lot_description_id": 23296,
+   "name_record": 23308,
+   "pack": "Base"
+  },
+  "2860935856": {
+   "name": "Arid Ridge",
+   "description": "",
+   "size": "40x30",
+   "lot_description_id": 23290,
+   "name_record": 23311,
+   "pack": "Base"
+  },
+  "994677120": {
+   "name": "Bargain Bend",
+   "description": "A sizeable Backwater lot, perfect for building your dream home.",
+   "size": "30x20",
+   "lot_description_id": 20643,
+   "name_record": 24512,
+   "pack": "Base"
+  },
+  "961654864": {
+   "name": "Daisy Hovel",
+   "description": "This home's open concept design is flexible with plenty of outdoor space.",
+   "size": "30x20",
+   "lot_description_id": 20649,
+   "name_record": 31309,
+   "pack": "Base"
+  },
+  "961473792": {
+   "name": "Garden Essence",
+   "description": "A sprawling colonial with landscaping perfect for outdoor entertaining.",
+   "size": "40x30",
+   "lot_description_id": 20651,
+   "name_record": 31310,
+   "pack": "Base"
+  },
+  "572688432": {
+   "name": "Rindle Rose",
+   "description": "A cozy cottage with a welcoming porch that just screams, \"RELAX!\"",
+   "size": "20x15",
+   "lot_description_id": 20634,
+   "name_record": 31312,
+   "pack": "Base"
+  },
+  "573143552": {
+   "name": "Pique Hearth",
+   "description": "",
+   "size": "30x20",
+   "lot_description_id": 20635,
+   "name_record": 31313,
+   "pack": "Base"
+  },
+  "573229280": {
+   "name": "Riverside Roost",
+   "description": "This modified double shotgun has plenty of space for a comfort and entertaining.",
+   "size": "30x20",
+   "lot_description_id": 20636,
+   "name_record": 31314,
+   "pack": "Base"
+  },
+  "2085060112": {
+   "name": "Umbrage Manor",
+   "description": "A huge colonial with lovely grounds, this home is sure to impress.",
+   "size": "40x30",
+   "lot_description_id": 20642,
+   "name_record": 31315,
+   "pack": "Base"
+  },
+  "1989072208": {
+   "name": "Ophelia Villa",
+   "description": "History (and mystery) emanates from this tri-story Gothic mansion.",
+   "size": "30x20",
+   "lot_description_id": 20637,
+   "name_record": 31317,
+   "pack": "Base"
+  },
+  "1073501008": {
+   "name": "Parkshore",
+   "description": "A large, traditional home with verandas and balconies galore.",
+   "size": "40x30",
+   "lot_description_id": 20638,
+   "name_record": 31318,
+   "pack": "Base"
+  },
+  "1662145536": {
+   "name": "Agave Abode",
+   "description": "",
+   "size": "20x15",
+   "lot_description_id": 23284,
+   "name_record": 31321,
+   "pack": "Base"
+  },
+  "687165520": {
+   "name": "Yuma Heights",
+   "description": "",
+   "size": "40x30",
+   "lot_description_id": 23288,
+   "name_record": 31324,
+   "pack": "Base"
+  },
+  "1802486336": {
+   "name": "Springscape",
+   "description": "",
+   "size": "30x20",
+   "lot_description_id": 23294,
+   "name_record": 31325,
+   "pack": "Base"
+  },
+  "1802576896": {
+   "name": "Raffia Quinta",
+   "description": "",
+   "size": "20x15",
+   "lot_description_id": 23297,
+   "name_record": 31326,
+   "pack": "Base"
+  },
+  "1804000064": {
+   "name": "Rio Verde",
+   "description": "",
+   "size": "40x30",
+   "lot_description_id": 23289,
+   "name_record": 31327,
+   "pack": "Base"
+  },
+  "1804109472": {
+   "name": "Sultry Springside",
+   "description": "",
+   "size": "30x20",
+   "lot_description_id": 23291,
+   "name_record": 31328,
+   "pack": "Base"
+  },
+  "1804118928": {
+   "name": "Granada Place",
+   "description": "",
+   "size": "30x20",
+   "lot_description_id": 23292,
+   "name_record": 31329,
+   "pack": "Base"
+  },
+  "4267281792": {
+   "name": "Oakenstead",
+   "description": "Modern meets traditional in this three-story home with extensive landscaping.",
+   "size": "50x50",
+   "lot_description_id": 20630,
+   "name_record": 31429,
+   "pack": "Base"
+  },
+  "2484376288": {
+   "name": "Affluista Mansion",
+   "description": "",
+   "size": "50x50",
+   "lot_description_id": 23287,
+   "name_record": 31430,
+   "pack": "Base"
+  },
+  "1990246096": {
+   "name": "PERFTEST_GD_GardenCommunity_01_LOT 2",
+   "description": "PERFTEST",
+   "size": "30x20",
+   "lot_description_id": 31576,
+   "name_record": 31588,
+   "pack": "Base"
+  },
+  "1622136304": {
+   "name": "PERFTEST_GD_GardenCommunity_01_LOT 5",
+   "description": "PERFTEST",
+   "size": "20x15",
+   "lot_description_id": 31578,
+   "name_record": 31591,
+   "pack": "Base"
+  },
+  "90243216": {
+   "name": "Willow Creek Archive",
+   "description": "",
+   "size": "30x20",
+   "lot_description_id": 36245,
+   "name_record": 36251,
+   "pack": "Base"
+  },
+  "90336000": {
+   "name": "Movers & Shakers",
+   "description": "",
+   "size": "30x20",
+   "lot_description_id": 36247,
+   "name_record": 36252,
+   "pack": "Base"
+  },
+  "90369424": {
+   "name": "The Blue Velvet",
+   "description": "",
+   "size": "30x20",
+   "lot_description_id": 36248,
+   "name_record": 36253,
+   "pack": "Base"
+  },
+  "90404736": {
+   "name": "Municipal Muses",
+   "description": "",
+   "size": "40x30",
+   "lot_description_id": 36249,
+   "name_record": 36254,
+   "pack": "Base"
+  },
+  "254075440": {
+   "name": "Rattlesnake Juice",
+   "description": "",
+   "size": "30x20",
+   "lot_description_id": 36259,
+   "name_record": 36265,
+   "pack": "Base"
+  },
+  "254110336": {
+   "name": "The Futures Past",
+   "description": "",
+   "size": "30x20",
+   "lot_description_id": 36262,
+   "name_record": 36266,
+   "pack": "Base"
+  },
+  "254126448": {
+   "name": "The Solar Flare",
+   "description": "",
+   "size": "30x20",
+   "lot_description_id": 36264,
+   "name_record": 36267,
+   "pack": "Base"
+  },
+  "254175856": {
+   "name": "Burners & Builders",
+   "description": "",
+   "size": "40x30",
+   "lot_description_id": 36263,
+   "name_record": 36268,
+   "pack": "Base"
+  },
+  "1087874032": {
+   "name": "Brook Bungalow",
+   "description": "Built for outdoor living, this colonial features a wraparound porch and balcony.",
+   "size": "40x30",
+   "lot_description_id": 20633,
+   "name_record": 38375,
+   "pack": "Base"
+  },
+  "89245504": {
+   "name": "Desert Bloom",
+   "description": "",
+   "size": "50x50",
+   "lot_description_id": 42520,
+   "name_record": 42523,
+   "pack": "Base"
+  },
+  "64101728": {
+   "name": "Magnolia Blossom",
+   "description": "Magnolia Blossom Park is a historic park where Willow Creek inhabitants from all walks of life can come together to enjoy nature in a lush, green environment.",
+   "size": "50x50",
+   "lot_description_id": 42527,
+   "name_record": 42531,
+   "pack": "Base"
+  },
+  "1733679520": {
+   "name": "Forgotten Grotto",
+   "description": "",
+   "size": "15x10",
+   "lot_description_id": 47909,
+   "name_record": 47913,
+   "pack": "Base"
+  },
+  "1001644480": {
+   "name": "Sylvan Glade",
+   "description": "",
+   "size": "15x10",
+   "lot_description_id": 47910,
+   "name_record": 47914,
+   "pack": "Base"
+  },
+  "163840004": {
+   "name": "Police Station",
+   "description": "",
+   "size": "40x30",
+   "lot_description_id": 72884,
+   "name_record": 72891,
+   "pack": "EP01"
+  },
+  "162791427": {
+   "name": "Willow Creek Hospital",
+   "description": "",
+   "size": "50x50",
+   "lot_description_id": 72885,
+   "name_record": 72892,
+   "pack": "EP01"
+  },
+  "1592328195": {
+   "name": "Paddywack's Emporium",
+   "description": "",
+   "size": "20x20",
+   "lot_description_id": 72886,
+   "name_record": 72893,
+   "pack": "EP01"
+  },
+  "1593901060": {
+   "name": "JF&S Clothiers",
+   "description": "",
+   "size": "20x20",
+   "lot_description_id": 72887,
+   "name_record": 72894,
+   "pack": "EP01"
+  },
+  "1597833223": {
+   "name": "The Roadstead",
+   "description": "",
+   "size": "40x30",
+   "lot_description_id": 72888,
+   "name_record": 72895,
+   "pack": "EP01"
+  },
+  "1603600392": {
+   "name": "Preeminent Domain",
+   "description": "",
+   "size": "30x20",
+   "lot_description_id": 72889,
+   "name_record": 72896,
+   "pack": "EP01"
+  },
+  "720306180": {
+   "name": "Sixam",
+   "description": "",
+   "size": "20x20",
+   "lot_description_id": 72883,
+   "name_record": 72897,
+   "pack": "EP01"
+  },
+  "257228804": {
+   "name": "FutureSim Labs",
+   "description": "",
+   "size": "50x50",
+   "lot_description_id": 72890,
+   "name_record": 72898,
+   "pack": "EP01"
+  },
+  "2046492677": {
+   "name": "Rustic Residence",
+   "description": "",
+   "size": "30x20",
+   "lot_description_id": 101715,
+   "name_record": 101568,
+   "pack": "EP02"
+  },
+  "1871314947": {
+   "name": "Cottage Am See",
+   "description": "",
+   "size": "20x20",
+   "lot_description_id": 101537,
+   "name_record": 101716,
+   "pack": "EP02"
+  },
+  "3304849411": {
+   "name": "South Square Coffee",
+   "description": "",
+   "size": "30x20",
+   "lot_description_id": 101857,
+   "name_record": 101945,
+   "pack": "EP02"
+  },
+  "2463563779": {
+   "name": "Von-Windenburg Estate",
+   "description": "",
+   "size": "64x64",
+   "lot_description_id": 101856,
+   "name_record": 102399,
+   "pack": "EP02"
+  },
+  "3318415364": {
+   "name": "The Narwhal Arms",
+   "description": "",
+   "size": "30x20",
+   "lot_description_id": 102436,
+   "name_record": 102442,
+   "pack": "EP02"
+  },
+  "3329884165": {
+   "name": "Quad Manor",
+   "description": "",
+   "size": "30x20",
+   "lot_description_id": 102434,
+   "name_record": 102443,
+   "pack": "EP02"
+  },
+  "4282253317": {
+   "name": "Waterlock Redoubt",
+   "description": "",
+   "size": "30x20",
+   "lot_description_id": 102437,
+   "name_record": 102444,
+   "pack": "EP02"
+  },
+  "162529387": {
+   "name": "Factory One",
+   "description": "",
+   "size": "30x20",
+   "lot_description_id": 102438,
+   "name_record": 102445,
+   "pack": "EP02"
+  },
+  "64094310": {
+   "name": "Havisham House",
+   "description": "",
+   "size": "20x20",
+   "lot_description_id": 102439,
+   "name_record": 102446,
+   "pack": "EP02"
+  },
+  "3407880": {
+   "name": "Proprietor’s Square",
+   "description": "",
+   "size": "30x20",
+   "lot_description_id": 102435,
+   "name_record": 102447,
+   "pack": "EP02"
+  },
+  "3771138057": {
+   "name": "Old Quarter Inn",
+   "description": "",
+   "size": "20x20",
+   "lot_description_id": 102440,
+   "name_record": 102448,
+   "pack": "EP02"
+  },
+  "1975058435": {
+   "name": "Coorinberg Cottage",
+   "description": "",
+   "size": "40x30",
+   "lot_description_id": 106648,
+   "name_record": 102460,
+   "pack": "EP02"
+  },
+  "2057895943": {
+   "name": "Dresden House",
+   "description": "",
+   "size": "64x64",
+   "lot_description_id": 101539,
+   "name_record": 102461,
+   "pack": "EP02"
+  },
+  "2061565955": {
+   "name": "The Shrieking Llama",
+   "description": "",
+   "size": "20x20",
+   "lot_description_id": 101540,
+   "name_record": 102462,
+   "pack": "EP02"
+  },
+  "2062221320": {
+   "name": "The Summer Home",
+   "description": "",
+   "size": "40x30",
+   "lot_description_id": 101541,
+   "name_record": 102463,
+   "pack": "EP02"
+  },
+  "2478374916": {
+   "name": "The Lighthouse",
+   "description": "",
+   "size": "40x30",
+   "lot_description_id": 102450,
+   "name_record": 102557,
+   "pack": "EP02"
+  },
+  "2506358787": {
+   "name": "Mid-Nowhere",
+   "description": "",
+   "size": "20x20",
+   "lot_description_id": 102451,
+   "name_record": 102558,
+   "pack": "EP02"
+  },
+  "2514681861": {
+   "name": "Pier Palace",
+   "description": "",
+   "size": "30x20",
+   "lot_description_id": 102452,
+   "name_record": 102559,
+   "pack": "EP02"
+  },
+  "3377201155": {
+   "name": "Dock Den",
+   "description": "",
+   "size": "30x20",
+   "lot_description_id": 102453,
+   "name_record": 102560,
+   "pack": "EP02"
+  },
+  "1993998339": {
+   "name": "Harbor Quarter Gym",
+   "description": "",
+   "size": "30x30",
+   "lot_description_id": 102449,
+   "name_record": 103593,
+   "pack": "EP02"
+  },
+  "1995309060": {
+   "name": "Hare and Hedgehog",
+   "description": "",
+   "size": "30x20",
+   "lot_description_id": 102455,
+   "name_record": 103594,
+   "pack": "EP02"
+  },
+  "4125622276": {
+   "name": "Hare Square",
+   "description": "",
+   "size": "30x20",
+   "lot_description_id": 102456,
+   "name_record": 103595,
+   "pack": "EP02"
+  },
+  "504889347": {
+   "name": "Bathe de Rill",
+   "description": "",
+   "size": "40x30",
+   "lot_description_id": 102457,
+   "name_record": 103596,
+   "pack": "EP02"
+  },
+  "4137877509": {
+   "name": "Discotheque Pan Europa",
+   "description": "",
+   "size": "30x20",
+   "lot_description_id": 102458,
+   "name_record": 103597,
+   "pack": "EP02"
+  },
+  "1391722499": {
+   "name": "Ancient Ruins",
+   "description": "Windenburg's prized ancient ruins bespeak a silent whisper of the civilization who lived here long ago. Enjoy walking paths through the historical architecture in the afternoon sun... or joining your friends for the occasional secret party.",
+   "size": "20x15",
+   "lot_description_id": 103904,
+   "name_record": 103638,
+   "pack": "EP02"
+  },
+  "674955270": {
+   "name": "The Bluffs",
+   "description": "",
+   "size": "30x30",
+   "lot_description_id": 106837,
+   "name_record": 107231,
+   "pack": "EP02"
+  },
+  "996802565": {
+   "name": "Von Haunt Estate",
+   "description": "",
+   "size": "40x30",
+   "lot_description_id": 107232,
+   "name_record": 107267,
+   "pack": "EP02"
+  },
+  "1706622979": {
+   "name": "Casbah Gallery",
+   "description": "This modern glass structure in the heart of the Arts Quarter is a chic destination for a date or a recreational day devoted to improving your artistic skills.",
+   "size": "40x30",
+   "lot_description_id": 123169,
+   "name_record": 123918,
+   "pack": "EP03"
+  },
+  "195756036": {
+   "name": "20 Culpepper House",
+   "description": "A spacious brownstone apartment with bay windows, dockside views and open plan kitchen.",
+   "size": "30x30",
+   "lot_description_id": 119028,
+   "name_record": 119026,
+   "pack": "EP03"
+  },
+  "727449603": {
+   "name": "Waterside Warble",
+   "description": "Constructed from a converted cannery, Waterside Warble’s original warehouse layout was the perfect canvas to section off some intimate karaoke rooms.",
+   "size": "30x30",
+   "lot_description_id": 125296,
+   "name_record": 125333,
+   "pack": "EP03"
+  },
+  "1506541571": {
+   "name": "2A Jasmine Suites",
+   "description": "A compact apartment with character in a family friendly neighborhood.",
+   "size": "20x20",
+   "lot_description_id": 122143,
+   "name_record": 130589,
+   "pack": "EP03"
+  },
+  "2517434371": {
+   "name": "1010 Alto Apartments",
+   "description": "A huge family home with luxury Chef's kitchen, this apartment is the epitome of Uptown chic living.",
+   "size": "40x30",
+   "lot_description_id": 118799,
+   "name_record": 130960,
+   "pack": "EP03"
+  },
+  "2521038852": {
+   "name": "888 Spire Apartments",
+   "description": "With commanding views of the bay, the secluded 888 Spire Apartments is perhaps the most prestigious apartment for rent in the entire city. One glimpse through the floor to ceiling windows and you'll understand why.",
+   "size": "20x15",
+   "lot_description_id": 118797,
+   "name_record": 130962,
+   "pack": "EP03"
+  },
+  "2522808325": {
+   "name": "IX Landgraab",
+   "description": "Though the exclusive address is reason enough to take this dazzling suite, the upper-level loft and floor to ceiling windows certainly add to the appeal.",
+   "size": "30x20",
+   "lot_description_id": 118798,
+   "name_record": 130964,
+   "pack": "EP03"
+  },
+  "1712586756": {
+   "name": "121 Hakim House",
+   "description": "Though not the largest apartment in the building, the home studio and funky furnishings are certainly a desirable plus.",
+   "size": "30x20",
+   "lot_description_id": 123170,
+   "name_record": 130975,
+   "pack": "EP03"
+  },
+  "1729429511": {
+   "name": "Fountainview Penthouse",
+   "description": "Boasting some of the finest views in the Arts Quarter, this penthouse is prime real estate indeed.",
+   "size": "30x20",
+   "lot_description_id": 123173,
+   "name_record": 130977,
+   "pack": "EP03"
+  },
+  "985726979": {
+   "name": "910 Medina Studios",
+   "description": "A cramped apartment with… personality that overlooks the Art Quarter’s lovely center plaza. The cozy kitchen is just big enough and the living room boasts a classic mauve carpet.",
+   "size": "30x30",
+   "lot_description_id": 123172,
+   "name_record": 130980,
+   "pack": "EP03"
+  },
+  "1463943171": {
+   "name": "1313 21 Chic Street",
+   "description": "This place is incredibly, suspiciously cheap. It's like the Landlord can't give it away...",
+   "size": "20x20",
+   "lot_description_id": 120340,
+   "name_record": 131014,
+   "pack": "EP03"
+  },
+  "1464401924": {
+   "name": "702 ZenView",
+   "description": "A highly modern two floor apartment in the heart of the Fashion District.",
+   "size": "20x20",
+   "lot_description_id": 120341,
+   "name_record": 137290,
+   "pack": "EP03"
+  },
+  "653328387": {
+   "name": "Myshuno Meadows",
+   "description": "Surrounded by both trees and the cityscape, Myshuno Meadows is a great place for a relaxed wedding or outdoor birthday party. Centered on Barnabas Skye’s old Observatory, part of the area has been converted into an event space while still retaining the original telescope.",
+   "size": "64x64",
+   "lot_description_id": 132621,
+   "name_record": 132622,
+   "pack": "EP03"
+  },
+  "2671312906": {
+   "name": "1 Torendi Tower Penthouse",
+   "description": "This huge penthouse with a priceless view of the Fashion District has room for everything! With permits for complete interior remodeling, owners will be able to create the perfect home, no matter how grand their visions.",
+   "size": "40x30",
+   "lot_description_id": 135201,
+   "name_record": 135231,
+   "pack": "EP03"
+  },
+  "1564016770": {
+   "name": "The Old Salt House",
+   "description": "A sleek family home in a converted docklands building, The Old Salt House is a triumph of urban renewal.",
+   "size": "30x30",
+   "lot_description_id": 118307,
+   "name_record": 118310,
+   "pack": "EP03"
+  },
+  "3708747783": {
+   "name": "Stargazer Lounge",
+   "description": "Rooftop party, anyone? This decadent penthouse property overlooking the city has arguably the best bird's eye view of San Myshuno the market has to offer!",
+   "size": "40x30",
+   "lot_description_id": 118800,
+   "name_record": 120289,
+   "pack": "EP03"
+  },
+  "1521615080": {
+   "name": "Skye Fitness",
+   "description": "Skye Fitness Gym sits at the head of Uptown’s behemoth architectural complex. Enjoy breathtaking views of the city while shooting hoops on the gorgeous open-air basketball court.",
+   "size": "30x20",
+   "lot_description_id": 118801,
+   "name_record": 120290,
+   "pack": "EP03"
+  },
+  "1464926213": {
+   "name": "Planet Honey Pop!",
+   "description": "Built in the center of the Fashion District, Planet Honey Pop! Karaoke Bar’s sprightly melodies are in perfect harmony with the songs of the metro train below.",
+   "size": "30x20",
+   "lot_description_id": 120339,
+   "name_record": 120352,
+   "pack": "EP03"
+  },
+  "3421044741": {
+   "name": "Chateau Frise",
+   "description": "With gorgeous porches, a backyard swimming pool, and a phenomenal view of the Brindleton Light, this Dutch colonial is one of the most admired properties in the Bay.",
+   "size": "40x40",
+   "lot_description_id": 164762,
+   "name_record": 164766,
+   "pack": "EP04"
+  },
+  "1192493066": {
+   "name": "Dachshund's Creek",
+   "description": "Easy access to the creek below makes this property a must-own for nature-loving homebuilders. You don’t want to wait for your life to be over- purchase this property and get building!",
+   "size": "30x20",
+   "lot_description_id": 164764,
+   "name_record": 164767,
+   "pack": "EP04"
+  },
+  "397672454": {
+   "name": "Catscratch Cottage",
+   "description": "Smackdab in the middle of Whiskerman’s Wharf, this modest home is absolutely perfect for someone who can’t get enough of the frenetic felines that hang out by the docks.",
+   "size": "20x15",
+   "lot_description_id": 164760,
+   "name_record": 164768,
+   "pack": "EP04"
+  },
+  "1435500562": {
+   "name": "Tail's End",
+   "description": "Far from the bustle of the dockyards, this secluded lot still has plenty of that harbor charm (and a beautiful view to boot!)",
+   "size": "40x30",
+   "lot_description_id": 164761,
+   "name_record": 164769,
+   "pack": "EP04"
+  },
+  "1287389190": {
+   "name": "Deadgrass Discoveries",
+   "description": "After almost two centuries as the lighthouse keeper’s private home, this property was converted into a museum chronicling the Bay’s interesting maritime history when a new automated system was installed in the Brindleton Light.",
+   "size": "30x30",
+   "lot_description_id": 164765,
+   "name_record": 164770,
+   "pack": "EP04"
+  },
+  "2473787395": {
+   "name": "It's A Good House",
+   "description": "A series of renovations have restored this mid-century house to its former glory. All houses are good houses, but this one is especially good.",
+   "size": "40x40",
+   "lot_description_id": 164753,
+   "name_record": 164771,
+   "pack": "EP04"
+  },
+  "2886467601": {
+   "name": "Domus Familiaris",
+   "description": "A charmingly classic home steps away from the heart of Sable Square, Domus Familiaris is the ideal abode for a new family moving to the Bay.",
+   "size": "30x30",
+   "lot_description_id": 164754,
+   "name_record": 164772,
+   "pack": "EP04"
+  },
+  "3041853450": {
+   "name": "Sporting Space",
+   "description": "Central and affordable, this property is just waiting to be developed.",
+   "size": "30x20",
+   "lot_description_id": 164755,
+   "name_record": 164773,
+   "pack": "EP04"
+  },
+  "587399173": {
+   "name": "Brindleton Pawspital",
+   "description": "This state-of-the-art facility offers the very best in pet care for your sick barker or meower. Rumor has it the owner is preparing for retirement soon and is interested in selling the place to a young aspiring vet.",
+   "size": "40x30",
+   "lot_description_id": 164757,
+   "name_record": 164774,
+   "pack": "EP04"
+  },
+  "3081175056": {
+   "name": "Pupperstone Park",
+   "description": "Featuring a playground for their two-legged kids and an obstacle course for their four-legged ones, it’s no wonder Brindletonians spend so many of their afternoons in this quaint public park.",
+   "size": "40x30",
+   "lot_description_id": 164758,
+   "name_record": 164775,
+   "pack": "EP04"
+  },
+  "1187053577": {
+   "name": "Bedlington Boathouse",
+   "description": "Tucked away between the expensive mansions of Cape Cavalier is this humble little cottage. Nothing says “beach access” like living right on the beach!",
+   "size": "20x20",
+   "lot_description_id": 164750,
+   "name_record": 164776,
+   "pack": "EP04"
+  },
+  "2064580676": {
+   "name": "Hound's Head",
+   "description": "The largest property in Brindleton Bay- and with its very own private beach - Hound’s Head has housed a variety of rich and powerful pets (and their owners) through the ages.",
+   "size": "64x64",
+   "lot_description_id": 164751,
+   "name_record": 164777,
+   "pack": "EP04"
+  },
+  "1162739717": {
+   "name": "Hindquarter Hideaway",
+   "description": "The Hindquarter Hideaway may be the furthest property from the water’s edge, but the small fishing pond nearby more than makes up for it.",
+   "size": "30x20",
+   "lot_description_id": 164752,
+   "name_record": 164778,
+   "pack": "EP04"
+  },
+  "422707207": {
+   "name": "Ragdoll Refurb",
+   "description": "Once a part of the pet food cannery next door, this warehouse has since been converted into a stellar two-story home.",
+   "size": "20x20",
+   "lot_description_id": 164747,
+   "name_record": 164779,
+   "pack": "EP04"
+  },
+  "390791172": {
+   "name": "Salty Paws Saloon",
+   "description": "From sailors to spaniels to Scottish folds, the Salty Paws Saloon is a neighborhood staple and a favorite hangout spot for locals, human or otherwise.",
+   "size": "20x15",
+   "lot_description_id": 164749,
+   "name_record": 164780,
+   "pack": "EP04"
+  },
+  "1430847506": {
+   "name": "Club Calico",
+   "description": "Previously an exclusive yacht club for only the richest citizens of Brindleton Bay, a recent decree by Mayor Whiskers opened up this pool and wedding locale for public use.",
+   "size": "40x30",
+   "lot_description_id": 164759,
+   "name_record": 171255,
+   "pack": "EP04"
+  },
+  "284033049": {
+   "name": "Studio",
+   "description": "",
+   "size": "50x50",
+   "lot_description_id": 197667,
+   "name_record": 197669,
+   "pack": "EP06"
+  },
+  "2099838979": {
+   "name": "Upland Place",
+   "description": "Upland Place is small but has everything you could ever need to start your journey to becoming the next Global Superstar.",
+   "size": "40x30",
+   "lot_description_id": 201131,
+   "name_record": 201142,
+   "pack": "EP06"
+  },
+  "3031564292": {
+   "name": "Inner Circle",
+   "description": "Small quaint and cozy. Inner Circle is the perfect starting home to set your Acting Career off on the right foot.",
+   "size": "40x30",
+   "lot_description_id": 201132,
+   "name_record": 201143,
+   "pack": "EP06"
+  },
+  "3067215877": {
+   "name": "Vacuous Green",
+   "description": "This lot used to be a lovely little town home, but in the last few years after the fires it has been a vacant lot. Ready to be groomed and built upon.",
+   "size": "50x40",
+   "lot_description_id": 201135,
+   "name_record": 201144,
+   "pack": "EP06"
+  },
+  "1300824067": {
+   "name": "Chateau Peak",
+   "description": "Chateau Peak is the peak of fame. The tallest hill in all of Del Sol Valley. The people who live here have made it to the top.",
+   "size": "64x64",
+   "lot_description_id": 201133,
+   "name_record": 201145,
+   "pack": "EP06"
+  },
+  "1556217859": {
+   "name": "The Ward Den",
+   "description": "The Ward Den is home to the most prestigious celebrity, Judith Ward. She has built her empire way back in the day when Del Sol Valley was a small speck on the map of Fame and Stardom.",
+   "size": "50x40",
+   "lot_description_id": 201136,
+   "name_record": 201146,
+   "pack": "EP06"
+  },
+  "1642594307": {
+   "name": "Bailey-Moon Manor",
+   "description": "Bailey Manor is the prefect representation of the new celebrity life style. Nothing but the best and most high tech gadgets are allowed in this house.",
+   "size": "50x40",
+   "lot_description_id": 201137,
+   "name_record": 201147,
+   "pack": "EP06"
+  },
+  "562561093": {
+   "name": "Ward Park",
+   "description": "Need an escape from the hustle and bustle of the celebrity lifestyle. Ward Park is the perfect place to clear your mind, relax, and listen to the sounds of water.",
+   "size": "20x20",
+   "lot_description_id": 201134,
+   "name_record": 201148,
+   "pack": "EP06"
+  },
+  "579403848": {
+   "name": "Studio PBP",
+   "description": "Studio PBP is the peak of the luxury club scene. Only the highest of celebrities will make it past the bouncer. If you have a little extra cash you might be able to bribe the bouncer to sneak in.",
+   "size": "40x30",
+   "lot_description_id": 201138,
+   "name_record": 201149,
+   "pack": "EP06"
+  },
+  "3058499610": {
+   "name": "Plumbob Pictures Museum",
+   "description": "The Plumbob Pictures Museum is a walk down memory lane of some of the most famous scenes in the business. It is also a great place to get behind the scenes expose of all the pops and tech that are used to make the AAA titles that hit the silver screen.",
+   "size": "40x30",
+   "lot_description_id": 201139,
+   "name_record": 201150,
+   "pack": "EP06"
+  },
+  "2311979033": {
+   "name": "Orchid A Go Go",
+   "description": "Not the most lavish of bars in Del Sol Valley but you can surely find some low to mid level celebrities hanging out enjoying the more grungy atmosphere.",
+   "size": "30x30",
+   "lot_description_id": 201140,
+   "name_record": 201151,
+   "pack": "EP06"
+  },
+  "2841378864": {
+   "name": "Pectoral Fitness",
+   "description": "In order to reach the peak of celebrity status you need to look the part. That is where Pectoral Fitness comes in! We have the workouts that will make you sweat. Do you have what it takes to hang with the best of them?",
+   "size": "30x30",
+   "lot_description_id": 201141,
+   "name_record": 201152,
+   "pack": "EP06"
+  },
+  "3814129749": {
+   "name": "Reef Finery",
+   "description": "This remote beachfront loft mixes contemporary design with traditional elements as it sits on the edge of island civilization and marine bliss.",
+   "size": "40x30",
+   "lot_description_id": 207078,
+   "name_record": 207080,
+   "pack": "EP07"
+  },
+  "2462318643": {
+   "name": "Key Point",
+   "description": "This classic deserted islet formed from the natural accumulation of sand shored up by the surrounding reefs happens to make for the perfect untouched beach.",
+   "size": "40x30",
+   "lot_description_id": 212323,
+   "name_record": 212322,
+   "pack": "EP07"
+  },
+  "80740372": {
+   "name": "Admiral’s Wreckage",
+   "description": "Few remember how or when an old trawler became so dramatically landlocked. Even fewer know what remains of this vessel in ruins.",
+   "size": "50x50",
+   "lot_description_id": 212325,
+   "name_record": 212327,
+   "pack": "EP07"
+  },
+  "4100980749": {
+   "name": "Caldera Camp",
+   "description": "This ramshackle shelter, precariously sits at the base of an active volcano, is the first and potentially last stop for the most intrepid conservationists.",
+   "size": "30x20",
+   "lot_description_id": 212326,
+   "name_record": 212328,
+   "pack": "EP07"
+  },
+  "1289814031": {
+   "name": "Chieftain's Villa",
+   "description": "This traditional home of the tribal leader has been built up over the generations from the earliest island settlement into the modern era. Still it remains the seat of Ohan'ali Town's spiritual and civil influence.",
+   "size": "40x30",
+   "lot_description_id": 208804,
+   "name_record": 212333,
+   "pack": "EP07"
+  },
+  "316866564": {
+   "name": "The Sand Bar",
+   "description": "Local watering hole. Informal town center. Social hotspot. Refreshment support system. The only thing this open-air tavern doesn’t do is disappoint.",
+   "size": "30x20",
+   "lot_description_id": 208814,
+   "name_record": 212335,
+   "pack": "EP07"
+  },
+  "2050424860": {
+   "name": "Lagoon Look",
+   "description": "Ideally situated on the gentle shores of Ohan’ali cove, this simple but well-appointed beach house awaits its forever family.",
+   "size": "30x20",
+   "lot_description_id": 208815,
+   "name_record": 212339,
+   "pack": "EP07"
+  },
+  "2840395894": {
+   "name": "Ohan’ali Beach",
+   "description": "This stretch of sand has been the local beach for time immemorial. Where the first fishing boats once launched, this beach now serves as the main access into the lagoon's crystal clear waters.",
+   "size": "30x30",
+   "lot_description_id": 208816,
+   "name_record": 212340,
+   "pack": "EP07"
+  },
+  "1567621127": {
+   "name": "Tangled Flat",
+   "description": "This modest hut has withstood the test of time and constant encroachment of a voracious jungle environment.",
+   "size": "20x20",
+   "lot_description_id": 212338,
+   "name_record": 212341,
+   "pack": "EP07"
+  },
+  "2521301018": {
+   "name": "Journey's End",
+   "description": "Retreat into the ultimate island experience where relaxing into the sun and sand are within a short walk from the front door.",
+   "size": "40x30",
+   "lot_description_id": 213426,
+   "name_record": 213424,
+   "pack": "EP07"
+  },
+  "2334195731": {
+   "name": "Sapphire Shores",
+   "description": "Pristine white sand where topical water ebbs against the shore, and the ocean is teaming with life. Locations like this are the true island living dream.",
+   "size": "50x50",
+   "lot_description_id": 213427,
+   "name_record": 213425,
+   "pack": "EP07"
+  },
+  "2165506097": {
+   "name": "Pier Perfection",
+   "description": "When living right on the water is a goal, you can find Pier Perfection right here.",
+   "size": "30x20",
+   "lot_description_id": 213428,
+   "name_record": 213430,
+   "pack": "EP07"
+  },
+  "3970695593": {
+   "name": "Sand Simoleon Beach",
+   "description": "Surrounded on all sides by tranquil waters, this beach is a must visit destination for any island lover. Only the finest of lounge amenities fill this beach to enjoy a relaxing day or night by the calming waters.",
+   "size": "40x30",
+   "lot_description_id": 213429,
+   "name_record": 213431,
+   "pack": "EP07"
+  },
+  "651362343": {
+   "name": "Kin-Ship",
+   "description": "Once an old fishing-boat dock, Kin-Ship was recently repurposed into a charming waterfront home. This sizeable waterfront lot is now perfect for an active, close-knit family.",
+   "size": "30x30",
+   "lot_description_id": 214461,
+   "name_record": 214462,
+   "pack": "EP07"
+  },
+  "3870359634": {
+   "name": "Spring Steppes",
+   "description": "As one of the two prime locations in Gibbs Hill, Spring Steppes is a lush location with great views of the canals and an easy trip to both the bar and library.",
+   "size": "20x15",
+   "lot_description_id": 221613,
+   "name_record": 221617,
+   "pack": "EP08"
+  },
+  "705167367": {
+   "name": "Darkwing House",
+   "description": "This cottage sitting on the edge of campus was rumored to once be the home of Felix Psyded, founder of the University of Britechester. The cozy home has been updated through the years for student housing so that some could have a house away from home.",
+   "size": "30x20",
+   "lot_description_id": 221614,
+   "name_record": 221619,
+   "pack": "EP08"
+  },
+  "1849425924": {
+   "name": "Larry's Lagoon",
+   "description": "The Foxbury commons, fondly referred to as Larry's Lagoon, is the perfect place for students to recharge after a long day of classes. There's food, and lots of space to study or work on homework when students are tired of dealing with their roommates. Computers and Robotics Workstations gives everyone a chance to use the latest technology to get kickstart to a new term.",
+   "size": "40x30",
+   "lot_description_id": 221615,
+   "name_record": 221620,
+   "pack": "EP08"
+  },
+  "4082434051": {
+   "name": "Maritime Manor",
+   "description": "Foxbury Institute is aware that dorms are not the preferred living choice for all students so they build a few houses on campus for those that prefer a more homey living style.",
+   "size": "30x20",
+   "lot_description_id": 221782,
+   "name_record": 221785,
+   "pack": "EP08"
+  },
+  "4231921698": {
+   "name": "Briny Tower",
+   "description": "Briny Tower is great starter housing for incoming Freshmen. With a new friend in each room and an overlooking view of the whole campus it is one of the best introductions to university life a student could ask for.",
+   "size": "30x20",
+   "lot_description_id": 221783,
+   "name_record": 221786,
+   "pack": "EP08"
+  },
+  "4276158474": {
+   "name": "Tidal Tower",
+   "description": "Tidal Tower is one of the twin dorms at Foxbury Institute. This top floor housing is highly coveted by returning students particularly for its single room dorm and peak views of the Foxbury campus.",
+   "size": "30x20",
+   "lot_description_id": 221784,
+   "name_record": 221787,
+   "pack": "EP08"
+  },
+  "3073900618": {
+   "name": "Wyvern Hall",
+   "description": "Wyvern Hall has an all out feud with Drake Hall over who more exemplifies the spirit of Darby, Britechester's mascot. Of course for those that live in Wyvern Hall there is no question which is the superior dorm.",
+   "size": "30x20",
+   "lot_description_id": 222215,
+   "name_record": 222218,
+   "pack": "EP08"
+  },
+  "3101884519": {
+   "name": "Drake Hall",
+   "description": "Drake Hall is the best dorm on campus no matter what those Wyvern Hall students say. With the best view of campus from their balcony, the students that live here have nothing to complain about.",
+   "size": "30x20",
+   "lot_description_id": 222216,
+   "name_record": 222219,
+   "pack": "EP08"
+  },
+  "901251075": {
+   "name": "Darby's Den",
+   "description": "Darby's Den is the best location on campus to fuel up before the big exam, work on homework, and make new friends. The afternoon tea and poetry readings are a hit with the students, and nobody can withstand watching the great debates that have occurred here. It's snug and comfy, just right for the den of the Britechester Dragons.",
+   "size": "30x20",
+   "lot_description_id": 222217,
+   "name_record": 222220,
+   "pack": "EP08"
+  },
+  "3871342675": {
+   "name": "Mossy Lane",
+   "description": "The prominent half of the spacious two lot complex, Mossy Lane is an idyllic location beneath beautiful blue skies, and an impossible location to forget.",
+   "size": "20x15",
+   "lot_description_id": 222456,
+   "name_record": 222460,
+   "pack": "EP08"
+  },
+  "3872456788": {
+   "name": "Honeydew Fields",
+   "description": "Nothing seems quite real about Honeydew Fields, but staying here forever feels like a real possibility. With the nearby Pepper's Pub and Laurel Library, Honeydew Fields is a great location for those on a budget who don't mind a bit of hustle and bustle from being close to the center of town.",
+   "size": "20x15",
+   "lot_description_id": 222457,
+   "name_record": 222462,
+   "pack": "EP08"
+  },
+  "3883073621": {
+   "name": "Pepper's Pub",
+   "description": "Pepper's Pub has been serving the universities of Britechester for as long as they've been around. The drinks are cheap to keep the college students coming in, and they've become a home for the many organizations that have been formed over time.",
+   "size": "20x20",
+   "lot_description_id": 222458,
+   "name_record": 222463,
+   "pack": "EP08"
+  },
+  "3868590195": {
+   "name": "Laurel Library",
+   "description": "Laurel Library sits at the top of Gibbs Hill, a proud and prominent fixture of the town. Students from all around have used this library forever as a place to study, research, and find a little quiet away from their universities.",
+   "size": "50x40",
+   "lot_description_id": 222459,
+   "name_record": 222464,
+   "pack": "EP08"
+  },
+  "402457396": {
+   "name": "Pinecrest Apartments #402",
+   "description": "This tidy little two-bedroom has you in the heart of Conifer Station, just a few steps away from the local community space.",
+   "size": "30x20",
+   "lot_description_id": 237577,
+   "name_record": 238482,
+   "pack": "EP09"
+  },
+  "1651572785": {
+   "name": "Stonestreet Apartments #4",
+   "description": "This standard one-bedroom apartment only minutes away from the Quarry Building is perfect for a single Sim or couple looking for an inexpensive place to live in Evergreen Harbor.",
+   "size": "30x20",
+   "lot_description_id": 238635,
+   "name_record": 241268,
+   "pack": "EP09"
+  },
+  "3361079299": {
+   "name": "The Waterfront",
+   "description": "An old port building now owned by the community, The Waterfront is always the \"next\" revitalization project, but seems to have a hard time getting the love and attention it deserves.",
+   "size": "40x30",
+   "lot_description_id": 238524,
+   "name_record": 238525,
+   "pack": "EP09"
+  },
+  "2354249731": {
+   "name": "The Quarry Building",
+   "description": "The quarry has been shut down for years, but the building still stands, ready for a makeover that'll transform it from lonely and obsolete to new and fun at parties.",
+   "size": "40x30",
+   "lot_description_id": 235811,
+   "name_record": 235813,
+   "pack": "EP09"
+  },
+  "410910736": {
+   "name": "Sprucewood Square",
+   "description": "What used to be a gathering ground for Sims awaiting loved ones arriving on the train has seen better days, but the prime location means a few simple updates could have Sprucewood Square thriving once more.",
+   "size": "40x30",
+   "lot_description_id": 241997,
+   "name_record": 241995,
+   "pack": "EP09"
+  },
+  "290455566": {
+   "name": "Rockridge Springs",
+   "description": "A modest lot built near the remains of Grims Quarry, this home benefits from some of the fresh water unearthed by past digging at the quarry.",
+   "size": "30x20",
+   "lot_description_id": 238633,
+   "name_record": 238632,
+   "pack": "EP09"
+  },
+  "1609760816": {
+   "name": "Miner Mansion",
+   "description": "At the time, this was one of the largest homes built near the quarry by a successful miner working the stones. Despite not being a real mansion, it enjoys heritage status today and is a solid home for any family looking for a place in Evergreen Harbor.",
+   "size": "30x20",
+   "lot_description_id": 238634,
+   "name_record": 238636,
+   "pack": "EP09"
+  },
+  "427491372": {
+   "name": "Canal Corner",
+   "description": "A small slice of home with a yard, a view of the canal, and the memory of the chimes of yesteryear from the train station clock tower.",
+   "size": "20x15",
+   "lot_description_id": 242000,
+   "name_record": 241999,
+   "pack": "EP09"
+  },
+  "1302986785": {
+   "name": "Pigulock Manor",
+   "description": "Built by railroad financier Gregory Pigulock during the early development of Evergreen Harbor, this mansion twice suffered damage from local storms before being declared a historic landmark and being restored to its current glory.",
+   "size": "30x20",
+   "lot_description_id": 242001,
+   "name_record": 242003,
+   "pack": "EP09"
+  },
+  "3845324809": {
+   "name": "The Shipping Views",
+   "description": "To be honest, this lot isn't even officially zoned for residential living, but this affordable home of converted shipping containers - not to mention the views of the Sound! - is the perfect place for anyone looking for a simple place to call home.",
+   "size": "30x20",
+   "lot_description_id": 242287,
+   "name_record": 242291,
+   "pack": "EP09"
+  },
+  "3908108304": {
+   "name": "The Old Mill",
+   "description": "This beautifully repurposed space that sits at the base of the Croftville Dam is a meeting-place of past and present, as a modern home lives in the shell of a classic wood mill.",
+   "size": "30x20",
+   "lot_description_id": 242288,
+   "name_record": 242292,
+   "pack": "EP09"
+  },
+  "3940614167": {
+   "name": "The Caboose",
+   "description": "This old train station is now the perfect place to house a simple bar where people can get together and talk about a time when there was an old train station here.",
+   "size": "30x20",
+   "lot_description_id": 242289,
+   "name_record": 242293,
+   "pack": "EP09"
+  },
+  "256573450": {
+   "name": "The Portsmouth Promenade",
+   "description": "Situated right past the entrance gate to Port Promise, this lot provides gorgeous views of the old port while within walking distance to most of the local landmarks.",
+   "size": "30x20",
+   "lot_description_id": 242290,
+   "name_record": 242294,
+   "pack": "EP09"
+  },
+  "2191917059": {
+   "name": "2-4-1 Wakabamori",
+   "description": "This lot is ripe for development. Settled on the border of the Wakabamori subarea, any home or business on this lot is afforded easy access to the quiet residential charm of Wakabamori, as well as the bustling activity of Wakaba's town center.",
+   "size": "20x15",
+   "lot_description_id": 249007,
+   "name_record": 249012,
+   "pack": "EP10"
+  },
+  "2197487620": {
+   "name": "2-4-3 Wakabamori",
+   "description": "Sleek, exquisite, and understated. 2-4-3 Wakabamori fits right in to the neighborhood while offering complete amenities, at an inclusive price that anyone can afford.",
+   "size": "20x15",
+   "lot_description_id": 249008,
+   "name_record": 249013,
+   "pack": "EP10"
+  },
+  "2754674701": {
+   "name": "2-5-1 Wakabamori",
+   "description": "2-5-1 Wakabamori was a traditional manor home that has been transformed into a contemporary work of art. Seen as the nicest home in the entire prefecture, owning this home makes a bold statement to anyone who cares about that kind of thing.",
+   "size": "50x50",
+   "lot_description_id": 249009,
+   "name_record": 249014,
+   "pack": "EP10"
+  },
+  "2226126854": {
+   "name": "2-4-2 Wakabamori",
+   "description": "2-4-2 Wakabamori is the perfect rental for any traveler looking to immerse themselves in the full experience of Mt. Komorebi.",
+   "size": "30x20",
+   "lot_description_id": 249010,
+   "name_record": 249015,
+   "pack": "EP10"
+  },
+  "2230845447": {
+   "name": "Hazakura Lounge",
+   "description": "A swanky hotspot for both locals and tourists, Hazakura Lounge is the perfect place to grab a drink, meet locals, and watch local musicians take the stage.",
+   "size": "30x20",
+   "lot_description_id": 249011,
+   "name_record": 249016,
+   "pack": "EP10"
+  },
+  "4054450179": {
+   "name": "6-4-1 Hanamigawa",
+   "description": "Nobody knows who named this section of town Hanamigawa, but the lot at 6-4-1 Hanamigawa reflects the meaning well: \"Treasured flower looking down the river.\" This home is the perfect starter for a growing household.",
+   "size": "20x15",
+   "lot_description_id": 251670,
+   "name_record": 251675,
+   "pack": "EP10"
+  },
+  "4055105540": {
+   "name": "5-6-1 Shinrinyoku",
+   "description": "Nestled at the base of Mt. Komorebi, 5-6-1 Shinrinyoku is a beautiful family home with the perfect mix of privacy and access to the heart of Senbamachi.",
+   "size": "20x15",
+   "lot_description_id": 251671,
+   "name_record": 251676,
+   "pack": "EP10"
+  },
+  "4055433221": {
+   "name": "Hanamigawa Koen",
+   "description": "Hanamigawa Koen is a beautiful natural space that belongs to everyone! The land was donated to the town by families who wanted to preserve a little bit of the sweeping, surrounding natural beauty in the heart of Senbamachi.",
+   "size": "30x20",
+   "lot_description_id": 251672,
+   "name_record": 251677,
+   "pack": "EP10"
+  },
+  "4055957510": {
+   "name": "Izakaya Ippai",
+   "description": "Izakaya Ippai is the perfect place to meet up with friends, play a game of cards, or chat with the locals of Senbamachi.",
+   "size": "30x20",
+   "lot_description_id": 251673,
+   "name_record": 251678,
+   "pack": "EP10"
+  },
+  "4056219655": {
+   "name": "5-3-1 Shinrinyoku",
+   "description": "Homes like the one at 5-3-1 Shinrinyoku are less common these day. This large family home is ideal for any expanding household, with plenty of outdoor space for relaxing and entertaining.",
+   "size": "30x20",
+   "lot_description_id": 251674,
+   "name_record": 251679,
+   "pack": "EP10"
+  },
+  "558628916": {
+   "name": "Kiyomatsu Point",
+   "description": "Kiyomatsu Point is currently undeveloped. This giant plot has great residential and commercial potential: easy access to snow sport slopes and the Sutefani Onsen Bathhouse, and room to build whatever the heart desires (and has enough funds for.)",
+   "size": "50x50",
+   "lot_description_id": 256668,
+   "name_record": 256667,
+   "pack": "EP10"
+  },
+  "1831469061": {
+   "name": "Mt. Komorebi Peak",
+   "description": "",
+   "size": "20x20",
+   "lot_description_id": 247199,
+   "name_record": 247200,
+   "pack": "EP10"
+  },
+  "2366832680": {
+   "name": "Mt. Komorebi Base Camp",
+   "description": "",
+   "size": "20x15",
+   "lot_description_id": 247836,
+   "name_record": 247837,
+   "pack": "EP10"
+  },
+  "3718447143": {
+   "name": "The Croft Icefall",
+   "description": "",
+   "size": "20x15",
+   "lot_description_id": 247968,
+   "name_record": 247969,
+   "pack": "EP10"
+  },
+  "1851654149": {
+   "name": "Sutefani Onsen Bathhouse",
+   "description": "The Sutefani Onsen Bathhouse is the perfect place to unwind after an exciting day on the mountain. The natural hot springs have rejuvenating properties that will get any weary (or bruised!) adventurer back into the action in no time.",
+   "size": "30x20",
+   "lot_description_id": 248699,
+   "name_record": 248702,
+   "pack": "EP10"
+  },
+  "3428188211": {
+   "name": "5-1-2 Kiyomatsu",
+   "description": "5-1-2 Kiyomatsu is a gorgeously traditional rental with plenty of space for large groups and families. Enjoy all of the ski-in, ski-out benefits of the Kiyomatsu subarea as well as easy access to the Sutefani Onsen Bathhouse.",
+   "size": "30x20",
+   "lot_description_id": 248700,
+   "name_record": 248703,
+   "pack": "EP10"
+  },
+  "3429957684": {
+   "name": "5-1-1 Kiyomatsu",
+   "description": "5-1-1 Kiyomatsu is a stunningly unique rental with contemporary touches. Enjoy all of the ski-in, ski-out benefits of the Kiyomatsu subarea as well as easy access to the Sutefani Onsen Bathhouse.",
+   "size": "30x20",
+   "lot_description_id": 248701,
+   "name_record": 248704,
+   "pack": "EP10"
+  },
+  "3455909904": {
+   "name": "The Gnome's Arms",
+   "description": "This stone-built pub is the local hangout of choice around Finchwick, and it's not surprising to see folks from the entire surrounding Henford-on-Bagley area here. Head upstairs to watch a little football on the telly or enjoy some delicious local fare at the bar downstairs - either way, it's clear what makes this place a community favorite.",
+   "size": "30x20",
+   "lot_description_id": 263225,
+   "name_record": 263229,
+   "pack": "EP11"
+  },
+  "2794127375": {
+   "name": "3 Cobblebottom Street",
+   "description": "This cozy home sits in the heart of Finchwick and is steps away from the small village's community hub. Though it can get a bit loud on fair days, there's no better place for a Sim who wants to be a part of it all.",
+   "size": "20x20",
+   "lot_description_id": 263226,
+   "name_record": 263230,
+   "pack": "EP11"
+  },
+  "3887857669": {
+   "name": "5 Cobblebottom Street",
+   "description": "This pragmatic village home is planted directly across Cobblebottom Street from Finchwick's garden walkways, making it the ideal place for a botanic-minded Sim to settle down.",
+   "size": "30x20",
+   "lot_description_id": 263227,
+   "name_record": 263231,
+   "pack": "EP11"
+  },
+  "3891462150": {
+   "name": "1 Cobblebottom Street",
+   "description": "Don't be scared away by the fact that this cozy but cluttered home has been on the market for longer than normal. It may suffer from what some have deemed an \"excess of character,\" but that only means it's simply waiting for the right Sim to come and find it - a Sim looking to live their one wild and precious life in the quaint village of Finchwick.",
+   "size": "20x15",
+   "lot_description_id": 263228,
+   "name_record": 263232,
+   "pack": "EP11"
+  },
+  "1177419780": {
+   "name": "Isle of Volpe Park",
+   "description": "Located just across from the ruins on the Isle of Volpe, this park is the perfect start for any Bramblewood adventure. Then enjoy a meal at the grill, find or leave a present under Sophie the Snail, relax beside the serene Cordelia Falls, explore the ruins, charm the local wildlife, or go foraging for wild mushrooms and berries. The only problem will be doing it all before the sun goes down!",
+   "size": "50x40",
+   "lot_description_id": 263782,
+   "name_record": 263783,
+   "pack": "EP11"
+  },
+  "1180958725": {
+   "name": "13 Nettle Lane",
+   "description": "The perfect rental for any Sim wanting to visit Henford-on-Bagley, 13 Nettle Lane combines the natural charms of the surrounding Bramblewood with the updated conveniences of a contemporary renovation. Enjoy exploring the ruins on the nearby Isle of Volpe, finding local wildlife in the yard, or heading down the road to Old New Henford's community garden or Finchwick's weekly fair.",
+   "size": "30x20",
+   "lot_description_id": 263784,
+   "name_record": 263785,
+   "pack": "EP11"
+  },
+  "1182334983": {
+   "name": "14 Nettle Lane",
+   "description": "This old family home is buried deep in the Bramblewood, surrounded by the forest's furry and feathered inhabitants. Like a sturdy yew tree, it's a home that has stood the test of time, with sturdy roots, decades of memories, and a few fresh additions as the years have passed.",
+   "size": "40x30",
+   "lot_description_id": 263786,
+   "name_record": 263787,
+   "pack": "EP11"
+  },
+  "1199570952": {
+   "name": "Cordelia's Secret Cottage",
+   "description": "Those willing to make the hike up Cordelia Falls are rewarded with an enchanting secret. Nestled neatly near the top of the falls and rumored to have once secretly housed young royals on holiday, this small cottage is the perfect hideaway to enjoy nature, fish, and relax amidst the Bramblewood.",
+   "size": "30x20",
+   "lot_description_id": 263788,
+   "name_record": 263789,
+   "pack": "EP11"
+  },
+  "3885563909": {
+   "name": "Olde Mill Hill",
+   "description": "The centerpiece of Old New Henford, this sizeable estate sits perched at the top of Olde Mill Hill and has been part of the Watson family for generations. There's almost too much land for one family to tend, though the sprawling gardens and yard leave plenty of room for growing a variety of crops and keeping a bevy of animals.",
+   "size": "64x64",
+   "lot_description_id": 264834,
+   "name_record": 264835,
+   "pack": "EP11"
+  },
+  "3886481414": {
+   "name": "2 Olde Mill Lane",
+   "description": "2 Olde Mill Lane is an empty plot of idyllic country land, lying in wait for any Sim with a dream to transform it into the ideal home.",
+   "size": "50x40",
+   "lot_description_id": 264836,
+   "name_record": 264837,
+   "pack": "EP11"
+  },
+  "3886743559": {
+   "name": "3 Olde Mill Lane",
+   "description": "Sitting riverside in Old New Henford, this sizable home boasts lots of land for growing, whether a Sim is looking to grow plants, animals, or their family.",
+   "size": "50x40",
+   "lot_description_id": 264838,
+   "name_record": 264839,
+   "pack": "EP11"
+  },
+  "3887071240": {
+   "name": "4 Olde Mill Lane",
+   "description": "A fusion of Old New Henford's historic past and cool present, this old barn has been completely refurbished into a cottage home. Tucked privately between the edge of the Bramblewood and the River Bagley, a Sim could easily forget that the rest of the world exists while in its quaint garden.",
+   "size": "30x20",
+   "lot_description_id": 264840,
+   "name_record": 264841,
+   "pack": "EP11"
+  },
+  "225640452": {
+   "name": "Auditorium",
+   "description": "From Career Day to Graduation, this multipurpose space serves as a premiere setting for some of life's biggest moments. With a bit of music and the lights down low, this venue can transform into a perfect Prom paradise.",
+   "size": "30x20",
+   "lot_description_id": 290896,
+   "name_record": 290899,
+   "pack": "EP12"
+  },
+  "2753298437": {
+   "name": "Copperdale High School",
+   "description": "This long established academic institution offers teens a place to expand their horizons. Complete with classrooms, lockers, and a cafeteria! Copperdale High is an idyllic locale for learning, with a great view of the football field to boot.",
+   "size": "64x64",
+   "lot_description_id": 290895,
+   "name_record": 290898,
+   "pack": "EP12"
+  },
+  "635242008": {
+   "name": "ThrifTea",
+   "description": "With bubbles and bargains, this bubble-tea-thrift-shop combo is a favorite teen hotspot. Run by returning resident Eloise Hiddlestix!",
+   "size": "20x15",
+   "lot_description_id": 290897,
+   "name_record": 290900,
+   "pack": "EP12"
+  },
+  "801898557": {
+   "name": "Hillside Haven",
+   "description": "A cliffside oasis away from the hustle and bustle of the pier but close enough to enjoy the picturesque view.",
+   "size": "30x20",
+   "lot_description_id": 294294,
+   "name_record": 294293,
+   "pack": "EP12"
+  },
+  "2719678527": {
+   "name": "Lakeview Library",
+   "description": "Originally a city hall, this historic library has become a staple in Copperdale students' academic endeavors.",
+   "size": "20x20",
+   "lot_description_id": 294459,
+   "name_record": 294460,
+   "pack": "EP12"
+  },
+  "327221333": {
+   "name": "Golden Peak",
+   "description": "An estate worthy plot of land sits elegantly overlooking Copperdale. Pinkies up!",
+   "size": "30x30",
+   "lot_description_id": 294461,
+   "name_record": 294464,
+   "pack": "EP12"
+  },
+  "2716139581": {
+   "name": "Town Square Terrace",
+   "description": "A lively location settled within Prescott Square, complete with instant access to all the excitement downtown offers.",
+   "size": "20x15",
+   "lot_description_id": 294463,
+   "name_record": 294465,
+   "pack": "EP12"
+  },
+  "1782185987": {
+   "name": "Water Tower Way",
+   "description": "A charming lot situated on the edge of town, with a natural backdrop and suburban vibes. Perfect view of the famous Copperdale Water Tower - climbing prohibited.",
+   "size": "20x15",
+   "lot_description_id": 294462,
+   "name_record": 294466,
+   "pack": "EP12"
+  },
+  "3806068807": {
+   "name": "BridgeCreek Drive",
+   "description": "Close to the essentials and a tunnel into town, it's a comfortable spot for anyone's needs. Includes nearby access to a favorite teen hideaway. At least they're off the lawn.",
+   "size": "30x30",
+   "lot_description_id": 294983,
+   "name_record": 294989,
+   "pack": "EP12"
+  },
+  "4200595518": {
+   "name": "Totter Park",
+   "description": "Famously known for Teeter Rock, this park is a peaceful reprieve from the blinding lights of the Pier. Rated five stars, reviews claim \"this park rocks\".",
+   "size": "50x40",
+   "lot_description_id": 294986,
+   "name_record": 294990,
+   "pack": "EP12"
+  },
+  "924123198": {
+   "name": "LaSuli Point",
+   "description": "Situated a stone's throw away from the Pier, this delightful spot on Lake LaSuli is perfect for a starter home.",
+   "size": "20x15",
+   "lot_description_id": 294984,
+   "name_record": 294991,
+   "pack": "EP12"
+  },
+  "203948095": {
+   "name": "Little Falls Nook",
+   "description": "A cozy hideaway nestled by nature and gifted with waterfront access.",
+   "size": "20x20",
+   "lot_description_id": 294985,
+   "name_record": 294992,
+   "pack": "EP12"
+  },
+  "2690383881": {
+   "name": "Celebration Center",
+   "description": "The Celebration Center offers a little something for everyone. There's a gym space to get in that extra workout with friends, an artist's corner to paint or create, a music room to play instruments or sing with friends, and an area for Elders to gather and play chess, Simbles, or more.",
+   "size": "64x64",
+   "lot_description_id": 326733,
+   "name_record": 326738,
+   "pack": "EP13"
+  },
+  "2703097870": {
+   "name": "13 Acacia Avenue",
+   "description": "This cozy home is perfect for a small family who still want a bit of space for themselves, and with a backyard that's already treehouse-friendly, you're already set for plenty of outdoors fun! Gilbert Gardens is just across the street so you can look forward to grilling up a meal to enjoy at the gazebo or just taking a dip in the lake. If quiet is what your family is looking for, you've certainly found it!",
+   "size": "40x30",
+   "lot_description_id": 326734,
+   "name_record": 326739,
+   "pack": "EP13"
+  },
+  "2205351941": {
+   "name": "Parkside Place",
+   "description": "Looking to corner the market on cozy living with your first home? This starter features unique modern accents and a quiet patio area that's just right for your BBQ gatherings or quiet reflection. You won't be in the thick of noise or people in this neighborhood, but you'll still have plenty of activity around you at Gilbert Gardens.",
+   "size": "30x20",
+   "lot_description_id": 326735,
+   "name_record": 326740,
+   "pack": "EP13"
+  },
+  "2711814161": {
+   "name": "18 Celebration Way",
+   "description": "This lot's perfectly situated at the edge of Gilbert Gardens park with the Celebration Center close by. There's no such thing as a bad view here; you have the lake in one direction and the bay in another!",
+   "size": "40x20",
+   "lot_description_id": 326736,
+   "name_record": 326741,
+   "pack": "EP13"
+  },
+  "3860398087": {
+   "name": "Manzanita Terrace",
+   "description": "This plot of land is right at the center of all of Anchorpoint Wharf's action. It is perfectly poised location between the duality of the area: the calm, serenity of a lovely ocean view and the bustle of its historic downtown area. Best of all, the library is right across the way, so whoever lives here can stop by and pick up a good book anytime.",
+   "size": "30x20",
+   "lot_description_id": 326984,
+   "name_record": 326994,
+   "pack": "EP13"
+  },
+  "1359609861": {
+   "name": "Robles Point",
+   "description": "When Bayani Robles first purchased this plot of land and began building Robles Point, he surely never envisioned the legacy his family has gone on to have! This house has had many changes and additions over the year, but it all adds to the home's character and shows that Anchorpoint Wharf is an ever-evolving area where the old and the new come together.",
+   "size": "50x40",
+   "lot_description_id": 326985,
+   "name_record": 326995,
+   "pack": "EP13"
+  },
+  "3857973253": {
+   "name": "Anchorpoint Abode",
+   "description": "Looking for a luxe vacation spot on the wharf that checks every box? Anchorpoint Abode is a traveler's dream, with ample amenities (including a hot tub!) and a view that you just can't beat. Hope you're up for  a little shark-watching while you're at it.",
+   "size": "30x20",
+   "lot_description_id": 326986,
+   "name_record": 326996,
+   "pack": "EP13"
+  },
+  "3860004870": {
+   "name": "Anchorpoint Library",
+   "description": "Stop by and unwind with a good book. Or a bad book; no one will judge you here! This family-friendly library is the perfect place to curl up with a good book in a cozy corner, get some work done on a computer, or create your own story time for children in our special children's area.",
+   "size": "30x20",
+   "lot_description_id": 326987,
+   "name_record": 326997,
+   "pack": "EP13"
+  },
+  "149028869": {
+   "name": "23 Eucalyptus Lane",
+   "description": "Located in a quiet neighborhood, this lot boasts a lovely view of the marina and bay shoreline. A small park with fishing, a pirate ship playset, and a unique monument is only a stone's throw away.",
+   "size": "30x20",
+   "lot_description_id": 327271,
+   "name_record": 327275,
+   "pack": "EP13"
+  },
+  "157614088": {
+   "name": "Sequoia Cottage",
+   "description": "This cozy starter is tucked away in Hopewell Hills' spacious, breezy, suburban neighborhood. With ample yard space available, there's room for plenty of outdoor entertaining. But if all of that space isn't enough, there's literally a small park and a fishing pond right next door.",
+   "size": "30x20",
+   "lot_description_id": 327273,
+   "name_record": 327276,
+   "pack": "EP13"
+  },
+  "154140678": {
+   "name": "36 Bayani Place",
+   "description": "This modern addition to the neighborhood has a lot of curb appeal and plenty to love on the inside, too. Nested within the suburban, tree-filled neighborhood that was developed originally by Gilbert Gilberts, 36 Bayani Place has Dream home written all over it. The street name itself is an homage to Bayani Robles, whose statue is located within the adjacent park.",
+   "size": "30x20",
+   "lot_description_id": 327274,
+   "name_record": 327277,
+   "pack": "EP13"
+  },
+  "4137287685": {
+   "name": "7 Eucalyptus Lane",
+   "description": "Between the gorgeous bay views and the beautiful, tree-lined streets in this neighborhood, this house has a lot to offer a growing family looking for a more upscale feel to things. Enjoy spacious living inside, or take the fun outside in the large, well-appointed yard with plenty for any family member to do—but if you're looking for even more opportunities to get in touch with nature, a park with a small pond is nearby.",
+   "size": "50x40",
+   "lot_description_id": 327272,
+   "name_record": 327278,
+   "pack": "EP13"
+  },
+  "4150722571": {
+   "name": "Palomino Junction",
+   "description": "This cabin is the perfect respite for anyone looking to relax after a long day of horseback trail riding! It is central to all the vistas Galloping Gulch offers and gives plenty of space to train and care for Ranch Animals. Whether fishing, exploring, or going for a swim, this cabin will be warm and cozy when you turn in for the day.",
+   "size": "50x50",
+   "lot_description_id": 330010,
+   "name_record": 332741,
+   "pack": "EP14"
+  },
+  "1192034309": {
+   "name": "Canyon Crossing",
+   "description": "This scenic outlook is a perfect place to saddle up and hit the trails. This area is ideal for gazing across the canyon, admiring the natural rock bridge, and exploring all the mysterious wonders.",
+   "size": "20x20",
+   "lot_description_id": 330011,
+   "name_record": 332742,
+   "pack": "EP14"
+  },
+  "2564423972": {
+   "name": "Red Roan Field",
+   "description": "Surrounded by the beautiful community of Riders' Glen, this plot of land is prime real estate for anyone looking to start a ranch of their own. Whether for Horses, Mini Goats, or Mini Sheep (or all the above!), this is an ideal area to create precious memories with your Ranch Animal friends.",
+   "size": "64x64",
+   "lot_description_id": 329979,
+   "name_record": 332743,
+   "pack": "EP14"
+  },
+  "3019636744": {
+   "name": "Sweet Nectar Glade",
+   "description": "Tucked away on the side of the Glen, this picturesque pocket of land provides privacy and beautiful scenery while being close to the rest of the community. This also is a great spot for any Sim looking to take up Nectar Making.",
+   "size": "30x20",
+   "lot_description_id": 329980,
+   "name_record": 332744,
+   "pack": "EP14"
+  },
+  "3024289801": {
+   "name": "Biscuit's Bastion",
+   "description": "Trusty Steed Rock, or \"Ol' Biscuit,\" watches over this land as the ever-present, larger-than-life sentinel of the Glen.",
+   "size": "40x30",
+   "lot_description_id": 329981,
+   "name_record": 332745,
+   "pack": "EP14"
+  },
+  "3027042314": {
+   "name": "Grapevine Terrace",
+   "description": "This property is perfect for those looking to indulge in dynamic craft of Nectar Making. The inspiring views and breathtaking surroundings provide a luxurious environment for Nectar enthusiasts. Impress your neighborhoods with an elegant estate that will have the entire glen talking.",
+   "size": "30x20",
+   "lot_description_id": 329982,
+   "name_record": 332746,
+   "pack": "EP14"
+  },
+  "3031302155": {
+   "name": "Canter Cottage",
+   "description": "This ready-to-go home is perfect for multiple folks ready to dive into the world of Livestock and Horses. Surrounded by the friendly community of the Glen, this is an excellent starting point for any aspiring equestrian.",
+   "size": "30x30",
+   "lot_description_id": 330009,
+   "name_record": 332747,
+   "pack": "EP14"
+  },
+  "2316500997": {
+   "name": "The Cozy Corner House",
+   "description": "This quaint, cozy cottage on the outskirts of the main promenade is perfect for raising Mini Goats and Mini Sheep! It was one of the first homes built in New Appaloosa and has since been remodeled while keeping its rustic, homey feel. Complete with a small pen and Animal Feeder for your four-legged friends.",
+   "size": "20x20",
+   "lot_description_id": 329974,
+   "name_record": 332748,
+   "pack": "EP14"
+  },
+  "2324299782": {
+   "name": "Champion's Grove",
+   "description": "Throughout New Appaloosa's history, this lush grove has been home to many notable Equestrian Ultimate Champions. Its serene environment creates a beautiful relaxation spot for champ and Horse alike. The Sims and structures may have changed over the years, but this spot will always draw top-notch equestrians to call it home.",
+   "size": "30x20",
+   "lot_description_id": 329975,
+   "name_record": 332749,
+   "pack": "EP14"
+  },
+  "2327117831": {
+   "name": "The Rusty Horseshoe",
+   "description": "Yee haw! Come on down to the Rusty Horseshoe for a grand old time! No need to worry about being all fancy like those Nectar folks. The Rusty Horseshoe Dance Hall welcomes all types and promises good company, food, and boot-stomping Ranch Dancing. Come say howdy and take a load off after a day of hard work on the ranch!",
+   "size": "30x20",
+   "lot_description_id": 329976,
+   "name_record": 332750,
+   "pack": "EP14"
+  },
+  "2330198024": {
+   "name": "The Oak Barrel",
+   "description": "If you want to be among fellow Nectar afficionados, The Oak Barrel is the spot for you to test your palate with Nectar's delicate complexities. Classy with rustic elegance, it offers a flavor-filled respite from work.",
+   "size": "30x20",
+   "lot_description_id": 329977,
+   "name_record": 332751,
+   "pack": "EP14"
+  },
+  "2498166986": {
+   "name": "Duke's Hall",
+   "description": "Duke's Hall, named after the trusty steed of legendary Ultimate Horse Champion Don Gooseman, has everything riders and Horses need to rest and prepare for the next competition. It also includes a social space to chat with fellow Horse lovers. Make Don and Duke proud by winning that Ultimate Horse Championship!",
+   "size": "40x30",
+   "lot_description_id": 329978,
+   "name_record": 332752,
+   "pack": "EP14"
+  },
+  "3433037927": {
+   "name": "Big Sky Reach",
+   "description": "Do you want to enjoy the sights and sounds of the Gulch without being cramped in a tiny cabin? Big Sky Reach is the perfect destination for you. This luxurious, yet rustic, rental property is a hot commodity among the equestrians venturing in and out of Chestnut Ridge. Spend the day riding with your equine pal and mosey on back to a warm fire and cozy bed.",
+   "size": "20x15",
+   "lot_description_id": 336947,
+   "name_record": 336946,
+   "pack": "EP14"
+  },
+  "2221211661": {
+   "name": "Taka Soi 15",
+   "description": "A traditional framework built on a modern foundation. What a great start for any cohousing venture!",
+   "size": "20x20",
+   "lot_description_id": 367718,
+   "name_record": 367715,
+   "pack": "EP15"
+  },
+  "3503751180": {
+   "name": "Sungai Point",
+   "description": "Center to town yet still close to nature, a spot like this embraces the best of both worlds. With fountain ambiance and just a minute's walk to a screaming good time, this cohousing haven is a deal for a steal!",
+   "size": "30x20",
+   "lot_description_id": 367432,
+   "name_record": 367439,
+   "pack": "EP15"
+  },
+  "464846853": {
+   "name": "Tam Nang Sands",
+   "description": "Catch a glimpse of aquatic life floating by or soak up the sun! This inspirational site comes with beachfront access and exceptional views of Koh Sahpa's crystal clear waters.",
+   "size": "30x20",
+   "lot_description_id": 359477,
+   "name_record": 359479,
+   "pack": "EP15"
+  },
+  "645529613": {
+   "name": "Ro Kaya Rockside",
+   "description": "Apart from the dense streetways, this rocky headland delivers a picturesque view of Shih Sea. And for those who like a bit more bustle, it's only a hopscotch away from the beloved Night Market.",
+   "size": "40x30",
+   "lot_description_id": 367291,
+   "name_record": 367290,
+   "pack": "EP15"
+  },
+  "3577348115": {
+   "name": "Isda Riverfront",
+   "description": "A tranquil oasis just upstream from any and all commotion. This land rests quietly encased by nature's most relaxing elements complete with a worthwhile fishing spot.",
+   "size": "20x20",
+   "lot_description_id": 367435,
+   "name_record": 367436,
+   "pack": "EP15"
+  },
+  "3481665547": {
+   "name": "The Screaming Gecko",
+   "description": "An open-air local hotspot for social gatherings and steamy exchanges. Whether you're here for live music, the curated cuisine, or just taking a dip, it's sure to be a scream!",
+   "size": "20x20",
+   "lot_description_id": 367434,
+   "name_record": 367437,
+   "pack": "EP15"
+  },
+  "3549822993": {
+   "name": "Hothotok Shore",
+   "description": "Nestled up the shore, this cozy stilt house is settled just off the path into town. With luscious flora surrounding the grounds, anyone with a green thumb can feel at home.",
+   "size": "20x15",
+   "lot_description_id": 367433,
+   "name_record": 367438,
+   "pack": "EP15"
+  },
+  "2271215623": {
+   "name": "ZoSul Taman Botani",
+   "description": "Filled with luscious flora and fauna, this Garden is a welcome place to relax, restore, and reconnect with nature.",
+   "size": "30x30",
+   "lot_description_id": 367716,
+   "name_record": 367713,
+   "pack": "EP15"
+  },
+  "2238382087": {
+   "name": "Chee-wít Chee-waa Kanto",
+   "description": "Center to all that Morensong has to offer, this renovated shophouse is perfect for any lively lifestyle with an out-on-the-town attitude.",
+   "size": "20x15",
+   "lot_description_id": 367717,
+   "name_record": 367714,
+   "pack": "EP15"
+  },
+  "2050359393": {
+   "name": "Mystic Crossroads",
+   "description": "Recently deceased? Living but Macabre? This spacious lot is the perfect starter spot for any Sim who is seeking an eerie setting and a charming afterlife aesthetic.",
+   "size": "30x30",
+   "lot_description_id": 415484,
+   "name_record": 415495,
+   "pack": "EP17"
+  },
+  "1792802856": {
+   "name": "The Cozy Casket House",
+   "description": "Casket House lies nestled along the bog's edge. The air is thick but peaceful, interrupted only by the haunting whispers of Sims entering the afterlife. Many believe the house got its name due to the empty Casket inside, but in truth, it was first haunted by Catie Casket, a Ghost who finished her Unfinished Business and was Reborn in Willow Creek—or so they say. With its eerie charm, this lot promises potential for any brave mortal ready to make some Ghostly friends or any Ghost ready to start fresh in the life beyond.",
+   "size": "30x20",
+   "lot_description_id": 415485,
+   "name_record": 415496,
+   "pack": "EP17"
+  },
+  "3207856134": {
+   "name": "HeadlessQuarters",
+   "description": "It's Grim's office. He works here. While his personal crow should always be the employee of the month, Grim has decided he is the best at his job. He does own the place...and has been Reaping for centuries. Now Grim has opened up his practice to new Grimterns, eager to climb their way up the noncorporeal ladder.",
+   "size": "20x20",
+   "lot_description_id": 415492,
+   "name_record": 415497,
+   "pack": "EP17"
+  },
+  "2142634071": {
+   "name": "Hay Hill Landing",
+   "description": "This empty plot of land, nestled amongst pastoral, rolling hills, is the perfect locale for Sims aspiring to live a simplistic, rural life. A family living here will find themselves just down the old dirt lane from their neighbors and always under the ever-watchful gaze of the Ancestor across the river.",
+   "size": "64x64",
+   "lot_description_id": 415491,
+   "name_record": 415498,
+   "pack": "EP17"
+  },
+  "3407872018": {
+   "name": "Old Ravenwood Estate",
+   "description": "Everyone in Ravenwood knows about old Ravenwood Estate. It's one of the oldest buildings in the village, though it's been vacant for years. Locals whisper about its regal but oddly overbearing presence, the once fastidiously-tended garden turned wild, and the lovely abandoned greenhouse on the estate's grounds. Rumor has it this was once the summer home of a powerful Spellcaster and Tarot reader long ago. If a Sim comes along who can get past the flickering lights, foreboding sounds, and other inexplicable happenings inside, they'll have quite the fixer-upper...",
+   "size": "50x50",
+   "lot_description_id": 415487,
+   "name_record": 415499,
+   "pack": "EP17"
+  },
+  "3630170219": {
+   "name": "Eternal Hollow",
+   "description": "Eternal Hollow is Ravenwood's primary Cemetery. The main building is an intimate locale to say goodbye to the recently passed, and with plenty of graves and crypts still open, it'll continue to be a popular location for burials for years to come. Locals to Ravenwood know Eternal Hollow's pond is also one of the better places to find a Death Frog or the rare Bonefish. Whether a Sim is spending their forever here or just visiting, they will certainly feel at home in Eternal Hollow.",
+   "size": "64x64",
+   "lot_description_id": 415490,
+   "name_record": 415500,
+   "pack": "EP17"
+  },
+  "3165585413": {
+   "name": "Specter Family Manor",
+   "description": "For decades, this home has housed the Specter family, but now its history is closely tied to Olive Specter, a widow many times over. This house, sits almost like a crow on its perch watching the Specter cemetery below and waiting for yet another skeleton to join the closet. (Or in this house's case, maybe the basement...)",
+   "size": "30x20",
+   "lot_description_id": 415489,
+   "name_record": 415501,
+   "pack": "EP17"
+  },
+  "3175284742": {
+   "name": "Crow's Perch",
+   "description": "Nestled at the highest vantage in the village, this historic building is the perfect home for any family hoping to get the full Ravenwood experience. Head down to the village square to enjoy any of the three local festivals, explore the abandoned houses, or stop by the haunted playground and introduce the kids to Freddy, everyone's favorite specter.",
+   "size": "30x30",
+   "lot_description_id": 415488,
+   "name_record": 415502,
+   "pack": "EP17"
+  },
+  "2219311191": {
+   "name": "Moppy Manor",
+   "description": "Another Ravenwood historical building that boasts a fascinating past. This home was originally built for Moppy. Yes, the goat. It's now vacant and the perfect home for any Sim moving to the region. There's lots to do and plenty of goat-laden architecture to ponder. Just don't be too unsettled if the Moppy statue's eyes glow at night...or if lights start flickering in the abandoned houses next door. It's all part of the aesthetic.",
+   "size": "30x20",
+   "lot_description_id": 415486,
+   "name_record": 415503,
+   "pack": "EP17"
+  },
+  "2366570552": {
+   "name": "Club Eternity",
+   "description": "Club Eternity takes the saying \"dance like no one is watching\" both figuratively and...literally. If anyone knows how to party, it's the deceased. With a breathtaking, dark gothic aesthetic, this club's more Macabre patrons thrive and even Skeptics are convinced that Ghosts still know how to live.",
+   "size": "30x30",
+   "lot_description_id": 416875,
+   "name_record": 416873,
+   "pack": "EP17"
+  },
+  "2178482227": {
+   "name": "Mourning Mist Manor",
+   "description": "This green-thumb-friendly manor is conveniently located in central Mourningvale. One of the standout features of this home is the attached greenhouse, which has been converted into a breakfast nook that looks out over the central plaza. This space is perfect home for any Sims interested in gardening...and the afterlife living.",
+   "size": "20x20",
+   "lot_description_id": 416876,
+   "name_record": 416874,
+   "pack": "EP17"
+  },
+  "2463432763": {
+   "name": "The Final Draught",
+   "description": "The Final Draught is a cozy establishment, welcoming all beings. The Draught's regulars come for the dimmed lighting, comfortable seating, and gentle tunes. However, the upstairs is often host to private events—most commonly, events for those saying goodbye to their loved ones. This is Ravenwood, after all!",
+   "size": "30x30",
+   "lot_description_id": 416880,
+   "name_record": 416877,
+   "pack": "EP17"
+  },
+  "2523725892": {
+   "name": "Teardrop Cottage",
+   "description": "This large family cottage is perfectly situated on the river's shores, under the watchful gaze of the Ancestor. It's only a hop, skip, and a jump away from the nightly Moon Revelry festival as well! If that doesn't sell it, the wrap-around porch is the perfect reminder that sometimes it's good to slow down and enjoy the small things in life.",
+   "size": "30x30",
+   "lot_description_id": 416881,
+   "name_record": 416878,
+   "pack": "EP17"
+  },
+  "2512977983": {
+   "name": "The Marigold Chateau",
+   "description": "This rustic chateau has existed in its rolling countryside setting for over a century now. When the Aethers moved in it was renovated, and it's clear someone really liked the color pink. In a region that so often celebrates the Macabre, the wildflower gardens outside provide a cheery place to celebrate life in its many forms.",
+   "size": "50x50",
+   "lot_description_id": 416882,
+   "name_record": 416879,
+   "pack": "EP17"
+  },
+  "581238932": {
+   "name": "Spilled Neon",
+   "description": "With this lot, you can reach for the stars. This beautiful industrial-conversion is perfect for anyone looking for ample space to pursue their hobbies and dreams.",
+   "size": "20x20",
+   "lot_description_id": 417442,
+   "name_record": 424922,
+   "pack": "EP18"
+  },
+  "3993632859": {
+   "name": "New Harbor Park",
+   "description": "There once was a city plan for this green plot to house a new business. Nobody knows exactly what it was going to be—the project fell through, leaving not much more than an empty shell of a building. Yet the locals still hope that an ambitious entrepreneur might one day turn it into something.",
+   "size": "50x40",
+   "lot_description_id": 417443,
+   "name_record": 424923,
+   "pack": "EP18"
+  },
+  "3995074652": {
+   "name": "The Old Foundry",
+   "description": "Back in the day this brick building functioned as a small foundry used to produce metal castings. It's now been repurposed as a contemporary living space, with an added top floor for a scenic view of the central areas of Iverstad.",
+   "size": "20x15",
+   "lot_description_id": 417444,
+   "name_record": 424924,
+   "pack": "EP18"
+  },
+  "3996254301": {
+   "name": "Inked Inlet",
+   "description": "Nestled right in front of the Iverstad markets, this is a great spot for any Sim looking to expand their social circle and business network. Just be careful to not fall in the canals if you're riding a bike.",
+   "size": "20x20",
+   "lot_description_id": 417445,
+   "name_record": 424925,
+   "pack": "EP18"
+  },
+  "3998875742": {
+   "name": "Lighthouse Lookout",
+   "description": "This lot is perfect for any Sim looking for a stunning garden and a beautiful seaside view...and also doesn't mind waking up to the bright lamp of Iverstad's lighthouse.",
+   "size": "50x40",
+   "lot_description_id": 417446,
+   "name_record": 424926,
+   "pack": "EP18"
+  },
+  "3987996761": {
+   "name": "Terra-Potta",
+   "description": "Surrounded by green open space, this is the ideal island of tranquility to take a break from the brutality of the city's industrial buildings.",
+   "size": "30x20",
+   "lot_description_id": 417447,
+   "name_record": 424927,
+   "pack": "EP18"
+  },
+  "431620195": {
+   "name": "Old Torget House",
+   "description": "After years of disuse this old classic building has been recently refurbished and is finally on the market. Facing one of the oldest squares in Gammelvik, it's a dreamy little house for anyone wishing to immerse themselves in the culture of this historic neighborhood.",
+   "size": "20x15",
+   "lot_description_id": 417434,
+   "name_record": 424929,
+   "pack": "EP18"
+  },
+  "430702690": {
+   "name": "Koffieboon",
+   "description": "Right in the heart of Gammelvik, this classic four-bedroom building lives at the center of this city's community and history.",
+   "size": "20x20",
+   "lot_description_id": 417433,
+   "name_record": 424930,
+   "pack": "EP18"
+  },
+  "434045029": {
+   "name": "Konst Modern",
+   "description": "Following popular community vote, the old museum of Gammelvik was renovated into a state of the art, contemporary facility—with a new modern wing equipped with workstations for the community to learn pottery, painting and woodworking. Hereby presenting, the new Konst Modern.",
+   "size": "50x40",
+   "lot_description_id": 417435,
+   "name_record": 424931,
+   "pack": "EP18"
+  },
+  "434896998": {
+   "name": "The Rouge Note",
+   "description": "The Rouge Note is the go-to place for all the cool cats in Nordhaven to enjoy themselves after a long day of hard work. Savour the smooth music, let the sultry vibes in, dream of what the night could bring.",
+   "size": "20x20",
+   "lot_description_id": 417436,
+   "name_record": 424932,
+   "pack": "EP18"
+  },
+  "437583976": {
+   "name": "Fisher's Horizon",
+   "description": "Once an old market for Nordhaven's fishermen, this lot has been repurposed for new developments. Sims who love the morning sea breeze and watching the boats go by will find themselves at home here.",
+   "size": "30x20",
+   "lot_description_id": 417437,
+   "name_record": 424933,
+   "pack": "EP18"
+  },
+  "438632553": {
+   "name": "Comfortably Canalside",
+   "description": "In the heart of the old residential quarter and well positioned for a good view of the ancient town walls, this lot is perfect for any history buff. Build a new home or business on this canalside lot and add your own chapter to this city's long-running history.",
+   "size": "20x20",
+   "lot_description_id": 417438,
+   "name_record": 424934,
+   "pack": "EP18"
+  },
+  "2212429938": {
+   "name": "Miner's Manse",
+   "description": "Settle down in this cozy home with lovely valley views.",
+   "size": "30x20",
+   "lot_description_id": 474276,
+   "name_record": 474331,
+   "pack": "EP20"
+  },
+  "2234187891": {
+   "name": "Wanderwood Wonder",
+   "description": "Situated near the enchanting Butterfly Ranger Station, this charming cottage exudes rustic elegance, surrounded by vibrant gardens and peaceful woodlands, providing an idyllic retreat for those seeking harmony with nature.",
+   "size": "30x20",
+   "lot_description_id": 474275,
+   "name_record": 474332,
+   "pack": "EP20"
+  },
+  "2193227887": {
+   "name": "Fletcher's Cottage",
+   "description": "This cozy starter home offers modern amenities and easy access to the bustling town square, ideal for those seeking a convenient coastal lifestyle.",
+   "size": "30x20",
+   "lot_description_id": 474274,
+   "name_record": 474333,
+   "pack": "EP20"
+  },
+  "1889796325": {
+   "name": "Fearful Fish Lounge",
+   "description": "Sims love it, fish fear it—this lounge is an angler's delight, much to the dismay of any finned creature at Gibbi Point. Stop by between catches!",
+   "size": "20x20",
+   "lot_description_id": 479406,
+   "name_record": 479416,
+   "pack": "EP20"
+  },
+  "1874133136": {
+   "name": "Crystal Cottage",
+   "description": "This modern house in the historic mining town features sleek architectural design and a refreshing pool, seamlessly blending contemporary living with the area's rich heritage.",
+   "size": "30x20",
+   "lot_description_id": 479409,
+   "name_record": 479417,
+   "pack": "EP20"
+  },
+  "4164288581": {
+   "name": "Prospector's Paradise",
+   "description": "In a town with a storied mining past, this empty lot is located near Scoop's Gold, providing convenient access to crystal panning and a chance to be part of a community steeped in history.",
+   "size": "40x30",
+   "lot_description_id": 479408,
+   "name_record": 479418,
+   "pack": "EP20"
+  },
+  "2090008698": {
+   "name": "Love Highland",
+   "description": "Love is in the air at this coveted Getaway lot. Meet someone new while kayaking nearby or while taking a dip in the hot tub. Opportunities for romance—and drama—abound!",
+   "size": "50x50",
+   "lot_description_id": 479407,
+   "name_record": 479419,
+   "pack": "EP20"
+  },
+  "2892824584": {
+   "name": "Revive and Thrive Retreat",
+   "description": "Overlooking the picturesque bay, Revive and Thrive Retreat provides a serene escape to recharge and rejuvenate, featuring state-of-the-art fitness facilities and tranquil views for a truly refreshing experience.",
+   "size": "64x64",
+   "lot_description_id": 479410,
+   "name_record": 479420,
+   "pack": "EP20"
+  },
+  "1799815177": {
+   "name": "Jellyfish Jubilee",
+   "description": "Situated in the heart of the bustling seaside neighborhood, this rental home offers vacationers modern comfort and easy access to local attractions and amenities, perfect for an enjoyable and convenient getaway.",
+   "size": "40x30",
+   "lot_description_id": 479412,
+   "name_record": 479421,
+   "pack": "EP20"
+  },
+  "1804861450": {
+   "name": "Seabreeze Scenic",
+   "description": "This lot is located close to the center of Jellyfish Junction, but not too-too close to all the action.",
+   "size": "40x30",
+   "lot_description_id": 479411,
+   "name_record": 479422,
+   "pack": "EP20"
+  },
+  "3912105993": {
+   "name": "Plumbird Park",
+   "description": "Swing your cares away while taking in a bird's-eye view of Hothead Rock Geyser!",
+   "size": "40x40",
+   "lot_description_id": 479413,
+   "name_record": 479423,
+   "pack": "EP20"
+  },
+  "3980722193": {
+   "name": "Hothead Rock Hideaway",
+   "description": "This expansive lot offers breathtaking views of the historic Old Firewatch Tower. Surrounded by lush forests, it's the perfect place for nature enthusiasts.",
+   "size": "64x64",
+   "lot_description_id": 479414,
+   "name_record": 479424,
+   "pack": "EP20"
+  },
+  "1950482460": {
+   "name": "Camp Gibbi Gibbi",
+   "description": "Camp Gibbi Gibbi offers stunning lake views and a sturdy dock perfect for jumping into refreshing waters, creating unforgettable adventures in the heart of nature.",
+   "size": "50x50",
+   "lot_description_id": 479415,
+   "name_record": 479425,
+   "pack": "EP20"
+  },
+  "4127850633": {
+   "name": "17 Bright Cliff",
+   "description": "This refined yet cozy apartment gives a wonderful first taste of the opulent lifestyle of Ondarion. And thanks to the price freeze enacted by the Darongs in Dambele, it's not even impossible to afford!",
+   "size": "30x20",
+   "lot_description_id": 492177,
+   "name_record": 492183,
+   "pack": "EP21"
+  },
+  "2361852049": {
+   "name": "12 Lakeview Apartments",
+   "description": "An elegant and tasteful place, the perfect flat for the single nobleman who loves to flex his wealth with any date he brings over.",
+   "size": "40x30",
+   "lot_description_id": 494899,
+   "name_record": 494904,
+   "pack": "EP21"
+  },
+  "3077963882": {
+   "name": "Dambele Palace",
+   "description": "The palace was built to be more than just a monument to the majesty of Dambele. The Darongs wished for it to be open, easy to access for the whole community. A place designed not to overshadow its surroundings, but to enrich them.",
+   "size": "50x50",
+   "lot_description_id": 492176,
+   "name_record": 492182,
+   "pack": "EP21"
+  },
+  "3264217194": {
+   "name": "Sankofa Residence",
+   "description": "This old but luxurious mansion belonged to a nobleman who had it redecorated countless times. Before selling it, he decided to look back upon its roots and had it fully refurbished to a modernised version of its original look. The mansion is now looking at the future, towards its next occupier.",
+   "size": "30x20",
+   "lot_description_id": 492178,
+   "name_record": 492184,
+   "pack": "EP21"
+  },
+  "3292594283": {
+   "name": "Zanbira Market",
+   "description": "The true beating heart of Dambele is where its community comes together. It began as a market for locals to trade handcrafted goods. Over time it became a place to mingle, cook for each other, play a song, read out a book. A place where people of all ages meet, share and learn.",
+   "size": "30x20",
+   "lot_description_id": 492179,
+   "name_record": 492185,
+   "pack": "EP21"
+  },
+  "3176005864": {
+   "name": "Hardcover",
+   "description": "This library is one of the most frequented public spots in Dambele. Likely due to hosting the hottest underground club in the neighborhood (when the night falls). This place has everything, including the best answer on how to unite old and new ways to pass the time.",
+   "size": "20x20",
+   "lot_description_id": 492180,
+   "name_record": 492186,
+   "pack": "EP21"
+  },
+  "4110549098": {
+   "name": "Verdemar Palace",
+   "description": "The original residence of the first princess by the name of Cordelia, and historic seat of the Thebe Dynasty. People in Verdemar look to this palace up the cliff as the most glorious of the neighborhood's landmarks. Naturally, they come up with strange rumors about it. Many wonder if perhaps old pirate treasures are still hidden somewhere inside.",
+   "size": "50x50",
+   "lot_description_id": 494884,
+   "name_record": 494890,
+   "pack": "EP21"
+  },
+  "4136960106": {
+   "name": "Abrantes Estate",
+   "description": "The Abrantes estate was built in a perfect spot for staying at the center of Verdemar's affairs. How fitting that it also comes with a direct view of the Thebe's palace up the cliff...where perhaps the Abrantes always wished they could actually be.",
+   "size": "30x30",
+   "lot_description_id": 494885,
+   "name_record": 494891,
+   "pack": "EP21"
+  },
+  "4138270827": {
+   "name": "Casa do Corsário",
+   "description": "In a neighborhood like Verdemar, known for its extravagant and asymmetrical architecture, this cozy house somehow manages to stand out for its irregularity. Locals would tell you that's par for the course with any building that used to be owned by pirates.",
+   "size": "20x15",
+   "lot_description_id": 494886,
+   "name_record": 494892,
+   "pack": "EP21"
+  },
+  "4139778156": {
+   "name": "The Lair in the Open-Air",
+   "description": "A recently cleared plot of land sitting in a cozy spot surrounded by nature. Yet to be developed, it's available to anyone eager to build their own place in Verdemar.",
+   "size": "30x20",
+   "lot_description_id": 494887,
+   "name_record": 494893,
+   "pack": "EP21"
+  },
+  "4140892269": {
+   "name": "Fisherman's Hut",
+   "description": "This old fishing hut has been converted into a cozy, affordable little home! What did you think, that you could just stroll into Ondarion and afford to buy an actual house? Try again in the next life and hope you're born to rich parents!",
+   "size": "20x20",
+   "lot_description_id": 494888,
+   "name_record": 494894,
+   "pack": "EP21"
+  },
+  "4142006382": {
+   "name": "Ye Olde Voyager",
+   "description": "Come on down to the Voyager! Everyone knows that all fun things in Verdemar happen down here—didn't you know it first started as a pirate hangout? Times might have changed but the Voyager still owns up to the promise that you'll find a nice drink...and a fair share of rogue adventurers and mysterious characters!",
+   "size": "30x20",
+   "lot_description_id": 494889,
+   "name_record": 494895,
+   "pack": "EP21"
+  },
+  "92995691": {
+   "name": "La Vivace",
+   "description": "Inside the halls of La Vivace, Nobility revels. Luxury and elegance greet each other, with a romantic waltz. Grand Balls and pirouettes, until the small hours. Young debutantes, fretting to enter high society.",
+   "size": "40x30",
+   "lot_description_id": 494896,
+   "name_record": 494901,
+   "pack": "EP21"
+  },
+  "105513068": {
+   "name": "Giardino Del Grandioso",
+   "description": "This verdant tract sits in close proximity to Bellacorde's enchanting lake. A luxurious spot in a location of extraordinary prestige, ready to be purchased by someone with sufficient fine taste (and wallet size) to make something grand out of it.",
+   "size": "64x64",
+   "lot_description_id": 494897,
+   "name_record": 494902,
+   "pack": "EP21"
+  },
+  "1380384886": {
+   "name": "Renaissance Road",
+   "description": "This gracious family home would be considered quite sumptuous in most other places. In Bellacorde, surrounded by opulence and ostentation at every corner, it almost looks demure.",
+   "size": "20x15",
+   "lot_description_id": 494898,
+   "name_record": 494903,
+   "pack": "EP21"
+  },
+  "4147249284": {
+   "name": "Bellacorde Palace",
+   "description": "The Bellacorde Palace. A monument to beauty, class, luxury, sophistication, exclusivity, poshness, tradition, elitism, abundance, grace, elegance, culture, inheritance, style, magnificence, nobility, art. But most importantly: opulence—these people own everything.",
+   "size": "50x50",
+   "lot_description_id": 494900,
+   "name_record": 494905,
+   "pack": "EP21"
+  },
+  "3073376260": {
+   "name": "Lakeside Retreat",
+   "description": "",
+   "size": "40x30",
+   "lot_description_id": 66378,
+   "name_record": 66382,
+   "pack": "GP01"
+  },
+  "1554644996": {
+   "name": "Granite Falls Forest",
+   "description": "",
+   "size": "50x50",
+   "lot_description_id": 66379,
+   "name_record": 66383,
+   "pack": "GP01"
+  },
+  "1958215685": {
+   "name": "Hermit's House",
+   "description": "",
+   "size": "30x20",
+   "lot_description_id": 66380,
+   "name_record": 66384,
+   "pack": "GP01"
+  },
+  "3075014661": {
+   "name": "Forest Hideaway",
+   "description": "",
+   "size": "40x30",
+   "lot_description_id": 66532,
+   "name_record": 66540,
+   "pack": "GP01"
+  },
+  "1942880262": {
+   "name": "Riverside Retreat",
+   "description": "",
+   "size": "30x20",
+   "lot_description_id": 66533,
+   "name_record": 66541,
+   "pack": "GP01"
+  },
+  "1885929476": {
+   "name": "Green Getaway",
+   "description": "",
+   "size": "30x20",
+   "lot_description_id": 66534,
+   "name_record": 66542,
+   "pack": "GP01"
+  },
+  "2359099399": {
+   "name": "Campground",
+   "description": "",
+   "size": "30x20",
+   "lot_description_id": 66535,
+   "name_record": 66543,
+   "pack": "GP01"
+  },
+  "1439301663": {
+   "name": "Omiscan Temple",
+   "description": "",
+   "size": "50x50",
+   "lot_description_id": 179746,
+   "name_record": 181307,
+   "pack": "GP06"
+  },
+  "630390811": {
+   "name": "Alam Museum of Archaeology",
+   "description": "",
+   "size": "64x64",
+   "lot_description_id": 186844,
+   "name_record": 186845,
+   "pack": "GP06"
+  },
+  "419233797": {
+   "name": "Selvadorada Villa",
+   "description": "",
+   "size": "30x20",
+   "lot_description_id": 176652,
+   "name_record": 176658,
+   "pack": "GP06"
+  },
+  "3237085187": {
+   "name": "Belomisia Field Station",
+   "description": "",
+   "size": "30x20",
+   "lot_description_id": 179743,
+   "name_record": 179747,
+   "pack": "GP06"
+  },
+  "554500140": {
+   "name": "Jungle Bungalow",
+   "description": "",
+   "size": "30x30",
+   "lot_description_id": 179744,
+   "name_record": 179748,
+   "pack": "GP06"
+  },
+  "3238723589": {
+   "name": "Omiscan Royal Baths",
+   "description": "",
+   "size": "40x30",
+   "lot_description_id": 179745,
+   "name_record": 179749,
+   "pack": "GP06"
+  },
+  "420085766": {
+   "name": "Hillview Hideaway",
+   "description": "",
+   "size": "20x15",
+   "lot_description_id": 176651,
+   "name_record": 181332,
+   "pack": "GP06"
+  },
+  "415105027": {
+   "name": "Cantina “El Árbol del Jaguar”",
+   "description": "",
+   "size": "40x30",
+   "lot_description_id": 176650,
+   "name_record": 181333,
+   "pack": "GP06"
+  },
+  "615252035": {
+   "name": "Belomisia Trailhead",
+   "description": "",
+   "size": "40x20",
+   "lot_description_id": 182351,
+   "name_record": 182338,
+   "pack": "GP06"
+  },
+  "2307784707": {
+   "name": "The ██████ Lab",
+   "description": "The residents of StrangerVille say that this mysterious lab holds some deep dark secrets. Though there are many rumours, no one has ever set foot in the Secret Lab since the explosion. The Military seems to be keeping a close watch to ensure nothing goes in or out. Although security is tight around the lab, the locals say there is a small crack in the back of the fence that someone might be able to slip through undetected.",
+   "size": "64x64",
+   "lot_description_id": 208771,
+   "name_record": 208786,
+   "pack": "GP07"
+  },
+  "3473080362": {
+   "name": "Riverside Grove",
+   "description": "Located on a spacious corner lot in the StrangerVille Plaza The Riverside Grove is a quaint home for a small family.",
+   "size": "30x20",
+   "lot_description_id": 208772,
+   "name_record": 208787,
+   "pack": "GP07"
+  },
+  "523042887": {
+   "name": "Old Penelope",
+   "description": "Old Penelope is the tried and true cargo plane of George Cahill. She has put in many long years shuttling goods back and forth across the world. Unfortunately a freak storm while flying over StrangerVille has put her out of commission. Hopefully one day George will muster up enough energy to put the old horse back together.",
+   "size": "50x40",
+   "lot_description_id": 208777,
+   "name_record": 208788,
+   "pack": "GP07"
+  },
+  "1997406236": {
+   "name": "Carpophagous Corner",
+   "description": "Nestled in the the heart of the StrangerVille Plaza, this quaint home is perfect for anyone new in town. Right across from the StrangerVille Library and the hottest bar in town Carpophagous Corner will put you right next to all the best attractions StrangerVille has to offer.",
+   "size": "30x20",
+   "lot_description_id": 208778,
+   "name_record": 208789,
+   "pack": "GP07"
+  },
+  "2023096350": {
+   "name": "8 Bells",
+   "description": "8 Bells is the hottest bar in StrangerVille. Though they have little competition, the locals swear by the drinks. Located just near the StrangerVille National Base, you can always find Military Personnel winding down after a hard days work. The staff is friendly and are always looking to tell stories of StrangerVille.",
+   "size": "20x20",
+   "lot_description_id": 208779,
+   "name_record": 208791,
+   "pack": "GP07"
+  },
+  "138674231": {
+   "name": "StrangerVille Information Center",
+   "description": "The StrangerVille Information Center is a great place to hang out and study. We have a massive StrangerVille Archive where anyone can browse till their heart is content. The archives contain information about all the weird and unusual phenomena that has happened in our lovely little town. You can always find local Scientists here trying to brush up on research.",
+   "size": "20x20",
+   "lot_description_id": 208780,
+   "name_record": 208792,
+   "pack": "GP07"
+  },
+  "2956984352": {
+   "name": "Creek Corner Cove",
+   "description": "Nestled slightly outside of town, and overlooking the StrangerVille creek. This quaint cliff side plot is bound to make the perfect foundation for any home.",
+   "size": "30x20",
+   "lot_description_id": 208824,
+   "name_record": 208829,
+   "pack": "GP07"
+  },
+  "2970615842": {
+   "name": "Dream Weavers Way",
+   "description": "Dream Weavers Way is tucked high atop a plateau where you can hear the babbling brook and embrace your inner creative self. Perfect for any starving artist that is just looking to get away from it all.",
+   "size": "30x20",
+   "lot_description_id": 208825,
+   "name_record": 208830,
+   "pack": "GP07"
+  },
+  "2962489377": {
+   "name": "Plateau Place",
+   "description": "StrangerVille is known for its plateaus and unique rock formations. There is no better place like Plateau Place to take all of that in.",
+   "size": "40x30",
+   "lot_description_id": 208826,
+   "name_record": 208831,
+   "pack": "GP07"
+  },
+  "3150250019": {
+   "name": "Cliff Side Crest",
+   "description": "Providing the best views overlooking StrangerVille, Cliff Side Crest is the perfect place to build your dream home. Just ignore the strange lights coming from that crater.",
+   "size": "30x20",
+   "lot_description_id": 208827,
+   "name_record": 208832,
+   "pack": "GP07"
+  },
+  "3158048804": {
+   "name": "StrangerVille Overlook",
+   "description": "With the best views of the StrangerVille Plaza the StrangerVille Overlook is the perfect place to keep a watchful eye on the tiny town of StrangerVille.",
+   "size": "40x30",
+   "lot_description_id": 208828,
+   "name_record": 208833,
+   "pack": "GP07"
+  },
+  "3149529122": {
+   "name": "Slip 42",
+   "description": "Slip 42 used to be home to a local Conspiracy Theorist. One day they just decided to leave, no warning or notice, they were just gone. Upon inspection we found a strange note saying something about finding the Answer to the Ultimate Question of Life, The Universe, and Everything. The tenant even left all of their belongings behind. Those Conspiracy Theorists are definitely a strange bunch, but lucky for you Slip 42 is now vacant.",
+   "size": "20x15",
+   "lot_description_id": 210873,
+   "name_record": 210874,
+   "pack": "GP07"
+  },
+  "3019112452": {
+   "name": "The Magic Realm",
+   "description": "The Magic Realm is the source of all magic. Unfortunately, it is slowly being pulled apart by the swirling vortex surrounding it. The only thing that is keeping it together is the balance between the three houses of magic. Each house has a Sage that is the master in their respective style. If any imbalance is ever struct between these Sages the entire realm could collapse.",
+   "size": "50x40",
+   "lot_description_id": 222661,
+   "name_record": 222664,
+   "pack": "GP08"
+  },
+  "1035272224": {
+   "name": "Brooks Bridge Borough",
+   "description": "Situated in the center of Glimmerbrook this simple cottage is near the best fishing spots in all of Glimmerbrook. Not to mention the gorgeous Simstagram photos that can be taken from the nearby bridge.",
+   "size": "30x20",
+   "lot_description_id": 222662,
+   "name_record": 222665,
+   "pack": "GP08"
+  },
+  "3374055458": {
+   "name": "Elixirs and Brews",
+   "description": "A local establishment that's been in Glimmerbrook as far back as anyone can remember, and though it has had some upgrades through the years, it's still full of nostalgic charm.",
+   "size": "30x20",
+   "lot_description_id": 222798,
+   "name_record": 222797,
+   "pack": "GP08"
+  },
+  "3811442693": {
+   "name": "Rock Ridge Canyon",
+   "description": "If peace and quiet appeals to you, the Rock Ridge Canyon is perfect. Nestled up against Glimmerbrook's towering boulders, this quaint location is sure to give any Spellcaster the silence they need to practice and study to hone their magical prowess.",
+   "size": "40x30",
+   "lot_description_id": 224728,
+   "name_record": 224724,
+   "pack": "GP08"
+  },
+  "1024655366": {
+   "name": "Creek Side Corner",
+   "description": "With breathtaking views of Glimmerbrook Falls, this location is perfect for any cozy home.",
+   "size": "30x20",
+   "lot_description_id": 224729,
+   "name_record": 224725,
+   "pack": "GP08"
+  },
+  "1040318472": {
+   "name": "Glimmerbrook Watch",
+   "description": "An ancient plot nestled deep within Glimmerbrook. Some say the previous resident was tasked with guarding an ancient relic located atop the Glimmerbrook Waterfall. Legend has it the owner disappeared one night never to be seen again. Maybe they vanished into some other dimension?",
+   "size": "30x20",
+   "lot_description_id": 224730,
+   "name_record": 224727,
+   "pack": "GP08"
+  },
+  "3073835011": {
+   "name": "Optimist's Outlook",
+   "description": "",
+   "size": "40x30",
+   "lot_description_id": 93591,
+   "name_record": 93615,
+   "pack": "Base"
+  },
+  "3461873668": {
+   "name": "Hillside Highlands",
+   "description": "",
+   "size": "30x20",
+   "lot_description_id": 93599,
+   "name_record": 93616,
+   "pack": "Base"
+  },
+  "3469606917": {
+   "name": "Civic Cliffs",
+   "description": "",
+   "size": "30x20",
+   "lot_description_id": 93601,
+   "name_record": 93617,
+   "pack": "Base"
+  },
+  "3477340166": {
+   "name": "Cookout Lookout",
+   "description": "",
+   "size": "30x20",
+   "lot_description_id": 93602,
+   "name_record": 93618,
+   "pack": "Base"
+  },
+  "3482058759": {
+   "name": "Sandy Run",
+   "description": "",
+   "size": "40x20",
+   "lot_description_id": 93603,
+   "name_record": 93619,
+   "pack": "Base"
+  },
+  "1636761611": {
+   "name": "Rippling Flats",
+   "description": "",
+   "size": "40x30",
+   "lot_description_id": 93604,
+   "name_record": 93620,
+   "pack": "Base"
+  },
+  "1648099341": {
+   "name": "Twin Oracle Point",
+   "description": "",
+   "size": "50x40",
+   "lot_description_id": 93605,
+   "name_record": 93621,
+   "pack": "Base"
+  },
+  "1568800773": {
+   "name": "Tranquil Crescent",
+   "description": "",
+   "size": "30x30",
+   "lot_description_id": 93606,
+   "name_record": 93622,
+   "pack": "Base"
+  },
+  "1564934148": {
+   "name": "Avarice Acres",
+   "description": "",
+   "size": "40x30",
+   "lot_description_id": 93607,
+   "name_record": 93623,
+   "pack": "Base"
+  },
+  "2903179269": {
+   "name": "Asphalt Abodes",
+   "description": "",
+   "size": "30x20",
+   "lot_description_id": 93608,
+   "name_record": 93624,
+   "pack": "Base"
+  },
+  "3154640904": {
+   "name": "Comfy Cubby",
+   "description": "",
+   "size": "20x15",
+   "lot_description_id": 93609,
+   "name_record": 93625,
+   "pack": "Base"
+  },
+  "3137142788": {
+   "name": "Fern Park",
+   "description": "",
+   "size": "30x20",
+   "lot_description_id": 93610,
+   "name_record": 93626,
+   "pack": "Base"
+  },
+  "3149332487": {
+   "name": "Oak Alcove",
+   "description": "",
+   "size": "20x15",
+   "lot_description_id": 93611,
+   "name_record": 93627,
+   "pack": "Base"
+  },
+  "3142582277": {
+   "name": "Beech Byway",
+   "description": "",
+   "size": "30x20",
+   "lot_description_id": 93612,
+   "name_record": 93628,
+   "pack": "Base"
+  },
+  "3146711046": {
+   "name": "Midtown Meadows",
+   "description": "",
+   "size": "40x30",
+   "lot_description_id": 93613,
+   "name_record": 93629,
+   "pack": "Base"
+  },
+  "957612036": {
+   "name": "",
+   "description": "",
+   "size": "64x64",
+   "lot_description_id": 117187,
+   "name_record": 117295,
+   "pack": "Base"
+  },
+  "955383811": {
+   "name": "",
+   "description": "",
+   "size": "64x64",
+   "lot_description_id": 117186,
+   "name_record": 117304,
+   "pack": "Base"
+  },
+  "958726149": {
+   "name": "",
+   "description": "",
+   "size": "64x64",
+   "lot_description_id": 117188,
+   "name_record": 117305,
+   "pack": "Base"
+  },
+  "960167942": {
+   "name": "",
+   "description": "",
+   "size": "64x64",
+   "lot_description_id": 117189,
+   "name_record": 117306,
+   "pack": "Base"
+  },
+  "960888839": {
+   "name": "",
+   "description": "",
+   "size": "64x64",
+   "lot_description_id": 117190,
+   "name_record": 117307,
+   "pack": "Base"
+  },
+  "961675272": {
+   "name": "",
+   "description": "",
+   "size": "64x64",
+   "lot_description_id": 117191,
+   "name_record": 117308,
+   "pack": "Base"
+  },
+  "965738505": {
+   "name": "",
+   "description": "",
+   "size": "64x64",
+   "lot_description_id": 117192,
+   "name_record": 117309,
+   "pack": "Base"
+  },
+  "966131722": {
+   "name": "",
+   "description": "",
+   "size": "64x64",
+   "lot_description_id": 117193,
+   "name_record": 117311,
+   "pack": "Base"
+  },
+  "966656011": {
+   "name": "",
+   "description": "",
+   "size": "64x64",
+   "lot_description_id": 117194,
+   "name_record": 117312,
+   "pack": "Base"
+  },
+  "967114764": {
+   "name": "",
+   "description": "",
+   "size": "64x64",
+   "lot_description_id": 117195,
+   "name_record": 117314,
+   "pack": "Base"
+  },
+  "967442445": {
+   "name": "",
+   "description": "",
+   "size": "64x64",
+   "lot_description_id": 117196,
+   "name_record": 117315,
+   "pack": "Base"
+  },
+  "967770126": {
+   "name": "",
+   "description": "",
+   "size": "64x64",
+   "lot_description_id": 117197,
+   "name_record": 117316,
+   "pack": "Base"
+  },
+  "3088711712": {
+   "name": "Straud Mansion",
+   "description": "This mansion has been slowly built up over the town's history. Plenty of space and spare coffins.",
+   "size": "40x30",
+   "lot_description_id": 146198,
+   "name_record": 146331,
+   "pack": "GP04"
+  },
+  "1521745926": {
+   "name": "Wolfsbane Manor",
+   "description": "This Italianate Victorian manor is large enough to really stretch your wings. Its upscale decor will suit those with a taste for fine design.",
+   "size": "30x30",
+   "lot_description_id": 151344,
+   "name_record": 151348,
+   "pack": "GP04"
+  },
+  "1507786757": {
+   "name": "Widowshild Townhome",
+   "description": "This simple townhome maximizes space by building up. There is now plenty of room for a garden. Minor repairs needed.",
+   "size": "30x20",
+   "lot_description_id": 151345,
+   "name_record": 151349,
+   "pack": "GP04"
+  },
+  "3169845671": {
+   "name": "Garliclauter Place",
+   "description": "This Victorian is in the gothic revival style. Its previous tenants went a bit overboard with the garlic decoration for unknown reasons.",
+   "size": "30x20",
+   "lot_description_id": 151346,
+   "name_record": 151350,
+   "pack": "GP04"
+  },
+  "1452277763": {
+   "name": "Fledermaus Bend",
+   "description": "A perfect plot to call your final resting place. Don't build here if bats give you the creeps. Many make their home in a nearby cave.",
+   "size": "30x30",
+   "lot_description_id": 151347,
+   "name_record": 151351,
+   "pack": "GP04"
+  },
+  "2656632837": {
+   "name": "Black Spire Outpost",
+   "description": "",
+   "size": "30x30",
+   "lot_description_id": 239626,
+   "name_record": 239727,
+   "pack": "GP09"
+  },
+  "2980446211": {
+   "name": "First Order District",
+   "description": "",
+   "size": "30x20",
+   "lot_description_id": 241480,
+   "name_record": 241481,
+   "pack": "GP09"
+  },
+  "51838989": {
+   "name": "Resistance Encampment",
+   "description": "",
+   "size": "50x40",
+   "lot_description_id": 241482,
+   "name_record": 241483,
+   "pack": "GP09"
+  },
+  "3546939413": {
+   "name": "La Coppia Serena",
+   "description": "The golden crown of Tartosa's wedding industry. Sims travel from all around the world to partake of the area's many romance-oriented accommodations, and it all comes together here on the day of each Sim's wedding. Indoor or outdoor, this venue has hosted a multitude of dream weddings and will continue to do so for generations to come.",
+   "size": "50x40",
+   "lot_description_id": 293802,
+   "name_record": 293801,
+   "pack": "GP11"
+  },
+  "3490316297": {
+   "name": "The Old Wood Nectary",
+   "description": "The woods surrounding this home create a natural barrier of privacy and peace, the perfect place for a Sim seeking to benefit from the area's attractions yet retain sweet solitude. Years back, this building was the local nectary, but the establishment has since been refurbished into a home for the Markovic family.",
+   "size": "40x30",
+   "lot_description_id": 293804,
+   "name_record": 293803,
+   "pack": "GP11"
+  },
+  "3462266888": {
+   "name": "Rifugio dei Pirati",
+   "description": "At first glance, it's obvious this starter is a steal. Scenic views overlook Hideaway falls, the entirety of the Terra Amorosa estuary area, and the Lover's Tree. However, it's the hidden history that makes this spot so particularly notable to the locals. Shhh. It's a secret, though! A bit of sleuthing and you're bound to discover what makes this lot one of the best that Tartosa has to offer.",
+   "size": "30x20",
+   "lot_description_id": 293805,
+   "name_record": 293806,
+   "pack": "GP11"
+  },
+  "2680029281": {
+   "name": "Piccola Luce",
+   "description": "This adorable home hides off Porto Luminoso's shore on tiny Piccola Luce island. Its decor pulls from nature around it—the sea's cerulean waters and the coast's famous, apricot sunsets. There's no better home for a Sim seeking solitude in a love-laced land.",
+   "size": "20x20",
+   "lot_description_id": 294229,
+   "name_record": 294230,
+   "pack": "GP11"
+  },
+  "2664693854": {
+   "name": "Baia dell'amore",
+   "description": "Tucked snugly along Tartosa's sunset coastline, Baia dell'amore offers the best of the area: soft and sandy beaches to share with a lover, plus nighttime bioluminescent shores that are perfect for lighting up a romantic dip... and only a short stroll from Porto Luminoso.",
+   "size": "40x20",
+   "lot_description_id": 294228,
+   "name_record": 294231,
+   "pack": "GP11"
+  },
+  "2657747037": {
+   "name": "Celebrazioni d'Amore",
+   "description": "The La Coppia Serena may be the local go-to for wedding ceremonies, but every Sim knows Celebrazioni d'Amore is the best place to host a true party. Afterwards, head into the gardens for a stroll or back behind the lounge for a romantic view of the sea.",
+   "size": "50x40",
+   "lot_description_id": 294227,
+   "name_record": 294232,
+   "pack": "GP11"
+  },
+  "2670919776": {
+   "name": "Thebe Estate",
+   "description": "Thebe Estate is one of Porto Luminoso's historical buildings—its origins are draped in rumor and are often gossiped about by curious locals. The Thebe family, now the Laurents, have lived here for generations as noted by their fine collection of family heirlooms.",
+   "size": "50x50",
+   "lot_description_id": 294226,
+   "name_record": 294233,
+   "pack": "GP11"
+  },
+  "3493855235": {
+   "name": "Villa Vigna",
+   "description": "Visit Tartosa's Villa Vigna and enjoy Porto Luminoso's breathtaking cliffside views. Stay in and enjoy all the amenities this rental has to offer or take a walk down through the vineyards and visit the village for a small shopping trip. Just don't forget to try the local cuisine!",
+   "size": "30x20",
+   "lot_description_id": 287631,
+   "name_record": 287633,
+   "pack": "GP11"
+  },
+  "3528130571": {
+   "name": "Via Romanza",
+   "description": "Situated just off the Terra Amorosa estuary, close to Hideaway Falls, and overlooked by the Lover's Tree, Via Romanza is a prime piece of real estate. Its location in the heart of Tartosa's love industry begs the question: what will this plot of land become? The wedding industry's next big venue? A rental for the many coupled lovebirds who return on honeymoon? Or simply a home for those who find themselves moved by the land's romantic ambiance?",
+   "size": "30x30",
+   "lot_description_id": 287644,
+   "name_record": 287645,
+   "pack": "GP11"
+  },
+  "4142202885": {
+   "name": "Grimtooth Bar & Bunker",
+   "description": "In a town split by ideals, the newly established Grimtooth Bar is Celene's vision for the future - a friendly, neutral locale where all Sims - Werewolf or not - can gather and mingle.\\n\\nThough the scrapped-together venue may be a recent addition, the \"secret\" bunker out back isn't. The hairier inhabitants of Moonwood Mill have long considered it a local haven from curious eyes, and perhaps something more...",
+   "size": "50x40",
+   "lot_description_id": 310579,
+   "name_record": 310623,
+   "pack": "GP12"
+  },
+  "2239037443": {
+   "name": "The Moonwood Mill Library",
+   "description": "Moonwood Mill's community has repurposed an old logging factory into their very own local library. Its open and airy structure make it the perfect location to curl up with a book or catch a view of the night sky, and out back, the Wildfangs have dragged old workout equipment into the former loading dock for a handy make-shift gym.",
+   "size": "40x30",
+   "lot_description_id": 310581,
+   "name_record": 310624,
+   "pack": "GP12"
+  },
+  "4148756488": {
+   "name": "The Collective Cabin",
+   "description": "Nestled on the outskirts of Lake Lunvik, Kristopher Volkov created a home for himself and those in need. He's made room for all who have joined him over the years, with the homey garden and shed out back ensuring those who live here can live a self-sustainable lifestyle in peaceful solitude.",
+   "size": "40x30",
+   "lot_description_id": 310582,
+   "name_record": 310625,
+   "pack": "GP12"
+  },
+  "4151705609": {
+   "name": "New Moon Shack",
+   "description": "This little home may not seem like much, but for the Sim who's looking for some solitude and fresh air, living here can be quite... transformative.",
+   "size": "20x15",
+   "lot_description_id": 310583,
+   "name_record": 310626,
+   "pack": "GP12"
+  },
+  "4153081866": {
+   "name": "Prowler's Patch",
+   "description": "This inviting plot just off the Moonwood River and across from the local library is the perfect lot for any Sim looking to settle down in a small town. Inhale the fresh scent of woodland pine under the full moon, and pay no mind to the creatures lurking about and the incessant howling coming from every direction. (On second thought, maybe this would be a great commercial venue for the denizens who already live here!)",
+   "size": "30x30",
+   "lot_description_id": 310584,
+   "name_record": 310627,
+   "pack": "GP12"
+  },
+  "1087373410": {
+   "name": "Mansión de la Pasión",
+   "description": "This home is a dream come true for a thriving family that wants to skip the stress of moving on up and enjoy new memories together right away. Give you and your partner the perfect setting for a lifetime of happiness. With the heart of the neighborhood just a short walk away, purchasing this home is an easy choice.",
+   "size": "30x20",
+   "lot_description_id": 395695,
+   "name_record": 395707,
+   "pack": "EP16"
+  },
+  "1050673249": {
+   "name": "Laguna del Abrazo",
+   "description": "This lounge, located in the center of Vista Hermosa, holds a special place in the hearts of many locals. This hot spot welcomes couples and singles alike, providing an atmosphere of dim lights, smooth music, and excellent company. Romantics should take a short walk across the street to the famed Wall of Love, where locals have written their love declarations for generations, hoping for many years to come with their special someone. A few steps more leads to Beso Rápido, a local motel previously run by the well-known Carmen Ortega before her retirement.",
+   "size": "30x20",
+   "lot_description_id": 395696,
+   "name_record": 395708,
+   "pack": "EP16"
+  },
+  "401473685": {
+   "name": "Caminito del Deseo",
+   "description": "This lot, though currently vacant, is brimming with the potential for romantic experiences. The proximity to the picturesque Plaza Mariposa is sure to ignite even the most dormant of hearts with passion. Imagine strolling hand in hand with your special someone, seeking the perfect spot to lay a blanket and create a night of cherished memories.",
+   "size": "50x40",
+   "lot_description_id": 395698,
+   "name_record": 395710,
+   "pack": "EP16"
+  },
+  "1228931179": {
+   "name": "Casita del Amor",
+   "description": "Young couples looking to be close to the beating heart of this cozy suburban neighborhood will love this quaint, ready-to-move-in home! Singing, drinking, and a fun game of Who's Up are just minutes away at the Laguna del Abrazo. A perfect date spot for a casual night on the town.",
+   "size": "30x20",
+   "lot_description_id": 395699,
+   "name_record": 395711,
+   "pack": "EP16"
+  },
+  "1239220332": {
+   "name": "Calle de la Promesa",
+   "description": "Home is just a few bricks away on this lot, perfectly situated on the outskirts of Vista Hermosa. With stunning views and friendly neighbors, this charming little spot is ready and waiting for you.",
+   "size": "30x30",
+   "lot_description_id": 395700,
+   "name_record": 395712,
+   "pack": "EP16"
+  },
+  "3347709962": {
+   "name": "Avenida de la Eternidad",
+   "description": "Did you wish for happiness at the Fountain of Dreams? Well, here is your answer! A perfect plot of land to build a home on! This lot is close enough to the park that you can enjoy all of its offerings without traveling too far away from home.",
+   "size": "30x30",
+   "lot_description_id": 396034,
+   "name_record": 396029,
+   "pack": "EP16"
+  },
+  "1539899495": {
+   "name": "Calle del Ensueño",
+   "description": "When looking for the perfect place to live the life of a sweetheart-seeking single, look no further! Calle del Ensueño provides a stunning view of Plaza Mariposa and a serene and romantic atmosphere, making you and that potential sweetheart feel right at home. Make sure to stop at the Fountain of Dreams to wish for happiness for you and your partner!",
+   "size": "50x40",
+   "lot_description_id": 396035,
+   "name_record": 396030,
+   "pack": "EP16"
+  },
+  "3316908039": {
+   "name": "Media Naranja",
+   "description": "To find one's other half is a magical moment, and Media Naranja, nestled in the stunning Plaza Mariposa, offers a magical setting for that moment to blossom. With a panoramic view of the surrounding park, the inside bar provides a sweet, serene getaway for couples to bond over a nice drink or two.",
+   "size": "30x30",
+   "lot_description_id": 396036,
+   "name_record": 396032,
+   "pack": "EP16"
+  },
+  "3338338313": {
+   "name": "Villa Cálida",
+   "description": "This rental is equal parts luxury and mystery. They say the house belonged to a young couple madly in love—Samuel and Claire—but suddenly became vacant. The stories say Claire broke the heart of poor Samuel, and the house was abandoned soon after. Despite its tragic backstory, couples travel far and wide to stay in this gorgeous and conveniently located rental to prove that their love is strong enough to withstand its heartbreaking past. Still...some folks say you can still hear the cries of a broken-hearted Samuel ringing through the central square.",
+   "size": "30x30",
+   "lot_description_id": 396037,
+   "name_record": 396033,
+   "pack": "EP16"
+  },
+  "2919170055": {
+   "name": "Mirador del Amor",
+   "description": "This mysterious nightclub is for the seekers of sultry seduction. The tantalizing Mirador del Amor's allure lies in its dimly lit secluded areas, perfect for hushed whispers and dreamy sighs. For those without a partner, well, there's plenty of space on the dance floor, and plenty of time to look for love.",
+   "size": "30x20",
+   "lot_description_id": 402300,
+   "name_record": 402296,
+   "pack": "EP16"
+  },
+  "3656581125": {
+   "name": "La Suite del Flechazo",
+   "description": "Overlooking Nuevo Corazón, this penthouse is the epitome of elegance and luxury. Sit amongst the clouds and let the breathtaking view set the scene for the countless romantic memories you will assuredly make here. This sky-high love nest is perfect for all your future romantic adventures.",
+   "size": "20x15",
+   "lot_description_id": 402301,
+   "name_record": 402297,
+   "pack": "EP16"
+  },
+  "3664445447": {
+   "name": "Torres Amanecer",
+   "description": "Take your love to new heights and see the sunrise across the beautiful Nuevo Corazón in this luxurious, ready-to-move-in penthouse. Enjoy the view and relax with your love, new or old, in your arms instead of struggling to get the couch up all those stairs. Nobody has time for that when love is in the air!",
+   "size": "20x20",
+   "lot_description_id": 402302,
+   "name_record": 402298,
+   "pack": "EP16"
+  },
+  "2922315784": {
+   "name": "SUDOR",
+   "description": "This gym has everything: a swimming pool, exercise equipment, and most importantly, singles ready to mingle. The heart is a muscle, you know, and love is the best workout routine there is.",
+   "size": "30x20",
+   "lot_description_id": 402303,
+   "name_record": 402299,
+   "pack": "EP16"
+  },
+  "1509425336": {
+   "name": "Starsong Lounge",
+   "description": "The ethereal vibes of the Starsong Lounge attracts unique Sims from near and far. Locals are free to embody their true form and catch up with friends, or make new ones. Come for the otherworldly ambiance, and stay for the drinks and music!",
+   "size": "30x30",
+   "lot_description_id": 474306,
+   "name_record": 474302,
+   "pack": "EP19"
+  },
+  "1556218060": {
+   "name": "The Watering Hole",
+   "description": "The Watering Hole resides in Everdew amidst a backdrop of green and blue enchanted hues. Those living off the land will have just enough to live off of this empty lot.",
+   "size": "40x30",
+   "lot_description_id": 474307,
+   "name_record": 474303,
+   "pack": "EP19"
+  },
+  "2026701128": {
+   "name": "Bard Boulevard",
+   "description": "Sequestered at the edge of the wood, this cozy plot of land is the perfect spot for a humble abode with a not-so-humble view. Complete with everything a bard could need, such a whimsical cottage won't stay empty for long!",
+   "size": "30x20",
+   "lot_description_id": 474308,
+   "name_record": 474304,
+   "pack": "EP19"
+  },
+  "313458714": {
+   "name": "Crannamor Residential",
+   "description": "Along the outskirts of Everdew lies this quaint home, built into one of the largest trees in the forest. The breathtaking scenery is made more beautiful by the neighborhood's denizens, who can be seen out and about, using their enchantments on the world and Sims alike.",
+   "size": "20x20",
+   "lot_description_id": 460047,
+   "name_record": 460049,
+   "pack": "EP19"
+  },
+  "2259157008": {
+   "name": "Puckitt Hall",
+   "description": "A Fairy estate fit for high status, this château makes a prominent statement far beyond hefty household funds. Passed down through generations, it carries a versatility for both indoor and outdoor needs. Ethereal and elegant, there are no illusions of grandeur here.",
+   "size": "50x50",
+   "lot_description_id": 460048,
+   "name_record": 460050,
+   "pack": "EP19"
+  },
+  "980090978": {
+   "name": "1 Mari Shores Road",
+   "description": "Those looking for a short trek to the coast and some good ol' gnome vibes will love this charming two-story home. Visit the museum or chat up the locals for the juice on the town's history with the enchanted, all within walking distance.",
+   "size": "30x20",
+   "lot_description_id": 460817,
+   "name_record": 460818,
+   "pack": "EP19"
+  },
+  "183894035": {
+   "name": "8 Gnome Coast Street",
+   "description": "The scenic residence by the sea is perfect for anyone looking to house their hobbies. With plentiful space for gardening and crafting, there's gnome place like home!",
+   "size": "30x20",
+   "lot_description_id": 477046,
+   "name_record": 477071,
+   "pack": "EP19"
+  },
+  "213712936": {
+   "name": "The GNOM Exhibit",
+   "description": "The GNOM Exhibit (short for The Gallery of Notable and Ornamental Miniatures Exhibition) holds much of this coastal town's history and fascination with Gnomes. The bones of an old lighthouse are still prevalent atop the museum, with grandiose views that can be a sight to behold.",
+   "size": "40x30",
+   "lot_description_id": 477047,
+   "name_record": 477072,
+   "pack": "EP19"
+  },
+  "219807785": {
+   "name": "42 Normfair Drive",
+   "description": "Just a stone's throw away from the coast's center sits a home with simple beginnings. With no need for flair, this place is perfect for any family seeking a modern touch amongst nature.",
+   "size": "40x30",
+   "lot_description_id": 477048,
+   "name_record": 477073,
+   "pack": "EP19"
+  },
+  "2262171653": {
+   "name": "Fern & Frond Wading Pond",
+   "description": "This empty lot provides enough resources for those living off the land. The lush greenery provides a habitable environment that Sims can thrive off of. But don't worry, there's also some local shops if you really need anything.",
+   "size": "64x64",
+   "lot_description_id": 459763,
+   "name_record": 466289,
+   "pack": "EP19"
+  },
+  "3491102727": {
+   "name": "Whistling Thistle Gardens",
+   "description": "Catching up with Sims at the Whistling Thistle Gardens is a favorite pastime of the Sprucederry Grove residents. This community garden has been carefully curated over the years to grow all of the residents' favorite harvests. Besides socializing and gardening, painting and photography are especially enjoyable here as the light and natural ambience ignite creativity.",
+   "size": "40x30",
+   "lot_description_id": 459764,
+   "name_record": 466320,
+   "pack": "EP19"
+  },
+  "270073869": {
+   "name": "Greenwood Hamlet Residence",
+   "description": "This charming village home is conveniently located within a hop and skip away from a local park as well as the garden shop Clover's Seeds and Supplies. it's an ideal starter home for Sims that want to practice their Apothecary skills with access to the local stalls and shops.",
+   "size": "30x20",
+   "lot_description_id": 467803,
+   "name_record": 467804,
+   "pack": "EP19"
+  },
+  "395313183": {
+   "name": "Gimmley Gardensbrook",
+   "description": "A garden oasis filled with luscious greenery, placing residents on a hill they'll want to die on. Plentiful plots, gracious greens, and quaint carvings all give this storybook home two green thumbs up!",
+   "size": "30x30",
+   "lot_description_id": 467871,
+   "name_record": 467872,
+   "pack": "EP19"
+  },
+  "584187924": {
+   "name": "Gringle's",
+   "description": "Gringle's has been the local hot spot for Sims to enjoy mixed drinks after a long day of mixing Elixirs. Located near the center of Sprucederry Grove, Sims come to take in the greenery and partake in delectable conversation.",
+   "size": "30x30",
+   "lot_description_id": 467881,
+   "name_record": 467882,
+   "pack": "EP19"
+  }
+ }
+}

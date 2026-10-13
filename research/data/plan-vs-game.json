@@ -1,0 +1,6799 @@
+{
+ "_note": "Plan lots matched to the game's lots (tools/research/plan_vs_game.py).",
+ "worlds": {
+  "Willow Creek": {
+   "owned": true,
+   "lots": [
+    {
+     "neighbourhood": "Foundry Cove",
+     "lot": "Bargain Bend",
+     "myName": "Willow's",
+     "planSize": "30x20",
+     "planType": "Restaurant (Diner)",
+     "shared": true,
+     "game": {
+      "name": "Bargain Bend",
+      "size": "30x20",
+      "area": "GD_GardenWard_01_LL",
+      "id": "994677120"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Restaurant"
+    },
+    {
+     "neighbourhood": "Foundry Cove",
+     "lot": "Streamlet Single",
+     "myName": "Streamlet Single",
+     "planSize": "20x15",
+     "planType": "Residential",
+     "shared": true,
+     "game": {
+      "name": "Streamlet Single",
+      "size": "20x15",
+      "area": "GD_GardenWard_01_LL",
+      "id": "994751168"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Foundry Cove",
+     "lot": "Crick Cabana",
+     "myName": "Crick Cabana",
+     "planSize": "20x15",
+     "planType": "Tiny Home Residential",
+     "shared": true,
+     "game": {
+      "name": "Crick Cabana",
+      "size": "20x15",
+      "area": "GD_GardenWard_01_LL",
+      "id": "1064509568"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Foundry Cove",
+     "lot": "Daisy Hovel",
+     "myName": "Daisy Hovel",
+     "planSize": "30x20",
+     "planType": "Residential",
+     "shared": true,
+     "game": {
+      "name": "Daisy Hovel",
+      "size": "30x20",
+      "area": "GD_GardenWard_01_LL",
+      "id": "961654864"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Foundry Cove",
+     "lot": "Garden Essence",
+     "myName": "Garden Essence",
+     "planSize": "40x30",
+     "planType": "Residential",
+     "shared": true,
+     "game": {
+      "name": "Garden Essence",
+      "size": "40x30",
+      "area": "GD_GardenWard_01_LL",
+      "id": "961473792"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Foundry Cove",
+     "lot": "Sylvan Glade",
+     "myName": null,
+     "planSize": "15x10",
+     "planType": "Sylvan Glade",
+     "shared": false,
+     "game": {
+      "name": "Sylvan Glade",
+      "size": "15x10",
+      "area": "GD_RBH_glade_01",
+      "id": "1001644480"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Courtyard Lane",
+     "lot": "Potters Splay",
+     "myName": "Potters Splay",
+     "planSize": "30x20",
+     "planType": "Residential",
+     "shared": true,
+     "game": {
+      "name": "Potters Splay",
+      "size": "30x20",
+      "area": "GD_GardenSuburbs_01_LL",
+      "id": "571964304"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Courtyard Lane",
+     "lot": "Brook Bungalow",
+     "myName": "Brook Bungalow",
+     "planSize": "40x30",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Brook Bungalow",
+      "size": "40x30",
+      "area": "GD_GardenSuburbs_01_LL",
+      "id": "1087874032"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Courtyard Lane",
+     "lot": "Riverside Roost",
+     "myName": "Riverside Roost",
+     "planSize": "30x20",
+     "planType": "Residential",
+     "shared": true,
+     "game": {
+      "name": "Riverside Roost",
+      "size": "30x20",
+      "area": "GD_GardenSuburbs_01_LL",
+      "id": "573229280"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Courtyard Lane",
+     "lot": "Pique Hearth",
+     "myName": "Courtyard Lane Playground",
+     "planSize": "30x20",
+     "planType": "Playground",
+     "shared": true,
+     "game": {
+      "name": "Pique Hearth",
+      "size": "30x20",
+      "area": "GD_GardenSuburbs_01_LL",
+      "id": "573143552"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Playground"
+    },
+    {
+     "neighbourhood": "Courtyard Lane",
+     "lot": "Rindle Rose",
+     "myName": "Rindle Rose",
+     "planSize": "20x15",
+     "planType": "Residential",
+     "shared": true,
+     "game": {
+      "name": "Rindle Rose",
+      "size": "20x15",
+      "area": "GD_GardenSuburbs_01_LL",
+      "id": "572688432"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Pendula View",
+     "lot": "Hallow Slough",
+     "myName": null,
+     "planSize": "30x20",
+     "planType": "Residential",
+     "shared": true,
+     "game": {
+      "name": "Hallow Slough",
+      "size": "30x20",
+      "area": "GD_GardenCommunity_01_LL",
+      "id": "1544807168"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential"
+    },
+    {
+     "neighbourhood": "Pendula View",
+     "lot": "Umbrage Manor",
+     "myName": null,
+     "planSize": "40x30",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Umbrage Manor",
+      "size": "40x30",
+      "area": "GD_GardenCommunity_01_LL",
+      "id": "2085060112"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Pendula View",
+     "lot": "Parkshore",
+     "myName": "Cordelia Church",
+     "planSize": "40x30",
+     "planType": "Cemetery",
+     "shared": false,
+     "game": {
+      "name": "Parkshore",
+      "size": "40x30",
+      "area": "GD_GardenCommunity_01_LL",
+      "id": "1073501008"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Pendula View",
+     "lot": "Ophelia Villa",
+     "myName": null,
+     "planSize": "30x20",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Ophelia Villa",
+      "size": "30x20",
+      "area": "GD_GardenCommunity_01_LL",
+      "id": "1989072208"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Sage Estates",
+     "lot": "Oakenstead",
+     "myName": "Oakenstead",
+     "planSize": "50x50",
+     "planType": "Residential",
+     "shared": true,
+     "game": {
+      "name": "Oakenstead",
+      "size": "50x50",
+      "area": "GD_GardenEstate_02",
+      "id": "4267281792"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Sage Estates",
+     "lot": "Cypress Terrace",
+     "myName": "Cypress Terrace",
+     "planSize": "40x30",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Cypress Terrace",
+      "size": "40x30",
+      "area": "GD_GardenEstate_02",
+      "id": "7505088"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Crawdad Quarter",
+     "lot": "Municipal Muses",
+     "myName": "Municipal Muses",
+     "planSize": "40x30",
+     "planType": "Museum",
+     "shared": true,
+     "game": {
+      "name": "Municipal Muses",
+      "size": "40x30",
+      "area": "GD_wardVenue_01",
+      "id": "90404736"
+     },
+     "unitOf": null,
+     "typeInGame": "Museum",
+     "typeOnGallery": "Museum"
+    },
+    {
+     "neighbourhood": "Crawdad Quarter",
+     "lot": "The Blue Velvet",
+     "myName": "The Llama Café",
+     "planSize": "30x20",
+     "planType": "Café",
+     "shared": true,
+     "game": {
+      "name": "The Blue Velvet",
+      "size": "30x20",
+      "area": "GD_wardVenue_01",
+      "id": "90369424"
+     },
+     "unitOf": null,
+     "typeInGame": "Nightclub",
+     "typeOnGallery": "Café"
+    },
+    {
+     "neighbourhood": "Crawdad Quarter",
+     "lot": "Movers & Shakers",
+     "myName": null,
+     "planSize": "30x20",
+     "planType": "Gym",
+     "shared": false,
+     "game": {
+      "name": "Movers & Shakers",
+      "size": "30x20",
+      "area": "GD_wardVenue_01",
+      "id": "90336000"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Crawdad Quarter",
+     "lot": "Willow Creek Archive",
+     "myName": "Willow Creek Archive",
+     "planSize": "30x20",
+     "planType": "Library",
+     "shared": false,
+     "game": {
+      "name": "Willow Creek Archive",
+      "size": "30x20",
+      "area": "GD_wardVenue_01",
+      "id": "90243216"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Magnolia Blossom Park",
+     "lot": "Magnolia Blossom Park",
+     "myName": "Magnolia Blossom Park",
+     "planSize": "50x50",
+     "planType": "Park",
+     "shared": true,
+     "game": null,
+     "unitOf": null,
+     "typeOnGallery": "Park"
+    }
+   ],
+   "gameLotsNotInPlan": [
+    {
+     "id": "64101728",
+     "name": "Magnolia Blossom",
+     "description": "Magnolia Blossom Park is a historic park where Willow Creek inhabitants from all walks of life can come together to enjoy nature in a lush, green environment.",
+     "size": "50x50",
+     "area": "GD_GardenPark_01",
+     "pos": [
+      153.2,
+      150.0,
+      223.92
+     ]
+    }
+   ],
+   "areas": [
+    "GD_GardenCommunity_01_LL",
+    "GD_GardenEstate_02",
+    "GD_GardenPark_01",
+    "GD_GardenSuburbs_01_LL",
+    "GD_GardenWard_01_LL",
+    "GD_RBH_glade_01",
+    "GD_wardVenue_01"
+   ]
+  },
+  "Oasis Springs": {
+   "owned": true,
+   "lots": [
+    {
+     "neighbourhood": "Bedrock Strait",
+     "lot": "Sandtrap Flat",
+     "myName": "Sandtrap Flat",
+     "planSize": "30x20",
+     "planType": "Residential",
+     "shared": true,
+     "game": {
+      "name": "Sandtrap Flat",
+      "size": "30x20",
+      "area": "SO_CactusBeach_01",
+      "id": "2891968416"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Bedrock Strait",
+     "lot": "Nookstone",
+     "myName": "Nookstone",
+     "planSize": "20x15",
+     "planType": "Residential",
+     "shared": true,
+     "game": {
+      "name": "Nookstone",
+      "size": "20x15",
+      "area": "SO_CactusBeach_01",
+      "id": "1662175776"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Bedrock Strait",
+     "lot": "Pebble Burrow",
+     "myName": "Pebble Burrow",
+     "planSize": "30x20",
+     "planType": "Residential",
+     "shared": true,
+     "game": {
+      "name": "Pebble Burrow",
+      "size": "30x20",
+      "area": "SO_CactusBeach_01",
+      "id": "2896445168"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Bedrock Strait",
+     "lot": "Slipshod Mesquite",
+     "myName": "De Costadas",
+     "planSize": "40x30",
+     "planType": "Restaurant",
+     "shared": true,
+     "game": {
+      "name": "Slipshod Mesquite",
+      "size": "40x30",
+      "area": "SO_CactusBeach_01",
+      "id": "2880306736"
+     },
+     "unitOf": null,
+     "typeInGame": "Restaurant",
+     "typeOnGallery": "Restaurant"
+    },
+    {
+     "neighbourhood": "Bedrock Strait",
+     "lot": "Agave Abode",
+     "myName": "Agave Abode",
+     "planSize": "20x15",
+     "planType": "Residential",
+     "shared": true,
+     "game": {
+      "name": "Agave Abode",
+      "size": "20x15",
+      "area": "SO_CactusBeach_01",
+      "id": "1662145536"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Parched Prospect",
+     "lot": "Vista Quarry",
+     "myName": "Vista Quarry",
+     "planSize": "30x20",
+     "planType": "Residential",
+     "shared": true,
+     "game": {
+      "name": "Vista Quarry",
+      "size": "30x20",
+      "area": "SO_retroSuburbs_01",
+      "id": "1802450800"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Parched Prospect",
+     "lot": "Raffia Quinta",
+     "myName": "Raffia Quinta",
+     "planSize": "20x15",
+     "planType": "Residential",
+     "shared": true,
+     "game": {
+      "name": "Raffia Quinta",
+      "size": "20x15",
+      "area": "SO_retroSuburbs_01",
+      "id": "1802576896"
+     },
+     "unitOf": null,
+     "typeInGame": "Tiny Home Residential",
+     "typeOnGallery": "Tiny Home Residential"
+    },
+    {
+     "neighbourhood": "Parched Prospect",
+     "lot": "Dusty Turf",
+     "myName": "Dusty Turf",
+     "planSize": "30x20",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Dusty Turf",
+      "size": "30x20",
+      "area": "SO_retroSuburbs_01",
+      "id": "1802561584"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Parched Prospect",
+     "lot": "Springscape",
+     "myName": "Springscape",
+     "planSize": "30x20",
+     "planType": "Residential",
+     "shared": true,
+     "game": {
+      "name": "Springscape",
+      "size": "30x20",
+      "area": "SO_retroSuburbs_01",
+      "id": "1802486336"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Parched Prospect",
+     "lot": "Cacti Casa",
+     "myName": "Palm Springs Public Pool",
+     "planSize": "40x30",
+     "planType": "Pool",
+     "shared": true,
+     "game": {
+      "name": "Cacti Casa",
+      "size": "40x30",
+      "area": "SO_retroSuburbs_01",
+      "id": "2984780224"
+     },
+     "unitOf": null,
+     "typeInGame": "Pool",
+     "typeOnGallery": "Pool"
+    },
+    {
+     "neighbourhood": "Skyward Palms",
+     "lot": "Granada Place",
+     "myName": "Granada Place",
+     "planSize": "30x20",
+     "planType": "Residential",
+     "shared": true,
+     "game": {
+      "name": "Granada Place",
+      "size": "30x20",
+      "area": "SO_SkywardPalms_01",
+      "id": "1804118928"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Skyward Palms",
+     "lot": "Arid Ridge",
+     "myName": "Lotus Ridge Spa",
+     "planSize": "40x30",
+     "planType": "Spa",
+     "shared": true,
+     "game": {
+      "name": "Arid Ridge",
+      "size": "40x30",
+      "area": "SO_SkywardPalms_01",
+      "id": "2860935856"
+     },
+     "unitOf": null,
+     "typeInGame": "Spa",
+     "typeOnGallery": "Spa"
+    },
+    {
+     "neighbourhood": "Skyward Palms",
+     "lot": "Sultry Springside",
+     "myName": "Sultry Springside",
+     "planSize": "30x20",
+     "planType": "Residential",
+     "shared": true,
+     "game": {
+      "name": "Sultry Springside",
+      "size": "30x20",
+      "area": "SO_SkywardPalms_01",
+      "id": "1804109472"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Skyward Palms",
+     "lot": "Rio Verde",
+     "myName": "Rio Verde Retirement Home",
+     "planSize": "40x30",
+     "planType": "Residential Rental (6)",
+     "shared": true,
+     "game": {
+      "name": "Rio Verde",
+      "size": "40x30",
+      "area": "SO_SkywardPalms_01",
+      "id": "1804000064"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential Rental"
+    },
+    {
+     "neighbourhood": "Acquisition Butte",
+     "lot": "Affluista Mansion",
+     "myName": "Affluista Mansion",
+     "planSize": "50x50",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Affluista Mansion",
+      "size": "50x50",
+      "area": "SO_celebrityEstates_01",
+      "id": "2484376288"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Acquisition Butte",
+     "lot": "Yuma Heights",
+     "myName": "Yuma Heights",
+     "planSize": "40x30",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Yuma Heights",
+      "size": "40x30",
+      "area": "SO_celebrityEstates_01",
+      "id": "687165520"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Mirage Canyon",
+     "lot": "The Futures Past",
+     "myName": "The Futures Past",
+     "planSize": "30x20",
+     "planType": "Museum",
+     "shared": true,
+     "game": {
+      "name": "The Futures Past",
+      "size": "30x20",
+      "area": "SO_CactusVenus_01",
+      "id": "254110336"
+     },
+     "unitOf": null,
+     "typeInGame": "Museum",
+     "typeOnGallery": "Museum"
+    },
+    {
+     "neighbourhood": "Mirage Canyon",
+     "lot": "The Solar Flare",
+     "myName": "Oasis Springs Library",
+     "planSize": "30x20",
+     "planType": "Library",
+     "shared": true,
+     "game": {
+      "name": "The Solar Flare",
+      "size": "30x20",
+      "area": "SO_CactusVenus_01",
+      "id": "254126448"
+     },
+     "unitOf": null,
+     "typeInGame": "Lounge",
+     "typeOnGallery": "Library"
+    },
+    {
+     "neighbourhood": "Mirage Canyon",
+     "lot": "Burners & Builders",
+     "myName": "Burners & Builders",
+     "planSize": "40x30",
+     "planType": "Gym",
+     "shared": true,
+     "game": {
+      "name": "Burners & Builders",
+      "size": "40x30",
+      "area": "SO_CactusVenus_01",
+      "id": "254175856"
+     },
+     "unitOf": null,
+     "typeInGame": "Gym",
+     "typeOnGallery": "Gym"
+    },
+    {
+     "neighbourhood": "Mirage Canyon",
+     "lot": "Rattlesnake Juice",
+     "myName": "Rattlesnake Juice Bar",
+     "planSize": "30x20",
+     "planType": "Bar",
+     "shared": true,
+     "game": {
+      "name": "Rattlesnake Juice",
+      "size": "30x20",
+      "area": "SO_CactusVenus_01",
+      "id": "254075440"
+     },
+     "unitOf": null,
+     "typeInGame": "Bar",
+     "typeOnGallery": "Bar"
+    },
+    {
+     "neighbourhood": "Desert Bloom Park",
+     "lot": "Desert Bloom Park",
+     "myName": "Desert Bloom Park",
+     "planSize": "50x50",
+     "planType": "Park",
+     "shared": true,
+     "game": null,
+     "unitOf": null,
+     "typeOnGallery": "Park"
+    },
+    {
+     "neighbourhood": "Desert Bloom Park",
+     "lot": "Forgotten Grotto",
+     "myName": null,
+     "planSize": "15x10",
+     "planType": "Forgotten Grotto",
+     "shared": false,
+     "game": {
+      "name": "Forgotten Grotto",
+      "size": "15x10",
+      "area": "SO_RBH_Cave_01",
+      "id": "1733679520"
+     },
+     "unitOf": null
+    }
+   ],
+   "gameLotsNotInPlan": [
+    {
+     "id": "89245504",
+     "name": "Desert Bloom",
+     "description": "",
+     "size": "50x50",
+     "area": "SO_DesertPark_01",
+     "pos": [
+      341.91,
+      150.0,
+      366.15
+     ]
+    }
+   ],
+   "areas": [
+    "SO_CactusBeach_01",
+    "SO_CactusVenus_01",
+    "SO_DesertPark_01",
+    "SO_RBH_Cave_01",
+    "SO_SkywardPalms_01",
+    "SO_celebrityEstates_01",
+    "SO_retroSuburbs_01"
+   ]
+  },
+  "Newcrest": {
+   "owned": true,
+   "lots": [
+    {
+     "neighbourhood": "Bridgeview",
+     "lot": "Fern Park",
+     "myName": "Fern Park Flats",
+     "planSize": "30x20",
+     "planType": "Residential Rental (5)",
+     "shared": true,
+     "game": {
+      "name": "Fern Park",
+      "size": "30x20",
+      "area": "BG_Engagement_03",
+      "id": "3137142788"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential Rental"
+    },
+    {
+     "neighbourhood": "Bridgeview",
+     "lot": "Beech Byway",
+     "myName": "Newcrest Community Space",
+     "planSize": "30x20",
+     "planType": "Community Space",
+     "shared": true,
+     "game": {
+      "name": "Beech Byway",
+      "size": "30x20",
+      "area": "BG_Engagement_03",
+      "id": "3142582277"
+     },
+     "unitOf": null,
+     "typeInGame": "Community Space",
+     "typeOnGallery": "Missing sims translation"
+    },
+    {
+     "neighbourhood": "Bridgeview",
+     "lot": "Midtown Meadows",
+     "myName": "Midtown Meadows",
+     "planSize": "40x30",
+     "planType": "Residential Rental (5)",
+     "shared": false,
+     "game": {
+      "name": "Midtown Meadows",
+      "size": "40x30",
+      "area": "BG_Engagement_03",
+      "id": "3146711046"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Bridgeview",
+     "lot": "Oak Alcove",
+     "myName": "Oak Alcove",
+     "planSize": "20x15",
+     "planType": "Residential",
+     "shared": true,
+     "game": {
+      "name": "Oak Alcove",
+      "size": "20x15",
+      "area": "BG_Engagement_03",
+      "id": "3149332487"
+     },
+     "unitOf": null,
+     "typeInGame": "Tiny Home Residential",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Bridgeview",
+     "lot": "Comfy Cubby",
+     "myName": "Comfy Cubby",
+     "planSize": "20x15",
+     "planType": "Residential",
+     "shared": true,
+     "game": {
+      "name": "Comfy Cubby",
+      "size": "20x15",
+      "area": "BG_Engagement_03",
+      "id": "3154640904"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Llama Lagoon",
+     "lot": "Twin Oracle Point",
+     "myName": "Twin Oracle Point",
+     "planSize": "50x40",
+     "planType": "Residential",
+     "shared": true,
+     "game": {
+      "name": "Twin Oracle Point",
+      "size": "50x40",
+      "area": "BG_Engagement_02",
+      "id": "1648099341"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Llama Lagoon",
+     "lot": "Avarice Acres",
+     "myName": "Avarice Acres",
+     "planSize": "40x30",
+     "planType": "Residential",
+     "shared": true,
+     "game": {
+      "name": "Avarice Acres",
+      "size": "40x30",
+      "area": "BG_Engagement_02",
+      "id": "1564934148"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Llama Lagoon",
+     "lot": "Rippling Flats",
+     "myName": "Rippling Flats",
+     "planSize": "40x30",
+     "planType": "Residential Rental (2)",
+     "shared": false,
+     "game": {
+      "name": "Rippling Flats",
+      "size": "40x30",
+      "area": "BG_Engagement_02",
+      "id": "1636761611"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Llama Lagoon",
+     "lot": "Tranquil Crescent",
+     "myName": "The Ice Pavilion",
+     "planSize": "30x30",
+     "planType": "Park",
+     "shared": true,
+     "game": {
+      "name": "Tranquil Crescent",
+      "size": "30x30",
+      "area": "BG_Engagement_02",
+      "id": "1568800773"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Park"
+    },
+    {
+     "neighbourhood": "Llama Lagoon",
+     "lot": "Asphalt Abodes",
+     "myName": "Asphalt Abodes",
+     "planSize": "30x20",
+     "planType": "Residential",
+     "shared": true,
+     "game": {
+      "name": "Asphalt Abodes",
+      "size": "30x20",
+      "area": "BG_Engagement_02",
+      "id": "2903179269"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Ridgeline Drive",
+     "lot": "Sandy Run",
+     "myName": "The Aqua Grill",
+     "planSize": "40x20",
+     "planType": "Restaurant (Seafood)",
+     "shared": true,
+     "game": {
+      "name": "Sandy Run",
+      "size": "40x20",
+      "area": "BG_Engagement_01",
+      "id": "3482058759"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Restaurant"
+    },
+    {
+     "neighbourhood": "Ridgeline Drive",
+     "lot": "Cookout Lookout",
+     "myName": "Newcrest Wedding Hall",
+     "planSize": "30x20",
+     "planType": "Wedding Venue",
+     "shared": true,
+     "game": {
+      "name": "Cookout Lookout",
+      "size": "30x20",
+      "area": "BG_Engagement_01",
+      "id": "3477340166"
+     },
+     "unitOf": null,
+     "typeInGame": "Wedding Venue",
+     "typeOnGallery": "Wedding Venue"
+    },
+    {
+     "neighbourhood": "Ridgeline Drive",
+     "lot": "Civic Cliffs",
+     "myName": "Newcrest Arts Center",
+     "planSize": "30x20",
+     "planType": "Arts Center",
+     "shared": true,
+     "game": {
+      "name": "Civic Cliffs",
+      "size": "30x20",
+      "area": "BG_Engagement_01",
+      "id": "3469606917"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Arts Center"
+    },
+    {
+     "neighbourhood": "Ridgeline Drive",
+     "lot": "Hillside Highlands",
+     "myName": "Cookes 'n' Cream",
+     "planSize": "30x20",
+     "planType": "Retail (Bakery & Ice Cream)",
+     "shared": true,
+     "game": {
+      "name": "Hillside Highlands",
+      "size": "30x20",
+      "area": "BG_Engagement_01",
+      "id": "3461873668"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Retail"
+    },
+    {
+     "neighbourhood": "Ridgeline Drive",
+     "lot": "Optimist's Outlook",
+     "myName": "Optimist's Outlook",
+     "planSize": "40x30",
+     "planType": "Small Business",
+     "shared": true,
+     "game": {
+      "name": "Optimist's Outlook",
+      "size": "40x30",
+      "area": "BG_Engagement_01",
+      "id": "3073835011"
+     },
+     "unitOf": null,
+     "typeInGame": "Small Business Venue",
+     "typeOnGallery": "Small Business Venue"
+    }
+   ],
+   "gameLotsNotInPlan": [],
+   "areas": [
+    "BG_Engagement_01",
+    "BG_Engagement_02",
+    "BG_Engagement_03"
+   ]
+  },
+  "Granite Falls": {
+   "owned": true,
+   "lots": [
+    {
+     "neighbourhood": "Campground",
+     "lot": "Campground",
+     "myName": "Campground",
+     "planSize": "30x20",
+     "planType": "Vacation Rental",
+     "shared": true,
+     "game": {
+      "name": "Campground",
+      "size": "30x20",
+      "area": "GP01_Campground_01",
+      "id": "2359099399"
+     },
+     "unitOf": null,
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Campground",
+     "lot": "Forest Hideaway",
+     "myName": null,
+     "planSize": "40x30",
+     "planType": "Restaurant",
+     "shared": true,
+     "game": {
+      "name": "Forest Hideaway",
+      "size": "40x30",
+      "area": "GP01_Campground_01",
+      "id": "3075014661"
+     },
+     "unitOf": null,
+     "typeInGame": "Vacation Rental - Granite Falls",
+     "typeOnGallery": "Restaurant"
+    },
+    {
+     "neighbourhood": "Campground",
+     "lot": "Green Getaway",
+     "myName": "Green Getaway",
+     "planSize": "30x20",
+     "planType": "Vacation Rental",
+     "shared": true,
+     "game": {
+      "name": "Green Getaway",
+      "size": "30x20",
+      "area": "GP01_Campground_01",
+      "id": "1885929476"
+     },
+     "unitOf": null,
+     "typeInGame": "Vacation Rental - Granite Falls",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Campground",
+     "lot": "Lakeside Retreat",
+     "myName": "Lakeside Retreat",
+     "planSize": "40x30",
+     "planType": "Vacation Rental",
+     "shared": true,
+     "game": {
+      "name": "Lakeside Retreat",
+      "size": "40x30",
+      "area": "GP01_Campground_01",
+      "id": "3073376260"
+     },
+     "unitOf": null,
+     "typeInGame": "Vacation Rental - Granite Falls",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Campground",
+     "lot": "Riverside Retreat",
+     "myName": "Granite Falls Spa",
+     "planSize": "30x20",
+     "planType": "Spa",
+     "shared": true,
+     "game": {
+      "name": "Riverside Retreat",
+      "size": "30x20",
+      "area": "GP01_Campground_01",
+      "id": "1942880262"
+     },
+     "unitOf": null,
+     "typeInGame": "Vacation Rental - Granite Falls",
+     "typeOnGallery": "Spa"
+    },
+    {
+     "neighbourhood": "Granite Falls Forest",
+     "lot": "Granite Falls Forest",
+     "myName": "Granite Falls Forest",
+     "planSize": "50x50",
+     "planType": "National Park",
+     "shared": false,
+     "game": {
+      "name": "Granite Falls Forest",
+      "size": "50x50",
+      "area": "GP01_Forest_01",
+      "id": "1554644996"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Granite Falls Forest",
+     "lot": "Hermit's House",
+     "myName": null,
+     "planSize": "30x20",
+     "planType": "Hermit's Hut",
+     "shared": false,
+     "game": {
+      "name": "Hermit's House",
+      "size": "30x20",
+      "area": "GP01_HermitDwelling_01",
+      "id": "1958215685"
+     },
+     "unitOf": null
+    }
+   ],
+   "gameLotsNotInPlan": [],
+   "areas": [
+    "GP01_Campground_01",
+    "GP01_Forest_01",
+    "GP01_HermitDwelling_01"
+   ]
+  },
+  "Magnolia Promenade": {
+   "owned": true,
+   "lots": [
+    {
+     "neighbourhood": "Magnolia Promenade",
+     "lot": "Paddywack's Emporium",
+     "myName": "Paddy's Place",
+     "planSize": "20x20",
+     "planType": "Restaurant",
+     "shared": false,
+     "game": {
+      "name": "Paddywack's Emporium",
+      "size": "20x20",
+      "area": "EP01_Retails_01",
+      "id": "1592328195"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Magnolia Promenade",
+     "lot": "JF&S Clothiers",
+     "myName": "Llama Picturehouse",
+     "planSize": "20x20",
+     "planType": "Small Business",
+     "shared": true,
+     "game": {
+      "name": "JF&S Clothiers",
+      "size": "20x20",
+      "area": "EP01_Retails_01",
+      "id": "1593901060"
+     },
+     "unitOf": null,
+     "typeInGame": "Retail",
+     "typeOnGallery": "Bar"
+    },
+    {
+     "neighbourhood": "Magnolia Promenade",
+     "lot": "The Roadstead",
+     "myName": "Magnolia Mall",
+     "planSize": "40x30",
+     "planType": "Retail/Boba & Thrift",
+     "shared": false,
+     "game": {
+      "name": "The Roadstead",
+      "size": "40x30",
+      "area": "EP01_Retails_01",
+      "id": "1597833223"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Magnolia Promenade",
+     "lot": "Preeminent Domain",
+     "myName": "Magnolia Bowling Alley",
+     "planSize": "30x20",
+     "planType": "Bar",
+     "shared": true,
+     "game": {
+      "name": "Preeminent Domain",
+      "size": "30x20",
+      "area": "EP01_Retails_01",
+      "id": "1603600392"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Bar"
+    },
+    {
+     "neighbourhood": "Secret Lots",
+     "lot": "Police Station",
+     "myName": "Police Station",
+     "planSize": "40x30",
+     "planType": "Police Station",
+     "shared": false,
+     "game": {
+      "name": "Police Station",
+      "size": "40x30",
+      "area": "EP01_CivicCenter_02",
+      "id": "163840004"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Secret Lots",
+     "lot": "FutureSim Labs",
+     "myName": "FutureSim Labs",
+     "planSize": "50x50",
+     "planType": "Science Lab",
+     "shared": false,
+     "game": {
+      "name": "FutureSim Labs",
+      "size": "50x50",
+      "area": "EP01_ScienceLab_01",
+      "id": "257228804"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Secret Lots",
+     "lot": "Willow Creek Hospital",
+     "myName": "Willow Creek Hospital",
+     "planSize": "50x50",
+     "planType": "Hospital",
+     "shared": false,
+     "game": {
+      "name": "Willow Creek Hospital",
+      "size": "50x50",
+      "area": "EP01_CivicCenter_02",
+      "id": "162791427"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Secret Lots",
+     "lot": "Sixam",
+     "myName": "Sixam",
+     "planSize": "20x20",
+     "planType": "Sixam",
+     "shared": false,
+     "game": {
+      "name": "Sixam",
+      "size": "20x20",
+      "area": "EP01_AlienWorld_01",
+      "id": "720306180"
+     },
+     "unitOf": null
+    }
+   ],
+   "gameLotsNotInPlan": [],
+   "areas": [
+    "EP01_AlienWorld_01",
+    "EP01_CivicCenter_02",
+    "EP01_Retails_01",
+    "EP01_ScienceLab_01"
+   ]
+  },
+  "Windenburg": {
+   "owned": true,
+   "lots": [
+    {
+     "neighbourhood": "Olde Platz",
+     "lot": "Proprietor's Square",
+     "myName": "Proprietor's Square",
+     "planSize": "30x20",
+     "planType": "Residential",
+     "shared": true,
+     "game": {
+      "name": "Proprietor’s Square",
+      "size": "30x20",
+      "area": "EP02_OldTown_01",
+      "id": "3407880"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Olde Platz",
+     "lot": "Havisham House",
+     "myName": "Havisham House",
+     "planSize": "20x20",
+     "planType": "Residential",
+     "shared": true,
+     "game": {
+      "name": "Havisham House",
+      "size": "20x20",
+      "area": "EP02_OldTown_01",
+      "id": "64094310"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Olde Platz",
+     "lot": "Factory One",
+     "myName": "Factory One",
+     "planSize": "30x20",
+     "planType": "Residential",
+     "shared": true,
+     "game": {
+      "name": "Factory One",
+      "size": "30x20",
+      "area": "EP02_OldTown_01",
+      "id": "162529387"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Olde Platz",
+     "lot": "Waterlock Redoubt",
+     "myName": "Olde Platz Inn",
+     "planSize": "30x20",
+     "planType": "Restaurant/Vacation Rental",
+     "shared": true,
+     "game": {
+      "name": "Waterlock Redoubt",
+      "size": "30x20",
+      "area": "EP02_OldTown_01",
+      "id": "4282253317"
+     },
+     "unitOf": null,
+     "typeInGame": "Restaurant",
+     "typeOnGallery": "Restaurant"
+    },
+    {
+     "neighbourhood": "Olde Platz",
+     "lot": "Quad Manor",
+     "myName": null,
+     "planSize": "30x20",
+     "planType": "Library",
+     "shared": false,
+     "game": {
+      "name": "Quad Manor",
+      "size": "30x20",
+      "area": "EP02_OldTown_01",
+      "id": "3329884165"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Olde Platz",
+     "lot": "The Narwhal Arms",
+     "myName": "The Narwhal Arms",
+     "planSize": "30x20",
+     "planType": "Bar",
+     "shared": true,
+     "game": {
+      "name": "The Narwhal Arms",
+      "size": "30x20",
+      "area": "EP02_OldTown_01",
+      "id": "3318415364"
+     },
+     "unitOf": null,
+     "typeInGame": "Nightclub",
+     "typeOnGallery": "Bar"
+    },
+    {
+     "neighbourhood": "Olde Platz",
+     "lot": "South Square Coffee",
+     "myName": "Pixel Café",
+     "planSize": "30x20",
+     "planType": "Café",
+     "shared": true,
+     "game": {
+      "name": "South Square Coffee",
+      "size": "30x20",
+      "area": "EP02_OldTown_01",
+      "id": "3304849411"
+     },
+     "unitOf": null,
+     "typeInGame": "Café",
+     "typeOnGallery": "Café"
+    },
+    {
+     "neighbourhood": "Olde Platz",
+     "lot": "Old Quarter Inn",
+     "myName": "Museum of the Arts",
+     "planSize": "20x20",
+     "planType": "Museum",
+     "shared": true,
+     "game": {
+      "name": "Old Quarter Inn",
+      "size": "20x20",
+      "area": "EP02_OldTown_01",
+      "id": "3771138057"
+     },
+     "unitOf": null,
+     "typeInGame": "Bar",
+     "typeOnGallery": "Museum"
+    },
+    {
+     "neighbourhood": "Lykke Center / University of Windenburg",
+     "lot": "Bathe de Rill",
+     "myName": "La Discotheque",
+     "planSize": "40x30",
+     "planType": "Nightclub",
+     "shared": false,
+     "game": {
+      "name": "Bathe de Rill",
+      "size": "40x30",
+      "area": "EP02_Business_01",
+      "id": "504889347"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Lykke Center / University of Windenburg",
+     "lot": "Hare Square",
+     "myName": "UoW Hare Halls",
+     "planSize": "30x20",
+     "planType": "University Housing",
+     "shared": false,
+     "game": {
+      "name": "Hare Square",
+      "size": "30x20",
+      "area": "EP02_Business_01",
+      "id": "4125622276"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Lykke Center / University of Windenburg",
+     "lot": "Hare and Hedgehog",
+     "myName": "UoW Hedgehog Halls",
+     "planSize": "30x20",
+     "planType": "University Housing",
+     "shared": false,
+     "game": {
+      "name": "Hare and Hedgehog",
+      "size": "30x20",
+      "area": "EP02_Business_01",
+      "id": "1995309060"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Lykke Center / University of Windenburg",
+     "lot": "Harbor Quarter Gym",
+     "myName": "UoW Students Union",
+     "planSize": "30x20",
+     "planType": "Library",
+     "shared": false,
+     "game": {
+      "name": "Harbor Quarter Gym",
+      "size": "30x30",
+      "area": "EP02_Business_01",
+      "id": "1993998339"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Lykke Center / University of Windenburg",
+     "lot": "Discotheque Pan Europa",
+     "myName": "UoW Sports Center",
+     "planSize": "30x20",
+     "planType": "Gym/Pool",
+     "shared": false,
+     "game": {
+      "name": "Discotheque Pan Europa",
+      "size": "30x20",
+      "area": "EP02_Business_01",
+      "id": "4137877509"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Windslar",
+     "lot": "Coorinberg Cottage",
+     "myName": "Coorinberg Cottage",
+     "planSize": "40x30",
+     "planType": "Residential",
+     "shared": true,
+     "game": {
+      "name": "Coorinberg Cottage",
+      "size": "40x30",
+      "area": "EP02_Rural_01",
+      "id": "1975058435"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Windslar",
+     "lot": "Cottage Am See",
+     "myName": "Cottage Am See",
+     "planSize": "20x20",
+     "planType": "Residential",
+     "shared": true,
+     "game": {
+      "name": "Cottage Am See",
+      "size": "20x20",
+      "area": "EP02_Rural_01",
+      "id": "1871314947"
+     },
+     "unitOf": null,
+     "typeInGame": "Tiny Home Residential",
+     "typeOnGallery": "Tiny Home Residential"
+    },
+    {
+     "neighbourhood": "Windslar",
+     "lot": "Rustic Residence",
+     "myName": "Rustic Residence",
+     "planSize": "30x20",
+     "planType": "Residential",
+     "shared": true,
+     "game": {
+      "name": "Rustic Residence",
+      "size": "30x20",
+      "area": "EP02_Rural_01",
+      "id": "2046492677"
+     },
+     "unitOf": null,
+     "typeInGame": "Tiny Home Residential",
+     "typeOnGallery": "Tiny Home Residential"
+    },
+    {
+     "neighbourhood": "Windslar",
+     "lot": "The Shrieking Llama",
+     "myName": "The Shrieking Llama",
+     "planSize": "20x20",
+     "planType": "Bar",
+     "shared": true,
+     "game": {
+      "name": "The Shrieking Llama",
+      "size": "20x20",
+      "area": "EP02_Rural_01",
+      "id": "2061565955"
+     },
+     "unitOf": null,
+     "typeInGame": "Bar",
+     "typeOnGallery": "Bar"
+    },
+    {
+     "neighbourhood": "Windslar",
+     "lot": "Dresden House",
+     "myName": "Dresden House",
+     "planSize": "64x64",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Dresden House",
+      "size": "64x64",
+      "area": "EP02_Rural_01",
+      "id": "2057895943"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Windslar",
+     "lot": "The Summer Home",
+     "myName": null,
+     "planSize": "40x30",
+     "planType": "Vet Clinic",
+     "shared": false,
+     "game": {
+      "name": "The Summer Home",
+      "size": "40x30",
+      "area": "EP02_Rural_01",
+      "id": "2062221320"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "The Crumbling Isle",
+     "lot": "The Lighthouse",
+     "myName": "The Lighthouse",
+     "planSize": "40x30",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "The Lighthouse",
+      "size": "40x30",
+      "area": "EP02_Island_01",
+      "id": "2478374916"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "The Crumbling Isle",
+     "lot": "Mid-NoWhere",
+     "myName": "Mid-NoWhere",
+     "planSize": "20x20",
+     "planType": "Park",
+     "shared": true,
+     "game": {
+      "name": "Mid-Nowhere",
+      "size": "20x20",
+      "area": "EP02_Island_01",
+      "id": "2506358787"
+     },
+     "unitOf": null,
+     "typeInGame": "Generic",
+     "typeOnGallery": "Generic"
+    },
+    {
+     "neighbourhood": "The Crumbling Isle",
+     "lot": "Pier Palace",
+     "myName": "Pier Palace",
+     "planSize": "30x20",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Pier Palace",
+      "size": "30x20",
+      "area": "EP02_Island_01",
+      "id": "2514681861"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "The Crumbling Isle",
+     "lot": "Dock Den",
+     "myName": "Dock Den",
+     "planSize": "30x20",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Dock Den",
+      "size": "30x20",
+      "area": "EP02_Island_01",
+      "id": "3377201155"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "The Crumbling Isle",
+     "lot": "Von-Windenburg Estate",
+     "myName": "Von-Windenburg Estate",
+     "planSize": "64x64",
+     "planType": "Residential",
+     "shared": true,
+     "game": {
+      "name": "Von-Windenburg Estate",
+      "size": "64x64",
+      "area": "EP02_Island_01",
+      "id": "2463563779"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Special Lots",
+     "lot": "Von-Haunt Estate",
+     "myName": "Von-Haunt Estate",
+     "planSize": "40x30",
+     "planType": "Chalet Gardens",
+     "shared": false,
+     "game": {
+      "name": "Von Haunt Estate",
+      "size": "40x30",
+      "area": "EP02_ChaletGarden_01",
+      "id": "996802565"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Special Lots",
+     "lot": "Ancient Ruins",
+     "myName": "Ancient Ruins",
+     "planSize": "20x15",
+     "planType": "Ancient Ruins",
+     "shared": false,
+     "game": {
+      "name": "Ancient Ruins",
+      "size": "20x15",
+      "area": "EP02_OldTownRuins_01",
+      "id": "1391722499"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Special Lots",
+     "lot": "The Bluffs",
+     "myName": "The Bluffs",
+     "planSize": "30x30",
+     "planType": "Island Bluff",
+     "shared": false,
+     "game": {
+      "name": "The Bluffs",
+      "size": "30x30",
+      "area": "EP02_IslandBluff_01",
+      "id": "674955270"
+     },
+     "unitOf": null
+    }
+   ],
+   "gameLotsNotInPlan": [],
+   "areas": [
+    "EP02_Business_01",
+    "EP02_ChaletGarden_01",
+    "EP02_IslandBluff_01",
+    "EP02_Island_01",
+    "EP02_OldTownRuins_01",
+    "EP02_OldTown_01",
+    "EP02_Rural_01"
+   ]
+  },
+  "San Myshuno": {
+   "owned": true,
+   "lots": [
+    {
+     "neighbourhood": "Spice Market",
+     "lot": "17 Culpepper House",
+     "myName": "17 Culpepper House",
+     "planSize": "N/A",
+     "planType": "Apartment",
+     "shared": true,
+     "game": {
+      "name": "20 Culpepper House",
+      "size": "30x30",
+      "area": "EP03_Docklands_01",
+      "id": "195756036"
+     },
+     "unitOf": "20 Culpepper House",
+     "typeInGame": "Residential"
+    },
+    {
+     "neighbourhood": "Spice Market",
+     "lot": "18 Culpepper House",
+     "myName": "18 Culpepper House",
+     "planSize": "N/A",
+     "planType": "Apartment",
+     "shared": true,
+     "game": {
+      "name": "20 Culpepper House",
+      "size": "30x30",
+      "area": "EP03_Docklands_01",
+      "id": "195756036"
+     },
+     "unitOf": "20 Culpepper House",
+     "typeInGame": "Residential"
+    },
+    {
+     "neighbourhood": "Spice Market",
+     "lot": "19 Culpepper House",
+     "myName": "19 Culpepper House",
+     "planSize": "N/A",
+     "planType": "Apartment",
+     "shared": true,
+     "game": {
+      "name": "20 Culpepper House",
+      "size": "30x30",
+      "area": "EP03_Docklands_01",
+      "id": "195756036"
+     },
+     "unitOf": "20 Culpepper House",
+     "typeInGame": "Residential"
+    },
+    {
+     "neighbourhood": "Spice Market",
+     "lot": "20 Culpepper House",
+     "myName": "20 Culpepper House",
+     "planSize": "N/A",
+     "planType": "Apartment",
+     "shared": false,
+     "game": {
+      "name": "20 Culpepper House",
+      "size": "30x30",
+      "area": "EP03_Docklands_01",
+      "id": "195756036"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Spice Market",
+     "lot": "2A Jasmine Suites",
+     "myName": "Fraternity Apartment",
+     "planSize": "N/A",
+     "planType": "Apartment",
+     "shared": true,
+     "game": {
+      "name": "2A Jasmine Suites",
+      "size": "20x20",
+      "area": "EP03_Docklands_01",
+      "id": "1506541571"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential"
+    },
+    {
+     "neighbourhood": "Spice Market",
+     "lot": "2B Jasmine Suites",
+     "myName": "Sorority Apartment",
+     "planSize": "N/A",
+     "planType": "Apartment",
+     "shared": true,
+     "game": {
+      "name": "2A Jasmine Suites",
+      "size": "20x20",
+      "area": "EP03_Docklands_01",
+      "id": "1506541571"
+     },
+     "unitOf": "2A Jasmine Suites",
+     "typeInGame": "Residential"
+    },
+    {
+     "neighbourhood": "Spice Market",
+     "lot": "The Old Salt House",
+     "myName": "The Old Salt House",
+     "planSize": "30x30",
+     "planType": "Restaurant",
+     "shared": true,
+     "game": {
+      "name": "The Old Salt House",
+      "size": "30x30",
+      "area": "EP03_Docklands_01",
+      "id": "1564016770"
+     },
+     "unitOf": null,
+     "typeInGame": "Thrift and Bubble Tea Store",
+     "typeOnGallery": "Restaurant"
+    },
+    {
+     "neighbourhood": "Spice Market",
+     "lot": "Waterside Warble",
+     "myName": "Waterside Warble",
+     "planSize": "30x30",
+     "planType": "Karaoke Bar",
+     "shared": true,
+     "game": {
+      "name": "Waterside Warble",
+      "size": "30x30",
+      "area": "EP03_Docklands_01",
+      "id": "727449603"
+     },
+     "unitOf": null,
+     "typeInGame": "Karaoke Bar",
+     "typeOnGallery": "Karaoke Bar"
+    },
+    {
+     "neighbourhood": "Arts Quarter",
+     "lot": "910 Medina Studios",
+     "myName": "910 Medina Studios",
+     "planSize": "N/A",
+     "planType": "Apartment",
+     "shared": false,
+     "game": {
+      "name": "910 Medina Studios",
+      "size": "30x30",
+      "area": "EP03_ArtsQuarter_01",
+      "id": "985726979"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Arts Quarter",
+     "lot": "920 Medina Studios",
+     "myName": "920 Medina Studios",
+     "planSize": "N/A",
+     "planType": "Apartment",
+     "shared": true,
+     "game": {
+      "name": "910 Medina Studios",
+      "size": "30x30",
+      "area": "EP03_ArtsQuarter_01",
+      "id": "985726979"
+     },
+     "unitOf": "910 Medina Studios",
+     "typeInGame": "Residential"
+    },
+    {
+     "neighbourhood": "Arts Quarter",
+     "lot": "930 Medina Studios",
+     "myName": "930 Medina Studios",
+     "planSize": "N/A",
+     "planType": "Apartment",
+     "shared": true,
+     "game": {
+      "name": "910 Medina Studios",
+      "size": "30x30",
+      "area": "EP03_ArtsQuarter_01",
+      "id": "985726979"
+     },
+     "unitOf": "910 Medina Studios",
+     "typeInGame": "Residential"
+    },
+    {
+     "neighbourhood": "Arts Quarter",
+     "lot": "121 Hakim House",
+     "myName": "121 Hakim House",
+     "planSize": "N/A",
+     "planType": "Apartment",
+     "shared": false,
+     "game": {
+      "name": "121 Hakim House",
+      "size": "30x20",
+      "area": "EP03_ArtsQuarter_01",
+      "id": "1712586756"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Arts Quarter",
+     "lot": "122 Hakim House",
+     "myName": "122 Hakim House",
+     "planSize": "N/A",
+     "planType": "Apartment",
+     "shared": true,
+     "game": {
+      "name": "121 Hakim House",
+      "size": "30x20",
+      "area": "EP03_ArtsQuarter_01",
+      "id": "1712586756"
+     },
+     "unitOf": "121 Hakim House",
+     "typeInGame": "Residential"
+    },
+    {
+     "neighbourhood": "Arts Quarter",
+     "lot": "FountainView Penthouse",
+     "myName": "FountainView Penthouse",
+     "planSize": "N/A",
+     "planType": "Penthouse",
+     "shared": false,
+     "game": {
+      "name": "Fountainview Penthouse",
+      "size": "30x20",
+      "area": "EP03_ArtsQuarter_01",
+      "id": "1729429511"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Arts Quarter",
+     "lot": "Casbah Gallery",
+     "myName": "Casbah Gallery",
+     "planSize": "40x30",
+     "planType": "Arts Center",
+     "shared": false,
+     "game": {
+      "name": "Casbah Gallery",
+      "size": "40x30",
+      "area": "EP03_ArtsQuarter_01",
+      "id": "1706622979"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Fashion District",
+     "lot": "701 ZenView",
+     "myName": "701 ZenView",
+     "planSize": "N/A",
+     "planType": "Apartment",
+     "shared": false,
+     "game": {
+      "name": "702 ZenView",
+      "size": "20x20",
+      "area": "EP03_fashionDistrict_01",
+      "id": "1464401924"
+     },
+     "unitOf": "702 ZenView"
+    },
+    {
+     "neighbourhood": "Fashion District",
+     "lot": "702 ZenView",
+     "myName": "702 ZenView",
+     "planSize": "N/A",
+     "planType": "Apartment",
+     "shared": false,
+     "game": {
+      "name": "702 ZenView",
+      "size": "20x20",
+      "area": "EP03_fashionDistrict_01",
+      "id": "1464401924"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Fashion District",
+     "lot": "1310 21 Chic Street",
+     "myName": "1310 21 Chic Street",
+     "planSize": "N/A",
+     "planType": "Apartment",
+     "shared": true,
+     "game": {
+      "name": "1313 21 Chic Street",
+      "size": "20x20",
+      "area": "EP03_fashionDistrict_01",
+      "id": "1463943171"
+     },
+     "unitOf": "1313 21 Chic Street",
+     "typeInGame": "Residential"
+    },
+    {
+     "neighbourhood": "Fashion District",
+     "lot": "1312 21 Chic Street",
+     "myName": "1312 21 Chic Street",
+     "planSize": "N/A",
+     "planType": "Apartment",
+     "shared": false,
+     "game": {
+      "name": "1313 21 Chic Street",
+      "size": "20x20",
+      "area": "EP03_fashionDistrict_01",
+      "id": "1463943171"
+     },
+     "unitOf": "1313 21 Chic Street"
+    },
+    {
+     "neighbourhood": "Fashion District",
+     "lot": "1313 21 Chic Street",
+     "myName": "1313 21 Chic Street",
+     "planSize": "N/A",
+     "planType": "Apartment",
+     "shared": false,
+     "game": {
+      "name": "1313 21 Chic Street",
+      "size": "20x20",
+      "area": "EP03_fashionDistrict_01",
+      "id": "1463943171"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Fashion District",
+     "lot": "Torendi Tower Penthouse",
+     "myName": "Torendi Tunes",
+     "planSize": "40x30",
+     "planType": "Karaoke Bar",
+     "shared": false,
+     "game": {
+      "name": "1 Torendi Tower Penthouse",
+      "size": "40x30",
+      "area": "EP03_fashionDistrict_01",
+      "id": "2671312906"
+     },
+     "unitOf": "1 Torendi Tower Penthouse"
+    },
+    {
+     "neighbourhood": "Fashion District",
+     "lot": "Planet Honey Pop!",
+     "myName": "Planet Honey Pop!",
+     "planSize": "30x20",
+     "planType": "Boba & Thrift",
+     "shared": false,
+     "game": {
+      "name": "Planet Honey Pop!",
+      "size": "30x20",
+      "area": "EP03_fashionDistrict_01",
+      "id": "1464926213"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Uptown",
+     "lot": "1010 Alto Apartments",
+     "myName": "1010 Alto Apartments",
+     "planSize": "N/A",
+     "planType": "Apartment",
+     "shared": true,
+     "game": {
+      "name": "1010 Alto Apartments",
+      "size": "40x30",
+      "area": "EP03_Uptown_01",
+      "id": "2517434371"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential"
+    },
+    {
+     "neighbourhood": "Uptown",
+     "lot": "1020 Alto Apartments",
+     "myName": "1020 Alto Apartments",
+     "planSize": "N/A",
+     "planType": "Apartment",
+     "shared": false,
+     "game": {
+      "name": "1010 Alto Apartments",
+      "size": "40x30",
+      "area": "EP03_Uptown_01",
+      "id": "2517434371"
+     },
+     "unitOf": "1010 Alto Apartments"
+    },
+    {
+     "neighbourhood": "Uptown",
+     "lot": "VIII Landgraab Apartments",
+     "myName": "VIII Landgraab Apartments",
+     "planSize": "N/A",
+     "planType": "Apartment",
+     "shared": false,
+     "game": null,
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Uptown",
+     "lot": "IX Landgraab Apartments",
+     "myName": "IX Landgraab Apartments",
+     "planSize": "N/A",
+     "planType": "Apartment",
+     "shared": false,
+     "game": null,
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Uptown",
+     "lot": "888 Spire Apartments",
+     "myName": "888 Spire Apartments",
+     "planSize": "N/A",
+     "planType": "Apartment",
+     "shared": false,
+     "game": {
+      "name": "888 Spire Apartments",
+      "size": "20x15",
+      "area": "EP03_Uptown_01",
+      "id": "2521038852"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Uptown",
+     "lot": "Skye Fitness",
+     "myName": "Skye Fitness",
+     "planSize": "30x20",
+     "planType": "Gym",
+     "shared": true,
+     "game": {
+      "name": "Skye Fitness",
+      "size": "30x20",
+      "area": "EP03_Uptown_01",
+      "id": "1521615080"
+     },
+     "unitOf": null,
+     "typeInGame": "Gym",
+     "typeOnGallery": "Gym"
+    },
+    {
+     "neighbourhood": "Uptown",
+     "lot": "Stargazer Lounge",
+     "myName": "Stargazer Lounge",
+     "planSize": "40x30",
+     "planType": "Nightclub",
+     "shared": true,
+     "game": {
+      "name": "Stargazer Lounge",
+      "size": "40x30",
+      "area": "EP03_Uptown_01",
+      "id": "3708747783"
+     },
+     "unitOf": null,
+     "typeInGame": "Lounge",
+     "typeOnGallery": "Nightclub"
+    },
+    {
+     "neighbourhood": "Myshuno Meadows",
+     "lot": "Myshuno Meadows",
+     "myName": "Myshuno Meadows",
+     "planSize": "64x64",
+     "planType": "Central Park",
+     "shared": false,
+     "game": {
+      "name": "Myshuno Meadows",
+      "size": "64x64",
+      "area": "EP03_CentralPark_01",
+      "id": "653328387"
+     },
+     "unitOf": null
+    }
+   ],
+   "gameLotsNotInPlan": [
+    {
+     "id": "2522808325",
+     "name": "IX Landgraab",
+     "description": "Though the exclusive address is reason enough to take this dazzling suite, the upper-level loft and floor to ceiling windows certainly add to the appeal.",
+     "size": "30x20",
+     "area": "EP03_Uptown_01",
+     "pos": [
+      409.7,
+      168.83,
+      423.18
+     ]
+    }
+   ],
+   "areas": [
+    "EP03_ArtsQuarter_01",
+    "EP03_CentralPark_01",
+    "EP03_Docklands_01",
+    "EP03_Uptown_01",
+    "EP03_fashionDistrict_01"
+   ]
+  },
+  "Forgotten Hollow": {
+   "owned": false,
+   "lots": [
+    {
+     "neighbourhood": "Forgotten Hollow",
+     "lot": "Straud Mansion",
+     "myName": null,
+     "planSize": "40x30",
+     "planType": null,
+     "shared": false,
+     "game": {
+      "name": "Straud Mansion",
+      "size": "40x30",
+      "area": "GP04_VampireWorld_01",
+      "id": "3088711712"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Forgotten Hollow",
+     "lot": "Wolfsbane Manor",
+     "myName": null,
+     "planSize": "30x30",
+     "planType": null,
+     "shared": false,
+     "game": {
+      "name": "Wolfsbane Manor",
+      "size": "30x30",
+      "area": "GP04_VampireWorld_01",
+      "id": "1521745926"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Forgotten Hollow",
+     "lot": "Garliclauter Place",
+     "myName": null,
+     "planSize": "30x20",
+     "planType": null,
+     "shared": false,
+     "game": {
+      "name": "Garliclauter Place",
+      "size": "30x20",
+      "area": "GP04_VampireWorld_01",
+      "id": "3169845671"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Forgotten Hollow",
+     "lot": "Widowshild Townhome",
+     "myName": null,
+     "planSize": "30x20",
+     "planType": null,
+     "shared": false,
+     "game": {
+      "name": "Widowshild Townhome",
+      "size": "30x20",
+      "area": "GP04_VampireWorld_01",
+      "id": "1507786757"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Forgotten Hollow",
+     "lot": "Fledermaus Bend",
+     "myName": null,
+     "planSize": "30x30",
+     "planType": null,
+     "shared": false,
+     "game": {
+      "name": "Fledermaus Bend",
+      "size": "30x30",
+      "area": "GP04_VampireWorld_01",
+      "id": "1452277763"
+     },
+     "unitOf": null
+    }
+   ],
+   "gameLotsNotInPlan": [],
+   "areas": [
+    "GP04_VampireWorld_01"
+   ]
+  },
+  "Selvadorada": {
+   "owned": true,
+   "lots": [
+    {
+     "neighbourhood": "Puerto Llamante Marketplace",
+     "lot": "Alam Museum of Archaeology",
+     "myName": "Alam Museum of Archaeology",
+     "planSize": "64x64",
+     "planType": "Museum",
+     "shared": false,
+     "game": {
+      "name": "Alam Museum of Archaeology",
+      "size": "64x64",
+      "area": "GP06_MarketPlace_01",
+      "id": "630390811"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Puerto Llamante Marketplace",
+     "lot": "Hillview Hideaway",
+     "myName": "Hillside Hideaway",
+     "planSize": "20x15",
+     "planType": "Vacation Rental",
+     "shared": true,
+     "game": {
+      "name": "Hillview Hideaway",
+      "size": "20x15",
+      "area": "GP06_MarketPlace_01",
+      "id": "420085766"
+     },
+     "unitOf": null,
+     "typeInGame": "Vacation Rental - Selvadorada",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Puerto Llamante Marketplace",
+     "lot": "Selvadorada Villa",
+     "myName": "Selvadorada Villa",
+     "planSize": "30x20",
+     "planType": "Vacation Rental",
+     "shared": true,
+     "game": {
+      "name": "Selvadorada Villa",
+      "size": "30x20",
+      "area": "GP06_MarketPlace_01",
+      "id": "419233797"
+     },
+     "unitOf": null,
+     "typeInGame": "Vacation Rental - Selvadorada",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Puerto Llamante Marketplace",
+     "lot": "Cantina \"El Árbol del Jaguar\"",
+     "myName": "Cantina \"El Árbol del Jaguar\"",
+     "planSize": "40x30",
+     "planType": "Bar",
+     "shared": true,
+     "game": {
+      "name": "Cantina “El Árbol del Jaguar”",
+      "size": "40x30",
+      "area": "GP06_MarketPlace_01",
+      "id": "415105027"
+     },
+     "unitOf": null,
+     "typeInGame": "Bar",
+     "typeOnGallery": "Bar"
+    },
+    {
+     "neighbourhood": "Belomisia Jungle",
+     "lot": "Belomisia Trailhead",
+     "myName": "Belomisia Trailhead",
+     "planSize": "40x20",
+     "planType": "Campground",
+     "shared": false,
+     "game": {
+      "name": "Belomisia Trailhead",
+      "size": "40x20",
+      "area": "GP06_Jungle_01",
+      "id": "615252035"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Belomisia Jungle",
+     "lot": "Jungle Bungalow",
+     "myName": "Jungle Bungalow",
+     "planSize": "30x30",
+     "planType": "Vacation Rental",
+     "shared": true,
+     "game": {
+      "name": "Jungle Bungalow",
+      "size": "30x30",
+      "area": "GP06_Jungle_01",
+      "id": "554500140"
+     },
+     "unitOf": null,
+     "typeInGame": "Vacation Rental - Selvadorada",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Belomisia Jungle",
+     "lot": "Belomisia Field Station",
+     "myName": "Belomisia Field Station",
+     "planSize": "30x20",
+     "planType": "Vacation Rental",
+     "shared": true,
+     "game": {
+      "name": "Belomisia Field Station",
+      "size": "30x20",
+      "area": "GP06_Jungle_01",
+      "id": "3237085187"
+     },
+     "unitOf": null,
+     "typeInGame": "Custom Venue",
+     "typeOnGallery": "Custom Venue"
+    }
+   ],
+   "gameLotsNotInPlan": [
+    {
+     "id": "3238723589",
+     "name": "Omiscan Royal Baths",
+     "description": "",
+     "size": "40x30",
+     "area": "GP06_Jungle_01",
+     "pos": [
+      141.91,
+      287.51,
+      234.15
+     ]
+    },
+    {
+     "id": "1439301663",
+     "name": "Omiscan Temple",
+     "description": "",
+     "size": "50x50",
+     "area": "GP06_Jungle_01",
+     "pos": [
+      294.37,
+      264.33,
+      183.76
+     ]
+    }
+   ],
+   "areas": [
+    "GP06_Jungle_01",
+    "GP06_MarketPlace_01"
+   ]
+  },
+  "Brindleton Bay": {
+   "owned": true,
+   "lots": [
+    {
+     "neighbourhood": "Sable Square",
+     "lot": "Pupperstone Park",
+     "myName": "Pupperstone Park",
+     "planSize": "40x30",
+     "planType": "Park",
+     "shared": true,
+     "game": {
+      "name": "Pupperstone Park",
+      "size": "40x30",
+      "area": "EP04_TownSquare_01",
+      "id": "3081175056"
+     },
+     "unitOf": null,
+     "typeInGame": "Park",
+     "typeOnGallery": "Park"
+    },
+    {
+     "neighbourhood": "Sable Square",
+     "lot": "Brindleton Pawspital",
+     "myName": "Brindleton Pawspital",
+     "planSize": "40x30",
+     "planType": "Vet Clinic",
+     "shared": false,
+     "game": {
+      "name": "Brindleton Pawspital",
+      "size": "40x30",
+      "area": "EP04_TownSquare_01",
+      "id": "587399173"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Sable Square",
+     "lot": "It's A Good House",
+     "myName": "It's A Good House",
+     "planSize": "40x40",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "It's A Good House",
+      "size": "40x40",
+      "area": "EP04_TownSquare_01",
+      "id": "2473787395"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Sable Square",
+     "lot": "Domus Familiaris",
+     "myName": "Domus Familiaris",
+     "planSize": "30x30",
+     "planType": "Residential",
+     "shared": true,
+     "game": {
+      "name": "Domus Familiaris",
+      "size": "30x30",
+      "area": "EP04_TownSquare_01",
+      "id": "2886467601"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Sable Square",
+     "lot": "Sporting Space",
+     "myName": "Brindleton Boathouse",
+     "planSize": "30x20",
+     "planType": "Residential",
+     "shared": true,
+     "game": {
+      "name": "Sporting Space",
+      "size": "30x20",
+      "area": "EP04_TownSquare_01",
+      "id": "3041853450"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Whiskerman's Wharf",
+     "lot": "Club Calico",
+     "myName": "Calico",
+     "planSize": "40x30",
+     "planType": "Lounge",
+     "shared": true,
+     "game": {
+      "name": "Club Calico",
+      "size": "40x30",
+      "area": "EP04_Harbor_01",
+      "id": "1430847506"
+     },
+     "unitOf": null,
+     "typeInGame": "Lounge",
+     "typeOnGallery": "Lounge"
+    },
+    {
+     "neighbourhood": "Whiskerman's Wharf",
+     "lot": "Salty Paws Saloon",
+     "myName": "The Bay Café",
+     "planSize": "20x15",
+     "planType": "Small Business Cat Cafe",
+     "shared": true,
+     "game": {
+      "name": "Salty Paws Saloon",
+      "size": "20x15",
+      "area": "EP04_Harbor_01",
+      "id": "390791172"
+     },
+     "unitOf": null,
+     "typeInGame": "Generic",
+     "typeOnGallery": "Café"
+    },
+    {
+     "neighbourhood": "Whiskerman's Wharf",
+     "lot": "Catscratch Cottage",
+     "myName": null,
+     "planSize": "20x15",
+     "planType": "Restaurant (Seafood)",
+     "shared": false,
+     "game": {
+      "name": "Catscratch Cottage",
+      "size": "20x15",
+      "area": "EP04_Harbor_01",
+      "id": "397672454"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Whiskerman's Wharf",
+     "lot": "Ragdoll Refurb",
+     "myName": "Brindleton Library",
+     "planSize": "20x20",
+     "planType": "Library",
+     "shared": true,
+     "game": {
+      "name": "Ragdoll Refurb",
+      "size": "20x20",
+      "area": "EP04_Harbor_01",
+      "id": "422707207"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Library"
+    },
+    {
+     "neighbourhood": "Whiskerman's Wharf",
+     "lot": "Tail's End",
+     "myName": "Tail's End Apartments",
+     "planSize": "40x30",
+     "planType": "Residential Rental (4)",
+     "shared": true,
+     "game": {
+      "name": "Tail's End",
+      "size": "40x30",
+      "area": "EP04_Harbor_01",
+      "id": "1435500562"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential Rental"
+    },
+    {
+     "neighbourhood": "Cavalier Cove",
+     "lot": "Chateau Frise",
+     "myName": "Chateau Frise",
+     "planSize": "40x40",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Chateau Frise",
+      "size": "40x40",
+      "area": "EP04_Coastal_01",
+      "id": "3421044741"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Cavalier Cove",
+     "lot": "Bedlington Boathouse",
+     "myName": "Bedlington Barn",
+     "planSize": "20x20",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Bedlington Boathouse",
+      "size": "20x20",
+      "area": "EP04_Coastal_01",
+      "id": "1187053577"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Cavalier Cove",
+     "lot": "Hound's Head",
+     "myName": "Hound's Head",
+     "planSize": "64x64",
+     "planType": "Residential (Farm)",
+     "shared": false,
+     "game": {
+      "name": "Hound's Head",
+      "size": "64x64",
+      "area": "EP04_Coastal_01",
+      "id": "2064580676"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Cavalier Cove",
+     "lot": "Dachshund's Creek",
+     "myName": "Creek Clinic",
+     "planSize": "30x20",
+     "planType": "Vet Clinic",
+     "shared": true,
+     "game": {
+      "name": "Dachshund's Creek",
+      "size": "30x20",
+      "area": "EP04_Coastal_01",
+      "id": "1192493066"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Vet Clinic"
+    },
+    {
+     "neighbourhood": "Cavalier Cove",
+     "lot": "Hindquarter Hideaway",
+     "myName": "Hindquarter Hideaway",
+     "planSize": "30x20",
+     "planType": "Residential",
+     "shared": true,
+     "game": {
+      "name": "Hindquarter Hideaway",
+      "size": "30x20",
+      "area": "EP04_Coastal_01",
+      "id": "1162739717"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Deadgrass Isle",
+     "lot": "Deadgrass Discoveries",
+     "myName": "Deadgrass Discoveries",
+     "planSize": "30x30",
+     "planType": "Cemetery",
+     "shared": false,
+     "game": {
+      "name": "Deadgrass Discoveries",
+      "size": "30x30",
+      "area": "EP04_Island_01",
+      "id": "1287389190"
+     },
+     "unitOf": null
+    }
+   ],
+   "gameLotsNotInPlan": [],
+   "areas": [
+    "EP04_Coastal_01",
+    "EP04_Harbor_01",
+    "EP04_Island_01",
+    "EP04_TownSquare_01"
+   ]
+  },
+  "Del Sol Valley": {
+   "owned": true,
+   "lots": [
+    {
+     "neighbourhood": "Mirage Park",
+     "lot": "Vacuous Green",
+     "myName": "Strike Out!",
+     "planSize": "50x40",
+     "planType": "Nightclub",
+     "shared": true,
+     "game": {
+      "name": "Vacuous Green",
+      "size": "50x40",
+      "area": "EP06_EastHollywood_01",
+      "id": "3067215877"
+     },
+     "unitOf": null,
+     "typeInGame": "Nightclub",
+     "typeOnGallery": "Nightclub"
+    },
+    {
+     "neighbourhood": "Mirage Park",
+     "lot": "Inner Circle",
+     "myName": "Inner Circle",
+     "planSize": "40x30",
+     "planType": "Residential Rental (4)",
+     "shared": true,
+     "game": {
+      "name": "Inner Circle",
+      "size": "40x30",
+      "area": "EP06_EastHollywood_01",
+      "id": "3031564292"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential Rental"
+    },
+    {
+     "neighbourhood": "Mirage Park",
+     "lot": "Upland Place",
+     "myName": "Upland Trailer Park",
+     "planSize": "40x30",
+     "planType": "Residential Rental (4)",
+     "shared": true,
+     "game": {
+      "name": "Upland Place",
+      "size": "40x30",
+      "area": "EP06_EastHollywood_01",
+      "id": "2099838979"
+     },
+     "unitOf": null,
+     "typeInGame": "Vacation Rental",
+     "typeOnGallery": "Residential Rental"
+    },
+    {
+     "neighbourhood": "The Pinnacles",
+     "lot": "Chateau Peak",
+     "myName": "Chateau Peak",
+     "planSize": "64x64",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Chateau Peak",
+      "size": "64x64",
+      "area": "EP06_HollywoodHills_01",
+      "id": "1300824067"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "The Pinnacles",
+     "lot": "The Ward Den",
+     "myName": "The Ward Den",
+     "planSize": "50x40",
+     "planType": "Residential",
+     "shared": true,
+     "game": {
+      "name": "The Ward Den",
+      "size": "50x40",
+      "area": "EP06_HollywoodHills_01",
+      "id": "1556217859"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "The Pinnacles",
+     "lot": "Bailey-Moon Manor",
+     "myName": "Bailey-Moon Manor",
+     "planSize": "50x40",
+     "planType": "Residential",
+     "shared": true,
+     "game": {
+      "name": "Bailey-Moon Manor",
+      "size": "50x40",
+      "area": "EP06_HollywoodHills_01",
+      "id": "1642594307"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Starlight Boulevard",
+     "lot": "Orchid A Go Go",
+     "myName": "Orchid A Go Go",
+     "planSize": "30x30",
+     "planType": "Lounge",
+     "shared": true,
+     "game": {
+      "name": "Orchid A Go Go",
+      "size": "30x30",
+      "area": "EP06_StarsBlvd_01",
+      "id": "2311979033"
+     },
+     "unitOf": null,
+     "typeInGame": "Lounge",
+     "typeOnGallery": "Lounge"
+    },
+    {
+     "neighbourhood": "Starlight Boulevard",
+     "lot": "Ward Park",
+     "myName": "Starlight Fitness",
+     "planSize": "20x20",
+     "planType": "Gym",
+     "shared": true,
+     "game": {
+      "name": "Ward Park",
+      "size": "20x20",
+      "area": "EP06_StarsBlvd_01",
+      "id": "562561093"
+     },
+     "unitOf": null,
+     "typeInGame": "Generic",
+     "typeOnGallery": "Gym"
+    },
+    {
+     "neighbourhood": "Starlight Boulevard",
+     "lot": "Studio PBP",
+     "myName": "Studio PBP",
+     "planSize": "40x30",
+     "planType": "Lounge",
+     "shared": false,
+     "game": {
+      "name": "Studio PBP",
+      "size": "40x30",
+      "area": "EP06_StarsBlvd_01",
+      "id": "579403848"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Starlight Boulevard",
+     "lot": "Plumbob Pictures Museum",
+     "myName": "Plumbob Pictures Museum",
+     "planSize": "40x30",
+     "planType": "Small Business (Museum & Acting Classes)",
+     "shared": false,
+     "game": {
+      "name": "Plumbob Pictures Museum",
+      "size": "40x30",
+      "area": "EP06_StarsBlvd_01",
+      "id": "3058499610"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Starlight Boulevard",
+     "lot": "Pectoral Fitness",
+     "myName": "Valley Views",
+     "planSize": "30x30",
+     "planType": "Restaurant",
+     "shared": true,
+     "game": {
+      "name": "Pectoral Fitness",
+      "size": "30x30",
+      "area": "EP06_StarsBlvd_01",
+      "id": "2841378864"
+     },
+     "unitOf": null,
+     "typeInGame": "Restaurant",
+     "typeOnGallery": "Restaurant"
+    },
+    {
+     "neighbourhood": "Secret Lots",
+     "lot": "Plumbob Pictures",
+     "myName": "Plumbob Pictures",
+     "planSize": "50x50",
+     "planType": "Plumbob Pictures",
+     "shared": "N/A",
+     "game": null,
+     "unitOf": null
+    }
+   ],
+   "gameLotsNotInPlan": [
+    {
+     "id": "284033049",
+     "name": "Studio",
+     "description": "",
+     "size": "50x50",
+     "area": "EP06_Studio_01",
+     "pos": [
+      169.0,
+      151.34,
+      57.5
+     ]
+    }
+   ],
+   "areas": [
+    "EP06_EastHollywood_01",
+    "EP06_HollywoodHills_01",
+    "EP06_StarsBlvd_01",
+    "EP06_Studio_01"
+   ]
+  },
+  "StrangerVille": {
+   "owned": true,
+   "lots": [
+    {
+     "neighbourhood": "StrangerVille Plaza",
+     "lot": "8 Bells",
+     "myName": "8 Bells",
+     "planSize": "20x20",
+     "planType": "Bar",
+     "shared": false,
+     "game": {
+      "name": "8 Bells",
+      "size": "20x20",
+      "area": "GP07_Downtown_01",
+      "id": "2023096350"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "StrangerVille Plaza",
+     "lot": "StrangerVille Information Center",
+     "myName": "StrangerVille Information Center",
+     "planSize": "20x20",
+     "planType": "Museum",
+     "shared": false,
+     "game": {
+      "name": "StrangerVille Information Center",
+      "size": "20x20",
+      "area": "GP07_Downtown_01",
+      "id": "138674231"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "StrangerVille Plaza",
+     "lot": "Carpophagous Corner",
+     "myName": "Carpophagous Corner",
+     "planSize": "30x20",
+     "planType": "Vacation Rental",
+     "shared": true,
+     "game": {
+      "name": "Carpophagous Corner",
+      "size": "30x20",
+      "area": "GP07_Downtown_01",
+      "id": "1997406236"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "StrangerVille Plaza",
+     "lot": "Slip 42",
+     "myName": "Slip 42",
+     "planSize": "20x15",
+     "planType": "Residential Rental (2)",
+     "shared": true,
+     "game": {
+      "name": "Slip 42",
+      "size": "20x15",
+      "area": "GP07_Downtown_01",
+      "id": "3149529122"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "StrangerVille Plaza",
+     "lot": "Old Penelope",
+     "myName": "Old Penelope",
+     "planSize": "50x40",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Old Penelope",
+      "size": "50x40",
+      "area": "GP07_Downtown_01",
+      "id": "523042887"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "StrangerVille Plaza",
+     "lot": "Riverside Grove",
+     "myName": "Riverside Grove",
+     "planSize": "30x20",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Riverside Grove",
+      "size": "30x20",
+      "area": "GP07_Downtown_01",
+      "id": "3473080362"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Shady Acres",
+     "lot": "Cliff Side Crest",
+     "myName": "StrangerVille Gym&Pool",
+     "planSize": "30x20",
+     "planType": "Gym",
+     "shared": false,
+     "game": {
+      "name": "Cliff Side Crest",
+      "size": "30x20",
+      "area": "GP07_Outskirts_01",
+      "id": "3150250019"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Shady Acres",
+     "lot": "Creek Corner Cove",
+     "myName": "Creek Corner Cove",
+     "planSize": "30x20",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Creek Corner Cove",
+      "size": "30x20",
+      "area": "GP07_Outskirts_01",
+      "id": "2956984352"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Shady Acres",
+     "lot": "Plateau Place",
+     "myName": "SU Plateau Residence",
+     "planSize": "40x30",
+     "planType": "University Housing",
+     "shared": false,
+     "game": {
+      "name": "Plateau Place",
+      "size": "40x30",
+      "area": "GP07_Outskirts_01",
+      "id": "2962489377"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Shady Acres",
+     "lot": "Dream Weavers Way",
+     "myName": "StrangerVille Library",
+     "planSize": "30x20",
+     "planType": "Library",
+     "shared": false,
+     "game": {
+      "name": "Dream Weavers Way",
+      "size": "30x20",
+      "area": "GP07_Outskirts_01",
+      "id": "2970615842"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Shady Acres",
+     "lot": "StrangerVille Overlook",
+     "myName": "SU Overlook Residence",
+     "planSize": "40x30",
+     "planType": "University Housing",
+     "shared": false,
+     "game": {
+      "name": "StrangerVille Overlook",
+      "size": "40x30",
+      "area": "GP07_Outskirts_01",
+      "id": "3158048804"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Secret Lots",
+     "lot": "The ██████ Lab",
+     "myName": "The ██████ Lab",
+     "planSize": "64x64",
+     "planType": "Special",
+     "shared": "N/A",
+     "game": {
+      "name": "The ██████ Lab",
+      "size": "64x64",
+      "area": "GP07_CraterBase_01",
+      "id": "2307784707"
+     },
+     "unitOf": null
+    }
+   ],
+   "gameLotsNotInPlan": [],
+   "areas": [
+    "GP07_CraterBase_01",
+    "GP07_Downtown_01",
+    "GP07_Outskirts_01"
+   ]
+  },
+  "Sulani": {
+   "owned": true,
+   "lots": [
+    {
+     "neighbourhood": "Mua Pel'am",
+     "lot": "Admiral's Wreckage",
+     "myName": "Admiral's Wreckage",
+     "planSize": "50x50",
+     "planType": "Community Space",
+     "shared": true,
+     "game": {
+      "name": "Admiral’s Wreckage",
+      "size": "50x50",
+      "area": "EP07_Natural_Island_01",
+      "id": "80740372"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Missing sims translation"
+    },
+    {
+     "neighbourhood": "Mua Pel'am",
+     "lot": "Caldera Camp",
+     "myName": "Caldera Camp",
+     "planSize": "30x20",
+     "planType": "Residential",
+     "shared": true,
+     "game": {
+      "name": "Caldera Camp",
+      "size": "30x20",
+      "area": "EP07_Natural_Island_01",
+      "id": "4100980749"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Mua Pel'am",
+     "lot": "Key Point",
+     "myName": "Key Point",
+     "planSize": "40x30",
+     "planType": "To be decided",
+     "shared": false,
+     "game": {
+      "name": "Key Point",
+      "size": "40x30",
+      "area": "EP07_Natural_Island_01",
+      "id": "2462318643"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Ohan'ali Town",
+     "lot": "Kin-Ship",
+     "myName": "Kin-Ship",
+     "planSize": "30x30",
+     "planType": "Residential",
+     "shared": true,
+     "game": {
+      "name": "Kin-Ship",
+      "size": "30x30",
+      "area": "EP07_LocalIsland_01",
+      "id": "651362343"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Ohan'ali Town",
+     "lot": "Chieftain's Villa",
+     "myName": "Chieftain's Villa",
+     "planSize": "40x30",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Chieftain's Villa",
+      "size": "40x30",
+      "area": "EP07_LocalIsland_01",
+      "id": "1289814031"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Ohan'ali Town",
+     "lot": "Lagoon Look",
+     "myName": "Lagoon of Love",
+     "planSize": "30x20",
+     "planType": "Wedding Venue",
+     "shared": true,
+     "game": {
+      "name": "Lagoon Look",
+      "size": "30x20",
+      "area": "EP07_LocalIsland_01",
+      "id": "2050424860"
+     },
+     "unitOf": null,
+     "typeInGame": "Vacation Rental",
+     "typeOnGallery": "Park"
+    },
+    {
+     "neighbourhood": "Ohan'ali Town",
+     "lot": "Tangled Flat",
+     "myName": "Ohan'ali Community Center",
+     "planSize": "20x20",
+     "planType": "Library",
+     "shared": true,
+     "game": {
+      "name": "Tangled Flat",
+      "size": "20x20",
+      "area": "EP07_LocalIsland_01",
+      "id": "1567621127"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Library"
+    },
+    {
+     "neighbourhood": "Ohan'ali Town",
+     "lot": "The Sand Bar",
+     "myName": "The Sand Bar",
+     "planSize": "30x20",
+     "planType": "Bar",
+     "shared": true,
+     "game": {
+      "name": "The Sand Bar",
+      "size": "30x20",
+      "area": "EP07_LocalIsland_01",
+      "id": "316866564"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Bar"
+    },
+    {
+     "neighbourhood": "Ohan'ali Town",
+     "lot": "Ohan'ali Beach",
+     "myName": "Ohan'ali Beach",
+     "planSize": "30x30",
+     "planType": "Beach",
+     "shared": true,
+     "game": {
+      "name": "Ohan’ali Beach",
+      "size": "30x30",
+      "area": "EP07_LocalIsland_01",
+      "id": "2840395894"
+     },
+     "unitOf": null,
+     "typeInGame": "Beach",
+     "typeOnGallery": "Beach"
+    },
+    {
+     "neighbourhood": "Lani St. Taz",
+     "lot": "Reef Finery",
+     "myName": "Reef Finery",
+     "planSize": "40x30",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Reef Finery",
+      "size": "40x30",
+      "area": "EP07_ResortIsland",
+      "id": "3814129749"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Lani St. Taz",
+     "lot": "Journey's End",
+     "myName": "Journey's End",
+     "planSize": "40x30",
+     "planType": "Residential",
+     "shared": true,
+     "game": {
+      "name": "Journey's End",
+      "size": "40x30",
+      "area": "EP07_ResortIsland",
+      "id": "2521301018"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Lani St. Taz",
+     "lot": "Pier Perfection",
+     "myName": "Pier Perfection",
+     "planSize": "30x20",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Pier Perfection",
+      "size": "30x20",
+      "area": "EP07_ResortIsland",
+      "id": "2165506097"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Lani St. Taz",
+     "lot": "Sand Simoleon Beach",
+     "myName": "Sand Simoleon Beach",
+     "planSize": "40x30",
+     "planType": "Beach",
+     "shared": true,
+     "game": {
+      "name": "Sand Simoleon Beach",
+      "size": "40x30",
+      "area": "EP07_ResortIsland",
+      "id": "3970695593"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Beach"
+    },
+    {
+     "neighbourhood": "Lani St. Taz",
+     "lot": "Sapphire Shores",
+     "myName": "Sapphire Shores",
+     "planSize": "50x50",
+     "planType": "Residential",
+     "shared": true,
+     "game": {
+      "name": "Sapphire Shores",
+      "size": "50x50",
+      "area": "EP07_ResortIsland",
+      "id": "2334195731"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
+    }
+   ],
+   "gameLotsNotInPlan": [],
+   "areas": [
+    "EP07_LocalIsland_01",
+    "EP07_Natural_Island_01",
+    "EP07_ResortIsland"
+   ]
+  },
+  "Glimmerbrook": {
+   "owned": true,
+   "lots": [
+    {
+     "neighbourhood": "Glimmerbrook",
+     "lot": "Rock Ridge Canyon",
+     "myName": "Rock Ridge Canyon",
+     "planSize": "40x30",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Rock Ridge Canyon",
+      "size": "40x30",
+      "area": "GP08_Village_01",
+      "id": "3811442693"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Glimmerbrook",
+     "lot": "Creek Side Corner",
+     "myName": "Creek Side Corner",
+     "planSize": "30x20",
+     "planType": "Residential",
+     "shared": true,
+     "game": {
+      "name": "Creek Side Corner",
+      "size": "30x20",
+      "area": "GP08_Village_01",
+      "id": "1024655366"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Glimmerbrook",
+     "lot": "Glimmerbrook Watch",
+     "myName": "Glimmerbrook Watch",
+     "planSize": "30x20",
+     "planType": "Residential",
+     "shared": true,
+     "game": {
+      "name": "Glimmerbrook Watch",
+      "size": "30x20",
+      "area": "GP08_Village_01",
+      "id": "1040318472"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Glimmerbrook",
+     "lot": "Brooks Bridge Borough",
+     "myName": "Brooks Bridge Borough",
+     "planSize": "30x20",
+     "planType": "Residential",
+     "shared": true,
+     "game": {
+      "name": "Brooks Bridge Borough",
+      "size": "30x20",
+      "area": "GP08_Village_01",
+      "id": "1035272224"
+     },
+     "unitOf": null,
+     "typeInGame": "Haunted House Residential",
+     "typeOnGallery": "Haunted House Residential"
+    },
+    {
+     "neighbourhood": "Glimmerbrook",
+     "lot": "Elixirs and Brews",
+     "myName": "Glimmer & Books",
+     "planSize": "30x20",
+     "planType": "Library",
+     "shared": true,
+     "game": {
+      "name": "Elixirs and Brews",
+      "size": "30x20",
+      "area": "GP08_Village_01",
+      "id": "3374055458"
+     },
+     "unitOf": null,
+     "typeInGame": "Library",
+     "typeOnGallery": "Library"
+    },
+    {
+     "neighbourhood": "The Magic Realm",
+     "lot": "The Magic Realm",
+     "myName": "The Magic Realm",
+     "planSize": "40x40",
+     "planType": "The Magic Realm",
+     "shared": true,
+     "game": {
+      "name": "The Magic Realm",
+      "size": "50x40",
+      "area": "GP08_MagicRealm_01",
+      "id": "3019112452"
+     },
+     "unitOf": null,
+     "typeOnGallery": "Generic"
+    }
+   ],
+   "gameLotsNotInPlan": [],
+   "areas": [
+    "GP08_MagicRealm_01",
+    "GP08_Village_01"
+   ]
+  },
+  "Britechester": {
+   "owned": true,
+   "lots": [
+    {
+     "neighbourhood": "University of Britechester",
+     "lot": "Darby's Den",
+     "myName": "Darby's Den",
+     "planSize": "30x20",
+     "planType": "UoB Commons",
+     "shared": true,
+     "game": {
+      "name": "Darby's Den",
+      "size": "30x20",
+      "area": "EP08_ArtsCampus_01",
+      "id": "901251075"
+     },
+     "unitOf": null,
+     "typeInGame": "UBrite Commons",
+     "typeOnGallery": "UBrite Commons"
+    },
+    {
+     "neighbourhood": "University of Britechester",
+     "lot": "Darkwing House",
+     "myName": "The Old Clocktower",
+     "planSize": "30x20",
+     "planType": "Nightclub/Retail",
+     "shared": true,
+     "game": {
+      "name": "Darkwing House",
+      "size": "30x20",
+      "area": "EP08_ArtsCampus_01",
+      "id": "705167367"
+     },
+     "unitOf": null,
+     "typeInGame": "Retail",
+     "typeOnGallery": "Nightclub"
+    },
+    {
+     "neighbourhood": "University of Britechester",
+     "lot": "Drake Hall",
+     "myName": "Drake Hall",
+     "planSize": "30x20",
+     "planType": "University Housing",
+     "shared": true,
+     "game": {
+      "name": "Drake Hall",
+      "size": "30x20",
+      "area": "EP08_ArtsCampus_01",
+      "id": "3101884519"
+     },
+     "unitOf": null,
+     "typeInGame": "University Housing",
+     "typeOnGallery": "University Housing"
+    },
+    {
+     "neighbourhood": "University of Britechester",
+     "lot": "Wyvern Hall",
+     "myName": "Wyvern Hall",
+     "planSize": "30x20",
+     "planType": "University Housing",
+     "shared": true,
+     "game": {
+      "name": "Wyvern Hall",
+      "size": "30x20",
+      "area": "EP08_ArtsCampus_01",
+      "id": "3073900618"
+     },
+     "unitOf": null,
+     "typeInGame": "University Housing",
+     "typeOnGallery": "University Housing"
+    },
+    {
+     "neighbourhood": "Foxbury Institute",
+     "lot": "Larry's Lagoon",
+     "myName": "Larry's Lagoon",
+     "planSize": "40x30",
+     "planType": "Foxbury Commons",
+     "shared": true,
+     "game": {
+      "name": "Larry's Lagoon",
+      "size": "40x30",
+      "area": "EP08_STEMCampus_01",
+      "id": "1849425924"
+     },
+     "unitOf": null,
+     "typeInGame": "Foxbury Commons",
+     "typeOnGallery": "Foxbury Commons"
+    },
+    {
+     "neighbourhood": "Foxbury Institute",
+     "lot": "Maritime Manor",
+     "myName": "Maritime Manor",
+     "planSize": "30x20",
+     "planType": "Nightclub/Retail",
+     "shared": true,
+     "game": {
+      "name": "Maritime Manor",
+      "size": "30x20",
+      "area": "EP08_STEMCampus_01",
+      "id": "4082434051"
+     },
+     "unitOf": null,
+     "typeInGame": "Nightclub",
+     "typeOnGallery": "Nightclub"
+    },
+    {
+     "neighbourhood": "Foxbury Institute",
+     "lot": "Tidal Tower",
+     "myName": "Tidal Tower",
+     "planSize": "30x20",
+     "planType": "University Housing",
+     "shared": true,
+     "game": {
+      "name": "Tidal Tower",
+      "size": "30x20",
+      "area": "EP08_STEMCampus_01",
+      "id": "4276158474"
+     },
+     "unitOf": null,
+     "typeInGame": "University Housing",
+     "typeOnGallery": "University Housing"
+    },
+    {
+     "neighbourhood": "Foxbury Institute",
+     "lot": "Briny Tower",
+     "myName": "Briny Tower",
+     "planSize": "30x20",
+     "planType": "University Housing",
+     "shared": true,
+     "game": {
+      "name": "Briny Tower",
+      "size": "30x20",
+      "area": "EP08_STEMCampus_01",
+      "id": "4231921698"
+     },
+     "unitOf": null,
+     "typeInGame": "University Housing",
+     "typeOnGallery": "University Housing"
+    },
+    {
+     "neighbourhood": "Gibbs Hill",
+     "lot": "Honeydew Fields",
+     "myName": "Britechester BnB",
+     "planSize": "20x15",
+     "planType": "Café/Vacation Rental",
+     "shared": true,
+     "game": {
+      "name": "Honeydew Fields",
+      "size": "20x15",
+      "area": "EP08_CollegeTown_01",
+      "id": "3872456788"
+     },
+     "unitOf": null,
+     "typeInGame": "Café",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Gibbs Hill",
+     "lot": "Laurel Library",
+     "myName": "Laurel Library",
+     "planSize": "50x40",
+     "planType": "Library",
+     "shared": true,
+     "game": {
+      "name": "Laurel Library",
+      "size": "50x40",
+      "area": "EP08_CollegeTown_01",
+      "id": "3868590195"
+     },
+     "unitOf": null,
+     "typeInGame": "Generic",
+     "typeOnGallery": "Library"
+    },
+    {
+     "neighbourhood": "Gibbs Hill",
+     "lot": "Pepper's Pub",
+     "myName": "The Old Crown",
+     "planSize": "20x20",
+     "planType": "Bar",
+     "shared": true,
+     "game": {
+      "name": "Pepper's Pub",
+      "size": "20x20",
+      "area": "EP08_CollegeTown_01",
+      "id": "3883073621"
+     },
+     "unitOf": null,
+     "typeInGame": "Bar",
+     "typeOnGallery": "Bar"
+    },
+    {
+     "neighbourhood": "Gibbs Hill",
+     "lot": "Mossy Lane",
+     "myName": "Mossy Lane",
+     "planSize": "20x15",
+     "planType": "Residential Rental (4)",
+     "shared": true,
+     "game": {
+      "name": "Mossy Lane",
+      "size": "20x15",
+      "area": "EP08_CollegeTown_01",
+      "id": "3871342675"
+     },
+     "unitOf": null,
+     "typeInGame": "University Housing",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Gibbs Hill",
+     "lot": "Spring Steppes",
+     "myName": "Spring Steppes",
+     "planSize": "20x15",
+     "planType": "Residential Rental (4)",
+     "shared": true,
+     "game": {
+      "name": "Spring Steppes",
+      "size": "20x15",
+      "area": "EP08_CollegeTown_01",
+      "id": "3870359634"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "University Housing"
+    }
+   ],
+   "gameLotsNotInPlan": [],
+   "areas": [
+    "EP08_ArtsCampus_01",
+    "EP08_CollegeTown_01",
+    "EP08_STEMCampus_01"
+   ]
+  },
+  "Evergreen Harbor": {
+   "owned": true,
+   "lots": [
+    {
+     "neighbourhood": "Grims Quarry",
+     "lot": "Miner Mansion",
+     "myName": "Miner Mansion",
+     "planSize": "30x20",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Miner Mansion",
+      "size": "30x20",
+      "area": "EP09_Suburbs_01",
+      "id": "1609760816"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Grims Quarry",
+     "lot": "Rockridge Springs",
+     "myName": "Rockridge Springs",
+     "planSize": "30x20",
+     "planType": "Residential Rental (3)",
+     "shared": true,
+     "game": {
+      "name": "Rockridge Springs",
+      "size": "30x20",
+      "area": "EP09_Suburbs_01",
+      "id": "290455566"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Grims Quarry",
+     "lot": "Stonestreet Apartments #3",
+     "myName": "Stonestreet Apartments #3",
+     "planSize": "N/A",
+     "planType": "Apartment",
+     "shared": true,
+     "game": {
+      "name": "Stonestreet Apartments #4",
+      "size": "30x20",
+      "area": "EP09_Suburbs_01",
+      "id": "1651572785"
+     },
+     "unitOf": "Stonestreet Apartments #4",
+     "typeInGame": "Residential"
+    },
+    {
+     "neighbourhood": "Grims Quarry",
+     "lot": "Stonestreet Apartments #4",
+     "myName": "Stonestreet Apartments #4",
+     "planSize": "N/A",
+     "planType": "Apartment",
+     "shared": true,
+     "game": {
+      "name": "Stonestreet Apartments #4",
+      "size": "30x20",
+      "area": "EP09_Suburbs_01",
+      "id": "1651572785"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential"
+    },
+    {
+     "neighbourhood": "Grims Quarry",
+     "lot": "The Quarry Building",
+     "myName": "The Quarry Building",
+     "planSize": "40x30",
+     "planType": "Community Space",
+     "shared": false,
+     "game": {
+      "name": "The Quarry Building",
+      "size": "40x30",
+      "area": "EP09_Suburbs_01",
+      "id": "2354249731"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Conifer Station",
+     "lot": "Pigulock Manor",
+     "myName": "Pigulock Manor",
+     "planSize": "30x20",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Pigulock Manor",
+      "size": "30x20",
+      "area": "EP09_InnerCity_01",
+      "id": "1302986785"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Conifer Station",
+     "lot": "Canal Corner",
+     "myName": "Canal Corner",
+     "planSize": "20x15",
+     "planType": "Small Business",
+     "shared": false,
+     "game": {
+      "name": "Canal Corner",
+      "size": "20x15",
+      "area": "EP09_InnerCity_01",
+      "id": "427491372"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Conifer Station",
+     "lot": "Sprucewood Square",
+     "myName": "Sprucewood Square",
+     "planSize": "40x30",
+     "planType": "Community Space",
+     "shared": false,
+     "game": {
+      "name": "Sprucewood Square",
+      "size": "40x30",
+      "area": "EP09_InnerCity_01",
+      "id": "410910736"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Conifer Station",
+     "lot": "Pinecrest Apartments #402",
+     "myName": "Pinecrest Apartments #402",
+     "planSize": "N/A",
+     "planType": "Apartment",
+     "shared": false,
+     "game": {
+      "name": "Pinecrest Apartments #402",
+      "size": "30x20",
+      "area": "EP09_InnerCity_01",
+      "id": "402457396"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Conifer Station",
+     "lot": "Pinecrest Apartments #404",
+     "myName": "Pinecrest Apartments #404",
+     "planSize": "N/A",
+     "planType": "Apartment",
+     "shared": true,
+     "game": {
+      "name": "Pinecrest Apartments #402",
+      "size": "30x20",
+      "area": "EP09_InnerCity_01",
+      "id": "402457396"
+     },
+     "unitOf": "Pinecrest Apartments #402",
+     "typeInGame": "Residential"
+    },
+    {
+     "neighbourhood": "Port Promise",
+     "lot": "The Old Mill",
+     "myName": "The Old Mill",
+     "planSize": "30x20",
+     "planType": "Small Business",
+     "shared": false,
+     "game": {
+      "name": "The Old Mill",
+      "size": "30x20",
+      "area": "EP09_Industrial_01",
+      "id": "3908108304"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Port Promise",
+     "lot": "The Caboose",
+     "myName": "The Caboose",
+     "planSize": "30x20",
+     "planType": "Bar",
+     "shared": false,
+     "game": {
+      "name": "The Caboose",
+      "size": "30x20",
+      "area": "EP09_Industrial_01",
+      "id": "3940614167"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Port Promise",
+     "lot": "The Shipping Views",
+     "myName": "The Old Dockyard",
+     "planSize": "30x20",
+     "planType": "Community Space",
+     "shared": true,
+     "game": {
+      "name": "The Shipping Views",
+      "size": "30x20",
+      "area": "EP09_Industrial_01",
+      "id": "3845324809"
+     },
+     "unitOf": null,
+     "typeInGame": "Maker Space",
+     "typeOnGallery": "Missing sims translation"
+    },
+    {
+     "neighbourhood": "Port Promise",
+     "lot": "The Waterfront",
+     "myName": "Abandoned Views",
+     "planSize": "40x30",
+     "planType": "Residential Rental",
+     "shared": false,
+     "game": {
+      "name": "The Waterfront",
+      "size": "40x30",
+      "area": "EP09_Industrial_01",
+      "id": "3361079299"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Port Promise",
+     "lot": "The Portsmouth Promenade",
+     "myName": "The Portsmouth Promenade",
+     "planSize": "30x20",
+     "planType": "Small Business",
+     "shared": true,
+     "game": {
+      "name": "The Portsmouth Promenade",
+      "size": "30x20",
+      "area": "EP09_Industrial_01",
+      "id": "256573450"
+     },
+     "unitOf": null,
+     "typeInGame": "Small Business Venue",
+     "typeOnGallery": "Small Business Venue"
+    }
+   ],
+   "gameLotsNotInPlan": [],
+   "areas": [
+    "EP09_Industrial_01",
+    "EP09_InnerCity_01",
+    "EP09_Suburbs_01"
+   ]
+  },
+  "Mt. Komorebi": {
+   "owned": true,
+   "lots": [
+    {
+     "neighbourhood": "Wakaba",
+     "lot": "2-4-1 Wakabamori",
+     "myName": "?",
+     "planSize": "20x15",
+     "planType": "Cemetery",
+     "shared": false,
+     "game": {
+      "name": "2-4-1 Wakabamori",
+      "size": "20x15",
+      "area": "EP10_TouristTown_01",
+      "id": "2191917059"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Wakaba",
+     "lot": "2-4-2 Wakabamori",
+     "myName": "2-4-2 Wakabamori",
+     "planSize": "30x20",
+     "planType": "Residential",
+     "shared": true,
+     "game": {
+      "name": "2-4-2 Wakabamori",
+      "size": "30x20",
+      "area": "EP10_TouristTown_01",
+      "id": "2226126854"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Wakaba",
+     "lot": "2-4-3 Wakabamori",
+     "myName": "2-4-3 Wakabamori",
+     "planSize": "20x15",
+     "planType": "Residential",
+     "shared": true,
+     "game": {
+      "name": "2-4-3 Wakabamori",
+      "size": "20x15",
+      "area": "EP10_TouristTown_01",
+      "id": "2197487620"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Wakaba",
+     "lot": "2-5-1 Wakabamori",
+     "myName": "2-5-1 Wakabamori",
+     "planSize": "50x50",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "2-5-1 Wakabamori",
+      "size": "50x50",
+      "area": "EP10_TouristTown_01",
+      "id": "2754674701"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Wakaba",
+     "lot": "Hazakura Lounge",
+     "myName": "?",
+     "planSize": "30x20",
+     "planType": "Recreation Center",
+     "shared": false,
+     "game": {
+      "name": "Hazakura Lounge",
+      "size": "30x20",
+      "area": "EP10_TouristTown_01",
+      "id": "2230845447"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Senbamachi",
+     "lot": "5-6-1 Shinrinyoku",
+     "myName": "5-6-1 Shinrinyoku",
+     "planSize": "20x15",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "5-6-1 Shinrinyoku",
+      "size": "20x15",
+      "area": "EP10_MountainTown_01",
+      "id": "4055105540"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Senbamachi",
+     "lot": "5-3-1 Shinrinyoku",
+     "myName": "Sento Senbamachi",
+     "planSize": "30x20",
+     "planType": "Onsen Bathhouse",
+     "shared": true,
+     "game": {
+      "name": "5-3-1 Shinrinyoku",
+      "size": "30x20",
+      "area": "EP10_MountainTown_01",
+      "id": "4056219655"
+     },
+     "unitOf": null,
+     "typeInGame": "Onsen Bathhouse",
+     "typeOnGallery": "Onsen Bathhouse"
+    },
+    {
+     "neighbourhood": "Senbamachi",
+     "lot": "6-4-1 Hanamigawa",
+     "myName": "6-4-1 Hanamigawa",
+     "planSize": "20x15",
+     "planType": "Vacation Rental",
+     "shared": false,
+     "game": {
+      "name": "6-4-1 Hanamigawa",
+      "size": "20x15",
+      "area": "EP10_MountainTown_01",
+      "id": "4054450179"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Senbamachi",
+     "lot": "Hanamigawa Koen",
+     "myName": "Izakaya Hanamigawa Koen",
+     "planSize": "30x20",
+     "planType": "Restaurant (/Park)",
+     "shared": true,
+     "game": {
+      "name": "Hanamigawa Koen",
+      "size": "30x20",
+      "area": "EP10_MountainTown_01",
+      "id": "4055433221"
+     },
+     "unitOf": null,
+     "typeInGame": "Restaurant",
+     "typeOnGallery": "Restaurant"
+    },
+    {
+     "neighbourhood": "Senbamachi",
+     "lot": "Izakaya Ippai",
+     "myName": "Boba Ippai",
+     "planSize": "30x20",
+     "planType": "Boba & Thrift",
+     "shared": false,
+     "game": {
+      "name": "Izakaya Ippai",
+      "size": "30x20",
+      "area": "EP10_MountainTown_01",
+      "id": "4055957510"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Yukimatsu",
+     "lot": "5-1-1 Kiyomatsu",
+     "myName": "5-1-1 Kiyomatsu",
+     "planSize": "30x20",
+     "planType": "Vacation Rental",
+     "shared": true,
+     "game": {
+      "name": "5-1-1 Kiyomatsu",
+      "size": "30x20",
+      "area": "EP10_SummitTown_01",
+      "id": "3429957684"
+     },
+     "unitOf": null,
+     "typeInGame": "Vacation Rental",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Yukimatsu",
+     "lot": "5-1-2 Kiyomatsu",
+     "myName": "5-1-2 Kiyomatsu",
+     "planSize": "30x20",
+     "planType": "Vacation Rental",
+     "shared": true,
+     "game": {
+      "name": "5-1-2 Kiyomatsu",
+      "size": "30x20",
+      "area": "EP10_SummitTown_01",
+      "id": "3428188211"
+     },
+     "unitOf": null,
+     "typeInGame": "Vacation Rental",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Yukimatsu",
+     "lot": "Sutefani Onsen Bathhouse",
+     "myName": "Sutefani Onsen Bathhouse",
+     "planSize": "30x20",
+     "planType": "Onsen Bathhouse",
+     "shared": false,
+     "game": {
+      "name": "Sutefani Onsen Bathhouse",
+      "size": "30x20",
+      "area": "EP10_SummitTown_01",
+      "id": "1851654149"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Yukimatsu",
+     "lot": "Kiyomatsu Point",
+     "myName": "Kiyomatsu Point",
+     "planSize": "50x50",
+     "planType": "Custom Venue",
+     "shared": false,
+     "game": {
+      "name": "Kiyomatsu Point",
+      "size": "50x50",
+      "area": "EP10_SummitTown_01",
+      "id": "558628916"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Yukimatsu",
+     "lot": "Mt. Komorebi Peak",
+     "myName": null,
+     "planSize": "20x20",
+     "planType": "Mount Komorebi Summit",
+     "shared": false,
+     "game": {
+      "name": "Mt. Komorebi Peak",
+      "size": "20x20",
+      "area": "EP10_BaseCamp_03",
+      "id": "1831469061"
+     },
+     "unitOf": null
+    }
+   ],
+   "gameLotsNotInPlan": [
+    {
+     "id": "2366832680",
+     "name": "Mt. Komorebi Base Camp",
+     "description": "",
+     "size": "20x15",
+     "area": "EP10_BaseCamp_01",
+     "pos": [
+      186.92,
+      199.1,
+      138.33
+     ]
+    },
+    {
+     "id": "3718447143",
+     "name": "The Croft Icefall",
+     "description": "",
+     "size": "20x15",
+     "area": "EP10_BaseCamp_02",
+     "pos": [
+      227.22,
+      88.7,
+      133.0
+     ]
+    }
+   ],
+   "areas": [
+    "EP10_BaseCamp_01",
+    "EP10_BaseCamp_02",
+    "EP10_BaseCamp_03",
+    "EP10_MountainTown_01",
+    "EP10_SummitTown_01",
+    "EP10_TouristTown_01"
+   ]
+  },
+  "Henford-on-Bagley": {
+   "owned": true,
+   "lots": [
+    {
+     "neighbourhood": "Finchwick",
+     "lot": "The Gnome's Arms",
+     "myName": "The Gnome's Arms",
+     "planSize": "30x20",
+     "planType": "Bar (Pub)",
+     "shared": false,
+     "game": {
+      "name": "The Gnome's Arms",
+      "size": "30x20",
+      "area": "EP11_Village_01",
+      "id": "3455909904"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Finchwick",
+     "lot": "1 Cobblebottom Street",
+     "myName": "1 Cobblebottom Street",
+     "planSize": "20x15",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "1 Cobblebottom Street",
+      "size": "20x15",
+      "area": "EP11_Village_01",
+      "id": "3891462150"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Finchwick",
+     "lot": "3 Cobblebottom Street",
+     "myName": "3 Cobblebottom Street",
+     "planSize": "20x20",
+     "planType": "Residential Rental (2)",
+     "shared": false,
+     "game": {
+      "name": "3 Cobblebottom Street",
+      "size": "20x20",
+      "area": "EP11_Village_01",
+      "id": "2794127375"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Finchwick",
+     "lot": "5 Cobblebottom Street",
+     "myName": "Finchwick Village Hall",
+     "planSize": "30x20",
+     "planType": "Library(/Wedding Venue / Bar)",
+     "shared": true,
+     "game": {
+      "name": "5 Cobblebottom Street",
+      "size": "30x20",
+      "area": "EP11_Village_01",
+      "id": "3887857669"
+     },
+     "unitOf": null,
+     "typeInGame": "Library",
+     "typeOnGallery": "Library"
+    },
+    {
+     "neighbourhood": "Old New Henford",
+     "lot": "2 Olde Mill Lane",
+     "myName": "2 Olde Mill Lane",
+     "planSize": "50x40",
+     "planType": "Vet Clinic",
+     "shared": false,
+     "game": {
+      "name": "2 Olde Mill Lane",
+      "size": "50x40",
+      "area": "EP11_Rural_01",
+      "id": "3886481414"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Old New Henford",
+     "lot": "3 Olde Mill Lane",
+     "myName": "3 Olde Mill Lane",
+     "planSize": "50x40",
+     "planType": "Residential",
+     "shared": true,
+     "game": {
+      "name": "3 Olde Mill Lane",
+      "size": "50x40",
+      "area": "EP11_Rural_01",
+      "id": "3886743559"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Old New Henford",
+     "lot": "4 Olde Mill Lane",
+     "myName": "The Olde Mill",
+     "planSize": "30x20",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "4 Olde Mill Lane",
+      "size": "30x20",
+      "area": "EP11_Rural_01",
+      "id": "3887071240"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Old New Henford",
+     "lot": "Olde Mill Hill",
+     "myName": "Olde Mill Hill",
+     "planSize": "64x64",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Olde Mill Hill",
+      "size": "64x64",
+      "area": "EP11_Rural_01",
+      "id": "3885563909"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "The Bramblewood",
+     "lot": "13 Nettle Lane",
+     "myName": "13 Nettle Lane",
+     "planSize": "30x20",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "13 Nettle Lane",
+      "size": "30x20",
+      "area": "EP11_Forest_01",
+      "id": "1180958725"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "The Bramblewood",
+     "lot": "14 Nettle Lane",
+     "myName": "14 Nettle Lane",
+     "planSize": "40x30",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "14 Nettle Lane",
+      "size": "40x30",
+      "area": "EP11_Forest_01",
+      "id": "1182334983"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "The Bramblewood",
+     "lot": "Cordelia's Secret Cottage",
+     "myName": "Cordelia's Secret Cottage",
+     "planSize": "30x20",
+     "planType": "Residential",
+     "shared": true,
+     "game": {
+      "name": "Cordelia's Secret Cottage",
+      "size": "30x20",
+      "area": "EP11_Forest_01",
+      "id": "1199570952"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "The Bramblewood",
+     "lot": "Isle of Volpe",
+     "myName": "Isle of Volpe",
+     "planSize": "50x40",
+     "planType": "National Park",
+     "shared": false,
+     "game": null,
+     "unitOf": null
+    }
+   ],
+   "gameLotsNotInPlan": [
+    {
+     "id": "1177419780",
+     "name": "Isle of Volpe Park",
+     "description": "Located just across from the ruins on the Isle of Volpe, this park is the perfect start for any Bramblewood adventure. Then enjoy a meal at the grill, find or leave a present under Sophie the Snail, relax beside the serene Cordelia Falls, explore the ruins, charm the local wildlife, or go foraging for wild mushrooms and berries. The only problem will be doing it all before the sun goes down!",
+     "size": "50x40",
+     "area": "EP11_Forest_01",
+     "pos": [
+      253.74,
+      250.01,
+      526.6
+     ]
+    }
+   ],
+   "areas": [
+    "EP11_Forest_01",
+    "EP11_Rural_01",
+    "EP11_Village_01"
+   ]
+  },
+  "Tartosa": {
+   "owned": false,
+   "lots": [
+    {
+     "neighbourhood": "Porto Luminoso",
+     "lot": "Thebe Estate",
+     "myName": "Thebe Estate",
+     "planSize": "50x50",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Thebe Estate",
+      "size": "50x50",
+      "area": "GP11_Coastal_01",
+      "id": "2670919776"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Porto Luminoso",
+     "lot": "Piccola Luce",
+     "myName": "Piccola Luce",
+     "planSize": "20x20",
+     "planType": "Vacation Rental",
+     "shared": false,
+     "game": {
+      "name": "Piccola Luce",
+      "size": "20x20",
+      "area": "GP11_Coastal_01",
+      "id": "2680029281"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Porto Luminoso",
+     "lot": "Baia dell'Amore",
+     "myName": "Baia dell'Amore",
+     "planSize": "40x20",
+     "planType": "Wedding Venue",
+     "shared": false,
+     "game": {
+      "name": "Baia dell'amore",
+      "size": "40x20",
+      "area": "GP11_Coastal_01",
+      "id": "2664693854"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Porto Luminoso",
+     "lot": "Villa Vigna",
+     "myName": "?",
+     "planSize": "30x20",
+     "planType": "Lounge/Restaurant?",
+     "shared": false,
+     "game": {
+      "name": "Villa Vigna",
+      "size": "30x20",
+      "area": "GP11_Coastal_01",
+      "id": "3493855235"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Porto Luminoso",
+     "lot": "Celebrazioni d'Amore",
+     "myName": "?",
+     "planSize": "50x40",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Celebrazioni d'Amore",
+      "size": "50x40",
+      "area": "GP11_Coastal_01",
+      "id": "2657747037"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Terra Amorosa",
+     "lot": "The Old Wood Nectary",
+     "myName": "The Old Wood Nectary",
+     "planSize": "40x30",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "The Old Wood Nectary",
+      "size": "40x30",
+      "area": "GP11_Inland_01",
+      "id": "3490316297"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Terra Amorosa",
+     "lot": "Rifugio dei Pirati",
+     "myName": "Rifugio dei Pirati",
+     "planSize": "30x20",
+     "planType": "?",
+     "shared": false,
+     "game": {
+      "name": "Rifugio dei Pirati",
+      "size": "30x20",
+      "area": "GP11_Inland_01",
+      "id": "3462266888"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Terra Amorosa",
+     "lot": "Via Romanza",
+     "myName": "Via Romanza",
+     "planSize": "30x30",
+     "planType": "?",
+     "shared": false,
+     "game": {
+      "name": "Via Romanza",
+      "size": "30x30",
+      "area": "GP11_Inland_01",
+      "id": "3528130571"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Terra Amorosa",
+     "lot": "La Coppia Serena",
+     "myName": "La Coppia Serena",
+     "planSize": "50x40",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "La Coppia Serena",
+      "size": "50x40",
+      "area": "GP11_Inland_01",
+      "id": "3546939413"
+     },
+     "unitOf": null
+    }
+   ],
+   "gameLotsNotInPlan": [],
+   "areas": [
+    "GP11_Coastal_01",
+    "GP11_Inland_01"
+   ]
+  },
+  "Moonwood Mill": {
+   "owned": false,
+   "lots": [
+    {
+     "neighbourhood": "Moonwood Mill",
+     "lot": "The Collective Cabin",
+     "myName": "The Collective Cabin",
+     "planSize": "40x30",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "The Collective Cabin",
+      "size": "40x30",
+      "area": "GP12_Town_01",
+      "id": "4148756488"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Moonwood Mill",
+     "lot": "New Moon Shack",
+     "myName": "Full Moon Shack",
+     "planSize": "20x15",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "New Moon Shack",
+      "size": "20x15",
+      "area": "GP12_Town_01",
+      "id": "4151705609"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Moonwood Mill",
+     "lot": "Prowler's Patch",
+     "myName": "Moonwood Mill Library",
+     "planSize": "30x30",
+     "planType": "Library",
+     "shared": false,
+     "game": {
+      "name": "Prowler's Patch",
+      "size": "30x30",
+      "area": "GP12_Town_01",
+      "id": "4153081866"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Moonwood Mill",
+     "lot": "The Grimtooth Bar & Bunker",
+     "myName": "New Moon Cabins",
+     "planSize": "50x40",
+     "planType": "Residential",
+     "shared": false,
+     "game": null,
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Moonwood Mill",
+     "lot": "The Moonwood Mill Library",
+     "myName": "Grimtooth Bar",
+     "planSize": "40x30",
+     "planType": "Bar",
+     "shared": false,
+     "game": {
+      "name": "The Moonwood Mill Library",
+      "size": "40x30",
+      "area": "GP12_Town_01",
+      "id": "2239037443"
+     },
+     "unitOf": null
+    }
+   ],
+   "gameLotsNotInPlan": [
+    {
+     "id": "4142202885",
+     "name": "Grimtooth Bar & Bunker",
+     "description": "In a town split by ideals, the newly established Grimtooth Bar is Celene's vision for the future - a friendly, neutral locale where all Sims - Werewolf or not - can gather and mingle.\\n\\nThough the scrapped-together venue may be a recent addition, the \"secret\" bunker out back isn't. The hairier inhabitants of Moonwood Mill have long considered it a local haven from curious eyes, and perhaps something more...",
+     "size": "50x40",
+     "area": "GP12_Town_01",
+     "pos": [
+      467.22,
+      150.0,
+      399.51
+     ]
+    }
+   ],
+   "areas": [
+    "GP12_Town_01"
+   ]
+  },
+  "Copperdale": {
+   "owned": true,
+   "lots": [
+    {
+     "neighbourhood": "Rockridge Heights",
+     "lot": "Copperdale High School",
+     "myName": "Copperdale High School",
+     "planSize": "64x64",
+     "planType": "High School",
+     "shared": false,
+     "game": {
+      "name": "Copperdale High School",
+      "size": "64x64",
+      "area": "EP12_HighSchool_01",
+      "id": "2753298437"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Rockridge Heights",
+     "lot": "Auditorium",
+     "myName": "Auditorium",
+     "planSize": "30x20",
+     "planType": "Auditorium",
+     "shared": false,
+     "game": {
+      "name": "Auditorium",
+      "size": "30x20",
+      "area": "EP12_HighSchool_01",
+      "id": "225640452"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Prescott Square",
+     "lot": "Water Tower Way",
+     "myName": "Copperdale Library",
+     "planSize": "20x15",
+     "planType": "Library",
+     "shared": true,
+     "game": {
+      "name": "Water Tower Way",
+      "size": "20x15",
+      "area": "EP12_TownSquare_01",
+      "id": "1782185987"
+     },
+     "unitOf": null,
+     "typeInGame": "Library",
+     "typeOnGallery": "Library"
+    },
+    {
+     "neighbourhood": "Prescott Square",
+     "lot": "Town Square Terrace",
+     "myName": "Town Square Stores",
+     "planSize": "20x15",
+     "planType": "Boba & Thrift",
+     "shared": true,
+     "game": {
+      "name": "Town Square Terrace",
+      "size": "20x15",
+      "area": "EP12_TownSquare_01",
+      "id": "2716139581"
+     },
+     "unitOf": null,
+     "typeInGame": "Thrift and Bubble Tea Store",
+     "typeOnGallery": "Thrift and Bubble Tea Store"
+    },
+    {
+     "neighbourhood": "Prescott Square",
+     "lot": "ThrifTea",
+     "myName": "Prescott Boarding House",
+     "planSize": "20x15",
+     "planType": "Dorms #1",
+     "shared": false,
+     "game": {
+      "name": "ThrifTea",
+      "size": "20x15",
+      "area": "EP12_TownSquare_01",
+      "id": "635242008"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Prescott Square",
+     "lot": "Lakeview Library",
+     "myName": "Lakeview Boarding House",
+     "planSize": "20x20",
+     "planType": "Dorms #2",
+     "shared": false,
+     "game": {
+      "name": "Lakeview Library",
+      "size": "20x20",
+      "area": "EP12_TownSquare_01",
+      "id": "2719678527"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Prescott Square",
+     "lot": "Golden Peak",
+     "myName": "Golden Peak",
+     "planSize": "30x30",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Golden Peak",
+      "size": "30x30",
+      "area": "EP12_TownSquare_01",
+      "id": "327221333"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Plumbite Cove",
+     "lot": "LaSuli Point",
+     "myName": "LaSuli Point",
+     "planSize": "20x15",
+     "planType": "Restaurant",
+     "shared": false,
+     "game": {
+      "name": "LaSuli Point",
+      "size": "20x15",
+      "area": "EP12_Pier_01",
+      "id": "924123198"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Plumbite Cove",
+     "lot": "Totter Park",
+     "myName": "Totter Park",
+     "planSize": "50x40",
+     "planType": "Cemetery",
+     "shared": false,
+     "game": {
+      "name": "Totter Park",
+      "size": "50x40",
+      "area": "EP12_Pier_01",
+      "id": "4200595518"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Plumbite Cove",
+     "lot": "BridgeCreek Drive",
+     "myName": "BridgeCreek Drive",
+     "planSize": "30x30",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "BridgeCreek Drive",
+      "size": "30x30",
+      "area": "EP12_Pier_01",
+      "id": "3806068807"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Plumbite Cove",
+     "lot": "Little Falls Nook",
+     "myName": "Little Falls Nook",
+     "planSize": "20x20",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Little Falls Nook",
+      "size": "20x20",
+      "area": "EP12_Pier_01",
+      "id": "203948095"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Plumbite Cove",
+     "lot": "Hillside Haven",
+     "myName": "Hillside Haven",
+     "planSize": "30x20",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Hillside Haven",
+      "size": "30x20",
+      "area": "EP12_Pier_01",
+      "id": "801898557"
+     },
+     "unitOf": null
+    }
+   ],
+   "gameLotsNotInPlan": [],
+   "areas": [
+    "EP12_HighSchool_01",
+    "EP12_Pier_01",
+    "EP12_TownSquare_01"
+   ]
+  },
+  "San Sequoia": {
+   "owned": true,
+   "lots": [
+    {
+     "neighbourhood": "Anchorpoint Wharf",
+     "lot": "Robles Point",
+     "myName": "Robles Point",
+     "planSize": "50x40",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Robles Point",
+      "size": "50x40",
+      "area": "EP13_WaterFront_01",
+      "id": "1359609861"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Anchorpoint Wharf",
+     "lot": "Manzanita Terrace",
+     "myName": "Manzanita Terrace",
+     "planSize": "30x20",
+     "planType": "Residential Rental",
+     "shared": true,
+     "game": {
+      "name": "Manzanita Terrace",
+      "size": "30x20",
+      "area": "EP13_WaterFront_01",
+      "id": "3860398087"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential Rental",
+     "typeOnGallery": "Residential Rental"
+    },
+    {
+     "neighbourhood": "Anchorpoint Wharf",
+     "lot": "Anchorpoint Library",
+     "myName": "Anchorpoint Rec Center",
+     "planSize": "30x20",
+     "planType": "Rec Center",
+     "shared": true,
+     "game": {
+      "name": "Anchorpoint Library",
+      "size": "30x20",
+      "area": "EP13_WaterFront_01",
+      "id": "3860004870"
+     },
+     "unitOf": null,
+     "typeInGame": "Recreation Center",
+     "typeOnGallery": "Missing sims translation"
+    },
+    {
+     "neighbourhood": "Anchorpoint Wharf",
+     "lot": "Anchorpoint Abode",
+     "myName": "Anchorpoint Works",
+     "planSize": "30x20",
+     "planType": "Restaurant/Bar",
+     "shared": true,
+     "game": {
+      "name": "Anchorpoint Abode",
+      "size": "30x20",
+      "area": "EP13_WaterFront_01",
+      "id": "3857973253"
+     },
+     "unitOf": null,
+     "typeInGame": "Vacation Rental",
+     "typeOnGallery": "Restaurant"
+    },
+    {
+     "neighbourhood": "Gilbert Gardens",
+     "lot": "13 Acacia Avenue",
+     "myName": "13 Acacia Avenue",
+     "planSize": "40x30",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "13 Acacia Avenue",
+      "size": "40x30",
+      "area": "EP13_ThePark_01",
+      "id": "2703097870"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Gilbert Gardens",
+     "lot": "Parkside Place",
+     "myName": "Parkside Place",
+     "planSize": "30x20",
+     "planType": "Playground",
+     "shared": true,
+     "game": {
+      "name": "Parkside Place",
+      "size": "30x20",
+      "area": "EP13_ThePark_01",
+      "id": "2205351941"
+     },
+     "unitOf": null,
+     "typeInGame": "Playground",
+     "typeOnGallery": "Playground"
+    },
+    {
+     "neighbourhood": "Gilbert Gardens",
+     "lot": "18 Celebration Way",
+     "myName": "18 Celebration Way",
+     "planSize": "40x20",
+     "planType": "Boba & Thrift",
+     "shared": false,
+     "game": {
+      "name": "18 Celebration Way",
+      "size": "40x20",
+      "area": "EP13_ThePark_01",
+      "id": "2711814161"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Gilbert Gardens",
+     "lot": "Celebration Center",
+     "myName": "Celebration Center",
+     "planSize": "64x64",
+     "planType": "Wedding Venue/Cemetery",
+     "shared": false,
+     "game": {
+      "name": "Celebration Center",
+      "size": "64x64",
+      "area": "EP13_ThePark_01",
+      "id": "2690383881"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Hopewell Hills",
+     "lot": "7 Eucalyptus Lane",
+     "myName": "7 Eucalyptus Lane",
+     "planSize": "50x40",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "7 Eucalyptus Lane",
+      "size": "50x40",
+      "area": "EP13_AcrossTheBay_01",
+      "id": "4137287685"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Hopewell Hills",
+     "lot": "23 Eucalyptus Lane",
+     "myName": "23 Eucalyptus Lane",
+     "planSize": "30x20",
+     "planType": "Residential",
+     "shared": true,
+     "game": {
+      "name": "23 Eucalyptus Lane",
+      "size": "30x20",
+      "area": "EP13_AcrossTheBay_01",
+      "id": "149028869"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Hopewell Hills",
+     "lot": "36 Bayani Place",
+     "myName": "36 Bayani Place",
+     "planSize": "30x20",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "36 Bayani Place",
+      "size": "30x20",
+      "area": "EP13_AcrossTheBay_01",
+      "id": "154140678"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Hopewell Hills",
+     "lot": "Sequoia Cottage",
+     "myName": "Sequoia Cottage",
+     "planSize": "30x20",
+     "planType": "Residential Rental",
+     "shared": false,
+     "game": {
+      "name": "Sequoia Cottage",
+      "size": "30x20",
+      "area": "EP13_AcrossTheBay_01",
+      "id": "157614088"
+     },
+     "unitOf": null
+    }
+   ],
+   "gameLotsNotInPlan": [],
+   "areas": [
+    "EP13_AcrossTheBay_01",
+    "EP13_ThePark_01",
+    "EP13_WaterFront_01"
+   ]
+  },
+  "Chestnut Ridge": {
+   "owned": true,
+   "lots": [
+    {
+     "neighbourhood": "New Appaloosa",
+     "lot": "Champion's Grove",
+     "myName": "Champion's Grove",
+     "planSize": "30x20",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Champion's Grove",
+      "size": "30x20",
+      "area": "EP14_Town_01",
+      "id": "2324299782"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "New Appaloosa",
+     "lot": "The Cozy Corner House",
+     "myName": null,
+     "planSize": "20x20",
+     "planType": "Library",
+     "shared": false,
+     "game": {
+      "name": "The Cozy Corner House",
+      "size": "20x20",
+      "area": "EP14_Town_01",
+      "id": "2316500997"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "New Appaloosa",
+     "lot": "The Oak Barrel",
+     "myName": "The Oak Barrel",
+     "planSize": "30x20",
+     "planType": "Restaurant",
+     "shared": true,
+     "game": {
+      "name": "The Oak Barrel",
+      "size": "30x20",
+      "area": "EP14_Town_01",
+      "id": "2330198024"
+     },
+     "unitOf": null,
+     "typeInGame": "Restaurant",
+     "typeOnGallery": "Restaurant"
+    },
+    {
+     "neighbourhood": "New Appaloosa",
+     "lot": "The Rusty Horseshoe",
+     "myName": "The Rusty Horseshoe",
+     "planSize": "30x20",
+     "planType": "Nightclub",
+     "shared": false,
+     "game": {
+      "name": "The Rusty Horseshoe",
+      "size": "30x20",
+      "area": "EP14_Town_01",
+      "id": "2327117831"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "New Appaloosa",
+     "lot": "Duke's Hall",
+     "myName": "Appaloosa Stables",
+     "planSize": "40x30",
+     "planType": "Residential",
+     "shared": true,
+     "game": {
+      "name": "Duke's Hall",
+      "size": "40x30",
+      "area": "EP14_Town_01",
+      "id": "2498166986"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Riders' Glen",
+     "lot": "Biscuit's Bastion",
+     "myName": "Biscuit's Bastion",
+     "planSize": "40x30",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Biscuit's Bastion",
+      "size": "40x30",
+      "area": "EP14_Ranches_01",
+      "id": "3024289801"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Riders' Glen",
+     "lot": "Sweet Nectar Glade",
+     "myName": "Sweet Nectar Glade",
+     "planSize": "30x20",
+     "planType": "Bar",
+     "shared": false,
+     "game": {
+      "name": "Sweet Nectar Glade",
+      "size": "30x20",
+      "area": "EP14_Ranches_01",
+      "id": "3019636744"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Riders' Glen",
+     "lot": "Canter Cottage",
+     "myName": "Canter Clinic",
+     "planSize": "30x30",
+     "planType": "Vet Clinic",
+     "shared": false,
+     "game": {
+      "name": "Canter Cottage",
+      "size": "30x30",
+      "area": "EP14_Ranches_01",
+      "id": "3031302155"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Riders' Glen",
+     "lot": "Grapevine Terrace",
+     "myName": "Grapevine Terrace",
+     "planSize": "30x20",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Grapevine Terrace",
+      "size": "30x20",
+      "area": "EP14_Ranches_01",
+      "id": "3027042314"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Riders' Glen",
+     "lot": "Red Roan Field",
+     "myName": "Red Roan Farm",
+     "planSize": "64x64",
+     "planType": "Residential (Farm)",
+     "shared": true,
+     "game": {
+      "name": "Red Roan Field",
+      "size": "64x64",
+      "area": "EP14_Ranches_01",
+      "id": "2564423972"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Galloping Gulch",
+     "lot": "Canyon Crossing",
+     "myName": "Canyon Crossing",
+     "planSize": "20x20",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Canyon Crossing",
+      "size": "20x20",
+      "area": "EP14_Park_01",
+      "id": "1192034309"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Galloping Gulch",
+     "lot": "Palomino Junction",
+     "myName": "Palomino Junction",
+     "planSize": "50x50",
+     "planType": "Residential (Ranch)",
+     "shared": true,
+     "game": {
+      "name": "Palomino Junction",
+      "size": "50x50",
+      "area": "EP14_Park_01",
+      "id": "4150722571"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Galloping Gulch",
+     "lot": "Big Sky Reach",
+     "myName": "Big Sky Reach",
+     "planSize": "20x15",
+     "planType": "Vacation Rental",
+     "shared": true,
+     "game": {
+      "name": "Big Sky Reach",
+      "size": "20x15",
+      "area": "EP14_Park_01",
+      "id": "3433037927"
+     },
+     "unitOf": null,
+     "typeInGame": "Vacation Rental",
+     "typeOnGallery": "Residential"
+    }
+   ],
+   "gameLotsNotInPlan": [],
+   "areas": [
+    "EP14_Park_01",
+    "EP14_Ranches_01",
+    "EP14_Town_01"
+   ]
+  },
+  "Tomarang": {
+   "owned": true,
+   "lots": [
+    {
+     "neighbourhood": "Morensong",
+     "lot": "Ro Kaya Rockside",
+     "myName": "Ro Kaya Rockside",
+     "planSize": "40x30",
+     "planType": "Restaurant",
+     "shared": false,
+     "game": {
+      "name": "Ro Kaya Rockside",
+      "size": "40x30",
+      "area": "EP15_Urban_01",
+      "id": "645529613"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Morensong",
+     "lot": "Taka Soi 15",
+     "myName": "Taka Soi 15",
+     "planSize": "20x20",
+     "planType": "Residential Rental",
+     "shared": false,
+     "game": {
+      "name": "Taka Soi 15",
+      "size": "20x20",
+      "area": "EP15_Urban_01",
+      "id": "2221211661"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Morensong",
+     "lot": "Chee-wit Chee-waa Kanto",
+     "myName": "Chee-wit Chee-waa Kanto",
+     "planSize": "20x15",
+     "planType": "Boba & Thrift",
+     "shared": true,
+     "game": {
+      "name": "Chee-wít Chee-waa Kanto",
+      "size": "20x15",
+      "area": "EP15_Urban_01",
+      "id": "2238382087"
+     },
+     "unitOf": null,
+     "typeInGame": "Thrift and Bubble Tea Store",
+     "typeOnGallery": "Thrift and Bubble Tea Store"
+    },
+    {
+     "neighbourhood": "Morensong",
+     "lot": "ZoSul Taman Botani",
+     "myName": "ZoSul Taman Botani",
+     "planSize": "30x30",
+     "planType": "Wedding Venue",
+     "shared": false,
+     "game": {
+      "name": "ZoSul Taman Botani",
+      "size": "30x30",
+      "area": "EP15_Urban_01",
+      "id": "2271215623"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Koh Sahpa",
+     "lot": "Isda Riverfront",
+     "myName": "Isda Riverfront",
+     "planSize": "20x20",
+     "planType": "Residential Rental (2)",
+     "shared": false,
+     "game": {
+      "name": "Isda Riverfront",
+      "size": "20x20",
+      "area": "EP15_RiverDelta_01",
+      "id": "3577348115"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Koh Sahpa",
+     "lot": "Sungai Point",
+     "myName": "Sungai Point",
+     "planSize": "30x20",
+     "planType": "Residential Rental (3)",
+     "shared": false,
+     "game": {
+      "name": "Sungai Point",
+      "size": "30x20",
+      "area": "EP15_RiverDelta_01",
+      "id": "3503751180"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Koh Sahpa",
+     "lot": "The Screaming Gecko",
+     "myName": "The Screaming Gecko",
+     "planSize": "20x20",
+     "planType": "Bar",
+     "shared": false,
+     "game": {
+      "name": "The Screaming Gecko",
+      "size": "20x20",
+      "area": "EP15_RiverDelta_01",
+      "id": "3481665547"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Koh Sahpa",
+     "lot": "Tam Nang Sands",
+     "myName": "Tam Nang Sands",
+     "planSize": "30x20",
+     "planType": "Cemetery",
+     "shared": false,
+     "game": {
+      "name": "Tam Nang Sands",
+      "size": "30x20",
+      "area": "EP15_RiverDelta_01",
+      "id": "464846853"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Koh Sahpa",
+     "lot": "Hothotok Shore",
+     "myName": "Hothotok Shore",
+     "planSize": "20x15",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Hothotok Shore",
+      "size": "20x15",
+      "area": "EP15_RiverDelta_01",
+      "id": "3549822993"
+     },
+     "unitOf": null
+    }
+   ],
+   "gameLotsNotInPlan": [],
+   "areas": [
+    "EP15_RiverDelta_01",
+    "EP15_Urban_01"
+   ]
+  },
+  "Ciudad Enamorada": {
+   "owned": false,
+   "lots": [
+    {
+     "neighbourhood": "Nuevo Corazón",
+     "lot": "La Suite del Flechazo",
+     "myName": null,
+     "planSize": "20x15",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "La Suite del Flechazo",
+      "size": "20x15",
+      "area": "EP16_Downtown_01",
+      "id": "3656581125"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Nuevo Corazón",
+     "lot": "Torres Amanecer",
+     "myName": null,
+     "planSize": "20x20",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Torres Amanecer",
+      "size": "20x20",
+      "area": "EP16_Downtown_01",
+      "id": "3664445447"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Nuevo Corazón",
+     "lot": "Mirador del Amor",
+     "myName": null,
+     "planSize": "30x20",
+     "planType": "Nightclub",
+     "shared": false,
+     "game": {
+      "name": "Mirador del Amor",
+      "size": "30x20",
+      "area": "EP16_Downtown_01",
+      "id": "2919170055"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Nuevo Corazón",
+     "lot": "SUDOR",
+     "myName": null,
+     "planSize": "30x20",
+     "planType": "Gym",
+     "shared": false,
+     "game": {
+      "name": "SUDOR",
+      "size": "30x20",
+      "area": "EP16_Downtown_01",
+      "id": "2922315784"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Plaza Mariposa",
+     "lot": "Avenida de la Eternidad",
+     "myName": null,
+     "planSize": "30x30",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Avenida de la Eternidad",
+      "size": "30x30",
+      "area": "EP16_CentralSquare_01",
+      "id": "3347709962"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Plaza Mariposa",
+     "lot": "Calle del Ensueño",
+     "myName": null,
+     "planSize": "50x40",
+     "planType": null,
+     "shared": false,
+     "game": {
+      "name": "Calle del Ensueño",
+      "size": "50x40",
+      "area": "EP16_CentralSquare_01",
+      "id": "1539899495"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Plaza Mariposa",
+     "lot": "Villa Cálida",
+     "myName": null,
+     "planSize": "30x30",
+     "planType": "Vacation Rental",
+     "shared": false,
+     "game": {
+      "name": "Villa Cálida",
+      "size": "30x30",
+      "area": "EP16_CentralSquare_01",
+      "id": "3338338313"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Plaza Mariposa",
+     "lot": "Media Naranja",
+     "myName": null,
+     "planSize": "30x30",
+     "planType": "Park",
+     "shared": false,
+     "game": {
+      "name": "Media Naranja",
+      "size": "30x30",
+      "area": "EP16_CentralSquare_01",
+      "id": "3316908039"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Vista Hermosa",
+     "lot": "Calle de la Promesa",
+     "myName": null,
+     "planSize": "30x30",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Calle de la Promesa",
+      "size": "30x30",
+      "area": "EP16_Suburban_01",
+      "id": "1239220332"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Vista Hermosa",
+     "lot": "Mansión de la Pasión",
+     "myName": null,
+     "planSize": "30x20",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Mansión de la Pasión",
+      "size": "30x20",
+      "area": "EP16_Suburban_01",
+      "id": "1087373410"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Vista Hermosa",
+     "lot": "Casita del Amor",
+     "myName": null,
+     "planSize": "30x20",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Casita del Amor",
+      "size": "30x20",
+      "area": "EP16_Suburban_01",
+      "id": "1228931179"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Vista Hermosa",
+     "lot": "Caminito del Deseo",
+     "myName": null,
+     "planSize": "50x40",
+     "planType": null,
+     "shared": false,
+     "game": {
+      "name": "Caminito del Deseo",
+      "size": "50x40",
+      "area": "EP16_Suburban_01",
+      "id": "401473685"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Vista Hermosa",
+     "lot": "Laguna del Abrazo",
+     "myName": null,
+     "planSize": "30x20",
+     "planType": "Lounge",
+     "shared": false,
+     "game": {
+      "name": "Laguna del Abrazo",
+      "size": "30x20",
+      "area": "EP16_Suburban_01",
+      "id": "1050673249"
+     },
+     "unitOf": null
+    }
+   ],
+   "gameLotsNotInPlan": [],
+   "areas": [
+    "EP16_CentralSquare_01",
+    "EP16_Downtown_01",
+    "EP16_Suburban_01"
+   ]
+  },
+  "Ravenwood": {
+   "owned": true,
+   "lots": [
+    {
+     "neighbourhood": "Crow's Crossing",
+     "lot": "Specter Family Manor",
+     "myName": "Ravenwood Wedding Hall",
+     "planSize": "30x20",
+     "planType": "Wedding Venue",
+     "shared": false,
+     "game": {
+      "name": "Specter Family Manor",
+      "size": "30x20",
+      "area": "EP17_Village_01",
+      "id": "3165585413"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Crow's Crossing",
+     "lot": "Crow's Perch",
+     "myName": "Crow's Chronicles",
+     "planSize": "30x30",
+     "planType": "Library",
+     "shared": true,
+     "game": {
+      "name": "Crow's Perch",
+      "size": "30x30",
+      "area": "EP17_Village_01",
+      "id": "3175284742"
+     },
+     "unitOf": null,
+     "typeInGame": "Library",
+     "typeOnGallery": "Library"
+    },
+    {
+     "neighbourhood": "Crow's Crossing",
+     "lot": "Moppy Manor",
+     "myName": "Specter Row",
+     "planSize": "30x20",
+     "planType": "Residential Rental",
+     "shared": false,
+     "game": {
+      "name": "Moppy Manor",
+      "size": "30x20",
+      "area": "EP17_Village_01",
+      "id": "2219311191"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Crow's Crossing",
+     "lot": "Old Ravenwood Estate",
+     "myName": null,
+     "planSize": "50x50",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Old Ravenwood Estate",
+      "size": "50x50",
+      "area": "EP17_Village_01",
+      "id": "3407872018"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Crow's Crossing",
+     "lot": "Eternal Hollow",
+     "myName": null,
+     "planSize": "64x64",
+     "planType": "Cemetery",
+     "shared": false,
+     "game": {
+      "name": "Eternal Hollow",
+      "size": "64x64",
+      "area": "EP17_Village_01",
+      "id": "3630170219"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Whispering Glen",
+     "lot": "Teardrop Cottage",
+     "myName": null,
+     "planSize": "30x30",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Teardrop Cottage",
+      "size": "30x30",
+      "area": "EP17_Countryside_01",
+      "id": "2523725892"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Whispering Glen",
+     "lot": "The Marigold Chateau",
+     "myName": null,
+     "planSize": "50x50",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "The Marigold Chateau",
+      "size": "50x50",
+      "area": "EP17_Countryside_01",
+      "id": "2512977983"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Whispering Glen",
+     "lot": "Hay Hill Landing",
+     "myName": null,
+     "planSize": "64x64",
+     "planType": "Vineyard/Farm",
+     "shared": false,
+     "game": {
+      "name": "Hay Hill Landing",
+      "size": "64x64",
+      "area": "EP17_Countryside_01",
+      "id": "2142634071"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Whispering Glen",
+     "lot": "The Final Draught",
+     "myName": null,
+     "planSize": "30x30",
+     "planType": "Restaurant",
+     "shared": false,
+     "game": {
+      "name": "The Final Draught",
+      "size": "30x30",
+      "area": "EP17_Countryside_01",
+      "id": "2463432763"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Mourningvale",
+     "lot": "The Cozy Casket House",
+     "myName": null,
+     "planSize": "30x20",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "The Cozy Casket House",
+      "size": "30x20",
+      "area": "EP17_Afterlife_01",
+      "id": "1792802856"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Mourningvale",
+     "lot": "Mourning Mist Manor",
+     "myName": null,
+     "planSize": "20x20",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Mourning Mist Manor",
+      "size": "20x20",
+      "area": "EP17_Afterlife_01",
+      "id": "2178482227"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Mourningvale",
+     "lot": "Club Eternity",
+     "myName": null,
+     "planSize": "30x30",
+     "planType": "Nightclub",
+     "shared": false,
+     "game": {
+      "name": "Club Eternity",
+      "size": "30x30",
+      "area": "EP17_Afterlife_01",
+      "id": "2366570552"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Mourningvale",
+     "lot": "Mystic Crossroads",
+     "myName": null,
+     "planSize": "30x30",
+     "planType": "To be decided",
+     "shared": false,
+     "game": {
+      "name": "Mystic Crossroads",
+      "size": "30x30",
+      "area": "EP17_Afterlife_01",
+      "id": "2050359393"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Secret Lots",
+     "lot": "Netherworld Department",
+     "myName": "Netherworld Department",
+     "planSize": "30x30",
+     "planType": "Netherworld Department",
+     "shared": false,
+     "game": null,
+     "unitOf": null
+    }
+   ],
+   "gameLotsNotInPlan": [
+    {
+     "id": "3207856134",
+     "name": "HeadlessQuarters",
+     "description": "It's Grim's office. He works here. While his personal crow should always be the employee of the month, Grim has decided he is the best at his job. He does own the place...and has been Reaping for centuries. Now Grim has opened up his practice to new Grimterns, eager to climb their way up the noncorporeal ladder.",
+     "size": "20x20",
+     "area": "EP17_Grim_01",
+     "pos": [
+      185.11,
+      169.0,
+      195.32
+     ]
+    }
+   ],
+   "areas": [
+    "EP17_Afterlife_01",
+    "EP17_Countryside_01",
+    "EP17_Grim_01",
+    "EP17_Village_01"
+   ]
+  },
+  "Nordhaven": {
+   "owned": true,
+   "lots": [
+    {
+     "neighbourhood": "Gammelvik",
+     "lot": "Konst Modern",
+     "myName": null,
+     "planSize": "50x40",
+     "planType": "Museum",
+     "shared": false,
+     "game": {
+      "name": "Konst Modern",
+      "size": "50x40",
+      "area": "EP18_OldTown_01",
+      "id": "434045029"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Gammelvik",
+     "lot": "The Rouge Note",
+     "myName": "The Rouge Note",
+     "planSize": "20x20",
+     "planType": "Lounge/Bar/Nightclub",
+     "shared": true,
+     "game": {
+      "name": "The Rouge Note",
+      "size": "20x20",
+      "area": "EP18_OldTown_01",
+      "id": "434896998"
+     },
+     "unitOf": null,
+     "typeInGame": "Bar",
+     "typeOnGallery": "Bar"
+    },
+    {
+     "neighbourhood": "Gammelvik",
+     "lot": "Koffieboon",
+     "myName": null,
+     "planSize": "20x20",
+     "planType": "Small Business Residential",
+     "shared": false,
+     "game": {
+      "name": "Koffieboon",
+      "size": "20x20",
+      "area": "EP18_OldTown_01",
+      "id": "430702690"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Gammelvik",
+     "lot": "Old Torget House",
+     "myName": null,
+     "planSize": "20x15",
+     "planType": "Residential Rental (3)",
+     "shared": true,
+     "game": {
+      "name": "Old Torget House",
+      "size": "20x15",
+      "area": "EP18_OldTown_01",
+      "id": "431620195"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential Rental"
+    },
+    {
+     "neighbourhood": "Gammelvik",
+     "lot": "Fisher's Horizon",
+     "myName": "Fisherman's Wharf",
+     "planSize": "30x20",
+     "planType": "Small Business Residential",
+     "shared": true,
+     "game": {
+      "name": "Fisher's Horizon",
+      "size": "30x20",
+      "area": "EP18_OldTown_01",
+      "id": "437583976"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Gammelvik",
+     "lot": "Comfortably Canalside",
+     "myName": "Canalside Daycare",
+     "planSize": "20x20",
+     "planType": "Small Business Residential",
+     "shared": true,
+     "game": {
+      "name": "Comfortably Canalside",
+      "size": "20x20",
+      "area": "EP18_OldTown_01",
+      "id": "438632553"
+     },
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
+    },
+    {
+     "neighbourhood": "Iverstad",
+     "lot": "New Harbor Park",
+     "myName": null,
+     "planSize": "50x40",
+     "planType": "Small Business Residential",
+     "shared": false,
+     "game": {
+      "name": "New Harbor Park",
+      "size": "50x40",
+      "area": "EP18_NewTown_01",
+      "id": "3993632859"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Iverstad",
+     "lot": "Terra-Potta",
+     "myName": null,
+     "planSize": "30x20",
+     "planType": "Small Business Residential",
+     "shared": false,
+     "game": {
+      "name": "Terra-Potta",
+      "size": "30x20",
+      "area": "EP18_NewTown_01",
+      "id": "3987996761"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Iverstad",
+     "lot": "The Old Foundry",
+     "myName": null,
+     "planSize": "20x15",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "The Old Foundry",
+      "size": "20x15",
+      "area": "EP18_NewTown_01",
+      "id": "3995074652"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Iverstad",
+     "lot": "Spilled Neon",
+     "myName": null,
+     "planSize": "20x20",
+     "planType": "Small Business Residential",
+     "shared": false,
+     "game": {
+      "name": "Spilled Neon",
+      "size": "20x20",
+      "area": "EP18_NewTown_01",
+      "id": "581238932"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Iverstad",
+     "lot": "Inked Inlet",
+     "myName": null,
+     "planSize": "20x20",
+     "planType": "Library",
+     "shared": false,
+     "game": {
+      "name": "Inked Inlet",
+      "size": "20x20",
+      "area": "EP18_NewTown_01",
+      "id": "3996254301"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Iverstad",
+     "lot": "Lighthouse Lookout",
+     "myName": null,
+     "planSize": "50x40",
+     "planType": "Residential Rental",
+     "shared": false,
+     "game": {
+      "name": "Lighthouse Lookout",
+      "size": "50x40",
+      "area": "EP18_NewTown_01",
+      "id": "3998875742"
+     },
+     "unitOf": null
+    }
+   ],
+   "gameLotsNotInPlan": [],
+   "areas": [
+    "EP18_NewTown_01",
+    "EP18_OldTown_01"
+   ]
+  },
+  "Innisgreen": {
+   "owned": false,
+   "lots": [],
+   "gameLotsNotInPlan": [
+    {
+     "id": "980090978",
+     "name": "1 Mari Shores Road",
+     "description": "Those looking for a short trek to the coast and some good ol' gnome vibes will love this charming two-story home. Visit the museum or chat up the locals for the juice on the town's history with the enchanted, all within walking distance.",
+     "size": "30x20",
+     "area": "EP19_Coastal_01",
+     "pos": [
+      389.02,
+      150.0,
+      431.24
+     ]
+    },
+    {
+     "id": "219807785",
+     "name": "42 Normfair Drive",
+     "description": "Just a stone's throw away from the coast's center sits a home with simple beginnings. With no need for flair, this place is perfect for any family seeking a modern touch amongst nature.",
+     "size": "40x30",
+     "area": "EP19_Coastal_01",
+     "pos": [
+      301.11,
+      150.0,
+      436.67
+     ]
+    },
+    {
+     "id": "213712936",
+     "name": "The GNOM Exhibit",
+     "description": "The GNOM Exhibit (short for The Gallery of Notable and Ornamental Miniatures Exhibition) holds much of this coastal town's history and fascination with Gnomes. The bones of an old lighthouse are still prevalent atop the museum, with grandiose views that can be a sight to behold.",
+     "size": "40x30",
+     "area": "EP19_Coastal_01",
+     "pos": [
+      385.04,
+      151.25,
+      356.84
+     ]
+    },
+    {
+     "id": "183894035",
+     "name": "8 Gnome Coast Street",
+     "description": "The scenic residence by the sea is perfect for anyone looking to house their hobbies. With plentiful space for gardening and crafting, there's gnome place like home!",
+     "size": "30x20",
+     "area": "EP19_Coastal_01",
+     "pos": [
+      434.64,
+      150.0,
+      411.62
+     ]
+    },
+    {
+     "id": "2259157008",
+     "name": "Puckitt Hall",
+     "description": "A Fairy estate fit for high status, this château makes a prominent statement far beyond hefty household funds. Passed down through generations, it carries a versatility for both indoor and outdoor needs. Ethereal and elegant, there are no illusions of grandeur here.",
+     "size": "50x50",
+     "area": "EP19_Forest_01",
+     "pos": [
+      238.08,
+      171.5,
+      346.07
+     ]
+    },
+    {
+     "id": "2026701128",
+     "name": "Bard Boulevard",
+     "description": "Sequestered at the edge of the wood, this cozy plot of land is the perfect spot for a humble abode with a not-so-humble view. Complete with everything a bard could need, such a whimsical cottage won't stay empty for long!",
+     "size": "30x20",
+     "area": "EP19_Forest_01",
+     "pos": [
+      333.84,
+      173.0,
+      327.04
+     ]
+    },
+    {
+     "id": "1556218060",
+     "name": "The Watering Hole",
+     "description": "The Watering Hole resides in Everdew amidst a backdrop of green and blue enchanted hues. Those living off the land will have just enough to live off of this empty lot.",
+     "size": "40x30",
+     "area": "EP19_Forest_01",
+     "pos": [
+      301.28,
+      171.51,
+      446.77
+     ]
+    },
+    {
+     "id": "1509425336",
+     "name": "Starsong Lounge",
+     "description": "The ethereal vibes of the Starsong Lounge attracts unique Sims from near and far. Locals are free to embody their true form and catch up with friends, or make new ones. Come for the otherworldly ambiance, and stay for the drinks and music!",
+     "size": "30x30",
+     "area": "EP19_Forest_01",
+     "pos": [
+      241.87,
+      171.47,
+      419.93
+     ]
+    },
+    {
+     "id": "313458714",
+     "name": "Crannamor Residential",
+     "description": "Along the outskirts of Everdew lies this quaint home, built into one of the largest trees in the forest. The breathtaking scenery is made more beautiful by the neighborhood's denizens, who can be seen out and about, using their enchantments on the world and Sims alike.",
+     "size": "20x20",
+     "area": "EP19_Forest_01",
+     "pos": [
+      385.86,
+      171.64,
+      386.69
+     ]
+    },
+    {
+     "id": "3491102727",
+     "name": "Whistling Thistle Gardens",
+     "description": "Catching up with Sims at the Whistling Thistle Gardens is a favorite pastime of the Sprucederry Grove residents. This community garden has been carefully curated over the years to grow all of the residents' favorite harvests. Besides socializing and gardening, painting and photography are especially enjoyable here as the light and natural ambience ignite creativity.",
+     "size": "40x30",
+     "area": "EP19_Grove_01",
+     "pos": [
+      376.58,
+      150.0,
+      412.19
+     ]
+    },
+    {
+     "id": "2262171653",
+     "name": "Fern & Frond Wading Pond",
+     "description": "This empty lot provides enough resources for those living off the land. The lush greenery provides a habitable environment that Sims can thrive off of. But don't worry, there's also some local shops if you really need anything.",
+     "size": "64x64",
+     "area": "EP19_Grove_01",
+     "pos": [
+      435.43,
+      149.97,
+      422.95
+     ]
+    },
+    {
+     "id": "584187924",
+     "name": "Gringle's",
+     "description": "Gringle's has been the local hot spot for Sims to enjoy mixed drinks after a long day of mixing Elixirs. Located near the center of Sprucederry Grove, Sims come to take in the greenery and partake in delectable conversation.",
+     "size": "30x30",
+     "area": "EP19_Grove_01",
+     "pos": [
+      412.0,
+      150.0,
+      372.99
+     ]
+    },
+    {
+     "id": "395313183",
+     "name": "Gimmley Gardensbrook",
+     "description": "A garden oasis filled with luscious greenery, placing residents on a hill they'll want to die on. Plentiful plots, gracious greens, and quaint carvings all give this storybook home two green thumbs up!",
+     "size": "30x30",
+     "area": "EP19_Grove_01",
+     "pos": [
+      484.97,
+      150.0,
+      340.19
+     ]
+    },
+    {
+     "id": "270073869",
+     "name": "Greenwood Hamlet Residence",
+     "description": "This charming village home is conveniently located within a hop and skip away from a local park as well as the garden shop Clover's Seeds and Supplies. it's an ideal starter home for Sims that want to practice their Apothecary skills with access to the local stalls and shops.",
+     "size": "30x20",
+     "area": "EP19_Grove_01",
+     "pos": [
+      342.04,
+      150.0,
+      384.1
+     ]
+    }
+   ],
+   "areas": [
+    "EP19_Coastal_01",
+    "EP19_Forest_01",
+    "EP19_Grove_01"
+   ]
+  },
+  "Gibbi Point": {
+   "owned": true,
+   "lots": [
+    {
+     "neighbourhood": "Wanderwood Wilds",
+     "lot": "Hothead Rock Hideaway",
+     "myName": "Revive and Thrive Retreat",
+     "planSize": "64x64",
+     "planType": "Custom Venue",
+     "shared": true,
+     "game": {
+      "name": "Hothead Rock Hideaway",
+      "size": "64x64",
+      "area": "EP20_Wilderness_01",
+      "id": "3980722193"
+     },
+     "unitOf": null,
+     "typeInGame": "Custom Venue",
+     "typeOnGallery": "Custom Venue"
+    },
+    {
+     "neighbourhood": "Wanderwood Wilds",
+     "lot": "Camp Gibbi Gibbi",
+     "myName": "Camp Gibbi Gibbi",
+     "planSize": "50x50",
+     "planType": "Custom Venue",
+     "shared": false,
+     "game": {
+      "name": "Camp Gibbi Gibbi",
+      "size": "50x50",
+      "area": "EP20_Wilderness_01",
+      "id": "1950482460"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Wanderwood Wilds",
+     "lot": "Wanderwood Wonder",
+     "myName": "Wanderwood Wonder",
+     "planSize": "30x20",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Wanderwood Wonder",
+      "size": "30x20",
+      "area": "EP20_Wilderness_01",
+      "id": "2234187891"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Wanderwood Wilds",
+     "lot": "Plumbird Park",
+     "myName": "Plumbird Park",
+     "planSize": "40x40",
+     "planType": "Playground",
+     "shared": false,
+     "game": {
+      "name": "Plumbird Park",
+      "size": "40x40",
+      "area": "EP20_Wilderness_01",
+      "id": "3912105993"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Jellyfish Junction",
+     "lot": "Jellyfish Jubilee",
+     "myName": "Jellyfish Jubilee",
+     "planSize": "40x30",
+     "planType": "Restaurant",
+     "shared": false,
+     "game": {
+      "name": "Jellyfish Jubilee",
+      "size": "40x30",
+      "area": "EP20_SeabreezeSpa_01",
+      "id": "1799815177"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Jellyfish Junction",
+     "lot": "Seabreeze Scenic",
+     "myName": "Seabreeze Scenic",
+     "planSize": "40x30",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Seabreeze Scenic",
+      "size": "40x30",
+      "area": "EP20_SeabreezeSpa_01",
+      "id": "1804861450"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Jellyfish Junction",
+     "lot": "Fletcher's Cottage",
+     "myName": "Gibbi Point Library",
+     "planSize": "30x20",
+     "planType": "Library",
+     "shared": true,
+     "game": {
+      "name": "Fletcher's Cottage",
+      "size": "30x20",
+      "area": "EP20_SeabreezeSpa_01",
+      "id": "2193227887"
+     },
+     "unitOf": null,
+     "typeInGame": "Library",
+     "typeOnGallery": "Library"
+    },
+    {
+     "neighbourhood": "Jellyfish Junction",
+     "lot": "Revive and Thrive Retreat",
+     "myName": "Gibbi Rec Center",
+     "planSize": "64x64",
+     "planType": "Rec Center",
+     "shared": true,
+     "game": {
+      "name": "Revive and Thrive Retreat",
+      "size": "64x64",
+      "area": "EP20_SeabreezeSpa_01",
+      "id": "2892824584"
+     },
+     "unitOf": null,
+     "typeInGame": "Recreation Center",
+     "typeOnGallery": "Missing sims translation"
+    },
+    {
+     "neighbourhood": "Crystal Valley",
+     "lot": "Prospector's Paradise",
+     "myName": "Paradise Stables",
+     "planSize": "40x30",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Prospector's Paradise",
+      "size": "40x30",
+      "area": "EP20_GoldenRetreat_01",
+      "id": "4164288581"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Crystal Valley",
+     "lot": "Crystal Cottage",
+     "myName": "Crystal Cottage",
+     "planSize": "30x20",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Crystal Cottage",
+      "size": "30x20",
+      "area": "EP20_GoldenRetreat_01",
+      "id": "1874133136"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Crystal Valley",
+     "lot": "Love Highland",
+     "myName": "Love Highland",
+     "planSize": "50x50",
+     "planType": "Custom Venue",
+     "shared": false,
+     "game": {
+      "name": "Love Highland",
+      "size": "50x50",
+      "area": "EP20_GoldenRetreat_01",
+      "id": "2090008698"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Crystal Valley",
+     "lot": "Fearful Fish Lounge",
+     "myName": "Thrift 'n' Fish",
+     "planSize": "20x20",
+     "planType": "Boba & Thrift",
+     "shared": false,
+     "game": {
+      "name": "Fearful Fish Lounge",
+      "size": "20x20",
+      "area": "EP20_GoldenRetreat_01",
+      "id": "1889796325"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Crystal Valley",
+     "lot": "Miner's Manse",
+     "myName": "Miner's Manse",
+     "planSize": "30x20",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Miner's Manse",
+      "size": "30x20",
+      "area": "EP20_GoldenRetreat_01",
+      "id": "2212429938"
+     },
+     "unitOf": null
+    }
+   ],
+   "gameLotsNotInPlan": [],
+   "areas": [
+    "EP20_GoldenRetreat_01",
+    "EP20_SeabreezeSpa_01",
+    "EP20_Wilderness_01"
+   ]
+  },
+  "Ondarion": {
+   "owned": true,
+   "lots": [
+    {
+     "neighbourhood": "Dambele",
+     "lot": "Dambele Palace",
+     "myName": "Dambele Palace",
+     "planSize": "50x50",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Dambele Palace",
+      "size": "50x50",
+      "area": "EP21_Arid_01",
+      "id": "3077963882"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Dambele",
+     "lot": "Zanbira Market",
+     "myName": "Zanbira Market",
+     "planSize": "30x20",
+     "planType": "Community Market",
+     "shared": false,
+     "game": {
+      "name": "Zanbira Market",
+      "size": "30x20",
+      "area": "EP21_Arid_01",
+      "id": "3292594283"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Dambele",
+     "lot": "17 Bright Cliff",
+     "myName": "17 Bright Cliff",
+     "planSize": "N/A",
+     "planType": "Apartment",
+     "shared": false,
+     "game": {
+      "name": "17 Bright Cliff",
+      "size": "30x20",
+      "area": "EP21_Arid_01",
+      "id": "4127850633"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Dambele",
+     "lot": "18 Bright Cliff",
+     "myName": "18 Bright Cliff",
+     "planSize": "N/A",
+     "planType": "Apartment",
+     "shared": false,
+     "game": {
+      "name": "17 Bright Cliff",
+      "size": "30x20",
+      "area": "EP21_Arid_01",
+      "id": "4127850633"
+     },
+     "unitOf": "17 Bright Cliff"
+    },
+    {
+     "neighbourhood": "Dambele",
+     "lot": "Hardcover",
+     "myName": "Hardcover",
+     "planSize": "20x20",
+     "planType": "Backroom",
+     "shared": false,
+     "game": {
+      "name": "Hardcover",
+      "size": "20x20",
+      "area": "EP21_Arid_01",
+      "id": "3176005864"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Dambele",
+     "lot": "Sankofa Residence",
+     "myName": "Sankofa Residence",
+     "planSize": "30x20",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Sankofa Residence",
+      "size": "30x20",
+      "area": "EP21_Arid_01",
+      "id": "3264217194"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Verdemar",
+     "lot": "Verdemar Palace",
+     "myName": "Verdemar Palace",
+     "planSize": "50x50",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Verdemar Palace",
+      "size": "50x50",
+      "area": "EP21_Coast_01",
+      "id": "4110549098"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Verdemar",
+     "lot": "Casa Do Corsário",
+     "myName": "Casa Do Corsário",
+     "planSize": "20x15",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Casa do Corsário",
+      "size": "20x15",
+      "area": "EP21_Coast_01",
+      "id": "4138270827"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Verdemar",
+     "lot": "Abrantes Estate",
+     "myName": "Abrantes Estate",
+     "planSize": "30x30",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Abrantes Estate",
+      "size": "30x30",
+      "area": "EP21_Coast_01",
+      "id": "4136960106"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Verdemar",
+     "lot": "Fisherman's Hut",
+     "myName": null,
+     "planSize": "20x20",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Fisherman's Hut",
+      "size": "20x20",
+      "area": "EP21_Coast_01",
+      "id": "4140892269"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Verdemar",
+     "lot": "Ye Olde Voyager",
+     "myName": null,
+     "planSize": "30x20",
+     "planType": "Bar",
+     "shared": false,
+     "game": {
+      "name": "Ye Olde Voyager",
+      "size": "30x20",
+      "area": "EP21_Coast_01",
+      "id": "4142006382"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Verdemar",
+     "lot": "The Lair in the Open-Air",
+     "myName": null,
+     "planSize": "30x20",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "The Lair in the Open-Air",
+      "size": "30x20",
+      "area": "EP21_Coast_01",
+      "id": "4139778156"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Bellacorde",
+     "lot": "Bellacorde Palace",
+     "myName": "Bellacorde Palace",
+     "planSize": "50x50",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Bellacorde Palace",
+      "size": "50x50",
+      "area": "EP21_Lake_01",
+      "id": "4147249284"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Bellacorde",
+     "lot": "Renaissance Road",
+     "myName": "Renaissance Road",
+     "planSize": "20x15",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Renaissance Road",
+      "size": "20x15",
+      "area": "EP21_Lake_01",
+      "id": "1380384886"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Bellacorde",
+     "lot": "12 Lakeview Apartments",
+     "myName": "12 Lakeview Apartments",
+     "planSize": "N/A",
+     "planType": "Apartment",
+     "shared": false,
+     "game": {
+      "name": "12 Lakeview Apartments",
+      "size": "40x30",
+      "area": "EP21_Lake_01",
+      "id": "2361852049"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Bellacorde",
+     "lot": "13 Lakeview Apartments",
+     "myName": "13 Lakeview Apartments",
+     "planSize": "N/A",
+     "planType": "Apartment",
+     "shared": false,
+     "game": {
+      "name": "12 Lakeview Apartments",
+      "size": "40x30",
+      "area": "EP21_Lake_01",
+      "id": "2361852049"
+     },
+     "unitOf": "12 Lakeview Apartments"
+    },
+    {
+     "neighbourhood": "Bellacorde",
+     "lot": "La Vivace",
+     "myName": "La Vivace",
+     "planSize": "40x30",
+     "planType": "Lounge",
+     "shared": false,
+     "game": {
+      "name": "La Vivace",
+      "size": "40x30",
+      "area": "EP21_Lake_01",
+      "id": "92995691"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Bellacorde",
+     "lot": "Giardino Del Grandioso",
+     "myName": "Giardino Del Grandioso",
+     "planSize": "64x64",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Giardino Del Grandioso",
+      "size": "64x64",
+      "area": "EP21_Lake_01",
+      "id": "105513068"
+     },
+     "unitOf": null
+    }
+   ],
+   "gameLotsNotInPlan": [],
+   "areas": [
+    "EP21_Arid_01",
+    "EP21_Coast_01",
+    "EP21_Lake_01"
+   ]
+  },
+  "Batuu": {
+   "owned": false,
+   "lots": [],
+   "gameLotsNotInPlan": [
+    {
+     "id": "2980446211",
+     "name": "First Order District",
+     "description": "",
+     "size": "30x20",
+     "area": "GP09_FOO_01",
+     "pos": [
+      351.31,
+      150.73,
+      313.75
+     ]
+    },
+    {
+     "id": "51838989",
+     "name": "Resistance Encampment",
+     "description": "",
+     "size": "50x40",
+     "area": "GP09_RES_01",
+     "pos": [
+      380.02,
+      150.0,
+      335.75
+     ]
+    },
+    {
+     "id": "2656632837",
+     "name": "Black Spire Outpost",
+     "description": "",
+     "size": "30x30",
+     "area": "GP09_SMG_01",
+     "pos": [
+      478.63,
+      150.0,
+      313.35
+     ]
+    }
+   ],
+   "areas": [
+    "GP09_FOO_01",
+    "GP09_RES_01",
+    "GP09_SMG_01"
+   ]
+  }
+ }
+}
