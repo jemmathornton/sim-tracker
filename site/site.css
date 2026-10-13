@@ -457,3 +457,19 @@ i.nb-none svg.i{width:30%;height:auto;color:rgba(255,255,255,.6)}
 /* Gallery numbers over time (Stats page, 13 Oct) */
 .gal-gains{margin-top:28px}
 .gal-gains .sheet-wrap{margin-top:10px}
+/* packs per world (world pages, 13 Oct) */
+.world-packs{margin-top:16px;gap:8px}
+.world-packs span{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;padding:6px 8px 6px 14px;background:var(--surface)}
+.world-packs b{min-width:22px;padding:1px 6px;border-radius:99px;background:var(--soft);color:var(--muted);font-size:12px;text-align:center}
+footer .as-of{flex-basis:100%}
+/* site search (sidebar, 13 Oct) */
+.search{position:relative;padding:14px 12px 0}
+.search-ico{position:absolute;left:25px;top:33px;transform:translateY(-50%);display:flex;color:var(--on-deep-mute);pointer-events:none}
+.search input{width:100%;padding:9px 12px 9px 36px;border-radius:10px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.07);color:var(--on-deep);font:500 14px var(--body)}
+.search input::placeholder{color:var(--on-deep-mute)}
+.search input:focus{outline:none;border-color:var(--brass);background:rgba(255,255,255,.1)}
+.nav a.hit{align-items:flex-start}
+.nav a.hit>span{display:grid;gap:1px;min-width:0}
+.nav a.hit b{font-weight:600}
+.nav a.hit small{font-weight:500;font-size:12px;line-height:1.35;color:var(--on-deep-mute)}
+.nav a.hit.on{background:rgba(255,255,255,.12)}

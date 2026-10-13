@@ -99,7 +99,9 @@ const initial = n => esc(n.trim()[0] || "?");
 const titleWord = name => { const p = esc(name).split(" "); return p.length > 1 ? p.slice(0,-1).join(" ") + " <em>" + p.at(-1) + "</em>" : "<em>" + p[0] + "</em>"; };
 
 // sidebar follows where things live: world → neighbourhood → lot → household → Sims
+let navArgs = null;   // the page the sidebar belongs to, so it can come back after a search
 function renderNav(active, key, ctx){
+  navArgs = [active, key, ctx];
   const nav = document.getElementById("nav");
   const owned = worlds.filter(w => w.owned), notOwned = worlds.filter(w => !w.owned);
   let h = `<div class="nav-group"><a href="#home" class="${active==="home"?"on":""}">${ic("home")}Home</a></div><div class="nav-group"><div class="label">Worlds</div>`;
@@ -136,6 +138,52 @@ document.addEventListener("click", e => {
   if (list && here) { e.preventDefault(); list.hidden = !list.hidden; a.classList.toggle("folded", list.hidden); return; }
   if (here) window.scrollTo({top:0, behavior:"smooth"});
 });
+// ---------- search (13 Oct): lots by any of their names, households, Sims, neighbourhoods and worlds; results take the sidebar's place while typing ----------
+const fold = s => String(s ?? "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[‘’'.]/g, "").replace(/&/g, "and").replace(/\s+/g, " ");
+const KINDS = ["World", "Neighbourhood", "Lot", "Household", "Sim"];
+let searchList = null, hits = [], hit = 0;
+function searchIndex(){
+  const out = [], add = (kind, name, where, href, also, sim) => out.push({kind, name, where, href, sim, keys: [name, ...also].filter(Boolean).map(k => [k, fold(k)])});
+  worlds.filter(w => w.ready).forEach(w => {
+    add("World", w.name, w.pack, "#w-" + w.id, []);
+    w.hoods.forEach(h => { add("Neighbourhood", h.name, w.name, "#n-" + h.id, []);
+      h.lots.forEach(l => add("Lot", l.name, h.name + " · " + w.name, "#" + l.id, [l.lot, l.mine, l.gallery?.title, ...(l.versions || []).map(v => v.title), ...(l.gallery?.others || []).map(o => o.title)])); });
+    Object.values(w.households).forEach(x => { add("Household", x.name, w.name, "#" + x.id, []);
+      x.sims.forEach(sm => add("Sim", sm.name, x.name + " household", "#" + x.id, [], sm.id)); });
+  });
+  return out;
+}
+// best first: the name starts with it, then a word in the name does, then the name has it anywhere; matches on another name (in-game, Gallery title) after those
+function search(q){
+  const f = fold(q).trim(); searchList ||= searchIndex();
+  return searchList.map(r => { let best = null;
+    r.keys.forEach(([raw, k], i) => { const at = k.indexOf(f); if (at < 0) return;
+      const s = (i ? 3 : 0) + (at === 0 ? 0 : k[at - 1] === " " || k[at - 1] === "-" ? 1 : 2);
+      if (!best || s < best.s) best = {s, also: i && fold(raw) !== fold(r.name) ? raw : null}; });
+    return best && {...r, ...best}; }).filter(Boolean)
+    .sort((a, b) => a.s - b.s || KINDS.indexOf(a.kind) - KINDS.indexOf(b.kind) || a.name.localeCompare(b.name)).slice(0, 40);
+}
+function showSearch(){
+  const q = document.getElementById("q").value, nav = document.getElementById("nav");
+  if (!fold(q).trim()) { hits = []; if (navArgs) renderNav(...navArgs); return; }
+  hits = search(q); hit = Math.min(hit, Math.max(0, hits.length - 1));
+  nav.innerHTML = `<div class="nav-group results"><div class="label">${hits.length ? hits.length + (hits.length === 40 ? "+" : "") + " found" : "Nothing found"}</div>${hits.map((r, i) =>
+    `<a href="${r.href}" class="hit ${i === hit ? "on" : ""}" ${r.sim ? `data-sim="${r.sim}"` : ""}><span><b>${esc(r.name)}</b><small>${esc(r.kind)} · ${esc(r.where)}${r.also ? ` · “${esc(r.also)}”` : ""}</small></span></a>`).join("")}
+    ${hits.length ? "" : `<a href="#stats" class="hit">${ic("grid")}Search every lot on the Stats page</a>`}</div>`;
+}
+const clearSearch = () => { const q = document.getElementById("q"); if (q.value) { q.value = ""; hits = []; } };
+document.getElementById("q").addEventListener("input", () => { hit = 0; showSearch(); });
+document.getElementById("q").addEventListener("keydown", e => {
+  if (e.key === "Escape") { clearSearch(); showSearch(); return; }
+  if (!hits.length || !["ArrowDown", "ArrowUp", "Enter"].includes(e.key)) return;
+  e.preventDefault();
+  if (e.key === "Enter") { document.querySelector(".nav a.hit.on")?.click(); return; }
+  hit = (hit + (e.key === "ArrowDown" ? 1 : -1) + hits.length) % hits.length;
+  document.querySelectorAll(".nav a.hit").forEach((a, i) => a.classList.toggle("on", i === hit));
+  document.querySelector(".nav a.hit.on")?.scrollIntoView({block: "nearest"});
+});
+// a result for the page already open: no hashchange, so put the sidebar back here
+document.addEventListener("click", e => { const a = e.target.closest(".nav a.hit"); if (a && a.getAttribute("href") === location.hash) { clearSearch(); route(); } });
 // in-page jumps (households page chapter buttons)
 document.addEventListener("click", e => { const b = e.target.closest("[data-local]"); if (b) document.getElementById(b.dataset.hood)?.scrollIntoView({behavior:"smooth",block:"start"}); });
 
@@ -155,8 +203,10 @@ function home(){
     <div class="hero-foot"><div class="figures">${[[ready.length, ready.length===1?"world":"worlds"],[ready.reduce((n,w)=>n+w.hoods.length,0),"neighbourhoods"],[ready.reduce((n,w)=>n+w.stats.lots,0),"lots"],[ready.reduce((n,w)=>n+w.stats.hh,0),"households"],[simCount(ready.flatMap(w => Object.values(w.households))),"Sims"]].map(([n,t]) => `<div><b>${n}</b><span>${t}</span></div>`).join("")}</div></div></section>
     <div class="section-head"><h2>The <em>worlds</em></h2><span class="count">in the order they arrived</span></div><div class="worlds">${owned.map(worldTile).join("")}</div>
     <div class="section-head"><h2>Not owned</h2><span class="count">${notOwned.length} worlds</span></div><div class="worlds">${notOwned.map(worldTile).join("")}</div>
-    <footer><span>Lot names are my own; each lot page also shows its in-game name. Types and sizes follow the game.</span><span>World maps by 20th Century Plumbob · Icons by Lucide</span></footer>`;
+    <footer><span>Lot names are my own; each lot page also shows its in-game name. Types and sizes follow the game.</span><span>World maps by 20th Century Plumbob · Icons by Lucide</span>
+      <span class="as-of">Lots and households as of ${asOf(DATA.meta.built)} · Gallery numbers as of ${asOf(DATA.meta.galleryChecked)}</span></footer>`;
 }
+const asOf = iso => iso ? new Date(iso + "T12:00").toLocaleDateString("en-GB", {day: "numeric", month: "short", year: "numeric"}) : "not yet";
 
 const statusDots = l => [["built","hammer","Built"],["shared","share","Shared"],["sims","sim","Sims made"]]
   .filter(([k]) => l[k] === true || l[k] === false).map(([k,n,t]) => `<span class="${l[k]?"yes":""}" title="${t}: ${l[k]?"yes":"not yet"}">${ic(n)}</span>`).join("");
@@ -223,8 +273,19 @@ function world(w){
     w.hoods.map(x => `<a href="#n-${x.id}">${esc(x.name)}</a>`).join(""));
   h += `<section class="hood" style="--h:${w.color}"><div class="hood-head"><span class="label">Explore</span><div><h2>Neighbourhoods</h2><p>Open a neighbourhood to see its lots, then a home to meet the household living there.</p></div><a class="count" href="#f-${w.id}">All ${s.hh} households</a></div>
     <div class="listings">${w.hoods.map(hoodCard).join("")}</div></section>`;
+  h += worldPacks(w);
   h += `<a class="stats-link" href="#stats-${w.id}"><span>${ic("grid")}Progress, lot by lot</span><span class="go">See the stats for ${esc(w.name)} ${ic("arrow")}</span></a>`;
   return h;
+}
+// packs needed for the world's Gallery builds (13 Oct), most used first; the number is how many builds use each pack
+function worldPacks(w){
+  const shared = w.hoods.flatMap(h => h.lots).filter(l => l.gallery), n = {};
+  if (!shared.length) return "";
+  shared.forEach(l => (l.gallery.packs || []).forEach(p => n[p] = (n[p] || 0) + 1));
+  const ps = Object.entries(n).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+  return `<section class="block" style="--h:${w.color}"><div class="block-head"><h2>Packs <em>used</em></h2><span class="count">by ${shared.length} ${shared.length === 1 ? "build" : "builds"} on the Gallery</span></div>
+    <p class="showing">Everything you need to download every ${esc(w.name)} build. The number is how many builds use that pack.</p>
+    <div class="packs world-packs">${ps.length ? ps.map(([p, k]) => `<span>${esc(p)}<b>${k}</b></span>`).join("") : "<span>Base game only</span>"}</div></section>`;
 }
 function hoodPage(x){
   const w = x.world, hhSet = [...new Set(x.lots.filter(l => l.hh).map(l => l.hh))], built = x.lots.filter(l => l.built === true).length;
@@ -287,7 +348,7 @@ function lot(l){
           ${l.gallery.tags?.length ? `<div class="tags">${l.gallery.tags.map(t => `<span>#${esc(t)}</span>`).join("")}</div>` : ""}
           ${theirs(l).length ? `<div class="g-comments"><span class="label">Comments on the Gallery</span><ul>${theirs(l).map(c => `<li><div class="c-head"><b>${esc(c.u || "A simmer")}</b>${c.t ? `<small>${new Date(c.t).toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric"})}</small>` : ""}</div><p>${esc(c.m)}</p></li>`).join("")}</ul></div>` : ""}</div>
         <aside class="gallery-card"><span class="label">On the Sims 4 Gallery</span>
-          <dl><div><dt>Value</dt><dd>${esc(l.gallery.value)}</dd></div><div><dt>Favourites</dt><dd>${l.gallery.likes}</dd></div><div><dt>Downloads</dt><dd>${l.gallery.downloads}</dd></div>${l.gallery.beds ? `<div><dt>Bedrooms</dt><dd>${l.gallery.beds}</dd></div>` : ""}${l.gallery.baths ? `<div><dt>Bathrooms</dt><dd>${l.gallery.baths}</dd></div>` : ""}<div><dt>Comments</dt><dd>${l.gallery.comments || 0}</dd></div></dl>
+          <dl><div><dt>Value</dt><dd>${esc(l.gallery.value)}</dd></div><div><dt>Favourites</dt><dd>${l.gallery.likes}</dd></div><div><dt>Downloads</dt><dd>${l.gallery.downloads}</dd></div>${l.gallery.beds ? `<div><dt>Bedrooms</dt><dd>${l.gallery.beds}</dd></div>` : ""}${l.gallery.baths ? `<div><dt>Bathrooms</dt><dd>${l.gallery.baths}</dd></div>` : ""}<div><dt>Comments</dt><dd>${l.gallery.comments || 0}</dd></div>${l.gallery.shared ? `<div><dt>Shared</dt><dd>${esc(l.gallery.shared)}</dd></div>` : ""}</dl>
           ${l.gallery.packs?.length ? `<span class="label">Packs used</span><div class="packs">${l.gallery.packs.map(p => `<span>${esc(p)}</span>`).join("")}</div>` : `<span class="label">Packs used</span><div class="packs"><span>Base game only</span></div>`}
           ${l.gallery.old ? `<p class="g-old">${ic("note")}This Gallery upload is an older version of the build.</p>` : ""}
           <a class="gal-link" style="color:${textOn(l.hood.color)}" href="${esc(l.gallery.url)}" target="_blank" rel="noopener">View on the Gallery${l.gallery.others?.length ? ` · ${esc(l.gallery.label)}` : ""} ${ic("arrow")}</a>
@@ -475,6 +536,7 @@ function route(){
   else { root.removeProperty("--deep"); root.removeProperty("--deep-2"); }
   view.innerHTML = html;
   lazyPics(view);
+  clearSearch();
   renderNav(active, key, ctx);
   window.scrollTo(0, 0);
   document.body.classList.remove("nav-open");
@@ -484,7 +546,7 @@ function route(){
 const CS_VERSIONS = DATA.csVersions;
 function applyVersion(l, i){
   const v = l.versions[i]; l.vi = i; l.photos = v.photos;
-  l.gallery = {...l.baseGallery, title: v.title, url: v.url, likes: v.likes, downloads: v.downloads, value: v.value, packs: v.packs, description: v.description, tags: v.tags, label: v.label, others: null, beds: 0, baths: 0};
+  l.gallery = {...l.baseGallery, title: v.title, url: v.url, likes: v.likes, downloads: v.downloads, value: v.value, packs: v.packs, description: v.description, tags: v.tags, shared: v.shared, label: v.label, others: null, beds: 0, baths: 0};
 }
 Object.values(lotIndex).forEach(l => { const vs = CS_VERSIONS[l.world.name + "|" + l.lot]; if (vs && l.gallery) { l.versions = vs; l.baseGallery = l.gallery; applyVersion(l, 0); } });
 function versionTabs(l){
@@ -496,6 +558,7 @@ function versionTabs(l){
 document.addEventListener("click", e => { const b = e.target.closest("[data-ver]"); if (!b) return; const l = lotIndex[location.hash.slice(1)]; if (!l || !l.versions) return;
   applyVersion(l, +b.dataset.ver); const y = scrollY; document.getElementById("view").innerHTML = lot(l); lazyPics(document.getElementById("view")); window.scrollTo(0, y); document.querySelector(`[data-ver="${b.dataset.ver}"]`)?.focus(); });
 document.getElementById("menuIco").innerHTML = ic("menu");
+document.getElementById("searchIco").innerHTML = ic("search");
 addEventListener("hashchange", route);
 document.getElementById("menuBtn").addEventListener("click", () => document.body.classList.toggle("nav-open"));
 document.getElementById("scrim").addEventListener("click", () => document.body.classList.remove("nav-open"));
