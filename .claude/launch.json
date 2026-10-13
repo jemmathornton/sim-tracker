@@ -28,18 +28,6 @@
         "live-site"
       ],
       "port": 8000
-    },
-    {
-      "name": "compare",
-      "runtimeExecutable": "C:/Users/Jemma/AppData/Local/Programs/Python/Python313/python.exe",
-      "runtimeArgs": [
-        "-m",
-        "http.server",
-        "8002",
-        "--bind",
-        "127.0.0.1"
-      ],
-      "port": 8002
     }
   ]
 }

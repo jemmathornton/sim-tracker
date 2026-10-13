@@ -170,11 +170,20 @@ def main():
 
 
 if __name__ == '__main__':
-    ok = main()
-    if '--no-build' not in sys.argv:
-        import subprocess
-        r = subprocess.run([sys.executable, os.path.join(ROOT, 'tools', 'build.py')], capture_output=True, text=True, encoding='utf-8')
-        say((r.stdout or r.stderr).strip())
-    os.makedirs(os.path.join(ROOT, 'logs'), exist_ok=True)
-    with open(os.path.join(ROOT, 'logs', 'gallery-refresh.log'), 'a', encoding='utf-8') as f: f.write('\n'.join(report) + '\n\n')
+    ok = False
+    try:
+        ok = main()
+        if '--no-build' not in sys.argv:
+            import subprocess
+            # stdin=DEVNULL: the weekly task runs without a console, and Windows refuses to pass on a missing stdin
+            r = subprocess.run([sys.executable, '-X', 'utf8', os.path.join(ROOT, 'tools', 'build.py')],
+                               stdin=subprocess.DEVNULL, capture_output=True, text=True, encoding='utf-8')
+            say((r.stdout or r.stderr).strip())
+            ok = ok and r.returncode == 0
+    except Exception:
+        import traceback
+        say("Stopped with an error:\n" + traceback.format_exc())
+    finally:
+        os.makedirs(os.path.join(ROOT, 'logs'), exist_ok=True)
+        with open(os.path.join(ROOT, 'logs', 'gallery-refresh.log'), 'a', encoding='utf-8') as f: f.write('\n'.join(report) + '\n\n')
     sys.exit(0 if ok else 1)

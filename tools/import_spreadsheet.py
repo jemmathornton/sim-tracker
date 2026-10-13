@@ -1,0 +1,114 @@
+"""Bring Jemma's edits from the World Plans spreadsheet into the app's data.
+
+    python tools/import_spreadsheet.py                 report only (changes nothing)
+    python tools/import_spreadsheet.py --apply         apply her spreadsheet edits to data/worlds, then rebuild
+    python tools/import_spreadsheet.py "<file.xlsx>"   another copy of the spreadsheet (default: Downloads\\World Plans (fixed).xlsx)
+
+Her spreadsheet is only ever read, from a temporary copy. Three versions are compared, lot by lot and column by column:
+  base   = the spreadsheet as last imported (data/spreadsheet/last-import.json)
+  sheet  = the spreadsheet now
+  app    = the app's data (data/worlds/*.json)
+A column she changed in the spreadsheet (sheet differs from base) is copied into the app, unless the app changed the same
+column to something else (a clash: listed, nothing applied). Changes made in the app are kept, and listed so they can be
+copied into the spreadsheet if it stays her main copy. New lots are added; lots missing from the spreadsheet are only listed.
+"""
+import json, os, shutil, subprocess, sys, tempfile
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from common import ROOT, DATA, load, save, world_files
+
+DEFAULT = os.path.join(os.path.expanduser('~'), 'Downloads', 'World Plans (fixed).xlsx')
+BASE = os.path.join(DATA, 'spreadsheet', 'last-import.json')
+FIELDS = [("My Name", "myName"), ("Lot Type", "type"), ("Lot Size", "size"), ("Residents/Owners", "residents"),
+          ("Built", "built"), ("Shared", "shared"), ("Screenshots", "screenshots"), ("Sims Made", "simsMade")]
+HEAD = ["Lot Name"] + [f for f, _ in FIELDS]
+
+
+def read_sheet(xlsx):
+    """The workbook as [{tab, title, sections: [{name, lots: [{Lot Name, My Name, ...}]}]}] (same shape as last-import.json)."""
+    import openpyxl
+    tmp = os.path.join(tempfile.mkdtemp(), 'world-plans.xlsx'); shutil.copy(xlsx, tmp)   # never open her file itself
+    wb = openpyxl.load_workbook(tmp, data_only=True, read_only=True)
+    out = [{"tab": "Overview", "sections": []}]
+    for ws in wb.worksheets[1:]:
+        rows = [[c for c in r[:9]] + [None] * (9 - len(r[:9])) for r in ws.iter_rows(values_only=True)]
+        tab = {"tab": ws.title, "title": rows[0][0] if rows else ws.title, "sections": []}
+        i = 0
+        while i < len(rows):
+            r = rows[i]
+            if r[0] == "Statistics": break
+            if r[0] and i + 1 < len(rows) and rows[i + 1][0] == "Lot Name":
+                sec = {"name": str(r[0]).strip(), "lots": []}; i += 2
+                while i < len(rows) and rows[i][0] not in (None, "") and rows[i][0] != "Statistics":
+                    sec["lots"].append({h: (v.strip() if isinstance(v, str) else v) for h, v in zip(HEAD, rows[i])}); i += 1
+                tab["sections"].append(sec); continue
+            i += 1
+        out.append(tab)
+    wb.close()
+    return out
+
+
+def lots_by_key(sheet):
+    """(world, Lot Name) -> (neighbourhood, position, row)."""
+    return {(t['tab'], l['Lot Name']): (s['name'], n, l) for t in sheet[1:] for s in t['sections'] for n, l in enumerate(s['lots'])}
+
+
+def main():
+    args = [a for a in sys.argv[1:] if not a.startswith('--')]
+    apply = '--apply' in sys.argv
+    xlsx = args[0] if args else DEFAULT
+    sheet, base = read_sheet(xlsx), load(BASE)
+    S, B = lots_by_key(sheet), lots_by_key(base)
+    paths = world_files(); worlds = {load(p)['name']: (p, load(p)) for p in paths}
+    A = {(wn, l['lot']): (h['name'], l) for wn, (_, W) in worlds.items() for h in W['neighbourhoods'] for l in h['lots']}
+    applied, clashes, app_only, added, missing, touched = [], [], [], [], [], set()
+    show = lambda v: '(empty)' if v in (None, '') else repr(v) if isinstance(v, str) else str(v).upper() if isinstance(v, bool) else str(v)
+
+    for key, (hood, pos, row) in S.items():
+        if key not in A:
+            if key not in B:
+                added.append((key, hood, pos, row))
+            continue
+        b = B.get(key, (None, None, {}))[2]; _, lot = A[key]
+        for col, f in FIELDS:
+            s, a, o = row.get(col), lot.get(f), b.get(col)
+            if s == a: continue
+            if key in B and s != o:           # she changed it in the spreadsheet
+                if a == o or key not in B:
+                    applied.append(f"{key[0]} / {key[1]}: {col} {show(a)} -> {show(s)}")
+                    if apply: lot[f] = s; touched.add(key[0])
+                else:
+                    clashes.append(f"{key[0]} / {key[1]}: {col}: spreadsheet {show(s)}, app {show(a)} (was {show(o)})")
+            else:                             # changed in the app only
+                app_only.append(f"{key[0]} / {key[1]}: {col} is {show(a)} in the app, {show(s)} in the spreadsheet")
+    for key in A:
+        if key not in S and key[0] in {t['tab'] for t in sheet[1:]}:
+            missing.append(f"{key[0]} / {key[1]}" + (" (gone from the spreadsheet since last import)" if key in B else ""))
+    for (wn, name), hood, pos, row in added:
+        line = f"{wn} / {hood}: new lot {name!r}"
+        if wn not in worlds:
+            clashes.append(line + " in a world the app doesn't have yet; add the world first"); continue
+        if apply:
+            W = worlds[wn][1]
+            h = next((x for x in W['neighbourhoods'] if x['name'] == hood), None)
+            if h is None: h = {"name": hood, "desc": "", "lots": []}; W['neighbourhoods'].append(h)
+            h['lots'].insert(min(pos, len(h['lots'])), {"lot": name, **{f: row.get(c) for c, f in FIELDS}}); touched.add(wn)
+        applied.append(line)
+
+    print(f"Spreadsheet: {xlsx}\n")
+    for title, items in [("Spreadsheet edits" + (" (applied)" if apply else " (would be applied with --apply)"), applied),
+                         ("Clashes: changed in both, nothing applied", clashes),
+                         ("In the app but not in the spreadsheet (lots)", missing),
+                         ("Changed in the app only (copy into the spreadsheet if it stays the main copy)", app_only)]:
+        print(f"{title}: {len(items)}")
+        for x in items: print("  " + x)
+        print()
+    if apply:
+        for wn in touched: save(worlds[wn][0], worlds[wn][1])
+        shutil.copy(BASE, BASE.replace('.json', '-previous.json'))
+        with open(BASE, 'w', encoding='utf-8', newline='\n') as f: json.dump(sheet, f, ensure_ascii=False, indent=1)
+        r = subprocess.run([sys.executable, '-X', 'utf8', os.path.join(ROOT, 'tools', 'build.py')], stdin=subprocess.DEVNULL, capture_output=True, text=True, encoding='utf-8')
+        print((r.stdout or r.stderr).strip())
+
+
+if __name__ == '__main__':
+    main()

@@ -1,16 +1,18 @@
-"""One-off (13 Oct 2026): turn the claude.ai chat build (build/ + live-site/) into the app's own data.
+"""One-off (13 Oct 2026): turn the claude.ai chat build (old-chat-build/ + live-site/) into the app's own data.
 
-Reads only: build/*.json, build/template.html, build/gallery-picture-ids.txt, live-site/.
+Reads only: old-chat-build/*.json, template.html, gallery-picture-ids.txt (then called build/), live-site/.
 Writes: data/ (worlds, Gallery data, spreadsheet base) and the pictures under site/ (maps, shots, gallery).
 
-Every change from build/live_overrides.json is folded into the data here, so the overrides file can be retired.
-Kept for the record; there's no need to run it again.
+Every change from live_overrides.json is folded into the data here, so the overrides file can be retired.
+Kept for the record; there's no need to run it again (it refuses to while data/ exists).
 """
 import os, re, shutil, sys, urllib.parse
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 from common import ROOT, DATA, SITE, GALLERY, path, slug, norm, load, save
 
-B = lambda *p: path('build', *p)
+if os.path.exists(os.path.join(DATA, 'worlds.json')): sys.exit('data/ already exists; this one-off would overwrite it.')
+
+B = lambda *p: path('old-chat-build', *p)
 LIVE = lambda *p: path('live-site', *p)
 
 new = load(B('new.json'))
