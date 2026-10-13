@@ -99,7 +99,9 @@ const initial = n => esc(n.trim()[0] || "?");
 const titleWord = name => { const p = esc(name).split(" "); return p.length > 1 ? p.slice(0,-1).join(" ") + " <em>" + p.at(-1) + "</em>" : "<em>" + p[0] + "</em>"; };
 
 // sidebar follows where things live: world → neighbourhood → lot → household → Sims
+let navArgs = null;   // the page the sidebar belongs to, so it can come back after a search
 function renderNav(active, key, ctx){
+  navArgs = [active, key, ctx];
   const nav = document.getElementById("nav");
   const owned = worlds.filter(w => w.owned), notOwned = worlds.filter(w => !w.owned);
   let h = `<div class="nav-group"><a href="#home" class="${active==="home"?"on":""}">${ic("home")}Home</a></div><div class="nav-group"><div class="label">Worlds</div>`;
@@ -136,6 +138,52 @@ document.addEventListener("click", e => {
   if (list && here) { e.preventDefault(); list.hidden = !list.hidden; a.classList.toggle("folded", list.hidden); return; }
   if (here) window.scrollTo({top:0, behavior:"smooth"});
 });
+// ---------- search (13 Oct): lots by any of their names, households, Sims, neighbourhoods and worlds; results take the sidebar's place while typing ----------
+const fold = s => String(s ?? "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[‘’'.]/g, "").replace(/&/g, "and").replace(/\s+/g, " ");
+const KINDS = ["World", "Neighbourhood", "Lot", "Household", "Sim"];
+let searchList = null, hits = [], hit = 0;
+function searchIndex(){
+  const out = [], add = (kind, name, where, href, also, sim) => out.push({kind, name, where, href, sim, keys: [name, ...also].filter(Boolean).map(k => [k, fold(k)])});
+  worlds.filter(w => w.ready).forEach(w => {
+    add("World", w.name, w.pack, "#w-" + w.id, []);
+    w.hoods.forEach(h => { add("Neighbourhood", h.name, w.name, "#n-" + h.id, []);
+      h.lots.forEach(l => add("Lot", l.name, h.name + " · " + w.name, "#" + l.id, [l.lot, l.mine, l.gallery?.title, ...(l.versions || []).map(v => v.title), ...(l.gallery?.others || []).map(o => o.title)])); });
+    Object.values(w.households).forEach(x => { add("Household", x.name, w.name, "#" + x.id, []);
+      x.sims.forEach(sm => add("Sim", sm.name, x.name + " household", "#" + x.id, [], sm.id)); });
+  });
+  return out;
+}
+// best first: the name starts with it, then a word in the name does, then the name has it anywhere; matches on another name (in-game, Gallery title) after those
+function search(q){
+  const f = fold(q).trim(); searchList ||= searchIndex();
+  return searchList.map(r => { let best = null;
+    r.keys.forEach(([raw, k], i) => { const at = k.indexOf(f); if (at < 0) return;
+      const s = (i ? 3 : 0) + (at === 0 ? 0 : k[at - 1] === " " || k[at - 1] === "-" ? 1 : 2);
+      if (!best || s < best.s) best = {s, also: i && fold(raw) !== fold(r.name) ? raw : null}; });
+    return best && {...r, ...best}; }).filter(Boolean)
+    .sort((a, b) => a.s - b.s || KINDS.indexOf(a.kind) - KINDS.indexOf(b.kind) || a.name.localeCompare(b.name)).slice(0, 40);
+}
+function showSearch(){
+  const q = document.getElementById("q").value, nav = document.getElementById("nav");
+  if (!fold(q).trim()) { hits = []; if (navArgs) renderNav(...navArgs); return; }
+  hits = search(q); hit = Math.min(hit, Math.max(0, hits.length - 1));
+  nav.innerHTML = `<div class="nav-group results"><div class="label">${hits.length ? hits.length + (hits.length === 40 ? "+" : "") + " found" : "Nothing found"}</div>${hits.map((r, i) =>
+    `<a href="${r.href}" class="hit ${i === hit ? "on" : ""}" ${r.sim ? `data-sim="${r.sim}"` : ""}><span><b>${esc(r.name)}</b><small>${esc(r.kind)} · ${esc(r.where)}${r.also ? ` · “${esc(r.also)}”` : ""}</small></span></a>`).join("")}
+    ${hits.length ? "" : `<a href="#stats" class="hit">${ic("grid")}Search every lot on the Stats page</a>`}</div>`;
+}
+const clearSearch = () => { const q = document.getElementById("q"); if (q.value) { q.value = ""; hits = []; } };
+document.getElementById("q").addEventListener("input", () => { hit = 0; showSearch(); });
+document.getElementById("q").addEventListener("keydown", e => {
+  if (e.key === "Escape") { clearSearch(); showSearch(); return; }
+  if (!hits.length || !["ArrowDown", "ArrowUp", "Enter"].includes(e.key)) return;
+  e.preventDefault();
+  if (e.key === "Enter") { document.querySelector(".nav a.hit.on")?.click(); return; }
+  hit = (hit + (e.key === "ArrowDown" ? 1 : -1) + hits.length) % hits.length;
+  document.querySelectorAll(".nav a.hit").forEach((a, i) => a.classList.toggle("on", i === hit));
+  document.querySelector(".nav a.hit.on")?.scrollIntoView({block: "nearest"});
+});
+// a result for the page already open: no hashchange, so put the sidebar back here
+document.addEventListener("click", e => { const a = e.target.closest(".nav a.hit"); if (a && a.getAttribute("href") === location.hash) { clearSearch(); route(); } });
 // in-page jumps (households page chapter buttons)
 document.addEventListener("click", e => { const b = e.target.closest("[data-local]"); if (b) document.getElementById(b.dataset.hood)?.scrollIntoView({behavior:"smooth",block:"start"}); });
 
@@ -488,6 +536,7 @@ function route(){
   else { root.removeProperty("--deep"); root.removeProperty("--deep-2"); }
   view.innerHTML = html;
   lazyPics(view);
+  clearSearch();
   renderNav(active, key, ctx);
   window.scrollTo(0, 0);
   document.body.classList.remove("nav-open");
@@ -509,6 +558,7 @@ function versionTabs(l){
 document.addEventListener("click", e => { const b = e.target.closest("[data-ver]"); if (!b) return; const l = lotIndex[location.hash.slice(1)]; if (!l || !l.versions) return;
   applyVersion(l, +b.dataset.ver); const y = scrollY; document.getElementById("view").innerHTML = lot(l); lazyPics(document.getElementById("view")); window.scrollTo(0, y); document.querySelector(`[data-ver="${b.dataset.ver}"]`)?.focus(); });
 document.getElementById("menuIco").innerHTML = ic("menu");
+document.getElementById("searchIco").innerHTML = ic("search");
 addEventListener("hashchange", route);
 document.getElementById("menuBtn").addEventListener("click", () => document.body.classList.toggle("nav-open"));
 document.getElementById("scrim").addEventListener("click", () => document.body.classList.remove("nav-open"));
