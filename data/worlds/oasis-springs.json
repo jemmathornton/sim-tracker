@@ -10,31 +10,31 @@
    "name": "Bedrock Strait",
    "desc": "Residents of this delightfully kitschy neighbourhood take pride in their billboards and lawn gnomes. And who wouldn't love getting to say hello to Barry the Brontosaurus every morning?",
    "lots": [
-    {"lot": "Sandtrap Flat", "myName": "Sandtrap Flat", "type": "Residential", "size": "30x20", "residents": "2 Bedroom", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["k+ArWsHmEe2CoYnwBMy2Ww==", "SJqRgD27EemF5Xldy2Ruvw=="]},
-    {"lot": "Nookstone", "myName": "Nookstone", "type": "Residential", "size": "20x15", "residents": "Leah-Moon Cadberry+", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["UZsaW3zJSzmBiMnwHmQ0Kw==", "pO69ST24EemJ1Xldy2Ruvw=="]},
-    {"lot": "Pebble Burrow", "myName": "Pebble Burrow", "type": "Residential", "size": "30x20", "residents": "2 Bedroom", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["wa3+U+DCEemKKyZ9R8et5A=="]},
-    {"lot": "Slipshod Mesquite", "myName": "De Costadas", "type": "Restaurant", "size": "40x30", "residents": "De Costa", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["mItnq8rfRW2dSUiQsM1RIw==", "JJv0rPbqEeaPG9F92RUZ9w=="]},
-    {"lot": "Agave Abode", "myName": "Agave Abode", "type": "Residential", "size": "20x15", "residents": "Lothario *WithUpdates*", "built": true, "shared": true, "screenshots": false, "simsMade": false, "displayName": "Agave Abode", "gallery": ["y+FpyTStEeqB4aX7uid5MQ=="]}
+    {"lot": "Sandtrap Flat", "myName": "Sandtrap Flat", "type": "Residential", "size": "30x20", "residents": "2 Bedroom", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["k+ArWsHmEe2CoYnwBMy2Ww==", "SJqRgD27EemF5Xldy2Ruvw=="], "traits": ["Natural Light", "Penny Pixies"], "challenges": ["Quake Zone"]},
+    {"lot": "Nookstone", "myName": "Nookstone", "type": "Residential", "size": "20x15", "residents": "Leah-Moon Cadberry+", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["UZsaW3zJSzmBiMnwHmQ0Kw==", "pO69ST24EemJ1Xldy2Ruvw=="], "traits": ["Science Lair", "Homey", "Bracing Breezes"]},
+    {"lot": "Pebble Burrow", "myName": "Pebble Burrow", "type": "Residential", "size": "30x20", "residents": "2 Bedroom", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["wa3+U+DCEemKKyZ9R8et5A=="], "traits": ["Homey", "Sunny Aspect"], "challenges": ["Quake Zone"]},
+    {"lot": "Slipshod Mesquite", "myName": "De Costadas", "type": "Restaurant", "size": "40x30", "residents": "De Costa", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["mItnq8rfRW2dSUiQsM1RIw==", "JJv0rPbqEeaPG9F92RUZ9w=="], "traits": ["Chef's Kitchen", "Homey", "Romantic Aura"]},
+    {"lot": "Agave Abode", "myName": "Agave Abode", "type": "Residential", "size": "20x15", "residents": "Lothario *WithUpdates*", "built": true, "shared": true, "screenshots": false, "simsMade": false, "displayName": "Agave Abode", "gallery": ["y+FpyTStEeqB4aX7uid5MQ=="], "traits": ["Sunny Aspect", "Homey"], "challenges": ["Quake Zone"]}
    ]
   },
   {
    "name": "Parched Prospect",
    "desc": "This neighbourhood is your quintessential desert-living experience with bustling tumbleweeds and cacti as far as the eye can see!",
    "lots": [
-    {"lot": "Vista Quarry", "myName": "Vista Quarry", "type": "Residential", "size": "30x20", "residents": "2 Bed Family", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["D3pjU723EeuN9fwg9JDtjA=="]},
-    {"lot": "Raffia Quinta", "myName": "Raffia Quinta", "type": "Residential", "size": "20x15", "residents": "Rivera", "built": true, "shared": true, "screenshots": true, "simsMade": false, "gallery": ["Vstuj6QyEe2MBonwBMy2Ww==", "AmjVup8KEeuBmE1o44QF8A==", "xiShWZ1HEeuKQPwg9JDtjA==", "UQKFRHa/EeaFcH7TsqKNFQ=="]},
+    {"lot": "Vista Quarry", "myName": "Vista Quarry", "type": "Residential", "size": "30x20", "residents": "2 Bed Family", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["D3pjU723EeuN9fwg9JDtjA=="], "traits": ["Natural Light"], "challenges": ["Quake Zone"]},
+    {"lot": "Raffia Quinta", "myName": "Raffia Quinta", "type": "Residential", "size": "20x15", "residents": "Rivera", "built": true, "shared": true, "screenshots": true, "simsMade": false, "gallery": ["Vstuj6QyEe2MBonwBMy2Ww==", "AmjVup8KEeuBmE1o44QF8A==", "xiShWZ1HEeuKQPwg9JDtjA==", "UQKFRHa/EeaFcH7TsqKNFQ=="], "traits": ["Homey", "Eco Lot"]},
     {"lot": "Dusty Turf", "myName": "Dusty Turf", "type": "Residential", "size": "30x20", "residents": "De Costa", "built": true, "shared": false, "screenshots": false, "simsMade": false},
-    {"lot": "Springscape", "myName": "Springscape", "type": "Residential", "size": "30x20", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["hYfhA752EeuOnL8NB92BJw=="]},
-    {"lot": "Cacti Casa", "myName": "Palm Springs Public Pool", "type": "Pool", "size": "40x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["T4xX5K02EeuEt01o44QF8A=="]}
+    {"lot": "Springscape", "myName": "Springscape", "type": "Residential", "size": "30x20", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["hYfhA752EeuOnL8NB92BJw=="], "challenges": ["Quake Zone"]},
+    {"lot": "Cacti Casa", "myName": "Palm Springs Public Pool", "type": "Pool", "size": "40x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["T4xX5K02EeuEt01o44QF8A=="], "traits": ["Bracing Breezes"], "challenges": ["Quake Zone"]}
    ]
   },
   {
    "name": "Skyward Palms",
    "desc": "This upscale gated community offers its residents all the warm, wild benefits of living in the desert along with the luxury of endless green grass.",
    "lots": [
-    {"lot": "Granada Place", "myName": "Granada Place", "type": "Residential", "size": "30x20", "residents": "Curious *WithUpdates*", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["91JnkAJZEeuMZ399sA1LjA==", "UafOQQHXEeuGlOoH0nH2iQ=="]},
-    {"lot": "Arid Ridge", "myName": "Lotus Ridge Spa", "type": "Spa", "size": "40x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["k9wU7gLyEe2GTnUsHjDJmA=="]},
-    {"lot": "Sultry Springside", "myName": "Sultry Springside", "type": "Residential", "size": "30x20", "residents": "Smith", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["wPMUJgKdEeuGMnCrzml8yA=="]},
+    {"lot": "Granada Place", "myName": "Granada Place", "type": "Residential", "size": "30x20", "residents": "Curious *WithUpdates*", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["91JnkAJZEeuMZ399sA1LjA==", "UafOQQHXEeuGlOoH0nH2iQ=="], "traits": ["Good Schools", "Sunny Aspect"]},
+    {"lot": "Arid Ridge", "myName": "Lotus Ridge Spa", "type": "Spa", "size": "40x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["k9wU7gLyEe2GTnUsHjDJmA=="], "traits": ["Romantic Aura", "On Ley Line"], "challenges": ["Quake Zone"]},
+    {"lot": "Sultry Springside", "myName": "Sultry Springside", "type": "Residential", "size": "30x20", "residents": "Smith", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["wPMUJgKdEeuGMnCrzml8yA=="], "traits": ["Good Schools", "Sunny Aspect"]},
     {"lot": "Rio Verde", "myName": "Rio Verde Retirement Home", "type": "Residential Rental (6)", "size": "40x30", "residents": "Elders", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["MEKP5ok7QxmPVa2JI2GTNg==", "vt1B67ztEeuJDE1o44QF8A=="]}
    ]
   },
@@ -50,10 +50,10 @@
    "name": "Mirage Canyon",
    "desc": "Mirage Canyon is Oasis Springs' true oasis. Parched visitors passing through can always delight in seeing the gorgeous rushing waterfall and a well-appreciated pitstop.",
    "lots": [
-    {"lot": "The Futures Past", "myName": "The Futures Past", "type": "Museum", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["5cWe2q4DEeuJE01o44QF8A=="]},
-    {"lot": "The Solar Flare", "myName": "Oasis Springs Library", "type": "Library", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["X3UEJms3EeeEnaGw/5dQ7w=="]},
-    {"lot": "Burners & Builders", "myName": "Burners & Builders", "type": "Gym", "size": "40x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["IfhanfMkEeeNZDTk/zkpCA=="]},
-    {"lot": "Rattlesnake Juice", "myName": "Rattlesnake Juice Bar", "type": "Bar", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["SIZIFmaSR2quQEzJQQ9HUA=="]}
+    {"lot": "The Futures Past", "myName": "The Futures Past", "type": "Museum", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["5cWe2q4DEeuJE01o44QF8A=="], "traits": ["Sunny Aspect", "Natural Light"]},
+    {"lot": "The Solar Flare", "myName": "Oasis Springs Library", "type": "Library", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["X3UEJms3EeeEnaGw/5dQ7w=="], "traits": ["Fast Internet", "Child's Play", "Sunny Aspect"]},
+    {"lot": "Burners & Builders", "myName": "Burners & Builders", "type": "Gym", "size": "40x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["IfhanfMkEeeNZDTk/zkpCA=="], "traits": ["Bracing Breezes", "Sunny Aspect", "Gnomes"]},
+    {"lot": "Rattlesnake Juice", "myName": "Rattlesnake Juice Bar", "type": "Bar", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["SIZIFmaSR2quQEzJQQ9HUA=="], "traits": ["Convivial", "Party Place"]}
    ]
   },
   {

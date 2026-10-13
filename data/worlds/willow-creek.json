@@ -11,11 +11,11 @@
    "desc": "Modest homes with a canal for fishing and a charming active railroad.",
    "mapSpot": [0.69, 0.59],
    "lots": [
-    {"lot": "Bargain Bend", "myName": "Willow's", "type": "Restaurant (Diner)", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["qJHM+ODxEeaFuql4la3fHw=="]},
-    {"lot": "Streamlet Single", "myName": "Streamlet Single", "type": "Residential", "size": "20x15", "residents": "Davidson", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["ZkIsQakfEeuDv/wg9JDtjA=="]},
-    {"lot": "Crick Cabana", "myName": "Crick Cabana", "type": "Tiny Home Residential", "size": "20x15", "residents": "Broke", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["2giAjpTyEemJ3lunJjefig=="]},
-    {"lot": "Daisy Hovel", "myName": "Daisy Hovel", "type": "Residential", "size": "30x20", "residents": "Winters", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["fUcTYJT3EemHwlunJjefig=="]},
-    {"lot": "Garden Essence", "myName": "Garden Essence", "type": "Residential", "size": "40x30", "residents": "Davidson", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["bbq1/qh3EeuCcfwg9JDtjA=="]}
+    {"lot": "Bargain Bend", "myName": "Willow's", "type": "Restaurant (Diner)", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["qJHM+ODxEeaFuql4la3fHw=="], "traits": ["Chef's Kitchen", "Homey", "Sunny Aspect"]},
+    {"lot": "Streamlet Single", "myName": "Streamlet Single", "type": "Residential", "size": "20x15", "residents": "Davidson", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["ZkIsQakfEeuDv/wg9JDtjA=="], "traits": ["Homey", "Great Soil", "Peace and Quiet"]},
+    {"lot": "Crick Cabana", "myName": "Crick Cabana", "type": "Tiny Home Residential", "size": "20x15", "residents": "Broke", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["2giAjpTyEemJ3lunJjefig=="], "traits": ["Peace and Quiet", "Great Soil", "Sunny Aspect"]},
+    {"lot": "Daisy Hovel", "myName": "Daisy Hovel", "type": "Residential", "size": "30x20", "residents": "Winters", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["fUcTYJT3EemHwlunJjefig=="], "traits": ["Great Soil", "Peace and Quiet", "Homey"]},
+    {"lot": "Garden Essence", "myName": "Garden Essence", "type": "Residential", "size": "40x30", "residents": "Davidson", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["bbq1/qh3EeuCcfwg9JDtjA=="], "traits": ["Great Soil", "Homey", "Peace and Quiet"]}
    ]
   },
   {
@@ -23,10 +23,10 @@
    "desc": "Affordable homes for the upwardly mobile, with classic styling and larger shotgun houses.",
    "mapSpot": [0.75, 0.45],
    "lots": [
-    {"lot": "Potters Splay", "myName": "Potters Splay", "type": "Residential", "size": "30x20", "residents": "Reynolds", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["BPJCMI95EeiLGX32EHttrg=="], "galleryOld": true},
+    {"lot": "Potters Splay", "myName": "Potters Splay", "type": "Residential", "size": "30x20", "residents": "Reynolds", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["BPJCMI95EeiLGX32EHttrg=="], "galleryOld": true, "traits": ["Child's Play", "Good Schools", "Homey"]},
     {"lot": "Brook Bungalow", "myName": "Brook Bungalow", "type": "Residential", "size": "40x30", "residents": "Bjergsen", "built": false, "shared": false, "screenshots": false, "simsMade": false},
-    {"lot": "Riverside Roost", "myName": "Riverside Roost", "type": "Residential", "size": "30x20", "residents": "Kopf", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["QRrjnco2EeuNga3kS5H9ag=="]},
-    {"lot": "Pique Hearth", "myName": "Courtyard Lane Playground", "type": "Playground", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["vOvZf6/kT+qX4dUGnWHUqw=="]},
+    {"lot": "Riverside Roost", "myName": "Riverside Roost", "type": "Residential", "size": "30x20", "residents": "Kopf", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["QRrjnco2EeuNga3kS5H9ag=="], "traits": ["Child's Play", "Good Schools"]},
+    {"lot": "Pique Hearth", "myName": "Courtyard Lane Playground", "type": "Playground", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["vOvZf6/kT+qX4dUGnWHUqw=="], "traits": ["Child's Play", "Party Place", "Teen Neighborhood"]},
     {"lot": "Rindle Rose", "myName": "Rindle Rose", "type": "Residential", "size": "20x15", "residents": "Pancakes", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["zDXCdVD6R0qgz6j/cCBarg==", "x7aJgQdUEeePiAjcJnR/JA=="]}
    ]
   },
@@ -35,7 +35,7 @@
    "desc": "The historical garden community, home to large mansions.",
    "mapSpot": [0.5, 0.42],
    "lots": [
-    {"lot": "Hallow Slough", "myName": null, "type": "Residential", "size": "30x20", "residents": "Ella-Mint Cadberry", "built": true, "shared": true, "screenshots": false, "simsMade": true, "gallery": ["lT07JI6TRFGUJDcUM/WXSw==", "M3br1xN8T0StPxOXyRCzFw==", "HnM7TsLGEe2LNbYNwBdzag==", "Lyq5qYQoRr6opnJbd6FYgQ=="]},
+    {"lot": "Hallow Slough", "myName": null, "type": "Residential", "size": "30x20", "residents": "Ella-Mint Cadberry", "built": true, "shared": true, "screenshots": false, "simsMade": true, "gallery": ["lT07JI6TRFGUJDcUM/WXSw==", "M3br1xN8T0StPxOXyRCzFw==", "HnM7TsLGEe2LNbYNwBdzag==", "Lyq5qYQoRr6opnJbd6FYgQ=="], "traits": ["Fast Internet", "Homey"]},
     {"lot": "Umbrage Manor", "myName": null, "type": "Residential", "size": "40x30", "residents": "Villareel", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Parkshore", "myName": "Cordelia Church", "type": "Cemetery", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Ophelia Villa", "myName": null, "type": "Residential", "size": "30x20", "residents": "Goth", "built": false, "shared": false, "screenshots": false, "simsMade": false}
@@ -46,7 +46,7 @@
    "desc": "Willow Creek's most desirable area, with sprawling estates and lush landscaping.",
    "mapSpot": [0.25, 0.42],
    "lots": [
-    {"lot": "Oakenstead", "myName": "Oakenstead", "type": "Residential", "size": "50x50", "residents": "Barraza", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["IY91nQcwEeqP3/Ao7taYVg=="], "galleryOld": true},
+    {"lot": "Oakenstead", "myName": "Oakenstead", "type": "Residential", "size": "50x50", "residents": "Barraza", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["IY91nQcwEeqP3/Ao7taYVg=="], "galleryOld": true, "traits": ["Fast Internet", "Good Schools", "Great Soil"]},
     {"lot": "Cypress Terrace", "myName": "Cypress Terrace", "type": "Residential", "size": "40x30", "residents": "Spencer-Kim-Lewis", "built": false, "shared": false, "screenshots": false, "simsMade": false}
    ]
   },
@@ -55,8 +55,8 @@
    "desc": "The heart of Willow Creek, from parks to nightlife.",
    "mapSpot": [0.33, 0.66],
    "lots": [
-    {"lot": "Municipal Muses", "myName": "Municipal Muses", "type": "Museum", "size": "40x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["3uTcvsTNEeeHdWHJsaQqWQ=="]},
-    {"lot": "The Blue Velvet", "myName": "The Llama Café", "type": "Café", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["P5LkNP5KRd+K9PSzz+WEvQ==", "iW3gtRsVEeePAFoDfK+4qA=="]},
+    {"lot": "Municipal Muses", "myName": "Municipal Muses", "type": "Museum", "size": "40x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["3uTcvsTNEeeHdWHJsaQqWQ=="], "traits": ["Natural Light", "Romantic Aura", "Great Acoustics"]},
+    {"lot": "The Blue Velvet", "myName": "The Llama Café", "type": "Café", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["P5LkNP5KRd+K9PSzz+WEvQ==", "iW3gtRsVEeePAFoDfK+4qA=="], "traits": ["Sunny Aspect", "Romantic Aura", "Penny Pixies"]},
     {"lot": "Movers & Shakers", "myName": null, "type": "Gym", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Willow Creek Archive", "myName": "Willow Creek Archive", "type": "Library", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ]
@@ -66,7 +66,7 @@
    "desc": "A sprawling park in the heart of town.",
    "mapSpot": [0.375, 0.54],
    "lots": [
-    {"lot": "Magnolia Blossom Park", "myName": "Magnolia Blossom Park", "type": "Park", "size": "50x50", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["Py7Ecqn9EeuLTucawTB/JA=="]}
+    {"lot": "Magnolia Blossom Park", "myName": "Magnolia Blossom Park", "type": "Park", "size": "50x50", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["Py7Ecqn9EeuLTucawTB/JA=="], "traits": ["Teen Neighborhood", "Cat Hangout", "Dog Hangout"]}
    ]
   }
  ],

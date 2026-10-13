@@ -10,14 +10,14 @@
    "name": "Olde Platz",
    "desc": "What Olde Platz lacks in greenery it makes up for in charming cobblestone. Live, work and play in the rich, cultural history of the oldest part of Windenburg.",
    "lots": [
-    {"lot": "Proprietor's Square", "myName": "Proprietor's Square", "type": "Residential", "size": "30x20", "residents": "2 Bed", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["fCk9D0WAEeeOAaP4YfS2mA=="]},
-    {"lot": "Havisham House", "myName": "Havisham House", "type": "Residential", "size": "20x20", "residents": "Specter *WithUpdates*", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["GsrjSQceEeqGNEu/SNc3OA=="]},
-    {"lot": "Factory One", "myName": "Factory One", "type": "Residential", "size": "30x20", "residents": "Partihaus", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["zdQ3QSN9EeeFiWUH0XaZxA=="]},
-    {"lot": "Waterlock Redoubt", "myName": "Olde Platz Inn", "type": "Restaurant/Vacation Rental", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": true, "simsMade": "N/A", "gallery": ["UrN6y7srEeuAzvwg9JDtjA==", "Td3YR7srEeuApPwg9JDtjA=="]},
+    {"lot": "Proprietor's Square", "myName": "Proprietor's Square", "type": "Residential", "size": "30x20", "residents": "2 Bed", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["fCk9D0WAEeeOAaP4YfS2mA=="], "traits": ["Party Place", "Great Acoustics", "Gnomes"]},
+    {"lot": "Havisham House", "myName": "Havisham House", "type": "Residential", "size": "20x20", "residents": "Specter *WithUpdates*", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["GsrjSQceEeqGNEu/SNc3OA=="], "traits": ["Homey", "Gnomes", "Home Studio"]},
+    {"lot": "Factory One", "myName": "Factory One", "type": "Residential", "size": "30x20", "residents": "Partihaus", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["zdQ3QSN9EeeFiWUH0XaZxA=="], "traits": ["Party Place", "Great Acoustics"]},
+    {"lot": "Waterlock Redoubt", "myName": "Olde Platz Inn", "type": "Restaurant/Vacation Rental", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": true, "simsMade": "N/A", "gallery": ["UrN6y7srEeuAzvwg9JDtjA==", "Td3YR7srEeuApPwg9JDtjA=="], "traits": ["Homey", "Romantic Aura"]},
     {"lot": "Quad Manor", "myName": null, "type": "Library", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
-    {"lot": "The Narwhal Arms", "myName": "The Narwhal Arms", "type": "Bar", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["LAC77Vm5EeeAK22AqHCI6g=="]},
-    {"lot": "South Square Coffee", "myName": "Pixel Café", "type": "Café", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["lU27jsitEeeLcr+KYzr9wA=="]},
-    {"lot": "Old Quarter Inn", "myName": "Museum of the Arts", "type": "Museum", "size": "20x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["TEsvlFq8EeeK+MnL0U6IYw=="]}
+    {"lot": "The Narwhal Arms", "myName": "The Narwhal Arms", "type": "Bar", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["LAC77Vm5EeeAK22AqHCI6g=="], "traits": ["Convivial", "Party Place"], "challenges": ["Spooky"]},
+    {"lot": "South Square Coffee", "myName": "Pixel Café", "type": "Café", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["lU27jsitEeeLcr+KYzr9wA=="], "traits": ["Fast Internet", "Party Place", "Gnomes"]},
+    {"lot": "Old Quarter Inn", "myName": "Museum of the Arts", "type": "Museum", "size": "20x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["TEsvlFq8EeeK+MnL0U6IYw=="], "traits": ["Natural Light", "Sunny Aspect", "Home Studio"]}
    ]
   },
   {
@@ -36,9 +36,9 @@
    "desc": "Wide open spaces and a chateau or two. Visit or live in Windslar for a delectable taste of countryside living.",
    "lots": [
     {"lot": "Coorinberg Cottage", "myName": "Coorinberg Cottage", "type": "Residential", "size": "40x30", "residents": "Munch", "built": true, "shared": true, "screenshots": true, "simsMade": false, "gallery": ["60HYgOvpR0a9c7/SdYBveA=="]},
-    {"lot": "Cottage Am See", "myName": "Cottage Am See", "type": "Residential", "size": "20x20", "residents": "Free Spirits", "built": true, "shared": true, "screenshots": true, "simsMade": false, "gallery": ["90eaL6RtEeuE1ecawTB/JA=="]},
-    {"lot": "Rustic Residence", "myName": "Rustic Residence", "type": "Residential", "size": "30x20", "residents": "1 Bed", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["XCNL0nuzEeyN+AW7hdRP0w=="]},
-    {"lot": "The Shrieking Llama", "myName": "The Shrieking Llama", "type": "Bar", "size": "20x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["hQY3dKXnEeuB2+cawTB/JA=="]},
+    {"lot": "Cottage Am See", "myName": "Cottage Am See", "type": "Residential", "size": "20x20", "residents": "Free Spirits", "built": true, "shared": true, "screenshots": true, "simsMade": false, "gallery": ["90eaL6RtEeuE1ecawTB/JA=="], "traits": ["Great Soil", "Sunny Aspect", "Peace and Quiet"]},
+    {"lot": "Rustic Residence", "myName": "Rustic Residence", "type": "Residential", "size": "30x20", "residents": "1 Bed", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["XCNL0nuzEeyN+AW7hdRP0w=="], "traits": ["Great Soil", "Homey"], "challenges": ["Simple Living"]},
+    {"lot": "The Shrieking Llama", "myName": "The Shrieking Llama", "type": "Bar", "size": "20x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["hQY3dKXnEeuB2+cawTB/JA=="], "traits": ["Sunny Aspect", "Dog Friendly", "Dog Hangout"]},
     {"lot": "Dresden House", "myName": "Dresden House", "type": "Residential", "size": "64x64", "residents": "Fyres", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "The Summer House", "myName": null, "type": "Vet Clinic", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ]

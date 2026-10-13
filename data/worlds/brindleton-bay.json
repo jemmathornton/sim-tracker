@@ -10,21 +10,21 @@
    "name": "Sable Square",
    "desc": "The cultural centre of the city, Sable Square is ideal for both cats and dogs. These people love their pets so much, they've built a monument to them right in the middle of town!",
    "lots": [
-    {"lot": "Pupperstone Park", "myName": "Pupperstone Park", "type": "Park", "size": "40x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["St7XdvkYEeqHReAP1tcFHw=="]},
+    {"lot": "Pupperstone Park", "myName": "Pupperstone Park", "type": "Park", "size": "40x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["St7XdvkYEeqHReAP1tcFHw=="], "traits": ["Dog Friendly", "Dog Hangout", "Training Ground"]},
     {"lot": "Brindleton Pawspital", "myName": "Brindleton Pawspital", "type": "Vet Clinic", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "It's A Good House", "myName": "It's A Good House", "type": "Residential", "size": "40x40", "residents": "Hecking", "built": false, "shared": false, "screenshots": false, "simsMade": false},
-    {"lot": "Domus Familiaris", "myName": "Domus Familiaris", "type": "Residential", "size": "30x30", "residents": "Large 3 Bedroom", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["zmRNX/egEeqEegj3LsIbeA=="]},
-    {"lot": "Sporting Space", "myName": "Brindleton Boathouse", "type": "Residential", "size": "30x20", "residents": "Newbie?", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["A/9iCxIxEeqI+SSV4rtE9w=="]}
+    {"lot": "Domus Familiaris", "myName": "Domus Familiaris", "type": "Residential", "size": "30x30", "residents": "Large 3 Bedroom", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["zmRNX/egEeqEegj3LsIbeA=="], "traits": ["Good Schools", "Gnomes", "Peace and Quiet"]},
+    {"lot": "Sporting Space", "myName": "Brindleton Boathouse", "type": "Residential", "size": "30x20", "residents": "Newbie?", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["A/9iCxIxEeqI+SSV4rtE9w=="], "traits": ["Dog Hangout", "Home Studio", "Homey"]}
    ]
   },
   {
    "name": "Whiskerman's Wharf",
    "desc": "A favourite hangout for the Bay's feline citizens, who can be found climbing around down at the docks. Whiskerman's Wharf is also enjoyed by fishermen and tourists alike.",
    "lots": [
-    {"lot": "Club Calico", "myName": "Calico", "type": "Lounge", "size": "40x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["TBbktz3AEemOU3ldy2Ruvw=="]},
-    {"lot": "Salty Paws Saloon", "myName": "The Bay Café", "type": "Small Business Cat Cafe", "size": "20x15", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["Sa/c+Av6EeuBi5LGvPH+KA=="]},
+    {"lot": "Club Calico", "myName": "Calico", "type": "Lounge", "size": "40x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["TBbktz3AEemOU3ldy2Ruvw=="], "traits": ["Convivial", "Party Place", "Hottest Spot in Town"]},
+    {"lot": "Salty Paws Saloon", "myName": "The Bay Café", "type": "Small Business Cat Cafe", "size": "20x15", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["Sa/c+Av6EeuBi5LGvPH+KA=="], "traits": ["Cat Friendly", "Cat Hangout"]},
     {"lot": "Catscratch Cottage", "myName": null, "type": "Restaurant (Seafood)", "size": "20x15", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
-    {"lot": "Ragdoll Refurb", "myName": "Brindleton Library", "type": "Library", "size": "20x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["4PImECUzEeiJE2UCaOyRNg=="]},
+    {"lot": "Ragdoll Refurb", "myName": "Brindleton Library", "type": "Library", "size": "20x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["4PImECUzEeiJE2UCaOyRNg=="], "traits": ["Fast Internet", "Sunny Aspect", "Science Lair"]},
     {"lot": "Tail's End", "myName": "Tail's End Apartments", "type": "Residential Rental (4)", "size": "40x30", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["+A+x1l7bRQqBZ6ykyVWG+g=="]}
    ]
   },
@@ -35,8 +35,8 @@
     {"lot": "Chateau Frise", "myName": "Chateau Frise", "type": "Residential", "size": "40x40", "residents": "Delgato", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Bedlington Boathouse", "myName": "Bedlington Boathouse", "type": "Residential", "size": "20x20", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["/gt2zD29EemDcnldy2Ruvw=="]},
     {"lot": "Hound's Head", "myName": "Hound's Head", "type": "Residential (Farm)", "size": "64x64", "residents": "Empty", "built": false, "shared": false, "screenshots": false, "simsMade": false},
-    {"lot": "Dachshund's Creek", "myName": "Creek Clinic", "type": "Vet Clinic", "size": "30x20", "residents": "Ventura", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["TG3zMCVJEeiGvGUCaOyRNg=="]},
-    {"lot": "Hindquarter Hideaway", "myName": "Hindquarter Hideaway", "type": "Residential", "size": "30x20", "residents": "Ventura", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["ZRB3u+jIEeeCjfk5Gb/cmg=="]}
+    {"lot": "Dachshund's Creek", "myName": "Creek Clinic", "type": "Vet Clinic", "size": "30x20", "residents": "Ventura", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["TG3zMCVJEeiGvGUCaOyRNg=="], "traits": ["Science Lair", "Training Ground", "Breeding Ground"]},
+    {"lot": "Hindquarter Hideaway", "myName": "Hindquarter Hideaway", "type": "Residential", "size": "30x20", "residents": "Ventura", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["ZRB3u+jIEeeCjfk5Gb/cmg=="], "traits": ["Dog Hangout", "Great Soil", "Homey"]}
    ]
   },
   {

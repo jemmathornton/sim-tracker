@@ -12,9 +12,9 @@
    "lots": [
     {"lot": "Champions' Grove", "myName": "Champions' Grove", "type": "Residential", "size": "30x20", "residents": "Sienna & Flapjack", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "The Cozy Corner House", "myName": null, "type": "Library", "size": "20x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
-    {"lot": "The Oak Barrel", "myName": "The Oak Barrel", "type": "Restaurant", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["1Q66JxbkTmSxL/yKFObuBg=="]},
+    {"lot": "The Oak Barrel", "myName": "The Oak Barrel", "type": "Restaurant", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["1Q66JxbkTmSxL/yKFObuBg=="], "traits": ["Convivial", "Party Place", "Sunny Aspect"]},
     {"lot": "The Rusty Horseshoe", "myName": "The Rusty Horseshoe", "type": "Nightclub", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
-    {"lot": "Duke's Hall", "myName": "Appaloosa Stables", "type": "Residential", "size": "40x30", "residents": "Horse Elder Couple", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["W2doWBlGRk+vBVPnU2Y6aQ=="]}
+    {"lot": "Duke's Hall", "myName": "Appaloosa Stables", "type": "Residential", "size": "40x30", "residents": "Horse Elder Couple", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["W2doWBlGRk+vBVPnU2Y6aQ=="], "traits": ["Gnomes", "Homey"], "challenges": ["Wild Prairie Grass"]}
    ]
   },
   {
@@ -25,7 +25,7 @@
     {"lot": "Sweet Nectar Glade", "myName": "Sweet Nectar Glade", "type": "Bar", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Canter Cottage", "myName": "Canter Clinic", "type": "Vet Clinic", "size": "30x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Grapevine Terrace", "myName": "Grapevine Terrace", "type": "Residential", "size": "30x20", "residents": "The Nectar Making Duo", "built": false, "shared": false, "screenshots": false, "simsMade": false},
-    {"lot": "Red Roan Field", "myName": "Red Roan Farm", "type": "Residential (Farm)", "size": "64x64", "residents": "Mine", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["NmY0ps4JQs+b2oePMFcq1w=="]}
+    {"lot": "Red Roan Field", "myName": "Red Roan Farm", "type": "Residential (Farm)", "size": "64x64", "residents": "Mine", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["NmY0ps4JQs+b2oePMFcq1w=="], "traits": ["Homey", "Great Soil", "Training Ground"], "challenges": ["Wild Prairie Grass", "Wild Foxes", "Simple Living"]}
    ]
   },
   {
@@ -33,8 +33,8 @@
    "desc": "Lauded as one of the go-to regions for Horse Riding, the Gulch is chockfull of gorgeous trails and stunning outlooks.",
    "lots": [
     {"lot": "Canyon Crossing", "myName": "Canyon Crossing", "type": "Residential", "size": "20x20", "residents": "Gooseman", "built": false, "shared": false, "screenshots": false, "simsMade": false},
-    {"lot": "Palomino Junction", "myName": "Palomino Junction", "type": "Residential (Ranch)", "size": "50x50", "residents": "Palumbo", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["RZD6nwFCTjqQAXMiXhbgMg==", "/wcmTH3JSeeGjHDL4sZ7oA=="]},
-    {"lot": "Big Sky Reach", "myName": "Big Sky Reach", "type": "Vacation Rental", "size": "20x15", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["W6J+tA4mQGS/Zrj6G+qdpw=="]}
+    {"lot": "Palomino Junction", "myName": "Palomino Junction", "type": "Residential (Ranch)", "size": "50x50", "residents": "Palumbo", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["RZD6nwFCTjqQAXMiXhbgMg==", "/wcmTH3JSeeGjHDL4sZ7oA=="], "traits": ["Bracing Breezes", "Great Acoustics", "Homey"], "challenges": ["Wild Prairie Grass"]},
+    {"lot": "Big Sky Reach", "myName": "Big Sky Reach", "type": "Vacation Rental", "size": "20x15", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["W6J+tA4mQGS/Zrj6G+qdpw=="], "traits": ["Peace and Quiet", "Sunny Aspect"]}
    ]
   }
  ]

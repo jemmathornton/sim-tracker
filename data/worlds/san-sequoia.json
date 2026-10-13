@@ -12,7 +12,7 @@
    "lots": [
     {"lot": "Robles Point", "myName": "Robles Point", "type": "Residential", "size": "50x40", "residents": "Robles", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Manzanita Terrace", "myName": "Manzanita Terrace", "type": "Residential Rental", "size": "30x20", "residents": "Robles own", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["VQFgXtugQYOnRKBloF2q8w==", "S5OBFGGuQdCbSX8fSeqfxQ=="]},
-    {"lot": "Anchorpoint Library", "myName": "Anchorpoint Rec Center", "type": "Rec Center", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["UXbB7/eiRbWJZnZEclMjpA=="]},
+    {"lot": "Anchorpoint Library", "myName": "Anchorpoint Rec Center", "type": "Rec Center", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["UXbB7/eiRbWJZnZEclMjpA=="], "traits": ["Child's Play", "Fast Internet"]},
     {"lot": "Anchorpoint Abode", "myName": "Anchorpoint Works", "type": "Restaurant/Bar", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["z2mjougaSg2qJMlf9cbGpw=="]}
    ]
   },
@@ -21,7 +21,7 @@
    "desc": "Gilbert Gardens' gorgeous park was once owned by Gilbert Gilberts, a land developer who helped establish the area. Now, it's the perfect locale for family trips to the gardens.",
    "lots": [
     {"lot": "13 Acacia Avenue", "myName": "13 Acacia Avenue", "type": "Residential", "size": "40x30", "residents": "Robles-Ruano", "built": false, "shared": false, "screenshots": false, "simsMade": false},
-    {"lot": "Parkside Place", "myName": "Parkside Place", "type": "Playground", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["HMOwRBrIQuedlPG5caBw8A=="]},
+    {"lot": "Parkside Place", "myName": "Parkside Place", "type": "Playground", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["HMOwRBrIQuedlPG5caBw8A=="], "traits": ["Child's Play", "Party Place"]},
     {"lot": "18 Celebration Way", "myName": "18 Celebration Way", "type": "Boba & Thrift", "size": "40x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Celebration Center", "myName": "Celebration Center", "type": "Wedding Venue/Cemetery", "size": "64x64", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ]
@@ -31,7 +31,7 @@
    "desc": "Hopewell Hills is a cosy spot away from the hustle and bustle of town; the perfect place for anyone who wants, well, space! If the suburbs are your idea of paradise, you've found it here in this quiet neighbourhood.",
    "lots": [
     {"lot": "7 Eucalyptus Lane", "myName": "7 Eucalyptus Lane", "type": "Residential", "size": "50x40", "residents": "Michaelson", "built": false, "shared": false, "screenshots": false, "simsMade": false},
-    {"lot": "23 Eucalyptus Lane", "myName": "23 Eucalyptus Lane", "type": "Residential", "size": "30x20", "residents": "Lovejoy", "built": true, "shared": true, "screenshots": false, "simsMade": true, "gallery": ["1WpsEz1aTLyFuTNaFCmhLA=="]},
+    {"lot": "23 Eucalyptus Lane", "myName": "23 Eucalyptus Lane", "type": "Residential", "size": "30x20", "residents": "Lovejoy", "built": true, "shared": true, "screenshots": false, "simsMade": true, "gallery": ["1WpsEz1aTLyFuTNaFCmhLA=="], "traits": ["Bracing Breezes", "Child's Play"]},
     {"lot": "36 Bayani Place", "myName": "36 Bayani Place", "type": "Residential", "size": "30x20", "residents": "Luna-Sullivan", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Sequoia Cottage", "myName": "Sequoia Cottage", "type": "Residential Rental", "size": "30x20", "residents": "Lovejoy own", "built": false, "shared": false, "screenshots": false, "simsMade": false}
    ]

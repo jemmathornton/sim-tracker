@@ -181,7 +181,8 @@ def build():
                 lots.append({"lot": l['lot'], "mine": l['myName'], "type": l['type'], "size": l['size'],
                              "who": (name + ("?" if unsure else "")) if name else None, "whoNote": note,
                              "built": l['built'], "shared": l['shared'], "sims": l['simsMade'],
-                             "gallery": g, "photos": photos_for(ws, slug(l['lot']))})
+                             "gallery": g, "photos": photos_for(ws, slug(l['lot'])),
+                             **{k: l[k] for k in ("traits", "challenges") if l.get(k)}})   # from her Building save (tools/lot_traits.py)
             if owned: w["hoods"].append({"name": hood['name'], "desc": hood.get('desc', ''), "color": W['colour'], "lots": lots})
         if W.get('households'): households[n] = W['households']
         if W.get('familyLinks'): family_links[n] = W['familyLinks']

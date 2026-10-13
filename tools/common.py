@@ -24,8 +24,9 @@ def slug(s):
 
 
 def norm(s):
-    """Loose comparison key for names: letters and digits only."""
-    return re.sub(r'[^a-z0-9]', '', (s or '').lower().replace('&', 'and').replace('é', 'e'))
+    """Loose comparison key for names: letters and digits only, accents dropped ("Chee-wít" = "Chee-wit")."""
+    s = re.sub('[̀-ͯ]', '', unicodedata.normalize('NFD', (s or '').lower()))
+    return re.sub(r'[^a-z0-9]', '', s.replace('&', 'and'))
 
 
 def load(p):

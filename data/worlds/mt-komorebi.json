@@ -12,8 +12,8 @@
    "desc": "Like its namesake, Wakaba is young, new, and bright as the leaves of a tree in early springtime. This small town is up-and-coming in the region, home to beautiful, sleek new homes and an attractive town centre featuring Mt. Komorebi's official mascot: Yamachan.",
    "lots": [
     {"lot": "2-4-1 Wakabamori", "myName": "?", "type": "Cemetery", "size": "20x15", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
-    {"lot": "2-4-2 Wakabamori", "myName": "2-4-2 Wakabamori", "type": "Residential", "size": "30x20", "residents": "Akiyama", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["VbPOiqJiEe2JB1d8Dz3Yjw=="]},
-    {"lot": "2-4-3 Wakabamori", "myName": "2-4-3 Wakabamori", "type": "Residential", "size": "20x15", "residents": "My Sims??", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["WNVbEc9zEeuIuUhsV3GtHg=="]},
+    {"lot": "2-4-2 Wakabamori", "myName": "2-4-2 Wakabamori", "type": "Residential", "size": "30x20", "residents": "Akiyama", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["VbPOiqJiEe2JB1d8Dz3Yjw=="], "traits": ["Child's Play", "Good Schools"]},
+    {"lot": "2-4-3 Wakabamori", "myName": "2-4-3 Wakabamori", "type": "Residential", "size": "20x15", "residents": "My Sims??", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["WNVbEc9zEeuIuUhsV3GtHg=="], "traits": ["Good Schools", "Peace and Quiet"]},
     {"lot": "2-5-1 Wakabamori", "myName": "2-5-1 Wakabamori", "type": "Residential", "size": "50x50", "residents": "Ito", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Hazakura Lounge", "myName": "?", "type": "Recreation Center", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ]
@@ -23,9 +23,9 @@
    "desc": "Senbamachi, the town of a thousand leaves, is the oldest in the region. Many locals enjoy the town's connection to nature, especially with the bamboo forests surrounding the town and unique spritely creatures that make a home in their leaves.",
    "lots": [
     {"lot": "5-6-1 Shinrinyoku", "myName": "5-6-1 Shinrinyoku", "type": "Residential", "size": "20x15", "residents": "Nishidake", "built": false, "shared": false, "screenshots": false, "simsMade": false},
-    {"lot": "5-3-1 Shinrinyoku", "myName": "Sento Senbamachi", "type": "Onsen Bathhouse", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["HA1X7avPEe2KmInwBMy2Ww=="]},
+    {"lot": "5-3-1 Shinrinyoku", "myName": "Sento Senbamachi", "type": "Onsen Bathhouse", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["HA1X7avPEe2KmInwBMy2Ww=="], "traits": ["On Ley Line", "Party Place"]},
     {"lot": "6-4-1 Hanamigawa", "myName": "6-4-1 Hanamigawa", "type": "Vacation Rental", "size": "20x15", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
-    {"lot": "Hanamigawa Koen", "myName": "Izakaya Hanamigawa Koen", "type": "Restaurant (/Park)", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": true, "simsMade": "N/A", "gallery": ["LZDQX/6/EeyBmFZvr3rQ2g=="]},
+    {"lot": "Hanamigawa Koen", "myName": "Izakaya Hanamigawa Koen", "type": "Restaurant (/Park)", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": true, "simsMade": "N/A", "gallery": ["LZDQX/6/EeyBmFZvr3rQ2g=="], "traits": ["Convivial"]},
     {"lot": "Izakaya Ippai", "myName": "Boba Ippai", "type": "Boba & Thrift", "size": "30x20", "residents": "N/A", "built": true, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ]
   },
@@ -33,7 +33,7 @@
    "name": "Yukimatsu",
    "desc": "The true beauty of the countryside can be seen from Yukimatsu, named for its snow-covered pines. Located on the slopes of Mt. Komorebi, this area offers gorgeous vacation rentals, a variety of snow sports, untamed wilderness, and a peaceful Onsen Bathhouse getaway.",
    "lots": [
-    {"lot": "5-1-1 Kiyomatsu", "myName": "5-1-1 Kiyomatsu", "type": "Vacation Rental", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["DalrQoxKT2WT8gFfb+JCuA=="]},
+    {"lot": "5-1-1 Kiyomatsu", "myName": "5-1-1 Kiyomatsu", "type": "Vacation Rental", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["DalrQoxKT2WT8gFfb+JCuA=="], "traits": ["Convivial", "Bracing Breezes", "Natural Well"]},
     {"lot": "5-1-2 Kiyomatsu", "myName": "5-1-2 Kiyomatsu", "type": "Vacation Rental", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["N+vsiXPfSiyLfiA9VWRa3Q=="]},
     {"lot": "Sutefani Onsen Bathhouse", "myName": "Sutefani Onsen Bathhouse", "type": "Onsen Bathhouse", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Kiyomatsu Point", "myName": "Kiyomatsu Point", "type": "Custom Venue", "size": "50x50", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}

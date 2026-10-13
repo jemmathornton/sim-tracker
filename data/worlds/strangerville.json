@@ -12,8 +12,8 @@
    "lots": [
     {"lot": "8 Bells", "myName": "8 Bells", "type": "Bar", "size": "20x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "StrangerVille Information Center", "myName": "StrangerVille Information Center", "type": "Museum", "size": "20x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
-    {"lot": "Carpophagous Corner", "myName": "Carpophagous Corner", "type": "Vacation Rental", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["90dWb5T5EemIVFunJjefig=="]},
-    {"lot": "Slip 42", "myName": "Slip 42", "type": "Residential Rental (2)", "size": "20x15", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["b5Ji8j+9EeqMyfXdRXmRsg=="]},
+    {"lot": "Carpophagous Corner", "myName": "Carpophagous Corner", "type": "Vacation Rental", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["90dWb5T5EemIVFunJjefig=="], "traits": ["Science Lair", "Bracing Breezes"], "challenges": ["Quake Zone"]},
+    {"lot": "Slip 42", "myName": "Slip 42", "type": "Residential Rental (2)", "size": "20x15", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["b5Ji8j+9EeqMyfXdRXmRsg=="], "challenges": ["Creepy Crawlies", "Quake Zone", "Filthy"]},
     {"lot": "Old Penelope", "myName": "Old Penelope", "type": "Residential", "size": "50x40", "residents": "Cahill", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Riverside Grove", "myName": "Riverside Grove", "type": "Residential", "size": "30x20", "residents": "Sigworth", "built": true, "shared": false, "screenshots": false, "simsMade": false}
    ]

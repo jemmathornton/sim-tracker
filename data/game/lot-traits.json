@@ -1,0 +1,515 @@
+{
+ "_note": "Lot traits and lot challenges, from the game's own files (tools/lot_traits.py --game). Keyed by the game's id.",
+ "traits": {
+  "147847": {
+   "name": "Gremlins",
+   "kind": "challenge",
+   "tuning": "zoneModifier_lotTrait_Gremlins",
+   "description": "Stuff breaks here a lot. It's like there are tiny goblins who come out at night and smash things... but that's ridiculous, right?\\n\\nAvailable with City Living."
+  },
+  "147778": {
+   "name": "Gnomes",
+   "kind": "trait",
+   "tuning": "zoneModifier_lotTrait_Gnomes",
+   "description": "Broken things just seem to get mended overnight. It's as if kindly Gnomes watch over the place..."
+  },
+  "137277": {
+   "name": "Quiet",
+   "kind": "trait",
+   "tuning": "zoneModifier_pro_Quiet",
+   "description": "Maybe it's the insulation or maybe the neighbors are very polite. Either way, it's never noisy here."
+  },
+  "137276": {
+   "name": "Lively Neighbors",
+   "kind": "trait",
+   "tuning": "zoneModifier_con_LivelyNeighbors",
+   "description": "The neighbors live life to the max. There's often a party going on."
+  },
+  "137279": {
+   "name": "Romantic Fireplace",
+   "kind": "trait",
+   "tuning": "zoneModifier_Pro_RomanticFireplace",
+   "description": "A flirty vibe radiates from the beautiful fireplace in this apartment. The Landlord won't allow this fireplace to be removed or sold."
+  },
+  "137278": {
+   "name": "Great View",
+   "kind": "trait",
+   "tuning": "zoneModifier_pro_GreatView",
+   "description": "The beautiful views are sure to lift anyone's spirits."
+  },
+  "137273": {
+   "name": "Cheap Rent",
+   "kind": "trait",
+   "tuning": "zoneModifier_pro_Cheap",
+   "description": "Rent is cheaper than average for this Apartment."
+  },
+  "137272": {
+   "name": "Pricey",
+   "kind": "trait",
+   "tuning": "zoneModifier_con_Pricey",
+   "description": "Rent is higher than average for this Apartment."
+  },
+  "137275": {
+   "name": "On Ley Line",
+   "kind": "trait",
+   "tuning": "zoneModifier_pro_OnLeyLine",
+   "description": "Full of funky fertile earth energy, twins are born here more often than not."
+  },
+  "137274": {
+   "name": "Serviced Apartment",
+   "kind": "trait",
+   "tuning": "zoneModifier_pro_ServicedApartment",
+   "description": "The rent for this apartment includes maid service."
+  },
+  "137223": {
+   "name": "Good Schools",
+   "kind": "trait",
+   "tuning": "zoneModifier_pro_NearGoodSchools",
+   "description": "The local school is great! Kids seem to get high grades and usually do better at homework."
+  },
+  "137285": {
+   "name": "Cursed",
+   "kind": "challenge",
+   "tuning": "zoneModifier_con_Cursed",
+   "description": "Lots of things seem to go wrong here.\\n\\nAvailable with City Living."
+  },
+  "137284": {
+   "name": "Home Studio",
+   "kind": "trait",
+   "tuning": "zoneModifier_pro_HomeStudio",
+   "description": "The artsy vibe makes this a great place to be creative. Painting, Writing, and Woodworking usually comes out better quality."
+  },
+  "137287": {
+   "name": "Party Place",
+   "kind": "trait",
+   "tuning": "zoneModifier_pro_GreatAtmosphere",
+   "description": "Parties just seem to go well at this place! Meeting Social Event goals becomes much easier."
+  },
+  "137286": {
+   "name": "Spooky",
+   "kind": "trait",
+   "tuning": "zoneModifier_con_Haunted",
+   "description": "For some inexplicable reason this lot attracts wandering Ghosts!\\n\\nAvailable with City Living."
+  },
+  "137281": {
+   "name": "Chef's Kitchen",
+   "kind": "trait",
+   "tuning": "zoneModifier_pro_ChefsKitchen",
+   "description": "Food prepared in this kitchen will enhance your Sims' culinary skills. Look out famous Chefs!"
+  },
+  "137280": {
+   "name": "Historical",
+   "kind": "trait",
+   "tuning": "zoneModifier_pro_Historical",
+   "description": "The Landlord has one rule - the Inspirational plaque dedicated to a famous historical resident can never be removed or sold."
+  },
+  "137283": {
+   "name": "Needs TLC",
+   "kind": "trait",
+   "tuning": "zoneModifier_con_NeedsTLC",
+   "description": "A great place to practice your Handiness skills!"
+  },
+  "137282": {
+   "name": "Low Deposit",
+   "kind": "trait",
+   "tuning": "zoneModifier_pro_LowDeposit",
+   "description": "The deposit for this apartment is suspiciously low..."
+  },
+  "144143": {
+   "name": "Quake Zone",
+   "kind": "challenge",
+   "tuning": "zoneModifier_lotTrait_QuakeZone",
+   "description": "Occasionally there’s a minor tremor here. Probably nothing to worry about…\\n\\nAvailable with City Living."
+  },
+  "144149": {
+   "name": "Romantic Aura",
+   "kind": "trait",
+   "tuning": "zoneModifier_lotTrait_RomanticAtmosphere",
+   "description": "Romantic Aura makes it easier to get other people in the mood for LURVE!"
+  },
+  "144148": {
+   "name": "Filthy",
+   "kind": "challenge",
+   "tuning": "zoneModifier_lotTrait_Filthy",
+   "description": "From clogged sewers to grimy counters, this place seems to get dirty really quickly.\\n\\nAvailable with City Living."
+  },
+  "144151": {
+   "name": "Child's Play",
+   "kind": "trait",
+   "tuning": "zoneModifier_lotTrait_ChildsPlay",
+   "description": "Kids just seem to learn faster here."
+  },
+  "144150": {
+   "name": "Great Soil",
+   "kind": "trait",
+   "tuning": "zoneModifier_lotTrait_GreatSoil",
+   "description": "Gardening just seems to go really well here."
+  },
+  "144145": {
+   "name": "Sunny Aspect",
+   "kind": "trait",
+   "tuning": "zoneModifier_lotTrait_SunnyAspect",
+   "description": "The beautiful scenery really make this place uplifting. When the sun goes down, Sims may get Energized, Happy, or Inspired."
+  },
+  "144144": {
+   "name": "Mean Vibe",
+   "kind": "trait",
+   "tuning": "zoneModifier_lotTrait_MeanVibe",
+   "description": "The Mean Vibe makes it easier to get other Sims angry with Mean or Mischief interactions."
+  },
+  "144147": {
+   "name": "Penny Pixies",
+   "kind": "trait",
+   "tuning": "zoneModifier_lotTrait_PennyPixies",
+   "description": "Sims often find loose change around the place. It's like there are pixies squirreling away Simoleons or something."
+  },
+  "144146": {
+   "name": "Grody",
+   "kind": "challenge",
+   "tuning": "zoneModifier_lotTrait_Grody",
+   "description": "Sims have a chance to get nauseous when eating, drinking or using the bathroom.\\n\\nAvailable with City Living."
+  },
+  "199661": {
+   "name": "Celebrity Home",
+   "kind": "trait",
+   "tuning": "zoneModifiers_lotTrait_CelebrityHomeLotTrait",
+   "description": "This residence is listed on the Celebrity Home Tours, granting increased fame gain, restricted access, and awe amongst welcomed visitors. Beware though! Those who live here but aren’t actually very famous will be considered posers!"
+  },
+  "209417": {
+   "name": "Oceanic Paradise",
+   "kind": "trait",
+   "tuning": "zoneModifier_lotTrait_OceanicParadise",
+   "description": "This lot has an abundance of ocean life. Swimming in the ocean is an inspiring endeavor and dolphins and rare fish are easily found here."
+  },
+  "207738": {
+   "name": "Volcanic Activity",
+   "kind": "challenge",
+   "tuning": "zoneModifier_lotTrait_VolcanicActivity",
+   "description": "This lot is near an active volcano! Beware of earthquakes, steam vents, and occasional lava bombs.\\n\\nAvailable with Island Living."
+  },
+  "208521": {
+   "name": "Island Spirits",
+   "kind": "trait",
+   "tuning": "zoneModifier_lotTrait_IslandSpirits",
+   "description": "Ancient Island spirits inhabit this lot, visiting frequently. How will Sims choose to interact with them?"
+  },
+  "206665": {
+   "name": "Off-the-Grid",
+   "kind": "challenge",
+   "tuning": "zoneModifier_lotTrait_OffTheGrid",
+   "description": "This lot is not connected to the utility grid, and most objects that use Power or Water will not function as expected. Can your Sims survive without the comforts of plumbing and electricity? Natural living does have it's advantages—such as no utility bills!\\n\\nAvailable with The Sims 4."
+  },
+  "205826": {
+   "name": "Clothing Optional",
+   "kind": "trait",
+   "tuning": "zoneModifier_lotTrait_ClothingOptional",
+   "description": "This lot embraces an open, natural lifestyle empowering visitors to shed strict material conventions and prudish societal moors… also their clothes."
+  },
+  "225543": {
+   "name": "University Student Hang Out",
+   "kind": "trait",
+   "tuning": "zoneModifier_lotTrait_UniversityStudentHangout",
+   "description": "This spot has great prices on food and drink, so the university students are sure to flock to it."
+  },
+  "225542": {
+   "name": "Study Spot",
+   "kind": "trait",
+   "tuning": "zoneModifier_lotTrait_StudySpot",
+   "description": "A great place to enhance one's mind in pursuit of higher education. Not only will Sims complete their homework faster, but they can study longer without getting mentally exhausted. They'll also enjoy a slight bonus to all skill building."
+  },
+  "498970": {
+   "name": "Clandestine",
+   "kind": "trait",
+   "tuning": "zoneModifier_lotTrait_Clandestine",
+   "description": "What happens on this lot, stays on this lot! Sims can get up to all sorts of scandalous behavior without fear of secrets spreading."
+  },
+  "494130": {
+   "name": "Regal Residence",
+   "kind": "trait",
+   "tuning": "zoneModifiers_EV008_RegalResidence",
+   "description": "The dream of a rich life becomes reality! Sims needs will decay slower, and their moods improve longer as the value of their lots goes up!"
+  },
+  "235291": {
+   "name": "Build Mode Items Grant Gameplay Effects:",
+   "kind": "trait",
+   "tuning": "ZoneModifiers_Hidden_BBGameplayEffects",
+   "description": "If enabled, architectural elements such as wallpaper, floor patterns, roof materials, doors, windows, pools, fountains, trees, and more will grant effects to gameplay elements like environment score, eco footprint, and utilities. Check the tooltips for each item to see what effects they might apply!"
+  },
+  "231704": {
+   "name": "Landfill Lot",
+   "kind": "challenge",
+   "tuning": "zoneModifier_lotTrait_LandfillLot",
+   "description": "This place is a dump! Trash accumulates on this lot.\\n\\nAvailable with Eco Lifestyle."
+  },
+  "231728": {
+   "name": "Natural Well",
+   "kind": "trait",
+   "tuning": "zoneModifiers_lotTrait_NaturalWell",
+   "description": "Spring water runs under this lot, reducing utility bills and offering fresh, clean water from the tap."
+  },
+  "231727": {
+   "name": "Geothermal",
+   "kind": "trait",
+   "tuning": "zoneModifiers_lotTrait_Geothermal",
+   "description": "Natural heating lowers utility bills by generating power, and keeps any pools warm."
+  },
+  "231719": {
+   "name": "Eco Lot",
+   "kind": "trait",
+   "tuning": "zoneModifier_lotTrait_EcoLot",
+   "description": "This lot moves toward eco-friendliness faster than others."
+  },
+  "229433": {
+   "name": "Let It Grow",
+   "kind": "trait",
+   "tuning": "zoneModifiers_TinyHome_Gardening_Increase",
+   "description": "Plants grow twice as fast as normal."
+  },
+  "229435": {
+   "name": "Lighten The Load",
+   "kind": "trait",
+   "tuning": "zoneModifiers_TinyHome_Bill_Decrease",
+   "description": "Using less space means using less energy which means lower bills!"
+  },
+  "229434": {
+   "name": "You Got The Touch",
+   "kind": "trait",
+   "tuning": "zoneModifiers_TinyHome_Skill_Increase",
+   "description": "Skills increase at double the standard rate."
+  },
+  "230476": {
+   "name": "Feelin’ Fine All The Time",
+   "kind": "trait",
+   "tuning": "zoneModifiers_TinyHome_Positive_Buff_Duration_Increase",
+   "description": "Happy, Inspired, and Focused buffs last twice as long."
+  },
+  "230474": {
+   "name": "Cozy Comforts",
+   "kind": "trait",
+   "tuning": "zoneModifiers_TinyHome_Comfort_Increase",
+   "description": "Relax! Everything is twice as comfortable as it is generally."
+  },
+  "230472": {
+   "name": "Let’s All Get Along",
+   "kind": "trait",
+   "tuning": "zoneModifiers_TinyHome_Rel_Gain_Increase",
+   "description": "All Relationship gains are doubled."
+  },
+  "230867": {
+   "name": "Reduce and Recycle",
+   "kind": "challenge",
+   "tuning": "zoneModifier_LotTrait_TrashUpdate",
+   "description": "This lot generates Compostable and Recyclable Trash, and outdoor cans are no longer bottomless. Actively managing the trash output is a must!\\n\\nAvailable with Eco Lifestyle."
+  },
+  "252401": {
+   "name": "Test",
+   "kind": "trait",
+   "tuning": "zoneModifiers_Hidden_HauntedHouse",
+   "description": "Test"
+  },
+  "249371": {
+   "name": "Batuu",
+   "kind": "trait",
+   "tuning": "zoneModifierInfo_Hidden_Batuu_GP09",
+   "description": "Batuu"
+  },
+  "258836": {
+   "name": "Simple Living",
+   "kind": "challenge",
+   "tuning": "zoneModifiers_lotTrait_RequiredIngredients",
+   "description": "This lot requires ingredients to cook all recipes. Cooking with ingredients just makes food taste better!\\n\\nAvailable with Cottage Living."
+  },
+  "144159": {
+   "name": "Private Dwelling",
+   "kind": "trait",
+   "tuning": "zoneModifier_lotTrait_NoTrespassing",
+   "description": "A home lot with this trait deters all but the most determined visitors (It has little effect on commercial venues)."
+  },
+  "144157": {
+   "name": "Natural Light",
+   "kind": "trait",
+   "tuning": "zoneModifier_lotTrait_NaturalLight",
+   "description": "The quality of light here makes Painting and Photography much easier to master."
+  },
+  "144152": {
+   "name": "Homey",
+   "kind": "trait",
+   "tuning": "zoneModifier_lotTrait_Homey",
+   "description": "The homey vibe helps Sims quickly master the domestic arts of Cooking, Mixology, Handiness and Gardening."
+  },
+  "144155": {
+   "name": "Science Lair",
+   "kind": "trait",
+   "tuning": "zoneModifier_lotTrait_ScienceLair",
+   "description": "The secluded vibe means there's little to distract great minds from the study of Logic or Rocket Science."
+  },
+  "144156": {
+   "name": "Convivial",
+   "kind": "trait",
+   "tuning": "zoneModifier_lotTrait_Convivial",
+   "description": "The spacious but intimate feel makes it easier to practice Charisma, Comedy and Mischief to your heart's content."
+  },
+  "144153": {
+   "name": "Fast Internet",
+   "kind": "trait",
+   "tuning": "zoneModifier_lotTrait_HighSpeedInternet",
+   "description": "A great online connection helps out those looking to improve their Programming, Video Gaming or Writing skills."
+  },
+  "144154": {
+   "name": "Great Acoustics",
+   "kind": "trait",
+   "tuning": "zoneModifier_lotTrait_GreatAcoustics",
+   "description": "The acoustics are perfect here! A great place for any musician to hone their skills."
+  },
+  "144158": {
+   "name": "Bracing Breezes",
+   "kind": "trait",
+   "tuning": "zoneModifier_lotTrait_FreshAir",
+   "description": "Oodles of fresh air make for a bracing environment to exercise."
+  },
+  "154647": {
+   "name": "On a Dark Ley Line",
+   "kind": "trait",
+   "tuning": "zoneModifier_lotTrait_OnDarkLeyLine",
+   "description": "The dark energy here has a impact on all nocturnal activities. You can expect babies conceived here to require extra care while teething."
+  },
+  "154888": {
+   "name": "Vampire Nexus",
+   "kind": "trait",
+   "tuning": "zoneModifier_lotTrait_VampireNexus",
+   "description": "A dark void envelopes this lot in the upside down. Vampires are more likely to visit the area."
+  },
+  "149429": {
+   "name": "Spooky",
+   "kind": "challenge",
+   "tuning": "zoneModifier_lotTrait_Haunted",
+   "description": "For some inexplicable reason this lot attracts wandering Ghosts!\\n\\nAvailable with City Living."
+  },
+  "162560": {
+   "name": "Teen Neighborhood",
+   "kind": "trait",
+   "tuning": "zoneModifiers-lotTrait_Teen_Hang_Out",
+   "description": "More teens will hang out in the neighborhood that surrounds this lot. You'll spot them roaming around and loitering in the streets, as teens are known to do. It's a good opportunity for teens in your household to meet new friends their own age!"
+  },
+  "431901": {
+   "name": "Heist Havoc",
+   "kind": "challenge",
+   "tuning": "zoneModifier_lotTrait_BurglarTime",
+   "description": "Lock the doors and hide all valuables! Burglars visit more often on this lot, and the trusty alarms have a mind of their own."
+  },
+  "155246": {
+   "name": "Registered Vampire Lair",
+   "kind": "trait",
+   "tuning": "zoneModifier_lotTrait_RegisteredVampireLair",
+   "description": "The lot registers as a vampire lair. The League will send various gifts from time to time. Through the mail, no less. Even the immortals use the public mail service. Only available on home residences."
+  },
+  "170196": {
+   "name": "Cat Friendly",
+   "kind": "trait",
+   "tuning": "zoneModifier_PetWorld_CatFriendly",
+   "description": "Cat owners will visit this lot with their cats."
+  },
+  "170190": {
+   "name": "Cat Hangout",
+   "kind": "trait",
+   "tuning": "zoneModifier_PetWorld_CatHangout",
+   "description": "Stray cats really love this lot. Meow!"
+  },
+  "170191": {
+   "name": "Dog Hangout",
+   "kind": "trait",
+   "tuning": "zoneModifier_PetWorld_DogHangout",
+   "description": "Stray dogs will hang out at this lot."
+  },
+  "170198": {
+   "name": "Training Ground",
+   "kind": "trait",
+   "tuning": "zoneModifier_PetWorld_TrainingGround",
+   "description": "Sims gain Pet Training skill faster on this lot."
+  },
+  "170199": {
+   "name": "Breeding Ground",
+   "kind": "trait",
+   "tuning": "zoneModifier_PetWorld_BreedingGround",
+   "description": "Increases the chances for pets to have larger pet litters."
+  },
+  "170197": {
+   "name": "Dog Friendly",
+   "kind": "trait",
+   "tuning": "zoneModifier_PetWorld_DogFriendly",
+   "description": "Dog owners will visit this lot and bring their dogs."
+  },
+  "440962": {
+   "name": "Fairy Passage",
+   "kind": "trait",
+   "tuning": "zoneModifierInfo_FairyPassage",
+   "description": "This lot is near an enchanted passage. Fairy Sims are more likely to visit."
+  },
+  "179555": {
+   "name": "Peace and Quiet",
+   "kind": "trait",
+   "tuning": "zoneModifier_lotTrait_PeaceAndQuiet",
+   "description": "Something about this lot makes it great for reading. Sims understand more, so they gain skill faster from reading, and Tense moods go away faster."
+  },
+  "179482": {
+   "name": "Creepy Crawlies",
+   "kind": "challenge",
+   "tuning": "zoneModifiers_lotTrait_CreepyCrawlies",
+   "description": "It seems that some creepy pests have taken up residence here. Be prepared; when they hit, you'll never see them coming!"
+  },
+  "191710": {
+   "name": "Hottest Spot in Town",
+   "kind": "trait",
+   "tuning": "zoneModifier_lotTrait_CelebrityHangOut_HighFame",
+   "description": "A place for the Superstars, the VIPs, those who’ve achieved victory over the commonplace! After all, who else could afford these hyperinflated lot prices? Not you... no. But at least, the Starlight Accolades can only happen on Lounges with this trait."
+  },
+  "191708": {
+   "name": "Up-and-Coming Hotspot",
+   "kind": "trait",
+   "tuning": "zoneModifier_lotTrait_CelebrityHangOut_LowFame",
+   "description": "At least your sims can say they ‘went here before it was cool.’ Also, cheap drinks and eats for the super famous! Even better, Meet a Celebrity events can only happen on Lounges with this trait."
+  },
+  "329964": {
+   "name": "Wild Prairie Grass",
+   "kind": "challenge",
+   "tuning": "zoneModifier_lotTrait_WildGrass",
+   "description": "Day after day, wild Prairie Grass will pop up and spread. Are the seeds of this Hay-yielding plant carried by the wind? Gnomes? Both? Nobody knows!\\n\\nAvailable with Horse Ranch."
+  },
+  "342342": {
+   "name": "Mold",
+   "kind": "challenge",
+   "tuning": "zoneModifiers_lotTrait_moldSystem_susceptibleToMold",
+   "description": "There is a dampness in the air here that just doesn't feel right. Keep puddles mopped, trash from overflowing, and plumbing objects clean or mold piles will start to appear, and beware of the <i>deadly</i> black mold pile!\\n\\nAvailable with For Rent."
+  },
+  "356465": {
+   "name": "Maintenance Troubles",
+   "kind": "challenge",
+   "tuning": "zoneModifier_lotTrait_muEventOnResidential",
+   "description": "Home ownership involves maintenance and this lot brings surprise events knocking.\\n\\nAvailable with For Rent."
+  },
+  "373212": {
+   "name": "Scare Seeker",
+   "kind": "challenge",
+   "tuning": "zoneModifiers_R3Event_ThrillSeeker",
+   "description": "There's something in the air here that fills you with eldritch excitement, and attracts Sims looking for a ghoulishly good time."
+  },
+  "370284": {
+   "name": "Singles Hangout",
+   "kind": "trait",
+   "tuning": "zoneModifierDisplayInfo_singles_hangout",
+   "description": "Looking to mingle with some singles?\\n\\nThis Lot Trait will have more date-ready Sims walking around in the neighborhood!"
+  },
+  "379789": {
+   "name": "On Hallowed Grounds",
+   "kind": "trait",
+   "tuning": "zoneModifier_lotTrait_OnHallowedGround",
+   "description": "This lot adds an exciting punch of terror to the otherwise daily mundane. Be it possessed TVs, netherworld treasures, or lowered bills—living or dead, there's something here for everybody!"
+  },
+  "266703": {
+   "name": "Wild Foxes",
+   "kind": "challenge",
+   "tuning": "zoneModifier_LotTraits_Foxes",
+   "description": "Wild foxes will appear on this lot, being a nuisance to your garden, chickens, and rabbits.\\n\\nAvailable with Cottage Living."
+  }
+ }
+}

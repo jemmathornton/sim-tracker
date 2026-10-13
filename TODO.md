@@ -132,7 +132,6 @@ Newer lot types and where they could go (research/lot-types-reference.md):
 - [ ] Community Market: a standalone market at Key Point (beach market), or a lot in Henford or Chestnut Ridge
 - [ ] Custom Venue: Key Point as a watersports or beach camp
 - [ ] Haunted House Residential: Brooks Bridge Borough (its upload already is), Specter Row (with On Hallowed Grounds)
-- [ ] Sento Senbamachi works as a Spa or an Onsen, if she wants a second Onsen
 - Keep in mind for empty lots: Cemetery, Playground, Recreation Center, Karaoke Bar, Onsen, Pool, Spa, Arts Center, Beach. Newer lot traits: Clandestine, Regal Residence, Fairy Passage, On Hallowed Grounds
 
 Site ideas, quick wins (no input needed):
@@ -146,17 +145,19 @@ Site ideas, quick wins (no input needed):
 
 - [ ] [Jemma] Look over the 13 Oct additions and change any wording or placement: the Packs used block (world pages), "Shared" on Gallery cards, the footer dates (home), the search box (sidebar)
 
-Site ideas, bigger:
+Site ideas, bigger (13 Oct: she chose the five marked; no preference on the others yet):
 - [ ] What's new page (dated changelog)
 - [x] Gallery numbers over time (keep each weekly refresh), top builds and biggest gains (13 Oct: Stats → On the Gallery)
 - [ ] Automatic Checks panel (spreadsheet vs Gallery mismatches, missing sizes or types, duplicate names)
 - [ ] Empty homes and units page, built with the rentals per-unit view
 - [ ] Before and after pictures on rebuilt EA lots (needs her screenshots of the originals)
-- [ ] Household basics for all households (Sims and pets, life stages, family type, played, Neighbourhood Stories)
-- [ ] Relationships between households beyond family
-- [ ] Family tree, Goths first
+- [ ] **Chosen 13 Oct:** Household basics for all households (Sims and pets, life stages, family type, played, Neighbourhood Stories)
+- [ ] **Chosen 13 Oct:** Relationships between households beyond family
+- [ ] **Chosen 13 Oct:** Family tree, Goths first
 - [ ] Challenge builds grouping (her Simsie shell builds)
-- [ ] Lot traits per lot (not in Gallery data, so a spreadsheet column)
-- [ ] Neighbourhood eco footprint and festivals/events per world
+- [x] **Chosen 13 Oct:** Lot traits per lot. Done for 159 of the 168 shared lots, read from her "Building #2" save (lot pages show "Lot traits" and "Lot challenges"; names are the game's own)
+- [ ] [Jemma] 9 shared lots have a different name in the save. Are these the same lot? Coorinberg Cottage = "Shark Shell Challenge"; Rockridge Springs = "Simsie Townhouse Shell"; Brooks Bridge Borough = "Simsie Puzzle Shell" (Glimmerbrook); Von-Windenburg Estate = "Von Castle"; Finchwick Village Hall = "Finchwick Library"; Bedlington Boathouse = "Barn Conversion"?; Anchorpoint Works = "On Point"?; The Old Salt House: the lot holds "Bubble World" in the save, so its traits are Bubble World's; Desert Bloom Park: not found in the save
+- [ ] [Jemma] Household basics, relationships and family tree need Sims, which aren't to come from the Building saves: which save (if any) should they come from, or will you give them?
+- [ ] **Chosen 13 Oct:** Neighbourhood eco footprint and festivals/events per world
 
 Things to avoid (from the research): tracking every Sim in detail, values that change every session, EA pack logos as icons, anything AI-generated, percentages outside Stats.

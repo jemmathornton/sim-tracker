@@ -10,7 +10,7 @@
    "name": "Wanderwood Wilds",
    "desc": "Life in Wanderwood Wilds sure is a blast - literally! Hothead Rock Geyser may be the main draw to the area, but there's more in these woods than meets the eye.",
    "lots": [
-    {"lot": "Hothead Rock Hideaway", "myName": "Revive and Thrive Retreat", "type": "Custom Venue", "size": "64x64", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["bVV01Nz1Soi3smD/Qv6Z/w=="]},
+    {"lot": "Hothead Rock Hideaway", "myName": "Revive and Thrive Retreat", "type": "Custom Venue", "size": "64x64", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["bVV01Nz1Soi3smD/Qv6Z/w=="], "traits": ["Bracing Breezes", "Peace and Quiet", "Sunny Aspect"]},
     {"lot": "Camp Gibbi Gibbi", "myName": "Camp Gibbi Gibbi", "type": "Custom Venue", "size": "50x50", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Wanderwood Wonder", "myName": "Wanderwood Wonder", "type": "Residential", "size": "30x20", "residents": "Chavez-Ralston", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Plumbird Park", "myName": "Plumbird Park", "type": "Playground", "size": "40x40", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
@@ -22,7 +22,7 @@
    "lots": [
     {"lot": "Jellyfish Jubilee", "myName": "Jellyfish Jubilee", "type": "Restaurant", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Seabreeze Scenic", "myName": "Seabreeze Scenic", "type": "Residential", "size": "40x30", "residents": "Perry", "built": false, "shared": false, "screenshots": false, "simsMade": false},
-    {"lot": "Fletcher's Cottage", "myName": "Gibbi Point Library", "type": "Library", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["pKnwlfeXRiGGVi/QvTc7TQ=="]},
+    {"lot": "Fletcher's Cottage", "myName": "Gibbi Point Library", "type": "Library", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["pKnwlfeXRiGGVi/QvTc7TQ=="], "traits": ["Child's Play", "Peace and Quiet", "Study Spot"]},
     {"lot": "Revive and Thrive Retreat", "myName": "Gibbi Rec Center", "type": "Rec Center", "size": "64x64", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["R7mzaO9GS5atpQCbFz9dlw=="]}
    ]
   },
