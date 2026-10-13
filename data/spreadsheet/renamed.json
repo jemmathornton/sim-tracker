@@ -1,0 +1,14 @@
+{
+ "_note": "Names corrected in the app that her spreadsheet may still spell the old way (world|old -> new). tools/import_spreadsheet.py reads the spreadsheet through this.",
+ "lots": {
+  "Tartosa|Piccola Luca": "Piccola Luce",
+  "Windenburg|The Summer House": "The Summer Home",
+  "Ciudad Enamorada|Avenida de la Eternida": "Avenida de la Eternidad",
+  "Glimmerbrook|Creekside Corner": "Creek Side Corner",
+  "Chestnut Ridge|Champions' Grove": "Champion's Grove",
+  "San Myshuno|1313 21 Chic street": "1313 21 Chic Street"
+ },
+ "neighbourhoods": {
+  "Ciudad Enamorada|Plaza Maripoza": "Plaza Mariposa"
+ }
+}

@@ -40,7 +40,7 @@
     {"lot": "Rustic Residence", "myName": "Rustic Residence", "type": "Residential", "size": "30x20", "residents": "1 Bed", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["XCNL0nuzEeyN+AW7hdRP0w=="], "traits": ["Great Soil", "Homey"], "challenges": ["Simple Living"]},
     {"lot": "The Shrieking Llama", "myName": "The Shrieking Llama", "type": "Bar", "size": "20x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["hQY3dKXnEeuB2+cawTB/JA=="], "traits": ["Sunny Aspect", "Dog Friendly", "Dog Hangout"]},
     {"lot": "Dresden House", "myName": "Dresden House", "type": "Residential", "size": "64x64", "residents": "Fyres", "built": false, "shared": false, "screenshots": false, "simsMade": false},
-    {"lot": "The Summer House", "myName": null, "type": "Vet Clinic", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
+    {"lot": "The Summer Home", "myName": null, "type": "Vet Clinic", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ]
   },
   {

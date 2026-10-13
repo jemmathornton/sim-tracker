@@ -47,6 +47,20 @@ def read_sheet(xlsx):
     return out
 
 
+def with_app_names(sheet):
+    """Her spreadsheet may still use names the app has since corrected (data/spreadsheet/renamed.json): read it with the new ones."""
+    p = os.path.join(DATA, 'spreadsheet', 'renamed.json')
+    if not os.path.exists(p): return sheet
+    r = load(p)
+    for t in sheet[1:]:
+        for sec in t['sections']:
+            sec['name'] = r['neighbourhoods'].get(t['tab'] + '|' + sec['name'], sec['name'])
+            for l in sec['lots']:
+                l['Lot Name'] = r['lots'].get(t['tab'] + '|' + str(l['Lot Name']), l['Lot Name'])
+                if l.get('My Name') and t['tab'] + '|' + str(l['My Name']) in r['lots']: l['My Name'] = r['lots'][t['tab'] + '|' + l['My Name']]
+    return sheet
+
+
 def lots_by_key(sheet):
     """(world, Lot Name) -> (neighbourhood, position, row)."""
     return {(t['tab'], l['Lot Name']): (s['name'], n, l) for t in sheet[1:] for s in t['sections'] for n, l in enumerate(s['lots'])}
@@ -56,7 +70,7 @@ def main():
     args = [a for a in sys.argv[1:] if not a.startswith('--')]
     apply = '--apply' in sys.argv
     xlsx = args[0] if args else DEFAULT
-    sheet, base = read_sheet(xlsx), load(BASE)
+    sheet, base = with_app_names(read_sheet(xlsx)), with_app_names(load(BASE))
     S, B = lots_by_key(sheet), lots_by_key(base)
     paths = world_files(); worlds = {load(p)['name']: (p, load(p)) for p in paths}
     A = {(wn, l['lot']): (h['name'], l) for wn, (_, W) in worlds.items() for h in W['neighbourhoods'] for l in h['lots']}

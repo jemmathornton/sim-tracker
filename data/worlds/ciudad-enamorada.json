@@ -16,9 +16,9 @@
    ]
   },
   {
-   "name": "Plaza Maripoza",
+   "name": "Plaza Mariposa",
    "lots": [
-    {"lot": "Avenida de la Eternida", "myName": null, "type": "Residential", "size": "30x30", "residents": "Dynamic Daters", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Avenida de la Eternidad", "myName": null, "type": "Residential", "size": "30x30", "residents": "Dynamic Daters", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Calle del Ensueño", "myName": null, "type": null, "size": "50x40", "residents": null, "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Villa Cálida", "myName": null, "type": "Vacation Rental", "size": "30x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Media Naranja", "myName": null, "type": "Park", "size": "30x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}

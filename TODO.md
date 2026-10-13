@@ -13,7 +13,7 @@ Every open item carried over from the claude.ai project on 13 Oct 2026: the note
 - [x] [Claude] Weekly Gallery refresh rebuilt (Windows task, Sundays 08:54) and run once (13 Oct)
 - [ ] [Jemma] Turn off the "Weekly Gallery stats refresh" scheduled task in claude.ai (the app has its own now, and the old one only updates the claude.ai page)
 - [x] [Claude] `live_overrides.json` folded into the app's data and retired
-- [ ] [Jemma] If the spreadsheet stays your main copy: 58 decisions from the chat (names, lot types, sizes, built/shared ticks) are in the app but not in the spreadsheet yet. Claude can list them, or make a filled-in copy of the spreadsheet for you to check (your file is never changed without asking)
+- [ ] [Jemma] If the spreadsheet stays your main copy: 55 decisions (names, lot types, sizes, built/shared ticks) plus the 13 Oct spelling fixes are in the app but not in the spreadsheet yet. Claude can list them, or make a filled-in copy of the spreadsheet for you to check (your file is never changed without asking)
 - [ ] [Jemma] Have a look at the new bits: Stats page → "On the Gallery" at the bottom (keep it there? wording?), and the app icon (Lucide house, brass on purple)
 - [ ] [Jemma] Bubble World (new upload, 82 favourites / 647 downloads) is on The Old Salt House lot but left unlinked as a bonus build (§5). Link it to the lot instead?
 - [ ] [Jemma] part1/2/3.zip in the project folder are already unpacked; they can be deleted
@@ -81,6 +81,7 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
 ## 5. Lot types, groups and names
 
 - [ ] [Jemma] Key Point (Sulani, 40×30) and Mystic Crossroads (Ravenwood, 30×30): lot type still to be decided (ideas in §8)
+- 13 Oct: no preference yet on the lot type changes below; left as they are
 - [ ] [Jemma] 14 lot types are really place names. Suggested changes (tick the ones to make):
   - [ ] Darby's Den: "UoB Commons" → **UBrite Commons** (type on her Gallery upload)
   - [ ] Boba & Thrift (Planet Honey Pop!, Boba Ippai, Town Square Stores, 18 Celebration Way, Chee-wit Chee-waa Kanto, Thrift 'n' Fish) → **Thrift and Bubble Tea Store** (official name, as on two of her uploads)
@@ -98,7 +99,7 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
 ## 6. From the 13 Oct lot check (research/missing-lots-check.md)
 
 - [ ] [Jemma] Add the 4 missing secret lots? Sylvan Glade (Willow Creek, 15×10), Forgotten Grotto (Oasis Springs, 15×10), Hermit's House (Granite Falls, 30×20), Mt. Komorebi Peak (20×20, type "Mount Komorebi Summit"). Selvadorada's jungle areas / Omiscan Temple suggested to leave out
-- [ ] [Jemma] In-game spellings to fix (her own names untouched): Piccola Luca → Piccola Luce (Tartosa); The Summer House → The Summer Home (Windenburg); Avenida de la Eternida → Avenida de la Eternidad and neighbourhood Plaza Maripoza → Plaza Mariposa (Ciudad Enamorada); Creekside Corner → Creek Side Corner (Glimmerbrook); Champions' Grove → Champion's Grove (Chestnut Ridge); 1313 21 Chic street → Street (done on the site, not in the spreadsheet)
+- [x] In-game spellings fixed 13 Oct, each checked against the game's own text: Piccola Luce, The Summer Home, Avenida de la Eternidad, Plaza Mariposa, Creek Side Corner, Champion's Grove, 1313 21 Chic Street (her name column had the same typo on three; fixed too). Her spreadsheet still has the old spellings; the import reads them as the new ones (`data/spreadsheet/renamed.json`)
 - [ ] [Jemma] Club Eternity (Ravenwood): plan says 30×30; two sources say 30×20. Check in game
 - Innisgreen is on the site as not owned; nothing to do unless she buys Enchanted by Nature. Batuu only if she owns Journey to Batuu.
 

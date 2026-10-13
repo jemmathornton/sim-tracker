@@ -10,7 +10,7 @@
    "name": "New Appaloosa",
    "desc": "The historic New Appaloosa serves as a hub for Horse Riders, Ranchers, and Nectar Makers. Whether competing at the Hay Now! Equestrian Center, enjoying a night out at the dance hall, or savouring Nectar with good friends, this old watering hole has something for everyone.",
    "lots": [
-    {"lot": "Champions' Grove", "myName": "Champions' Grove", "type": "Residential", "size": "30x20", "residents": "Sienna & Flapjack", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Champion's Grove", "myName": "Champion's Grove", "type": "Residential", "size": "30x20", "residents": "Sienna & Flapjack", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "The Cozy Corner House", "myName": null, "type": "Library", "size": "20x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "The Oak Barrel", "myName": "The Oak Barrel", "type": "Restaurant", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["1Q66JxbkTmSxL/yKFObuBg=="], "traits": ["Convivial", "Party Place", "Sunny Aspect"]},
     {"lot": "The Rusty Horseshoe", "myName": "The Rusty Horseshoe", "type": "Nightclub", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
