@@ -21,6 +21,8 @@ Written 13 Oct 2026. §1–§6 below are the state of the project at the moment 
 
 **New on the site:** Stats page, at the bottom: "On the Gallery" (totals at each weekly check, and the builds that gained most since the check before). App icon: Lucide "home" in brass on the sidebar purple. Added the same evening by a second session (merged): a search box at the top of the sidebar (lots by any of their names, households, Sims, neighbourhoods, worlds); a "Packs used" block on world pages; "Shared" month on Gallery cards (decoded from upload ids, 2016 to early 2023 only); build and Gallery-check dates in the home footer; and `tools/map-squares.html` + `tools/set_map_spots.py` for the map spots.
 
+**Later on 13 Oct, with Jemma:** lot traits and lot challenges on lot pages, read from her "Building" saves with the game's own names (tools/lot_traits.py; shared lots only, lots only). Repeated Gallery uploads settled: one upload per lot, the latest, except versions she keeps on purpose (Community Spaces, rental + regular, Britechester B&B). Bedlington Boathouse untangled (both uploads are Brindleton Boathouse on Sporting Space; the Cavalier Cove lot is her Bedlington Barn). Six in-game spellings fixed, four secret lots added, game version in the footer.
+
 §2 below describes the chat's generator, now in `old-chat-build/` (retired). §4: the refresh no longer needs a browser tab.
 
 ## 1. What exists today

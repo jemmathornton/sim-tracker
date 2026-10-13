@@ -62,12 +62,12 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
 - [ ] [Jemma] Decide each rental's households unit by unit, and landlords for the 17 rentals without one
 - [ ] [Jemma] A "Rental units" tab in World Plans (World · Rental · Unit · Beds · Baths · Household · Landlord)? She was "not sure yet, discuss more"
 - [ ] [Jemma] How to show unit counts like "(4)"
-- [ ] [Jemma] Confirm unit counts: Taka Soi 15 = 2 (game: units 08 and 09, Cahyaputris in 09, 08 empty); Manzanita Terrace = 3 (her Gallery text). Still unknown: Abandoned Views, Sequoia Cottage, Specter Row, Lighthouse Lookout
+- [ ] [Jemma] Confirm unit counts. Her Building #2 save (13 Oct) has: Taka Soi 15 = 2 (08 and 09), Manzanita Terrace = 3, Sequoia Cottage = 2, Sungai Point = 3, Isda Riverfront = 2, 3 Cobblebottom Street = 2 (3A, 3B), and the plan's counts for Rio Verde 6, Fern Park Flats 5, Midtown Meadows 5, Tail's End 4, Inner Circle 4, Upland Trailer Park 4, Old Torget House 3. Abandoned Views, Specter Row and Lighthouse Lookout aren't split into units in the save yet
 - [ ] [Claude] Once decided: show each rental's units on its page and neighbourhood card, a household or "Empty" per unit, bedrooms and bathrooms per unit where known
 
 ## 3. Apartments
 
-- [ ] [Jemma] Bathrooms for every apartment except 920 Medina Studios (2, from screenshots). No reliable list exists online; needs checking in game or screenshots
+- [ ] [Jemma] Bathrooms for every apartment except 920 Medina Studios (2, from screenshots). Her save only has counts for units she has visited (e.g. Stonestreet Apartments #3 2 bed / 1 bath, Pinecrest Apartments #402 2 / 1, 17 Bright Cliff 2 / 1, 18 Bright Cliff 2 / 2, 12 and 13 Lakeview 1 / 1); the ones below show nothing there, so they still need checking in game
 - [ ] [Jemma] 1010 Alto Apartments: bedrooms unknown
 - [ ] [Jemma] 18 Culpepper House: Gallery says two bedrooms, plan says 1 Bed (site shows 2)
 - [ ] [Jemma] 920 Medina Studios: shown as 2 bedrooms (master + child room); are Child Bedroom 1 and 2 two rooms?
