@@ -1,0 +1,20 @@
+{
+ "name": "Forgotten Hollow",
+ "pack": "Vampires",
+ "owned": false,
+ "colour": "#6A4A6E",
+ "deep": null,
+ "blurb": "",
+ "neighbourhoods": [
+  {
+   "name": "Forgotten Hollow",
+   "lots": [
+    {"lot": "Straud Mansion", "myName": null, "type": null, "size": "40x30", "residents": null, "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Wolfsbane Manor", "myName": null, "type": null, "size": "30x30", "residents": null, "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Garliclauter Place", "myName": null, "type": null, "size": "30x20", "residents": null, "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Widowshild Townhome", "myName": null, "type": null, "size": "30x20", "residents": null, "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Fledermaus Bend", "myName": null, "type": null, "size": "30x30", "residents": null, "built": false, "shared": false, "screenshots": false, "simsMade": false}
+   ]
+  }
+ ]
+}

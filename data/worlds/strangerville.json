@@ -1,0 +1,40 @@
+{
+ "name": "StrangerVille",
+ "pack": "StrangerVille",
+ "owned": true,
+ "colour": "#C8675F",
+ "deep": ["#4A1D1E", "#6A2E2D"],
+ "blurb": "The only thing stranger than the people is the flora! StrangerVille is a quiet little town with a strange problem. The residents are very friendly, but at night things start to get more interesting.",
+ "neighbourhoods": [
+  {
+   "name": "StrangerVille Plaza",
+   "desc": "Visit the StrangerVille Information Center. This place is way more interesting than the Secret Lab.",
+   "lots": [
+    {"lot": "8 Bells", "myName": "8 Bells", "type": "Bar", "size": "20x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "StrangerVille Information Center", "myName": "StrangerVille Information Center", "type": "Museum", "size": "20x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "Carpophagous Corner", "myName": "Carpophagous Corner", "type": "Vacation Rental", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["90dWb5T5EemIVFunJjefig=="]},
+    {"lot": "Slip 42", "myName": "Slip 42", "type": "Residential Rental (2)", "size": "20x15", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["b5Ji8j+9EeqMyfXdRXmRsg=="]},
+    {"lot": "Old Penelope", "myName": "Old Penelope", "type": "Residential", "size": "50x40", "residents": "Cahill", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Riverside Grove", "myName": "Riverside Grove", "type": "Residential", "size": "30x20", "residents": "Sigworth", "built": true, "shared": false, "screenshots": false, "simsMade": false}
+   ]
+  },
+  {
+   "name": "Shady Acres",
+   "desc": "Boasting the most beautiful view StrangerVille has to offer, stay at Shady Acres and you too can wonder where all this wealth comes from.",
+   "lots": [
+    {"lot": "Cliff Side Crest", "myName": "StrangerVille Gym&Pool", "type": "Gym", "size": "30x20", "residents": "N/A", "built": true, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "Creek Corner Cove", "myName": "Creek Corner Cove", "type": "Residential", "size": "30x20", "residents": "Roswell", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Plateau Place", "myName": "SU Plateau Residence", "type": "University Housing", "size": "40x30", "residents": "Empty", "built": true, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Dream Weavers Way", "myName": "StrangerVille Library", "type": "Library", "size": "30x20", "residents": "N/A", "built": true, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "StrangerVille Overlook", "myName": "SU Overlook Residence", "type": "University Housing", "size": "40x30", "residents": "Empty", "built": true, "shared": false, "screenshots": false, "simsMade": false}
+   ]
+  },
+  {
+   "name": "Secret Lots",
+   "desc": "",
+   "lots": [
+    {"lot": "The ██████ Lab", "myName": "The ██████ Lab", "type": "Special", "size": "64x64", "residents": "N/A", "built": "N/A", "shared": "N/A", "screenshots": "N/A", "simsMade": "N/A"}
+   ]
+  }
+ ]
+}

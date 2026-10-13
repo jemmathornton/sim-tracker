@@ -1,0 +1,38 @@
+{
+ "name": "Ciudad Enamorada",
+ "pack": "Lovestruck",
+ "owned": false,
+ "colour": "#C2456B",
+ "deep": null,
+ "blurb": "",
+ "neighbourhoods": [
+  {
+   "name": "Nuevo Corazón",
+   "lots": [
+    {"lot": "La Suite del Flechazo", "myName": null, "type": "Residential", "size": "20x15", "residents": "Nadir", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Torres Amanecer", "myName": null, "type": "Residential", "size": "20x20", "residents": "Empty", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Mirador del Amor", "myName": null, "type": "Nightclub", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "SUDOR", "myName": null, "type": "Gym", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
+   ]
+  },
+  {
+   "name": "Plaza Maripoza",
+   "lots": [
+    {"lot": "Avenida de la Eternida", "myName": null, "type": "Residential", "size": "30x30", "residents": "Dynamic Daters", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Calle del Ensueño", "myName": null, "type": null, "size": "50x40", "residents": null, "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Villa Cálida", "myName": null, "type": "Vacation Rental", "size": "30x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "Media Naranja", "myName": null, "type": "Park", "size": "30x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
+   ]
+  },
+  {
+   "name": "Vista Hermosa",
+   "lots": [
+    {"lot": "Calle de la Promesa", "myName": null, "type": "Residential", "size": "30x30", "residents": "López", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Mansión de la Pasión", "myName": null, "type": "Residential", "size": "30x20", "residents": "Empty", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Casita del Amor", "myName": null, "type": "Residential", "size": "30x20", "residents": "Empty", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Caminito del Deseo", "myName": null, "type": null, "size": "50x40", "residents": null, "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Laguna del Abrazo", "myName": null, "type": "Lounge", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
+   ]
+  }
+ ]
+}

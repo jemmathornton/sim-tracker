@@ -1,0 +1,34 @@
+{
+ "name": "Nordhaven",
+ "pack": "Businesses & Hobbies",
+ "owned": true,
+ "colour": "#6C747B",
+ "deep": ["#25292D", "#383E44"],
+ "blurb": "This northern coastal city is known for its thriving, independent local businesses and the enchanting beauty of its cold seasons. Whether you seek to make your business flourish or just want to practice your hobbies with a cosy community, you will always find an opportunity here.",
+ "neighbourhoods": [
+  {
+   "name": "Gammelvik",
+   "desc": "Take a walk down the historic streets of Gammelvik and immerse yourself in the culture of Nordhaven's oldest district. Locals here like to take it slow, travel to work on their vintage bikes, and take long strolls by the old canals at night.",
+   "lots": [
+    {"lot": "Konst Modern", "myName": null, "type": "Museum", "size": "50x40", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "The Rouge Note", "myName": "The Rouge Note", "type": "Lounge/Bar/Nightclub", "size": "20x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["ed6i66jPTSu6+5lsSvpp5w=="]},
+    {"lot": "Koffieboon", "myName": null, "type": "Small Business Residential", "size": "20x20", "residents": "Loden", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Old Torget House", "myName": null, "type": "Residential Rental (3)", "size": "20x15", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["EMetavynTOqQjkFpJaa3Yw==", "HxiiH6/xQISfiK5zXZWmKw=="]},
+    {"lot": "Fisher's Horizon", "myName": "Fisherman's Wharf", "type": "Small Business Residential", "size": "30x20", "residents": "Johansson", "built": true, "shared": true, "screenshots": false, "simsMade": true, "gallery": ["eBW0HHlhR+aMEYGS2IRYfA=="]},
+    {"lot": "Comfortably Canalside", "myName": "Canalside Daycare", "type": "Small Business Residential", "size": "20x20", "residents": "?", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["4gCiLpEpQf284z6512WwEA=="]}
+   ]
+  },
+  {
+   "name": "Iverstad",
+   "desc": "Originally the industrial district of the city, Iverstad has recently turned into a natural settling spot for ambitious and stylish Sims. Many of its old factories have been repurposed as living spaces.",
+   "lots": [
+    {"lot": "New Harbor Park", "myName": null, "type": "Small Business Residential", "size": "50x40", "residents": "Empty", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Terra-Potta", "myName": null, "type": "Small Business Residential", "size": "30x20", "residents": "Koopman", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "The Old Foundry", "myName": null, "type": "Residential", "size": "20x15", "residents": "Urbane Housesharers household", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Spilled Neon", "myName": null, "type": "Small Business Residential", "size": "20x20", "residents": "Sarpong", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Inked Inlet", "myName": null, "type": "Library", "size": "20x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "Lighthouse Lookout", "myName": null, "type": "Residential Rental", "size": "50x40", "residents": "Empty", "built": false, "shared": false, "screenshots": false, "simsMade": false}
+   ]
+  }
+ ]
+}

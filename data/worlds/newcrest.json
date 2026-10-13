@@ -1,0 +1,43 @@
+{
+ "name": "Newcrest",
+ "pack": "Base Game",
+ "owned": true,
+ "colour": "#4FA34A",
+ "deep": ["#173A16", "#245723"],
+ "blurb": "Don't let the abundance of space fool you. Take a look around, admire the wonderful scenery, and explore the endless possibilities. Do you see it? This is your whole new world! What are you waiting for?",
+ "neighbourhoods": [
+  {
+   "name": "Bridgeview",
+   "desc": "This family-friendly neighbourhood has a lovely picnic area and a striking city skyline backdrop.",
+   "lots": [
+    {"lot": "Fern Park", "myName": "Fern Park Flats", "type": "Residential Rental (5)", "size": "30x20", "residents": "BFF", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["RiP+5wQ8RJK3hotf53yaQw==", "4J6IDbENEeuBuxaIFwKmRQ=="]},
+    {"lot": "Beech Byway", "myName": "Newcrest Community Space", "type": "Community Space", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["ngmQLbmXEeuN378NB92BJw==", "jFnAgrmXEeuNkr8NB92BJw==", "jucBIbmXEeuNor8NB92BJw==", "kZXBNLmXEeuNq78NB92BJw=="], "versions": [{"label": "Market", "upload": "ngmQLbmXEeuN378NB92BJw=="}, {"label": "Garden", "upload": "jucBIbmXEeuNor8NB92BJw=="}, {"label": "Makers", "upload": "kZXBNLmXEeuNq78NB92BJw=="}, {"label": "Community space", "upload": "jFnAgrmXEeuNkr8NB92BJw=="}]},
+    {"lot": "Midtown Meadows", "myName": "Midtown Meadows", "type": "Residential Rental (5)", "size": "40x30", "residents": "Single Mum Friends", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Oak Alcove", "myName": "Oak Alcove", "type": "Residential", "size": "20x15", "residents": "Versaree", "built": true, "shared": true, "screenshots": false, "simsMade": true, "gallery": ["0p+N/YbaEeiMRh/IdAuKQQ==", "a+d9vcpdEeeLG+wJmrMMQw=="]},
+    {"lot": "Comfy Cubby", "myName": "Comfy Cubby", "type": "Residential", "size": "20x15", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["fP8z05XKEeiCPH6gmyVpVw==", "mUoqkcitEeeLfL+KYzr9wA=="]}
+   ]
+  },
+  {
+   "name": "Llama Lagoon",
+   "desc": "With lakeside walkways and public playground equipment, this neighbourhood's just the right amount of cosmopolitan.",
+   "lots": [
+    {"lot": "Twin Oracle Point", "myName": "Twin Oracle Point", "type": "Residential", "size": "50x40", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["m35FmzjdEeeOtKP4YfS2mA=="]},
+    {"lot": "Avarice Acres", "myName": "Avarice Acres", "type": "Residential", "size": "40x30", "residents": "LeBlanc", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["H5W5eU6+EeeKGWZWSBao2A=="]},
+    {"lot": "Rippling Flats", "myName": "Rippling Flats", "type": "Residential Rental (2)", "size": "40x30", "residents": "(Current uni sims)", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Tranquil Crescent", "myName": "The Ice Pavilion", "type": "Park", "size": "30x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "displayName": "The Ice Pavilion", "gallery": ["+DAFcj27EemJdXldy2Ruvw=="]},
+    {"lot": "Asphalt Abodes", "myName": "Asphalt Abodes", "type": "Residential", "size": "30x20", "residents": "Sylvia & Kenny Cadberry", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["6DxqqjzOQTCrmkXX5Ym/tQ==", "RZYry9BwRbq4DoUFdzwRng=="]}
+   ]
+  },
+  {
+   "name": "Ridgeline Drive",
+   "desc": "",
+   "lots": [
+    {"lot": "Sandy Run", "myName": "The Aqua Grill", "type": "Restaurant (Seafood)", "size": "40x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["9T/CGgyvEeqBoLqJHNbwJw=="]},
+    {"lot": "Cookout Lookout", "myName": "Newcrest Wedding Hall", "type": "Wedding Venue", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["tW8EcJW2EeyEfidMGW1b+w=="]},
+    {"lot": "Civic Cliffs", "myName": "Newcrest Arts Center", "type": "Arts Center", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["10bAnPbrEeaEQtF92RUZ9w=="]},
+    {"lot": "Hillside Highlands", "myName": "Cookes 'n' Cream", "type": "Retail (Bakery & Ice Cream)", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["5IgKUz28EemN+Hldy2Ruvw=="]},
+    {"lot": "Optimist's Outlook", "myName": "Optimist's Outlook", "type": "Small Business", "size": "40x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["b8CLGvj5QeOG99APW33WlQ=="]}
+   ]
+  }
+ ]
+}

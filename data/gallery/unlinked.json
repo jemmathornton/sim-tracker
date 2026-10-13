@@ -1,0 +1,45 @@
+{
+ "_note": "Uploads not linked to any lot, and why. The weekly refresh leaves these alone.",
+ "uploads": {
+  "ywv7Hxr8EeeNJloDfK+4qA==": {
+   "title": "Affluista Mansion",
+   "lot": "Oasis Springs / Affluista Mansion",
+   "why": "Different build (the upload is a template for another house)."
+  },
+  "YP1yQwU/Ee2Cu7lNnAI1VQ==": {
+   "title": "Abandoned Views",
+   "lot": "Evergreen Harbor / The Waterfront",
+   "why": "Jemma: ignore this upload for Abandoned Views."
+  },
+  "jj7/+DmtEeeMeZgYwdJhoA==": {
+   "title": "The Waterfront",
+   "lot": "Evergreen Harbor / The Waterfront",
+   "why": "Jemma: ignore this upload for Abandoned Views."
+  },
+  "pVZgIU6/EeePiWZWSBao2A==": {
+   "title": "Midtown Meadows",
+   "lot": "Newcrest / Midtown Meadows",
+   "why": "On hold: Jemma will compare its two uploads."
+  },
+  "eIr/HztEEeeJ903rjU7EnA==": {
+   "title": "Midtown Meadows",
+   "lot": "Newcrest / Midtown Meadows",
+   "why": "On hold: Jemma will compare its two uploads."
+  },
+  "sI9QzRN6Ee2InLlNnAI1VQ==": {
+   "title": "Robert Piggott School",
+   "lot": null,
+   "why": "No single lot in the plan matches it."
+  },
+  "QqSW0sKjEe2PzLYNwBdzag==": {
+   "title": "Pink-Purple Nursery",
+   "lot": null,
+   "why": "Room upload with no apartment of that name in the plan."
+  },
+  "RiwyK8KjEe2P7bYNwBdzag==": {
+   "title": "Blue-Green Nursery",
+   "lot": null,
+   "why": "Room upload with no apartment of that name in the plan."
+  }
+ }
+}

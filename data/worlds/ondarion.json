@@ -1,0 +1,46 @@
+{
+ "name": "Ondarion",
+ "pack": "Royalty & Legacy",
+ "owned": true,
+ "colour": "#A88A3E",
+ "deep": ["#372C12", "#4F401C"],
+ "blurb": "The regal Kingdom of Ondarion takes its name from the emerald sea that unites its three great shores. Together its cultures have forged a grand legacy of Nobility and aristocratic Dynasties, which has lasted for countless generations.",
+ "neighbourhoods": [
+  {
+   "name": "Dambele",
+   "desc": "Known for its vibrant streets, communal spaces and a strong tradition of painting and crafting, Dambele is a warm and welcoming place.",
+   "lots": [
+    {"lot": "Dambele Palace", "myName": "Dambele Palace", "type": "Residential", "size": "50x50", "residents": "Darong", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Zanbira Market", "myName": "Zanbira Market", "type": "Community Market", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "17 Bright Cliff", "myName": "17 Bright Cliff", "type": "Apartment", "size": "N/A", "residents": "Empty", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "18 Bright Cliff", "myName": "18 Bright Cliff", "type": "Apartment", "size": "N/A", "residents": "Ananou", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Hardcover", "myName": "Hardcover", "type": "Backroom", "size": "20x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "Sankofa Residence", "myName": "Sankofa Residence", "type": "Residential", "size": "30x20", "residents": "Empty", "built": false, "shared": false, "screenshots": false, "simsMade": false}
+   ]
+  },
+  {
+   "name": "Verdemar",
+   "desc": "Fierce and untamed like its people, Verdemar is a place of bold contrasts. Rowdy pirates and educated Nobles have both called it home throughout history.",
+   "lots": [
+    {"lot": "Verdemar Palace", "myName": "Verdemar Palace", "type": "Residential", "size": "50x50", "residents": "Thebe", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Casa Do Corsário", "myName": "Casa Do Corsário", "type": "Residential", "size": "20x15", "residents": "Aloisio Romualdo", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Abrantes Estate", "myName": "Abrantes Estate", "type": "Residential", "size": "30x30", "residents": "Abrantes", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Fisherman's Hut", "myName": null, "type": "Residential", "size": "20x20", "residents": "Empty", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Ye Olde Voyager", "myName": null, "type": "Bar", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "The Lair in the Open-Air", "myName": null, "type": "Residential", "size": "30x20", "residents": "Empty", "built": false, "shared": false, "screenshots": false, "simsMade": false}
+   ]
+  },
+  {
+   "name": "Bellacorde",
+   "desc": "Class, opulence and elegance. In Bellacorde everything is romantic, beautiful...and crazy expensive.",
+   "lots": [
+    {"lot": "Bellacorde Palace", "myName": "Bellacorde Palace", "type": "Residential", "size": "50x50", "residents": "Capp", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Renaissance Road", "myName": "Renaissance Road", "type": "Residential", "size": "20x15", "residents": "Monty", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "12 Lakeview Apartments", "myName": "12 Lakeview Apartments", "type": "Apartment", "size": "N/A", "residents": "Enzo Alto", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "13 Lakeview Apartments", "myName": "13 Lakeview Apartments", "type": "Apartment", "size": "N/A", "residents": "Empty", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "La Vivace", "myName": "La Vivace", "type": "Lounge", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "Giardino Del Grandioso", "myName": "Giardino Del Grandioso", "type": "Residential", "size": "64x64", "residents": "Empty", "built": false, "shared": false, "screenshots": false, "simsMade": false}
+   ]
+  }
+ ]
+}

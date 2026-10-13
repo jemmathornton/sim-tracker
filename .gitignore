@@ -2,7 +2,7 @@
 part*.zip
 __pycache__/
 *.pyc
-# built by tools/build.py
-site/js/data.js
+# test leftovers
+.claude/tmp-*
 # local logs
 logs/

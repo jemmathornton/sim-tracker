@@ -1,0 +1,67 @@
+{
+ "name": "Windenburg",
+ "pack": "Get Together",
+ "owned": true,
+ "colour": "#3F5E8C",
+ "deep": ["#162238", "#213252"],
+ "blurb": "Take ye olde deep breath and enjoy the mountain air. This green, expansive playground has got it all: lush countryside, serene and rocky cliffs, a quaint village with remnants of the old world all nestled around the modern shore side business centre.",
+ "neighbourhoods": [
+  {
+   "name": "Olde Platz",
+   "desc": "What Olde Platz lacks in greenery it makes up for in charming cobblestone. Live, work and play in the rich, cultural history of the oldest part of Windenburg.",
+   "lots": [
+    {"lot": "Proprietor's Square", "myName": "Proprietor's Square", "type": "Residential", "size": "30x20", "residents": "2 Bed", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["fCk9D0WAEeeOAaP4YfS2mA=="]},
+    {"lot": "Havisham House", "myName": "Havisham House", "type": "Residential", "size": "20x20", "residents": "Specter *WithUpdates*", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["GsrjSQceEeqGNEu/SNc3OA=="]},
+    {"lot": "Factory One", "myName": "Factory One", "type": "Residential", "size": "30x20", "residents": "Partihaus", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["zdQ3QSN9EeeFiWUH0XaZxA=="]},
+    {"lot": "Waterlock Redoubt", "myName": "Olde Platz Inn", "type": "Restaurant/Vacation Rental", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": true, "simsMade": "N/A", "gallery": ["UrN6y7srEeuAzvwg9JDtjA==", "Td3YR7srEeuApPwg9JDtjA=="]},
+    {"lot": "Quad Manor", "myName": null, "type": "Library", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "The Narwhal Arms", "myName": "The Narwhal Arms", "type": "Bar", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["LAC77Vm5EeeAK22AqHCI6g=="]},
+    {"lot": "South Square Coffee", "myName": "Pixel Café", "type": "Café", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["lU27jsitEeeLcr+KYzr9wA=="]},
+    {"lot": "Old Quarter Inn", "myName": "Museum of the Arts", "type": "Museum", "size": "20x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["TEsvlFq8EeeK+MnL0U6IYw=="]}
+   ]
+  },
+  {
+   "name": "Lykke Center / University of Windenburg",
+   "desc": "Fresh, new, and arrestingly shiny, Lykke Centre is where new commercial enterprise in Windenburg thrives.",
+   "lots": [
+    {"lot": "Bathe de Rill", "myName": "La Discotheque", "type": "Nightclub", "size": "40x30", "residents": "N/A", "built": true, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "Hare Square", "myName": "UoW Hare Halls", "type": "University Housing", "size": "30x20", "residents": "Empty", "built": true, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Hare and Hedgehog", "myName": "UoW Hedgehog Halls", "type": "University Housing", "size": "30x20", "residents": "Empty", "built": true, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Harbor Quarter Gym", "myName": "UoW Students Union", "type": "Library", "size": "30x20", "residents": "N/A", "built": true, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "Discotheque Pan Europa", "myName": "UoW Sports Center", "type": "Gym/Pool", "size": "30x20", "residents": "N/A", "built": true, "shared": false, "screenshots": false, "simsMade": "N/A"}
+   ]
+  },
+  {
+   "name": "Windslar",
+   "desc": "Wide open spaces and a chateau or two. Visit or live in Windslar for a delectable taste of countryside living.",
+   "lots": [
+    {"lot": "Coorinberg Cottage", "myName": "Coorinberg Cottage", "type": "Residential", "size": "40x30", "residents": "Munch", "built": true, "shared": true, "screenshots": true, "simsMade": false, "gallery": ["60HYgOvpR0a9c7/SdYBveA=="]},
+    {"lot": "Cottage Am See", "myName": "Cottage Am See", "type": "Residential", "size": "20x20", "residents": "Free Spirits", "built": true, "shared": true, "screenshots": true, "simsMade": false, "gallery": ["90eaL6RtEeuE1ecawTB/JA=="]},
+    {"lot": "Rustic Residence", "myName": "Rustic Residence", "type": "Residential", "size": "30x20", "residents": "1 Bed", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["XCNL0nuzEeyN+AW7hdRP0w=="]},
+    {"lot": "The Shrieking Llama", "myName": "The Shrieking Llama", "type": "Bar", "size": "20x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["hQY3dKXnEeuB2+cawTB/JA=="]},
+    {"lot": "Dresden House", "myName": "Dresden House", "type": "Residential", "size": "64x64", "residents": "Fyres", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "The Summer House", "myName": null, "type": "Vet Clinic", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
+   ]
+  },
+  {
+   "name": "The Crumbling Isle",
+   "desc": "The Crumbling Isle is a bit of a misnomer for this part of town. There's nothing here but glorious high-end real estate as far as the eye can see.",
+   "lots": [
+    {"lot": "The Lighthouse", "myName": "The Lighthouse", "type": "Residential", "size": "40x30", "residents": "Tiquelle", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Mid-NoWhere", "myName": "Mid-NoWhere", "type": "Park", "size": "20x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["KjklhciHEeuF3a3kS5H9ag=="]},
+    {"lot": "Pier Palace", "myName": "Pier Palace", "type": "Residential", "size": "30x20", "residents": "Tiquelle", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Dock Den", "myName": "Dock Den", "type": "Residential", "size": "30x20", "residents": "Tiquelle", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Von-Windenburg Estate", "myName": "Von-Windenburg Estate", "type": "Residential", "size": "64x64", "residents": "Tiquelle", "built": true, "shared": true, "screenshots": true, "simsMade": false, "gallery": ["5Ogf+wA8EeuOvtW1mM26QQ=="]}
+   ]
+  },
+  {
+   "name": "Special Lots",
+   "desc": "",
+   "lots": [
+    {"lot": "Von-Haunt Estate", "myName": "Von-Haunt Estate", "type": "Chalet Gardens", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "Ancient Ruins", "myName": "Ancient Ruins", "type": "Ancient Ruins", "size": "20x15", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "The Bluffs", "myName": "The Bluffs", "type": "Island Bluff", "size": "30x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
+   ]
+  }
+ ]
+}

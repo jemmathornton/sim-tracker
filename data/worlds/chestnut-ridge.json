@@ -1,0 +1,41 @@
+{
+ "name": "Chestnut Ridge",
+ "pack": "Horse Ranch",
+ "owned": true,
+ "colour": "#8A5434",
+ "deep": ["#301B10", "#462818"],
+ "blurb": "This community formed when several groups embraced their mutual connection to Horses and the land. The area soon became known as a hub for all things Equestrian, set against a beautiful and expansive landscape. Over time, the area became famous for another endeavor, as the rich soil brought in the new enterprise of Nectar Making.",
+ "neighbourhoods": [
+  {
+   "name": "New Appaloosa",
+   "desc": "The historic New Appaloosa serves as a hub for Horse Riders, Ranchers, and Nectar Makers. Whether competing at the Hay Now! Equestrian Center, enjoying a night out at the dance hall, or savouring Nectar with good friends, this old watering hole has something for everyone.",
+   "lots": [
+    {"lot": "Champions' Grove", "myName": "Champions' Grove", "type": "Residential", "size": "30x20", "residents": "Sienna & Flapjack", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "The Cozy Corner House", "myName": null, "type": "Library", "size": "20x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "The Oak Barrel", "myName": "The Oak Barrel", "type": "Restaurant", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["1Q66JxbkTmSxL/yKFObuBg=="]},
+    {"lot": "The Rusty Horseshoe", "myName": "The Rusty Horseshoe", "type": "Nightclub", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "Duke's Hall", "myName": "Appaloosa Stables", "type": "Residential", "size": "40x30", "residents": "Horse Elder Couple", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["W2doWBlGRk+vBVPnU2Y6aQ=="]}
+   ]
+  },
+  {
+   "name": "Riders' Glen",
+   "desc": "Watched over by the Trusty Steed Rock, known as \"Ol' Biscuit\" to the locals, Riders' Glen has been home to generations of Ranchers and Nectar Makers.",
+   "lots": [
+    {"lot": "Biscuit's Bastion", "myName": "Biscuit's Bastion", "type": "Residential", "size": "40x30", "residents": "The Grove Family", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Sweet Nectar Glade", "myName": "Sweet Nectar Glade", "type": "Bar", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "Canter Cottage", "myName": "Canter Clinic", "type": "Vet Clinic", "size": "30x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "Grapevine Terrace", "myName": "Grapevine Terrace", "type": "Residential", "size": "30x20", "residents": "The Nectar Making Duo", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Red Roan Field", "myName": "Red Roan Farm", "type": "Residential (Farm)", "size": "64x64", "residents": "Mine", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["NmY0ps4JQs+b2oePMFcq1w=="]}
+   ]
+  },
+  {
+   "name": "Galloping Gulch",
+   "desc": "Lauded as one of the go-to regions for Horse Riding, the Gulch is chockfull of gorgeous trails and stunning outlooks.",
+   "lots": [
+    {"lot": "Canyon Crossing", "myName": "Canyon Crossing", "type": "Residential", "size": "20x20", "residents": "Gooseman", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Palomino Junction", "myName": "Palomino Junction", "type": "Residential (Ranch)", "size": "50x50", "residents": "Palumbo", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["RZD6nwFCTjqQAXMiXhbgMg==", "/wcmTH3JSeeGjHDL4sZ7oA=="]},
+    {"lot": "Big Sky Reach", "myName": "Big Sky Reach", "type": "Vacation Rental", "size": "20x15", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["W6J+tA4mQGS/Zrj6G+qdpw=="]}
+   ]
+  }
+ ]
+}

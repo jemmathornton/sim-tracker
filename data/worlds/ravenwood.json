@@ -1,0 +1,51 @@
+{
+ "name": "Ravenwood",
+ "pack": "Life & Death",
+ "owned": true,
+ "colour": "#6B5F8E",
+ "deep": ["#211C30", "#302943"],
+ "blurb": "Things always get a little spooky in Ravenwood. Whispering Glen is perhaps the most \"normal\" part of the area, Crow's Crossing village is clearly quite haunted, and Mourningvale is where things get extra ethereal. Sometimes Grim even stops by!",
+ "neighbourhoods": [
+  {
+   "name": "Crow's Crossing",
+   "desc": "Crow's Crossing is a village founded by Moppy the Goat and rumoured to be frequented by Ghosts and regular hauntings.",
+   "lots": [
+    {"lot": "Specter Family Manor", "myName": "Ravenwood Wedding Hall", "type": "Wedding Venue", "size": "30x20", "residents": "N/A", "built": true, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "Crow's Perch", "myName": "Crow's Chronicles", "type": "Library", "size": "30x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["LSNKN6V/Sjaa8F6nEgj9Vw=="]},
+    {"lot": "Moppy Manor", "myName": "Specter Row", "type": "Residential Rental", "size": "30x20", "residents": "Specter (rent out)", "built": false, "shared": false, "screenshots": false, "simsMade": false, "statsResidents": "Specter + tenants"},
+    {"lot": "Old Ravenwood Estate", "myName": null, "type": "Residential", "size": "50x50", "residents": "Empty", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Eternal Hollow", "myName": null, "type": "Cemetery", "size": "64x64", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
+   ]
+  },
+  {
+   "name": "Whispering Glen",
+   "desc": "Nestled in the rolling hills of Ravenwood's countryside, Whispering Glen offers a quiet, rural locale for those hoping to take a step away from all the local hauntings and into a slow-paced lifestyle.",
+   "lots": [
+    {"lot": "Teardrop Cottage", "myName": null, "type": "Residential", "size": "30x30", "residents": "Gomes", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "The Marigold Chateau", "myName": null, "type": "Residential", "size": "50x50", "residents": "Aether", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Hay Hill Landing", "myName": null, "type": "Vineyard/Farm", "size": "64x64", "residents": "Empty", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "The Final Draught", "myName": null, "type": "Restaurant", "size": "30x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
+   ]
+  },
+  {
+   "name": "Mourningvale",
+   "desc": "There's something otherworldly about Mourningvale. No matter the reason, many Ghosts choose to call this place home. The Grim Reaper has even been known to wander through now and then!",
+   "lots": [
+    {"lot": "The Cozy Casket House", "myName": null, "type": "Residential", "size": "30x20", "residents": "Empty", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Mourning Mist Manor", "myName": null, "type": "Residential", "size": "20x20", "residents": "Izadi-Gomes", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Club Eternity", "myName": null, "type": "Nightclub", "size": "30x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "Mystic Crossroads", "myName": null, "type": "To be decided", "size": "30x30", "residents": null, "built": false, "shared": false, "screenshots": false, "simsMade": false}
+   ]
+  },
+  {
+   "name": "Secret Lots",
+   "desc": "",
+   "lots": [
+    {"lot": "Netherworld Department", "myName": "Netherworld Department", "type": "Netherworld Department", "size": "30x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
+   ]
+  }
+ ],
+ "familyLinks": [
+  ["Gomes", "Izadi-Gomes"]
+ ]
+}

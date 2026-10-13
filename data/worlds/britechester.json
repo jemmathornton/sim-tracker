@@ -1,0 +1,42 @@
+{
+ "name": "Britechester",
+ "pack": "Discover University",
+ "owned": true,
+ "colour": "#8F7756",
+ "deep": ["#6A5C4A", "#817059"],
+ "glow": "#EBDAC2",
+ "blurb": "Begin a new chapter in the historical University of Britechester or modern Foxbury Institute. Live in a dorm room or off-campus in the welcoming town of Gibbs Hill. Explore Britechester on a bicycle, spend time in the student commons, and have a study session at the library. Cheer on the student body at a school spirit event and wear school colours to show your Sim’s pride.",
+ "neighbourhoods": [
+  {
+   "name": "University of Britechester",
+   "desc": "Come tour the historic University of Britechester where a budding artist can flourish!",
+   "lots": [
+    {"lot": "Darby's Den", "myName": "Darby's Den", "type": "UoB Commons", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["C0fsDxFmEeqHo0u/SNc3OA=="]},
+    {"lot": "Darkwing House", "myName": "The Old Clocktower", "type": "Nightclub/Retail", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["01RGHv0YEeqGaYQzBy11UQ=="]},
+    {"lot": "Drake Hall", "myName": "Drake Hall", "type": "University Housing", "size": "30x20", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["xwKW8hFmEeqKVku/SNc3OA=="]},
+    {"lot": "Wyvern Hall", "myName": "Wyvern Hall", "type": "University Housing", "size": "30x20", "residents": "Best of Friends", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["yJusUxFnEeqOJ0u/SNc3OA=="]}
+   ]
+  },
+  {
+   "name": "Foxbury Institute",
+   "desc": "Come visit the innovative campus of Foxbury to see if a future in technology is right for you.",
+   "lots": [
+    {"lot": "Larry's Lagoon", "myName": "Larry's Lagoon", "type": "Foxbury Commons", "size": "40x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["J5N3RfOPEeqCCcLb66ZsmA=="]},
+    {"lot": "Maritime Manor", "myName": "Maritime Manor", "type": "Nightclub/Retail", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["tzrKYfg/EeqKp+5FdmbmdA=="]},
+    {"lot": "Tidal Tower", "myName": "Tidal Tower", "type": "University Housing", "size": "30x20", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["hZKnQAU9RVSEhAqGTS7yyQ=="]},
+    {"lot": "Briny Tower", "myName": "Briny Tower", "type": "University Housing", "size": "30x20", "residents": "Fletcher", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["dUmUl8fLSFC7Tb8ux2J66Q=="]}
+   ]
+  },
+  {
+   "name": "Gibbs Hill",
+   "desc": "Gibbs Hill is nestled in the centre of Britechester right between the two universities: Foxbury Institute and the University of Britechester. It was the first centre of activity in Britechester and its famous Laurel Library has stayed a key location for many students to study and learn.",
+   "lots": [
+    {"lot": "Honeydew Fields", "myName": "Britechester BnB", "type": "Café/Vacation Rental", "size": "20x15", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["wBt4dbV+EeuBjk1o44QF8A==", "RwfD0bUaEeuB0ucawTB/JA=="]},
+    {"lot": "Laurel Library", "myName": "Laurel Library", "type": "Library", "size": "50x40", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["421u6vYLEeqOjQj3LsIbeA=="]},
+    {"lot": "Pepper's Pub", "myName": "The Old Crown", "type": "Bar", "size": "20x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["RQVL6vebEeqB6gj3LsIbeA=="]},
+    {"lot": "Mossy Lane", "myName": "Mossy Lane", "type": "Residential Rental (4)", "size": "20x15", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["+1TuKO1OEeqP5iQfmaYcsw=="]},
+    {"lot": "Spring Steppes", "myName": "Spring Steppes", "type": "Residential Rental (4)", "size": "20x15", "residents": "Elderberry & Pleasant", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["yQ7eyLWyEeuOBucawTB/JA=="]}
+   ]
+  }
+ ]
+}

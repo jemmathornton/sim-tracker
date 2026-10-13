@@ -1,0 +1,29 @@
+{
+ "name": "Selvadorada",
+ "pack": "Jungle Adventure",
+ "owned": true,
+ "colour": "#2E7D5B",
+ "deep": ["#0F2E22", "#164333"],
+ "blurb": "Enjoy learning about the Selvadorada culture, or explore the jungle's hidden secrets. But be prepared! It won't be an easy trek through the jungle.",
+ "neighbourhoods": [
+  {
+   "name": "Puerto Llamante Marketplace",
+   "desc": "Come enjoy the sights and sounds of Selvadorada!",
+   "lots": [
+    {"lot": "Alam Museum of Archaeology", "myName": "Alam Museum of Archaeology", "type": "Museum", "size": "64x64", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "Hillview Hideaway", "myName": "Hillside Hideaway", "type": "Vacation Rental", "size": "20x15", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["335sZpKTEeyL94KVX4KDoA=="]},
+    {"lot": "Selvadorada Villa", "myName": "Selvadorada Villa", "type": "Vacation Rental", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["ofQVeJT5EemF/FunJjefig=="]},
+    {"lot": "Cantina \"El Árbol del Jaguar\"", "myName": "Cantina \"El Árbol del Jaguar\"", "type": "Bar", "size": "40x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["aqDVugmrEeuPyZLGvPH+KA=="]}
+   ]
+  },
+  {
+   "name": "Belomisia Jungle",
+   "desc": "The jungle is teeming with wondrous sights and hidden dangers. Brave adventurers can explore the ruins of the ancient Omiscans. Skilled Sims and those equipped with gear from the marketplace will do well here.",
+   "lots": [
+    {"lot": "Belomisia Trailhead", "myName": "Belomisia Trailhead", "type": "Campground", "size": "40x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "Jungle Bungalow", "myName": "Jungle Bungalow", "type": "Vacation Rental", "size": "30x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["3nHPkj3IEemMPXldy2Ruvw=="]},
+    {"lot": "Belomisia Field Station", "myName": "Belomisia Field Station", "type": "Vacation Rental", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["XpBSeY8IRSGZ4EaA0S8D/A=="]}
+   ]
+  }
+ ]
+}

@@ -1,0 +1,40 @@
+{
+ "name": "Copperdale",
+ "pack": "High School Years",
+ "owned": true,
+ "colour": "#A85C3A",
+ "deep": ["#3A1E12", "#53301D"],
+ "blurb": "Once renowned for its booming mining industry, the town of Copperdale, quaint and historic, lay nestled on the banks of Lake LaSuli. With academics and adventures abound, Copperdale is now home to many families seeking a small-town life with big-city dreams for themselves and their teens.",
+ "neighbourhoods": [
+  {
+   "name": "Rockridge Heights",
+   "desc": "Home to Copperdale High, Rockridge Heights is the town's standard-bearer for academia across generations. It's a beloved school ground for quintessential teen moments and college preparation.",
+   "lots": [
+    {"lot": "Copperdale High School", "myName": "Copperdale High School", "type": "High School", "size": "64x64", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "Auditorium", "myName": "Auditorium", "type": "Auditorium", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
+   ]
+  },
+  {
+   "name": "Prescott Square",
+   "desc": "Named after Copperdale's founder, Jasper Prescott, this town square is a quaint hub for all afterschool hangouts.",
+   "lots": [
+    {"lot": "Water Tower Way", "myName": "Copperdale Library", "type": "Library", "size": "20x15", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["nFAht7I4Sdu8iwDUqLc6WA=="]},
+    {"lot": "Town Square Terrace", "myName": "Town Square Stores", "type": "Boba & Thrift", "size": "20x15", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["5e8Hz59OEe2D31rYHh8uGQ=="]},
+    {"lot": "ThrifTea", "myName": "Prescott Boarding House", "type": "Dorms #1", "size": "20x15", "residents": "Chess/Comp Teens", "built": true, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Lakeview Library", "myName": "Lakeview Boarding House", "type": "Dorms #2", "size": "20x20", "residents": "Cheer/Football Teens", "built": true, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Golden Peak", "myName": "Golden Peak", "type": "Residential", "size": "30x30", "residents": "Prescott", "built": false, "shared": false, "screenshots": false, "simsMade": false}
+   ]
+  },
+  {
+   "name": "Plumbite Cove",
+   "desc": "Settled on Lake LaSuli sits Plumbite Cove, a once-popular location for its mining of rare gems. After the mines shut down, the town turned this picturesque outlook into a waterfront fairground.",
+   "lots": [
+    {"lot": "LaSuli Point", "myName": "LaSuli Point", "type": "Restaurant", "size": "20x15", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "Totter Park", "myName": "Totter Park", "type": "Cemetery", "size": "50x40", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "BridgeCreek Drive", "myName": "BridgeCreek Drive", "type": "Residential", "size": "30x30", "residents": "Price", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Little Falls Nook", "myName": "Little Falls Nook", "type": "Residential", "size": "20x20", "residents": "Harjo", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Hillside Haven", "myName": "Hillside Haven", "type": "Residential", "size": "30x20", "residents": "Donovan (move!)", "built": false, "shared": false, "screenshots": false, "simsMade": false}
+   ]
+  }
+ ]
+}

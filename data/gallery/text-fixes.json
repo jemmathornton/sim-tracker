@@ -1,0 +1,23 @@
+{
+ "_note": "Typo fixes applied to Gallery text on the site (her uploads on EA are unchanged).",
+ "fixes": {
+  "wcXFyz21EemNHnldy2Ruvw==": {
+   "lot": "San Myshuno / 18 Culpepper House",
+   "description": [
+    ["stones throw", "stone’s throw"]
+   ]
+  },
+  "+1TuKO1OEeqP5iQfmaYcsw==": {
+   "lot": "Britechester / Mossy Lane",
+   "description": [
+    ["stones throw", "stone’s throw"]
+   ]
+  },
+  "r8/jiu1NEeqKZyQfmaYcsw==": {
+   "lot": "Sulani / The Sand Bar",
+   "description": [
+    ["social hospot", "social hotspot"]
+   ]
+  }
+ }
+}

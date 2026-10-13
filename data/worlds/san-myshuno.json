@@ -1,0 +1,70 @@
+{
+ "name": "San Myshuno",
+ "pack": "City Living",
+ "owned": true,
+ "colour": "#5B4BB0",
+ "deep": ["#19163A", "#272255"],
+ "blurb": "Welcome to San Myshuno! Every day is an adventure on the streets of San Myshuno.",
+ "neighbourhoods": [
+  {
+   "name": "Spice Market",
+   "desc": "A family neighbourhood famous for its Spice Festival, Flea Market and dockland views.",
+   "lots": [
+    {"lot": "17 Culpepper House", "myName": "17 Culpepper House", "type": "Apartment", "size": "N/A", "residents": "1 Bed Small", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["Vk2VHIiVEemPc9x2YPRdRQ=="], "beds": 1},
+    {"lot": "18 Culpepper House", "myName": "18 Culpepper House", "type": "Apartment", "size": "N/A", "residents": "1 Bed", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["wcXFyz21EemNHnldy2Ruvw=="], "beds": 2},
+    {"lot": "19 Culpepper House", "myName": "19 Culpepper House", "type": "Apartment", "size": "N/A", "residents": "2 Bed", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["8+qh5iODEeeKPGUH0XaZxA=="], "beds": 2},
+    {"lot": "20 Culpepper House", "myName": "20 Culpepper House", "type": "Apartment", "size": "N/A", "residents": "Rasoya", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "2A Jasmine Suites", "myName": "Fraternity Apartment", "type": "Apartment", "size": "N/A", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["jvRimu1VEeqLZil86hsCPw=="], "beds": 3},
+    {"lot": "2B Jasmine Suites", "myName": "Sorority Apartment", "type": "Apartment", "size": "N/A", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["/1AOQu1PEeqCUCl86hsCPw==", "ld1RCT22EemAnXldy2Ruvw=="], "beds": 3},
+    {"lot": "The Old Salt House", "myName": "The Old Salt House", "type": "Restaurant", "size": "30x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["jVD2MEWBEeeBOqP4YfS2mA=="]},
+    {"lot": "Waterside Warble", "myName": "Waterside Warble", "type": "Karaoke Bar", "size": "30x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["cm8k9PS2EeeKFZymIxmfvg=="]}
+   ]
+  },
+  {
+   "name": "Arts Quarter",
+   "desc": "Home to the Humour and Hijinks Festival, the bohemian Arts Quarter is beloved by musicians, artists and all manner of creative types.",
+   "lots": [
+    {"lot": "910 Medina Studios", "myName": "910 Medina Studios", "type": "Apartment", "size": "N/A", "residents": "Benali", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "920 Medina Studios", "myName": "920 Medina Studios", "type": "Apartment", "size": "N/A", "residents": "Bheeda", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["lnguI4+KEeiPG13tOtUAYg=="], "beds": 2, "baths": 2},
+    {"lot": "930 Medina Studios", "myName": "930 Medina Studios", "type": "Apartment", "size": "N/A", "residents": "Livin' In The City", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["oRFw156kEemGlHVYaA94HQ==", "7moaSJ6jEemDpHVYaA94HQ=="], "beds": 4},
+    {"lot": "121 Hakim House", "myName": "121 Hakim House", "type": "Apartment", "size": "N/A", "residents": "Jang", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "122 Hakim House", "myName": "122 Hakim House", "type": "Apartment", "size": "N/A", "residents": "2/3 Bed", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["Uf3EQP8MEeyKGRdS1XRQaQ=="], "beds": 2},
+    {"lot": "FountainView Penthouse", "myName": "FountainView Penthouse", "type": "Penthouse", "size": "N/A", "residents": "Santiago Ojo", "built": true, "shared": false, "screenshots": false, "simsMade": true},
+    {"lot": "Casbah Gallery", "myName": "Casbah Gallery", "type": "Arts Center", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
+   ]
+  },
+  {
+   "name": "Fashion District",
+   "desc": "Popular with young and trendy Sims, the Fashion District is also home to the Romance Festival and GeekCon.",
+   "lots": [
+    {"lot": "701 ZenView", "myName": "701 ZenView", "type": "Apartment", "size": "N/A", "residents": "Bro & Kennedy", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "702 ZenView", "myName": "702 ZenView", "type": "Apartment", "size": "N/A", "residents": "Behr", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "1310 21 Chic Street", "myName": "1310 21 Chic Street", "type": "Apartment", "size": "N/A", "residents": "Jeong", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["IJqDYJjGEeiBKjwldOHC9g=="], "beds": 1},
+    {"lot": "1312 21 Chic Street", "myName": "1312 21 Chic Street", "type": "Apartment", "size": "N/A", "residents": "Pizzazz", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "1313 21 Chic street", "myName": "1313 21 Chic Street", "type": "Apartment", "size": "N/A", "residents": "Empty", "built": true, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Torendi Tower Penthouse", "myName": "Torendi Tunes", "type": "Karaoke Bar", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "Planet Honey Pop!", "myName": "Planet Honey Pop!", "type": "Boba & Thrift", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
+   ]
+  },
+  {
+   "name": "Uptown",
+   "desc": "The luxurious heart of the City, Uptown is home to the rich, powerful... and slightly odd.",
+   "lots": [
+    {"lot": "1010 Alto Apartments", "myName": "1010 Alto Apartments", "type": "Apartment", "size": "N/A", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["wgO03R6kEeuOM2EZzJ8AzQ=="]},
+    {"lot": "1020 Alto Apartments", "myName": "1020 Alto Apartments", "type": "Apartment", "size": "N/A", "residents": "Lobo", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "VIII Landgraab Apartments", "myName": "VIII Landgraab Apartments", "type": "Apartment", "size": "N/A", "residents": "Empty", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "IX Landgraab Apartments", "myName": "IX Landgraab Apartments", "type": "Apartment", "size": "N/A", "residents": "Feng", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "888 Spire Apartments", "myName": "888 Spire Apartments", "type": "Apartment", "size": "N/A", "residents": "Empty", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Skye Fitness", "myName": "Skye Fitness", "type": "Gym", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["TKz5fD8MEeqGF0Ftv2M37A=="]},
+    {"lot": "Stargazer Lounge", "myName": "Stargazer Lounge", "type": "Nightclub", "size": "40x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["/QOT/EWBEeeCgKP4YfS2mA=="]}
+   ]
+  },
+  {
+   "name": "Myshuno Meadows",
+   "desc": "Surrounded by both trees and the cityscape, Myshuno Meadows is a great place for a relaxed wedding or outdoor birthday party. Centred on Barnabas Skye's old Observatory, part of the area has been converted into an event space while still retaining the original telescope.",
+   "lots": [
+    {"lot": "Myshuno Meadows", "myName": "Myshuno Meadows", "type": "Central Park", "size": "64x64", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
+   ]
+  }
+ ]
+}

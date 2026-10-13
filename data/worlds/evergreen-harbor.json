@@ -1,0 +1,46 @@
+{
+ "name": "Evergreen Harbor",
+ "pack": "Eco Lifestyle",
+ "owned": true,
+ "colour": "#4F7A6B",
+ "deep": ["#1A2D27", "#263F37"],
+ "blurb": "Sandwiched between rolling hills of evergreen forest on one side and the waters of the Willupette Sound on the other, Evergreen Harbor used to be the industrial hub of the region. However, as the world changed around it, the region has struggled to keep up. Evergreen Harbor now stands on the precipice of making its own future. The only question is: what kind of future will it be?",
+ "neighbourhoods": [
+  {
+   "name": "Grims Quarry",
+   "desc": "The quaint suburbs near the historic quarry is a sweet destination for any evergreen enthusiast.",
+   "lots": [
+    {"lot": "Miner Mansion", "myName": "Miner Mansion", "type": "Residential", "size": "30x20", "residents": "Harris", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Rockridge Springs", "myName": "Rockridge Springs", "type": "Residential Rental (3)", "size": "30x20", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["7qor1/qySJOuKuOZ5Tq/Tg=="]},
+    {"lot": "Stonestreet Apartments #3", "myName": "Stonestreet Apartments #3", "type": "Apartment", "size": "N/A", "residents": "Knox Greenburg", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["jfISOaR8EeuMrecawTB/JA=="], "beds": 2},
+    {"lot": "Stonestreet Apartments #4", "myName": "Stonestreet Apartments #4", "type": "Apartment", "size": "N/A", "residents": "Sterling Rico", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["mVpx+qSLEeuE+/wg9JDtjA=="], "beds": 1},
+    {"lot": "The Quarry Building", "myName": "The Quarry Building", "type": "Community Space", "size": "40x30", "residents": "N/A", "built": true, "shared": false, "screenshots": false, "simsMade": "N/A"}
+   ]
+  },
+  {
+   "name": "Conifer Station",
+   "desc": "What happens when the trains stop running? Downtown Evergreen, affectionately known to locals as Conifer Station, may be a bit quieter nowadays, but residents will tell you that the defunct train station and unsightly storage tanks hide a hard-working community eager to improve their little corner of the world.",
+   "lots": [
+    {"lot": "Pigulock Manor", "myName": "Pigulock Manor", "type": "Residential", "size": "30x20", "residents": "Tinker", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Canal Corner", "myName": "Canal Corner", "type": "Small Business", "size": "20x15", "residents": "Tinker", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "Sprucewood Square", "myName": "Sprucewood Square", "type": "Community Space", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "Pinecrest Apartments #402", "myName": "Pinecrest Apartments #402", "type": "Apartment", "size": "N/A", "residents": "Eco Roomies", "built": true, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Pinecrest Apartments #404", "myName": "Pinecrest Apartments #404", "type": "Apartment", "size": "N/A", "residents": "2 Bed", "built": true, "shared": true, "screenshots": false, "simsMade": false, "displayName": "Pinecrest Apartments #404", "gallery": ["rZY+UsMqEeuDL+WcoywPdA=="], "beds": 2}
+   ]
+  },
+  {
+   "name": "Port Promise",
+   "desc": "This smoggy old port may make you gag, but it's an adequate place to learn about industrialization.",
+   "lots": [
+    {"lot": "The Old Mill", "myName": "The Old Mill", "type": "Small Business", "size": "30x20", "residents": "Sterling Rico", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "The Caboose", "myName": "The Caboose", "type": "Bar", "size": "30x20", "residents": "N/A", "built": true, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "The Shipping Views", "myName": "The Old Dockyard", "type": "Community Space", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["ZQSlwRx6EeuFnhriosBzww==", "YkcpxBx6EeuFjhriosBzww==", "Zz52rhx6EeuFrhriosBzww==", "aP66fRx6EeuFtxriosBzww=="], "versions": [{"label": "Market", "upload": "Zz52rhx6EeuFrhriosBzww=="}, {"label": "Garden", "upload": "ZQSlwRx6EeuFnhriosBzww=="}, {"label": "Makers", "upload": "aP66fRx6EeuFtxriosBzww=="}, {"label": "Community space", "upload": "YkcpxBx6EeuFjhriosBzww=="}]},
+    {"lot": "The Waterfront", "myName": "Abandoned Views", "type": "Residential Rental", "size": "40x30", "residents": "Henley", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "The Portsmouth Promenade", "myName": "The Portsmouth Promenade", "type": "Small Business", "size": "30x20", "residents": "Greenburg", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["WzZP/f/sT6inGdN6AXBE6Q=="]}
+   ]
+  }
+ ],
+ "familyLinks": [
+  ["Greenburg", "Knox Greenburg"]
+ ]
+}

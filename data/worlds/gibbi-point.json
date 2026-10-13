@@ -1,0 +1,41 @@
+{
+ "name": "Gibbi Point",
+ "pack": "Adventure Awaits",
+ "owned": true,
+ "colour": "#2F7FB8",
+ "deep": ["#0F2A40", "#173D5C"],
+ "blurb": "It's been many years since Gibbi Point experienced the Great Wave, a seismic event that carved out unique landmarks and created lush flora and fauna. Its many underground hot springs keep the waters tepid and inviting, allowing for swimming and water activities year-round.",
+ "neighbourhoods": [
+  {
+   "name": "Wanderwood Wilds",
+   "desc": "Life in Wanderwood Wilds sure is a blast - literally! Hothead Rock Geyser may be the main draw to the area, but there's more in these woods than meets the eye.",
+   "lots": [
+    {"lot": "Hothead Rock Hideaway", "myName": "Revive and Thrive Retreat", "type": "Custom Venue", "size": "64x64", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["bVV01Nz1Soi3smD/Qv6Z/w=="]},
+    {"lot": "Camp Gibbi Gibbi", "myName": "Camp Gibbi Gibbi", "type": "Custom Venue", "size": "50x50", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "Wanderwood Wonder", "myName": "Wanderwood Wonder", "type": "Residential", "size": "30x20", "residents": "Chavez-Ralston", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Plumbird Park", "myName": "Plumbird Park", "type": "Playground", "size": "40x40", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
+   ]
+  },
+  {
+   "name": "Jellyfish Junction",
+   "desc": "Jellyfish Junction is known for its unique, artistic vibe, attracting not only creatives, but also kayakers and tourists eager to explore.",
+   "lots": [
+    {"lot": "Jellyfish Jubilee", "myName": "Jellyfish Jubilee", "type": "Restaurant", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "Seabreeze Scenic", "myName": "Seabreeze Scenic", "type": "Residential", "size": "40x30", "residents": "Perry", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Fletcher's Cottage", "myName": "Gibbi Point Library", "type": "Library", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["pKnwlfeXRiGGVi/QvTc7TQ=="]},
+    {"lot": "Revive and Thrive Retreat", "myName": "Gibbi Rec Center", "type": "Rec Center", "size": "64x64", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["R7mzaO9GS5atpQCbFz9dlw=="]}
+   ]
+  },
+  {
+   "name": "Crystal Valley",
+   "desc": "Once a bustling gold mining community, Crystal Valley earned its name after an unusual occurrence took place: overnight, the Scoop's Gold Mine dried up only to be replaced by crystals!",
+   "lots": [
+    {"lot": "Prospector's Paradise", "myName": "Paradise Stables", "type": "Residential", "size": "40x30", "residents": "? (Horses!)", "built": true, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Crystal Cottage", "myName": "Crystal Cottage", "type": "Residential", "size": "30x20", "residents": "Addam Commune", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Love Highland", "myName": "Love Highland", "type": "Custom Venue", "size": "50x50", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "Fearful Fish Lounge", "myName": "Thrift 'n' Fish", "type": "Boba & Thrift", "size": "20x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "Miner's Manse", "myName": "Miner's Manse", "type": "Residential", "size": "30x20", "residents": "Empty", "built": false, "shared": false, "screenshots": false, "simsMade": false}
+   ]
+  }
+ ]
+}

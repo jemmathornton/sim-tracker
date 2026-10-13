@@ -1,0 +1,30 @@
+{
+ "name": "Magnolia Promenade",
+ "pack": "Get To Work",
+ "owned": true,
+ "colour": "#A2574F",
+ "deep": ["#3E1F1E", "#57302D"],
+ "blurb": "Welcome to a world in which beautiful scenery meets metropolitan life! Magnolia Promenade offers fantastic views and a top of the line shopping experience for customers and entrepreneurs alike.",
+ "neighbourhoods": [
+  {
+   "name": "Magnolia Promenade",
+   "desc": "",
+   "lots": [
+    {"lot": "Paddywack's Emporium", "myName": "Paddy's Place", "type": "Restaurant", "size": "20x20", "residents": "N/A", "built": true, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "JF&S Clothiers", "myName": "Llama Picturehouse", "type": "Small Business", "size": "20x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["ndWmrcitEeeLib+KYzr9wA=="]},
+    {"lot": "The Roadstead", "myName": "Magnolia Mall", "type": "Retail/Boba & Thrift", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "Preeminent Domain", "myName": "Magnolia Bowling Alley", "type": "Bar", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["xNEy4XPlEeeBQSkfayV2UA=="]}
+   ]
+  },
+  {
+   "name": "Secret Lots",
+   "desc": "",
+   "lots": [
+    {"lot": "Police Station", "myName": "Police Station", "type": "Police Station", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "FutureSim Labs", "myName": "FutureSim Labs", "type": "Science Lab", "size": "50x50", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "Willow Creek Hospital", "myName": "Willow Creek Hospital", "type": "Hospital", "size": "50x50", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "Sixam", "myName": "Sixam", "type": "Sixam", "size": "20x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
+   ]
+  }
+ ]
+}

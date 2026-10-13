@@ -1,0 +1,29 @@
+{
+ "name": "Tartosa",
+ "pack": "My Wedding Stories",
+ "owned": false,
+ "colour": "#B86A6A",
+ "deep": null,
+ "blurb": "",
+ "neighbourhoods": [
+  {
+   "name": "Porto Luminoso",
+   "lots": [
+    {"lot": "Thebe Estate", "myName": "Thebe Estate", "type": "Residential", "size": "50x50", "residents": "Laurent", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Piccola Luca", "myName": "Piccola Luca", "type": "Vacation Rental", "size": "20x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "Baia dell'Amore", "myName": "Baia dell'Amore", "type": "Wedding Venue", "size": "40x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "Villa Vigna", "myName": "?", "type": "Lounge/Restaurant?", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "Celebrazioni d'Amore", "myName": "?", "type": "Residential", "size": "50x40", "residents": "? (Capp/Monty)", "built": false, "shared": false, "screenshots": false, "simsMade": false}
+   ]
+  },
+  {
+   "name": "Terra Amorosa",
+   "lots": [
+    {"lot": "The Old Wood Nectary", "myName": "The Old Wood Nectary", "type": "Residential", "size": "40x30", "residents": "Markovic", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Rifugio dei Pirati", "myName": "Rifugio dei Pirati", "type": "?", "size": "30x20", "residents": "?", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "Via Romanza", "myName": "Via Romanza", "type": "?", "size": "30x30", "residents": "?", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "La Coppia Serena", "myName": "La Coppia Serena", "type": "Residential", "size": "50x40", "residents": "? (Capp/Monty)", "built": false, "shared": false, "screenshots": false, "simsMade": false}
+   ]
+  }
+ ]
+}

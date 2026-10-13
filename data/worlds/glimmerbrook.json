@@ -1,0 +1,28 @@
+{
+ "name": "Glimmerbrook",
+ "pack": "Realm of Magic",
+ "owned": true,
+ "colour": "#8A5AA8",
+ "deep": ["#2A1838", "#3C2350"],
+ "blurb": "The quiet town of Glimmerbrook may have more to it than meets the eye...",
+ "neighbourhoods": [
+  {
+   "name": "Glimmerbrook",
+   "desc": "",
+   "lots": [
+    {"lot": "Rock Ridge Canyon", "myName": "Rock Ridge Canyon", "type": "Residential", "size": "40x30", "residents": "Charm", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Creekside Corner", "myName": "Creekside Corner", "type": "Residential", "size": "30x20", "residents": "3 Bed", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["xr995/SGEeqJ1e5FdmbmdA=="]},
+    {"lot": "Glimmerbrook Watch", "myName": "Glimmerbrook Watch", "type": "Residential", "size": "30x20", "residents": "1 Bed", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["odr5dwNmEeuHqnCrzml8yA=="]},
+    {"lot": "Brooks Bridge Borough", "myName": "Brooks Bridge Borough", "type": "Residential", "size": "30x20", "residents": "Amicable Acolytes", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["H04iZgvxRb6FF++S6ssRlg=="]},
+    {"lot": "Elixirs and Brews", "myName": "Glimmer & Books", "type": "Library", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["+aNzE+BWEeyIaxrwo9vsUA=="]}
+   ]
+  },
+  {
+   "name": "The Magic Realm",
+   "desc": "The Magic Realm is the source of all magic. Unfortunately, it is slowly being pulled apart by the swirling vortex surrounding it. The only thing that is keeping it together is the balance between the three houses of magic.",
+   "lots": [
+    {"lot": "The Magic Realm", "myName": "The Magic Realm", "type": "The Magic Realm", "size": "40x40", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["PopQBuBAEeyONXVMsZWocA=="]}
+   ]
+  }
+ ]
+}
