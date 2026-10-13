@@ -37,7 +37,7 @@ fixes = load(os.path.join(GALLERY, 'text-fixes.json'))['fixes']
 def short_pack(p): return re.sub(r'\s+(Expansion Pack|Game Pack|Stuff Pack|Kit)$', '', p.replace('The Sims™ 4 ', '')).strip()
 def clean_title(t): return re.sub(r'\s*\[[^\]]*\]\s*$', '', t).strip()     # "Kin-Ship [Simsie Shell]" -> "Kin-Ship"
 
-MONTHS = "January February March April May June July August September October November December".split()
+MONTHS = "Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split()   # short, as dates are shown elsewhere on the site
 def shared_on(i):
     """The month an upload went on the Gallery. Ids from 2016 to early 2023 are time-based UUIDs with the upload time inside; newer ids are random, so no date."""
     u = uuid.UUID(bytes=base64.b64decode(i))

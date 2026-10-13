@@ -457,3 +457,8 @@ i.nb-none svg.i{width:30%;height:auto;color:rgba(255,255,255,.6)}
 /* Gallery numbers over time (Stats page, 13 Oct) */
 .gal-gains{margin-top:28px}
 .gal-gains .sheet-wrap{margin-top:10px}
+/* packs per world (world pages, 13 Oct) */
+.world-packs{margin-top:16px;gap:8px}
+.world-packs span{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;padding:6px 8px 6px 14px;background:var(--surface)}
+.world-packs b{min-width:22px;padding:1px 6px;border-radius:99px;background:var(--soft);color:var(--muted);font-size:12px;text-align:center}
+footer .as-of{flex-basis:100%}
