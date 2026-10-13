@@ -88,8 +88,8 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
   - [ ] Myshuno Meadows: "Central Park" → **Park**
   - [ ] Belomisia Trailhead: "Campground" → **National Park**
   - [ ] The Magic Realm: keep as a special lot, or **Generic** (her upload's type)?
-  - [ ] Plumbob Pictures (secret lot): the game calls it the **Acting Studio**
-  - [ ] Copperdale dorms: "Dorms #1 / #2" → **Residential** (University Housing only works in Britechester), or keep "Boarding House"
+  - [ ] Plumbob Pictures (secret lot): the game calls it the **Acting Studio** (confirmed in the game's own text, 13 Oct)
+  - [ ] Copperdale dorms (Prescott and Lakeview Boarding Houses): "Dorms #1 / #2" → **University Housing** (the research says it works in any world; her SU Plateau Residence in StrangerVille already uses it), or **Residential**, or keep "Boarding House"
   - Larry's Lagoon "Foxbury Commons" is already official. Also already official: Sixam, Police Station, Hospital, Science Lab, Ancient Ruins, Island Bluff, High School, Auditorium, Custom Venue, Netherworld Department, Community Market, Backroom
 - [ ] [Jemma] Magnolia Promenade's "Secret Lots" group holds the Police Station, FutureSim Labs and Hospital (in the game they're in hidden neighbourhoods "Civic Center" and "Scientist"); keep or regroup? Some special groups have no description
 - [ ] [Jemma] Household names still unsure: Newbie? (Sporting Space) and My Sims? (2-4-3 Wakabamori). Paradise Stables (Gibbi Point) residents "To be decided"
@@ -101,7 +101,11 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
 - [x] The 4 missing secret lots added 13 Oct (not built yet): Sylvan Glade (Foundry Cove), Forgotten Grotto (Desert Bloom Park, her choice), Hermit's House (Granite Falls Forest, type Hermit's Hut), Mt. Komorebi Peak (Yukimatsu, type Mount Komorebi Summit). Selvadorada's jungle areas / Omiscan Temple left out
 - [x] In-game spellings fixed 13 Oct, each checked against the game's own text: Piccola Luce, The Summer Home, Avenida de la Eternidad, Plaza Mariposa, Creek Side Corner, Champion's Grove, 1313 21 Chic Street (her name column had the same typo on three; fixed too). Her spreadsheet still has the old spellings; the import reads them as the new ones (`data/spreadsheet/renamed.json`)
 - [ ] [Jemma] Club Eternity (Ravenwood): plan says 30×30; two sources say 30×20. Check in game
-- Innisgreen is on the site as not owned; nothing to do unless she buys Enchanted by Nature. Batuu only if she owns Journey to Batuu.
+- [ ] [Jemma] Innisgreen (Enchanted by Nature, not owned): the research lists its 14 lots (research/missing-lots-check.md). Your other not-owned worlds have their lots in the plan and on Stats; add Innisgreen's too, as not owned?
+- [ ] [Jemma] Harbor Quarter Gym (her UoW Students Union, Windenburg): the research says the game's lot is 30×30; the chat decided on 12 Oct it stays 30×20. Keep 30×20 (e.g. if you resized it), or check in game?
+- [x] Checked in the game's own text (13 Oct): "Plateau Place" (her spelling) is right, not "Plateau Palace"
+- [x] Batuu: Journey to Batuu isn't installed, so nothing to add
+- Left as the research suggested: Selvadorada's jungle areas and Omiscan Temple (not real lots, no sizes); Mt. Komorebi's two unnamed hidden stages; The Magic Realm's 40×40 (no source gives a size); Netherworld Department stays 30×30 (her confirmed size)
 
 ## 7. Parked until she asks
 
@@ -129,15 +133,26 @@ Site ideas, quick wins (no input needed):
 - [ ] [Jemma] Look over the 13 Oct additions and change any wording or placement: the Packs used block (world pages), "Shared" on Gallery cards, the footer dates (home), the search box (sidebar)
 
 Site ideas, bigger (13 Oct: she chose the five marked; no preference on the others yet):
-- [ ] What's new page (dated changelog)
+- [ ] What's new page (dated changelog) (13 Oct: no preference yet)
 - [x] Gallery numbers over time (keep each weekly refresh), top builds and biggest gains (13 Oct: Stats → On the Gallery)
-- [ ] Automatic Checks panel (spreadsheet vs Gallery mismatches, missing sizes or types, duplicate names)
+- [ ] Automatic Checks panel (spreadsheet vs Gallery mismatches, missing sizes or types, duplicate names) (13 Oct: no preference yet)
 - [ ] Empty homes and units page, built with the rentals per-unit view
 - [ ] Before and after pictures on rebuilt EA lots (needs her screenshots of the originals)
 - [ ] **Chosen 13 Oct:** Household basics for all households (Sims and pets, life stages, family type, played, Neighbourhood Stories)
 - [ ] **Chosen 13 Oct:** Relationships between households beyond family
 - [ ] **Chosen 13 Oct:** Family tree, Goths first
 - [ ] Challenge builds grouping (her Simsie shell builds)
+From the research but not on the list until 13 Oct (suggestions only):
+- [ ] Beds by age group / capacity for homes and rental units (e.g. "3 beds: 1 double, 2 single; fits 4"), to see where a family fits
+- [ ] Lot value as a Stats column (it's already on each lot's Gallery card)
+- [ ] Original vs new lot size for lots she resized ("40×30, was 30×20")
+- [ ] Filters on world and Stats pages: pack, lot type, lot trait (now that traits are in), built/shared, empty/occupied
+- [ ] "New since you looked" markers on lots with new comments or favourites (13 Oct: no preference yet)
+- [ ] Timeline of builds by the month they were shared, on the home page (13 Oct: no preference yet)
+- [ ] Newest Gallery comments on the Stats page
+- [ ] World extras beyond festivals: climate/weather and landmarks per world
+- [ ] [Claude] A checklist for adding a new world or pack (map, colours, gridded map, lots, households); no input needed
+- [ ] Spreadsheet columns for the new fields (lot traits, beds, eco state), if the spreadsheet stays her main copy (needs her OK to change her file)
 - [x] **Chosen 13 Oct:** Lot traits per lot. Done for 159 of the 168 shared lots, read from her "Building #2" save (lot pages show "Lot traits" and "Lot challenges"; names are the game's own)
 - [x] 9 shared lots had a different name in the save: settled 13 Oct (shell builds keep their challenge names in the game; The Old Salt House's traits come from the older "Building" save)
 - [ ] [Jemma] Anchorpoint Works is now called "On Point" in the game. Should the site say On Point? (Its Gallery upload is still called Anchorpoint Works, which wins unless you say otherwise)
