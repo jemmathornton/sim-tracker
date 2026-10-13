@@ -5,8 +5,8 @@
 The page itself (site/index.html, css/, js/app.js) is hand-written and never generated; this only refreshes
 the data it shows. Pictures are read from site/shots (Jemma's screenshots) and site/gallery (Gallery pictures).
 """
-import os, re, sys, urllib.parse
-from datetime import date
+import base64, os, re, sys, urllib.parse, uuid
+from datetime import date, datetime, timedelta
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import DATA, SITE, GALLERY, slug, load, nice_date, world_files
 
@@ -37,6 +37,14 @@ fixes = load(os.path.join(GALLERY, 'text-fixes.json'))['fixes']
 def short_pack(p): return re.sub(r'\s+(Expansion Pack|Game Pack|Stuff Pack|Kit)$', '', p.replace('The Sims™ 4 ', '')).strip()
 def clean_title(t): return re.sub(r'\s*\[[^\]]*\]\s*$', '', t).strip()     # "Kin-Ship [Simsie Shell]" -> "Kin-Ship"
 
+MONTHS = "January February March April May June July August September October November December".split()
+def shared_on(i):
+    """The month an upload went on the Gallery. Ids from 2016 to early 2023 are time-based UUIDs with the upload time inside; newer ids are random, so no date."""
+    u = uuid.UUID(bytes=base64.b64decode(i))
+    if u.version != 1: return None
+    d = datetime(1582, 10, 15) + timedelta(microseconds=u.time // 10)
+    return f"{MONTHS[d.month - 1]} {d.year}"
+
 def upload_entry(i):
     u = uploads[i]; desc = u['description'] or ''; k = desc.find('#')
     text = re.sub(r'\s+', ' ', desc[:k] if k >= 0 else desc).strip().replace("''", "'")
@@ -45,7 +53,7 @@ def upload_entry(i):
     return {"url": GALLERY_ITEM + urllib.parse.quote(i, safe=''), "title": clean_title(u['title']), "description": text,
             "tags": re.findall(r'#(\w+)', desc), "packs": [short_pack(p) for p in u['packs']], "value": f"§{u['price']:,}",
             "likes": u['favourites'], "downloads": u['downloads'], "comments": len(cl), "commentList": cl,
-            "beds": u['beds'], "baths": u['baths'], "lotType": u['lotType'], "checked": nice_date(u['checked'])}
+            "beds": u['beds'], "baths": u['baths'], "lotType": u['lotType'], "checked": nice_date(u['checked']), "shared": shared_on(i)}
 
 VERSION_END = r'(Market|Gardens?|Makers|Space)$'
 def version_label(e):
@@ -168,7 +176,7 @@ def build():
                     for v in l['versions']:
                         e = upload_entry(v['upload'])
                         vs.append({"label": v['label'], "title": e['title'], "url": e['url'], "likes": e['likes'], "downloads": e['downloads'], "value": e['value'],
-                                   "packs": e['packs'], "description": e['description'], "tags": e['tags'], "photos": version_photos(ws, slug(l['lot']), v['label'])})
+                                   "packs": e['packs'], "description": e['description'], "tags": e['tags'], "shared": e['shared'], "photos": version_photos(ws, slug(l['lot']), v['label'])})
                     cs_versions[key] = vs
                 lots.append({"lot": l['lot'], "mine": l['myName'], "type": l['type'], "size": l['size'],
                              "who": (name + ("?" if unsure else "")) if name else None, "whoNote": note,

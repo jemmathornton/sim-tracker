@@ -287,7 +287,7 @@ function lot(l){
           ${l.gallery.tags?.length ? `<div class="tags">${l.gallery.tags.map(t => `<span>#${esc(t)}</span>`).join("")}</div>` : ""}
           ${theirs(l).length ? `<div class="g-comments"><span class="label">Comments on the Gallery</span><ul>${theirs(l).map(c => `<li><div class="c-head"><b>${esc(c.u || "A simmer")}</b>${c.t ? `<small>${new Date(c.t).toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric"})}</small>` : ""}</div><p>${esc(c.m)}</p></li>`).join("")}</ul></div>` : ""}</div>
         <aside class="gallery-card"><span class="label">On the Sims 4 Gallery</span>
-          <dl><div><dt>Value</dt><dd>${esc(l.gallery.value)}</dd></div><div><dt>Favourites</dt><dd>${l.gallery.likes}</dd></div><div><dt>Downloads</dt><dd>${l.gallery.downloads}</dd></div>${l.gallery.beds ? `<div><dt>Bedrooms</dt><dd>${l.gallery.beds}</dd></div>` : ""}${l.gallery.baths ? `<div><dt>Bathrooms</dt><dd>${l.gallery.baths}</dd></div>` : ""}<div><dt>Comments</dt><dd>${l.gallery.comments || 0}</dd></div></dl>
+          <dl>${l.gallery.shared ? `<div><dt>Shared</dt><dd>${esc(l.gallery.shared)}</dd></div>` : ""}<div><dt>Value</dt><dd>${esc(l.gallery.value)}</dd></div><div><dt>Favourites</dt><dd>${l.gallery.likes}</dd></div><div><dt>Downloads</dt><dd>${l.gallery.downloads}</dd></div>${l.gallery.beds ? `<div><dt>Bedrooms</dt><dd>${l.gallery.beds}</dd></div>` : ""}${l.gallery.baths ? `<div><dt>Bathrooms</dt><dd>${l.gallery.baths}</dd></div>` : ""}<div><dt>Comments</dt><dd>${l.gallery.comments || 0}</dd></div></dl>
           ${l.gallery.packs?.length ? `<span class="label">Packs used</span><div class="packs">${l.gallery.packs.map(p => `<span>${esc(p)}</span>`).join("")}</div>` : `<span class="label">Packs used</span><div class="packs"><span>Base game only</span></div>`}
           ${l.gallery.old ? `<p class="g-old">${ic("note")}This Gallery upload is an older version of the build.</p>` : ""}
           <a class="gal-link" style="color:${textOn(l.hood.color)}" href="${esc(l.gallery.url)}" target="_blank" rel="noopener">View on the Gallery${l.gallery.others?.length ? ` · ${esc(l.gallery.label)}` : ""} ${ic("arrow")}</a>
@@ -484,7 +484,7 @@ function route(){
 const CS_VERSIONS = DATA.csVersions;
 function applyVersion(l, i){
   const v = l.versions[i]; l.vi = i; l.photos = v.photos;
-  l.gallery = {...l.baseGallery, title: v.title, url: v.url, likes: v.likes, downloads: v.downloads, value: v.value, packs: v.packs, description: v.description, tags: v.tags, label: v.label, others: null, beds: 0, baths: 0};
+  l.gallery = {...l.baseGallery, title: v.title, url: v.url, likes: v.likes, downloads: v.downloads, value: v.value, packs: v.packs, description: v.description, tags: v.tags, shared: v.shared, label: v.label, others: null, beds: 0, baths: 0};
 }
 Object.values(lotIndex).forEach(l => { const vs = CS_VERSIONS[l.world.name + "|" + l.lot]; if (vs && l.gallery) { l.versions = vs; l.baseGallery = l.gallery; applyVersion(l, 0); } });
 function versionTabs(l){
