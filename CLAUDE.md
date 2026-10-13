@@ -12,6 +12,7 @@ Read `HANDOVER.md` once for the full story, then `TODO.md` for everything still 
 - **Curly apostrophes** in displayed text; ids, links and data keys stay straight.
 - **Short, plain answers.** She reviews by looking at the site, not by reading long reports.
 - **Obvious bugs** (wrong numbers, things out of sync, broken behaviour) can be fixed straight away. **Anything needing her judgement** (names, wording, lot types, layout choices) goes on `TODO.md` for her to decide.
+- **One Gallery upload per lot, the latest.** Exceptions only for versions she keeps on purpose (Community Space variants, rental + regular versions, `galleryVariants` lots). If copies of a build aren't identical, she chooses.
 - **Lot names:** her Gallery title wins, then her own name ("My Name", ignored if just "?"), then the in-game name. The in-game name shows only on the lot page and the Stats sheet.
 - **Percentages only on the Stats page.** Elsewhere use counts or words.
 - **World colours** come from the world's map and her builds, never from one side of a world (e.g. Britechester must match neither UoB green nor Foxbury red). The "deep" shades drive the fade at the bottom of each map hero and must look the same as that world's neighbourhood cards.

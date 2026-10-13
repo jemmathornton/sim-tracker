@@ -18,35 +18,16 @@ Every open item carried over from the claude.ai project on 13 Oct 2026: the note
 - [ ] [Jemma] Bubble World (new upload, 82 favourites / 647 downloads) is on The Old Salt House lot but left unlinked as a bonus build (§5). Link it to the lot instead?
 - [ ] [Jemma] part1/2/3.zip in the project folder are already unpacked; they can be deleted
 
-## 1. Repeated Gallery uploads (parked)
+## 1. Repeated Gallery uploads (settled 13 Oct)
 
-17 lots have more than one upload with no rule yet; the site shows the most popular copy and merges comments. Figures are favourites / downloads (11 Oct). Since 13 Oct, Hallow Slough (SoupShell) is linked too.
+Her rule: **one upload per lot, the latest**. Exceptions are versions she keeps on purpose: Community Space variants (tabs), rentals with a rental and a regular version (Rio Verde, Fern Park Flats, Inner Circle, Upland Trailer Park, Manzanita Terrace, Old Torget House) and Britechester B&B (café + home). Where copies of a build aren't identical, she chooses.
 
-| Lot | Uploads | Kind |
-| --- | --- | --- |
-| Rindle Rose | Rindle Rose, residential 13 / 95; The Treehouse, generic 0 / 17 | Different type |
-| Hallow Slough | Mint Family Home 6 / 25; Mint Starter, 1 bed 3 / 22; Hallow Slough 0 / 6; Hallow Slough (SoupShell), haunted 3 / 11 | Different names |
-| Olde Platz Inn | restaurant 11 / 125; residential 3 / 30 | Different type |
-| Britechester B&B | residential 8 / 29; café 7 / 33 | Different type |
-| Raffia Quinta | 2 tiny home (2 / 9, 2 / 9); 2 residential (0 / 9, 1 / 13) | Different type |
-| Nookstone | 3 beds 3 / 15; 1 bed 2 / 8 | Fewer beds |
-| Palomino Junction | 2 beds 38 / 268; 1 bed 4 / 18 | Fewer beds |
-| Granada Place | 3 beds 6 / 42; 0 beds 2 / 47 | Fewer beds |
-| Comfy Cubby | 2 beds 2 / 2; 0 beds 0 / 16 | Fewer beds |
-| Asphalt Abodes | 4 / 20; 1 / 26 | Same build twice |
-| De Costadas | 2 / 52; 0 / 10 | Same build twice |
-| Café Llama | 2 / 12; 0 / 22 | Same build twice |
-| Sandtrap Flat | 5 / 13; 2 / 13 | Same build twice |
-| Caldera Camp | 2 / 22; 6 / 35 | Same build twice |
-| Strike Out! | 2 / 42; 11 / 71 | Same build twice |
-| Oak Alcove | 0 / 9; 0 / 10 | Same build twice |
-
-Settled 13 Oct: Bedlington Boathouse (20×20) and Brindleton Boathouse (30×20) are the same build, both on Sporting Space (Brindleton Boathouse), leading with Brindleton Boathouse.
-
-Also uploaded twice but not in the plan: 930 Medina Studios and Jameson. The Inner Circle has a third copy ("Inner Circle", 0 beds, 4 / 28), linked under its rental.
-
-- [ ] [Jemma] Decide these. Proposed default: lead with the copy that matches the plan, link the others, and add up favourites, downloads and comments across copies. Her open question on the notes doc: does the default apply to all of them, or should some lead with a different copy?
+- [x] Identical copies, latest kept: Café Llama, Sandtrap Flat, De Costadas, Oak Alcove, Strike Out!, Caldera Camp, 930 Medina Studios, Brindleton Boathouse (both Boathouse uploads are this build), Asphalt Abodes (the copy with 4 favourites; she removed the other from the Gallery)
+- [x] Her choices: Olde Platz Inn restaurant; Nookstone, Granada Place 3 bedrooms; Comfy Cubby, Palomino Junction 2 bedrooms; Raffia Quinta tiny home with 2 beds (2023); Rindle Rose (not The Treehouse); Sorority Apartment (not 2B Jasmine Suites); Inner Circle without its third copy
+- [ ] [Jemma] Hallow Slough: none of its four uploads (Mint Family Home, Mint Starter, Hallow Slough, Hallow Slough (SoupShell)) is for it, so it has no Gallery upload now but is still marked shared. Is its build on the Gallery under another name, or should it be marked not shared?
 - [ ] [Jemma] Midtown Meadows: compare its two uploads (link removed for now)
+
+Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
 
 ## 2. Rentals
 
