@@ -27,7 +27,7 @@
     {"lot": "Brook Bungalow", "myName": "Brook Bungalow", "type": "Residential", "size": "40x30", "residents": "Bjergsen", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Riverside Roost", "myName": "Riverside Roost", "type": "Residential", "size": "30x20", "residents": "Kopf", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["QRrjnco2EeuNga3kS5H9ag=="], "traits": ["Child's Play", "Good Schools"]},
     {"lot": "Pique Hearth", "myName": "Courtyard Lane Playground", "type": "Playground", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["vOvZf6/kT+qX4dUGnWHUqw=="], "traits": ["Child's Play", "Party Place", "Teen Neighborhood"]},
-    {"lot": "Rindle Rose", "myName": "Rindle Rose", "type": "Residential", "size": "20x15", "residents": "Pancakes", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["zDXCdVD6R0qgz6j/cCBarg==", "x7aJgQdUEeePiAjcJnR/JA=="]}
+    {"lot": "Rindle Rose", "myName": "Rindle Rose", "type": "Residential", "size": "20x15", "residents": "Pancakes", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["zDXCdVD6R0qgz6j/cCBarg=="]}
    ]
   },
   {
@@ -35,7 +35,7 @@
    "desc": "The historical garden community, home to large mansions.",
    "mapSpot": [0.5, 0.42],
    "lots": [
-    {"lot": "Hallow Slough", "myName": null, "type": "Residential", "size": "30x20", "residents": "Ella-Mint Cadberry", "built": true, "shared": true, "screenshots": false, "simsMade": true, "gallery": ["lT07JI6TRFGUJDcUM/WXSw==", "M3br1xN8T0StPxOXyRCzFw==", "HnM7TsLGEe2LNbYNwBdzag==", "Lyq5qYQoRr6opnJbd6FYgQ=="], "traits": ["Fast Internet", "Homey"]},
+    {"lot": "Hallow Slough", "myName": null, "type": "Residential", "size": "30x20", "residents": "Ella-Mint Cadberry", "built": true, "shared": true, "screenshots": false, "simsMade": true, "traits": ["Fast Internet", "Homey"]},
     {"lot": "Umbrage Manor", "myName": null, "type": "Residential", "size": "40x30", "residents": "Villareel", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Parkshore", "myName": "Cordelia Church", "type": "Cemetery", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Ophelia Villa", "myName": null, "type": "Residential", "size": "30x20", "residents": "Goth", "built": false, "shared": false, "screenshots": false, "simsMade": false}
