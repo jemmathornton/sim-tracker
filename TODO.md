@@ -6,17 +6,21 @@ Every open item carried over from the claude.ai project on 13 Oct 2026: the note
 
 ## 0. Moving to the app
 
-- [ ] [Jemma] Decide what "an actual app" means: local website, hosted site (private or public), or desktop app (see HANDOVER.md §5)
-- [ ] [Jemma] Decide whether the World Plans spreadsheet stays the place she edits, or the app takes over
-- [ ] [Claude] Rebuild the current site in the new setup, matching the live page (`live-site/`) page for page before changing anything
-- [ ] [Claude] Turn Gallery pictures from `/_blob/<id>` into normal files named by lot
-- [ ] [Claude] Rebuild the weekly Gallery refresh (favourites, downloads, comments) for the app; then [Jemma] turn off the "Weekly Gallery stats refresh" scheduled task in claude.ai
-- [ ] [Jemma + Claude] Move the changes in `build/live_overrides.json` into the spreadsheet (needs her OK to edit it) or into the app's own data, then retire the overrides file. This includes the lot types and names decided 12-13 Oct (HANDOVER.md §6) and keeping "(own)" in Residents
-- [ ] [Claude] Run the Gallery refresh after the first rebuild (the overrides pin numbers for 16 lots; the rest are from 11 Oct)
+- [x] [Jemma] What "an app" means (13 Oct): on her PC for now, easy to put online later
+- [ ] [Jemma] Where she edits: undecided, kept flexible. Today Claude edits the app's data; her spreadsheet can still be imported at any time (edits on both sides are kept). Decide later
+- [x] [Claude] Rebuild the site in the new setup, matching the live page page for page (all 614 pages checked, 13 Oct)
+- [x] [Claude] Gallery pictures are normal files named by lot
+- [x] [Claude] Weekly Gallery refresh rebuilt (Windows task, Sundays 08:54) and run once (13 Oct)
+- [ ] [Jemma] Turn off the "Weekly Gallery stats refresh" scheduled task in claude.ai (the app has its own now, and the old one only updates the claude.ai page)
+- [x] [Claude] `live_overrides.json` folded into the app's data and retired
+- [ ] [Jemma] If the spreadsheet stays your main copy: 58 decisions from the chat (names, lot types, sizes, built/shared ticks) are in the app but not in the spreadsheet yet. Claude can list them, or make a filled-in copy of the spreadsheet for you to check (your file is never changed without asking)
+- [ ] [Jemma] Have a look at the new bits: Stats page → "On the Gallery" at the bottom (keep it there? wording?), and the app icon (Lucide house, brass on purple)
+- [ ] [Jemma] Bubble World (new upload, 82 favourites / 647 downloads) is on The Old Salt House lot but left unlinked as a bonus build (§5). Link it to the lot instead?
+- [ ] [Jemma] part1/2/3.zip in the project folder are already unpacked; they can be deleted
 
 ## 1. Repeated Gallery uploads (parked)
 
-17 lots have more than one upload with no rule yet; the site shows the most popular copy and merges comments. Figures are favourites / downloads.
+17 lots have more than one upload with no rule yet; the site shows the most popular copy and merges comments. Figures are favourites / downloads (11 Oct). Since 13 Oct, Hallow Slough (SoupShell) is linked too.
 
 | Lot | Uploads | Kind |
 | --- | --- | --- |
@@ -89,7 +93,8 @@ Also uploaded twice but not in the plan: 930 Medina Studios and Jameson. The Inn
 
 ## 4. Neighbourhood map spots
 
-- [ ] [Claude → Jemma] For each of the 24 worlds other than Willow Creek: make a gridded copy of the map (8 columns A–H × 6 rows 1–6), she names the square for each neighbourhood, then add the spots to `NB_PT`. Until then those cards show the whole map.
+- [x] [Claude] Gridded maps for the 24 worlds other than Willow Creek: `for-jemma/map-grids/` (each lists that world's neighbourhoods underneath)
+- [ ] [Jemma] Name the square for each neighbourhood (e.g. "Newcrest: Bridgeview C4"); Claude then adds them as `mapSpot`. Until then those cards show the whole map
 
 ## 5. Lot types, groups and names
 
@@ -140,7 +145,7 @@ Site ideas, quick wins (no input needed):
 
 Site ideas, bigger:
 - [ ] What's new page (dated changelog)
-- [ ] Gallery numbers over time (keep each weekly refresh), top builds and biggest gains
+- [x] Gallery numbers over time (keep each weekly refresh), top builds and biggest gains (13 Oct: Stats → On the Gallery)
 - [ ] Automatic Checks panel (spreadsheet vs Gallery mismatches, missing sizes or types, duplicate names)
 - [ ] Empty homes and units page, built with the rentals per-unit view
 - [ ] Before and after pictures on rebuilt EA lots (needs her screenshots of the originals)

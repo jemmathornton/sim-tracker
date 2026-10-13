@@ -1,15 +1,17 @@
-"""One-off (13 Oct 2026): split the chat's single-page template (build/template.html) into the app's files.
+"""One-off (13 Oct 2026): split the chat's single-page template (old-chat-build/template.html) into the app's files.
 
 site/index.html   the page skeleton
 site/site.css     the styles (unchanged; kept next to index.html so picture paths in them work)
-site/js/icons.js  Lucide icons (from build/icons.json)
+site/js/icons.js  Lucide icons (from old-chat-build/icons.json)
 site/js/app.js    the page code (unchanged, except the data it used to carry now comes from js/data.js)
 """
 import json, os, re, sys
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 from common import path, SITE
 
-tpl = open(path('build', 'template.html'), encoding='utf-8').read()
+if os.path.exists(os.path.join(SITE, 'js', 'app.js')): sys.exit('site/ has been edited since the split; this one-off would overwrite it.')
+
+tpl = open(path('old-chat-build', 'template.html'), encoding='utf-8').read()
 lines = tpl.split('\n')
 
 # the claude.ai page wrapper's own defaults (margin 0, etc.), kept so the page looks the same
@@ -36,7 +38,7 @@ def write(p, text):
     with open(os.path.join(SITE, p), 'w', encoding='utf-8', newline='\n') as f: f.write(text)
 
 write('site.css', "/* Jemma's Sim World: styles. */\n\n/* page defaults (as on the claude.ai page) */\n" + wrapper_css.replace('}', '}\n') + "\n" + css + "\n")
-icons = json.load(open(path('build', 'icons.json'), encoding='utf-8'))
+icons = json.load(open(path('old-chat-build', 'icons.json'), encoding='utf-8'))
 write('js/icons.js', "// Icons from Lucide (https://lucide.dev), ISC licence.\nconst ICONS = " + json.dumps(icons, ensure_ascii=False, indent=1) + ";\n")
 write('js/app.js', "// Jemma's Sim World: the page code. Everything is drawn from DATA (js/data.js, built by tools/build.py).\n" + script + "\n")
 write('index.html', f"""<!doctype html>

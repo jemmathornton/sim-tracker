@@ -1,6 +1,10 @@
 """Shared helpers for the Sim World tools: paths, slugs, JSON in and out."""
-import json, os, re, unicodedata
+import json, os, re, sys, unicodedata
 from datetime import date
+
+# names like Admiral’s Wreckage print fine in any Windows console (and there's no console at all for the weekly task)
+for _s in (sys.stdout, sys.stderr):
+    if _s is not None and hasattr(_s, 'reconfigure'): _s.reconfigure(encoding='utf-8', errors='replace')
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, 'data')

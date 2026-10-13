@@ -13,7 +13,7 @@ live_line = next(l for l in open(path('live-site', 'index.html'), encoding='utf-
 live = json.loads(live_line[len('const DATA = '):].rstrip().rstrip(';'))
 new_text = open(os.path.join(SITE, 'js', 'data.js'), encoding='utf-8').read()
 new = json.loads(re.search(r'^const DATA = (.*);$', new_text, re.M).group(1))
-tpl = open(path('build', 'template.html'), encoding='utf-8').read()
+tpl = open(path('old-chat-build', 'template.html'), encoding='utf-8').read()
 
 _h = {}
 def digest(p):

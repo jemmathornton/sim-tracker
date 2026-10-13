@@ -1,6 +1,27 @@
 # Handover: Jemma's Sim World, from claude.ai chat to Claude Code
 
-Written 13 Oct 2026. Everything below is the state of the project at the moment it left the chat.
+Written 13 Oct 2026. §1–§6 below are the state of the project at the moment it left the chat; §0 is what happened next.
+
+## 0. The move to an app (13 Oct 2026, evening)
+
+**What Jemma chose:** an app on her PC for now, kept easy to put online later; where she edits is undecided (keep it flexible); weekly Gallery stats with history; the look kept exactly as it was.
+
+**What it is now:** `site/` is a plain static site (no server needed). Shortcuts called "Jemma's Sim World" (Desktop, Start menu, project folder) open `site/index.html` in its own Chrome window. `tools/build.py` turns `data/` into `site/js/data.js`. Layout and commands are in CLAUDE.md.
+
+**Checked:** before the Gallery refresh, all 614 pages drew exactly the same content as the live claude.ai page (one double space in Briny Tower's description aside), and the pictures are byte-identical. `tools/check_pages.js` passes on all 637 pages after the refresh.
+
+**Where the chat's pieces went** (rules unchanged, only their home):
+- `new.json` + `live_overrides.json` → `data/worlds/<world>.json` (every override folded in as a plan value; bracketed planning notes kept, e.g. Moppy Manor "Specter (rent out)", Prospector's Paradise "? (Horses!)"). `RESIDENT_FIX` (Kopf) is now just the data. "(own)" in Residents is now kept by the parser itself.
+- `NAME_FIX` → lot `displayName`; `ROOM_INFO` → lot `beds`/`baths`; `TENANTS` → lot `tenants`; `FAMILY_LINKS` → world `familyLinks`; `NB_PT` → neighbourhood `mapSpot`; `CS_VERSIONS` → lot `versions` (numbers now refresh weekly); Goth Sims → world `households`.
+- Gallery matching (`GAL_ALIAS`, hashtags…) ran once; its result is stored as each lot's `gallery` id list, so a renamed upload can't silently move. Removed links (Affluista Mansion, Abandoned Views, Midtown Meadows) are in `data/gallery/unlinked.json` with the reason. Description typo fixes → `data/gallery/text-fixes.json`. Titles drop a trailing `[…]` (e.g. "[Simsie Shell]").
+- Stats "Residents" for a lot with tenants is generated ("Moody & McMillan (owners) + Cecilia Kang (tenant)").
+- Gallery pictures: `/_blob/<id>` → `site/gallery/<world>/<lot>.jpg`. The page code moved to `site/js/app.js` unchanged except that its data constants now come from `DATA`.
+
+**First Gallery refresh (13 Oct):** run from her PC with no sign-in or browser (EA's API answers directly; comments too). 221 uploads; 2 new since 11 Oct: "Hallow Slough (SoupShell)" (linked to Hallow Slough, the 4th copy in TODO §1) and "Bubble World" (left unlinked: a bonus build placed on The Old Salt House lot). Three hashtags now show her own capitals (#SimsieSharkShell).
+
+**New on the site:** Stats page, at the bottom: "On the Gallery" (totals at each weekly check, and the builds that gained most since the check before). App icon: Lucide "home" in brass on the sidebar purple.
+
+§2 below describes the chat's generator, now in `old-chat-build/` (retired). §4: the refresh no longer needs a browser tab.
 
 ## 1. What exists today
 
