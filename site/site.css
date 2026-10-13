@@ -454,3 +454,6 @@ i.nb-none svg.i{width:30%;height:auto;color:rgba(255,255,255,.6)}
 }
 @media (max-width:440px){ .listings,.worlds{grid-template-columns:1fr} .ticks{grid-template-columns:1fr} .hood-head{grid-template-columns:1fr} }
 @media (prefers-reduced-motion:reduce){ *{transition:none!important} }
+/* Gallery numbers over time (Stats page, 13 Oct) */
+.gal-gains{margin-top:28px}
+.gal-gains .sheet-wrap{margin-top:10px}

@@ -103,10 +103,43 @@ def version_photos(ws, ls, label):
     return [{"src": f"gallery/{ws}/{ls}/{f}", "thumb": f"gallery/{ws}/{ls}/{f}", "caption": f"{label} · from the Gallery", "gallery": True} for f in fs]
 
 
+# ---------- Gallery numbers over time (data/gallery/history.csv, one row per upload per refresh) ----------
+def gallery_history(lot_of):
+    """Totals per weekly refresh (newest first), and the builds that gained most since the refresh before.
+    Only full refreshes count (the 12 Oct rows were a handful of uploads added by hand)."""
+    snaps = {}
+    for row in open(os.path.join(GALLERY, 'history.csv'), encoding='utf-8').read().splitlines()[1:]:
+        if not row: continue
+        d, i, fav, dl, com = row.split(','); snaps.setdefault(d, {})[i] = (int(fav), int(dl), int(com))
+    biggest = max((len(s) for s in snaps.values()), default=0)
+    days = sorted((d for d, s in snaps.items() if len(s) >= .8 * biggest), reverse=True)
+    def gain(a, b):   # a = later snapshot, b = earlier: summed over uploads present in both
+        both = [i for i in a if i in b]
+        return [sum(a[i][k] - b[i][k] for i in both) for k in range(3)]
+    dates = []
+    for n, d in enumerate(days):
+        s = snaps[d]; e = {"date": nice_date(d), "uploads": len(s), "favourites": sum(v[0] for v in s.values()),
+                           "downloads": sum(v[1] for v in s.values()), "comments": sum(v[2] for v in s.values())}
+        if n + 1 < len(days): e["gain"] = dict(zip(("favourites", "downloads", "comments"), gain(s, snaps[days[n + 1]])))
+        dates.append(e)
+    gains = []
+    if len(days) > 1:
+        a, b = snaps[days[0]], snaps[days[1]]
+        for i in a:
+            if i not in b or i not in uploads: continue
+            g = [a[i][k] - b[i][k] for k in range(3)]
+            if g[0] > 0 or g[1] > 0:
+                gains.append({"title": clean_title(uploads[i]['title']), "url": GALLERY_ITEM + urllib.parse.quote(i, safe=''), "lot": lot_of.get(i),
+                              "favourites": g[0], "downloads": g[1], "comments": g[2], "nowFavourites": a[i][0], "nowDownloads": a[i][1]})
+        gains.sort(key=lambda x: (-x['downloads'], -x['favourites'], x['title']))
+    return {"dates": dates, "since": nice_date(days[1]) if len(days) > 1 else None, "gains": gains[:10]}
+
+
 # ---------- assemble ----------
 def build():
     out, stats, households = [], [], {}
     family_links, tenants, name_fix, nb_pt, cs_versions = {}, {}, {}, {}, {}
+    lot_of = {}   # Gallery id -> the lot page it belongs to
     for wf in world_files():
         W = load(wf); n, ws, owned = W['name'], slug(W['name']), W['owned']
         w = {"name": n, "pack": W['pack'], "owned": owned, "color": W['colour'], "deep": W.get('deep'), "ready": owned,
@@ -127,6 +160,8 @@ def build():
                 if l.get('displayName'): name_fix[key] = l['displayName']
                 if l.get('tenants'): tenants[key] = l['tenants']
                 if not owned: continue
+                for i in l.get('gallery', []) + [v['upload'] for v in l.get('versions', [])]:
+                    lot_of.setdefault(i, {"id": f"l-{ws}--{slug(l['lot'])}", "world": n})
                 g = gallery_for(l)
                 if l.get('versions') and g:
                     vs = []
@@ -146,6 +181,7 @@ def build():
     checked = max((u['checked'] for u in uploads.values()), default=None)
     return {"worlds": out, "households": households, "stats": stats,
             "familyLinks": family_links, "tenants": tenants, "nameFix": name_fix, "nbPt": nb_pt, "csVersions": cs_versions,
+            "galleryHistory": gallery_history(lot_of),
             "meta": {"built": date.today().isoformat(), "galleryChecked": checked}}
 
 

@@ -405,7 +405,21 @@ function statsPage(pre){
         <label>Neighbourhood<select id="f-hood"><option value="">All</option>${hoods.map(n => `<option ${statsState.hood===n?"selected":""}>${esc(n)}</option>`).join("")}</select></label>
         <label>Show<select id="f-status"><option value="">Everything</option><option value="notbuilt" ${statsState.status==="notbuilt"?"selected":""}>Not built yet</option><option value="notshared" ${statsState.status==="notshared"?"selected":""}>Built, not shared</option><option value="nosims" ${statsState.status==="nosims"?"selected":""}>Sims not made</option><option value="photos" ${statsState.status==="photos"?"selected":""}>Has photos</option></select></label>
         <label class="grow">Search<input id="f-q" type="search" placeholder="Lot, type, residents…" value="${esc(statsState.q)}"></label></div>
-      <div id="lot-rows">${lotRows()}</div></section>`;
+      <div id="lot-rows">${lotRows()}</div></section>
+    ${galleryOverTime()}`;
+}
+// Gallery numbers over time (13 Oct): one row per weekly check, then the builds that gained most since the check before
+function galleryOverTime(){
+  const g = DATA.galleryHistory; if (!g || !g.dates.length) return "";
+  const up = x => x > 0 ? `<small> +${x}</small>` : "";
+  const weeks = `<div class="sheet-wrap"><table class="sheet"><thead><tr><th scope="col">Checked</th><th scope="col">Uploads</th><th scope="col">Favourites</th><th scope="col">Downloads</th><th scope="col">Comments</th></tr></thead>
+    <tbody>${g.dates.map(d => `<tr><th scope="row">${esc(d.date)}</th><td class="num">${d.uploads}</td><td class="num">${d.favourites}${up(d.gain?.favourites)}</td><td class="num">${d.downloads}${up(d.gain?.downloads)}</td><td class="num">${d.comments}${up(d.gain?.comments)}</td></tr>`).join("")}</tbody></table></div>
+    ${g.since ? `<p class="showing">Small numbers: new since the check before, on uploads that were already there.</p>` : ""}`;
+  const gains = !g.since ? "" : !g.gains.length ? `<p class="showing">No new favourites or downloads since ${esc(g.since)}.</p>`
+    : `<div class="gal-gains"><span class="label">Biggest gains since ${esc(g.since)}</span><div class="sheet-wrap"><table class="sheet lots-sheet"><thead><tr><th scope="col">Build</th><th scope="col">World</th><th scope="col">Favourites</th><th scope="col">Downloads</th></tr></thead>
+      <tbody>${g.gains.map(x => `<tr><td class="lotcell wrap">${x.lot ? `<a href="#${x.lot.id}">${esc(x.title)}</a>` : `<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a>`}</td><td>${esc(x.lot ? x.lot.world : "")}</td>
+        <td class="num">${x.favourites > 0 ? "+" + x.favourites : "–"}<small> of ${x.nowFavourites}</small></td><td class="num">${x.downloads > 0 ? "+" + x.downloads : "–"}<small> of ${x.nowDownloads}</small></td></tr>`).join("")}</tbody></table></div></div>`;
+  return `<section class="block"><div class="block-head"><h2>On the <em>Gallery</em></h2><span class="count">checked every Sunday</span></div>${weeks}${gains}</section>`;
 }
 function refreshStats(full){ if (full) { const y = scrollY; document.getElementById("view").innerHTML = statsPage(); window.scrollTo(0, y); } else document.getElementById("lot-rows").innerHTML = lotRows(); }
 document.addEventListener("change", e => { if (!e.target.closest("#lot-sheet")) return;
