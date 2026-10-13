@@ -16,7 +16,7 @@
     {"lot": "20 Culpepper House", "myName": "20 Culpepper House", "type": "Apartment", "size": "N/A", "residents": "Rasoya", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "2A Jasmine Suites", "myName": "Fraternity Apartment", "type": "Apartment", "size": "N/A", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["jvRimu1VEeqLZil86hsCPw=="], "beds": 3},
     {"lot": "2B Jasmine Suites", "myName": "Sorority Apartment", "type": "Apartment", "size": "N/A", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["/1AOQu1PEeqCUCl86hsCPw==", "ld1RCT22EemAnXldy2Ruvw=="], "beds": 3},
-    {"lot": "The Old Salt House", "myName": "The Old Salt House", "type": "Restaurant", "size": "30x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["jVD2MEWBEeeBOqP4YfS2mA=="]},
+    {"lot": "The Old Salt House", "myName": "The Old Salt House", "type": "Restaurant", "size": "30x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["jVD2MEWBEeeBOqP4YfS2mA=="], "traits": ["Chef's Kitchen", "Romantic Aura", "Party Place"]},
     {"lot": "Waterside Warble", "myName": "Waterside Warble", "type": "Karaoke Bar", "size": "30x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["cm8k9PS2EeeKFZymIxmfvg=="], "traits": ["Party Place", "Convivial", "Great Acoustics"]}
    ]
   },

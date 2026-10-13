@@ -13,7 +13,7 @@
     {"lot": "Robles Point", "myName": "Robles Point", "type": "Residential", "size": "50x40", "residents": "Robles", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Manzanita Terrace", "myName": "Manzanita Terrace", "type": "Residential Rental", "size": "30x20", "residents": "Robles own", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["VQFgXtugQYOnRKBloF2q8w==", "S5OBFGGuQdCbSX8fSeqfxQ=="]},
     {"lot": "Anchorpoint Library", "myName": "Anchorpoint Rec Center", "type": "Rec Center", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["UXbB7/eiRbWJZnZEclMjpA=="], "traits": ["Child's Play", "Fast Internet"]},
-    {"lot": "Anchorpoint Abode", "myName": "Anchorpoint Works", "type": "Restaurant/Bar", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["z2mjougaSg2qJMlf9cbGpw=="]}
+    {"lot": "Anchorpoint Abode", "myName": "Anchorpoint Works", "type": "Restaurant/Bar", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["z2mjougaSg2qJMlf9cbGpw=="], "traits": ["Great Acoustics", "Party Place", "Sunny Aspect"]}
    ]
   },
   {
