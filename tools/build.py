@@ -61,8 +61,9 @@ def version_label(e):
     return {'Space': 'Community space', 'Gardens': 'Garden'}.get(x, x)
 
 def gallery_for(lot):
-    """The Gallery card for a lot: its most popular upload, with every copy's comments added together.
-    Residential rentals uploaded twice lead with the rental; Community Space lots lead with the plain version."""
+    """The Gallery card for a lot. Jemma's rule (13 Oct): one upload per lot, the latest, unless the copies are versions she
+    keeps on purpose: Community Space variants (tabs), rental + regular versions and `galleryVariants` lots (listed as
+    "Other versions"). Lots still waiting for her choice show their most popular copy. Comments of all linked copies add up."""
     ups = [upload_entry(i) for i in lot.get('gallery', [])]
     if not ups: return None
     g = None
@@ -74,8 +75,12 @@ def gallery_for(lot):
         if lot.get('versions'):
             main = next((e for e in ups if not re.search(r'\b' + VERSION_END, e['title'])), None) or next(e for e in ups if e['title'].endswith('Space'))
             label = version_label
-        elif any(e['lotType'] == 'Residential Rental' for e in ups):
-            main = max((e for e in ups if e['lotType'] == 'Residential Rental'), key=lambda e: e['likes'] + e['downloads'])
+        elif lot.get('galleryVariants') or any(e['lotType'] == 'Residential Rental' for e in ups):
+            # versions Jemma keeps on purpose (a rental and a regular version, a B&B as café and as home): the one matching
+            # the lot type in her plan leads, then the rental, and the others are listed under "Other versions"
+            plan = [t.strip() for t in re.sub(r'\s*\([^)]*\)', '', lot.get('type') or '').split('/')]
+            pick = [e for e in ups if e['lotType'] in plan] or [e for e in ups if e['lotType'] == 'Residential Rental'] or ups
+            main = max(pick, key=lambda e: e['likes'] + e['downloads'])
             label = lambda e: e['lotType'] or 'Other version'
         if main:
             main = dict(main, label=label(main))
