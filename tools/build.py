@@ -68,6 +68,7 @@ def gallery_for(lot):
     g = None
     for e in ups:
         if g is None or e['likes'] + e['downloads'] > g['likes'] + g['downloads']: g = e
+    if lot.get('galleryLead') in lot['gallery']: g = ups[lot['gallery'].index(lot['galleryLead'])]   # the copy Jemma chose to lead
     if len(ups) > 1:
         main = None
         if lot.get('versions'):

@@ -40,7 +40,8 @@ Every open item carried over from the claude.ai project on 13 Oct 2026: the note
 | Caldera Camp | 2 / 22; 6 / 35 | Same build twice |
 | Strike Out! | 2 / 42; 11 / 71 | Same build twice |
 | Oak Alcove | 0 / 9; 0 / 10 | Same build twice |
-| Bedlington Boathouse | Bedlington Boathouse 20×20, 1 bed 1 / 26; Brindleton Boathouse 30×20, 2 / 15 | Different size |
+
+Settled 13 Oct: Bedlington Boathouse (20×20) and Brindleton Boathouse (30×20) are the same build, both on Sporting Space (Brindleton Boathouse), leading with Brindleton Boathouse.
 
 Also uploaded twice but not in the plan: 930 Medina Studios and Jameson. The Inner Circle has a third copy ("Inner Circle", 0 beds, 4 / 28), linked under its rental.
 
@@ -156,7 +157,9 @@ Site ideas, bigger (13 Oct: she chose the five marked; no preference on the othe
 - [ ] **Chosen 13 Oct:** Family tree, Goths first
 - [ ] Challenge builds grouping (her Simsie shell builds)
 - [x] **Chosen 13 Oct:** Lot traits per lot. Done for 159 of the 168 shared lots, read from her "Building #2" save (lot pages show "Lot traits" and "Lot challenges"; names are the game's own)
-- [ ] [Jemma] 9 shared lots have a different name in the save. Are these the same lot? Coorinberg Cottage = "Shark Shell Challenge"; Rockridge Springs = "Simsie Townhouse Shell"; Brooks Bridge Borough = "Simsie Puzzle Shell" (Glimmerbrook); Von-Windenburg Estate = "Von Castle"; Finchwick Village Hall = "Finchwick Library"; Bedlington Boathouse = "Barn Conversion"?; Anchorpoint Works = "On Point"?; The Old Salt House: the lot holds "Bubble World" in the save, so its traits are Bubble World's; Desert Bloom Park: not found in the save
+- [x] 9 shared lots had a different name in the save: settled 13 Oct (shell builds keep their challenge names in the game; The Old Salt House's traits come from the older "Building" save)
+- [ ] [Jemma] Anchorpoint Works is now called "On Point" in the game. Should the site say On Point? (Its Gallery upload is still called Anchorpoint Works, which wins unless you say otherwise)
+- [ ] [Jemma] Bedlington Barn (Cavalier Cove; "Barn Conversion" in the game): built and shared yet? The spreadsheet says built, not shared, and that's what the site shows. Desert Bloom Park has no traits set in the game
 - [ ] [Jemma] Household basics, relationships and family tree need Sims, which aren't to come from the Building saves: which save (if any) should they come from, or will you give them?
 - [ ] **Chosen 13 Oct:** Neighbourhood eco footprint and festivals/events per world
 
