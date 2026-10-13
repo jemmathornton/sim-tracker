@@ -97,12 +97,13 @@ def gallery_for(lot):
 # ---------- pictures ----------
 EXTERIOR = ['front', 'outside', 'side', 'angle', 'back', 'rear', 'aerial', 'exterior', 'garden', 'entrance']
 
-def photos_for(ws, ls):
-    """Jemma's screenshots (site/shots/<world>/<lot>/), exterior shots first and floor plans last; else the lot's Gallery picture."""
+def photos_for(ws, ls, has_upload):
+    """Jemma's screenshots (site/shots/<world>/<lot>/), exterior shots first and floor plans last; else the lot's Gallery
+    picture, but only while the lot has a Gallery upload (a picture left behind after an upload moves never shows)."""
     dd = os.path.join(SITE, 'shots', ws, ls)
     if not os.path.isdir(dd):
         cover = f"gallery/{ws}/{ls}.jpg"
-        return [{"src": cover, "thumb": cover, "caption": "From the Gallery", "gallery": True}] if os.path.exists(os.path.join(SITE, cover)) else []
+        return [{"src": cover, "thumb": cover, "caption": "From the Gallery", "gallery": True}] if has_upload and os.path.exists(os.path.join(SITE, cover)) else []
     fs = [f for f in os.listdir(dd) if f.endswith('.jpg') and not f.endswith('.thumb.jpg')]
     def key(f):
         n = f[:-4]; i = next((k for k, w in enumerate(EXTERIOR) if w in n), 99)
@@ -187,7 +188,7 @@ def build():
                 lots.append({"lot": l['lot'], "mine": l['myName'], "type": l['type'], "size": l['size'],
                              "who": (name + ("?" if unsure else "")) if name else None, "whoNote": note,
                              "built": l['built'], "shared": l['shared'], "sims": l['simsMade'],
-                             "gallery": g, "photos": photos_for(ws, slug(l['lot'])),
+                             "gallery": g, "photos": photos_for(ws, slug(l['lot']), bool(g)),
                              **{k: l[k] for k in ("traits", "challenges") if l.get(k)}})   # from her Building save (tools/lot_traits.py)
             if owned: w["hoods"].append({"name": hood['name'], "desc": hood.get('desc', ''), "color": W['colour'], "lots": lots})
         if W.get('households'): households[n] = W['households']
