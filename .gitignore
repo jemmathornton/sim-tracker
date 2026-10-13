@@ -1,0 +1,8 @@
+# transfer zips from the claude.ai handover (already unpacked here)
+part*.zip
+__pycache__/
+*.pyc
+# built by tools/build.py
+site/js/data.js
+# local logs
+logs/

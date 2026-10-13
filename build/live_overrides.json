@@ -1,0 +1,1044 @@
+{
+ "_note": "Changes made on the live page after the spreadsheet build (12-13 Oct 2026). build_site.py applies these last, so a rebuild matches the live site. Remove an entry once the spreadsheet or data files carry the same change. Gallery numbers here are a snapshot; run the Gallery refresh after a rebuild.",
+ "worlds": {
+  "Oasis Springs": {
+   "blurb": "An oasis nestled in the austere beauty of the western desert, this haven of eclectic culture is fringed by countless soaring palms, and lent vibrant colour through impossibly lush landscaping. Oasis Springs offers relaxing retreats from the sun to any traveler who discovers it."
+  },
+  "Windenburg": {
+   "blurb": "Take ye olde deep breath and enjoy the mountain air. This green, expansive playground has got it all: lush countryside, serene and rocky cliffs, a quaint village with remnants of the old world all nestled around the modern shore side business centre."
+  },
+  "Sulani": {
+   "blurb": "The gorgeous Sulani island chain welcomes all to a life of blue oceans and friendly neighbours. The main islands show off the many walks of life from the community centred Ohan'ali Town, to the more lavish upscale Lani St. Taz, and even down to the seemingly vacant Mua Pel'am. All around is the beauty of nature no matter where you look."
+  },
+  "Britechester": {
+   "deep": [
+    "#6A5C4A",
+    "#817059"
+   ],
+   "blurb": "Begin a new chapter in the historical University of Britechester or modern Foxbury Institute. Live in a dorm room or off-campus in the welcoming town of Gibbs Hill. Explore Britechester on a bicycle, spend time in the student commons, and have a study session at the library. Cheer on the student body at a school spirit event and wear school colours to show your Sim’s pride.",
+   "glow": "#EBDAC2",
+   "color": "#8F7756"
+  },
+  "San Sequoia": {
+   "blurb": "San Sequoia began as a small fishing town, then became a hub of the fishing and canning industry. Today, San Sequoia is home to cosy streets, a beautiful park with gardens, and quiet suburban neighbourhoods. It's the perfect place to raise a family!"
+  },
+  "Nordhaven": {
+   "blurb": "This northern coastal city is known for its thriving, independent local businesses and the enchanting beauty of its cold seasons. Whether you seek to make your business flourish or just want to practice your hobbies with a cosy community, you will always find an opportunity here."
+  }
+ },
+ "hoods": {
+  "Oasis Springs|Bedrock Strait": {
+   "desc": "Residents of this delightfully kitschy neighbourhood take pride in their billboards and lawn gnomes. And who wouldn't love getting to say hello to Barry the Brontosaurus every morning?"
+  },
+  "Oasis Springs|Parched Prospect": {
+   "desc": "This neighbourhood is your quintessential desert-living experience with bustling tumbleweeds and cacti as far as the eye can see!"
+  },
+  "Newcrest|Bridgeview": {
+   "desc": "This family-friendly neighbourhood has a lovely picnic area and a striking city skyline backdrop."
+  },
+  "Newcrest|Llama Lagoon": {
+   "desc": "With lakeside walkways and public playground equipment, this neighbourhood's just the right amount of cosmopolitan."
+  },
+  "San Myshuno|Spice Market": {
+   "desc": "A family neighbourhood famous for its Spice Festival, Flea Market and dockland views."
+  },
+  "San Myshuno|Arts Quarter": {
+   "desc": "Home to the Humour and Hijinks Festival, the bohemian Arts Quarter is beloved by musicians, artists and all manner of creative types."
+  },
+  "San Myshuno|Myshuno Meadows": {
+   "desc": "Surrounded by both trees and the cityscape, Myshuno Meadows is a great place for a relaxed wedding or outdoor birthday party. Centred on Barnabas Skye's old Observatory, part of the area has been converted into an event space while still retaining the original telescope."
+  },
+  "Brindleton Bay|Sable Square": {
+   "desc": "The cultural centre of the city, Sable Square is ideal for both cats and dogs. These people love their pets so much, they've built a monument to them right in the middle of town!"
+  },
+  "Brindleton Bay|Whiskerman's Wharf": {
+   "desc": "A favourite hangout for the Bay's feline citizens, who can be found climbing around down at the docks. Whiskerman's Wharf is also enjoyed by fishermen and tourists alike."
+  },
+  "Brindleton Bay|Deadgrass Isle": {
+   "desc": "Once the site of a mysterious shipwreck, the Deadgrass Isle is now home to the world-famous Brindleton Light and the city's largest population of indigenous strays. Lately, however, there have been some rumours about strange visitors after sundown…"
+  },
+  "Britechester|University of Britechester": {
+   "color": "#8F7756"
+  },
+  "Britechester|Foxbury Institute": {
+   "color": "#8F7756"
+  },
+  "Britechester|Gibbs Hill": {
+   "desc": "Gibbs Hill is nestled in the centre of Britechester right between the two universities: Foxbury Institute and the University of Britechester. It was the first centre of activity in Britechester and its famous Laurel Library has stayed a key location for many students to study and learn.",
+   "color": "#8F7756"
+  },
+  "Mt. Komorebi|Wakaba": {
+   "desc": "Like its namesake, Wakaba is young, new, and bright as the leaves of a tree in early springtime. This small town is up-and-coming in the region, home to beautiful, sleek new homes and an attractive town centre featuring Mt. Komorebi's official mascot: Yamachan."
+  },
+  "San Sequoia|Anchorpoint Wharf": {
+   "desc": "Once the centre of a bustling fishing and canning industry, Anchorpoint Wharf is known now as a vibrant area downtown featuring a movie theatre, parklets, and more. There's plenty to keep all ages entertained."
+  },
+  "San Sequoia|Hopewell Hills": {
+   "desc": "Hopewell Hills is a cosy spot away from the hustle and bustle of town; the perfect place for anyone who wants, well, space! If the suburbs are your idea of paradise, you've found it here in this quiet neighbourhood."
+  },
+  "Chestnut Ridge|New Appaloosa": {
+   "desc": "The historic New Appaloosa serves as a hub for Horse Riders, Ranchers, and Nectar Makers. Whether competing at the Hay Now! Equestrian Center, enjoying a night out at the dance hall, or savouring Nectar with good friends, this old watering hole has something for everyone."
+  },
+  "Tomarang|Morensong": {
+   "desc": "A bustling neighbourhood with pockets of idyllic peace and nooks of neighbourly nuance! Morensong is the spot for vibrant communities to thrive, day or night."
+  },
+  "Tomarang|Koh Sahpa": {
+   "desc": "Neighbours with nature or other tenants, Koh Sahpa offers a more relaxed lifestyle along the river."
+  },
+  "Ravenwood|Crow's Crossing": {
+   "desc": "Crow's Crossing is a village founded by Moppy the Goat and rumoured to be frequented by Ghosts and regular hauntings."
+  }
+ },
+ "lots": {
+  "Willow Creek|Potters Splay": {
+   "gallery": {
+    "url": "https://www.ea.com/games/the-sims/the-sims-4/gallery/item/BPJCMI95EeiLGX32EHttrg%3D%3D",
+    "title": "Potters Splay",
+    "description": "Right on the waterfront, this home is wonderful for all the family. No household is too large for this spacious house, with everything that everysim could ever want, from swimming to painting. The only limit is your imagination!",
+    "tags": [
+     "pottersplay",
+     "potterssplay",
+     "willowcreek",
+     "familyhome",
+     "home",
+     "childsplay",
+     "homely",
+     "goodschools"
+    ],
+    "packs": [
+     "Perfect Patio Stuff",
+     "Parenthood",
+     "Kids Room Stuff",
+     "Get Together",
+     "Cats & Dogs",
+     "Spa Day",
+     "Build Lush Gardens",
+     "City Living",
+     "Vintage Glamour Stuff",
+     "Cool Kitchen Stuff"
+    ],
+    "value": "§328,220",
+    "likes": 3,
+    "downloads": 11,
+    "comments": 0,
+    "commentList": [],
+    "beds": 0,
+    "baths": 0,
+    "lotType": "Residential",
+    "checked": "11 Oct 2026",
+    "old": true
+   },
+   "shared": true
+  },
+  "Willow Creek|Parkshore": {
+   "mine": "Cordelia Church"
+  },
+  "Willow Creek|Oakenstead": {
+   "gallery": {
+    "url": "https://www.ea.com/games/the-sims/the-sims-4/gallery/item/IY91nQcwEeqP3%2FAo7taYVg%3D%3D",
+    "title": "Oakenstead",
+    "description": "The beautiful home is the perfect blend of modern and traditional. It has wonderful surroundings and a spacious enclosed garden, great for a young family. Plus in the heart of Willow Creek, it has the fastest internet and the best schools. A gorgeous home, all ready set up for a growing family.",
+    "tags": [
+     "nocc",
+     "willowcreek",
+     "oakenstead",
+     "threebedroom",
+     "fourbedroom",
+     "family",
+     "familyhome",
+     "spacious",
+     "fastinternet",
+     "goodschools",
+     "greatsoil"
+    ],
+    "packs": [
+     "Seasons",
+     "Kids Room Stuff",
+     "Cool Kitchen Stuff",
+     "Parenthood",
+     "Get Together",
+     "Strangerville",
+     "Backyard Stuff",
+     "Build Lush Gardens",
+     "Island Living",
+     "City Living",
+     "Get to Work"
+    ],
+    "value": "§261,980",
+    "likes": 0,
+    "downloads": 7,
+    "comments": 0,
+    "commentList": [],
+    "beds": 0,
+    "baths": 0,
+    "lotType": "Residential",
+    "checked": "11 Oct 2026",
+    "old": true
+   },
+   "shared": true
+  },
+  "Willow Creek|Movers & Shakers": {
+   "type": "Gym"
+  },
+  "Oasis Springs|Affluista Mansion": {
+   "photos": [],
+   "gallery": null
+  },
+  "Oasis Springs|Desert Bloom Park": {
+   "shared": true,
+   "built": true
+  },
+  "Newcrest|Midtown Meadows": {
+   "gallery": null
+  },
+  "Newcrest|Tranquil Crescent": {
+   "mine": "The Ice Pavilion"
+  },
+  "Magnolia Promenade|Police Station": {
+   "size": "40x30"
+  },
+  "Magnolia Promenade|FutureSim Labs": {
+   "size": "50x50"
+  },
+  "Magnolia Promenade|Willow Creek Hospital": {
+   "size": "50x50"
+  },
+  "Magnolia Promenade|Sixam": {
+   "size": "20x20"
+  },
+  "Windenburg|Quad Manor": {
+   "type": "Library"
+  },
+  "Windenburg|South Square Coffee": {
+   "shared": true
+  },
+  "Windenburg|Discotheque Pan Europa": {
+   "mine": "UoW Sports Center"
+  },
+  "Windenburg|Coorinberg Cottage": {
+   "gallery": {
+    "url": "https://www.ea.com/games/the-sims/the-sims-4/gallery/item/60HYgOvpR0a9c7%2FSdYBveA%3D%3D",
+    "title": "Coorinberg Cottage",
+    "description": "This lovely cottage is in one of the best spots in Windslar. It has plenty of room for all your plants, animals as well as four bedrooms and an office. It is in a quiet corner on the road, but still close enough to walk down to the pub to hang out with all your friends.",
+    "tags": [
+     "simsiesharkshell",
+     "gettogether",
+     "windenberg",
+     "windslar",
+     "coorinbergcottage",
+     "cottage",
+     "cottageliving",
+     "horseranch",
+     "playtested",
+     "playertested",
+     "nocc"
+    ],
+    "packs": [
+     "Spa Day",
+     "Get Together",
+     "My First Pet Stuff",
+     "Dine Out",
+     "Cottage Living",
+     "Cats & Dogs",
+     "Moschino Stuff",
+     "Blooming Rooms",
+     "Realm of Magic",
+     "Seasons",
+     "Horse Ranch",
+     "Paranormal",
+     "Parenthood",
+     "Tiny Living",
+     "Jungle Adventures",
+     "High School Years",
+     "Backyard Stuff",
+     "Discover University",
+     "Strangerville",
+     "Courtyard Oasis",
+     "Home Chef Hustle",
+     "Laundry Day Stuff",
+     "Dream Home Decorator",
+     "Get to Work",
+     "City Living",
+     "Crystal Creations",
+     "Perfect Patio Stuff",
+     "Island Living",
+     "Snowy Escape",
+     "Vintage Glamour Stuff",
+     "Eco Lifestyle",
+     "Spooky Stuff",
+     "Bowling Night Stuff",
+     "Desert Luxe",
+     "Kids Room Stuff",
+     "Cool Kitchen Stuff"
+    ],
+    "value": "§146,514",
+    "likes": 5,
+    "downloads": 55,
+    "comments": 0,
+    "commentList": [],
+    "beds": 4,
+    "baths": 3,
+    "lotType": "Residential",
+    "checked": "12 Oct 2026"
+   }
+  },
+  "San Myshuno|18 Culpepper House": {
+   "gallery": {
+    "url": "https://www.ea.com/games/the-sims/the-sims-4/gallery/item/wcXFyz21EemNHnldy2Ruvw%3D%3D",
+    "title": "18 Culpepper House",
+    "description": "This cosy two bedroom apartment is great for any sims who like to live right in the middle of everything in San Myshuno. A stone’s throw away from great restaurants and karaoke bars, or you can just invite all your friends back home to your perfect pad! Sometimes you may think you saw something in the middle of the night - but you were just imagining it, right? Of course you were.",
+    "tags": [
+     "18culpepperhouse",
+     "apartment",
+     "cityliving",
+     "culpepperhouse",
+     "spicedistrict",
+     "sanmyshuno",
+     "partyplace",
+     "haunted",
+     "cosy",
+     "cute"
+    ],
+    "packs": [
+     "City Living",
+     "Seasons",
+     "Parenthood",
+     "Backyard Stuff",
+     "Vintage Glamour Stuff",
+     "Watch Movies with Friends!",
+     "Cats & Dogs"
+    ],
+    "value": "§25,168",
+    "likes": 0,
+    "downloads": 10,
+    "comments": 0,
+    "commentList": [],
+    "beds": 2,
+    "baths": 0,
+    "lotType": "",
+    "checked": "11 Oct 2026"
+   }
+  },
+  "San Myshuno|1313 21 Chic street": {
+   "mine": "1313 21 Chic Street"
+  },
+  "San Myshuno|Torendi Tower Penthouse": {
+   "size": "40x30"
+  },
+  "San Myshuno|Skye Fitness": {
+   "photos": [
+    {
+     "src": "/_blob/13b2dd269400809ecbf5606d115e0b7f",
+     "thumb": "/_blob/13b2dd269400809ecbf5606d115e0b7f",
+     "caption": "From the Gallery",
+     "gallery": true
+    }
+   ],
+   "gallery": {
+    "url": "https://www.ea.com/games/the-sims/the-sims-4/gallery/item/TKz5fD8MEeqGF0Ftv2M37A%3D%3D",
+    "title": "Skye Fitness",
+    "description": "Skye Fitness Gym sits at the head of the behemoth architectural complex, Uptown. Here you can join a yoga class, practice your climbing skills or relax in the beautiful pool. The classiest gym in town! Plus you can shoot some hoops on the basketball court outside, with stunning views across the city.",
+    "tags": [
+     "skyefitness",
+     "gym",
+     "pool",
+     "uptown",
+     "cityliving",
+     "spaday",
+     "fitnessstuff",
+     "yoga",
+     "rockclimbing",
+     "bracingbreezes",
+     "sunnyaspect",
+     "simsieshell",
+     "simsie",
+     "shellchallenge",
+     "nocc",
+     "playertested",
+     "playtested",
+     "moo"
+    ],
+    "packs": [
+     "Spa Day",
+     "Get Famous",
+     "Cool Kitchen Stuff",
+     "Fitness Stuff",
+     "Bowling Night Stuff",
+     "Island Living",
+     "City Living",
+     "Discover University",
+     "Get Together",
+     "Seasons",
+     "Get to Work",
+     "Dine Out",
+     "Vintage Glamour Stuff"
+    ],
+    "value": "§143,650",
+    "likes": 2,
+    "downloads": 33,
+    "comments": 0,
+    "commentList": [],
+    "beds": 0,
+    "baths": 0,
+    "lotType": "Gym",
+    "checked": "12 Oct 2026"
+   }
+  },
+  "Selvadorada|Hillview Hideaway": {
+   "photos": [
+    {
+     "src": "/_blob/0b48960aab41206e1631dabdc7e451c4",
+     "thumb": "/_blob/0b48960aab41206e1631dabdc7e451c4",
+     "caption": "From the Gallery",
+     "gallery": true
+    }
+   ],
+   "gallery": {
+    "url": "https://www.ea.com/games/the-sims/the-sims-4/gallery/item/335sZpKTEeyL94KVX4KDoA%3D%3D",
+    "title": "Hillside Hideaway",
+    "description": "Hillview Hideaway is a small and historic place to stay when visiting Selvadorada. Being walking distance to the center and the jungle, it is in the ideal location and has everything you need to start exploring the world around you. It's only one bed, but that's all you need - you can even bring your dog along with you!",
+    "tags": [
+     "jungleadventure",
+     "selvadorada",
+     "jungle",
+     "rental",
+     "catsanddogs",
+     "playtested",
+     "playertested",
+     "nocc",
+     "smallsimsieshell",
+     "shellchallenge"
+    ],
+    "packs": [
+     "Cats & Dogs",
+     "Jungle Adventures"
+    ],
+    "value": "§57,174",
+    "likes": 5,
+    "downloads": 29,
+    "comments": 0,
+    "commentList": [],
+    "beds": 0,
+    "baths": 0,
+    "lotType": "Residential",
+    "checked": "12 Oct 2026"
+   }
+  },
+  "Brindleton Bay|Salty Paws Saloon": {
+   "shared": true
+  },
+  "Brindleton Bay|Bedlington Boathouse": {
+   "shared": true,
+   "mine": "Bedlington Boathouse"
+  },
+  "Del Sol Valley|Ward Park": {
+   "type": "Gym"
+  },
+  "Del Sol Valley|Plumbob Pictures": {
+   "size": "50x50"
+  },
+  "Sulani|Key Point": {
+   "type": "To be decided"
+  },
+  "Sulani|Kin-Ship": {
+   "photos": [
+    {
+     "src": "/_blob/3197400a69074dc5b92bd1c4b9518b80",
+     "thumb": "/_blob/3197400a69074dc5b92bd1c4b9518b80",
+     "caption": "From the Gallery",
+     "gallery": true
+    }
+   ],
+   "gallery": {
+    "url": "https://www.ea.com/games/the-sims/the-sims-4/gallery/item/4poh5Z5%2FEe2LeKFUkPHwsA%3D%3D",
+    "title": "Kin-Ship",
+    "description": "This tropical house is perfect for any small family wanting to live out in Sulani. Near the town and with your own dock onto the ocean, this sunset themed house has everything you need for family life.",
+    "tags": [
+     "simsienewyearshell",
+     "kinship",
+     "ohanalitown",
+     "sulani",
+     "islandliving",
+     "lilsimsie",
+     "shellchallenge",
+     "moo",
+     "playtested",
+     "playertested"
+    ],
+    "packs": [
+     "Island Living"
+    ],
+    "value": "§94,527",
+    "likes": 14,
+    "downloads": 59,
+    "comments": 0,
+    "commentList": [],
+    "beds": 2,
+    "baths": 3,
+    "lotType": "Residential",
+    "checked": "12 Oct 2026"
+   }
+  },
+  "Sulani|The Sand Bar": {
+   "gallery": {
+    "url": "https://www.ea.com/games/the-sims/the-sims-4/gallery/item/r8%2Fjiu1NEeqKZyQfmaYcsw%3D%3D",
+    "title": "The Sand Bar",
+    "description": "This local watering hole has become a social hotspot, particularly for some of the adult sims in town! A great place to chill out and relax, especially when the sun goes down. Plus you can go for a swim down at the nearby beach after having a few drinks. What could possibly go wrong?",
+    "tags": [
+     "thesandbar",
+     "ohanalitown",
+     "sulani",
+     "islandliving",
+     "bar",
+     "convivial",
+     "partyplace",
+     "sunnyaspect",
+     "beach",
+     "beachbar",
+     "social"
+    ],
+    "packs": [
+     "Island Living",
+     "Get Together",
+     "Laundry Day Stuff",
+     "Outdoor Retreat",
+     "Seasons",
+     "Cats & Dogs"
+    ],
+    "value": "§41,697",
+    "likes": 1,
+    "downloads": 22,
+    "comments": 0,
+    "commentList": [],
+    "beds": 0,
+    "baths": 0,
+    "lotType": "Bar",
+    "checked": "11 Oct 2026"
+   }
+  },
+  "Glimmerbrook|Brooks Bridge Borough": {
+   "photos": [
+    {
+     "src": "/_blob/aca4d3128b56d58ee90a72945dfec2f5",
+     "thumb": "/_blob/aca4d3128b56d58ee90a72945dfec2f5",
+     "caption": "From the Gallery",
+     "gallery": true
+    }
+   ],
+   "gallery": {
+    "url": "https://www.ea.com/games/the-sims/the-sims-4/gallery/item/H04iZgvxRb6FF%2B%2BS6ssRlg%3D%3D",
+    "title": "Brooks Bridge",
+    "description": "In the center of Glimmerbook, this house looks like it fits perfectly in this cosy little part of the woods. Some say it is not as perfect as it seems, with rumours of spirits visiting the property, but who's to know what really lies here.",
+    "tags": [
+     "simsiepuzzleshell",
+     "hardmode",
+     "nodeletedwalls",
+     "noduplicaterooms",
+     "brooksbridgeborough",
+     "glimmerbrook",
+     "realmofmagic",
+     "haunted",
+     "paranormalstuff",
+     "paranormal",
+     "nocc",
+     "playtested",
+     "playertested"
+    ],
+    "packs": [
+     "Strangerville",
+     "Cottage Living",
+     "Realm of Magic",
+     "Paranormal",
+     "High School Years",
+     "Get Famous",
+     "Island Living",
+     "Vintage Glamour Stuff"
+    ],
+    "value": "§142,160",
+    "likes": 5,
+    "downloads": 25,
+    "comments": 0,
+    "commentList": [],
+    "beds": 2,
+    "baths": 2,
+    "lotType": "Haunted House Residential",
+    "checked": "12 Oct 2026"
+   }
+  },
+  "Britechester|Tidal Tower": {
+   "photos": [
+    {
+     "src": "/_blob/e5e980668bebf64a4241976f6dc164ea",
+     "thumb": "/_blob/e5e980668bebf64a4241976f6dc164ea",
+     "caption": "From the Gallery",
+     "gallery": true
+    }
+   ],
+   "gallery": {
+    "url": "https://www.ea.com/games/the-sims/the-sims-4/gallery/item/hZKnQAU9RVSEhAqGTS7yyQ%3D%3D",
+    "title": "Tidal Tower",
+    "description": "Tidal Tower is the best of the towers at Foxbury Institute. This top floor housing is highly coveted by students, particularly for the single rooms in the flats, all the social and study amenities on the top floor, alongside the best view across Foxbury campus. The best place to live whilst studying here at Foxbury.",
+    "tags": [
+     "foxbury",
+     "tidaltower",
+     "foxburyinstitute",
+     "university",
+     "britechester",
+     "discoveruniversity",
+     "dorms",
+     "halls",
+     "singles",
+     "flats",
+     "campus",
+     "campusliving",
+     "fastinternet",
+     "studyspot",
+     "sunnyaspect",
+     "nocc"
+    ],
+    "packs": [
+     "Dine Out",
+     "Discover University",
+     "Watch Movies with Friends!",
+     "Vintage Glamour Stuff",
+     "City Living",
+     "Get Together",
+     "Seasons",
+     "Get to Work",
+     "Spa Day",
+     "Get Famous",
+     "Parenthood",
+     "Moschino Stuff",
+     "Fitness Stuff",
+     "Cool Kitchen Stuff",
+     "Bowling Night Stuff",
+     "Cats & Dogs",
+     "Island Living"
+    ],
+    "value": "§240,024",
+    "likes": 0,
+    "downloads": 0,
+    "comments": 0,
+    "commentList": [],
+    "beds": 8,
+    "baths": 5,
+    "lotType": "University Housing",
+    "checked": "12 Oct 2026"
+   }
+  },
+  "Britechester|Briny Tower": {
+   "photos": [
+    {
+     "src": "/_blob/370b2bf229ae52a0c2b7649df1f14831",
+     "thumb": "/_blob/370b2bf229ae52a0c2b7649df1f14831",
+     "caption": "From the Gallery",
+     "gallery": true
+    }
+   ],
+   "gallery": {
+    "url": "https://www.ea.com/games/the-sims/the-sims-4/gallery/item/dUmUl8fLSFC7Tb8ux2J66Q%3D%3D",
+    "title": "Briny Tower",
+    "description": "Briny Tower is THE place to be at Foxbury. The shared rooms here make for the best and cheapest halls on campus. Plus that view! Come live at Briny, where you can work hard  AND play hard!",
+    "tags": [
+     "foxbury",
+     "brinytower",
+     "foxburyinstitute",
+     "university",
+     "britechester",
+     "discoveruniversity",
+     "dorms",
+     "halls",
+     "singles",
+     "flats",
+     "campus",
+     "campusliving",
+     "partyplace",
+     "studyspot",
+     "sunnyaspect",
+     "nocc"
+    ],
+    "packs": [
+     "Dine Out",
+     "Discover University",
+     "Watch Movies with Friends!",
+     "City Living",
+     "Backyard Stuff",
+     "Get Together",
+     "Seasons",
+     "Spa Day",
+     "Get Famous",
+     "Parenthood",
+     "Cats & Dogs",
+     "Kids Room Stuff",
+     "Get to Work",
+     "Cool Kitchen Stuff",
+     "Fitness Stuff",
+     "Moschino Stuff",
+     "Realm of Magic",
+     "Island Living"
+    ],
+    "value": "§222,318",
+    "likes": 0,
+    "downloads": 0,
+    "comments": 0,
+    "commentList": [],
+    "beds": 9,
+    "baths": 5,
+    "lotType": "University Housing",
+    "checked": "12 Oct 2026"
+   }
+  },
+  "Britechester|Mossy Lane": {
+   "gallery": {
+    "url": "https://www.ea.com/games/the-sims/the-sims-4/gallery/item/%2B1TuKO1OEeqP5iQfmaYcsw%3D%3D",
+    "title": "Mossy Lane",
+    "description": "This old little lane has become a student hotspot. Once workers housing, this area is now predominantly lived in by students. Just a stone’s throw away from the heart of Gibbs Hill, this is the perfect place to live if you want a break from the chaotic campus life, but still enjoy the hussle and bussle of student life",
+    "tags": [
+     "student",
+     "university",
+     "discoveruniversity",
+     "universityhousing",
+     "residential",
+     "terrace",
+     "terraced",
+     "british",
+     "redbrick",
+     "studenthousing",
+     "cheap",
+     "cosy",
+     "traditional",
+     "brick",
+     "rowhouse",
+     "moo"
+    ],
+    "packs": [
+     "Discover University",
+     "Cool Kitchen Stuff",
+     "Parenthood",
+     "City Living",
+     "Get Together",
+     "Moschino Stuff",
+     "Seasons",
+     "Spa Day",
+     "Island Living"
+    ],
+    "value": "§91,222",
+    "likes": 0,
+    "downloads": 2,
+    "comments": 0,
+    "commentList": [],
+    "beds": 9,
+    "baths": 3,
+    "lotType": "Residential",
+    "checked": "11 Oct 2026"
+   }
+  },
+  "Evergreen Harbor|Rockridge Springs": {
+   "photos": [
+    {
+     "src": "/_blob/fc3608defc38ae1696b7c37d3921af30",
+     "thumb": "/_blob/fc3608defc38ae1696b7c37d3921af30",
+     "caption": "From the Gallery",
+     "gallery": true
+    }
+   ],
+   "gallery": {
+    "url": "https://www.ea.com/games/the-sims/the-sims-4/gallery/item/7qor1%2FqySJOuKuOZ5Tq%2FTg%3D%3D",
+    "title": "Rockridge Springs",
+    "description": "These homes are great for anyone who wants to start out a life in Evergreen Harbor. These three houses are perfect for all different kinds of families, whether you're by yourself or surrounded by all your family. The perfect place to buy (or even to rent!)!",
+    "tags": [
+     "simsietownhouseshell",
+     "simsieshell",
+     "residentialrental",
+     "multiunit",
+     "rockridgesprings",
+     "evergreenharbor",
+     "ecolifestyle",
+     "forrent",
+     "moo",
+     "playtested",
+     "playertested",
+     "nocc"
+    ],
+    "packs": [
+     "High School Years",
+     "Discover University",
+     "Eco Lifestyle",
+     "Snowy Escape",
+     "Dream Home Decorator",
+     "Parenthood",
+     "Tiny Living",
+     "City Living",
+     "Home Chef Hustle",
+     "Desert Luxe",
+     "Seasons",
+     "Kids Room Stuff"
+    ],
+    "value": "§197,205",
+    "likes": 15,
+    "downloads": 57,
+    "comments": 0,
+    "commentList": [],
+    "beds": 7,
+    "baths": 7,
+    "lotType": "Residential",
+    "checked": "12 Oct 2026"
+   }
+  },
+  "Evergreen Harbor|Pinecrest Apartments #402": {
+   "who": "Eco Roomies"
+  },
+  "Evergreen Harbor|The Waterfront": {
+   "type": "Residential Rental",
+   "photos": [],
+   "gallery": null
+  },
+  "Evergreen Harbor|The Portsmouth Promenade": {
+   "shared": true,
+   "built": true
+  },
+  "Mt. Komorebi|2-4-1 Wakabamori": {
+   "type": "Cemetery"
+  },
+  "Mt. Komorebi|Hazakura Lounge": {
+   "type": "Recreation Center"
+  },
+  "Henford-on-Bagley|3 Cobblebottom Street": {
+   "who": "Moody & McMillan"
+  },
+  "Henford-on-Bagley|5 Cobblebottom Street": {
+   "mine": "Finchwick Village Hall"
+  },
+  "Henford-on-Bagley|Cordelia's Secret Cottage": {
+   "shared": true,
+   "built": true
+  },
+  "Copperdale|Water Tower Way": {
+   "shared": true,
+   "mine": "Copperdale Library"
+  },
+  "Copperdale|ThrifTea": {
+   "mine": "Prescott Boarding House"
+  },
+  "Copperdale|Lakeview Library": {
+   "mine": "Lakeview Boarding House"
+  },
+  "San Sequoia|23 Eucalyptus Lane": {
+   "shared": true
+  },
+  "Chestnut Ridge|The Cozy Corner House": {
+   "type": "Library"
+  },
+  "Chestnut Ridge|Canter Cottage": {
+   "type": "Vet Clinic",
+   "mine": "Canter Clinic"
+  },
+  "Tomarang|Taka Soi 15": {
+   "who": "Cahyaputri own"
+  },
+  "Tomarang|ZoSul Taman Botani": {
+   "type": "Wedding Venue"
+  },
+  "Tomarang|Tam Nang Sands": {
+   "type": "Cemetery"
+  },
+  "Ravenwood|Moppy Manor": {
+   "who": "Specter"
+  },
+  "Ravenwood|Mystic Crossroads": {
+   "type": "To be decided"
+  },
+  "Ravenwood|Netherworld Department": {
+   "size": "30x30"
+  },
+  "Nordhaven|Konst Modern": {
+   "type": "Museum"
+  },
+  "Nordhaven|Koffieboon": {
+   "who": "Loden"
+  },
+  "Nordhaven|Terra-Potta": {
+   "who": "Koopman"
+  },
+  "Nordhaven|Spilled Neon": {
+   "who": "Sarpong"
+  },
+  "Nordhaven|Inked Inlet": {
+   "type": "Library"
+  },
+  "Nordhaven|Lighthouse Lookout": {
+   "type": "Residential Rental"
+  },
+  "Gibbi Point|Prospector's Paradise": {
+   "whoNote": "To be decided",
+   "who": null
+  },
+  "Ondarion|17 Bright Cliff": {
+   "type": "Apartment"
+  },
+  "Ondarion|18 Bright Cliff": {
+   "type": "Apartment"
+  },
+  "Ondarion|12 Lakeview Apartments": {
+   "type": "Apartment"
+  },
+  "Ondarion|13 Lakeview Apartments": {
+   "type": "Apartment"
+  }
+ },
+ "stats": {
+  "Willow Creek|Potters Splay": {
+   "shared": true
+  },
+  "Willow Creek|Parkshore": {
+   "mine": "Cordelia Church"
+  },
+  "Willow Creek|Oakenstead": {
+   "shared": true
+  },
+  "Willow Creek|Movers & Shakers": {
+   "type": "Gym"
+  },
+  "Oasis Springs|Desert Bloom Park": {
+   "shared": true,
+   "built": true
+  },
+  "Newcrest|Tranquil Crescent": {
+   "mine": "The Ice Pavilion"
+  },
+  "Magnolia Promenade|Police Station": {
+   "size": "40x30"
+  },
+  "Magnolia Promenade|FutureSim Labs": {
+   "size": "50x50"
+  },
+  "Magnolia Promenade|Willow Creek Hospital": {
+   "size": "50x50"
+  },
+  "Magnolia Promenade|Sixam": {
+   "size": "20x20"
+  },
+  "Windenburg|Quad Manor": {
+   "type": "Library"
+  },
+  "Windenburg|South Square Coffee": {
+   "shared": true
+  },
+  "Windenburg|Discotheque Pan Europa": {
+   "mine": "UoW Sports Center"
+  },
+  "San Myshuno|1313 21 Chic street": {
+   "mine": "1313 21 Chic Street"
+  },
+  "San Myshuno|Torendi Tower Penthouse": {
+   "size": "40x30"
+  },
+  "Brindleton Bay|Salty Paws Saloon": {
+   "shared": true
+  },
+  "Brindleton Bay|Bedlington Boathouse": {
+   "shared": true,
+   "mine": "Bedlington Boathouse"
+  },
+  "Del Sol Valley|Ward Park": {
+   "type": "Gym"
+  },
+  "Del Sol Valley|Plumbob Pictures": {
+   "size": "50x50"
+  },
+  "Sulani|Key Point": {
+   "type": "To be decided"
+  },
+  "Evergreen Harbor|The Waterfront": {
+   "type": "Residential Rental"
+  },
+  "Evergreen Harbor|The Portsmouth Promenade": {
+   "shared": true,
+   "built": true
+  },
+  "Mt. Komorebi|2-4-1 Wakabamori": {
+   "type": "Cemetery"
+  },
+  "Mt. Komorebi|Hazakura Lounge": {
+   "type": "Recreation Center"
+  },
+  "Henford-on-Bagley|3 Cobblebottom Street": {
+   "who": "Moody & McMillan (owners) + Cecilia Kang (tenant)"
+  },
+  "Henford-on-Bagley|5 Cobblebottom Street": {
+   "mine": "Finchwick Village Hall"
+  },
+  "Henford-on-Bagley|Cordelia's Secret Cottage": {
+   "shared": true,
+   "built": true
+  },
+  "Tartosa|Celebrazioni d'Amore": {
+   "who": "To be decided"
+  },
+  "Tartosa|La Coppia Serena": {
+   "who": "To be decided"
+  },
+  "Copperdale|Water Tower Way": {
+   "shared": true,
+   "mine": "Copperdale Library"
+  },
+  "Copperdale|ThrifTea": {
+   "mine": "Prescott Boarding House"
+  },
+  "Copperdale|Lakeview Library": {
+   "mine": "Lakeview Boarding House"
+  },
+  "San Sequoia|23 Eucalyptus Lane": {
+   "shared": true
+  },
+  "Chestnut Ridge|The Cozy Corner House": {
+   "type": "Library"
+  },
+  "Chestnut Ridge|Canter Cottage": {
+   "type": "Vet Clinic",
+   "mine": "Canter Clinic"
+  },
+  "Tomarang|Taka Soi 15": {
+   "who": "Cahyaputri own"
+  },
+  "Tomarang|ZoSul Taman Botani": {
+   "type": "Wedding Venue"
+  },
+  "Tomarang|Tam Nang Sands": {
+   "type": "Cemetery"
+  },
+  "Ravenwood|Moppy Manor": {
+   "who": "Specter + tenants"
+  },
+  "Ravenwood|Mystic Crossroads": {
+   "type": "To be decided"
+  },
+  "Ravenwood|Netherworld Department": {
+   "size": "30x30"
+  },
+  "Nordhaven|Konst Modern": {
+   "type": "Museum"
+  },
+  "Nordhaven|Inked Inlet": {
+   "type": "Library"
+  },
+  "Nordhaven|Lighthouse Lookout": {
+   "type": "Residential Rental"
+  },
+  "Gibbi Point|Prospector's Paradise": {
+   "who": "To be decided"
+  },
+  "Ondarion|17 Bright Cliff": {
+   "type": "Apartment"
+  },
+  "Ondarion|18 Bright Cliff": {
+   "type": "Apartment"
+  },
+  "Ondarion|12 Lakeview Apartments": {
+   "type": "Apartment"
+  },
+  "Ondarion|13 Lakeview Apartments": {
+   "type": "Apartment"
+  }
+ }
+}

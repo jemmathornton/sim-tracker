@@ -1,0 +1,7658 @@
+[
+ {
+  "tab": "Overview",
+  "title": "World Plans",
+  "sections": [],
+  "stray": [
+   [
+    "A2",
+    "Click a world to jump to its tab. Percentages update automatically. Set Owned to No for worlds you don't have the pack for; the totals row only counts owned worlds."
+   ],
+   [
+    "A4",
+    "World"
+   ],
+   [
+    "B4",
+    "Pack"
+   ],
+   [
+    "C4",
+    "Owned"
+   ],
+   [
+    "D4",
+    "Lots"
+   ],
+   [
+    "E4",
+    "Built"
+   ],
+   [
+    "F4",
+    "Shared"
+   ],
+   [
+    "G4",
+    "Screenshots"
+   ],
+   [
+    "H4",
+    "Sims Made"
+   ],
+   [
+    "I4",
+    "Overall"
+   ],
+   [
+    "J4",
+    "To build"
+   ],
+   [
+    "K4",
+    "Built, not shared"
+   ],
+   [
+    "M4",
+    "lots"
+   ],
+   [
+    "N4",
+    "builtT"
+   ],
+   [
+    "O4",
+    "builtF"
+   ],
+   [
+    "P4",
+    "shareT"
+   ],
+   [
+    "Q4",
+    "shareF"
+   ],
+   [
+    "R4",
+    "shotT"
+   ],
+   [
+    "S4",
+    "shotF"
+   ],
+   [
+    "T4",
+    "simsT"
+   ],
+   [
+    "U4",
+    "simsF"
+   ],
+   [
+    "V4",
+    "toShare"
+   ],
+   [
+    "A5",
+    "Willow Creek"
+   ],
+   [
+    "B5",
+    "Base Game"
+   ],
+   [
+    "C5",
+    "Yes"
+   ],
+   [
+    "D5",
+    "=M5"
+   ],
+   [
+    "E5",
+    "=IFERROR(N5/(N5+O5),\"\")"
+   ],
+   [
+    "F5",
+    "=IFERROR(P5/(P5+Q5),\"\")"
+   ],
+   [
+    "G5",
+    "=IFERROR(R5/(R5+S5),\"\")"
+   ],
+   [
+    "H5",
+    "=IFERROR(T5/(T5+U5),\"\")"
+   ],
+   [
+    "I5",
+    "=IFERROR(AVERAGE(E5:H5),\"\")"
+   ],
+   [
+    "J5",
+    "=O5"
+   ],
+   [
+    "K5",
+    "=V5"
+   ],
+   [
+    "M5",
+    "=COUNTA('Willow Creek'!$A$3:$A$40)-2*COUNTIF('Willow Creek'!$A$3:$A$40,\"Lot Name\")"
+   ],
+   [
+    "N5",
+    "=COUNTIF('Willow Creek'!$F$3:$F$40,TRUE)"
+   ],
+   [
+    "O5",
+    "=COUNTIF('Willow Creek'!$F$3:$F$40,FALSE)"
+   ],
+   [
+    "P5",
+    "=COUNTIF('Willow Creek'!$G$3:$G$40,TRUE)"
+   ],
+   [
+    "Q5",
+    "=COUNTIF('Willow Creek'!$G$3:$G$40,FALSE)"
+   ],
+   [
+    "R5",
+    "=COUNTIF('Willow Creek'!$H$3:$H$40,TRUE)"
+   ],
+   [
+    "S5",
+    "=COUNTIF('Willow Creek'!$H$3:$H$40,FALSE)"
+   ],
+   [
+    "T5",
+    "=COUNTIF('Willow Creek'!$I$3:$I$40,TRUE)"
+   ],
+   [
+    "U5",
+    "=COUNTIF('Willow Creek'!$I$3:$I$40,FALSE)"
+   ],
+   [
+    "V5",
+    "=COUNTIFS('Willow Creek'!$F$3:$F$40,TRUE,'Willow Creek'!$G$3:$G$40,FALSE)"
+   ],
+   [
+    "A6",
+    "Oasis Springs"
+   ],
+   [
+    "B6",
+    "Base Game"
+   ],
+   [
+    "C6",
+    "Yes"
+   ],
+   [
+    "D6",
+    "=M6"
+   ],
+   [
+    "E6",
+    "=IFERROR(N6/(N6+O6),\"\")"
+   ],
+   [
+    "F6",
+    "=IFERROR(P6/(P6+Q6),\"\")"
+   ],
+   [
+    "G6",
+    "=IFERROR(R6/(R6+S6),\"\")"
+   ],
+   [
+    "H6",
+    "=IFERROR(T6/(T6+U6),\"\")"
+   ],
+   [
+    "I6",
+    "=IFERROR(AVERAGE(E6:H6),\"\")"
+   ],
+   [
+    "J6",
+    "=O6"
+   ],
+   [
+    "K6",
+    "=V6"
+   ],
+   [
+    "M6",
+    "=COUNTA('Oasis Springs'!$A$3:$A$40)-2*COUNTIF('Oasis Springs'!$A$3:$A$40,\"Lot Name\")"
+   ],
+   [
+    "N6",
+    "=COUNTIF('Oasis Springs'!$F$3:$F$40,TRUE)"
+   ],
+   [
+    "O6",
+    "=COUNTIF('Oasis Springs'!$F$3:$F$40,FALSE)"
+   ],
+   [
+    "P6",
+    "=COUNTIF('Oasis Springs'!$G$3:$G$40,TRUE)"
+   ],
+   [
+    "Q6",
+    "=COUNTIF('Oasis Springs'!$G$3:$G$40,FALSE)"
+   ],
+   [
+    "R6",
+    "=COUNTIF('Oasis Springs'!$H$3:$H$40,TRUE)"
+   ],
+   [
+    "S6",
+    "=COUNTIF('Oasis Springs'!$H$3:$H$40,FALSE)"
+   ],
+   [
+    "T6",
+    "=COUNTIF('Oasis Springs'!$I$3:$I$40,TRUE)"
+   ],
+   [
+    "U6",
+    "=COUNTIF('Oasis Springs'!$I$3:$I$40,FALSE)"
+   ],
+   [
+    "V6",
+    "=COUNTIFS('Oasis Springs'!$F$3:$F$40,TRUE,'Oasis Springs'!$G$3:$G$40,FALSE)"
+   ],
+   [
+    "A7",
+    "Newcrest"
+   ],
+   [
+    "B7",
+    "Base Game"
+   ],
+   [
+    "C7",
+    "Yes"
+   ],
+   [
+    "D7",
+    "=M7"
+   ],
+   [
+    "E7",
+    "=IFERROR(N7/(N7+O7),\"\")"
+   ],
+   [
+    "F7",
+    "=IFERROR(P7/(P7+Q7),\"\")"
+   ],
+   [
+    "G7",
+    "=IFERROR(R7/(R7+S7),\"\")"
+   ],
+   [
+    "H7",
+    "=IFERROR(T7/(T7+U7),\"\")"
+   ],
+   [
+    "I7",
+    "=IFERROR(AVERAGE(E7:H7),\"\")"
+   ],
+   [
+    "J7",
+    "=O7"
+   ],
+   [
+    "K7",
+    "=V7"
+   ],
+   [
+    "M7",
+    "=COUNTA('Newcrest'!$A$3:$A$25)-2*COUNTIF('Newcrest'!$A$3:$A$25,\"Lot Name\")"
+   ],
+   [
+    "N7",
+    "=COUNTIF('Newcrest'!$F$3:$F$25,TRUE)"
+   ],
+   [
+    "O7",
+    "=COUNTIF('Newcrest'!$F$3:$F$25,FALSE)"
+   ],
+   [
+    "P7",
+    "=COUNTIF('Newcrest'!$G$3:$G$25,TRUE)"
+   ],
+   [
+    "Q7",
+    "=COUNTIF('Newcrest'!$G$3:$G$25,FALSE)"
+   ],
+   [
+    "R7",
+    "=COUNTIF('Newcrest'!$H$3:$H$25,TRUE)"
+   ],
+   [
+    "S7",
+    "=COUNTIF('Newcrest'!$H$3:$H$25,FALSE)"
+   ],
+   [
+    "T7",
+    "=COUNTIF('Newcrest'!$I$3:$I$25,TRUE)"
+   ],
+   [
+    "U7",
+    "=COUNTIF('Newcrest'!$I$3:$I$25,FALSE)"
+   ],
+   [
+    "V7",
+    "=COUNTIFS('Newcrest'!$F$3:$F$25,TRUE,'Newcrest'!$G$3:$G$25,FALSE)"
+   ],
+   [
+    "A8",
+    "Granite Falls"
+   ],
+   [
+    "B8",
+    "Outdoor Retreat"
+   ],
+   [
+    "C8",
+    "Yes"
+   ],
+   [
+    "D8",
+    "=M8"
+   ],
+   [
+    "E8",
+    "=IFERROR(N8/(N8+O8),\"\")"
+   ],
+   [
+    "F8",
+    "=IFERROR(P8/(P8+Q8),\"\")"
+   ],
+   [
+    "G8",
+    "=IFERROR(R8/(R8+S8),\"\")"
+   ],
+   [
+    "H8",
+    "=IFERROR(T8/(T8+U8),\"\")"
+   ],
+   [
+    "I8",
+    "=IFERROR(AVERAGE(E8:H8),\"\")"
+   ],
+   [
+    "J8",
+    "=O8"
+   ],
+   [
+    "K8",
+    "=V8"
+   ],
+   [
+    "M8",
+    "=COUNTA('Granite Falls'!$A$3:$A$13)-2*COUNTIF('Granite Falls'!$A$3:$A$13,\"Lot Name\")"
+   ],
+   [
+    "N8",
+    "=COUNTIF('Granite Falls'!$F$3:$F$13,TRUE)"
+   ],
+   [
+    "O8",
+    "=COUNTIF('Granite Falls'!$F$3:$F$13,FALSE)"
+   ],
+   [
+    "P8",
+    "=COUNTIF('Granite Falls'!$G$3:$G$13,TRUE)"
+   ],
+   [
+    "Q8",
+    "=COUNTIF('Granite Falls'!$G$3:$G$13,FALSE)"
+   ],
+   [
+    "R8",
+    "=COUNTIF('Granite Falls'!$H$3:$H$13,TRUE)"
+   ],
+   [
+    "S8",
+    "=COUNTIF('Granite Falls'!$H$3:$H$13,FALSE)"
+   ],
+   [
+    "T8",
+    "=COUNTIF('Granite Falls'!$I$3:$I$13,TRUE)"
+   ],
+   [
+    "U8",
+    "=COUNTIF('Granite Falls'!$I$3:$I$13,FALSE)"
+   ],
+   [
+    "V8",
+    "=COUNTIFS('Granite Falls'!$F$3:$F$13,TRUE,'Granite Falls'!$G$3:$G$13,FALSE)"
+   ],
+   [
+    "A9",
+    "Magnolia Promenade"
+   ],
+   [
+    "B9",
+    "Get To Work"
+   ],
+   [
+    "C9",
+    "Yes"
+   ],
+   [
+    "D9",
+    "=M9"
+   ],
+   [
+    "E9",
+    "=IFERROR(N9/(N9+O9),\"\")"
+   ],
+   [
+    "F9",
+    "=IFERROR(P9/(P9+Q9),\"\")"
+   ],
+   [
+    "G9",
+    "=IFERROR(R9/(R9+S9),\"\")"
+   ],
+   [
+    "H9",
+    "=IFERROR(T9/(T9+U9),\"\")"
+   ],
+   [
+    "I9",
+    "=IFERROR(AVERAGE(E9:H9),\"\")"
+   ],
+   [
+    "J9",
+    "=O9"
+   ],
+   [
+    "K9",
+    "=V9"
+   ],
+   [
+    "M9",
+    "=COUNTA('Magnolia Promenade'!$A$3:$A$15)-2*COUNTIF('Magnolia Promenade'!$A$3:$A$15,\"Lot Name\")"
+   ],
+   [
+    "N9",
+    "=COUNTIF('Magnolia Promenade'!$F$3:$F$15,TRUE)"
+   ],
+   [
+    "O9",
+    "=COUNTIF('Magnolia Promenade'!$F$3:$F$15,FALSE)"
+   ],
+   [
+    "P9",
+    "=COUNTIF('Magnolia Promenade'!$G$3:$G$15,TRUE)"
+   ],
+   [
+    "Q9",
+    "=COUNTIF('Magnolia Promenade'!$G$3:$G$15,FALSE)"
+   ],
+   [
+    "R9",
+    "=COUNTIF('Magnolia Promenade'!$H$3:$H$15,TRUE)"
+   ],
+   [
+    "S9",
+    "=COUNTIF('Magnolia Promenade'!$H$3:$H$15,FALSE)"
+   ],
+   [
+    "T9",
+    "=COUNTIF('Magnolia Promenade'!$I$3:$I$15,TRUE)"
+   ],
+   [
+    "U9",
+    "=COUNTIF('Magnolia Promenade'!$I$3:$I$15,FALSE)"
+   ],
+   [
+    "V9",
+    "=COUNTIFS('Magnolia Promenade'!$F$3:$F$15,TRUE,'Magnolia Promenade'!$G$3:$G$15,FALSE)"
+   ],
+   [
+    "A10",
+    "Windenburg"
+   ],
+   [
+    "B10",
+    "Get Together"
+   ],
+   [
+    "C10",
+    "Yes"
+   ],
+   [
+    "D10",
+    "=M10"
+   ],
+   [
+    "E10",
+    "=IFERROR(N10/(N10+O10),\"\")"
+   ],
+   [
+    "F10",
+    "=IFERROR(P10/(P10+Q10),\"\")"
+   ],
+   [
+    "G10",
+    "=IFERROR(R10/(R10+S10),\"\")"
+   ],
+   [
+    "H10",
+    "=IFERROR(T10/(T10+U10),\"\")"
+   ],
+   [
+    "I10",
+    "=IFERROR(AVERAGE(E10:H10),\"\")"
+   ],
+   [
+    "J10",
+    "=O10"
+   ],
+   [
+    "K10",
+    "=V10"
+   ],
+   [
+    "M10",
+    "=COUNTA('Windenburg'!$A$3:$A$43)-2*COUNTIF('Windenburg'!$A$3:$A$43,\"Lot Name\")"
+   ],
+   [
+    "N10",
+    "=COUNTIF('Windenburg'!$F$3:$F$43,TRUE)"
+   ],
+   [
+    "O10",
+    "=COUNTIF('Windenburg'!$F$3:$F$43,FALSE)"
+   ],
+   [
+    "P10",
+    "=COUNTIF('Windenburg'!$G$3:$G$43,TRUE)"
+   ],
+   [
+    "Q10",
+    "=COUNTIF('Windenburg'!$G$3:$G$43,FALSE)"
+   ],
+   [
+    "R10",
+    "=COUNTIF('Windenburg'!$H$3:$H$43,TRUE)"
+   ],
+   [
+    "S10",
+    "=COUNTIF('Windenburg'!$H$3:$H$43,FALSE)"
+   ],
+   [
+    "T10",
+    "=COUNTIF('Windenburg'!$I$3:$I$43,TRUE)"
+   ],
+   [
+    "U10",
+    "=COUNTIF('Windenburg'!$I$3:$I$43,FALSE)"
+   ],
+   [
+    "V10",
+    "=COUNTIFS('Windenburg'!$F$3:$F$43,TRUE,'Windenburg'!$G$3:$G$43,FALSE)"
+   ],
+   [
+    "A11",
+    "San Myshuno"
+   ],
+   [
+    "B11",
+    "City Living"
+   ],
+   [
+    "C11",
+    "Yes"
+   ],
+   [
+    "D11",
+    "=M11"
+   ],
+   [
+    "E11",
+    "=IFERROR(N11/(N11+O11),\"\")"
+   ],
+   [
+    "F11",
+    "=IFERROR(P11/(P11+Q11),\"\")"
+   ],
+   [
+    "G11",
+    "=IFERROR(R11/(R11+S11),\"\")"
+   ],
+   [
+    "H11",
+    "=IFERROR(T11/(T11+U11),\"\")"
+   ],
+   [
+    "I11",
+    "=IFERROR(AVERAGE(E11:H11),\"\")"
+   ],
+   [
+    "J11",
+    "=O11"
+   ],
+   [
+    "K11",
+    "=V11"
+   ],
+   [
+    "M11",
+    "=COUNTA('San Myshuno'!$A$3:$A$46)-2*COUNTIF('San Myshuno'!$A$3:$A$46,\"Lot Name\")"
+   ],
+   [
+    "N11",
+    "=COUNTIF('San Myshuno'!$F$3:$F$46,TRUE)"
+   ],
+   [
+    "O11",
+    "=COUNTIF('San Myshuno'!$F$3:$F$46,FALSE)"
+   ],
+   [
+    "P11",
+    "=COUNTIF('San Myshuno'!$G$3:$G$46,TRUE)"
+   ],
+   [
+    "Q11",
+    "=COUNTIF('San Myshuno'!$G$3:$G$46,FALSE)"
+   ],
+   [
+    "R11",
+    "=COUNTIF('San Myshuno'!$H$3:$H$46,TRUE)"
+   ],
+   [
+    "S11",
+    "=COUNTIF('San Myshuno'!$H$3:$H$46,FALSE)"
+   ],
+   [
+    "T11",
+    "=COUNTIF('San Myshuno'!$I$3:$I$46,TRUE)"
+   ],
+   [
+    "U11",
+    "=COUNTIF('San Myshuno'!$I$3:$I$46,FALSE)"
+   ],
+   [
+    "V11",
+    "=COUNTIFS('San Myshuno'!$F$3:$F$46,TRUE,'San Myshuno'!$G$3:$G$46,FALSE)"
+   ],
+   [
+    "A12",
+    "Forgotten Hollow"
+   ],
+   [
+    "B12",
+    "Vampires"
+   ],
+   [
+    "C12",
+    "No"
+   ],
+   [
+    "D12",
+    "=M12"
+   ],
+   [
+    "E12",
+    "=IFERROR(N12/(N12+O12),\"\")"
+   ],
+   [
+    "F12",
+    "=IFERROR(P12/(P12+Q12),\"\")"
+   ],
+   [
+    "G12",
+    "=IFERROR(R12/(R12+S12),\"\")"
+   ],
+   [
+    "H12",
+    "=IFERROR(T12/(T12+U12),\"\")"
+   ],
+   [
+    "I12",
+    "=IFERROR(AVERAGE(E12:H12),\"\")"
+   ],
+   [
+    "J12",
+    "=O12"
+   ],
+   [
+    "K12",
+    "=V12"
+   ],
+   [
+    "M12",
+    "=COUNTA('Forgotten Hollow'!$A$3:$A$9)-2*COUNTIF('Forgotten Hollow'!$A$3:$A$9,\"Lot Name\")"
+   ],
+   [
+    "N12",
+    "=COUNTIF('Forgotten Hollow'!$F$3:$F$9,TRUE)"
+   ],
+   [
+    "O12",
+    "=COUNTIF('Forgotten Hollow'!$F$3:$F$9,FALSE)"
+   ],
+   [
+    "P12",
+    "=COUNTIF('Forgotten Hollow'!$G$3:$G$9,TRUE)"
+   ],
+   [
+    "Q12",
+    "=COUNTIF('Forgotten Hollow'!$G$3:$G$9,FALSE)"
+   ],
+   [
+    "R12",
+    "=COUNTIF('Forgotten Hollow'!$H$3:$H$9,TRUE)"
+   ],
+   [
+    "S12",
+    "=COUNTIF('Forgotten Hollow'!$H$3:$H$9,FALSE)"
+   ],
+   [
+    "T12",
+    "=COUNTIF('Forgotten Hollow'!$I$3:$I$9,TRUE)"
+   ],
+   [
+    "U12",
+    "=COUNTIF('Forgotten Hollow'!$I$3:$I$9,FALSE)"
+   ],
+   [
+    "V12",
+    "=COUNTIFS('Forgotten Hollow'!$F$3:$F$9,TRUE,'Forgotten Hollow'!$G$3:$G$9,FALSE)"
+   ],
+   [
+    "A13",
+    "Selvadorada"
+   ],
+   [
+    "B13",
+    "Jungle Adventure"
+   ],
+   [
+    "C13",
+    "Yes"
+   ],
+   [
+    "D13",
+    "=M13"
+   ],
+   [
+    "E13",
+    "=IFERROR(N13/(N13+O13),\"\")"
+   ],
+   [
+    "F13",
+    "=IFERROR(P13/(P13+Q13),\"\")"
+   ],
+   [
+    "G13",
+    "=IFERROR(R13/(R13+S13),\"\")"
+   ],
+   [
+    "H13",
+    "=IFERROR(T13/(T13+U13),\"\")"
+   ],
+   [
+    "I13",
+    "=IFERROR(AVERAGE(E13:H13),\"\")"
+   ],
+   [
+    "J13",
+    "=O13"
+   ],
+   [
+    "K13",
+    "=V13"
+   ],
+   [
+    "M13",
+    "=COUNTA('Selvadorada'!$A$3:$A$14)-2*COUNTIF('Selvadorada'!$A$3:$A$14,\"Lot Name\")"
+   ],
+   [
+    "N13",
+    "=COUNTIF('Selvadorada'!$F$3:$F$14,TRUE)"
+   ],
+   [
+    "O13",
+    "=COUNTIF('Selvadorada'!$F$3:$F$14,FALSE)"
+   ],
+   [
+    "P13",
+    "=COUNTIF('Selvadorada'!$G$3:$G$14,TRUE)"
+   ],
+   [
+    "Q13",
+    "=COUNTIF('Selvadorada'!$G$3:$G$14,FALSE)"
+   ],
+   [
+    "R13",
+    "=COUNTIF('Selvadorada'!$H$3:$H$14,TRUE)"
+   ],
+   [
+    "S13",
+    "=COUNTIF('Selvadorada'!$H$3:$H$14,FALSE)"
+   ],
+   [
+    "T13",
+    "=COUNTIF('Selvadorada'!$I$3:$I$14,TRUE)"
+   ],
+   [
+    "U13",
+    "=COUNTIF('Selvadorada'!$I$3:$I$14,FALSE)"
+   ],
+   [
+    "V13",
+    "=COUNTIFS('Selvadorada'!$F$3:$F$14,TRUE,'Selvadorada'!$G$3:$G$14,FALSE)"
+   ],
+   [
+    "A14",
+    "Brindleton Bay"
+   ],
+   [
+    "B14",
+    "Cats & Dogs"
+   ],
+   [
+    "C14",
+    "Yes"
+   ],
+   [
+    "D14",
+    "=M14"
+   ],
+   [
+    "E14",
+    "=IFERROR(N14/(N14+O14),\"\")"
+   ],
+   [
+    "F14",
+    "=IFERROR(P14/(P14+Q14),\"\")"
+   ],
+   [
+    "G14",
+    "=IFERROR(R14/(R14+S14),\"\")"
+   ],
+   [
+    "H14",
+    "=IFERROR(T14/(T14+U14),\"\")"
+   ],
+   [
+    "I14",
+    "=IFERROR(AVERAGE(E14:H14),\"\")"
+   ],
+   [
+    "J14",
+    "=O14"
+   ],
+   [
+    "K14",
+    "=V14"
+   ],
+   [
+    "M14",
+    "=COUNTA('Brindleton Bay'!$A$3:$A$29)-2*COUNTIF('Brindleton Bay'!$A$3:$A$29,\"Lot Name\")"
+   ],
+   [
+    "N14",
+    "=COUNTIF('Brindleton Bay'!$F$3:$F$29,TRUE)"
+   ],
+   [
+    "O14",
+    "=COUNTIF('Brindleton Bay'!$F$3:$F$29,FALSE)"
+   ],
+   [
+    "P14",
+    "=COUNTIF('Brindleton Bay'!$G$3:$G$29,TRUE)"
+   ],
+   [
+    "Q14",
+    "=COUNTIF('Brindleton Bay'!$G$3:$G$29,FALSE)"
+   ],
+   [
+    "R14",
+    "=COUNTIF('Brindleton Bay'!$H$3:$H$29,TRUE)"
+   ],
+   [
+    "S14",
+    "=COUNTIF('Brindleton Bay'!$H$3:$H$29,FALSE)"
+   ],
+   [
+    "T14",
+    "=COUNTIF('Brindleton Bay'!$I$3:$I$29,TRUE)"
+   ],
+   [
+    "U14",
+    "=COUNTIF('Brindleton Bay'!$I$3:$I$29,FALSE)"
+   ],
+   [
+    "V14",
+    "=COUNTIFS('Brindleton Bay'!$F$3:$F$29,TRUE,'Brindleton Bay'!$G$3:$G$29,FALSE)"
+   ],
+   [
+    "A15",
+    "Del Sol Valley"
+   ],
+   [
+    "B15",
+    "Get Famous"
+   ],
+   [
+    "C15",
+    "Yes"
+   ],
+   [
+    "D15",
+    "=M15"
+   ],
+   [
+    "E15",
+    "=IFERROR(N15/(N15+O15),\"\")"
+   ],
+   [
+    "F15",
+    "=IFERROR(P15/(P15+Q15),\"\")"
+   ],
+   [
+    "G15",
+    "=IFERROR(R15/(R15+S15),\"\")"
+   ],
+   [
+    "H15",
+    "=IFERROR(T15/(T15+U15),\"\")"
+   ],
+   [
+    "I15",
+    "=IFERROR(AVERAGE(E15:H15),\"\")"
+   ],
+   [
+    "J15",
+    "=O15"
+   ],
+   [
+    "K15",
+    "=V15"
+   ],
+   [
+    "M15",
+    "=COUNTA('Del Sol Valley'!$A$3:$A$25)-2*COUNTIF('Del Sol Valley'!$A$3:$A$25,\"Lot Name\")"
+   ],
+   [
+    "N15",
+    "=COUNTIF('Del Sol Valley'!$F$3:$F$25,TRUE)"
+   ],
+   [
+    "O15",
+    "=COUNTIF('Del Sol Valley'!$F$3:$F$25,FALSE)"
+   ],
+   [
+    "P15",
+    "=COUNTIF('Del Sol Valley'!$G$3:$G$25,TRUE)"
+   ],
+   [
+    "Q15",
+    "=COUNTIF('Del Sol Valley'!$G$3:$G$25,FALSE)"
+   ],
+   [
+    "R15",
+    "=COUNTIF('Del Sol Valley'!$H$3:$H$25,TRUE)"
+   ],
+   [
+    "S15",
+    "=COUNTIF('Del Sol Valley'!$H$3:$H$25,FALSE)"
+   ],
+   [
+    "T15",
+    "=COUNTIF('Del Sol Valley'!$I$3:$I$25,TRUE)"
+   ],
+   [
+    "U15",
+    "=COUNTIF('Del Sol Valley'!$I$3:$I$25,FALSE)"
+   ],
+   [
+    "V15",
+    "=COUNTIFS('Del Sol Valley'!$F$3:$F$25,TRUE,'Del Sol Valley'!$G$3:$G$25,FALSE)"
+   ],
+   [
+    "A16",
+    "StrangerVille"
+   ],
+   [
+    "B16",
+    "StrangerVille"
+   ],
+   [
+    "C16",
+    "Yes"
+   ],
+   [
+    "D16",
+    "=M16"
+   ],
+   [
+    "E16",
+    "=IFERROR(N16/(N16+O16),\"\")"
+   ],
+   [
+    "F16",
+    "=IFERROR(P16/(P16+Q16),\"\")"
+   ],
+   [
+    "G16",
+    "=IFERROR(R16/(R16+S16),\"\")"
+   ],
+   [
+    "H16",
+    "=IFERROR(T16/(T16+U16),\"\")"
+   ],
+   [
+    "I16",
+    "=IFERROR(AVERAGE(E16:H16),\"\")"
+   ],
+   [
+    "J16",
+    "=O16"
+   ],
+   [
+    "K16",
+    "=V16"
+   ],
+   [
+    "M16",
+    "=COUNTA('StrangerVille'!$A$3:$A$22)-2*COUNTIF('StrangerVille'!$A$3:$A$22,\"Lot Name\")"
+   ],
+   [
+    "N16",
+    "=COUNTIF('StrangerVille'!$F$3:$F$22,TRUE)"
+   ],
+   [
+    "O16",
+    "=COUNTIF('StrangerVille'!$F$3:$F$22,FALSE)"
+   ],
+   [
+    "P16",
+    "=COUNTIF('StrangerVille'!$G$3:$G$22,TRUE)"
+   ],
+   [
+    "Q16",
+    "=COUNTIF('StrangerVille'!$G$3:$G$22,FALSE)"
+   ],
+   [
+    "R16",
+    "=COUNTIF('StrangerVille'!$H$3:$H$22,TRUE)"
+   ],
+   [
+    "S16",
+    "=COUNTIF('StrangerVille'!$H$3:$H$22,FALSE)"
+   ],
+   [
+    "T16",
+    "=COUNTIF('StrangerVille'!$I$3:$I$22,TRUE)"
+   ],
+   [
+    "U16",
+    "=COUNTIF('StrangerVille'!$I$3:$I$22,FALSE)"
+   ],
+   [
+    "V16",
+    "=COUNTIFS('StrangerVille'!$F$3:$F$22,TRUE,'StrangerVille'!$G$3:$G$22,FALSE)"
+   ],
+   [
+    "A17",
+    "Sulani"
+   ],
+   [
+    "B17",
+    "Island Living"
+   ],
+   [
+    "C17",
+    "Yes"
+   ],
+   [
+    "D17",
+    "=M17"
+   ],
+   [
+    "E17",
+    "=IFERROR(N17/(N17+O17),\"\")"
+   ],
+   [
+    "F17",
+    "=IFERROR(P17/(P17+Q17),\"\")"
+   ],
+   [
+    "G17",
+    "=IFERROR(R17/(R17+S17),\"\")"
+   ],
+   [
+    "H17",
+    "=IFERROR(T17/(T17+U17),\"\")"
+   ],
+   [
+    "I17",
+    "=IFERROR(AVERAGE(E17:H17),\"\")"
+   ],
+   [
+    "J17",
+    "=O17"
+   ],
+   [
+    "K17",
+    "=V17"
+   ],
+   [
+    "M17",
+    "=COUNTA('Sulani'!$A$3:$A$24)-2*COUNTIF('Sulani'!$A$3:$A$24,\"Lot Name\")"
+   ],
+   [
+    "N17",
+    "=COUNTIF('Sulani'!$F$3:$F$24,TRUE)"
+   ],
+   [
+    "O17",
+    "=COUNTIF('Sulani'!$F$3:$F$24,FALSE)"
+   ],
+   [
+    "P17",
+    "=COUNTIF('Sulani'!$G$3:$G$24,TRUE)"
+   ],
+   [
+    "Q17",
+    "=COUNTIF('Sulani'!$G$3:$G$24,FALSE)"
+   ],
+   [
+    "R17",
+    "=COUNTIF('Sulani'!$H$3:$H$24,TRUE)"
+   ],
+   [
+    "S17",
+    "=COUNTIF('Sulani'!$H$3:$H$24,FALSE)"
+   ],
+   [
+    "T17",
+    "=COUNTIF('Sulani'!$I$3:$I$24,TRUE)"
+   ],
+   [
+    "U17",
+    "=COUNTIF('Sulani'!$I$3:$I$24,FALSE)"
+   ],
+   [
+    "V17",
+    "=COUNTIFS('Sulani'!$F$3:$F$24,TRUE,'Sulani'!$G$3:$G$24,FALSE)"
+   ],
+   [
+    "A18",
+    "Glimmerbrook"
+   ],
+   [
+    "B18",
+    "Realm of Magic"
+   ],
+   [
+    "C18",
+    "Yes"
+   ],
+   [
+    "D18",
+    "=M18"
+   ],
+   [
+    "E18",
+    "=IFERROR(N18/(N18+O18),\"\")"
+   ],
+   [
+    "F18",
+    "=IFERROR(P18/(P18+Q18),\"\")"
+   ],
+   [
+    "G18",
+    "=IFERROR(R18/(R18+S18),\"\")"
+   ],
+   [
+    "H18",
+    "=IFERROR(T18/(T18+U18),\"\")"
+   ],
+   [
+    "I18",
+    "=IFERROR(AVERAGE(E18:H18),\"\")"
+   ],
+   [
+    "J18",
+    "=O18"
+   ],
+   [
+    "K18",
+    "=V18"
+   ],
+   [
+    "M18",
+    "=COUNTA('Glimmerbrook'!$A$3:$A$13)-2*COUNTIF('Glimmerbrook'!$A$3:$A$13,\"Lot Name\")"
+   ],
+   [
+    "N18",
+    "=COUNTIF('Glimmerbrook'!$F$3:$F$13,TRUE)"
+   ],
+   [
+    "O18",
+    "=COUNTIF('Glimmerbrook'!$F$3:$F$13,FALSE)"
+   ],
+   [
+    "P18",
+    "=COUNTIF('Glimmerbrook'!$G$3:$G$13,TRUE)"
+   ],
+   [
+    "Q18",
+    "=COUNTIF('Glimmerbrook'!$G$3:$G$13,FALSE)"
+   ],
+   [
+    "R18",
+    "=COUNTIF('Glimmerbrook'!$H$3:$H$13,TRUE)"
+   ],
+   [
+    "S18",
+    "=COUNTIF('Glimmerbrook'!$H$3:$H$13,FALSE)"
+   ],
+   [
+    "T18",
+    "=COUNTIF('Glimmerbrook'!$I$3:$I$13,TRUE)"
+   ],
+   [
+    "U18",
+    "=COUNTIF('Glimmerbrook'!$I$3:$I$13,FALSE)"
+   ],
+   [
+    "V18",
+    "=COUNTIFS('Glimmerbrook'!$F$3:$F$13,TRUE,'Glimmerbrook'!$G$3:$G$13,FALSE)"
+   ],
+   [
+    "A19",
+    "Britechester"
+   ],
+   [
+    "B19",
+    "Discover University"
+   ],
+   [
+    "C19",
+    "Yes"
+   ],
+   [
+    "D19",
+    "=M19"
+   ],
+   [
+    "E19",
+    "=IFERROR(N19/(N19+O19),\"\")"
+   ],
+   [
+    "F19",
+    "=IFERROR(P19/(P19+Q19),\"\")"
+   ],
+   [
+    "G19",
+    "=IFERROR(R19/(R19+S19),\"\")"
+   ],
+   [
+    "H19",
+    "=IFERROR(T19/(T19+U19),\"\")"
+   ],
+   [
+    "I19",
+    "=IFERROR(AVERAGE(E19:H19),\"\")"
+   ],
+   [
+    "J19",
+    "=O19"
+   ],
+   [
+    "K19",
+    "=V19"
+   ],
+   [
+    "M19",
+    "=COUNTA('Britechester'!$A$3:$A$23)-2*COUNTIF('Britechester'!$A$3:$A$23,\"Lot Name\")"
+   ],
+   [
+    "N19",
+    "=COUNTIF('Britechester'!$F$3:$F$23,TRUE)"
+   ],
+   [
+    "O19",
+    "=COUNTIF('Britechester'!$F$3:$F$23,FALSE)"
+   ],
+   [
+    "P19",
+    "=COUNTIF('Britechester'!$G$3:$G$23,TRUE)"
+   ],
+   [
+    "Q19",
+    "=COUNTIF('Britechester'!$G$3:$G$23,FALSE)"
+   ],
+   [
+    "R19",
+    "=COUNTIF('Britechester'!$H$3:$H$23,TRUE)"
+   ],
+   [
+    "S19",
+    "=COUNTIF('Britechester'!$H$3:$H$23,FALSE)"
+   ],
+   [
+    "T19",
+    "=COUNTIF('Britechester'!$I$3:$I$23,TRUE)"
+   ],
+   [
+    "U19",
+    "=COUNTIF('Britechester'!$I$3:$I$23,FALSE)"
+   ],
+   [
+    "V19",
+    "=COUNTIFS('Britechester'!$F$3:$F$23,TRUE,'Britechester'!$G$3:$G$23,FALSE)"
+   ],
+   [
+    "A20",
+    "Evergreen Harbor"
+   ],
+   [
+    "B20",
+    "Eco Lifestyle"
+   ],
+   [
+    "C20",
+    "Yes"
+   ],
+   [
+    "D20",
+    "=M20"
+   ],
+   [
+    "E20",
+    "=IFERROR(N20/(N20+O20),\"\")"
+   ],
+   [
+    "F20",
+    "=IFERROR(P20/(P20+Q20),\"\")"
+   ],
+   [
+    "G20",
+    "=IFERROR(R20/(R20+S20),\"\")"
+   ],
+   [
+    "H20",
+    "=IFERROR(T20/(T20+U20),\"\")"
+   ],
+   [
+    "I20",
+    "=IFERROR(AVERAGE(E20:H20),\"\")"
+   ],
+   [
+    "J20",
+    "=O20"
+   ],
+   [
+    "K20",
+    "=V20"
+   ],
+   [
+    "M20",
+    "=COUNTA('Evergreen Harbor'!$A$3:$A$25)-2*COUNTIF('Evergreen Harbor'!$A$3:$A$25,\"Lot Name\")"
+   ],
+   [
+    "N20",
+    "=COUNTIF('Evergreen Harbor'!$F$3:$F$25,TRUE)"
+   ],
+   [
+    "O20",
+    "=COUNTIF('Evergreen Harbor'!$F$3:$F$25,FALSE)"
+   ],
+   [
+    "P20",
+    "=COUNTIF('Evergreen Harbor'!$G$3:$G$25,TRUE)"
+   ],
+   [
+    "Q20",
+    "=COUNTIF('Evergreen Harbor'!$G$3:$G$25,FALSE)"
+   ],
+   [
+    "R20",
+    "=COUNTIF('Evergreen Harbor'!$H$3:$H$25,TRUE)"
+   ],
+   [
+    "S20",
+    "=COUNTIF('Evergreen Harbor'!$H$3:$H$25,FALSE)"
+   ],
+   [
+    "T20",
+    "=COUNTIF('Evergreen Harbor'!$I$3:$I$25,TRUE)"
+   ],
+   [
+    "U20",
+    "=COUNTIF('Evergreen Harbor'!$I$3:$I$25,FALSE)"
+   ],
+   [
+    "V20",
+    "=COUNTIFS('Evergreen Harbor'!$F$3:$F$25,TRUE,'Evergreen Harbor'!$G$3:$G$25,FALSE)"
+   ],
+   [
+    "A21",
+    "Mt. Komorebi"
+   ],
+   [
+    "B21",
+    "Snowy Escape"
+   ],
+   [
+    "C21",
+    "Yes"
+   ],
+   [
+    "D21",
+    "=M21"
+   ],
+   [
+    "E21",
+    "=IFERROR(N21/(N21+O21),\"\")"
+   ],
+   [
+    "F21",
+    "=IFERROR(P21/(P21+Q21),\"\")"
+   ],
+   [
+    "G21",
+    "=IFERROR(R21/(R21+S21),\"\")"
+   ],
+   [
+    "H21",
+    "=IFERROR(T21/(T21+U21),\"\")"
+   ],
+   [
+    "I21",
+    "=IFERROR(AVERAGE(E21:H21),\"\")"
+   ],
+   [
+    "J21",
+    "=O21"
+   ],
+   [
+    "K21",
+    "=V21"
+   ],
+   [
+    "M21",
+    "=COUNTA('Mt. Komorebi'!$A$3:$A$24)-2*COUNTIF('Mt. Komorebi'!$A$3:$A$24,\"Lot Name\")"
+   ],
+   [
+    "N21",
+    "=COUNTIF('Mt. Komorebi'!$F$3:$F$24,TRUE)"
+   ],
+   [
+    "O21",
+    "=COUNTIF('Mt. Komorebi'!$F$3:$F$24,FALSE)"
+   ],
+   [
+    "P21",
+    "=COUNTIF('Mt. Komorebi'!$G$3:$G$24,TRUE)"
+   ],
+   [
+    "Q21",
+    "=COUNTIF('Mt. Komorebi'!$G$3:$G$24,FALSE)"
+   ],
+   [
+    "R21",
+    "=COUNTIF('Mt. Komorebi'!$H$3:$H$24,TRUE)"
+   ],
+   [
+    "S21",
+    "=COUNTIF('Mt. Komorebi'!$H$3:$H$24,FALSE)"
+   ],
+   [
+    "T21",
+    "=COUNTIF('Mt. Komorebi'!$I$3:$I$24,TRUE)"
+   ],
+   [
+    "U21",
+    "=COUNTIF('Mt. Komorebi'!$I$3:$I$24,FALSE)"
+   ],
+   [
+    "V21",
+    "=COUNTIFS('Mt. Komorebi'!$F$3:$F$24,TRUE,'Mt. Komorebi'!$G$3:$G$24,FALSE)"
+   ],
+   [
+    "A22",
+    "Henford-on-Bagley"
+   ],
+   [
+    "B22",
+    "Cottage Living"
+   ],
+   [
+    "C22",
+    "Yes"
+   ],
+   [
+    "D22",
+    "=M22"
+   ],
+   [
+    "E22",
+    "=IFERROR(N22/(N22+O22),\"\")"
+   ],
+   [
+    "F22",
+    "=IFERROR(P22/(P22+Q22),\"\")"
+   ],
+   [
+    "G22",
+    "=IFERROR(R22/(R22+S22),\"\")"
+   ],
+   [
+    "H22",
+    "=IFERROR(T22/(T22+U22),\"\")"
+   ],
+   [
+    "I22",
+    "=IFERROR(AVERAGE(E22:H22),\"\")"
+   ],
+   [
+    "J22",
+    "=O22"
+   ],
+   [
+    "K22",
+    "=V22"
+   ],
+   [
+    "M22",
+    "=COUNTA('Henford-on-Bagley'!$A$3:$A$22)-2*COUNTIF('Henford-on-Bagley'!$A$3:$A$22,\"Lot Name\")"
+   ],
+   [
+    "N22",
+    "=COUNTIF('Henford-on-Bagley'!$F$3:$F$22,TRUE)"
+   ],
+   [
+    "O22",
+    "=COUNTIF('Henford-on-Bagley'!$F$3:$F$22,FALSE)"
+   ],
+   [
+    "P22",
+    "=COUNTIF('Henford-on-Bagley'!$G$3:$G$22,TRUE)"
+   ],
+   [
+    "Q22",
+    "=COUNTIF('Henford-on-Bagley'!$G$3:$G$22,FALSE)"
+   ],
+   [
+    "R22",
+    "=COUNTIF('Henford-on-Bagley'!$H$3:$H$22,TRUE)"
+   ],
+   [
+    "S22",
+    "=COUNTIF('Henford-on-Bagley'!$H$3:$H$22,FALSE)"
+   ],
+   [
+    "T22",
+    "=COUNTIF('Henford-on-Bagley'!$I$3:$I$22,TRUE)"
+   ],
+   [
+    "U22",
+    "=COUNTIF('Henford-on-Bagley'!$I$3:$I$22,FALSE)"
+   ],
+   [
+    "V22",
+    "=COUNTIFS('Henford-on-Bagley'!$F$3:$F$22,TRUE,'Henford-on-Bagley'!$G$3:$G$22,FALSE)"
+   ],
+   [
+    "A23",
+    "Tartosa"
+   ],
+   [
+    "B23",
+    "My Wedding Stories"
+   ],
+   [
+    "C23",
+    "No"
+   ],
+   [
+    "D23",
+    "=M23"
+   ],
+   [
+    "E23",
+    "=IFERROR(N23/(N23+O23),\"\")"
+   ],
+   [
+    "F23",
+    "=IFERROR(P23/(P23+Q23),\"\")"
+   ],
+   [
+    "G23",
+    "=IFERROR(R23/(R23+S23),\"\")"
+   ],
+   [
+    "H23",
+    "=IFERROR(T23/(T23+U23),\"\")"
+   ],
+   [
+    "I23",
+    "=IFERROR(AVERAGE(E23:H23),\"\")"
+   ],
+   [
+    "J23",
+    "=O23"
+   ],
+   [
+    "K23",
+    "=V23"
+   ],
+   [
+    "M23",
+    "=COUNTA('Tartosa'!$A$3:$A$16)-2*COUNTIF('Tartosa'!$A$3:$A$16,\"Lot Name\")"
+   ],
+   [
+    "N23",
+    "=COUNTIF('Tartosa'!$F$3:$F$16,TRUE)"
+   ],
+   [
+    "O23",
+    "=COUNTIF('Tartosa'!$F$3:$F$16,FALSE)"
+   ],
+   [
+    "P23",
+    "=COUNTIF('Tartosa'!$G$3:$G$16,TRUE)"
+   ],
+   [
+    "Q23",
+    "=COUNTIF('Tartosa'!$G$3:$G$16,FALSE)"
+   ],
+   [
+    "R23",
+    "=COUNTIF('Tartosa'!$H$3:$H$16,TRUE)"
+   ],
+   [
+    "S23",
+    "=COUNTIF('Tartosa'!$H$3:$H$16,FALSE)"
+   ],
+   [
+    "T23",
+    "=COUNTIF('Tartosa'!$I$3:$I$16,TRUE)"
+   ],
+   [
+    "U23",
+    "=COUNTIF('Tartosa'!$I$3:$I$16,FALSE)"
+   ],
+   [
+    "V23",
+    "=COUNTIFS('Tartosa'!$F$3:$F$16,TRUE,'Tartosa'!$G$3:$G$16,FALSE)"
+   ],
+   [
+    "A24",
+    "Moonwood Mill"
+   ],
+   [
+    "B24",
+    "Werewolves"
+   ],
+   [
+    "C24",
+    "No"
+   ],
+   [
+    "D24",
+    "=M24"
+   ],
+   [
+    "E24",
+    "=IFERROR(N24/(N24+O24),\"\")"
+   ],
+   [
+    "F24",
+    "=IFERROR(P24/(P24+Q24),\"\")"
+   ],
+   [
+    "G24",
+    "=IFERROR(R24/(R24+S24),\"\")"
+   ],
+   [
+    "H24",
+    "=IFERROR(T24/(T24+U24),\"\")"
+   ],
+   [
+    "I24",
+    "=IFERROR(AVERAGE(E24:H24),\"\")"
+   ],
+   [
+    "J24",
+    "=O24"
+   ],
+   [
+    "K24",
+    "=V24"
+   ],
+   [
+    "M24",
+    "=COUNTA('Moonwood Mill'!$A$3:$A$9)-2*COUNTIF('Moonwood Mill'!$A$3:$A$9,\"Lot Name\")"
+   ],
+   [
+    "N24",
+    "=COUNTIF('Moonwood Mill'!$F$3:$F$9,TRUE)"
+   ],
+   [
+    "O24",
+    "=COUNTIF('Moonwood Mill'!$F$3:$F$9,FALSE)"
+   ],
+   [
+    "P24",
+    "=COUNTIF('Moonwood Mill'!$G$3:$G$9,TRUE)"
+   ],
+   [
+    "Q24",
+    "=COUNTIF('Moonwood Mill'!$G$3:$G$9,FALSE)"
+   ],
+   [
+    "R24",
+    "=COUNTIF('Moonwood Mill'!$H$3:$H$9,TRUE)"
+   ],
+   [
+    "S24",
+    "=COUNTIF('Moonwood Mill'!$H$3:$H$9,FALSE)"
+   ],
+   [
+    "T24",
+    "=COUNTIF('Moonwood Mill'!$I$3:$I$9,TRUE)"
+   ],
+   [
+    "U24",
+    "=COUNTIF('Moonwood Mill'!$I$3:$I$9,FALSE)"
+   ],
+   [
+    "V24",
+    "=COUNTIFS('Moonwood Mill'!$F$3:$F$9,TRUE,'Moonwood Mill'!$G$3:$G$9,FALSE)"
+   ],
+   [
+    "A25",
+    "Copperdale"
+   ],
+   [
+    "B25",
+    "High School Years"
+   ],
+   [
+    "C25",
+    "Yes"
+   ],
+   [
+    "D25",
+    "=M25"
+   ],
+   [
+    "E25",
+    "=IFERROR(N25/(N25+O25),\"\")"
+   ],
+   [
+    "F25",
+    "=IFERROR(P25/(P25+Q25),\"\")"
+   ],
+   [
+    "G25",
+    "=IFERROR(R25/(R25+S25),\"\")"
+   ],
+   [
+    "H25",
+    "=IFERROR(T25/(T25+U25),\"\")"
+   ],
+   [
+    "I25",
+    "=IFERROR(AVERAGE(E25:H25),\"\")"
+   ],
+   [
+    "J25",
+    "=O25"
+   ],
+   [
+    "K25",
+    "=V25"
+   ],
+   [
+    "M25",
+    "=COUNTA('Copperdale'!$A$3:$A$22)-2*COUNTIF('Copperdale'!$A$3:$A$22,\"Lot Name\")"
+   ],
+   [
+    "N25",
+    "=COUNTIF('Copperdale'!$F$3:$F$22,TRUE)"
+   ],
+   [
+    "O25",
+    "=COUNTIF('Copperdale'!$F$3:$F$22,FALSE)"
+   ],
+   [
+    "P25",
+    "=COUNTIF('Copperdale'!$G$3:$G$22,TRUE)"
+   ],
+   [
+    "Q25",
+    "=COUNTIF('Copperdale'!$G$3:$G$22,FALSE)"
+   ],
+   [
+    "R25",
+    "=COUNTIF('Copperdale'!$H$3:$H$22,TRUE)"
+   ],
+   [
+    "S25",
+    "=COUNTIF('Copperdale'!$H$3:$H$22,FALSE)"
+   ],
+   [
+    "T25",
+    "=COUNTIF('Copperdale'!$I$3:$I$22,TRUE)"
+   ],
+   [
+    "U25",
+    "=COUNTIF('Copperdale'!$I$3:$I$22,FALSE)"
+   ],
+   [
+    "V25",
+    "=COUNTIFS('Copperdale'!$F$3:$F$22,TRUE,'Copperdale'!$G$3:$G$22,FALSE)"
+   ],
+   [
+    "A26",
+    "San Sequoia"
+   ],
+   [
+    "B26",
+    "Growing Together"
+   ],
+   [
+    "C26",
+    "Yes"
+   ],
+   [
+    "D26",
+    "=M26"
+   ],
+   [
+    "E26",
+    "=IFERROR(N26/(N26+O26),\"\")"
+   ],
+   [
+    "F26",
+    "=IFERROR(P26/(P26+Q26),\"\")"
+   ],
+   [
+    "G26",
+    "=IFERROR(R26/(R26+S26),\"\")"
+   ],
+   [
+    "H26",
+    "=IFERROR(T26/(T26+U26),\"\")"
+   ],
+   [
+    "I26",
+    "=IFERROR(AVERAGE(E26:H26),\"\")"
+   ],
+   [
+    "J26",
+    "=O26"
+   ],
+   [
+    "K26",
+    "=V26"
+   ],
+   [
+    "M26",
+    "=COUNTA('San Sequoia'!$A$3:$A$22)-2*COUNTIF('San Sequoia'!$A$3:$A$22,\"Lot Name\")"
+   ],
+   [
+    "N26",
+    "=COUNTIF('San Sequoia'!$F$3:$F$22,TRUE)"
+   ],
+   [
+    "O26",
+    "=COUNTIF('San Sequoia'!$F$3:$F$22,FALSE)"
+   ],
+   [
+    "P26",
+    "=COUNTIF('San Sequoia'!$G$3:$G$22,TRUE)"
+   ],
+   [
+    "Q26",
+    "=COUNTIF('San Sequoia'!$G$3:$G$22,FALSE)"
+   ],
+   [
+    "R26",
+    "=COUNTIF('San Sequoia'!$H$3:$H$22,TRUE)"
+   ],
+   [
+    "S26",
+    "=COUNTIF('San Sequoia'!$H$3:$H$22,FALSE)"
+   ],
+   [
+    "T26",
+    "=COUNTIF('San Sequoia'!$I$3:$I$22,TRUE)"
+   ],
+   [
+    "U26",
+    "=COUNTIF('San Sequoia'!$I$3:$I$22,FALSE)"
+   ],
+   [
+    "V26",
+    "=COUNTIFS('San Sequoia'!$F$3:$F$22,TRUE,'San Sequoia'!$G$3:$G$22,FALSE)"
+   ],
+   [
+    "A27",
+    "Chestnut Ridge"
+   ],
+   [
+    "B27",
+    "Horse Ranch"
+   ],
+   [
+    "C27",
+    "Yes"
+   ],
+   [
+    "D27",
+    "=M27"
+   ],
+   [
+    "E27",
+    "=IFERROR(N27/(N27+O27),\"\")"
+   ],
+   [
+    "F27",
+    "=IFERROR(P27/(P27+Q27),\"\")"
+   ],
+   [
+    "G27",
+    "=IFERROR(R27/(R27+S27),\"\")"
+   ],
+   [
+    "H27",
+    "=IFERROR(T27/(T27+U27),\"\")"
+   ],
+   [
+    "I27",
+    "=IFERROR(AVERAGE(E27:H27),\"\")"
+   ],
+   [
+    "J27",
+    "=O27"
+   ],
+   [
+    "K27",
+    "=V27"
+   ],
+   [
+    "M27",
+    "=COUNTA('Chestnut Ridge'!$A$3:$A$23)-2*COUNTIF('Chestnut Ridge'!$A$3:$A$23,\"Lot Name\")"
+   ],
+   [
+    "N27",
+    "=COUNTIF('Chestnut Ridge'!$F$3:$F$23,TRUE)"
+   ],
+   [
+    "O27",
+    "=COUNTIF('Chestnut Ridge'!$F$3:$F$23,FALSE)"
+   ],
+   [
+    "P27",
+    "=COUNTIF('Chestnut Ridge'!$G$3:$G$23,TRUE)"
+   ],
+   [
+    "Q27",
+    "=COUNTIF('Chestnut Ridge'!$G$3:$G$23,FALSE)"
+   ],
+   [
+    "R27",
+    "=COUNTIF('Chestnut Ridge'!$H$3:$H$23,TRUE)"
+   ],
+   [
+    "S27",
+    "=COUNTIF('Chestnut Ridge'!$H$3:$H$23,FALSE)"
+   ],
+   [
+    "T27",
+    "=COUNTIF('Chestnut Ridge'!$I$3:$I$23,TRUE)"
+   ],
+   [
+    "U27",
+    "=COUNTIF('Chestnut Ridge'!$I$3:$I$23,FALSE)"
+   ],
+   [
+    "V27",
+    "=COUNTIFS('Chestnut Ridge'!$F$3:$F$23,TRUE,'Chestnut Ridge'!$G$3:$G$23,FALSE)"
+   ],
+   [
+    "A28",
+    "Tomarang"
+   ],
+   [
+    "B28",
+    "For Rent"
+   ],
+   [
+    "C28",
+    "Yes"
+   ],
+   [
+    "D28",
+    "=M28"
+   ],
+   [
+    "E28",
+    "=IFERROR(N28/(N28+O28),\"\")"
+   ],
+   [
+    "F28",
+    "=IFERROR(P28/(P28+Q28),\"\")"
+   ],
+   [
+    "G28",
+    "=IFERROR(R28/(R28+S28),\"\")"
+   ],
+   [
+    "H28",
+    "=IFERROR(T28/(T28+U28),\"\")"
+   ],
+   [
+    "I28",
+    "=IFERROR(AVERAGE(E28:H28),\"\")"
+   ],
+   [
+    "J28",
+    "=O28"
+   ],
+   [
+    "K28",
+    "=V28"
+   ],
+   [
+    "M28",
+    "=COUNTA('Tomarang'!$A$3:$A$16)-2*COUNTIF('Tomarang'!$A$3:$A$16,\"Lot Name\")"
+   ],
+   [
+    "N28",
+    "=COUNTIF('Tomarang'!$F$3:$F$16,TRUE)"
+   ],
+   [
+    "O28",
+    "=COUNTIF('Tomarang'!$F$3:$F$16,FALSE)"
+   ],
+   [
+    "P28",
+    "=COUNTIF('Tomarang'!$G$3:$G$16,TRUE)"
+   ],
+   [
+    "Q28",
+    "=COUNTIF('Tomarang'!$G$3:$G$16,FALSE)"
+   ],
+   [
+    "R28",
+    "=COUNTIF('Tomarang'!$H$3:$H$16,TRUE)"
+   ],
+   [
+    "S28",
+    "=COUNTIF('Tomarang'!$H$3:$H$16,FALSE)"
+   ],
+   [
+    "T28",
+    "=COUNTIF('Tomarang'!$I$3:$I$16,TRUE)"
+   ],
+   [
+    "U28",
+    "=COUNTIF('Tomarang'!$I$3:$I$16,FALSE)"
+   ],
+   [
+    "V28",
+    "=COUNTIFS('Tomarang'!$F$3:$F$16,TRUE,'Tomarang'!$G$3:$G$16,FALSE)"
+   ],
+   [
+    "A29",
+    "Ciudad Enamorada"
+   ],
+   [
+    "B29",
+    "Lovestruck"
+   ],
+   [
+    "C29",
+    "No"
+   ],
+   [
+    "D29",
+    "=M29"
+   ],
+   [
+    "E29",
+    "=IFERROR(N29/(N29+O29),\"\")"
+   ],
+   [
+    "F29",
+    "=IFERROR(P29/(P29+Q29),\"\")"
+   ],
+   [
+    "G29",
+    "=IFERROR(R29/(R29+S29),\"\")"
+   ],
+   [
+    "H29",
+    "=IFERROR(T29/(T29+U29),\"\")"
+   ],
+   [
+    "I29",
+    "=IFERROR(AVERAGE(E29:H29),\"\")"
+   ],
+   [
+    "J29",
+    "=O29"
+   ],
+   [
+    "K29",
+    "=V29"
+   ],
+   [
+    "M29",
+    "=COUNTA('Ciudad Enamorada'!$A$3:$A$23)-2*COUNTIF('Ciudad Enamorada'!$A$3:$A$23,\"Lot Name\")"
+   ],
+   [
+    "N29",
+    "=COUNTIF('Ciudad Enamorada'!$F$3:$F$23,TRUE)"
+   ],
+   [
+    "O29",
+    "=COUNTIF('Ciudad Enamorada'!$F$3:$F$23,FALSE)"
+   ],
+   [
+    "P29",
+    "=COUNTIF('Ciudad Enamorada'!$G$3:$G$23,TRUE)"
+   ],
+   [
+    "Q29",
+    "=COUNTIF('Ciudad Enamorada'!$G$3:$G$23,FALSE)"
+   ],
+   [
+    "R29",
+    "=COUNTIF('Ciudad Enamorada'!$H$3:$H$23,TRUE)"
+   ],
+   [
+    "S29",
+    "=COUNTIF('Ciudad Enamorada'!$H$3:$H$23,FALSE)"
+   ],
+   [
+    "T29",
+    "=COUNTIF('Ciudad Enamorada'!$I$3:$I$23,TRUE)"
+   ],
+   [
+    "U29",
+    "=COUNTIF('Ciudad Enamorada'!$I$3:$I$23,FALSE)"
+   ],
+   [
+    "V29",
+    "=COUNTIFS('Ciudad Enamorada'!$F$3:$F$23,TRUE,'Ciudad Enamorada'!$G$3:$G$23,FALSE)"
+   ],
+   [
+    "A30",
+    "Ravenwood"
+   ],
+   [
+    "B30",
+    "Life & Death"
+   ],
+   [
+    "C30",
+    "Yes"
+   ],
+   [
+    "D30",
+    "=M30"
+   ],
+   [
+    "E30",
+    "=IFERROR(N30/(N30+O30),\"\")"
+   ],
+   [
+    "F30",
+    "=IFERROR(P30/(P30+Q30),\"\")"
+   ],
+   [
+    "G30",
+    "=IFERROR(R30/(R30+S30),\"\")"
+   ],
+   [
+    "H30",
+    "=IFERROR(T30/(T30+U30),\"\")"
+   ],
+   [
+    "I30",
+    "=IFERROR(AVERAGE(E30:H30),\"\")"
+   ],
+   [
+    "J30",
+    "=O30"
+   ],
+   [
+    "K30",
+    "=V30"
+   ],
+   [
+    "M30",
+    "=COUNTA('Ravenwood'!$A$3:$A$27)-2*COUNTIF('Ravenwood'!$A$3:$A$27,\"Lot Name\")"
+   ],
+   [
+    "N30",
+    "=COUNTIF('Ravenwood'!$F$3:$F$27,TRUE)"
+   ],
+   [
+    "O30",
+    "=COUNTIF('Ravenwood'!$F$3:$F$27,FALSE)"
+   ],
+   [
+    "P30",
+    "=COUNTIF('Ravenwood'!$G$3:$G$27,TRUE)"
+   ],
+   [
+    "Q30",
+    "=COUNTIF('Ravenwood'!$G$3:$G$27,FALSE)"
+   ],
+   [
+    "R30",
+    "=COUNTIF('Ravenwood'!$H$3:$H$27,TRUE)"
+   ],
+   [
+    "S30",
+    "=COUNTIF('Ravenwood'!$H$3:$H$27,FALSE)"
+   ],
+   [
+    "T30",
+    "=COUNTIF('Ravenwood'!$I$3:$I$27,TRUE)"
+   ],
+   [
+    "U30",
+    "=COUNTIF('Ravenwood'!$I$3:$I$27,FALSE)"
+   ],
+   [
+    "V30",
+    "=COUNTIFS('Ravenwood'!$F$3:$F$27,TRUE,'Ravenwood'!$G$3:$G$27,FALSE)"
+   ],
+   [
+    "A31",
+    "Nordhaven"
+   ],
+   [
+    "B31",
+    "Businesses & Hobbies"
+   ],
+   [
+    "C31",
+    "Yes"
+   ],
+   [
+    "D31",
+    "=M31"
+   ],
+   [
+    "E31",
+    "=IFERROR(N31/(N31+O31),\"\")"
+   ],
+   [
+    "F31",
+    "=IFERROR(P31/(P31+Q31),\"\")"
+   ],
+   [
+    "G31",
+    "=IFERROR(R31/(R31+S31),\"\")"
+   ],
+   [
+    "H31",
+    "=IFERROR(T31/(T31+U31),\"\")"
+   ],
+   [
+    "I31",
+    "=IFERROR(AVERAGE(E31:H31),\"\")"
+   ],
+   [
+    "J31",
+    "=O31"
+   ],
+   [
+    "K31",
+    "=V31"
+   ],
+   [
+    "M31",
+    "=COUNTA('Nordhaven'!$A$3:$A$19)-2*COUNTIF('Nordhaven'!$A$3:$A$19,\"Lot Name\")"
+   ],
+   [
+    "N31",
+    "=COUNTIF('Nordhaven'!$F$3:$F$19,TRUE)"
+   ],
+   [
+    "O31",
+    "=COUNTIF('Nordhaven'!$F$3:$F$19,FALSE)"
+   ],
+   [
+    "P31",
+    "=COUNTIF('Nordhaven'!$G$3:$G$19,TRUE)"
+   ],
+   [
+    "Q31",
+    "=COUNTIF('Nordhaven'!$G$3:$G$19,FALSE)"
+   ],
+   [
+    "R31",
+    "=COUNTIF('Nordhaven'!$H$3:$H$19,TRUE)"
+   ],
+   [
+    "S31",
+    "=COUNTIF('Nordhaven'!$H$3:$H$19,FALSE)"
+   ],
+   [
+    "T31",
+    "=COUNTIF('Nordhaven'!$I$3:$I$19,TRUE)"
+   ],
+   [
+    "U31",
+    "=COUNTIF('Nordhaven'!$I$3:$I$19,FALSE)"
+   ],
+   [
+    "V31",
+    "=COUNTIFS('Nordhaven'!$F$3:$F$19,TRUE,'Nordhaven'!$G$3:$G$19,FALSE)"
+   ],
+   [
+    "A32",
+    "Gibbi Point"
+   ],
+   [
+    "B32",
+    "Adventure Awaits"
+   ],
+   [
+    "C32",
+    "Yes"
+   ],
+   [
+    "D32",
+    "=M32"
+   ],
+   [
+    "E32",
+    "=IFERROR(N32/(N32+O32),\"\")"
+   ],
+   [
+    "F32",
+    "=IFERROR(P32/(P32+Q32),\"\")"
+   ],
+   [
+    "G32",
+    "=IFERROR(R32/(R32+S32),\"\")"
+   ],
+   [
+    "H32",
+    "=IFERROR(T32/(T32+U32),\"\")"
+   ],
+   [
+    "I32",
+    "=IFERROR(AVERAGE(E32:H32),\"\")"
+   ],
+   [
+    "J32",
+    "=O32"
+   ],
+   [
+    "K32",
+    "=V32"
+   ],
+   [
+    "M32",
+    "=COUNTA('Gibbi Point'!$A$3:$A$23)-2*COUNTIF('Gibbi Point'!$A$3:$A$23,\"Lot Name\")"
+   ],
+   [
+    "N32",
+    "=COUNTIF('Gibbi Point'!$F$3:$F$23,TRUE)"
+   ],
+   [
+    "O32",
+    "=COUNTIF('Gibbi Point'!$F$3:$F$23,FALSE)"
+   ],
+   [
+    "P32",
+    "=COUNTIF('Gibbi Point'!$G$3:$G$23,TRUE)"
+   ],
+   [
+    "Q32",
+    "=COUNTIF('Gibbi Point'!$G$3:$G$23,FALSE)"
+   ],
+   [
+    "R32",
+    "=COUNTIF('Gibbi Point'!$H$3:$H$23,TRUE)"
+   ],
+   [
+    "S32",
+    "=COUNTIF('Gibbi Point'!$H$3:$H$23,FALSE)"
+   ],
+   [
+    "T32",
+    "=COUNTIF('Gibbi Point'!$I$3:$I$23,TRUE)"
+   ],
+   [
+    "U32",
+    "=COUNTIF('Gibbi Point'!$I$3:$I$23,FALSE)"
+   ],
+   [
+    "V32",
+    "=COUNTIFS('Gibbi Point'!$F$3:$F$23,TRUE,'Gibbi Point'!$G$3:$G$23,FALSE)"
+   ],
+   [
+    "A33",
+    "Ondarion"
+   ],
+   [
+    "B33",
+    "Royalty & Legacy"
+   ],
+   [
+    "C33",
+    "Yes"
+   ],
+   [
+    "D33",
+    "=M33"
+   ],
+   [
+    "E33",
+    "=IFERROR(N33/(N33+O33),\"\")"
+   ],
+   [
+    "F33",
+    "=IFERROR(P33/(P33+Q33),\"\")"
+   ],
+   [
+    "G33",
+    "=IFERROR(R33/(R33+S33),\"\")"
+   ],
+   [
+    "H33",
+    "=IFERROR(T33/(T33+U33),\"\")"
+   ],
+   [
+    "I33",
+    "=IFERROR(AVERAGE(E33:H33),\"\")"
+   ],
+   [
+    "J33",
+    "=O33"
+   ],
+   [
+    "K33",
+    "=V33"
+   ],
+   [
+    "M33",
+    "=COUNTA('Ondarion'!$A$3:$A$28)-2*COUNTIF('Ondarion'!$A$3:$A$28,\"Lot Name\")"
+   ],
+   [
+    "N33",
+    "=COUNTIF('Ondarion'!$F$3:$F$28,TRUE)"
+   ],
+   [
+    "O33",
+    "=COUNTIF('Ondarion'!$F$3:$F$28,FALSE)"
+   ],
+   [
+    "P33",
+    "=COUNTIF('Ondarion'!$G$3:$G$28,TRUE)"
+   ],
+   [
+    "Q33",
+    "=COUNTIF('Ondarion'!$G$3:$G$28,FALSE)"
+   ],
+   [
+    "R33",
+    "=COUNTIF('Ondarion'!$H$3:$H$28,TRUE)"
+   ],
+   [
+    "S33",
+    "=COUNTIF('Ondarion'!$H$3:$H$28,FALSE)"
+   ],
+   [
+    "T33",
+    "=COUNTIF('Ondarion'!$I$3:$I$28,TRUE)"
+   ],
+   [
+    "U33",
+    "=COUNTIF('Ondarion'!$I$3:$I$28,FALSE)"
+   ],
+   [
+    "V33",
+    "=COUNTIFS('Ondarion'!$F$3:$F$28,TRUE,'Ondarion'!$G$3:$G$28,FALSE)"
+   ],
+   [
+    "A34",
+    "Total (owned worlds)"
+   ],
+   [
+    "D34",
+    "=M34"
+   ],
+   [
+    "E34",
+    "=IFERROR(N34/(N34+O34),\"\")"
+   ],
+   [
+    "F34",
+    "=IFERROR(P34/(P34+Q34),\"\")"
+   ],
+   [
+    "G34",
+    "=IFERROR(R34/(R34+S34),\"\")"
+   ],
+   [
+    "H34",
+    "=IFERROR(T34/(T34+U34),\"\")"
+   ],
+   [
+    "I34",
+    "=IFERROR(AVERAGE(E34:H34),\"\")"
+   ],
+   [
+    "J34",
+    "=O34"
+   ],
+   [
+    "K34",
+    "=V34"
+   ],
+   [
+    "M34",
+    "=SUMIF($C$5:$C$33,\"Yes\",M5:M33)"
+   ],
+   [
+    "N34",
+    "=SUMIF($C$5:$C$33,\"Yes\",N5:N33)"
+   ],
+   [
+    "O34",
+    "=SUMIF($C$5:$C$33,\"Yes\",O5:O33)"
+   ],
+   [
+    "P34",
+    "=SUMIF($C$5:$C$33,\"Yes\",P5:P33)"
+   ],
+   [
+    "Q34",
+    "=SUMIF($C$5:$C$33,\"Yes\",Q5:Q33)"
+   ],
+   [
+    "R34",
+    "=SUMIF($C$5:$C$33,\"Yes\",R5:R33)"
+   ],
+   [
+    "S34",
+    "=SUMIF($C$5:$C$33,\"Yes\",S5:S33)"
+   ],
+   [
+    "T34",
+    "=SUMIF($C$5:$C$33,\"Yes\",T5:T33)"
+   ],
+   [
+    "U34",
+    "=SUMIF($C$5:$C$33,\"Yes\",U5:U33)"
+   ],
+   [
+    "V34",
+    "=SUMIF($C$5:$C$33,\"Yes\",V5:V33)"
+   ]
+  ]
+ },
+ {
+  "tab": "Willow Creek",
+  "title": "Willow Creek",
+  "sections": [
+   {
+    "name": "Foundry Cove",
+    "lots": [
+     {
+      "Lot Name": "Bargain Bend",
+      "My Name": "Willow's",
+      "Lot Type": "Restaurant (Diner)",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Streamlet Single",
+      "My Name": "Streamlet Single",
+      "Lot Type": "Residential",
+      "Lot Size": "20x15",
+      "Residents/Owners": "Davidson",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Crick Cabana",
+      "My Name": "Crick Cabana",
+      "Lot Type": "Tiny Home Residential",
+      "Lot Size": "20x15",
+      "Residents/Owners": "Broke",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Daisy Hovel",
+      "My Name": "Daisy Hovel",
+      "Lot Type": "Residential",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Winters",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Garden Essence",
+      "My Name": "Garden Essence",
+      "Lot Type": "Residential",
+      "Lot Size": "40x30",
+      "Residents/Owners": "Davidson",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     }
+    ]
+   },
+   {
+    "name": "Courtyard Lane",
+    "lots": [
+     {
+      "Lot Name": "Potters Splay",
+      "My Name": "Potters Splay",
+      "Lot Type": "Residential",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Reynolds",
+      "Built": true,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Brook Bungalow",
+      "My Name": "Brook Bungalow",
+      "Lot Type": "Residential",
+      "Lot Size": "40x30",
+      "Residents/Owners": "Bjergsen",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Riverside Roost",
+      "My Name": "Riverside Roost",
+      "Lot Type": "Residential",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Kopf?",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Pique Hearth",
+      "My Name": "Courtyard Lane Playground",
+      "Lot Type": "Playground",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Rindle Rose",
+      "My Name": "Rindle Rose",
+      "Lot Type": "Residential",
+      "Lot Size": "20x15",
+      "Residents/Owners": "Pancakes",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     }
+    ]
+   },
+   {
+    "name": "Pendula View",
+    "lots": [
+     {
+      "Lot Name": "Hallow Slough",
+      "My Name": null,
+      "Lot Type": "Residential",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Ella-Mint Cadberry",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": true
+     },
+     {
+      "Lot Name": "Umbrage Manor",
+      "My Name": null,
+      "Lot Type": "Residential",
+      "Lot Size": "40x30",
+      "Residents/Owners": "Villareel",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Parkshore",
+      "My Name": "Cordelia House (Churchish)",
+      "Lot Type": "Cemetery",
+      "Lot Size": "40x30",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Ophelia Villa",
+      "My Name": null,
+      "Lot Type": "Residential",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Goth",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     }
+    ]
+   },
+   {
+    "name": "Sage Estates",
+    "lots": [
+     {
+      "Lot Name": "Oakenstead",
+      "My Name": "Oakenstead",
+      "Lot Type": "Residential",
+      "Lot Size": "50x50",
+      "Residents/Owners": "Barraza",
+      "Built": true,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Cypress Terrace",
+      "My Name": "Cypress Terrace",
+      "Lot Type": "Residential",
+      "Lot Size": "40x30",
+      "Residents/Owners": "Spencer-Kim-Lewis",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     }
+    ]
+   },
+   {
+    "name": "Crawdad Quarter",
+    "lots": [
+     {
+      "Lot Name": "Municipal Muses",
+      "My Name": "Municipal Muses",
+      "Lot Type": "Museum",
+      "Lot Size": "40x30",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "The Blue Velvet",
+      "My Name": "The Llama Café",
+      "Lot Type": "Café",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Movers & Shakers",
+      "My Name": null,
+      "Lot Type": null,
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Willow Creek Archive",
+      "My Name": "Willow Creek Archive",
+      "Lot Type": "Library",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     }
+    ]
+   },
+   {
+    "name": "Magnolia Blossom Park",
+    "lots": [
+     {
+      "Lot Name": "Magnolia Blossom Park",
+      "My Name": "Magnolia Blossom Park",
+      "Lot Type": "Park",
+      "Lot Size": "50x50",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     }
+    ]
+   }
+  ],
+  "stray": [
+   [
+    "I1",
+    "← Overview"
+   ],
+   [
+    "D42",
+    "Notes"
+   ],
+   [
+    "D43",
+    "Ella-Mint Cadberry"
+   ]
+  ]
+ },
+ {
+  "tab": "Oasis Springs",
+  "title": "Oasis Springs",
+  "sections": [
+   {
+    "name": "Bedrock Strait",
+    "lots": [
+     {
+      "Lot Name": "Sandtrap Flat",
+      "My Name": "Sandtrap Flat",
+      "Lot Type": "Residential",
+      "Lot Size": "30x20",
+      "Residents/Owners": "2 Bedroom",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Nookstone",
+      "My Name": "Nookstone",
+      "Lot Type": "Residential",
+      "Lot Size": "20x15",
+      "Residents/Owners": "Leah-Moon Cadberry+",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Pebble Burrow",
+      "My Name": "Pebble Burrow",
+      "Lot Type": "Residential",
+      "Lot Size": "30x20",
+      "Residents/Owners": "2 Bedroom",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Slipshod Mesquite",
+      "My Name": "De Costadas",
+      "Lot Type": "Restaurant",
+      "Lot Size": "40x30",
+      "Residents/Owners": "De Costa",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Agave Abode",
+      "My Name": "Agave Abode",
+      "Lot Type": "Residential",
+      "Lot Size": "20x15",
+      "Residents/Owners": "Lothario *WithUpdates*",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     }
+    ]
+   },
+   {
+    "name": "Parched Prospect",
+    "lots": [
+     {
+      "Lot Name": "Vista Quarry",
+      "My Name": "Vista Quarry",
+      "Lot Type": "Residential",
+      "Lot Size": "30x20",
+      "Residents/Owners": "2 Bed Family",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Raffia Quinta",
+      "My Name": "Raffia Quinta",
+      "Lot Type": "Residential",
+      "Lot Size": "20x15",
+      "Residents/Owners": "Rivera",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": true,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Dusty Turf",
+      "My Name": "Dusty Turf",
+      "Lot Type": "Residential",
+      "Lot Size": "30x20",
+      "Residents/Owners": "De Costa",
+      "Built": true,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Springscape",
+      "My Name": "Springscape",
+      "Lot Type": "Residential",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Empty",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Cacti Casa",
+      "My Name": "Palm Springs Public Pool",
+      "Lot Type": "Pool",
+      "Lot Size": "40x30",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     }
+    ]
+   },
+   {
+    "name": "Skyward Palms",
+    "lots": [
+     {
+      "Lot Name": "Granada Place",
+      "My Name": "Granada Place",
+      "Lot Type": "Residential",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Curious *WithUpdates*",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Arid Ridge",
+      "My Name": "Lotus Ridge Spa",
+      "Lot Type": "Spa",
+      "Lot Size": "40x30",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Sultry Springside",
+      "My Name": "Sultry Springside",
+      "Lot Type": "Residential",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Smith",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Rio Verde",
+      "My Name": "Rio Verde Retirement Home",
+      "Lot Type": "Residential Rental (6)",
+      "Lot Size": "40x30",
+      "Residents/Owners": "Elders",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     }
+    ]
+   },
+   {
+    "name": "Acquisition Butte",
+    "lots": [
+     {
+      "Lot Name": "Affluista Mansion",
+      "My Name": "Affluista Mansion",
+      "Lot Type": "Residential",
+      "Lot Size": "50x50",
+      "Residents/Owners": "Landgraab",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Yuma Heights",
+      "My Name": "Yuma Heights",
+      "Lot Type": "Residential",
+      "Lot Size": "40x30",
+      "Residents/Owners": "Caliente",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     }
+    ]
+   },
+   {
+    "name": "Mirage Canyon",
+    "lots": [
+     {
+      "Lot Name": "The Futures Past",
+      "My Name": "The Futures Past",
+      "Lot Type": "Museum",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "The Solar Flare",
+      "My Name": "Oasis Springs Library",
+      "Lot Type": "Library",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Burners & Builders",
+      "My Name": "Burners & Builders",
+      "Lot Type": "Gym",
+      "Lot Size": "40x30",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Rattlesnake Juice",
+      "My Name": "Rattlesnake Juice Bar",
+      "Lot Type": "Bar",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     }
+    ]
+   },
+   {
+    "name": "Desert Bloom Park",
+    "lots": [
+     {
+      "Lot Name": "Desert Bloom Park",
+      "My Name": "Desert Bloom Park",
+      "Lot Type": "Park",
+      "Lot Size": "50x50",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     }
+    ]
+   }
+  ],
+  "stray": [
+   [
+    "I1",
+    "← Overview"
+   ]
+  ]
+ },
+ {
+  "tab": "Newcrest",
+  "title": "Newcrest",
+  "sections": [
+   {
+    "name": "Bridgeview",
+    "lots": [
+     {
+      "Lot Name": "Fern Park",
+      "My Name": "Fern Park Flats",
+      "Lot Type": "Residential Rental (5)",
+      "Lot Size": "30x20",
+      "Residents/Owners": "BFF",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Beech Byway",
+      "My Name": "Newcrest Community Space",
+      "Lot Type": "Community Space",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Midtown Meadows",
+      "My Name": "Midtown Meadows",
+      "Lot Type": "Residential Rental (5)",
+      "Lot Size": "40x30",
+      "Residents/Owners": "Single Mum Friends",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Oak Alcove",
+      "My Name": "Oak Alcove",
+      "Lot Type": "Residential",
+      "Lot Size": "20x15",
+      "Residents/Owners": "Versaree",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": true
+     },
+     {
+      "Lot Name": "Comfy Cubby",
+      "My Name": "Comfy Cubby",
+      "Lot Type": "Residential",
+      "Lot Size": "20x15",
+      "Residents/Owners": "Empty",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     }
+    ]
+   },
+   {
+    "name": "Llama Lagoon",
+    "lots": [
+     {
+      "Lot Name": "Twin Oracle Point",
+      "My Name": "Twin Oracle Point",
+      "Lot Type": "Residential",
+      "Lot Size": "50x40",
+      "Residents/Owners": "Empty",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Avarice Acres",
+      "My Name": "Avarice Acres",
+      "Lot Type": "Residential",
+      "Lot Size": "40x30",
+      "Residents/Owners": "LeBlanc",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Rippling Flats",
+      "My Name": "Rippling Flats",
+      "Lot Type": "Residential Rental (2)",
+      "Lot Size": "40x30",
+      "Residents/Owners": "(Current uni sims)",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Tranquil Crescent",
+      "My Name": "The Ice Pavillion",
+      "Lot Type": "Park",
+      "Lot Size": "30x30",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Asphalt Abodes",
+      "My Name": "Asphalt Abodes",
+      "Lot Type": "Residential",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Sylvia & Kenny Cadberry",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     }
+    ]
+   },
+   {
+    "name": "Ridgeline Drive",
+    "lots": [
+     {
+      "Lot Name": "Sandy Run",
+      "My Name": "The Aqua Grill",
+      "Lot Type": "Restaurant (Seafood)",
+      "Lot Size": "40x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Cookout Lookout",
+      "My Name": "Newcrest Wedding Hall",
+      "Lot Type": "Wedding Venue",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Civic Cliffs",
+      "My Name": "Newcrest Arts Center",
+      "Lot Type": "Arts Center",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Hillside Highlands",
+      "My Name": "Cookes 'n' Cream",
+      "Lot Type": "Retail (Bakery & Ice Cream)",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Optimist's Outlook",
+      "My Name": "Optimist's Outlook",
+      "Lot Type": "Small Business",
+      "Lot Size": "40x30",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     }
+    ]
+   }
+  ],
+  "stray": [
+   [
+    "I1",
+    "← Overview"
+   ]
+  ]
+ },
+ {
+  "tab": "Granite Falls",
+  "title": "Granite Falls",
+  "sections": [
+   {
+    "name": "Campground",
+    "lots": [
+     {
+      "Lot Name": "Campground",
+      "My Name": "Campground",
+      "Lot Type": "Vacation Rental",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Forest Hideaway",
+      "My Name": null,
+      "Lot Type": "Restaurant",
+      "Lot Size": "40x30",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Green Getaway",
+      "My Name": "Green Getaway",
+      "Lot Type": "Vacation Rental",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Lakeside Retreat",
+      "My Name": "Lakeside Retreat",
+      "Lot Type": "Vacation Rental",
+      "Lot Size": "40x30",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": true,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Riverside Retreat",
+      "My Name": "Granite Falls Spa",
+      "Lot Type": "Spa",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     }
+    ]
+   },
+   {
+    "name": "Granite Falls Forest",
+    "lots": [
+     {
+      "Lot Name": "Granite Falls Forest",
+      "My Name": "Granite Falls Forest",
+      "Lot Type": "National Park",
+      "Lot Size": "50x50",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     }
+    ]
+   }
+  ],
+  "stray": [
+   [
+    "I1",
+    "← Overview"
+   ]
+  ]
+ },
+ {
+  "tab": "Magnolia Promenade",
+  "title": "Magnolia Promenade",
+  "sections": [
+   {
+    "name": "Magnolia Promenade",
+    "lots": [
+     {
+      "Lot Name": "Paddywack's Emporium",
+      "My Name": "Paddy's Place",
+      "Lot Type": "Restaurant",
+      "Lot Size": "20x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "JF&S Clothiers",
+      "My Name": "Llama Picturehouse",
+      "Lot Type": "Small Business",
+      "Lot Size": "20x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "The Roadstead",
+      "My Name": "Magnolia Mall",
+      "Lot Type": "Retail/Boba & Thrift",
+      "Lot Size": "40x30",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Preeminent Domain",
+      "My Name": "Magnolia Bowling Alley",
+      "Lot Type": "Bar",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     }
+    ]
+   },
+   {
+    "name": "Secret Lots",
+    "lots": [
+     {
+      "Lot Name": "Police Station",
+      "My Name": "Police Station",
+      "Lot Type": "Police Station",
+      "Lot Size": null,
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "FutureSim Labs",
+      "My Name": "FutureSim Labs",
+      "Lot Type": "Science Lab",
+      "Lot Size": null,
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Willow Creek Hospital",
+      "My Name": "Willow Creek Hospital",
+      "Lot Type": "Hospital",
+      "Lot Size": null,
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Sixam",
+      "My Name": "Sixam",
+      "Lot Type": "Sixam",
+      "Lot Size": null,
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     }
+    ]
+   }
+  ],
+  "stray": [
+   [
+    "I1",
+    "← Overview"
+   ]
+  ]
+ },
+ {
+  "tab": "Windenburg",
+  "title": "Windenburg",
+  "sections": [
+   {
+    "name": "Olde Platz",
+    "lots": [
+     {
+      "Lot Name": "Proprietor's Square",
+      "My Name": "Proprietor's Square",
+      "Lot Type": "Residential",
+      "Lot Size": "30x20",
+      "Residents/Owners": "2 Bed",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Havisham House",
+      "My Name": "Havisham House",
+      "Lot Type": "Residential",
+      "Lot Size": "20x20",
+      "Residents/Owners": "Specter *WithUpdates*",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Factory One",
+      "My Name": "Factory One",
+      "Lot Type": "Residential",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Partihaus",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Waterlock Redoubt",
+      "My Name": "Olde Platz Inn",
+      "Lot Type": "Restaurant/Vacation Rental",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": true,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Quad Manor",
+      "My Name": null,
+      "Lot Type": "Library/Boba & Thrift?",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "The Narwhal Arms",
+      "My Name": "The Narwhal Arms",
+      "Lot Type": "Bar",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "South Square Coffee",
+      "My Name": "Pixel Café",
+      "Lot Type": "Café",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Old Quarter Inn",
+      "My Name": "Museum of the Arts",
+      "Lot Type": "Museum",
+      "Lot Size": "20x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     }
+    ]
+   },
+   {
+    "name": "Lykke Center / University of Windenburg",
+    "lots": [
+     {
+      "Lot Name": "Bathe de Rill",
+      "My Name": "La Discotheque",
+      "Lot Type": "Nightclub",
+      "Lot Size": "40x30",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Hare Square",
+      "My Name": "UoW Hare Halls",
+      "Lot Type": "University Housing",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Empty",
+      "Built": true,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Hare and Hedgehog",
+      "My Name": "UoW Hedgehog Halls",
+      "Lot Type": "University Housing",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Empty",
+      "Built": true,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Harbor Quarter Gym",
+      "My Name": "UoW Students Union",
+      "Lot Type": "Library",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Discotheque Pan Europa",
+      "My Name": "Uow Sports Center",
+      "Lot Type": "Gym/Pool",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     }
+    ]
+   },
+   {
+    "name": "Windslar",
+    "lots": [
+     {
+      "Lot Name": "Coorinberg Cottage",
+      "My Name": "Coorinberg Cottage",
+      "Lot Type": "Residential",
+      "Lot Size": "40x30",
+      "Residents/Owners": "Munch",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": true,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Cottage Am See",
+      "My Name": "Cottage Am See",
+      "Lot Type": "Residential",
+      "Lot Size": "20x20",
+      "Residents/Owners": "Free Spirits",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": true,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Rustic Residence",
+      "My Name": "Rustic Residence",
+      "Lot Type": "Residential",
+      "Lot Size": "30x20",
+      "Residents/Owners": "1 Bed",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "The Shrieking Llama",
+      "My Name": "The Shrieking Llama",
+      "Lot Type": "Bar",
+      "Lot Size": "20x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Dresden House",
+      "My Name": "Dresden House",
+      "Lot Type": "Residential",
+      "Lot Size": "64x64",
+      "Residents/Owners": "Fyres",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "The Summer House",
+      "My Name": null,
+      "Lot Type": "Vet Clinic",
+      "Lot Size": "40x30",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     }
+    ]
+   },
+   {
+    "name": "The Crumbling Isle",
+    "lots": [
+     {
+      "Lot Name": "The Lighthouse",
+      "My Name": "The Lighthouse",
+      "Lot Type": "Residential",
+      "Lot Size": "40x30",
+      "Residents/Owners": "Tiquelle",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Mid-NoWhere",
+      "My Name": "Mid-NoWhere",
+      "Lot Type": "Park",
+      "Lot Size": "20x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Pier Palace",
+      "My Name": "Pier Palace",
+      "Lot Type": "Residential",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Tiquelle",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Dock Den",
+      "My Name": "Dock Den",
+      "Lot Type": "Residential",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Tiquelle",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Von-Windenburg Estate",
+      "My Name": "Von-Windenburg Estate",
+      "Lot Type": "Residential",
+      "Lot Size": "64x64",
+      "Residents/Owners": "Tiquelle",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": true,
+      "Sims Made": false
+     }
+    ]
+   },
+   {
+    "name": "Special Lots",
+    "lots": [
+     {
+      "Lot Name": "Von-Haunt Estate",
+      "My Name": "Von-Haunt Estate",
+      "Lot Type": "Chalet Gardens",
+      "Lot Size": "40x30",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Ancient Ruins",
+      "My Name": "Ancient Ruins",
+      "Lot Type": "Ancient Ruins",
+      "Lot Size": "20x15",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "The Bluffs",
+      "My Name": "The Bluffs",
+      "Lot Type": "Island Bluff",
+      "Lot Size": "30x30",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     }
+    ]
+   }
+  ],
+  "stray": [
+   [
+    "I1",
+    "← Overview"
+   ]
+  ]
+ },
+ {
+  "tab": "San Myshuno",
+  "title": "San Myshuno",
+  "sections": [
+   {
+    "name": "Spice Market",
+    "lots": [
+     {
+      "Lot Name": "17 Culpepper House",
+      "My Name": "17 Culpepper House",
+      "Lot Type": "Apartment",
+      "Lot Size": "N/A",
+      "Residents/Owners": "1 Bed Small",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "18 Culpepper House",
+      "My Name": "18 Culpepper House",
+      "Lot Type": "Apartment",
+      "Lot Size": "N/A",
+      "Residents/Owners": "1 Bed",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "19 Culpepper House",
+      "My Name": "19 Culpepper House",
+      "Lot Type": "Apartment",
+      "Lot Size": "N/A",
+      "Residents/Owners": "2 Bed",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "20 Culpepper House",
+      "My Name": "20 Culpepper House",
+      "Lot Type": "Apartment",
+      "Lot Size": "N/A",
+      "Residents/Owners": "Rasoya",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "2A Jasmine Suites",
+      "My Name": "Fraternity Apartment",
+      "Lot Type": "Apartment",
+      "Lot Size": "N/A",
+      "Residents/Owners": "Empty",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "2B Jasmine Suites",
+      "My Name": "Sorority Apartment",
+      "Lot Type": "Apartment",
+      "Lot Size": "N/A",
+      "Residents/Owners": "Empty",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "The Old Salt House",
+      "My Name": "The Old Salt House",
+      "Lot Type": "Restaurant",
+      "Lot Size": "30x30",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Waterside Warble",
+      "My Name": "Waterside Warble",
+      "Lot Type": "Karaoke Bar",
+      "Lot Size": "30x30",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     }
+    ]
+   },
+   {
+    "name": "Arts Quarter",
+    "lots": [
+     {
+      "Lot Name": "910 Medina Studios",
+      "My Name": "910 Medina Studios",
+      "Lot Type": "Apartment",
+      "Lot Size": "N/A",
+      "Residents/Owners": "Benali",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "920 Medina Studios",
+      "My Name": "920 Medina Studios",
+      "Lot Type": "Apartment",
+      "Lot Size": "N/A",
+      "Residents/Owners": "Bheeda",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "930 Medina Studios",
+      "My Name": "930 Medina Studios",
+      "Lot Type": "Apartment",
+      "Lot Size": "N/A",
+      "Residents/Owners": "Livin' In The City",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "121 Hakim House",
+      "My Name": "121 Hakim House",
+      "Lot Type": "Apartment",
+      "Lot Size": "N/A",
+      "Residents/Owners": "Jang",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "122 Hakim House",
+      "My Name": "122 Hakim House",
+      "Lot Type": "Apartment",
+      "Lot Size": "N/A",
+      "Residents/Owners": "2/3 Bed",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "FountainView Penthouse",
+      "My Name": "FountainView Penthouse",
+      "Lot Type": "Penthouse",
+      "Lot Size": "N/A",
+      "Residents/Owners": "Santiago Ojo",
+      "Built": true,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": true
+     },
+     {
+      "Lot Name": "Casbah Gallery",
+      "My Name": "Casbah Gallery",
+      "Lot Type": "Arts Center",
+      "Lot Size": "40x30",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     }
+    ]
+   },
+   {
+    "name": "Fashion District",
+    "lots": [
+     {
+      "Lot Name": "701 ZenView",
+      "My Name": "701 ZenView",
+      "Lot Type": "Apartment",
+      "Lot Size": "N/A",
+      "Residents/Owners": "Bro & Kennedy",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "702 ZenView",
+      "My Name": "702 ZenView",
+      "Lot Type": "Apartment",
+      "Lot Size": "N/A",
+      "Residents/Owners": "Behr",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "1310 21 Chic Street",
+      "My Name": "1310 21 Chic Street",
+      "Lot Type": "Apartment",
+      "Lot Size": "N/A",
+      "Residents/Owners": "Jeong",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "1312 21 Chic Street",
+      "My Name": "1312 21 Chic Street",
+      "Lot Type": "Apartment",
+      "Lot Size": "N/A",
+      "Residents/Owners": "Pizzazz",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "1313 21 Chic street",
+      "My Name": "1313 21 Chic street",
+      "Lot Type": "Apartment",
+      "Lot Size": "N/A",
+      "Residents/Owners": "Empty",
+      "Built": true,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Torendi Tower Penthouse",
+      "My Name": "Torendi Tunes",
+      "Lot Type": "Karaoke Bar",
+      "Lot Size": "N/A",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Planet Honey Pop!",
+      "My Name": "Planet Honey Pop!",
+      "Lot Type": "Boba & Thrift",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     }
+    ]
+   },
+   {
+    "name": "Uptown",
+    "lots": [
+     {
+      "Lot Name": "1010 Alto Apartments",
+      "My Name": "1010 Alto Apartments",
+      "Lot Type": "Apartment",
+      "Lot Size": "N/A",
+      "Residents/Owners": "Empty",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "1020 Alto Apartments",
+      "My Name": "1020 Alto Apartments",
+      "Lot Type": "Apartment",
+      "Lot Size": "N/A",
+      "Residents/Owners": "Lobo",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "VIII Landgraab Apartments",
+      "My Name": "VIII Landgraab Apartments",
+      "Lot Type": "Apartment",
+      "Lot Size": "N/A",
+      "Residents/Owners": "Empty",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "IX Landgraab Apartments",
+      "My Name": "IX Landgraab Apartments",
+      "Lot Type": "Apartment",
+      "Lot Size": "N/A",
+      "Residents/Owners": "Feng",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "888 Spire Apartments",
+      "My Name": "888 Spire Apartments",
+      "Lot Type": "Apartment",
+      "Lot Size": "N/A",
+      "Residents/Owners": "Empty",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Skye Fitness",
+      "My Name": "Skye Fitness",
+      "Lot Type": "Gym",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Stargazer Lounge",
+      "My Name": "Stargazer Lounge",
+      "Lot Type": "Nightclub",
+      "Lot Size": "40x30",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     }
+    ]
+   },
+   {
+    "name": "Myshuno Meadows",
+    "lots": [
+     {
+      "Lot Name": "Myshuno Meadows",
+      "My Name": "Myshuno Meadows",
+      "Lot Type": "Central Park",
+      "Lot Size": "64x64",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     }
+    ]
+   }
+  ],
+  "stray": [
+   [
+    "I1",
+    "← Overview"
+   ]
+  ]
+ },
+ {
+  "tab": "Forgotten Hollow",
+  "title": "Forgotten Hollow",
+  "sections": [
+   {
+    "name": "Forgotten Hollow",
+    "lots": [
+     {
+      "Lot Name": "Straud Mansion",
+      "My Name": null,
+      "Lot Type": null,
+      "Lot Size": "40x30",
+      "Residents/Owners": null,
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Wolfsbane Manor",
+      "My Name": null,
+      "Lot Type": null,
+      "Lot Size": "30x30",
+      "Residents/Owners": null,
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Garliclauter Place",
+      "My Name": null,
+      "Lot Type": null,
+      "Lot Size": "30x20",
+      "Residents/Owners": null,
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Widowshild Townhome",
+      "My Name": null,
+      "Lot Type": null,
+      "Lot Size": "30x20",
+      "Residents/Owners": null,
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Fledermaus Bend",
+      "My Name": null,
+      "Lot Type": null,
+      "Lot Size": "30x30",
+      "Residents/Owners": null,
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     }
+    ]
+   }
+  ],
+  "stray": [
+   [
+    "I1",
+    "← Overview"
+   ]
+  ]
+ },
+ {
+  "tab": "Selvadorada",
+  "title": "Selvadorada",
+  "sections": [
+   {
+    "name": "Puerto Llamante Marketplace",
+    "lots": [
+     {
+      "Lot Name": "Alam Museum of Archaeology",
+      "My Name": "Alam Museum of Archaeology",
+      "Lot Type": "Museum",
+      "Lot Size": "64x64",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Hillview Hideaway",
+      "My Name": "Hillside Hideaway",
+      "Lot Type": "Vacation Rental",
+      "Lot Size": "20x15",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Selvadorada Villa",
+      "My Name": "Selvadorada Villa",
+      "Lot Type": "Vacation Rental",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Cantina \"El Árbol del Jaguar\"",
+      "My Name": "Cantina \"El Árbol del Jaguar\"",
+      "Lot Type": "Bar",
+      "Lot Size": "40x30",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     }
+    ]
+   },
+   {
+    "name": "Belomisia Jungle",
+    "lots": [
+     {
+      "Lot Name": "Belomisia Trailhead",
+      "My Name": "Belomisia Trailhead",
+      "Lot Type": "Campground",
+      "Lot Size": "40x20",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Jungle Bungalow",
+      "My Name": "Jungle Bungalow",
+      "Lot Type": "Vacation Rental",
+      "Lot Size": "30x30",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Belomisia Field Station",
+      "My Name": "Belomisia Field Station",
+      "Lot Type": "Vacation Rental",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     }
+    ]
+   }
+  ],
+  "stray": [
+   [
+    "I1",
+    "← Overview"
+   ]
+  ]
+ },
+ {
+  "tab": "Brindleton Bay",
+  "title": "Brindleton Bay",
+  "sections": [
+   {
+    "name": "Sable Square",
+    "lots": [
+     {
+      "Lot Name": "Pupperstone Park",
+      "My Name": "Pupperstone Park",
+      "Lot Type": "Park",
+      "Lot Size": "40x30",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Brindleton Pawspital",
+      "My Name": "Brindleton Pawspital",
+      "Lot Type": "Vet Clinic",
+      "Lot Size": "40x30",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "It's A Good House",
+      "My Name": "It's A Good House",
+      "Lot Type": "Residential",
+      "Lot Size": "40x40",
+      "Residents/Owners": "Hecking",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Domus Familiaris",
+      "My Name": "Domus Familiaris",
+      "Lot Type": "Residential",
+      "Lot Size": "30x30",
+      "Residents/Owners": "Large 3 Bedroom",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Sporting Space",
+      "My Name": "Brindleton Boathouse",
+      "Lot Type": "Residential",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Newbie?",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     }
+    ]
+   },
+   {
+    "name": "Whiskerman's Wharf",
+    "lots": [
+     {
+      "Lot Name": "Club Calico",
+      "My Name": "Calico",
+      "Lot Type": "Lounge",
+      "Lot Size": "40x30",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Salty Paws Saloon",
+      "My Name": "The Bay Café",
+      "Lot Type": "Small Business Cat Cafe",
+      "Lot Size": "20x15",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Catscratch Cottage",
+      "My Name": null,
+      "Lot Type": "Restaurant (Seafood)",
+      "Lot Size": "20x15",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Ragdoll Refurb",
+      "My Name": "Brindleton Library",
+      "Lot Type": "Library",
+      "Lot Size": "20x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Tail's End",
+      "My Name": "Tail's End Apartments",
+      "Lot Type": "Residential Rental (4)",
+      "Lot Size": "40x30",
+      "Residents/Owners": "Empty",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     }
+    ]
+   },
+   {
+    "name": "Cavalier Cove",
+    "lots": [
+     {
+      "Lot Name": "Chateau Frise",
+      "My Name": "Chateau Frise",
+      "Lot Type": "Residential",
+      "Lot Size": "40x40",
+      "Residents/Owners": "Delgato",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Bedlington Boathouse",
+      "My Name": "Bedlington Barn",
+      "Lot Type": "Residential",
+      "Lot Size": "20x20",
+      "Residents/Owners": "Empty",
+      "Built": true,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Hound's Head",
+      "My Name": "Hound's Head",
+      "Lot Type": "Residential (Farm)",
+      "Lot Size": "64x64",
+      "Residents/Owners": "Empty",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Dachshund's Creek",
+      "My Name": "Creek Clinic",
+      "Lot Type": "Vet Clinic",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Ventura",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Hindquarter Hideaway",
+      "My Name": "Hindquarter Hideaway",
+      "Lot Type": "Residential",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Ventura",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     }
+    ]
+   },
+   {
+    "name": "Deadgrass Isle",
+    "lots": [
+     {
+      "Lot Name": "Deadgrass Discoveries",
+      "My Name": "Deadgrass Discoveries",
+      "Lot Type": "Cemetery",
+      "Lot Size": "30x30",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     }
+    ]
+   }
+  ],
+  "stray": [
+   [
+    "I1",
+    "← Overview"
+   ]
+  ]
+ },
+ {
+  "tab": "Del Sol Valley",
+  "title": "Del Sol Valley",
+  "sections": [
+   {
+    "name": "Mirage Park",
+    "lots": [
+     {
+      "Lot Name": "Vacuous Green",
+      "My Name": "Strike Out!",
+      "Lot Type": "Nightclub",
+      "Lot Size": "50x40",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Inner Circle",
+      "My Name": "Inner Circle",
+      "Lot Type": "Residential Rental (4)",
+      "Lot Size": "40x30",
+      "Residents/Owners": "Roomies",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Upland Place",
+      "My Name": "Upland Trailer Park",
+      "Lot Type": "Residential Rental (4)",
+      "Lot Size": "40x30",
+      "Residents/Owners": "Eclectic Arts",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     }
+    ]
+   },
+   {
+    "name": "The Pinnacles",
+    "lots": [
+     {
+      "Lot Name": "Chateau Peak",
+      "My Name": "Chateau Peak",
+      "Lot Type": "Residential",
+      "Lot Size": "64x64",
+      "Residents/Owners": "My Celebs",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "The Ward Den",
+      "My Name": "The Ward Den",
+      "Lot Type": "Residential",
+      "Lot Size": "50x40",
+      "Residents/Owners": "Ward",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Bailey-Moon Manor",
+      "My Name": "Bailey-Moon Manor",
+      "Lot Type": "Residential",
+      "Lot Size": "50x40",
+      "Residents/Owners": "Bailey-Moon",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": true,
+      "Sims Made": false
+     }
+    ]
+   },
+   {
+    "name": "Starlight Boulevard",
+    "lots": [
+     {
+      "Lot Name": "Orchid A Go Go",
+      "My Name": "Orchid A Go Go",
+      "Lot Type": "Lounge",
+      "Lot Size": "30x30",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Ward Park",
+      "My Name": "Starlight Fitness",
+      "Lot Type": "Gym (Small Business?)",
+      "Lot Size": "20x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Studio PBP",
+      "My Name": "Studio PBP",
+      "Lot Type": "Lounge",
+      "Lot Size": "40x30",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Plumbob Pictures Museum",
+      "My Name": "Plumbob Pictures Museum",
+      "Lot Type": "Small Business (Museum & Acting Classes)",
+      "Lot Size": "40x30",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Pectoral Fitness",
+      "My Name": "Valley Views",
+      "Lot Type": "Restaurant",
+      "Lot Size": "30x30",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     }
+    ]
+   },
+   {
+    "name": "Secret Lots",
+    "lots": [
+     {
+      "Lot Name": "Plumbob Pictures",
+      "My Name": "Plumbob Pictures",
+      "Lot Type": "Plumbob Pictures",
+      "Lot Size": null,
+      "Residents/Owners": "N/A",
+      "Built": "N/A",
+      "Shared": "N/A",
+      "Screenshots": "N/A",
+      "Sims Made": "N/A"
+     }
+    ]
+   }
+  ],
+  "stray": [
+   [
+    "I1",
+    "← Overview"
+   ]
+  ]
+ },
+ {
+  "tab": "StrangerVille",
+  "title": "StrangerVille",
+  "sections": [
+   {
+    "name": "StrangerVille Plaza",
+    "lots": [
+     {
+      "Lot Name": "8 Bells",
+      "My Name": "8 Bells",
+      "Lot Type": "Bar",
+      "Lot Size": "20x20",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "StrangerVille Information Center",
+      "My Name": "StrangerVille Information Center",
+      "Lot Type": "Museum",
+      "Lot Size": "20x20",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Carpophagous Corner",
+      "My Name": "Carpophagous Corner",
+      "Lot Type": "Vacation Rental",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Slip 42",
+      "My Name": "Slip 42",
+      "Lot Type": "Residential Rental (2)",
+      "Lot Size": "20x15",
+      "Residents/Owners": "Empty",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Old Penelope",
+      "My Name": "Old Penelope",
+      "Lot Type": "Residential",
+      "Lot Size": "50x40",
+      "Residents/Owners": "Cahill",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Riverside Grove",
+      "My Name": "Riverside Grove",
+      "Lot Type": "Residential",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Sigworth",
+      "Built": true,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     }
+    ]
+   },
+   {
+    "name": "Shady Acres",
+    "lots": [
+     {
+      "Lot Name": "Cliff Side Crest",
+      "My Name": "StrangerVille Gym&Pool",
+      "Lot Type": "Gym",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Creek Corner Cove",
+      "My Name": "Creek Corner Cove",
+      "Lot Type": "Residential",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Roswell",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Plateau Place",
+      "My Name": "SU Plateau Residence",
+      "Lot Type": "University Housing",
+      "Lot Size": "40x30",
+      "Residents/Owners": "Empty",
+      "Built": true,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Dream Weavers Way",
+      "My Name": "StrangerVille Library",
+      "Lot Type": "Library",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "StrangerVille Overlook",
+      "My Name": "SU Overlook Residence",
+      "Lot Type": "University Housing",
+      "Lot Size": "40x30",
+      "Residents/Owners": "Empty",
+      "Built": true,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     }
+    ]
+   },
+   {
+    "name": "Secret Lots",
+    "lots": [
+     {
+      "Lot Name": "The ██████ Lab",
+      "My Name": "The ██████ Lab",
+      "Lot Type": "Special",
+      "Lot Size": "64x64",
+      "Residents/Owners": "N/A",
+      "Built": "N/A",
+      "Shared": "N/A",
+      "Screenshots": "N/A",
+      "Sims Made": "N/A"
+     }
+    ]
+   }
+  ],
+  "stray": [
+   [
+    "I1",
+    "← Overview"
+   ]
+  ]
+ },
+ {
+  "tab": "Sulani",
+  "title": "Sulani",
+  "sections": [
+   {
+    "name": "Mua Pel'am",
+    "lots": [
+     {
+      "Lot Name": "Admiral's Wreckage",
+      "My Name": "Admiral's Wreckage",
+      "Lot Type": "Community Space",
+      "Lot Size": "50x50",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Caldera Camp",
+      "My Name": "Caldera Camp",
+      "Lot Type": "Residential",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Mine",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Key Point",
+      "My Name": "Key Point",
+      "Lot Type": "?",
+      "Lot Size": "40x30",
+      "Residents/Owners": null,
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     }
+    ]
+   },
+   {
+    "name": "Ohan'ali Town",
+    "lots": [
+     {
+      "Lot Name": "Kin-Ship",
+      "My Name": "Kin-Ship",
+      "Lot Type": "Residential",
+      "Lot Size": "30x30",
+      "Residents/Owners": "Kealoha",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Chieftain's Villa",
+      "My Name": "Chieftain's Villa",
+      "Lot Type": "Residential",
+      "Lot Size": "40x30",
+      "Residents/Owners": "Hoapili",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Lagoon Look",
+      "My Name": "Lagoon of Love",
+      "Lot Type": "Wedding Venue",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Tangled Flat",
+      "My Name": "Ohan'ali Community Center",
+      "Lot Type": "Library",
+      "Lot Size": "20x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "The Sand Bar",
+      "My Name": "The Sand Bar",
+      "Lot Type": "Bar",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Ohan'ali Beach",
+      "My Name": "Ohan'ali Beach",
+      "Lot Type": "Beach",
+      "Lot Size": "30x30",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     }
+    ]
+   },
+   {
+    "name": "Lani St. Taz",
+    "lots": [
+     {
+      "Lot Name": "Reef Finery",
+      "My Name": "Reef Finery",
+      "Lot Type": "Residential",
+      "Lot Size": "40x30",
+      "Residents/Owners": "Empty",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Journey's End",
+      "My Name": "Journey's End",
+      "Lot Type": "Residential",
+      "Lot Size": "40x30",
+      "Residents/Owners": "Empty",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Pier Perfection",
+      "My Name": "Pier Perfection",
+      "Lot Type": "Residential",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Empty",
+      "Built": true,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Sand Simoleon Beach",
+      "My Name": "Sand Simoleon Beach",
+      "Lot Type": "Beach",
+      "Lot Size": "40x30",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Sapphire Shores",
+      "My Name": "Sapphire Shores",
+      "Lot Type": "Residential",
+      "Lot Size": "50x50",
+      "Residents/Owners": "Empty",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     }
+    ]
+   }
+  ],
+  "stray": [
+   [
+    "I1",
+    "← Overview"
+   ]
+  ]
+ },
+ {
+  "tab": "Glimmerbrook",
+  "title": "Glimmerbrook",
+  "sections": [
+   {
+    "name": "Glimmerbrook",
+    "lots": [
+     {
+      "Lot Name": "Rock Ridge Canyon",
+      "My Name": "Rock Ridge Canyon",
+      "Lot Type": "Residential",
+      "Lot Size": "40x30",
+      "Residents/Owners": "Charm",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Creekside Corner",
+      "My Name": "Creekside Corner",
+      "Lot Type": "Residential",
+      "Lot Size": "30x20",
+      "Residents/Owners": "3 Bed",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Glimmerbrook Watch",
+      "My Name": "Glimmerbrook Watch",
+      "Lot Type": "Residential",
+      "Lot Size": "30x20",
+      "Residents/Owners": "1 Bed",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Brooks Bridge Borough",
+      "My Name": "Brooks Bridge Borough",
+      "Lot Type": "Residential",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Amicable Acolytes",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Elixirs and Brews",
+      "My Name": "Glimmer & Books",
+      "Lot Type": "Library",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     }
+    ]
+   },
+   {
+    "name": "The Magic Realm",
+    "lots": [
+     {
+      "Lot Name": "The Magic Realm",
+      "My Name": "The Magic Realm",
+      "Lot Type": "The Magic Realm",
+      "Lot Size": "40x40",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     }
+    ]
+   }
+  ],
+  "stray": [
+   [
+    "I1",
+    "← Overview"
+   ]
+  ]
+ },
+ {
+  "tab": "Britechester",
+  "title": "Britechester",
+  "sections": [
+   {
+    "name": "University of Britechester",
+    "lots": [
+     {
+      "Lot Name": "Darby's Den",
+      "My Name": "Darby's Den",
+      "Lot Type": "UoB Commons",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Darkwing House",
+      "My Name": "The Old Clocktower",
+      "Lot Type": "Nightclub/Retail",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Drake Hall",
+      "My Name": "Drake Hall",
+      "Lot Type": "University Housing",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Empty",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Wyvern Hall",
+      "My Name": "Wyvern Hall",
+      "Lot Type": "University Housing",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Best of Friends",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     }
+    ]
+   },
+   {
+    "name": "Foxbury Institute",
+    "lots": [
+     {
+      "Lot Name": "Larry's Lagoon",
+      "My Name": "Larry's Lagoon",
+      "Lot Type": "Foxbury Commons",
+      "Lot Size": "40x30",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Maritime Manor",
+      "My Name": "Maritime Manor",
+      "Lot Type": "Nightclub/Retail",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Tidal Tower",
+      "My Name": "Tidal Tower",
+      "Lot Type": "University Housing",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Empty",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Briny Tower",
+      "My Name": "Briny Tower",
+      "Lot Type": "University Housing",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Fletcher",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     }
+    ]
+   },
+   {
+    "name": "Gibbs Hill",
+    "lots": [
+     {
+      "Lot Name": "Honeydew Fields",
+      "My Name": "Britechester BnB",
+      "Lot Type": "Café/Vacation Rental",
+      "Lot Size": "20x15",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Laurel Library",
+      "My Name": "Laurel Library",
+      "Lot Type": "Library",
+      "Lot Size": "50x40",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Pepper's Pub",
+      "My Name": "The Old Crown",
+      "Lot Type": "Bar",
+      "Lot Size": "20x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Mossy Lane",
+      "My Name": "Mossy Lane",
+      "Lot Type": "Residential Rental (4)",
+      "Lot Size": "20x15",
+      "Residents/Owners": "Empty",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Spring Steppes",
+      "My Name": "Spring Steppes",
+      "Lot Type": "Residential Rental (4)",
+      "Lot Size": "20x15",
+      "Residents/Owners": "Elderberry & Pleasant",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     }
+    ]
+   }
+  ],
+  "stray": [
+   [
+    "I1",
+    "← Overview"
+   ]
+  ]
+ },
+ {
+  "tab": "Evergreen Harbor",
+  "title": "Evergreen Harbor",
+  "sections": [
+   {
+    "name": "Grims Quarry",
+    "lots": [
+     {
+      "Lot Name": "Miner Mansion",
+      "My Name": "Miner Mansion",
+      "Lot Type": "Residential",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Harris",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Rockridge Springs",
+      "My Name": "Rockridge Springs",
+      "Lot Type": "Residential Rental (3)",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Empty",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Stonestreet Apartments #3",
+      "My Name": "Stonestreet Apartments #3",
+      "Lot Type": "Apartment",
+      "Lot Size": "N/A",
+      "Residents/Owners": "Knox Greenburg",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Stonestreet Apartments #4",
+      "My Name": "Stonestreet Apartments #4",
+      "Lot Type": "Apartment",
+      "Lot Size": "N/A",
+      "Residents/Owners": "Sterling Rico",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "The Quarry Building",
+      "My Name": "The Quarry Building",
+      "Lot Type": "Community Space",
+      "Lot Size": "40x30",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     }
+    ]
+   },
+   {
+    "name": "Conifer Station",
+    "lots": [
+     {
+      "Lot Name": "Pigulock Manor",
+      "My Name": "Pigulock Manor",
+      "Lot Type": "Residential",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Tinker",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Canal Corner",
+      "My Name": "Canal Corner",
+      "Lot Type": "Small Business",
+      "Lot Size": "20x15",
+      "Residents/Owners": "Tinker",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Sprucewood Square",
+      "My Name": "Sprucewood Square",
+      "Lot Type": "Community Space",
+      "Lot Size": "40x30",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Pinecrest Apartments #402",
+      "My Name": "Pinecrest Apartments #402",
+      "Lot Type": "Apartment",
+      "Lot Size": "N/A",
+      "Residents/Owners": "Eco Roomies?",
+      "Built": true,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Pinecrest Apartments #404",
+      "My Name": "Pinecrest Apartments #404",
+      "Lot Type": "Apartment",
+      "Lot Size": "N/A",
+      "Residents/Owners": "2 Bed",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     }
+    ]
+   },
+   {
+    "name": "Port Promise",
+    "lots": [
+     {
+      "Lot Name": "The Old Mill",
+      "My Name": "The Old Mill",
+      "Lot Type": "Small Business",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Sterling Rico",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "The Caboose",
+      "My Name": "The Caboose",
+      "Lot Type": "Bar",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "The Shipping Views",
+      "My Name": "The Old Dockyard",
+      "Lot Type": "Community Space",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "The Waterfront",
+      "My Name": "Abandoned Views",
+      "Lot Type": "Residential Rental (3?)",
+      "Lot Size": "40x30",
+      "Residents/Owners": "Henley",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "The Portsmouth Promenade",
+      "My Name": "The Portsmouth Promenade",
+      "Lot Type": "Small Business",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Greenburg",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     }
+    ]
+   }
+  ],
+  "stray": [
+   [
+    "I1",
+    "← Overview"
+   ]
+  ]
+ },
+ {
+  "tab": "Mt. Komorebi",
+  "title": "Mt. Komorebi",
+  "sections": [
+   {
+    "name": "Wakaba",
+    "lots": [
+     {
+      "Lot Name": "2-4-1 Wakabamori",
+      "My Name": "?",
+      "Lot Type": "Cemetery?",
+      "Lot Size": "20x15",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "2-4-2 Wakabamori",
+      "My Name": "2-4-2 Wakabamori",
+      "Lot Type": "Residential",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Akiyama",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "2-4-3 Wakabamori",
+      "My Name": "2-4-3 Wakabamori",
+      "Lot Type": "Residential",
+      "Lot Size": "20x15",
+      "Residents/Owners": "My Sims??",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "2-5-1 Wakabamori",
+      "My Name": "2-5-1 Wakabamori",
+      "Lot Type": "Residential",
+      "Lot Size": "50x50",
+      "Residents/Owners": "Ito",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Hazakura Lounge",
+      "My Name": "?",
+      "Lot Type": "Rec Center?",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     }
+    ]
+   },
+   {
+    "name": "Senbamachi",
+    "lots": [
+     {
+      "Lot Name": "5-6-1 Shinrinyoku",
+      "My Name": "5-6-1 Shinrinyoku",
+      "Lot Type": "Residential",
+      "Lot Size": "20x15",
+      "Residents/Owners": "Nishidake",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "5-3-1 Shinrinyoku",
+      "My Name": "Sento Senbamachi",
+      "Lot Type": "Onsen Bathhouse",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "6-4-1 Hanamigawa",
+      "My Name": "6-4-1 Hanamigawa",
+      "Lot Type": "Vacation Rental",
+      "Lot Size": "20x15",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Hanamigawa Koen",
+      "My Name": "Izakaya Hanamigawa Koen",
+      "Lot Type": "Restaurant (/Park)",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": true,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Izakaya Ippai",
+      "My Name": "Boba Ippai",
+      "Lot Type": "Boba & Thrift",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     }
+    ]
+   },
+   {
+    "name": "Yukimatsu",
+    "lots": [
+     {
+      "Lot Name": "5-1-1 Kiyomatsu",
+      "My Name": "5-1-1 Kiyomatsu",
+      "Lot Type": "Vacation Rental",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "5-1-2 Kiyomatsu",
+      "My Name": "5-1-2 Kiyomatsu",
+      "Lot Type": "Vacation Rental",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Sutefani Onsen Bathhouse",
+      "My Name": "Sutefani Onsen Bathhouse",
+      "Lot Type": "Onsen Bathhouse",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Kiyomatsu Point",
+      "My Name": "Kiyomatsu Point",
+      "Lot Type": "Custom Venue",
+      "Lot Size": "50x50",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     }
+    ]
+   }
+  ],
+  "stray": [
+   [
+    "I1",
+    "← Overview"
+   ]
+  ]
+ },
+ {
+  "tab": "Henford-on-Bagley",
+  "title": "Henford-on-Bagley",
+  "sections": [
+   {
+    "name": "Finchwick",
+    "lots": [
+     {
+      "Lot Name": "The Gnome's Arms",
+      "My Name": "The Gnome's Arms",
+      "Lot Type": "Bar (Pub)",
+      "Lot Size": "30x20",
+      "Residents/Owners": "The Scotts (*NPC)",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "1 Cobblebottom Street",
+      "My Name": "1 Cobblebottom Street",
+      "Lot Type": "Residential",
+      "Lot Size": "20x15",
+      "Residents/Owners": "1 Bed",
+      "Built": true,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "3 Cobblebottom Street",
+      "My Name": "3 Cobblebottom Street",
+      "Lot Type": "Residential Rental (2)",
+      "Lot Size": "20x20",
+      "Residents/Owners": "Cecilia Kang \"A New Start\" Moody & McMillan",
+      "Built": true,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "5 Cobblebottom Street",
+      "My Name": "Finchwich Village Hall",
+      "Lot Type": "Library(/Wedding Venue / Bar)",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": true,
+      "Sims Made": "N/A"
+     }
+    ]
+   },
+   {
+    "name": "Old New Henford",
+    "lots": [
+     {
+      "Lot Name": "2 Olde Mill Lane",
+      "My Name": "2 Olde Mill Lane",
+      "Lot Type": "Vet Clinic",
+      "Lot Size": "50x40",
+      "Residents/Owners": "Watson-Holmes",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "3 Olde Mill Lane",
+      "My Name": "3 Olde Mill Lane",
+      "Lot Type": "Residential",
+      "Lot Size": "50x40",
+      "Residents/Owners": "Watson-Holmes",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "4 Olde Mill Lane",
+      "My Name": "The Olde Mill",
+      "Lot Type": "Residential",
+      "Lot Size": "30x20",
+      "Residents/Owners": "1/2 Bed Big",
+      "Built": true,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Olde Mill Hill",
+      "My Name": "Olde Mill Hill",
+      "Lot Type": "Residential",
+      "Lot Size": "64x64",
+      "Residents/Owners": "The Watsons",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     }
+    ]
+   },
+   {
+    "name": "The Bramblewood",
+    "lots": [
+     {
+      "Lot Name": "13 Nettle Lane",
+      "My Name": "13 Nettle Lane",
+      "Lot Type": "Residential",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Empty",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "14 Nettle Lane",
+      "My Name": "14 Nettle Lane",
+      "Lot Type": "Residential",
+      "Lot Size": "40x30",
+      "Residents/Owners": "Empty",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Cordelia's Secret Cottage",
+      "My Name": "Cordelia's Secret Cottage",
+      "Lot Type": "Residential",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Empty",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Isle of Volpe",
+      "My Name": "Isle of Volpe",
+      "Lot Type": "National Park",
+      "Lot Size": "50x40",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     }
+    ]
+   }
+  ],
+  "stray": [
+   [
+    "I1",
+    "← Overview"
+   ]
+  ]
+ },
+ {
+  "tab": "Tartosa",
+  "title": "Tartosa",
+  "sections": [
+   {
+    "name": "Porto Luminoso",
+    "lots": [
+     {
+      "Lot Name": "Thebe Estate",
+      "My Name": "Thebe Estate",
+      "Lot Type": "Residential",
+      "Lot Size": "50x50",
+      "Residents/Owners": "Laurent",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Piccola Luca",
+      "My Name": "Piccola Luca",
+      "Lot Type": "Vacation Rental",
+      "Lot Size": "20x20",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Baia dell'Amore",
+      "My Name": "Baia dell'Amore",
+      "Lot Type": "Wedding Venue",
+      "Lot Size": "40x20",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Villa Vigna",
+      "My Name": "?",
+      "Lot Type": "Lounge/Restaurant?",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Celebrazioni d'Amore",
+      "My Name": "?",
+      "Lot Type": "Residential",
+      "Lot Size": "50x40",
+      "Residents/Owners": "Capp/Monty?",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     }
+    ]
+   },
+   {
+    "name": "Terra Amorosa",
+    "lots": [
+     {
+      "Lot Name": "The Old Wood Nectary",
+      "My Name": "The Old Wood Nectary",
+      "Lot Type": "Residential",
+      "Lot Size": "40x30",
+      "Residents/Owners": "Markovic",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Rifugio dei Pirati",
+      "My Name": "Rifugio dei Pirati",
+      "Lot Type": "?",
+      "Lot Size": "30x20",
+      "Residents/Owners": "?",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Via Romanza",
+      "My Name": "Via Romanza",
+      "Lot Type": "?",
+      "Lot Size": "30x30",
+      "Residents/Owners": "?",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "La Coppia Serena",
+      "My Name": "La Coppia Serena",
+      "Lot Type": "Residential",
+      "Lot Size": "50x40",
+      "Residents/Owners": "Capp/Monty?",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     }
+    ]
+   }
+  ],
+  "stray": [
+   [
+    "I1",
+    "← Overview"
+   ]
+  ]
+ },
+ {
+  "tab": "Moonwood Mill",
+  "title": "Moonwood Mill",
+  "sections": [
+   {
+    "name": "Moonwood Mill",
+    "lots": [
+     {
+      "Lot Name": "The Collective Cabin",
+      "My Name": "The Collective Cabin",
+      "Lot Type": "Residential",
+      "Lot Size": "40x30",
+      "Residents/Owners": "Volkov",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "New Moon Shack",
+      "My Name": "Full Moon Shack",
+      "Lot Type": "Residential",
+      "Lot Size": "20x15",
+      "Residents/Owners": "Rory & Friend?",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Prowler's Patch",
+      "My Name": "Moonwood Mill Library",
+      "Lot Type": "Library",
+      "Lot Size": "30x30",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "The Grimtooth Bar & Bunker",
+      "My Name": "New Moon Cabins",
+      "Lot Type": "Residential",
+      "Lot Size": "50x40",
+      "Residents/Owners": "Werewolves in Training",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "The Moonwood Mill Library",
+      "My Name": "Grimtooth Bar",
+      "Lot Type": "Bar",
+      "Lot Size": "40x30",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     }
+    ]
+   }
+  ],
+  "stray": [
+   [
+    "I1",
+    "← Overview"
+   ]
+  ]
+ },
+ {
+  "tab": "Copperdale",
+  "title": "Copperdale",
+  "sections": [
+   {
+    "name": "Rockridge Heights",
+    "lots": [
+     {
+      "Lot Name": "Copperdale High School",
+      "My Name": "Copperdale High School",
+      "Lot Type": "High School",
+      "Lot Size": "64x64",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Auditorium",
+      "My Name": "Auditorium",
+      "Lot Type": "Auditorium",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     }
+    ]
+   },
+   {
+    "name": "Prescott Square",
+    "lots": [
+     {
+      "Lot Name": "Water Tower Way",
+      "My Name": "Water Tower Way",
+      "Lot Type": "Library",
+      "Lot Size": "20x15",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Town Square Terrace",
+      "My Name": "Town Square Stores",
+      "Lot Type": "Boba & Thrift",
+      "Lot Size": "20x15",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "ThrifTea",
+      "My Name": "Lakeside Boarding House",
+      "Lot Type": "Dorms #1",
+      "Lot Size": "20x15",
+      "Residents/Owners": "Chess/Comp Teens",
+      "Built": true,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Lakeview Library",
+      "My Name": "Lakeside Boarding House",
+      "Lot Type": "Dorms #2",
+      "Lot Size": "20x20",
+      "Residents/Owners": "Cheer/Football Teens",
+      "Built": true,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Golden Peak",
+      "My Name": "Golden Peak",
+      "Lot Type": "Residential",
+      "Lot Size": "30x30",
+      "Residents/Owners": "Prescott",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     }
+    ]
+   },
+   {
+    "name": "Plumbite Cove",
+    "lots": [
+     {
+      "Lot Name": "LaSuli Point",
+      "My Name": "LaSuli Point",
+      "Lot Type": "Restaurant",
+      "Lot Size": "20x15",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Totter Park",
+      "My Name": "Totter Park",
+      "Lot Type": "Cemetery",
+      "Lot Size": "50x40",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "BridgeCreek Drive",
+      "My Name": "BridgeCreek Drive",
+      "Lot Type": "Residential",
+      "Lot Size": "30x30",
+      "Residents/Owners": "Price",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Little Falls Nook",
+      "My Name": "Little Falls Nook",
+      "Lot Type": "Residential",
+      "Lot Size": "20x20",
+      "Residents/Owners": "Harjo",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Hillside Haven",
+      "My Name": "Hillside Haven",
+      "Lot Type": "Residential",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Donovan (move!)",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     }
+    ]
+   }
+  ],
+  "stray": [
+   [
+    "I1",
+    "← Overview"
+   ]
+  ]
+ },
+ {
+  "tab": "San Sequoia",
+  "title": "San Sequoia",
+  "sections": [
+   {
+    "name": "Anchorpoint Wharf",
+    "lots": [
+     {
+      "Lot Name": "Robles Point",
+      "My Name": "Robles Point",
+      "Lot Type": "Residential",
+      "Lot Size": "50x40",
+      "Residents/Owners": "Robles",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Manzanita Terrace",
+      "My Name": "Manzanita Terrace",
+      "Lot Type": "Residential Rental",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Robles own",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Anchorpoint Library",
+      "My Name": "Anchorpoint Rec Center",
+      "Lot Type": "Rec Center",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Anchorpoint Abode",
+      "My Name": "Anchorpoint Works",
+      "Lot Type": "Restaurant/Bar",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     }
+    ]
+   },
+   {
+    "name": "Gilbert Gardens",
+    "lots": [
+     {
+      "Lot Name": "13 Acacia Avenue",
+      "My Name": "13 Acacia Avenue",
+      "Lot Type": "Residential",
+      "Lot Size": "40x30",
+      "Residents/Owners": "Robles-Ruano",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Parkside Place",
+      "My Name": "Parkside Place",
+      "Lot Type": "Playground",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "18 Celebration Way",
+      "My Name": "18 Celebration Way",
+      "Lot Type": "Boba & Thrift",
+      "Lot Size": "40x20",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Celebration Center",
+      "My Name": "Celebration Center",
+      "Lot Type": "Wedding Venue/Cemetery",
+      "Lot Size": "64x64",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     }
+    ]
+   },
+   {
+    "name": "Hopewell Hills",
+    "lots": [
+     {
+      "Lot Name": "7 Eucalyptus Lane",
+      "My Name": "7 Eucalyptus Lane",
+      "Lot Type": "Residential",
+      "Lot Size": "50x40",
+      "Residents/Owners": "Michaelson",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "23 Eucalyptus Lane",
+      "My Name": "23 Eucalyptus Lane",
+      "Lot Type": "Residential",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Lovejoy",
+      "Built": true,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": true
+     },
+     {
+      "Lot Name": "36 Bayani Place",
+      "My Name": "36 Bayani Place",
+      "Lot Type": "Residential",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Luna-Sullivan",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Sequoia Cottage",
+      "My Name": "Sequoia Cottage",
+      "Lot Type": "Residential Rental",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Lovejoy own",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     }
+    ]
+   }
+  ],
+  "stray": [
+   [
+    "I1",
+    "← Overview"
+   ]
+  ]
+ },
+ {
+  "tab": "Chestnut Ridge",
+  "title": "Chestnut Ridge",
+  "sections": [
+   {
+    "name": "New Appaloosa",
+    "lots": [
+     {
+      "Lot Name": "Champions' Grove",
+      "My Name": "Champions' Grove",
+      "Lot Type": "Residential",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Sienna & Flapjack",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "The Cozy Corner House",
+      "My Name": null,
+      "Lot Type": "Vet Clinic/Library?",
+      "Lot Size": "20x20",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "The Oak Barrel",
+      "My Name": "The Oak Barrel",
+      "Lot Type": "Restaurant",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "The Rusty Horseshoe",
+      "My Name": "The Rusty Horseshoe",
+      "Lot Type": "Nightclub",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Duke's Hall",
+      "My Name": "Appaloosa Stables",
+      "Lot Type": "Residential",
+      "Lot Size": "40x30",
+      "Residents/Owners": "Horse Elder Couple",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     }
+    ]
+   },
+   {
+    "name": "Riders' Glen",
+    "lots": [
+     {
+      "Lot Name": "Biscuit's Bastion",
+      "My Name": "Biscuit's Bastion",
+      "Lot Type": "Residential",
+      "Lot Size": "40x30",
+      "Residents/Owners": "The Grove Family",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Sweet Nectar Glade",
+      "My Name": "Sweet Nectar Glade",
+      "Lot Type": "Bar",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Canter Cottage",
+      "My Name": "Canter Cemetery",
+      "Lot Type": "Cemetery",
+      "Lot Size": "30x30",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Grapevine Terrace",
+      "My Name": "Grapevine Terrace",
+      "Lot Type": "Residential",
+      "Lot Size": "30x20",
+      "Residents/Owners": "The Nectar Making Duo",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Red Roan Field",
+      "My Name": "Red Roan Farm",
+      "Lot Type": "Residential (Farm)",
+      "Lot Size": "64x64",
+      "Residents/Owners": "Mine",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     }
+    ]
+   },
+   {
+    "name": "Galloping Gulch",
+    "lots": [
+     {
+      "Lot Name": "Canyon Crossing",
+      "My Name": "Canyon Crossing",
+      "Lot Type": "Residential",
+      "Lot Size": "20x20",
+      "Residents/Owners": "Gooseman",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Palomino Junction",
+      "My Name": "Palomino Junction",
+      "Lot Type": "Residential (Ranch)",
+      "Lot Size": "50x50",
+      "Residents/Owners": "Palumbo",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Big Sky Reach",
+      "My Name": "Big Sky Reach",
+      "Lot Type": "Vacation Rental",
+      "Lot Size": "20x15",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     }
+    ]
+   }
+  ],
+  "stray": [
+   [
+    "I1",
+    "← Overview"
+   ],
+   [
+    "D25",
+    "Notes"
+   ],
+   [
+    "D26",
+    "One of Duo's Parents"
+   ]
+  ]
+ },
+ {
+  "tab": "Tomarang",
+  "title": "Tomarang",
+  "sections": [
+   {
+    "name": "Morensong",
+    "lots": [
+     {
+      "Lot Name": "Ro Kaya Rockside",
+      "My Name": "Ro Kaya Rockside",
+      "Lot Type": "Restaurant",
+      "Lot Size": "40x30",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Taka Soi 15",
+      "My Name": "Taka Soi 15",
+      "Lot Type": "Residential Rental",
+      "Lot Size": "20x20",
+      "Residents/Owners": "Cahyaputri (own)",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Chee-wit Chee-waa Kanto",
+      "My Name": "Chee-wit Chee-waa Kanto",
+      "Lot Type": "Boba & Thrift",
+      "Lot Size": "20x15",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "ZoSul Taman Botani",
+      "My Name": "ZoSul Taman Botani",
+      "Lot Type": "Park/Wedding/Cemetery?",
+      "Lot Size": "30x30",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     }
+    ]
+   },
+   {
+    "name": "Koh Sahpa",
+    "lots": [
+     {
+      "Lot Name": "Isda Riverfront",
+      "My Name": "Isda Riverfront",
+      "Lot Type": "Residential Rental (2)",
+      "Lot Size": "20x20",
+      "Residents/Owners": "Rochana/Caberry own",
+      "Built": true,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Sungai Point",
+      "My Name": "Sungai Point",
+      "Lot Type": "Residential Rental (3)",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Linh-Sadya & Linh",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "The Screaming Gecko",
+      "My Name": "The Screaming Gecko",
+      "Lot Type": "Bar",
+      "Lot Size": "20x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Tam Nang Sands",
+      "My Name": "Tam Nang Sands",
+      "Lot Type": "Commercial?",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Hothotok Shore",
+      "My Name": "Hothotok Shore",
+      "Lot Type": "Residential",
+      "Lot Size": "20x15",
+      "Residents/Owners": "Bun Ma",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     }
+    ]
+   }
+  ],
+  "stray": [
+   [
+    "I1",
+    "← Overview"
+   ],
+   [
+    "D18",
+    "Notes"
+   ],
+   [
+    "D19",
+    "Lynx"
+   ]
+  ]
+ },
+ {
+  "tab": "Ciudad Enamorada",
+  "title": "Ciudad Enamorada",
+  "sections": [
+   {
+    "name": "Nuevo Corazón",
+    "lots": [
+     {
+      "Lot Name": "La Suite del Flechazo",
+      "My Name": null,
+      "Lot Type": "Residential",
+      "Lot Size": "20x15",
+      "Residents/Owners": "Nadir",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Torres Amanecer",
+      "My Name": null,
+      "Lot Type": "Residential",
+      "Lot Size": "20x20",
+      "Residents/Owners": "Empty",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Mirador del Amor",
+      "My Name": null,
+      "Lot Type": "Nightclub",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "SUDOR",
+      "My Name": null,
+      "Lot Type": "Gym",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     }
+    ]
+   },
+   {
+    "name": "Plaza Maripoza",
+    "lots": [
+     {
+      "Lot Name": "Avenida de la Eternida",
+      "My Name": null,
+      "Lot Type": "Residential",
+      "Lot Size": "30x30",
+      "Residents/Owners": "Dynamic Daters",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Calle del Ensueño",
+      "My Name": null,
+      "Lot Type": null,
+      "Lot Size": "50x40",
+      "Residents/Owners": null,
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Villa Cálida",
+      "My Name": null,
+      "Lot Type": "Vacation Rental",
+      "Lot Size": "30x30",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Media Naranja",
+      "My Name": null,
+      "Lot Type": "Park",
+      "Lot Size": "30x30",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     }
+    ]
+   },
+   {
+    "name": "Vista Hermosa",
+    "lots": [
+     {
+      "Lot Name": "Calle de la Promesa",
+      "My Name": null,
+      "Lot Type": "Residential",
+      "Lot Size": "30x30",
+      "Residents/Owners": "López",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Mansión de la Pasión",
+      "My Name": null,
+      "Lot Type": "Residential",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Empty",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Casita del Amor",
+      "My Name": null,
+      "Lot Type": "Residential",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Empty",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Caminito del Deseo",
+      "My Name": null,
+      "Lot Type": null,
+      "Lot Size": "50x40",
+      "Residents/Owners": null,
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Laguna del Abrazo",
+      "My Name": null,
+      "Lot Type": "Lounge",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     }
+    ]
+   }
+  ],
+  "stray": [
+   [
+    "I1",
+    "← Overview"
+   ],
+   [
+    "D25",
+    "Notes"
+   ],
+   [
+    "D26",
+    "Lynx"
+   ]
+  ]
+ },
+ {
+  "tab": "Ravenwood",
+  "title": "Ravenwood",
+  "sections": [
+   {
+    "name": "Crow's Crossing",
+    "lots": [
+     {
+      "Lot Name": "Specter Family Manor",
+      "My Name": "Ravenwood Wedding Hall",
+      "Lot Type": "Wedding Venue",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Crow's Perch",
+      "My Name": "Crow's Chronicles",
+      "Lot Type": "Library",
+      "Lot Size": "30x30",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Moppy Manor",
+      "My Name": "Specter Row",
+      "Lot Type": "Residential Rental",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Specter & Rent Out",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Old Ravenwood Estate",
+      "My Name": null,
+      "Lot Type": "Residential",
+      "Lot Size": "50x50",
+      "Residents/Owners": "Empty",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Eternal Hollow",
+      "My Name": null,
+      "Lot Type": "Cemetery",
+      "Lot Size": "64x64",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     }
+    ]
+   },
+   {
+    "name": "Whispering Glen",
+    "lots": [
+     {
+      "Lot Name": "Teardrop Cottage",
+      "My Name": null,
+      "Lot Type": "Residential",
+      "Lot Size": "30x30",
+      "Residents/Owners": "Gomes",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "The Marigold Chateau",
+      "My Name": null,
+      "Lot Type": "Residential",
+      "Lot Size": "50x50",
+      "Residents/Owners": "Aether",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Hay Hill Landing",
+      "My Name": null,
+      "Lot Type": "Vineyard/Farm",
+      "Lot Size": "64x64",
+      "Residents/Owners": "Empty",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "The Final Draught",
+      "My Name": null,
+      "Lot Type": "Restaurant",
+      "Lot Size": "30x30",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     }
+    ]
+   },
+   {
+    "name": "Mourningvale",
+    "lots": [
+     {
+      "Lot Name": "The Cozy Casket House",
+      "My Name": null,
+      "Lot Type": "Residential",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Empty",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Mourning Mist Manor",
+      "My Name": null,
+      "Lot Type": "Residential",
+      "Lot Size": "20x20",
+      "Residents/Owners": "Izadi-Gomes",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Club Eternity",
+      "My Name": null,
+      "Lot Type": "Nightclub",
+      "Lot Size": "30x30",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Mystic Crossroads",
+      "My Name": null,
+      "Lot Type": null,
+      "Lot Size": "30x30",
+      "Residents/Owners": null,
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     }
+    ]
+   },
+   {
+    "name": "Secret Lots",
+    "lots": [
+     {
+      "Lot Name": "Netherworld Department",
+      "My Name": "Netherworld Department",
+      "Lot Type": "Netherworld Department",
+      "Lot Size": "N/A",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     }
+    ]
+   }
+  ],
+  "stray": [
+   [
+    "I1",
+    "← Overview"
+   ]
+  ]
+ },
+ {
+  "tab": "Nordhaven",
+  "title": "Nordhaven",
+  "sections": [
+   {
+    "name": "Gammelvik",
+    "lots": [
+     {
+      "Lot Name": "Konst Modern",
+      "My Name": null,
+      "Lot Type": "Museum/Wedding Venue?",
+      "Lot Size": "50x40",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "The Rouge Note",
+      "My Name": "The Rouge Note",
+      "Lot Type": "Lounge/Bar/Nightclub",
+      "Lot Size": "20x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Koffieboon",
+      "My Name": null,
+      "Lot Type": "Small Business Residential",
+      "Lot Size": "20x20",
+      "Residents/Owners": "Loden?",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Old Torget House",
+      "My Name": null,
+      "Lot Type": "Residential Rental (3)",
+      "Lot Size": "20x15",
+      "Residents/Owners": "Empty",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Fisher's Horizon",
+      "My Name": "Fisherman's Wharf",
+      "Lot Type": "Small Business Residential",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Johansson",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": true
+     },
+     {
+      "Lot Name": "Comfortably Canalside",
+      "My Name": "Canalside Daycare",
+      "Lot Type": "Small Business Residential",
+      "Lot Size": "20x20",
+      "Residents/Owners": "?",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": false
+     }
+    ]
+   },
+   {
+    "name": "Iverstad",
+    "lots": [
+     {
+      "Lot Name": "New Harbor Park",
+      "My Name": null,
+      "Lot Type": "Small Business Residential",
+      "Lot Size": "50x40",
+      "Residents/Owners": "Empty",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Terra-Potta",
+      "My Name": null,
+      "Lot Type": "Small Business Residential",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Koopman??",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "The Old Foundry",
+      "My Name": null,
+      "Lot Type": "Residential",
+      "Lot Size": "20x15",
+      "Residents/Owners": "Urbane Housesharers household",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Spilled Neon",
+      "My Name": null,
+      "Lot Type": "Small Business Residential",
+      "Lot Size": "20x20",
+      "Residents/Owners": "Sarpong?",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Inked Inlet",
+      "My Name": null,
+      "Lot Type": "Library?",
+      "Lot Size": "20x20",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Lighthouse Lookout",
+      "My Name": null,
+      "Lot Type": "Residential Rental (?)",
+      "Lot Size": "50x40",
+      "Residents/Owners": "Empty",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     }
+    ]
+   }
+  ],
+  "stray": [
+   [
+    "I1",
+    "← Overview"
+   ]
+  ]
+ },
+ {
+  "tab": "Gibbi Point",
+  "title": "Gibbi Point",
+  "sections": [
+   {
+    "name": "Wanderwood Wilds",
+    "lots": [
+     {
+      "Lot Name": "Hothead Rock Hideaway",
+      "My Name": "Revive and Thrive Retreat",
+      "Lot Type": "Custom Venue",
+      "Lot Size": "64x64",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Camp Gibbi Gibbi",
+      "My Name": "Camp Gibbi Gibbi",
+      "Lot Type": "Custom Venue",
+      "Lot Size": "50x50",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Wanderwood Wonder",
+      "My Name": "Wanderwood Wonder",
+      "Lot Type": "Residential",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Chavez-Ralston",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Plumbird Park",
+      "My Name": "Plumbird Park",
+      "Lot Type": "Playground",
+      "Lot Size": "40x40",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     }
+    ]
+   },
+   {
+    "name": "Jellyfish Junction",
+    "lots": [
+     {
+      "Lot Name": "Jellyfish Jubilee",
+      "My Name": "Jellyfish Jubilee",
+      "Lot Type": "Restaurant",
+      "Lot Size": "40x30",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Seabreeze Scenic",
+      "My Name": "Seabreeze Scenic",
+      "Lot Type": "Residential",
+      "Lot Size": "40x30",
+      "Residents/Owners": "Perry",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Fletcher's Cottage",
+      "My Name": "Gibbi Point Library",
+      "Lot Type": "Library",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Revive and Thrive Retreat",
+      "My Name": "Gibbi Rec Center",
+      "Lot Type": "Rec Center",
+      "Lot Size": "64x64",
+      "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     }
+    ]
+   },
+   {
+    "name": "Crystal Valley",
+    "lots": [
+     {
+      "Lot Name": "Prospector's Paradise",
+      "My Name": "Paradise Stables",
+      "Lot Type": "Residential",
+      "Lot Size": "40x30",
+      "Residents/Owners": "Horses!",
+      "Built": true,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Crystal Cottage",
+      "My Name": "Crystal Cottage",
+      "Lot Type": "Residential",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Addam Commune",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Love Highland",
+      "My Name": "Love Highland",
+      "Lot Type": "Custom Venue",
+      "Lot Size": "50x50",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Fearful Fish Lounge",
+      "My Name": "Thrift 'n' Fish",
+      "Lot Type": "Boba & Thrift",
+      "Lot Size": "20x20",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Miner's Manse",
+      "My Name": "Miner's Manse",
+      "Lot Type": "Residential",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Empty",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     }
+    ]
+   }
+  ],
+  "stray": [
+   [
+    "I1",
+    "← Overview"
+   ]
+  ]
+ },
+ {
+  "tab": "Ondarion",
+  "title": "Ondarion",
+  "sections": [
+   {
+    "name": "Dambele",
+    "lots": [
+     {
+      "Lot Name": "Dambele Palace",
+      "My Name": "Dambele Palace",
+      "Lot Type": "Residential",
+      "Lot Size": "50x50",
+      "Residents/Owners": "Darong",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Zanbira Market",
+      "My Name": "Zanbira Market",
+      "Lot Type": "Community Market",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "17 Bright Cliff",
+      "My Name": "17 Bright Cliff",
+      "Lot Type": "Residential",
+      "Lot Size": "N/A",
+      "Residents/Owners": "Empty",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "18 Bright Cliff",
+      "My Name": "18 Bright Cliff",
+      "Lot Type": "Residential",
+      "Lot Size": "N/A",
+      "Residents/Owners": "Ananou",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Hardcover",
+      "My Name": "Hardcover",
+      "Lot Type": "Backroom",
+      "Lot Size": "20x20",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Sankofa Residence",
+      "My Name": "Sankofa Residence",
+      "Lot Type": "Residential",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Empty",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     }
+    ]
+   },
+   {
+    "name": "Verdemar",
+    "lots": [
+     {
+      "Lot Name": "Verdemar Palace",
+      "My Name": "Verdemar Palace",
+      "Lot Type": "Residential",
+      "Lot Size": "50x50",
+      "Residents/Owners": "Thebe",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Casa Do Corsário",
+      "My Name": "Casa Do Corsário",
+      "Lot Type": "Residential",
+      "Lot Size": "20x15",
+      "Residents/Owners": "Aloisio Romualdo",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Abrantes Estate",
+      "My Name": "Abrantes Estate",
+      "Lot Type": "Residential",
+      "Lot Size": "30x30",
+      "Residents/Owners": "Abrantes",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Fisherman's Hut",
+      "My Name": null,
+      "Lot Type": "Residential",
+      "Lot Size": "20x20",
+      "Residents/Owners": "Empty",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Ye Olde Voyager",
+      "My Name": null,
+      "Lot Type": "Bar",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "The Lair in the Open-Air",
+      "My Name": null,
+      "Lot Type": "Residential",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Empty",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     }
+    ]
+   },
+   {
+    "name": "Bellacorde",
+    "lots": [
+     {
+      "Lot Name": "Bellacorde Palace",
+      "My Name": "Bellacorde Palace",
+      "Lot Type": "Residential",
+      "Lot Size": "50x50",
+      "Residents/Owners": "Capp",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "Renaissance Road",
+      "My Name": "Renaissance Road",
+      "Lot Type": "Residential",
+      "Lot Size": "20x15",
+      "Residents/Owners": "Monty",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "12 Lakeview Apartments",
+      "My Name": "12 Lakeview Apartments",
+      "Lot Type": "Residential",
+      "Lot Size": "N/A",
+      "Residents/Owners": "Enzo Alto",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "13 Lakeview Apartments",
+      "My Name": "13 Lakeview Apartments",
+      "Lot Type": "Residential",
+      "Lot Size": "N/A",
+      "Residents/Owners": "Empty",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "La Vivace",
+      "My Name": "La Vivace",
+      "Lot Type": "Lounge",
+      "Lot Size": "40x30",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Giardino Del Grandioso",
+      "My Name": "Giardino Del Grandioso",
+      "Lot Type": "Residential",
+      "Lot Size": "64x64",
+      "Residents/Owners": "Empty",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     }
+    ]
+   }
+  ],
+  "stray": [
+   [
+    "I1",
+    "← Overview"
+   ]
+  ]
+ }
+]
