@@ -251,6 +251,21 @@ function boxZoom(b){
   const room = 1.15, w = (b[2] - b[0]) * room, h = (b[3] - b[1]) * room;
   return Math.max(CARD_RATIO / MAP_RATIO + .01, Math.min(4, 1 / Math.max(w, .01), CARD_RATIO / (MAP_RATIO * Math.max(h, .01))));
 }
+// where the card looks: the card is 4:3, so a wide or tall box leaves spare room around it. Slide the view (keeping the
+// whole box in it) so that spare room shows as little of the world's other neighbourhoods as possible (14 Oct: Windslar's
+// card was showing a Crumbling Isle lot below it); ties stay centred
+function boxCentre(b, zoom, others){
+  const vw = 1 / zoom, vh = CARD_RATIO / (zoom * MAP_RATIO), steps = 12;
+  const range = (lo, hi, size) => size >= hi - lo ? [lo - (size - (hi - lo)), lo] : [(lo + hi - size) / 2, (lo + hi - size) / 2];
+  const [x0, x1] = range(b[0], b[2], vw), [y0, y1] = range(b[1], b[3], vh);
+  const hit = (l, t) => others.reduce((n, o) => n + Math.max(0, Math.min(l + vw, o[2]) - Math.max(l, o[0])) * Math.max(0, Math.min(t + vh, o[3]) - Math.max(t, o[1])), 0);
+  let best = null;
+  for (let i = 0; i <= steps; i++) for (let j = 0; j <= steps; j++) {
+    const l = x0 + (x1 - x0) * i / steps, t = y0 + (y1 - y0) * j / steps, off = Math.abs(i / steps - .5) + Math.abs(j / steps - .5), n = hit(l, t);
+    if (!best || n < best.n - 1e-6 || (Math.abs(n - best.n) <= 1e-6 && off < best.off)) best = {n, off, c: [l + vw / 2, t + vh / 2]};
+  }
+  return best.c;
+}
 // background-position that puts point [x,y] of the map at the card's centre (clamped at the map's edges), plus where the pin lands
 function nbView(pt, zoom = ZOOM){
   const kx = zoom, ky = zoom * MAP_RATIO / CARD_RATIO, cl = v => Math.max(0, Math.min(1, v));
@@ -262,7 +277,8 @@ const nbTile = l => l.photos[0] ? `<i style="background-image:url('${l.photos[0]
 document.addEventListener("click", e => { const c = e.target.closest("[data-lot-link]"); if (!c) return; e.preventDefault(); e.stopPropagation(); location.hash = c.dataset.lotLink; }, true);
 function hoodArt(x){
   const spot = (NB_PT[x.world.id] || {})[x.name], box = (NB_BOX[x.world.id] || {})[x.name], n = x.lots.length;
-  const v = box ? nbView([(box[0] + box[2]) / 2, (box[1] + box[3]) / 2], boxZoom(box)) : spot ? nbView(spot) : null;
+  const others = Object.entries(NB_BOX[x.world.id] || {}).filter(([n]) => n !== x.name).map(([, b]) => b);
+  const v = box ? nbView(boxCentre(box, boxZoom(box), others), boxZoom(box)) : spot ? nbView(spot) : null;
   const bg = !x.world.map ? "" : v ? `background:url('${x.world.map}') ${v.bg}` : `background:url('${x.world.map}') center 45%/cover`;
   const circles = x.lots.map(l => nbTile(l).replace("<i ", `<i data-lot-link="${l.id}" aria-label="${esc(l.name)}" `).replace(/ title="[^"]*"/, ` data-name="${esc(l.name)}"`)).join("");
   return `<div class="photo nb-map" style="${bg}"><span class="nb-bubbles${n > 5 ? " many" : ""}">${circles}</span><span class="type">Neighbourhood</span></div>`;

@@ -76,6 +76,8 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
 - [x] [Claude] Tried suggesting squares from the game's own map data (13–14 Oct): it can't place neighbourhoods on the map pictures, so no suggestions (research/map-squares.md)
 - [x] Done 14 Oct: she drew a box around every neighbourhood on the clickable page (Willow Creek redone too), saved as `mapSpot` + `mapBox`; each card zooms to fit its box. Checked against the plots on each map; the overlaps are only bare ground (e.g. Chestnut Ridge's L-shaped neighbourhoods). The Secret/Special Lots groups and The Magic Realm have no box, on purpose
 - If a map picture is ever replaced (e.g. by her own in-game map screenshot): line the old and new pictures up and move the boxes to match, then let her check the cards
+- [ ] [Jemma] San Myshuno's boxes: recheck later (the night map shows no lots, so the apartment buildings are hard to place)
+- Cards slide their view so the spare room around a wide or tall box shows as little of the neighbouring boxes as possible (14 Oct: Windslar showed a Crumbling Isle lot)
 
 ## 5. Lot types, groups and names
 
