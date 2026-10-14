@@ -36,8 +36,8 @@
    "desc": "Wide open spaces and a chateau or two. Visit or live in Windslar for a delectable taste of countryside living.",
    "lots": [
     {"lot": "Coorinberg Cottage", "myName": "Coorinberg Cottage", "type": "Residential", "size": "40x30", "residents": "Munch", "built": true, "shared": true, "screenshots": true, "simsMade": false, "gallery": ["60HYgOvpR0a9c7/SdYBveA=="], "traits": ["Peace and Quiet", "Great Soil", "Homey"], "challenges": ["Simple Living"]},
-    {"lot": "Cottage Am See", "myName": "Cottage Am See", "type": "Residential", "size": "20x20", "residents": "Free Spirits", "built": true, "shared": true, "screenshots": true, "simsMade": false, "gallery": ["90eaL6RtEeuE1ecawTB/JA=="], "traits": ["Great Soil", "Sunny Aspect", "Peace and Quiet"]},
-    {"lot": "Rustic Residence", "myName": "Rustic Residence", "type": "Residential", "size": "30x20", "residents": "1 Bed", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["XCNL0nuzEeyN+AW7hdRP0w=="], "traits": ["Great Soil", "Homey"], "challenges": ["Simple Living"]},
+    {"lot": "Cottage Am See", "myName": "Cottage Am See", "type": "Tiny Home Residential", "size": "20x20", "residents": "Free Spirits", "built": true, "shared": true, "screenshots": true, "simsMade": false, "gallery": ["90eaL6RtEeuE1ecawTB/JA=="], "traits": ["Great Soil", "Sunny Aspect", "Peace and Quiet"]},
+    {"lot": "Rustic Residence", "myName": "Rustic Residence", "type": "Tiny Home Residential", "size": "30x20", "residents": "1 Bed", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["XCNL0nuzEeyN+AW7hdRP0w=="], "traits": ["Great Soil", "Homey"], "challenges": ["Simple Living"]},
     {"lot": "The Shrieking Llama", "myName": "The Shrieking Llama", "type": "Bar", "size": "20x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["hQY3dKXnEeuB2+cawTB/JA=="], "traits": ["Sunny Aspect", "Dog Friendly", "Dog Hangout"]},
     {"lot": "Dresden House", "myName": "Dresden House", "type": "Residential", "size": "64x64", "residents": "Fyres", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "The Summer Home", "myName": null, "type": "Vet Clinic", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
@@ -48,7 +48,7 @@
    "desc": "The Crumbling Isle is a bit of a misnomer for this part of town. There's nothing here but glorious high-end real estate as far as the eye can see.",
    "lots": [
     {"lot": "The Lighthouse", "myName": "The Lighthouse", "type": "Residential", "size": "40x30", "residents": "Tiquelle", "built": false, "shared": false, "screenshots": false, "simsMade": false},
-    {"lot": "Mid-NoWhere", "myName": "Mid-NoWhere", "type": "Park", "size": "20x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["KjklhciHEeuF3a3kS5H9ag=="]},
+    {"lot": "Mid-NoWhere", "myName": "Mid-NoWhere", "type": "Generic", "size": "20x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["KjklhciHEeuF3a3kS5H9ag=="]},
     {"lot": "Pier Palace", "myName": "Pier Palace", "type": "Residential", "size": "30x20", "residents": "Tiquelle", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Dock Den", "myName": "Dock Den", "type": "Residential", "size": "30x20", "residents": "Tiquelle", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Von-Windenburg Estate", "myName": "Von-Windenburg Estate", "type": "Residential", "size": "64x64", "residents": "Tiquelle", "built": true, "shared": true, "screenshots": true, "simsMade": false, "gallery": ["5Ogf+wA8EeuOvtW1mM26QQ=="], "traits": ["Private Dwelling", "Sunny Aspect"], "challenges": ["Spooky"]}

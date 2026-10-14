@@ -81,6 +81,7 @@ def gallery_for(lot):
             plan = [t.strip() for t in re.sub(r'\s*\([^)]*\)', '', lot.get('type') or '').split('/')]
             pick = [e for e in ups if e['lotType'] in plan] or [e for e in ups if e['lotType'] == 'Residential Rental'] or ups
             main = max(pick, key=lambda e: e['likes'] + e['downloads'])
+            if lot.get('galleryLead') in lot['gallery']: main = ups[lot['gallery'].index(lot['galleryLead'])]   # her choice wins
             label = lambda e: e['lotType'] or 'Other version'
         if main:
             main = dict(main, label=label(main))

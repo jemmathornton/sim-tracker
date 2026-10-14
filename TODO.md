@@ -20,7 +20,7 @@ Every open item carried over from the claude.ai project on 13 Oct 2026: the note
 
 ## 1. Repeated Gallery uploads (settled 13 Oct)
 
-Her rule: **one upload per lot, the latest**. Exceptions are versions she keeps on purpose: Community Space variants (tabs), rentals with a rental and a regular version (Rio Verde, Fern Park Flats, Inner Circle, Upland Trailer Park, Manzanita Terrace, Old Torget House) and Britechester B&B (café + home). Where copies of a build aren't identical, she chooses.
+Her rule: **one upload per lot, the latest**. Exceptions are versions she keeps on purpose: Community Space variants (tabs), rentals with a rental and a regular version (Rio Verde, Fern Park Flats, Inner Circle, Upland Trailer Park, Manzanita Terrace, Old Torget House, and from 14 Oct Slip 42, Spring Steppes and Rockridge Springs), Britechester B&B (café + home) and The Llama Picturehouse (Small Business + Bar, the Small Business one leads). Where copies of a build aren't identical, she chooses.
 
 - [x] Identical copies, latest kept: Café Llama, Sandtrap Flat, De Costadas, Oak Alcove, Strike Out!, Caldera Camp, 930 Medina Studios, Brindleton Boathouse (both Boathouse uploads are this build), Asphalt Abodes (the copy with 4 favourites; she removed the other from the Gallery)
 - [x] Her choices: Olde Platz Inn restaurant; Nookstone, Granada Place 3 bedrooms; Comfy Cubby, Palomino Junction 2 bedrooms; Raffia Quinta tiny home with 2 beds (2023); Rindle Rose (not The Treehouse); Sorority Apartment (not 2B Jasmine Suites); Inner Circle without its third copy
@@ -31,7 +31,7 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
 
 ## 2. Rentals
 
-21 residential rentals. Residents are mostly a group label or "Empty"; 4 are owned by a family.
+20 residential rentals (Mossy Lane is University Housing since 14 Oct). Residents are mostly a group label or "Empty"; 4 are owned by a family.
 
 | World | Rental | Units | Residents in the plan |
 | --- | --- | --- | --- |
@@ -43,8 +43,7 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
 | Del Sol Valley | Inner Circle | 4 | Roomies |
 | Del Sol Valley | Upland Trailer Park | 4 | Eclectic Arts |
 | StrangerVille | Slip 42 | 2 | Empty |
-| Britechester | Mossy Lane | 4 | Empty |
-| Britechester | Spring Steppes | 4 | Elderberry & Pleasant |
+| Britechester | Spring Steppes | 3 | Elderberry own it, Pleasant live there too (14 Oct) |
 | Evergreen Harbor | Rockridge Springs | 3 | Empty |
 | Evergreen Harbor | Abandoned Views | ? | Henley |
 | Henford-on-Bagley | 3 Cobblebottom Street | 2 | Moody & McMillan (own, live there) + tenant Cecilia Kang "A New Start" |
@@ -63,7 +62,7 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
 - [ ] [Jemma] A "Rental units" tab in World Plans (World · Rental · Unit · Beds · Baths · Household · Landlord)? She was "not sure yet, discuss more"
 - [ ] [Jemma] How to show unit counts like "(4)"
 - [ ] [Jemma] Confirm unit counts: Taka Soi 15 = 2 (game: units 08 and 09, Cahyaputris in 09, 08 empty); Manzanita Terrace = 3 (her Gallery text, and her save). Her Building #2 save matches the plan for the shared rentals Rio Verde 6, Fern Park Flats 5, Tail's End 4, Inner Circle 4, Upland Trailer Park 4, Old Torget House 3 (research/rentals-and-apartments.md). Unshared rentals aren't read from the save (her rule)
-- [ ] [Jemma] Mossy Lane (plan 4 units), Spring Steppes (4), Rockridge Springs (3) and Slip 42 (2) are shared but still one home in her save, not split into units. Split them in game later, or change the plan's counts?
+- [x] Settled 14 Oct: Mossy Lane is University Housing (one home); Spring Steppes has 3 units; Rockridge Springs and Slip 42 keep their units and now have rental uploads too (Rockridge Springs' new upload wasn't on the Gallery listing yet on 14 Oct; the Sunday refresh links it)
 - [ ] [Claude] Once decided: show each rental's units on its page and neighbourhood card, a household or "Empty" per unit, bedrooms and bathrooms per unit where known
 
 ## 3. Apartments
@@ -112,7 +111,8 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
 - Left as the research suggested: Selvadorada's jungle areas (not lots in the game either); Netherworld Department stays 30×30 (her confirmed size; the game's file has it at 20×20)
 
 From the overnight check of the plan against the game's own files and her save, 14 Oct (research/plan-vs-game.md; 380 of 388 lots match by name, sizes match except the two above, neighbourhoods are the game's own):
-- [ ] [Jemma] Lot types: for 17 shared lots the Gallery upload's type differs from the plan's (e.g. Llama Picturehouse: plan Small Business, Gallery Bar; Mid-NoWhere: plan Park, Gallery Generic; Brooks Bridge Borough: Gallery Haunted House Residential; Raffia Quinta, Cottage Am See, Rustic Residence: Gallery Tiny Home). Table in research/plan-vs-game.md. Which should the site follow?
+- [x] Lot types where the Gallery and the plan differed, settled 14 Oct: Raffia Quinta, Cottage Am See, Rustic Residence → Tiny Home Residential; Crick Cabana → Residential; Mid-NoWhere → Generic; Belomisia Field Station → Custom Venue; The Bay Café → Café; Llama Picturehouse → Small Business/Bar; Lagoon of Love → Vacation Rental; Carpophagous Corner stays Vacation Rental (none of her 224 uploads is a Vacation Rental, so the Gallery seems not to keep that type)
+- [ ] [Jemma] Still to choose: Brooks Bridge Borough (plan Residential, Gallery Haunted House Residential), Admiral's Wreckage and The Old Dockyard (plan Community Space; EA shows their upload type as "Missing sims translation"; the save has Residential and Maker Space)
 - [ ] [Jemma] Apartment sizes: the plan has "N/A"; the game gives each building's size (list in research/plan-vs-game.md). Show them?
 - Name differences with the game (Magnolia Blossom Park, Desert Bloom Park, Isle of Volpe, The Grimtooth Bar & Bunker): the plan's names read better; noted only
 

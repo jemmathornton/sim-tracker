@@ -34,8 +34,8 @@
     {"lot": "Honeydew Fields", "myName": "Britechester BnB", "type": "Café/Vacation Rental", "size": "20x15", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["wBt4dbV+EeuBjk1o44QF8A==", "RwfD0bUaEeuB0ucawTB/JA=="], "traits": ["Romantic Aura", "University Student Hang Out"], "galleryVariants": true},
     {"lot": "Laurel Library", "myName": "Laurel Library", "type": "Library", "size": "50x40", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["421u6vYLEeqOjQj3LsIbeA=="], "traits": ["Study Spot", "University Student Hang Out", "Peace and Quiet"]},
     {"lot": "Pepper's Pub", "myName": "The Old Crown", "type": "Bar", "size": "20x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["RQVL6vebEeqB6gj3LsIbeA=="], "traits": ["University Student Hang Out", "Convivial"]},
-    {"lot": "Mossy Lane", "myName": "Mossy Lane", "type": "Residential Rental (4)", "size": "20x15", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["+1TuKO1OEeqP5iQfmaYcsw=="], "traits": ["Homey", "Cat Hangout"]},
-    {"lot": "Spring Steppes", "myName": "Spring Steppes", "type": "Residential Rental (4)", "size": "20x15", "residents": "Elderberry & Pleasant", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["yQ7eyLWyEeuOBucawTB/JA=="], "traits": ["Homey", "Cat Hangout"]}
+    {"lot": "Mossy Lane", "myName": "Mossy Lane", "type": "University Housing", "size": "20x15", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["+1TuKO1OEeqP5iQfmaYcsw=="], "traits": ["Homey", "Cat Hangout"]},
+    {"lot": "Spring Steppes", "myName": "Spring Steppes", "type": "Residential Rental (3)", "size": "20x15", "residents": "Elderberry", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["yQ7eyLWyEeuOBucawTB/JA==", "KSt/tE6iQq2vZ7znirZsAw=="], "traits": ["Homey", "Cat Hangout"], "tenants": [{"name": "Pleasant"}]}
    ]
   }
  ]
