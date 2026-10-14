@@ -7,7 +7,7 @@ Reads data/gallery/ (uploads, history, comments) and data/worlds (which lot each
 writes research/data/gallery-deep-dive.json.
 """
 import base64, csv, json, os, re, statistics, sys, uuid, collections
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 from common import ROOT, GALLERY, load, world_files
 
@@ -79,7 +79,7 @@ def main():
         "growth": {"from": first, "to": last, "downloads gained": sum(g['downloads gained'] for g in gains), "favourites gained": sum(g['favourites gained'] for g in gains), "top": gains[:12]},
         "comments": {"total": sum(len(v) for v in com.values()), "uploads with comments": sum(1 for v in com.values() if v),
                      "by upload": sorted([{"title": up[i]['title'], "n": len(v)} for i, v in com.items() if v and i in up], key=lambda x: -x['n'])[:10],
-                     "years": collections.Counter(datetime.utcfromtimestamp(c['t'] / 1000).year for v in com.values() for c in v if c.get('t'))},
+                     "years": collections.Counter(datetime.fromtimestamp(c["t"] / 1000, timezone.utc).year for v in com.values() for c in v if c.get('t'))},
         "credited to others": [{"title": r['title'], "creator": r['creator']} for r in rows if r.get('creator') and r['creator'] != 'JemmaTheSimmer'],
     }
     with open(os.path.join(ROOT, 'research', 'data', 'gallery-deep-dive.json'), 'w', encoding='utf-8', newline='\n') as f:
