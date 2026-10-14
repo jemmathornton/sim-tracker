@@ -5,7 +5,7 @@
 The page itself (site/index.html, css/, js/app.js) is hand-written and never generated; this only refreshes
 the data it shows. Pictures are read from site/shots (Jemma's screenshots) and site/gallery (Gallery pictures).
 """
-import base64, os, re, sys, urllib.parse, uuid
+import base64, html, os, re, sys, urllib.parse, uuid
 from datetime import date, datetime, timedelta
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import DATA, SITE, GALLERY, slug, load, nice_date, world_files
@@ -49,7 +49,8 @@ def upload_entry(i):
     u = uploads[i]; desc = u['description'] or ''; k = desc.find('#')
     text = re.sub(r'\s+', ' ', desc[:k] if k >= 0 else desc).strip().replace("''", "'")
     for a, b in fixes.get(i, {}).get('description', []): text = text.replace(a, b)
-    cl = comments.get(i, [])
+    # EA sends some comment text HTML-escaped ("&lt;3"); the page escapes text itself, so turn it back into plain text first
+    cl = [dict(c, m=html.unescape(c.get('m') or '')) for c in comments.get(i, [])]
     return {"url": GALLERY_ITEM + urllib.parse.quote(i, safe=''), "title": clean_title(u['title']), "description": text,
             "tags": re.findall(r'#(\w+)', desc), "packs": [short_pack(p) for p in u['packs']], "value": f"§{u['price']:,}",
             "likes": u['favourites'], "downloads": u['downloads'], "comments": len(cl), "commentList": cl,
