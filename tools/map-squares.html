@@ -38,6 +38,10 @@ em{font-style:italic}
 .pin::before{content:"";display:block;width:16px;height:16px;border-radius:50%;background:var(--brass);border:3px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.6);margin:0 auto}
 .pin b{display:block;margin-top:3px;font:700 12px/1.2 var(--body);color:#fff;background:rgba(20,16,30,.82);padding:3px 7px;border-radius:5px;white-space:nowrap}
 .pin.on::before{background:#fff;border-color:var(--brass)}
+.box{position:absolute;border:2px solid #fff;border-radius:6px;background:rgba(201,160,74,.18);box-shadow:0 0 0 1px rgba(0,0,0,.45);pointer-events:none}
+.box.on{border-color:var(--brass);background:rgba(201,160,74,.32)}
+.box b{position:absolute;left:4px;top:4px;font:700 12px/1.2 var(--body);color:#fff;background:rgba(20,16,30,.82);padding:3px 7px;border-radius:5px;white-space:nowrap}
+.box.drawing{border-style:dashed}
 .hoods{list-style:none;margin:0;padding:0;display:grid;gap:8px}
 .hoods li{display:grid;grid-template-columns:1fr 64px 26px;gap:6px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:8px 8px 8px 12px;cursor:pointer}
 .hoods li.on{border-color:var(--brass);box-shadow:0 0 0 2px color-mix(in srgb,var(--brass) 35%,transparent)}
@@ -59,7 +63,7 @@ textarea{width:100%;min-height:120px;margin-top:10px;font:13px/1.5 ui-monospace,
 <body>
 <div class="wrap">
   <h1>Where are the <em>neighbourhoods</em>?</h1>
-  <p class="intro">Each map has a grid: columns <b>A–H</b>, rows <b>1–6</b>. Pick a neighbourhood on the right, then click its spot on the map (or type the square, like <b>F4</b>). The next neighbourhood is picked for you. Leave a box empty if a neighbourhood has no single place (some <b>Secret Lots</b> groups), and its card keeps showing the whole map.<br>Your answers are kept in this browser as you go. When you’re done, press <b>Copy answers</b> and paste them to Claude.</p>
+  <p class="intro">Each map has a grid: columns <b>A–H</b>, rows <b>1–6</b>. Pick a neighbourhood on the right, then <b>drag a box around it</b> on the map, as tight or as wide as the neighbourhood is (its card zooms to fit the box). A plain click marks just a spot, and you can also type a square, like <b>F4</b>. The next neighbourhood is picked for you. Leave a box empty if a neighbourhood has no single place (some <b>Secret Lots</b> groups), and its card keeps showing the whole map.<br>Your answers are kept in this browser as you go. When you’re done, press <b>Copy answers</b> and paste them to Claude.</p>
   <div id="worlds"></div>
 </div>
 <div class="bar"><div class="in"><button type="button" id="copy">Copy answers</button><span id="copied" aria-live="polite"></span><span class="done" id="count"></span></div></div>
@@ -71,10 +75,13 @@ const slug = s => String(s).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,""
 const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])).replace(/'/g, "’");
 let saved = {}; try { saved = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) {}
 const store = () => { try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch (e) {} };
-
-// every owned world without spots yet (Willow Creek has its own)
-const todo = typeof DATA === "undefined" ? [] : DATA.worlds.filter(w => w.owned && w.map && !DATA.nbPt[slug(w.name)]);
 const square = (x, y) => COLS[Math.min(7, Math.floor(x * 8))] + (Math.min(ROWS - 1, Math.floor(y * ROWS)) + 1);
+
+// every owned world with a map; spots and boxes already on the site are shown to start with (Willow Creek had spots only)
+const todo = typeof DATA === "undefined" ? [] : DATA.worlds.filter(w => w.owned && w.map);
+todo.forEach(w => { const pts = (DATA.nbPt || {})[slug(w.name)] || {}, boxes = (DATA.nbBox || {})[slug(w.name)] || {};
+  w.hoods.forEach(h => { const pt = pts[h.name]; if (!pt || (saved[w.name] || {})[h.name]) return;
+    (saved[w.name] ||= {})[h.name] = {sq: square(pt[0], pt[1]), x: pt[0], y: pt[1], ...(boxes[h.name] ? {box: boxes[h.name]} : {})}; }); });
 const centre = sq => { const m = /^([A-H])([1-6])$/i.exec(sq.trim()); return m ? [(COLS.indexOf(m[1].toUpperCase()) + .5) / 8, (+m[2] - .5) / ROWS] : null; };
 const r2 = v => Math.round(v * 100) / 100;
 const active = {};   // world id -> index of the neighbourhood that the next map click places
@@ -85,7 +92,7 @@ function draw(){
     return `<section class="world" data-w="${id}"><div class="world-head"><h2>${esc(w.name)}</h2><span>${w.hoods.length} neighbourhoods</span></div>
       <div class="world-body"><div class="map" data-map="${id}"><img src="../site/${w.map}" alt="Map of ${esc(w.name)}"><div class="grid">${Array.from({length: 8 * ROWS}, (_, k) => `<i>${COLS[k % 8]}${Math.floor(k / 8) + 1}</i>`).join("")}</div><div class="pins"></div></div>
       <div><ul class="hoods">${w.hoods.map((h, i) => `<li data-i="${i}"><span class="nm"><span>${esc(h.name)}</span><small>${h.lots.length} ${h.lots.length === 1 ? "lot" : "lots"}</small></span><input aria-label="Square for ${esc(h.name)}" maxlength="5" placeholder="–"><button type="button" title="Clear" aria-label="Clear ${esc(h.name)}">×</button></li>`).join("")}</ul>
-      <p class="hint">Click the map to place the highlighted neighbourhood.</p></div></div></section>`; }).join("");
+      <p class="hint">Drag a box on the map around the highlighted neighbourhood.</p></div></div></section>`; }).join("");
   todo.forEach(w => { const id = slug(w.name); active[id] = firstEmpty(w); paint(w); });
   count();
 }
@@ -95,10 +102,12 @@ function paint(w){
   sec.querySelectorAll(".hoods li").forEach(li => { const h = w.hoods[+li.dataset.i], v = s[h.name], inp = li.querySelector("input");
     li.classList.toggle("on", +li.dataset.i === active[id]); li.classList.toggle("set", !!v);
     if (document.activeElement !== inp) inp.value = v ? v.sq : ""; });
-  sec.querySelector(".pins").innerHTML = w.hoods.map((h, i) => { const v = s[h.name]; return v ? `<span class="pin ${i === active[id] ? "on" : ""}" style="left:${v.x * 100}%;top:${v.y * 100}%"><b>${esc(h.name)}</b></span>` : ""; }).join("");
+  sec.querySelector(".pins").innerHTML = w.hoods.map((h, i) => { const v = s[h.name], on = i === active[id] ? "on" : ""; if (!v) return "";
+    if (v.box) { const [a, b, c, d] = v.box; return `<span class="box ${on}" style="left:${a * 100}%;top:${b * 100}%;width:${(c - a) * 100}%;height:${(d - b) * 100}%"><b>${esc(h.name)}</b></span>`; }
+    return `<span class="pin ${on}" style="left:${v.x * 100}%;top:${v.y * 100}%"><b>${esc(h.name)}</b></span>`; }).join("");
 }
-function place(w, i, x, y, sq){
-  (saved[w.name] ||= {})[w.hoods[i].name] = {sq: sq || square(x, y), x: r2(x), y: r2(y)}; store();
+function place(w, i, x, y, sq, box){
+  (saved[w.name] ||= {})[w.hoods[i].name] = {sq: sq || square(x, y), x: r2(x), y: r2(y), ...(box ? {box: box.map(r2)} : {})}; store();
   const id = slug(w.name), next = w.hoods.findIndex((h, k) => k > i && !saved[w.name][h.name]);
   active[id] = next < 0 ? i : next; paint(w); count();
 }
@@ -108,9 +117,20 @@ function count(){
 }
 const worldOf = el => todo.find(w => slug(w.name) === el.closest("[data-w]").dataset.w);
 
+let drag = null;   // {map, w, x0, y0, el}
+const frac = (map, e) => { const r = map.getBoundingClientRect(); return [Math.max(0, Math.min(1, (e.clientX - r.left) / r.width)), Math.max(0, Math.min(1, (e.clientY - r.top) / r.height))]; };
+document.addEventListener("pointerdown", e => { const map = e.target.closest("[data-map]"); if (!map || e.button !== 0) return;
+  e.preventDefault(); const [x0, y0] = frac(map, e), el = document.createElement("span"); el.className = "box drawing";
+  map.querySelector(".pins").appendChild(el); drag = {map, w: worldOf(map), x0, y0, el}; map.setPointerCapture(e.pointerId); });
+document.addEventListener("pointermove", e => { if (!drag) return; const [x, y] = frac(drag.map, e), el = drag.el;
+  el.style.left = Math.min(x, drag.x0) * 100 + "%"; el.style.top = Math.min(y, drag.y0) * 100 + "%";
+  el.style.width = Math.abs(x - drag.x0) * 100 + "%"; el.style.height = Math.abs(y - drag.y0) * 100 + "%"; });
+document.addEventListener("pointerup", e => { if (!drag) return; const d = drag; drag = null; d.el.remove();
+  const [x, y] = frac(d.map, e), i = active[slug(d.w.name)];
+  if (Math.abs(x - d.x0) < .02 && Math.abs(y - d.y0) < .02) { place(d.w, i, x, y); return; }   // a plain click: just a spot
+  const box = [Math.min(x, d.x0), Math.min(y, d.y0), Math.max(x, d.x0), Math.max(y, d.y0)];
+  place(d.w, i, (box[0] + box[2]) / 2, (box[1] + box[3]) / 2, null, box); });
 document.addEventListener("click", e => {
-  const map = e.target.closest("[data-map]");
-  if (map) { const w = worldOf(map), r = map.getBoundingClientRect(); place(w, active[slug(w.name)], (e.clientX - r.left) / r.width, (e.clientY - r.top) / r.height); return; }
   const li = e.target.closest(".hoods li"); if (!li) return;
   const w = worldOf(li), i = +li.dataset.i;
   if (e.target.closest("button")) { delete (saved[w.name] || {})[w.hoods[i].name]; store(); count(); }
@@ -122,10 +142,10 @@ document.addEventListener("change", e => { const li = e.target.closest(".hoods l
   else if (c) place(w, i, c[0], c[1], v);
   else { e.target.value = (saved[w.name] || {})[w.hoods[i].name]?.sq || ""; e.target.placeholder = "A1–H6"; } });
 
-// one line per world: "Oasis Springs: Bedrock Strait C3 (0.31, 0.45); ..." (the numbers are the exact click, as fractions of the map)
+// one line per world: "Oasis Springs: Bedrock Strait C3 (0.31, 0.45) [0.25, 0.38, 0.37, 0.52]; ..." (spot and box, as fractions of the map)
 function answers(){
   return todo.map(w => { const s = saved[w.name] || {}, got = w.hoods.filter(h => s[h.name]);
-    return got.length ? `${w.name}: ` + got.map(h => `${h.name} ${s[h.name].sq} (${s[h.name].x}, ${s[h.name].y})`).join("; ") : ""; }).filter(Boolean).join("\n");
+    return got.length ? `${w.name}: ` + got.map(h => `${h.name} ${s[h.name].sq} (${s[h.name].x}, ${s[h.name].y})` + (s[h.name].box ? ` [${s[h.name].box.join(", ")}]` : "")).join("; ") : ""; }).filter(Boolean).join("\n");
 }
 document.getElementById("copy").addEventListener("click", async () => {
   const t = answers(), msg = document.getElementById("copied");

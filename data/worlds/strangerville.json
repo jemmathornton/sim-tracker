@@ -9,6 +9,8 @@
   {
    "name": "StrangerVille Plaza",
    "desc": "Visit the StrangerVille Information Center. This place is way more interesting than the Secret Lab.",
+   "mapSpot": [0.4, 0.68],
+   "mapBox": [0.2, 0.56, 0.6, 0.79],
    "lots": [
     {"lot": "8 Bells", "myName": "8 Bells", "type": "Bar", "size": "20x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "StrangerVille Information Center", "myName": "StrangerVille Information Center", "type": "Museum", "size": "20x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
@@ -21,6 +23,8 @@
   {
    "name": "Shady Acres",
    "desc": "Boasting the most beautiful view StrangerVille has to offer, stay at Shady Acres and you too can wonder where all this wealth comes from.",
+   "mapSpot": [0.69, 0.34],
+   "mapBox": [0.55, 0.25, 0.83, 0.44],
    "lots": [
     {"lot": "Cliff Side Crest", "myName": "StrangerVille Gym&Pool", "type": "Gym", "size": "30x20", "residents": "N/A", "built": true, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Creek Corner Cove", "myName": "Creek Corner Cove", "type": "Residential", "size": "30x20", "residents": "Roswell", "built": false, "shared": false, "screenshots": false, "simsMade": false},
@@ -32,6 +36,8 @@
   {
    "name": "Secret Lots",
    "desc": "",
+   "mapSpot": [0.32, 0.34],
+   "mapBox": [0.23, 0.27, 0.42, 0.42],
    "lots": [
     {"lot": "The ██████ Lab", "myName": "The ██████ Lab", "type": "Special", "size": "64x64", "residents": "N/A", "built": "N/A", "shared": "N/A", "screenshots": "N/A", "simsMade": "N/A"}
    ]

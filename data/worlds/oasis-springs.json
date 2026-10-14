@@ -9,6 +9,8 @@
   {
    "name": "Bedrock Strait",
    "desc": "Residents of this delightfully kitschy neighbourhood take pride in their billboards and lawn gnomes. And who wouldn't love getting to say hello to Barry the Brontosaurus every morning?",
+   "mapSpot": [0.73, 0.49],
+   "mapBox": [0.62, 0.39, 0.84, 0.58],
    "lots": [
     {"lot": "Sandtrap Flat", "myName": "Sandtrap Flat", "type": "Residential", "size": "30x20", "residents": "2 Bedroom", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["k+ArWsHmEe2CoYnwBMy2Ww=="], "traits": ["Natural Light", "Penny Pixies"], "challenges": ["Quake Zone"]},
     {"lot": "Nookstone", "myName": "Nookstone", "type": "Residential", "size": "20x15", "residents": "Leah-Moon Cadberry+", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["UZsaW3zJSzmBiMnwHmQ0Kw=="], "traits": ["Science Lair", "Homey", "Bracing Breezes"]},
@@ -20,6 +22,8 @@
   {
    "name": "Parched Prospect",
    "desc": "This neighbourhood is your quintessential desert-living experience with bustling tumbleweeds and cacti as far as the eye can see!",
+   "mapSpot": [0.65, 0.68],
+   "mapBox": [0.47, 0.57, 0.84, 0.78],
    "lots": [
     {"lot": "Vista Quarry", "myName": "Vista Quarry", "type": "Residential", "size": "30x20", "residents": "2 Bed Family", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["D3pjU723EeuN9fwg9JDtjA=="], "traits": ["Natural Light"], "challenges": ["Quake Zone"]},
     {"lot": "Raffia Quinta", "myName": "Raffia Quinta", "type": "Tiny Home Residential", "size": "20x15", "residents": "Rivera", "built": true, "shared": true, "screenshots": true, "simsMade": false, "gallery": ["Vstuj6QyEe2MBonwBMy2Ww=="], "traits": ["Homey", "Eco Lot"]},
@@ -31,6 +35,8 @@
   {
    "name": "Skyward Palms",
    "desc": "This upscale gated community offers its residents all the warm, wild benefits of living in the desert along with the luxury of endless green grass.",
+   "mapSpot": [0.29, 0.44],
+   "mapBox": [0.14, 0.35, 0.43, 0.53],
    "lots": [
     {"lot": "Granada Place", "myName": "Granada Place", "type": "Residential", "size": "30x20", "residents": "Curious *WithUpdates*", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["91JnkAJZEeuMZ399sA1LjA=="], "traits": ["Good Schools", "Sunny Aspect"]},
     {"lot": "Arid Ridge", "myName": "Lotus Ridge Spa", "type": "Spa", "size": "40x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["k9wU7gLyEe2GTnUsHjDJmA=="], "traits": ["Romantic Aura", "On Ley Line"], "challenges": ["Quake Zone"]},
@@ -41,6 +47,8 @@
   {
    "name": "Acquisition Butte",
    "desc": "",
+   "mapSpot": [0.5, 0.4],
+   "mapBox": [0.38, 0.33, 0.62, 0.46],
    "lots": [
     {"lot": "Affluista Mansion", "myName": "Affluista Mansion", "type": "Residential", "size": "50x50", "residents": "Landgraab", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Yuma Heights", "myName": "Yuma Heights", "type": "Residential", "size": "40x30", "residents": "Caliente", "built": false, "shared": false, "screenshots": false, "simsMade": false}
@@ -49,6 +57,8 @@
   {
    "name": "Mirage Canyon",
    "desc": "Mirage Canyon is Oasis Springs' true oasis. Parched visitors passing through can always delight in seeing the gorgeous rushing waterfall and a well-appreciated pitstop.",
+   "mapSpot": [0.31, 0.65],
+   "mapBox": [0.15, 0.56, 0.47, 0.75],
    "lots": [
     {"lot": "The Futures Past", "myName": "The Futures Past", "type": "Museum", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["5cWe2q4DEeuJE01o44QF8A=="], "traits": ["Sunny Aspect", "Natural Light"]},
     {"lot": "The Solar Flare", "myName": "Oasis Springs Library", "type": "Library", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["X3UEJms3EeeEnaGw/5dQ7w=="], "traits": ["Fast Internet", "Child's Play", "Sunny Aspect"]},
@@ -59,6 +69,8 @@
   {
    "name": "Desert Bloom Park",
    "desc": "",
+   "mapSpot": [0.49, 0.51],
+   "mapBox": [0.4, 0.45, 0.57, 0.58],
    "lots": [
     {"lot": "Desert Bloom Park", "myName": "Desert Bloom Park", "type": "Park", "size": "50x50", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["7rH4P51KEeuKxvwg9JDtjA=="]},
     {"lot": "Forgotten Grotto", "myName": null, "type": "Forgotten Grotto", "size": "15x10", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}

@@ -9,6 +9,8 @@
   {
    "name": "Bridgeview",
    "desc": "This family-friendly neighbourhood has a lovely picnic area and a striking city skyline backdrop.",
+   "mapSpot": [0.58, 0.32],
+   "mapBox": [0.46, 0.23, 0.7, 0.42],
    "lots": [
     {"lot": "Fern Park", "myName": "Fern Park Flats", "type": "Residential Rental (5)", "size": "30x20", "residents": "BFF", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["RiP+5wQ8RJK3hotf53yaQw==", "4J6IDbENEeuBuxaIFwKmRQ=="], "traits": ["Fast Internet", "Sunny Aspect"]},
     {"lot": "Beech Byway", "myName": "Newcrest Community Space", "type": "Community Space", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["ngmQLbmXEeuN378NB92BJw==", "jFnAgrmXEeuNkr8NB92BJw==", "jucBIbmXEeuNor8NB92BJw==", "kZXBNLmXEeuNq78NB92BJw=="], "versions": [{"label": "Market", "upload": "ngmQLbmXEeuN378NB92BJw=="}, {"label": "Garden", "upload": "jucBIbmXEeuNor8NB92BJw=="}, {"label": "Makers", "upload": "kZXBNLmXEeuNq78NB92BJw=="}, {"label": "Community space", "upload": "jFnAgrmXEeuNkr8NB92BJw=="}], "traits": ["Eco Lot", "Teen Neighborhood"], "challenges": ["Reduce and Recycle"]},
@@ -20,6 +22,8 @@
   {
    "name": "Llama Lagoon",
    "desc": "With lakeside walkways and public playground equipment, this neighbourhood's just the right amount of cosmopolitan.",
+   "mapSpot": [0.35, 0.6],
+   "mapBox": [0.22, 0.45, 0.49, 0.75],
    "lots": [
     {"lot": "Twin Oracle Point", "myName": "Twin Oracle Point", "type": "Residential", "size": "50x40", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["m35FmzjdEeeOtKP4YfS2mA=="], "traits": ["On Ley Line", "Child's Play", "Fast Internet"]},
     {"lot": "Avarice Acres", "myName": "Avarice Acres", "type": "Residential", "size": "40x30", "residents": "LeBlanc", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["H5W5eU6+EeeKGWZWSBao2A=="], "traits": ["Fast Internet", "Child's Play", "Good Schools"]},
@@ -31,6 +35,8 @@
   {
    "name": "Ridgeline Drive",
    "desc": "",
+   "mapSpot": [0.69, 0.62],
+   "mapBox": [0.55, 0.46, 0.83, 0.77],
    "lots": [
     {"lot": "Sandy Run", "myName": "The Aqua Grill", "type": "Restaurant (Seafood)", "size": "40x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["9T/CGgyvEeqBoLqJHNbwJw=="], "traits": ["Chef's Kitchen", "Party Place", "Romantic Aura"]},
     {"lot": "Cookout Lookout", "myName": "Newcrest Wedding Hall", "type": "Wedding Venue", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["tW8EcJW2EeyEfidMGW1b+w=="], "traits": ["Romantic Aura", "Party Place"]},

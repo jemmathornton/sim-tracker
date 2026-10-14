@@ -9,6 +9,8 @@
   {
    "name": "Crow's Crossing",
    "desc": "Crow's Crossing is a village founded by Moppy the Goat and rumoured to be frequented by Ghosts and regular hauntings.",
+   "mapSpot": [0.61, 0.65],
+   "mapBox": [0.43, 0.52, 0.8, 0.77],
    "lots": [
     {"lot": "Specter Family Manor", "myName": "Ravenwood Wedding Hall", "type": "Wedding Venue", "size": "30x20", "residents": "N/A", "built": true, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Crow's Perch", "myName": "Crow's Chronicles", "type": "Library", "size": "30x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["LSNKN6V/Sjaa8F6nEgj9Vw=="], "traits": ["On Hallowed Grounds", "Study Spot"]},
@@ -21,6 +23,8 @@
   {
    "name": "Whispering Glen",
    "desc": "Nestled in the rolling hills of Ravenwood's countryside, Whispering Glen offers a quiet, rural locale for those hoping to take a step away from all the local hauntings and into a slow-paced lifestyle.",
+   "mapSpot": [0.65, 0.44],
+   "mapBox": [0.5, 0.36, 0.79, 0.51],
    "lots": [
     {"lot": "Teardrop Cottage", "myName": null, "type": "Residential", "size": "30x30", "residents": "Gomes", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "The Marigold Chateau", "myName": null, "type": "Residential", "size": "50x50", "residents": "Aether", "built": false, "shared": false, "screenshots": false, "simsMade": false},
@@ -32,6 +36,8 @@
   {
    "name": "Mourningvale",
    "desc": "There's something otherworldly about Mourningvale. No matter the reason, many Ghosts choose to call this place home. The Grim Reaper has even been known to wander through now and then!",
+   "mapSpot": [0.33, 0.32],
+   "mapBox": [0.17, 0.23, 0.49, 0.41],
    "lots": [
     {"lot": "The Cozy Casket House", "myName": null, "type": "Residential", "size": "30x20", "residents": "Empty", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Mourning Mist Manor", "myName": null, "type": "Residential", "size": "20x20", "residents": "Izadi-Gomes", "built": false, "shared": false, "screenshots": false, "simsMade": false},

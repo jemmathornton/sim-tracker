@@ -9,6 +9,8 @@
   {
    "name": "Sable Square",
    "desc": "The cultural centre of the city, Sable Square is ideal for both cats and dogs. These people love their pets so much, they've built a monument to them right in the middle of town!",
+   "mapSpot": [0.31, 0.38],
+   "mapBox": [0.21, 0.3, 0.42, 0.46],
    "lots": [
     {"lot": "Pupperstone Park", "myName": "Pupperstone Park", "type": "Park", "size": "40x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["St7XdvkYEeqHReAP1tcFHw=="], "traits": ["Dog Friendly", "Dog Hangout", "Training Ground"]},
     {"lot": "Brindleton Pawspital", "myName": "Brindleton Pawspital", "type": "Vet Clinic", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
@@ -20,6 +22,8 @@
   {
    "name": "Whiskerman's Wharf",
    "desc": "A favourite hangout for the Bay's feline citizens, who can be found climbing around down at the docks. Whiskerman's Wharf is also enjoyed by fishermen and tourists alike.",
+   "mapSpot": [0.32, 0.58],
+   "mapBox": [0.18, 0.47, 0.46, 0.69],
    "lots": [
     {"lot": "Club Calico", "myName": "Calico", "type": "Lounge", "size": "40x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["TBbktz3AEemOU3ldy2Ruvw=="], "traits": ["Convivial", "Party Place", "Hottest Spot in Town"]},
     {"lot": "Salty Paws Saloon", "myName": "The Bay Café", "type": "Café", "size": "20x15", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["Sa/c+Av6EeuBi5LGvPH+KA=="], "traits": ["Cat Friendly", "Cat Hangout"]},
@@ -31,6 +35,8 @@
   {
    "name": "Cavalier Cove",
    "desc": "Known for its hiking trails and sprawling coastal properties, Cavalier Cove is the perfect place to go exploring or chase seagulls with an adventurous pup!",
+   "mapSpot": [0.65, 0.42],
+   "mapBox": [0.46, 0.29, 0.84, 0.55],
    "lots": [
     {"lot": "Chateau Frise", "myName": "Chateau Frise", "type": "Residential", "size": "40x40", "residents": "Delgato", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Bedlington Boathouse", "myName": "Bedlington Barn", "type": "Residential", "size": "20x20", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["98RpXiA8TIaxkspATvE/5w=="], "traits": ["Dog Hangout", "Training Ground", "Homey"]},
@@ -42,6 +48,8 @@
   {
    "name": "Deadgrass Isle",
    "desc": "Once the site of a mysterious shipwreck, the Deadgrass Isle is now home to the world-famous Brindleton Light and the city's largest population of indigenous strays. Lately, however, there have been some rumours about strange visitors after sundown…",
+   "mapSpot": [0.75, 0.65],
+   "mapBox": [0.63, 0.54, 0.87, 0.76],
    "lots": [
     {"lot": "Deadgrass Discoveries", "myName": "Deadgrass Discoveries", "type": "Cemetery", "size": "30x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ]

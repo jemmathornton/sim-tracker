@@ -9,6 +9,8 @@
   {
    "name": "Rockridge Heights",
    "desc": "Home to Copperdale High, Rockridge Heights is the town's standard-bearer for academia across generations. It's a beloved school ground for quintessential teen moments and college preparation.",
+   "mapSpot": [0.44, 0.28],
+   "mapBox": [0.32, 0.2, 0.57, 0.36],
    "lots": [
     {"lot": "Copperdale High School", "myName": "Copperdale High School", "type": "High School", "size": "64x64", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Auditorium", "myName": "Auditorium", "type": "Auditorium", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
@@ -18,6 +20,8 @@
   {
    "name": "Prescott Square",
    "desc": "Named after Copperdale's founder, Jasper Prescott, this town square is a quaint hub for all afterschool hangouts.",
+   "mapSpot": [0.31, 0.51],
+   "mapBox": [0.21, 0.38, 0.41, 0.64],
    "lots": [
     {"lot": "Water Tower Way", "myName": "Copperdale Library", "type": "Library", "size": "20x15", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["nFAht7I4Sdu8iwDUqLc6WA=="], "traits": ["Teen Neighborhood", "Study Spot", "Child's Play"]},
     {"lot": "Town Square Terrace", "myName": "Town Square Stores", "type": "Boba & Thrift", "size": "20x15", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["5e8Hz59OEe2D31rYHh8uGQ=="], "traits": ["Fast Internet", "Teen Neighborhood"]},
@@ -29,6 +33,8 @@
   {
    "name": "Plumbite Cove",
    "desc": "Settled on Lake LaSuli sits Plumbite Cove, a once-popular location for its mining of rare gems. After the mines shut down, the town turned this picturesque outlook into a waterfront fairground.",
+   "mapSpot": [0.63, 0.63],
+   "mapBox": [0.47, 0.48, 0.79, 0.78],
    "lots": [
     {"lot": "LaSuli Point", "myName": "LaSuli Point", "type": "Restaurant", "size": "20x15", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Totter Park", "myName": "Totter Park", "type": "Cemetery", "size": "50x40", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},

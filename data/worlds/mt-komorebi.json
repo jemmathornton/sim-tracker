@@ -10,6 +10,8 @@
   {
    "name": "Wakaba",
    "desc": "Like its namesake, Wakaba is young, new, and bright as the leaves of a tree in early springtime. This small town is up-and-coming in the region, home to beautiful, sleek new homes and an attractive town centre featuring Mt. Komorebi's official mascot: Yamachan.",
+   "mapSpot": [0.68, 0.65],
+   "mapBox": [0.52, 0.55, 0.84, 0.76],
    "lots": [
     {"lot": "2-4-1 Wakabamori", "myName": "?", "type": "Cemetery", "size": "20x15", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "2-4-2 Wakabamori", "myName": "2-4-2 Wakabamori", "type": "Residential", "size": "30x20", "residents": "Akiyama", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["VbPOiqJiEe2JB1d8Dz3Yjw=="], "traits": ["Child's Play", "Good Schools"]},
@@ -22,6 +24,8 @@
   {
    "name": "Senbamachi",
    "desc": "Senbamachi, the town of a thousand leaves, is the oldest in the region. Many locals enjoy the town's connection to nature, especially with the bamboo forests surrounding the town and unique spritely creatures that make a home in their leaves.",
+   "mapSpot": [0.42, 0.47],
+   "mapBox": [0.34, 0.37, 0.51, 0.57],
    "lots": [
     {"lot": "5-6-1 Shinrinyoku", "myName": "5-6-1 Shinrinyoku", "type": "Residential", "size": "20x15", "residents": "Nishidake", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "5-3-1 Shinrinyoku", "myName": "Sento Senbamachi", "type": "Onsen Bathhouse", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["HA1X7avPEe2KmInwBMy2Ww=="], "traits": ["On Ley Line", "Party Place"]},
@@ -34,6 +38,8 @@
   {
    "name": "Yukimatsu",
    "desc": "The true beauty of the countryside can be seen from Yukimatsu, named for its snow-covered pines. Located on the slopes of Mt. Komorebi, this area offers gorgeous vacation rentals, a variety of snow sports, untamed wilderness, and a peaceful Onsen Bathhouse getaway.",
+   "mapSpot": [0.53, 0.3],
+   "mapBox": [0.36, 0.23, 0.69, 0.36],
    "lots": [
     {"lot": "5-1-1 Kiyomatsu", "myName": "5-1-1 Kiyomatsu", "type": "Vacation Rental", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["DalrQoxKT2WT8gFfb+JCuA=="], "traits": ["Convivial", "Bracing Breezes", "Natural Well"]},
     {"lot": "5-1-2 Kiyomatsu", "myName": "5-1-2 Kiyomatsu", "type": "Vacation Rental", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["N+vsiXPfSiyLfiA9VWRa3Q=="]},

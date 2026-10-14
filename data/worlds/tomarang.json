@@ -9,6 +9,8 @@
   {
    "name": "Morensong",
    "desc": "A bustling neighbourhood with pockets of idyllic peace and nooks of neighbourly nuance! Morensong is the spot for vibrant communities to thrive, day or night.",
+   "mapSpot": [0.39, 0.28],
+   "mapBox": [0.2, 0.15, 0.57, 0.41],
    "lots": [
     {"lot": "Ro Kaya Rockside", "myName": "Ro Kaya Rockside", "type": "Restaurant", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Taka Soi 15", "myName": "Taka Soi 15", "type": "Residential Rental (2)", "size": "20x20", "residents": "Cahyaputri (own)", "built": false, "shared": false, "screenshots": false, "simsMade": false},
@@ -19,6 +21,8 @@
   {
    "name": "Koh Sahpa",
    "desc": "Neighbours with nature or other tenants, Koh Sahpa offers a more relaxed lifestyle along the river.",
+   "mapSpot": [0.59, 0.58],
+   "mapBox": [0.43, 0.46, 0.75, 0.7],
    "lots": [
     {"lot": "Isda Riverfront", "myName": "Isda Riverfront", "type": "Residential Rental (2)", "size": "20x20", "residents": "Rochana/Caberry own", "built": true, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Sungai Point", "myName": "Sungai Point", "type": "Residential Rental (3)", "size": "30x20", "residents": "Linh-Sadya & Linh", "built": false, "shared": false, "screenshots": false, "simsMade": false},

@@ -9,6 +9,8 @@
   {
    "name": "Mua Pel'am",
    "desc": "Nature rules this island, from the active volcano to the flowing waterfall and down into the depths of the secluded cave. This remote destination in the Sulani island chain is the place for exploring the beauty of nature.",
+   "mapSpot": [0.7, 0.33],
+   "mapBox": [0.52, 0.21, 0.88, 0.44],
    "lots": [
     {"lot": "Admiral's Wreckage", "myName": "Admiral's Wreckage", "type": "Community Space", "size": "50x50", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["+PLCKxlfEeuO3QW7hdRP0w==", "AIotNBlgEeuPAwW7hdRP0w==", "+1U+KRlfEeuO4gW7hdRP0w==", "/bCtIBlfEeuO7QW7hdRP0w=="], "versions": [{"label": "Market", "upload": "/bCtIBlfEeuO7QW7hdRP0w=="}, {"label": "Garden", "upload": "+1U+KRlfEeuO4gW7hdRP0w=="}, {"label": "Makers", "upload": "AIotNBlgEeuPAwW7hdRP0w=="}, {"label": "Community space", "upload": "+PLCKxlfEeuO3QW7hdRP0w=="}], "traits": ["Eco Lot", "Great Soil"], "challenges": ["Reduce and Recycle"]},
     {"lot": "Caldera Camp", "myName": "Caldera Camp", "type": "Residential", "size": "30x20", "residents": "Mine", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["bTN95hlYEeuNKWEZzJ8AzQ=="], "traits": ["Eco Lot"], "challenges": ["Volcanic Activity", "Off-the-Grid"]},
@@ -19,6 +21,8 @@
   {
    "name": "Ohan'ali Town",
    "desc": "",
+   "mapSpot": [0.6, 0.63],
+   "mapBox": [0.39, 0.5, 0.8, 0.76],
    "lots": [
     {"lot": "Kin-Ship", "myName": "Kin-Ship", "type": "Residential", "size": "30x30", "residents": "Kealoha", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["4poh5Z5/Ee2LeKFUkPHwsA=="], "traits": ["Geothermal", "Home Studio", "Sunny Aspect"], "challenges": ["Volcanic Activity"]},
     {"lot": "Chieftain's Villa", "myName": "Chieftain's Villa", "type": "Residential", "size": "40x30", "residents": "Hoapili", "built": false, "shared": false, "screenshots": false, "simsMade": false},
@@ -32,6 +36,8 @@
   {
    "name": "Lani St. Taz",
    "desc": "",
+   "mapSpot": [0.32, 0.37],
+   "mapBox": [0.14, 0.26, 0.49, 0.48],
    "lots": [
     {"lot": "Reef Finery", "myName": "Reef Finery", "type": "Residential", "size": "40x30", "residents": "Empty", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Journey's End", "myName": "Journey's End", "type": "Residential", "size": "40x30", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["hix5Gu1OEeqN7CQfmaYcsw=="], "traits": ["Sunny Aspect", "Great Acoustics"]},

@@ -9,6 +9,8 @@
   {
    "name": "Olde Platz",
    "desc": "What Olde Platz lacks in greenery it makes up for in charming cobblestone. Live, work and play in the rich, cultural history of the oldest part of Windenburg.",
+   "mapSpot": [0.69, 0.46],
+   "mapBox": [0.54, 0.38, 0.84, 0.55],
    "lots": [
     {"lot": "Proprietor's Square", "myName": "Proprietor's Square", "type": "Residential", "size": "30x20", "residents": "2 Bed", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["fCk9D0WAEeeOAaP4YfS2mA=="], "traits": ["Party Place", "Great Acoustics", "Gnomes"]},
     {"lot": "Havisham House", "myName": "Havisham House", "type": "Residential", "size": "20x20", "residents": "Specter *WithUpdates*", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["GsrjSQceEeqGNEu/SNc3OA=="], "traits": ["Homey", "Gnomes", "Home Studio"]},
@@ -23,6 +25,8 @@
   {
    "name": "Lykke Center / University of Windenburg",
    "desc": "Fresh, new, and arrestingly shiny, Lykke Centre is where new commercial enterprise in Windenburg thrives.",
+   "mapSpot": [0.68, 0.65],
+   "mapBox": [0.54, 0.55, 0.82, 0.74],
    "lots": [
     {"lot": "Bathe de Rill", "myName": "La Discotheque", "type": "Nightclub", "size": "40x30", "residents": "N/A", "built": true, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Hare Square", "myName": "UoW Hare Halls", "type": "University Housing", "size": "30x20", "residents": "Empty", "built": true, "shared": false, "screenshots": false, "simsMade": false},
@@ -34,6 +38,8 @@
   {
    "name": "Windslar",
    "desc": "Wide open spaces and a chateau or two. Visit or live in Windslar for a delectable taste of countryside living.",
+   "mapSpot": [0.39, 0.4],
+   "mapBox": [0.25, 0.31, 0.54, 0.48],
    "lots": [
     {"lot": "Coorinberg Cottage", "myName": "Coorinberg Cottage", "type": "Residential", "size": "40x30", "residents": "Munch", "built": true, "shared": true, "screenshots": true, "simsMade": false, "gallery": ["60HYgOvpR0a9c7/SdYBveA=="], "traits": ["Peace and Quiet", "Great Soil", "Homey"], "challenges": ["Simple Living"]},
     {"lot": "Cottage Am See", "myName": "Cottage Am See", "type": "Tiny Home Residential", "size": "20x20", "residents": "Free Spirits", "built": true, "shared": true, "screenshots": true, "simsMade": false, "gallery": ["90eaL6RtEeuE1ecawTB/JA=="], "traits": ["Great Soil", "Sunny Aspect", "Peace and Quiet"]},
@@ -46,6 +52,8 @@
   {
    "name": "The Crumbling Isle",
    "desc": "The Crumbling Isle is a bit of a misnomer for this part of town. There's nothing here but glorious high-end real estate as far as the eye can see.",
+   "mapSpot": [0.33, 0.62],
+   "mapBox": [0.18, 0.47, 0.47, 0.76],
    "lots": [
     {"lot": "The Lighthouse", "myName": "The Lighthouse", "type": "Residential", "size": "40x30", "residents": "Tiquelle", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Mid-NoWhere", "myName": "Mid-NoWhere", "type": "Generic", "size": "20x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["KjklhciHEeuF3a3kS5H9ag=="]},

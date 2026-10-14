@@ -9,6 +9,8 @@
   {
    "name": "Mirage Park",
    "desc": "With reasonably priced homes and so close to downtown, Mirage Park is the perfect place for an up and coming star to start their rise to fame.",
+   "mapSpot": [0.39, 0.37],
+   "mapBox": [0.32, 0.3, 0.46, 0.43],
    "lots": [
     {"lot": "Vacuous Green", "myName": "Strike Out!", "type": "Nightclub", "size": "50x40", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["+RyMyQ0wEeqC+TQshgnHrQ=="], "traits": ["Up-and-Coming Hotspot", "Party Place"]},
     {"lot": "Inner Circle", "myName": "Inner Circle", "type": "Residential Rental (4)", "size": "40x30", "residents": "Roomies", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["loFJviHeSPiqw5EI645QUg==", "5mQygaPJEeuPieWcoywPdA=="], "traits": ["Party Place"], "challenges": ["Quake Zone", "Filthy"]},
@@ -18,6 +20,8 @@
   {
    "name": "The Pinnacles",
    "desc": "Fit for the rich and famous, The Pinnacles boast the most expensive homes in all of Del Sol Valley. If you want to live here you need to make it big!",
+   "mapSpot": [0.65, 0.29],
+   "mapBox": [0.53, 0.2, 0.77, 0.39],
    "lots": [
     {"lot": "Chateau Peak", "myName": "Chateau Peak", "type": "Residential", "size": "64x64", "residents": "My Celebs", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "The Ward Den", "myName": "The Ward Den", "type": "Residential", "size": "50x40", "residents": "Ward", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["xqUlDKYSEeuFF/wg9JDtjA=="], "traits": ["Celebrity Home", "Sunny Aspect", "Natural Light"]},
@@ -27,6 +31,8 @@
   {
    "name": "Starlight Boulevard",
    "desc": "When it comes to night life Starlight Boulevard can not be beat. Where only the most famous Sims have access to the most exclusive night club in town. It is where the who's who of the industry come to show off.",
+   "mapSpot": [0.35, 0.59],
+   "mapBox": [0.24, 0.47, 0.46, 0.7],
    "lots": [
     {"lot": "Orchid A Go Go", "myName": "Orchid A Go Go", "type": "Lounge", "size": "30x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["F9KVZ6FaEeuHNfwg9JDtjA=="], "traits": ["Great Acoustics", "Up-and-Coming Hotspot", "Convivial"]},
     {"lot": "Ward Park", "myName": "Starlight Fitness", "type": "Gym", "size": "20x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["lRs1caFSEeuGj/wg9JDtjA=="], "traits": ["Bracing Breezes", "Up-and-Coming Hotspot", "Sunny Aspect"]},

@@ -9,6 +9,8 @@
   {
    "name": "Grims Quarry",
    "desc": "The quaint suburbs near the historic quarry is a sweet destination for any evergreen enthusiast.",
+   "mapSpot": [0.3, 0.32],
+   "mapBox": [0.14, 0.21, 0.46, 0.44],
    "lots": [
     {"lot": "Miner Mansion", "myName": "Miner Mansion", "type": "Residential", "size": "30x20", "residents": "Harris", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Rockridge Springs", "myName": "Rockridge Springs", "type": "Residential Rental (3)", "size": "30x20", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["7qor1/qySJOuKuOZ5Tq/Tg=="], "traits": ["Good Schools", "Sunny Aspect"]},
@@ -21,6 +23,8 @@
   {
    "name": "Conifer Station",
    "desc": "What happens when the trains stop running? Downtown Evergreen, affectionately known to locals as Conifer Station, may be a bit quieter nowadays, but residents will tell you that the defunct train station and unsightly storage tanks hide a hard-working community eager to improve their little corner of the world.",
+   "mapSpot": [0.73, 0.44],
+   "mapBox": [0.55, 0.27, 0.9, 0.61],
    "lots": [
     {"lot": "Pigulock Manor", "myName": "Pigulock Manor", "type": "Residential", "size": "30x20", "residents": "Tinker", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Canal Corner", "myName": "Canal Corner", "type": "Small Business", "size": "20x15", "residents": "Tinker", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
@@ -32,6 +36,8 @@
   {
    "name": "Port Promise",
    "desc": "This smoggy old port may make you gag, but it's an adequate place to learn about industrialization.",
+   "mapSpot": [0.41, 0.58],
+   "mapBox": [0.25, 0.43, 0.57, 0.74],
    "lots": [
     {"lot": "The Old Mill", "myName": "The Old Mill", "type": "Small Business", "size": "30x20", "residents": "Sterling Rico", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "The Caboose", "myName": "The Caboose", "type": "Bar", "size": "30x20", "residents": "N/A", "built": true, "shared": false, "screenshots": false, "simsMade": "N/A"},

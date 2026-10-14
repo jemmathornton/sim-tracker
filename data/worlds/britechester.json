@@ -10,6 +10,8 @@
   {
    "name": "University of Britechester",
    "desc": "Come tour the historic University of Britechester where a budding artist can flourish!",
+   "mapSpot": [0.76, 0.34],
+   "mapBox": [0.64, 0.25, 0.87, 0.43],
    "lots": [
     {"lot": "Darby's Den", "myName": "Darby's Den", "type": "UoB Commons", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["C0fsDxFmEeqHo0u/SNc3OA=="], "traits": ["Study Spot", "Convivial", "Great Acoustics"]},
     {"lot": "Darkwing House", "myName": "The Old Clocktower", "type": "Nightclub/Retail", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["01RGHv0YEeqGaYQzBy11UQ=="], "traits": ["University Student Hang Out", "Convivial", "Romantic Aura"]},
@@ -21,6 +23,8 @@
   {
    "name": "Foxbury Institute",
    "desc": "Come visit the innovative campus of Foxbury to see if a future in technology is right for you.",
+   "mapSpot": [0.25, 0.5],
+   "mapBox": [0.13, 0.37, 0.38, 0.64],
    "lots": [
     {"lot": "Larry's Lagoon", "myName": "Larry's Lagoon", "type": "Foxbury Commons", "size": "40x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["J5N3RfOPEeqCCcLb66ZsmA=="], "traits": ["Study Spot", "Convivial", "Fast Internet"]},
     {"lot": "Maritime Manor", "myName": "Maritime Manor", "type": "Nightclub/Retail", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["tzrKYfg/EeqKp+5FdmbmdA=="], "traits": ["University Student Hang Out", "Party Place", "Romantic Aura"]},
@@ -32,6 +36,8 @@
   {
    "name": "Gibbs Hill",
    "desc": "Gibbs Hill is nestled in the centre of Britechester right between the two universities: Foxbury Institute and the University of Britechester. It was the first centre of activity in Britechester and its famous Laurel Library has stayed a key location for many students to study and learn.",
+   "mapSpot": [0.54, 0.47],
+   "mapBox": [0.41, 0.34, 0.66, 0.6],
    "lots": [
     {"lot": "Honeydew Fields", "myName": "Britechester BnB", "type": "Café/Vacation Rental", "size": "20x15", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["wBt4dbV+EeuBjk1o44QF8A==", "RwfD0bUaEeuB0ucawTB/JA=="], "traits": ["Romantic Aura", "University Student Hang Out"], "galleryVariants": true},
     {"lot": "Laurel Library", "myName": "Laurel Library", "type": "Library", "size": "50x40", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["421u6vYLEeqOjQj3LsIbeA=="], "traits": ["Study Spot", "University Student Hang Out", "Peace and Quiet"]},

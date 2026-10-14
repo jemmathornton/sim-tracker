@@ -9,6 +9,8 @@
   {
    "name": "Glimmerbrook",
    "desc": "",
+   "mapSpot": [0.55, 0.55],
+   "mapBox": [0.3, 0.37, 0.79, 0.73],
    "lots": [
     {"lot": "Rock Ridge Canyon", "myName": "Rock Ridge Canyon", "type": "Residential", "size": "40x30", "residents": "Charm", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Creek Side Corner", "myName": "Creek Side Corner", "type": "Residential", "size": "30x20", "residents": "3 Bed", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["xr995/SGEeqJ1e5FdmbmdA=="], "traits": ["Peace and Quiet", "Gnomes", "Sunny Aspect"]},

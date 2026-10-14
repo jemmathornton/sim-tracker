@@ -9,6 +9,8 @@
   {
    "name": "Spice Market",
    "desc": "A family neighbourhood famous for its Spice Festival, Flea Market and dockland views.",
+   "mapSpot": [0.33, 0.27],
+   "mapBox": [0.21, 0.14, 0.46, 0.4],
    "lots": [
     {"lot": "17 Culpepper House", "myName": "17 Culpepper House", "type": "Apartment", "size": "N/A", "residents": "1 Bed Small", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["Vk2VHIiVEemPc9x2YPRdRQ=="], "beds": 1, "baths": 1},
     {"lot": "18 Culpepper House", "myName": "18 Culpepper House", "type": "Apartment", "size": "N/A", "residents": "1 Bed", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["wcXFyz21EemNHnldy2Ruvw=="], "beds": 2, "traits": ["Historical"], "baths": 1},
@@ -24,6 +26,8 @@
   {
    "name": "Arts Quarter",
    "desc": "Home to the Humour and Hijinks Festival, the bohemian Arts Quarter is beloved by musicians, artists and all manner of creative types.",
+   "mapSpot": [0.68, 0.28],
+   "mapBox": [0.55, 0.15, 0.8, 0.42],
    "lots": [
     {"lot": "910 Medina Studios", "myName": "910 Medina Studios", "type": "Apartment", "size": "N/A", "residents": "Benali", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "920 Medina Studios", "myName": "920 Medina Studios", "type": "Apartment", "size": "N/A", "residents": "Bheeda", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["lnguI4+KEeiPG13tOtUAYg=="], "beds": 2, "baths": 2, "traits": ["Quiet"]},
@@ -38,6 +42,8 @@
   {
    "name": "Fashion District",
    "desc": "Popular with young and trendy Sims, the Fashion District is also home to the Romance Festival and GeekCon.",
+   "mapSpot": [0.25, 0.55],
+   "mapBox": [0.14, 0.42, 0.37, 0.67],
    "lots": [
     {"lot": "701 ZenView", "myName": "701 ZenView", "type": "Apartment", "size": "N/A", "residents": "Bro & Kennedy", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "702 ZenView", "myName": "702 ZenView", "type": "Apartment", "size": "N/A", "residents": "Behr", "built": false, "shared": false, "screenshots": false, "simsMade": false},
@@ -52,6 +58,8 @@
   {
    "name": "Uptown",
    "desc": "The luxurious heart of the City, Uptown is home to the rich, powerful... and slightly odd.",
+   "mapSpot": [0.57, 0.64],
+   "mapBox": [0.46, 0.48, 0.67, 0.79],
    "lots": [
     {"lot": "1010 Alto Apartments", "myName": "1010 Alto Apartments", "type": "Apartment", "size": "N/A", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["wgO03R6kEeuOM2EZzJ8AzQ=="], "traits": ["Chef's Kitchen", "Party Place"], "beds": 3, "baths": 3},
     {"lot": "1020 Alto Apartments", "myName": "1020 Alto Apartments", "type": "Apartment", "size": "N/A", "residents": "Lobo", "built": false, "shared": false, "screenshots": false, "simsMade": false},
@@ -65,6 +73,8 @@
   {
    "name": "Myshuno Meadows",
    "desc": "Surrounded by both trees and the cityscape, Myshuno Meadows is a great place for a relaxed wedding or outdoor birthday party. Centred on Barnabas Skye's old Observatory, part of the area has been converted into an event space while still retaining the original telescope.",
+   "mapSpot": [0.77, 0.61],
+   "mapBox": [0.69, 0.52, 0.84, 0.69],
    "lots": [
     {"lot": "Myshuno Meadows", "myName": "Myshuno Meadows", "type": "Central Park", "size": "64x64", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ],

@@ -9,6 +9,8 @@
   {
    "name": "Campground",
    "desc": "",
+   "mapSpot": [0.44, 0.56],
+   "mapBox": [0.26, 0.37, 0.63, 0.75],
    "lots": [
     {"lot": "Campground", "myName": "Campground", "type": "Vacation Rental", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["CteLgi2OSyWWdZNQihdhuQ=="]},
     {"lot": "Forest Hideaway", "myName": null, "type": "Restaurant", "size": "40x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["TsBq/oKyEeiG+faJ0UabCw=="], "traits": ["Sunny Aspect", "Party Place", "Chef's Kitchen"]},
@@ -20,6 +22,8 @@
   {
    "name": "Granite Falls Forest",
    "desc": "Experience the true perfection of nature by exploring the lush and beautiful Granite Falls Forest.",
+   "mapSpot": [0.76, 0.34],
+   "mapBox": [0.63, 0.23, 0.9, 0.45],
    "lots": [
     {"lot": "Granite Falls Forest", "myName": "Granite Falls Forest", "type": "National Park", "size": "50x50", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Hermit's House", "myName": null, "type": "Hermit's Hut", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}

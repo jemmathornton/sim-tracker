@@ -9,6 +9,8 @@
   {
    "name": "Finchwick",
    "desc": "Nestled along the River Bagley, the old mill village of Finchwick prides itself on its bustling and close-knit community. Its historic square features a pub and quaint stalls amid a flowering garden, perfect for a little window shopping.",
+   "mapSpot": [0.59, 0.71],
+   "mapBox": [0.47, 0.62, 0.71, 0.8],
    "lots": [
     {"lot": "The Gnome's Arms", "myName": "The Gnome's Arms", "type": "Bar (Pub)", "size": "30x20", "residents": "The Scotts (*NPC)", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "1 Cobblebottom Street", "myName": "1 Cobblebottom Street", "type": "Residential", "size": "20x15", "residents": "1 Bed", "built": true, "shared": false, "screenshots": false, "simsMade": false},
@@ -20,6 +22,8 @@
   {
    "name": "Old New Henford",
    "desc": "An area that boasts rolling hills, lush estates, and a small community garden, Old New Henford is perhaps best known for its historical naming woes.",
+   "mapSpot": [0.69, 0.45],
+   "mapBox": [0.55, 0.35, 0.83, 0.55],
    "lots": [
     {"lot": "2 Olde Mill Lane", "myName": "2 Olde Mill Lane", "type": "Vet Clinic", "size": "50x40", "residents": "Watson-Holmes", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "3 Olde Mill Lane", "myName": "3 Olde Mill Lane", "type": "Residential", "size": "50x40", "residents": "Watson-Holmes", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["ifmJ+XofEeyNagW7hdRP0w=="], "traits": ["Homey", "Cat Hangout"], "challenges": ["Wild Foxes", "Simple Living"]},
@@ -31,6 +35,8 @@
   {
    "name": "The Bramblewood",
    "desc": "The wooded area on the outskirts of Henford has a storybook-like feel and is where the most wild animals can be found, such as wild birds, rabbits, and foxes.",
+   "mapSpot": [0.34, 0.34],
+   "mapBox": [0.2, 0.21, 0.48, 0.48],
    "lots": [
     {"lot": "13 Nettle Lane", "myName": "13 Nettle Lane", "type": "Residential", "size": "30x20", "residents": "Empty", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "14 Nettle Lane", "myName": "14 Nettle Lane", "type": "Residential", "size": "40x30", "residents": "Empty", "built": false, "shared": false, "screenshots": false, "simsMade": false},

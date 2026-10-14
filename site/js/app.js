@@ -243,19 +243,26 @@ function mapHero(w, kicker, title, text, figures, chapters, small){
 // Neighbourhood cards (chosen 12 Oct, "D1"): a close-up of the world map at the neighbourhood's spot (no pin, Jemma's choice),
 // and a row of circles, one per lot, each linking to its lot.
 // Spots are fractions of the map's width/height, placed by Jemma on a gridded map. Worlds without spots show the whole map, no pin.
-const NB_PT = DATA.nbPt;
+const NB_PT = DATA.nbPt, NB_BOX = DATA.nbBox || {};
 const MAP_RATIO = 1266/1800, CARD_RATIO = 3/4, ZOOM = 3.2;
+// a box Jemma drew around a neighbourhood (14 Oct): zoom so the whole box fits the card, with a little room around it
+// (never so far out that the map no longer fills the card, nor closer than a quarter of the map's width)
+function boxZoom(b){
+  const room = 1.15, w = (b[2] - b[0]) * room, h = (b[3] - b[1]) * room;
+  return Math.max(CARD_RATIO / MAP_RATIO + .01, Math.min(4, 1 / Math.max(w, .01), CARD_RATIO / (MAP_RATIO * Math.max(h, .01))));
+}
 // background-position that puts point [x,y] of the map at the card's centre (clamped at the map's edges), plus where the pin lands
-function nbView(pt){
-  const kx = ZOOM, ky = ZOOM * MAP_RATIO / CARD_RATIO, cl = v => Math.max(0, Math.min(1, v));
+function nbView(pt, zoom = ZOOM){
+  const kx = zoom, ky = zoom * MAP_RATIO / CARD_RATIO, cl = v => Math.max(0, Math.min(1, v));
   const px = cl((pt[0]*kx - .5)/(kx - 1)), py = cl((pt[1]*ky - .5)/(ky - 1));
-  return {bg: `${(px*100).toFixed(1)}% ${(py*100).toFixed(1)}%/${ZOOM*100}% auto`, pin: [pt[0]*kx + px*(1-kx), pt[1]*ky + py*(1-ky)].map(v => (v*100).toFixed(1) + "%")};
+  return {bg: `${(px*100).toFixed(1)}% ${(py*100).toFixed(1)}%/${(zoom*100).toFixed(1)}% auto`, pin: [pt[0]*kx + px*(1-kx), pt[1]*ky + py*(1-ky)].map(v => (v*100).toFixed(1) + "%")};
 }
 const nbTile = l => l.photos[0] ? `<i style="background-image:url('${l.photos[0].thumb}')" title="${esc(l.name)}"></i>` : `<i class="nb-none" title="${esc(l.name)} (no picture yet)">${isApt(l) ? ic("home") : plot(l.size, 60, false)}</i>`;
 // a lot circle on a neighbourhood card opens that lot (the rest of the card still opens the neighbourhood)
 document.addEventListener("click", e => { const c = e.target.closest("[data-lot-link]"); if (!c) return; e.preventDefault(); e.stopPropagation(); location.hash = c.dataset.lotLink; }, true);
 function hoodArt(x){
-  const spot = (NB_PT[x.world.id] || {})[x.name], v = spot ? nbView(spot) : null, n = x.lots.length;
+  const spot = (NB_PT[x.world.id] || {})[x.name], box = (NB_BOX[x.world.id] || {})[x.name], n = x.lots.length;
+  const v = box ? nbView([(box[0] + box[2]) / 2, (box[1] + box[3]) / 2], boxZoom(box)) : spot ? nbView(spot) : null;
   const bg = !x.world.map ? "" : v ? `background:url('${x.world.map}') ${v.bg}` : `background:url('${x.world.map}') center 45%/cover`;
   const circles = x.lots.map(l => nbTile(l).replace("<i ", `<i data-lot-link="${l.id}" aria-label="${esc(l.name)}" `).replace(/ title="[^"]*"/, ` data-name="${esc(l.name)}"`)).join("");
   return `<div class="photo nb-map" style="${bg}"><span class="nb-bubbles${n > 5 ? " many" : ""}">${circles}</span><span class="type">Neighbourhood</span></div>`;

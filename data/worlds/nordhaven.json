@@ -9,6 +9,8 @@
   {
    "name": "Gammelvik",
    "desc": "Take a walk down the historic streets of Gammelvik and immerse yourself in the culture of Nordhaven's oldest district. Locals here like to take it slow, travel to work on their vintage bikes, and take long strolls by the old canals at night.",
+   "mapSpot": [0.72, 0.55],
+   "mapBox": [0.57, 0.41, 0.87, 0.69],
    "lots": [
     {"lot": "Konst Modern", "myName": null, "type": "Museum", "size": "50x40", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "The Rouge Note", "myName": "The Rouge Note", "type": "Lounge/Bar/Nightclub", "size": "20x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["ed6i66jPTSu6+5lsSvpp5w=="], "traits": ["Romantic Aura", "Convivial", "Great Acoustics"]},
@@ -22,6 +24,8 @@
   {
    "name": "Iverstad",
    "desc": "Originally the industrial district of the city, Iverstad has recently turned into a natural settling spot for ambitious and stylish Sims. Many of its old factories have been repurposed as living spaces.",
+   "mapSpot": [0.32, 0.37],
+   "mapBox": [0.15, 0.21, 0.49, 0.53],
    "lots": [
     {"lot": "New Harbor Park", "myName": null, "type": "Small Business Residential", "size": "50x40", "residents": "Empty", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Terra-Potta", "myName": null, "type": "Small Business Residential", "size": "30x20", "residents": "Koopman", "built": false, "shared": false, "screenshots": false, "simsMade": false},

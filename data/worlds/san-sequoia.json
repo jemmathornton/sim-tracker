@@ -9,6 +9,8 @@
   {
    "name": "Anchorpoint Wharf",
    "desc": "Once the centre of a bustling fishing and canning industry, Anchorpoint Wharf is known now as a vibrant area downtown featuring a movie theatre, parklets, and more. There's plenty to keep all ages entertained.",
+   "mapSpot": [0.32, 0.3],
+   "mapBox": [0.21, 0.19, 0.44, 0.41],
    "lots": [
     {"lot": "Robles Point", "myName": "Robles Point", "type": "Residential", "size": "50x40", "residents": "Robles", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Manzanita Terrace", "myName": "Manzanita Terrace", "type": "Residential Rental", "size": "30x20", "residents": "Robles own", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["VQFgXtugQYOnRKBloF2q8w==", "S5OBFGGuQdCbSX8fSeqfxQ=="], "traits": ["Natural Light", "Bracing Breezes", "Child's Play"]},
@@ -19,6 +21,8 @@
   {
    "name": "Gilbert Gardens",
    "desc": "Gilbert Gardens' gorgeous park was once owned by Gilbert Gilberts, a land developer who helped establish the area. Now, it's the perfect locale for family trips to the gardens.",
+   "mapSpot": [0.7, 0.3],
+   "mapBox": [0.57, 0.19, 0.83, 0.41],
    "lots": [
     {"lot": "13 Acacia Avenue", "myName": "13 Acacia Avenue", "type": "Residential", "size": "40x30", "residents": "Robles-Ruano", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Parkside Place", "myName": "Parkside Place", "type": "Playground", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["HMOwRBrIQuedlPG5caBw8A=="], "traits": ["Child's Play", "Party Place"]},
@@ -30,6 +34,8 @@
   {
    "name": "Hopewell Hills",
    "desc": "Hopewell Hills is a cosy spot away from the hustle and bustle of town; the perfect place for anyone who wants, well, space! If the suburbs are your idea of paradise, you've found it here in this quiet neighbourhood.",
+   "mapSpot": [0.53, 0.71],
+   "mapBox": [0.36, 0.56, 0.69, 0.87],
    "lots": [
     {"lot": "7 Eucalyptus Lane", "myName": "7 Eucalyptus Lane", "type": "Residential", "size": "50x40", "residents": "Michaelson", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "23 Eucalyptus Lane", "myName": "23 Eucalyptus Lane", "type": "Residential", "size": "30x20", "residents": "Lovejoy", "built": true, "shared": true, "screenshots": false, "simsMade": true, "gallery": ["1WpsEz1aTLyFuTNaFCmhLA=="], "traits": ["Bracing Breezes", "Child's Play"]},

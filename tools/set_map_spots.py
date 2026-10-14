@@ -3,16 +3,17 @@
     python tools/set_map_spots.py answers.txt      (or paste the answers in when it asks)
 
 One line per world, as the page writes them:
-    Oasis Springs: Bedrock Strait C3 (0.31, 0.45); Parched Prospect E4
+    Oasis Springs: Bedrock Strait C3 (0.31, 0.45) [0.25, 0.38, 0.37, 0.52]; Parched Prospect E4
 A square on its own (no numbers) goes in at the middle of that square. The spots end up as mapSpot in
-data/worlds/<world>.json; run tools/build.py afterwards to show them on the neighbourhood cards.
+data/worlds/<world>.json, and a box she drew around the neighbourhood (left, top, right, bottom) as mapBox: its card
+zooms to fit the box. Run tools/build.py afterwards to show them on the neighbourhood cards.
 """
 import os, re, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import DATA, slug, load, save
 
 COLS = "ABCDEFGH"
-ITEM = re.compile(r'^(?P<name>.+?)\s+(?P<sq>[A-H][1-6])(?:\s*\(\s*(?P<x>[\d.]+)\s*,\s*(?P<y>[\d.]+)\s*\))?$', re.I)
+ITEM = re.compile(r'^(?P<name>.+?)\s+(?P<sq>[A-H][1-6])(?:\s*\(\s*(?P<x>[\d.]+)\s*,\s*(?P<y>[\d.]+)\s*\))?(?:\s*\[(?P<box>[\d.,\s]+)\])?$', re.I)
 
 
 def spot(m):
@@ -34,13 +35,14 @@ def main(text):
             if not m: problems.append(f"{world}: couldn't read “{item}”"); continue
             h = hoods.get(m['name'].strip())
             if not h: problems.append(f"{world}: no neighbourhood called {m['name'].strip()}"); continue
-            # keep the key order the other neighbourhoods use: name, desc, mapSpot, lots
-            new = spot(m); old = h.get('mapSpot')
-            if old == new: continue
-            items = [(k, v) for k, v in h.items() if k != 'mapSpot']
+            # keep the key order the other neighbourhoods use: name, desc, mapSpot, mapBox, lots
+            new = spot(m); box = [round(float(v), 2) for v in m['box'].split(',')] if m['box'] else None
+            if box is not None and len(box) != 4: problems.append(f"{world}: couldn't read the box for {h['name']}"); continue
+            if h.get('mapSpot') == new and h.get('mapBox') == box: continue
+            items = [(k, v) for k, v in h.items() if k not in ('mapSpot', 'mapBox')]
             k = next((n for n, (key, _) in enumerate(items) if key == 'lots'), len(items))
-            h.clear(); h.update(items[:k] + [('mapSpot', new)] + items[k:])
-            changed.append(f"{world} / {h['name']}: {m['sq'].upper()} {new}")
+            h.clear(); h.update(items[:k] + [('mapSpot', new)] + ([('mapBox', box)] if box else []) + items[k:])
+            changed.append(f"{world} / {h['name']}: {m['sq'].upper()} {new}" + (f" box {box}" if box else ""))
         save(p, W)
     return changed, problems
 

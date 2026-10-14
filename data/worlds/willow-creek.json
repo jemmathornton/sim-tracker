@@ -9,7 +9,8 @@
   {
    "name": "Foundry Cove",
    "desc": "Modest homes with a canal for fishing and a charming active railroad.",
-   "mapSpot": [0.69, 0.59],
+   "mapSpot": [0.67, 0.64],
+   "mapBox": [0.53, 0.55, 0.82, 0.73],
    "lots": [
     {"lot": "Bargain Bend", "myName": "Willow's", "type": "Restaurant (Diner)", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["qJHM+ODxEeaFuql4la3fHw=="], "traits": ["Chef's Kitchen", "Homey", "Sunny Aspect"]},
     {"lot": "Streamlet Single", "myName": "Streamlet Single", "type": "Residential", "size": "20x15", "residents": "Davidson", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["ZkIsQakfEeuDv/wg9JDtjA=="], "traits": ["Homey", "Great Soil", "Peace and Quiet"]},
@@ -22,7 +23,8 @@
   {
    "name": "Courtyard Lane",
    "desc": "Affordable homes for the upwardly mobile, with classic styling and larger shotgun houses.",
-   "mapSpot": [0.75, 0.45],
+   "mapSpot": [0.72, 0.47],
+   "mapBox": [0.62, 0.39, 0.83, 0.55],
    "lots": [
     {"lot": "Potters Splay", "myName": "Potters Splay", "type": "Residential", "size": "30x20", "residents": "Reynolds", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["BPJCMI95EeiLGX32EHttrg=="], "galleryOld": true, "traits": ["Child's Play", "Good Schools", "Homey"]},
     {"lot": "Brook Bungalow", "myName": "Brook Bungalow", "type": "Residential", "size": "40x30", "residents": "Bjergsen", "built": false, "shared": false, "screenshots": false, "simsMade": false},
@@ -34,7 +36,8 @@
   {
    "name": "Pendula View",
    "desc": "The historical garden community, home to large mansions.",
-   "mapSpot": [0.5, 0.42],
+   "mapSpot": [0.5, 0.41],
+   "mapBox": [0.38, 0.33, 0.61, 0.49],
    "lots": [
     {"lot": "Hallow Slough", "myName": null, "type": "Residential", "size": "30x20", "residents": "Ella-Mint Cadberry", "built": true, "shared": false, "screenshots": false, "simsMade": true},
     {"lot": "Umbrage Manor", "myName": null, "type": "Residential", "size": "40x30", "residents": "Villareel", "built": false, "shared": false, "screenshots": false, "simsMade": false},
@@ -45,7 +48,8 @@
   {
    "name": "Sage Estates",
    "desc": "Willow Creek's most desirable area, with sprawling estates and lush landscaping.",
-   "mapSpot": [0.25, 0.42],
+   "mapSpot": [0.27, 0.43],
+   "mapBox": [0.17, 0.36, 0.37, 0.5],
    "lots": [
     {"lot": "Oakenstead", "myName": "Oakenstead", "type": "Residential", "size": "50x50", "residents": "Barraza", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["IY91nQcwEeqP3/Ao7taYVg=="], "galleryOld": true, "traits": ["Fast Internet", "Good Schools", "Great Soil"]},
     {"lot": "Cypress Terrace", "myName": "Cypress Terrace", "type": "Residential", "size": "40x30", "residents": "Spencer-Kim-Lewis", "built": false, "shared": false, "screenshots": false, "simsMade": false}
@@ -54,7 +58,8 @@
   {
    "name": "Crawdad Quarter",
    "desc": "The heart of Willow Creek, from parks to nightlife.",
-   "mapSpot": [0.33, 0.66],
+   "mapSpot": [0.32, 0.66],
+   "mapBox": [0.15, 0.55, 0.49, 0.77],
    "lots": [
     {"lot": "Municipal Muses", "myName": "Municipal Muses", "type": "Museum", "size": "40x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["3uTcvsTNEeeHdWHJsaQqWQ=="], "traits": ["Natural Light", "Romantic Aura", "Great Acoustics"]},
     {"lot": "The Blue Velvet", "myName": "The Llama Café", "type": "Café", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["P5LkNP5KRd+K9PSzz+WEvQ=="], "traits": ["Sunny Aspect", "Romantic Aura", "Penny Pixies"]},
@@ -65,7 +70,8 @@
   {
    "name": "Magnolia Blossom Park",
    "desc": "A sprawling park in the heart of town.",
-   "mapSpot": [0.375, 0.54],
+   "mapSpot": [0.41, 0.56],
+   "mapBox": [0.3, 0.48, 0.51, 0.64],
    "lots": [
     {"lot": "Magnolia Blossom Park", "myName": "Magnolia Blossom Park", "type": "Park", "size": "50x50", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["Py7Ecqn9EeuLTucawTB/JA=="], "traits": ["Teen Neighborhood", "Cat Hangout", "Dog Hangout"]}
    ],
