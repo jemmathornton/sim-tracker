@@ -105,7 +105,7 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
 - [ ] [Jemma] Innisgreen (Enchanted by Nature, not owned): the research lists its 14 lots (research/missing-lots-check.md); the game's own files confirm all 14, sizes included (14 Oct). Your other not-owned worlds have their lots in the plan and on Stats; add Innisgreen's too, as not owned?
 - [x] Harbor Quarter Gym (her UoW Students Union): now 30×30, the game's size (14 Oct, her choice)
 - [x] The Magic Realm: now 50×40, the game's size (14 Oct, her choice)
-- [ ] [Jemma] Selvadorada's Omiscan Temple (50×50) and Omiscan Royal Baths (40×30) are real lots in the game files, and Mt. Komorebi's two hidden lots are Mt. Komorebi Base Camp and The Croft Icefall (20×15 each). Add any of them to the plan? (14 Oct: she wants to research them more first; Claude is researching too)
+- [ ] [Jemma] Selvadorada's Omiscan Temple (50×50) and Omiscan Royal Baths (40×30) are real lots in the game files, and Mt. Komorebi's two hidden lots are Mt. Komorebi Base Camp and The Croft Icefall (20×15 each). Add any of them to the plan? (14 Oct: she wants to research them more first. Claude's findings are in research/hidden-lots-check.md: Base Camp, The Croft Icefall and Royal Baths can be built on with free build and are often rebuilt; the Temple has five game-controlled layouts, so it's not one to rebuild)
 - [x] Checked in the game's own text (13 Oct): "Plateau Place" (her spelling) is right, not "Plateau Palace"
 - [x] Batuu: Journey to Batuu isn't installed, so nothing to add
 - Left as the research suggested: Selvadorada's jungle areas (not lots in the game either); Netherworld Department stays 30×30 (her confirmed size; the game's file has it at 20×20)
