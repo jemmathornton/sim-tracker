@@ -6,3 +6,4 @@ __pycache__/
 .claude/tmp-*
 # local logs
 logs/
+data/spreadsheet/last-import-previous.json

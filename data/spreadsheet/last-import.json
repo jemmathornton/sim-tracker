@@ -1,2610 +1,7 @@
 [
  {
   "tab": "Overview",
-  "title": "World Plans",
-  "sections": [],
-  "stray": [
-   [
-    "A2",
-    "Click a world to jump to its tab. Percentages update automatically. Set Owned to No for worlds you don't have the pack for; the totals row only counts owned worlds."
-   ],
-   [
-    "A4",
-    "World"
-   ],
-   [
-    "B4",
-    "Pack"
-   ],
-   [
-    "C4",
-    "Owned"
-   ],
-   [
-    "D4",
-    "Lots"
-   ],
-   [
-    "E4",
-    "Built"
-   ],
-   [
-    "F4",
-    "Shared"
-   ],
-   [
-    "G4",
-    "Screenshots"
-   ],
-   [
-    "H4",
-    "Sims Made"
-   ],
-   [
-    "I4",
-    "Overall"
-   ],
-   [
-    "J4",
-    "To build"
-   ],
-   [
-    "K4",
-    "Built, not shared"
-   ],
-   [
-    "M4",
-    "lots"
-   ],
-   [
-    "N4",
-    "builtT"
-   ],
-   [
-    "O4",
-    "builtF"
-   ],
-   [
-    "P4",
-    "shareT"
-   ],
-   [
-    "Q4",
-    "shareF"
-   ],
-   [
-    "R4",
-    "shotT"
-   ],
-   [
-    "S4",
-    "shotF"
-   ],
-   [
-    "T4",
-    "simsT"
-   ],
-   [
-    "U4",
-    "simsF"
-   ],
-   [
-    "V4",
-    "toShare"
-   ],
-   [
-    "A5",
-    "Willow Creek"
-   ],
-   [
-    "B5",
-    "Base Game"
-   ],
-   [
-    "C5",
-    "Yes"
-   ],
-   [
-    "D5",
-    "=M5"
-   ],
-   [
-    "E5",
-    "=IFERROR(N5/(N5+O5),\"\")"
-   ],
-   [
-    "F5",
-    "=IFERROR(P5/(P5+Q5),\"\")"
-   ],
-   [
-    "G5",
-    "=IFERROR(R5/(R5+S5),\"\")"
-   ],
-   [
-    "H5",
-    "=IFERROR(T5/(T5+U5),\"\")"
-   ],
-   [
-    "I5",
-    "=IFERROR(AVERAGE(E5:H5),\"\")"
-   ],
-   [
-    "J5",
-    "=O5"
-   ],
-   [
-    "K5",
-    "=V5"
-   ],
-   [
-    "M5",
-    "=COUNTA('Willow Creek'!$A$3:$A$40)-2*COUNTIF('Willow Creek'!$A$3:$A$40,\"Lot Name\")"
-   ],
-   [
-    "N5",
-    "=COUNTIF('Willow Creek'!$F$3:$F$40,TRUE)"
-   ],
-   [
-    "O5",
-    "=COUNTIF('Willow Creek'!$F$3:$F$40,FALSE)"
-   ],
-   [
-    "P5",
-    "=COUNTIF('Willow Creek'!$G$3:$G$40,TRUE)"
-   ],
-   [
-    "Q5",
-    "=COUNTIF('Willow Creek'!$G$3:$G$40,FALSE)"
-   ],
-   [
-    "R5",
-    "=COUNTIF('Willow Creek'!$H$3:$H$40,TRUE)"
-   ],
-   [
-    "S5",
-    "=COUNTIF('Willow Creek'!$H$3:$H$40,FALSE)"
-   ],
-   [
-    "T5",
-    "=COUNTIF('Willow Creek'!$I$3:$I$40,TRUE)"
-   ],
-   [
-    "U5",
-    "=COUNTIF('Willow Creek'!$I$3:$I$40,FALSE)"
-   ],
-   [
-    "V5",
-    "=COUNTIFS('Willow Creek'!$F$3:$F$40,TRUE,'Willow Creek'!$G$3:$G$40,FALSE)"
-   ],
-   [
-    "A6",
-    "Oasis Springs"
-   ],
-   [
-    "B6",
-    "Base Game"
-   ],
-   [
-    "C6",
-    "Yes"
-   ],
-   [
-    "D6",
-    "=M6"
-   ],
-   [
-    "E6",
-    "=IFERROR(N6/(N6+O6),\"\")"
-   ],
-   [
-    "F6",
-    "=IFERROR(P6/(P6+Q6),\"\")"
-   ],
-   [
-    "G6",
-    "=IFERROR(R6/(R6+S6),\"\")"
-   ],
-   [
-    "H6",
-    "=IFERROR(T6/(T6+U6),\"\")"
-   ],
-   [
-    "I6",
-    "=IFERROR(AVERAGE(E6:H6),\"\")"
-   ],
-   [
-    "J6",
-    "=O6"
-   ],
-   [
-    "K6",
-    "=V6"
-   ],
-   [
-    "M6",
-    "=COUNTA('Oasis Springs'!$A$3:$A$40)-2*COUNTIF('Oasis Springs'!$A$3:$A$40,\"Lot Name\")"
-   ],
-   [
-    "N6",
-    "=COUNTIF('Oasis Springs'!$F$3:$F$40,TRUE)"
-   ],
-   [
-    "O6",
-    "=COUNTIF('Oasis Springs'!$F$3:$F$40,FALSE)"
-   ],
-   [
-    "P6",
-    "=COUNTIF('Oasis Springs'!$G$3:$G$40,TRUE)"
-   ],
-   [
-    "Q6",
-    "=COUNTIF('Oasis Springs'!$G$3:$G$40,FALSE)"
-   ],
-   [
-    "R6",
-    "=COUNTIF('Oasis Springs'!$H$3:$H$40,TRUE)"
-   ],
-   [
-    "S6",
-    "=COUNTIF('Oasis Springs'!$H$3:$H$40,FALSE)"
-   ],
-   [
-    "T6",
-    "=COUNTIF('Oasis Springs'!$I$3:$I$40,TRUE)"
-   ],
-   [
-    "U6",
-    "=COUNTIF('Oasis Springs'!$I$3:$I$40,FALSE)"
-   ],
-   [
-    "V6",
-    "=COUNTIFS('Oasis Springs'!$F$3:$F$40,TRUE,'Oasis Springs'!$G$3:$G$40,FALSE)"
-   ],
-   [
-    "A7",
-    "Newcrest"
-   ],
-   [
-    "B7",
-    "Base Game"
-   ],
-   [
-    "C7",
-    "Yes"
-   ],
-   [
-    "D7",
-    "=M7"
-   ],
-   [
-    "E7",
-    "=IFERROR(N7/(N7+O7),\"\")"
-   ],
-   [
-    "F7",
-    "=IFERROR(P7/(P7+Q7),\"\")"
-   ],
-   [
-    "G7",
-    "=IFERROR(R7/(R7+S7),\"\")"
-   ],
-   [
-    "H7",
-    "=IFERROR(T7/(T7+U7),\"\")"
-   ],
-   [
-    "I7",
-    "=IFERROR(AVERAGE(E7:H7),\"\")"
-   ],
-   [
-    "J7",
-    "=O7"
-   ],
-   [
-    "K7",
-    "=V7"
-   ],
-   [
-    "M7",
-    "=COUNTA('Newcrest'!$A$3:$A$25)-2*COUNTIF('Newcrest'!$A$3:$A$25,\"Lot Name\")"
-   ],
-   [
-    "N7",
-    "=COUNTIF('Newcrest'!$F$3:$F$25,TRUE)"
-   ],
-   [
-    "O7",
-    "=COUNTIF('Newcrest'!$F$3:$F$25,FALSE)"
-   ],
-   [
-    "P7",
-    "=COUNTIF('Newcrest'!$G$3:$G$25,TRUE)"
-   ],
-   [
-    "Q7",
-    "=COUNTIF('Newcrest'!$G$3:$G$25,FALSE)"
-   ],
-   [
-    "R7",
-    "=COUNTIF('Newcrest'!$H$3:$H$25,TRUE)"
-   ],
-   [
-    "S7",
-    "=COUNTIF('Newcrest'!$H$3:$H$25,FALSE)"
-   ],
-   [
-    "T7",
-    "=COUNTIF('Newcrest'!$I$3:$I$25,TRUE)"
-   ],
-   [
-    "U7",
-    "=COUNTIF('Newcrest'!$I$3:$I$25,FALSE)"
-   ],
-   [
-    "V7",
-    "=COUNTIFS('Newcrest'!$F$3:$F$25,TRUE,'Newcrest'!$G$3:$G$25,FALSE)"
-   ],
-   [
-    "A8",
-    "Granite Falls"
-   ],
-   [
-    "B8",
-    "Outdoor Retreat"
-   ],
-   [
-    "C8",
-    "Yes"
-   ],
-   [
-    "D8",
-    "=M8"
-   ],
-   [
-    "E8",
-    "=IFERROR(N8/(N8+O8),\"\")"
-   ],
-   [
-    "F8",
-    "=IFERROR(P8/(P8+Q8),\"\")"
-   ],
-   [
-    "G8",
-    "=IFERROR(R8/(R8+S8),\"\")"
-   ],
-   [
-    "H8",
-    "=IFERROR(T8/(T8+U8),\"\")"
-   ],
-   [
-    "I8",
-    "=IFERROR(AVERAGE(E8:H8),\"\")"
-   ],
-   [
-    "J8",
-    "=O8"
-   ],
-   [
-    "K8",
-    "=V8"
-   ],
-   [
-    "M8",
-    "=COUNTA('Granite Falls'!$A$3:$A$13)-2*COUNTIF('Granite Falls'!$A$3:$A$13,\"Lot Name\")"
-   ],
-   [
-    "N8",
-    "=COUNTIF('Granite Falls'!$F$3:$F$13,TRUE)"
-   ],
-   [
-    "O8",
-    "=COUNTIF('Granite Falls'!$F$3:$F$13,FALSE)"
-   ],
-   [
-    "P8",
-    "=COUNTIF('Granite Falls'!$G$3:$G$13,TRUE)"
-   ],
-   [
-    "Q8",
-    "=COUNTIF('Granite Falls'!$G$3:$G$13,FALSE)"
-   ],
-   [
-    "R8",
-    "=COUNTIF('Granite Falls'!$H$3:$H$13,TRUE)"
-   ],
-   [
-    "S8",
-    "=COUNTIF('Granite Falls'!$H$3:$H$13,FALSE)"
-   ],
-   [
-    "T8",
-    "=COUNTIF('Granite Falls'!$I$3:$I$13,TRUE)"
-   ],
-   [
-    "U8",
-    "=COUNTIF('Granite Falls'!$I$3:$I$13,FALSE)"
-   ],
-   [
-    "V8",
-    "=COUNTIFS('Granite Falls'!$F$3:$F$13,TRUE,'Granite Falls'!$G$3:$G$13,FALSE)"
-   ],
-   [
-    "A9",
-    "Magnolia Promenade"
-   ],
-   [
-    "B9",
-    "Get To Work"
-   ],
-   [
-    "C9",
-    "Yes"
-   ],
-   [
-    "D9",
-    "=M9"
-   ],
-   [
-    "E9",
-    "=IFERROR(N9/(N9+O9),\"\")"
-   ],
-   [
-    "F9",
-    "=IFERROR(P9/(P9+Q9),\"\")"
-   ],
-   [
-    "G9",
-    "=IFERROR(R9/(R9+S9),\"\")"
-   ],
-   [
-    "H9",
-    "=IFERROR(T9/(T9+U9),\"\")"
-   ],
-   [
-    "I9",
-    "=IFERROR(AVERAGE(E9:H9),\"\")"
-   ],
-   [
-    "J9",
-    "=O9"
-   ],
-   [
-    "K9",
-    "=V9"
-   ],
-   [
-    "M9",
-    "=COUNTA('Magnolia Promenade'!$A$3:$A$15)-2*COUNTIF('Magnolia Promenade'!$A$3:$A$15,\"Lot Name\")"
-   ],
-   [
-    "N9",
-    "=COUNTIF('Magnolia Promenade'!$F$3:$F$15,TRUE)"
-   ],
-   [
-    "O9",
-    "=COUNTIF('Magnolia Promenade'!$F$3:$F$15,FALSE)"
-   ],
-   [
-    "P9",
-    "=COUNTIF('Magnolia Promenade'!$G$3:$G$15,TRUE)"
-   ],
-   [
-    "Q9",
-    "=COUNTIF('Magnolia Promenade'!$G$3:$G$15,FALSE)"
-   ],
-   [
-    "R9",
-    "=COUNTIF('Magnolia Promenade'!$H$3:$H$15,TRUE)"
-   ],
-   [
-    "S9",
-    "=COUNTIF('Magnolia Promenade'!$H$3:$H$15,FALSE)"
-   ],
-   [
-    "T9",
-    "=COUNTIF('Magnolia Promenade'!$I$3:$I$15,TRUE)"
-   ],
-   [
-    "U9",
-    "=COUNTIF('Magnolia Promenade'!$I$3:$I$15,FALSE)"
-   ],
-   [
-    "V9",
-    "=COUNTIFS('Magnolia Promenade'!$F$3:$F$15,TRUE,'Magnolia Promenade'!$G$3:$G$15,FALSE)"
-   ],
-   [
-    "A10",
-    "Windenburg"
-   ],
-   [
-    "B10",
-    "Get Together"
-   ],
-   [
-    "C10",
-    "Yes"
-   ],
-   [
-    "D10",
-    "=M10"
-   ],
-   [
-    "E10",
-    "=IFERROR(N10/(N10+O10),\"\")"
-   ],
-   [
-    "F10",
-    "=IFERROR(P10/(P10+Q10),\"\")"
-   ],
-   [
-    "G10",
-    "=IFERROR(R10/(R10+S10),\"\")"
-   ],
-   [
-    "H10",
-    "=IFERROR(T10/(T10+U10),\"\")"
-   ],
-   [
-    "I10",
-    "=IFERROR(AVERAGE(E10:H10),\"\")"
-   ],
-   [
-    "J10",
-    "=O10"
-   ],
-   [
-    "K10",
-    "=V10"
-   ],
-   [
-    "M10",
-    "=COUNTA('Windenburg'!$A$3:$A$43)-2*COUNTIF('Windenburg'!$A$3:$A$43,\"Lot Name\")"
-   ],
-   [
-    "N10",
-    "=COUNTIF('Windenburg'!$F$3:$F$43,TRUE)"
-   ],
-   [
-    "O10",
-    "=COUNTIF('Windenburg'!$F$3:$F$43,FALSE)"
-   ],
-   [
-    "P10",
-    "=COUNTIF('Windenburg'!$G$3:$G$43,TRUE)"
-   ],
-   [
-    "Q10",
-    "=COUNTIF('Windenburg'!$G$3:$G$43,FALSE)"
-   ],
-   [
-    "R10",
-    "=COUNTIF('Windenburg'!$H$3:$H$43,TRUE)"
-   ],
-   [
-    "S10",
-    "=COUNTIF('Windenburg'!$H$3:$H$43,FALSE)"
-   ],
-   [
-    "T10",
-    "=COUNTIF('Windenburg'!$I$3:$I$43,TRUE)"
-   ],
-   [
-    "U10",
-    "=COUNTIF('Windenburg'!$I$3:$I$43,FALSE)"
-   ],
-   [
-    "V10",
-    "=COUNTIFS('Windenburg'!$F$3:$F$43,TRUE,'Windenburg'!$G$3:$G$43,FALSE)"
-   ],
-   [
-    "A11",
-    "San Myshuno"
-   ],
-   [
-    "B11",
-    "City Living"
-   ],
-   [
-    "C11",
-    "Yes"
-   ],
-   [
-    "D11",
-    "=M11"
-   ],
-   [
-    "E11",
-    "=IFERROR(N11/(N11+O11),\"\")"
-   ],
-   [
-    "F11",
-    "=IFERROR(P11/(P11+Q11),\"\")"
-   ],
-   [
-    "G11",
-    "=IFERROR(R11/(R11+S11),\"\")"
-   ],
-   [
-    "H11",
-    "=IFERROR(T11/(T11+U11),\"\")"
-   ],
-   [
-    "I11",
-    "=IFERROR(AVERAGE(E11:H11),\"\")"
-   ],
-   [
-    "J11",
-    "=O11"
-   ],
-   [
-    "K11",
-    "=V11"
-   ],
-   [
-    "M11",
-    "=COUNTA('San Myshuno'!$A$3:$A$46)-2*COUNTIF('San Myshuno'!$A$3:$A$46,\"Lot Name\")"
-   ],
-   [
-    "N11",
-    "=COUNTIF('San Myshuno'!$F$3:$F$46,TRUE)"
-   ],
-   [
-    "O11",
-    "=COUNTIF('San Myshuno'!$F$3:$F$46,FALSE)"
-   ],
-   [
-    "P11",
-    "=COUNTIF('San Myshuno'!$G$3:$G$46,TRUE)"
-   ],
-   [
-    "Q11",
-    "=COUNTIF('San Myshuno'!$G$3:$G$46,FALSE)"
-   ],
-   [
-    "R11",
-    "=COUNTIF('San Myshuno'!$H$3:$H$46,TRUE)"
-   ],
-   [
-    "S11",
-    "=COUNTIF('San Myshuno'!$H$3:$H$46,FALSE)"
-   ],
-   [
-    "T11",
-    "=COUNTIF('San Myshuno'!$I$3:$I$46,TRUE)"
-   ],
-   [
-    "U11",
-    "=COUNTIF('San Myshuno'!$I$3:$I$46,FALSE)"
-   ],
-   [
-    "V11",
-    "=COUNTIFS('San Myshuno'!$F$3:$F$46,TRUE,'San Myshuno'!$G$3:$G$46,FALSE)"
-   ],
-   [
-    "A12",
-    "Forgotten Hollow"
-   ],
-   [
-    "B12",
-    "Vampires"
-   ],
-   [
-    "C12",
-    "No"
-   ],
-   [
-    "D12",
-    "=M12"
-   ],
-   [
-    "E12",
-    "=IFERROR(N12/(N12+O12),\"\")"
-   ],
-   [
-    "F12",
-    "=IFERROR(P12/(P12+Q12),\"\")"
-   ],
-   [
-    "G12",
-    "=IFERROR(R12/(R12+S12),\"\")"
-   ],
-   [
-    "H12",
-    "=IFERROR(T12/(T12+U12),\"\")"
-   ],
-   [
-    "I12",
-    "=IFERROR(AVERAGE(E12:H12),\"\")"
-   ],
-   [
-    "J12",
-    "=O12"
-   ],
-   [
-    "K12",
-    "=V12"
-   ],
-   [
-    "M12",
-    "=COUNTA('Forgotten Hollow'!$A$3:$A$9)-2*COUNTIF('Forgotten Hollow'!$A$3:$A$9,\"Lot Name\")"
-   ],
-   [
-    "N12",
-    "=COUNTIF('Forgotten Hollow'!$F$3:$F$9,TRUE)"
-   ],
-   [
-    "O12",
-    "=COUNTIF('Forgotten Hollow'!$F$3:$F$9,FALSE)"
-   ],
-   [
-    "P12",
-    "=COUNTIF('Forgotten Hollow'!$G$3:$G$9,TRUE)"
-   ],
-   [
-    "Q12",
-    "=COUNTIF('Forgotten Hollow'!$G$3:$G$9,FALSE)"
-   ],
-   [
-    "R12",
-    "=COUNTIF('Forgotten Hollow'!$H$3:$H$9,TRUE)"
-   ],
-   [
-    "S12",
-    "=COUNTIF('Forgotten Hollow'!$H$3:$H$9,FALSE)"
-   ],
-   [
-    "T12",
-    "=COUNTIF('Forgotten Hollow'!$I$3:$I$9,TRUE)"
-   ],
-   [
-    "U12",
-    "=COUNTIF('Forgotten Hollow'!$I$3:$I$9,FALSE)"
-   ],
-   [
-    "V12",
-    "=COUNTIFS('Forgotten Hollow'!$F$3:$F$9,TRUE,'Forgotten Hollow'!$G$3:$G$9,FALSE)"
-   ],
-   [
-    "A13",
-    "Selvadorada"
-   ],
-   [
-    "B13",
-    "Jungle Adventure"
-   ],
-   [
-    "C13",
-    "Yes"
-   ],
-   [
-    "D13",
-    "=M13"
-   ],
-   [
-    "E13",
-    "=IFERROR(N13/(N13+O13),\"\")"
-   ],
-   [
-    "F13",
-    "=IFERROR(P13/(P13+Q13),\"\")"
-   ],
-   [
-    "G13",
-    "=IFERROR(R13/(R13+S13),\"\")"
-   ],
-   [
-    "H13",
-    "=IFERROR(T13/(T13+U13),\"\")"
-   ],
-   [
-    "I13",
-    "=IFERROR(AVERAGE(E13:H13),\"\")"
-   ],
-   [
-    "J13",
-    "=O13"
-   ],
-   [
-    "K13",
-    "=V13"
-   ],
-   [
-    "M13",
-    "=COUNTA('Selvadorada'!$A$3:$A$14)-2*COUNTIF('Selvadorada'!$A$3:$A$14,\"Lot Name\")"
-   ],
-   [
-    "N13",
-    "=COUNTIF('Selvadorada'!$F$3:$F$14,TRUE)"
-   ],
-   [
-    "O13",
-    "=COUNTIF('Selvadorada'!$F$3:$F$14,FALSE)"
-   ],
-   [
-    "P13",
-    "=COUNTIF('Selvadorada'!$G$3:$G$14,TRUE)"
-   ],
-   [
-    "Q13",
-    "=COUNTIF('Selvadorada'!$G$3:$G$14,FALSE)"
-   ],
-   [
-    "R13",
-    "=COUNTIF('Selvadorada'!$H$3:$H$14,TRUE)"
-   ],
-   [
-    "S13",
-    "=COUNTIF('Selvadorada'!$H$3:$H$14,FALSE)"
-   ],
-   [
-    "T13",
-    "=COUNTIF('Selvadorada'!$I$3:$I$14,TRUE)"
-   ],
-   [
-    "U13",
-    "=COUNTIF('Selvadorada'!$I$3:$I$14,FALSE)"
-   ],
-   [
-    "V13",
-    "=COUNTIFS('Selvadorada'!$F$3:$F$14,TRUE,'Selvadorada'!$G$3:$G$14,FALSE)"
-   ],
-   [
-    "A14",
-    "Brindleton Bay"
-   ],
-   [
-    "B14",
-    "Cats & Dogs"
-   ],
-   [
-    "C14",
-    "Yes"
-   ],
-   [
-    "D14",
-    "=M14"
-   ],
-   [
-    "E14",
-    "=IFERROR(N14/(N14+O14),\"\")"
-   ],
-   [
-    "F14",
-    "=IFERROR(P14/(P14+Q14),\"\")"
-   ],
-   [
-    "G14",
-    "=IFERROR(R14/(R14+S14),\"\")"
-   ],
-   [
-    "H14",
-    "=IFERROR(T14/(T14+U14),\"\")"
-   ],
-   [
-    "I14",
-    "=IFERROR(AVERAGE(E14:H14),\"\")"
-   ],
-   [
-    "J14",
-    "=O14"
-   ],
-   [
-    "K14",
-    "=V14"
-   ],
-   [
-    "M14",
-    "=COUNTA('Brindleton Bay'!$A$3:$A$29)-2*COUNTIF('Brindleton Bay'!$A$3:$A$29,\"Lot Name\")"
-   ],
-   [
-    "N14",
-    "=COUNTIF('Brindleton Bay'!$F$3:$F$29,TRUE)"
-   ],
-   [
-    "O14",
-    "=COUNTIF('Brindleton Bay'!$F$3:$F$29,FALSE)"
-   ],
-   [
-    "P14",
-    "=COUNTIF('Brindleton Bay'!$G$3:$G$29,TRUE)"
-   ],
-   [
-    "Q14",
-    "=COUNTIF('Brindleton Bay'!$G$3:$G$29,FALSE)"
-   ],
-   [
-    "R14",
-    "=COUNTIF('Brindleton Bay'!$H$3:$H$29,TRUE)"
-   ],
-   [
-    "S14",
-    "=COUNTIF('Brindleton Bay'!$H$3:$H$29,FALSE)"
-   ],
-   [
-    "T14",
-    "=COUNTIF('Brindleton Bay'!$I$3:$I$29,TRUE)"
-   ],
-   [
-    "U14",
-    "=COUNTIF('Brindleton Bay'!$I$3:$I$29,FALSE)"
-   ],
-   [
-    "V14",
-    "=COUNTIFS('Brindleton Bay'!$F$3:$F$29,TRUE,'Brindleton Bay'!$G$3:$G$29,FALSE)"
-   ],
-   [
-    "A15",
-    "Del Sol Valley"
-   ],
-   [
-    "B15",
-    "Get Famous"
-   ],
-   [
-    "C15",
-    "Yes"
-   ],
-   [
-    "D15",
-    "=M15"
-   ],
-   [
-    "E15",
-    "=IFERROR(N15/(N15+O15),\"\")"
-   ],
-   [
-    "F15",
-    "=IFERROR(P15/(P15+Q15),\"\")"
-   ],
-   [
-    "G15",
-    "=IFERROR(R15/(R15+S15),\"\")"
-   ],
-   [
-    "H15",
-    "=IFERROR(T15/(T15+U15),\"\")"
-   ],
-   [
-    "I15",
-    "=IFERROR(AVERAGE(E15:H15),\"\")"
-   ],
-   [
-    "J15",
-    "=O15"
-   ],
-   [
-    "K15",
-    "=V15"
-   ],
-   [
-    "M15",
-    "=COUNTA('Del Sol Valley'!$A$3:$A$25)-2*COUNTIF('Del Sol Valley'!$A$3:$A$25,\"Lot Name\")"
-   ],
-   [
-    "N15",
-    "=COUNTIF('Del Sol Valley'!$F$3:$F$25,TRUE)"
-   ],
-   [
-    "O15",
-    "=COUNTIF('Del Sol Valley'!$F$3:$F$25,FALSE)"
-   ],
-   [
-    "P15",
-    "=COUNTIF('Del Sol Valley'!$G$3:$G$25,TRUE)"
-   ],
-   [
-    "Q15",
-    "=COUNTIF('Del Sol Valley'!$G$3:$G$25,FALSE)"
-   ],
-   [
-    "R15",
-    "=COUNTIF('Del Sol Valley'!$H$3:$H$25,TRUE)"
-   ],
-   [
-    "S15",
-    "=COUNTIF('Del Sol Valley'!$H$3:$H$25,FALSE)"
-   ],
-   [
-    "T15",
-    "=COUNTIF('Del Sol Valley'!$I$3:$I$25,TRUE)"
-   ],
-   [
-    "U15",
-    "=COUNTIF('Del Sol Valley'!$I$3:$I$25,FALSE)"
-   ],
-   [
-    "V15",
-    "=COUNTIFS('Del Sol Valley'!$F$3:$F$25,TRUE,'Del Sol Valley'!$G$3:$G$25,FALSE)"
-   ],
-   [
-    "A16",
-    "StrangerVille"
-   ],
-   [
-    "B16",
-    "StrangerVille"
-   ],
-   [
-    "C16",
-    "Yes"
-   ],
-   [
-    "D16",
-    "=M16"
-   ],
-   [
-    "E16",
-    "=IFERROR(N16/(N16+O16),\"\")"
-   ],
-   [
-    "F16",
-    "=IFERROR(P16/(P16+Q16),\"\")"
-   ],
-   [
-    "G16",
-    "=IFERROR(R16/(R16+S16),\"\")"
-   ],
-   [
-    "H16",
-    "=IFERROR(T16/(T16+U16),\"\")"
-   ],
-   [
-    "I16",
-    "=IFERROR(AVERAGE(E16:H16),\"\")"
-   ],
-   [
-    "J16",
-    "=O16"
-   ],
-   [
-    "K16",
-    "=V16"
-   ],
-   [
-    "M16",
-    "=COUNTA('StrangerVille'!$A$3:$A$22)-2*COUNTIF('StrangerVille'!$A$3:$A$22,\"Lot Name\")"
-   ],
-   [
-    "N16",
-    "=COUNTIF('StrangerVille'!$F$3:$F$22,TRUE)"
-   ],
-   [
-    "O16",
-    "=COUNTIF('StrangerVille'!$F$3:$F$22,FALSE)"
-   ],
-   [
-    "P16",
-    "=COUNTIF('StrangerVille'!$G$3:$G$22,TRUE)"
-   ],
-   [
-    "Q16",
-    "=COUNTIF('StrangerVille'!$G$3:$G$22,FALSE)"
-   ],
-   [
-    "R16",
-    "=COUNTIF('StrangerVille'!$H$3:$H$22,TRUE)"
-   ],
-   [
-    "S16",
-    "=COUNTIF('StrangerVille'!$H$3:$H$22,FALSE)"
-   ],
-   [
-    "T16",
-    "=COUNTIF('StrangerVille'!$I$3:$I$22,TRUE)"
-   ],
-   [
-    "U16",
-    "=COUNTIF('StrangerVille'!$I$3:$I$22,FALSE)"
-   ],
-   [
-    "V16",
-    "=COUNTIFS('StrangerVille'!$F$3:$F$22,TRUE,'StrangerVille'!$G$3:$G$22,FALSE)"
-   ],
-   [
-    "A17",
-    "Sulani"
-   ],
-   [
-    "B17",
-    "Island Living"
-   ],
-   [
-    "C17",
-    "Yes"
-   ],
-   [
-    "D17",
-    "=M17"
-   ],
-   [
-    "E17",
-    "=IFERROR(N17/(N17+O17),\"\")"
-   ],
-   [
-    "F17",
-    "=IFERROR(P17/(P17+Q17),\"\")"
-   ],
-   [
-    "G17",
-    "=IFERROR(R17/(R17+S17),\"\")"
-   ],
-   [
-    "H17",
-    "=IFERROR(T17/(T17+U17),\"\")"
-   ],
-   [
-    "I17",
-    "=IFERROR(AVERAGE(E17:H17),\"\")"
-   ],
-   [
-    "J17",
-    "=O17"
-   ],
-   [
-    "K17",
-    "=V17"
-   ],
-   [
-    "M17",
-    "=COUNTA('Sulani'!$A$3:$A$24)-2*COUNTIF('Sulani'!$A$3:$A$24,\"Lot Name\")"
-   ],
-   [
-    "N17",
-    "=COUNTIF('Sulani'!$F$3:$F$24,TRUE)"
-   ],
-   [
-    "O17",
-    "=COUNTIF('Sulani'!$F$3:$F$24,FALSE)"
-   ],
-   [
-    "P17",
-    "=COUNTIF('Sulani'!$G$3:$G$24,TRUE)"
-   ],
-   [
-    "Q17",
-    "=COUNTIF('Sulani'!$G$3:$G$24,FALSE)"
-   ],
-   [
-    "R17",
-    "=COUNTIF('Sulani'!$H$3:$H$24,TRUE)"
-   ],
-   [
-    "S17",
-    "=COUNTIF('Sulani'!$H$3:$H$24,FALSE)"
-   ],
-   [
-    "T17",
-    "=COUNTIF('Sulani'!$I$3:$I$24,TRUE)"
-   ],
-   [
-    "U17",
-    "=COUNTIF('Sulani'!$I$3:$I$24,FALSE)"
-   ],
-   [
-    "V17",
-    "=COUNTIFS('Sulani'!$F$3:$F$24,TRUE,'Sulani'!$G$3:$G$24,FALSE)"
-   ],
-   [
-    "A18",
-    "Glimmerbrook"
-   ],
-   [
-    "B18",
-    "Realm of Magic"
-   ],
-   [
-    "C18",
-    "Yes"
-   ],
-   [
-    "D18",
-    "=M18"
-   ],
-   [
-    "E18",
-    "=IFERROR(N18/(N18+O18),\"\")"
-   ],
-   [
-    "F18",
-    "=IFERROR(P18/(P18+Q18),\"\")"
-   ],
-   [
-    "G18",
-    "=IFERROR(R18/(R18+S18),\"\")"
-   ],
-   [
-    "H18",
-    "=IFERROR(T18/(T18+U18),\"\")"
-   ],
-   [
-    "I18",
-    "=IFERROR(AVERAGE(E18:H18),\"\")"
-   ],
-   [
-    "J18",
-    "=O18"
-   ],
-   [
-    "K18",
-    "=V18"
-   ],
-   [
-    "M18",
-    "=COUNTA('Glimmerbrook'!$A$3:$A$13)-2*COUNTIF('Glimmerbrook'!$A$3:$A$13,\"Lot Name\")"
-   ],
-   [
-    "N18",
-    "=COUNTIF('Glimmerbrook'!$F$3:$F$13,TRUE)"
-   ],
-   [
-    "O18",
-    "=COUNTIF('Glimmerbrook'!$F$3:$F$13,FALSE)"
-   ],
-   [
-    "P18",
-    "=COUNTIF('Glimmerbrook'!$G$3:$G$13,TRUE)"
-   ],
-   [
-    "Q18",
-    "=COUNTIF('Glimmerbrook'!$G$3:$G$13,FALSE)"
-   ],
-   [
-    "R18",
-    "=COUNTIF('Glimmerbrook'!$H$3:$H$13,TRUE)"
-   ],
-   [
-    "S18",
-    "=COUNTIF('Glimmerbrook'!$H$3:$H$13,FALSE)"
-   ],
-   [
-    "T18",
-    "=COUNTIF('Glimmerbrook'!$I$3:$I$13,TRUE)"
-   ],
-   [
-    "U18",
-    "=COUNTIF('Glimmerbrook'!$I$3:$I$13,FALSE)"
-   ],
-   [
-    "V18",
-    "=COUNTIFS('Glimmerbrook'!$F$3:$F$13,TRUE,'Glimmerbrook'!$G$3:$G$13,FALSE)"
-   ],
-   [
-    "A19",
-    "Britechester"
-   ],
-   [
-    "B19",
-    "Discover University"
-   ],
-   [
-    "C19",
-    "Yes"
-   ],
-   [
-    "D19",
-    "=M19"
-   ],
-   [
-    "E19",
-    "=IFERROR(N19/(N19+O19),\"\")"
-   ],
-   [
-    "F19",
-    "=IFERROR(P19/(P19+Q19),\"\")"
-   ],
-   [
-    "G19",
-    "=IFERROR(R19/(R19+S19),\"\")"
-   ],
-   [
-    "H19",
-    "=IFERROR(T19/(T19+U19),\"\")"
-   ],
-   [
-    "I19",
-    "=IFERROR(AVERAGE(E19:H19),\"\")"
-   ],
-   [
-    "J19",
-    "=O19"
-   ],
-   [
-    "K19",
-    "=V19"
-   ],
-   [
-    "M19",
-    "=COUNTA('Britechester'!$A$3:$A$23)-2*COUNTIF('Britechester'!$A$3:$A$23,\"Lot Name\")"
-   ],
-   [
-    "N19",
-    "=COUNTIF('Britechester'!$F$3:$F$23,TRUE)"
-   ],
-   [
-    "O19",
-    "=COUNTIF('Britechester'!$F$3:$F$23,FALSE)"
-   ],
-   [
-    "P19",
-    "=COUNTIF('Britechester'!$G$3:$G$23,TRUE)"
-   ],
-   [
-    "Q19",
-    "=COUNTIF('Britechester'!$G$3:$G$23,FALSE)"
-   ],
-   [
-    "R19",
-    "=COUNTIF('Britechester'!$H$3:$H$23,TRUE)"
-   ],
-   [
-    "S19",
-    "=COUNTIF('Britechester'!$H$3:$H$23,FALSE)"
-   ],
-   [
-    "T19",
-    "=COUNTIF('Britechester'!$I$3:$I$23,TRUE)"
-   ],
-   [
-    "U19",
-    "=COUNTIF('Britechester'!$I$3:$I$23,FALSE)"
-   ],
-   [
-    "V19",
-    "=COUNTIFS('Britechester'!$F$3:$F$23,TRUE,'Britechester'!$G$3:$G$23,FALSE)"
-   ],
-   [
-    "A20",
-    "Evergreen Harbor"
-   ],
-   [
-    "B20",
-    "Eco Lifestyle"
-   ],
-   [
-    "C20",
-    "Yes"
-   ],
-   [
-    "D20",
-    "=M20"
-   ],
-   [
-    "E20",
-    "=IFERROR(N20/(N20+O20),\"\")"
-   ],
-   [
-    "F20",
-    "=IFERROR(P20/(P20+Q20),\"\")"
-   ],
-   [
-    "G20",
-    "=IFERROR(R20/(R20+S20),\"\")"
-   ],
-   [
-    "H20",
-    "=IFERROR(T20/(T20+U20),\"\")"
-   ],
-   [
-    "I20",
-    "=IFERROR(AVERAGE(E20:H20),\"\")"
-   ],
-   [
-    "J20",
-    "=O20"
-   ],
-   [
-    "K20",
-    "=V20"
-   ],
-   [
-    "M20",
-    "=COUNTA('Evergreen Harbor'!$A$3:$A$25)-2*COUNTIF('Evergreen Harbor'!$A$3:$A$25,\"Lot Name\")"
-   ],
-   [
-    "N20",
-    "=COUNTIF('Evergreen Harbor'!$F$3:$F$25,TRUE)"
-   ],
-   [
-    "O20",
-    "=COUNTIF('Evergreen Harbor'!$F$3:$F$25,FALSE)"
-   ],
-   [
-    "P20",
-    "=COUNTIF('Evergreen Harbor'!$G$3:$G$25,TRUE)"
-   ],
-   [
-    "Q20",
-    "=COUNTIF('Evergreen Harbor'!$G$3:$G$25,FALSE)"
-   ],
-   [
-    "R20",
-    "=COUNTIF('Evergreen Harbor'!$H$3:$H$25,TRUE)"
-   ],
-   [
-    "S20",
-    "=COUNTIF('Evergreen Harbor'!$H$3:$H$25,FALSE)"
-   ],
-   [
-    "T20",
-    "=COUNTIF('Evergreen Harbor'!$I$3:$I$25,TRUE)"
-   ],
-   [
-    "U20",
-    "=COUNTIF('Evergreen Harbor'!$I$3:$I$25,FALSE)"
-   ],
-   [
-    "V20",
-    "=COUNTIFS('Evergreen Harbor'!$F$3:$F$25,TRUE,'Evergreen Harbor'!$G$3:$G$25,FALSE)"
-   ],
-   [
-    "A21",
-    "Mt. Komorebi"
-   ],
-   [
-    "B21",
-    "Snowy Escape"
-   ],
-   [
-    "C21",
-    "Yes"
-   ],
-   [
-    "D21",
-    "=M21"
-   ],
-   [
-    "E21",
-    "=IFERROR(N21/(N21+O21),\"\")"
-   ],
-   [
-    "F21",
-    "=IFERROR(P21/(P21+Q21),\"\")"
-   ],
-   [
-    "G21",
-    "=IFERROR(R21/(R21+S21),\"\")"
-   ],
-   [
-    "H21",
-    "=IFERROR(T21/(T21+U21),\"\")"
-   ],
-   [
-    "I21",
-    "=IFERROR(AVERAGE(E21:H21),\"\")"
-   ],
-   [
-    "J21",
-    "=O21"
-   ],
-   [
-    "K21",
-    "=V21"
-   ],
-   [
-    "M21",
-    "=COUNTA('Mt. Komorebi'!$A$3:$A$24)-2*COUNTIF('Mt. Komorebi'!$A$3:$A$24,\"Lot Name\")"
-   ],
-   [
-    "N21",
-    "=COUNTIF('Mt. Komorebi'!$F$3:$F$24,TRUE)"
-   ],
-   [
-    "O21",
-    "=COUNTIF('Mt. Komorebi'!$F$3:$F$24,FALSE)"
-   ],
-   [
-    "P21",
-    "=COUNTIF('Mt. Komorebi'!$G$3:$G$24,TRUE)"
-   ],
-   [
-    "Q21",
-    "=COUNTIF('Mt. Komorebi'!$G$3:$G$24,FALSE)"
-   ],
-   [
-    "R21",
-    "=COUNTIF('Mt. Komorebi'!$H$3:$H$24,TRUE)"
-   ],
-   [
-    "S21",
-    "=COUNTIF('Mt. Komorebi'!$H$3:$H$24,FALSE)"
-   ],
-   [
-    "T21",
-    "=COUNTIF('Mt. Komorebi'!$I$3:$I$24,TRUE)"
-   ],
-   [
-    "U21",
-    "=COUNTIF('Mt. Komorebi'!$I$3:$I$24,FALSE)"
-   ],
-   [
-    "V21",
-    "=COUNTIFS('Mt. Komorebi'!$F$3:$F$24,TRUE,'Mt. Komorebi'!$G$3:$G$24,FALSE)"
-   ],
-   [
-    "A22",
-    "Henford-on-Bagley"
-   ],
-   [
-    "B22",
-    "Cottage Living"
-   ],
-   [
-    "C22",
-    "Yes"
-   ],
-   [
-    "D22",
-    "=M22"
-   ],
-   [
-    "E22",
-    "=IFERROR(N22/(N22+O22),\"\")"
-   ],
-   [
-    "F22",
-    "=IFERROR(P22/(P22+Q22),\"\")"
-   ],
-   [
-    "G22",
-    "=IFERROR(R22/(R22+S22),\"\")"
-   ],
-   [
-    "H22",
-    "=IFERROR(T22/(T22+U22),\"\")"
-   ],
-   [
-    "I22",
-    "=IFERROR(AVERAGE(E22:H22),\"\")"
-   ],
-   [
-    "J22",
-    "=O22"
-   ],
-   [
-    "K22",
-    "=V22"
-   ],
-   [
-    "M22",
-    "=COUNTA('Henford-on-Bagley'!$A$3:$A$22)-2*COUNTIF('Henford-on-Bagley'!$A$3:$A$22,\"Lot Name\")"
-   ],
-   [
-    "N22",
-    "=COUNTIF('Henford-on-Bagley'!$F$3:$F$22,TRUE)"
-   ],
-   [
-    "O22",
-    "=COUNTIF('Henford-on-Bagley'!$F$3:$F$22,FALSE)"
-   ],
-   [
-    "P22",
-    "=COUNTIF('Henford-on-Bagley'!$G$3:$G$22,TRUE)"
-   ],
-   [
-    "Q22",
-    "=COUNTIF('Henford-on-Bagley'!$G$3:$G$22,FALSE)"
-   ],
-   [
-    "R22",
-    "=COUNTIF('Henford-on-Bagley'!$H$3:$H$22,TRUE)"
-   ],
-   [
-    "S22",
-    "=COUNTIF('Henford-on-Bagley'!$H$3:$H$22,FALSE)"
-   ],
-   [
-    "T22",
-    "=COUNTIF('Henford-on-Bagley'!$I$3:$I$22,TRUE)"
-   ],
-   [
-    "U22",
-    "=COUNTIF('Henford-on-Bagley'!$I$3:$I$22,FALSE)"
-   ],
-   [
-    "V22",
-    "=COUNTIFS('Henford-on-Bagley'!$F$3:$F$22,TRUE,'Henford-on-Bagley'!$G$3:$G$22,FALSE)"
-   ],
-   [
-    "A23",
-    "Tartosa"
-   ],
-   [
-    "B23",
-    "My Wedding Stories"
-   ],
-   [
-    "C23",
-    "No"
-   ],
-   [
-    "D23",
-    "=M23"
-   ],
-   [
-    "E23",
-    "=IFERROR(N23/(N23+O23),\"\")"
-   ],
-   [
-    "F23",
-    "=IFERROR(P23/(P23+Q23),\"\")"
-   ],
-   [
-    "G23",
-    "=IFERROR(R23/(R23+S23),\"\")"
-   ],
-   [
-    "H23",
-    "=IFERROR(T23/(T23+U23),\"\")"
-   ],
-   [
-    "I23",
-    "=IFERROR(AVERAGE(E23:H23),\"\")"
-   ],
-   [
-    "J23",
-    "=O23"
-   ],
-   [
-    "K23",
-    "=V23"
-   ],
-   [
-    "M23",
-    "=COUNTA('Tartosa'!$A$3:$A$16)-2*COUNTIF('Tartosa'!$A$3:$A$16,\"Lot Name\")"
-   ],
-   [
-    "N23",
-    "=COUNTIF('Tartosa'!$F$3:$F$16,TRUE)"
-   ],
-   [
-    "O23",
-    "=COUNTIF('Tartosa'!$F$3:$F$16,FALSE)"
-   ],
-   [
-    "P23",
-    "=COUNTIF('Tartosa'!$G$3:$G$16,TRUE)"
-   ],
-   [
-    "Q23",
-    "=COUNTIF('Tartosa'!$G$3:$G$16,FALSE)"
-   ],
-   [
-    "R23",
-    "=COUNTIF('Tartosa'!$H$3:$H$16,TRUE)"
-   ],
-   [
-    "S23",
-    "=COUNTIF('Tartosa'!$H$3:$H$16,FALSE)"
-   ],
-   [
-    "T23",
-    "=COUNTIF('Tartosa'!$I$3:$I$16,TRUE)"
-   ],
-   [
-    "U23",
-    "=COUNTIF('Tartosa'!$I$3:$I$16,FALSE)"
-   ],
-   [
-    "V23",
-    "=COUNTIFS('Tartosa'!$F$3:$F$16,TRUE,'Tartosa'!$G$3:$G$16,FALSE)"
-   ],
-   [
-    "A24",
-    "Moonwood Mill"
-   ],
-   [
-    "B24",
-    "Werewolves"
-   ],
-   [
-    "C24",
-    "No"
-   ],
-   [
-    "D24",
-    "=M24"
-   ],
-   [
-    "E24",
-    "=IFERROR(N24/(N24+O24),\"\")"
-   ],
-   [
-    "F24",
-    "=IFERROR(P24/(P24+Q24),\"\")"
-   ],
-   [
-    "G24",
-    "=IFERROR(R24/(R24+S24),\"\")"
-   ],
-   [
-    "H24",
-    "=IFERROR(T24/(T24+U24),\"\")"
-   ],
-   [
-    "I24",
-    "=IFERROR(AVERAGE(E24:H24),\"\")"
-   ],
-   [
-    "J24",
-    "=O24"
-   ],
-   [
-    "K24",
-    "=V24"
-   ],
-   [
-    "M24",
-    "=COUNTA('Moonwood Mill'!$A$3:$A$9)-2*COUNTIF('Moonwood Mill'!$A$3:$A$9,\"Lot Name\")"
-   ],
-   [
-    "N24",
-    "=COUNTIF('Moonwood Mill'!$F$3:$F$9,TRUE)"
-   ],
-   [
-    "O24",
-    "=COUNTIF('Moonwood Mill'!$F$3:$F$9,FALSE)"
-   ],
-   [
-    "P24",
-    "=COUNTIF('Moonwood Mill'!$G$3:$G$9,TRUE)"
-   ],
-   [
-    "Q24",
-    "=COUNTIF('Moonwood Mill'!$G$3:$G$9,FALSE)"
-   ],
-   [
-    "R24",
-    "=COUNTIF('Moonwood Mill'!$H$3:$H$9,TRUE)"
-   ],
-   [
-    "S24",
-    "=COUNTIF('Moonwood Mill'!$H$3:$H$9,FALSE)"
-   ],
-   [
-    "T24",
-    "=COUNTIF('Moonwood Mill'!$I$3:$I$9,TRUE)"
-   ],
-   [
-    "U24",
-    "=COUNTIF('Moonwood Mill'!$I$3:$I$9,FALSE)"
-   ],
-   [
-    "V24",
-    "=COUNTIFS('Moonwood Mill'!$F$3:$F$9,TRUE,'Moonwood Mill'!$G$3:$G$9,FALSE)"
-   ],
-   [
-    "A25",
-    "Copperdale"
-   ],
-   [
-    "B25",
-    "High School Years"
-   ],
-   [
-    "C25",
-    "Yes"
-   ],
-   [
-    "D25",
-    "=M25"
-   ],
-   [
-    "E25",
-    "=IFERROR(N25/(N25+O25),\"\")"
-   ],
-   [
-    "F25",
-    "=IFERROR(P25/(P25+Q25),\"\")"
-   ],
-   [
-    "G25",
-    "=IFERROR(R25/(R25+S25),\"\")"
-   ],
-   [
-    "H25",
-    "=IFERROR(T25/(T25+U25),\"\")"
-   ],
-   [
-    "I25",
-    "=IFERROR(AVERAGE(E25:H25),\"\")"
-   ],
-   [
-    "J25",
-    "=O25"
-   ],
-   [
-    "K25",
-    "=V25"
-   ],
-   [
-    "M25",
-    "=COUNTA('Copperdale'!$A$3:$A$22)-2*COUNTIF('Copperdale'!$A$3:$A$22,\"Lot Name\")"
-   ],
-   [
-    "N25",
-    "=COUNTIF('Copperdale'!$F$3:$F$22,TRUE)"
-   ],
-   [
-    "O25",
-    "=COUNTIF('Copperdale'!$F$3:$F$22,FALSE)"
-   ],
-   [
-    "P25",
-    "=COUNTIF('Copperdale'!$G$3:$G$22,TRUE)"
-   ],
-   [
-    "Q25",
-    "=COUNTIF('Copperdale'!$G$3:$G$22,FALSE)"
-   ],
-   [
-    "R25",
-    "=COUNTIF('Copperdale'!$H$3:$H$22,TRUE)"
-   ],
-   [
-    "S25",
-    "=COUNTIF('Copperdale'!$H$3:$H$22,FALSE)"
-   ],
-   [
-    "T25",
-    "=COUNTIF('Copperdale'!$I$3:$I$22,TRUE)"
-   ],
-   [
-    "U25",
-    "=COUNTIF('Copperdale'!$I$3:$I$22,FALSE)"
-   ],
-   [
-    "V25",
-    "=COUNTIFS('Copperdale'!$F$3:$F$22,TRUE,'Copperdale'!$G$3:$G$22,FALSE)"
-   ],
-   [
-    "A26",
-    "San Sequoia"
-   ],
-   [
-    "B26",
-    "Growing Together"
-   ],
-   [
-    "C26",
-    "Yes"
-   ],
-   [
-    "D26",
-    "=M26"
-   ],
-   [
-    "E26",
-    "=IFERROR(N26/(N26+O26),\"\")"
-   ],
-   [
-    "F26",
-    "=IFERROR(P26/(P26+Q26),\"\")"
-   ],
-   [
-    "G26",
-    "=IFERROR(R26/(R26+S26),\"\")"
-   ],
-   [
-    "H26",
-    "=IFERROR(T26/(T26+U26),\"\")"
-   ],
-   [
-    "I26",
-    "=IFERROR(AVERAGE(E26:H26),\"\")"
-   ],
-   [
-    "J26",
-    "=O26"
-   ],
-   [
-    "K26",
-    "=V26"
-   ],
-   [
-    "M26",
-    "=COUNTA('San Sequoia'!$A$3:$A$22)-2*COUNTIF('San Sequoia'!$A$3:$A$22,\"Lot Name\")"
-   ],
-   [
-    "N26",
-    "=COUNTIF('San Sequoia'!$F$3:$F$22,TRUE)"
-   ],
-   [
-    "O26",
-    "=COUNTIF('San Sequoia'!$F$3:$F$22,FALSE)"
-   ],
-   [
-    "P26",
-    "=COUNTIF('San Sequoia'!$G$3:$G$22,TRUE)"
-   ],
-   [
-    "Q26",
-    "=COUNTIF('San Sequoia'!$G$3:$G$22,FALSE)"
-   ],
-   [
-    "R26",
-    "=COUNTIF('San Sequoia'!$H$3:$H$22,TRUE)"
-   ],
-   [
-    "S26",
-    "=COUNTIF('San Sequoia'!$H$3:$H$22,FALSE)"
-   ],
-   [
-    "T26",
-    "=COUNTIF('San Sequoia'!$I$3:$I$22,TRUE)"
-   ],
-   [
-    "U26",
-    "=COUNTIF('San Sequoia'!$I$3:$I$22,FALSE)"
-   ],
-   [
-    "V26",
-    "=COUNTIFS('San Sequoia'!$F$3:$F$22,TRUE,'San Sequoia'!$G$3:$G$22,FALSE)"
-   ],
-   [
-    "A27",
-    "Chestnut Ridge"
-   ],
-   [
-    "B27",
-    "Horse Ranch"
-   ],
-   [
-    "C27",
-    "Yes"
-   ],
-   [
-    "D27",
-    "=M27"
-   ],
-   [
-    "E27",
-    "=IFERROR(N27/(N27+O27),\"\")"
-   ],
-   [
-    "F27",
-    "=IFERROR(P27/(P27+Q27),\"\")"
-   ],
-   [
-    "G27",
-    "=IFERROR(R27/(R27+S27),\"\")"
-   ],
-   [
-    "H27",
-    "=IFERROR(T27/(T27+U27),\"\")"
-   ],
-   [
-    "I27",
-    "=IFERROR(AVERAGE(E27:H27),\"\")"
-   ],
-   [
-    "J27",
-    "=O27"
-   ],
-   [
-    "K27",
-    "=V27"
-   ],
-   [
-    "M27",
-    "=COUNTA('Chestnut Ridge'!$A$3:$A$23)-2*COUNTIF('Chestnut Ridge'!$A$3:$A$23,\"Lot Name\")"
-   ],
-   [
-    "N27",
-    "=COUNTIF('Chestnut Ridge'!$F$3:$F$23,TRUE)"
-   ],
-   [
-    "O27",
-    "=COUNTIF('Chestnut Ridge'!$F$3:$F$23,FALSE)"
-   ],
-   [
-    "P27",
-    "=COUNTIF('Chestnut Ridge'!$G$3:$G$23,TRUE)"
-   ],
-   [
-    "Q27",
-    "=COUNTIF('Chestnut Ridge'!$G$3:$G$23,FALSE)"
-   ],
-   [
-    "R27",
-    "=COUNTIF('Chestnut Ridge'!$H$3:$H$23,TRUE)"
-   ],
-   [
-    "S27",
-    "=COUNTIF('Chestnut Ridge'!$H$3:$H$23,FALSE)"
-   ],
-   [
-    "T27",
-    "=COUNTIF('Chestnut Ridge'!$I$3:$I$23,TRUE)"
-   ],
-   [
-    "U27",
-    "=COUNTIF('Chestnut Ridge'!$I$3:$I$23,FALSE)"
-   ],
-   [
-    "V27",
-    "=COUNTIFS('Chestnut Ridge'!$F$3:$F$23,TRUE,'Chestnut Ridge'!$G$3:$G$23,FALSE)"
-   ],
-   [
-    "A28",
-    "Tomarang"
-   ],
-   [
-    "B28",
-    "For Rent"
-   ],
-   [
-    "C28",
-    "Yes"
-   ],
-   [
-    "D28",
-    "=M28"
-   ],
-   [
-    "E28",
-    "=IFERROR(N28/(N28+O28),\"\")"
-   ],
-   [
-    "F28",
-    "=IFERROR(P28/(P28+Q28),\"\")"
-   ],
-   [
-    "G28",
-    "=IFERROR(R28/(R28+S28),\"\")"
-   ],
-   [
-    "H28",
-    "=IFERROR(T28/(T28+U28),\"\")"
-   ],
-   [
-    "I28",
-    "=IFERROR(AVERAGE(E28:H28),\"\")"
-   ],
-   [
-    "J28",
-    "=O28"
-   ],
-   [
-    "K28",
-    "=V28"
-   ],
-   [
-    "M28",
-    "=COUNTA('Tomarang'!$A$3:$A$16)-2*COUNTIF('Tomarang'!$A$3:$A$16,\"Lot Name\")"
-   ],
-   [
-    "N28",
-    "=COUNTIF('Tomarang'!$F$3:$F$16,TRUE)"
-   ],
-   [
-    "O28",
-    "=COUNTIF('Tomarang'!$F$3:$F$16,FALSE)"
-   ],
-   [
-    "P28",
-    "=COUNTIF('Tomarang'!$G$3:$G$16,TRUE)"
-   ],
-   [
-    "Q28",
-    "=COUNTIF('Tomarang'!$G$3:$G$16,FALSE)"
-   ],
-   [
-    "R28",
-    "=COUNTIF('Tomarang'!$H$3:$H$16,TRUE)"
-   ],
-   [
-    "S28",
-    "=COUNTIF('Tomarang'!$H$3:$H$16,FALSE)"
-   ],
-   [
-    "T28",
-    "=COUNTIF('Tomarang'!$I$3:$I$16,TRUE)"
-   ],
-   [
-    "U28",
-    "=COUNTIF('Tomarang'!$I$3:$I$16,FALSE)"
-   ],
-   [
-    "V28",
-    "=COUNTIFS('Tomarang'!$F$3:$F$16,TRUE,'Tomarang'!$G$3:$G$16,FALSE)"
-   ],
-   [
-    "A29",
-    "Ciudad Enamorada"
-   ],
-   [
-    "B29",
-    "Lovestruck"
-   ],
-   [
-    "C29",
-    "No"
-   ],
-   [
-    "D29",
-    "=M29"
-   ],
-   [
-    "E29",
-    "=IFERROR(N29/(N29+O29),\"\")"
-   ],
-   [
-    "F29",
-    "=IFERROR(P29/(P29+Q29),\"\")"
-   ],
-   [
-    "G29",
-    "=IFERROR(R29/(R29+S29),\"\")"
-   ],
-   [
-    "H29",
-    "=IFERROR(T29/(T29+U29),\"\")"
-   ],
-   [
-    "I29",
-    "=IFERROR(AVERAGE(E29:H29),\"\")"
-   ],
-   [
-    "J29",
-    "=O29"
-   ],
-   [
-    "K29",
-    "=V29"
-   ],
-   [
-    "M29",
-    "=COUNTA('Ciudad Enamorada'!$A$3:$A$23)-2*COUNTIF('Ciudad Enamorada'!$A$3:$A$23,\"Lot Name\")"
-   ],
-   [
-    "N29",
-    "=COUNTIF('Ciudad Enamorada'!$F$3:$F$23,TRUE)"
-   ],
-   [
-    "O29",
-    "=COUNTIF('Ciudad Enamorada'!$F$3:$F$23,FALSE)"
-   ],
-   [
-    "P29",
-    "=COUNTIF('Ciudad Enamorada'!$G$3:$G$23,TRUE)"
-   ],
-   [
-    "Q29",
-    "=COUNTIF('Ciudad Enamorada'!$G$3:$G$23,FALSE)"
-   ],
-   [
-    "R29",
-    "=COUNTIF('Ciudad Enamorada'!$H$3:$H$23,TRUE)"
-   ],
-   [
-    "S29",
-    "=COUNTIF('Ciudad Enamorada'!$H$3:$H$23,FALSE)"
-   ],
-   [
-    "T29",
-    "=COUNTIF('Ciudad Enamorada'!$I$3:$I$23,TRUE)"
-   ],
-   [
-    "U29",
-    "=COUNTIF('Ciudad Enamorada'!$I$3:$I$23,FALSE)"
-   ],
-   [
-    "V29",
-    "=COUNTIFS('Ciudad Enamorada'!$F$3:$F$23,TRUE,'Ciudad Enamorada'!$G$3:$G$23,FALSE)"
-   ],
-   [
-    "A30",
-    "Ravenwood"
-   ],
-   [
-    "B30",
-    "Life & Death"
-   ],
-   [
-    "C30",
-    "Yes"
-   ],
-   [
-    "D30",
-    "=M30"
-   ],
-   [
-    "E30",
-    "=IFERROR(N30/(N30+O30),\"\")"
-   ],
-   [
-    "F30",
-    "=IFERROR(P30/(P30+Q30),\"\")"
-   ],
-   [
-    "G30",
-    "=IFERROR(R30/(R30+S30),\"\")"
-   ],
-   [
-    "H30",
-    "=IFERROR(T30/(T30+U30),\"\")"
-   ],
-   [
-    "I30",
-    "=IFERROR(AVERAGE(E30:H30),\"\")"
-   ],
-   [
-    "J30",
-    "=O30"
-   ],
-   [
-    "K30",
-    "=V30"
-   ],
-   [
-    "M30",
-    "=COUNTA('Ravenwood'!$A$3:$A$27)-2*COUNTIF('Ravenwood'!$A$3:$A$27,\"Lot Name\")"
-   ],
-   [
-    "N30",
-    "=COUNTIF('Ravenwood'!$F$3:$F$27,TRUE)"
-   ],
-   [
-    "O30",
-    "=COUNTIF('Ravenwood'!$F$3:$F$27,FALSE)"
-   ],
-   [
-    "P30",
-    "=COUNTIF('Ravenwood'!$G$3:$G$27,TRUE)"
-   ],
-   [
-    "Q30",
-    "=COUNTIF('Ravenwood'!$G$3:$G$27,FALSE)"
-   ],
-   [
-    "R30",
-    "=COUNTIF('Ravenwood'!$H$3:$H$27,TRUE)"
-   ],
-   [
-    "S30",
-    "=COUNTIF('Ravenwood'!$H$3:$H$27,FALSE)"
-   ],
-   [
-    "T30",
-    "=COUNTIF('Ravenwood'!$I$3:$I$27,TRUE)"
-   ],
-   [
-    "U30",
-    "=COUNTIF('Ravenwood'!$I$3:$I$27,FALSE)"
-   ],
-   [
-    "V30",
-    "=COUNTIFS('Ravenwood'!$F$3:$F$27,TRUE,'Ravenwood'!$G$3:$G$27,FALSE)"
-   ],
-   [
-    "A31",
-    "Nordhaven"
-   ],
-   [
-    "B31",
-    "Businesses & Hobbies"
-   ],
-   [
-    "C31",
-    "Yes"
-   ],
-   [
-    "D31",
-    "=M31"
-   ],
-   [
-    "E31",
-    "=IFERROR(N31/(N31+O31),\"\")"
-   ],
-   [
-    "F31",
-    "=IFERROR(P31/(P31+Q31),\"\")"
-   ],
-   [
-    "G31",
-    "=IFERROR(R31/(R31+S31),\"\")"
-   ],
-   [
-    "H31",
-    "=IFERROR(T31/(T31+U31),\"\")"
-   ],
-   [
-    "I31",
-    "=IFERROR(AVERAGE(E31:H31),\"\")"
-   ],
-   [
-    "J31",
-    "=O31"
-   ],
-   [
-    "K31",
-    "=V31"
-   ],
-   [
-    "M31",
-    "=COUNTA('Nordhaven'!$A$3:$A$19)-2*COUNTIF('Nordhaven'!$A$3:$A$19,\"Lot Name\")"
-   ],
-   [
-    "N31",
-    "=COUNTIF('Nordhaven'!$F$3:$F$19,TRUE)"
-   ],
-   [
-    "O31",
-    "=COUNTIF('Nordhaven'!$F$3:$F$19,FALSE)"
-   ],
-   [
-    "P31",
-    "=COUNTIF('Nordhaven'!$G$3:$G$19,TRUE)"
-   ],
-   [
-    "Q31",
-    "=COUNTIF('Nordhaven'!$G$3:$G$19,FALSE)"
-   ],
-   [
-    "R31",
-    "=COUNTIF('Nordhaven'!$H$3:$H$19,TRUE)"
-   ],
-   [
-    "S31",
-    "=COUNTIF('Nordhaven'!$H$3:$H$19,FALSE)"
-   ],
-   [
-    "T31",
-    "=COUNTIF('Nordhaven'!$I$3:$I$19,TRUE)"
-   ],
-   [
-    "U31",
-    "=COUNTIF('Nordhaven'!$I$3:$I$19,FALSE)"
-   ],
-   [
-    "V31",
-    "=COUNTIFS('Nordhaven'!$F$3:$F$19,TRUE,'Nordhaven'!$G$3:$G$19,FALSE)"
-   ],
-   [
-    "A32",
-    "Gibbi Point"
-   ],
-   [
-    "B32",
-    "Adventure Awaits"
-   ],
-   [
-    "C32",
-    "Yes"
-   ],
-   [
-    "D32",
-    "=M32"
-   ],
-   [
-    "E32",
-    "=IFERROR(N32/(N32+O32),\"\")"
-   ],
-   [
-    "F32",
-    "=IFERROR(P32/(P32+Q32),\"\")"
-   ],
-   [
-    "G32",
-    "=IFERROR(R32/(R32+S32),\"\")"
-   ],
-   [
-    "H32",
-    "=IFERROR(T32/(T32+U32),\"\")"
-   ],
-   [
-    "I32",
-    "=IFERROR(AVERAGE(E32:H32),\"\")"
-   ],
-   [
-    "J32",
-    "=O32"
-   ],
-   [
-    "K32",
-    "=V32"
-   ],
-   [
-    "M32",
-    "=COUNTA('Gibbi Point'!$A$3:$A$23)-2*COUNTIF('Gibbi Point'!$A$3:$A$23,\"Lot Name\")"
-   ],
-   [
-    "N32",
-    "=COUNTIF('Gibbi Point'!$F$3:$F$23,TRUE)"
-   ],
-   [
-    "O32",
-    "=COUNTIF('Gibbi Point'!$F$3:$F$23,FALSE)"
-   ],
-   [
-    "P32",
-    "=COUNTIF('Gibbi Point'!$G$3:$G$23,TRUE)"
-   ],
-   [
-    "Q32",
-    "=COUNTIF('Gibbi Point'!$G$3:$G$23,FALSE)"
-   ],
-   [
-    "R32",
-    "=COUNTIF('Gibbi Point'!$H$3:$H$23,TRUE)"
-   ],
-   [
-    "S32",
-    "=COUNTIF('Gibbi Point'!$H$3:$H$23,FALSE)"
-   ],
-   [
-    "T32",
-    "=COUNTIF('Gibbi Point'!$I$3:$I$23,TRUE)"
-   ],
-   [
-    "U32",
-    "=COUNTIF('Gibbi Point'!$I$3:$I$23,FALSE)"
-   ],
-   [
-    "V32",
-    "=COUNTIFS('Gibbi Point'!$F$3:$F$23,TRUE,'Gibbi Point'!$G$3:$G$23,FALSE)"
-   ],
-   [
-    "A33",
-    "Ondarion"
-   ],
-   [
-    "B33",
-    "Royalty & Legacy"
-   ],
-   [
-    "C33",
-    "Yes"
-   ],
-   [
-    "D33",
-    "=M33"
-   ],
-   [
-    "E33",
-    "=IFERROR(N33/(N33+O33),\"\")"
-   ],
-   [
-    "F33",
-    "=IFERROR(P33/(P33+Q33),\"\")"
-   ],
-   [
-    "G33",
-    "=IFERROR(R33/(R33+S33),\"\")"
-   ],
-   [
-    "H33",
-    "=IFERROR(T33/(T33+U33),\"\")"
-   ],
-   [
-    "I33",
-    "=IFERROR(AVERAGE(E33:H33),\"\")"
-   ],
-   [
-    "J33",
-    "=O33"
-   ],
-   [
-    "K33",
-    "=V33"
-   ],
-   [
-    "M33",
-    "=COUNTA('Ondarion'!$A$3:$A$28)-2*COUNTIF('Ondarion'!$A$3:$A$28,\"Lot Name\")"
-   ],
-   [
-    "N33",
-    "=COUNTIF('Ondarion'!$F$3:$F$28,TRUE)"
-   ],
-   [
-    "O33",
-    "=COUNTIF('Ondarion'!$F$3:$F$28,FALSE)"
-   ],
-   [
-    "P33",
-    "=COUNTIF('Ondarion'!$G$3:$G$28,TRUE)"
-   ],
-   [
-    "Q33",
-    "=COUNTIF('Ondarion'!$G$3:$G$28,FALSE)"
-   ],
-   [
-    "R33",
-    "=COUNTIF('Ondarion'!$H$3:$H$28,TRUE)"
-   ],
-   [
-    "S33",
-    "=COUNTIF('Ondarion'!$H$3:$H$28,FALSE)"
-   ],
-   [
-    "T33",
-    "=COUNTIF('Ondarion'!$I$3:$I$28,TRUE)"
-   ],
-   [
-    "U33",
-    "=COUNTIF('Ondarion'!$I$3:$I$28,FALSE)"
-   ],
-   [
-    "V33",
-    "=COUNTIFS('Ondarion'!$F$3:$F$28,TRUE,'Ondarion'!$G$3:$G$28,FALSE)"
-   ],
-   [
-    "A34",
-    "Total (owned worlds)"
-   ],
-   [
-    "D34",
-    "=M34"
-   ],
-   [
-    "E34",
-    "=IFERROR(N34/(N34+O34),\"\")"
-   ],
-   [
-    "F34",
-    "=IFERROR(P34/(P34+Q34),\"\")"
-   ],
-   [
-    "G34",
-    "=IFERROR(R34/(R34+S34),\"\")"
-   ],
-   [
-    "H34",
-    "=IFERROR(T34/(T34+U34),\"\")"
-   ],
-   [
-    "I34",
-    "=IFERROR(AVERAGE(E34:H34),\"\")"
-   ],
-   [
-    "J34",
-    "=O34"
-   ],
-   [
-    "K34",
-    "=V34"
-   ],
-   [
-    "M34",
-    "=SUMIF($C$5:$C$33,\"Yes\",M5:M33)"
-   ],
-   [
-    "N34",
-    "=SUMIF($C$5:$C$33,\"Yes\",N5:N33)"
-   ],
-   [
-    "O34",
-    "=SUMIF($C$5:$C$33,\"Yes\",O5:O33)"
-   ],
-   [
-    "P34",
-    "=SUMIF($C$5:$C$33,\"Yes\",P5:P33)"
-   ],
-   [
-    "Q34",
-    "=SUMIF($C$5:$C$33,\"Yes\",Q5:Q33)"
-   ],
-   [
-    "R34",
-    "=SUMIF($C$5:$C$33,\"Yes\",R5:R33)"
-   ],
-   [
-    "S34",
-    "=SUMIF($C$5:$C$33,\"Yes\",S5:S33)"
-   ],
-   [
-    "T34",
-    "=SUMIF($C$5:$C$33,\"Yes\",T5:T33)"
-   ],
-   [
-    "U34",
-    "=SUMIF($C$5:$C$33,\"Yes\",U5:U33)"
-   ],
-   [
-    "V34",
-    "=SUMIF($C$5:$C$33,\"Yes\",V5:V33)"
-   ]
-  ]
+  "sections": []
  },
  {
   "tab": "Willow Creek",
@@ -2638,7 +35,7 @@
      {
       "Lot Name": "Crick Cabana",
       "My Name": "Crick Cabana",
-      "Lot Type": "Tiny Home Residential",
+      "Lot Type": "Residential",
       "Lot Size": "20x15",
       "Residents/Owners": "Broke",
       "Built": true,
@@ -2667,6 +64,17 @@
       "Shared": true,
       "Screenshots": false,
       "Sims Made": false
+     },
+     {
+      "Lot Name": "Sylvan Glade",
+      "My Name": null,
+      "Lot Type": "Sylvan Glade",
+      "Lot Size": "15x10",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
      }
     ]
    },
@@ -2680,7 +88,7 @@
       "Lot Size": "30x20",
       "Residents/Owners": "Reynolds",
       "Built": true,
-      "Shared": false,
+      "Shared": true,
       "Screenshots": false,
       "Sims Made": false
      },
@@ -2700,7 +108,7 @@
       "My Name": "Riverside Roost",
       "Lot Type": "Residential",
       "Lot Size": "30x20",
-      "Residents/Owners": "Kopf?",
+      "Residents/Owners": "Kopf",
       "Built": true,
       "Shared": true,
       "Screenshots": false,
@@ -2757,7 +165,7 @@
      },
      {
       "Lot Name": "Parkshore",
-      "My Name": "Cordelia House (Churchish)",
+      "My Name": "Cordelia Church",
       "Lot Type": "Cemetery",
       "Lot Size": "40x30",
       "Residents/Owners": "N/A",
@@ -2789,7 +197,7 @@
       "Lot Size": "50x50",
       "Residents/Owners": "Barraza",
       "Built": true,
-      "Shared": false,
+      "Shared": true,
       "Screenshots": false,
       "Sims Made": false
      },
@@ -2834,7 +242,7 @@
      {
       "Lot Name": "Movers & Shakers",
       "My Name": null,
-      "Lot Type": null,
+      "Lot Type": "Gym",
       "Lot Size": "30x20",
       "Residents/Owners": "N/A",
       "Built": false,
@@ -2871,20 +279,6 @@
      }
     ]
    }
-  ],
-  "stray": [
-   [
-    "I1",
-    "← Overview"
-   ],
-   [
-    "D42",
-    "Notes"
-   ],
-   [
-    "D43",
-    "Ella-Mint Cadberry"
-   ]
   ]
  },
  {
@@ -2968,7 +362,7 @@
      {
       "Lot Name": "Raffia Quinta",
       "My Name": "Raffia Quinta",
-      "Lot Type": "Residential",
+      "Lot Type": "Tiny Home Residential",
       "Lot Size": "20x15",
       "Residents/Owners": "Rivera",
       "Built": true,
@@ -3145,6 +539,17 @@
       "Lot Type": "Park",
       "Lot Size": "50x50",
       "Residents/Owners": "N/A",
+      "Built": true,
+      "Shared": true,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Forgotten Grotto",
+      "My Name": null,
+      "Lot Type": "Forgotten Grotto",
+      "Lot Size": "15x10",
+      "Residents/Owners": "N/A",
       "Built": false,
       "Shared": false,
       "Screenshots": false,
@@ -3152,12 +557,6 @@
      }
     ]
    }
-  ],
-  "stray": [
-   [
-    "I1",
-    "← Overview"
-   ]
   ]
  },
  {
@@ -3262,7 +661,7 @@
      },
      {
       "Lot Name": "Tranquil Crescent",
-      "My Name": "The Ice Pavillion",
+      "My Name": "The Ice Pavilion",
       "Lot Type": "Park",
       "Lot Size": "30x30",
       "Residents/Owners": "N/A",
@@ -3344,12 +743,6 @@
      }
     ]
    }
-  ],
-  "stray": [
-   [
-    "I1",
-    "← Overview"
-   ]
   ]
  },
  {
@@ -3429,15 +822,20 @@
       "Shared": false,
       "Screenshots": false,
       "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Hermit's House",
+      "My Name": null,
+      "Lot Type": "Hermit's Hut",
+      "Lot Size": "30x20",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
      }
     ]
    }
-  ],
-  "stray": [
-   [
-    "I1",
-    "← Overview"
-   ]
   ]
  },
  {
@@ -3461,7 +859,7 @@
      {
       "Lot Name": "JF&S Clothiers",
       "My Name": "Llama Picturehouse",
-      "Lot Type": "Small Business",
+      "Lot Type": "Small Business/Bar",
       "Lot Size": "20x20",
       "Residents/Owners": "N/A",
       "Built": true,
@@ -3500,7 +898,7 @@
       "Lot Name": "Police Station",
       "My Name": "Police Station",
       "Lot Type": "Police Station",
-      "Lot Size": null,
+      "Lot Size": "40x30",
       "Residents/Owners": "N/A",
       "Built": false,
       "Shared": false,
@@ -3511,7 +909,7 @@
       "Lot Name": "FutureSim Labs",
       "My Name": "FutureSim Labs",
       "Lot Type": "Science Lab",
-      "Lot Size": null,
+      "Lot Size": "50x50",
       "Residents/Owners": "N/A",
       "Built": false,
       "Shared": false,
@@ -3522,7 +920,7 @@
       "Lot Name": "Willow Creek Hospital",
       "My Name": "Willow Creek Hospital",
       "Lot Type": "Hospital",
-      "Lot Size": null,
+      "Lot Size": "50x50",
       "Residents/Owners": "N/A",
       "Built": false,
       "Shared": false,
@@ -3533,7 +931,7 @@
       "Lot Name": "Sixam",
       "My Name": "Sixam",
       "Lot Type": "Sixam",
-      "Lot Size": null,
+      "Lot Size": "20x20",
       "Residents/Owners": "N/A",
       "Built": false,
       "Shared": false,
@@ -3542,12 +940,6 @@
      }
     ]
    }
-  ],
-  "stray": [
-   [
-    "I1",
-    "← Overview"
-   ]
   ]
  },
  {
@@ -3604,7 +996,7 @@
      {
       "Lot Name": "Quad Manor",
       "My Name": null,
-      "Lot Type": "Library/Boba & Thrift?",
+      "Lot Type": "Library",
       "Lot Size": "30x20",
       "Residents/Owners": "N/A",
       "Built": false,
@@ -3630,7 +1022,7 @@
       "Lot Size": "30x20",
       "Residents/Owners": "N/A",
       "Built": true,
-      "Shared": false,
+      "Shared": true,
       "Screenshots": false,
       "Sims Made": "N/A"
      },
@@ -3687,7 +1079,7 @@
       "Lot Name": "Harbor Quarter Gym",
       "My Name": "UoW Students Union",
       "Lot Type": "Library",
-      "Lot Size": "30x20",
+      "Lot Size": "30x30",
       "Residents/Owners": "N/A",
       "Built": true,
       "Shared": false,
@@ -3696,7 +1088,7 @@
      },
      {
       "Lot Name": "Discotheque Pan Europa",
-      "My Name": "Uow Sports Center",
+      "My Name": "UoW Sports Center",
       "Lot Type": "Gym/Pool",
       "Lot Size": "30x20",
       "Residents/Owners": "N/A",
@@ -3724,7 +1116,7 @@
      {
       "Lot Name": "Cottage Am See",
       "My Name": "Cottage Am See",
-      "Lot Type": "Residential",
+      "Lot Type": "Tiny Home Residential",
       "Lot Size": "20x20",
       "Residents/Owners": "Free Spirits",
       "Built": true,
@@ -3735,7 +1127,7 @@
      {
       "Lot Name": "Rustic Residence",
       "My Name": "Rustic Residence",
-      "Lot Type": "Residential",
+      "Lot Type": "Tiny Home Residential",
       "Lot Size": "30x20",
       "Residents/Owners": "1 Bed",
       "Built": true,
@@ -3766,7 +1158,7 @@
       "Sims Made": false
      },
      {
-      "Lot Name": "The Summer House",
+      "Lot Name": "The Summer Home",
       "My Name": null,
       "Lot Type": "Vet Clinic",
       "Lot Size": "40x30",
@@ -3795,7 +1187,7 @@
      {
       "Lot Name": "Mid-NoWhere",
       "My Name": "Mid-NoWhere",
-      "Lot Type": "Park",
+      "Lot Type": "Generic",
       "Lot Size": "20x20",
       "Residents/Owners": "N/A",
       "Built": true,
@@ -3876,12 +1268,6 @@
      }
     ]
    }
-  ],
-  "stray": [
-   [
-    "I1",
-    "← Overview"
-   ]
   ]
  },
  {
@@ -4111,8 +1497,8 @@
       "Sims Made": false
      },
      {
-      "Lot Name": "1313 21 Chic street",
-      "My Name": "1313 21 Chic street",
+      "Lot Name": "1313 21 Chic Street",
+      "My Name": "1313 21 Chic Street",
       "Lot Type": "Apartment",
       "Lot Size": "N/A",
       "Residents/Owners": "Empty",
@@ -4125,7 +1511,7 @@
       "Lot Name": "Torendi Tower Penthouse",
       "My Name": "Torendi Tunes",
       "Lot Type": "Karaoke Bar",
-      "Lot Size": "N/A",
+      "Lot Size": "40x30",
       "Residents/Owners": "N/A",
       "Built": false,
       "Shared": false,
@@ -4243,12 +1629,6 @@
      }
     ]
    }
-  ],
-  "stray": [
-   [
-    "I1",
-    "← Overview"
-   ]
   ]
  },
  {
@@ -4315,12 +1695,6 @@
      }
     ]
    }
-  ],
-  "stray": [
-   [
-    "I1",
-    "← Overview"
-   ]
   ]
  },
  {
@@ -4404,7 +1778,7 @@
      {
       "Lot Name": "Belomisia Field Station",
       "My Name": "Belomisia Field Station",
-      "Lot Type": "Vacation Rental",
+      "Lot Type": "Custom Venue",
       "Lot Size": "30x20",
       "Residents/Owners": "N/A",
       "Built": true,
@@ -4414,12 +1788,6 @@
      }
     ]
    }
-  ],
-  "stray": [
-   [
-    "I1",
-    "← Overview"
-   ]
   ]
  },
  {
@@ -4503,11 +1871,11 @@
      {
       "Lot Name": "Salty Paws Saloon",
       "My Name": "The Bay Café",
-      "Lot Type": "Small Business Cat Cafe",
+      "Lot Type": "Café",
       "Lot Size": "20x15",
       "Residents/Owners": "N/A",
       "Built": true,
-      "Shared": false,
+      "Shared": true,
       "Screenshots": false,
       "Sims Made": "N/A"
      },
@@ -4622,12 +1990,6 @@
      }
     ]
    }
-  ],
-  "stray": [
-   [
-    "I1",
-    "← Overview"
-   ]
   ]
  },
  {
@@ -4727,7 +2089,7 @@
      {
       "Lot Name": "Ward Park",
       "My Name": "Starlight Fitness",
-      "Lot Type": "Gym (Small Business?)",
+      "Lot Type": "Gym",
       "Lot Size": "20x20",
       "Residents/Owners": "N/A",
       "Built": true,
@@ -4777,7 +2139,7 @@
       "Lot Name": "Plumbob Pictures",
       "My Name": "Plumbob Pictures",
       "Lot Type": "Plumbob Pictures",
-      "Lot Size": null,
+      "Lot Size": "50x50",
       "Residents/Owners": "N/A",
       "Built": "N/A",
       "Shared": "N/A",
@@ -4786,12 +2148,6 @@
      }
     ]
    }
-  ],
-  "stray": [
-   [
-    "I1",
-    "← Overview"
-   ]
   ]
  },
  {
@@ -4945,12 +2301,6 @@
      }
     ]
    }
-  ],
-  "stray": [
-   [
-    "I1",
-    "← Overview"
-   ]
   ]
  },
  {
@@ -4985,7 +2335,7 @@
      {
       "Lot Name": "Key Point",
       "My Name": "Key Point",
-      "Lot Type": "?",
+      "Lot Type": "To be decided",
       "Lot Size": "40x30",
       "Residents/Owners": null,
       "Built": false,
@@ -5023,7 +2373,7 @@
      {
       "Lot Name": "Lagoon Look",
       "My Name": "Lagoon of Love",
-      "Lot Type": "Wedding Venue",
+      "Lot Type": "Vacation Rental",
       "Lot Size": "30x20",
       "Residents/Owners": "N/A",
       "Built": true,
@@ -5126,12 +2476,6 @@
      }
     ]
    }
-  ],
-  "stray": [
-   [
-    "I1",
-    "← Overview"
-   ]
   ]
  },
  {
@@ -5153,8 +2497,8 @@
       "Sims Made": false
      },
      {
-      "Lot Name": "Creekside Corner",
-      "My Name": "Creekside Corner",
+      "Lot Name": "Creek Side Corner",
+      "My Name": "Creek Side Corner",
       "Lot Type": "Residential",
       "Lot Size": "30x20",
       "Residents/Owners": "3 Bed",
@@ -5177,7 +2521,7 @@
      {
       "Lot Name": "Brooks Bridge Borough",
       "My Name": "Brooks Bridge Borough",
-      "Lot Type": "Residential",
+      "Lot Type": "Haunted House Residential",
       "Lot Size": "30x20",
       "Residents/Owners": "Amicable Acolytes",
       "Built": true,
@@ -5205,7 +2549,7 @@
       "Lot Name": "The Magic Realm",
       "My Name": "The Magic Realm",
       "Lot Type": "The Magic Realm",
-      "Lot Size": "40x40",
+      "Lot Size": "50x40",
       "Residents/Owners": "N/A",
       "Built": true,
       "Shared": true,
@@ -5214,12 +2558,6 @@
      }
     ]
    }
-  ],
-  "stray": [
-   [
-    "I1",
-    "← Overview"
-   ]
   ]
  },
  {
@@ -5363,7 +2701,7 @@
      {
       "Lot Name": "Mossy Lane",
       "My Name": "Mossy Lane",
-      "Lot Type": "Residential Rental (4)",
+      "Lot Type": "University Housing",
       "Lot Size": "20x15",
       "Residents/Owners": "Empty",
       "Built": true,
@@ -5374,7 +2712,7 @@
      {
       "Lot Name": "Spring Steppes",
       "My Name": "Spring Steppes",
-      "Lot Type": "Residential Rental (4)",
+      "Lot Type": "Residential Rental (3)",
       "Lot Size": "20x15",
       "Residents/Owners": "Elderberry & Pleasant",
       "Built": true,
@@ -5384,12 +2722,6 @@
      }
     ]
    }
-  ],
-  "stray": [
-   [
-    "I1",
-    "← Overview"
-   ]
   ]
  },
  {
@@ -5497,7 +2829,7 @@
       "My Name": "Pinecrest Apartments #402",
       "Lot Type": "Apartment",
       "Lot Size": "N/A",
-      "Residents/Owners": "Eco Roomies?",
+      "Residents/Owners": "Eco Roomies",
       "Built": true,
       "Shared": false,
       "Screenshots": false,
@@ -5555,7 +2887,7 @@
      {
       "Lot Name": "The Waterfront",
       "My Name": "Abandoned Views",
-      "Lot Type": "Residential Rental (3?)",
+      "Lot Type": "Residential Rental",
       "Lot Size": "40x30",
       "Residents/Owners": "Henley",
       "Built": false,
@@ -5569,19 +2901,13 @@
       "Lot Type": "Small Business",
       "Lot Size": "30x20",
       "Residents/Owners": "Greenburg",
-      "Built": false,
-      "Shared": false,
+      "Built": true,
+      "Shared": true,
       "Screenshots": false,
       "Sims Made": "N/A"
      }
     ]
    }
-  ],
-  "stray": [
-   [
-    "I1",
-    "← Overview"
-   ]
   ]
  },
  {
@@ -5594,7 +2920,7 @@
      {
       "Lot Name": "2-4-1 Wakabamori",
       "My Name": "?",
-      "Lot Type": "Cemetery?",
+      "Lot Type": "Cemetery",
       "Lot Size": "20x15",
       "Residents/Owners": "N/A",
       "Built": false,
@@ -5638,7 +2964,7 @@
      {
       "Lot Name": "Hazakura Lounge",
       "My Name": "?",
-      "Lot Type": "Rec Center?",
+      "Lot Type": "Recreation Center",
       "Lot Size": "30x20",
       "Residents/Owners": "N/A",
       "Built": false,
@@ -5754,15 +3080,20 @@
       "Shared": false,
       "Screenshots": false,
       "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "Mt. Komorebi Peak",
+      "My Name": null,
+      "Lot Type": "Mount Komorebi Summit",
+      "Lot Size": "20x20",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
      }
     ]
    }
-  ],
-  "stray": [
-   [
-    "I1",
-    "← Overview"
-   ]
   ]
  },
  {
@@ -5807,7 +3138,7 @@
      },
      {
       "Lot Name": "5 Cobblebottom Street",
-      "My Name": "Finchwich Village Hall",
+      "My Name": "Finchwick Village Hall",
       "Lot Type": "Library(/Wedding Venue / Bar)",
       "Lot Size": "30x20",
       "Residents/Owners": "N/A",
@@ -5898,8 +3229,8 @@
       "Lot Type": "Residential",
       "Lot Size": "30x20",
       "Residents/Owners": "Empty",
-      "Built": false,
-      "Shared": false,
+      "Built": true,
+      "Shared": true,
       "Screenshots": false,
       "Sims Made": false
      },
@@ -5916,12 +3247,6 @@
      }
     ]
    }
-  ],
-  "stray": [
-   [
-    "I1",
-    "← Overview"
-   ]
   ]
  },
  {
@@ -5943,8 +3268,8 @@
       "Sims Made": false
      },
      {
-      "Lot Name": "Piccola Luca",
-      "My Name": "Piccola Luca",
+      "Lot Name": "Piccola Luce",
+      "My Name": "Piccola Luce",
       "Lot Type": "Vacation Rental",
       "Lot Size": "20x20",
       "Residents/Owners": "N/A",
@@ -5980,7 +3305,7 @@
       "My Name": "?",
       "Lot Type": "Residential",
       "Lot Size": "50x40",
-      "Residents/Owners": "Capp/Monty?",
+      "Residents/Owners": "? (Capp/Monty)",
       "Built": false,
       "Shared": false,
       "Screenshots": false,
@@ -6029,7 +3354,7 @@
       "My Name": "La Coppia Serena",
       "Lot Type": "Residential",
       "Lot Size": "50x40",
-      "Residents/Owners": "Capp/Monty?",
+      "Residents/Owners": "? (Capp/Monty)",
       "Built": false,
       "Shared": false,
       "Screenshots": false,
@@ -6037,12 +3362,6 @@
      }
     ]
    }
-  ],
-  "stray": [
-   [
-    "I1",
-    "← Overview"
-   ]
   ]
  },
  {
@@ -6109,12 +3428,6 @@
      }
     ]
    }
-  ],
-  "stray": [
-   [
-    "I1",
-    "← Overview"
-   ]
   ]
  },
  {
@@ -6153,12 +3466,12 @@
     "lots": [
      {
       "Lot Name": "Water Tower Way",
-      "My Name": "Water Tower Way",
+      "My Name": "Copperdale Library",
       "Lot Type": "Library",
       "Lot Size": "20x15",
       "Residents/Owners": "N/A",
       "Built": true,
-      "Shared": false,
+      "Shared": true,
       "Screenshots": false,
       "Sims Made": "N/A"
      },
@@ -6175,7 +3488,7 @@
      },
      {
       "Lot Name": "ThrifTea",
-      "My Name": "Lakeside Boarding House",
+      "My Name": "Prescott Boarding House",
       "Lot Type": "Dorms #1",
       "Lot Size": "20x15",
       "Residents/Owners": "Chess/Comp Teens",
@@ -6186,7 +3499,7 @@
      },
      {
       "Lot Name": "Lakeview Library",
-      "My Name": "Lakeside Boarding House",
+      "My Name": "Lakeview Boarding House",
       "Lot Type": "Dorms #2",
       "Lot Size": "20x20",
       "Residents/Owners": "Cheer/Football Teens",
@@ -6268,12 +3581,6 @@
      }
     ]
    }
-  ],
-  "stray": [
-   [
-    "I1",
-    "← Overview"
-   ]
   ]
  },
  {
@@ -6399,7 +3706,7 @@
       "Lot Size": "30x20",
       "Residents/Owners": "Lovejoy",
       "Built": true,
-      "Shared": false,
+      "Shared": true,
       "Screenshots": false,
       "Sims Made": true
      },
@@ -6427,12 +3734,6 @@
      }
     ]
    }
-  ],
-  "stray": [
-   [
-    "I1",
-    "← Overview"
-   ]
   ]
  },
  {
@@ -6443,8 +3744,8 @@
     "name": "New Appaloosa",
     "lots": [
      {
-      "Lot Name": "Champions' Grove",
-      "My Name": "Champions' Grove",
+      "Lot Name": "Champion's Grove",
+      "My Name": "Champion's Grove",
       "Lot Type": "Residential",
       "Lot Size": "30x20",
       "Residents/Owners": "Sienna & Flapjack",
@@ -6456,7 +3757,7 @@
      {
       "Lot Name": "The Cozy Corner House",
       "My Name": null,
-      "Lot Type": "Vet Clinic/Library?",
+      "Lot Type": "Library",
       "Lot Size": "20x20",
       "Residents/Owners": "N/A",
       "Built": false,
@@ -6526,8 +3827,8 @@
      },
      {
       "Lot Name": "Canter Cottage",
-      "My Name": "Canter Cemetery",
-      "Lot Type": "Cemetery",
+      "My Name": "Canter Clinic",
+      "Lot Type": "Vet Clinic",
       "Lot Size": "30x30",
       "Residents/Owners": "N/A",
       "Built": false,
@@ -6597,20 +3898,6 @@
      }
     ]
    }
-  ],
-  "stray": [
-   [
-    "I1",
-    "← Overview"
-   ],
-   [
-    "D25",
-    "Notes"
-   ],
-   [
-    "D26",
-    "One of Duo's Parents"
-   ]
   ]
  },
  {
@@ -6656,7 +3943,7 @@
      {
       "Lot Name": "ZoSul Taman Botani",
       "My Name": "ZoSul Taman Botani",
-      "Lot Type": "Park/Wedding/Cemetery?",
+      "Lot Type": "Wedding Venue",
       "Lot Size": "30x30",
       "Residents/Owners": "N/A",
       "Built": false,
@@ -6705,7 +3992,7 @@
      {
       "Lot Name": "Tam Nang Sands",
       "My Name": "Tam Nang Sands",
-      "Lot Type": "Commercial?",
+      "Lot Type": "Cemetery",
       "Lot Size": "30x20",
       "Residents/Owners": "N/A",
       "Built": false,
@@ -6726,20 +4013,6 @@
      }
     ]
    }
-  ],
-  "stray": [
-   [
-    "I1",
-    "← Overview"
-   ],
-   [
-    "D18",
-    "Notes"
-   ],
-   [
-    "D19",
-    "Lynx"
-   ]
   ]
  },
  {
@@ -6796,10 +4069,10 @@
     ]
    },
    {
-    "name": "Plaza Maripoza",
+    "name": "Plaza Mariposa",
     "lots": [
      {
-      "Lot Name": "Avenida de la Eternida",
+      "Lot Name": "Avenida de la Eternidad",
       "My Name": null,
       "Lot Type": "Residential",
       "Lot Size": "30x30",
@@ -6904,20 +4177,6 @@
      }
     ]
    }
-  ],
-  "stray": [
-   [
-    "I1",
-    "← Overview"
-   ],
-   [
-    "D25",
-    "Notes"
-   ],
-   [
-    "D26",
-    "Lynx"
-   ]
   ]
  },
  {
@@ -6954,7 +4213,7 @@
       "My Name": "Specter Row",
       "Lot Type": "Residential Rental",
       "Lot Size": "30x20",
-      "Residents/Owners": "Specter & Rent Out",
+      "Residents/Owners": "Specter (rent out)",
       "Built": false,
       "Shared": false,
       "Screenshots": false,
@@ -7072,7 +4331,7 @@
      {
       "Lot Name": "Mystic Crossroads",
       "My Name": null,
-      "Lot Type": null,
+      "Lot Type": "To be decided",
       "Lot Size": "30x30",
       "Residents/Owners": null,
       "Built": false,
@@ -7089,7 +4348,7 @@
       "Lot Name": "Netherworld Department",
       "My Name": "Netherworld Department",
       "Lot Type": "Netherworld Department",
-      "Lot Size": "N/A",
+      "Lot Size": "30x30",
       "Residents/Owners": "N/A",
       "Built": false,
       "Shared": false,
@@ -7098,12 +4357,6 @@
      }
     ]
    }
-  ],
-  "stray": [
-   [
-    "I1",
-    "← Overview"
-   ]
   ]
  },
  {
@@ -7116,7 +4369,7 @@
      {
       "Lot Name": "Konst Modern",
       "My Name": null,
-      "Lot Type": "Museum/Wedding Venue?",
+      "Lot Type": "Museum",
       "Lot Size": "50x40",
       "Residents/Owners": "N/A",
       "Built": false,
@@ -7140,7 +4393,7 @@
       "My Name": null,
       "Lot Type": "Small Business Residential",
       "Lot Size": "20x20",
-      "Residents/Owners": "Loden?",
+      "Residents/Owners": "Loden",
       "Built": false,
       "Shared": false,
       "Screenshots": false,
@@ -7200,7 +4453,7 @@
       "My Name": null,
       "Lot Type": "Small Business Residential",
       "Lot Size": "30x20",
-      "Residents/Owners": "Koopman??",
+      "Residents/Owners": "Koopman",
       "Built": false,
       "Shared": false,
       "Screenshots": false,
@@ -7222,7 +4475,7 @@
       "My Name": null,
       "Lot Type": "Small Business Residential",
       "Lot Size": "20x20",
-      "Residents/Owners": "Sarpong?",
+      "Residents/Owners": "Sarpong",
       "Built": false,
       "Shared": false,
       "Screenshots": false,
@@ -7231,7 +4484,7 @@
      {
       "Lot Name": "Inked Inlet",
       "My Name": null,
-      "Lot Type": "Library?",
+      "Lot Type": "Library",
       "Lot Size": "20x20",
       "Residents/Owners": "N/A",
       "Built": false,
@@ -7242,7 +4495,7 @@
      {
       "Lot Name": "Lighthouse Lookout",
       "My Name": null,
-      "Lot Type": "Residential Rental (?)",
+      "Lot Type": "Residential Rental",
       "Lot Size": "50x40",
       "Residents/Owners": "Empty",
       "Built": false,
@@ -7252,12 +4505,6 @@
      }
     ]
    }
-  ],
-  "stray": [
-   [
-    "I1",
-    "← Overview"
-   ]
   ]
  },
  {
@@ -7370,7 +4617,7 @@
       "My Name": "Paradise Stables",
       "Lot Type": "Residential",
       "Lot Size": "40x30",
-      "Residents/Owners": "Horses!",
+      "Residents/Owners": "? (Horses!)",
       "Built": true,
       "Shared": false,
       "Screenshots": false,
@@ -7422,12 +4669,6 @@
      }
     ]
    }
-  ],
-  "stray": [
-   [
-    "I1",
-    "← Overview"
-   ]
   ]
  },
  {
@@ -7462,7 +4703,7 @@
      {
       "Lot Name": "17 Bright Cliff",
       "My Name": "17 Bright Cliff",
-      "Lot Type": "Residential",
+      "Lot Type": "Apartment",
       "Lot Size": "N/A",
       "Residents/Owners": "Empty",
       "Built": false,
@@ -7473,7 +4714,7 @@
      {
       "Lot Name": "18 Bright Cliff",
       "My Name": "18 Bright Cliff",
-      "Lot Type": "Residential",
+      "Lot Type": "Apartment",
       "Lot Size": "N/A",
       "Residents/Owners": "Ananou",
       "Built": false,
@@ -7604,7 +4845,7 @@
      {
       "Lot Name": "12 Lakeview Apartments",
       "My Name": "12 Lakeview Apartments",
-      "Lot Type": "Residential",
+      "Lot Type": "Apartment",
       "Lot Size": "N/A",
       "Residents/Owners": "Enzo Alto",
       "Built": false,
@@ -7615,7 +4856,7 @@
      {
       "Lot Name": "13 Lakeview Apartments",
       "My Name": "13 Lakeview Apartments",
-      "Lot Type": "Residential",
+      "Lot Type": "Apartment",
       "Lot Size": "N/A",
       "Residents/Owners": "Empty",
       "Built": false,
@@ -7647,12 +4888,6 @@
      }
     ]
    }
-  ],
-  "stray": [
-   [
-    "I1",
-    "← Overview"
-   ]
   ]
  }
 ]

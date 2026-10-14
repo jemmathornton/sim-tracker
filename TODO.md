@@ -13,7 +13,7 @@ Every open item carried over from the claude.ai project on 13 Oct 2026: the note
 - [x] [Claude] Weekly Gallery refresh rebuilt (Windows task, Sundays 08:54) and run once (13 Oct)
 - [ ] [Jemma] Turn off the "Weekly Gallery stats refresh" scheduled task in claude.ai (the app has its own now, and the old one only updates the claude.ai page)
 - [x] [Claude] `live_overrides.json` folded into the app's data and retired
-- [ ] [Jemma] If the spreadsheet stays your main copy: 55 decisions (names, lot types, sizes, built/shared ticks) plus the 13 Oct spelling fixes are in the app but not in the spreadsheet yet. Claude can list them, or make a filled-in copy of the spreadsheet for you to check (your file is never changed without asking)
+- [x] Her spreadsheet updated with everything decided in the app (14 Oct, her request): 83 cells, the spelling fixes and the 4 secret lots as new rows (the percentages and the Overview take them in). Her old copy is kept as `World Plans (fixed) - backup 14 Oct.xlsx`. Only difference left: the Residents cell of 3 Cobblebottom Street and Spring Steppes still names owners and tenants together, which the app splits
 - [ ] [Jemma] Have a look at the new bits: Stats page → "On the Gallery" at the bottom (keep it there? wording?), and the app icon (Lucide house, brass on purple)
 - [ ] [Jemma] Bubble World (82 favourites / 647 downloads) sits on The Old Salt House lot; left unlinked for now (13 Oct: "leave it for now"), until the bonus builds are decided (§5)
 - [ ] [Jemma] part1/2/3.zip in the project folder are already unpacked; they can be deleted
@@ -105,14 +105,14 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
 - [ ] [Jemma] Innisgreen (Enchanted by Nature, not owned): the research lists its 14 lots (research/missing-lots-check.md); the game's own files confirm all 14, sizes included (14 Oct). Your other not-owned worlds have their lots in the plan and on Stats; add Innisgreen's too, as not owned?
 - [x] Harbor Quarter Gym (her UoW Students Union): now 30×30, the game's size (14 Oct, her choice)
 - [x] The Magic Realm: now 50×40, the game's size (14 Oct, her choice)
-- [ ] [Jemma] Selvadorada's Omiscan Temple (50×50) and Omiscan Royal Baths (40×30) are real lots in the game files, and Mt. Komorebi's two hidden lots are Mt. Komorebi Base Camp and The Croft Icefall (20×15 each). Add any of them to the plan?
+- [ ] [Jemma] Selvadorada's Omiscan Temple (50×50) and Omiscan Royal Baths (40×30) are real lots in the game files, and Mt. Komorebi's two hidden lots are Mt. Komorebi Base Camp and The Croft Icefall (20×15 each). Add any of them to the plan? (14 Oct: she wants to research them more first; Claude is researching too)
 - [x] Checked in the game's own text (13 Oct): "Plateau Place" (her spelling) is right, not "Plateau Palace"
 - [x] Batuu: Journey to Batuu isn't installed, so nothing to add
 - Left as the research suggested: Selvadorada's jungle areas (not lots in the game either); Netherworld Department stays 30×30 (her confirmed size; the game's file has it at 20×20)
 
 From the overnight check of the plan against the game's own files and her save, 14 Oct (research/plan-vs-game.md; 380 of 388 lots match by name, sizes match except the two above, neighbourhoods are the game's own):
 - [x] Lot types where the Gallery and the plan differed, settled 14 Oct: Raffia Quinta, Cottage Am See, Rustic Residence → Tiny Home Residential; Crick Cabana → Residential; Mid-NoWhere → Generic; Belomisia Field Station → Custom Venue; The Bay Café → Café; Llama Picturehouse → Small Business/Bar; Lagoon of Love → Vacation Rental; Carpophagous Corner stays Vacation Rental (none of her 224 uploads is a Vacation Rental, so the Gallery seems not to keep that type)
-- [ ] [Jemma] Still to choose: Brooks Bridge Borough (plan Residential, Gallery Haunted House Residential), Admiral's Wreckage and The Old Dockyard (plan Community Space; EA shows their upload type as "Missing sims translation"; the save has Residential and Maker Space)
+- [x] Also 14 Oct: Brooks Bridge Borough → Haunted House Residential; Admiral's Wreckage and The Old Dockyard stay Community Space
 - [ ] [Jemma] Apartment sizes: the plan has "N/A"; the game gives each building's size (list in research/plan-vs-game.md). Show them?
 - Name differences with the game (Magnolia Blossom Park, Desert Bloom Park, Isle of Volpe, The Grimtooth Bar & Bunker): the plan's names read better; noted only
 
