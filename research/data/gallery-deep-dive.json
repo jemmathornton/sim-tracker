@@ -1,0 +1,1157 @@
+{
+ "totals": {
+  "lot": {
+   "uploads": 203,
+   "downloads": 19280,
+   "favourites": 2039
+  },
+  "household": {
+   "uploads": 6,
+   "downloads": 17,
+   "favourites": 1
+  },
+  "room": {
+   "uploads": 17,
+   "downloads": 536,
+   "favourites": 54
+  }
+ },
+ "top downloads": [
+  {
+   "title": "The Futures Past",
+   "world": "Oasis Springs",
+   "downloads": 4645,
+   "favourites": 336
+  },
+  {
+   "title": "Oasis Springs Library",
+   "world": "Oasis Springs",
+   "downloads": 1462,
+   "favourites": 92
+  },
+  {
+   "title": "Finchwick Village Hall",
+   "world": "Henford-on-Bagley",
+   "downloads": 879,
+   "favourites": 106
+  },
+  {
+   "title": "Bubble World",
+   "world": "(not on a lot)",
+   "downloads": 647,
+   "favourites": 82
+  },
+  {
+   "title": "Anchorpoint Rec Center",
+   "world": "San Sequoia",
+   "downloads": 621,
+   "favourites": 57
+  },
+  {
+   "title": "Izakaya Hanamigawa Koen",
+   "world": "Mt. Komorebi",
+   "downloads": 613,
+   "favourites": 83
+  },
+  {
+   "title": "Newcrest Arts Center",
+   "world": "Newcrest",
+   "downloads": 428,
+   "favourites": 22
+  },
+  {
+   "title": "2-4-3 Wakabamori",
+   "world": "Mt. Komorebi",
+   "downloads": 346,
+   "favourites": 40
+  },
+  {
+   "title": "Upland Trailer Park",
+   "world": "Del Sol Valley",
+   "downloads": 327,
+   "favourites": 49
+  },
+  {
+   "title": "Optimist's Outlook",
+   "world": "Newcrest",
+   "downloads": 297,
+   "favourites": 30
+  },
+  {
+   "title": "Palomino Junction",
+   "world": "Chestnut Ridge",
+   "downloads": 268,
+   "favourites": 38
+  },
+  {
+   "title": "The Narwhal Arms",
+   "world": "Windenburg",
+   "downloads": 266,
+   "favourites": 24
+  }
+ ],
+ "top favourites": [
+  {
+   "title": "The Futures Past",
+   "world": "Oasis Springs",
+   "favourites": 336,
+   "downloads": 4645
+  },
+  {
+   "title": "Finchwick Village Hall",
+   "world": "Henford-on-Bagley",
+   "favourites": 106,
+   "downloads": 879
+  },
+  {
+   "title": "Oasis Springs Library",
+   "world": "Oasis Springs",
+   "favourites": 92,
+   "downloads": 1462
+  },
+  {
+   "title": "Izakaya Hanamigawa Koen",
+   "world": "Mt. Komorebi",
+   "favourites": 83,
+   "downloads": 613
+  },
+  {
+   "title": "Bubble World",
+   "world": "(not on a lot)",
+   "favourites": 82,
+   "downloads": 647
+  },
+  {
+   "title": "Anchorpoint Rec Center",
+   "world": "San Sequoia",
+   "favourites": 57,
+   "downloads": 621
+  },
+  {
+   "title": "Upland Trailer Park",
+   "world": "Del Sol Valley",
+   "favourites": 49,
+   "downloads": 327
+  },
+  {
+   "title": "Sento Senbamachi",
+   "world": "Mt. Komorebi",
+   "favourites": 48,
+   "downloads": 220
+  },
+  {
+   "title": "2-4-3 Wakabamori",
+   "world": "Mt. Komorebi",
+   "favourites": 40,
+   "downloads": 346
+  },
+  {
+   "title": "Palomino Junction",
+   "world": "Chestnut Ridge",
+   "favourites": 38,
+   "downloads": 268
+  },
+  {
+   "title": "Optimist's Outlook",
+   "world": "Newcrest",
+   "favourites": 30,
+   "downloads": 297
+  },
+  {
+   "title": "The Narwhal Arms",
+   "world": "Windenburg",
+   "favourites": 24,
+   "downloads": 266
+  }
+ ],
+ "most loved (favourites per 100 downloads, 50+ downloads)": [
+  {
+   "title": "Glimmerbrook Watch",
+   "world": "Glimmerbrook",
+   "rate": 30.7,
+   "downloads": 75
+  },
+  {
+   "title": "Old Torget Houses",
+   "world": "Nordhaven",
+   "rate": 29.1,
+   "downloads": 79
+  },
+  {
+   "title": "Rockridge Springs",
+   "world": "Evergreen Harbor",
+   "rate": 25.9,
+   "downloads": 58
+  },
+  {
+   "title": "Kin-Ship [Simsie Shell]",
+   "world": "Sulani",
+   "rate": 23.7,
+   "downloads": 59
+  },
+  {
+   "title": "Sento Senbamachi",
+   "world": "Mt. Komorebi",
+   "rate": 21.8,
+   "downloads": 220
+  },
+  {
+   "title": "Old Torget House",
+   "world": "Nordhaven",
+   "rate": 21.4,
+   "downloads": 70
+  },
+  {
+   "title": "The Shrieking Llama",
+   "world": "Windenburg",
+   "rate": 20.9,
+   "downloads": 86
+  },
+  {
+   "title": "Valley Views",
+   "world": "Del Sol Valley",
+   "rate": 19.4,
+   "downloads": 72
+  },
+  {
+   "title": "Appaloosa Stables",
+   "world": "Chestnut Ridge",
+   "rate": 17.1,
+   "downloads": 70
+  },
+  {
+   "title": "Anchorpoint Works",
+   "world": "San Sequoia",
+   "rate": 16.7,
+   "downloads": 60
+  }
+ ],
+ "by world": [
+  {
+   "group": "Mt. Komorebi",
+   "uploads": 6,
+   "downloads": 1422,
+   "favourites": 196,
+   "median downloads": 171.5,
+   "favourites per 100 downloads": 13.8
+  },
+  {
+   "group": "Henford-on-Bagley",
+   "uploads": 3,
+   "downloads": 1068,
+   "favourites": 135,
+   "median downloads": 153,
+   "favourites per 100 downloads": 12.6
+  },
+  {
+   "group": "Copperdale",
+   "uploads": 2,
+   "downloads": 199,
+   "favourites": 23,
+   "median downloads": 99.5,
+   "favourites per 100 downloads": 11.6
+  },
+  {
+   "group": "Tomarang",
+   "uploads": 1,
+   "downloads": 80,
+   "favourites": 8,
+   "median downloads": 80,
+   "favourites per 100 downloads": 10.0
+  },
+  {
+   "group": "Newcrest",
+   "uploads": 18,
+   "downloads": 1906,
+   "favourites": 180,
+   "median downloads": 73.5,
+   "favourites per 100 downloads": 9.4
+  },
+  {
+   "group": "Nordhaven",
+   "uploads": 5,
+   "downloads": 402,
+   "favourites": 60,
+   "median downloads": 70,
+   "favourites per 100 downloads": 14.9
+  },
+  {
+   "group": "San Sequoia",
+   "uploads": 6,
+   "downloads": 876,
+   "favourites": 88,
+   "median downloads": 60.5,
+   "favourites per 100 downloads": 10.0
+  },
+  {
+   "group": "Windenburg",
+   "uploads": 13,
+   "downloads": 1076,
+   "favourites": 129,
+   "median downloads": 55,
+   "favourites per 100 downloads": 12.0
+  },
+  {
+   "group": "Del Sol Valley",
+   "uploads": 10,
+   "downloads": 978,
+   "favourites": 124,
+   "median downloads": 52.0,
+   "favourites per 100 downloads": 12.7
+  },
+  {
+   "group": "Glimmerbrook",
+   "uploads": 5,
+   "downloads": 219,
+   "favourites": 51,
+   "median downloads": 48,
+   "favourites per 100 downloads": 23.3
+  },
+  {
+   "group": "Chestnut Ridge",
+   "uploads": 5,
+   "downloads": 439,
+   "favourites": 63,
+   "median downloads": 44,
+   "favourites per 100 downloads": 14.4
+  },
+  {
+   "group": "Evergreen Harbor",
+   "uploads": 6,
+   "downloads": 304,
+   "favourites": 38,
+   "median downloads": 36.5,
+   "favourites per 100 downloads": 12.5
+  },
+  {
+   "group": "Sulani",
+   "uploads": 13,
+   "downloads": 435,
+   "favourites": 63,
+   "median downloads": 34,
+   "favourites per 100 downloads": 14.5
+  },
+  {
+   "group": "Oasis Springs",
+   "uploads": 19,
+   "downloads": 6796,
+   "favourites": 514,
+   "median downloads": 31,
+   "favourites per 100 downloads": 7.6
+  },
+  {
+   "group": "Selvadorada",
+   "uploads": 5,
+   "downloads": 123,
+   "favourites": 13,
+   "median downloads": 28,
+   "favourites per 100 downloads": 10.6
+  },
+  {
+   "group": "Britechester",
+   "uploads": 15,
+   "downloads": 318,
+   "favourites": 46,
+   "median downloads": 24,
+   "favourites per 100 downloads": 14.5
+  },
+  {
+   "group": "Granite Falls",
+   "uploads": 5,
+   "downloads": 301,
+   "favourites": 31,
+   "median downloads": 22,
+   "favourites per 100 downloads": 10.3
+  },
+  {
+   "group": "Gibbi Point",
+   "uploads": 3,
+   "downloads": 109,
+   "favourites": 13,
+   "median downloads": 20,
+   "favourites per 100 downloads": 11.9
+  },
+  {
+   "group": "(not on a lot)",
+   "uploads": 29,
+   "downloads": 1286,
+   "favourites": 158,
+   "median downloads": 18,
+   "favourites per 100 downloads": 12.3
+  },
+  {
+   "group": "Willow Creek",
+   "uploads": 13,
+   "downloads": 446,
+   "favourites": 57,
+   "median downloads": 17,
+   "favourites per 100 downloads": 12.8
+  },
+  {
+   "group": "Brindleton Bay",
+   "uploads": 10,
+   "downloads": 134,
+   "favourites": 15,
+   "median downloads": 15.0,
+   "favourites per 100 downloads": 11.2
+  },
+  {
+   "group": "Magnolia Promenade",
+   "uploads": 3,
+   "downloads": 250,
+   "favourites": 20,
+   "median downloads": 15,
+   "favourites per 100 downloads": 8.0
+  },
+  {
+   "group": "Ravenwood",
+   "uploads": 1,
+   "downloads": 12,
+   "favourites": 0,
+   "median downloads": 12,
+   "favourites per 100 downloads": 0.0
+  },
+  {
+   "group": "San Myshuno",
+   "uploads": 4,
+   "downloads": 63,
+   "favourites": 3,
+   "median downloads": 10.5,
+   "favourites per 100 downloads": 4.8
+  },
+  {
+   "group": "StrangerVille",
+   "uploads": 3,
+   "downloads": 38,
+   "favourites": 11,
+   "median downloads": 10,
+   "favourites per 100 downloads": 28.9
+  }
+ ],
+ "by lot type": [
+  {
+   "group": "Small Business Venue",
+   "uploads": 3,
+   "downloads": 430,
+   "favourites": 39,
+   "median downloads": 131,
+   "favourites per 100 downloads": 9.1
+  },
+  {
+   "group": "Thrift and Bubble Tea Store",
+   "uploads": 3,
+   "downloads": 850,
+   "favourites": 107,
+   "median downloads": 123,
+   "favourites per 100 downloads": 12.6
+  },
+  {
+   "group": "Museum",
+   "uploads": 3,
+   "downloads": 4756,
+   "favourites": 345,
+   "median downloads": 104,
+   "favourites per 100 downloads": 7.3
+  },
+  {
+   "group": "Bar",
+   "uploads": 9,
+   "downloads": 1018,
+   "favourites": 93,
+   "median downloads": 86,
+   "favourites per 100 downloads": 9.1
+  },
+  {
+   "group": "Residential Rental",
+   "uploads": 10,
+   "downloads": 702,
+   "favourites": 109,
+   "median downloads": 50.5,
+   "favourites per 100 downloads": 15.5
+  },
+  {
+   "group": "Restaurant",
+   "uploads": 12,
+   "downloads": 1162,
+   "favourites": 139,
+   "median downloads": 47.5,
+   "favourites per 100 downloads": 12.0
+  },
+  {
+   "group": "Library",
+   "uploads": 9,
+   "downloads": 2597,
+   "favourites": 230,
+   "median downloads": 44,
+   "favourites per 100 downloads": 8.9
+  },
+  {
+   "group": "Nightclub",
+   "uploads": 5,
+   "downloads": 204,
+   "favourites": 27,
+   "median downloads": 42,
+   "favourites per 100 downloads": 13.2
+  },
+  {
+   "group": "Missing sims translation",
+   "uploads": 14,
+   "downloads": 1555,
+   "favourites": 162,
+   "median downloads": 38.5,
+   "favourites per 100 downloads": 10.4
+  },
+  {
+   "group": "Park",
+   "uploads": 5,
+   "downloads": 174,
+   "favourites": 22,
+   "median downloads": 33,
+   "favourites per 100 downloads": 12.6
+  },
+  {
+   "group": "Gym",
+   "uploads": 3,
+   "downloads": 118,
+   "favourites": 6,
+   "median downloads": 33,
+   "favourites per 100 downloads": 5.1
+  },
+  {
+   "group": "Residential",
+   "uploads": 88,
+   "downloads": 3886,
+   "favourites": 546,
+   "median downloads": 23.5,
+   "favourites per 100 downloads": 14.1
+  },
+  {
+   "group": "Generic",
+   "uploads": 4,
+   "downloads": 93,
+   "favourites": 24,
+   "median downloads": 20.5,
+   "favourites per 100 downloads": 25.8
+  },
+  {
+   "group": "Café",
+   "uploads": 5,
+   "downloads": 93,
+   "favourites": 12,
+   "median downloads": 15,
+   "favourites per 100 downloads": 12.9
+  },
+  {
+   "group": "Tiny Home Residential",
+   "uploads": 4,
+   "downloads": 209,
+   "favourites": 29,
+   "median downloads": 12.0,
+   "favourites per 100 downloads": 13.9
+  },
+  {
+   "group": "University Housing",
+   "uploads": 5,
+   "downloads": 63,
+   "favourites": 2,
+   "median downloads": 6,
+   "favourites per 100 downloads": 3.2
+  }
+ ],
+ "by size": [
+  {
+   "group": "40x20",
+   "uploads": 1,
+   "downloads": 106,
+   "favourites": 8,
+   "median downloads": 106,
+   "favourites per 100 downloads": 7.5
+  },
+  {
+   "group": "50x40",
+   "uploads": 8,
+   "downloads": 577,
+   "favourites": 73,
+   "median downloads": 41.5,
+   "favourites per 100 downloads": 12.7
+  },
+  {
+   "group": "20x20",
+   "uploads": 15,
+   "downloads": 974,
+   "favourites": 112,
+   "median downloads": 37,
+   "favourites per 100 downloads": 11.5
+  },
+  {
+   "group": "30x20",
+   "uploads": 88,
+   "downloads": 12981,
+   "favourites": 1225,
+   "median downloads": 32.5,
+   "favourites per 100 downloads": 9.4
+  },
+  {
+   "group": "50x50",
+   "uploads": 11,
+   "downloads": 544,
+   "favourites": 68,
+   "median downloads": 30,
+   "favourites per 100 downloads": 12.5
+  },
+  {
+   "group": "40x30",
+   "uploads": 33,
+   "downloads": 1762,
+   "favourites": 220,
+   "median downloads": 28,
+   "favourites per 100 downloads": 12.5
+  },
+  {
+   "group": "64x64",
+   "uploads": 5,
+   "downloads": 167,
+   "favourites": 29,
+   "median downloads": 25,
+   "favourites per 100 downloads": 17.4
+  },
+  {
+   "group": "30x30",
+   "uploads": 11,
+   "downloads": 966,
+   "favourites": 124,
+   "median downloads": 18,
+   "favourites per 100 downloads": 12.8
+  },
+  {
+   "group": "20x15",
+   "uploads": 31,
+   "downloads": 1203,
+   "favourites": 180,
+   "median downloads": 15,
+   "favourites per 100 downloads": 15.0
+  }
+ ],
+ "by packs needed": [
+  {
+   "group": "base game only",
+   "uploads": 7,
+   "downloads": 5198,
+   "favourites": 393,
+   "median downloads": 95,
+   "favourites per 100 downloads": 7.6
+  },
+  {
+   "group": "1–3 packs",
+   "uploads": 84,
+   "downloads": 8516,
+   "favourites": 1096,
+   "median downloads": 41.0,
+   "favourites per 100 downloads": 12.9
+  },
+  {
+   "group": "4–7 packs",
+   "uploads": 35,
+   "downloads": 1218,
+   "favourites": 127,
+   "median downloads": 19,
+   "favourites per 100 downloads": 10.4
+  },
+  {
+   "group": "8 or more packs",
+   "uploads": 77,
+   "downloads": 4348,
+   "favourites": 423,
+   "median downloads": 18,
+   "favourites per 100 downloads": 9.7
+  }
+ ],
+ "by year shared": [
+  {
+   "group": 2016,
+   "uploads": 1,
+   "downloads": 13,
+   "favourites": 1,
+   "median downloads": 13,
+   "favourites per 100 downloads": 7.7
+  },
+  {
+   "group": 2017,
+   "uploads": 26,
+   "downloads": 2971,
+   "favourites": 202,
+   "median downloads": 15.5,
+   "favourites per 100 downloads": 6.8
+  },
+  {
+   "group": 2018,
+   "uploads": 10,
+   "downloads": 245,
+   "favourites": 23,
+   "median downloads": 15.0,
+   "favourites per 100 downloads": 9.4
+  },
+  {
+   "group": 2019,
+   "uploads": 22,
+   "downloads": 799,
+   "favourites": 93,
+   "median downloads": 23.5,
+   "favourites per 100 downloads": 11.6
+  },
+  {
+   "group": 2020,
+   "uploads": 35,
+   "downloads": 1219,
+   "favourites": 179,
+   "median downloads": 32,
+   "favourites per 100 downloads": 14.7
+  },
+  {
+   "group": 2021,
+   "uploads": 32,
+   "downloads": 6663,
+   "favourites": 592,
+   "median downloads": 29.5,
+   "favourites per 100 downloads": 8.9
+  },
+  {
+   "group": 2022,
+   "uploads": 13,
+   "downloads": 2810,
+   "favourites": 371,
+   "median downloads": 63,
+   "favourites per 100 downloads": 13.2
+  },
+  {
+   "group": 2023,
+   "uploads": 8,
+   "downloads": 609,
+   "favourites": 112,
+   "median downloads": 65.5,
+   "favourites per 100 downloads": 18.4
+  },
+  {
+   "group": "from 2023 (no date)",
+   "uploads": 56,
+   "downloads": 3951,
+   "favourites": 466,
+   "median downloads": 36.5,
+   "favourites per 100 downloads": 11.8
+  }
+ ],
+ "hashtags": [
+  {
+   "tag": "nocc",
+   "uploads": 146,
+   "median downloads with": 33.5,
+   "without": 16
+  },
+  {
+   "tag": "playtested",
+   "uploads": 104,
+   "median downloads with": 36.5,
+   "without": 22
+  },
+  {
+   "tag": "playertested",
+   "uploads": 91,
+   "median downloads with": 35,
+   "without": 23.0
+  },
+  {
+   "tag": "moo",
+   "uploads": 69,
+   "median downloads with": 33,
+   "without": 26.0
+  },
+  {
+   "tag": "oasissprings",
+   "uploads": 24,
+   "median downloads with": 27.5,
+   "without": 29
+  },
+  {
+   "tag": "newcrest",
+   "uploads": 23,
+   "median downloads with": 43,
+   "without": 28.0
+  },
+  {
+   "tag": "rental",
+   "uploads": 20,
+   "median downloads with": 41.5,
+   "without": 27
+  },
+  {
+   "tag": "willowcreek",
+   "uploads": 19,
+   "median downloads with": 17,
+   "without": 32.0
+  },
+  {
+   "tag": "ecolifestyle",
+   "uploads": 19,
+   "median downloads with": 35,
+   "without": 28.0
+  },
+  {
+   "tag": "starterhome",
+   "uploads": 19,
+   "median downloads with": 16,
+   "without": 32.0
+  },
+  {
+   "tag": "moveobjectson",
+   "uploads": 18,
+   "median downloads with": 37.5,
+   "without": 27
+  },
+  {
+   "tag": "modern",
+   "uploads": 18,
+   "median downloads with": 25.0,
+   "without": 29
+  },
+  {
+   "tag": "sunnyaspect",
+   "uploads": 18,
+   "median downloads with": 33.5,
+   "without": 29
+  },
+  {
+   "tag": "gettogether",
+   "uploads": 17,
+   "median downloads with": 30,
+   "without": 28.5
+  },
+  {
+   "tag": "cosy",
+   "uploads": 17,
+   "median downloads with": 15,
+   "without": 32.0
+  },
+  {
+   "tag": "islandliving",
+   "uploads": 17,
+   "median downloads with": 34,
+   "without": 28.0
+  },
+  {
+   "tag": "under20000",
+   "uploads": 16,
+   "median downloads with": 15.5,
+   "without": 32
+  },
+  {
+   "tag": "catsanddogs",
+   "uploads": 15,
+   "median downloads with": 23,
+   "without": 31.0
+  },
+  {
+   "tag": "familyhome",
+   "uploads": 15,
+   "median downloads with": 18,
+   "without": 31.5
+  },
+  {
+   "tag": "discoveruniversity",
+   "uploads": 15,
+   "median downloads with": 24,
+   "without": 31.0
+  },
+  {
+   "tag": "family",
+   "uploads": 14,
+   "median downloads with": 34.0,
+   "without": 29
+  },
+  {
+   "tag": "university",
+   "uploads": 14,
+   "median downloads with": 19.0,
+   "without": 31
+  },
+  {
+   "tag": "sulani",
+   "uploads": 14,
+   "median downloads with": 34.0,
+   "without": 28
+  },
+  {
+   "tag": "dineout",
+   "uploads": 13,
+   "median downloads with": 39,
+   "without": 28.5
+  },
+  {
+   "tag": "getfamous",
+   "uploads": 13,
+   "median downloads with": 50,
+   "without": 28.5
+  },
+  {
+   "tag": "cityliving",
+   "uploads": 13,
+   "median downloads with": 50,
+   "without": 27.5
+  },
+  {
+   "tag": "windenburg",
+   "uploads": 13,
+   "median downloads with": 25,
+   "without": 29.5
+  },
+  {
+   "tag": "restaurant",
+   "uploads": 12,
+   "median downloads with": 47.5,
+   "without": 28
+  },
+  {
+   "tag": "delsolvalley",
+   "uploads": 12,
+   "median downloads with": 52.0,
+   "without": 28
+  },
+  {
+   "tag": "homey",
+   "uploads": 12,
+   "median downloads with": 14.0,
+   "without": 31
+  },
+  {
+   "tag": "communityspace",
+   "uploads": 12,
+   "median downloads with": 36.5,
+   "without": 28
+  },
+  {
+   "tag": "bar",
+   "uploads": 11,
+   "median downloads with": 60,
+   "without": 28.5
+  },
+  {
+   "tag": "residentialrental",
+   "uploads": 10,
+   "median downloads with": 59.5,
+   "without": 28
+  },
+  {
+   "tag": "brindletonbay",
+   "uploads": 10,
+   "median downloads with": 15.0,
+   "without": 31
+  },
+  {
+   "tag": "under20k",
+   "uploads": 10,
+   "median downloads with": 20.0,
+   "without": 30
+  },
+  {
+   "tag": "starter",
+   "uploads": 10,
+   "median downloads with": 15.5,
+   "without": 31
+  },
+  {
+   "tag": "greatsoil",
+   "uploads": 10,
+   "median downloads with": 24.0,
+   "without": 29
+  },
+  {
+   "tag": "jungleadventure",
+   "uploads": 9,
+   "median downloads with": 29,
+   "without": 29.5
+  },
+  {
+   "tag": "basegame",
+   "uploads": 9,
+   "median downloads with": 75,
+   "without": 27.5
+  },
+  {
+   "tag": "cottage",
+   "uploads": 9,
+   "median downloads with": 51,
+   "without": 29.0
+  }
+ ],
+ "growth": {
+  "from": "2026-10-11",
+  "to": "2026-10-14",
+  "downloads gained": 20,
+  "favourites gained": 1,
+  "top": [
+   {
+    "title": "Crow's Chronicles",
+    "world": "Ravenwood",
+    "downloads gained": 6,
+    "favourites gained": 0
+   },
+   {
+    "title": "The Rouge Note",
+    "world": "Nordhaven",
+    "downloads gained": 3,
+    "favourites gained": 0
+   },
+   {
+    "title": "Gibbi Rec Center",
+    "world": "Gibbi Point",
+    "downloads gained": 2,
+    "favourites gained": 0
+   },
+   {
+    "title": "Anchorpoint Rec Center",
+    "world": "San Sequoia",
+    "downloads gained": 2,
+    "favourites gained": 0
+   },
+   {
+    "title": "The Futures Past",
+    "world": "Oasis Springs",
+    "downloads gained": 2,
+    "favourites gained": 0
+   },
+   {
+    "title": "Courtyard Lane Playground",
+    "world": "Willow Creek",
+    "downloads gained": 1,
+    "favourites gained": 0
+   },
+   {
+    "title": "Old Torget Houses",
+    "world": "Nordhaven",
+    "downloads gained": 1,
+    "favourites gained": 0
+   },
+   {
+    "title": "Copperdale Library",
+    "world": "Copperdale",
+    "downloads gained": 1,
+    "favourites gained": 0
+   },
+   {
+    "title": "Optimist's Outlook",
+    "world": "Newcrest",
+    "downloads gained": 1,
+    "favourites gained": 0
+   },
+   {
+    "title": "Izakaya Hanamigawa Koen",
+    "world": "Mt. Komorebi",
+    "downloads gained": 1,
+    "favourites gained": 0
+   },
+   {
+    "title": "Oasis Springs Library",
+    "world": "Oasis Springs",
+    "downloads gained": 1,
+    "favourites gained": 0
+   },
+   {
+    "title": "Big Sky Reach",
+    "world": "Chestnut Ridge",
+    "downloads gained": 0,
+    "favourites gained": 1
+   }
+  ]
+ },
+ "comments": {
+  "total": 50,
+  "uploads with comments": 26,
+  "by upload": [
+   {
+    "title": "Bubble World",
+    "n": 8
+   },
+   {
+    "title": "Lakeside Retreat",
+    "n": 4
+   },
+   {
+    "title": "Upland Trailer Park",
+    "n": 3
+   },
+   {
+    "title": "The Futures Past",
+    "n": 3
+   },
+   {
+    "title": "Strike Out!",
+    "n": 3
+   },
+   {
+    "title": "Newcrest Community Space",
+    "n": 3
+   },
+   {
+    "title": "Laurel Library",
+    "n": 2
+   },
+   {
+    "title": "Finchwick Village Hall",
+    "n": 2
+   },
+   {
+    "title": "Cottage Am See",
+    "n": 2
+   },
+   {
+    "title": "Oasis Springs Library",
+    "n": 2
+   }
+  ],
+  "years": {
+   "2019": 5,
+   "2022": 9,
+   "2025": 5,
+   "2023": 3,
+   "2021": 9,
+   "2017": 5,
+   "2020": 6,
+   "2026": 3,
+   "2024": 4,
+   "2018": 1
+  }
+ },
+ "credited to others": [
+  {
+   "title": "Coorinberg Cottage",
+   "creator": "lilsimsie"
+  },
+  {
+   "title": "Skye Fitness",
+   "creator": "lilsimsie"
+  },
+  {
+   "title": "Hillside Hideaway",
+   "creator": "lilsimsie"
+  },
+  {
+   "title": "Kin-Ship [Simsie Shell]",
+   "creator": "lilsimsie"
+  },
+  {
+   "title": "Brooks Bridge [Puzzle]",
+   "creator": "lilsimsie"
+  },
+  {
+   "title": "Rockridge Springs",
+   "creator": "lilsimsie"
+  },
+  {
+   "title": "Hallow Slough (SoupShell)",
+   "creator": "lilsimsie"
+  },
+  {
+   "title": "Bubble World",
+   "creator": "lilsimsie"
+  }
+ ]
+}

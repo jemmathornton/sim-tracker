@@ -1,0 +1,68 @@
+{
+ "screenshots_in_app_not_ticked": [
+  "Willow Creek / Foundry Cove / Willow's (tick: False)",
+  "Oasis Springs / Skyward Palms / Rio Verde Retirement Home (tick: False)",
+  "Newcrest / Bridgeview / Midtown Meadows (tick: False)",
+  "Newcrest / Bridgeview / Comfy Cubby (tick: False)",
+  "Newcrest / Ridgeline Drive / Newcrest Wedding Hall (tick: False)",
+  "San Myshuno / Arts Quarter / 920 Medina Studios (tick: False)",
+  "Henford-on-Bagley / Old New Henford / 3 Olde Mill Lane (tick: False)"
+ ],
+ "name_plan_vs_gallery": [
+  "Willow Creek / Crawdad Quarter / The Llama Café: her name 'The Llama Café', upload title 'Café Llama'",
+  "Oasis Springs / Bedrock Strait / Agave Abode: her name 'Agave Abode', upload title 'Agave Above'",
+  "Oasis Springs / Parched Prospect / Vista Quarry: her name 'Vista Quarry', upload title 'Vista Quarry Villa'",
+  "Oasis Springs / Desert Bloom Park / Desert Bloom Park: her name 'Desert Bloom Park', upload title 'Desert Bloom'",
+  "Newcrest / Llama Lagoon / The Ice Pavilion: her name 'The Ice Pavilion', upload title 'The Ice Pavillion'",
+  "Newcrest / Ridgeline Drive / Cookes 'n' Cream: her name \"Cookes 'n' Cream\", upload title \"Cookies 'n' Cream\"",
+  "Magnolia Promenade / Magnolia Promenade / Llama Picturehouse: her name 'Llama Picturehouse', upload title 'The Llama Picturehouse'",
+  "Windenburg / The Crumbling Isle / Von-Windenburg Estate: her name 'Von-Windenburg Estate', upload title 'Von-Windenburg Castle'",
+  "San Myshuno / Uptown / Stargazer Lounge: her name 'Stargazer Lounge', upload title 'Stargazer'",
+  "Del Sol Valley / Mirage Park / Inner Circle: her name 'Inner Circle', upload title 'The Inner Circle'",
+  "Sulani / Mua Pel'am / Admiral's Wreckage: her name \"Admiral's Wreckage\", upload title 'Admiral’s Wreckage Garden'",
+  "Glimmerbrook / Glimmerbrook / Brooks Bridge Borough: her name 'Brooks Bridge Borough', upload title 'Brooks Bridge [Puzzle]'",
+  "Britechester / Foxbury Institute / Maritime Manor: her name 'Maritime Manor', upload title 'Foxbury Court'",
+  "Britechester / Gibbs Hill / Britechester BnB: her name 'Britechester BnB', upload title 'Britechester B&B'",
+  "Britechester / Gibbs Hill / The Old Crown: her name 'The Old Crown', upload title 'The Royal Crown'",
+  "Evergreen Harbor / Port Promise / The Old Dockyard: her name 'The Old Dockyard', upload title 'The Old Dockyard Makers'",
+  "San Sequoia / Gilbert Gardens / Parkside Place: her name 'Parkside Place', upload title 'Parkside Playground'",
+  "Tomarang / Morensong / Chee-wit Chee-waa Kanto: her name 'Chee-wit Chee-waa Kanto', upload title 'Chee-wít Chee-waa'",
+  "Gibbi Point / Wanderwood Wilds / Revive and Thrive Retreat: her name 'Revive and Thrive Retreat', upload title 'Revive and Thrive'"
+ ],
+ "no_description": [
+  "Oasis Springs / Acquisition Butte",
+  "Oasis Springs / Desert Bloom Park",
+  "Newcrest / Ridgeline Drive",
+  "Granite Falls / Campground",
+  "Magnolia Promenade / Magnolia Promenade",
+  "Magnolia Promenade / Secret Lots",
+  "Windenburg / Special Lots",
+  "Del Sol Valley / Secret Lots",
+  "StrangerVille / Secret Lots",
+  "Sulani / Ohan'ali Town",
+  "Sulani / Lani St. Taz",
+  "Glimmerbrook / Glimmerbrook",
+  "Ravenwood / Secret Lots"
+ ],
+ "type_plan_vs_gallery": [
+  "Granite Falls / Campground / Campground: plan Vacation Rental, upload Residential",
+  "Granite Falls / Campground / Green Getaway: plan Vacation Rental, upload Residential",
+  "Granite Falls / Campground / Lakeside Retreat: plan Vacation Rental, upload Residential",
+  "Selvadorada / Puerto Llamante Marketplace / Hillside Hideaway: plan Vacation Rental, upload Residential",
+  "Selvadorada / Puerto Llamante Marketplace / Selvadorada Villa: plan Vacation Rental, upload Residential",
+  "Selvadorada / Belomisia Jungle / Jungle Bungalow: plan Vacation Rental, upload Residential",
+  "StrangerVille / StrangerVille Plaza / Carpophagous Corner: plan Vacation Rental, upload Residential",
+  "Sulani / Ohan'ali Town / Lagoon of Love: plan Vacation Rental, upload Park",
+  "Glimmerbrook / The Magic Realm / The Magic Realm: plan The Magic Realm, upload Generic",
+  "Britechester / Gibbs Hill / Mossy Lane: plan University Housing, upload Residential",
+  "Britechester / Gibbs Hill / Spring Steppes: plan Residential Rental (3), upload University Housing (one of its kept versions)",
+  "Mt. Komorebi / Yukimatsu / 5-1-1 Kiyomatsu: plan Vacation Rental, upload Residential",
+  "Mt. Komorebi / Yukimatsu / 5-1-2 Kiyomatsu: plan Vacation Rental, upload Residential",
+  "Chestnut Ridge / Galloping Gulch / Big Sky Reach: plan Vacation Rental, upload Residential"
+ ],
+ "screenshots_ticked_none_in_app": [
+  "Windenburg / The Crumbling Isle / Von-Windenburg Estate",
+  "Del Sol Valley / The Pinnacles / Bailey-Moon Manor",
+  "Mt. Komorebi / Senbamachi / Izakaya Hanamigawa Koen"
+ ]
+}

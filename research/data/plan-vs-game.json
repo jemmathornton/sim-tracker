@@ -43,7 +43,7 @@
      "lot": "Crick Cabana",
      "myName": "Crick Cabana",
      "planSize": "20x15",
-     "planType": "Tiny Home Residential",
+     "planType": "Residential",
      "shared": true,
      "game": {
       "name": "Crick Cabana",
@@ -193,15 +193,14 @@
      "myName": null,
      "planSize": "30x20",
      "planType": "Residential",
-     "shared": true,
+     "shared": false,
      "game": {
       "name": "Hallow Slough",
       "size": "30x20",
       "area": "GD_GardenCommunity_01_LL",
       "id": "1544807168"
      },
-     "unitOf": null,
-     "typeInGame": "Residential"
+     "unitOf": null
     },
     {
      "neighbourhood": "Pendula View",
@@ -490,7 +489,7 @@
      "lot": "Raffia Quinta",
      "myName": "Raffia Quinta",
      "planSize": "20x15",
-     "planType": "Residential",
+     "planType": "Tiny Home Residential",
      "shared": true,
      "game": {
       "name": "Raffia Quinta",
@@ -811,14 +810,16 @@
      "myName": "Midtown Meadows",
      "planSize": "40x30",
      "planType": "Residential Rental (5)",
-     "shared": false,
+     "shared": true,
      "game": {
       "name": "Midtown Meadows",
       "size": "40x30",
       "area": "BG_Engagement_03",
       "id": "3146711046"
      },
-     "unitOf": null
+     "unitOf": null,
+     "typeInGame": "Residential Rental",
+     "typeOnGallery": "Residential Rental"
     },
     {
      "neighbourhood": "Bridgeview",
@@ -1178,7 +1179,7 @@
      "lot": "JF&S Clothiers",
      "myName": "Llama Picturehouse",
      "planSize": "20x20",
-     "planType": "Small Business",
+     "planType": "Small Business/Bar",
      "shared": true,
      "game": {
       "name": "JF&S Clothiers",
@@ -1187,8 +1188,8 @@
       "id": "1593901060"
      },
      "unitOf": null,
-     "typeInGame": "Retail",
-     "typeOnGallery": "Bar"
+     "typeInGame": "Bar",
+     "typeOnGallery": "Small Business Venue"
     },
     {
      "neighbourhood": "Magnolia Promenade",
@@ -1477,7 +1478,7 @@
      "neighbourhood": "Lykke Center / University of Windenburg",
      "lot": "Harbor Quarter Gym",
      "myName": "UoW Students Union",
-     "planSize": "30x20",
+     "planSize": "30x30",
      "planType": "Library",
      "shared": false,
      "game": {
@@ -1525,7 +1526,7 @@
      "lot": "Cottage Am See",
      "myName": "Cottage Am See",
      "planSize": "20x20",
-     "planType": "Residential",
+     "planType": "Tiny Home Residential",
      "shared": true,
      "game": {
       "name": "Cottage Am See",
@@ -1542,7 +1543,7 @@
      "lot": "Rustic Residence",
      "myName": "Rustic Residence",
      "planSize": "30x20",
-     "planType": "Residential",
+     "planType": "Tiny Home Residential",
      "shared": true,
      "game": {
       "name": "Rustic Residence",
@@ -1621,7 +1622,7 @@
      "lot": "Mid-NoWhere",
      "myName": "Mid-NoWhere",
      "planSize": "20x20",
-     "planType": "Park",
+     "planType": "Generic",
      "shared": true,
      "game": {
       "name": "Mid-Nowhere",
@@ -2411,7 +2412,7 @@
      "lot": "Belomisia Field Station",
      "myName": "Belomisia Field Station",
      "planSize": "30x20",
-     "planType": "Vacation Rental",
+     "planType": "Custom Venue",
      "shared": true,
      "game": {
       "name": "Belomisia Field Station",
@@ -2561,7 +2562,7 @@
      "lot": "Salty Paws Saloon",
      "myName": "The Bay Café",
      "planSize": "20x15",
-     "planType": "Small Business Cat Cafe",
+     "planType": "Café",
      "shared": true,
      "game": {
       "name": "Salty Paws Saloon",
@@ -2643,14 +2644,16 @@
      "myName": "Bedlington Barn",
      "planSize": "20x20",
      "planType": "Residential",
-     "shared": false,
+     "shared": true,
      "game": {
       "name": "Bedlington Boathouse",
       "size": "20x20",
       "area": "EP04_Coastal_01",
       "id": "1187053577"
      },
-     "unitOf": null
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
     },
     {
      "neighbourhood": "Cavalier Cove",
@@ -2988,7 +2991,7 @@
       "id": "1997406236"
      },
      "unitOf": null,
-     "typeInGame": "Residential",
+     "typeInGame": "Vacation Rental",
      "typeOnGallery": "Residential"
     },
     {
@@ -3225,7 +3228,7 @@
      "lot": "Lagoon Look",
      "myName": "Lagoon of Love",
      "planSize": "30x20",
-     "planType": "Wedding Venue",
+     "planType": "Vacation Rental",
      "shared": true,
      "game": {
       "name": "Lagoon Look",
@@ -3434,7 +3437,7 @@
      "lot": "Brooks Bridge Borough",
      "myName": "Brooks Bridge Borough",
      "planSize": "30x20",
-     "planType": "Residential",
+     "planType": "Haunted House Residential",
      "shared": true,
      "game": {
       "name": "Brooks Bridge Borough",
@@ -3467,7 +3470,7 @@
      "neighbourhood": "The Magic Realm",
      "lot": "The Magic Realm",
      "myName": "The Magic Realm",
-     "planSize": "40x40",
+     "planSize": "50x40",
      "planType": "The Magic Realm",
      "shared": true,
      "game": {
@@ -3681,7 +3684,7 @@
      "lot": "Mossy Lane",
      "myName": "Mossy Lane",
      "planSize": "20x15",
-     "planType": "Residential Rental (4)",
+     "planType": "University Housing",
      "shared": true,
      "game": {
       "name": "Mossy Lane",
@@ -3698,7 +3701,7 @@
      "lot": "Spring Steppes",
      "myName": "Spring Steppes",
      "planSize": "20x15",
-     "planType": "Residential Rental (4)",
+     "planType": "Residential Rental (3)",
      "shared": true,
      "game": {
       "name": "Spring Steppes",
@@ -5059,7 +5062,7 @@
      "lot": "Sequoia Cottage",
      "myName": "Sequoia Cottage",
      "planSize": "30x20",
-     "planType": "Residential Rental",
+     "planType": "Residential Rental (2)",
      "shared": false,
      "game": {
       "name": "Sequoia Cottage",
@@ -5316,7 +5319,7 @@
      "lot": "Taka Soi 15",
      "myName": "Taka Soi 15",
      "planSize": "20x20",
-     "planType": "Residential Rental",
+     "planType": "Residential Rental (2)",
      "shared": false,
      "game": {
       "name": "Taka Soi 15",

@@ -25,6 +25,8 @@ Written 13 Oct 2026. §1–§6 below are the state of the project at the moment 
 
 **Overnight 13–14 Oct (research only, nothing on the site changed):** her plan checked against the game's own files and her newest Building save (research/plan-vs-game.md), world extras read from the game's tuning: weather, festivals by neighbourhood, starting eco footprint, highlights (research/world-extras.md), rentals and apartments from her save (research/rentals-and-apartments.md), and an attempt at map squares from the game's map data, which can't place neighbourhoods (research/map-squares.md). Scripts in `tools/research/`, their output in `research/data/`. Findings that need her are in TODO.md. Two to-do notes had used save details from unshared rentals and apartments; those were taken out (her rule).
 
+**14 Oct with Jemma:** lot types, sizes, rentals and apartment rooms settled; spreadsheet brought in line with the app (backups in Downloads); world extras on the site; Packs used removed; map boxes drawn by her for every world (cards zoom to fit, slide part-way from neighbours; `mapCentred`/`mapZoom` per card). **Overnight 14–15 Oct (write-up only):** data check-up (research/data-check-up.md), Gallery deep dive (research/gallery-deep-dive.md), rental layout mock-ups (for-jemma/rental-layouts.html); one display bug fixed (escaped hearts in comments).
+
 §2 below describes the chat's generator, now in `old-chat-build/` (retired). §4: the refresh no longer needs a browser tab.
 
 ## 1. What exists today

@@ -56,7 +56,7 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
 | Nordhaven | Old Torget House | 3 | Empty |
 | Nordhaven | Lighthouse Lookout | ? (not finished, 14 Oct) | Empty |
 
-- [ ] [Jemma] Pick a rental layout. Options from 12 Oct: (1) like apartments, one card listing every unit; (2) a normal lot card with a "Rental · 6 units" badge and a short "Who lives here" box (landlord, tenants, units let/free); (3) landlord links both ways (already done for the "own" rentals); (4) flats as photo tabs where there are per-flat screenshots. Suggestion was 2 + 3 now, switch each rental to 1 once its units are decided, and 4 on Rio Verde.
+- [ ] [Jemma] Pick a rental layout. **Mock-ups of all four with her real rentals: `for-jemma/rental-layouts.html`** (opens from the folder; 15 Oct). Options from 12 Oct: (1) like apartments, one card listing every unit; (2) a normal lot card with a "Rental · 6 units" badge and a short "Who lives here" box (landlord, tenants, units let/free); (3) landlord links both ways (already done for the "own" rentals); (4) flats as photo tabs where there are per-flat screenshots. Suggestion was 2 + 3 now, switch each rental to 1 once its units are decided, and 4 on Rio Verde.
 - [ ] [Jemma] Rio Verde flat tabs (option 4): she said "later, with the rentals"
 - [ ] [Jemma] Decide each rental's households unit by unit, and landlords for the 17 rentals without one
 - [ ] [Jemma] A "Rental units" tab in World Plans (World · Rental · Unit · Beds · Baths · Household · Landlord)? She was "not sure yet, discuss more"
@@ -118,6 +118,16 @@ From the overnight check of the plan against the game's own files and her save, 
 - [ ] [Jemma] Apartment sizes: the plan has "N/A"; the game gives each building's size (list in research/plan-vs-game.md). Show them?
 - Name differences with the game (Magnolia Blossom Park, Desert Bloom Park, Isle of Volpe, The Grimtooth Bar & Bunker): the plan's names read better; noted only
 
+From the data check-up, 15 Oct (research/data-check-up.md; sizes, uploads and shared ticks all agree):
+- [ ] [Jemma] Tick "Screenshots" for the 7 lots that have pictures in the app: Willow's, Rio Verde Retirement Home, Midtown Meadows, Comfy Cubby, Newcrest Wedding Hall, 920 Medina Studios, 3 Olde Mill Lane (the site already counts them)
+- [ ] [Jemma] Von-Windenburg Estate is ticked for screenshots; its 17 pictures are in the Builds folder "Von-Windenburg Castle", held back as a bonus build. Show them on the Estate's page (its Gallery card is the castle already)?
+- [ ] [Jemma] Bailey-Moon Manor and Izakaya Hanamigawa Koen are ticked for screenshots but have no Builds folder
+- [ ] [Jemma] Neighbourhood descriptions from the game for Acquisition Butte, Ridgeline Drive, Ohan'ali Town, Lani St. Taz (and the world text for Magnolia Promenade); wording in the note. Use them?
+- [ ] [Jemma] Gallery titles the site shows instead of her own names (e.g. Foxbury Court / Maritime Manor, The Royal Crown / The Old Crown, Café Llama / The Llama Café): any she'd rather show her own name for? List in the note
+- [ ] [Jemma] Mossy Lane's upload says Residential; re-upload as University Housing if wanted (her own Gallery)
+- [ ] [Jemma] From Gallery comments (research/gallery-deep-dive.md): Strike Out! asks for a waste basket in game; someone found Newcrest Community Space's court bugged
+- [x] Fixed 15 Oct: three Gallery comments showed "&lt;3" instead of "<3"
+
 ## 7. Parked until she asks
 
 - [ ] Phone layout: Stats lot names pushed off-screen by the World/Neighbourhood columns
@@ -161,6 +171,7 @@ From the research but not on the list until 13 Oct (suggestions only):
 - [ ] "New since you looked" markers on lots with new comments or favourites (13 Oct: no preference yet)
 - [ ] Timeline of builds by the month they were shared, on the home page (13 Oct: no preference yet)
 - [ ] Newest Gallery comments on the Stats page
+- [ ] "Most loved" (favourites per download) next to the most downloaded on Stats; a "Base game only" marker on lots that need no packs (base-game builds get the most downloads; research/gallery-deep-dive.md)
 - [x] World extras beyond festivals: weather line and the game's three highlights on each world page (14 Oct)
 - [ ] [Claude] A checklist for adding a new world or pack (map, colours, gridded map, lots, households); no input needed
 - [ ] Spreadsheet columns for the new fields (lot traits, beds, eco state), if the spreadsheet stays her main copy (needs her OK to change her file)

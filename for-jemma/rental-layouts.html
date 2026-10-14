@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rental Layout Options</title>
+<!-- Mock-ups of the four rental layouts from TODO §2, drawn with the site's own styles and real rentals, so Jemma can pick by
+     looking. Opens straight from the folder. Nothing here changes the site. Everything is read from ../site/. -->
+<base href="../site/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="site.css">
+<style>
+  body{display:block}
+  .app-skeleton{display:none}
+  .mock{max-width:1100px;margin:0 auto;padding:40px 24px 120px}
+  .mock h1{font:400 52px/1.05 var(--display);margin:0}
+  .mock .intro{color:var(--muted);max-width:760px;margin:14px 0 0;font-size:15px;line-height:1.6}
+  .opt{margin-top:56px;padding-top:24px;border-top:1px solid var(--line)}
+  .opt-head{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap}
+  .opt-head .no{font:400 44px/1 var(--display);color:var(--brass)}
+  .opt-head h2{font:400 34px/1.1 var(--display);margin:0}
+  .opt p.say{color:var(--muted);max-width:760px;font-size:14.5px;line-height:1.6;margin:10px 0 22px}
+  .eg{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--brass);margin-left:6px}
+  .row{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:28px 22px}
+  .row.two{grid-template-columns:repeat(auto-fill,minmax(330px,1fr))}
+  .panel{border:1px solid var(--line);border-radius:18px;background:var(--surface);padding:18px 20px}
+  .panel h3{font:400 26px/1.1 var(--display);margin:0 0 4px}
+  .panel .kick{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;font-weight:700}
+  .panel dl{display:grid;grid-template-columns:auto 1fr;gap:8px 16px;margin:14px 0 0;font-size:14px}
+  .panel dt{color:var(--muted)} .panel dd{margin:0}
+  .panel .units{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:6px}
+  .panel .units li{display:grid;grid-template-columns:120px 1fr auto;gap:10px;align-items:center;padding:7px 12px;border:1px solid var(--line);border-radius:12px;font-size:14px}
+  .panel .units small{color:var(--muted)}
+  .badge{position:absolute;left:12px;top:12px;font-size:11.5px;font-weight:800;padding:5px 10px;border-radius:99px;background:var(--brass);color:#1A1F1C}
+  .flat-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+  .flat-tabs button{all:unset;cursor:pointer;padding:7px 14px;border-radius:99px;border:1.5px solid var(--line);background:var(--surface);font-weight:700;font-size:13.5px}
+  .flat-tabs button.on{border-color:var(--brass);box-shadow:0 0 0 3px color-mix(in srgb,var(--brass) 25%,transparent)}
+  .flat-pics{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+  .flat-pics figure{margin:0}.flat-pics img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;display:block}
+  .flat-pics figcaption{font-size:12.5px;color:var(--muted);margin-top:4px}
+  .pick{margin-top:56px;padding:20px 22px;border-radius:18px;background:var(--deep);color:#F1F4F7;font-size:15px;line-height:1.6}
+  .pick b{color:var(--brass)}
+</style>
+</head>
+<body>
+<!-- the site's page code expects its own page around it; it stays hidden here -->
+<div class="app-skeleton"><div class="topbar"><button id="menuBtn" type="button"><span id="menuIco"></span></button></div><div class="scrim" id="scrim"></div>
+<aside class="side" id="side"><div class="search"><span id="searchIco"></span><input id="q" type="search"></div><nav class="nav" id="nav"></nav></aside><main id="main"><div class="wrap" id="view"></div></main></div>
+
+<div class="mock" id="mock"></div>
+
+<script src="js/icons.js"></script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script>
+// Real rentals; the units are the ones in her Building save (shared lots only). Who lives in which unit isn't decided yet,
+// so those lines are examples, marked as such.
+const find = name => Object.values(lotIndex).find(l => l.name === name || l.mine === name);
+const RENTALS = [
+  {lot: find("Rio Verde Retirement Home"), landlord: null, units: [1, 2, 3, 4, 5, 6].map(n => ({name: `Flat ${n}`, who: "Elders", rooms: n === 1 ? "" : ""})), note: "the plan says Elders live here"},
+  {lot: find("Spring Steppes"), landlord: "Elderberry", units: [{name: "1 Spring Steppes", who: "Elderberry (owners)"}, {name: "2 Spring Steppes", who: "Pleasant"}, {name: "3 Spring Steppes", who: null}]},
+  {lot: find("Manzanita Terrace"), landlord: "Robles", units: [1, 2, 3].map(n => ({name: `${n} Manzanita Terrace`, who: n === 1 ? "Robles (owners)" : null, rooms: "3 bedrooms · 3 bathrooms"}))},
+];
+const hhLink = name => { const hh = Object.values(hhIndex).find(h => h.name === name); return hh ? `<a href="#${hh.id}"><b>${esc(name)}</b></a>` : `<b>${esc(name)}</b>`; };
+const card = (r, badge) => { let h = listing(r.lot); if (badge) h = h.replace(/<span class="type">[^<]*<\/span>/, `<span class="badge">Rental · ${r.units.length} units</span>`); return h; };
+const unitsOf = r => r.units.map(u => `<li><b>${esc(u.name)}</b><span>${u.who ? `${ic("users")} ${esc(u.who)}` : `<small>Empty</small>`}</span><small>${esc(u.rooms || "")}</small></li>`).join("");
+const let_ = r => r.units.filter(u => u.who).length;
+
+let h = `<h1>Rental <em>layouts</em></h1>
+<p class="intro">Four ways the site could show a rental, drawn with the site’s own styles. The rentals, pictures and unit names are real (units from your Building save). <b>Who lives in which unit is only an example</b>, since you haven’t decided that yet. Nothing here changes the site.</p>`;
+
+h += `<section class="opt"><div class="opt-head"><span class="no">Today</span><h2>How rentals look now</h2></div>
+<p class="say">An ordinary lot card. The unit count only shows in the lot type, and the lot page names one household.</p>
+<div class="row">${RENTALS.map(r => card(r)).join("")}</div></section>`;
+
+h += `<section class="opt"><div class="opt-head"><span class="no">1</span><h2>One card per rental, every unit listed</h2></div>
+<p class="say">Like the apartment buildings in San Myshuno: one card for the whole rental, with a line per unit showing who lives there (or Empty). Good once each rental’s units are decided.<span class="eg">Example households</span></p>
+<div class="row two">${RENTALS.map(r => `<div class="listing bcard" style="--h:${r.lot.hood.color}">${card(r).match(/<div class="photo[\s\S]*?<\/div>/)[0].replace(/<span class="type">[^<]*<\/span>/, `<span class="type">Rental</span><span class="size">${r.units.length} units</span>`)}
+  <h3>${esc(r.lot.name)}</h3><ul class="units">${r.units.map(u => `<li><a href="#${r.lot.id}"><span class="unit-no">${esc(u.name.replace(/\D+/g, "") || "–")}</span><span class="unit-who">${u.who ? `${ic("users")}<b>${esc(u.who)}</b>` : `<i>Empty</i>`}</span><span class="status"></span></a></li>`).join("")}</ul>
+  <div class="meta"><span>${ic("home")}<b>${let_(r)} of ${r.units.length}</b> units let</span></div></div>`).join("")}</div></section>`;
+
+h += `<section class="opt"><div class="opt-head"><span class="no">2</span><h2>Normal card with a badge, plus “Who lives here”</h2></div>
+<p class="say">The card stays as it is, with a “Rental · 6 units” badge. On the lot page, a small box says who the landlord is, who rents, and how many units are let or free. It works even before every unit is decided.<span class="eg">Example households</span></p>
+<div class="row two">${RENTALS.map(r => `<div style="display:grid;gap:14px">${card(r, true)}
+  <div class="panel"><span class="kick">On the lot page</span><h3>Who lives here</h3><dl>
+  <dt>Landlord</dt><dd>${r.landlord ? hhLink(r.landlord) : "None yet"}</dd>
+  <dt>Tenants</dt><dd>${r.units.filter(u => u.who && !/owners/.test(u.who)).map(u => esc(u.who)).filter((x, i, a) => a.indexOf(x) === i).join(", ") || "None yet"}</dd>
+  <dt>Units</dt><dd>${r.units.length}: ${let_(r)} let, ${r.units.length - let_(r)} free</dd>
+  ${r.units.some(u => u.rooms) ? `<dt>Each unit</dt><dd>${esc(r.units.find(u => u.rooms).rooms)}</dd>` : ""}</dl></div></div>`).join("")}</div></section>`;
+
+const sp = RENTALS[1];
+h += `<section class="opt"><div class="opt-head"><span class="no">3</span><h2>Landlord linked both ways</h2></div>
+<p class="say">The rental’s page links to its landlord, and the landlord’s household page lists the rentals they let. This already works for the rentals your plan marks as “own” (e.g. Spring Steppes, Manzanita Terrace), and could go with 1 or 2.</p>
+<div class="row two"><div class="panel"><span class="kick">On ${esc(sp.lot.name)}’s page</span><h3>${esc(sp.lot.name)}</h3><dl><dt>Owned by</dt><dd>${hhLink("Elderberry")} (landlord)</dd><dt>Tenant</dt><dd>${hhLink("Pleasant")}</dd></dl></div>
+<div class="panel"><span class="kick">On the Elderberry household page</span><h3>Elderberry</h3><dl><dt>Home</dt><dd>${esc(sp.lot.name)}</dd><dt>Lets out</dt><dd><a href="#${sp.lot.id}"><b>${esc(sp.lot.name)}</b></a> · ${sp.units.length} units, ${let_(sp)} let</dd></dl></div></div></section>`;
+
+const rv = RENTALS[0].lot, flats = {};
+rv.photos.forEach(p => { const m = /flat-(\d)/.exec(p.src || p.full || p.thumb); (flats[m ? "Flat " + m[1] : "Outside and shared"] ||= []).push(p); });
+const tabs = Object.keys(flats).sort((a, b) => (a[0] === "O") - (b[0] === "O") || a.localeCompare(b));
+h += `<section class="opt"><div class="opt-head"><span class="no">4</span><h2>Flats as photo tabs</h2></div>
+<p class="say">For a rental with pictures of each flat, like ${esc(rv.name)}: tabs above the photos, one per flat, so each flat’s rooms are together. Try the tabs.</p>
+<div class="flat-tabs">${tabs.map((t, i) => `<button type="button" data-flat="${esc(t)}" class="${i === 0 ? "on" : ""}">${esc(t)}</button>`).join("")}</div><div class="flat-pics" id="flatPics"></div></section>`;
+
+h += `<div class="pick">The suggestion from 12 Oct was <b>2 and 3 now</b>, then switch each rental to <b>1</b> once its units are decided, and <b>4</b> on Rio Verde. Tell Claude which you’d like (or a mix).</div>`;
+
+document.getElementById("mock").innerHTML = h;
+lazyPics(document.getElementById("mock"));
+const showFlat = t => { document.getElementById("flatPics").innerHTML = flats[t].map(p => `<figure><img src="${p.thumb}" alt=""><figcaption>${esc((p.caption || p.label || p.thumb.split("/").pop().replace(/\.thumb\.jpg$|\.jpg$/, "").replace(/-/g, " ")))}</figcaption></figure>`).join("");
+  document.querySelectorAll(".flat-tabs button").forEach(b => b.classList.toggle("on", b.dataset.flat === t)); };
+document.addEventListener("click", e => { const b = e.target.closest("[data-flat]"); if (b) showFlat(b.dataset.flat); });
+showFlat(tabs[0]);
+document.title = "Rental Layout Options";   // the site's page code sets its own title when it starts
+</script>
+</body>
+</html>
