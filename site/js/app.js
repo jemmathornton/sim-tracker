@@ -281,7 +281,6 @@ function world(w){
   h += `<section class="hood" style="--h:${w.color}"><div class="hood-head"><span class="label">Explore</span><div><h2>Neighbourhoods</h2><p>Open a neighbourhood to see its lots, then a home to meet the household living there.</p></div><a class="count" href="#f-${w.id}">All ${s.hh} households</a></div>
     <div class="listings">${w.hoods.map(hoodCard).join("")}</div></section>`;
   h += worldAbout(w);
-  h += worldPacks(w);
   h += `<a class="stats-link" href="#stats-${w.id}"><span>${ic("grid")}Progress, lot by lot</span><span class="go">See the stats for ${esc(w.name)} ${ic("arrow")}</span></a>`;
   return h;
 }
@@ -291,16 +290,6 @@ function worldAbout(w){
   return `<section class="block" style="--h:${w.color}"><div class="block-head"><h2>Weather and <em>highlights</em></h2><span class="count">from the game</span></div>
     ${w.weather ? `<p class="home-to world-weather">${ic("weather")}<span>${esc(w.weather)}</span></p>` : ""}
     ${w.highlights ? `<div class="highlights">${w.highlights.map(x => `<div>${ic("landmark")}<b>${esc(x.name)}</b><span>${esc(x.text)}</span></div>`).join("")}</div>` : ""}</section>`;
-}
-// packs needed for the world's Gallery builds (13 Oct), most used first; the number is how many builds use each pack
-function worldPacks(w){
-  const shared = w.hoods.flatMap(h => h.lots).filter(l => l.gallery), n = {};
-  if (!shared.length) return "";
-  shared.forEach(l => (l.gallery.packs || []).forEach(p => n[p] = (n[p] || 0) + 1));
-  const ps = Object.entries(n).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
-  return `<section class="block" style="--h:${w.color}"><div class="block-head"><h2>Packs <em>used</em></h2><span class="count">by ${shared.length} ${shared.length === 1 ? "build" : "builds"} on the Gallery</span></div>
-    <p class="showing">Everything you need to download every ${esc(w.name)} build. The number is how many builds use that pack.</p>
-    <div class="packs world-packs">${ps.length ? ps.map(([p, k]) => `<span>${esc(p)}<b>${k}</b></span>`).join("") : "<span>Base game only</span>"}</div></section>`;
 }
 function hoodPage(x){
   const w = x.world, hhSet = [...new Set(x.lots.filter(l => l.hh).map(l => l.hh))], built = x.lots.filter(l => l.built === true).length;

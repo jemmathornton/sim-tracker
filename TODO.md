@@ -131,7 +131,7 @@ Newer lot types and where they could go (research/lot-types-reference.md):
 - Keep in mind for empty lots: Cemetery, Playground, Recreation Center, Karaoke Bar, Onsen, Pool, Spa, Arts Center, Beach. Newer lot traits: Clandestine, Regal Residence, Fairy Passage, On Hallowed Grounds
 
 Site ideas, quick wins (no input needed):
-- [x] Packs needed per world (13 Oct: a "Packs used" block on each world page, below the neighbourhoods, with how many builds use each pack)
+- [x] Packs needed per world (13 Oct: a "Packs used" block on each world page; removed 14 Oct, her choice: lot pages still show each build's packs)
 - [ ] One-word world status on home tiles: Not started / Started / Almost / Complete (she agrees the cut-offs)
 - [x] "Shared on the Gallery: <month year>" from the date hidden in 169 upload ids (13 Oct: "Shared" on each lot's Gallery card, e.g. Jan 2017; 124 of the 168 lots with uploads. Ids from 2023 on are random, so newer uploads show no date)
 - [x] "Data as of" footer line: spreadsheet date, last Gallery refresh, game patch (13 Oct: home page footer shows the build date and the Gallery check date)
@@ -139,7 +139,7 @@ Site ideas, quick wins (no input needed):
 - [x] Site-wide search (lots, households, Gallery titles, in-game names) (13 Oct: box at the top of the sidebar; also finds Sims, neighbourhoods and worlds)
 - [x] Jump links at the top of long world pages, one per neighbourhood (already there: each world's header lists its neighbourhoods as links, and world pages now show neighbourhood cards rather than one long list)
 
-- [ ] [Jemma] Look over the 13 Oct additions and change any wording or placement: the Packs used block (world pages), "Shared" on Gallery cards, the footer dates (home), the search box (sidebar)
+- [ ] [Jemma] Look over the 13 Oct additions and change any wording or placement: "Shared" on Gallery cards, the footer dates (home), the search box (sidebar)
 
 Site ideas, bigger (13 Oct: she chose the five marked; no preference on the others yet):
 - [ ] What's new page (dated changelog) (13 Oct: no preference yet)
