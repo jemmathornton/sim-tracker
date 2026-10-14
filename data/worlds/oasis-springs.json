@@ -35,7 +35,7 @@
     {"lot": "Granada Place", "myName": "Granada Place", "type": "Residential", "size": "30x20", "residents": "Curious *WithUpdates*", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["91JnkAJZEeuMZ399sA1LjA=="], "traits": ["Good Schools", "Sunny Aspect"]},
     {"lot": "Arid Ridge", "myName": "Lotus Ridge Spa", "type": "Spa", "size": "40x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["k9wU7gLyEe2GTnUsHjDJmA=="], "traits": ["Romantic Aura", "On Ley Line"], "challenges": ["Quake Zone"]},
     {"lot": "Sultry Springside", "myName": "Sultry Springside", "type": "Residential", "size": "30x20", "residents": "Smith", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["wPMUJgKdEeuGMnCrzml8yA=="], "traits": ["Good Schools", "Sunny Aspect"]},
-    {"lot": "Rio Verde", "myName": "Rio Verde Retirement Home", "type": "Residential Rental (6)", "size": "40x30", "residents": "Elders", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["MEKP5ok7QxmPVa2JI2GTNg==", "vt1B67ztEeuJDE1o44QF8A=="]}
+    {"lot": "Rio Verde", "myName": "Rio Verde Retirement Home", "type": "Residential Rental (6)", "size": "40x30", "residents": "Elders", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["MEKP5ok7QxmPVa2JI2GTNg==", "vt1B67ztEeuJDE1o44QF8A=="], "traits": ["Sunny Aspect", "Homey"], "challenges": ["Quake Zone"]}
    ]
   },
   {

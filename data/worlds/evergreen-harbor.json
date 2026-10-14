@@ -11,9 +11,9 @@
    "desc": "The quaint suburbs near the historic quarry is a sweet destination for any evergreen enthusiast.",
    "lots": [
     {"lot": "Miner Mansion", "myName": "Miner Mansion", "type": "Residential", "size": "30x20", "residents": "Harris", "built": false, "shared": false, "screenshots": false, "simsMade": false},
-    {"lot": "Rockridge Springs", "myName": "Rockridge Springs", "type": "Residential Rental (3)", "size": "30x20", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["7qor1/qySJOuKuOZ5Tq/Tg=="]},
+    {"lot": "Rockridge Springs", "myName": "Rockridge Springs", "type": "Residential Rental (3)", "size": "30x20", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["7qor1/qySJOuKuOZ5Tq/Tg=="], "traits": ["Good Schools", "Sunny Aspect"]},
     {"lot": "Stonestreet Apartments #3", "myName": "Stonestreet Apartments #3", "type": "Apartment", "size": "N/A", "residents": "Knox Greenburg", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["jfISOaR8EeuMrecawTB/JA=="], "beds": 2, "baths": 1, "traits": ["Eco Lot", "Good Schools"], "challenges": ["Reduce and Recycle"]},
-    {"lot": "Stonestreet Apartments #4", "myName": "Stonestreet Apartments #4", "type": "Apartment", "size": "N/A", "residents": "Sterling Rico", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["mVpx+qSLEeuE+/wg9JDtjA=="], "beds": 1, "traits": ["Eco Lot", "Fast Internet"], "challenges": ["Reduce and Recycle"]},
+    {"lot": "Stonestreet Apartments #4", "myName": "Stonestreet Apartments #4", "type": "Apartment", "size": "N/A", "residents": "Sterling Rico", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["mVpx+qSLEeuE+/wg9JDtjA=="], "beds": 1, "traits": ["Eco Lot", "Fast Internet"], "challenges": ["Reduce and Recycle"], "baths": 1},
     {"lot": "The Quarry Building", "myName": "The Quarry Building", "type": "Community Space", "size": "40x30", "residents": "N/A", "built": true, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ],
    "ecoStart": "Green"
@@ -26,7 +26,7 @@
     {"lot": "Canal Corner", "myName": "Canal Corner", "type": "Small Business", "size": "20x15", "residents": "Tinker", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Sprucewood Square", "myName": "Sprucewood Square", "type": "Community Space", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Pinecrest Apartments #402", "myName": "Pinecrest Apartments #402", "type": "Apartment", "size": "N/A", "residents": "Eco Roomies", "built": true, "shared": false, "screenshots": false, "simsMade": false},
-    {"lot": "Pinecrest Apartments #404", "myName": "Pinecrest Apartments #404", "type": "Apartment", "size": "N/A", "residents": "2 Bed", "built": true, "shared": true, "screenshots": false, "simsMade": false, "displayName": "Pinecrest Apartments #404", "gallery": ["rZY+UsMqEeuDL+WcoywPdA=="], "beds": 2}
+    {"lot": "Pinecrest Apartments #404", "myName": "Pinecrest Apartments #404", "type": "Apartment", "size": "N/A", "residents": "2 Bed", "built": true, "shared": true, "screenshots": false, "simsMade": false, "displayName": "Pinecrest Apartments #404", "gallery": ["rZY+UsMqEeuDL+WcoywPdA=="], "beds": 2, "baths": 1}
    ]
   },
   {

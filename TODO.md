@@ -24,8 +24,8 @@ Her rule: **one upload per lot, the latest**. Exceptions are versions she keeps 
 
 - [x] Identical copies, latest kept: Café Llama, Sandtrap Flat, De Costadas, Oak Alcove, Strike Out!, Caldera Camp, 930 Medina Studios, Brindleton Boathouse (both Boathouse uploads are this build), Asphalt Abodes (the copy with 4 favourites; she removed the other from the Gallery)
 - [x] Her choices: Olde Platz Inn restaurant; Nookstone, Granada Place 3 bedrooms; Comfy Cubby, Palomino Junction 2 bedrooms; Raffia Quinta tiny home with 2 beds (2023); Rindle Rose (not The Treehouse); Sorority Apartment (not 2B Jasmine Suites); Inner Circle without its third copy
-- [ ] [Jemma] Hallow Slough: none of its four uploads (Mint Family Home, Mint Starter, Hallow Slough, Hallow Slough (SoupShell)) is for it, so it has no Gallery upload now but is still marked shared. Is its build on the Gallery under another name, or should it be marked not shared?
-- [ ] [Jemma] Midtown Meadows: compare its two uploads (link removed for now)
+- [x] Hallow Slough: not shared yet (14 Oct); none of its four uploads is for it
+- [x] Midtown Meadows: uses her new rental upload (14 Oct), now built and shared; the two older uploads stay off the site
 
 Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
 
@@ -45,33 +45,30 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
 | StrangerVille | Slip 42 | 2 | Empty |
 | Britechester | Spring Steppes | 3 | Elderberry own it, Pleasant live there too (14 Oct) |
 | Evergreen Harbor | Rockridge Springs | 3 | Empty |
-| Evergreen Harbor | Abandoned Views | ? | Henley |
+| Evergreen Harbor | Abandoned Views | ? (not finished, 14 Oct) | Henley |
 | Henford-on-Bagley | 3 Cobblebottom Street | 2 | Moody & McMillan (own, live there) + tenant Cecilia Kang "A New Start" |
 | San Sequoia | Manzanita Terrace | ? (3 per her Gallery text) | Robles own |
-| San Sequoia | Sequoia Cottage | ? | Lovejoy own |
-| Tomarang | Taka Soi 15 | ? (2 in game) | Cahyaputri (own) |
+| San Sequoia | Sequoia Cottage | 2 (14 Oct) | Lovejoy own |
+| Tomarang | Taka Soi 15 | 2 (14 Oct) | Cahyaputri (own) |
 | Tomarang | Isda Riverfront | 2 | Rochana/Caberry own |
 | Tomarang | Sungai Point | 3 | Linh-Sadya & Linh |
-| Ravenwood | Specter Row (Moppy Manor) | ? | Specters' home + tenants |
+| Ravenwood | Specter Row (Moppy Manor) | ? (not finished, 14 Oct) | Specters' home + tenants |
 | Nordhaven | Old Torget House | 3 | Empty |
-| Nordhaven | Lighthouse Lookout | ? | Empty |
+| Nordhaven | Lighthouse Lookout | ? (not finished, 14 Oct) | Empty |
 
 - [ ] [Jemma] Pick a rental layout. Options from 12 Oct: (1) like apartments, one card listing every unit; (2) a normal lot card with a "Rental · 6 units" badge and a short "Who lives here" box (landlord, tenants, units let/free); (3) landlord links both ways (already done for the "own" rentals); (4) flats as photo tabs where there are per-flat screenshots. Suggestion was 2 + 3 now, switch each rental to 1 once its units are decided, and 4 on Rio Verde.
 - [ ] [Jemma] Rio Verde flat tabs (option 4): she said "later, with the rentals"
 - [ ] [Jemma] Decide each rental's households unit by unit, and landlords for the 17 rentals without one
 - [ ] [Jemma] A "Rental units" tab in World Plans (World · Rental · Unit · Beds · Baths · Household · Landlord)? She was "not sure yet, discuss more"
 - [ ] [Jemma] How to show unit counts like "(4)"
-- [ ] [Jemma] Confirm unit counts: Taka Soi 15 = 2 (game: units 08 and 09, Cahyaputris in 09, 08 empty); Manzanita Terrace = 3 (her Gallery text, and her save). Her Building #2 save matches the plan for the shared rentals Rio Verde 6, Fern Park Flats 5, Tail's End 4, Inner Circle 4, Upland Trailer Park 4, Old Torget House 3 (research/rentals-and-apartments.md). Unshared rentals aren't read from the save (her rule)
+- [x] Unit counts confirmed 14 Oct: Taka Soi 15 = 2, Sequoia Cottage = 2, Manzanita Terrace = 3; the save matches the plan for Rio Verde 6, Fern Park Flats 5, Tail's End 4, Inner Circle 4, Upland Trailer Park 4, Old Torget House 3
+- [ ] [Jemma] Abandoned Views, Specter Row and Lighthouse Lookout: unit counts once they're finished
 - [x] Settled 14 Oct: Mossy Lane is University Housing (one home); Spring Steppes has 3 units; Rockridge Springs and Slip 42 keep their units and now have rental uploads too (Rockridge Springs' new upload wasn't on the Gallery listing yet on 14 Oct; the Sunday refresh links it)
 - [ ] [Claude] Once decided: show each rental's units on its page and neighbourhood card, a household or "Empty" per unit, bedrooms and bathrooms per unit where known
 
 ## 3. Apartments
 
-- [ ] [Jemma] Bathrooms for every apartment except 920 Medina Studios (2, from screenshots). Her save has no room counts for units she has rebuilt; the only shared one with numbers was Stonestreet Apartments #3 (1 bathroom, shown since 14 Oct). The rest still need checking in game
-- [ ] [Jemma] 1010 Alto Apartments: bedrooms unknown
-- [ ] [Jemma] 18 Culpepper House: Gallery says two bedrooms, plan says 1 Bed (site shows 2)
-- [ ] [Jemma] 920 Medina Studios: shown as 2 bedrooms (master + child room); are Child Bedroom 1 and 2 two rooms?
-- [ ] [Jemma] Confirm guessed bedrooms: 17 Culpepper 1, 19 Culpepper 2 (plan notes), 1310 21 Chic Street 1 (picture), Stonestreet Apartments #4 1 ("couple or single")
+- [x] Bedrooms and bathrooms of every shared apartment, checked in game 14 Oct (she counts only rooms used as bedrooms, not gyms, music or art rooms): 17 Culpepper 1/1, 18 Culpepper 2/1, 19 Culpepper 1/1, Fraternity and Sorority Apartments 3/1, 920 Medina 2/2, 930 Medina 4/2, 122 Hakim 2/2, 1310 21 Chic Street 1/1, 1010 Alto 3/3, Stonestreet #3 2/1, #4 1/1, Pinecrest #404 2/1
 
 ## 4. Neighbourhood map spots
 
@@ -93,7 +90,8 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
   - [ ] Copperdale dorms (Prescott and Lakeview Boarding Houses): "Dorms #1 / #2" → **University Housing** (the research says it works in any world; her SU Plateau Residence in StrangerVille already uses it), or **Residential**, or keep "Boarding House"
   - Larry's Lagoon "Foxbury Commons" is already official. Also already official: Sixam, Police Station, Hospital, Science Lab, Ancient Ruins, Island Bluff, High School, Auditorium, Custom Venue, Netherworld Department, Community Market, Backroom
 - [ ] [Jemma] Magnolia Promenade's "Secret Lots" group holds the Police Station, FutureSim Labs and Hospital (in the game they're in hidden neighbourhoods "Civic Center" and "Scientist"); keep or regroup? Some special groups have no description
-- [ ] [Jemma] Household names still unsure: Newbie? (Sporting Space) and My Sims? (2-4-3 Wakabamori). Paradise Stables (Gibbi Point) residents "To be decided"
+- [x] Brindleton Boathouse (Sporting Space) and 2-4-3 Wakabamori: empty for now (14 Oct)
+- [ ] [Jemma] Paradise Stables (Gibbi Point): residents "To be decided"
 - [ ] [Jemma] Household count consistency (lots vs households in page headers): revisit later
 - [ ] [Jemma] Bonus builds section: Robert Piggott School, Von-Windenburg Castle, Bubble World
 
@@ -165,7 +163,7 @@ From the research but not on the list until 13 Oct (suggestions only):
 - [x] **Chosen 13 Oct:** Lot traits per lot. Done for 159 of the 168 shared lots, read from her "Building #2" save (lot pages show "Lot traits" and "Lot challenges"; names are the game's own)
 - [x] 9 shared lots had a different name in the save: settled 13 Oct (shell builds keep their challenge names in the game; The Old Salt House's traits come from the older "Building" save)
 - [ ] [Jemma] Anchorpoint Works is now called "On Point" in the game. Should the site say On Point? (Its Gallery upload is still called Anchorpoint Works, which wins unless you say otherwise)
-- [ ] [Jemma] Bedlington Barn (Cavalier Cove; "Barn Conversion" in the game): built and shared yet? The spreadsheet says built, not shared, and that's what the site shows. Desert Bloom Park has no traits set in the game
+- [x] Bedlington Barn: shared 14 Oct, upload linked. (Desert Bloom Park has no lot traits set in the game)
 - [ ] [Jemma] Household basics, relationships and family tree need Sims, which aren't to come from the Building saves: which save (if any) should they come from, or will you give them?
 - [x] **Chosen 13 Oct:** Neighbourhood eco footprint and festivals/events: on the neighbourhood cards (first three) and pages (all), 14 Oct
 - [ ] [Jemma] Look over the 14 Oct world extras: the weather lines are made from the game's forecasts by simple rules (e.g. "Often cloudy, snowy winters"), so reword any; some Sulani, Ravenwood and Nordhaven event names had no on-screen name in the game and were made from its settings (Beach Bonfire, Funeral BBQ, Hobby meetups…); highlight texts are the game's own (US spelling)

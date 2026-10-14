@@ -66,11 +66,11 @@ SAVE_NAMES = {
     "Willow Creek|Magnolia Blossom Park": "Magnolia Blossom",
     # confirmed by Jemma 13 Oct: shell-challenge builds keep their challenge names in the game, and some lots were renamed
     "Windenburg|Coorinberg Cottage": "Shark Shell Challenge",
-    "Evergreen Harbor|Rockridge Springs": "Simsie Townhouse Shell",
     "Glimmerbrook|Brooks Bridge Borough": "Simsie Puzzle Shell",
     "Windenburg|Von-Windenburg Estate": "Von Castle",
     "Henford-on-Bagley|5 Cobblebottom Street": "Finchwick Library",   # her Finchwick Village Hall
     "San Sequoia|Anchorpoint Abode": "On Point",                     # her Anchorpoint Works
+    "Brindleton Bay|Bedlington Boathouse": "Barn Conversion",         # her Bedlington Barn (confirmed 14 Oct)
 }
 
 
@@ -113,18 +113,27 @@ def main():
         if not W['owned']: continue
         for h in W['neighbourhoods']:
             for l in h['lots']:
-                if l.get('shared') is not True: continue
+                if l.get('shared') is not True:   # her rule: nothing from a save on unshared lots, so traits go if a lot stops being shared
+                    if l.get('traits') or l.get('challenges'):
+                        changed.append(f"{W['name']} / {l.get('myName') or l['lot']}: not shared any more, traits removed")
+                        if apply: l.pop('traits', None); l.pop('challenges', None); touched = True
+                    continue
                 n_shared += 1
                 label = f"{W['name']} / {l.get('myName') or l['lot']}"
-                hits = first[id(l)]
+                hits, src = first[id(l)], saves[0][2]
                 for p, sname, by_world in ([] if hits else saves[1:]):    # older saves only for lots the newest doesn't have
-                    hits = find(W, l, by_world, claimed)
+                    hits, src = find(W, l, by_world, claimed), by_world
                     if hits: older.append(f"{label} (from {sname})"); break
                 if not hits: unmatched.append(label); continue
                 if len(hits) > 1: ambiguous.append(f"{label} ({len(hits)} lots in the save have that name)"); continue
                 n_found += 1
                 got = {"traits": [], "challenges": []}
-                for t in hits[0].get('lot_traits', []):
+                # a rental split into units keeps its traits on the units ("1 Spring Steppes"), not on the building's own record
+                # (apartment units share their building's id too, but each has its own traits, so only rentals look further)
+                same = [hits[0]]
+                if not hits[0].get('lot_traits') and re.search(r'rental', l.get('type') or '', re.I):
+                    same += [z for z in {id(z): z for zs in src.values() for z in zs}.values() if z is not hits[0] and z.get('lot_id') == hits[0].get('lot_id')]
+                for t in dict.fromkeys(t for z in same for t in z.get('lot_traits', [])):
                     if str(t) in traits: got["challenges" if traits[str(t)]['kind'] == 'challenge' else "traits"].append(traits[str(t)]['name'])
                 if any(got[k] != l.get(k, []) for k in got):
                     changed.append(f"{label}: {', '.join(got['traits']) or '(no traits)'}" + (f"; challenges: {', '.join(got['challenges'])}" if got['challenges'] else ""))

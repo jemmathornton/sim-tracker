@@ -3518,7 +3518,7 @@
    "packs": ["The Sims™ 4 High School Years", "The Sims™ 4 Discover University", "The Sims™ 4 Eco Lifestyle", "The Sims™ 4 Snowy Escape", "The Sims™ 4 Dream Home Decorator", "The Sims™ 4 Parenthood", "The Sims™ 4 Tiny Living", "The Sims™ 4 City Living", "The Sims™ 4 Home Chef Hustle Stuff Pack", "The Sims™ 4 Desert Luxe Kit", "The Sims™ 4 Seasons", "The Sims™ 4 Kids Room Stuff"],
    "images": ["https://athena.thesims.com/v2/images/1/0x00002131/EEAA2BD7-FAB2-4893-AE2A-E399E53ABF4E/00.jpg", "https://athena.thesims.com/v2/images/1/0x00002131/EEAA2BD7-FAB2-4893-AE2A-E399E53ABF4E/01.jpg", "https://athena.thesims.com/v2/images/1/0x00002131/EEAA2BD7-FAB2-4893-AE2A-E399E53ABF4E/02.jpg", "https://athena.thesims.com/v2/images/1/0x00002131/EEAA2BD7-FAB2-4893-AE2A-E399E53ABF4E/03.jpg"],
    "favourites": 15,
-   "downloads": 57,
+   "downloads": 58,
    "creator": "lilsimsie",
    "checked": "2026-10-14"
   },
@@ -3582,7 +3582,7 @@
    "packs": ["The Sims™ 4 City Living", "The Sims™ 4 Dine Out", "Watch Movies with Friends!", "The Sims™ 4 Vintage Glamour Stuff", "The Sims™ 4 Businesses & Hobbies Expansion Pack", "The Sims™ 4 Bowling Night Stuff", "The Sims™ 4 Perfect Patio Stuff", "The Sims™ 4 Spa Day", "The Sims™ 4 Get to Work", "The Sims™ 4 Get Together", "The Sims™ 4 Parenthood"],
    "images": ["https://athena.thesims.com/v2/images/1/0x00001cf6/DF9882E1-E217-4453-A4AB-351762AF038A/00.jpg", "https://athena.thesims.com/v2/images/1/0x00001cf6/DF9882E1-E217-4453-A4AB-351762AF038A/01.jpg", "https://athena.thesims.com/v2/images/1/0x00001cf6/DF9882E1-E217-4453-A4AB-351762AF038A/02.jpg", "https://athena.thesims.com/v2/images/1/0x00001cf6/DF9882E1-E217-4453-A4AB-351762AF038A/03.jpg"],
    "favourites": 0,
-   "downloads": 1,
+   "downloads": 2,
    "creator": "JemmaTheSimmer",
    "checked": "2026-10-14"
   },
@@ -3599,6 +3599,38 @@
    "images": ["https://athena.thesims.com/v2/images/1/0x00000de4/292B7FB4-4EA2-42AD-AF67-BCE78AB66C03/00.jpg", "https://athena.thesims.com/v2/images/1/0x00000de4/292B7FB4-4EA2-42AD-AF67-BCE78AB66C03/01.jpg", "https://athena.thesims.com/v2/images/1/0x00000de4/292B7FB4-4EA2-42AD-AF67-BCE78AB66C03/02.jpg", "https://athena.thesims.com/v2/images/1/0x00000de4/292B7FB4-4EA2-42AD-AF67-BCE78AB66C03/03.jpg"],
    "favourites": 0,
    "downloads": 1,
+   "creator": "JemmaTheSimmer",
+   "checked": "2026-10-14"
+  },
+  "98RpXiA8TIaxkspATvE/5w==": {
+   "title": "Bedlington Barn",
+   "kind": "lot",
+   "description": "Once part of the large farm nearby, this barn has now been converted into a cosy one bedroom house. Great for a couple looking to have a relaxing life alongside many animal companions! #bedlingtonboathouse #barn #conversion #barnconversion #brindletonbay ",
+   "lotType": "Residential",
+   "size": "20x20",
+   "price": 86642,
+   "beds": 1,
+   "baths": 1,
+   "packs": ["The Sims™ 4 Get Together", "Cats & Dogs", "The Sims™ 4 Jungle Adventures", "Watch Movies with Friends!", "The Sims™ 4 Nifty Knitting", "The Sims™ 4 Parenthood", "The Sims™ 4 Seasons", "The Sims™ 4 Outdoor Retreat", "The Sims™ 4 Laundry Day Stuff"],
+   "images": ["https://athena.thesims.com/v2/images/1/0x000023c6/F7C4695E-203C-4C86-B192-CA404EF13FE7/00.jpg", "https://athena.thesims.com/v2/images/1/0x000023c6/F7C4695E-203C-4C86-B192-CA404EF13FE7/01.jpg", "https://athena.thesims.com/v2/images/1/0x000023c6/F7C4695E-203C-4C86-B192-CA404EF13FE7/02.jpg", "https://athena.thesims.com/v2/images/1/0x000023c6/F7C4695E-203C-4C86-B192-CA404EF13FE7/03.jpg"],
+   "favourites": 0,
+   "downloads": 0,
+   "creator": "JemmaTheSimmer",
+   "checked": "2026-10-14"
+  },
+  "hUU2PF35R4KCXaGXOvgXJg==": {
+   "title": "Midtown Meadows",
+   "kind": "lot",
+   "description": "This modern row of terraced houses is a great place to start your life, whether you're a family with young kids or a couple with the latest gadgets, there is a house here to suit your needs. #midtownmeadows #newcrest #terrace #rowhouses #rental #residentialrental #playtested #playertested #moo ",
+   "lotType": "Residential Rental",
+   "size": "40x30",
+   "price": 393661,
+   "beds": 9,
+   "baths": 9,
+   "packs": ["The Sims™ 4 Get Famous", "The Sims™ 4 Moschino Stuff", "The Sims™ 4 City Living", "The Sims™ 4 Discover University", "The Sims™ 4 Seasons", "The Sims™ 4 Get Together", "The Sims™ 4 Parenthood", "The Sims™ 4 Spa Day", "The Sims™ 4 Get to Work", "The Sims™ 4 Kids Room Stuff", "The Sims™ 4 Toddler Stuff", "Watch Movies with Friends!", "The Sims™ 4 Vintage Glamour Stuff", "Cats & Dogs", "The Sims™ 4 Cool Kitchen Stuff", "The Sims™ 4 Fitness Stuff", "The Sims™ 4 Backyard Stuff", "The Sims™ 4 Dine Out", "The Sims™ 4 Perfect Patio Stuff"],
+   "images": ["https://athena.thesims.com/v2/images/1/0x00000bb2/8545363C-5DF9-4782-825D-A1973AF81726/00.jpg", "https://athena.thesims.com/v2/images/1/0x00000bb2/8545363C-5DF9-4782-825D-A1973AF81726/01.jpg", "https://athena.thesims.com/v2/images/1/0x00000bb2/8545363C-5DF9-4782-825D-A1973AF81726/02.jpg", "https://athena.thesims.com/v2/images/1/0x00000bb2/8545363C-5DF9-4782-825D-A1973AF81726/03.jpg", "https://athena.thesims.com/v2/images/1/0x00000bb2/8545363C-5DF9-4782-825D-A1973AF81726/04.jpg"],
+   "favourites": 0,
+   "downloads": 0,
    "creator": "JemmaTheSimmer",
    "checked": "2026-10-14"
   }
