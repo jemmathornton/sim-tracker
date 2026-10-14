@@ -74,7 +74,8 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
 
 - [x] [Claude] Gridded maps for the 24 worlds other than Willow Creek: pictures in `for-jemma/map-grids/` (each lists that world's neighbourhoods underneath), or the clickable `tools/map-squares.html` (click the spot or type the square for each neighbourhood, then Copy answers)
 - [x] [Claude] Tried suggesting squares from the game's own map data (13–14 Oct): it can't place neighbourhoods on the map pictures, so no suggestions (research/map-squares.md)
-- [ ] [Jemma] Name the square for each neighbourhood (e.g. "Newcrest: Bridgeview C4"), or paste the answers from the clickable page; Claude then adds them as `mapSpot` with `tools/set_map_spots.py` (takes either). Until then those cards show the whole map
+- [x] Done 14 Oct: she drew a box around every neighbourhood on the clickable page (Willow Creek redone too), saved as `mapSpot` + `mapBox`; each card zooms to fit its box. Checked against the plots on each map; the overlaps are only bare ground (e.g. Chestnut Ridge's L-shaped neighbourhoods). The Secret/Special Lots groups and The Magic Realm have no box, on purpose
+- If a map picture is ever replaced (e.g. by her own in-game map screenshot): line the old and new pictures up and move the boxes to match, then let her check the cards
 
 ## 5. Lot types, groups and names
 
