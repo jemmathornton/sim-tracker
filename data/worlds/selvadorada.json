@@ -25,5 +25,20 @@
     {"lot": "Belomisia Field Station", "myName": "Belomisia Field Station", "type": "Custom Venue", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["XpBSeY8IRSGZ4EaA0S8D/A=="], "traits": ["Peace and Quiet", "Sunny Aspect"]}
    ]
   }
+ ],
+ "weather": "Sunny most of the year, no snow, heat waves in summer",
+ "highlights": [
+  {
+   "name": "Explore the Jungle",
+   "text": "It's literally a jungle out there! Don't forget to bring your spider repellent and machete!"
+  },
+  {
+   "name": "Hidden Temple",
+   "text": "The more you explore, the more secret ancient rooms open up for discovery"
+  },
+  {
+   "name": "Ancient Artifacts",
+   "text": "Find, purchase, and collect ancient artifacts so you can bring a piece of the jungle home with you"
+  }
  ]
 }

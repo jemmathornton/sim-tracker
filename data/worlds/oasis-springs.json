@@ -62,7 +62,23 @@
    "lots": [
     {"lot": "Desert Bloom Park", "myName": "Desert Bloom Park", "type": "Park", "size": "50x50", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["7rH4P51KEeuKxvwg9JDtjA=="]},
     {"lot": "Forgotten Grotto", "myName": null, "type": "Forgotten Grotto", "size": "15x10", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
-   ]
+   ],
+   "ecoStart": "Green"
+  }
+ ],
+ "weather": "Sunny most of the year, heat waves in summer, mysterious weather in autumn",
+ "highlights": [
+  {
+   "name": "Brontosaurus Bend",
+   "text": "Visit your home away from home in the desert suburbs of Brontosaurus Bend"
+  },
+  {
+   "name": "Abandoned Mine",
+   "text": "The old forgotten mine near Acquisition Butte is a must-see for any explorer"
+  },
+  {
+   "name": "Mirage Canyon Lookout",
+   "text": "Visit Oasis Spring's namesake body of water while passing through Mirage Canyon"
   }
  ]
 }

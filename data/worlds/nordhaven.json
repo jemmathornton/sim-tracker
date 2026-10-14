@@ -16,7 +16,8 @@
     {"lot": "Old Torget House", "myName": null, "type": "Residential Rental (3)", "size": "20x15", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["EMetavynTOqQjkFpJaa3Yw==", "HxiiH6/xQISfiK5zXZWmKw=="]},
     {"lot": "Fisher's Horizon", "myName": "Fisherman's Wharf", "type": "Small Business Residential", "size": "30x20", "residents": "Johansson", "built": true, "shared": true, "screenshots": false, "simsMade": true, "gallery": ["eBW0HHlhR+aMEYGS2IRYfA=="], "traits": ["Home Studio"]},
     {"lot": "Comfortably Canalside", "myName": "Canalside Daycare", "type": "Small Business Residential", "size": "20x20", "residents": "?", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["4gCiLpEpQf284z6512WwEA=="], "traits": ["Child's Play", "Good Schools"]}
-   ]
+   ],
+   "festivals": ["Hobby meetups"]
   },
   {
    "name": "Iverstad",
@@ -28,7 +29,23 @@
     {"lot": "Spilled Neon", "myName": null, "type": "Small Business Residential", "size": "20x20", "residents": "Sarpong", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Inked Inlet", "myName": null, "type": "Library", "size": "20x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Lighthouse Lookout", "myName": null, "type": "Residential Rental", "size": "50x40", "residents": "Empty", "built": false, "shared": false, "screenshots": false, "simsMade": false}
-   ]
+   ],
+   "festivals": ["Hobby meetups"]
+  }
+ ],
+ "weather": "Snowy winters, plenty of rain",
+ "highlights": [
+  {
+   "name": "Old Town Charm",
+   "text": "Spend a romantic day in historic Gammelvik! Grab a hot drink from the market, walk the canals, and stop at a fishing spot to help keep them clean."
+  },
+  {
+   "name": "Practice Your Hobby",
+   "text": "Visit the market squares for daily hobby meetups, where you can learn a new skill while making new friends!"
+  },
+  {
+   "name": "Get Inked",
+   "text": "Feeling daring? Visit a tattoo studio in Iverstad to mark your skin with a good memory."
   }
  ]
 }

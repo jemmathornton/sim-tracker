@@ -37,5 +37,20 @@
     {"lot": "Big Sky Reach", "myName": "Big Sky Reach", "type": "Vacation Rental", "size": "20x15", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["W6J+tA4mQGS/Zrj6G+qdpw=="], "traits": ["Peace and Quiet", "Sunny Aspect"]}
    ]
   }
+ ],
+ "weather": "Snowy winters, heat waves in summer",
+ "highlights": [
+  {
+   "name": "Explore Dreadhorse Caverns",
+   "text": "Located in the southwestern corner of Galloping Gulch quietly nestled beneath some trees, Dreadhorse Caverns is a vast cave full of bats, bears, and giant spiders! Dance battle your way down further and further into the abyss! Solve riddles, collecting rare reward items, and find the underground land of the unicorns! How deep can you go?"
+  },
+  {
+   "name": "Go Horseback Riding",
+   "text": "The trails in Galloping Gulch offer incredible views and sweeping vistas. Take your horse out and enjoy the sights and sounds, find places to camp and light a fire, or spend the night hunting for the mysterious ghost horse that haunts the park."
+  },
+  {
+   "name": "Rare Fishing Spots",
+   "text": "Find incredible fishing spots with some of the rarest fish you'll ever catch in your life! There's no better place to cast out a line and let yourself relax and unwind from the hustle and bustle of daily life."
+  }
  ]
 }

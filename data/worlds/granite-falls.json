@@ -25,5 +25,20 @@
     {"lot": "Hermit's House", "myName": null, "type": "Hermit's Hut", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ]
   }
+ ],
+ "weather": "Snowy winters, heat waves and thunderstorms in summer",
+ "highlights": [
+  {
+   "name": "Camping and Cabins",
+   "text": "Whether you’re roughing it or glamping it, Granite Falls has a variety of sites to choose from"
+  },
+  {
+   "name": "Insect Collecting",
+   "text": "Power through your Squeamish sensibilities and discover some truly fascinating insects"
+  },
+  {
+   "name": "Granite Falls Forest",
+   "text": "Experience the true perfection of nature by exploring the lush and beautiful Granite Falls Forest"
+  }
  ]
 }

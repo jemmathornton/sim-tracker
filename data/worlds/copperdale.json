@@ -12,7 +12,8 @@
    "lots": [
     {"lot": "Copperdale High School", "myName": "Copperdale High School", "type": "High School", "size": "64x64", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Auditorium", "myName": "Auditorium", "type": "Auditorium", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
-   ]
+   ],
+   "festivals": ["Cheerleading Team Sports Day", "Chess Team Science Fair", "Computer Team Science Fair", "Football Team Sports Day"]
   },
   {
    "name": "Prescott Square",
@@ -35,6 +36,21 @@
     {"lot": "Little Falls Nook", "myName": "Little Falls Nook", "type": "Residential", "size": "20x20", "residents": "Harjo", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Hillside Haven", "myName": "Hillside Haven", "type": "Residential", "size": "30x20", "residents": "Donovan (move!)", "built": false, "shared": false, "screenshots": false, "simsMade": false}
    ]
+  }
+ ],
+ "weather": "Often cloudy, snowy winters, heat waves in summer",
+ "highlights": [
+  {
+   "name": "Pier Attractions",
+   "text": "Bring friends, family, or even a special someone, to enjoy the thrills of Plumbite Pier's waterfront fairground filled with attractions."
+  },
+  {
+   "name": "Academia",
+   "text": "Learning is always an adventure! Dive into academics or take a break from studying to cheer on the Womp Womps at a Copperdale High afterschool festival."
+  },
+  {
+   "name": "Town Centre",
+   "text": "Home to residents and bustling with teens, come enjoy the tea, trends, and tales of Prescott Square, Copperdale's historic central hub."
   }
  ]
 }

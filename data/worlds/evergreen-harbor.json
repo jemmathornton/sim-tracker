@@ -15,7 +15,8 @@
     {"lot": "Stonestreet Apartments #3", "myName": "Stonestreet Apartments #3", "type": "Apartment", "size": "N/A", "residents": "Knox Greenburg", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["jfISOaR8EeuMrecawTB/JA=="], "beds": 2, "baths": 1, "traits": ["Eco Lot", "Good Schools"], "challenges": ["Reduce and Recycle"]},
     {"lot": "Stonestreet Apartments #4", "myName": "Stonestreet Apartments #4", "type": "Apartment", "size": "N/A", "residents": "Sterling Rico", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["mVpx+qSLEeuE+/wg9JDtjA=="], "beds": 1, "traits": ["Eco Lot", "Fast Internet"], "challenges": ["Reduce and Recycle"]},
     {"lot": "The Quarry Building", "myName": "The Quarry Building", "type": "Community Space", "size": "40x30", "residents": "N/A", "built": true, "shared": false, "screenshots": false, "simsMade": "N/A"}
-   ]
+   ],
+   "ecoStart": "Green"
   },
   {
    "name": "Conifer Station",
@@ -37,10 +38,26 @@
     {"lot": "The Shipping Views", "myName": "The Old Dockyard", "type": "Community Space", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["ZQSlwRx6EeuFnhriosBzww==", "YkcpxBx6EeuFjhriosBzww==", "Zz52rhx6EeuFrhriosBzww==", "aP66fRx6EeuFtxriosBzww=="], "versions": [{"label": "Market", "upload": "Zz52rhx6EeuFrhriosBzww=="}, {"label": "Garden", "upload": "ZQSlwRx6EeuFnhriosBzww=="}, {"label": "Makers", "upload": "aP66fRx6EeuFtxriosBzww=="}, {"label": "Community space", "upload": "YkcpxBx6EeuFjhriosBzww=="}], "traits": ["Sunny Aspect", "Convivial"], "challenges": ["Reduce and Recycle", "Off-the-Grid"]},
     {"lot": "The Waterfront", "myName": "Abandoned Views", "type": "Residential Rental", "size": "40x30", "residents": "Henley", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "The Portsmouth Promenade", "myName": "The Portsmouth Promenade", "type": "Small Business", "size": "30x20", "residents": "Greenburg", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["WzZP/f/sT6inGdN6AXBE6Q=="], "traits": ["Study Spot"]}
-   ]
+   ],
+   "ecoStart": "Industrial"
   }
  ],
  "familyLinks": [
   ["Greenburg", "Knox Greenburg"]
+ ],
+ "weather": "Sunny most of the year",
+ "highlights": [
+  {
+   "name": "Port Promise",
+   "text": "This smoggy old port may make you gag, but it’s an adequate place to learn about industrialization"
+  },
+  {
+   "name": "Grims Quarry",
+   "text": "The quaint suburbs near the historic quarry is a sweet destination for any evergreen enthusiast"
+  },
+  {
+   "name": "Conifer Station",
+   "text": "This pretty area on the outskirts of the city has a historic train station to visit"
+  }
  ]
 }

@@ -42,5 +42,19 @@
     {"lot": "Giardino Del Grandioso", "myName": "Giardino Del Grandioso", "type": "Residential", "size": "64x64", "residents": "Empty", "built": false, "shared": false, "screenshots": false, "simsMade": false}
    ]
   }
+ ],
+ "highlights": [
+  {
+   "name": "Sunny Coastline",
+   "text": "Have a day in the sun surrounded by the warm community of Dambele, nothing tastes better than one of their homemade traditional soups!"
+  },
+  {
+   "name": "Emerald Sea",
+   "text": "Feeling adventurous? Get on a boat and sail around the shores of Verdemar, you might even find some buried treasures!"
+  },
+  {
+   "name": "Elite Lifestyle",
+   "text": "Relax and indulge in the refined atmosphere of Bellacorde, where life feels slower but oh so luxurious."
+  }
  ]
 }

@@ -5,5 +5,20 @@
  "colour": "#7C8B4E",
  "deep": null,
  "blurb": "",
- "neighbourhoods": []
+ "neighbourhoods": [],
+ "weather": "Snowy winters",
+ "highlights": [
+  {
+   "name": "Bohemian Lifestyle",
+   "text": "Embrace the bohemian lifestyle in picturesque landscapes, where all Sims can learn to live comfortably off the land."
+  },
+  {
+   "name": "Healing Haven",
+   "text": "Tap into natural healing and self-care through a strong local connection with Apothecary arts."
+  },
+  {
+   "name": "An Enchanting World",
+   "text": "From the forested Everdew to the Coast of Adhmor, delight and discovery await in the special landmarks, plants, and stories of this world."
+  }
+ ]
 }

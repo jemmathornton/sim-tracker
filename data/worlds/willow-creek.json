@@ -68,7 +68,8 @@
    "mapSpot": [0.375, 0.54],
    "lots": [
     {"lot": "Magnolia Blossom Park", "myName": "Magnolia Blossom Park", "type": "Park", "size": "50x50", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["Py7Ecqn9EeuLTucawTB/JA=="], "traits": ["Teen Neighborhood", "Cat Hangout", "Dog Hangout"]}
-   ]
+   ],
+   "ecoStart": "Green"
   }
  ],
  "households": {
@@ -152,5 +153,20 @@
     }
    ]
   }
- }
+ },
+ "weather": "Snowy winters, heat waves and thunderstorms in summer",
+ "highlights": [
+  {
+   "name": "Pendula View",
+   "text": "Slumber amidst sophisticated gardens and enjoy the city’s namesake willows"
+  },
+  {
+   "name": "Ferryboat",
+   "text": "Take in the sights of the old ferryboat along the Willow Creek Canal. She lights up the night!"
+  },
+  {
+   "name": "Home to Bob Pancakes",
+   "text": "Stroll around Courtyard Lane for a chance to see the legendary Bob Pancakes!"
+  }
+ ]
 }

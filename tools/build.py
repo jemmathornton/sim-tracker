@@ -163,6 +163,7 @@ def build():
              "thumb": f"maps/{ws}.thumb.jpg" if os.path.exists(os.path.join(SITE, 'maps', ws + '.thumb.jpg')) else "",
              "blurb": W.get('blurb', ''), "hoods": []}
         if W.get('glow'): w["glow"] = W['glow']
+        w.update({k: W[k] for k in ("weather", "highlights") if W.get(k)})   # from the game (tools/research/world_extras.py --apply)
         for hood in W['neighbourhoods']:
             lots = []
             if hood.get('mapSpot'): nb_pt.setdefault(ws, {})[hood['name']] = hood['mapSpot']
@@ -191,7 +192,8 @@ def build():
                              "built": l['built'], "shared": l['shared'], "sims": l['simsMade'],
                              "gallery": g, "photos": photos_for(ws, slug(l['lot']), bool(g)),
                              **{k: l[k] for k in ("traits", "challenges") if l.get(k)}})   # from her Building save (tools/lot_traits.py)
-            if owned: w["hoods"].append({"name": hood['name'], "desc": hood.get('desc', ''), "color": W['colour'], "lots": lots})
+            if owned: w["hoods"].append({"name": hood['name'], "desc": hood.get('desc', ''), "color": W['colour'], "lots": lots,
+                                         **{k: hood[k] for k in ("festivals", "ecoStart") if hood.get(k)}})
         if W.get('households'): households[n] = W['households']
         if W.get('familyLinks'): family_links[n] = W['familyLinks']
         out.append(w)

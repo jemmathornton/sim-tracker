@@ -13,7 +13,8 @@
     {"lot": "Admiral's Wreckage", "myName": "Admiral's Wreckage", "type": "Community Space", "size": "50x50", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["+PLCKxlfEeuO3QW7hdRP0w==", "AIotNBlgEeuPAwW7hdRP0w==", "+1U+KRlfEeuO4gW7hdRP0w==", "/bCtIBlfEeuO7QW7hdRP0w=="], "versions": [{"label": "Market", "upload": "/bCtIBlfEeuO7QW7hdRP0w=="}, {"label": "Garden", "upload": "+1U+KRlfEeuO4gW7hdRP0w=="}, {"label": "Makers", "upload": "AIotNBlgEeuPAwW7hdRP0w=="}, {"label": "Community space", "upload": "+PLCKxlfEeuO3QW7hdRP0w=="}], "traits": ["Eco Lot", "Great Soil"], "challenges": ["Reduce and Recycle"]},
     {"lot": "Caldera Camp", "myName": "Caldera Camp", "type": "Residential", "size": "30x20", "residents": "Mine", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["bTN95hlYEeuNKWEZzJ8AzQ=="], "traits": ["Eco Lot"], "challenges": ["Volcanic Activity", "Off-the-Grid"]},
     {"lot": "Key Point", "myName": "Key Point", "type": "To be decided", "size": "40x30", "residents": null, "built": false, "shared": false, "screenshots": false, "simsMade": false}
-   ]
+   ],
+   "festivals": ["Turtle Hatching"]
   },
   {
    "name": "Ohan'ali Town",
@@ -25,7 +26,8 @@
     {"lot": "Tangled Flat", "myName": "Ohan'ali Community Center", "type": "Library", "size": "20x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["twCTOO1NEeqKkCQfmaYcsw=="], "traits": ["Study Spot", "Child's Play", "Home Studio"]},
     {"lot": "The Sand Bar", "myName": "The Sand Bar", "type": "Bar", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["r8/jiu1NEeqKZyQfmaYcsw=="], "traits": ["Convivial", "Party Place", "Sunny Aspect"]},
     {"lot": "Ohan'ali Beach", "myName": "Ohan'ali Beach", "type": "Beach", "size": "30x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["nYH8Hu1NEeqKESQfmaYcsw=="], "traits": ["Sunny Aspect", "Dog Hangout"]}
-   ]
+   ],
+   "festivals": ["Beach Bonfire", "Family Fun Day", "Fishing Competition", "Flowers and Music", "Island Celebration", "Town BBQ", "Town Potluck"]
   },
   {
    "name": "Lani St. Taz",
@@ -37,6 +39,21 @@
     {"lot": "Sand Simoleon Beach", "myName": "Sand Simoleon Beach", "type": "Beach", "size": "40x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["o96LYe1NEeqKMCQfmaYcsw=="], "traits": ["Oceanic Paradise", "Sunny Aspect"]},
     {"lot": "Sapphire Shores", "myName": "Sapphire Shores", "type": "Residential", "size": "50x50", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["2laHTe1NEeqLICQfmaYcsw=="], "traits": ["Oceanic Paradise", "Child's Play", "Sunny Aspect"]}
    ]
+  }
+ ],
+ "weather": "Sunny most of the year, no snow, monsoons in summer and autumn",
+ "highlights": [
+  {
+   "name": "Active Volcano!",
+   "text": "Get up close and personal with Sulani’s active volcano! Or admire it safely from afar..."
+  },
+  {
+   "name": "Ocean Activities",
+   "text": "Sulani’s crisp ocean waters are your aquatic haven for Swimming, Snorkeling, or making a dolphin friend!"
+  },
+  {
+   "name": "Local Culture",
+   "text": "Meet new friends and learn about local culture at various local events in Ohan’ali Town"
   }
  ]
 }

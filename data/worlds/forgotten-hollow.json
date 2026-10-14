@@ -16,5 +16,20 @@
     {"lot": "Fledermaus Bend", "myName": null, "type": null, "size": "30x30", "residents": null, "built": false, "shared": false, "screenshots": false, "simsMade": false}
    ]
   }
+ ],
+ "weather": "Often cloudy, a chance of snow in winter, heat waves and thunderstorms in summer",
+ "highlights": [
+  {
+   "name": "Great for Night Owls!",
+   "text": "The sun rises later and sets earlier here, meaning you can enjoy more hours of darkness"
+  },
+  {
+   "name": "Local History",
+   "text": "Tour relics of founders and meet residents that have “lived” here for generations"
+  },
+  {
+   "name": "Unique Flora",
+   "text": "Rare plants like Plasmafruit and the Sixam Mosquito Trap can be only found here"
+  }
  ]
 }

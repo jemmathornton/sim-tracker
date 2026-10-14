@@ -24,5 +24,20 @@
     {"lot": "The Magic Realm", "myName": "The Magic Realm", "type": "The Magic Realm", "size": "50x40", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["PopQBuBAEeyONXVMsZWocA=="]}
    ]
   }
+ ],
+ "weather": "Snowy winters, plenty of rain",
+ "highlights": [
+  {
+   "name": "Magic Portal",
+   "text": "There are tales of a portal above the Glimmerbrook waterfall. Are you brave enough to see where it leads?"
+  },
+  {
+   "name": "Casters Alley",
+   "text": "Casters Alley within the Magic Realm is your go-to shopping spot for wands, potions, and brooms"
+  },
+  {
+   "name": "Enchantment",
+   "text": "Make this a truly magical vacation. Cauldrons are brewing and spells are a-casting here in Glimmerbrook"
+  }
  ]
 }

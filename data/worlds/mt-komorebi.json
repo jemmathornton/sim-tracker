@@ -16,7 +16,8 @@
     {"lot": "2-4-3 Wakabamori", "myName": "2-4-3 Wakabamori", "type": "Residential", "size": "20x15", "residents": "My Sims??", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["WNVbEc9zEeuIuUhsV3GtHg=="], "traits": ["Good Schools", "Peace and Quiet"]},
     {"lot": "2-5-1 Wakabamori", "myName": "2-5-1 Wakabamori", "type": "Residential", "size": "50x50", "residents": "Ito", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Hazakura Lounge", "myName": "?", "type": "Recreation Center", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
-   ]
+   ],
+   "festivals": ["Festival of Youth"]
   },
   {
    "name": "Senbamachi",
@@ -27,7 +28,8 @@
     {"lot": "6-4-1 Hanamigawa", "myName": "6-4-1 Hanamigawa", "type": "Vacation Rental", "size": "20x15", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Hanamigawa Koen", "myName": "Izakaya Hanamigawa Koen", "type": "Restaurant (/Park)", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": true, "simsMade": "N/A", "gallery": ["LZDQX/6/EeyBmFZvr3rQ2g=="], "traits": ["Convivial"]},
     {"lot": "Izakaya Ippai", "myName": "Boba Ippai", "type": "Boba & Thrift", "size": "30x20", "residents": "N/A", "built": true, "shared": false, "screenshots": false, "simsMade": "N/A"}
-   ]
+   ],
+   "festivals": ["Festival of Light"]
   },
   {
    "name": "Yukimatsu",
@@ -38,7 +40,23 @@
     {"lot": "Sutefani Onsen Bathhouse", "myName": "Sutefani Onsen Bathhouse", "type": "Onsen Bathhouse", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Kiyomatsu Point", "myName": "Kiyomatsu Point", "type": "Custom Venue", "size": "50x50", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Mt. Komorebi Peak", "myName": null, "type": "Mount Komorebi Summit", "size": "20x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
-   ]
+   ],
+   "festivals": ["Festival of Snow"]
+  }
+ ],
+ "weather": "Snowy winters, the odd thundersnowstorm",
+ "highlights": [
+  {
+   "name": "Snow Sports",
+   "text": "The mountain town of Yukimatsu is a snowy escape for skiing, snowboarding, sledding, and rock climbing"
+  },
+  {
+   "name": "Onsen Venue",
+   "text": "After a fun (or painful?) day of frolicking in the snow, relax and recover in the Onsen’s healing hot springs"
+  },
+  {
+   "name": "Mountain Climbing Excursion",
+   "text": "Plan a group Excursion and attempt to reach the summit of Mt. Komorebi"
   }
  ]
 }

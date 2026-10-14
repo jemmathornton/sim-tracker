@@ -14,7 +14,8 @@
     {"lot": "1 Cobblebottom Street", "myName": "1 Cobblebottom Street", "type": "Residential", "size": "20x15", "residents": "1 Bed", "built": true, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "3 Cobblebottom Street", "myName": "3 Cobblebottom Street", "type": "Residential Rental (2)", "size": "20x20", "residents": "Moody & McMillan", "built": true, "shared": false, "screenshots": false, "simsMade": false, "tenants": [{"name": "Cecilia Kang", "note": "A New Start"}]},
     {"lot": "5 Cobblebottom Street", "myName": "Finchwick Village Hall", "type": "Library(/Wedding Venue / Bar)", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": true, "simsMade": "N/A", "gallery": ["7nHvQXlqEeyMMC9r3fSuPw=="], "traits": ["Romantic Aura", "Cat Hangout"], "challenges": ["Wild Foxes", "Spooky"]}
-   ]
+   ],
+   "festivals": ["Finchwick Chicken Fair", "Finchwick Cow Fair", "Finchwick Garden Fair", "Finchwick Llama Fair", "Finchwick Oversized Crop Fair"]
   },
   {
    "name": "Old New Henford",
@@ -24,7 +25,8 @@
     {"lot": "3 Olde Mill Lane", "myName": "3 Olde Mill Lane", "type": "Residential", "size": "50x40", "residents": "Watson-Holmes", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["ifmJ+XofEeyNagW7hdRP0w=="], "traits": ["Homey", "Cat Hangout"], "challenges": ["Wild Foxes", "Simple Living"]},
     {"lot": "4 Olde Mill Lane", "myName": "The Olde Mill", "type": "Residential", "size": "30x20", "residents": "1/2 Bed Big", "built": true, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Olde Mill Hill", "myName": "Olde Mill Hill", "type": "Residential", "size": "64x64", "residents": "The Watsons", "built": false, "shared": false, "screenshots": false, "simsMade": false}
-   ]
+   ],
+   "ecoStart": "Green"
   },
   {
    "name": "The Bramblewood",
@@ -34,7 +36,23 @@
     {"lot": "14 Nettle Lane", "myName": "14 Nettle Lane", "type": "Residential", "size": "40x30", "residents": "Empty", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Cordelia's Secret Cottage", "myName": "Cordelia's Secret Cottage", "type": "Residential", "size": "30x20", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["9qzpljoJSjOu1Y1zWOxe+Q=="], "traits": ["Great Soil", "Homey", "Cat Hangout"], "challenges": ["Off-the-Grid", "Wild Foxes", "Simple Living"]},
     {"lot": "Isle of Volpe", "myName": "Isle of Volpe", "type": "National Park", "size": "50x40", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
-   ]
+   ],
+   "ecoStart": "Green"
+  }
+ ],
+ "weather": "Often cloudy, snowy winters",
+ "highlights": [
+  {
+   "name": "Ramble the Bramblewood",
+   "text": "Gather mushrooms, befriend wild rabbits and birds, enjoy the ruins, and stop by Sophie the Snail in these lush woods"
+  },
+  {
+   "name": "A Cozy Village",
+   "text": "The small but lively village of Finchwick is home to friendly locals and shop stalls"
+  },
+  {
+   "name": "Weekly Fair",
+   "text": "Enter the weekly fair for a chance to prove that your animal, produce, or cooking is the cream of the crop"
   }
  ]
 }

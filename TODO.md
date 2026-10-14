@@ -159,7 +159,7 @@ From the research but not on the list until 13 Oct (suggestions only):
 - [ ] "New since you looked" markers on lots with new comments or favourites (13 Oct: no preference yet)
 - [ ] Timeline of builds by the month they were shared, on the home page (13 Oct: no preference yet)
 - [ ] Newest Gallery comments on the Stats page
-- [ ] World extras beyond festivals: climate/weather and landmarks per world (data ready, research/world-extras.md)
+- [x] World extras beyond festivals: weather line and the game's three highlights on each world page (14 Oct)
 - [ ] [Claude] A checklist for adding a new world or pack (map, colours, gridded map, lots, households); no input needed
 - [ ] Spreadsheet columns for the new fields (lot traits, beds, eco state), if the spreadsheet stays her main copy (needs her OK to change her file)
 - [x] **Chosen 13 Oct:** Lot traits per lot. Done for 159 of the 168 shared lots, read from her "Building #2" save (lot pages show "Lot traits" and "Lot challenges"; names are the game's own)
@@ -167,6 +167,7 @@ From the research but not on the list until 13 Oct (suggestions only):
 - [ ] [Jemma] Anchorpoint Works is now called "On Point" in the game. Should the site say On Point? (Its Gallery upload is still called Anchorpoint Works, which wins unless you say otherwise)
 - [ ] [Jemma] Bedlington Barn (Cavalier Cove; "Barn Conversion" in the game): built and shared yet? The spreadsheet says built, not shared, and that's what the site shows. Desert Bloom Park has no traits set in the game
 - [ ] [Jemma] Household basics, relationships and family tree need Sims, which aren't to come from the Building saves: which save (if any) should they come from, or will you give them?
-- [ ] **Chosen 13 Oct:** Neighbourhood eco footprint and festivals/events per world. Data now read from the game (research/world-extras.md): festivals in 9 worlds by neighbourhood, 12 neighbourhoods that don't start Neutral. [Jemma] where and how to show them (ideas at the end of that note)
+- [x] **Chosen 13 Oct:** Neighbourhood eco footprint and festivals/events: on the neighbourhood cards (first three) and pages (all), 14 Oct
+- [ ] [Jemma] Look over the 14 Oct world extras: the weather lines are made from the game's forecasts by simple rules (e.g. "Often cloudy, snowy winters"), so reword any; some Sulani, Ravenwood and Nordhaven event names had no on-screen name in the game and were made from its settings (Beach Bonfire, Funeral BBQ, Hobby meetups…); highlight texts are the game's own (US spelling)
 
 Things to avoid (from the research): tracking every Sim in detail, values that change every session, EA pack logos as icons, anything AI-generated, percentages outside Stats.

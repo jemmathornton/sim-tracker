@@ -36,5 +36,20 @@
     {"lot": "The ██████ Lab", "myName": "The ██████ Lab", "type": "Special", "size": "64x64", "residents": "N/A", "built": "N/A", "shared": "N/A", "screenshots": "N/A", "simsMade": "N/A"}
    ]
   }
+ ],
+ "weather": "Sunny most of the year, heat waves in summer, mysterious weather in autumn",
+ "highlights": [
+  {
+   "name": "Strangerville Plaza",
+   "text": "Visit the Strangerville Information Center. This place is way more interesting than the Secret Lab"
+  },
+  {
+   "name": "Shady Acres Vista",
+   "text": "Boasting the most beautiful view Strangerville has to offer, stay at Shady Acres and you too can wonder where all this wealth comes from"
+  },
+  {
+   "name": "Interesting Locals",
+   "text": "You’d be hard pressed to find hospitality like this anywhere else. Just try not to let them get too close…"
+  }
  ]
 }

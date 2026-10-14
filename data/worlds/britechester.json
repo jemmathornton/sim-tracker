@@ -15,7 +15,8 @@
     {"lot": "Darkwing House", "myName": "The Old Clocktower", "type": "Nightclub/Retail", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["01RGHv0YEeqGaYQzBy11UQ=="], "traits": ["University Student Hang Out", "Convivial", "Romantic Aura"]},
     {"lot": "Drake Hall", "myName": "Drake Hall", "type": "University Housing", "size": "30x20", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["xwKW8hFmEeqKVku/SNc3OA=="], "traits": ["Study Spot", "Natural Light", "Sunny Aspect"]},
     {"lot": "Wyvern Hall", "myName": "Wyvern Hall", "type": "University Housing", "size": "30x20", "residents": "Best of Friends", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["yJusUxFnEeqOJ0u/SNc3OA=="], "traits": ["Party Place", "Study Spot", "Sunny Aspect"]}
-   ]
+   ],
+   "festivals": ["Britechester Game Day Party", "Creativity Celebration", "Debate Showdown", "Figure Painting"]
   },
   {
    "name": "Foxbury Institute",
@@ -25,7 +26,8 @@
     {"lot": "Maritime Manor", "myName": "Maritime Manor", "type": "Nightclub/Retail", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["tzrKYfg/EeqKp+5FdmbmdA=="], "traits": ["University Student Hang Out", "Party Place", "Romantic Aura"]},
     {"lot": "Tidal Tower", "myName": "Tidal Tower", "type": "University Housing", "size": "30x20", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["hZKnQAU9RVSEhAqGTS7yyQ=="], "traits": ["Fast Internet", "Study Spot", "Sunny Aspect"]},
     {"lot": "Briny Tower", "myName": "Briny Tower", "type": "University Housing", "size": "30x20", "residents": "Fletcher", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["dUmUl8fLSFC7Tb8ux2J66Q=="], "traits": ["Study Spot", "Party Place", "Sunny Aspect"]}
-   ]
+   ],
+   "festivals": ["Foxbury Game Day Party", "School Spirit Day", "Utili-Bot Contest"]
   },
   {
    "name": "Gibbs Hill",
@@ -36,7 +38,23 @@
     {"lot": "Pepper's Pub", "myName": "The Old Crown", "type": "Bar", "size": "20x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["RQVL6vebEeqB6gj3LsIbeA=="], "traits": ["University Student Hang Out", "Convivial"]},
     {"lot": "Mossy Lane", "myName": "Mossy Lane", "type": "University Housing", "size": "20x15", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["+1TuKO1OEeqP5iQfmaYcsw=="], "traits": ["Homey", "Cat Hangout"]},
     {"lot": "Spring Steppes", "myName": "Spring Steppes", "type": "Residential Rental (3)", "size": "20x15", "residents": "Elderberry", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["yQ7eyLWyEeuOBucawTB/JA==", "KSt/tE6iQq2vZ7znirZsAw=="], "traits": ["Homey", "Cat Hangout"], "tenants": [{"name": "Pleasant"}]}
-   ]
+   ],
+   "festivals": ["Sprite Celebration Ritual"]
+  }
+ ],
+ "weather": "Often cloudy, a chance of snow in winter",
+ "highlights": [
+  {
+   "name": "University of Britechester Campus",
+   "text": "Come tour the historic University of Britechester where a budding artist can flourish!"
+  },
+  {
+   "name": "Foxbury Institute Campus",
+   "text": "Come visit the innovative campus of Foxbury to see if a future in technology is right for you"
+  },
+  {
+   "name": "Historic Mysteries",
+   "text": "From campus ghosts to an elusive Secret Society, Britechester boasts its share of the unexplained"
   }
  ]
 }

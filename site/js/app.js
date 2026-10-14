@@ -260,11 +260,18 @@ function hoodArt(x){
   const circles = x.lots.map(l => nbTile(l).replace("<i ", `<i data-lot-link="${l.id}" aria-label="${esc(l.name)}" `).replace(/ title="[^"]*"/, ` data-name="${esc(l.name)}"`)).join("");
   return `<div class="photo nb-map" style="${bg}"><span class="nb-bubbles${n > 5 ? " many" : ""}">${circles}</span><span class="type">Neighbourhood</span></div>`;
 }
+// festivals and events held in a neighbourhood, and where its eco footprint starts (14 Oct, read from the game's own files)
+function hoodExtras(x, all){
+  const f = x.festivals || [], shown = all ? f : f.slice(0, 3), more = f.length - shown.length;
+  return (f.length ? `<p class="home-to">${ic("party")}<span>Festivals and events: ${shown.map(n => `<b>${esc(n)}</b>`).join(", ")}${more ? ` and ${more} more` : ""}</span></p>` : "")
+    + (x.ecoStart ? `<p class="home-to">${ic(x.ecoStart === "Industrial" ? "factory" : "leaf")}<span>Eco footprint starts <b>${esc(x.ecoStart)}</b></span></p>` : "");
+}
 function hoodCard(x){
   const hhSet = [...new Set(x.lots.filter(l => l.hh).map(l => l.hh))], hh = hhSet.length, built = x.lots.filter(l => l.built === true).length, made = hhSet.filter(simsMade).length;
   return `<a class="listing" href="#n-${x.id}" style="--h:${x.color}">${hoodArt(x)}
     <h3>${esc(x.name)}</h3>${x.desc ? `<p class="desc">${esc(x.desc)}</p>` : ""}
     ${hh ? `<p class="home-to">${ic("users")}<span>Home to ${hhSet.map(f => `<b>${esc(f.name)}</b>`).join(", ")}</span></p>` : `<p class="home-to">${ic("pin")}<span>Community lots only</span></p>`}
+    ${hoodExtras(x)}
     <div class="meta"><span>${ic("hammer")}<b>${built} of ${x.lots.length}</b> lots built</span>${hh ? `<span>${ic("sim")}<b>${made} of ${hh}</b> with Sims made</span>` : ""}</div></a>`;
 }
 function world(w){
@@ -273,9 +280,17 @@ function world(w){
     w.hoods.map(x => `<a href="#n-${x.id}">${esc(x.name)}</a>`).join(""));
   h += `<section class="hood" style="--h:${w.color}"><div class="hood-head"><span class="label">Explore</span><div><h2>Neighbourhoods</h2><p>Open a neighbourhood to see its lots, then a home to meet the household living there.</p></div><a class="count" href="#f-${w.id}">All ${s.hh} households</a></div>
     <div class="listings">${w.hoods.map(hoodCard).join("")}</div></section>`;
+  h += worldAbout(w);
   h += worldPacks(w);
   h += `<a class="stats-link" href="#stats-${w.id}"><span>${ic("grid")}Progress, lot by lot</span><span class="go">See the stats for ${esc(w.name)} ${ic("arrow")}</span></a>`;
   return h;
+}
+// the world's weather and the three highlights the game shows when you pick it (14 Oct, read from the game's own files)
+function worldAbout(w){
+  if (!w.weather && !w.highlights) return "";
+  return `<section class="block" style="--h:${w.color}"><div class="block-head"><h2>Weather and <em>highlights</em></h2><span class="count">from the game</span></div>
+    ${w.weather ? `<p class="home-to world-weather">${ic("weather")}<span>${esc(w.weather)}</span></p>` : ""}
+    ${w.highlights ? `<div class="highlights">${w.highlights.map(x => `<div>${ic("landmark")}<b>${esc(x.name)}</b><span>${esc(x.text)}</span></div>`).join("")}</div>` : ""}</section>`;
 }
 // packs needed for the world's Gallery builds (13 Oct), most used first; the number is how many builds use each pack
 function worldPacks(w){
@@ -293,7 +308,7 @@ function hoodPage(x){
   if (hhSet.length) figs.push([hhSet.length, hhSet.length===1?"household":"households"],[simCount(hhSet), simCount(hhSet)===1?"Sim":"Sims"]);
   let h = mapHero(w, `Neighbourhood · ${esc(w.name)}`, esc(x.name), x.desc ? esc(x.desc) : "", figs,
     w.hoods.filter(o => o !== x).map(o => `<a href="#n-${o.id}">${esc(o.name)}</a>`).join(""), true);
-  h += `<section class="hood" style="--h:${x.color}"><div class="hood-head"><span class="label">${esc(x.name)}</span><div><h2>The <em>lots</em></h2><p>Open a home to meet the household who lives there.</p><p class="dot-key"><span class="yes">${ic("hammer")}</span>Built <span class="yes">${ic("share")}</span>Shared <span class="yes">${ic("sim")}</span>Sims made <small>Faded means not yet.</small></p></div><span class="count">${built} of ${x.lots.length} built</span></div>
+  h += `<section class="hood" style="--h:${x.color}"><div class="hood-head"><span class="label">${esc(x.name)}</span><div><h2>The <em>lots</em></h2><p>Open a home to meet the household who lives there.</p>${hoodExtras(x, true) ? `<div class="hood-extras">${hoodExtras(x, true)}</div>` : ""}<p class="dot-key"><span class="yes">${ic("hammer")}</span>Built <span class="yes">${ic("share")}</span>Shared <span class="yes">${ic("sim")}</span>Sims made <small>Faded means not yet.</small></p></div><span class="count">${built} of ${x.lots.length} built</span></div>
     <div class="listings">${hoodItems(x).join("")}</div></section>`;
   return h;
 }

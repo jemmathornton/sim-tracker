@@ -63,5 +63,20 @@
     {"lot": "The Bluffs", "myName": "The Bluffs", "type": "Island Bluff", "size": "30x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ]
   }
+ ],
+ "weather": "Snowy winters",
+ "highlights": [
+  {
+   "name": "The Bluffs",
+   "text": "Visit this steamy, secluded natural pool overlooking the crystalline Lake Windenburg"
+  },
+  {
+   "name": "Von Haunt Estate",
+   "text": "The original owners of this preserved estate loved it so much, they’re still here!"
+  },
+  {
+   "name": "Olde Platz Ruins",
+   "text": "Take a leisurely stroll around the old ruins that used to circle Windenburg Castle"
+  }
  ]
 }

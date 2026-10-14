@@ -16,5 +16,20 @@
     {"lot": "The Moonwood Mill Library", "myName": "Grimtooth Bar", "type": "Bar", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ]
   }
+ ],
+ "weather": "Sunny most of the year, snowy winters, heat waves in summer, the odd thundersnowstorm",
+ "highlights": [
+  {
+   "name": "Local History",
+   "text": "This former lumber mill town may be a bit quiet, but dig a little and you're sure to surface some secrets from the past... and present!"
+  },
+  {
+   "name": "Natural Wonder",
+   "text": "Surrounded by miles of wilderness and enriched by rare fauna and flora like the Luna Fish and Moonpetal Flower, Moonwood Mill is a nature-lover's paradise."
+  },
+  {
+   "name": "Mysterious Sightings",
+   "text": "The mysterious silhouettes lurking in the wilderness' trees are enough to make any visitor's fur - erm, hair - stand on end."
+  }
  ]
 }

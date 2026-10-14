@@ -18,7 +18,8 @@
     {"lot": "2B Jasmine Suites", "myName": "Sorority Apartment", "type": "Apartment", "size": "N/A", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["/1AOQu1PEeqCUCl86hsCPw=="], "beds": 3},
     {"lot": "The Old Salt House", "myName": "The Old Salt House", "type": "Restaurant", "size": "30x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["jVD2MEWBEeeBOqP4YfS2mA=="], "traits": ["Chef's Kitchen", "Romantic Aura", "Party Place"]},
     {"lot": "Waterside Warble", "myName": "Waterside Warble", "type": "Karaoke Bar", "size": "30x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["cm8k9PS2EeeKFZymIxmfvg=="], "traits": ["Party Place", "Convivial", "Great Acoustics"]}
-   ]
+   ],
+   "festivals": ["Flea Market", "Spice Festival"]
   },
   {
    "name": "Arts Quarter",
@@ -31,7 +32,8 @@
     {"lot": "122 Hakim House", "myName": "122 Hakim House", "type": "Apartment", "size": "N/A", "residents": "2/3 Bed", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["Uf3EQP8MEeyKGRdS1XRQaQ=="], "beds": 2, "traits": ["Historical"]},
     {"lot": "FountainView Penthouse", "myName": "FountainView Penthouse", "type": "Penthouse", "size": "N/A", "residents": "Santiago Ojo", "built": true, "shared": false, "screenshots": false, "simsMade": true},
     {"lot": "Casbah Gallery", "myName": "Casbah Gallery", "type": "Arts Center", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
-   ]
+   ],
+   "festivals": ["Humor and Hijinks Festival"]
   },
   {
    "name": "Fashion District",
@@ -44,7 +46,8 @@
     {"lot": "1313 21 Chic Street", "myName": "1313 21 Chic Street", "type": "Apartment", "size": "N/A", "residents": "Empty", "built": true, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Torendi Tower Penthouse", "myName": "Torendi Tunes", "type": "Karaoke Bar", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Planet Honey Pop!", "myName": "Planet Honey Pop!", "type": "Boba & Thrift", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
-   ]
+   ],
+   "festivals": ["GeekCon", "Romance Festival"]
   },
   {
    "name": "Uptown",
@@ -64,7 +67,23 @@
    "desc": "Surrounded by both trees and the cityscape, Myshuno Meadows is a great place for a relaxed wedding or outdoor birthday party. Centred on Barnabas Skye's old Observatory, part of the area has been converted into an event space while still retaining the original telescope.",
    "lots": [
     {"lot": "Myshuno Meadows", "myName": "Myshuno Meadows", "type": "Central Park", "size": "64x64", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
-   ]
+   ],
+   "ecoStart": "Green"
+  }
+ ],
+ "weather": "Often cloudy, snowy winters",
+ "highlights": [
+  {
+   "name": "Festivals",
+   "text": "Festivals are happening daily in San Myshuno, so you’ll never be short on fun things to do!"
+  },
+  {
+   "name": "Night Life",
+   "text": "Who needs sleep? Experience the city at night and all the unique folks you may meet"
+  },
+  {
+   "name": "Myshuno Meadows",
+   "text": "Enjoy some lovely views of the city while jogging or playing ball in this Center Park"
   }
  ]
 }

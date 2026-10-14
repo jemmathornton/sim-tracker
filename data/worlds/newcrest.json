@@ -39,5 +39,20 @@
     {"lot": "Optimist's Outlook", "myName": "Optimist's Outlook", "type": "Small Business", "size": "40x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["b8CLGvj5QeOG99APW33WlQ=="]}
    ]
   }
+ ],
+ "weather": "Snowy winters, heat waves and thunderstorms in summer, plenty of rain, mysterious weather in autumn",
+ "highlights": [
+  {
+   "name": "Lots of Space!",
+   "text": "Looking for vast open space to ponder your next building project? Look no further"
+  },
+  {
+   "name": "Peace and Quiet",
+   "text": "Not everyone wants an adrenaline rush on their vacation. Find peaceful refuge here"
+  },
+  {
+   "name": "Plenty Room to Jog",
+   "text": "Newcrest is the perfect location to get in those steps that you’ve been promising yourself"
+  }
  ]
 }

@@ -23,7 +23,23 @@
     {"lot": "Rifugio dei Pirati", "myName": "Rifugio dei Pirati", "type": "?", "size": "30x20", "residents": "?", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Via Romanza", "myName": "Via Romanza", "type": "?", "size": "30x30", "residents": "?", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "La Coppia Serena", "myName": "La Coppia Serena", "type": "Residential", "size": "50x40", "residents": "? (Capp/Monty)", "built": false, "shared": false, "screenshots": false, "simsMade": false}
-   ]
+   ],
+   "ecoStart": "Green"
+  }
+ ],
+ "weather": "Sunny most of the year, no snow",
+ "highlights": [
+  {
+   "name": "Village Square",
+   "text": "Visit Porto Luminoso's various shops and market stalls. Just don't forget to try the world-famous fruit tarts!"
+  },
+  {
+   "name": "Romantic Sights",
+   "text": "Romance lofts through Tartosa's air, and there's always a new adventure to be had at one of the area's various romantic sites!"
+  },
+  {
+   "name": "Local History",
+   "text": "Word travels fast through Tartosa's Grapevine, and myths and legends about the area's history abound."
   }
  ]
 }

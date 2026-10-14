@@ -473,3 +473,11 @@ footer .as-of{flex-basis:100%}
 .nav a.hit b{font-weight:600}
 .nav a.hit small{font-weight:500;font-size:12px;line-height:1.35;color:var(--on-deep-mute)}
 .nav a.hit.on{background:rgba(255,255,255,.12)}
+/* world extras from the game (14 Oct): weather line, highlights, festivals and eco start */
+.world-weather{margin-top:16px;font-size:15px}
+.highlights{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px}
+.highlights div{display:grid;grid-template-columns:auto 1fr;gap:4px 10px;padding:14px 16px;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+.highlights svg{grid-row:span 2;margin-top:2px;color:var(--h)}
+.highlights b{font-weight:700}
+.highlights span{color:var(--muted);font-size:13.5px;line-height:1.5}
+.hood-extras{display:grid;gap:4px;margin:8px 0 6px}

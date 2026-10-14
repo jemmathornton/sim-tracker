@@ -1,9 +1,13 @@
 """World extras from the game's own tuning: weather per season, festivals and events (and where they happen),
 each neighbourhood's starting eco footprint, and each world's "tourist highlights" (landmarks).
 
-    python tools/research/world_extras.py
+    python tools/research/world_extras.py            read the game (a few minutes), write research/data/world-extras.json
+    python tools/research/world_extras.py --apply    copy what the site shows into data/worlds, then rebuild
 
-Needs research/data/plan-vs-game.json (for which plan neighbourhood each game area is). Writes research/data/world-extras.json.
+Needs research/data/plan-vs-game.json (for which plan neighbourhood each game area is).
+On the site (chosen 14 Oct): a weather line and the three highlights on each world page; festivals and a starting
+eco footprint other than Neutral on neighbourhood cards. --apply writes world `weather`, `highlights` and neighbourhood
+`festivals`, `ecoStart`; it only replaces those fields.
 """
 import json, os, re, sys, collections
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
@@ -151,6 +155,82 @@ def main():
     return out
 
 
-if __name__ == '__main__':
+# parks the plan names differently from the game's lot, so their street isn't matched through the lots
+AREA_HOOD = {"GD_GardenPark_01": ("Willow Creek", "Magnolia Blossom Park"), "SO_DesertPark_01": ("Oasis Springs", "Desert Bloom Park")}
+
+
+def weather_line(seasons):
+    """A short line about a world's weather, from the likeliest kinds per season."""
+    if not seasons: return None
+    top = {k: v[:3] for k, v in seasons.items()}; every = {x for v in seasons.values() for x in v}
+    if len(every) == 1: return next(iter(every)).capitalize() + " all year"
+    parts = []
+    first = [v[0] for v in seasons.values() if v]
+    sunny = first.count('Sunny')
+    if sunny >= 3: parts.append("sunny most of the year")
+    elif sunny <= 1 and sum(1 for x in first if x in ('Cloudy', 'Partly Cloudy')) >= 2: parts.append("often cloudy")
+    w = seasons.get('WINTER', [])
+    if 'Snow' in top.get('WINTER', []): parts.append("snowy winters")
+    elif 'Chance of Snow' in top.get('WINTER', []): parts.append("a chance of snow in winter")
+    elif not any('Snow' in x for x in every): parts.append("no snow")
+    elif not any('Snow' in x for x in w): parts.append("no snow in winter")
+    summer = top.get('SUMMER', [])
+    hot, storms = 'Heat Wave!' in summer, 'Thunderstorms' in summer
+    if hot and storms: parts.append("heat waves and thunderstorms in summer")
+    elif hot: parts.append("heat waves in summer")
+    elif storms: parts.append("thunderstorms in summer")
+    monsoon = [n for n, k in (("summer", 'SUMMER'), ("autumn", 'FALL')) if 'Monsoons' in seasons.get(k, [])]
+    if monsoon: parts.append("monsoons in " + " and ".join(monsoon))
+    if sum(1 for v in seasons.values() if v and v[0] in ('Rain', 'Chance of Rain')) >= 2: parts.append("plenty of rain")
+    if 'Mysterious Weather' in top.get('FALL', []): parts.append("mysterious weather in autumn")
+    if 'Thundersnowstorm' in every: parts.append("the odd thundersnowstorm")
+    if not parts: return None
+    line = ", ".join(parts)
+    return line[0].upper() + line[1:]
+
+
+def festivals(names):
+    """Event names for a card: one entry for a group of hobby meetups, no "X - variant" duplicates, game casing."""
+    out = []
+    for n in names:
+        if n.startswith('Hobby Meetup'): n = 'Hobby meetups'
+        n = re.sub(r'\bAnd\b', 'and', n)
+        if n in out or any(n.startswith(o + ' - ') for o in names): continue
+        out.append(n)
+    return sorted(out)
+
+
+def apply():
+    sys.path.insert(0, os.path.join(ROOT, 'tools'))
+    from common import save, world_files
+    o = load(os.path.join(ROOT, 'research', 'data', 'world-extras.json'))
+    fest = collections.defaultdict(list); eco = {}
+    for e in o['events']:
+        if e['world'] and e['neighbourhood']: fest[(e['world'], e['neighbourhood'])].append(e['name'])
+    for st in o['streets'].values():
+        wn, hood = AREA_HOOD.get(st['area'], (st['world'], st['neighbourhood']))
+        if wn and hood and st['ecoStart']: eco[(wn, hood)] = "Green" if st['ecoStart'] < 0 else "Industrial"
+    hl = {h['world']: h['items'] for h in o['highlights'] if h['world']}
+    n = collections.Counter()
+    for f in world_files():
+        W = load(f); wn = W['name']
+        line = weather_line(o['weather'].get(wn))
+        if line: W['weather'] = line; n['weather'] += 1
+        else: W.pop('weather', None)
+        if hl.get(wn): W['highlights'] = [{"name": i['heading'], "text": i['text']} for i in hl[wn]]; n['highlights'] += 1
+        for h in W['neighbourhoods']:
+            h.pop('festivals', None); h.pop('ecoStart', None)
+            if fest.get((wn, h['name'])): h['festivals'] = festivals(fest[(wn, h['name'])]); n['festivals'] += 1
+            if eco.get((wn, h['name'])): h['ecoStart'] = eco[(wn, h['name'])]; n['eco'] += 1
+        save(f, W)
+    print(dict(n))
+    import subprocess
+    r = subprocess.run([sys.executable, '-X', 'utf8', os.path.join(ROOT, 'tools', 'build.py')], stdin=subprocess.DEVNULL, capture_output=True, text=True, encoding='utf-8')
+    print((r.stdout or r.stderr).strip())
+
+
+if __name__ == '__main__' and '--apply' in sys.argv:
+    apply()
+elif __name__ == '__main__':
     o = main()
     print(len(o['weather']), 'worlds with weather,', len(o['streets']), 'streets,', len(o['events']), 'events,', len(o['highlights']), 'highlight sets')

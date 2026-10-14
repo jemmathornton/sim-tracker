@@ -26,5 +26,20 @@
     {"lot": "Sixam", "myName": "Sixam", "type": "Sixam", "size": "20x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ]
   }
+ ],
+ "weather": "Snowy winters, heat waves and thunderstorms in summer",
+ "highlights": [
+  {
+   "name": "Scout Out Your Shop Location",
+   "text": "Looking for the perfect spot to finally open your own retail business? Search no more!"
+  },
+  {
+   "name": "Outdoor Park Activities",
+   "text": "Keep the kids entertained with a small playground and a small outdoor eating area"
+  },
+  {
+   "name": "Watch the Ducks",
+   "text": "Enjoy a quiet outdoor seating area by the river where the ducks like to play"
+  }
  ]
 }

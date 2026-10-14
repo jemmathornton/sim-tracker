@@ -27,5 +27,20 @@
     {"lot": "Hothotok Shore", "myName": "Hothotok Shore", "type": "Residential", "size": "20x15", "residents": "Bun Ma", "built": false, "shared": false, "screenshots": false, "simsMade": false}
    ]
   }
+ ],
+ "weather": "No snow, monsoons in autumn, plenty of rain",
+ "highlights": [
+  {
+   "name": "Night Market",
+   "text": "Visit the famous Tomarang Night Market for some after-dark shopping and mouth-watering cuisine!"
+  },
+  {
+   "name": "Local Living",
+   "text": "Embrace community and take a minute to get to know the local neighbors. Poke for local gossip, join in a game of marbles, and enjoy the warmth of this tight knit locale."
+  },
+  {
+   "name": "Rich History",
+   "text": "Dive into the lore of the land and discover hidden secrets, historical battles, and legendary tails."
+  }
  ]
 }

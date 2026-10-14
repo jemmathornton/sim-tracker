@@ -46,5 +46,20 @@
     {"lot": "Deadgrass Discoveries", "myName": "Deadgrass Discoveries", "type": "Cemetery", "size": "30x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ]
   }
+ ],
+ "weather": "Snowy winters, thunderstorms in summer, plenty of rain",
+ "highlights": [
+  {
+   "name": "The Best Dog Walking Paths",
+   "text": "For a trip that will truly impress your pup, nothing beats Cavalier Cove’s sandy dog walking paths"
+  },
+  {
+   "name": "Lighthouse",
+   "text": "Deadgrass Isle has the most creative spot for couples looking to spice up their love life"
+  },
+  {
+   "name": "Whiskerman's Wharf",
+   "text": "Come for the sea breeze, chowder, and lobster rolls. Stay for the cuddly local kitties"
+  }
  ]
 }

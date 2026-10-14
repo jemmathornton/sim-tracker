@@ -14,7 +14,8 @@
     {"lot": "Camp Gibbi Gibbi", "myName": "Camp Gibbi Gibbi", "type": "Custom Venue", "size": "50x50", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Wanderwood Wonder", "myName": "Wanderwood Wonder", "type": "Residential", "size": "30x20", "residents": "Chavez-Ralston", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Plumbird Park", "myName": "Plumbird Park", "type": "Playground", "size": "40x40", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
-   ]
+   ],
+   "festivals": ["'Round the Fire Festival"]
   },
   {
    "name": "Jellyfish Junction",
@@ -24,7 +25,8 @@
     {"lot": "Seabreeze Scenic", "myName": "Seabreeze Scenic", "type": "Residential", "size": "40x30", "residents": "Perry", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Fletcher's Cottage", "myName": "Gibbi Point Library", "type": "Library", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["pKnwlfeXRiGGVi/QvTc7TQ=="], "traits": ["Child's Play", "Peace and Quiet", "Study Spot"]},
     {"lot": "Revive and Thrive Retreat", "myName": "Gibbi Rec Center", "type": "Rec Center", "size": "64x64", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["R7mzaO9GS5atpQCbFz9dlw=="]}
-   ]
+   ],
+   "festivals": ["Fitness Fest", "Glow and Flow Festival"]
   },
   {
    "name": "Crystal Valley",
@@ -35,7 +37,23 @@
     {"lot": "Love Highland", "myName": "Love Highland", "type": "Custom Venue", "size": "50x50", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Fearful Fish Lounge", "myName": "Thrift 'n' Fish", "type": "Boba & Thrift", "size": "20x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Miner's Manse", "myName": "Miner's Manse", "type": "Residential", "size": "30x20", "residents": "Empty", "built": false, "shared": false, "screenshots": false, "simsMade": false}
-   ]
+   ],
+   "festivals": ["Sunrise, Sunset Festival"]
+  }
+ ],
+ "weather": "Sunny most of the year, a chance of snow in winter",
+ "highlights": [
+  {
+   "name": "Natural Wonders",
+   "text": "Wend your way towards awe-inspiring natural landmarks such as Hothead Rock Geyser, the jellyfish-filled Electric Lagoon, and Underlight Bay."
+  },
+  {
+   "name": "Outdoor Activities",
+   "text": "Looking to spend a little more time taking in some fresh air, or looking to take on some new activities in general? Try your hand at archery or kayaking, or go for a little dive off the diving board at a pool. Unique festivals will have you dipping your toes into all sorts of outdoorsy endeavors."
+  },
+  {
+   "name": "Fluttery and Feathery",
+   "text": "You'll want to fly over to Gibbi Point as fast as you can once you hear that it hosts many winged delights; from its unique butterfly and moth population to the storied Peculiar Plumbird, there's a flock-o-fun to be had here."
   }
  ]
 }

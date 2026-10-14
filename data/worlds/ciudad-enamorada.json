@@ -34,5 +34,20 @@
     {"lot": "Laguna del Abrazo", "myName": null, "type": "Lounge", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ]
   }
+ ],
+ "weather": "No snow, monsoons in autumn",
+ "highlights": [
+  {
+   "name": "Revel in Romance",
+   "text": "This romantic locale is perfect for singles and those looking to rekindle their love."
+  },
+  {
+   "name": "Looking for Love",
+   "text": "Still single? No worry! Find your next flame at the Nightclub, Lounge, or Gym to burn off some pent-up energy."
+  },
+  {
+   "name": "Enchanting Locale",
+   "text": "Love is in the air thanks to the romantic vistas, charming park, and passionate Sims."
+  }
  ]
 }

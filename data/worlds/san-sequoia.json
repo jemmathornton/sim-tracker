@@ -24,7 +24,8 @@
     {"lot": "Parkside Place", "myName": "Parkside Place", "type": "Playground", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["HMOwRBrIQuedlPG5caBw8A=="], "traits": ["Child's Play", "Party Place"]},
     {"lot": "18 Celebration Way", "myName": "18 Celebration Way", "type": "Boba & Thrift", "size": "40x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Celebration Center", "myName": "Celebration Center", "type": "Wedding Venue/Cemetery", "size": "64x64", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
-   ]
+   ],
+   "ecoStart": "Green"
   },
   {
    "name": "Hopewell Hills",
@@ -34,10 +35,26 @@
     {"lot": "23 Eucalyptus Lane", "myName": "23 Eucalyptus Lane", "type": "Residential", "size": "30x20", "residents": "Lovejoy", "built": true, "shared": true, "screenshots": false, "simsMade": true, "gallery": ["1WpsEz1aTLyFuTNaFCmhLA=="], "traits": ["Bracing Breezes", "Child's Play"]},
     {"lot": "36 Bayani Place", "myName": "36 Bayani Place", "type": "Residential", "size": "30x20", "residents": "Luna-Sullivan", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Sequoia Cottage", "myName": "Sequoia Cottage", "type": "Residential Rental", "size": "30x20", "residents": "Lovejoy own", "built": false, "shared": false, "screenshots": false, "simsMade": false}
-   ]
+   ],
+   "ecoStart": "Green"
   }
  ],
  "familyLinks": [
   ["Robles", "Robles-Ruano"]
+ ],
+ "weather": "No snow",
+ "highlights": [
+  {
+   "name": "Park Paradise",
+   "text": "Stomp around at Whalebert's splash pad play area, fish and swim in a pond, or go for a walk on any one of our Gilbert Gardens' three walking paths surrounding Celebration Lake."
+  },
+  {
+   "name": "Wharf Wonders",
+   "text": "The heart of San Sequoia can be found at Anchorpoint Wharf, where the area's fishing industry history is still visible in the architecture."
+  },
+  {
+   "name": "Family Friendly",
+   "text": "Bring the whole family along to enjoy a movie at the wharf or a bit of a nosh at the Around the World in 80 Bites food cart.  There's plenty for all ages to see and explore!"
+  }
  ]
 }
