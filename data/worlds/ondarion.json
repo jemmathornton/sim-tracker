@@ -9,8 +9,8 @@
   {
    "name": "Dambele",
    "desc": "Known for its vibrant streets, communal spaces and a strong tradition of painting and crafting, Dambele is a warm and welcoming place.",
-   "mapSpot": [0.54, 0.66],
-   "mapBox": [0.41, 0.54, 0.67, 0.77],
+   "mapSpot": [0.56, 0.65],
+   "mapBox": [0.42, 0.52, 0.7, 0.77],
    "lots": [
     {"lot": "Dambele Palace", "myName": "Dambele Palace", "type": "Residential", "size": "50x50", "residents": "Darong", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Zanbira Market", "myName": "Zanbira Market", "type": "Community Market", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},

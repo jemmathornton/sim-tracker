@@ -154,7 +154,7 @@ def gallery_history(lot_of):
 # ---------- assemble ----------
 def build():
     out, stats, households = [], [], {}
-    family_links, tenants, name_fix, nb_pt, nb_box, cs_versions = {}, {}, {}, {}, {}, {}
+    family_links, tenants, name_fix, nb_pt, nb_box, nb_centred, cs_versions = {}, {}, {}, {}, {}, {}, {}
     lot_of = {}   # Gallery id -> the lot page it belongs to
     for wf in world_files():
         W = load(wf); n, ws, owned = W['name'], slug(W['name']), W['owned']
@@ -168,6 +168,7 @@ def build():
             lots = []
             if hood.get('mapSpot'): nb_pt.setdefault(ws, {})[hood['name']] = hood['mapSpot']
             if hood.get('mapBox'): nb_box.setdefault(ws, {})[hood['name']] = hood['mapBox']
+            if hood.get('mapCentred'): nb_centred.setdefault(ws, []).append(hood['name'])   # card stays centred on its box (her choice)
             for l in hood['lots']:
                 name, unsure, note = residents(l['residents'])
                 who = name or note or None
@@ -200,7 +201,7 @@ def build():
         out.append(w)
     checked = max((u['checked'] for u in uploads.values()), default=None)
     return {"worlds": out, "households": households, "stats": stats,
-            "familyLinks": family_links, "tenants": tenants, "nameFix": name_fix, "nbPt": nb_pt, "nbBox": nb_box, "csVersions": cs_versions,
+            "familyLinks": family_links, "tenants": tenants, "nameFix": name_fix, "nbPt": nb_pt, "nbBox": nb_box, "nbCentred": nb_centred, "csVersions": cs_versions,
             "galleryHistory": gallery_history(lot_of),
             "meta": {"built": date.today().isoformat(), "galleryChecked": checked, "game": game_version()}}
 

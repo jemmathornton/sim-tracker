@@ -23,8 +23,9 @@
   {
    "name": "Whispering Glen",
    "desc": "Nestled in the rolling hills of Ravenwood's countryside, Whispering Glen offers a quiet, rural locale for those hoping to take a step away from all the local hauntings and into a slow-paced lifestyle.",
-   "mapSpot": [0.65, 0.44],
-   "mapBox": [0.5, 0.36, 0.79, 0.51],
+   "mapSpot": [0.65, 0.43],
+   "mapBox": [0.51, 0.34, 0.8, 0.51],
+   "mapCentred": true,
    "lots": [
     {"lot": "Teardrop Cottage", "myName": null, "type": "Residential", "size": "30x30", "residents": "Gomes", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "The Marigold Chateau", "myName": null, "type": "Residential", "size": "50x50", "residents": "Aether", "built": false, "shared": false, "screenshots": false, "simsMade": false},
