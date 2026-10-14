@@ -27,7 +27,7 @@
     {"lot": "Bathe de Rill", "myName": "La Discotheque", "type": "Nightclub", "size": "40x30", "residents": "N/A", "built": true, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Hare Square", "myName": "UoW Hare Halls", "type": "University Housing", "size": "30x20", "residents": "Empty", "built": true, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Hare and Hedgehog", "myName": "UoW Hedgehog Halls", "type": "University Housing", "size": "30x20", "residents": "Empty", "built": true, "shared": false, "screenshots": false, "simsMade": false},
-    {"lot": "Harbor Quarter Gym", "myName": "UoW Students Union", "type": "Library", "size": "30x20", "residents": "N/A", "built": true, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "Harbor Quarter Gym", "myName": "UoW Students Union", "type": "Library", "size": "30x30", "residents": "N/A", "built": true, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Discotheque Pan Europa", "myName": "UoW Sports Center", "type": "Gym/Pool", "size": "30x20", "residents": "N/A", "built": true, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ]
   },

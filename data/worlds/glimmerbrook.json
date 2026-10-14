@@ -21,7 +21,7 @@
    "name": "The Magic Realm",
    "desc": "The Magic Realm is the source of all magic. Unfortunately, it is slowly being pulled apart by the swirling vortex surrounding it. The only thing that is keeping it together is the balance between the three houses of magic.",
    "lots": [
-    {"lot": "The Magic Realm", "myName": "The Magic Realm", "type": "The Magic Realm", "size": "40x40", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["PopQBuBAEeyONXVMsZWocA=="]}
+    {"lot": "The Magic Realm", "myName": "The Magic Realm", "type": "The Magic Realm", "size": "50x40", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["PopQBuBAEeyONXVMsZWocA=="]}
    ]
   }
  ]

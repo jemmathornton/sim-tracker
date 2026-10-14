@@ -12,7 +12,7 @@
    "lots": [
     {"lot": "Miner Mansion", "myName": "Miner Mansion", "type": "Residential", "size": "30x20", "residents": "Harris", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Rockridge Springs", "myName": "Rockridge Springs", "type": "Residential Rental (3)", "size": "30x20", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["7qor1/qySJOuKuOZ5Tq/Tg=="]},
-    {"lot": "Stonestreet Apartments #3", "myName": "Stonestreet Apartments #3", "type": "Apartment", "size": "N/A", "residents": "Knox Greenburg", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["jfISOaR8EeuMrecawTB/JA=="], "beds": 2, "traits": ["Eco Lot", "Good Schools"], "challenges": ["Reduce and Recycle"]},
+    {"lot": "Stonestreet Apartments #3", "myName": "Stonestreet Apartments #3", "type": "Apartment", "size": "N/A", "residents": "Knox Greenburg", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["jfISOaR8EeuMrecawTB/JA=="], "beds": 2, "baths": 1, "traits": ["Eco Lot", "Good Schools"], "challenges": ["Reduce and Recycle"]},
     {"lot": "Stonestreet Apartments #4", "myName": "Stonestreet Apartments #4", "type": "Apartment", "size": "N/A", "residents": "Sterling Rico", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["mVpx+qSLEeuE+/wg9JDtjA=="], "beds": 1, "traits": ["Eco Lot", "Fast Internet"], "challenges": ["Reduce and Recycle"]},
     {"lot": "The Quarry Building", "myName": "The Quarry Building", "type": "Community Space", "size": "40x30", "residents": "N/A", "built": true, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ]

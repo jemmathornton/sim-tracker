@@ -68,7 +68,7 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
 
 ## 3. Apartments
 
-- [ ] [Jemma] Bathrooms for every apartment except 920 Medina Studios (2, from screenshots). Her save has no room counts for units she has rebuilt; the only shared one with numbers is Stonestreet Apartments #3: 2 bedrooms, **1 bathroom** (show it?). The rest still need checking in game
+- [ ] [Jemma] Bathrooms for every apartment except 920 Medina Studios (2, from screenshots). Her save has no room counts for units she has rebuilt; the only shared one with numbers was Stonestreet Apartments #3 (1 bathroom, shown since 14 Oct). The rest still need checking in game
 - [ ] [Jemma] 1010 Alto Apartments: bedrooms unknown
 - [ ] [Jemma] 18 Culpepper House: Gallery says two bedrooms, plan says 1 Bed (site shows 2)
 - [ ] [Jemma] 920 Medina Studios: shown as 2 bedrooms (master + child room); are Child Bedroom 1 and 2 two rooms?
@@ -87,7 +87,7 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
 - [ ] [Jemma] 14 lot types are really place names. Suggested changes (tick the ones to make):
   - [ ] Darby's Den: "UoB Commons" → **UBrite Commons** (type on her Gallery upload)
   - [ ] Boba & Thrift (Planet Honey Pop!, Boba Ippai, Town Square Stores, 18 Celebration Way, Chee-wit Chee-waa Kanto, Thrift 'n' Fish) → **Thrift and Bubble Tea Store** (official name, as on two of her uploads)
-  - [ ] Myshuno Meadows: "Central Park" → **Center Park** (the game's own lot type for it, checked 14 Oct; plain Park is a different type)
+  - [x] Myshuno Meadows: stays "Central Park" (14 Oct, her choice; the game calls the type "Center Park")
   - [ ] Belomisia Trailhead: "Campground" → **National Park**
   - [ ] The Magic Realm: keep as a special lot, or **Generic** (her upload's type)?
   - [ ] Plumbob Pictures (secret lot): the game calls it the **Acting Studio** (confirmed in the game's own text, 13 Oct)
@@ -104,8 +104,8 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
 - [x] In-game spellings fixed 13 Oct, each checked against the game's own text: Piccola Luce, The Summer Home, Avenida de la Eternidad, Plaza Mariposa, Creek Side Corner, Champion's Grove, 1313 21 Chic Street (her name column had the same typo on three; fixed too). Her spreadsheet still has the old spellings; the import reads them as the new ones (`data/spreadsheet/renamed.json`)
 - [x] Club Eternity (Ravenwood): the game's own files say 30×30, as in the plan (14 Oct); nothing to change
 - [ ] [Jemma] Innisgreen (Enchanted by Nature, not owned): the research lists its 14 lots (research/missing-lots-check.md); the game's own files confirm all 14, sizes included (14 Oct). Your other not-owned worlds have their lots in the plan and on Stats; add Innisgreen's too, as not owned?
-- [ ] [Jemma] Harbor Quarter Gym (her UoW Students Union, Windenburg): the game's own files say 30×30 (EA's original size, 14 Oct); the chat decided on 12 Oct it stays 30×20. Keep 30×20 (e.g. if you resized it), or change to 30×30?
-- [ ] [Jemma] The Magic Realm: the game's own files say **50×40**; the plan has 40×40. Change it?
+- [x] Harbor Quarter Gym (her UoW Students Union): now 30×30, the game's size (14 Oct, her choice)
+- [x] The Magic Realm: now 50×40, the game's size (14 Oct, her choice)
 - [ ] [Jemma] Selvadorada's Omiscan Temple (50×50) and Omiscan Royal Baths (40×30) are real lots in the game files, and Mt. Komorebi's two hidden lots are Mt. Komorebi Base Camp and The Croft Icefall (20×15 each). Add any of them to the plan?
 - [x] Checked in the game's own text (13 Oct): "Plateau Place" (her spelling) is right, not "Plateau Palace"
 - [x] Batuu: Journey to Batuu isn't installed, so nothing to add
