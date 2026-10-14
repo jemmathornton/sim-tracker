@@ -9,8 +9,8 @@
   {
    "name": "New Appaloosa",
    "desc": "The historic New Appaloosa serves as a hub for Horse Riders, Ranchers, and Nectar Makers. Whether competing at the Hay Now! Equestrian Center, enjoying a night out at the dance hall, or savouring Nectar with good friends, this old watering hole has something for everyone.",
-   "mapSpot": [0.52, 0.47],
-   "mapBox": [0.36, 0.33, 0.68, 0.62],
+   "mapSpot": [0.52, 0.46],
+   "mapBox": [0.37, 0.33, 0.68, 0.6],
    "lots": [
     {"lot": "Champion's Grove", "myName": "Champion's Grove", "type": "Residential", "size": "30x20", "residents": "Sienna & Flapjack", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "The Cozy Corner House", "myName": null, "type": "Library", "size": "20x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
@@ -22,8 +22,8 @@
   {
    "name": "Riders' Glen",
    "desc": "Watched over by the Trusty Steed Rock, known as \"Ol' Biscuit\" to the locals, Riders' Glen has been home to generations of Ranchers and Nectar Makers.",
-   "mapSpot": [0.68, 0.61],
-   "mapBox": [0.5, 0.43, 0.86, 0.79],
+   "mapSpot": [0.68, 0.63],
+   "mapBox": [0.51, 0.49, 0.86, 0.76],
    "lots": [
     {"lot": "Biscuit's Bastion", "myName": "Biscuit's Bastion", "type": "Residential", "size": "40x30", "residents": "The Grove Family", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Sweet Nectar Glade", "myName": "Sweet Nectar Glade", "type": "Bar", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
