@@ -5,7 +5,40 @@
  "colour": "#7C8B4E",
  "deep": null,
  "blurb": "",
- "neighbourhoods": [],
+ "neighbourhoods": [
+  {
+   "name": "Coast of Adhmor",
+   "desc": "",
+   "lots": [
+    {"lot": "8 Gnome Coast Street", "myName": null, "type": null, "size": "30x20", "residents": null, "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "1 Mari Shores Road", "myName": null, "type": null, "size": "30x20", "residents": null, "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "42 Normfair Drive", "myName": null, "type": null, "size": "40x30", "residents": null, "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "The GNOM Exhibit", "myName": null, "type": null, "size": "40x30", "residents": null, "built": false, "shared": false, "screenshots": false, "simsMade": false}
+   ]
+  },
+  {
+   "name": "Sprucederry Grove",
+   "desc": "",
+   "lots": [
+    {"lot": "Fern & Frond Wading Pond", "myName": null, "type": null, "size": "64x64", "residents": null, "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Whistling Thistle Gardens", "myName": null, "type": null, "size": "40x30", "residents": null, "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Greenwood Hamlet Residence", "myName": null, "type": null, "size": "30x20", "residents": null, "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Gringle's", "myName": null, "type": null, "size": "30x30", "residents": null, "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Gimmley Gardensbrook", "myName": null, "type": null, "size": "30x30", "residents": null, "built": false, "shared": false, "screenshots": false, "simsMade": false}
+   ]
+  },
+  {
+   "name": "Everdew",
+   "desc": "",
+   "lots": [
+    {"lot": "Crannamor Residential", "myName": null, "type": null, "size": "20x20", "residents": null, "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "The Watering Hole", "myName": null, "type": null, "size": "40x30", "residents": null, "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Starsong Lounge", "myName": null, "type": null, "size": "30x30", "residents": null, "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Puckitt Hall", "myName": null, "type": null, "size": "50x50", "residents": null, "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Bard Boulevard", "myName": null, "type": null, "size": "30x20", "residents": null, "built": false, "shared": false, "screenshots": false, "simsMade": false}
+   ]
+  }
+ ],
  "weather": "Snowy winters",
  "highlights": [
   {

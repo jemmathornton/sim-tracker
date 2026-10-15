@@ -26,7 +26,8 @@
    "lots": [
     {"lot": "Belomisia Trailhead", "myName": "Belomisia Trailhead", "type": "Campground", "size": "40x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Jungle Bungalow", "myName": "Jungle Bungalow", "type": "Vacation Rental", "size": "30x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["3nHPkj3IEemMPXldy2Ruvw=="], "traits": ["Romantic Aura", "Peace and Quiet"]},
-    {"lot": "Belomisia Field Station", "myName": "Belomisia Field Station", "type": "Custom Venue", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["XpBSeY8IRSGZ4EaA0S8D/A=="], "traits": ["Peace and Quiet", "Sunny Aspect"]}
+    {"lot": "Belomisia Field Station", "myName": "Belomisia Field Station", "type": "Custom Venue", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["XpBSeY8IRSGZ4EaA0S8D/A=="], "traits": ["Peace and Quiet", "Sunny Aspect"]},
+    {"lot": "Omiscan Royal Baths", "myName": null, "type": "Omiscan Royal Baths", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ]
   }
  ],
