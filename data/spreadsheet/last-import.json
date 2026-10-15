@@ -177,7 +177,7 @@
      {
       "Lot Name": "Ophelia Villa",
       "My Name": null,
-      "Lot Type": "Residential",
+      "Lot Type": "Haunted House Residential",
       "Lot Size": "30x20",
       "Residents/Owners": "Goth",
       "Built": false,
@@ -242,7 +242,7 @@
      {
       "Lot Name": "Movers & Shakers",
       "My Name": null,
-      "Lot Type": "Backroom",
+      "Lot Type": "Recreation Center",
       "Lot Size": "30x20",
       "Residents/Owners": "N/A",
       "Built": false,
@@ -870,7 +870,7 @@
      {
       "Lot Name": "The Roadstead",
       "My Name": "Magnolia Mall",
-      "Lot Type": "Retail/Boba & Thrift",
+      "Lot Type": "Retail/Thrift and Boba Store",
       "Lot Size": "40x30",
       "Residents/Owners": "N/A",
       "Built": false,
@@ -908,7 +908,7 @@
      {
       "Lot Name": "FutureSim Labs",
       "My Name": "FutureSim Labs",
-      "Lot Type": "Science Lab",
+      "Lot Type": "FutureSim Labs",
       "Lot Size": "50x50",
       "Residents/Owners": "N/A",
       "Built": false,
@@ -1521,7 +1521,7 @@
      {
       "Lot Name": "Planet Honey Pop!",
       "My Name": "Planet Honey Pop!",
-      "Lot Type": "Boba & Thrift",
+      "Lot Type": "Thrift and Boba Store",
       "Lot Size": "30x20",
       "Residents/Owners": "N/A",
       "Built": false,
@@ -1619,7 +1619,7 @@
      {
       "Lot Name": "Myshuno Meadows",
       "My Name": "Myshuno Meadows",
-      "Lot Type": "Central Park",
+      "Lot Type": "Center Park",
       "Lot Size": "64x64",
       "Residents/Owners": "N/A",
       "Built": false,
@@ -1756,7 +1756,7 @@
      {
       "Lot Name": "Belomisia Trailhead",
       "My Name": "Belomisia Trailhead",
-      "Lot Type": "Campground",
+      "Lot Type": "National Park",
       "Lot Size": "40x20",
       "Residents/Owners": "N/A",
       "Built": false,
@@ -2149,7 +2149,7 @@
      {
       "Lot Name": "Plumbob Pictures",
       "My Name": "Plumbob Pictures",
-      "Lot Type": "Plumbob Pictures",
+      "Lot Type": "Acting Studio",
       "Lot Size": "50x50",
       "Residents/Owners": "N/A",
       "Built": "N/A",
@@ -2302,7 +2302,7 @@
      {
       "Lot Name": "The ██████ Lab",
       "My Name": "The ██████ Lab",
-      "Lot Type": "Special",
+      "Lot Type": "Secret Lab",
       "Lot Size": "64x64",
       "Residents/Owners": "N/A",
       "Built": "N/A",
@@ -2592,7 +2592,7 @@
      {
       "Lot Name": "Darkwing House",
       "My Name": "The Old Clocktower",
-      "Lot Type": "Nightclub/Retail",
+      "Lot Type": "Nightclub",
       "Lot Size": "30x20",
       "Residents/Owners": "N/A",
       "Built": true,
@@ -2641,7 +2641,7 @@
      {
       "Lot Name": "Maritime Manor",
       "My Name": "Foxbury Court",
-      "Lot Type": "Nightclub/Retail",
+      "Lot Type": "Nightclub",
       "Lot Size": "30x20",
       "Residents/Owners": "N/A",
       "Built": true,
@@ -2780,7 +2780,7 @@
       "My Name": "Stonestreet Apartments #4",
       "Lot Type": "Apartment",
       "Lot Size": "N/A",
-      "Residents/Owners": "Sterling Rico",
+      "Residents/Owners": "Empty",
       "Built": true,
       "Shared": true,
       "Screenshots": false,
@@ -2789,13 +2789,13 @@
      {
       "Lot Name": "The Quarry Building",
       "My Name": "The Quarry Building",
-      "Lot Type": "Community Space",
+      "Lot Type": "Small Business Residential",
       "Lot Size": "40x30",
-      "Residents/Owners": "N/A",
-      "Built": true,
+      "Residents/Owners": "Sterling Rico",
+      "Built": false,
       "Shared": false,
       "Screenshots": false,
-      "Sims Made": "N/A"
+      "Sims Made": false
      }
     ]
    },
@@ -2827,7 +2827,7 @@
      {
       "Lot Name": "Sprucewood Square",
       "My Name": "Sprucewood Square",
-      "Lot Type": "Community Space",
+      "Lot Type": "Community Market",
       "Lot Size": "40x30",
       "Residents/Owners": "N/A",
       "Built": false,
@@ -2865,9 +2865,9 @@
      {
       "Lot Name": "The Old Mill",
       "My Name": "The Old Mill",
-      "Lot Type": "Small Business",
+      "Lot Type": "Backroom",
       "Lot Size": "30x20",
-      "Residents/Owners": "Sterling Rico",
+      "Residents/Owners": "N/A",
       "Built": false,
       "Shared": false,
       "Screenshots": false,
@@ -3035,7 +3035,7 @@
      {
       "Lot Name": "Izakaya Ippai",
       "My Name": "Boba Ippai",
-      "Lot Type": "Boba & Thrift",
+      "Lot Type": "Thrift and Boba Store",
       "Lot Size": "30x20",
       "Residents/Owners": "N/A",
       "Built": true,
@@ -3511,7 +3511,7 @@
      {
       "Lot Name": "Town Square Terrace",
       "My Name": "Town Square Stores",
-      "Lot Type": "Boba & Thrift",
+      "Lot Type": "Thrift and Boba Store",
       "Lot Size": "20x15",
       "Residents/Owners": "N/A",
       "Built": true,
@@ -3522,7 +3522,7 @@
      {
       "Lot Name": "ThrifTea",
       "My Name": "Prescott Boarding House",
-      "Lot Type": "Dorms #1",
+      "Lot Type": "University Housing",
       "Lot Size": "20x15",
       "Residents/Owners": "Chess/Comp Teens",
       "Built": true,
@@ -3533,7 +3533,7 @@
      {
       "Lot Name": "Lakeview Library",
       "My Name": "Lakeview Boarding House",
-      "Lot Type": "Dorms #2",
+      "Lot Type": "University Housing",
       "Lot Size": "20x20",
       "Residents/Owners": "Cheer/Football Teens",
       "Built": true,
@@ -3648,7 +3648,7 @@
      {
       "Lot Name": "Anchorpoint Library",
       "My Name": "Anchorpoint Rec Center",
-      "Lot Type": "Rec Center",
+      "Lot Type": "Recreation Center",
       "Lot Size": "30x20",
       "Residents/Owners": "N/A",
       "Built": true,
@@ -3697,7 +3697,7 @@
      {
       "Lot Name": "18 Celebration Way",
       "My Name": "18 Celebration Way",
-      "Lot Type": "Boba & Thrift",
+      "Lot Type": "Community Market",
       "Lot Size": "40x20",
       "Residents/Owners": "N/A",
       "Built": false,
@@ -3943,7 +3943,7 @@
      {
       "Lot Name": "Ro Kaya Rockside",
       "My Name": "Ro Kaya Rockside",
-      "Lot Type": "Restaurant",
+      "Lot Type": "Community Market",
       "Lot Size": "40x30",
       "Residents/Owners": "N/A",
       "Built": false,
@@ -3965,7 +3965,7 @@
      {
       "Lot Name": "Chee-wit Chee-waa Kanto",
       "My Name": "Chee-wit Chee-waa Kanto",
-      "Lot Type": "Boba & Thrift",
+      "Lot Type": "Thrift and Boba Store",
       "Lot Size": "20x15",
       "Residents/Owners": "N/A",
       "Built": true,
@@ -4014,7 +4014,7 @@
      {
       "Lot Name": "The Screaming Gecko",
       "My Name": "The Screaming Gecko",
-      "Lot Type": "Bar",
+      "Lot Type": "Karaoke Bar",
       "Lot Size": "20x20",
       "Residents/Owners": "N/A",
       "Built": true,
@@ -4025,7 +4025,7 @@
      {
       "Lot Name": "Tam Nang Sands",
       "My Name": "Tam Nang Sands",
-      "Lot Type": "Cemetery",
+      "Lot Type": "Spa",
       "Lot Size": "30x20",
       "Residents/Owners": "N/A",
       "Built": false,
@@ -4244,7 +4244,7 @@
      {
       "Lot Name": "Moppy Manor",
       "My Name": "Specter Row",
-      "Lot Type": "Residential Rental",
+      "Lot Type": "Residential Rental/Haunted House Residential",
       "Lot Size": "30x20",
       "Residents/Owners": "Specter (rent out)",
       "Built": false,
@@ -4255,7 +4255,7 @@
      {
       "Lot Name": "Old Ravenwood Estate",
       "My Name": null,
-      "Lot Type": "Residential",
+      "Lot Type": "Haunted House Residential",
       "Lot Size": "50x50",
       "Residents/Owners": "Empty",
       "Built": false,
@@ -4331,7 +4331,7 @@
      {
       "Lot Name": "The Cozy Casket House",
       "My Name": null,
-      "Lot Type": "Residential",
+      "Lot Type": "Haunted House Residential",
       "Lot Size": "30x20",
       "Residents/Owners": "Empty",
       "Built": false,
@@ -4473,13 +4473,13 @@
      {
       "Lot Name": "New Harbor Park",
       "My Name": null,
-      "Lot Type": "Small Business Residential",
+      "Lot Type": "Community Space",
       "Lot Size": "50x40",
-      "Residents/Owners": "Empty",
+      "Residents/Owners": "N/A",
       "Built": false,
       "Shared": false,
       "Screenshots": false,
-      "Sims Made": false
+      "Sims Made": "N/A"
      },
      {
       "Lot Name": "Terra-Potta",
@@ -4517,7 +4517,7 @@
      {
       "Lot Name": "Inked Inlet",
       "My Name": null,
-      "Lot Type": "Library",
+      "Lot Type": "Playground",
       "Lot Size": "20x20",
       "Residents/Owners": "N/A",
       "Built": false,
@@ -4528,13 +4528,13 @@
      {
       "Lot Name": "Lighthouse Lookout",
       "My Name": null,
-      "Lot Type": "Residential Rental",
+      "Lot Type": "Library",
       "Lot Size": "50x40",
-      "Residents/Owners": "Empty",
+      "Residents/Owners": "N/A",
       "Built": false,
       "Shared": false,
       "Screenshots": false,
-      "Sims Made": false
+      "Sims Made": "N/A"
      }
     ]
    }
@@ -4807,7 +4807,7 @@
      {
       "Lot Name": "Revive and Thrive Retreat",
       "My Name": "Gibbi Rec Center",
-      "Lot Type": "Rec Center",
+      "Lot Type": "Recreation Center",
       "Lot Size": "64x64",
       "Residents/Owners": "N/A",
       "Built": true,
@@ -4834,13 +4834,13 @@
      {
       "Lot Name": "Crystal Cottage",
       "My Name": "Crystal Cottage",
-      "Lot Type": "Residential",
+      "Lot Type": "Onsen Bathhouse",
       "Lot Size": "30x20",
-      "Residents/Owners": "Addam Commune",
+      "Residents/Owners": "N/A",
       "Built": false,
       "Shared": false,
       "Screenshots": false,
-      "Sims Made": false
+      "Sims Made": "N/A"
      },
      {
       "Lot Name": "Love Highland",
@@ -4856,7 +4856,7 @@
      {
       "Lot Name": "Fearful Fish Lounge",
       "My Name": "Thrift 'n' Fish",
-      "Lot Type": "Boba & Thrift",
+      "Lot Type": "Thrift and Boba Store",
       "Lot Size": "20x20",
       "Residents/Owners": "N/A",
       "Built": false,
@@ -4869,7 +4869,7 @@
       "My Name": "Miner's Manse",
       "Lot Type": "Residential",
       "Lot Size": "30x20",
-      "Residents/Owners": "Empty",
+      "Residents/Owners": "Addam Commune",
       "Built": false,
       "Shared": false,
       "Screenshots": false,
