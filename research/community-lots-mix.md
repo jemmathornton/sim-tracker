@@ -21,8 +21,8 @@ Caveats: types are matched by words in the plan's lot type, so it's approximate.
 | Spa | 2 | 2 | 3–5 |
 | Onsen | 2 | 1 | depends on the world |
 | Rec Center | 3 | 3 | depends on the world |
-| Park | 10 | 10 | 12–20 (plus open-world parks) |
-| Playground | 3 | 3 | 4–8 (plus open-world ones) |
+| Park | 10 | 10 | 6–12 lots (lowered 15 Oct: open-world parks do much of the job) |
+| Playground | 4 (15 Oct) | 4 | 2–5 lots (lowered 15 Oct: open-world playsets, Rec Centers, pools and play areas in other lots, rentals included) |
 | Beach | 2 | 1 | depends on the world |
 | Cemetery | 7 | 7 | 4–8 |
 | Shops | 23 | 13 | 15–25 |
