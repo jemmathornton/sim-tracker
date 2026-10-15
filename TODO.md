@@ -204,7 +204,7 @@ From the research but not on the list until 13 Oct (suggestions only):
 - [x] Newest Gallery comments on the Stats page (15 Oct)
 - [x] "Most loved" next to "Most downloaded" on Stats; "Base game" marker on lot cards and lot pages (15 Oct)
 - [x] World extras beyond festivals: weather line and the game's three highlights on each world page (14 Oct)
-- [ ] [Claude] A checklist for adding a new world or pack (map, colours, gridded map, lots, households); no input needed
+- [x] [Claude] A checklist for adding a new world or pack (16 Oct: HANDOVER.md §7)
 - [x] Spreadsheet columns (15 Oct, her OK): Lot Traits, Lot Challenges, Bedrooms, Bathrooms (J–M) on every world sheet, and "Eco footprint starts …" beside each neighbourhood that has one; backup kept as `World Plans (fixed) - backup 15 Oct.xlsx`. Filled from the app; the import still reads only columns A–I, so edits in J–M don't come back yet
 - [x] **Chosen 13 Oct:** Lot traits per lot. Done for 159 of the 168 shared lots, read from her "Building #2" save (lot pages show "Lot traits" and "Lot challenges"; names are the game's own)
 - [x] 9 shared lots had a different name in the save: settled 13 Oct (shell builds keep their challenge names in the game; The Old Salt House's traits come from the older "Building" save)

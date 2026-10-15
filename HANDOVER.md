@@ -121,3 +121,18 @@ All in the notes doc; the important ones:
 - Gallery links removed: Affluista Mansion (different build), Abandoned Views (ignore), Midtown Meadows (on hold).
 - Sizes filled: Police Station 40×30, FutureSim Labs 50×50, Hospital 50×50, Sixam 20×20, Plumbob Pictures 50×50, Torendi 40×30, Netherworld Department 30×30 (Jemma's confirmed size, even though one source says 20×20); Harbor Quarter Gym stays 30×20. Ondarion's Bright Cliff and Lakeview units are Apartments.
 - "Kopf?" fixed to "Kopf" in the spreadsheet (12 Oct; backup kept).
+
+## 7. Checklist: adding a world or pack (written 16 Oct)
+
+For when she buys a pack. The five worlds she doesn't own yet (Forgotten Hollow, Tartosa, Moonwood Mill, Ciudad Enamorada, Innisgreen) already have files in `data/worlds/` with `"owned": false`, and rough lot ideas in `research/not-owned-worlds.md`.
+
+1. **Game research first** (read only; the game files change with the pack): rerun `tools/research/game_lots.py`, `world_files.py`, `game_venues.py`, `world_lot_types.py`, then `plan_vs_game.py`. A brand-new world also needs its region in `REGION_WORLD` (`world_extras.py`) and its pack folder in `FOLDER_WORLD` (`plan_vs_game.py`). After a game update, `tools/lot_traits.py --game` re-reads the lot trait names.
+2. **World file:** set `"owned": true` in `data/worlds/<world>.json` (a world not there yet needs a new file and a line in `data/worlds.json`). Neighbourhood names and `desc` come from the game (the descriptions are resource 0xA680EA4B, see `world_extras.py`).
+3. **Spreadsheet:** she adds or fills the world's tab. `tools/import_spreadsheet.py` reports, then `--apply` brings the lots in (the import refuses lots in a world the app doesn't have yet). Columns J–M are filled from the app. Back up and ask before writing to her spreadsheet.
+4. **World extras:** `tools/research/world_extras.py --apply` adds weather, highlights, festivals and eco start.
+5. **Map:** `tools/extract_map.py "<…\Mods\20thCenturyPlumbob Maps\…<World>.package>" <world-id>` makes `site/maps/<world>.jpg`. It needs numpy, which isn't installed: ask her first. No other map source (no AI art, no screenshots of other maps).
+6. **Colours:** `colour` and `deep` in the world file come from the map and her builds, never one side of the world. `deep` drives the fade at the bottom of the map hero and must match the neighbourhood cards.
+7. **Neighbourhood spots:** never guess. Run `tools/map_grids.py` (gridded map in `for-jemma/map-grids/`) or let her use `tools/map-squares.html`. Then `tools/set_map_spots.py` writes `mapSpot`/`mapBox`.
+8. **Pictures:** a new Builds folder needs a line in `FOLDERS` in `tools/screenshots.py`. Gallery uploads link to lots by title at the Sunday refresh; anything unclear goes to `data/gallery/unlinked.json` for her.
+9. **Lot traits:** `tools/lot_traits.py --apply` (shared lots only, from her newest "Building" save).
+10. **Build and check:** `tools/build.py`, then `tools/check_pages.js` in the app preview at 1280px. Look at the new world's pages, commit, and add a line to §0 here.
