@@ -137,10 +137,10 @@ From the data check-up, 15 Oct (research/data-check-up.md; sizes, uploads and sh
 ## 8. Ideas from the research (suggestions only; tick to do)
 
 Newer lot types and where they could go (research/lot-types-reference.md):
-- [ ] Backroom (library/museum/gym by day, nightclub 9pm–6am): Finchwick Village Hall (nearly one already), Mystic Crossroads (with the Clandestine lot trait), The Rouge Note
-- [ ] Community Market: a standalone market at Key Point (beach market), or a lot in Henford or Chestnut Ridge
+- [ ] [Jemma] Backroom (library/museum/gym by day, nightclub 9pm–6am; the game allows it in every world, checked 15 Oct). 15 Oct: still deciding. Best fits (already mix day and night): Finchwick Village Hall, Oasis Springs Library (Lounge in her save), Museum of the Arts (Bar in her save). Also: The Rouge Note; not built yet: UoW Students Union, Willow Creek Archive, Quad Manor, Inked Inlet, Mystic Crossroads (with the Clandestine trait)
+- [ ] Community Market: a standalone market at Key Point (beach market), or a lot in Henford or Chestnut Ridge (allowed in every world; 15 Oct: Key Point still deciding)
 - [ ] Custom Venue: Key Point as a watersports or beach camp
-- [ ] Haunted House Residential: Brooks Bridge Borough (its upload already is), Specter Row (with On Hallowed Grounds)
+- [ ] Haunted House Residential: Specter Row (with On Hallowed Grounds); 15 Oct: still deciding. (Brooks Bridge Borough is one since 14 Oct)
 - Keep in mind for empty lots: Cemetery, Playground, Recreation Center, Karaoke Bar, Onsen, Pool, Spa, Arts Center, Beach. Newer lot traits: Clandestine, Regal Residence, Fairy Passage, On Hallowed Grounds
 
 Site ideas, quick wins (no input needed):
