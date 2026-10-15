@@ -14,8 +14,8 @@
    "lots": [
     {"lot": "Specter Family Manor", "myName": "Ravenwood Wedding Hall", "type": "Wedding Venue", "size": "30x20", "residents": "N/A", "built": true, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Crow's Perch", "myName": "Crow's Chronicles", "type": "Library", "size": "30x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["LSNKN6V/Sjaa8F6nEgj9Vw=="], "traits": ["On Hallowed Grounds", "Study Spot"]},
-    {"lot": "Moppy Manor", "myName": "Specter Row", "type": "Residential Rental", "size": "30x20", "residents": "Specter (rent out)", "built": false, "shared": false, "screenshots": false, "simsMade": false, "statsResidents": "Specter + tenants"},
-    {"lot": "Old Ravenwood Estate", "myName": null, "type": "Residential", "size": "50x50", "residents": "Empty", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Moppy Manor", "myName": "Specter Row", "type": "Residential Rental/Haunted House Residential", "size": "30x20", "residents": "Specter (rent out)", "built": false, "shared": false, "screenshots": false, "simsMade": false, "statsResidents": "Specter + tenants"},
+    {"lot": "Old Ravenwood Estate", "myName": null, "type": "Haunted House Residential", "size": "50x50", "residents": "Empty", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Eternal Hollow", "myName": null, "type": "Cemetery", "size": "64x64", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ],
    "festivals": ["Casket Sale", "Funeral BBQ", "Ravenwood Family Day"]

@@ -150,7 +150,7 @@ Newer lot types and where they could go (research/lot-types-reference.md):
 - [ ] [Jemma] Another day: The Old Clocktower and/or Foxbury Court (Britechester nightclubs) as Backrooms? Study space (library) or gallery by day, club by night. Their student shops would become decoration (a Backroom's day side is library, museum or gym). Both would make 6 Backrooms, 2 in one world; Claude suggested just The Old Clocktower
 - [ ] Community Market: a standalone market at Key Point (beach market), or a lot in Henford or Chestnut Ridge (allowed in every world; 15 Oct: Key Point still deciding)
 - [ ] Custom Venue: Key Point as a watersports or beach camp
-- [ ] Haunted House Residential: Specter Row (with On Hallowed Grounds); 15 Oct: still deciding. (Brooks Bridge Borough is one since 14 Oct)
+- [ ] [Jemma] Haunted House Residential: Specter Row unsure, a rental or a haunted house (a lot can't be both); typed "Residential Rental/Haunted House Residential" until she decides. Brooks Bridge Borough is one since 14 Oct; Old Ravenwood Estate since 15 Oct (her choice: the game's description has flickering lights and inexplicable happenings)
 - Keep in mind for empty lots: Cemetery, Playground, Recreation Center, Karaoke Bar, Onsen, Pool, Spa, Arts Center, Beach. Newer lot traits: Clandestine, Regal Residence, Fairy Passage, On Hallowed Grounds
 
 Site ideas, quick wins (no input needed):
