@@ -28,7 +28,7 @@
    "lots": [
     {"lot": "Pigulock Manor", "myName": "Pigulock Manor", "type": "Residential", "size": "30x20", "residents": "Tinker", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Canal Corner", "myName": "Canal Corner", "type": "Small Business", "size": "20x15", "residents": "Tinker", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
-    {"lot": "Sprucewood Square", "myName": "Sprucewood Square", "type": "Community Space", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "Sprucewood Square", "myName": "Sprucewood Square", "type": "Community Market", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Pinecrest Apartments #402", "myName": "Pinecrest Apartments #402", "type": "Apartment", "size": "N/A", "residents": "Eco Roomies", "built": true, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Pinecrest Apartments #404", "myName": "Pinecrest Apartments #404", "type": "Apartment", "size": "N/A", "residents": "2 Bed", "built": true, "shared": true, "screenshots": false, "simsMade": false, "displayName": "Pinecrest Apartments #404", "gallery": ["rZY+UsMqEeuDL+WcoywPdA=="], "beds": 2, "baths": 1}
    ]
