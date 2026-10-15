@@ -4,6 +4,8 @@
 
 Each world's Region instance lists its compatible venues. Writes research/data/world-lot-types.json with, per world,
 the lot types allowed and the ones not allowed (e.g. Beach is only allowed in Sulani and Tartosa).
+Special lots (Auditorium, High School events, Secret Lab, The Magic Realm, Omiscan Royal Baths, Police Station...) come with
+their own world or hidden area and are missing from these lists even where a world ships with one (Copperdale's Auditorium).
 """
 import json, os, sys
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
