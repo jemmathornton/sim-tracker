@@ -21,8 +21,9 @@ FOLDERS = {  # Builds folder -> (world, lot) as used in page links
     "Newcrest Wedding Hall": ("newcrest", "cookout-lookout"), "Olde Platz Inn": ("windenburg", "waterlock-redoubt"),
     "Raffia Quinta": ("oasis-springs", "raffia-quinta"), "Rio Verde Retirement Villa": ("oasis-springs", "rio-verde"),
     "Willow's": ("willow-creek", "bargain-bend"),
+    "Von-Windenburg Castle": ("windenburg", "von-windenburg-estate"),   # her castle build is the Estate lot (15 Oct)
 }
-NOT_LOTS = {"Bubble World", "Robert Piggott School", "Von-Windenburg Castle", "New folder"}   # bonus builds (TODO §5) and an empty folder
+NOT_LOTS = {"Bubble World", "Robert Piggott School", "New folder"}   # bonus builds (TODO §5) and an empty folder
 SKIP = {"Gallery Pirce.png", "Front Gallery.png"}
 
 

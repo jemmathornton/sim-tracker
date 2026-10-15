@@ -97,7 +97,7 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
 - [x] Brindleton Boathouse (Sporting Space) and 2-4-3 Wakabamori: empty for now (14 Oct)
 - [ ] [Jemma] Paradise Stables (Gibbi Point): residents "To be decided"
 - [ ] [Jemma] Household count consistency (lots vs households in page headers): revisit later
-- [ ] [Jemma] Bonus builds section: Robert Piggott School, Von-Windenburg Castle, Bubble World
+- [ ] [Jemma] Bonus builds section: Robert Piggott School, Bubble World (Von-Windenburg Castle is the Estate lot's build, 15 Oct)
 
 ## 6. From the 13 Oct lot check (research/missing-lots-check.md)
 
@@ -119,10 +119,10 @@ From the overnight check of the plan against the game's own files and her save, 
 - Name differences with the game (Magnolia Blossom Park, Desert Bloom Park, Isle of Volpe, The Grimtooth Bar & Bunker): the plan's names read better; noted only
 
 From the data check-up, 15 Oct (research/data-check-up.md; sizes, uploads and shared ticks all agree):
-- [ ] [Jemma] Tick "Screenshots" for the 7 lots that have pictures in the app: Willow's, Rio Verde Retirement Home, Midtown Meadows, Comfy Cubby, Newcrest Wedding Hall, 920 Medina Studios, 3 Olde Mill Lane (the site already counts them)
-- [ ] [Jemma] Von-Windenburg Estate is ticked for screenshots; its 17 pictures are in the Builds folder "Von-Windenburg Castle", held back as a bonus build. Show them on the Estate's page (its Gallery card is the castle already)?
+- [x] Ticked "Screenshots" for the 7 lots with pictures (15 Oct, app and spreadsheet)
+- [x] Von-Windenburg Estate shows the 38 pictures from the "Von-Windenburg Castle" Builds folder (15 Oct, her choice: the castle is the Estate's build)
 - [ ] [Jemma] Bailey-Moon Manor and Izakaya Hanamigawa Koen are ticked for screenshots but have no Builds folder
-- [ ] [Jemma] Neighbourhood descriptions from the game for Acquisition Butte, Ridgeline Drive, Ohan'ali Town, Lani St. Taz (and the world text for Magnolia Promenade); wording in the note. Use them?
+- [x] Game descriptions added for Acquisition Butte, Ridgeline Drive, Ohan'ali Town, Lani St. Taz and Magnolia Promenade (15 Oct). Still none (no game text): Desert Bloom Park, Campground, Glimmerbrook, the Secret/Special Lots groups
 - [ ] [Jemma] Gallery titles the site shows instead of her own names (e.g. Foxbury Court / Maritime Manor, The Royal Crown / The Old Crown, Café Llama / The Llama Café): any she'd rather show her own name for? List in the note
 - [ ] [Jemma] Mossy Lane's upload says Residential; re-upload as University Housing if wanted (her own Gallery)
 - [ ] [Jemma] From Gallery comments (research/gallery-deep-dive.md): Strike Out! asks for a waste basket in game; someone found Newcrest Community Space's court bugged
@@ -177,7 +177,7 @@ From the research but not on the list until 13 Oct (suggestions only):
 - [x] Spreadsheet columns (15 Oct, her OK): Lot Traits, Lot Challenges, Bedrooms, Bathrooms (J–M) on every world sheet, and "Eco footprint starts …" beside each neighbourhood that has one; backup kept as `World Plans (fixed) - backup 15 Oct.xlsx`. Filled from the app; the import still reads only columns A–I, so edits in J–M don't come back yet
 - [x] **Chosen 13 Oct:** Lot traits per lot. Done for 159 of the 168 shared lots, read from her "Building #2" save (lot pages show "Lot traits" and "Lot challenges"; names are the game's own)
 - [x] 9 shared lots had a different name in the save: settled 13 Oct (shell builds keep their challenge names in the game; The Old Salt House's traits come from the older "Building" save)
-- [ ] [Jemma] Anchorpoint Works is now called "On Point" in the game. Should the site say On Point? (Its Gallery upload is still called Anchorpoint Works, which wins unless you say otherwise)
+- [x] Anchorpoint Works keeps its name on the site (15 Oct, her choice; "On Point" in her game)
 - [x] Bedlington Barn: shared 14 Oct, upload linked. (Desert Bloom Park has no lot traits set in the game)
 - [ ] [Jemma] Household basics, relationships and family tree need Sims, which aren't to come from the Building saves: which save (if any) should they come from, or will you give them?
 - [x] **Chosen 13 Oct:** Neighbourhood eco footprint and festivals/events: on the neighbourhood cards (first three) and pages (all), 14 Oct
