@@ -15,8 +15,8 @@
     {"lot": "Miner Mansion", "myName": "Miner Mansion", "type": "Residential", "size": "30x20", "residents": "Harris", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Rockridge Springs", "myName": "Rockridge Springs", "type": "Residential Rental (3)", "size": "30x20", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["7qor1/qySJOuKuOZ5Tq/Tg=="], "traits": ["Good Schools", "Sunny Aspect"]},
     {"lot": "Stonestreet Apartments #3", "myName": "Stonestreet Apartments #3", "type": "Apartment", "size": "N/A", "residents": "Knox Greenburg", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["jfISOaR8EeuMrecawTB/JA=="], "beds": 2, "baths": 1, "traits": ["Eco Lot", "Good Schools"], "challenges": ["Reduce and Recycle"]},
-    {"lot": "Stonestreet Apartments #4", "myName": "Stonestreet Apartments #4", "type": "Apartment", "size": "N/A", "residents": "Sterling Rico", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["mVpx+qSLEeuE+/wg9JDtjA=="], "beds": 1, "traits": ["Eco Lot", "Fast Internet"], "challenges": ["Reduce and Recycle"], "baths": 1},
-    {"lot": "The Quarry Building", "myName": "The Quarry Building", "type": "Community Space", "size": "40x30", "residents": "N/A", "built": true, "shared": false, "screenshots": false, "simsMade": "N/A"}
+    {"lot": "Stonestreet Apartments #4", "myName": "Stonestreet Apartments #4", "type": "Apartment", "size": "N/A", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["mVpx+qSLEeuE+/wg9JDtjA=="], "beds": 1, "traits": ["Eco Lot", "Fast Internet"], "challenges": ["Reduce and Recycle"], "baths": 1},
+    {"lot": "The Quarry Building", "myName": "The Quarry Building", "type": "Small Business Residential", "size": "40x30", "residents": "Sterling Rico", "built": false, "shared": false, "screenshots": false, "simsMade": false}
    ],
    "ecoStart": "Green"
   },
@@ -39,7 +39,7 @@
    "mapSpot": [0.41, 0.58],
    "mapBox": [0.25, 0.43, 0.57, 0.74],
    "lots": [
-    {"lot": "The Old Mill", "myName": "The Old Mill", "type": "Small Business", "size": "30x20", "residents": "Sterling Rico", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "The Old Mill", "myName": "The Old Mill", "type": "Backroom", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "The Caboose", "myName": "The Caboose", "type": "Bar", "size": "30x20", "residents": "N/A", "built": true, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "The Shipping Views", "myName": "The Old Dockyard", "type": "Community Space", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["ZQSlwRx6EeuFnhriosBzww==", "YkcpxBx6EeuFjhriosBzww==", "Zz52rhx6EeuFrhriosBzww==", "aP66fRx6EeuFtxriosBzww=="], "versions": [{"label": "Market", "upload": "Zz52rhx6EeuFrhriosBzww=="}, {"label": "Garden", "upload": "ZQSlwRx6EeuFnhriosBzww=="}, {"label": "Makers", "upload": "aP66fRx6EeuFtxriosBzww=="}, {"label": "Community space", "upload": "YkcpxBx6EeuFjhriosBzww=="}], "traits": ["Sunny Aspect", "Convivial"], "challenges": ["Reduce and Recycle", "Off-the-Grid"]},
     {"lot": "The Waterfront", "myName": "Abandoned Views", "type": "Residential Rental", "size": "40x30", "residents": "Henley", "built": false, "shared": false, "screenshots": false, "simsMade": false},
