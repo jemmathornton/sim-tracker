@@ -26,7 +26,7 @@
    "lots": [
     {"lot": "Isda Riverfront", "myName": "Isda Riverfront", "type": "Residential Rental (2)", "size": "20x20", "residents": "Rochana/Caberry own", "built": true, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Sungai Point", "myName": "Sungai Point", "type": "Residential Rental (3)", "size": "30x20", "residents": "Linh-Sadya & Linh", "built": false, "shared": false, "screenshots": false, "simsMade": false},
-    {"lot": "The Screaming Gecko", "myName": "The Screaming Gecko", "type": "Bar", "size": "20x20", "residents": "N/A", "built": true, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "The Screaming Gecko", "myName": "The Screaming Gecko", "type": "Karaoke Bar", "size": "20x20", "residents": "N/A", "built": true, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Tam Nang Sands", "myName": "Tam Nang Sands", "type": "Cemetery", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Hothotok Shore", "myName": "Hothotok Shore", "type": "Residential", "size": "20x15", "residents": "Bun Ma", "built": false, "shared": false, "screenshots": false, "simsMade": false}
    ]
