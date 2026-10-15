@@ -216,9 +216,11 @@ const progressRow = l => { const parts = [["built","Built"],["shared","Shared"],
 // apartments have no lot size of their own, so no plot drawing or size for them
 const isApt = l => /apartment|penthouse/i.test(l.type || "");
 const lotArt = l => isApt(l) ? `<span class="apt-art">${ic("home")}</span>` : plot(l.size, 120, false);
+const cardPills = l => { const n = newSince(l), p = [n ? `<span class="pill new" title="${esc(newTxt(n))} since you last looked">New</span>` : "", baseGame(l) ? `<span class="pill" title="Needs no packs">Base game</span>` : ""].join("");
+  return p ? `<span class="pills">${p}</span>` : ""; };
 function listing(l){
   const cover = l.photos[0];
-  return `<a class="listing" href="#${l.id}" style="--h:${l.hood.color}"><div class="photo ${cover?"shot":""}" ${cover?`data-lazy="--img" data-src="${cover.thumb}"`:""}>${cover ? "" : lotArt(l)}<span class="type">${esc(l.type || "Lot")}</span><span class="status">${statusDots(l)}</span>${sizeTxt(l.size) && !isApt(l) ? `<span class="size">${sizeTxt(l.size)}</span>` : ""}</div>
+  return `<a class="listing" href="#${l.id}" style="--h:${l.hood.color}"><div class="photo ${cover?"shot":""}" ${cover?`data-lazy="--img" data-src="${cover.thumb}"`:""}>${cover ? "" : lotArt(l)}<span class="type">${esc(l.type || "Lot")}</span><span class="status">${statusDots(l)}</span>${sizeTxt(l.size) && !isApt(l) ? `<span class="size">${sizeTxt(l.size)}</span>` : ""}${cardPills(l)}</div>
     <h3>${esc(l.name)}</h3>
     <div class="meta">${l.hh ? `<span>${ic("users")}<b>${esc(l.hh.name)}</b>${l.hh.unsure?" (unsure)":""}</span>` : l.whoNote ? `<span>${ic("users")}${esc(emptyNote(l.whoNote))}</span>` : ""}${l.gallery ? `<span title="Downloads on the Sims 4 Gallery">${ic("share")}${l.gallery.downloads} downloads</span>` : ""}</div></a>`;
 }
@@ -363,7 +365,7 @@ function lot(l){
   const tk = (v, t) => v === true || v === false ? `<div class="tick ${v?"yes":""}"><i></i>${t}</div>` : "";
   const others = l.hood.lots.filter(x => x !== l && !(l.building && x.building === l.building)), mates = l.building ? l.building.units.filter(x => x !== l) : [];
   const cover = l.photos[0];
-  return `<section class="hero small ${cover?"mapped lot-hero":""}" style="--c:${l.hood.glow||hc};${cover?`--map:url('${cover.src}')`:""}"><div class="crumbs"><a href="#w-${w.id}">${ic("map")}${esc(w.name)}</a><a href="#n-${l.hood.id}">${ic("pin")}${esc(l.hood.name)}</a>${l.building ? `<span>${ic("home")}${esc(l.building.name)}</span>` : ""}</div>
+  return `<section class="hero small ${cover?"mapped lot-hero":""}" style="--c:${l.hood.glow||hc};${cover?`--map:url('${cover.src}')`:""}"><div class="crumbs"><a href="#w-${w.id}">${ic("map")}${esc(w.name)}</a><a href="#n-${l.hood.id}">${ic("pin")}${esc(l.hood.name)}</a>${l.building ? `<span>${ic("home")}${esc(l.building.name)}</span>` : ""}${baseGame(l) ? `<span>${ic("sparkle")}Base game only</span>` : ""}</div>
     <h1 style="margin-top:18px">${esc(l.name)}</h1></section>
     <div class="detail" style="--h:${hc}">${carousel(l)}
     <div><dl class="facts">${l.ea ? `<div><dt>In-game name</dt><dd>${esc(l.ea)}</dd></div>` : ""}<div><dt>Lot type</dt><dd>${esc(l.type || "Not set")}</dd></div>${isApt(l) ? "" : `<div><dt>Lot size</dt><dd>${esc(sizeTxt(l.size) || "Not checked yet")}</dd></div>`}${l.traits ? `<div><dt>Lot traits</dt><dd>${l.traits.map(esc).join(", ")}</dd></div>` : ""}${l.challenges ? `<div><dt>${l.challenges.length > 1 ? "Lot challenges" : "Lot challenge"}</dt><dd>${l.challenges.map(esc).join(", ")}</dd></div>` : ""}
@@ -378,7 +380,7 @@ function lot(l){
       ${l.gallery ? `<div class="notes-wrap"><div class="notes-text">${l.gallery.title !== l.name ? `<span class="label">Uploaded as “${esc(l.gallery.title)}”</span>` : ""}${l.gallery.description ? `<p class="lede">${esc(l.gallery.description)}</p>` : ""}
           ${l.gallery.tags?.length ? `<div class="tags">${l.gallery.tags.map(t => `<span>#${esc(t)}</span>`).join("")}</div>` : ""}
           ${theirs(l).length ? `<div class="g-comments"><span class="label">Comments on the Gallery</span><ul>${theirs(l).map(c => `<li><div class="c-head"><b>${esc(c.u || "A simmer")}</b>${c.t ? `<small>${new Date(c.t).toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric"})}</small>` : ""}</div><p>${esc(c.m)}</p></li>`).join("")}</ul></div>` : ""}</div>
-        <aside class="gallery-card"><span class="label">On the Sims 4 Gallery</span>
+        <aside class="gallery-card"><span class="label">On the Sims 4 Gallery</span>${(n => n ? `<p class="new-since">${ic("sparkle")}${esc(newTxt(n))} since you last looked</p>` : "")(newSince(l))}
           <dl><div><dt>Value</dt><dd>${esc(l.gallery.value)}</dd></div><div><dt>Favourites</dt><dd>${l.gallery.likes}</dd></div><div><dt>Downloads</dt><dd>${l.gallery.downloads}</dd></div>${l.gallery.beds ? `<div><dt>Bedrooms</dt><dd>${l.gallery.beds}</dd></div>` : ""}${l.gallery.baths ? `<div><dt>Bathrooms</dt><dd>${l.gallery.baths}</dd></div>` : ""}<div><dt>Comments</dt><dd>${l.gallery.comments || 0}</dd></div>${l.gallery.shared ? `<div><dt>Shared</dt><dd>${esc(l.gallery.shared)}</dd></div>` : ""}</dl>
           ${l.gallery.packs?.length ? `<span class="label">Packs used</span><div class="packs">${l.gallery.packs.map(p => `<span>${esc(p)}</span>`).join("")}</div>` : `<span class="label">Packs used</span><div class="packs"><span>Base game only</span></div>`}
           ${l.gallery.old ? `<p class="g-old">${ic("note")}This Gallery upload is an older version of the build.</p>` : ""}
@@ -410,6 +412,20 @@ function simCard(sm){
 document.addEventListener("click", e => { const a = e.target.closest("a[data-sim]"); if (a) { const id = a.dataset.sim; setTimeout(() => document.getElementById(id)?.scrollIntoView({block:"start", behavior:"smooth"}), 120); } });
 // Jemma's own replies count towards the total but are not shown
 const theirs = l => (l.gallery?.commentList || []).filter(c => (c.u || "").toLowerCase() !== "jemmathesimmer");
+// builds that need no packs (15 Oct: base-game builds are the most downloaded)
+const baseGame = l => !!l.gallery && !(l.gallery.packs || []).length;
+// "new since you looked" (15 Oct): this browser remembers each build's favourites and comments from when its page was
+// last opened. The first visit just remembers everything; after that, builds with more favourites or comments, and new
+// uploads, are marked until their page is opened. Kept in this browser only, so it's per viewer.
+const SEEN_KEY = "jsw-seen-v1";
+let seen = null; try { seen = JSON.parse(localStorage.getItem(SEEN_KEY) || "null"); } catch (e) {}
+const seenNow = l => [l.gallery.likes, theirs(l).length];
+const saveSeen = () => { try { localStorage.setItem(SEEN_KEY, JSON.stringify(seen)); } catch (e) {} };
+if (!seen) { seen = {}; Object.values(lotIndex).forEach(l => { if (l.gallery) seen[l.id] = seenNow(l); }); saveSeen(); }
+const newSince = l => { if (!l.gallery) return null; const s = seen[l.id], [f, c] = seenNow(l);
+  if (!s) return {fresh: true}; return f > s[0] || c > s[1] ? {f: Math.max(0, f - s[0]), c: Math.max(0, c - s[1])} : null; };
+const markSeen = l => { if (l.gallery) { seen[l.id] = seenNow(l); saveSeen(); } };
+const newTxt = n => n.fresh ? "New on the Gallery" : [n.f && `${n.f} new ${n.f === 1 ? "favourite" : "favourites"}`, n.c && `${n.c} new ${n.c === 1 ? "comment" : "comments"}`].filter(Boolean).join(", ");
 // a home with no household yet: bed-size planning notes just read "Empty" (bed counts live in the Gallery card)
 // dark text on light colours (Sulani yellow etc.), white on dark ones: whichever reads better
 function textOn(hex){ const c = (hex || "#000").replace("#",""), L = [0,2,4].map(i => { const v = parseInt(c.slice(i,i+2),16)/255; return v <= .03928 ? v/12.92 : Math.pow((v+.055)/1.055, 2.4); }), Y = .2126*L[0] + .7152*L[1] + .0722*L[2];
@@ -511,7 +527,23 @@ function galleryOverTime(){
     : `<div class="gal-gains"><span class="label">Biggest gains since ${esc(g.since)}</span><div class="sheet-wrap"><table class="sheet lots-sheet"><thead><tr><th scope="col">Build</th><th scope="col">World</th><th scope="col">Favourites</th><th scope="col">Downloads</th></tr></thead>
       <tbody>${g.gains.map(x => `<tr><td class="lotcell wrap">${x.lot ? `<a href="#${x.lot.id}">${esc(x.title)}</a>` : `<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a>`}</td><td>${esc(x.lot ? x.lot.world : "")}</td>
         <td class="num">${x.favourites > 0 ? "+" + x.favourites : "–"}<small> of ${x.nowFavourites}</small></td><td class="num">${x.downloads > 0 ? "+" + x.downloads : "–"}<small> of ${x.nowDownloads}</small></td></tr>`).join("")}</tbody></table></div></div>`;
-  return `<section class="block"><div class="block-head"><h2>On the <em>Gallery</em></h2><span class="count">checked every Sunday</span></div>${weeks}${gains}</section>`;
+  return `<section class="block"><div class="block-head"><h2>On the <em>Gallery</em></h2><span class="count">checked every Sunday</span></div>${weeks}${gains}${galleryBest()}${newestComments()}</section>`;
+}
+// most downloaded next to most loved (favourites per 100 downloads, builds with 50+ downloads), 15 Oct
+function galleryBest(){
+  const ls = Object.values(lotIndex).filter(l => l.gallery), row = (l, v) => `<tr><td class="lotcell wrap"><a href="#${l.id}">${esc(l.name)}</a></td><td>${esc(l.world.name)}</td><td class="num">${v}</td></tr>`;
+  const most = [...ls].sort((a, b) => b.gallery.downloads - a.gallery.downloads).slice(0, 8);
+  const loved = ls.filter(l => l.gallery.downloads >= 50).sort((a, b) => b.gallery.likes / b.gallery.downloads - a.gallery.likes / a.gallery.downloads).slice(0, 8);
+  const table = (title, head, rows) => `<div><span class="label">${title}</span><div class="sheet-wrap"><table class="sheet lots-sheet"><thead><tr><th scope="col">Build</th><th scope="col">World</th><th scope="col">${head}</th></tr></thead><tbody>${rows}</tbody></table></div></div>`;
+  return `<div class="gal-best">${table("Most downloaded", "Downloads", most.map(l => row(l, l.gallery.downloads)).join(""))}
+    ${table("Most loved", "Favourites", loved.map(l => row(l, `${Math.round(100 * l.gallery.likes / l.gallery.downloads)}%<small> of ${l.gallery.downloads} downloads</small>`)).join(""))}</div>
+    <p class="showing">Most loved: the share of downloads that also got a favourite, for builds with at least 50 downloads.</p>`;
+}
+// the latest comments other simmers left on her builds, 15 Oct
+function newestComments(){
+  const all = Object.values(lotIndex).filter(l => l.gallery).flatMap(l => theirs(l).map(c => ({c, l}))).filter(x => x.c.t).sort((a, b) => b.c.t - a.c.t).slice(0, 8);
+  if (!all.length) return "";
+  return `<div class="g-comments newest"><span class="label">Newest comments</span><ul>${all.map(({c, l}) => `<li><div class="c-head"><b>${esc(c.u || "A simmer")}</b> on <a href="#${l.id}">${esc(l.name)}</a><small>${new Date(c.t).toLocaleDateString("en-GB", {day: "numeric", month: "short", year: "numeric"})}</small></div><p>${esc(c.m)}</p></li>`).join("")}</ul></div>`;
 }
 function refreshStats(full){ if (full) { const y = scrollY; document.getElementById("view").innerHTML = statsPage(); window.scrollTo(0, y); } else document.getElementById("lot-rows").innerHTML = lotRows(); }
 document.addEventListener("change", e => { if (!e.target.closest("#lot-sheet")) return;
@@ -553,7 +585,7 @@ function route(){
   let html, active = "home"; const ctx = {};
   const wd = key.startsWith("w-") && worlds.find(w => w.ready && w.id === key.slice(2));
   if (wd) { html = world(wd); active = wd.id; document.title = wd.name + " · Jemma's Sim World"; }
-  else if (lotIndex[key]) { const l = lotIndex[key]; ctx.hood = l.hood; ctx.lot = l; html = lot(l); active = l.world.id; document.title = l.name + " · Jemma's Sim World"; }
+  else if (lotIndex[key]) { const l = lotIndex[key]; ctx.hood = l.hood; ctx.lot = l; html = lot(l); markSeen(l); active = l.world.id; document.title = l.name + " · Jemma's Sim World"; }
   else if (key.startsWith("n-") && hoodIndex[key.slice(2)]) { const x = hoodIndex[key.slice(2)]; ctx.hood = x; html = hoodPage(x); active = x.world.id; document.title = x.name + " · " + x.world.name + " · Jemma's Sim World"; }
   else if (key.startsWith("f-") && worlds.find(w => w.ready && w.id === key.slice(2))) { const w = worlds.find(w => w.id === key.slice(2)); html = families(w); active = w.id; document.title = "Households · " + w.name + " · Jemma's Sim World"; }
   else if (hhIndex[key]) { const x = hhIndex[key]; ctx.hh = x; ctx.lot = x.lots[0]; ctx.hood = x.lots[0].hood; html = household(x); active = x.world.id; document.title = x.name + " household · Jemma's Sim World"; }

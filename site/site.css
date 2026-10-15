@@ -478,3 +478,14 @@ footer .as-of{flex-basis:100%}
 .highlights b{font-weight:700}
 .highlights span{color:var(--muted);font-size:13.5px;line-height:1.5}
 .hood-extras{display:grid;gap:4px;margin:8px 0 6px}
+/* Stats → On the Gallery: most downloaded next to most loved, and the newest comments (15 Oct) */
+.gal-best{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:28px}
+.gal-best .label{display:block;margin-bottom:8px}
+.g-comments.newest{margin-top:28px}.g-comments.newest li{border-left-color:var(--brass)}
+.g-comments.newest .c-head a{color:inherit;font-weight:600}
+/* lot card pills, top right: New since you looked, Base game (15 Oct) */
+.photo .pills{position:absolute;right:12px;top:12px;display:flex;gap:6px}
+.photo .pill{font-size:11.5px;font-weight:700;padding:5px 10px;border-radius:99px;background:rgba(255,255,255,.92);color:#1A1F1C;letter-spacing:.02em}
+.photo .pill.new{background:var(--brass);color:#1A1F1C}
+.new-since{display:flex;gap:8px;align-items:center;margin:8px 0 0;padding:8px 12px;border-radius:10px;background:color-mix(in srgb,var(--brass) 18%,transparent);font-size:13.5px;font-weight:600}
+.new-since svg{color:var(--brass)}

@@ -144,7 +144,7 @@ Newer lot types and where they could go (research/lot-types-reference.md):
 
 Site ideas, quick wins (no input needed):
 - [x] Packs needed per world (13 Oct: a "Packs used" block on each world page; removed 14 Oct, her choice: lot pages still show each build's packs)
-- [ ] One-word world status on home tiles: Not started / Started / Almost / Complete (she agrees the cut-offs)
+- [ ] (15 Oct: not now) One-word world status on home tiles: Not started / Started / Almost / Complete (she agrees the cut-offs)
 - [x] "Shared on the Gallery: <month year>" from the date hidden in 169 upload ids (13 Oct: "Shared" on each lot's Gallery card, e.g. Jan 2017; 124 of the 168 lots with uploads. Ids from 2023 on are random, so newer uploads show no date)
 - [x] "Data as of" footer line: spreadsheet date, last Gallery refresh, game patch (13 Oct: home page footer shows the build date and the Gallery check date)
 - [x] Game version added to the home footer (13 Oct), read from the installed game at each build
@@ -168,10 +168,10 @@ From the research but not on the list until 13 Oct (suggestions only):
 - [ ] Lot value as a Stats column (it's already on each lot's Gallery card)
 - [ ] Original vs new lot size for lots she resized ("40×30, was 30×20")
 - [ ] Filters on world and Stats pages: pack, lot type, lot trait (now that traits are in), built/shared, empty/occupied
-- [ ] "New since you looked" markers on lots with new comments or favourites (13 Oct: no preference yet)
+- [x] "New since you looked" markers (15 Oct): a "New" pill on lot cards and a note on the lot page when a build has new favourites or comments, or is a new upload, since its page was last opened in this browser
 - [ ] Timeline of builds by the month they were shared, on the home page (13 Oct: no preference yet)
-- [ ] Newest Gallery comments on the Stats page
-- [ ] "Most loved" (favourites per download) next to the most downloaded on Stats; a "Base game only" marker on lots that need no packs (base-game builds get the most downloads; research/gallery-deep-dive.md)
+- [x] Newest Gallery comments on the Stats page (15 Oct)
+- [x] "Most loved" next to "Most downloaded" on Stats; "Base game" marker on lot cards and lot pages (15 Oct)
 - [x] World extras beyond festivals: weather line and the game's three highlights on each world page (14 Oct)
 - [ ] [Claude] A checklist for adding a new world or pack (map, colours, gridded map, lots, households); no input needed
 - [ ] Spreadsheet columns for the new fields (lot traits, beds, eco state), if the spreadsheet stays her main copy (needs her OK to change her file)
