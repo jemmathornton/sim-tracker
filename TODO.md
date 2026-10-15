@@ -82,7 +82,7 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
 
 ## 5. Lot types, groups and names
 
-- [ ] [Jemma] Key Point (Sulani, 40×30) and Mystic Crossroads (Ravenwood, 30×30): lot type still to be decided (15 Oct: still deciding; ideas in §8). Mystic Crossroads ideas (Ravenwood has no café, pub, park, gym or shops): an occult curiosities shop, a gothic tea room/café, or a pub
+- [ ] [Jemma] Key Point (Sulani, 40×30) and Mystic Crossroads (Ravenwood, 30×30): lot type still to be decided (15 Oct: still deciding; ideas in §8). Mystic Crossroads ideas (Ravenwood has no café, pub, park, gym or shops): an occult curiosities shop, a gothic tea room/café, or a pub. See research/community-lots-mix.md for what each world is missing
 - 13 Oct: no preference yet on the lot type changes below; left as they are
 - [ ] [Jemma] 14 lot types are really place names (15 Oct: no preference yet). Suggested changes (tick the ones to make):
   - [ ] Darby's Den: "UoB Commons" → **UBrite Commons** (type on her Gallery upload)
