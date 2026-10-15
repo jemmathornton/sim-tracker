@@ -12,7 +12,7 @@
    "mapSpot": [0.39, 0.28],
    "mapBox": [0.2, 0.15, 0.57, 0.41],
    "lots": [
-    {"lot": "Ro Kaya Rockside", "myName": "Ro Kaya Rockside", "type": "Restaurant", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "Ro Kaya Rockside", "myName": "Ro Kaya Rockside", "type": "Community Market", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Taka Soi 15", "myName": "Taka Soi 15", "type": "Residential Rental (2)", "size": "20x20", "residents": "Cahyaputri (own)", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Chee-wit Chee-waa Kanto", "myName": "Chee-wit Chee-waa Kanto", "type": "Boba & Thrift", "size": "20x15", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["JnppkuUEQPS6bRavGX505Q=="], "traits": ["Teen Neighborhood", "Great Acoustics"]},
     {"lot": "ZoSul Taman Botani", "myName": "ZoSul Taman Botani", "type": "Wedding Venue", "size": "30x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
@@ -27,7 +27,7 @@
     {"lot": "Isda Riverfront", "myName": "Isda Riverfront", "type": "Residential Rental (2)", "size": "20x20", "residents": "Rochana/Caberry own", "built": true, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Sungai Point", "myName": "Sungai Point", "type": "Residential Rental (3)", "size": "30x20", "residents": "Linh-Sadya & Linh", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "The Screaming Gecko", "myName": "The Screaming Gecko", "type": "Karaoke Bar", "size": "20x20", "residents": "N/A", "built": true, "shared": false, "screenshots": false, "simsMade": "N/A"},
-    {"lot": "Tam Nang Sands", "myName": "Tam Nang Sands", "type": "Cemetery", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "Tam Nang Sands", "myName": "Tam Nang Sands", "type": "Spa", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Hothotok Shore", "myName": "Hothotok Shore", "type": "Residential", "size": "20x15", "residents": "Bun Ma", "built": false, "shared": false, "screenshots": false, "simsMade": false}
    ]
   }
