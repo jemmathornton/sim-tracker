@@ -27,7 +27,7 @@
    "mapSpot": [0.32, 0.37],
    "mapBox": [0.15, 0.21, 0.49, 0.53],
    "lots": [
-    {"lot": "New Harbor Park", "myName": null, "type": "Gym", "size": "50x40", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "New Harbor Park", "myName": null, "type": "Community Space", "size": "50x40", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Terra-Potta", "myName": null, "type": "Small Business Residential", "size": "30x20", "residents": "Koopman", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "The Old Foundry", "myName": null, "type": "Residential", "size": "20x15", "residents": "Urbane Housesharers household", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Spilled Neon", "myName": null, "type": "Small Business Residential", "size": "20x20", "residents": "Sarpong", "built": false, "shared": false, "screenshots": false, "simsMade": false},
