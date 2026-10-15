@@ -27,6 +27,10 @@ Written 13 Oct 2026. §1–§6 below are the state of the project at the moment 
 
 **14 Oct with Jemma:** lot types, sizes, rentals and apartment rooms settled; spreadsheet brought in line with the app (backups in Downloads); world extras on the site; Packs used removed; map boxes drawn by her for every world (cards zoom to fit, slide part-way from neighbours; `mapCentred`/`mapZoom` per card). **Overnight 14–15 Oct (write-up only):** data check-up (research/data-check-up.md), Gallery deep dive (research/gallery-deep-dive.md), rental layout mock-ups (for-jemma/rental-layouts.html); one display bug fixed (escaped hearts in comments).
 
+**15 Oct with Jemma:** site ideas done (Most loved, Newest comments, Base game marker, New since you looked, spreadsheet columns J–M); hidden lots and Innisgreen added; Backrooms talked through and three tagged; then the whole community-lot mix, world by world and type by type (research/community-lots-mix.md, evergreen-harbor.md, tomarang.md, nordhaven.md): 4 Community Markets, Recreation Centers, a spa, an onsen, karaoke, haunted houses, playgrounds and community spaces placed; lot types moved to the game's official names (her exceptions in CLAUDE.md); spreadsheet updated (backup "15 Oct lot types"); backup zip SimTracker backup 2026-10-15.zip in Documents.
+
+**Overnight 15–16 Oct (write-up only, nothing in the plan or on the site changed):** a note for every world (research/worlds/, 21 worlds, written by four helper agents from per-world fact packs: her plan, the game's lot descriptions, the Sims Wiki pages fetched through its API, and the new tools/research/world_lot_types.py), the Ondarion deep dive (research/ondarion.md), restaurants world by world (research/restaurants.md), rough lot ideas for the five worlds she doesn't own (research/not-owned-worlds.md) and the new-world checklist (§7 here). Every finding is on TODO.md §6c.
+
 §2 below describes the chat's generator, now in `old-chat-build/` (retired). §4: the refresh no longer needs a browser tab.
 
 ## 1. What exists today
