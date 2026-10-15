@@ -100,6 +100,7 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
   - [x] Copperdale dorms (Prescott and Lakeview Boarding Houses): "Dorms #1 / #2" → **University Housing**
   - [x] The ██████ Lab: "Special" → **Secret Lab**; FutureSim Labs: "Science Lab" → **FutureSim Labs** (the game's names)
   - Larry's Lagoon "Foxbury Commons" is already official. Also already official: Sixam, Police Station, Hospital, Ancient Ruins, Island Bluff, High School, Auditorium, Custom Venue, Netherworld Department, Community Market, Backroom
+- [ ] [Jemma] Later: check the small business lot types (15 Oct). It must stay obvious a business is run from the lot, not just a home. "Small Business Residential" (6 lots: The Quarry Building, Koffieboon, Fisherman's Wharf, Canalside Daycare, Terra-Potta, Spilled Neon) is her own label (the game has Residential with a business registered); "Small Business" (3), "Small Business/Bar" and "Small Business (Museum & Acting Classes)" are "Small Business Venue" in the game
 - [ ] [Jemma] Later: Magnolia Promenade's "Secret Lots" group (Police Station, FutureSim Labs, Willow Creek Hospital and Sixam): keep for now (15 Oct); maybe regroup later. Some special groups have no description
 - [x] Brindleton Boathouse (Sporting Space) and 2-4-3 Wakabamori: empty for now (14 Oct)
 - [ ] [Jemma] Paradise Stables (Gibbi Point): residents "To be decided" (15 Oct: still deciding)
