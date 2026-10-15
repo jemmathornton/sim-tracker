@@ -83,6 +83,10 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
 ## 5. Lot types, groups and names
 
 - [ ] [Jemma] Key Point (Sulani, 40×30) and Mystic Crossroads (Ravenwood, 30×30): lot type still to be decided (15 Oct: still deciding; ideas in §8). Mystic Crossroads ideas (Ravenwood has no café, pub, park, gym or shops): an occult curiosities shop, a gothic tea room/café, or a pub. See research/community-lots-mix.md for what each world is missing
+- [ ] [Jemma] **Ondarion: nothing decided yet. Big discussion later** (15 Oct). All its lots are open; start from what it's missing (research/community-lots-mix.md)
+- [ ] [Jemma] Evergreen Harbor community lots: to discuss (15 Oct). She may change some, and thinks the community spaces may take too much room; The Quarry Building is ticked built but she's not sure it is
+- [ ] [Jemma] Windenburg: Quad Manor (not built) as a Backroom instead of a library? (15 Oct, her idea; UoW Students Union is a library by type but really a student union)
+- Community mix look (15 Oct): kept as planned: Chestnut Ridge (The Rusty Horseshoe is the game's own dance hall, a nightclub; Sweet Nectar Glade stays a bar beside the vineyard), Henford (The Gnome's Arms serves food in the game), Sulani (island vibes; no restaurant needed), San Myshuno (a city, and karaoke's own pack)
 - 13 Oct: no preference yet on the lot type changes below; left as they are
 - [ ] [Jemma] 14 lot types are really place names (15 Oct: no preference yet). Suggested changes (tick the ones to make):
   - [ ] Darby's Den: "UoB Commons" → **UBrite Commons** (type on her Gallery upload)
