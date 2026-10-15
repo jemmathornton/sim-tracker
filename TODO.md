@@ -84,7 +84,7 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
 
 - [ ] [Jemma] Key Point (Sulani, 40×30) and Mystic Crossroads (Ravenwood, 30×30): lot type still to be decided (15 Oct: still deciding; ideas in §8)
 - 13 Oct: no preference yet on the lot type changes below; left as they are
-- [ ] [Jemma] 14 lot types are really place names. Suggested changes (tick the ones to make):
+- [ ] [Jemma] 14 lot types are really place names (15 Oct: no preference yet). Suggested changes (tick the ones to make):
   - [ ] Darby's Den: "UoB Commons" → **UBrite Commons** (type on her Gallery upload)
   - [ ] Boba & Thrift (Planet Honey Pop!, Boba Ippai, Town Square Stores, 18 Celebration Way, Chee-wit Chee-waa Kanto, Thrift 'n' Fish) → **Thrift and Bubble Tea Store** (official name, as on two of her uploads)
   - [x] Myshuno Meadows: stays "Central Park" (14 Oct, her choice; the game calls the type "Center Park")
@@ -124,7 +124,7 @@ From the data check-up, 15 Oct (research/data-check-up.md; sizes, uploads and sh
 - [x] Von-Windenburg Estate shows the 38 pictures from the "Von-Windenburg Castle" Builds folder (15 Oct, her choice: the castle is the Estate's build)
 - [ ] [Jemma] Bailey-Moon Manor and Izakaya Hanamigawa Koen are ticked for screenshots but have no Builds folder
 - [x] Game descriptions added for Acquisition Butte, Ridgeline Drive, Ohan'ali Town, Lani St. Taz and Magnolia Promenade (15 Oct). Still none (no game text): Desert Bloom Park, Campground, Glimmerbrook, the Secret/Special Lots groups
-- [ ] [Jemma] Gallery titles the site shows instead of her own names (e.g. Foxbury Court / Maritime Manor, The Royal Crown / The Old Crown, Café Llama / The Llama Café): any she'd rather show her own name for? List in the note
+- [x] Her "My Name" now matches her Gallery titles on 11 lots (15 Oct, plan and spreadsheet): Café Llama, Foxbury Court, The Royal Crown, Von-Windenburg Castle, Parkside Playground, Stargazer, Vista Quarry Villa, Revive and Thrive, Brooks Bridge, Desert Bloom, Cookies 'n' Cream
 - [ ] [Jemma] Mossy Lane's upload says Residential; re-upload as University Housing if wanted (her own Gallery)
 - [ ] [Jemma] From Gallery comments (research/gallery-deep-dive.md): Strike Out! asks for a waste basket in game; someone found Newcrest Community Space's court bugged
 - [x] Fixed 15 Oct: three Gallery comments showed "&lt;3" instead of "<3"

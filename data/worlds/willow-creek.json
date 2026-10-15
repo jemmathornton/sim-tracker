@@ -62,7 +62,7 @@
    "mapBox": [0.15, 0.55, 0.49, 0.77],
    "lots": [
     {"lot": "Municipal Muses", "myName": "Municipal Muses", "type": "Museum", "size": "40x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["3uTcvsTNEeeHdWHJsaQqWQ=="], "traits": ["Natural Light", "Romantic Aura", "Great Acoustics"]},
-    {"lot": "The Blue Velvet", "myName": "The Llama Café", "type": "Café", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["P5LkNP5KRd+K9PSzz+WEvQ=="], "traits": ["Sunny Aspect", "Romantic Aura", "Penny Pixies"]},
+    {"lot": "The Blue Velvet", "myName": "Café Llama", "type": "Café", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["P5LkNP5KRd+K9PSzz+WEvQ=="], "traits": ["Sunny Aspect", "Romantic Aura", "Penny Pixies"]},
     {"lot": "Movers & Shakers", "myName": null, "type": "Gym", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Willow Creek Archive", "myName": "Willow Creek Archive", "type": "Library", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ]

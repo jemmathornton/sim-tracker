@@ -25,7 +25,7 @@
    "mapSpot": [0.65, 0.68],
    "mapBox": [0.47, 0.57, 0.84, 0.78],
    "lots": [
-    {"lot": "Vista Quarry", "myName": "Vista Quarry", "type": "Residential", "size": "30x20", "residents": "2 Bed Family", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["D3pjU723EeuN9fwg9JDtjA=="], "traits": ["Natural Light"], "challenges": ["Quake Zone"]},
+    {"lot": "Vista Quarry", "myName": "Vista Quarry Villa", "type": "Residential", "size": "30x20", "residents": "2 Bed Family", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["D3pjU723EeuN9fwg9JDtjA=="], "traits": ["Natural Light"], "challenges": ["Quake Zone"]},
     {"lot": "Raffia Quinta", "myName": "Raffia Quinta", "type": "Tiny Home Residential", "size": "20x15", "residents": "Rivera", "built": true, "shared": true, "screenshots": true, "simsMade": false, "gallery": ["Vstuj6QyEe2MBonwBMy2Ww=="], "traits": ["Homey", "Eco Lot"]},
     {"lot": "Dusty Turf", "myName": "Dusty Turf", "type": "Residential", "size": "30x20", "residents": "De Costa", "built": true, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Springscape", "myName": "Springscape", "type": "Residential", "size": "30x20", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["hYfhA752EeuOnL8NB92BJw=="], "challenges": ["Quake Zone"]},
@@ -72,7 +72,7 @@
    "mapSpot": [0.49, 0.51],
    "mapBox": [0.4, 0.45, 0.57, 0.58],
    "lots": [
-    {"lot": "Desert Bloom Park", "myName": "Desert Bloom Park", "type": "Park", "size": "50x50", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["7rH4P51KEeuKxvwg9JDtjA=="]},
+    {"lot": "Desert Bloom Park", "myName": "Desert Bloom", "type": "Park", "size": "50x50", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["7rH4P51KEeuKxvwg9JDtjA=="]},
     {"lot": "Forgotten Grotto", "myName": null, "type": "Forgotten Grotto", "size": "15x10", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ],
    "ecoStart": "Green"

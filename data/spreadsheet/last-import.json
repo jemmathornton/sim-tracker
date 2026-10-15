@@ -230,7 +230,7 @@
      },
      {
       "Lot Name": "The Blue Velvet",
-      "My Name": "The Llama Café",
+      "My Name": "Café Llama",
       "Lot Type": "Café",
       "Lot Size": "30x20",
       "Residents/Owners": "N/A",
@@ -350,7 +350,7 @@
     "lots": [
      {
       "Lot Name": "Vista Quarry",
-      "My Name": "Vista Quarry",
+      "My Name": "Vista Quarry Villa",
       "Lot Type": "Residential",
       "Lot Size": "30x20",
       "Residents/Owners": "2 Bed Family",
@@ -535,7 +535,7 @@
     "lots": [
      {
       "Lot Name": "Desert Bloom Park",
-      "My Name": "Desert Bloom Park",
+      "My Name": "Desert Bloom",
       "Lot Type": "Park",
       "Lot Size": "50x50",
       "Residents/Owners": "N/A",
@@ -721,7 +721,7 @@
      },
      {
       "Lot Name": "Hillside Highlands",
-      "My Name": "Cookes 'n' Cream",
+      "My Name": "Cookies 'n' Cream",
       "Lot Type": "Retail (Bakery & Ice Cream)",
       "Lot Size": "30x20",
       "Residents/Owners": "N/A",
@@ -1219,7 +1219,7 @@
      },
      {
       "Lot Name": "Von-Windenburg Estate",
-      "My Name": "Von-Windenburg Estate",
+      "My Name": "Von-Windenburg Castle",
       "Lot Type": "Residential",
       "Lot Size": "64x64",
       "Residents/Owners": "Tiquelle",
@@ -1602,7 +1602,7 @@
      },
      {
       "Lot Name": "Stargazer Lounge",
-      "My Name": "Stargazer Lounge",
+      "My Name": "Stargazer",
       "Lot Type": "Nightclub",
       "Lot Size": "40x30",
       "Residents/Owners": "N/A",
@@ -2531,7 +2531,7 @@
      },
      {
       "Lot Name": "Brooks Bridge Borough",
-      "My Name": "Brooks Bridge Borough",
+      "My Name": "Brooks Bridge",
       "Lot Type": "Haunted House Residential",
       "Lot Size": "30x20",
       "Residents/Owners": "Amicable Acolytes",
@@ -2640,7 +2640,7 @@
      },
      {
       "Lot Name": "Maritime Manor",
-      "My Name": "Maritime Manor",
+      "My Name": "Foxbury Court",
       "Lot Type": "Nightclub/Retail",
       "Lot Size": "30x20",
       "Residents/Owners": "N/A",
@@ -2700,7 +2700,7 @@
      },
      {
       "Lot Name": "Pepper's Pub",
-      "My Name": "The Old Crown",
+      "My Name": "The Royal Crown",
       "Lot Type": "Bar",
       "Lot Size": "20x20",
       "Residents/Owners": "N/A",
@@ -3685,7 +3685,7 @@
      },
      {
       "Lot Name": "Parkside Place",
-      "My Name": "Parkside Place",
+      "My Name": "Parkside Playground",
       "Lot Type": "Playground",
       "Lot Size": "30x20",
       "Residents/Owners": "N/A",
@@ -4724,7 +4724,7 @@
     "lots": [
      {
       "Lot Name": "Hothead Rock Hideaway",
-      "My Name": "Revive and Thrive Retreat",
+      "My Name": "Revive and Thrive",
       "Lot Type": "Custom Venue",
       "Lot Size": "64x64",
       "Residents/Owners": "N/A",

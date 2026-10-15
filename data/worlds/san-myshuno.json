@@ -67,7 +67,7 @@
     {"lot": "IX Landgraab Apartments", "myName": "IX Landgraab Apartments", "type": "Apartment", "size": "N/A", "residents": "Feng", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "888 Spire Apartments", "myName": "888 Spire Apartments", "type": "Apartment", "size": "N/A", "residents": "Empty", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Skye Fitness", "myName": "Skye Fitness", "type": "Gym", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["TKz5fD8MEeqGF0Ftv2M37A=="], "traits": ["Sunny Aspect", "Bracing Breezes"]},
-    {"lot": "Stargazer Lounge", "myName": "Stargazer Lounge", "type": "Nightclub", "size": "40x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["/QOT/EWBEeeCgKP4YfS2mA=="], "traits": ["Romantic Aura", "Party Place", "Great Acoustics"]}
+    {"lot": "Stargazer Lounge", "myName": "Stargazer", "type": "Nightclub", "size": "40x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["/QOT/EWBEeeCgKP4YfS2mA=="], "traits": ["Romantic Aura", "Party Place", "Great Acoustics"]}
    ]
   },
   {

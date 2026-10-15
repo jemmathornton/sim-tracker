@@ -27,7 +27,7 @@
    "mapBox": [0.13, 0.37, 0.38, 0.64],
    "lots": [
     {"lot": "Larry's Lagoon", "myName": "Larry's Lagoon", "type": "Foxbury Commons", "size": "40x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["J5N3RfOPEeqCCcLb66ZsmA=="], "traits": ["Study Spot", "Convivial", "Fast Internet"]},
-    {"lot": "Maritime Manor", "myName": "Maritime Manor", "type": "Nightclub/Retail", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["tzrKYfg/EeqKp+5FdmbmdA=="], "traits": ["University Student Hang Out", "Party Place", "Romantic Aura"]},
+    {"lot": "Maritime Manor", "myName": "Foxbury Court", "type": "Nightclub/Retail", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["tzrKYfg/EeqKp+5FdmbmdA=="], "traits": ["University Student Hang Out", "Party Place", "Romantic Aura"]},
     {"lot": "Tidal Tower", "myName": "Tidal Tower", "type": "University Housing", "size": "30x20", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["hZKnQAU9RVSEhAqGTS7yyQ=="], "traits": ["Fast Internet", "Study Spot", "Sunny Aspect"]},
     {"lot": "Briny Tower", "myName": "Briny Tower", "type": "University Housing", "size": "30x20", "residents": "Fletcher", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["dUmUl8fLSFC7Tb8ux2J66Q=="], "traits": ["Study Spot", "Party Place", "Sunny Aspect"]}
    ],
@@ -41,7 +41,7 @@
    "lots": [
     {"lot": "Honeydew Fields", "myName": "Britechester BnB", "type": "Café/Vacation Rental", "size": "20x15", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["wBt4dbV+EeuBjk1o44QF8A==", "RwfD0bUaEeuB0ucawTB/JA=="], "traits": ["Romantic Aura", "University Student Hang Out"], "galleryVariants": true},
     {"lot": "Laurel Library", "myName": "Laurel Library", "type": "Library", "size": "50x40", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["421u6vYLEeqOjQj3LsIbeA=="], "traits": ["Study Spot", "University Student Hang Out", "Peace and Quiet"]},
-    {"lot": "Pepper's Pub", "myName": "The Old Crown", "type": "Bar", "size": "20x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["RQVL6vebEeqB6gj3LsIbeA=="], "traits": ["University Student Hang Out", "Convivial"]},
+    {"lot": "Pepper's Pub", "myName": "The Royal Crown", "type": "Bar", "size": "20x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["RQVL6vebEeqB6gj3LsIbeA=="], "traits": ["University Student Hang Out", "Convivial"]},
     {"lot": "Mossy Lane", "myName": "Mossy Lane", "type": "University Housing", "size": "20x15", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["+1TuKO1OEeqP5iQfmaYcsw=="], "traits": ["Homey", "Cat Hangout"]},
     {"lot": "Spring Steppes", "myName": "Spring Steppes", "type": "Residential Rental (3)", "size": "20x15", "residents": "Elderberry", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["yQ7eyLWyEeuOBucawTB/JA==", "KSt/tE6iQq2vZ7znirZsAw=="], "traits": ["Homey", "Cat Hangout"], "tenants": [{"name": "Pleasant"}]}
    ],
