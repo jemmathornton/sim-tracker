@@ -242,7 +242,7 @@
      {
       "Lot Name": "Movers & Shakers",
       "My Name": null,
-      "Lot Type": "Gym",
+      "Lot Type": "Backroom",
       "Lot Size": "30x20",
       "Residents/Owners": "N/A",
       "Built": false,
@@ -2182,7 +2182,7 @@
      {
       "Lot Name": "StrangerVille Information Center",
       "My Name": "StrangerVille Information Center",
-      "Lot Type": "Museum",
+      "Lot Type": "Backroom",
       "Lot Size": "20x20",
       "Residents/Owners": "N/A",
       "Built": false,
@@ -3560,7 +3560,7 @@
      {
       "Lot Name": "LaSuli Point",
       "My Name": "LaSuli Point",
-      "Lot Type": "Restaurant",
+      "Lot Type": "Park/Cemetery",
       "Lot Size": "20x15",
       "Residents/Owners": "N/A",
       "Built": false,
@@ -3571,24 +3571,24 @@
      {
       "Lot Name": "Totter Park",
       "My Name": "Totter Park",
-      "Lot Type": "Cemetery",
-      "Lot Size": "50x40",
-      "Residents/Owners": "N/A",
-      "Built": false,
-      "Shared": false,
-      "Screenshots": false,
-      "Sims Made": "N/A"
-     },
-     {
-      "Lot Name": "BridgeCreek Drive",
-      "My Name": "BridgeCreek Drive",
       "Lot Type": "Residential",
-      "Lot Size": "30x30",
+      "Lot Size": "50x40",
       "Residents/Owners": "Price",
       "Built": false,
       "Shared": false,
       "Screenshots": false,
       "Sims Made": false
+     },
+     {
+      "Lot Name": "BridgeCreek Drive",
+      "My Name": "BridgeCreek Drive",
+      "Lot Type": "Backroom",
+      "Lot Size": "30x30",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
      },
      {
       "Lot Name": "Little Falls Nook",
