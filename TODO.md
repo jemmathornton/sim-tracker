@@ -82,7 +82,7 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
 
 ## 5. Lot types, groups and names
 
-- [ ] [Jemma] Key Point (Sulani, 40×30) and Mystic Crossroads (Ravenwood, 30×30): lot type still to be decided (15 Oct: still deciding; ideas in §8)
+- [ ] [Jemma] Key Point (Sulani, 40×30) and Mystic Crossroads (Ravenwood, 30×30): lot type still to be decided (15 Oct: still deciding; ideas in §8). Mystic Crossroads ideas (Ravenwood has no café, pub, park, gym or shops): an occult curiosities shop, a gothic tea room/café, or a pub
 - 13 Oct: no preference yet on the lot type changes below; left as they are
 - [ ] [Jemma] 14 lot types are really place names (15 Oct: no preference yet). Suggested changes (tick the ones to make):
   - [ ] Darby's Den: "UoB Commons" → **UBrite Commons** (type on her Gallery upload)
@@ -138,7 +138,7 @@ From the data check-up, 15 Oct (research/data-check-up.md; sizes, uploads and sh
 ## 8. Ideas from the research (suggestions only; tick to do)
 
 Newer lot types and where they could go (research/lot-types-reference.md):
-- [ ] [Jemma] Backrooms (library/museum/gym by day, nightclub 9pm–6am; allowed in every world; by day it brings readers, art lovers or gym-goers for whichever of bookcases, art and gym equipment are on the lot, mixed if mixed; needs 3 of them in any combination, plus bar, stereo, 4 barstools, sink, toilet, bin). 15 Oct: Movers & Shakers (Willow Creek), StrangerVille Information Center and BridgeCreek Drive (Copperdale; the Price family moved to Totter Park, which is now Residential instead of a cemetery) tagged as Backrooms, not built. Other ideas: Mystic Crossroads, Finchwick Village Hall
+- [ ] [Jemma] Backrooms (library/museum/gym by day, nightclub 9pm–6am; allowed in every world; by day it brings readers, art lovers or gym-goers for whichever of bookcases, art and gym equipment are on the lot, mixed if mixed; needs 3 of them in any combination, plus bar, stereo, 4 barstools, sink, toilet, bin). 15 Oct: Movers & Shakers (Willow Creek), StrangerVille Information Center and BridgeCreek Drive (Copperdale; the Price family moved to Totter Park, which is now Residential instead of a cemetery) tagged as Backrooms, not built. Other idea: Finchwick Village Hall. Keep them rare (about one per world at most, where it fills a gap or suits the story); not Ravenwood (openly creepy already, nothing to hide)
 - [ ] Community Market: a standalone market at Key Point (beach market), or a lot in Henford or Chestnut Ridge (allowed in every world; 15 Oct: Key Point still deciding)
 - [ ] Custom Venue: Key Point as a watersports or beach camp
 - [ ] Haunted House Residential: Specter Row (with On Hallowed Grounds); 15 Oct: still deciding. (Brooks Bridge Borough is one since 14 Oct)
