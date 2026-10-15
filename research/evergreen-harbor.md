@@ -44,3 +44,13 @@ For the Evergreen Harbor community-lot discussion (TODO §5). Sources: the Sims 
 - **A café works.** Nordhaven's Koffieboon is a small business: coffee, tea, reading and classes.
 - **Proper meals are awkward.** There are no waiters, food is self-serve from a counter, and the owner must be on the lot.
 - **They open when their owner opens them.** Player reports on NPC-owned ones opening by themselves are mixed. Café, bar and restaurant lot types run on their own.
+
+## Community Market (Royalty & Legacy), added after she asked
+
+Also in research/lot-types-reference.md. Sources: simscommunity's Community Market guide and the EA forums Royalty & Legacy Q&A.
+
+- **A market that's always on.** Unlike the community space's Marketplace version, no neighbourhood vote is needed, and it's one build, not four. It works in any world (Zanbira Market in Ondarion is the premade one).
+- **Needs:** 2 stoves, a fridge, a dining table with 4 chairs, a podium, 3 sales tables (any pack's), a toilet, a washbasin and a bin. Optional: toys, an instrument and picnic tables.
+- **Vendors:** 1–2 at a time, selling crafted and foraged goods, swords, collectables and Eco Lifestyle upgrade parts (stock is luck-based). Sims can sell their own goods.
+- **Food:** visiting Sims cook and eat together in the shared kitchen, so it's free food rather than food for sale.
+- **Watch out:** rain damages outdoor stoves. It's not confirmed whether Sims reliably use the podium.
