@@ -36,7 +36,7 @@
    "mapSpot": [0.63, 0.63],
    "mapBox": [0.47, 0.48, 0.79, 0.78],
    "lots": [
-    {"lot": "LaSuli Point", "myName": "LaSuli Point", "type": "Restaurant", "size": "20x15", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "LaSuli Point", "myName": "LaSuli Point", "type": "Park/Cemetery", "size": "20x15", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Totter Park", "myName": "Totter Park", "type": "Residential", "size": "50x40", "residents": "Price", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "BridgeCreek Drive", "myName": "BridgeCreek Drive", "type": "Backroom", "size": "30x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Little Falls Nook", "myName": "Little Falls Nook", "type": "Residential", "size": "20x20", "residents": "Harjo", "built": false, "shared": false, "screenshots": false, "simsMade": false},
