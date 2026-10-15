@@ -26,7 +26,7 @@
    "lots": [
     {"lot": "13 Acacia Avenue", "myName": "13 Acacia Avenue", "type": "Residential", "size": "40x30", "residents": "Robles-Ruano", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Parkside Place", "myName": "Parkside Playground", "type": "Playground", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["HMOwRBrIQuedlPG5caBw8A=="], "traits": ["Child's Play", "Party Place"]},
-    {"lot": "18 Celebration Way", "myName": "18 Celebration Way", "type": "Boba & Thrift", "size": "40x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "18 Celebration Way", "myName": "18 Celebration Way", "type": "Community Market", "size": "40x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Celebration Center", "myName": "Celebration Center", "type": "Wedding Venue/Cemetery", "size": "64x64", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ],
    "ecoStart": "Green"
