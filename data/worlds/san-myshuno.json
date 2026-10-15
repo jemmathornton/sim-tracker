@@ -76,7 +76,7 @@
    "mapSpot": [0.77, 0.61],
    "mapBox": [0.69, 0.52, 0.84, 0.69],
    "lots": [
-    {"lot": "Myshuno Meadows", "myName": "Myshuno Meadows", "type": "Central Park", "size": "64x64", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
+    {"lot": "Myshuno Meadows", "myName": "Myshuno Meadows", "type": "Center Park", "size": "64x64", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ],
    "ecoStart": "Green"
   }

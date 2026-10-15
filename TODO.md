@@ -93,7 +93,7 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
 - [x] [Jemma] Lot types that are really place names or shorthand (15 Oct, her rule: official names, except her British/own replacements):
   - [x] Darby's Den: stays **UoB Commons** (her choice: Britechester is meant to be British; "UBrite" is an odd American abbreviation)
   - [x] Boba & Thrift (6 lots, incl. Magnolia Mall) → **Thrift and Boba Store** (the official shape, but "boba", not "bubble tea", her choice)
-  - [x] Myshuno Meadows: stays **Central Park** (her choice, 15 Oct; the game's own text says "Center Park")
+  - [x] Myshuno Meadows: **Center Park** (15 Oct: she checked in game, it's the real type name)
   - [x] Belomisia Trailhead: "Campground" → **National Park**
   - [x] The Magic Realm: stays (it is the game's own lot type name)
   - [x] Plumbob Pictures (secret lot) → **Acting Studio**

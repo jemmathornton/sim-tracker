@@ -16,7 +16,7 @@ Read `HANDOVER.md` once for the full story, then `TODO.md` for everything still 
 - **Lot names:** her Gallery title wins, then her own name ("My Name", ignored if just "?"), then the in-game name. The in-game name shows only on the lot page and the Stats sheet.
 - **Percentages only on the Stats page.** Elsewhere use counts or words.
 - **Bedrooms** count only rooms used as bedrooms (not gyms, music or art rooms).
-- **Lot types** use the game's official names (she types shorthand in game because of character limits), except her own British replacements: **Thrift and Boba Store** (not "Bubble Tea"), **UoB Commons** (not "UBrite") and **Central Park** (the game says "Center Park"). Combos (Park/Cemetery) and her notes in brackets ("Restaurant (Seafood)") stay.
+- **Lot types** use the game's official names (she types shorthand in game because of character limits), except her own British replacements: **Thrift and Boba Store** (not "Bubble Tea") and **UoB Commons** (not "UBrite"). Combos (Park/Cemetery) and her notes in brackets ("Restaurant (Seafood)") stay.
 - **World colours** come from the world's map and her builds, never from one side of a world (e.g. Britechester must match neither UoB green nor Foxbury red). The "deep" shades drive the fade at the bottom of each map hero and must look the same as that world's neighbourhood cards.
 - **Never guess where a neighbourhood is on a map.** Give her a gridded copy (8 columns A–H × 6 rows 1–6) and let her name the squares.
 - **Phone layout is parked** until she asks; laptop (1280px) first.
