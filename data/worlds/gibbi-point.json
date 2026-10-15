@@ -28,7 +28,7 @@
     {"lot": "Jellyfish Jubilee", "myName": "Jellyfish Jubilee", "type": "Restaurant", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Seabreeze Scenic", "myName": "Seabreeze Scenic", "type": "Residential", "size": "40x30", "residents": "Perry", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Fletcher's Cottage", "myName": "Gibbi Point Library", "type": "Library", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["pKnwlfeXRiGGVi/QvTc7TQ=="], "traits": ["Child's Play", "Peace and Quiet", "Study Spot"]},
-    {"lot": "Revive and Thrive Retreat", "myName": "Gibbi Rec Center", "type": "Rec Center", "size": "64x64", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["R7mzaO9GS5atpQCbFz9dlw=="]}
+    {"lot": "Revive and Thrive Retreat", "myName": "Gibbi Rec Center", "type": "Recreation Center", "size": "64x64", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["R7mzaO9GS5atpQCbFz9dlw=="]}
    ],
    "festivals": ["Fitness Fest", "Glow and Flow Festival"]
   },
