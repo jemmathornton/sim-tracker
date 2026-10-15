@@ -39,7 +39,7 @@
    "mapSpot": [0.32, 0.34],
    "mapBox": [0.23, 0.27, 0.42, 0.42],
    "lots": [
-    {"lot": "The ██████ Lab", "myName": "The ██████ Lab", "type": "Special", "size": "64x64", "residents": "N/A", "built": "N/A", "shared": "N/A", "screenshots": "N/A", "simsMade": "N/A"}
+    {"lot": "The ██████ Lab", "myName": "The ██████ Lab", "type": "Secret Lab", "size": "64x64", "residents": "N/A", "built": "N/A", "shared": "N/A", "screenshots": "N/A", "simsMade": "N/A"}
    ]
   }
  ],

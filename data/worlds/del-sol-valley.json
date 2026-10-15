@@ -45,7 +45,7 @@
    "name": "Secret Lots",
    "desc": "",
    "lots": [
-    {"lot": "Plumbob Pictures", "myName": "Plumbob Pictures", "type": "Plumbob Pictures", "size": "50x50", "residents": "N/A", "built": "N/A", "shared": "N/A", "screenshots": "N/A", "simsMade": "N/A"}
+    {"lot": "Plumbob Pictures", "myName": "Plumbob Pictures", "type": "Acting Studio", "size": "50x50", "residents": "N/A", "built": "N/A", "shared": "N/A", "screenshots": "N/A", "simsMade": "N/A"}
    ]
   }
  ],

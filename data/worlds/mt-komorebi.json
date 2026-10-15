@@ -31,7 +31,7 @@
     {"lot": "5-3-1 Shinrinyoku", "myName": "Sento Senbamachi", "type": "Onsen Bathhouse", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["HA1X7avPEe2KmInwBMy2Ww=="], "traits": ["On Ley Line", "Party Place"]},
     {"lot": "6-4-1 Hanamigawa", "myName": "6-4-1 Hanamigawa", "type": "Vacation Rental", "size": "20x15", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Hanamigawa Koen", "myName": "Izakaya Hanamigawa Koen", "type": "Restaurant (/Park)", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": true, "simsMade": "N/A", "gallery": ["LZDQX/6/EeyBmFZvr3rQ2g=="], "traits": ["Convivial"]},
-    {"lot": "Izakaya Ippai", "myName": "Boba Ippai", "type": "Boba & Thrift", "size": "30x20", "residents": "N/A", "built": true, "shared": false, "screenshots": false, "simsMade": "N/A"}
+    {"lot": "Izakaya Ippai", "myName": "Boba Ippai", "type": "Thrift and Boba Store", "size": "30x20", "residents": "N/A", "built": true, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ],
    "festivals": ["Festival of Light"]
   },

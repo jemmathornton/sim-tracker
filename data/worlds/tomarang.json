@@ -14,7 +14,7 @@
    "lots": [
     {"lot": "Ro Kaya Rockside", "myName": "Ro Kaya Rockside", "type": "Community Market", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Taka Soi 15", "myName": "Taka Soi 15", "type": "Residential Rental (2)", "size": "20x20", "residents": "Cahyaputri (own)", "built": false, "shared": false, "screenshots": false, "simsMade": false},
-    {"lot": "Chee-wit Chee-waa Kanto", "myName": "Chee-wit Chee-waa Kanto", "type": "Boba & Thrift", "size": "20x15", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["JnppkuUEQPS6bRavGX505Q=="], "traits": ["Teen Neighborhood", "Great Acoustics"]},
+    {"lot": "Chee-wit Chee-waa Kanto", "myName": "Chee-wit Chee-waa Kanto", "type": "Thrift and Boba Store", "size": "20x15", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["JnppkuUEQPS6bRavGX505Q=="], "traits": ["Teen Neighborhood", "Great Acoustics"]},
     {"lot": "ZoSul Taman Botani", "myName": "ZoSul Taman Botani", "type": "Wedding Venue", "size": "30x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ]
   },

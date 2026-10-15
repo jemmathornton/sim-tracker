@@ -51,7 +51,7 @@
     {"lot": "1312 21 Chic Street", "myName": "1312 21 Chic Street", "type": "Apartment", "size": "N/A", "residents": "Pizzazz", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "1313 21 Chic Street", "myName": "1313 21 Chic Street", "type": "Apartment", "size": "N/A", "residents": "Empty", "built": true, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Torendi Tower Penthouse", "myName": "Torendi Tunes", "type": "Karaoke Bar", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
-    {"lot": "Planet Honey Pop!", "myName": "Planet Honey Pop!", "type": "Boba & Thrift", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
+    {"lot": "Planet Honey Pop!", "myName": "Planet Honey Pop!", "type": "Thrift and Boba Store", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ],
    "festivals": ["GeekCon", "Romance Festival"]
   },
