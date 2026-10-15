@@ -137,7 +137,7 @@ From the data check-up, 15 Oct (research/data-check-up.md; sizes, uploads and sh
 ## 8. Ideas from the research (suggestions only; tick to do)
 
 Newer lot types and where they could go (research/lot-types-reference.md):
-- [ ] [Jemma] Backrooms (library/museum/gym by day, nightclub 9pm–6am; allowed in every world; by day it brings readers, art lovers or gym-goers for whichever of bookcases, art and gym equipment are on the lot, mixed if mixed; needs 3 of them in any combination, plus bar, stereo, 4 barstools, sink, toilet, bin). 15 Oct: Movers & Shakers (Willow Creek) and StrangerVille Information Center tagged as Backrooms, not built. Copperdale next to decide (Copperdale Library, LaSuli Point, or a Plumbite Cove house lot); other ideas: Mystic Crossroads, Finchwick Village Hall
+- [ ] [Jemma] Backrooms (library/museum/gym by day, nightclub 9pm–6am; allowed in every world; by day it brings readers, art lovers or gym-goers for whichever of bookcases, art and gym equipment are on the lot, mixed if mixed; needs 3 of them in any combination, plus bar, stereo, 4 barstools, sink, toilet, bin). 15 Oct: Movers & Shakers (Willow Creek), StrangerVille Information Center and BridgeCreek Drive (Copperdale; the Price family moved to Totter Park, which is now Residential instead of a cemetery) tagged as Backrooms, not built. Other ideas: Mystic Crossroads, Finchwick Village Hall
 - [ ] Community Market: a standalone market at Key Point (beach market), or a lot in Henford or Chestnut Ridge (allowed in every world; 15 Oct: Key Point still deciding)
 - [ ] Custom Venue: Key Point as a watersports or beach camp
 - [ ] Haunted House Residential: Specter Row (with On Hallowed Grounds); 15 Oct: still deciding. (Brooks Bridge Borough is one since 14 Oct)
