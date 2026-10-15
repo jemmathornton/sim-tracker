@@ -82,7 +82,7 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
 
 ## 5. Lot types, groups and names
 
-- [ ] [Jemma] Key Point (Sulani, 40×30) and Mystic Crossroads (Ravenwood, 30×30): lot type still to be decided (ideas in §8)
+- [ ] [Jemma] Key Point (Sulani, 40×30) and Mystic Crossroads (Ravenwood, 30×30): lot type still to be decided (15 Oct: still deciding; ideas in §8)
 - 13 Oct: no preference yet on the lot type changes below; left as they are
 - [ ] [Jemma] 14 lot types are really place names. Suggested changes (tick the ones to make):
   - [ ] Darby's Den: "UoB Commons" → **UBrite Commons** (type on her Gallery upload)
@@ -93,7 +93,7 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
   - [ ] Plumbob Pictures (secret lot): the game calls it the **Acting Studio** (confirmed in the game's own text, 13 Oct)
   - [ ] Copperdale dorms (Prescott and Lakeview Boarding Houses): "Dorms #1 / #2" → **University Housing** (the research says it works in any world; her SU Plateau Residence in StrangerVille already uses it), or **Residential**, or keep "Boarding House"
   - Larry's Lagoon "Foxbury Commons" is already official. Also already official: Sixam, Police Station, Hospital, Science Lab, Ancient Ruins, Island Bluff, High School, Auditorium, Custom Venue, Netherworld Department, Community Market, Backroom
-- [ ] [Jemma] Magnolia Promenade's "Secret Lots" group holds the Police Station, FutureSim Labs and Hospital (in the game they're in hidden neighbourhoods "Civic Center" and "Scientist"); keep or regroup? Some special groups have no description
+- [ ] [Jemma] Later: Magnolia Promenade's "Secret Lots" group (Police Station, FutureSim Labs, Willow Creek Hospital and Sixam): keep for now (15 Oct); maybe regroup later. Some special groups have no description
 - [x] Brindleton Boathouse (Sporting Space) and 2-4-3 Wakabamori: empty for now (14 Oct)
 - [ ] [Jemma] Paradise Stables (Gibbi Point): residents "To be decided"
 - [ ] [Jemma] Household count consistency (lots vs households in page headers): revisit later
@@ -104,7 +104,7 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
 - [x] The 4 missing secret lots added 13 Oct (not built yet): Sylvan Glade (Foundry Cove), Forgotten Grotto (Desert Bloom Park, her choice), Hermit's House (Granite Falls Forest, type Hermit's Hut), Mt. Komorebi Peak (Yukimatsu, type Mount Komorebi Summit). Selvadorada's jungle areas / Omiscan Temple left out
 - [x] In-game spellings fixed 13 Oct, each checked against the game's own text: Piccola Luce, The Summer Home, Avenida de la Eternidad, Plaza Mariposa, Creek Side Corner, Champion's Grove, 1313 21 Chic Street (her name column had the same typo on three; fixed too). Her spreadsheet still has the old spellings; the import reads them as the new ones (`data/spreadsheet/renamed.json`)
 - [x] Club Eternity (Ravenwood): the game's own files say 30×30, as in the plan (14 Oct); nothing to change
-- [x] Innisgreen's 14 lots added as not owned (15 Oct): Coast of Adhmor, Sprucederry Grove, Everdew; on Stats with the other not-owned worlds
+- [x] Innisgreen's 14 lots added as not owned (15 Oct): Coast of Adhmor, Sprucederry Grove, Everdew; on Stats with the other not-owned worlds, and in her spreadsheet (new Innisgreen tab and Overview row, backup kept)
 - [x] Harbor Quarter Gym (her UoW Students Union): now 30×30, the game's size (14 Oct, her choice)
 - [x] The Magic Realm: now 50×40, the game's size (14 Oct, her choice)
 - [x] Hidden lots added as secret lots, not built (15 Oct): Mt. Komorebi Base Camp and The Croft Icefall (Yukimatsu, before the Peak), Omiscan Royal Baths (Belomisia Jungle). Omiscan Temple left out (five game-controlled layouts)
