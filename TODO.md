@@ -95,9 +95,9 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
   - Larry's Lagoon "Foxbury Commons" is already official. Also already official: Sixam, Police Station, Hospital, Science Lab, Ancient Ruins, Island Bluff, High School, Auditorium, Custom Venue, Netherworld Department, Community Market, Backroom
 - [ ] [Jemma] Later: Magnolia Promenade's "Secret Lots" group (Police Station, FutureSim Labs, Willow Creek Hospital and Sixam): keep for now (15 Oct); maybe regroup later. Some special groups have no description
 - [x] Brindleton Boathouse (Sporting Space) and 2-4-3 Wakabamori: empty for now (14 Oct)
-- [ ] [Jemma] Paradise Stables (Gibbi Point): residents "To be decided"
+- [ ] [Jemma] Paradise Stables (Gibbi Point): residents "To be decided" (15 Oct: still deciding)
 - [ ] [Jemma] Household count consistency (lots vs households in page headers): revisit later
-- [ ] [Jemma] Bonus builds section: Robert Piggott School, Bubble World (Von-Windenburg Castle is the Estate lot's build, 15 Oct)
+- [ ] [Jemma] Bonus builds section: Robert Piggott School, Bubble World (15 Oct: not now; Von-Windenburg Castle is the Estate lot's build)
 
 ## 6. From the 13 Oct lot check (research/missing-lots-check.md)
 
