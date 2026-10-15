@@ -31,8 +31,8 @@
     {"lot": "Terra-Potta", "myName": null, "type": "Small Business Residential", "size": "30x20", "residents": "Koopman", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "The Old Foundry", "myName": null, "type": "Residential", "size": "20x15", "residents": "Urbane Housesharers household", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Spilled Neon", "myName": null, "type": "Small Business Residential", "size": "20x20", "residents": "Sarpong", "built": false, "shared": false, "screenshots": false, "simsMade": false},
-    {"lot": "Inked Inlet", "myName": null, "type": "Library", "size": "20x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
-    {"lot": "Lighthouse Lookout", "myName": null, "type": "Residential Rental", "size": "50x40", "residents": "Empty", "built": false, "shared": false, "screenshots": false, "simsMade": false}
+    {"lot": "Inked Inlet", "myName": null, "type": "Playground", "size": "20x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "Lighthouse Lookout", "myName": null, "type": "Library", "size": "50x40", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ],
    "festivals": ["Hobby meetups"]
   }
