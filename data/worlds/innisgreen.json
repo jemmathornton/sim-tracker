@@ -22,7 +22,7 @@
    "lots": [
     {"lot": "Fern & Frond Wading Pond", "myName": null, "type": "Community Market", "size": "64x64", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Whistling Thistle Gardens", "myName": null, "type": "Park", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
-    {"lot": "Greenwood Hamlet Residence", "myName": null, "type": "Small Business (Apothecary)", "size": "30x20", "residents": "? (owner to decide; maybe Todd Attenberry)", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "Greenwood Hamlet Residence", "myName": null, "type": "Small Business (Apothecary)", "size": "30x20", "residents": "Enchanted Lovers (Todd Attenberry's apothecary, for now)", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Gringle's", "myName": null, "type": "Bar", "size": "30x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Gimmley Gardensbrook", "myName": null, "type": "Residential", "size": "30x30", "residents": "Enchanted Lovers", "built": false, "shared": false, "screenshots": false, "simsMade": false}
    ]
