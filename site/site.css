@@ -511,3 +511,5 @@ footer .as-of{flex-basis:100%}
 .listing .meta .unit-list em{font-style:normal;margin-left:auto;flex:none;width:4.2em;text-align:left;font-variant-numeric:tabular-nums;color:var(--muted);font-size:12.5px}
 .listing .meta .hh-link{cursor:pointer}
 .listing .meta .hh-link:hover{text-decoration:underline;text-underline-offset:2px}
+.listing.bfront{cursor:default}
+.listing.bfront:hover h3{text-decoration:none}.listing.bfront:hover .plot-svg{transform:none}.listing.bfront:hover .photo.shot{filter:none}

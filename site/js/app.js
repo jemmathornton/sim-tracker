@@ -248,15 +248,14 @@ function unitsTable(l){
   return `<section class="block" style="--h:${l.hood.color}"><div class="block-head"><h2>The <em>units</em></h2><span class="count">${units.length} units</span></div><div class="unit-table">${units.map((u, i) => { const p = (ph[i + 1] || [])[0];
     return `<a class="unit-row" href="#${u ? u.hh.id : l.id}"><span class="u-pic" ${p ? `style="background-image:url('${p.thumb}')"` : ""}>${p ? "" : i + 1}</span><span class="u-name">Unit ${i + 1}</span><span class="u-who">${u ? `<b>${esc(u.hh.name)}</b>${u.role === "owners" ? " (landlord)" : ""}` : "<i>Nobody yet</i>"}</span></a>`; }).join("")}</div></section>`;
 }
-// apartment buildings: one card with the building's front picture and its apartments as circles
+// apartment buildings: one card with the building's front picture and its apartments as circles; the card itself doesn't open (her choice, 16 Oct), the circles and household names do
 // a household's name on a card opens the household's page (the card itself opens the lot)
 const hhLink = hh => `<b class="hh-link" data-lot-link="${hh.id}" title="Open the ${esc(hh.name)} household">${esc(hh.name)}</b>`;
 function buildingFront(b){
   const cover = (b.units.find(u => u.photos[0]) || {}).photos?.[0], lived = b.units.filter(u => u.hh).length;
   const circ = b.units.map(u => nbTile(u).replace("<i ", `<i data-lot-link="${u.id}" aria-label="${esc(u.name)}" `).replace(/ title="[^"]*"/, ` data-name="${esc(u.name)}"`)).join("");
-  const first = b.units.find(u => u.hh) || b.units[0];
-  return `<a class="listing" href="#${first.id}" style="--h:${b.hood.color}"><div class="photo ${cover?"shot":""}" ${cover?`style="--img:url('${cover.thumb}')"`:""}>${cover ? "" : plot("40x30", 120, false)}<span class="nb-bubbles${b.units.length > 5 ? " many" : ""}">${circ}</span><span class="type">Apartment Building · ${b.units.length} Apartments</span></div>
-    <h3>${esc(b.name)}</h3><div class="meta">${lived ? `<ul class="unit-list">${b.units.filter(u => u.hh).map(u => `<li>${ic("home")}${hhLink(u.hh)}<em>${esc(u.unit || "")}</em></li>`).join("")}</ul>` : ""}<span>${ic("grid")}${b.units.length - lived ? `${lived} lived in, ${b.units.length - lived} free` : "All lived in"}</span></div></a>`;
+  return `<div class="listing bfront" style="--h:${b.hood.color}"><div class="photo ${cover?"shot":""}" ${cover?`style="--img:url('${cover.thumb}')"`:""}>${cover ? "" : plot("40x30", 120, false)}<span class="nb-bubbles${b.units.length > 5 ? " many" : ""}">${circ}</span><span class="type">Apartment Building · ${b.units.length} Apartments</span></div>
+    <h3>${esc(b.name)}</h3><div class="meta">${lived ? `<ul class="unit-list">${b.units.filter(u => u.hh).map(u => `<li>${ic("home")}${hhLink(u.hh)}<em>${esc(u.unit || "")}</em></li>`).join("")}</ul>` : ""}<span>${ic("grid")}${b.units.length - lived ? `${lived} lived in, ${b.units.length - lived} free` : "All lived in"}</span></div></div>`;
 }
 
 function rvSwitch(show){
