@@ -54,6 +54,7 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
 | Tomarang | Sungai Point | 3 | Linh-Sadya & Linh |
 | Ravenwood | Specter Row (Moppy Manor) | ? (not finished, 14 Oct) | Specters' home + tenants |
 | Nordhaven | Old Torget House | 3 | Empty |
+| Del Sol Valley | Upland Trailer Park | 4 | Eclectic Arts; Johnny Zest renting a unit (16 Oct) |
 | Ondarion | Casa Do Corsário | 2 or 3 (to decide, 16 Oct) | Aloisio Romualdo own |
 | Nordhaven | ~~Lighthouse Lookout~~ | no longer a rental: the Library since 15 Oct | – |
 
@@ -173,7 +174,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [ ] [Jemma] Magnolia Promenade: the shopping world has one shop, Magnolia Mall (not built), typed Retail/Thrift and Boba Store; a lot takes one type (Retail only opens when she plays the owners (corrected 16 Oct: you can visit an NPC-run small business or shop as a customer, e.g. Nordhaven's Koffieboon; she has done it); a Thrift and Boba Store runs itself). For the Secret Lots regroup: the wiki disagrees on which world the hidden Get to Work lots belong to
 - [ ] [Jemma] San Myshuno and Newcrest: neither has a library or museum (Casbah Gallery, an Arts Center, isn't built); one restaurant for the city
 - [ ] [Jemma] Del Sol Valley: no café, library or park; the Plumbob Pictures Museum (Small Business) has no named owner. Venessa Jeong is probably the "Jeong" household at 1310 21 Chic Street (San Myshuno); not recorded. 16 Oct, confirmed: the Jeong at 1310 21 Chic Street is Venessa (she's rising, so somewhere nicer than the trailer park); noted on the lot
-- [ ] [Jemma] Oasis Springs: no café; Johnny Zest isn't in the plan; the "Roomies" renting Inner Circle (Del Sol Valley) may be the game's Oasis Springs Roomies
+- [ ] [Jemma] Oasis Springs: no café; Johnny Zest isn't in the plan; the "Roomies" renting Inner Circle (Del Sol Valley) may be the game's Oasis Springs Roomies. 16 Oct, her choice: Johnny Zest rents a unit at Upland Trailer Park (Del Sol Valley), chasing fame; his game home Slipshod Mesquite is her De Costadas. Also: the game's Oasis Springs Roomies lived at Cacti Casa (now her Palm Springs Public Pool); are the Del Sol 'Roomies' at Inner Circle them? (asked 16 Oct)
 - [ ] [Jemma] Willow Creek: the plan spells "Villareel"; the game's family is Villareal. The wiki places Magnolia Promenade beside downtown Willow Creek (its bowling alley, cinema and Paddy's Place are close nights out)
 - [ ] [Jemma] Selvadorada: her Belomisia Field Station upload describes a stay with dorms, but only Vacation Rentals can be booked; as a Custom Venue it can be visited, not stayed at (check in game)
 - [ ] [Jemma] Ravenwood: in the game The Final Draught's upstairs hosts wakes; check funerals still work now it's planned as a Restaurant. For Specter Row: the On Hallowed Grounds lot trait might keep a rental spooky (unchecked)

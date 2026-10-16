@@ -14,7 +14,7 @@
    "lots": [
     {"lot": "Vacuous Green", "myName": "Strike Out!", "type": "Nightclub", "size": "50x40", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["+RyMyQ0wEeqC+TQshgnHrQ=="], "traits": ["Up-and-Coming Hotspot", "Party Place"]},
     {"lot": "Inner Circle", "myName": "Inner Circle", "type": "Residential Rental (4)", "size": "40x30", "residents": "Roomies", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["loFJviHeSPiqw5EI645QUg==", "5mQygaPJEeuPieWcoywPdA=="], "traits": ["Party Place"], "challenges": ["Quake Zone", "Filthy"]},
-    {"lot": "Upland Place", "myName": "Upland Trailer Park", "type": "Residential Rental (4)", "size": "40x30", "residents": "Eclectic Arts", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["sf2Tcm6GSAOVENYPoOEwGw==", "01zLurUYEeuL/ecawTB/JA=="], "traits": ["Sunny Aspect"], "challenges": ["Filthy", "Quake Zone"]}
+    {"lot": "Upland Place", "myName": "Upland Trailer Park", "type": "Residential Rental (4)", "size": "40x30", "residents": "Eclectic Arts", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["sf2Tcm6GSAOVENYPoOEwGw==", "01zLurUYEeuL/ecawTB/JA=="], "traits": ["Sunny Aspect"], "challenges": ["Filthy", "Quake Zone"], "tenants": [{"name": "Zest", "note": "Johnny Zest, from Oasis Springs"}]}
    ]
   },
   {
