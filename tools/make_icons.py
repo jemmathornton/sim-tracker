@@ -13,9 +13,9 @@ from common import SITE
 
 PURPLE, PURPLE_TOP, YELLOW = "#4A2E78", "#5C3A90", "#E6BE55"   # a brighter take on --nav; --brass, lifted
 # the plumbob in a 32-unit square: a six-sided double pyramid, worked out rather than guessed. Its six middle corners sit
-# on a circle, turned TURN degrees and seen a little from above (TILT), so the sides facing us show different widths
+# on a circle, turned TURN degrees and seen a little from below (TILT; from above the bottom half would look the shorter one), so the sides facing us show different widths
 import math
-TURN, R, CX, GY, TILT = 22, 7, 16, 14.8, 1.6
+TURN, R, CX, GY, TILT = 12, 7, 16, 14.8, -1.4   # seen a little from below, which suits the shorter top
 TOP, BOT = (CX, 2.5), (CX, 29.5)
 ring = [(CX + R * math.cos(math.radians(TURN + 60 * k)), GY + TILT * math.sin(math.radians(TURN + 60 * k))) for k in range(6)]
 front = [p for k, p in enumerate(ring) if math.sin(math.radians(TURN + 60 * k)) > 0]           # corners on our side
