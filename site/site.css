@@ -495,19 +495,9 @@ footer .as-of{flex-basis:100%}
 /* rental layout trial (16 Oct): unit-list cards for single rentals link their name */
 .bcard h3 a{text-decoration:none}
 .rv-switch{position:fixed;right:18px;bottom:18px;z-index:60;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:16px;padding:12px 14px;box-shadow:0 10px 30px rgba(0,0,0,.18);display:grid;gap:8px;font-size:13px}
-.rv-switch div{display:flex;flex-wrap:wrap;gap:6px}
-.rv-switch button{border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:5px 11px;cursor:pointer;font-weight:600;font-size:12.5px}
-.rv-switch button.on{background:var(--brass);border-color:var(--brass);color:#fff}
 .bgroup-head h3 a{text-decoration:none;color:inherit}
 .nb-bubbles i.unit-no-pic{display:grid;place-items:center}
 .nb-bubbles i.unit-no-pic b{font:700 14px var(--body);color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.5)}
-.unit-strip{display:flex;flex-wrap:wrap;gap:6px;padding:10px 0 2px}
-.unit-strip i{width:38px;height:38px;border-radius:9px;background:var(--surface) center/cover;border:1px solid var(--line);box-sizing:border-box;display:grid;place-items:center;font:700 12px var(--body);font-style:normal;color:var(--muted);position:relative;cursor:pointer}
-.unit-strip i.r-owner::after{content:"";position:absolute;right:-3px;top:-3px;width:11px;height:11px;border-radius:50%;background:var(--brass);border:2px solid var(--surface)}
-.unit-strip i.r-tenant{box-shadow:inset 0 0 0 2px var(--h)}
-.unit-strip i.r-empty{border:1px dashed var(--muted)}
-.unit-strip i:hover{transform:translateY(-1px);box-shadow:0 2px 6px rgba(0,0,0,.18)}
-.unit-strip i.r-tenant:hover{box-shadow:inset 0 0 0 2px var(--h),0 2px 6px rgba(0,0,0,.18)}
 .unit-table{display:grid;gap:8px}
 .unit-row{display:grid;grid-template-columns:64px 80px 1fr auto;align-items:center;gap:14px;padding:8px 12px;border:1px solid var(--line);border-radius:12px;background:var(--surface);text-decoration:none;color:inherit}
 .unit-row:hover{border-color:var(--h)}
@@ -522,3 +512,6 @@ footer .as-of{flex-basis:100%}
 .listing .meta .who-list>span{display:inline;line-height:1.45}
 .listing .meta .who-list svg{margin-top:3px;flex:none}
 .rv-switch .rv-demo{display:flex;gap:6px;align-items:center;margin-top:8px;font-size:12px;color:var(--muted);cursor:pointer}
+.listing .meta .unit-list{list-style:none;margin:0 0 2px;padding:0;flex-basis:100%;display:grid;gap:3px}
+.listing .meta .unit-list li{display:flex;align-items:center;gap:6px}
+.listing .meta .unit-list em{font-style:normal;margin-left:auto;color:var(--muted);font-size:12.5px}

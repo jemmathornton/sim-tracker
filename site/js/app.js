@@ -221,10 +221,7 @@ const isApt = l => /apartment|penthouse/i.test(l.type || "");
 const lotArt = l => isApt(l) ? `<span class="apt-art">${ic("home")}</span>` : plot(l.size, 120, false);
 const cardPills = l => { const n = newSince(l), p = [n ? `<span class="pill new" title="${esc(newTxt(n))} since you last looked">New</span>` : "", baseGame(l) ? `<span class="pill" title="Needs no packs">Base game</span>` : ""].join("");
   return p ? `<span class="pills">${p}</span>` : ""; };
-// ---------- rental layout trial (16 Oct): a small switch on neighbourhood and lot pages with rentals lets her compare layout 1 (units listed) and 2 (badge + unit count) ----------
-const RV_KEY = "jsw-rental-layout";
-let RV = (() => { try { return localStorage.getItem(RV_KEY) || "1"; } catch (e) { return "1"; } })();   // 3-way trial: 1, 2 or u
-const rvOf = l => RV;
+// ---------- rentals (layout chosen 16 Oct, "4"): the front picture with a circle per unit, and every household listed with its unit ----------
 const isRental = l => /residential rental/i.test(l.type || "");
 const unitCount = l => { const m = /\((\d+)\)/.exec(l.type || ""); return isRental(l) && m ? +m[1] : null; };
 // who lives in which unit isn't decided yet: the plan's household fills the first unit, tenants the next, the rest show as empty
@@ -232,24 +229,9 @@ const rentalUnits = l => { const n = unitCount(l), who = [];
   if (l.hh) who.push({hh: l.hh, role: l.tenants || /\sown\??$/i.test(l.who || "") ? "owners" : ""});
   (l.tenants || []).forEach(t => who.push({hh: t, role: "tenant"}));
   return Array.from({length: n}, (_, i) => who[i] || null); };
-function rentalCard(l){
-  const units = rentalUnits(l), cover = l.photos[0], lived = units.filter(Boolean).length;
-  return `<div class="listing bcard" style="--h:${l.hood.color}"><div class="photo ${cover?"shot":""}" ${cover?`style="--img:url('${cover.thumb}')"`:""}>${cover ? "" : lotArt(l)}<span class="type">Rental</span><span class="size">${units.length} units</span></div>
-    <h3><a href="#${l.id}">${esc(l.name)}</a></h3>
-    <ul class="units">${units.map((u, i) => `<li><a href="#${u ? u.hh.id : l.id}"><span class="unit-no">${i + 1}</span><span class="unit-who">${u ? `${ic("users")}<b>${esc(u.hh.name)}</b>${u.role ? ` <small>${u.role}</small>` : ""}` : `<i>Empty</i>`}</span><span class="status"></span></a></li>`).join("")}</ul>
-    <div class="meta"><span>${ic("home")}<b>${lived} of ${units.length}</b> units lived in</span></div></div>`;
-}
-
-// layout "u": every unit its own card, with its own picture (photos named flat-N or unit-N) or a placeholder
+// a unit's own pictures: photos named flat-N or unit-N
 const unitPhotos = l => { const m = {}; l.photos.forEach(p => { const r = /(?:flat|unit)[-_ ]?(\d+)/i.exec(p.thumb || p.src || ""); if (r) (m[+r[1]] ||= []).push(p); }); return m; };
-function unitCards(l){
-  const units = rentalUnits(l), ph = unitPhotos(l), word = /flat/i.test(Object.values(l.photos).map(p => p.thumb).join(" ")) ? "Flat" : "Unit";
-  return units.map((u, i) => { const p = (ph[i + 1] || [])[0];
-    return `<a class="listing" href="#${u ? u.hh.id : l.id}" style="--h:${l.hood.color}"><div class="photo ${p?"shot":""}" ${p?`style="--img:url('${p.thumb}')"`:""}>${p ? "" : `<span class="apt-art">${ic("home")}</span>`}<span class="type">${word} ${i + 1}</span>${p ? "" : `<span class="size">No photo yet</span>`}</div>
-      <h3>${esc(l.name)} · ${word.toLowerCase()} ${i + 1}</h3><div class="meta"><span>${ic("users")}${u ? `<b>${esc(u.hh.name)}</b>${u.role ? ` (${u.role})` : ""}` : "Empty"}</span></div></a>`; }).join("");
-}
-
-// layout "4": an ordinary card with the front picture, unit bubbles on top (like the lot circles on neighbourhood cards), and a plain landlord/units line
+// the unit circles on the card (like the lot circles on neighbourhood cards), and the households listed under it
 function rentalBubbles(l){
   const units = rentalUnits(l), ph = unitPhotos(l);
   return units.map((u, i) => { const p = (ph[i + 1] || [])[0], lab = `Unit ${i + 1}: ${u ? u.hh.name + (u.role ? ` (${u.role === "owners" ? "landlord" : u.role})` : "") : "Empty"}`, to = u ? u.hh.id : l.id;
@@ -257,37 +239,30 @@ function rentalBubbles(l){
       : `<i class="nb-none unit-no-pic" data-lot-link="${to}" aria-label="${esc(lab)}" data-name="${esc(lab)}"><b>${i + 1}</b></i>`; }).join("");
 }
 const rentalMeta = l => { const units = rentalUnits(l), who = units.filter(Boolean), owned = who.filter(u => u.role === "owners").length, lived = who.length - owned, free = units.length - who.length;   // the landlord's own unit isn't "let"
-  const names = who.map(u => `<b>${esc(u.hh.name)}</b>${u.role === "owners" ? " (landlord)" : u.role === "tenant" ? " (tenant)" : ""}`).join(", ");
-  return `${names ? `<span class="who-list">${ic("users")}<span>${names}</span></span>` : ""}<span>${ic("home")}${free ? `${lived} let, ${free} free` : "All let"}</span>`; };
+  const rows = units.map((u, i) => u ? `<li>${ic("home")}<b>${esc(u.hh.name)}</b>${u.role === "owners" ? " (landlord)" : ""}<em>Unit ${i + 1}</em></li>` : "").join("");
+  return `${rows ? `<ul class="unit-list">${rows}</ul>` : ""}<span>${ic("grid")}${free ? `${lived} let, ${free} free` : "All let"}</span>`; };
 
-// layout "5": front picture, then a strip of small unit squares under it (gold dot = landlord's own unit, coloured ring = a tenant, faded = free)
+// labels for the units table on the lot page
 const roleOf = u => "r-" + (u ? (u.role === "owners" ? "owner" : u.role === "tenant" ? "tenant" : "lives") : "empty");
 const roleTxt = u => u ? (u.role === "owners" ? "Landlord" : u.role === "tenant" ? "Tenant" : "Lives here") : "Free";
-function rentalStrip(l){
-  const units = rentalUnits(l), ph = unitPhotos(l);
-  return units.map((u, i) => { const p = (ph[i + 1] || [])[0];
-    return `<i data-lot-link="${u ? u.hh.id : l.id}" class="${roleOf(u)}" title="Unit ${i + 1}: ${esc(u ? u.hh.name : "")}${u ? " · " : ""}${roleTxt(u)}" ${p ? `style="background-image:url('${p.thumb}')"` : ""}>${p ? "" : i + 1}</i>`; }).join("");
-}
-// the units as a table on the lot page (layouts 4, 5 and 6): picture, unit, who, and a landlord / tenant / free label
+// the units as a table on the lot page: picture, unit, who, and a landlord / tenant / free label
 function unitsTable(l){
   const units = rentalUnits(l), ph = unitPhotos(l);
   return `<section class="block" style="--h:${l.hood.color}"><div class="block-head"><h2>The <em>units</em></h2><span class="count">${units.length} units</span></div><div class="unit-table">${units.map((u, i) => { const p = (ph[i + 1] || [])[0];
     return `<a class="unit-row" href="#${u ? u.hh.id : l.id}"><span class="u-pic" ${p ? `style="background-image:url('${p.thumb}')"` : ""}>${p ? "" : i + 1}</span><span class="u-name">Unit ${i + 1}</span><span class="u-who">${u ? `<b>${esc(u.hh.name)}</b>` : "<i>Nobody yet</i>"}</span><span class="role-chip ${roleOf(u)}">${roleTxt(u)}</span></a>`; }).join("")}</div></section>`;
 }
-// apartment buildings in layouts 4 and 5: one card with the building's front picture, its apartments as circles or a strip
-function buildingFront(b, mode){
+// apartment buildings: one card with the building's front picture and its apartments as circles
+function buildingFront(b){
   const cover = (b.units.find(u => u.photos[0]) || {}).photos?.[0], lived = b.units.filter(u => u.hh).length;
   const circ = b.units.map(u => nbTile(u).replace("<i ", `<i data-lot-link="${u.id}" aria-label="${esc(u.name)}" `).replace(/ title="[^"]*"/, ` data-name="${esc(u.name)}"`)).join("");
-  const strip = b.units.map(u => `<i data-lot-link="${u.id}" class="${u.hh ? "r-lives" : "r-empty"}" title="${esc(u.name)}${u.hh ? " · " + esc(u.hh.name) : " · Free"}" ${u.photos[0] ? `style="background-image:url('${u.photos[0].thumb}')"` : ""}>${u.photos[0] ? "" : esc(u.unit || "")}</i>`).join("");
-  return `<div class="listing" style="--h:${b.hood.color}"><div class="photo ${cover?"shot":""}" ${cover?`style="--img:url('${cover.thumb}')"`:""}>${cover ? "" : plot("40x30", 120, false)}${mode === "4" ? `<span class="nb-bubbles${b.units.length > 5 ? " many" : ""}">${circ}</span>` : ""}<span class="type">Apartment Building · ${b.units.length} Apartments</span></div>${mode === "5" ? `<div class="unit-strip">${strip}</div>` : ""}
+  return `<div class="listing" style="--h:${b.hood.color}"><div class="photo ${cover?"shot":""}" ${cover?`style="--img:url('${cover.thumb}')"`:""}>${cover ? "" : plot("40x30", 120, false)}<span class="nb-bubbles${b.units.length > 5 ? " many" : ""}">${circ}</span><span class="type">Apartment Building · ${b.units.length} Apartments</span></div>
     <h3>${esc(b.name)}</h3><div class="meta"><span>${ic("home")}${lived} lived in, ${b.units.length - lived} free</span></div></div>`;
 }
 
 function rvSwitch(show){
   document.getElementById("rv-switch")?.remove(); if (!show) return;
   const d = document.createElement("div"); d.id = "rv-switch"; d.className = "rv-switch";
-  d.innerHTML = `<b>Rental layout (trial)</b><div>${[["1", "1 · units listed"], ["2", "2 · badge + unit count"], ["u", "3 · each unit its own card"], ["4", "4 · front photo + unit circles"], ["5", "5 · front photo + unit strip"], ["6", "6 · house-style card + units table"]].map(([k, t]) => `<button type="button" data-rv="${k}" class="${RV === k ? "on" : ""}">${t}</button>`).join("")}</div>`;
-  if (ctx_rio()) d.innerHTML += `<label class="rv-demo"><input type="checkbox" data-rv-demo ${RV_DEMO ? "checked" : ""}> Pretend Rio Verde is full (6 households, borrowed from other worlds; not saved)</label>`;
+  d.innerHTML = `<b>Trial</b><label class="rv-demo"><input type="checkbox" data-rv-demo ${RV_DEMO ? "checked" : ""}> Pretend Rio Verde is full (6 households, borrowed from other worlds; not saved)</label>`;
   document.body.appendChild(d);
 }
 // trial only: fill Rio Verde with six borrowed households so she can judge a full card
@@ -298,13 +273,12 @@ function rioDemo(){ const l = lotIndex[RIO]; if (!l) return; Object.assign(l, ri
   if (RV_DEMO) { const pool = Object.values(hhIndex).filter(h => h !== rioReal.hh).sort((a, b) => b.name.length - a.name.length); l.tenants = [rioReal.hh, pool[3], pool[10], pool[20], pool[40], pool[60]].filter(Boolean); l.hh = null; } }
 rioDemo();
 document.addEventListener("change", e => { if (!e.target.matches("[data-rv-demo]")) return; RV_DEMO = e.target.checked; try { localStorage.setItem("jsw-rio-demo", RV_DEMO ? "1" : "0"); } catch (err) {} rioDemo(); const y = scrollY; route(); scrollTo(0, y); });
-document.addEventListener("click", e => { const b = e.target.closest("[data-rv]"); if (!b) return; RV = b.dataset.rv; try { localStorage.setItem(RV_KEY, RV); } catch (err) {} const y = scrollY; route(); scrollTo(0, y); });
 
 function listing(l){
   const cover = l.photos[0];
-  return `<a class="listing" href="#${l.id}" style="--h:${l.hood.color}"><div class="photo ${cover?"shot":""}" ${cover?`data-lazy="--img" data-src="${cover.thumb}"`:""}>${cover ? "" : lotArt(l)}${rvOf(l) === "4" && unitCount(l) ? `<span class="nb-bubbles${unitCount(l) > 5 ? " many" : ""}">${rentalBubbles(l)}</span>` : ""}<span class="type">${["2", "4", "5", "6"].includes(rvOf(l)) && unitCount(l) ? `Residential Rental · ${unitCount(l)} units` : esc(l.type || "Lot")}</span><span class="status">${statusDots(l)}</span>${sizeTxt(l.size) && !isApt(l) ? `<span class="size">${sizeTxt(l.size)}</span>` : ""}${cardPills(l)}</div>${rvOf(l) === "5" && unitCount(l) ? `<div class="unit-strip">${rentalStrip(l)}</div>` : ""}
+  return `<a class="listing" href="#${l.id}" style="--h:${l.hood.color}"><div class="photo ${cover?"shot":""}" ${cover?`data-lazy="--img" data-src="${cover.thumb}"`:""}>${cover ? "" : lotArt(l)}${unitCount(l) ? `<span class="nb-bubbles${unitCount(l) > 5 ? " many" : ""}">${rentalBubbles(l)}</span>` : ""}<span class="type">${unitCount(l) ? `Residential Rental · ${unitCount(l)} units` : esc(l.type || "Lot")}</span><span class="status">${statusDots(l)}</span>${sizeTxt(l.size) && !isApt(l) ? `<span class="size">${sizeTxt(l.size)}</span>` : ""}${cardPills(l)}</div>
     <h3>${esc(l.name)}</h3>
-    <div class="meta">${["4", "5", "6"].includes(rvOf(l)) && unitCount(l) ? rentalMeta(l) : l.hh ? `<span>${ic("users")}<b>${esc(l.hh.name)}</b>${l.hh.unsure?" (unsure)":""}</span>` : l.whoNote ? `<span>${ic("users")}${esc(emptyNote(l.whoNote))}</span>` : ""}${l.gallery ? `<span title="Downloads on the Sims 4 Gallery">${ic("share")}${l.gallery.downloads} downloads</span>` : ""}</div></a>`;
+    <div class="meta">${unitCount(l) ? rentalMeta(l) : l.hh ? `<span>${ic("users")}<b>${esc(l.hh.name)}</b>${l.hh.unsure?" (unsure)":""}</span>` : l.whoNote ? `<span>${ic("users")}${esc(emptyNote(l.whoNote))}</span>` : ""}${l.gallery ? `<span title="Downloads on the Sims 4 Gallery">${ic("share")}${l.gallery.downloads} downloads</span>` : ""}</div></a>`;
 }
 
 function buildingCard(b){
@@ -314,11 +288,9 @@ function buildingCard(b){
     <ul class="units">${b.units.map(l => `<li><a href="#${l.id}"><span class="unit-no">${esc(l.unit)}</span><span class="unit-who">${l.hh ? `${ic("users")}<b>${esc(l.hh.name)}</b>` : `<i>${esc(l.whoNote ? emptyNote(l.whoNote) : "No household yet")}</i>`}</span><span class="status">${statusDots(l)}</span></a></li>`).join("")}</ul>
     <div class="meta"><span>${ic("hammer")}<b>${built} of ${b.units.length}</b> built</span></div></div>`;
 }
-// units of a building sit together under a small heading, each keeping its own card and picture
-const hoodItems = x => { const seen = new Set(); return x.lots.flatMap(l => { if (!l.building) return [rvOf(l) === "1" && unitCount(l) ? rentalCard(l) : rvOf(l) === "u" && unitCount(l) ? `<div class="bgroup"><div class="bgroup-head">${ic("home")}<h3><a href="#${l.id}">${esc(l.name)}</a></h3><span>Residential Rental · ${unitCount(l)} units · ${rentalUnits(l).filter(Boolean).length} lived in</span></div><div class="listings">${unitCards(l)}</div></div>` : listing(l)]; const b = l.building; if (seen.has(b)) return []; seen.add(b);
-  const built = b.units.filter(u => u.built === true).length;
-  if (RV === "4" || RV === "5") return [buildingFront(b, RV)];
-  return [`<div class="bgroup"><div class="bgroup-head">${ic("home")}<h3>${esc(b.name)}</h3><span>${b.units.length} Apartments · ${built} built</span></div><div class="listings">${b.units.map(listing).join("")}</div></div>`]; }); };
+// units of a building share one card
+const hoodItems = x => { const seen = new Set(); return x.lots.flatMap(l => { if (!l.building) return [listing(l)]; const b = l.building; if (seen.has(b)) return []; seen.add(b);
+  return [buildingFront(b)]; }); };
 function mapHero(w, kicker, title, text, figures, chapters, small){
   return `<section class="hero ${w.map?"mapped":""} ${small?"hh-hero":""}" style="--c:${w.glow||w.color};${w.map?`--map:url('${w.map}')`:""}">${w.map?`<span class="credit">Map by 20th Century Plumbob</span>`:""}<div class="kicker"><i></i><span class="label">${kicker}</span></div>
     <h1>${title}</h1>${text ? `<p>${text}</p>` : ""}
@@ -453,13 +425,13 @@ function lot(l){
     <div class="detail" style="--h:${hc}">${carousel(l)}
     <div><dl class="facts">${l.ea ? `<div><dt>In-game name</dt><dd>${esc(l.ea)}</dd></div>` : ""}<div><dt>Lot type</dt><dd>${esc(l.type || "Not set")}</dd></div>${isApt(l) ? "" : `<div><dt>Lot size</dt><dd>${esc(sizeTxt(l.size) || "Not checked yet")}</dd></div>`}${l.traits ? `<div><dt>Lot traits</dt><dd>${l.traits.map(esc).join(", ")}</dd></div>` : ""}${l.challenges ? `<div><dt>${l.challenges.length > 1 ? "Lot challenges" : "Lot challenge"}</dt><dd>${l.challenges.map(esc).join(", ")}</dd></div>` : ""}
       <div><dt>Neighbourhood</dt><dd>${esc(l.hood.name)}</dd></div>${progressRow(l)}${l.building ? `<div><dt>Building</dt><dd>${esc(l.building.name)} · ${l.building.units.length} Apartments</dd></div>` : ""}
-      ${l.hh || l.whoNote ? `<div><dt>${l.owned ? "Owned by" : "Household"}</dt><dd>${l.hh ? `<a href="#${l.hh.id}">${esc(l.hh.name)}</a>${l.hh.unsure?" (unsure)":""}${l.tenants && !l.owned ? " (owners)" : ""}` : esc(emptyNote(l.whoNote))}</dd></div>` : ""}${rvOf(l) && unitCount(l) ? (u => `<div><dt>Units</dt><dd>${u.length}: ${u.filter(Boolean).length} lived in, ${u.filter(x => !x).length} free</dd></div>`)(rentalUnits(l)) : ""}${l.tenants ? `<div><dt>${l.tenants.length > 1 ? "Tenants" : "Tenant"}</dt><dd>${l.tenants.map(t => `<a href="#${t.id}">${esc(t.name)}</a>${t.note ? ` <small>“${esc(t.note)}”</small>` : ""}`).join(", ")}</dd></div>` : ""}</dl>${l.versions ? versionTabs(l) : ""}
+      ${l.hh || l.whoNote ? `<div><dt>${l.owned ? "Owned by" : "Household"}</dt><dd>${l.hh ? `<a href="#${l.hh.id}">${esc(l.hh.name)}</a>${l.hh.unsure?" (unsure)":""}${l.tenants && !l.owned ? " (owners)" : ""}` : esc(emptyNote(l.whoNote))}</dd></div>` : ""}${unitCount(l) ? (u => `<div><dt>Units</dt><dd>${u.length}: ${u.filter(Boolean).length} lived in, ${u.filter(x => !x).length} free</dd></div>`)(rentalUnits(l)) : ""}${l.tenants ? `<div><dt>${l.tenants.length > 1 ? "Tenants" : "Tenant"}</dt><dd>${l.tenants.map(t => `<a href="#${t.id}">${esc(t.name)}</a>${t.note ? ` <small>“${esc(t.note)}”</small>` : ""}`).join(", ")}</dd></div>` : ""}</dl>${l.versions ? versionTabs(l) : ""}
 </div></div>
     ${l.hh ? `<section class="block" style="--h:${hc}"><div class="block-head"><h2>${l.owned ? "Who <em>owns it</em>" : "Who <em>lives here</em>"}</h2></div>
       <div class="lives"><div class="lives-card">${hhListing(l.hh)}</div>
       <div>${l.hh.sims.length ? `<span class="label">The Sims</span><ul class="sim-list">${l.hh.sims.map(sm => `<li><a href="#${l.hh.id}" data-sim="${sm.id}"><span class="mono">${initial(sm.name)}</span><span><b>${esc(sm.name)}</b><small>${esc([sm.age, sm.aspiration].filter(Boolean).join(" · "))}</small></span></a></li>`).join("")}</ul>` : `<div class="empty" style="margin-top:0">${ic("sim")}No Sims added for the ${esc(l.hh.name)} household yet.</div>`}
       <a class="more" href="#${l.hh.id}">Open the ${esc(l.hh.name)} household ${ic("arrow")}</a></div></div></section>` : ""}
-    ${["4", "5", "6"].includes(rvOf(l)) && unitCount(l) ? unitsTable(l) : ""}${rvOf(l) === "u" && unitCount(l) ? `<section class="block" style="--h:${hc}"><div class="block-head"><h2>The <em>units</em></h2><span class="count">${unitCount(l)} units</span></div><div class="listings">${unitCards(l)}</div></section>` : ""}
+    ${unitCount(l) ? unitsTable(l) : ""}
     <section class="block" style="--h:${hc}"><div class="block-head"><h2>Build <em>notes</em></h2></div>
       ${l.gallery ? `<div class="notes-wrap"><div class="notes-text">${l.gallery.title !== l.name ? `<span class="label">Uploaded as “${esc(l.gallery.title)}”</span>` : ""}${l.gallery.description ? `<p class="lede">${esc(l.gallery.description)}</p>` : ""}
           ${l.gallery.tags?.length ? `<div class="tags">${l.gallery.tags.map(t => `<span>#${esc(t)}</span>`).join("")}</div>` : ""}
@@ -686,7 +658,7 @@ function route(){
   lazyPics(view);
   clearSearch();
   renderNav(active, key, ctx);
-  rvSwitch((ctx.lot && unitCount(ctx.lot) && !ctx.hh) || (ctx.hood && !ctx.lot && ctx.hood.lots.some(l => unitCount(l) || l.building)));
+  rvSwitch(ctx_rio());
   window.scrollTo(0, 0);
   document.body.classList.remove("nav-open");
 }
