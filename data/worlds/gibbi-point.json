@@ -25,7 +25,7 @@
    "mapSpot": [0.61, 0.64],
    "mapBox": [0.47, 0.54, 0.76, 0.75],
    "lots": [
-    {"lot": "Jellyfish Jubilee", "myName": "Jellyfish Jubilee", "type": "Restaurant", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "Jellyfish Jubilee", "myName": "Jellyfish Jubilee", "type": "Bar", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Seabreeze Scenic", "myName": "Seabreeze Scenic", "type": "Residential", "size": "40x30", "residents": "Perry", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Fletcher's Cottage", "myName": "Gibbi Point Library", "type": "Library", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["pKnwlfeXRiGGVi/QvTc7TQ=="], "traits": ["Child's Play", "Peace and Quiet", "Study Spot"]},
     {"lot": "Revive and Thrive Retreat", "myName": "Gibbi Rec Center", "type": "Recreation Center", "size": "64x64", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["R7mzaO9GS5atpQCbFz9dlw=="]}
