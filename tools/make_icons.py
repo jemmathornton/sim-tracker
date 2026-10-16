@@ -20,6 +20,7 @@ GL, GFL, GFR, GR = (16 - R, MID), (16 - R / 2, MID + DIP), (16 + R / 2, MID + DI
 OUTLINE = [TOP, GR, BOT, GL]
 FACETS = [[GL, GFL, GFR, GR], [TOP, GFL, BOT], [TOP, GFR, BOT]]
 
+PAGE_SIZES = (16, 24, 30, 32, 36, 40, 48, 64, 96, 192)
 pts = lambda ps: " ".join(f"{x},{y}" for x, y in ps)
 SVG = (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">'
        f'<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{PURPLE_TOP}"/><stop offset="1" stop-color="{PURPLE}"/></linearGradient></defs>'
@@ -54,7 +55,7 @@ if __name__ == "__main__":
     draw(512).save(os.path.join(SITE, "icon.png"))
     # Chrome's app window takes its taskbar icon from the page's icons: give it each size drawn properly, so it never
     # has to stretch a small one (that's what made the taskbar icon blurry, 16 Oct)
-    for s in (16, 32, 48, 64, 96, 192): draw(s).save(os.path.join(SITE, f"icon-{s}.png"))
-    sizes = [16, 24, 32, 48, 64, 128, 256]
+    for s in PAGE_SIZES: draw(s).save(os.path.join(SITE, f"icon-{s}.png"))
+    sizes = [16, 20, 24, 30, 32, 36, 40, 48, 60, 64, 72, 80, 96, 128, 256]   # incl. the in-between sizes Windows uses when scaled to 125% or 150%
     big = draw(256); big.save(os.path.join(SITE, "icon.ico"), sizes=[(s, s) for s in sizes], append_images=[draw(s) for s in sizes[:-1]])
     print("wrote site/icon.svg, icon.png, icon.ico")
