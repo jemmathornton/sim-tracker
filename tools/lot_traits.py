@@ -1,7 +1,8 @@
 """Lot traits for Jemma's shared lots, from her newest "Building" save.
 
     python tools/lot_traits.py            report only (changes nothing)
-    python tools/lot_traits.py --apply    write the traits (and lot challenges) into data/worlds/*.json and rebuild the site
+    python tools/lot_traits.py --apply    write the traits (and lot challenges) into data/worlds/*.json and rebuild the site;
+                                          rentals also get `units`: each unit's own name and traits, in the game's unit order
     python tools/lot_traits.py --game     also re-read the trait names from the game (after a game update or a new pack)
 
 The save is read from a temporary copy; her saves and the game are never changed. Only lots marked shared in the plan
@@ -74,6 +75,17 @@ SAVE_NAMES = {
 }
 
 
+def unit_name(name, lot_names):
+    """A unit's own part of its name: '3A Cobblebottom Street' on the lot '3 Cobblebottom Street' is '3A', '1 Rio Verde' on Rio Verde is '1'.
+    Words it shares at the end with the lot's name are dropped; a name with nothing in common is kept whole."""
+    w = name.split()
+    for ln in lot_names:
+        lw, k = (ln or '').split(), 0
+        while k < min(len(w) - 1, len(lw)) and w[-1 - k].lower() == lw[-1 - k].lower(): k += 1
+        if k: return " ".join(w[:len(w) - k])
+    return name
+
+
 def bare(n): return norm(re.sub(r'\s*[\[(][^\])]*[\])]\s*$', '', n or ''))
 
 
@@ -90,6 +102,7 @@ def main():
     uploads = load(os.path.join(GALLERY, 'uploads.json'))['uploads']
     print("Saves: " + "; ".join(f"{label} ({os.path.basename(p)})" for p, label, _ in saves), end="\n\n")
     changed, unmatched, ambiguous, older, n_shared, n_found = [], [], [], [], 0, 0
+    unknown = set()
     worlds = [(wf, load(wf)) for wf in world_files()]
     shared = [(W, l) for wf, W in worlds if W['owned'] for h in W['neighbourhoods'] for l in h['lots'] if l.get('shared') is True]
 
@@ -135,6 +148,23 @@ def main():
                     same += [z for z in {id(z): z for zs in src.values() for z in zs}.values() if z is not hits[0] and z.get('lot_id') == hits[0].get('lot_id')]
                 for t in dict.fromkeys(t for z in same for t in z.get('lot_traits', [])):
                     if str(t) in traits: got["challenges" if traits[str(t)]['kind'] == 'challenge' else "traits"].append(traits[str(t)]['name'])
+                # each unit of a rental: its own name (as she named it in the game, shortened to what isn't the lot's name) and traits
+                units = []
+                if re.search(r'rental', l.get('type') or '', re.I):
+                    for z in sorted((z for z in same if z is not hits[0] or z.get('lot_traits')), key=lambda z: z.get('active_plex') or 0):
+                        if z.get('active_plex') in (None, 0, 300) and not z.get('lot_traits'): continue
+                        u = {"name": unit_name(z.get('name', ''), [l['lot'], hits[0].get('name', '')])}
+                        for t in z.get('lot_traits', []):
+                            if str(t) in traits: u.setdefault("challenges" if traits[str(t)]['kind'] == 'challenge' else "traits", []).append(traits[str(t)]['name'])
+                            else: unknown.add(t)
+                        units.append(u)
+                    units = units if len(units) > 1 else []
+                if units != l.get('units', []):
+                    changed.append(f"{label}: units " + "; ".join(u['name'] + (f" ({', '.join(u.get('traits', []) + u.get('challenges', []))})" if u.get('traits') or u.get('challenges') else "") for u in units))
+                    if apply:
+                        if units: l['units'] = units
+                        else: l.pop('units', None)
+                        touched = True
                 if any(got[k] != l.get(k, []) for k in got):
                     changed.append(f"{label}: {', '.join(got['traits']) or '(no traits)'}" + (f"; challenges: {', '.join(got['challenges'])}" if got['challenges'] else ""))
                     if apply:
@@ -144,6 +174,7 @@ def main():
                         touched = True
         if touched: save(wf, W)
     print(f"{n_found} of {n_shared} shared lots found in the saves.\n")
+    if unknown: print("Trait ids with no name yet (run with --game after a game update): " + ", ".join(map(str, sorted(unknown))), end="\n\n")
     for title, items in [("Traits " + ("written" if apply else "to write (run with --apply)"), changed), ("Found only in an older save", older),
                          ("Shared lots not found in the saves by name", unmatched), ("Several lots with the same name", ambiguous)]:
         print(f"{title}: {len(items)}")

@@ -197,7 +197,7 @@ def build():
                              "who": (name + ("?" if unsure else "")) if name else None, "whoNote": note,
                              "built": l['built'], "shared": l['shared'], "sims": l['simsMade'],
                              "gallery": g, "photos": photos_for(ws, slug(l['lot']), bool(g)),
-                             **{k: l[k] for k in ("traits", "challenges") if l.get(k)}})   # from her Building save (tools/lot_traits.py)
+                             **{k: l[k] for k in ("traits", "challenges", "units") if l.get(k)}})   # from her Building save (tools/lot_traits.py); units: a rental's own unit names and traits
             if owned: w["hoods"].append({"name": hood['name'], "desc": hood.get('desc', ''), "color": W['colour'], "lots": lots,
                                          **{k: hood[k] for k in ("festivals", "ecoStart") if hood.get(k)}})
         if W.get('households'): households[n] = W['households']

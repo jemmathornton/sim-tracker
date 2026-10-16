@@ -29,7 +29,7 @@
     {"lot": "Salty Paws Saloon", "myName": "The Bay Café", "type": "Café", "size": "20x15", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["Sa/c+Av6EeuBi5LGvPH+KA=="], "traits": ["Cat Friendly", "Cat Hangout"]},
     {"lot": "Catscratch Cottage", "myName": null, "type": "Restaurant (Seafood)", "size": "20x15", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Ragdoll Refurb", "myName": "Brindleton Library", "type": "Library", "size": "20x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["4PImECUzEeiJE2UCaOyRNg=="], "traits": ["Fast Internet", "Sunny Aspect", "Science Lair"]},
-    {"lot": "Tail's End", "myName": "Tail's End Apartments", "type": "Residential Rental (4)", "size": "40x30", "residents": "Lynx (renting a unit)", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["+A+x1l7bRQqBZ6ykyVWG+g=="], "traits": ["Cat Hangout", "Fast Internet", "Good Schools", "Homey", "Natural Light"]}
+    {"lot": "Tail's End", "myName": "Tail's End Apartments", "type": "Residential Rental (4)", "size": "40x30", "residents": "Lynx (renting a unit)", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["+A+x1l7bRQqBZ6ykyVWG+g=="], "traits": ["Cat Hangout", "Fast Internet", "Good Schools", "Homey", "Natural Light"], "units": [{"name": "1", "traits": ["Cat Hangout", "Fast Internet"]}, {"name": "2", "traits": ["Good Schools", "Fast Internet"]}, {"name": "3", "traits": ["Cat Hangout", "Homey"]}, {"name": "4", "traits": ["Fast Internet", "Natural Light"]}]}
    ]
   },
   {

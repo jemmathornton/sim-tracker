@@ -235,19 +235,22 @@ const unitPhotos = l => { const m = {}; l.photos.forEach(p => { const r = /(?:fl
 // the unit circles on the card (like the lot circles on neighbourhood cards), and the households listed under it
 function rentalBubbles(l){
   const units = rentalUnits(l), ph = unitPhotos(l);
-  return units.map((u, i) => { const p = (ph[i + 1] || [])[0], lab = `Unit ${i + 1}: ${u ? u.hh.name + (u.role === "owners" ? " (landlord)" : "") : "Empty"}`, to = u ? u.hh.id : l.id;
+  return units.map((u, i) => { const p = (ph[i + 1] || [])[0], lab = `${unitLabel(l, i)}: ${u ? u.hh.name + (u.role === "owners" ? " (landlord)" : "") : "Empty"}`, to = u ? u.hh.id : l.id;
     return p ? `<i data-lot-link="${to}" aria-label="${esc(lab)}" data-name="${esc(lab)}" style="background-image:url('${p.thumb}')"></i>`
       : `<i class="nb-none unit-no-pic" data-lot-link="${to}" aria-label="${esc(lab)}" data-name="${esc(lab)}"><b>${i + 1}</b></i>`; }).join("");
 }
+// a unit's name as she gave it in the game (from her Building save, shared rentals only): "Unit 3A", or her own name in full; otherwise its number
+const unitLabel = (l, i) => { const n = l.units?.[i]?.name; return !n ? `Unit ${i + 1}` : n.length <= 4 ? `Unit ${n}` : n; };
+const unitTraits = (l, i) => [...(l.units?.[i]?.traits || []), ...(l.units?.[i]?.challenges || [])];
 const rentalMeta = l => { const units = rentalUnits(l), who = units.filter(Boolean), owned = who.filter(u => u.role === "owners").length, lived = who.length - owned, free = units.length - who.length;   // the landlord's own unit isn't "let"
-  const rows = units.map((u, i) => `<li${u ? "" : ' class="free"'}>${ic("home")}${u ? hhLink(u.hh) + (u.role === "owners" ? " (landlord)" : "") : "Free"}<em>Unit ${i + 1}</em></li>`).join("");
+  const rows = units.map((u, i) => `<li${u ? "" : ' class="free"'}>${ic("home")}${u ? hhLink(u.hh) + (u.role === "owners" ? " (landlord)" : "") : "Free"}<em>${esc(unitLabel(l, i))}</em></li>`).join("");
   return `${rows ? `<ul class="unit-list">${rows}</ul>` : ""}<span>${ic("grid")}${free ? `${lived} let, ${free} free` : "All let"}</span>`; };
 
 // the units as a table on the lot page: picture, unit, who (only the landlord is marked)
 function unitsTable(l){
   const units = rentalUnits(l), ph = unitPhotos(l);
   return `<section class="block" style="--h:${l.hood.color}"><div class="block-head"><h2>The <em>units</em></h2><span class="count">${units.length} units</span></div><div class="unit-table">${units.map((u, i) => { const p = (ph[i + 1] || [])[0];
-    return `<a class="unit-row" href="#${u ? u.hh.id : l.id}"><span class="u-pic" ${p ? `style="background-image:url('${p.thumb}')"` : ""}>${p ? "" : i + 1}</span><span class="u-name">Unit ${i + 1}</span><span class="u-who">${u ? `<b>${esc(u.hh.name)}</b>${u.role === "owners" ? " (landlord)" : ""}` : "<i>Nobody yet</i>"}</span></a>`; }).join("")}</div></section>`;
+    return `<a class="unit-row" href="#${u ? u.hh.id : l.id}"><span class="u-pic" ${p ? `style="background-image:url('${p.thumb}')"` : ""}>${p ? "" : i + 1}</span><span class="u-name">${esc(unitLabel(l, i))}</span><span class="u-who">${u ? `<b>${esc(u.hh.name)}</b>${u.role === "owners" ? " (landlord)" : ""}` : "<i>Nobody yet</i>"}</span><span class="u-traits">${unitTraits(l, i).map(esc).join(", ")}</span></a>`; }).join("")}</div></section>`;
 }
 // apartment buildings: one card with the building's front picture and its apartments as circles; the card itself doesn't open (her choice, 16 Oct), the circles and household names do
 // a household's name on a card opens the household's page (the card itself opens the lot)
