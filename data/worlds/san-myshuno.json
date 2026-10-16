@@ -2,7 +2,7 @@
  "name": "San Myshuno",
  "pack": "City Living",
  "owned": true,
- "colour": "#5B4BB0", "heroY": 22,
+ "colour": "#5B4BB0", "heroY": 28,
  "deep": ["#19163A", "#272255"],
  "blurb": "Welcome to San Myshuno! Every day is an adventure on the streets of San Myshuno.",
  "neighbourhoods": [
