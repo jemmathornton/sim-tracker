@@ -223,7 +223,7 @@ const cardPills = l => { const n = newSince(l), p = [n ? `<span class="pill new"
   return p ? `<span class="pills">${p}</span>` : ""; };
 // ---------- rental layout trial (16 Oct): a small switch on neighbourhood and lot pages with rentals lets her compare layout 1 (units listed) and 2 (badge + unit count) ----------
 const RV_KEY = "jsw-rental-layout";
-let RV = (() => { try { return localStorage.getItem(RV_KEY) || ""; } catch (e) { return ""; } })();
+let RV = (() => { try { return localStorage.getItem(RV_KEY) || "1"; } catch (e) { return "1"; } })();   // 3-way trial: 1, 2 or u
 const rvOf = l => RV;
 const isRental = l => /residential rental/i.test(l.type || "");
 const unitCount = l => { const m = /\((\d+)\)/.exec(l.type || ""); return isRental(l) && m ? +m[1] : null; };
@@ -252,7 +252,7 @@ function unitCards(l){
 function rvSwitch(show){
   document.getElementById("rv-switch")?.remove(); if (!show) return;
   const d = document.createElement("div"); d.id = "rv-switch"; d.className = "rv-switch";
-  d.innerHTML = `<b>Rental layout (trial)</b><div>${[["", "Today"], ["1", "1 · units listed"], ["2", "2 · badge + unit count"], ["u", "3 · each unit its own card"]].map(([k, t]) => `<button type="button" data-rv="${k}" class="${RV === k ? "on" : ""}">${t}</button>`).join("")}</div>`;
+  d.innerHTML = `<b>Rental layout (trial)</b><div>${[["1", "1 · units listed"], ["2", "2 · badge + unit count"], ["u", "3 · each unit its own card"]].map(([k, t]) => `<button type="button" data-rv="${k}" class="${RV === k ? "on" : ""}">${t}</button>`).join("")}</div>`;
   document.body.appendChild(d);
 }
 document.addEventListener("click", e => { const b = e.target.closest("[data-rv]"); if (!b) return; RV = b.dataset.rv; try { localStorage.setItem(RV_KEY, RV); } catch (err) {} const y = scrollY; route(); scrollTo(0, y); });
