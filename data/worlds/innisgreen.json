@@ -33,7 +33,7 @@
    "lots": [
     {"lot": "Crannamor Residential", "myName": null, "type": "Residential", "size": "20x20", "residents": "Empty", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "The Watering Hole", "myName": null, "type": "Custom Venue", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
-    {"lot": "Starsong Lounge", "myName": null, "type": "Lounge", "size": "30x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "Starsong Lounge", "myName": null, "type": "Nightclub", "size": "30x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Puckitt Hall", "myName": null, "type": "Residential", "size": "50x50", "residents": "Summerdream", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Bard Boulevard", "myName": null, "type": "Residential", "size": "30x20", "residents": "Mystical Besties", "built": false, "shared": false, "screenshots": false, "simsMade": false}
    ]
