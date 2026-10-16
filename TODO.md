@@ -223,7 +223,7 @@ Site ideas, quick wins (no input needed):
 - [x] Site-wide search (lots, households, Gallery titles, in-game names) (13 Oct: box at the top of the sidebar; also finds Sims, neighbourhoods and worlds)
 - [x] Jump links at the top of long world pages, one per neighbourhood (already there: each world's header lists its neighbourhoods as links, and world pages now show neighbourhood cards rather than one long list)
 
-- [ ] [Jemma] Look over the 13 Oct additions and change any wording or placement: "Shared" on Gallery cards, the footer dates (home), the search box (sidebar)
+- [x] 13 Oct additions kept as they are: "Shared" on Gallery cards, the footer dates (home), the search box (sidebar; its text shortened to "Search…") (16 Oct)
 
 Site ideas, bigger (13 Oct: she chose the five marked; no preference on the others yet):
 - [ ] What's new page (dated changelog) (13 Oct: no preference yet)
