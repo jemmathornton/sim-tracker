@@ -323,8 +323,8 @@ const nbTile = l => l.photos[0] ? `<i style="background-image:url('${l.photos[0]
 // a lot circle on a neighbourhood card opens that lot (the rest of the card still opens the neighbourhood)
 document.addEventListener("click", e => { const c = e.target.closest("[data-lot-link]"); if (!c) return; e.preventDefault(); e.stopPropagation(); location.hash = c.dataset.lotLink; }, true);
 // the banner on a neighbourhood page shows the same part of the map as its card (16 Oct, her idea), zoomed less:
-// the maps are 1800px wide, so the banner stays at most twice as close as the whole map to stay sharp
-const HERO_RATIO = .52, HERO_ZOOM = 2;
+// the maps are about 3075px wide (full size from the mod since 16 Oct), so the banner can be up to 3x closer and stay sharp
+const HERO_RATIO = .52, HERO_ZOOM = 3;
 function hoodHeroView(x){
   const box = (NB_BOX[x.world.id] || {})[x.name], spot = (NB_PT[x.world.id] || {})[x.name];
   if (!x.world.map || !(box || spot)) return "";

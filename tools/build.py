@@ -14,6 +14,12 @@ GALLERY_ITEM = "https://www.ea.com/games/the-sims/the-sims-4/gallery/item/"
 
 
 # ---------- the plan's Residents column ----------
+
+def stamped(rel):
+    """A picture's path with a fingerprint, so a browser never shows an old copy after the picture changes (maps, 16 Oct)."""
+    import hashlib
+    return f"{rel}?v={hashlib.md5(open(os.path.join(SITE, rel), 'rb').read()).hexdigest()[:8]}"
+
 def residents(who):
     """Split the Residents column into a household name, an 'unsure' flag, or a note about the lot."""
     if who in (None, "N/A") or not str(who).strip(): return None, False, ""
@@ -161,8 +167,8 @@ def build():
     for wf in world_files():
         W = load(wf); n, ws, owned = W['name'], slug(W['name']), W['owned']
         w = {"name": n, "pack": W['pack'], "owned": owned, "color": W['colour'], "deep": W.get('deep'), "ready": owned,
-             "map": f"maps/{ws}.jpg" if owned and os.path.exists(os.path.join(SITE, 'maps', ws + '.jpg')) else "",
-             "thumb": f"maps/{ws}.thumb.jpg" if os.path.exists(os.path.join(SITE, 'maps', ws + '.thumb.jpg')) else "",
+             "map": stamped(f"maps/{ws}.jpg") if owned and os.path.exists(os.path.join(SITE, 'maps', ws + '.jpg')) else "",
+             "thumb": stamped(f"maps/{ws}.thumb.jpg") if os.path.exists(os.path.join(SITE, 'maps', ws + '.thumb.jpg')) else "",
              "blurb": W.get('blurb', ''), "hoods": []}
         if W.get('glow'): w["glow"] = W['glow']
         w.update({k: W[k] for k in ("weather", "highlights") if W.get(k)})   # from the game (tools/research/world_extras.py --apply)
@@ -226,7 +232,7 @@ def missing_pictures(data):
     def walk(o):
         if isinstance(o, dict):
             for k, v in o.items():
-                if k in ('src', 'thumb', 'map') and isinstance(v, str) and v: found.add(v)
+                if k in ('src', 'thumb', 'map') and isinstance(v, str) and v: found.add(v.split('?')[0])   # fingerprinted maps carry ?v=
                 else: walk(v)
         elif isinstance(o, list):
             for x in o: walk(x)
