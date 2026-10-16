@@ -12,12 +12,17 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import SITE
 
 PURPLE, PURPLE_TOP, YELLOW = "#4A2E78", "#5C3A90", "#E6BE55"   # a brighter take on --nav; --brass, lifted
-# the plumbob in a 32-unit square: a tall six-sided double pyramid, seen side-on, so three of its six sides face us
-# (the middle one straight on): top and bottom points, the widest points left and right, and the two front corners a little lower
-TOP, BOT = (16, 2.5), (16, 29.5)
-GL, GFL, GFR, GR = (9, 14.5), (13.4, 16.3), (18.6, 16.3), (23, 14.5)
+# the plumbob in a 32-unit square: a six-sided double pyramid, worked out rather than guessed. Its six middle corners sit
+# on a circle, turned TURN degrees and seen a little from above (TILT), so the sides facing us show different widths
+import math
+TURN, R, CX, GY, TILT = 22, 7, 16, 14.8, 1.6
+TOP, BOT = (CX, 2.5), (CX, 29.5)
+ring = [(CX + R * math.cos(math.radians(TURN + 60 * k)), GY + TILT * math.sin(math.radians(TURN + 60 * k))) for k in range(6)]
+front = [p for k, p in enumerate(ring) if math.sin(math.radians(TURN + 60 * k)) > 0]           # corners on our side
+GR, GL = max(ring), min(ring)                                                                  # the outline's widest points
 OUTLINE = [TOP, GR, BOT, GL]
-FACETS = [[GL, GFL, GFR, GR], [TOP, GFL, BOT], [TOP, GFR, BOT]]
+girdle = sorted({GL, *front, GR}, key=lambda p: p[0])
+FACETS = [girdle] + [[TOP, p, BOT] for p in front if p not in (GL, GR)]
 
 pts = lambda ps: " ".join(f"{x},{y}" for x, y in ps)
 SVG = (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">'
