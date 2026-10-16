@@ -29,7 +29,7 @@
     {"lot": "Verdemar Palace", "myName": "Verdemar Palace", "type": "Residential", "size": "50x50", "residents": "Thebe", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Casa Do Corsário", "myName": "Casa Do Corsário", "type": "Residential", "size": "20x15", "residents": "Aloisio Romualdo", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Abrantes Estate", "myName": "Abrantes Estate", "type": "Residential", "size": "30x30", "residents": "Abrantes", "built": false, "shared": false, "screenshots": false, "simsMade": false},
-    {"lot": "Fisherman's Hut", "myName": null, "type": "Residential", "size": "20x20", "residents": "Empty", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Fisherman's Hut", "myName": null, "type": "Restaurant (Seafood)", "size": "20x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Ye Olde Voyager", "myName": null, "type": "Bar", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "The Lair in the Open-Air", "myName": null, "type": "Residential", "size": "30x20", "residents": "Empty", "built": false, "shared": false, "screenshots": false, "simsMade": false}
    ]
