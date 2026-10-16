@@ -1,0 +1,125 @@
+/* Prototypes, 17 Oct: styles on top of the site's own site.css (linked first). Nothing here is used by the site. */
+
+/* pages without the site's sidebar */
+.solo main{margin-left:0}
+.solo>.hero{margin-inline:0;padding-inline:max(24px,calc((100% - 1200px) / 2))}
+.proto{max-width:1248px;margin:0 auto;padding:0 24px 120px}
+.proto-tag{display:inline-flex;align-items:center;gap:8px;font:700 11.5px/1 var(--body);letter-spacing:.08em;text-transform:uppercase;padding:6px 11px;border-radius:99px;background:var(--brass);color:#1A1F1C}
+.hero .kicker .proto-tag{color:#1A1F1C}
+
+/* option switch and the options themselves */
+.controls{display:flex;flex-wrap:wrap;align-items:center;gap:12px 22px;margin:30px 0 8px}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:99px;background:var(--surface);padding:3px}
+.seg button{all:unset;cursor:pointer;padding:7px 14px;border-radius:99px;font-weight:700;font-size:13.5px;color:var(--muted)}
+.seg button.on{background:var(--ink);color:var(--paper)}
+.seg button:focus-visible{outline:2px solid var(--brass)}
+.controls label{display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:600;cursor:pointer}
+.controls input{accent-color:var(--brass);width:16px;height:16px}
+.opts{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:start;margin-top:24px}
+.opts.one{grid-template-columns:minmax(0,1000px);justify-content:center}
+.opts.one>[hidden]{display:none}
+.opt-head{display:flex;gap:14px;align-items:flex-start;padding-bottom:12px;border-bottom:1px solid var(--line);margin-bottom:18px}
+.opt-head .no{font:400 46px/1 var(--display);color:var(--brass);flex:none;width:36px}
+.opt-head h2{font-size:32px;line-height:1.05}
+.opt-head p{margin:4px 0 0;color:var(--muted);font-size:14px;line-height:1.5}
+
+/* empty homes, option A: compact table */
+.sheet.empties{font-size:13.5px}
+.sheet.empties th,.sheet.empties td{white-space:normal;padding:8px 9px}
+.sheet.empties thead th{white-space:nowrap}
+.sheet.empties td.lotcell{min-width:150px}
+.sheet.empties td.lotcell a{font-weight:700;text-decoration-color:var(--line);text-underline-offset:3px}
+.sheet.empties td.lotcell small{display:block}
+.sheet.empties td.nowrap{white-space:nowrap}
+.sheet.empties .w-row th{background:color-mix(in srgb,var(--h) 12%,var(--surface));font:400 22px/1.1 var(--display);color:var(--ink);padding:12px 10px 8px;border-left:4px solid var(--h)}
+.sheet.empties .w-row small{font:600 12.5px var(--body);color:var(--muted);margin-left:10px}
+.sheet.empties .n-row th{font:700 11px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding:12px 10px 6px;background:var(--surface)}
+.sheet.empties tbody tr:hover{background:transparent}
+.sheet.empties tr.lot:hover{background:color-mix(in srgb,var(--soft) 60%,transparent)}
+.unit{display:inline-block;font-size:11.5px;font-weight:700;padding:1px 8px;border-radius:99px;background:var(--soft);margin-left:6px;vertical-align:1px}
+.note-cell{color:var(--brass);font-weight:600;font-size:12.5px}
+.plan{color:var(--muted);font-style:italic}
+.traits.small span{font-size:11.5px;padding:2px 8px}
+.sheet .traits{gap:4px}
+
+/* empty homes, option B: cards */
+.w-group{margin-top:34px}
+.w-group:first-child{margin-top:0}
+.w-title{display:flex;align-items:center;gap:10px;font-size:30px;line-height:1;padding-bottom:8px;border-bottom:2px solid var(--c)}
+.w-title small{font:600 13px var(--body);color:var(--muted);margin-left:auto}
+.w-title .dot,.dot.c{width:11px;height:11px;border-radius:50%;background:var(--c);box-shadow:none}
+.n-label{display:flex;align-items:center;gap:8px;margin:18px 0 10px;color:var(--h)}
+.n-label::before{content:"";width:18px;height:2px;background:var(--h)}
+.opt .listings{gap:22px 18px}
+.listing .meta .plan-note,.plan-note{color:var(--brass);font-weight:600;align-items:flex-start}
+.listing .meta .plan-note svg{margin-top:4px}
+.listing .meta .traits{flex-basis:100%}
+.listing .meta .unit-list small{color:var(--muted);font-size:12px;margin-left:4px;font-style:normal}
+.listing .meta .unit-list li.free{color:var(--ink);font-weight:600;font-style:normal}
+.listing .meta .unit-list li.free svg{color:var(--done)}
+
+.footnote{margin-top:44px;padding:16px 20px;border-radius:14px;border:1px dashed var(--line);background:var(--surface);color:var(--muted);font-size:14px}
+.footnote b{color:var(--ink)}
+.pick{margin-top:40px;padding:22px 26px;border-radius:18px;background:var(--deep);color:var(--on-deep);font-size:15px;line-height:1.6}
+.pick h2{font-size:30px;margin-bottom:6px}
+.pick ol{margin:8px 0 0;padding-left:22px;display:grid;gap:6px}
+.pick b{color:var(--brass)}
+
+/* filters: chips */
+.chiprows{display:grid;gap:10px;margin-top:6px}
+.chiprow{display:grid;grid-template-columns:132px minmax(0,1fr);gap:12px;align-items:start}
+.chiprow>.label{padding-top:9px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:6px;padding:5px 11px;border-radius:99px;border:1.5px solid var(--line);background:var(--surface);font-size:13px;font-weight:600;line-height:1.3}
+.chip small{color:var(--muted);font-weight:700;font-variant-numeric:tabular-nums}
+.chip:hover{border-color:color-mix(in srgb,var(--h,var(--ink)) 60%,var(--line))}
+.chip.on{background:var(--h,var(--ink));border-color:var(--h,var(--ink));color:#fff}
+.chip.on small{color:rgba(255,255,255,.8)}
+.chip.zero{opacity:.38}
+.chip.ch{border-style:dashed}
+.chip.ch.on{border-style:solid}
+.chip:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
+.chip.more{border-color:transparent;background:transparent;color:var(--muted);text-decoration:underline;text-underline-offset:3px}
+.showing-line{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 18px;margin:18px 0 0;font-size:14px;color:var(--muted)}
+.showing-line b{color:var(--ink)}
+.linkbtn{all:unset;cursor:pointer;font-weight:700;color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+.linkbtn:focus-visible{outline:2px solid var(--brass)}
+
+/* filters, option B: one folded bar */
+.fbar{position:relative;display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:6px}
+.fbtn{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:12px;border:1.5px solid var(--line);background:var(--surface);font-weight:700;font-size:14px}
+.fbtn i{font-style:normal;font-size:11px;color:var(--muted)}
+.fbtn b{display:inline-grid;place-items:center;min-width:20px;height:20px;padding:0 6px;border-radius:99px;background:var(--h,var(--ink));color:#fff;font-size:11.5px}
+.fbtn.open{border-color:var(--h,var(--ink));box-shadow:0 0 0 3px color-mix(in srgb,var(--h,var(--ink)) 20%,transparent)}
+.fbtn:focus-visible{outline:2px solid var(--brass)}
+.fpanel{margin-top:10px;padding:14px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);box-shadow:0 10px 30px rgba(0,0,0,.08);max-height:260px;overflow:auto}
+.fpanel .label{display:block;margin-bottom:10px}
+.active-line{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:12px;font-size:13px;color:var(--muted)}
+.active-line .chip{padding:4px 10px}
+
+/* filters: lots, matched-on line, stats table */
+.hood-mini{margin-top:40px}
+.hood-mini .hood-head{margin-bottom:16px}
+.hood-mini .hood-head h2{font-size:38px}
+.matched{flex-basis:100%;font-size:12.5px;color:var(--muted)}
+.matched b{color:var(--h);font-weight:700}
+.nomatch{margin-top:24px}
+.sheet .packs-cell{white-space:normal;min-width:70px;max-width:120px}
+.sheet .traits-cell{white-space:normal;min-width:120px;max-width:200px;font-size:12.5px;color:var(--muted)}
+.statsbar{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;margin-top:16px}
+.hero.proto-hero{min-height:300px}
+.side .proto-note{display:block;margin:10px 24px 0;color:var(--on-deep-mute);font-size:12.5px;line-height:1.5}
+.nav a{cursor:pointer}
+.ch-txt{font-style:italic;text-decoration:underline dashed;text-decoration-color:var(--line);text-underline-offset:3px}
+.sheet.empties td:nth-child(3){white-space:nowrap}
+.opt .listing{align-content:start}
+.sheet.empties td.lotcell{width:42%}
+.sheet.empties .units-line{display:flex;flex-wrap:wrap;gap:4px;margin-top:5px}
+.sheet.empties .units-line .unit{margin-left:0}
+.sheet.empties .note-cell{display:block;margin-top:5px;line-height:1.4}
+.sheet.empties .unit-traits{display:block}
+.sheet.empties .unit-traits b{font-weight:700;color:var(--muted);font-size:12px}
+.sheet .packs-cell{min-width:0;max-width:none;white-space:nowrap}
+.sheet td.where small{display:block}
+#statsBody .lots-sheet td.where{min-width:110px;max-width:130px}
+#statsBody .lots-sheet td.lotcell{min-width:120px;max-width:170px}

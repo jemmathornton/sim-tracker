@@ -222,6 +222,11 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [ ] [Jemma] Sim pictures: decode the Library portraits for Sim cards, or stick to her screenshots and monograms?
 - [ ] [Claude] When Sims go in: key each Sim by the game’s sim id, not its name (two Sims can share a name)
 
+### Empty homes page and filters (prototypes: for-jemma/prototypes/lots/index.html, opens from the folder)
+- [ ] [Jemma] Empty homes page (27 empty homes, 14 empty apartments, 41 free rental units, 7 University Housing lots): compact table (A) or cards (B)? Its own page in the sidebar or a part of Stats? Count University Housing and lots not built yet?
+- [ ] [Jemma] Filters (pack, lot type, lot trait, built/shared, empty/lived in): every group always showing (A) or one bar that opens (B)? Above the neighbourhood cards or on an “All lots” page per world? Chips on Stats instead of, or as well as, the “Show” dropdown?
+- [ ] [Claude] Bugs it found: Sequoia Cottage’s card puts the Lovejoys in unit 1 as landlord although they live at 23 Eucalyptus Lane (so 1 free, should be 2); Upland Trailer Park shows Johnny Zest in unit 2 but the plan has him in the 4th trailer
+
 ### Rentals unit by unit (research/rental-units.md)
 - [ ] [Jemma] Suggested fits: Upland units 1–3 the Eclectic Arts, 4 Johnny Zest; Tail’s End 3 (Cat Hangout) Catarina Lynx; Spring Steppes 1 Elderberry, 2 the Pleasant twins; 3 Cobblebottom 3A Cecilia Kang (Cat Hangout), 3B Moody & McMillan (Chef’s Kitchen). OK?
 - [ ] [Jemma] BFF, the Roomies and the Eclectic Arts don’t fit one flat each (the flats are one-bed): split them into separate households, or keep each together?

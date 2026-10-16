@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Empty Homes Prototype</title>
+<!-- Prototype, 17 Oct: TODO §8 "Empty homes and units page, built with the rentals per-unit view". Two layouts side by side
+     (A compact table, B cards). Opens straight from the folder; reads the site's own files and changes nothing. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="../../../site/site.css">
+<link rel="stylesheet" href="proto-lots.css">
+</head>
+<body class="solo">
+<section class="hero small" style="--c:#8E62CF"><div class="kicker"><span class="proto-tag">Prototype, 17 Oct</span><i></i><span class="label">A page for every world</span></div>
+  <h1 style="margin-top:14px">Empty <em>homes</em></h1>
+  <p>Every home with nobody in it, and every free rental unit, across your owned worlds. Two layouts side by side, both with the real lots. Nothing here changes the site.</p>
+  <div class="hero-foot"><div class="figures" id="figures"></div></div></section>
+
+<div class="proto">
+  <div class="controls">
+    <div class="seg" role="group" aria-label="Layout"><button type="button" data-view="both" class="on">Side by side</button><button type="button" data-view="A">A only</button><button type="button" data-view="B">B only</button></div>
+    <label><input type="checkbox" id="unbuilt" checked>Include lots not built yet</label>
+    <label><input type="checkbox" id="dorms" checked>Include University Housing</label>
+  </div>
+  <p class="showing">Bedrooms: your in-game counts on the Gallery card; for unshared lots, your plan’s note. Lot traits only for shared lots, and each rental unit’s own traits from your save; challenges are dashed on cards and in italics in the table. Who lives in which unit isn’t decided yet, so households fill the first units, as on the rental cards. Click any lot to open it on the site.</p>
+
+  <div class="opts" id="opts">
+    <section class="opt" id="optA"><div class="opt-head"><span class="no">A</span><div><h2>Compact table</h2><p>One row per empty home or rental, under its world and neighbourhood. Quick to scan; a rental names only its free units.</p></div></div><div id="bodyA"></div></section>
+    <section class="opt" id="optB"><div class="opt-head"><span class="no">B</span><div><h2>Cards</h2><p>The site’s own lot cards with the details added. A rental keeps one card with every unit listed, free ones marked.</p></div></div><div id="bodyB"></div></section>
+  </div>
+
+  <p class="footnote" id="footnote"></p>
+
+  <div class="pick"><h2>For you to pick</h2><ol>
+    <li><b>A or B</b> (or a mix, e.g. B on a world page and A on the Stats page).</li>
+    <li><b>Where it lives:</b> its own page in the sidebar (under Stats), or a section of the Stats page.</li>
+    <li><b>University Housing:</b> count it as empty homes, or leave it out? In the game, students move in by themselves.</li>
+    <li><b>Lots not built yet:</b> list them, or only homes that are built?</li>
+    <li><b>Rentals:</b> only the free units (A), or the whole rental with its free units marked (B)?</li>
+  </ol></div>
+</div>
+
+<script src="../../../site/js/icons.js"></script>
+<script src="../../../site/js/data.js"></script>
+<script src="proto-lots.js"></script>
+<script>
+// Which lots show: homes with no household, and rentals with a free unit; the two tick boxes take out unbuilt lots and University Housing.
+const view = {mode: "both", unbuilt: true, dorms: true};
+const isDorm = l => l.kind === "University Housing";
+const shown = () => LOTS.filter(l => l.home && (l.unitList ? l.free > 0 : !l.who) && (view.unbuilt || l.built === true) && (view.dorms || !isDorm(l)));
+// world → neighbourhood → lots, in the site's order
+const grouped = list => WORLDS.map(w => ({w, hoods: w.hoods.map(h => ({h, lots: list.filter(l => l.hood === h)})).filter(x => x.lots.length)})).filter(x => x.hoods.length);
+const tally = lots => { const homes = lots.filter(l => !l.unitList).length, units = lots.reduce((n, l) => n + l.free, 0);
+  return [homes && count(homes, "empty home"), units && count(units, "free unit")].filter(Boolean).join(", "); };
+const sub = l => [l.unitList ? `Residential Rental · ${l.free} of ${l.unitList.length} units free` : l.kind, progressOf(l)].join(" · ");
+
+// A: a row per empty home or rental; a rental names its free units, with each unit's own traits
+function rowA(l){
+  const free = (l.unitList || []).filter(u => !u.who);
+  const units = free.length ? `<span class="units-line">${free.map(u => `<span class="unit">${esc(u.name)}</span>`).join("")}</span>` : "";
+  // units with the same traits share a line ("Each:" when every free unit has them)
+  const same = {}; free.forEach(u => { const t = traitText(u.traits, u.challenges); if (t) (same[t] ||= []).push(u.name); });
+  const traits = !l.unitList ? traitText(l.traitList, l.challengeList)
+    : Object.entries(same).map(([t, us]) => `<span class="unit-traits"><b>${us.length === free.length && us.length > 1 ? "Each" : esc(us.join(", "))}:</b> ${t}</span>`).join("");
+  const beds = free[0]?.beds ? `${unitBeds(free[0], true)} each` : bedrooms(l, true);
+  return `<tr class="lot"><td class="lotcell"><a href="${attr(l.link)}" target="_blank" rel="noopener">${esc(l.name)}</a><small>${esc(sub(l))}</small>${units}${l.planNote ? `<span class="note-cell">${esc(l.planNote)}</span>` : ""}</td>
+    <td class="nowrap">${sizeTxt(l.size)}</td><td>${beds}</td><td>${traits}</td></tr>`;
+}
+const tableA = groups => `<div class="sheet-wrap"><table class="sheet empties"><thead><tr><th>Home</th><th>Size</th><th>Bed / bath</th><th>Lot traits</th></tr></thead>
+  ${groups.map(({w, hoods}) => `<tbody style="--h:${w.color}"><tr class="w-row"><th colspan="4">${esc(w.name)}<small>${tally(hoods.flatMap(x => x.lots))}</small></th></tr>
+    ${hoods.map(({h, lots}) => `<tr class="n-row"><th colspan="4">${esc(h.name)}</th></tr>${lots.map(rowA).join("")}`).join("")}</tbody>`).join("")}</table></div>`;
+
+// B: the site's lot card, with bedrooms, traits and every unit of a rental
+function cardB(l){
+  const lines = [], beds = bedrooms(l);
+  if (!l.unitList) { if (beds) lines.push(`<span>${ic("home")}${beds}</span>`); lines.push(traitPills(l.traitList, l.challengeList)); }
+  else lines.push(`<ul class="unit-list">${l.unitList.map(u => `<li class="${u.who ? "" : "free"}">${ic(u.who ? "users" : "home")}<span>${u.who ? `${esc(u.who.name)}${u.who.landlord ? " (landlord)" : ""}`
+      : `Free${unitBeds(u) ? ` <small>${unitBeds(u)}</small>` : ""}${u.traits.length || u.challenges.length ? ` <small>${esc([...u.traits, ...u.challenges].join(", "))}</small>` : ""}`}</span><em>${esc(u.name)}</em></li>`).join("")}</ul>`,
+    `<span>${ic("grid")}${l.free} of ${l.unitList.length} free${beds ? ` · ${beds}` : ""}</span>`);
+  if (l.planNote) lines.push(`<span class="plan-note">${ic("note")}${esc(l.planNote)}</span>`);
+  return `<a class="listing" href="${attr(l.link)}" target="_blank" rel="noopener" style="--h:${l.hood.color}">${photo(l)}<h3>${esc(l.name)}</h3><div class="meta">${lines.filter(Boolean).join("")}</div></a>`;
+}
+const cardsB = groups => groups.map(({w, hoods}) => `<div class="w-group" style="--c:${w.color}"><h3 class="w-title"><span class="dot"></span>${esc(w.name)}<small>${tally(hoods.flatMap(x => x.lots))}</small></h3>
+  ${hoods.map(({h, lots}) => `<p class="label n-label" style="--h:${h.color}">${esc(h.name)}</p><div class="listings">${lots.map(cardB).join("")}</div>`).join("")}</div>`).join("");
+
+function render(){
+  const list = shown(), groups = grouped(list);
+  const figs = [[list.filter(l => !l.unitList && !l.apt && !isDorm(l)).length, "empty homes"], [list.filter(l => l.apt).length, "empty apartments"],
+    [list.reduce((n, l) => n + l.free, 0), "free rental units"], [list.filter(isDorm).length, "University Housing lots"], [list.filter(l => l.planNote).length, "with a household still to decide"]];
+  document.getElementById("figures").innerHTML = figs.map(([n, t]) => `<div><b>${n}</b><span>${t}</span></div>`).join("");
+  document.getElementById("bodyA").innerHTML = tableA(groups);
+  document.getElementById("bodyB").innerHTML = cardsB(groups);
+  document.getElementById("opts").className = "opts" + (view.mode === "both" ? "" : " one");
+  document.getElementById("optA").hidden = view.mode === "B"; document.getElementById("optB").hidden = view.mode === "A";
+  document.querySelectorAll("[data-view]").forEach(b => b.classList.toggle("on", b.dataset.view === view.mode));
+}
+// rentals whose unit count isn't settled can't show free units yet
+const unsettled = LOTS.filter(l => /residential rental/i.test(l.type || "") && !l.unitList);
+document.getElementById("footnote").innerHTML = `<b>Not counted yet:</b> ${unsettled.map(l => `<a href="${attr(l.link)}" target="_blank" rel="noopener">${esc(l.name)}</a> (${esc(l.world.name)}${l.who ? " · " + esc(l.who.replace(/\s+own\??$/i, "")) : ""})`).join(", ")}. Their unit counts aren’t settled (TODO §2), so their free units can’t be listed. Full rentals and lived-in homes aren’t shown.`;
+document.addEventListener("click", e => { const b = e.target.closest("[data-view]"); if (b) { view.mode = b.dataset.view; render(); } });
+document.getElementById("unbuilt").addEventListener("change", e => { view.unbuilt = e.target.checked; render(); });
+document.getElementById("dorms").addEventListener("change", e => { view.dorms = e.target.checked; render(); });
+render();
+</script>
+</body>
+</html>

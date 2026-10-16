@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lot Filters Prototype</title>
+<!-- Prototype, 17 Oct: TODO §8 "Filters on world and Stats pages: pack, lot type, lot trait, built/shared, empty/occupied".
+     A world's lots under filter chips (two layouts, A and B), and the same chips on a Stats-style table. Counts only.
+     Opens straight from the folder; reads the site's own files and changes nothing. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="../../../site/site.css">
+<link rel="stylesheet" href="proto-lots.css">
+</head>
+<body>
+<aside class="side" aria-label="Worlds">
+  <a class="brand" href="index.html"><b>Jemma’s <em>Sim World</em></b><small>Prototype, 17 Oct</small></a>
+  <span class="proto-note">Pick a world to try its filters. The real site isn’t changed.</span>
+  <nav class="nav" id="nav"></nav>
+</aside>
+<main><div class="wrap">
+  <div id="hero"></div>
+  <div class="controls"><span class="label">Chip layout</span>
+    <div class="seg" role="group" aria-label="Chip layout"><button type="button" data-opt="A" class="on">A · Chips always showing</button><button type="button" data-opt="B">B · One folded bar</button></div></div>
+
+  <section class="hood" style="margin-top:28px"><div class="hood-head"><span class="label">On the world page</span><div><h2>Filter the <em>lots</em></h2>
+    <p>Pick chips to narrow the list. Within a group any chip matches (Bar or Café); across groups all must match (Bar and Shared). Each chip’s number is how many lots it would show.</p></div></div>
+    <div id="pageFilters"></div><div id="pageLots"></div></section>
+
+  <section class="block" id="stats"><div class="block-head"><h2>On the <em>Stats</em> page</h2><span class="count">the same chips on the lot sheet</span></div>
+    <div class="statsbar filters"><label>World<select id="statsWorld"></select></label></div>
+    <div id="statsFilters" style="margin-top:14px"></div><div id="statsBody"></div></section>
+
+  <div class="pick"><h2>For you to pick</h2><ol>
+    <li><b>A or B</b> for the chips (try both with a busy group, e.g. Pack on the Stats sheet).</li>
+    <li><b>World page:</b> the chips above the neighbourhood cards, with the lot list showing once a chip is picked, or a separate “All lots” page for each world?</li>
+    <li><b>Lot traits:</b> keep lot challenges (dashed) in the same group, or give them their own?</li>
+    <li><b>Packs</b> are only known for builds on the Gallery, so other lots drop out when a pack is picked. All right?</li>
+    <li><b>Stats page:</b> chips in place of the “Show” dropdown, or as well as it?</li>
+  </ol></div>
+</div></main>
+
+<script src="../../../site/js/icons.js"></script>
+<script src="../../../site/js/data.js"></script>
+<script src="proto-lots.js"></script>
+<script>
+// ---------- the five filter groups: what each lot counts as ----------
+const residentTags = l => {
+  if (l.kind === "To be decided") return [];
+  if (!l.home) return ["Community lot"];
+  const t = [];
+  if (l.unitList) { if (l.free < l.unitList.length) t.push("Lived in"); if (l.free === l.unitList.length) t.push("Empty"); if (l.free) t.push("Has free units"); }
+  else t.push(l.who ? "Lived in" : "Empty");
+  if (l.planNote) t.push("Household undecided");
+  return t;
+};
+const FACETS = [
+  {key: "pack", label: "Pack", of: l => !l.gallery ? ["Not on the Gallery"] : l.gallery.packs?.length ? l.gallery.packs : ["Base game only"], first: "Base game only", last: "Not on the Gallery"},
+  {key: "type", label: "Lot type", of: l => [l.kind]},
+  {key: "trait", label: "Lot trait", of: l => l.traitList.length || l.challengeList.length ? [...l.traitList, ...l.challengeList] : ["None known"], last: "None known"},
+  {key: "progress", label: "Built / shared", of: l => [progressOf(l)], order: ["Not built yet", "Built, not shared", "Shared", "Not applicable"], optional: "Not applicable"},
+  {key: "residents", label: "Empty / lived in", of: residentTags, order: ["Lived in", "Empty", "Has free units", "Household undecided", "Community lot"]},
+];
+const CHALLENGES = new Set(LOTS.flatMap(l => l.challengeList));
+LOTS.forEach(l => l.f = Object.fromEntries(FACETS.map(g => [g.key, g.of(l)])));
+
+// ---------- state: one set of chips for the world page, one for the Stats sheet ----------
+const newSet = () => ({on: Object.fromEntries(FACETS.map(g => [g.key, new Set()])), more: {}, open: null});
+const sets = {page: newSet(), stats: newSet()};
+let world = WORLDS[0], option = "A", statsWorld = "";
+const pool = name => name === "page" ? LOTS.filter(l => l.world === world) : LOTS.filter(l => !statsWorld || l.world.name === statsWorld);
+const fits = (l, s, skip) => FACETS.every(g => g.key === skip || !s.on[g.key].size || l.f[g.key].some(v => s.on[g.key].has(v)));
+const matching = name => pool(name).filter(l => fits(l, sets[name]));
+const anyOn = name => FACETS.some(g => sets[name].on[g.key].size);
+
+// each chip and its count: how many lots it would show, given what's picked in the other groups
+function chipList(name, g){
+  const s = sets[name], n = new Map(), lots = pool(name);
+  lots.filter(l => fits(l, s, g.key)).forEach(l => l.f[g.key].forEach(v => n.set(v, (n.get(v) || 0) + 1)));
+  let vals = g.order ? g.order.filter(v => v !== g.optional || lots.some(l => l.f[g.key].includes(v))) : [...new Set(lots.flatMap(l => l.f[g.key]))].sort((a, b) => (n.get(b) || 0) - (n.get(a) || 0) || a.localeCompare(b));
+  if (g.first && vals.includes(g.first)) vals = [g.first, ...vals.filter(v => v !== g.first)];
+  if (g.last && vals.includes(g.last)) vals = [...vals.filter(v => v !== g.last), g.last];
+  return vals.map(v => ({v, n: n.get(v) || 0, on: s.on[g.key].has(v)}));
+}
+const chip = (name, g, c, x = "") => `<button type="button" class="chip${c.on ? " on" : ""}${c.n || c.on ? "" : " zero"}${g.key === "trait" && CHALLENGES.has(c.v) ? " ch" : ""}" data-set="${name}" data-g="${g.key}" data-v="${attr(c.v)}" aria-pressed="${c.on}"${g.key === "trait" && CHALLENGES.has(c.v) ? ' title="Lot challenge"' : ""}>${esc(c.v)}${x || ` <small>${c.n}</small>`}</button>`;
+
+// A: every group on its own row, long groups folded after 10 chips
+const LIMIT = 10;
+const chipsA = name => `<div class="chiprows">${FACETS.map(g => { const cs = chipList(name, g), open = sets[name].more[g.key], show = open ? cs : cs.filter((c, i) => i < LIMIT || c.on);
+  return `<div class="chiprow"><span class="label">${g.label}</span><div class="chips">${show.map(c => chip(name, g, c)).join("")}${cs.length > LIMIT ? `<button type="button" class="chip more" data-more="${name}|${g.key}">${open ? "Show fewer" : `${cs.length - show.length} more`}</button>` : ""}</div></div>`; }).join("")}</div>`;
+// B: one bar of group buttons; a group's chips open underneath; what's picked shows as a line you can click to remove
+function chipsB(name){
+  const s = sets[name], g = FACETS.find(x => x.key === s.open), picked = FACETS.flatMap(x => [...s.on[x.key]].map(v => [x, v]));
+  return `<div class="fbar">${FACETS.map(x => `<button type="button" class="fbtn${s.open === x.key ? " open" : ""}" data-open="${name}|${x.key}" aria-expanded="${s.open === x.key}">${x.label}${s.on[x.key].size ? `<b>${s.on[x.key].size}</b>` : ""}<i>${s.open === x.key ? "▲" : "▼"}</i></button>`).join("")}</div>
+    ${g ? `<div class="fpanel"><span class="label">${g.label}</span><div class="chips">${chipList(name, g).map(c => chip(name, g, c)).join("")}</div></div>` : ""}
+    ${picked.length ? `<div class="active-line">Only: ${picked.map(([x, v]) => chip(name, x, {v, n: 1, on: true}, " ×")).join("")}</div>` : ""}`;
+}
+const chipsFor = name => option === "A" ? chipsA(name) : chipsB(name);
+const showing = (name, list, all) => `<p class="showing-line"><span>Showing <b>${list.length}</b> of ${all.length} lots</span><span>${list.filter(l => l.built === true).length} built · ${list.filter(l => l.shared === true).length} shared</span>${anyOn(name) ? `<button type="button" class="linkbtn" data-clear="${name}">Clear filters</button>` : ""}</p>`;
+
+// ---------- the world page: its lots as cards, under their neighbourhoods ----------
+const whoText = l => l.unitList ? `${l.unitList.length - l.free} lived in, ${l.free} free` : l.who ? esc(l.hhName) + (l.landlordAway ? " (landlord)" : l.home ? "" : " (owners)") : l.home ? (l.planNote ? "To be decided" : "Empty") : "";
+function card(l){
+  const s = sets.page, why = [...l.f.pack.filter(v => s.on.pack.has(v)), ...l.f.trait.filter(v => s.on.trait.has(v))], who = whoText(l);
+  return `<a class="listing" href="${attr(l.link)}" target="_blank" rel="noopener" style="--h:${l.hood.color}">${photo(l)}<h3>${esc(l.name)}</h3>
+    <div class="meta">${who ? `<span>${ic(l.unitList ? "grid" : "users")}${l.who && !l.unitList ? `<b>${who}</b>` : who}</span>` : ""}${l.gallery ? `<span>${ic("share")}${l.gallery.downloads} downloads</span>` : ""}${why.length ? `<span class="matched">Matched on ${why.map(v => `<b>${esc(v)}</b>`).join(", ")}</span>` : ""}</div></a>`;
+}
+function pageLots(){
+  const list = matching("page"), all = pool("page");
+  const hoods = world.hoods.map(h => ({h, ls: list.filter(l => l.hood === h), of: all.filter(l => l.hood === h).length})).filter(x => x.ls.length);
+  return showing("page", list, all) + (hoods.length ? hoods.map(x => `<section class="hood-mini" style="--h:${x.h.color}"><div class="hood-head"><span class="label">${esc(world.name)}</span><div><h2>${esc(x.h.name)}</h2></div><span class="count">${x.ls.length} of ${count(x.of, "lot")}</span></div>
+    <div class="listings">${x.ls.map(card).join("")}</div></section>`).join("") : `<div class="empty nomatch">${ic("search")}No lots in ${esc(world.name)} match all of these. <button type="button" class="linkbtn" data-clear="page">Clear filters</button></div>`);
+}
+function hero(){
+  const all = pool("page"), r = document.documentElement.style;
+  r.setProperty("--deep", world.deep[0]); r.setProperty("--deep-2", world.deep[1]);
+  const figs = [[all.length, "lots"], [all.filter(l => l.built === true).length, "built"], [all.filter(l => l.shared === true).length, "shared"], [all.filter(l => l.home && !l.unitList && !l.who && l.kind !== "To be decided").length, "empty homes"], [all.reduce((n, l) => n + l.free, 0), "free rental units"]];
+  return `<section class="hero small mapped proto-hero" style="--c:${world.glow || world.color};--map:url('${attr(PIC + world.map)}');--mapview:center ${world.heroY ?? 35}%/cover"><span class="credit">Map by 20th Century Plumbob</span>
+    <div class="kicker"><span class="proto-tag">Prototype, 17 Oct</span><i></i><span class="label">${esc(world.pack)} · filters</span></div><h1>${esc(world.name).replace(/ ([^ ]+)$/, " <em>$1</em>")}</h1>
+    <div class="hero-foot"><div class="figures">${figs.map(([n, t]) => `<div><b>${n}</b><span>${t}</span></div>`).join("")}</div></div></section>`;
+}
+
+// ---------- the Stats sheet: every lot, same chips, plus a count per world ----------
+const tick = v => v === true ? `<span class="t yes" title="Yes">✓</span>` : v === false ? `<span class="t no" title="Not yet">–</span>` : `<span class="t na">n/a</span>`;
+function statsBody(){
+  const list = matching("stats"), all = pool("stats"), sum = k => list.reduce((n, l) => n + (l.gallery?.[k] || 0), 0);
+  const rows = list.map(l => `<tr><td class="where">${esc(l.hood.name)}<small>${esc(l.world.name)}</small></td><td class="lotcell wrap"><a href="${attr(l.link)}" target="_blank" rel="noopener">${esc(l.name)}</a>${l.ea ? `<small>${esc(l.ea)}</small>` : ""}</td>
+    <td class="wrap">${esc(l.kind)}${l.unitList ? ` (${l.unitList.length})` : ""}</td><td class="num">${l.apt ? "" : sizeTxt(l.size)}</td><td class="wrap">${whoText(l)}</td><td class="c">${tick(l.built)}</td><td class="c">${tick(l.shared)}</td>
+    <td class="num packs-cell" title="${attr((l.gallery?.packs || []).join(", "))}">${!l.gallery ? "" : l.gallery.packs?.length ? l.gallery.packs.length : "<small>Base game</small>"}</td><td class="traits-cell">${traitText(l.traitList, l.challengeList)}</td>
+    <td class="num">${l.gallery ? l.gallery.downloads : ""}</td></tr>`).join("");
+  const table = `<div class="sheet-wrap tall"><table class="sheet lots-sheet"><thead><tr><th>Where</th><th>Lot</th><th>Type</th><th>Size</th><th>Residents</th><th>Built</th><th>Shared</th><th title="How many packs the build uses (point at a number to see them)">Packs</th><th>Lot traits</th><th>Downloads</th></tr></thead>
+    <tbody>${rows}</tbody><tfoot><tr><td colspan="5">${count(list.length, "lot")}</td><td class="c">${list.filter(l => l.built === true).length}</td><td class="c">${list.filter(l => l.shared === true).length}</td><td></td><td></td><td class="num">${sum("downloads")}</td></tr></tfoot></table></div>`;
+  const perWorld = statsWorld ? "" : `<p class="label" style="margin-top:28px">The same lots, counted by world</p><div class="sheet-wrap"><table class="sheet summary"><thead><tr><th>World</th><th>Lots</th><th>Built</th><th>Shared</th><th>Empty homes</th><th>Free rental units</th><th>Favourites</th><th>Downloads</th></tr></thead><tbody>
+    ${WORLDS.map(w => { const ls = list.filter(l => l.world === w); return ls.length ? `<tr><th scope="row">${esc(w.name)}</th><td>${ls.length}</td><td>${ls.filter(l => l.built === true).length}</td><td>${ls.filter(l => l.shared === true).length}</td><td>${ls.filter(l => l.home && !l.unitList && !l.who && l.kind !== "To be decided").length}</td><td>${ls.reduce((n, l) => n + l.free, 0)}</td><td class="num">${ls.reduce((n, l) => n + (l.gallery?.likes || 0), 0)}</td><td class="num">${ls.reduce((n, l) => n + (l.gallery?.downloads || 0), 0)}</td></tr>` : ""; }).join("")}</tbody></table></div>`;
+  return showing("stats", list, all) + table + perWorld;
+}
+
+// ---------- drawing and clicks ----------
+function render(newWorld){
+  if (newWorld) document.getElementById("hero").innerHTML = hero();
+  document.getElementById("nav").innerHTML = `<div class="nav-group"><span class="label">Worlds</span>${WORLDS.map(w => `<a href="#" data-world="${w.id}" class="${w === world ? "on" : ""}"><span class="dot" style="--c:${w.glow || w.color}"></span>${esc(w.name)}</a>`).join("")}</div>
+    <div class="nav-group"><a href="#stats">${ic("grid")}The Stats sheet</a></div>`;
+  document.querySelectorAll("[data-opt]").forEach(b => b.classList.toggle("on", b.dataset.opt === option));
+  document.getElementById("pageFilters").innerHTML = chipsFor("page");
+  document.getElementById("pageLots").innerHTML = pageLots();
+  document.getElementById("statsFilters").innerHTML = chipsFor("stats");
+  document.getElementById("statsBody").innerHTML = statsBody();
+}
+document.getElementById("statsWorld").innerHTML = `<option value="">All owned worlds</option>${WORLDS.map(w => `<option>${esc(w.name)}</option>`).join("")}`;
+document.getElementById("statsWorld").addEventListener("change", e => { statsWorld = e.target.value; render(); });
+document.addEventListener("click", e => {
+  const c = e.target.closest("[data-g]"), m = e.target.closest("[data-more]"), o = e.target.closest("[data-open]"), cl = e.target.closest("[data-clear]"), w = e.target.closest("[data-world]"), op = e.target.closest("[data-opt]");
+  if (c) { const on = sets[c.dataset.set].on[c.dataset.g], v = c.dataset.v; on.has(v) ? on.delete(v) : on.add(v); render();
+    document.querySelector(`[data-set="${c.dataset.set}"][data-g="${c.dataset.g}"][data-v="${CSS.escape(v)}"]`)?.focus(); }   // keep the keyboard's place
+  else if (m) { const [n, k] = m.dataset.more.split("|"); sets[n].more[k] = !sets[n].more[k]; render(); }
+  else if (o) { const [n, k] = o.dataset.open.split("|"); sets[n].open = sets[n].open === k ? null : k; render(); document.querySelector(`[data-open="${o.dataset.open}"]`)?.focus(); }
+  else if (cl) { sets[cl.dataset.clear] = newSet(); render(); }
+  else if (w) { e.preventDefault(); world = WORLDS.find(x => x.id === w.dataset.world); sets.page = newSet(); render(true); scrollTo(0, 0); }
+  else if (op) { option = op.dataset.opt; render(); }
+});
+render(true);
+</script>
+</body>
+</html>
