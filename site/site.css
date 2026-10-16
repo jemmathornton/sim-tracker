@@ -500,23 +500,23 @@ footer .as-of{flex-basis:100%}
 .rv-switch button.on{background:var(--brass);border-color:var(--brass);color:#fff}
 .bgroup-head h3 a{text-decoration:none;color:inherit}
 .nb-bubbles i.unit-no-pic{display:grid;place-items:center}
-.nb-bubbles i.unit-no-pic b{font:700 13px var(--body);color:var(--muted)}
-.nb-bubbles i.tenant{outline:2px dashed rgba(255,255,255,.9);outline-offset:-2px}
+.nb-bubbles i.unit-no-pic b{font:700 14px var(--body);color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.5)}
+.nb-bubbles>i.tenant{border-style:dashed}
 .unit-strip{display:flex;flex-wrap:wrap;gap:6px;padding:10px 0 2px}
 .unit-strip i{width:38px;height:38px;border-radius:9px;background:var(--surface) center/cover;border:1px solid var(--line);box-sizing:border-box;display:grid;place-items:center;font:700 12px var(--body);font-style:normal;color:var(--muted);position:relative;cursor:pointer}
 .unit-strip i.r-owner::after{content:"";position:absolute;right:-3px;top:-3px;width:11px;height:11px;border-radius:50%;background:var(--brass);border:2px solid var(--surface)}
 .unit-strip i.r-tenant{box-shadow:inset 0 0 0 2px var(--h)}
-.unit-strip i.r-empty{opacity:.4;filter:grayscale(1);cursor:default;outline:1px dashed var(--muted);outline-offset:-1px}
-.unit-strip i:not(.r-empty):hover{transform:translateY(-1px);box-shadow:0 2px 6px rgba(0,0,0,.18)}
+.unit-strip i.r-empty{border:1px dashed var(--muted)}
+.unit-strip i:hover{transform:translateY(-1px);box-shadow:0 2px 6px rgba(0,0,0,.18)}
 .unit-strip i.r-tenant:hover{box-shadow:inset 0 0 0 2px var(--h),0 2px 6px rgba(0,0,0,.18)}
 .unit-table{display:grid;gap:8px}
 .unit-row{display:grid;grid-template-columns:64px 80px 1fr auto;align-items:center;gap:14px;padding:8px 12px;border:1px solid var(--line);border-radius:12px;background:var(--surface);text-decoration:none;color:inherit}
-a.unit-row:hover{border-color:var(--h)}
-.unit-row.free{opacity:.6}
-.unit-row.free .u-pic{filter:grayscale(1)}
+.unit-row:hover{border-color:var(--h)}
 .u-pic{width:64px;height:44px;border-radius:8px;background:var(--soft) center/cover;display:grid;place-items:center;font-weight:700;color:var(--muted)}
 .u-name{font-weight:600;color:var(--muted);font-size:13px}
 .role-chip{font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:999px;background:var(--soft)}
 .role-chip.r-owner{background:var(--brass);color:#fff}
 .role-chip.r-tenant{background:color-mix(in srgb,var(--h) 25%,var(--surface))}
 .role-chip.r-empty{color:var(--muted)}
+
+.nb-bubbles>i.owner::before{content:"";position:absolute;right:-1px;top:-1px;width:12px;height:12px;border-radius:50%;background:var(--brass);border:2px solid #fff;z-index:1}

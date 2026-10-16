@@ -253,8 +253,8 @@ function unitCards(l){
 function rentalBubbles(l){
   const units = rentalUnits(l), ph = unitPhotos(l);
   return units.map((u, i) => { const p = (ph[i + 1] || [])[0], lab = `Unit ${i + 1}: ${u ? u.hh.name + (u.role ? ` (${u.role === "owners" ? "landlord" : u.role})` : "") : "Empty"}`, to = u ? u.hh.id : l.id;
-    return p ? `<i data-lot-link="${to}" aria-label="${esc(lab)}" data-name="${esc(lab)}" class="${u && u.role === "tenant" ? "tenant" : ""}" style="background-image:url('${p.thumb}')"></i>`
-      : `<i class="nb-none unit-no-pic ${u && u.role === "tenant" ? "tenant" : ""}" data-lot-link="${to}" aria-label="${esc(lab)}" data-name="${esc(lab)}"><b>${i + 1}</b></i>`; }).join("");
+    return p ? `<i data-lot-link="${to}" aria-label="${esc(lab)}" data-name="${esc(lab)}" class="${u && u.role === "tenant" ? "tenant" : u && u.role === "owners" ? "owner" : ""}" style="background-image:url('${p.thumb}')"></i>`
+      : `<i class="nb-none unit-no-pic ${u && u.role === "tenant" ? "tenant" : u && u.role === "owners" ? "owner" : ""}" data-lot-link="${to}" aria-label="${esc(lab)}" data-name="${esc(lab)}"><b>${i + 1}</b></i>`; }).join("");
 }
 const rentalMeta = l => { const units = rentalUnits(l), owner = units.find(u => u && u.role === "owners"), tenants = units.filter(u => u && u.role === "tenant").length, lived = units.filter(Boolean).length;
   const lead = owner ? `<span>${ic("users")}<b>${esc(owner.hh.name)}</b> (landlord)</span>` : l.hh ? `<span>${ic("users")}<b>${esc(l.hh.name)}</b></span>` : "";
@@ -266,20 +266,20 @@ const roleTxt = u => u ? (u.role === "owners" ? "Landlord" : u.role === "tenant"
 function rentalStrip(l){
   const units = rentalUnits(l), ph = unitPhotos(l);
   return units.map((u, i) => { const p = (ph[i + 1] || [])[0];
-    return `<i ${u ? `data-lot-link="${u.hh.id}"` : ""} class="${roleOf(u)}" title="Unit ${i + 1}: ${esc(u ? u.hh.name : "")}${u ? " · " : ""}${roleTxt(u)}" ${p ? `style="background-image:url('${p.thumb}')"` : ""}>${p ? "" : i + 1}</i>`; }).join("");
+    return `<i data-lot-link="${u ? u.hh.id : l.id}" class="${roleOf(u)}" title="Unit ${i + 1}: ${esc(u ? u.hh.name : "")}${u ? " · " : ""}${roleTxt(u)}" ${p ? `style="background-image:url('${p.thumb}')"` : ""}>${p ? "" : i + 1}</i>`; }).join("");
 }
 // the units as a table on the lot page (layouts 4, 5 and 6): picture, unit, who, and a landlord / tenant / free label
 function unitsTable(l){
   const units = rentalUnits(l), ph = unitPhotos(l);
   return `<section class="block" style="--h:${l.hood.color}"><div class="block-head"><h2>The <em>units</em></h2><span class="count">${units.length} units</span></div><div class="unit-table">${units.map((u, i) => { const p = (ph[i + 1] || [])[0];
-    return `<${u ? `a href="#${u.hh.id}"` : "div"} class="unit-row${u ? "" : " free"}"><span class="u-pic" ${p ? `style="background-image:url('${p.thumb}')"` : ""}>${p ? "" : i + 1}</span><span class="u-name">Unit ${i + 1}</span><span class="u-who">${u ? `<b>${esc(u.hh.name)}</b>` : "<i>Nobody yet</i>"}</span><span class="role-chip ${roleOf(u)}">${roleTxt(u)}</span></${u ? "a" : "div"}>`; }).join("")}</div></section>`;
+    return `<a class="unit-row" href="#${u ? u.hh.id : l.id}"><span class="u-pic" ${p ? `style="background-image:url('${p.thumb}')"` : ""}>${p ? "" : i + 1}</span><span class="u-name">Unit ${i + 1}</span><span class="u-who">${u ? `<b>${esc(u.hh.name)}</b>` : "<i>Nobody yet</i>"}</span><span class="role-chip ${roleOf(u)}">${roleTxt(u)}</span></a>`; }).join("")}</div></section>`;
 }
 // apartment buildings in layouts 4 and 5: one card with the building's front picture, its apartments as circles or a strip
 function buildingFront(b, mode){
   const cover = (b.units.find(u => u.photos[0]) || {}).photos?.[0], lived = b.units.filter(u => u.hh).length;
   const circ = b.units.map(u => nbTile(u).replace("<i ", `<i data-lot-link="${u.id}" aria-label="${esc(u.name)}" `).replace(/ title="[^"]*"/, ` data-name="${esc(u.name)}"`)).join("");
-  const strip = b.units.map(u => `<i ${u.hh ? `data-lot-link="${u.id}"` : ""} class="${u.hh ? "r-lives" : "r-empty"}" title="${esc(u.name)}${u.hh ? " · " + esc(u.hh.name) : " · Free"}" ${u.photos[0] ? `style="background-image:url('${u.photos[0].thumb}')"` : ""}>${u.photos[0] ? "" : esc(u.unit || "")}</i>`).join("");
-  return `<div class="listing" style="--h:${b.hood.color}"><div class="photo ${cover?"shot":""}" ${cover?`style="--img:url('${cover.thumb}')"`:""}>${cover ? "" : plot("40x30", 120, false)}${mode === "4" ? `<span class="nb-bubbles${b.units.length > 5 ? " many" : ""}">${circ}</span>` : ""}<span class="type">Apartment building · ${b.units.length} apartments</span></div>${mode === "5" ? `<div class="unit-strip">${strip}</div>` : ""}
+  const strip = b.units.map(u => `<i data-lot-link="${u.id}" class="${u.hh ? "r-lives" : "r-empty"}" title="${esc(u.name)}${u.hh ? " · " + esc(u.hh.name) : " · Free"}" ${u.photos[0] ? `style="background-image:url('${u.photos[0].thumb}')"` : ""}>${u.photos[0] ? "" : esc(u.unit || "")}</i>`).join("");
+  return `<div class="listing" style="--h:${b.hood.color}"><div class="photo ${cover?"shot":""}" ${cover?`style="--img:url('${cover.thumb}')"`:""}>${cover ? "" : plot("40x30", 120, false)}${mode === "4" ? `<span class="nb-bubbles${b.units.length > 5 ? " many" : ""}">${circ}</span>` : ""}<span class="type">Apartment Building · ${b.units.length} Apartments</span></div>${mode === "5" ? `<div class="unit-strip">${strip}</div>` : ""}
     <h3>${esc(b.name)}</h3><div class="meta"><span>${ic("home")}${lived} lived in, ${b.units.length - lived} free</span></div></div>`;
 }
 
@@ -300,7 +300,7 @@ function listing(l){
 
 function buildingCard(b){
   const cover = b.units.find(l => l.photos[0]), built = b.units.filter(l => l.built === true).length;
-  return `<div class="listing bcard" style="--h:${b.hood.color}"><div class="photo ${cover?"shot":""}" ${cover?`style="--img:url('${cover.photos[0].thumb}')"`:""}>${cover ? "" : plot("40x30", 120, false)}<span class="type">Apartment building</span><span class="size">${b.units.length} apartments</span></div>
+  return `<div class="listing bcard" style="--h:${b.hood.color}"><div class="photo ${cover?"shot":""}" ${cover?`style="--img:url('${cover.photos[0].thumb}')"`:""}>${cover ? "" : plot("40x30", 120, false)}<span class="type">Apartment Building</span><span class="size">${b.units.length} Apartments</span></div>
     <h3>${esc(b.name)}</h3>
     <ul class="units">${b.units.map(l => `<li><a href="#${l.id}"><span class="unit-no">${esc(l.unit)}</span><span class="unit-who">${l.hh ? `${ic("users")}<b>${esc(l.hh.name)}</b>` : `<i>${esc(l.whoNote ? emptyNote(l.whoNote) : "No household yet")}</i>`}</span><span class="status">${statusDots(l)}</span></a></li>`).join("")}</ul>
     <div class="meta"><span>${ic("hammer")}<b>${built} of ${b.units.length}</b> built</span></div></div>`;
@@ -309,7 +309,7 @@ function buildingCard(b){
 const hoodItems = x => { const seen = new Set(); return x.lots.flatMap(l => { if (!l.building) return [rvOf(l) === "1" && unitCount(l) ? rentalCard(l) : rvOf(l) === "u" && unitCount(l) ? `<div class="bgroup"><div class="bgroup-head">${ic("home")}<h3><a href="#${l.id}">${esc(l.name)}</a></h3><span>Residential Rental · ${unitCount(l)} units · ${rentalUnits(l).filter(Boolean).length} lived in</span></div><div class="listings">${unitCards(l)}</div></div>` : listing(l)]; const b = l.building; if (seen.has(b)) return []; seen.add(b);
   const built = b.units.filter(u => u.built === true).length;
   if (RV === "4" || RV === "5") return [buildingFront(b, RV)];
-  return [`<div class="bgroup"><div class="bgroup-head">${ic("home")}<h3>${esc(b.name)}</h3><span>${b.units.length} apartments · ${built} built</span></div><div class="listings">${b.units.map(listing).join("")}</div></div>`]; }); };
+  return [`<div class="bgroup"><div class="bgroup-head">${ic("home")}<h3>${esc(b.name)}</h3><span>${b.units.length} Apartments · ${built} built</span></div><div class="listings">${b.units.map(listing).join("")}</div></div>`]; }); };
 function mapHero(w, kicker, title, text, figures, chapters, small){
   return `<section class="hero ${w.map?"mapped":""} ${small?"hh-hero":""}" style="--c:${w.glow||w.color};${w.map?`--map:url('${w.map}')`:""}">${w.map?`<span class="credit">Map by 20th Century Plumbob</span>`:""}<div class="kicker"><i></i><span class="label">${kicker}</span></div>
     <h1>${title}</h1>${text ? `<p>${text}</p>` : ""}
@@ -443,7 +443,7 @@ function lot(l){
     <h1 style="margin-top:18px">${esc(l.name)}</h1></section>
     <div class="detail" style="--h:${hc}">${carousel(l)}
     <div><dl class="facts">${l.ea ? `<div><dt>In-game name</dt><dd>${esc(l.ea)}</dd></div>` : ""}<div><dt>Lot type</dt><dd>${esc(l.type || "Not set")}</dd></div>${isApt(l) ? "" : `<div><dt>Lot size</dt><dd>${esc(sizeTxt(l.size) || "Not checked yet")}</dd></div>`}${l.traits ? `<div><dt>Lot traits</dt><dd>${l.traits.map(esc).join(", ")}</dd></div>` : ""}${l.challenges ? `<div><dt>${l.challenges.length > 1 ? "Lot challenges" : "Lot challenge"}</dt><dd>${l.challenges.map(esc).join(", ")}</dd></div>` : ""}
-      <div><dt>Neighbourhood</dt><dd>${esc(l.hood.name)}</dd></div>${progressRow(l)}${l.building ? `<div><dt>Building</dt><dd>${esc(l.building.name)} · ${l.building.units.length} apartments</dd></div>` : ""}
+      <div><dt>Neighbourhood</dt><dd>${esc(l.hood.name)}</dd></div>${progressRow(l)}${l.building ? `<div><dt>Building</dt><dd>${esc(l.building.name)} · ${l.building.units.length} Apartments</dd></div>` : ""}
       ${l.hh || l.whoNote ? `<div><dt>${l.owned ? "Owned by" : "Household"}</dt><dd>${l.hh ? `<a href="#${l.hh.id}">${esc(l.hh.name)}</a>${l.hh.unsure?" (unsure)":""}${l.tenants && !l.owned ? " (owners)" : ""}` : esc(emptyNote(l.whoNote))}</dd></div>` : ""}${rvOf(l) && unitCount(l) ? (u => `<div><dt>Units</dt><dd>${u.length}: ${u.filter(Boolean).length} lived in, ${u.filter(x => !x).length} free</dd></div>`)(rentalUnits(l)) : ""}${l.tenants ? `<div><dt>${l.tenants.length > 1 ? "Tenants" : "Tenant"}</dt><dd>${l.tenants.map(t => `<a href="#${t.id}">${esc(t.name)}</a>${t.note ? ` <small>“${esc(t.note)}”</small>` : ""}`).join(", ")}</dd></div>` : ""}</dl>${l.versions ? versionTabs(l) : ""}
 </div></div>
     ${l.hh ? `<section class="block" style="--h:${hc}"><div class="block-head"><h2>${l.owned ? "Who <em>owns it</em>" : "Who <em>lives here</em>"}</h2></div>
