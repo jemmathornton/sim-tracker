@@ -9,11 +9,11 @@
   {
    "name": "Forgotten Hollow",
    "lots": [
-    {"lot": "Straud Mansion", "myName": null, "type": null, "size": "40x30", "residents": null, "built": false, "shared": false, "screenshots": false, "simsMade": false},
-    {"lot": "Wolfsbane Manor", "myName": null, "type": null, "size": "30x30", "residents": null, "built": false, "shared": false, "screenshots": false, "simsMade": false},
-    {"lot": "Garliclauter Place", "myName": null, "type": null, "size": "30x20", "residents": null, "built": false, "shared": false, "screenshots": false, "simsMade": false},
-    {"lot": "Widowshild Townhome", "myName": null, "type": null, "size": "30x20", "residents": null, "built": false, "shared": false, "screenshots": false, "simsMade": false},
-    {"lot": "Fledermaus Bend", "myName": null, "type": null, "size": "30x30", "residents": null, "built": false, "shared": false, "screenshots": false, "simsMade": false}
+    {"lot": "Straud Mansion", "myName": null, "type": "Residential", "size": "40x30", "residents": "Straud", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Wolfsbane Manor", "myName": null, "type": "Residential", "size": "30x30", "residents": "Vatore", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Garliclauter Place", "myName": null, "type": "Backroom", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "Widowshild Townhome", "myName": null, "type": "Residential", "size": "30x20", "residents": "? (new vampires of her own, maybe)", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Fledermaus Bend", "myName": null, "type": "Cemetery", "size": "30x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ]
   }
  ],
