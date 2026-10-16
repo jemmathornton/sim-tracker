@@ -40,7 +40,7 @@
    "mapBox": [0.38, 0.33, 0.61, 0.49],
    "lots": [
     {"lot": "Hallow Slough", "myName": null, "type": "Residential", "size": "30x20", "residents": "Ella-Mint Cadberry", "built": true, "shared": false, "screenshots": false, "simsMade": true},
-    {"lot": "Umbrage Manor", "myName": null, "type": "Residential", "size": "40x30", "residents": "Villareel", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Umbrage Manor", "myName": null, "type": "Residential", "size": "40x30", "residents": "Villareal", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Parkshore", "myName": "Cordelia Church", "type": "Cemetery", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Ophelia Villa", "myName": null, "type": "Haunted House Residential", "size": "30x20", "residents": "Goth", "built": false, "shared": false, "screenshots": false, "simsMade": false}
    ]
