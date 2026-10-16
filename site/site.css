@@ -518,3 +518,6 @@ footer .as-of{flex-basis:100%}
 .role-chip.r-tenant{background:color-mix(in srgb,var(--h) 25%,var(--surface))}
 .role-chip.r-empty{color:var(--muted)}
 
+.listing .meta span.who-list{align-items:flex-start}
+.listing .meta .who-list>span{display:inline;line-height:1.45}
+.listing .meta .who-list svg{margin-top:3px;flex:none}

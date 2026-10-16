@@ -256,9 +256,9 @@ function rentalBubbles(l){
     return p ? `<i data-lot-link="${to}" aria-label="${esc(lab)}" data-name="${esc(lab)}" style="background-image:url('${p.thumb}')"></i>`
       : `<i class="nb-none unit-no-pic" data-lot-link="${to}" aria-label="${esc(lab)}" data-name="${esc(lab)}"><b>${i + 1}</b></i>`; }).join("");
 }
-const rentalMeta = l => { const units = rentalUnits(l), who = units.filter(Boolean), lived = who.length;
+const rentalMeta = l => { const units = rentalUnits(l), who = units.filter(Boolean), owned = who.filter(u => u.role === "owners").length, lived = who.length - owned, free = units.length - who.length;   // the landlord's own unit isn't "let"
   const names = who.map(u => `<b>${esc(u.hh.name)}</b>${u.role === "owners" ? " (landlord)" : u.role === "tenant" ? " (tenant)" : ""}`).join(", ");
-  return `${names ? `<span>${ic("users")}${names}</span>` : ""}<span>${ic("home")}${units.length - lived ? `${lived} let, ${units.length - lived} free` : "All let"}</span>`; };
+  return `${names ? `<span class="who-list">${ic("users")}<span>${names}</span></span>` : ""}<span>${ic("home")}${free ? `${lived} let, ${free} free` : "All let"}</span>`; };
 
 // layout "5": front picture, then a strip of small unit squares under it (gold dot = landlord's own unit, coloured ring = a tenant, faded = free)
 const roleOf = u => "r-" + (u ? (u.role === "owners" ? "owner" : u.role === "tenant" ? "tenant" : "lives") : "empty");
