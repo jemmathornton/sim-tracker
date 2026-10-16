@@ -14,7 +14,7 @@
    "lots": [
     {"lot": "Dambele Palace", "myName": "Dambele Palace", "type": "Residential", "size": "50x50", "residents": "Darong", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Zanbira Market", "myName": "Zanbira Market", "type": "Community Market", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
-    {"lot": "17 Bright Cliff", "myName": "17 Bright Cliff", "type": "Apartment", "size": "N/A", "residents": "Empty", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "17 Bright Cliff", "myName": "17 Bright Cliff", "type": "Apartment", "size": "N/A", "residents": "Aloisio Romualdo? (tentative)", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "18 Bright Cliff", "myName": "18 Bright Cliff", "type": "Apartment", "size": "N/A", "residents": "Ananou", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Hardcover", "myName": "Hardcover", "type": "Backroom", "size": "20x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Sankofa Residence", "myName": "Sankofa Residence", "type": "Museum", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
@@ -27,7 +27,7 @@
    "mapBox": [0.23, 0.24, 0.49, 0.5],
    "lots": [
     {"lot": "Verdemar Palace", "myName": "Verdemar Palace", "type": "Residential", "size": "50x50", "residents": "Thebe", "built": false, "shared": false, "screenshots": false, "simsMade": false},
-    {"lot": "Casa Do Corsário", "myName": "Casa Do Corsário", "type": "Residential", "size": "20x15", "residents": "Aloisio Romualdo", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Casa Do Corsário", "myName": "Casa Do Corsário", "type": "Library", "size": "20x15", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Abrantes Estate", "myName": "Abrantes Estate", "type": "Residential", "size": "30x30", "residents": "Abrantes", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Fisherman's Hut", "myName": null, "type": "Restaurant (Seafood)", "size": "20x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Ye Olde Voyager", "myName": null, "type": "Bar", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
