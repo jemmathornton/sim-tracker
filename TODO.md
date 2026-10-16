@@ -242,6 +242,12 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [ ] [Jemma] Only if she ever wants it on other devices or for friends: Cloudflare Pages with Cloudflare Access is free and private (people she lists get an email code). A public version would first need other players’ Gallery comments and usernames left out, the map mod’s terms checked with 20th Century Plumbob, and a “not affiliated with EA” line. No need to go online for herself
 - [ ] [Claude] Small tidy-up whenever: 6 files in site/ are never shown (3.6 MB: the full maps of the 5 worlds she doesn’t own, and gallery/windenburg/von-windenburg-estate.jpg); add Lucide’s licence notice to site/
 
+### Game changes, Oct 2025 – Oct 2026 (research/game-changes-2026.md)
+- [ ] [Jemma] Nothing new to add: no new world since Ondarion and none announced; the new lot types (Custom Venue, Backroom, Community Market, Playground) and traits are already in her plan and tools. Her game is up to date (22 Sep 2026 patch)
+- [ ] [Jemma] In game: Wedding Venues placed from the Gallery could stay Residential underneath until the 22 Sep patch; worth checking hers (Celebration Center, La Coppia Serena, Caminito del Deseo and the others)
+- [ ] [Jemma] For the family tree: the 3 Feb 2026 update gave six premade families ancestors (Goths, Landgraabs, Thebes, Capps, Montys, Darongs), but only in new saves; EA plans more family and relationship work for late 2026
+- [ ] [Claude] Correct research/lot-types-reference.md: Penthouses can be Residential Rentals since Jul 2024; Gibbi Point’s waterfront lots are excluded like Sulani’s; Backroom is allowed in every world
+
 ### Neighbourhood banners (research/hood-banners-review.md; pictures in for-jemma/hood-banners/)
 - [ ] [Claude] Bug: the banner zoom is worked out for a banner about 352px tall, but the real ones are 380–686px (the title and text make them taller), so each neighbourhood only fills the middle and its lowest part sits under the fade. Work out the zoom from the banner’s real height and keep the box above the fade (fixes most of the so-so ones: Lykke Center / University of Windenburg, Hopewell Hills, Deadgrass Isle, The Crumbling Isle, Plumbite Cove). Fix when she’s back
 - [ ] [Jemma] None looks worse than the whole map (48 good, 29 so-so). Her taste: put Belomisia Jungle, Campground, Glimmerbrook (loses its sunset) and Conifer Station back to the whole map? They barely zoom (1.01–1.15×)
