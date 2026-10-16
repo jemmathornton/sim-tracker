@@ -1,4 +1,4 @@
-"""The app icon: a plumbob outline (drawn here from straight lines, no clip art or AI) in the app's yellow on purple.
+"""The app icon: a plumbob outline (its corners written out as coordinates below and joined with lines; no clip art or AI) in the app's yellow on purple.
 Chosen 16 Oct: the old icon (Lucide's house on the sidebar's deep purple) looked near black and blurry at the corners.
 
     python tools/make_icons.py
@@ -12,11 +12,12 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import SITE
 
 PURPLE, PURPLE_TOP, YELLOW = "#4A2E78", "#5C3A90", "#E6BE55"   # a brighter take on --nav; --brass, lifted
-# the plumbob in a 32-unit square: top point, girdle (left, front-left, front-right, right), bottom point
-TOP, BOT = (16, 3.5), (16, 28.5)
-GL, GFL, GFR, GR = (8, 12.5), (13.2, 14), (18.8, 14), (24, 12.5)
+# the plumbob in a 32-unit square, seen corner-on (a tall six-sided double pyramid): top and bottom points, the widest
+# points left and right just above the middle, and the front corner a little lower, so its edge runs top to bottom
+TOP, BOT = (16, 2.5), (16, 29.5)
+GL, GF, GR = (9.5, 14.5), (16, 16.5), (22.5, 14.5)
 OUTLINE = [TOP, GR, BOT, GL]
-FACETS = [[GL, GFL, GFR, GR], [TOP, GFL], [TOP, GFR], [BOT, GFL], [BOT, GFR]]
+FACETS = [[GL, GF, GR], [TOP, GF, BOT]]
 
 pts = lambda ps: " ".join(f"{x},{y}" for x, y in ps)
 SVG = (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">'
@@ -42,8 +43,7 @@ def draw(px):
         ps = [P(p) for p in ps] + ([P(ps[0])] if closed else [])
         w = max(1, round(width * u)); d.line(ps, fill=YELLOW, width=w, joint="curve")
         for x, y in ps: d.ellipse((x - w / 2, y - w / 2, x + w / 2, y + w / 2), fill=YELLOW)
-    # at the smallest sizes the thin facet lines would just blur, so keep the outline and the girdle only
-    for f in (FACETS if px >= 32 else FACETS[:1]): line(f, 1.1 if px >= 32 else 1.4)
+    for f in FACETS: line(f, 1.2 if px >= 32 else 1.5)
     line(OUTLINE, 2 if px >= 32 else 2.4, closed=True)
     return im.resize((px, px), Image.LANCZOS)
 
