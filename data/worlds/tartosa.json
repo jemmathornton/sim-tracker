@@ -12,7 +12,7 @@
     {"lot": "Thebe Estate", "myName": "Thebe Estate", "type": "Residential", "size": "50x50", "residents": "Laurent", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Piccola Luce", "myName": "Piccola Luce", "type": "Vacation Rental", "size": "20x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Baia dell'Amore", "myName": "Baia dell'Amore", "type": "Wedding Venue", "size": "40x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
-    {"lot": "Villa Vigna", "myName": "?", "type": "Lounge/Restaurant?", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "Villa Vigna", "myName": "?", "type": "Restaurant", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Celebrazioni d'Amore", "myName": "?", "type": "Lounge", "size": "50x40", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ]
   },
