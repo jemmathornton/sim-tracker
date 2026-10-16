@@ -205,6 +205,13 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [ ] [Jemma] EA’s families vs hers: an origin tag, plus “In the game / In my save” for premade families?
 - [ ] [Jemma] Story questions: how is Romeo related to the recreated Sims 2 Montys, and who heads each dynasty in her save?
 
+### EA’s family lore (research/ea-family-lore.md: every premade household per world, and the links between them)
+- [ ] [Jemma] Romeo has no relatives in the Sims 4. Should her recreated Montys follow the Sims 2 tree (Patrizio and Isabella as grandparents, Mercutio his brother, Antonio and Bianca uncle and aunt, Beatrice and Benedick cousins)?
+- [ ] [Jemma] Dynasties: keep the game’s heads (Juliette heads the Montys in the game), or do the Renaissance Road Montys hold the Monty dynasty, with Romeo and Juliette outcasts of both? Was her save started after Royalty & Legacy (the Goth and Landgraab dynasties need a newer save)?
+- [ ] [Jemma] Who’s who in her plan: are the Specters (Havisham House), Curious (Granada Place) and Smiths (Sultry Springside) Maxis’s Sims 2 families from the Gallery (then she has two Olive Specters)? What does “*WithUpdates*” mean? The Broke household at Crick Cabana: hers, or Dustin Broke? Is Santiago Ojo related to Miko Ojo? Who is the Kennedy in “Bro & Kennedy”? Does “My Celebs” include any of the game’s celebrities? Is BFF the Willow Creek trio? Is “Rochana/Caberry” meant to be Cadberry?
+- [ ] [Jemma] Relatives that only exist on the Gallery (Iggy Pancakes, Daniel and Mary-Sue Pleasant and others): show them on family trees?
+- Cross-world links worth showing (from the game): Agnes Crumplebottom is Mortimer Goth’s aunt; Lily Zhu is the Vatores’ cousin; Skip Broke is Dustin Broke’s father; Enzo Alto is Holly Alto’s cousin; Arnessa Thebe is Consort Capp’s cousin; the Gomes family shares an ancestor with the Goths. Her moves add more (Juliette Monty, now in Tartosa, is Tybalt Capp’s sister)
+
 ### Where Sims could come from (research/sims-sources.md)
 - [ ] [Jemma] Which save is the Sims source: an exception to the Building rule for households in “Building #2” (like the rental-units one), or a separate save kept for Sims (what would it be called)? Her other 30 saves hold everything but are old (newest “Season Events”, 15 Mar 2026) and don’t have her rebuilt lots
 - [ ] [Jemma] EA’s families: fill them in automatically from the game’s own files (197 premade households, their family links, and 348 starting friendships between households), or only the ones she has played?
