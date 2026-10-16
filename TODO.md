@@ -59,6 +59,8 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
 | Nordhaven | ~~Lighthouse Lookout~~ | no longer a rental: the Library since 15 Oct | – |
 
 - [x] Rental layout picked (16 Oct): **4**, the front photo with a circle per unit, “Residential Rental · N units” badge, and under the card each household with a house icon and its unit (landlord marked), then “N let, N free” (the landlord’s own unit isn’t counted as let). Lot pages have a units table. Only the landlord is marked, “(landlord)”, on the card list, the circles and the table; tenants aren’t marked. Apartment buildings are one card with their front photo and a circle per apartment (an inside shot until there are outside screenshots). The other trial layouts and the switch are gone.
+- [x] Household names on cards open the household (houses, rentals, apartments); apartment buildings show the same household list as rentals, with each flat’s number, and the card opens the first lived-in flat (16 Oct)
+- [x] Not-owned worlds: opened as plan pages for her review on 16 Oct, closed again (greyed, not clickable) once she’d finished, same day
 - [ ] [Jemma] Rio Verde with six households: is the list too long? A “Pretend Rio Verde is full” tick box (bottom right, Skyward Palms and Rio Verde pages only, borrowed households, nothing saved) is there until she decides; then remove it
 - [ ] [Jemma] Photo tabs per unit (layout 4): for every rental once it has screenshots of each unit (16 Oct, her view; Rio Verde is the only one so far)
 - [ ] [Jemma] Decide each rental's households unit by unit, and landlords for the 17 rentals without one

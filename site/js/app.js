@@ -105,11 +105,11 @@ function renderNav(active, key, ctx){
   const nav = document.getElementById("nav");
   const owned = worlds.filter(w => w.owned), notOwned = worlds.filter(w => !w.owned);
   let h = `<div class="nav-group"><a href="#home" class="${active==="home"?"on":""}">${ic("home")}Home</a></div><div class="nav-group"><div class="label">Worlds</div>`;
-  // not-owned worlds open too (16 Oct, her request), still greyed in the "Not owned" group
+  // not-owned worlds are listed greyed in the "Not owned" group and don't open (opened 16 Oct for her plan review, closed again the same day)
   const navWorld = (w, grey) => { let h = "";
-    const on = active === w.id, open = w.ready || grey;
-    h += open ? `<a href="#w-${w.id}" class="${grey?"soon open ":""}${on?"on":""}" style="--c:${w.glow||w.color}"><span class="dot"></span>${esc(w.name)}</a>`
-      : `<a class="soon" aria-disabled="true" style="--c:${w.glow||w.color}"><span class="dot"></span>${esc(w.name)}<span class="pct">soon</span></a>`;
+    const on = active === w.id, open = w.ready && !grey;
+    h += open ? `<a href="#w-${w.id}" class="${on?"on":""}" style="--c:${w.glow||w.color}"><span class="dot"></span>${esc(w.name)}</a>`
+      : `<a class="soon" aria-disabled="true" style="--c:${w.glow||w.color}"><span class="dot"></span>${esc(w.name)}${grey ? "" : `<span class="pct">soon</span>`}</a>`;
     if (open && on) {
       h += `<div class="subnav">${w.hoods.map(x => {
         let t = `<a href="#n-${x.id}" class="${ctx.hood===x ? (ctx.lot ? "path" : "cur") : ""}">${esc(x.name)}</a>`;
@@ -192,7 +192,7 @@ document.addEventListener("click", e => { const b = e.target.closest("[data-loca
 function worldTile(w){
   const inner = `<div class="photo ${w.thumb?"pic":""}" ${w.thumb?`data-lazy="--map" data-src="${w.thumb}"`:""}><span class="big">${esc(w.name.slice(0,1))}</span><span class="type">${esc(w.pack)}</span></div>
     <h3>${esc(w.name)}</h3><div class="meta"><span>${w.ready ? `${w.stats.lots} lots · ${w.stats.hh} households` : w.owned ? "Coming soon" : "Pack not owned"}</span></div>`;
-  if (!w.owned) return `<a class="wt off notown" href="#w-${w.id}" style="--c:${w.glow||w.color}">${inner}</a>`;   // greyed, but opens (16 Oct)
+  if (!w.owned) return `<div class="wt off notown" style="--c:${w.glow||w.color}">${inner}</div>`;
   return w.ready ? `<a class="wt" href="#w-${w.id}" style="--c:${w.glow||w.color}">${inner}</a>` : `<div class="wt off" style="--c:${w.glow||w.color}">${inner}</div>`;
 }
 function home(){
@@ -239,7 +239,7 @@ function rentalBubbles(l){
       : `<i class="nb-none unit-no-pic" data-lot-link="${to}" aria-label="${esc(lab)}" data-name="${esc(lab)}"><b>${i + 1}</b></i>`; }).join("");
 }
 const rentalMeta = l => { const units = rentalUnits(l), who = units.filter(Boolean), owned = who.filter(u => u.role === "owners").length, lived = who.length - owned, free = units.length - who.length;   // the landlord's own unit isn't "let"
-  const rows = units.map((u, i) => u ? `<li>${ic("home")}<b>${esc(u.hh.name)}</b>${u.role === "owners" ? " (landlord)" : ""}<em>Unit ${i + 1}</em></li>` : "").join("");
+  const rows = units.map((u, i) => u ? `<li>${ic("home")}${hhLink(u.hh)}${u.role === "owners" ? " (landlord)" : ""}<em>Unit ${i + 1}</em></li>` : "").join("");
   return `${rows ? `<ul class="unit-list">${rows}</ul>` : ""}<span>${ic("grid")}${free ? `${lived} let, ${free} free` : "All let"}</span>`; };
 
 // the units as a table on the lot page: picture, unit, who (only the landlord is marked)
@@ -249,11 +249,14 @@ function unitsTable(l){
     return `<a class="unit-row" href="#${u ? u.hh.id : l.id}"><span class="u-pic" ${p ? `style="background-image:url('${p.thumb}')"` : ""}>${p ? "" : i + 1}</span><span class="u-name">Unit ${i + 1}</span><span class="u-who">${u ? `<b>${esc(u.hh.name)}</b>${u.role === "owners" ? " (landlord)" : ""}` : "<i>Nobody yet</i>"}</span></a>`; }).join("")}</div></section>`;
 }
 // apartment buildings: one card with the building's front picture and its apartments as circles
+// a household's name on a card opens the household's page (the card itself opens the lot)
+const hhLink = hh => `<b class="hh-link" data-lot-link="${hh.id}" title="Open the ${esc(hh.name)} household">${esc(hh.name)}</b>`;
 function buildingFront(b){
   const cover = (b.units.find(u => u.photos[0]) || {}).photos?.[0], lived = b.units.filter(u => u.hh).length;
   const circ = b.units.map(u => nbTile(u).replace("<i ", `<i data-lot-link="${u.id}" aria-label="${esc(u.name)}" `).replace(/ title="[^"]*"/, ` data-name="${esc(u.name)}"`)).join("");
-  return `<div class="listing" style="--h:${b.hood.color}"><div class="photo ${cover?"shot":""}" ${cover?`style="--img:url('${cover.thumb}')"`:""}>${cover ? "" : plot("40x30", 120, false)}<span class="nb-bubbles${b.units.length > 5 ? " many" : ""}">${circ}</span><span class="type">Apartment Building · ${b.units.length} Apartments</span></div>
-    <h3>${esc(b.name)}</h3><div class="meta"><span>${ic("home")}${lived} lived in, ${b.units.length - lived} free</span></div></div>`;
+  const first = b.units.find(u => u.hh) || b.units[0];
+  return `<a class="listing" href="#${first.id}" style="--h:${b.hood.color}"><div class="photo ${cover?"shot":""}" ${cover?`style="--img:url('${cover.thumb}')"`:""}>${cover ? "" : plot("40x30", 120, false)}<span class="nb-bubbles${b.units.length > 5 ? " many" : ""}">${circ}</span><span class="type">Apartment Building · ${b.units.length} Apartments</span></div>
+    <h3>${esc(b.name)}</h3><div class="meta">${lived ? `<ul class="unit-list">${b.units.filter(u => u.hh).map(u => `<li>${ic("home")}${hhLink(u.hh)}<em>${esc(u.unit || "")}</em></li>`).join("")}</ul>` : ""}<span>${ic("grid")}${b.units.length - lived ? `${lived} lived in, ${b.units.length - lived} free` : "All lived in"}</span></div></a>`;
 }
 
 function rvSwitch(show){
@@ -275,7 +278,7 @@ function listing(l){
   const cover = l.photos[0];
   return `<a class="listing" href="#${l.id}" style="--h:${l.hood.color}"><div class="photo ${cover?"shot":""}" ${cover?`data-lazy="--img" data-src="${cover.thumb}"`:""}>${cover ? "" : lotArt(l)}${unitCount(l) ? `<span class="nb-bubbles${unitCount(l) > 5 ? " many" : ""}">${rentalBubbles(l)}</span>` : ""}<span class="type">${unitCount(l) ? `Residential Rental · ${unitCount(l)} units` : esc(l.type || "Lot")}</span><span class="status">${statusDots(l)}</span>${sizeTxt(l.size) && !isApt(l) ? `<span class="size">${sizeTxt(l.size)}</span>` : ""}${cardPills(l)}</div>
     <h3>${esc(l.name)}</h3>
-    <div class="meta">${unitCount(l) ? rentalMeta(l) : l.hh ? `<span>${ic("users")}<b>${esc(l.hh.name)}</b>${l.hh.unsure?" (unsure)":""}</span>` : l.whoNote ? `<span>${ic("users")}${esc(emptyNote(l.whoNote))}</span>` : ""}${l.gallery ? `<span title="Downloads on the Sims 4 Gallery">${ic("share")}${l.gallery.downloads} downloads</span>` : ""}</div></a>`;
+    <div class="meta">${unitCount(l) ? rentalMeta(l) : l.hh ? `<span>${ic("users")}${hhLink(l.hh)}${l.hh.unsure?" (unsure)":""}</span>` : l.whoNote ? `<span>${ic("users")}${esc(emptyNote(l.whoNote))}</span>` : ""}${l.gallery ? `<span title="Downloads on the Sims 4 Gallery">${ic("share")}${l.gallery.downloads} downloads</span>` : ""}</div></a>`;
 }
 
 function buildingCard(b){
@@ -631,7 +634,7 @@ document.addEventListener("keydown", e => { if (!lb) return;
 const lazyIO = "IntersectionObserver" in window ? new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { showPic(e.target); lazyIO.unobserve(e.target); } }), {rootMargin: "400px 0px"}) : null;
 function showPic(el){ el.style.setProperty(el.dataset.lazy, `url('${el.dataset.src}')`); el.removeAttribute("data-lazy"); }
 function lazyPics(root){ root.querySelectorAll("[data-lazy]").forEach(el => lazyIO ? lazyIO.observe(el) : showPic(el)); }
-const open = w => w.ready || !w.owned;   // pages that open: owned worlds, and not-owned ones as plans (16 Oct)
+const open = w => w.ready;   // pages that open: owned, ready worlds
 function route(){
   closeLightbox();
   const key = location.hash.slice(1) || "home";
