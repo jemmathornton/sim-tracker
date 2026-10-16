@@ -16,7 +16,7 @@ Every open item carried over from the claude.ai project on 13 Oct 2026: the note
 - [x] Her spreadsheet updated with everything decided in the app (14 Oct, her request): 83 cells, the spelling fixes and the 4 secret lots as new rows (the percentages and the Overview take them in). Her old copy is kept as `World Plans (fixed) - backup 14 Oct.xlsx`. Only difference left: the Residents cell of 3 Cobblebottom Street and Spring Steppes still names owners and tenants together, which the app splits
 - [ ] [Jemma] Have a look at the new bits: Stats page → "On the Gallery" at the bottom (keep it there? wording?), and the app icon (Lucide house, brass on purple)
 - [ ] [Jemma] Bubble World (82 favourites / 647 downloads) sits on The Old Salt House lot; left unlinked for now (13 Oct: "leave it for now"), until the bonus builds are decided (§5)
-- [ ] [Jemma] part1/2/3.zip in the project folder are already unpacked; they can be deleted
+- [x] part1/2/3.zip (already unpacked) moved to the Recycle Bin, her OK (16 Oct)
 
 ## 1. Repeated Gallery uploads (settled 13 Oct)
 
