@@ -2,7 +2,7 @@
  "name": "Ravenwood",
  "pack": "Life & Death",
  "owned": true,
- "colour": "#6B5F8E", "heroY": 35,
+ "colour": "#6B5F8E", "heroY": 28,
  "deep": ["#211C30", "#302943"],
  "blurb": "Things always get a little spooky in Ravenwood. Whispering Glen is perhaps the most \"normal\" part of the area, Crow's Crossing village is clearly quite haunted, and Mourningvale is where things get extra ethereal. Sometimes Grim even stops by!",
  "neighbourhoods": [

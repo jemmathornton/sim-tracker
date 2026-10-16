@@ -2,7 +2,7 @@
  "name": "Gibbi Point",
  "pack": "Adventure Awaits",
  "owned": true,
- "colour": "#2F7FB8", "heroY": 50,
+ "colour": "#2F7FB8", "heroY": 40,
  "deep": ["#0F2A40", "#173D5C"],
  "blurb": "It's been many years since Gibbi Point experienced the Great Wave, a seismic event that carved out unique landmarks and created lush flora and fauna. Its many underground hot springs keep the waters tepid and inviting, allowing for swimming and water activities year-round.",
  "neighbourhoods": [

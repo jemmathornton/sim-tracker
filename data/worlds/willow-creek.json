@@ -2,7 +2,7 @@
  "name": "Willow Creek",
  "pack": "Base Game",
  "owned": true,
- "colour": "#2E6F80", "heroY": 45,
+ "colour": "#2E6F80", "heroY": 38,
  "deep": ["#123A4B", "#1B5468"],
  "blurb": "A lush bayou of rolling hills and marshy riverways, inspired by New Orleans. Long-standing reputations, simple lifestyles and plenty of coastal hospitality.",
  "neighbourhoods": [
