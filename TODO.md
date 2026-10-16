@@ -64,7 +64,7 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
 - [x] Not-owned worlds: opened as plan pages for her review on 16 Oct, closed again (greyed, not clickable) once she’d finished, same day
 - [x] Rental unit names and each unit’s own lot traits now come from her newest Building save (`tools/lot_traits.py`, shared rentals only; the Gallery has neither). The shared rentals’ units are all just numbered in game (1, 2, 3…); the ones she named (3A/3B Cobblebottom Street, 11A–C Sungai Point, 08/09 Taka Soi 15) are on unshared lots, read anyway as her exception (16 Oct)
 - [x] World banners settled 16 Oct (she’s happy, “as good as possible”): each world has its own height on its map (`heroY` in its data file, 0 top to 100 bottom; first guesses 16 Oct, e.g. StrangerVille, Nordhaven, San Myshuno 10–12 to keep their tops, Chestnut Ridge and Ondarion 68, then halved back to 52 at her request; StrangerVille 24, halved back; San Myshuno 28; Mt. Komorebi 41, lower to show its lots; Nordhaven 32, her choice of lots over mountains; Mt. Komorebi settled; Ravenwood 28, her request. Tried nudging seven others to stop their tops clipping; she found them worse (more lost at the bottom for little gained at the top), so they went back; San Sequoia 47 after all, so Hopewell Hills isn't cut off). Name any that still look off
-- [ ] [Jemma] Neighbourhood page banners now zoom to the neighbourhood’s part of the world map (16 Oct, her idea; maps re-extracted at full size so it stays sharp). Some may look worse than the whole map: name any to put back
+- [ ] [Jemma] Neighbourhood page banners now zoom to the neighbourhood’s part of the world map (16 Oct, her idea; maps re-extracted at full size so it stays sharp). Some may look worse than the whole map: name any to put back (17 Oct review in §6d)
 - [x] Rio Verde with six households: she looked with the “Pretend Rio Verde is full” tick box; box removed (16 Oct)
 - [ ] [Jemma] Photo tabs per unit (layout 4): for every rental once it has screenshots of each unit (16 Oct, her view; Rio Verde is the only one so far)
 - [ ] [Jemma] Decide each rental's households unit by unit, and landlords for the 17 rentals without one
@@ -213,6 +213,11 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [ ] [Jemma] Typing Sims in: chat only, or a Sims tab in World Plans?
 - [ ] [Jemma] Sim pictures: decode the Library portraits for Sim cards, or stick to her screenshots and monograms?
 - [ ] [Claude] When Sims go in: key each Sim by the game’s sim id, not its name (two Sims can share a name)
+
+### Neighbourhood banners (research/hood-banners-review.md; pictures in for-jemma/hood-banners/)
+- [ ] [Claude] Bug: the banner zoom is worked out for a banner about 352px tall, but the real ones are 380–686px (the title and text make them taller), so each neighbourhood only fills the middle and its lowest part sits under the fade. Work out the zoom from the banner’s real height and keep the box above the fade (fixes most of the so-so ones: Lykke Center / University of Windenburg, Hopewell Hills, Deadgrass Isle, The Crumbling Isle, Plumbite Cove). Fix when she’s back
+- [ ] [Jemma] None looks worse than the whole map (48 good, 29 so-so). Her taste: put Belomisia Jungle, Campground, Glimmerbrook (loses its sunset) and Conifer Station back to the whole map? They barely zoom (1.01–1.15×)
+- [ ] [Jemma] Zoom out a bit: Acquisition Butte, Desert Bloom Park, Galloping Gulch (mostly bare rock at 3×), Myshuno Meadows (soft), Yukimatsu (mostly snow)? Needs a small per-neighbourhood banner setting
 
 ### Blurry taskbar icon (research/taskbar-icon.md)
 - [ ] [Jemma] Cause found: a plain Chrome app window takes its taskbar icon from the page’s 16px icon and Windows stretches it (her PC runs at 200% scaling, so the taskbar wants 48px). A restart won’t fix it. Fix: make it an installed Chrome app served from http://127.0.0.1 (a small local server started at sign-in, a web manifest; she clicks Install once). Cheaper, untested: pin a shortcut with Chrome’s own taskbar id. Her call
