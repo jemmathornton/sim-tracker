@@ -13,16 +13,16 @@
     {"lot": "Piccola Luce", "myName": "Piccola Luce", "type": "Vacation Rental", "size": "20x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Baia dell'Amore", "myName": "Baia dell'Amore", "type": "Wedding Venue", "size": "40x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Villa Vigna", "myName": "?", "type": "Lounge/Restaurant?", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
-    {"lot": "Celebrazioni d'Amore", "myName": "?", "type": "Residential", "size": "50x40", "residents": "? (Capp/Monty)", "built": false, "shared": false, "screenshots": false, "simsMade": false}
+    {"lot": "Celebrazioni d'Amore", "myName": "?", "type": "Lounge", "size": "50x40", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ]
   },
   {
    "name": "Terra Amorosa",
    "lots": [
     {"lot": "The Old Wood Nectary", "myName": "The Old Wood Nectary", "type": "Residential", "size": "40x30", "residents": "Markovic", "built": false, "shared": false, "screenshots": false, "simsMade": false},
-    {"lot": "Rifugio dei Pirati", "myName": "Rifugio dei Pirati", "type": "?", "size": "30x20", "residents": "?", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
-    {"lot": "Via Romanza", "myName": "Via Romanza", "type": "?", "size": "30x30", "residents": "?", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
-    {"lot": "La Coppia Serena", "myName": "La Coppia Serena", "type": "Residential", "size": "50x40", "residents": "? (Capp/Monty)", "built": false, "shared": false, "screenshots": false, "simsMade": false}
+    {"lot": "Rifugio dei Pirati", "myName": "Rifugio dei Pirati", "type": "Residential", "size": "30x20", "residents": "Monty (Romeo, Juliette and Dante, from Ondarion)", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Via Romanza", "myName": "Via Romanza", "type": "Residential", "size": "30x30", "residents": "Soto", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "La Coppia Serena", "myName": "La Coppia Serena", "type": "Wedding Venue", "size": "50x40", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ],
    "ecoStart": "Green"
   }

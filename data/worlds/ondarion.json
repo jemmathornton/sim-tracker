@@ -41,7 +41,7 @@
    "mapBox": [0.51, 0.23, 0.84, 0.47],
    "lots": [
     {"lot": "Bellacorde Palace", "myName": "Bellacorde Palace", "type": "Residential", "size": "50x50", "residents": "Capp", "built": false, "shared": false, "screenshots": false, "simsMade": false},
-    {"lot": "Renaissance Road", "myName": "Renaissance Road", "type": "Residential", "size": "20x15", "residents": "Monty", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Renaissance Road", "myName": "Renaissance Road", "type": "Residential", "size": "20x15", "residents": "Monty (the Sims 2 Montys, recreated)", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "12 Lakeview Apartments", "myName": "12 Lakeview Apartments", "type": "Apartment", "size": "N/A", "residents": "Enzo Alto", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "13 Lakeview Apartments", "myName": "13 Lakeview Apartments", "type": "Apartment", "size": "N/A", "residents": "Empty", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "La Vivace", "myName": "La Vivace", "type": "Lounge", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
