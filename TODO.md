@@ -192,6 +192,19 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [Claude] Saves vs plan noticed in passing (for when she's in game, not fixes): her Building save has Anchorpoint Works as a Vacation Rental and The Old Clocktower as Retail
 
 
+## 6d. From the 16–17 Oct overnight research (her call unless marked [Claude])
+
+### Showing Sims (research/sims-display.md)
+- [ ] [Jemma] How much to track: three levels (basics for every household, profiles for played ones, extras for favourites)?
+- [ ] [Jemma] Household page: Sims as a roster table first with cards below, or a family-portrait screenshot at the top?
+- [ ] [Jemma] Relationship tags: six groups (Family, Romance, Friends, Conflict, Work & school, Dynasty) plus an optional free label? Add or drop any?
+- [ ] [Jemma] Use the game’s own words “Spouse / Partner / Engaged” (since patch 162) instead of “Husband / Wife” (the Goth cards say Husband and Wife now)?
+- [ ] [Jemma] Family tree: a drawn top-down tree, or a simple generations list to start with?
+- [ ] [Jemma] Families that move between worlds: one tree per family across worlds, or per-world trees with “moved to …” stubs? (test case: the Montys and Capps across Ondarion and Tartosa)
+- [ ] [Jemma] Links between households: grouped lists first, then a small web around one household; try lines on the world map later?
+- [ ] [Jemma] EA’s families vs hers: an origin tag, plus “In the game / In my save” for premade families?
+- [ ] [Jemma] Story questions: how is Romeo related to the recreated Sims 2 Montys, and who heads each dynasty in her save?
+
 ## 7. Parked until she asks
 
 - [ ] Phone layout: Stats lot names pushed off-screen by the World/Neighbourhood columns
