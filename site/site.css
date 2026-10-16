@@ -510,4 +510,4 @@ footer .as-of{flex-basis:100%}
 .rv-switch .rv-demo{display:flex;gap:6px;align-items:center;margin-top:8px;font-size:12px;color:var(--muted);cursor:pointer}
 .listing .meta .unit-list{list-style:none;margin:0 0 2px;padding:0;flex-basis:100%;display:grid;gap:3px}
 .listing .meta .unit-list li{display:flex;align-items:center;gap:6px}
-.listing .meta .unit-list em{font-style:normal;margin-left:auto;color:var(--muted);font-size:12.5px}
+.listing .meta .unit-list em{font-style:normal;margin-left:auto;flex:none;width:4.2em;text-align:left;font-variant-numeric:tabular-nums;color:var(--muted);font-size:12.5px}
