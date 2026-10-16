@@ -181,7 +181,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [x] [Jemma] Britechester: no restaurant; the only lots that could change without moving anyone are the three empty University Housing lots (Drake Hall, Tidal Tower, Mossy Lane). 16 Oct, her view: Britechester is done
 - [ ] [Jemma] Copperdale: who are the Donovans at Hillside Haven ("move!")? Totter Park was the game's only park (now the Prices' home), so LaSuli Point (by the Pier fairground) is the only way to a park or a cemetery. 16 Oct: not an EA household in any Sims 4 world; probably her own Sims (left as is; she may check)
 - [x] [Jemma] Windenburg: no cemetery and no park lot (Hare Square became student halls); the Ancient Ruins, The Bluffs and Chalet Gardens do some of a park's job. 16 Oct: left as is
-- [ ] [Jemma] Granite Falls: the game allows no homes there (only rentals and venues); Granite Falls Forest (National Park) still unbuilt
+- [x] [Jemma] Granite Falls: the game allows no homes there (only rentals and venues); Granite Falls Forest (National Park) still unbuilt (16 Oct: just a note, nothing to decide)
 - [Claude] Saves vs plan noticed in passing (for when she's in game, not fixes): her Building save has Anchorpoint Works as a Vacation Rental and The Old Clocktower as Retail
 
 
