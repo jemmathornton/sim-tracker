@@ -10,7 +10,7 @@
    "name": "Nuevo Corazón",
    "lots": [
     {"lot": "La Suite del Flechazo", "myName": null, "type": "Residential", "size": "20x15", "residents": "Nadir", "built": false, "shared": false, "screenshots": false, "simsMade": false},
-    {"lot": "Torres Amanecer", "myName": null, "type": "Residential", "size": "20x20", "residents": "Empty", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Torres Amanecer", "myName": null, "type": "Restaurant", "size": "20x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Mirador del Amor", "myName": null, "type": "Nightclub", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "SUDOR", "myName": null, "type": "Gym", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ]
