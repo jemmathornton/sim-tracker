@@ -160,7 +160,7 @@ def build():
     for wf in world_files():
         W = load(wf); n, ws, owned = W['name'], slug(W['name']), W['owned']
         w = {"name": n, "pack": W['pack'], "owned": owned, "color": W['colour'], "deep": W.get('deep'), "ready": owned,
-             "map": f"maps/{ws}.jpg" if owned and os.path.exists(os.path.join(SITE, 'maps', ws + '.jpg')) else "",
+             "map": f"maps/{ws}.jpg" if os.path.exists(os.path.join(SITE, 'maps', ws + '.jpg')) else "",
              "thumb": f"maps/{ws}.thumb.jpg" if os.path.exists(os.path.join(SITE, 'maps', ws + '.thumb.jpg')) else "",
              "blurb": W.get('blurb', ''), "hoods": []}
         if W.get('glow'): w["glow"] = W['glow']
@@ -180,7 +180,6 @@ def build():
                 key = n + '|' + l['lot']
                 if l.get('displayName'): name_fix[key] = l['displayName']
                 if l.get('tenants'): tenants[key] = l['tenants']
-                if not owned: continue
                 for i in l.get('gallery', []) + [v['upload'] for v in l.get('versions', [])]:
                     lot_of.setdefault(i, {"id": f"l-{ws}--{slug(l['lot'])}", "world": n})
                 g = gallery_for(l)
@@ -196,7 +195,7 @@ def build():
                              "built": l['built'], "shared": l['shared'], "sims": l['simsMade'],
                              "gallery": g, "photos": photos_for(ws, slug(l['lot']), bool(g)),
                              **{k: l[k] for k in ("traits", "challenges") if l.get(k)}})   # from her Building save (tools/lot_traits.py)
-            if owned: w["hoods"].append({"name": hood['name'], "desc": hood.get('desc', ''), "color": W['colour'], "lots": lots,
+            w["hoods"].append({"name": hood['name'], "desc": hood.get('desc', ''), "color": W['colour'], "lots": lots,
                                          **{k: hood[k] for k in ("festivals", "ecoStart") if hood.get(k)}})
         if W.get('households'): households[n] = W['households']
         if W.get('familyLinks'): family_links[n] = W['familyLinks']

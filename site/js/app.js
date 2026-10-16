@@ -105,11 +105,12 @@ function renderNav(active, key, ctx){
   const nav = document.getElementById("nav");
   const owned = worlds.filter(w => w.owned), notOwned = worlds.filter(w => !w.owned);
   let h = `<div class="nav-group"><a href="#home" class="${active==="home"?"on":""}">${ic("home")}Home</a></div><div class="nav-group"><div class="label">Worlds</div>`;
-  owned.forEach(w => {
-    const on = active === w.id;
-    h += w.ready ? `<a href="#w-${w.id}" class="${on?"on":""}" style="--c:${w.glow||w.color}"><span class="dot"></span>${esc(w.name)}</a>`
+  // not-owned worlds open too (16 Oct, her request), still greyed in the "Not owned" group
+  const navWorld = (w, grey) => { let h = "";
+    const on = active === w.id, open = w.ready || grey;
+    h += open ? `<a href="#w-${w.id}" class="${grey?"soon open ":""}${on?"on":""}" style="--c:${w.glow||w.color}"><span class="dot"></span>${esc(w.name)}</a>`
       : `<a class="soon" aria-disabled="true" style="--c:${w.glow||w.color}"><span class="dot"></span>${esc(w.name)}<span class="pct">soon</span></a>`;
-    if (w.ready && on) {
+    if (open && on) {
       h += `<div class="subnav">${w.hoods.map(x => {
         let t = `<a href="#n-${x.id}" class="${ctx.hood===x ? (ctx.lot ? "path" : "cur") : ""}">${esc(x.name)}</a>`;
         const seenB = new Set();
@@ -124,8 +125,9 @@ function renderNav(active, key, ctx){
           return u; }).join("")}</div>`;
         return t; }).join("")}<a class="hh-link ${key==="f-"+w.id?"cur":""}" href="#f-${w.id}">${ic("users")}Households</a></div>`;
     }
-  });
-  h += `</div><div class="nav-group dim"><div class="label">Not owned</div>${notOwned.map(w => `<a class="soon" aria-disabled="true" style="--c:${w.glow||w.color}"><span class="dot"></span>${esc(w.name)}</a>`).join("")}</div>
+    return h; };
+  owned.forEach(w => h += navWorld(w));
+  h += `</div><div class="nav-group dim"><div class="label">Not owned</div>${notOwned.map(w => navWorld(w, true)).join("")}</div>
     <div class="nav-group stats-nav"><a href="#stats" class="${active==="stats"?"on":""}">${ic("grid")}Stats</a></div>`;
   nav.innerHTML = h;
 }
@@ -190,7 +192,8 @@ document.addEventListener("click", e => { const b = e.target.closest("[data-loca
 function worldTile(w){
   const inner = `<div class="photo ${w.thumb?"pic":""}" ${w.thumb?`data-lazy="--map" data-src="${w.thumb}"`:""}><span class="big">${esc(w.name.slice(0,1))}</span><span class="type">${esc(w.pack)}</span></div>
     <h3>${esc(w.name)}</h3><div class="meta"><span>${w.ready ? `${w.stats.lots} lots · ${w.stats.hh} households` : w.owned ? "Coming soon" : "Pack not owned"}</span></div>`;
-  return w.ready ? `<a class="wt" href="#w-${w.id}" style="--c:${w.glow||w.color}">${inner}</a>` : `<div class="wt off ${w.owned?"":"notown"}" style="--c:${w.glow||w.color}">${inner}</div>`;
+  if (!w.owned) return `<a class="wt off notown" href="#w-${w.id}" style="--c:${w.glow||w.color}">${inner}</a>`;   // greyed, but opens (16 Oct)
+  return w.ready ? `<a class="wt" href="#w-${w.id}" style="--c:${w.glow||w.color}">${inner}</a>` : `<div class="wt off" style="--c:${w.glow||w.color}">${inner}</div>`;
 }
 function home(){
   const ready = worlds.filter(w => w.ready), all = ready.flatMap(w => w.hoods.flatMap(h => h.lots));
@@ -305,7 +308,7 @@ function hoodCard(x){
 }
 function world(w){
   const s = w.stats;
-  let h = mapHero(w, esc(w.pack), titleWord(w.name), w.blurb ? esc(w.blurb) : "", [[w.hoods.length,"neighbourhoods"],[s.lots,"lots"],[s.hh,"households"],[simCount(Object.values(w.households)),"Sims"]],
+  let h = mapHero(w, esc(w.pack) + (w.owned ? "" : " · not owned yet"), titleWord(w.name), w.blurb ? esc(w.blurb) : "", [[w.hoods.length,"neighbourhoods"],[s.lots,"lots"],[s.hh,"households"],[simCount(Object.values(w.households)),"Sims"]],
     w.hoods.map(x => `<a href="#n-${x.id}">${esc(x.name)}</a>`).join(""));
   h += `<section class="hood" style="--h:${w.color}"><div class="hood-head"><span class="label">Explore</span><div><h2>Neighbourhoods</h2><p>Open a neighbourhood to see its lots, then a home to meet the household living there.</p></div><a class="count" href="#f-${w.id}">All ${s.hh} households</a></div>
     <div class="listings">${w.hoods.map(hoodCard).join("")}</div></section>`;
@@ -578,16 +581,17 @@ document.addEventListener("keydown", e => { if (!lb) return;
 const lazyIO = "IntersectionObserver" in window ? new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { showPic(e.target); lazyIO.unobserve(e.target); } }), {rootMargin: "400px 0px"}) : null;
 function showPic(el){ el.style.setProperty(el.dataset.lazy, `url('${el.dataset.src}')`); el.removeAttribute("data-lazy"); }
 function lazyPics(root){ root.querySelectorAll("[data-lazy]").forEach(el => lazyIO ? lazyIO.observe(el) : showPic(el)); }
+const open = w => w.ready || !w.owned;   // pages that open: owned worlds, and not-owned ones as plans (16 Oct)
 function route(){
   closeLightbox();
   const key = location.hash.slice(1) || "home";
   const view = document.getElementById("view");
   let html, active = "home"; const ctx = {};
-  const wd = key.startsWith("w-") && worlds.find(w => w.ready && w.id === key.slice(2));
+  const wd = key.startsWith("w-") && worlds.find(w => open(w) && w.id === key.slice(2));
   if (wd) { html = world(wd); active = wd.id; document.title = wd.name + " · Jemma's Sim World"; }
   else if (lotIndex[key]) { const l = lotIndex[key]; ctx.hood = l.hood; ctx.lot = l; html = lot(l); markSeen(l); active = l.world.id; document.title = l.name + " · Jemma's Sim World"; }
   else if (key.startsWith("n-") && hoodIndex[key.slice(2)]) { const x = hoodIndex[key.slice(2)]; ctx.hood = x; html = hoodPage(x); active = x.world.id; document.title = x.name + " · " + x.world.name + " · Jemma's Sim World"; }
-  else if (key.startsWith("f-") && worlds.find(w => w.ready && w.id === key.slice(2))) { const w = worlds.find(w => w.id === key.slice(2)); html = families(w); active = w.id; document.title = "Households · " + w.name + " · Jemma's Sim World"; }
+  else if (key.startsWith("f-") && worlds.find(w => open(w) && w.id === key.slice(2))) { const w = worlds.find(w => w.id === key.slice(2)); html = families(w); active = w.id; document.title = "Households · " + w.name + " · Jemma's Sim World"; }
   else if (hhIndex[key]) { const x = hhIndex[key]; ctx.hh = x; ctx.lot = x.lots[0]; ctx.hood = x.lots[0].hood; html = household(x); active = x.world.id; document.title = x.name + " household · Jemma's Sim World"; }
   else if (key === "stats" || key.startsWith("stats-")) { const w = worlds.find(x => "stats-" + x.id === key); html = statsPage(w ? w.name : (key === "stats" ? null : "")); active = "stats"; document.title = "Stats · Jemma's Sim World"; }
   else if (key === "home") { html = home(); document.title = "Jemma's Sim World"; }
