@@ -12,11 +12,11 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import SITE
 
 PURPLE, PURPLE_TOP, YELLOW = "#4A2E78", "#5C3A90", "#E6BE55"   # a brighter take on --nav; --brass, lifted
-# the plumbob in a 32-unit square: a tall six-sided double pyramid, seen side-on, so three of its six sides face us
-# (the middle one straight on): top and bottom points, the widest points left and right, and the two front corners a little lower.
-# Her closest so far (16 Oct); to be redrawn from the corners of an in-game screenshot of hers
-TOP, BOT = (16, 2.5), (16, 29.5)
-GL, GFL, GFR, GR = (9, 14.5), (13.4, 16.3), (18.6, 16.3), (23, 14.5)
+# the plumbob in a 32-unit square. Since The Sims 2 it's a hexagonal bipyramid (Sims Wiki, "Plumbob"): two equal six-sided
+# pyramids base to base, 12 matching triangles. Seen side-on, three of each pyramid's six sides face us; the middle one,
+# straight on, is twice as wide as the two at its sides. Seen a touch from above, so the front corners sit slightly lower.
+TOP, BOT, MID, R, DIP = (16, 2.5), (16, 29.5), 16, 7, 1.2
+GL, GFL, GFR, GR = (16 - R, MID), (16 - R / 2, MID + DIP), (16 + R / 2, MID + DIP), (16 + R, MID)
 OUTLINE = [TOP, GR, BOT, GL]
 FACETS = [[GL, GFL, GFR, GR], [TOP, GFL, BOT], [TOP, GFR, BOT]]
 
