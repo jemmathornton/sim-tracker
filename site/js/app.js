@@ -253,12 +253,12 @@ function unitCards(l){
 function rentalBubbles(l){
   const units = rentalUnits(l), ph = unitPhotos(l);
   return units.map((u, i) => { const p = (ph[i + 1] || [])[0], lab = `Unit ${i + 1}: ${u ? u.hh.name + (u.role ? ` (${u.role === "owners" ? "landlord" : u.role})` : "") : "Empty"}`, to = u ? u.hh.id : l.id;
-    return p ? `<i data-lot-link="${to}" aria-label="${esc(lab)}" data-name="${esc(lab)}" class="${u && u.role === "tenant" ? "tenant" : u && u.role === "owners" ? "owner" : ""}" style="background-image:url('${p.thumb}')"></i>`
-      : `<i class="nb-none unit-no-pic ${u && u.role === "tenant" ? "tenant" : u && u.role === "owners" ? "owner" : ""}" data-lot-link="${to}" aria-label="${esc(lab)}" data-name="${esc(lab)}"><b>${i + 1}</b></i>`; }).join("");
+    return p ? `<i data-lot-link="${to}" aria-label="${esc(lab)}" data-name="${esc(lab)}" style="background-image:url('${p.thumb}')"></i>`
+      : `<i class="nb-none unit-no-pic" data-lot-link="${to}" aria-label="${esc(lab)}" data-name="${esc(lab)}"><b>${i + 1}</b></i>`; }).join("");
 }
-const rentalMeta = l => { const units = rentalUnits(l), owner = units.find(u => u && u.role === "owners"), tenants = units.filter(u => u && u.role === "tenant").length, lived = units.filter(Boolean).length;
-  const lead = owner ? `<span>${ic("users")}<b>${esc(owner.hh.name)}</b> (landlord)</span>` : l.hh ? `<span>${ic("users")}<b>${esc(l.hh.name)}</b></span>` : "";
-  return `${lead}<span>${ic("home")}${units.length - lived ? `${lived} let, ${units.length - lived} free` : "All let"}${tenants ? ` · ${tenants} ${tenants === 1 ? "tenant" : "tenants"}` : ""}</span>`; };
+const rentalMeta = l => { const units = rentalUnits(l), who = units.filter(Boolean), lived = who.length;
+  const names = who.map(u => `<b>${esc(u.hh.name)}</b>${u.role === "owners" ? " (landlord)" : u.role === "tenant" ? " (tenant)" : ""}`).join(", ");
+  return `${names ? `<span>${ic("users")}${names}</span>` : ""}<span>${ic("home")}${units.length - lived ? `${lived} let, ${units.length - lived} free` : "All let"}</span>`; };
 
 // layout "5": front picture, then a strip of small unit squares under it (gold dot = landlord's own unit, coloured ring = a tenant, faded = free)
 const roleOf = u => "r-" + (u ? (u.role === "owners" ? "owner" : u.role === "tenant" ? "tenant" : "lives") : "empty");
