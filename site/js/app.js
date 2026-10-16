@@ -287,8 +287,17 @@ function rvSwitch(show){
   document.getElementById("rv-switch")?.remove(); if (!show) return;
   const d = document.createElement("div"); d.id = "rv-switch"; d.className = "rv-switch";
   d.innerHTML = `<b>Rental layout (trial)</b><div>${[["1", "1 · units listed"], ["2", "2 · badge + unit count"], ["u", "3 · each unit its own card"], ["4", "4 · front photo + unit circles"], ["5", "5 · front photo + unit strip"], ["6", "6 · house-style card + units table"]].map(([k, t]) => `<button type="button" data-rv="${k}" class="${RV === k ? "on" : ""}">${t}</button>`).join("")}</div>`;
+  if (ctx_rio()) d.innerHTML += `<label class="rv-demo"><input type="checkbox" data-rv-demo ${RV_DEMO ? "checked" : ""}> Pretend Rio Verde is full (6 households, borrowed from other worlds; not saved)</label>`;
   document.body.appendChild(d);
 }
+// trial only: fill Rio Verde with six borrowed households so she can judge a full card
+const RIO = "l-oasis-springs--rio-verde", rioReal = (() => { const l = lotIndex[RIO]; return l && {hh: l.hh, tenants: l.tenants}; })();
+let RV_DEMO = (() => { try { return localStorage.getItem("jsw-rio-demo") === "1"; } catch (e) { return false; } })();
+const ctx_rio = () => lotIndex[RIO] && (location.hash === "#" + RIO || location.hash === "#n-" + lotIndex[RIO].hood.id);
+function rioDemo(){ const l = lotIndex[RIO]; if (!l) return; Object.assign(l, rioReal);
+  if (RV_DEMO) { const pool = Object.values(hhIndex).filter(h => h !== rioReal.hh).sort((a, b) => b.name.length - a.name.length); l.tenants = [rioReal.hh, pool[3], pool[10], pool[20], pool[40], pool[60]].filter(Boolean); l.hh = null; } }
+rioDemo();
+document.addEventListener("change", e => { if (!e.target.matches("[data-rv-demo]")) return; RV_DEMO = e.target.checked; try { localStorage.setItem("jsw-rio-demo", RV_DEMO ? "1" : "0"); } catch (err) {} rioDemo(); const y = scrollY; route(); scrollTo(0, y); });
 document.addEventListener("click", e => { const b = e.target.closest("[data-rv]"); if (!b) return; RV = b.dataset.rv; try { localStorage.setItem(RV_KEY, RV); } catch (err) {} const y = scrollY; route(); scrollTo(0, y); });
 
 function listing(l){
