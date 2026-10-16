@@ -68,7 +68,7 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
 - [ ] [Jemma] Photo tabs per unit (layout 4): for every rental once it has screenshots of each unit (16 Oct, her view; Rio Verde is the only one so far)
 - [ ] [Jemma] Decide each rental's households unit by unit, and landlords for the 17 rentals without one
 - [ ] [Jemma] A "Rental units" tab in World Plans (World · Rental · Unit · Beds · Baths · Household · Landlord)? She was "not sure yet, discuss more"
-- [ ] [Jemma] How to show unit counts like "(4)"
+- [x] Unit counts show as "Residential Rental · 4 units" on cards and lot pages (her choice, 16 Oct; the Stats sheet keeps her "(4)")
 - [x] Unit counts confirmed 14 Oct: Taka Soi 15 = 2, Sequoia Cottage = 2, Manzanita Terrace = 3; the save matches the plan for Rio Verde 6, Fern Park Flats 5, Tail's End 4, Inner Circle 4, Upland Trailer Park 4, Old Torget House 3
 - [ ] [Jemma] Abandoned Views and Specter Row: unit counts once they're finished
 - [x] Settled 14 Oct: Mossy Lane is University Housing (one home); Spring Steppes has 3 units; Rockridge Springs and Slip 42 keep their units and now have rental uploads too (Rockridge Springs' new upload wasn't on the Gallery listing yet on 14 Oct; the Sunday refresh links it)
