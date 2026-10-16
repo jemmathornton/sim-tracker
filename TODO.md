@@ -62,7 +62,7 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
 - [x] Household names on cards open the household (houses, rentals, apartments); apartment buildings show the same household list as rentals, with each flat’s number, and the card itself doesn’t open (her choice): the circles and household names do (16 Oct)
 - [x] Not-owned worlds: opened as plan pages for her review on 16 Oct, closed again (greyed, not clickable) once she’d finished, same day
 - [x] Rental unit names and each unit’s own lot traits now come from her newest Building save (`tools/lot_traits.py`, shared rentals only; the Gallery has neither). The shared rentals’ units are all just numbered in game (1, 2, 3…); the ones she named (3A/3B Cobblebottom Street, 11A–C Sungai Point, 08/09 Taka Soi 15) are on unshared lots, read anyway as her exception (16 Oct)
-- [ ] [Jemma] Rio Verde with six households: is the list too long? A “Pretend Rio Verde is full” tick box (bottom right, Skyward Palms and Rio Verde pages only, borrowed households, nothing saved) is there until she decides; then remove it
+- [x] Rio Verde with six households: she looked with the “Pretend Rio Verde is full” tick box; box removed (16 Oct)
 - [ ] [Jemma] Photo tabs per unit (layout 4): for every rental once it has screenshots of each unit (16 Oct, her view; Rio Verde is the only one so far)
 - [ ] [Jemma] Decide each rental's households unit by unit, and landlords for the 17 rentals without one
 - [ ] [Jemma] A "Rental units" tab in World Plans (World · Rental · Unit · Beds · Baths · Household · Landlord)? She was "not sure yet, discuss more"

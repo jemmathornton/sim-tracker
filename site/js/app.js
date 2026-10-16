@@ -262,21 +262,6 @@ function buildingFront(b){
     <h3>${esc(b.name)}</h3><div class="meta"><ul class="unit-list">${b.units.map(u => `<li${u.hh ? "" : ' class="free"'}>${ic("home")}${u.hh ? hhLink(u.hh) : "Free"}<em>${esc(u.unit || "")}</em></li>`).join("")}</ul><span>${ic("grid")}${b.units.length - lived ? `${lived} lived in, ${b.units.length - lived} free` : "All lived in"}</span></div></div>`;
 }
 
-function rvSwitch(show){
-  document.getElementById("rv-switch")?.remove(); if (!show) return;
-  const d = document.createElement("div"); d.id = "rv-switch"; d.className = "rv-switch";
-  d.innerHTML = `<b>Trial</b><label class="rv-demo"><input type="checkbox" data-rv-demo ${RV_DEMO ? "checked" : ""}> Pretend Rio Verde is full (6 households, borrowed from other worlds; not saved)</label>`;
-  document.body.appendChild(d);
-}
-// trial only: fill Rio Verde with six borrowed households so she can judge a full card
-const RIO = "l-oasis-springs--rio-verde", rioReal = (() => { const l = lotIndex[RIO]; return l && {hh: l.hh, tenants: l.tenants}; })();
-let RV_DEMO = (() => { try { return localStorage.getItem("jsw-rio-demo") === "1"; } catch (e) { return false; } })();
-const ctx_rio = () => lotIndex[RIO] && (location.hash === "#" + RIO || location.hash === "#n-" + lotIndex[RIO].hood.id);
-function rioDemo(){ const l = lotIndex[RIO]; if (!l) return; Object.assign(l, rioReal);
-  if (RV_DEMO) { const pool = Object.values(hhIndex).filter(h => h !== rioReal.hh).sort((a, b) => b.name.length - a.name.length); l.tenants = [rioReal.hh, pool[3], pool[10], pool[20], pool[40], pool[60]].filter(Boolean); l.hh = null; } }
-rioDemo();
-document.addEventListener("change", e => { if (!e.target.matches("[data-rv-demo]")) return; RV_DEMO = e.target.checked; try { localStorage.setItem("jsw-rio-demo", RV_DEMO ? "1" : "0"); } catch (err) {} rioDemo(); const y = scrollY; route(); scrollTo(0, y); });
-
 function listing(l){
   const cover = l.photos[0];
   return `<a class="listing" href="#${l.id}" style="--h:${l.hood.color}"><div class="photo ${cover?"shot":""}" ${cover?`data-lazy="--img" data-src="${cover.thumb}"`:""}>${cover ? "" : lotArt(l)}${unitCount(l) ? `<span class="nb-bubbles${unitCount(l) > 5 ? " many" : ""}">${rentalBubbles(l)}</span>` : ""}<span class="type">${unitCount(l) ? `Residential Rental · ${unitCount(l)} units` : esc(l.type || "Lot")}</span><span class="status">${statusDots(l)}</span>${sizeTxt(l.size) && !isApt(l) ? `<span class="size">${sizeTxt(l.size)}</span>` : ""}${cardPills(l)}</div>
@@ -661,7 +646,6 @@ function route(){
   lazyPics(view);
   clearSearch();
   renderNav(active, key, ctx);
-  rvSwitch(ctx_rio());
   window.scrollTo(0, 0);
   document.body.classList.remove("nav-open");
 }

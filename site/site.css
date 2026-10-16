@@ -492,7 +492,6 @@ footer .as-of{flex-basis:100%}
 
 /* rental layout trial (16 Oct): unit-list cards for single rentals link their name */
 .bcard h3 a{text-decoration:none}
-.rv-switch{position:fixed;right:18px;bottom:18px;z-index:60;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:16px;padding:12px 14px;box-shadow:0 10px 30px rgba(0,0,0,.18);display:grid;gap:8px;font-size:13px}
 .bgroup-head h3 a{text-decoration:none;color:inherit}
 .nb-bubbles i.unit-no-pic{display:grid;place-items:center}
 .nb-bubbles i.unit-no-pic b{font:700 14px var(--body);color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.5)}
@@ -505,7 +504,6 @@ footer .as-of{flex-basis:100%}
 .listing .meta span.who-list{align-items:flex-start}
 .listing .meta .who-list>span{display:inline;line-height:1.45}
 .listing .meta .who-list svg{margin-top:3px;flex:none}
-.rv-switch .rv-demo{display:flex;gap:6px;align-items:center;margin-top:8px;font-size:12px;color:var(--muted);cursor:pointer}
 .listing .meta .unit-list{list-style:none;margin:0 0 2px;padding:0;flex-basis:100%;display:grid;gap:3px}
 .listing .meta .unit-list li{display:flex;align-items:center;gap:6px}
 .listing .meta .unit-list em{font-style:normal;margin-left:auto;flex:none;width:4.2em;text-align:left;font-variant-numeric:tabular-nums;color:var(--muted);font-size:12.5px}
