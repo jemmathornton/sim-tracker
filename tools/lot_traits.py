@@ -6,7 +6,8 @@
     python tools/lot_traits.py --game     also re-read the trait names from the game (after a game update or a new pack)
 
 The save is read from a temporary copy; her saves and the game are never changed. Only lots marked shared in the plan
-get traits (unshared lots may not be finished, her rule of 13 Oct). In the "Building" saves only lots are looked at, not Sims.
+get traits (unshared lots may not be finished, her rule of 13 Oct). One exception, hers (16 Oct): rentals get their
+unit names and unit traits even before they're shared. In the "Building" saves only lots are looked at, not Sims.
 Her newest "Building" save is used first; an older one only for lots the newest no longer has (e.g. The Old Salt House,
 whose lot now holds Bubble World). A save lot is matched to a plan lot in the same world by name: the save's lot name against the lot's in-game name,
 her own name, its display name and its Gallery titles.
@@ -16,6 +17,8 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import ROOT, DATA, GALLERY, norm, load, save, world_files
 import sims4files as s4
 
+# For Rent's hidden markers on rental units (the game's repair-event checks: has electrics, water, a toilet, a bin); not lot traits
+HIDDEN = {347990, 347991, 347992, 347995}
 TRAITS_FILE = os.path.join(DATA, 'game', 'lot-traits.json')
 P = '.EA.Sims4.Persistence.'
 
@@ -117,6 +120,28 @@ def main():
             hits = exact if len(exact) == 1 else hits
         return hits
 
+    def rental_units(l, hit, src):
+        """Each unit of a rental: its own name (as she named it in the game, shortened to what isn't the lot's name) and traits,
+        in the game's unit order. Empty for anything that isn't a rental split into units."""
+        if not re.search(r'rental', l.get('type') or '', re.I): return []
+        units = []
+        for z in sorted({id(z): z for zs in src.values() for z in zs if z.get('lot_id') == hit.get('lot_id')}.values(), key=lambda z: z.get('active_plex') or 0):
+            if z.get('active_plex') in (None, 0, 300): continue   # 300 is the building's own record, the units are 301, 302…
+            u = {"name": unit_name(z.get('name', ''), [l['lot'], hit.get('name', '')])}
+            for t in z.get('lot_traits', []):
+                if str(t) in traits: u.setdefault("challenges" if traits[str(t)]['kind'] == 'challenge' else "traits", []).append(traits[str(t)]['name'])
+                elif t not in HIDDEN: unknown.add(t)
+            units.append(u)
+        return units if len(units) > 1 else []
+
+    def note_units(label, l, units):
+        if units == l.get('units', []): return False
+        changed.append(f"{label}: units " + ("; ".join(u['name'] + (f" ({', '.join(u.get('traits', []) + u.get('challenges', []))})" if u.get('traits') or u.get('challenges') else "") for u in units) or "removed"))
+        if apply:
+            if units: l['units'] = units
+            else: l.pop('units', None)
+        return apply
+
     # lots (by the game's lot id, which stays the same when a lot is renamed) already matched in the newest save
     # can't be handed to another plan lot from an older save: Bedlington Boathouse in "Building" is Brindleton Boathouse now
     first = {id(l): find(W, l, saves[0][2]) for W, l in shared}
@@ -130,6 +155,9 @@ def main():
                     if l.get('traits') or l.get('challenges'):
                         changed.append(f"{W['name']} / {l.get('myName') or l['lot']}: not shared any more, traits removed")
                         if apply: l.pop('traits', None); l.pop('challenges', None); touched = True
+                    # her exception (16 Oct): rentals get their unit names and unit traits from the save even before they're shared
+                    hits = find(W, l, saves[0][2]) if re.search(r'rental', l.get('type') or '', re.I) else []
+                    if len(hits) == 1 and note_units(f"{W['name']} / {l.get('myName') or l['lot']} (not shared yet)", l, rental_units(l, hits[0], saves[0][2])): touched = True
                     continue
                 n_shared += 1
                 label = f"{W['name']} / {l.get('myName') or l['lot']}"
@@ -148,23 +176,8 @@ def main():
                     same += [z for z in {id(z): z for zs in src.values() for z in zs}.values() if z is not hits[0] and z.get('lot_id') == hits[0].get('lot_id')]
                 for t in dict.fromkeys(t for z in same for t in z.get('lot_traits', [])):
                     if str(t) in traits: got["challenges" if traits[str(t)]['kind'] == 'challenge' else "traits"].append(traits[str(t)]['name'])
-                # each unit of a rental: its own name (as she named it in the game, shortened to what isn't the lot's name) and traits
-                units = []
-                if re.search(r'rental', l.get('type') or '', re.I):
-                    for z in sorted((z for z in same if z is not hits[0] or z.get('lot_traits')), key=lambda z: z.get('active_plex') or 0):
-                        if z.get('active_plex') in (None, 0, 300) and not z.get('lot_traits'): continue
-                        u = {"name": unit_name(z.get('name', ''), [l['lot'], hits[0].get('name', '')])}
-                        for t in z.get('lot_traits', []):
-                            if str(t) in traits: u.setdefault("challenges" if traits[str(t)]['kind'] == 'challenge' else "traits", []).append(traits[str(t)]['name'])
-                            else: unknown.add(t)
-                        units.append(u)
-                    units = units if len(units) > 1 else []
-                if units != l.get('units', []):
-                    changed.append(f"{label}: units " + "; ".join(u['name'] + (f" ({', '.join(u.get('traits', []) + u.get('challenges', []))})" if u.get('traits') or u.get('challenges') else "") for u in units))
-                    if apply:
-                        if units: l['units'] = units
-                        else: l.pop('units', None)
-                        touched = True
+                units = rental_units(l, hits[0], src)
+                if note_units(label, l, units): touched = True
                 if any(got[k] != l.get(k, []) for k in got):
                     changed.append(f"{label}: {', '.join(got['traits']) or '(no traits)'}" + (f"; challenges: {', '.join(got['challenges'])}" if got['challenges'] else ""))
                     if apply:
