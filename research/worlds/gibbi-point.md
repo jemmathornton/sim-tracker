@@ -21,7 +21,7 @@ For future lot decisions. Sources: the Sims Wiki's Gibbi Point page, the game's 
   - Love Highland: the Addam Commune, 50×50. Their home and their "Love Highland Getaway" (hot tub, kayaking).
   - Fearful Fish Lounge: Lounge, 20×20, for anglers.
   - Miner's Manse: empty home, 30×20.
-- **The wiki names nobody without a home.**
+- **Homeless townies:** Laxmi and Raheel Kunal are homeless premade townies (corrected 17 Oct, research/townies-and-roles.md; the wiki world page doesn't list them).
 - **Open world:** Hothead Rock Geyser, the Electric Lagoon, Underlight Bay, archery, kayaking, pools with diving boards, a public playground in each neighbourhood, and underground hot springs (in the blurb). Festivals include Fitness Fest and Glow and Flow.
 
 ## Her plan against that
