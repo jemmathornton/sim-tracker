@@ -34,7 +34,7 @@ For future lot decisions. Sources: the Sims Wiki's Glimmerbrook page, the game's
 - **A quiet village with only a library.** Villages usually have a pub, a café or tea room, a library or village hall, a cemetery and a vet. Glimmerbrook has no restaurant, café, bar or pub, park, gym, cemetery or vet.
 - **The game's one community lot was the pub.** Its in-game name (Elixirs and Brews) and its "local establishment" text read like a bar. Glimmer & Books kept that text in its upload.
 - **Restaurants:** still to look at for Glimmerbrook (TODO §5).
-- **No spare lot.** The only homes with no household named are Creek Side Corner and Glimmerbrook Watch, both built and shared. A pub, café or tea room would mean a rebuild, or a small business run from one of those homes once someone lives there (it would only open when she plays the owners).
+- **No spare lot.** The only homes with no household named are Creek Side Corner and Glimmerbrook Watch, both built and shared. A pub, café or tea room would mean a rebuild, or a small business run from one of those homes once someone lives there (it would only open when she plays the owners (corrected 16 Oct: you can visit an NPC-run small business or shop as a customer, e.g. Nordhaven's Koffieboon; she has done it)).
 - **Glimmerbrook Watch gets the most favourites for its downloads of all her uploads** (research/gallery-deep-dive.md). Worth knowing before changing it.
 - **Magic shopping is covered:** Casters Alley sells wands, potions and brooms.
 - The game's ghost-story text belongs to Glimmerbrook Watch (the owner who vanished), not to Brooks Bridge, her haunted house. Only matters if she wants the game text and the plan to match.

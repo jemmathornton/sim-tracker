@@ -38,7 +38,7 @@ For future lot decisions. Sources: the Sims Wiki's Del Sol Valley page, the game
 
 - **City character, and the plan shows it:** a nightclub, two lounges, a restaurant, a gym and a museum.
 - **No café, library or park.** The café idea already on TODO §5: "Drink Coffee" as one of the Plumbob Pictures Museum's small-business activities.
-- **As a small business, the museum only opens when its owner is played** (the game's Museum type runs by itself). The owner isn't in the plan. TODO §5 also has the open item on small business type names (the game calls them "Small Business Venue").
+- **As a small business, the museum only opens when its owner is played** (the game's Museum type runs by itself (corrected 16 Oct: you can visit an NPC-run small business or shop as a customer, e.g. Nordhaven's Koffieboon; she has done it)). The owner isn't in the plan. TODO §5 also has the open item on small business type names (the game calls them "Small Business Venue").
 - **Two game descriptions no longer fit:** Ward Park's is a quiet park (now the gym) and Pectoral Fitness's is a gym (now the restaurant). Both are built, so it's only the in-game text.
 - **Nothing is spare:** every lot has a household or a job. The unbuilt ones are Chateau Peak, Studio PBP and the museum.
 - **Open items:** a Gallery comment on Strike Out! asks for a waste basket; Bailey-Moon Manor is ticked for screenshots but has no Builds folder.

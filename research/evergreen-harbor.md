@@ -43,7 +43,7 @@ For the Evergreen Harbor community-lot discussion (TODO §5). Sources: the Sims 
 
 - **A café works.** Nordhaven's Koffieboon is a small business: coffee, tea, reading and classes.
 - **Proper meals are awkward.** There are no waiters, food is self-serve from a counter, and the owner must be on the lot.
-- **They open when their owner opens them.** Player reports on NPC-owned ones opening by themselves are mixed. Café, bar and restaurant lot types run on their own.
+- **They open when their owner opens them. (corrected 16 Oct: you can visit an NPC-run small business or shop as a customer, e.g. Nordhaven's Koffieboon; she has done it)** Player reports on NPC-owned ones opening by themselves are mixed. Café, bar and restaurant lot types run on their own.
 
 ## Community Market (Royalty & Legacy), added after she asked
 

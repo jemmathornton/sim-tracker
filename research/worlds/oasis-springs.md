@@ -41,6 +41,6 @@ For future lot decisions. Sources: the Sims Wiki's Oasis Springs page, the game'
 
 - **No café.** The bars at the pool and the spa and Rattlesnake Juice are the nearest. A Thrift and Boba Store would count as one.
 - **No spare unbuilt lot.** The only unbuilt lots are the Landgraab and Caliente homes. A café would mean reusing a built lot; Springscape is the one home with nobody planned ("Empty", built, shared).
-- **No shops,** but retail only opens when she plays the owners. No cemetery or vet either.
+- **No shops,** but retail only opens when she plays the owners (corrected 16 Oct: you can visit an NPC-run small business or shop as a customer, e.g. Nordhaven's Koffieboon; she has done it). No cemetery or vet either.
 - **Suits a hot desert suburb already:** a pool, a spa, a gym, and Desert Bloom with a splash pool, slip and slide, barbecue, fishing and a playground (her upload).
 - **Open item:** Rio Verde's flat tabs wait for the rental layout decision (TODO §2).

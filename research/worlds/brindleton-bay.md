@@ -40,7 +40,7 @@ For future lot decisions. Sources: the Sims Wiki's Brindleton Bay page, the game
 - **A seaside pet town keeping both vets** (settled). The Delgatos' story fits the Pawspital, as Supriya wants to buy it. Its owner isn't in the plan yet.
 - **The Lynxes have no home** now Catscratch Cottage is the restaurant. Empty homes in her plan: Tail's End Apartments (4 empty units, same neighbourhood), Bedlington Barn, Brindleton Boathouse, Domus Familiaris and Hound's Head.
 - **No bar or pub.** The game's Salty Paws Saloon is now the café; Calico (a lounge) covers evenings.
-- **No shops.** Retail only opens when its owners are played.
+- **No shops.** Retail only opens when its owners are played (corrected 16 Oct: you can visit an NPC-run small business or shop as a customer, e.g. Nordhaven's Koffieboon; she has done it).
 - **No museum.** Deadgrass Discoveries' game text is a maritime museum; her plan makes it a cemetery. The isle's name and its after-dark rumours suit a cemetery; the lighthouse keeper text doesn't. It isn't built, so either is easy.
 - **The wharf highlight (chowder and lobster rolls) suits the seafood restaurant.** Catscratch Cottage is small (20×15).
 - **Hound's Head (64×64) is the one big lot with nobody in it and nothing built.**
