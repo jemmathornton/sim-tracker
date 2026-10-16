@@ -491,3 +491,10 @@ footer .as-of{flex-basis:100%}
 .photo .pill.new{background:var(--brass);color:#1A1F1C}
 .new-since{display:flex;gap:8px;align-items:center;margin:8px 0 0;padding:8px 12px;border-radius:10px;background:color-mix(in srgb,var(--brass) 18%,transparent);font-size:13.5px;font-weight:600}
 .new-since svg{color:var(--brass)}
+
+/* rental layout trial (16 Oct): unit-list cards for single rentals link their name */
+.bcard h3 a{text-decoration:none}
+.rv-switch{position:fixed;right:18px;bottom:18px;z-index:60;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:16px;padding:12px 14px;box-shadow:0 10px 30px rgba(0,0,0,.18);display:grid;gap:8px;font-size:13px}
+.rv-switch div{display:flex;flex-wrap:wrap;gap:6px}
+.rv-switch button{border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:5px 11px;cursor:pointer;font-weight:600;font-size:12.5px}
+.rv-switch button.on{background:var(--brass);border-color:var(--brass);color:#fff}

@@ -221,9 +221,36 @@ const isApt = l => /apartment|penthouse/i.test(l.type || "");
 const lotArt = l => isApt(l) ? `<span class="apt-art">${ic("home")}</span>` : plot(l.size, 120, false);
 const cardPills = l => { const n = newSince(l), p = [n ? `<span class="pill new" title="${esc(newTxt(n))} since you last looked">New</span>` : "", baseGame(l) ? `<span class="pill" title="Needs no packs">Base game</span>` : ""].join("");
   return p ? `<span class="pills">${p}</span>` : ""; };
+// ---------- rental layout trial (16 Oct): a small switch on neighbourhood and lot pages with rentals lets her compare layout 1 (units listed) and 2 (badge + unit count) ----------
+const RV_KEY = "jsw-rental-layout";
+let RV = (() => { try { return localStorage.getItem(RV_KEY) || ""; } catch (e) { return ""; } })();
+const rvOf = l => RV;
+const isRental = l => /residential rental/i.test(l.type || "");
+const unitCount = l => { const m = /\((\d+)\)/.exec(l.type || ""); return isRental(l) && m ? +m[1] : null; };
+// who lives in which unit isn't decided yet: the plan's household fills the first unit, tenants the next, the rest show as empty
+const rentalUnits = l => { const n = unitCount(l), who = [];
+  if (l.hh) who.push({hh: l.hh, role: l.tenants || /\sown\??$/i.test(l.who || "") ? "owners" : ""});
+  (l.tenants || []).forEach(t => who.push({hh: t, role: "tenant"}));
+  return Array.from({length: n}, (_, i) => who[i] || null); };
+function rentalCard(l){
+  const units = rentalUnits(l), cover = l.photos[0], lived = units.filter(Boolean).length;
+  return `<div class="listing bcard" style="--h:${l.hood.color}"><div class="photo ${cover?"shot":""}" ${cover?`style="--img:url('${cover.thumb}')"`:""}>${cover ? "" : lotArt(l)}<span class="type">Rental</span><span class="size">${units.length} units</span></div>
+    <h3><a href="#${l.id}">${esc(l.name)}</a></h3>
+    <ul class="units">${units.map((u, i) => `<li><a href="#${u ? u.hh.id : l.id}"><span class="unit-no">${i + 1}</span><span class="unit-who">${u ? `${ic("users")}<b>${esc(u.hh.name)}</b>${u.role ? ` <small>${u.role}</small>` : ""}` : `<i>Empty</i>`}</span><span class="status"></span></a></li>`).join("")}</ul>
+    <div class="meta"><span>${ic("home")}<b>${lived} of ${units.length}</b> units lived in</span></div></div>`;
+}
+
+function rvSwitch(show){
+  document.getElementById("rv-switch")?.remove(); if (!show) return;
+  const d = document.createElement("div"); d.id = "rv-switch"; d.className = "rv-switch";
+  d.innerHTML = `<b>Rental layout (trial)</b><div>${[["", "Today"], ["1", "1 · units listed"], ["2", "2 · badge + unit count"]].map(([k, t]) => `<button type="button" data-rv="${k}" class="${RV === k ? "on" : ""}">${t}</button>`).join("")}</div>`;
+  document.body.appendChild(d);
+}
+document.addEventListener("click", e => { const b = e.target.closest("[data-rv]"); if (!b) return; RV = b.dataset.rv; try { localStorage.setItem(RV_KEY, RV); } catch (err) {} const y = scrollY; route(); scrollTo(0, y); });
+
 function listing(l){
   const cover = l.photos[0];
-  return `<a class="listing" href="#${l.id}" style="--h:${l.hood.color}"><div class="photo ${cover?"shot":""}" ${cover?`data-lazy="--img" data-src="${cover.thumb}"`:""}>${cover ? "" : lotArt(l)}<span class="type">${esc(l.type || "Lot")}</span><span class="status">${statusDots(l)}</span>${sizeTxt(l.size) && !isApt(l) ? `<span class="size">${sizeTxt(l.size)}</span>` : ""}${cardPills(l)}</div>
+  return `<a class="listing" href="#${l.id}" style="--h:${l.hood.color}"><div class="photo ${cover?"shot":""}" ${cover?`data-lazy="--img" data-src="${cover.thumb}"`:""}>${cover ? "" : lotArt(l)}<span class="type">${rvOf(l) === "2" && unitCount(l) ? `Rental · ${unitCount(l)} units` : esc(l.type || "Lot")}</span><span class="status">${statusDots(l)}</span>${sizeTxt(l.size) && !isApt(l) ? `<span class="size">${sizeTxt(l.size)}</span>` : ""}${cardPills(l)}</div>
     <h3>${esc(l.name)}</h3>
     <div class="meta">${l.hh ? `<span>${ic("users")}<b>${esc(l.hh.name)}</b>${l.hh.unsure?" (unsure)":""}</span>` : l.whoNote ? `<span>${ic("users")}${esc(emptyNote(l.whoNote))}</span>` : ""}${l.gallery ? `<span title="Downloads on the Sims 4 Gallery">${ic("share")}${l.gallery.downloads} downloads</span>` : ""}</div></a>`;
 }
@@ -236,7 +263,7 @@ function buildingCard(b){
     <div class="meta"><span>${ic("hammer")}<b>${built} of ${b.units.length}</b> built</span></div></div>`;
 }
 // units of a building sit together under a small heading, each keeping its own card and picture
-const hoodItems = x => { const seen = new Set(); return x.lots.flatMap(l => { if (!l.building) return [listing(l)]; const b = l.building; if (seen.has(b)) return []; seen.add(b);
+const hoodItems = x => { const seen = new Set(); return x.lots.flatMap(l => { if (!l.building) return [rvOf(l) === "1" && unitCount(l) ? rentalCard(l) : listing(l)]; const b = l.building; if (seen.has(b)) return []; seen.add(b);
   const built = b.units.filter(u => u.built === true).length;
   return [`<div class="bgroup"><div class="bgroup-head">${ic("home")}<h3>${esc(b.name)}</h3><span>${b.units.length} apartments · ${built} built</span></div><div class="listings">${b.units.map(listing).join("")}</div></div>`]; }); };
 function mapHero(w, kicker, title, text, figures, chapters, small){
@@ -373,7 +400,7 @@ function lot(l){
     <div class="detail" style="--h:${hc}">${carousel(l)}
     <div><dl class="facts">${l.ea ? `<div><dt>In-game name</dt><dd>${esc(l.ea)}</dd></div>` : ""}<div><dt>Lot type</dt><dd>${esc(l.type || "Not set")}</dd></div>${isApt(l) ? "" : `<div><dt>Lot size</dt><dd>${esc(sizeTxt(l.size) || "Not checked yet")}</dd></div>`}${l.traits ? `<div><dt>Lot traits</dt><dd>${l.traits.map(esc).join(", ")}</dd></div>` : ""}${l.challenges ? `<div><dt>${l.challenges.length > 1 ? "Lot challenges" : "Lot challenge"}</dt><dd>${l.challenges.map(esc).join(", ")}</dd></div>` : ""}
       <div><dt>Neighbourhood</dt><dd>${esc(l.hood.name)}</dd></div>${progressRow(l)}${l.building ? `<div><dt>Building</dt><dd>${esc(l.building.name)} · ${l.building.units.length} apartments</dd></div>` : ""}
-      ${l.hh || l.whoNote ? `<div><dt>${l.owned ? "Owned by" : "Household"}</dt><dd>${l.hh ? `<a href="#${l.hh.id}">${esc(l.hh.name)}</a>${l.hh.unsure?" (unsure)":""}${l.tenants && !l.owned ? " (owners)" : ""}` : esc(emptyNote(l.whoNote))}</dd></div>` : ""}${l.tenants ? `<div><dt>${l.tenants.length > 1 ? "Tenants" : "Tenant"}</dt><dd>${l.tenants.map(t => `<a href="#${t.id}">${esc(t.name)}</a>${t.note ? ` <small>“${esc(t.note)}”</small>` : ""}`).join(", ")}</dd></div>` : ""}</dl>${l.versions ? versionTabs(l) : ""}
+      ${l.hh || l.whoNote ? `<div><dt>${l.owned ? "Owned by" : "Household"}</dt><dd>${l.hh ? `<a href="#${l.hh.id}">${esc(l.hh.name)}</a>${l.hh.unsure?" (unsure)":""}${l.tenants && !l.owned ? " (owners)" : ""}` : esc(emptyNote(l.whoNote))}</dd></div>` : ""}${rvOf(l) && unitCount(l) ? (u => `<div><dt>Units</dt><dd>${u.length}: ${u.filter(Boolean).length} lived in, ${u.filter(x => !x).length} free</dd></div>`)(rentalUnits(l)) : ""}${l.tenants ? `<div><dt>${l.tenants.length > 1 ? "Tenants" : "Tenant"}</dt><dd>${l.tenants.map(t => `<a href="#${t.id}">${esc(t.name)}</a>${t.note ? ` <small>“${esc(t.note)}”</small>` : ""}`).join(", ")}</dd></div>` : ""}</dl>${l.versions ? versionTabs(l) : ""}
 </div></div>
     ${l.hh ? `<section class="block" style="--h:${hc}"><div class="block-head"><h2>${l.owned ? "Who <em>owns it</em>" : "Who <em>lives here</em>"}</h2></div>
       <div class="lives"><div class="lives-card">${hhListing(l.hh)}</div>
@@ -605,6 +632,7 @@ function route(){
   lazyPics(view);
   clearSearch();
   renderNav(active, key, ctx);
+  rvSwitch((ctx.lot && unitCount(ctx.lot) && !ctx.hh) || (ctx.hood && !ctx.lot && ctx.hood.lots.some(unitCount)));
   window.scrollTo(0, 0);
   document.body.classList.remove("nav-open");
 }
