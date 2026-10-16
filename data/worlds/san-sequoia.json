@@ -2,7 +2,7 @@
  "name": "San Sequoia",
  "pack": "Growing Together",
  "owned": true,
- "colour": "#2A7D93", "heroY": 47,
+ "colour": "#2A7D93", "heroY": 30,
  "deep": ["#0F2F38", "#164552"],
  "blurb": "San Sequoia began as a small fishing town, then became a hub of the fishing and canning industry. Today, San Sequoia is home to cosy streets, a beautiful park with gardens, and quiet suburban neighbourhoods. It's the perfect place to raise a family!",
  "neighbourhoods": [
