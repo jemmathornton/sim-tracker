@@ -239,7 +239,7 @@ function rentalBubbles(l){
       : `<i class="nb-none unit-no-pic" data-lot-link="${to}" aria-label="${esc(lab)}" data-name="${esc(lab)}"><b>${i + 1}</b></i>`; }).join("");
 }
 const rentalMeta = l => { const units = rentalUnits(l), who = units.filter(Boolean), owned = who.filter(u => u.role === "owners").length, lived = who.length - owned, free = units.length - who.length;   // the landlord's own unit isn't "let"
-  const rows = units.map((u, i) => u ? `<li>${ic("home")}${hhLink(u.hh)}${u.role === "owners" ? " (landlord)" : ""}<em>Unit ${i + 1}</em></li>` : "").join("");
+  const rows = units.map((u, i) => `<li${u ? "" : ' class="free"'}>${ic("home")}${u ? hhLink(u.hh) + (u.role === "owners" ? " (landlord)" : "") : "Free"}<em>Unit ${i + 1}</em></li>`).join("");
   return `${rows ? `<ul class="unit-list">${rows}</ul>` : ""}<span>${ic("grid")}${free ? `${lived} let, ${free} free` : "All let"}</span>`; };
 
 // the units as a table on the lot page: picture, unit, who (only the landlord is marked)
@@ -255,7 +255,7 @@ function buildingFront(b){
   const cover = (b.units.find(u => u.photos[0]) || {}).photos?.[0], lived = b.units.filter(u => u.hh).length;
   const circ = b.units.map(u => nbTile(u).replace("<i ", `<i data-lot-link="${u.id}" aria-label="${esc(u.name)}" `).replace(/ title="[^"]*"/, ` data-name="${esc(u.name)}"`)).join("");
   return `<div class="listing bfront" style="--h:${b.hood.color}"><div class="photo ${cover?"shot":""}" ${cover?`style="--img:url('${cover.thumb}')"`:""}>${cover ? "" : plot("40x30", 120, false)}<span class="nb-bubbles${b.units.length > 5 ? " many" : ""}">${circ}</span><span class="type">Apartment Building · ${b.units.length} Apartments</span></div>
-    <h3>${esc(b.name)}</h3><div class="meta">${lived ? `<ul class="unit-list">${b.units.filter(u => u.hh).map(u => `<li>${ic("home")}${hhLink(u.hh)}<em>${esc(u.unit || "")}</em></li>`).join("")}</ul>` : ""}<span>${ic("grid")}${b.units.length - lived ? `${lived} lived in, ${b.units.length - lived} free` : "All lived in"}</span></div></div>`;
+    <h3>${esc(b.name)}</h3><div class="meta"><ul class="unit-list">${b.units.map(u => `<li${u.hh ? "" : ' class="free"'}>${ic("home")}${u.hh ? hhLink(u.hh) : "Free"}<em>${esc(u.unit || "")}</em></li>`).join("")}</ul><span>${ic("grid")}${b.units.length - lived ? `${lived} lived in, ${b.units.length - lived} free` : "All lived in"}</span></div></div>`;
 }
 
 function rvSwitch(show){

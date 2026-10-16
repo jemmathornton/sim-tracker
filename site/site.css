@@ -513,3 +513,4 @@ footer .as-of{flex-basis:100%}
 .listing .meta .hh-link:hover{text-decoration:underline;text-underline-offset:2px}
 .listing.bfront{cursor:default}
 .listing.bfront:hover h3{text-decoration:none}.listing.bfront:hover .plot-svg{transform:none}.listing.bfront:hover .photo.shot{filter:none}
+.listing .meta .unit-list li.free{font-style:italic}
