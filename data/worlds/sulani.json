@@ -39,8 +39,8 @@
    "mapSpot": [0.32, 0.37],
    "mapBox": [0.14, 0.26, 0.49, 0.48],
    "lots": [
-    {"lot": "Reef Finery", "myName": "Reef Finery", "type": "Residential", "size": "40x30", "residents": "Empty", "built": false, "shared": false, "screenshots": false, "simsMade": false},
-    {"lot": "Journey's End", "myName": "Journey's End", "type": "Residential", "size": "40x30", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["hix5Gu1OEeqN7CQfmaYcsw=="], "traits": ["Sunny Aspect", "Great Acoustics"]},
+    {"lot": "Reef Finery", "myName": "Reef Finery", "type": "Residential", "size": "40x30", "residents": "Ngata *may change*", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Journey's End", "myName": "Journey's End", "type": "Residential", "size": "40x30", "residents": "Kahananui *may change*", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["hix5Gu1OEeqN7CQfmaYcsw=="], "traits": ["Sunny Aspect", "Great Acoustics"]},
     {"lot": "Pier Perfection", "myName": "Pier Perfection", "type": "Residential", "size": "30x20", "residents": "Empty", "built": true, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Sand Simoleon Beach", "myName": "Sand Simoleon Beach", "type": "Beach", "size": "40x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["o96LYe1NEeqKMCQfmaYcsw=="], "traits": ["Oceanic Paradise", "Sunny Aspect"]},
     {"lot": "Sapphire Shores", "myName": "Sapphire Shores", "type": "Residential", "size": "50x50", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["2laHTe1NEeqLICQfmaYcsw=="], "traits": ["Oceanic Paradise", "Child's Play", "Sunny Aspect"]}
