@@ -218,7 +218,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [ ] [Jemma] EA’s families: fill them in automatically from the game’s own files (197 premade households, their family links, and 348 starting friendships between households), or only the ones she has played?
 - [ ] [Jemma] Show EA’s starting friendships, or only relationships from her own save?
 - [ ] [Jemma] Her Library (122 households, 56 her own uploads): use it as a top-up (only her own, or Maxis and others too), or not at all?
-- [ ] [Jemma] Typing Sims in: chat only, or a Sims tab in World Plans?
+- [ ] [Jemma] Typing Sims in: chat only, or a Sims tab in World Plans? **Prototype to try:** for-jemma/prototypes/world-plans-sims-tab.xlsx (a copy of her workbook with a Sims tab and a Relationships tab, drop-downs, mistake highlighting and 24 example premade Sims; her own file untouched), explained in world-plans-sims-tab.md with 10 choices. If used, the importer needs a one-line change so it doesn’t treat the new tabs as worlds
 - [ ] [Jemma] Sim pictures: decode the Library portraits for Sim cards, or stick to her screenshots and monograms?
 - [ ] [Claude] When Sims go in: key each Sim by the game’s sim id, not its name (two Sims can share a name)
 
