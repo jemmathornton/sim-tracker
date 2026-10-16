@@ -205,6 +205,13 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [ ] [Jemma] EA’s families vs hers: an origin tag, plus “In the game / In my save” for premade families?
 - [ ] [Jemma] Story questions: how is Romeo related to the recreated Sims 2 Montys, and who heads each dynasty in her save?
 
+### Blurry taskbar icon (research/taskbar-icon.md)
+- [ ] [Jemma] Cause found: a plain Chrome app window takes its taskbar icon from the page’s 16px icon and Windows stretches it (her PC runs at 200% scaling, so the taskbar wants 48px). A restart won’t fix it. Fix: make it an installed Chrome app served from http://127.0.0.1 (a small local server started at sign-in, a web manifest; she clicks Install once). Cheaper, untested: pin a shortcut with Chrome’s own taskbar id. Her call
+
+### Tidy-up check (research/site-audit-16-oct.md, 35 items)
+- [ ] [Claude] Fix the “obvious bug” items when she’s back (no coding overnight), e.g. Manzanita Terrace’s type has no “(3)” so it shows no units; Rippling Flats’ card and page disagree; “Jemma’s Sim World” has a straight apostrophe in the title, sidebar and top bar; Calle del Ensueño’s Sims made is false not N/A; leftover rental-trial code; out-of-date counts and notes in TODO.md, HANDOVER.md and CLAUDE.md; research notes that predate the 16 Oct choices
+- [ ] [Jemma] The “needs her decision” items in that file, e.g. Glimmer & Books is ticked shared but marked not built; Taka Soi 15’s units come out 09 before 08 (the game’s order)
+
 ## 7. Parked until she asks
 
 - [ ] Phone layout: Stats lot names pushed off-screen by the World/Neighbourhood columns
