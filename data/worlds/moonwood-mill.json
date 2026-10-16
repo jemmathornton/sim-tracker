@@ -11,9 +11,9 @@
    "lots": [
     {"lot": "The Collective Cabin", "myName": "The Collective Cabin", "type": "Residential", "size": "40x30", "residents": "Volkov", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "New Moon Shack", "myName": "Full Moon Shack", "type": "Residential", "size": "20x15", "residents": "Rory & Friend?", "built": false, "shared": false, "screenshots": false, "simsMade": false},
-    {"lot": "Prowler's Patch", "myName": "Moonwood Mill Library", "type": "Library", "size": "30x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
-    {"lot": "The Grimtooth Bar & Bunker", "myName": "New Moon Cabins", "type": "Residential", "size": "50x40", "residents": "Werewolves in Training", "built": false, "shared": false, "screenshots": false, "simsMade": false},
-    {"lot": "The Moonwood Mill Library", "myName": "Grimtooth Bar", "type": "Bar", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
+    {"lot": "Prowler's Patch", "myName": "New Moon Cabins", "type": "Residential", "size": "30x30", "residents": "Werewolves in Training", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "The Grimtooth Bar & Bunker", "myName": "Grimtooth Bar", "type": "Bar", "size": "50x40", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "The Moonwood Mill Library", "myName": "Moonwood Mill Library", "type": "Library", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ]
   }
  ],

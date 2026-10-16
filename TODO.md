@@ -155,7 +155,7 @@ From the data check-up, 15 Oct (research/data-check-up.md; sizes, uploads and sh
 
 Each world now has a note: research/worlds/<world>.md (plus research/evergreen-harbor.md, tomarang.md, nordhaven.md, ondarion.md). Findings worth deciding:
 
-- [ ] [Jemma] Moonwood Mill (not owned): the placeholder rows look shifted by one. Prowler's Patch has "Moonwood Mill Library" (Library), The Grimtooth Bar & Bunker has "New Moon Cabins" (Residential), The Moonwood Mill Library has "Grimtooth Bar" (Bar). Probably meant: Prowler's Patch = New Moon Cabins; bar and library as the game ships them. Check in her spreadsheet
+- [x] [Jemma] Moonwood Mill (not owned): the placeholder rows look shifted by one. Prowler's Patch has "Moonwood Mill Library" (Library), The Grimtooth Bar & Bunker has "New Moon Cabins" (Residential), The Moonwood Mill Library has "Grimtooth Bar" (Bar). Probably meant: Prowler's Patch = New Moon Cabins; bar and library as the game ships them. Check in her spreadsheet. Fixed 16 Oct (her OK): Prowler's Patch = New Moon Cabins (Werewolves in Training), the bar and library as the game ships them; sizes were already right. Spreadsheet still to update
 - [ ] [Jemma] Tartosa (not owned): Celebrazioni d'Amore and La Coppia Serena say "? (Capp/Monty)", but the Capps and Montys are now planned in Ondarion
 - [ ] [Jemma] San Sequoia: Celebration Center has two types (Wedding Venue/Cemetery); a lot takes one. The game's own Celebration Center is a Recreation Center. San Sequoia also has no café now (18 Celebration Way became the market)
 - [ ] [Jemma] Brindleton Bay: the Lynx household has no home (Catscratch Cottage is the seafood restaurant); Deadgrass Discoveries is a maritime museum in the game but a Cemetery in the plan (not built)
