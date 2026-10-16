@@ -2,7 +2,7 @@
  "name": "StrangerVille",
  "pack": "StrangerVille",
  "owned": true,
- "colour": "#C8675F",
+ "colour": "#C8675F", "heroY": 12,
  "deep": ["#4A1D1E", "#6A2E2D"],
  "blurb": "The only thing stranger than the people is the flora! StrangerVille is a quiet little town with a strange problem. The residents are very friendly, but at night things start to get more interesting.",
  "neighbourhoods": [

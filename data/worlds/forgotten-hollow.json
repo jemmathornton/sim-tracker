@@ -2,7 +2,7 @@
  "name": "Forgotten Hollow",
  "pack": "Vampires",
  "owned": false,
- "colour": "#6A4A6E",
+ "colour": "#6A4A6E", "heroY": 40,
  "deep": null,
  "blurb": "",
  "neighbourhoods": [

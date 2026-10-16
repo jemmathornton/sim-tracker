@@ -2,7 +2,7 @@
  "name": "Del Sol Valley",
  "pack": "Get Famous",
  "owned": true,
- "colour": "#AE8A30",
+ "colour": "#AE8A30", "heroY": 55,
  "deep": ["#382A0D", "#523E14"],
  "blurb": "A densely populated city brimming with opportunities to make it big!",
  "neighbourhoods": [

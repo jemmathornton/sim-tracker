@@ -2,7 +2,7 @@
  "name": "Chestnut Ridge",
  "pack": "Horse Ranch",
  "owned": true,
- "colour": "#8A5434",
+ "colour": "#8A5434", "heroY": 68,
  "deep": ["#301B10", "#462818"],
  "blurb": "This community formed when several groups embraced their mutual connection to Horses and the land. The area soon became known as a hub for all things Equestrian, set against a beautiful and expansive landscape. Over time, the area became famous for another endeavor, as the rich soil brought in the new enterprise of Nectar Making.",
  "neighbourhoods": [

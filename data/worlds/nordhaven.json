@@ -2,7 +2,7 @@
  "name": "Nordhaven",
  "pack": "Businesses & Hobbies",
  "owned": true,
- "colour": "#6C747B",
+ "colour": "#6C747B", "heroY": 12,
  "deep": ["#25292D", "#383E44"],
  "blurb": "This northern coastal city is known for its thriving, independent local businesses and the enchanting beauty of its cold seasons. Whether you seek to make your business flourish or just want to practice your hobbies with a cosy community, you will always find an opportunity here.",
  "neighbourhoods": [

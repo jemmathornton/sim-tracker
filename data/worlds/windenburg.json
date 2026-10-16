@@ -2,7 +2,7 @@
  "name": "Windenburg",
  "pack": "Get Together",
  "owned": true,
- "colour": "#3F5E8C",
+ "colour": "#3F5E8C", "heroY": 40,
  "deep": ["#162238", "#213252"],
  "blurb": "Take ye olde deep breath and enjoy the mountain air. This green, expansive playground has got it all: lush countryside, serene and rocky cliffs, a quaint village with remnants of the old world all nestled around the modern shore side business centre.",
  "neighbourhoods": [

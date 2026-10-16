@@ -180,6 +180,7 @@ def build():
              "thumb": stamped(f"maps/{ws}.thumb.jpg") if os.path.exists(os.path.join(SITE, 'maps', ws + '.thumb.jpg')) else "",
              "blurb": W.get('blurb', ''), "hoods": []}
         if W.get('glow'): w["glow"] = W['glow']
+        if W.get('heroY') is not None: w["heroY"] = W['heroY']   # how far down the world banner looks at its map (0 top, 100 bottom; her call)
         w.update({k: W[k] for k in ("weather", "highlights") if W.get(k)})   # from the game (tools/research/world_extras.py --apply)
         for hood in W['neighbourhoods']:
             lots = []

@@ -2,7 +2,7 @@
  "name": "Copperdale",
  "pack": "High School Years",
  "owned": true,
- "colour": "#A85C3A",
+ "colour": "#A85C3A", "heroY": 40,
  "deep": ["#3A1E12", "#53301D"],
  "blurb": "Once renowned for its booming mining industry, the town of Copperdale, quaint and historic, lay nestled on the banks of Lake LaSuli. With academics and adventures abound, Copperdale is now home to many families seeking a small-town life with big-city dreams for themselves and their teens.",
  "neighbourhoods": [

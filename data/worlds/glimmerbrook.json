@@ -2,7 +2,7 @@
  "name": "Glimmerbrook",
  "pack": "Realm of Magic",
  "owned": true,
- "colour": "#8A5AA8",
+ "colour": "#8A5AA8", "heroY": 30,
  "deep": ["#2A1838", "#3C2350"],
  "blurb": "The quiet town of Glimmerbrook may have more to it than meets the eye...",
  "neighbourhoods": [

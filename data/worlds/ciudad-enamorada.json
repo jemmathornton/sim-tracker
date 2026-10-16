@@ -2,7 +2,7 @@
  "name": "Ciudad Enamorada",
  "pack": "Lovestruck",
  "owned": false,
- "colour": "#C2456B",
+ "colour": "#C2456B", "heroY": 50,
  "deep": null,
  "blurb": "",
  "neighbourhoods": [

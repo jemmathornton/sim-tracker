@@ -2,7 +2,7 @@
  "name": "Newcrest",
  "pack": "Base Game",
  "owned": true,
- "colour": "#4FA34A",
+ "colour": "#4FA34A", "heroY": 45,
  "deep": ["#173A16", "#245723"],
  "blurb": "Don't let the abundance of space fool you. Take a look around, admire the wonderful scenery, and explore the endless possibilities. Do you see it? This is your whole new world! What are you waiting for?",
  "neighbourhoods": [
