@@ -25,8 +25,8 @@ SVG = (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">'
        f'<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{PURPLE_TOP}"/><stop offset="1" stop-color="{PURPLE}"/></linearGradient></defs>'
        f'<rect width="32" height="32" rx="7" fill="url(#g)"/>'
        f'<g fill="none" stroke="{YELLOW}" stroke-linejoin="round" stroke-linecap="round">'
-       f'<polygon points="{pts(OUTLINE)}" stroke-width="2"/>'
-       + "".join(f'<polyline points="{pts(f)}" stroke-width="1.1"/>' for f in FACETS) +
+       f'<polygon points="{pts(OUTLINE)}" stroke-width="1.45"/>'
+       + "".join(f'<polyline points="{pts(f)}" stroke-width=".85"/>' for f in FACETS) +
        '</g></svg>\n')
 
 
@@ -44,8 +44,8 @@ def draw(px):
         ps = [P(p) for p in ps] + ([P(ps[0])] if closed else [])
         w = max(1, round(width * u)); d.line(ps, fill=YELLOW, width=w, joint="curve")
         for x, y in ps: d.ellipse((x - w / 2, y - w / 2, x + w / 2, y + w / 2), fill=YELLOW)
-    for f in FACETS: line(f, 1.2 if px >= 32 else 1.5)
-    line(OUTLINE, 2 if px >= 32 else 2.4, closed=True)
+    for f in FACETS: line(f, .85 if px >= 32 else 1.2)
+    line(OUTLINE, 1.45 if px >= 32 else 1.9, closed=True)
     return im.resize((px, px), Image.LANCZOS)
 
 
