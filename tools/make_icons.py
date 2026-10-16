@@ -12,12 +12,12 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import SITE
 
 PURPLE, PURPLE_TOP, YELLOW = "#4A2E78", "#5C3A90", "#E6BE55"   # a brighter take on --nav; --brass, lifted
-# the plumbob in a 32-unit square, seen corner-on (a tall six-sided double pyramid): top and bottom points, the widest
-# points left and right just above the middle, and the front corner a little lower, so its edge runs top to bottom
+# the plumbob in a 32-unit square: a tall six-sided double pyramid, seen side-on, so three of its six sides face us
+# (the middle one straight on): top and bottom points, the widest points left and right, and the two front corners a little lower
 TOP, BOT = (16, 2.5), (16, 29.5)
-GL, GF, GR = (9.5, 14.5), (16, 16.5), (22.5, 14.5)
+GL, GFL, GFR, GR = (9, 14.5), (13.4, 16.3), (18.6, 16.3), (23, 14.5)
 OUTLINE = [TOP, GR, BOT, GL]
-FACETS = [[GL, GF, GR], [TOP, GF, BOT]]
+FACETS = [[GL, GFL, GFR, GR], [TOP, GFL, BOT], [TOP, GFR, BOT]]
 
 pts = lambda ps: " ".join(f"{x},{y}" for x, y in ps)
 SVG = (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">'
