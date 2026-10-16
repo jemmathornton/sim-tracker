@@ -5,6 +5,8 @@
 Writes site/maps/<world-id>.jpg (full size, up to 4096px; 1800px before 16 Oct) and .thumb.jpg (640px). Her Mods folder is only read.
 The textures are ATI2/BC5 pairs, luma + chroma (YCoCg), matched by instance. Needs numpy (pip install numpy),
 (installed 16 Oct with her OK).
+San Myshuno's night map comes out with scrambled colours with this tool (its package pairs its textures differently);
+the site keeps its older 1800px copy. Check every map by eye after re-extracting.
 """
 import io, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))

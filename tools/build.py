@@ -15,6 +15,14 @@ GALLERY_ITEM = "https://www.ea.com/games/the-sims/the-sims-4/gallery/item/"
 
 # ---------- the plan's Residents column ----------
 
+def map_width(ws):
+    """The map picture's width in pixels: neighbourhood banners zoom in only as far as it stays sharp."""
+    f = os.path.join(SITE, 'maps', ws + '.jpg')
+    if not os.path.exists(f): return 0
+    from PIL import Image
+    with Image.open(f) as im: return im.size[0]
+
+
 def stamped(rel):
     """A picture's path with a fingerprint, so a browser never shows an old copy after the picture changes (maps, 16 Oct)."""
     import hashlib
@@ -168,6 +176,7 @@ def build():
         W = load(wf); n, ws, owned = W['name'], slug(W['name']), W['owned']
         w = {"name": n, "pack": W['pack'], "owned": owned, "color": W['colour'], "deep": W.get('deep'), "ready": owned,
              "map": stamped(f"maps/{ws}.jpg") if owned and os.path.exists(os.path.join(SITE, 'maps', ws + '.jpg')) else "",
+             "mapW": map_width(ws),
              "thumb": stamped(f"maps/{ws}.thumb.jpg") if os.path.exists(os.path.join(SITE, 'maps', ws + '.thumb.jpg')) else "",
              "blurb": W.get('blurb', ''), "hoods": []}
         if W.get('glow'): w["glow"] = W['glow']

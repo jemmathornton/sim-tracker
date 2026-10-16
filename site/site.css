@@ -56,11 +56,11 @@ em{font-style:italic}
 .topbar,.scrim{display:none}
 
 /* ---------- main ---------- */
-main{margin-left:var(--side);min-height:100vh}
+main{margin-left:var(--side);min-height:100vh;container-type:inline-size}   /* lets banners reach main's edges on wide windows */
 .wrap{max-width:1140px;margin:0 auto;padding-inline:clamp(16px,4vw,56px);padding-block:0 110px}
 
 /* hero */
-.hero{margin-inline:calc(-1 * clamp(16px,4vw,56px));padding:72px clamp(16px,4vw,56px) 46px;color:var(--on-deep);position:relative;overflow:hidden;
+.hero{margin-inline:min(calc(-1 * clamp(16px,4vw,56px)),calc((100% - 100cqw) / 2));padding:72px max(clamp(16px,4vw,56px),calc((100cqw - 100%) / 2)) 46px;color:var(--on-deep);position:relative;overflow:hidden;
   background:radial-gradient(120% 90% at 85% 10%,color-mix(in srgb,var(--c) 75%,#fff 8%) 0%,transparent 55%),linear-gradient(160deg,var(--deep-2),var(--deep) 70%)}
 .hero::before{content:"";position:absolute;right:-60px;top:-30px;width:520px;height:520px;opacity:.16;
   background-image:linear-gradient(rgba(255,255,255,.9) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.9) 1px,transparent 1px);background-size:26px 26px;
@@ -84,7 +84,7 @@ main{margin-left:var(--side);min-height:100vh}
 .chapters button:focus-visible{outline:2px solid var(--brass)}
 
 /* hero with a world map photo */
-.hero.mapped{min-height:min(76vh,720px);display:flex;flex-direction:column;justify-content:flex-end;padding-top:120px;
+.hero.mapped{min-height:min(56vh,520px);display:flex;flex-direction:column;justify-content:flex-end;padding-top:64px;
   background:linear-gradient(180deg,color-mix(in srgb,var(--deep) 5%,transparent) 0%,color-mix(in srgb,var(--deep) 25%,transparent) 40%,color-mix(in srgb,var(--deep) 86%,transparent) 78%,var(--deep) 100%),var(--map) var(--mapview,center 35%/cover)}
 .hero.mapped::before{display:none}
 .hero.mapped h1{text-shadow:0 4px 30px rgba(0,0,0,.35)}
@@ -219,7 +219,7 @@ a.count{text-decoration:none}a.count:hover{color:var(--ink)}
 .photo .initial{font:400 96px/1 var(--display);font-style:italic;color:#fff;opacity:.92;text-shadow:0 4px 24px rgba(0,0,0,.18)}
 .photo .flag{width:auto!important;padding:0 10px;border-radius:99px!important;background:rgba(255,255,255,.9)!important;color:#1A1F1C!important;font-size:11.5px!important;font-weight:700}
 .listing:hover .initial{transform:scale(1.05);transition:transform .5s cubic-bezier(.2,.7,.2,1)}
-.hh-hero.mapped{min-height:min(56vh,520px)}
+.hh-hero.mapped{min-height:min(44vh,420px)}
 
 /* neighbourhood cards */
 .mosaic{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;align-content:center;width:82%;max-height:72%;overflow:hidden}
@@ -258,7 +258,7 @@ a.count{text-decoration:none}a.count:hover{color:var(--ink)}
 .photo.shot::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.18),transparent 35%,transparent 60%,rgba(0,0,0,.45))}
 .photo.shot>*{position:relative}.photo.shot .type,.photo.shot .status,.photo.shot .size{position:absolute}
 .listing:hover .photo.shot{filter:brightness(1.05)}
-.hero.lot-hero{min-height:min(62vh,600px)}
+.hero.lot-hero{min-height:min(46vh,440px)}
 .gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:18px}
 .gallery .shot-btn:first-child{grid-column:span 2;grid-row:span 2}
 .gallery.few{grid-template-columns:2fr 1fr}

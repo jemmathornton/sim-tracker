@@ -323,11 +323,13 @@ const nbTile = l => l.photos[0] ? `<i style="background-image:url('${l.photos[0]
 // a lot circle on a neighbourhood card opens that lot (the rest of the card still opens the neighbourhood)
 document.addEventListener("click", e => { const c = e.target.closest("[data-lot-link]"); if (!c) return; e.preventDefault(); e.stopPropagation(); location.hash = c.dataset.lotLink; }, true);
 // the banner on a neighbourhood page shows the same part of the map as its card (16 Oct, her idea), zoomed less:
-// the maps are about 3075px wide (full size from the mod since 16 Oct), so the banner can be up to 3x closer and stay sharp
-const HERO_RATIO = .52, HERO_ZOOM = 3;
+// (the banner's real shape is used, as it runs the full width of the page; it zooms only as far as the map picture stays sharp:
+// most maps are about 3075px wide, San Myshuno's 1800px, as its night map didn't come out right at full size)
 function hoodHeroView(x){
   const box = (NB_BOX[x.world.id] || {})[x.name], spot = (NB_PT[x.world.id] || {})[x.name];
   if (!x.world.map || !(box || spot)) return "";
+  const W = document.querySelector("main")?.clientWidth || 1000, HERO_RATIO = Math.max(.3, Math.min(.7, Math.min(.44 * innerHeight, 420) / W));
+  const HERO_ZOOM = Math.max(1.01, Math.min(3, (x.world.mapW || 1800) / (W * .85)));
   const room = 1.3, c = box ? [(box[0] + box[2]) / 2, (box[1] + box[3]) / 2] : spot;
   const fit = box ? Math.min(1 / ((box[2] - box[0]) * room), HERO_RATIO / (MAP_RATIO * (box[3] - box[1]) * room)) : HERO_ZOOM;
   const z = Math.max(1.01, Math.min(HERO_ZOOM, fit));
