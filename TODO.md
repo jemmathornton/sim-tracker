@@ -235,6 +235,9 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [ ] [Jemma] No owner named yet: Optimist’s Outlook, The Llama Picturehouse (or make it a Bar), Plumbob Pictures Museum, Canalside Daycare. Greenwood Hamlet Residence has a venue type but residents listed
 - [ ] [Jemma] Venue lots: show “Run by” instead of “Residents” on the site?
 
+### What to build next (research/build-priorities.md)
+- [ ] [Jemma] Have a look when planning builds: Britechester is complete; Newcrest needs only Rippling Flats; Granite Falls and Glimmerbrook have 2 lots left each; 28 lots are built but not shared (e.g. Boba Ippai); a suggested order for the next 15 builds, with reasons (based on what does well on her Gallery: 30×20 community lots, newer worlds, builds needing 3 packs or fewer)
+
 ### Neighbourhood banners (research/hood-banners-review.md; pictures in for-jemma/hood-banners/)
 - [ ] [Claude] Bug: the banner zoom is worked out for a banner about 352px tall, but the real ones are 380–686px (the title and text make them taller), so each neighbourhood only fills the middle and its lowest part sits under the fade. Work out the zoom from the banner’s real height and keep the box above the fade (fixes most of the so-so ones: Lykke Center / University of Windenburg, Hopewell Hills, Deadgrass Isle, The Crumbling Isle, Plumbite Cove). Fix when she’s back
 - [ ] [Jemma] None looks worse than the whole map (48 good, 29 so-so). Her taste: put Belomisia Jungle, Campground, Glimmerbrook (loses its sunset) and Conifer Station back to the whole map? They barely zoom (1.01–1.15×)
