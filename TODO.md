@@ -268,6 +268,11 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [ ] [Jemma] 137 shared lots have no pictures anywhere; they’d need screenshots taken in game (biggest gaps: Oasis Springs 14, Britechester 13, Willow Creek 12, San Myshuno 12). Midtown Meadows’ and Rio Verde’s photos are older than their current uploads: retake?
 - [ ] [Jemma] Show each lot’s Gallery upload date on its page? (169 of 226 uploads have it in their Gallery id)
 
+### Weekly Gallery refresh (research/gallery-refresh-health.md)
+- [ ] [Claude] Bug, fix first thing when she’s back: if a new upload is listed but can’t be read, the linking step crashes (KeyError in auto_link), so no lots get linked and the site isn’t rebuilt that Sunday (the numbers are already saved). One-line fix. Sunday 18 Oct should still run fine unless that happens
+- [ ] [Claude] Also: the Gallery search isn’t filtered by creator (someone else’s upload naming her could be counted); files aren’t written safely (a power cut mid-write could break history.csv); deleted uploads are never marked gone; results aren’t committed to git after a run
+- [ ] [Jemma] Optional extras: a notice in the app when the last refresh failed; commit after each refresh. The task only runs while she’s signed in and won’t wake the laptop, but catches up after a missed Sunday
+
 ### Neighbourhood banners (research/hood-banners-review.md; pictures in for-jemma/hood-banners/)
 - [ ] [Claude] Bug: the banner zoom is worked out for a banner about 352px tall, but the real ones are 380–686px (the title and text make them taller), so each neighbourhood only fills the middle and its lowest part sits under the fade. Work out the zoom from the banner’s real height and keep the box above the fade (fixes most of the so-so ones: Lykke Center / University of Windenburg, Hopewell Hills, Deadgrass Isle, The Crumbling Isle, Plumbite Cove). Fix when she’s back
 - [ ] [Jemma] None looks worse than the whole map (48 good, 29 so-so). Her taste: put Belomisia Jungle, Campground, Glimmerbrook (loses its sunset) and Conifer Station back to the whole map? They barely zoom (1.01–1.15×)
