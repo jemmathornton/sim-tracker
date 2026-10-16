@@ -227,6 +227,13 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [ ] [Jemma] Filters (pack, lot type, lot trait, built/shared, empty/lived in): every group always showing (A) or one bar that opens (B)? Above the neighbourhood cards or on an “All lots” page per world? Chips on Stats instead of, or as well as, the “Show” dropdown?
 - [ ] [Claude] Bugs it found: Sequoia Cottage’s card puts the Lovejoys in unit 1 as landlord although they live at 23 Eucalyptus Lane (so 1 free, should be 2); Upland Trailer Park shows Johnny Zest in unit 2 but the plan has him in the 4th trailer
 
+### Townies and NPC roles (research/townies-and-roles.md)
+- [ ] [Jemma] Moonwood Mill Library: settle it as a Library, not a Backroom? As a Backroom it would get no librarian by day and no bartender by night (the game has no Moonwood version of either), and Wolfgang Wilder loses his job
+- [ ] [Jemma] 1 Cobblebottom Street tea room: the Crumplebottoms can’t run it cleanly (their household is hidden, and Agnes loses her village role once in a household). Her own Sim or a Henford household with no village job instead?
+- [ ] [Jemma] In-game settings: Neighbourhood Stories off, or on with “Move In” and “Move Out” unticked for Other Households (so the game doesn’t fill her empty homes)? Raise Maximum Sim Count and heart her planned households (homeless premades are culled first)? Turn off ageing for unplayed Sims (so young role Sims like Eloise Hiddlestix don’t age out)?
+- [ ] [Jemma] Owners who live away from their rental (the Robles at Manzanita Terrace, the Lovejoys at Sequoia Cottage, Rochana/Caberry at Isda Riverfront) lose it if merged into another household elsewhere: merge the other household into theirs instead
+- [ ] [Claude] Correct research/worlds/gibbi-point.md: Laxmi and Raheel Kunal are homeless premade townies
+
 ### Rentals unit by unit (research/rental-units.md)
 - [ ] [Jemma] Suggested fits: Upland units 1–3 the Eclectic Arts, 4 Johnny Zest; Tail’s End 3 (Cat Hangout) Catarina Lynx; Spring Steppes 1 Elderberry, 2 the Pleasant twins; 3 Cobblebottom 3A Cecilia Kang (Cat Hangout), 3B Moody & McMillan (Chef’s Kitchen). OK?
 - [ ] [Jemma] BFF, the Roomies and the Eclectic Arts don’t fit one flat each (the flats are one-bed): split them into separate households, or keep each together?
