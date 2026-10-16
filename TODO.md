@@ -195,6 +195,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 ## 6d. From the 16–17 Oct overnight research (her call unless marked [Claude])
 
 ### Showing Sims (research/sims-display.md)
+- [ ] [Jemma] **Look at the prototype first:** for-jemma/prototypes/sims/index.html (opens from the folder): a Goth household page, a drawn family tree next to a generations list, links between households (lists, a small web, lines on the map), and the relationship tags, with switches for each choice below
 - [ ] [Jemma] How much to track: three levels (basics for every household, profiles for played ones, extras for favourites)?
 - [ ] [Jemma] Household page: Sims as a roster table first with cards below, or a family-portrait screenshot at the top?
 - [ ] [Jemma] Relationship tags: six groups (Family, Romance, Friends, Conflict, Work & school, Dynasty) plus an optional free label? Add or drop any?

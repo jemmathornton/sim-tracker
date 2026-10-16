@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Family Tree Prototype</title>
+<!-- Prototype, 16 Oct: the Goth family line as a drawn tree (7a-A) next to a generations list (7a-B); married-in Sims open their
+     birth family; families across worlds (7c-A vs 7c-B, the Capps and Montys); the world "Families" section (7b-A) and an
+     all-families index (7c-C). Opens straight from the folder. Reads the app's files in site/ and changes nothing. -->
+<base href="../../../site/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="../for-jemma/prototypes/sims/proto.css">
+</head>
+<body>
+<div class="topbar"><button id="menuBtn" aria-label="Open worlds menu" type="button"><span id="menuIco"></span>Worlds</button><b>Jemma's Sim World</b></div>
+<div class="scrim" id="scrim"></div>
+<aside class="side" id="side" aria-label="Worlds">
+  <a class="brand" href="#home"><b>Jemma's <em>Sim World</em></b><small>Every world, rebuilt</small></a>
+  <div class="search"><span class="search-ico" id="searchIco"></span><input id="q" type="search" placeholder="Search…" aria-label="Search the site" autocomplete="off" spellcheck="false"></div>
+  <nav class="nav" id="nav"></nav>
+</aside>
+<main id="main"><div class="wrap" id="view"></div></main>
+
+<script src="js/icons.js"></script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script src="../for-jemma/prototypes/sims/proto-icons.js"></script>
+<script src="../for-jemma/prototypes/sims/proto.js"></script>
+<script>
+protoStart({page: "family-tree.html", title: "Family tree", world: "willow-creek"});
+const WC = worldById("willow-creek");
+const nameLink = id => { const s = SIMS[id]; return s.hh ? `<a href="#${s.hh}">${esc(s.name)}</a>` : `<b>${esc(s.name)}</b>`; };
+
+// 7a-B: the same family as a list
+function generations() {
+  const rows = [
+    ["Generation 1", `${nameLink("cornelia-goth")} <small class="late">(late, born a Crumplebottom)</small>; father not in the game’s tree <small>(Gunther, in earlier games)</small>`],
+    ["Generation 2", `${nameLink("mortimer-goth")} <small>(dynasty head)</small> &amp; ${nameLink("bella-goth")} <small>(spouse, born a Bachelor)</small>`],
+    ["Generation 3", `${nameLink("cassandra-goth")} <small>(heir)</small>, ${nameLink("alexander-goth")}`],
+  ];
+  return `<dl class="gens" style="--h:${WC.color}">${rows.map(([t, d]) => `<div><dt>${t}</dt><dd>${d}</dd></div>`).join("")}</dl>
+    <p class="say" style="margin:12px 0 0">Mother’s family: Simon and Prudence Crumplebottom <small>(late)</small>; Agnes Crumplebottom, Mortimer’s aunt, in Henford-on-Bagley.</p>`;
+}
+
+// a tiny tree preview for the world's Families cards: a dot per Sim, couples joined, children under the first couple above
+function miniTree(rows, colour) {
+  if (!rows.length) return `<svg class="mini-tree" viewBox="0 0 240 72" aria-hidden="true"><text x="120" y="40" text-anchor="middle" font-size="12" fill="var(--muted)" font-family="var(--body)">Sims not added yet</text></svg>`;
+  const ys = rows.map((_, r) => rows.length === 1 ? 36 : 14 + r * (44 / (rows.length - 1)));
+  let s = "", above = null;
+  rows.forEach((units, r) => {
+    const n = units.reduce((a, b) => a + b, 0), w = (n - 1) * 22 + (units.length - 1) * 12; let x = 120 - w / 2; const firstUnit = [];
+    units.forEach((u, ui) => { const xs = []; for (let k = 0; k < u; k++) { xs.push(x); x += 22; } x += 12 - 22 + 22;
+      if (u === 2) s += `<line x1="${xs[0]}" y1="${ys[r]}" x2="${xs[1]}" y2="${ys[r]}" stroke="${colour}" stroke-width="2"/>`;
+      if (above) xs.forEach(cx => s += `<path d="M${above} ${ys[r - 1]} V${(ys[r - 1] + ys[r]) / 2} H${cx} V${ys[r]}" fill="none" stroke="${colour}" stroke-width="1.2" opacity=".6"/>`);
+      xs.forEach(cx => s += `<circle cx="${cx}" cy="${ys[r]}" r="5" fill="${colour}"/>`);
+      if (ui === 0) firstUnit.push(...xs); });
+    above = (firstUnit[0] + firstUnit[firstUnit.length - 1]) / 2;
+  });
+  return `<svg class="mini-tree" viewBox="0 0 240 72" aria-hidden="true">${s}</svg>`;
+}
+
+function page() {
+  let h = protoBar("Family tree", "Options shown: 7a-A drawn tree next to 7a-B generations list; married-in chips open the birth family; 7c-A one tree across worlds vs 7c-B per world; 7b-A the world’s Families section; 7c-C an all-families index.");
+  h += `<section class="hero small" style="--c:${WC.color}"><div class="kicker"><i></i><span class="label">Willow Creek · family line</span></div><h1 style="margin-top:14px">The <em>Goths</em></h1>
+    <p>EA’s Goths as the game draws them since patch 193: Mortimer’s late mother Cornelia and her Crumplebottom parents are in the game’s tree; his father isn’t.</p></section>`;
+  // 7a: A and B side by side
+  h += `<div class="opt-head"><span class="no">7a</span><h2>Drawn tree or a list</h2></div>
+    <div class="pair" style="grid-template-columns:minmax(0,1.6fr) minmax(0,1fr)">
+      <div class="pane"><div class="label"><span class="no">A</span><b>Drawn top-down tree</b><span class="opt-head" style="all:unset"><span class="rec" style="font-size:10px;font-weight:800;letter-spacing:.1em;color:var(--done);border:1.5px solid color-mix(in srgb,var(--done) 50%,var(--line));padding:2px 7px;border-radius:99px">Suggested</span></span></div>
+        <div style="overflow-x:auto">${drawTree(TREES.goth, {line: "goth", cw: 168})}</div>${treeKey()}
+        <div class="verdict"><span>The way Sims trees are usually drawn; who’s whose child is clear</span><span>About 5 cards fit across; a wider family scrolls inside its box, not the page</span><span class="minus">Needs every Sim’s parents noted</span></div></div>
+      <div class="pane"><div class="label"><span class="no">B</span><b>Generations list</b></div>${generations()}
+        <div class="verdict"><span>Quick; nothing to draw</span><span class="minus">In a big family it doesn’t show whose children are whose</span></div></div>
+    </div>`;
+  // the birth family a chip opens
+  h += `<div class="tree-panel" id="panel"><div class="tree-panel-head"><span class="label">Opened from Cornelia’s chip</span><h3>The <em>Crumplebottoms</em></h3><button type="button" data-scroll="top">${ic("arrow-left")}Back to the Goths</button></div>
+    <p class="say" style="margin-top:0">Married-in Sims carry a chip (“born a Crumplebottom”) that opens their own family, so separate family lines join up without one giant chart. Agnes’s chip is Henford-on-Bagley’s colour: she lives there.</p>
+    <div class="tree-box">${drawTree(TREES.crumplebottom, {line: "crumplebottom", cw: 160})}</div></div>`;
+  // 7c: across worlds
+  const onlyOnd = TREES.capp.filter(id => !["romeo-monty", "dante-monty"].includes(id));
+  h += `<div class="opt-head"><span class="no">7c</span><h2>Families that move between worlds</h2></div>
+    <p class="say">Your test case: the Capps stay at Bellacorde Palace in Ondarion; Romeo, Juliette (born a Capp) and Dante move to Rifugio dei Pirati in Tartosa. Chips carry each world’s colour.</p>
+    <div class="pane" id="capp-tree"><div class="label"><span class="no">A</span><b>One tree per family, whatever the world</b><span class="rec" style="font-size:10px;font-weight:800;letter-spacing:.1em;color:var(--done);border:1.5px solid color-mix(in srgb,var(--done) 50%,var(--line));padding:2px 7px;border-radius:99px">Suggested</span></div>
+      <div style="overflow-x:auto">${drawTree(TREES.capp, {line: "capp", compact: true, cw: 134, ch: 124})}</div>
+      <p class="say" style="margin:10px 0 0">Badges are the game’s (Juliette heads the Monty dynasty, Virgilio is the Capp outcast). In your story Romeo and Juliette are outcasts of both: that would go in “In my save”.</p>
+      <div class="verdict"><span>No duplicates: Juliette is drawn once, with her Tartosa chip</span><span class="minus">Trees become save-wide pages (a new kind of page, reached from any of the family’s households)</span></div></div>
+    <div class="pane" style="margin-top:18px"><div class="label"><span class="no">B</span><b>Per world, with “moved” stubs</b></div>
+      <span class="label" style="display:block;margin:4px 0 8px">Ondarion</span>
+      <div style="overflow-x:auto">${drawTree(onlyOnd, {line: "capp", compact: true, cw: 134, ch: 124, stubs: {"juliette-monty": `<button type="button" class="bornchip" data-scroll="tartosa">moved to Tartosa ${ic("chevron-right")}</button>`}})}</div>
+      <span class="label" id="tartosa" style="display:block;margin:18px 0 8px;scroll-margin-top:80px">Tartosa</span>
+      <div style="overflow-x:auto">${drawTree(["romeo-monty", "juliette-monty", "dante-monty"], {line: "monty", compact: true, cw: 134, ch: 124})}</div>
+      <div class="verdict"><span>Each world keeps its own Sims</span><span class="minus">The family is in pieces: Juliette appears twice, once as a stub</span></div></div>`;
+  // 7b-A: the world's Families section, and 7c-C: all families
+  const lines = [
+    {name: "Goth", rows: [[2], [2], [1, 1]], txt: "5 Sims · 3 generations", sub: "Ophelia Villa · and the Crumplebottoms in Henford-on-Bagley", href: ""},
+    {name: "Pancakes", rows: [[2]], txt: "2 Sims · 1 generation", sub: "Rindle Rose · basics only", href: "#h-willow-creek--pancakes"},
+    {name: "Davidson", rows: [], txt: "2 households", sub: "Streamlet Single and Garden Essence", href: "#h-willow-creek--davidson-1"},
+  ];
+  h += `<div class="opt-head"><span class="no">7b</span><h2>Finding the trees</h2><span class="rec">A suggested</span></div>
+    <p class="say">On each world’s households page, a <b>Families</b> section: every family line with a tiny preview and a count, opening its tree. (Davidson has no Sims typed in yet.)</p>
+    <section class="hood" style="--h:${WC.color};margin-top:18px"><div class="hood-head"><span class="label">Willow Creek</span><div><h2>Families</h2></div><span class="count">3 family lines</span></div>
+    <div class="fam-lines">${lines.map(l => `<a class="fam-line" style="--h:${WC.color}" href="${l.href || PROTO + "family-tree.html"}">${miniTree(l.rows, WC.color)}<b>${esc(l.name)}</b><small>${esc(l.txt)}</small><small>${esc(l.sub)}</small></a>`).join("")}</div></section>
+    <div class="opt-head" style="margin-top:48px"><span class="no">7c-C</span><h2>All families, save-wide</h2></div>
+    <p class="say">A “Families” link in the sidebar (or on the home page) would open a list like this, with the worlds each family lives in.</p>
+    <ul class="fam-index">${[
+      ["Goth", ["willow-creek"], "5 Sims · 3 generations"],
+      ["Crumplebottom", ["henford-on-bagley", "willow-creek"], "6 Sims · Cornelia married into the Goths"],
+      ["Capp", ["ondarion", "tartosa"], "11 Sims · 4 generations"],
+      ["Monty", ["tartosa", "ondarion"], "3 Sims · how the recreated Sims 2 Montys join is your open question"],
+      ["Landgraab", ["oasis-springs", "del-sol-valley"], "Johnny Zest lives in Del Sol Valley"],
+      ["Pancakes", ["willow-creek"], "2 Sims · basics only"],
+    ].map(([n, ws, t]) => `<li><b>${esc(n)}</b>${ws.map(id => { const w = worldById(id); return `<span class="hhchip" style="--w:${wColour(w)}">${esc(w.name)}${w.owned ? "" : " (not owned)"}</span>`; }).join("")}<span class="src">${esc(t)}</span></li>`).join("")}</ul>`;
+  h += `<footer><span>Prototype only: nothing on the site has changed. Sims are EA’s versions from The Sims Wiki; Tartosa moves are your 16 Oct plan.</span><span>Icons by Lucide</span></footer>`;
+  return h;
+}
+const v = document.getElementById("view"); v.innerHTML = page();
+// chips: open (scroll to) another family's tree on this page
+document.addEventListener("click", e => {
+  const t = e.target.closest("[data-tree]"), s = e.target.closest("[data-scroll]");
+  const go = id => document.getElementById(id)?.scrollIntoView({behavior: "smooth", block: "start"});
+  if (t) { const f = t.dataset.tree; go(f === "crumplebottom" ? "panel" : f === "capp" ? "capp-tree" : "view"); flash(f === "crumplebottom" ? "panel" : f === "capp" ? "capp-tree" : null); }
+  if (s) { s.dataset.scroll === "top" ? window.scrollTo({top: 0, behavior: "smooth"}) : go(s.dataset.scroll); }
+});
+function flash(id) { const el = id && document.getElementById(id); if (!el) return; el.style.transition = "box-shadow .3s"; el.style.boxShadow = "0 0 0 4px color-mix(in srgb,var(--brass) 45%,transparent)"; setTimeout(() => el.style.boxShadow = "", 1200); }
+const openTree = new URLSearchParams(location.search).get("open");
+if (openTree === "crumplebottom") setTimeout(() => { document.getElementById("panel").scrollIntoView({block: "start"}); flash("panel"); }, 60);
+</script>
+</body>
+</html>
