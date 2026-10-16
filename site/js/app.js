@@ -240,10 +240,19 @@ function rentalCard(l){
     <div class="meta"><span>${ic("home")}<b>${lived} of ${units.length}</b> units lived in</span></div></div>`;
 }
 
+// layout "u": every unit its own card, with its own picture (photos named flat-N or unit-N) or a placeholder
+const unitPhotos = l => { const m = {}; l.photos.forEach(p => { const r = /(?:flat|unit)[-_ ]?(\d+)/i.exec(p.thumb || p.src || ""); if (r) (m[+r[1]] ||= []).push(p); }); return m; };
+function unitCards(l){
+  const units = rentalUnits(l), ph = unitPhotos(l), word = /flat/i.test(Object.values(l.photos).map(p => p.thumb).join(" ")) ? "Flat" : "Unit";
+  return units.map((u, i) => { const p = (ph[i + 1] || [])[0];
+    return `<a class="listing" href="#${u ? u.hh.id : l.id}" style="--h:${l.hood.color}"><div class="photo ${p?"shot":""}" ${p?`style="--img:url('${p.thumb}')"`:""}>${p ? "" : `<span class="apt-art">${ic("home")}</span>`}<span class="type">${word} ${i + 1}</span>${p ? "" : `<span class="size">No photo yet</span>`}</div>
+      <h3>${esc(l.name)} · ${word.toLowerCase()} ${i + 1}</h3><div class="meta"><span>${ic("users")}${u ? `<b>${esc(u.hh.name)}</b>${u.role ? ` (${u.role})` : ""}` : "Empty"}</span></div></a>`; }).join("");
+}
+
 function rvSwitch(show){
   document.getElementById("rv-switch")?.remove(); if (!show) return;
   const d = document.createElement("div"); d.id = "rv-switch"; d.className = "rv-switch";
-  d.innerHTML = `<b>Rental layout (trial)</b><div>${[["", "Today"], ["1", "1 · units listed"], ["2", "2 · badge + unit count"]].map(([k, t]) => `<button type="button" data-rv="${k}" class="${RV === k ? "on" : ""}">${t}</button>`).join("")}</div>`;
+  d.innerHTML = `<b>Rental layout (trial)</b><div>${[["", "Today"], ["1", "1 · units listed"], ["2", "2 · badge + unit count"], ["u", "3 · each unit its own card"]].map(([k, t]) => `<button type="button" data-rv="${k}" class="${RV === k ? "on" : ""}">${t}</button>`).join("")}</div>`;
   document.body.appendChild(d);
 }
 document.addEventListener("click", e => { const b = e.target.closest("[data-rv]"); if (!b) return; RV = b.dataset.rv; try { localStorage.setItem(RV_KEY, RV); } catch (err) {} const y = scrollY; route(); scrollTo(0, y); });
@@ -263,7 +272,7 @@ function buildingCard(b){
     <div class="meta"><span>${ic("hammer")}<b>${built} of ${b.units.length}</b> built</span></div></div>`;
 }
 // units of a building sit together under a small heading, each keeping its own card and picture
-const hoodItems = x => { const seen = new Set(); return x.lots.flatMap(l => { if (!l.building) return [rvOf(l) === "1" && unitCount(l) ? rentalCard(l) : listing(l)]; const b = l.building; if (seen.has(b)) return []; seen.add(b);
+const hoodItems = x => { const seen = new Set(); return x.lots.flatMap(l => { if (!l.building) return [rvOf(l) === "1" && unitCount(l) ? rentalCard(l) : rvOf(l) === "u" && unitCount(l) ? `<div class="bgroup"><div class="bgroup-head">${ic("home")}<h3><a href="#${l.id}">${esc(l.name)}</a></h3><span>Rental · ${unitCount(l)} units · ${rentalUnits(l).filter(Boolean).length} lived in</span></div><div class="listings">${unitCards(l)}</div></div>` : listing(l)]; const b = l.building; if (seen.has(b)) return []; seen.add(b);
   const built = b.units.filter(u => u.built === true).length;
   return [`<div class="bgroup"><div class="bgroup-head">${ic("home")}<h3>${esc(b.name)}</h3><span>${b.units.length} apartments · ${built} built</span></div><div class="listings">${b.units.map(listing).join("")}</div></div>`]; }); };
 function mapHero(w, kicker, title, text, figures, chapters, small){
@@ -406,6 +415,7 @@ function lot(l){
       <div class="lives"><div class="lives-card">${hhListing(l.hh)}</div>
       <div>${l.hh.sims.length ? `<span class="label">The Sims</span><ul class="sim-list">${l.hh.sims.map(sm => `<li><a href="#${l.hh.id}" data-sim="${sm.id}"><span class="mono">${initial(sm.name)}</span><span><b>${esc(sm.name)}</b><small>${esc([sm.age, sm.aspiration].filter(Boolean).join(" · "))}</small></span></a></li>`).join("")}</ul>` : `<div class="empty" style="margin-top:0">${ic("sim")}No Sims added for the ${esc(l.hh.name)} household yet.</div>`}
       <a class="more" href="#${l.hh.id}">Open the ${esc(l.hh.name)} household ${ic("arrow")}</a></div></div></section>` : ""}
+    ${rvOf(l) === "u" && unitCount(l) ? `<section class="block" style="--h:${hc}"><div class="block-head"><h2>The <em>units</em></h2><span class="count">${unitCount(l)} units</span></div><div class="listings">${unitCards(l)}</div></section>` : ""}
     <section class="block" style="--h:${hc}"><div class="block-head"><h2>Build <em>notes</em></h2></div>
       ${l.gallery ? `<div class="notes-wrap"><div class="notes-text">${l.gallery.title !== l.name ? `<span class="label">Uploaded as “${esc(l.gallery.title)}”</span>` : ""}${l.gallery.description ? `<p class="lede">${esc(l.gallery.description)}</p>` : ""}
           ${l.gallery.tags?.length ? `<div class="tags">${l.gallery.tags.map(t => `<span>#${esc(t)}</span>`).join("")}</div>` : ""}

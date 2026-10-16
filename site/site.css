@@ -498,3 +498,4 @@ footer .as-of{flex-basis:100%}
 .rv-switch div{display:flex;flex-wrap:wrap;gap:6px}
 .rv-switch button{border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:5px 11px;cursor:pointer;font-weight:600;font-size:12.5px}
 .rv-switch button.on{background:var(--brass);border-color:var(--brass);color:#fff}
+.bgroup-head h3 a{text-decoration:none;color:inherit}
