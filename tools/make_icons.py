@@ -3,7 +3,7 @@ Chosen 16 Oct: the old icon (Lucide's house on the sidebar's deep purple) looked
 
     python tools/make_icons.py
 
-Writes site/icon.svg (browser tab), site/icon.png (app window) and site/icon.ico (Windows shortcut).
+Writes site/icon.svg, site/icon.png and icon-<size>.png (browser tab and the app window's taskbar icon) and site/icon.ico (Windows shortcut).
 Every size is drawn on its own (at 4x, then scaled down), so the small ones stay crisp.
 """
 import os, sys
@@ -52,6 +52,9 @@ def draw(px):
 if __name__ == "__main__":
     with open(os.path.join(SITE, "icon.svg"), "w", encoding="utf-8", newline="\n") as f: f.write(SVG)
     draw(512).save(os.path.join(SITE, "icon.png"))
+    # Chrome's app window takes its taskbar icon from the page's icons: give it each size drawn properly, so it never
+    # has to stretch a small one (that's what made the taskbar icon blurry, 16 Oct)
+    for s in (16, 32, 48, 64, 96, 192): draw(s).save(os.path.join(SITE, f"icon-{s}.png"))
     sizes = [16, 24, 32, 48, 64, 128, 256]
     big = draw(256); big.save(os.path.join(SITE, "icon.ico"), sizes=[(s, s) for s in sizes], append_images=[draw(s) for s in sizes[:-1]])
     print("wrote site/icon.svg, icon.png, icon.ico")
