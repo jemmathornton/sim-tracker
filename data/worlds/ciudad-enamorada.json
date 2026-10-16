@@ -29,8 +29,8 @@
    "lots": [
     {"lot": "Calle de la Promesa", "myName": null, "type": "Residential", "size": "30x30", "residents": "López", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Mansión de la Pasión", "myName": null, "type": "Residential", "size": "30x20", "residents": "Empty", "built": false, "shared": false, "screenshots": false, "simsMade": false},
-    {"lot": "Casita del Amor", "myName": null, "type": "Residential", "size": "30x20", "residents": "Empty", "built": false, "shared": false, "screenshots": false, "simsMade": false},
-    {"lot": "Caminito del Deseo", "myName": null, "type": null, "size": "50x40", "residents": null, "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Casita del Amor", "myName": null, "type": "Recreation Center", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "Caminito del Deseo", "myName": null, "type": "Wedding Venue", "size": "50x40", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Laguna del Abrazo", "myName": null, "type": "Lounge", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ]
   }
