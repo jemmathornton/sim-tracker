@@ -205,6 +205,15 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [ ] [Jemma] EA’s families vs hers: an origin tag, plus “In the game / In my save” for premade families?
 - [ ] [Jemma] Story questions: how is Romeo related to the recreated Sims 2 Montys, and who heads each dynasty in her save?
 
+### Where Sims could come from (research/sims-sources.md)
+- [ ] [Jemma] Which save is the Sims source: an exception to the Building rule for households in “Building #2” (like the rental-units one), or a separate save kept for Sims (what would it be called)? Her other 30 saves hold everything but are old (newest “Season Events”, 15 Mar 2026) and don’t have her rebuilt lots
+- [ ] [Jemma] EA’s families: fill them in automatically from the game’s own files (197 premade households, their family links, and 348 starting friendships between households), or only the ones she has played?
+- [ ] [Jemma] Show EA’s starting friendships, or only relationships from her own save?
+- [ ] [Jemma] Her Library (122 households, 56 her own uploads): use it as a top-up (only her own, or Maxis and others too), or not at all?
+- [ ] [Jemma] Typing Sims in: chat only, or a Sims tab in World Plans?
+- [ ] [Jemma] Sim pictures: decode the Library portraits for Sim cards, or stick to her screenshots and monograms?
+- [ ] [Claude] When Sims go in: key each Sim by the game’s sim id, not its name (two Sims can share a name)
+
 ### Blurry taskbar icon (research/taskbar-icon.md)
 - [ ] [Jemma] Cause found: a plain Chrome app window takes its taskbar icon from the page’s 16px icon and Windows stretches it (her PC runs at 200% scaling, so the taskbar wants 48px). A restart won’t fix it. Fix: make it an installed Chrome app served from http://127.0.0.1 (a small local server started at sign-in, a web manifest; she clicks Install once). Cheaper, untested: pin a shortcut with Chrome’s own taskbar id. Her call
 
