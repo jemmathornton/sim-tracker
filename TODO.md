@@ -146,7 +146,7 @@ From the overnight check of the plan against the game's own files and her save, 
 From the data check-up, 15 Oct (research/data-check-up.md; sizes, uploads and shared ticks all agree):
 - [x] Ticked "Screenshots" for the 7 lots with pictures (15 Oct, app and spreadsheet)
 - [x] Von-Windenburg Estate shows the 38 pictures from the "Von-Windenburg Castle" Builds folder (15 Oct, her choice: the castle is the Estate's build)
-- [ ] [Jemma] Bailey-Moon Manor and Izakaya Hanamigawa Koen are ticked for screenshots but have no Builds folder (16 Oct: the ticks may be wrong; she’ll check later)
+- [ ] [Jemma] Bailey-Moon Manor and Izakaya Hanamigawa Koen are ticked for screenshots but have no Builds folder (16 Oct: the ticks may be wrong; she’ll check later. 17 Oct: the ticks look right, her Screenshots folder has sets for both, see §6d)
 - [x] Game descriptions added for Acquisition Butte, Ridgeline Drive, Ohan'ali Town, Lani St. Taz and Magnolia Promenade (15 Oct). Still none (no game text): Desert Bloom Park, Campground, Glimmerbrook, the Secret/Special Lots groups
 - [x] Her "My Name" now matches her Gallery titles on 11 lots (15 Oct, plan and spreadsheet): Café Llama, Foxbury Court, The Royal Crown, Von-Windenburg Castle, Parkside Playground, Stargazer, Vista Quarry Villa, Revive and Thrive, Brooks Bridge, Desert Bloom, Cookies 'n' Cream
 - [ ] [Jemma] Re-upload Mossy Lane to the Gallery as University Housing (its only upload says Residential; Spring Steppes is the one with both a University Housing and a rental upload). 16 Oct: she'll do it later
@@ -262,6 +262,11 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [ ] [Jemma] Caldera Camp: add Geothermal and Natural Well? Key Point: Off-the-Grid only works if it’s a home, Tiny Home or Generic (not a Vacation Rental)
 - [ ] [Jemma] 88 shared lots have fewer than 3 traits: the note has ideas for each free slot, for when she’s in game
 - [x] Corrected research/undecided-lots.md (Off-the-Grid isn’t allowed on a Vacation Rental) and research/lot-types-reference.md (Maintenance Troubles isn’t allowed on rentals) (17 Oct)
+
+### Screenshots (research/screenshot-coverage.md)
+- [ ] [Jemma] Her Sims 4 Screenshots folder probably has pictures for 15 more lots, found by matching picture times to Gallery upload times (she takes them minutes before uploading). Strong: Bailey-Moon Manor and Izakaya Hanamigawa Koen (so their ticks are right), 122 Hakim House, Valley Views, Town Square Stores, Oak Alcove, Sultry Springside. Likely: Granada Place, Stonestreet Apartments 3 and 4, Museum of the Arts, Newcrest Community Space, Hindquarter Hideaway, The Forest Tavern, Twin Oracle Point. With her OK: copy each set into a new Builds folder (her folder, so she does it or says yes), name the pictures, add them to the site
+- [ ] [Jemma] 137 shared lots have no pictures anywhere; they’d need screenshots taken in game (biggest gaps: Oasis Springs 14, Britechester 13, Willow Creek 12, San Myshuno 12). Midtown Meadows’ and Rio Verde’s photos are older than their current uploads: retake?
+- [ ] [Jemma] Show each lot’s Gallery upload date on its page? (169 of 226 uploads have it in their Gallery id)
 
 ### Neighbourhood banners (research/hood-banners-review.md; pictures in for-jemma/hood-banners/)
 - [ ] [Claude] Bug: the banner zoom is worked out for a banner about 352px tall, but the real ones are 380–686px (the title and text make them taller), so each neighbourhood only fills the middle and its lowest part sits under the fade. Work out the zoom from the banner’s real height and keep the box above the fade (fixes most of the so-so ones: Lykke Center / University of Windenburg, Hopewell Hills, Deadgrass Isle, The Crumbling Isle, Plumbite Cove). Fix when she’s back
