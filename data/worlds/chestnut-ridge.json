@@ -13,7 +13,7 @@
    "mapBox": [0.37, 0.33, 0.68, 0.6],
    "lots": [
     {"lot": "Champion's Grove", "myName": "Champion's Grove", "type": "Residential", "size": "30x20", "residents": "Sienna & Flapjack", "built": false, "shared": false, "screenshots": false, "simsMade": false},
-    {"lot": "The Cozy Corner House", "myName": null, "type": "Library", "size": "20x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "The Cozy Corner House", "myName": null, "type": "Custom Venue (Community Farm)", "size": "20x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "The Oak Barrel", "myName": "The Oak Barrel", "type": "Restaurant", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["1Q66JxbkTmSxL/yKFObuBg=="], "traits": ["Convivial", "Party Place", "Sunny Aspect"]},
     {"lot": "The Rusty Horseshoe", "myName": "The Rusty Horseshoe", "type": "Nightclub", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Duke's Hall", "myName": "Appaloosa Stables", "type": "Residential", "size": "40x30", "residents": "Horse Elder Couple", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["W2doWBlGRk+vBVPnU2Y6aQ=="], "traits": ["Gnomes", "Homey"], "challenges": ["Wild Prairie Grass"]}
