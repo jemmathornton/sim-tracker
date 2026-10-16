@@ -1641,9 +1641,9 @@
      {
       "Lot Name": "Straud Mansion",
       "My Name": null,
-      "Lot Type": null,
+      "Lot Type": "Residential",
       "Lot Size": "40x30",
-      "Residents/Owners": null,
+      "Residents/Owners": "Straud",
       "Built": false,
       "Shared": false,
       "Screenshots": false,
@@ -1652,9 +1652,9 @@
      {
       "Lot Name": "Wolfsbane Manor",
       "My Name": null,
-      "Lot Type": null,
+      "Lot Type": "Residential",
       "Lot Size": "30x30",
-      "Residents/Owners": null,
+      "Residents/Owners": "Vatore",
       "Built": false,
       "Shared": false,
       "Screenshots": false,
@@ -1663,20 +1663,20 @@
      {
       "Lot Name": "Garliclauter Place",
       "My Name": null,
-      "Lot Type": null,
+      "Lot Type": "Backroom",
       "Lot Size": "30x20",
-      "Residents/Owners": null,
+      "Residents/Owners": "N/A",
       "Built": false,
       "Shared": false,
       "Screenshots": false,
-      "Sims Made": false
+      "Sims Made": "N/A"
      },
      {
       "Lot Name": "Widowshild Townhome",
       "My Name": null,
-      "Lot Type": null,
+      "Lot Type": "Residential",
       "Lot Size": "30x20",
-      "Residents/Owners": null,
+      "Residents/Owners": "? (new vampires of her own, maybe)",
       "Built": false,
       "Shared": false,
       "Screenshots": false,
@@ -1685,13 +1685,13 @@
      {
       "Lot Name": "Fledermaus Bend",
       "My Name": null,
-      "Lot Type": null,
+      "Lot Type": "Cemetery",
       "Lot Size": "30x30",
-      "Residents/Owners": null,
+      "Residents/Owners": "N/A",
       "Built": false,
       "Shared": false,
       "Screenshots": false,
-      "Sims Made": false
+      "Sims Made": "N/A"
      }
     ]
    }
@@ -3314,7 +3314,7 @@
      {
       "Lot Name": "Baia dell'Amore",
       "My Name": "Baia dell'Amore",
-      "Lot Type": "Wedding Venue",
+      "Lot Type": "Beach",
       "Lot Size": "40x20",
       "Residents/Owners": "N/A",
       "Built": false,
@@ -3325,7 +3325,7 @@
      {
       "Lot Name": "Villa Vigna",
       "My Name": "?",
-      "Lot Type": "Lounge/Restaurant?",
+      "Lot Type": "Restaurant",
       "Lot Size": "30x20",
       "Residents/Owners": "N/A",
       "Built": false,
@@ -3336,13 +3336,13 @@
      {
       "Lot Name": "Celebrazioni d'Amore",
       "My Name": "?",
-      "Lot Type": "Residential",
+      "Lot Type": "Lounge",
       "Lot Size": "50x40",
-      "Residents/Owners": "? (Capp/Monty)",
+      "Residents/Owners": "N/A",
       "Built": false,
       "Shared": false,
       "Screenshots": false,
-      "Sims Made": false
+      "Sims Made": "N/A"
      }
     ]
    },
@@ -3363,35 +3363,35 @@
      {
       "Lot Name": "Rifugio dei Pirati",
       "My Name": "Rifugio dei Pirati",
-      "Lot Type": "?",
-      "Lot Size": "30x20",
-      "Residents/Owners": "?",
-      "Built": false,
-      "Shared": false,
-      "Screenshots": false,
-      "Sims Made": "N/A"
-     },
-     {
-      "Lot Name": "Via Romanza",
-      "My Name": "Via Romanza",
-      "Lot Type": "?",
-      "Lot Size": "30x30",
-      "Residents/Owners": "?",
-      "Built": false,
-      "Shared": false,
-      "Screenshots": false,
-      "Sims Made": "N/A"
-     },
-     {
-      "Lot Name": "La Coppia Serena",
-      "My Name": "La Coppia Serena",
       "Lot Type": "Residential",
-      "Lot Size": "50x40",
-      "Residents/Owners": "? (Capp/Monty)",
+      "Lot Size": "30x20",
+      "Residents/Owners": "Monty (Romeo, Juliette and Dante, from Ondarion)",
       "Built": false,
       "Shared": false,
       "Screenshots": false,
       "Sims Made": false
+     },
+     {
+      "Lot Name": "Via Romanza",
+      "My Name": "Via Romanza",
+      "Lot Type": "Residential",
+      "Lot Size": "30x30",
+      "Residents/Owners": "Soto",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": false
+     },
+     {
+      "Lot Name": "La Coppia Serena",
+      "My Name": "La Coppia Serena",
+      "Lot Type": "Wedding Venue",
+      "Lot Size": "50x40",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
      }
     ]
    }
@@ -3420,7 +3420,7 @@
       "My Name": "Full Moon Shack",
       "Lot Type": "Residential",
       "Lot Size": "20x15",
-      "Residents/Owners": "Rory & Friend?",
+      "Residents/Owners": "Rory & Friend (a new Sim of her own)",
       "Built": false,
       "Shared": false,
       "Screenshots": false,
@@ -3428,20 +3428,9 @@
      },
      {
       "Lot Name": "Prowler's Patch",
-      "My Name": "Moonwood Mill Library",
-      "Lot Type": "Library",
-      "Lot Size": "30x30",
-      "Residents/Owners": "N/A",
-      "Built": false,
-      "Shared": false,
-      "Screenshots": false,
-      "Sims Made": "N/A"
-     },
-     {
-      "Lot Name": "The Grimtooth Bar & Bunker",
       "My Name": "New Moon Cabins",
-      "Lot Type": "Residential",
-      "Lot Size": "50x40",
+      "Lot Type": "Residential Rental",
+      "Lot Size": "30x30",
       "Residents/Owners": "Werewolves in Training",
       "Built": false,
       "Shared": false,
@@ -3449,9 +3438,20 @@
       "Sims Made": false
      },
      {
-      "Lot Name": "The Moonwood Mill Library",
+      "Lot Name": "The Grimtooth Bar & Bunker",
       "My Name": "Grimtooth Bar",
       "Lot Type": "Bar",
+      "Lot Size": "50x40",
+      "Residents/Owners": "N/A",
+      "Built": false,
+      "Shared": false,
+      "Screenshots": false,
+      "Sims Made": "N/A"
+     },
+     {
+      "Lot Name": "The Moonwood Mill Library",
+      "My Name": "Moonwood Mill Library",
+      "Lot Type": "Library/Backroom",
       "Lot Size": "40x30",
       "Residents/Owners": "N/A",
       "Built": false,
@@ -3708,7 +3708,7 @@
      {
       "Lot Name": "Celebration Center",
       "My Name": "Celebration Center",
-      "Lot Type": "Wedding Venue/Cemetery",
+      "Lot Type": "Wedding Venue",
       "Lot Size": "64x64",
       "Residents/Owners": "N/A",
       "Built": false,
@@ -4069,13 +4069,13 @@
      {
       "Lot Name": "Torres Amanecer",
       "My Name": null,
-      "Lot Type": "Residential",
+      "Lot Type": "Restaurant",
       "Lot Size": "20x20",
-      "Residents/Owners": "Empty",
+      "Residents/Owners": "N/A",
       "Built": false,
       "Shared": false,
       "Screenshots": false,
-      "Sims Made": false
+      "Sims Made": "N/A"
      },
      {
       "Lot Name": "Mirador del Amor",
@@ -4118,9 +4118,9 @@
      {
       "Lot Name": "Calle del Ensueño",
       "My Name": null,
-      "Lot Type": null,
+      "Lot Type": "Community Market",
       "Lot Size": "50x40",
-      "Residents/Owners": null,
+      "Residents/Owners": "N/A",
       "Built": false,
       "Shared": false,
       "Screenshots": false,
@@ -4178,29 +4178,29 @@
      {
       "Lot Name": "Casita del Amor",
       "My Name": null,
-      "Lot Type": "Residential",
+      "Lot Type": "Recreation Center",
       "Lot Size": "30x20",
-      "Residents/Owners": "Empty",
+      "Residents/Owners": "N/A",
       "Built": false,
       "Shared": false,
       "Screenshots": false,
-      "Sims Made": false
+      "Sims Made": "N/A"
      },
      {
       "Lot Name": "Caminito del Deseo",
       "My Name": null,
-      "Lot Type": null,
+      "Lot Type": "Wedding Venue",
       "Lot Size": "50x40",
-      "Residents/Owners": null,
+      "Residents/Owners": "N/A",
       "Built": false,
       "Shared": false,
       "Screenshots": false,
-      "Sims Made": false
+      "Sims Made": "N/A"
      },
      {
       "Lot Name": "Laguna del Abrazo",
       "My Name": null,
-      "Lot Type": "Lounge",
+      "Lot Type": "Karaoke Bar",
       "Lot Size": "30x20",
       "Residents/Owners": "N/A",
       "Built": false,
@@ -4550,9 +4550,9 @@
      {
       "Lot Name": "8 Gnome Coast Street",
       "My Name": null,
-      "Lot Type": null,
+      "Lot Type": "Residential",
       "Lot Size": "30x20",
-      "Residents/Owners": null,
+      "Residents/Owners": "Nhoam",
       "Built": false,
       "Shared": false,
       "Screenshots": false,
@@ -4561,20 +4561,20 @@
      {
       "Lot Name": "1 Mari Shores Road",
       "My Name": null,
-      "Lot Type": null,
+      "Lot Type": "Café",
       "Lot Size": "30x20",
-      "Residents/Owners": null,
+      "Residents/Owners": "N/A",
       "Built": false,
       "Shared": false,
       "Screenshots": false,
-      "Sims Made": false
+      "Sims Made": "N/A"
      },
      {
       "Lot Name": "42 Normfair Drive",
       "My Name": null,
-      "Lot Type": null,
+      "Lot Type": "Residential",
       "Lot Size": "40x30",
-      "Residents/Owners": null,
+      "Residents/Owners": "Ladipo",
       "Built": false,
       "Shared": false,
       "Screenshots": false,
@@ -4583,13 +4583,13 @@
      {
       "Lot Name": "The GNOM Exhibit",
       "My Name": null,
-      "Lot Type": null,
+      "Lot Type": "Museum",
       "Lot Size": "40x30",
-      "Residents/Owners": null,
+      "Residents/Owners": "N/A",
       "Built": false,
       "Shared": false,
       "Screenshots": false,
-      "Sims Made": false
+      "Sims Made": "N/A"
      }
     ]
    },
@@ -4599,53 +4599,53 @@
      {
       "Lot Name": "Fern & Frond Wading Pond",
       "My Name": null,
-      "Lot Type": null,
+      "Lot Type": "Community Market",
       "Lot Size": "64x64",
-      "Residents/Owners": null,
+      "Residents/Owners": "N/A",
       "Built": false,
       "Shared": false,
       "Screenshots": false,
-      "Sims Made": false
+      "Sims Made": "N/A"
      },
      {
       "Lot Name": "Whistling Thistle Gardens",
       "My Name": null,
-      "Lot Type": null,
+      "Lot Type": "Park",
       "Lot Size": "40x30",
-      "Residents/Owners": null,
+      "Residents/Owners": "N/A",
       "Built": false,
       "Shared": false,
       "Screenshots": false,
-      "Sims Made": false
+      "Sims Made": "N/A"
      },
      {
       "Lot Name": "Greenwood Hamlet Residence",
       "My Name": null,
-      "Lot Type": null,
+      "Lot Type": "Small Business (Apothecary)",
       "Lot Size": "30x20",
-      "Residents/Owners": null,
+      "Residents/Owners": "Enchanted Lovers (Todd Attenberry's apothecary, for now)",
       "Built": false,
       "Shared": false,
       "Screenshots": false,
-      "Sims Made": false
+      "Sims Made": "N/A"
      },
      {
       "Lot Name": "Gringle's",
       "My Name": null,
-      "Lot Type": null,
+      "Lot Type": "Bar",
       "Lot Size": "30x30",
-      "Residents/Owners": null,
+      "Residents/Owners": "N/A",
       "Built": false,
       "Shared": false,
       "Screenshots": false,
-      "Sims Made": false
+      "Sims Made": "N/A"
      },
      {
       "Lot Name": "Gimmley Gardensbrook",
       "My Name": null,
-      "Lot Type": null,
+      "Lot Type": "Residential",
       "Lot Size": "30x30",
-      "Residents/Owners": null,
+      "Residents/Owners": "Enchanted Lovers",
       "Built": false,
       "Shared": false,
       "Screenshots": false,
@@ -4659,9 +4659,9 @@
      {
       "Lot Name": "Crannamor Residential",
       "My Name": null,
-      "Lot Type": null,
+      "Lot Type": "Residential",
       "Lot Size": "20x20",
-      "Residents/Owners": null,
+      "Residents/Owners": "Empty",
       "Built": false,
       "Shared": false,
       "Screenshots": false,
@@ -4670,31 +4670,31 @@
      {
       "Lot Name": "The Watering Hole",
       "My Name": null,
-      "Lot Type": null,
+      "Lot Type": "Custom Venue",
       "Lot Size": "40x30",
-      "Residents/Owners": null,
+      "Residents/Owners": "N/A",
       "Built": false,
       "Shared": false,
       "Screenshots": false,
-      "Sims Made": false
+      "Sims Made": "N/A"
      },
      {
       "Lot Name": "Starsong Lounge",
       "My Name": null,
-      "Lot Type": null,
+      "Lot Type": "Nightclub",
       "Lot Size": "30x30",
-      "Residents/Owners": null,
+      "Residents/Owners": "N/A",
       "Built": false,
       "Shared": false,
       "Screenshots": false,
-      "Sims Made": false
+      "Sims Made": "N/A"
      },
      {
       "Lot Name": "Puckitt Hall",
       "My Name": null,
-      "Lot Type": null,
+      "Lot Type": "Residential",
       "Lot Size": "50x50",
-      "Residents/Owners": null,
+      "Residents/Owners": "Summerdream",
       "Built": false,
       "Shared": false,
       "Screenshots": false,
@@ -4703,9 +4703,9 @@
      {
       "Lot Name": "Bard Boulevard",
       "My Name": null,
-      "Lot Type": null,
+      "Lot Type": "Residential",
       "Lot Size": "30x20",
-      "Residents/Owners": null,
+      "Residents/Owners": "Mystical Besties",
       "Built": false,
       "Shared": false,
       "Screenshots": false,
@@ -4944,13 +4944,13 @@
      {
       "Lot Name": "Sankofa Residence",
       "My Name": "Sankofa Residence",
-      "Lot Type": "Residential",
+      "Lot Type": "Museum",
       "Lot Size": "30x20",
-      "Residents/Owners": "Empty",
+      "Residents/Owners": "N/A",
       "Built": false,
       "Shared": false,
       "Screenshots": false,
-      "Sims Made": false
+      "Sims Made": "N/A"
      }
     ]
    },
@@ -4971,9 +4971,9 @@
      {
       "Lot Name": "Casa Do Corsário",
       "My Name": "Casa Do Corsário",
-      "Lot Type": "Residential",
+      "Lot Type": "Residential Rental",
       "Lot Size": "20x15",
-      "Residents/Owners": "Aloisio Romualdo",
+      "Residents/Owners": "Aloisio Romualdo (own)",
       "Built": false,
       "Shared": false,
       "Screenshots": false,
@@ -4993,13 +4993,13 @@
      {
       "Lot Name": "Fisherman's Hut",
       "My Name": null,
-      "Lot Type": "Residential",
+      "Lot Type": "Restaurant (Seafood)",
       "Lot Size": "20x20",
-      "Residents/Owners": "Empty",
+      "Residents/Owners": "N/A",
       "Built": false,
       "Shared": false,
       "Screenshots": false,
-      "Sims Made": false
+      "Sims Made": "N/A"
      },
      {
       "Lot Name": "Ye Olde Voyager",
@@ -5015,13 +5015,13 @@
      {
       "Lot Name": "The Lair in the Open-Air",
       "My Name": null,
-      "Lot Type": "Residential",
+      "Lot Type": "Park",
       "Lot Size": "30x20",
-      "Residents/Owners": "Empty",
+      "Residents/Owners": "N/A",
       "Built": false,
       "Shared": false,
       "Screenshots": false,
-      "Sims Made": false
+      "Sims Made": "N/A"
      }
     ]
    },
@@ -5044,7 +5044,7 @@
       "My Name": "Renaissance Road",
       "Lot Type": "Residential",
       "Lot Size": "20x15",
-      "Residents/Owners": "Monty",
+      "Residents/Owners": "Monty (the Sims 2 Montys, recreated)",
       "Built": false,
       "Shared": false,
       "Screenshots": false,
@@ -5086,9 +5086,9 @@
      {
       "Lot Name": "Giardino Del Grandioso",
       "My Name": "Giardino Del Grandioso",
-      "Lot Type": "Residential",
+      "Lot Type": "Small Business Residential",
       "Lot Size": "64x64",
-      "Residents/Owners": "Empty",
+      "Residents/Owners": "Alto (vineyard: Enzo's mother, sister and brother-in-law, to create)",
       "Built": false,
       "Shared": false,
       "Screenshots": false,
