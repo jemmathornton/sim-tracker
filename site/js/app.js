@@ -279,8 +279,8 @@ function buildingCard(b){
 // units of a building share one card
 const hoodItems = x => { const seen = new Set(); return x.lots.flatMap(l => { if (!l.building) return [listing(l)]; const b = l.building; if (seen.has(b)) return []; seen.add(b);
   return [buildingFront(b)]; }); };
-function mapHero(w, kicker, title, text, figures, chapters, small){
-  return `<section class="hero ${w.map?"mapped":""} ${small?"hh-hero":""}" style="--c:${w.glow||w.color};${w.map?`--map:url('${w.map}')`:""}">${w.map?`<span class="credit">Map by 20th Century Plumbob</span>`:""}<div class="kicker"><i></i><span class="label">${kicker}</span></div>
+function mapHero(w, kicker, title, text, figures, chapters, small, view){
+  return `<section class="hero ${w.map?"mapped":""} ${small?"hh-hero":""}" style="--c:${w.glow||w.color};${w.map?`--map:url('${w.map}')`:""}${view ? `;--mapview:${view}` : ""}">${w.map?`<span class="credit">Map by 20th Century Plumbob</span>`:""}<div class="kicker"><i></i><span class="label">${kicker}</span></div>
     <h1>${title}</h1>${text ? `<p>${text}</p>` : ""}
     <div class="hero-foot"><div class="figures">${figures.map(([n,t]) => `<div><b>${n}</b><span>${t}</span></div>`).join("")}</div><div class="chapters">${chapters}</div></div></section>`;
 }
@@ -314,14 +314,25 @@ function boxCentre(b, zoom, others){
   return best.c;
 }
 // background-position that puts point [x,y] of the map at the card's centre (clamped at the map's edges), plus where the pin lands
-function nbView(pt, zoom = ZOOM){
-  const kx = zoom, ky = zoom * MAP_RATIO / CARD_RATIO, cl = v => Math.max(0, Math.min(1, v));
+function nbView(pt, zoom = ZOOM, ratio = CARD_RATIO){
+  const kx = zoom, ky = zoom * MAP_RATIO / ratio, cl = v => Math.max(0, Math.min(1, v));
   const px = cl((pt[0]*kx - .5)/(kx - 1)), py = cl((pt[1]*ky - .5)/(ky - 1));
   return {bg: `${(px*100).toFixed(1)}% ${(py*100).toFixed(1)}%/${(zoom*100).toFixed(1)}% auto`, pin: [pt[0]*kx + px*(1-kx), pt[1]*ky + py*(1-ky)].map(v => (v*100).toFixed(1) + "%")};
 }
 const nbTile = l => l.photos[0] ? `<i style="background-image:url('${l.photos[0].thumb}')" title="${esc(l.name)}"></i>` : `<i class="nb-none" title="${esc(l.name)} (no picture yet)">${isApt(l) ? ic("home") : plot(l.size, 60, false)}</i>`;
 // a lot circle on a neighbourhood card opens that lot (the rest of the card still opens the neighbourhood)
 document.addEventListener("click", e => { const c = e.target.closest("[data-lot-link]"); if (!c) return; e.preventDefault(); e.stopPropagation(); location.hash = c.dataset.lotLink; }, true);
+// the banner on a neighbourhood page shows the same part of the map as its card (16 Oct, her idea), zoomed less:
+// the maps are 1800px wide, so the banner stays at most twice as close as the whole map to stay sharp
+const HERO_RATIO = .52, HERO_ZOOM = 2;
+function hoodHeroView(x){
+  const box = (NB_BOX[x.world.id] || {})[x.name], spot = (NB_PT[x.world.id] || {})[x.name];
+  if (!x.world.map || !(box || spot)) return "";
+  const room = 1.3, c = box ? [(box[0] + box[2]) / 2, (box[1] + box[3]) / 2] : spot;
+  const fit = box ? Math.min(1 / ((box[2] - box[0]) * room), HERO_RATIO / (MAP_RATIO * (box[3] - box[1]) * room)) : HERO_ZOOM;
+  const z = Math.max(1.01, Math.min(HERO_ZOOM, fit));
+  return nbView([c[0], Math.min(1, c[1] + .04 / z)], z, HERO_RATIO).bg;   // a touch lower, so the neighbourhood sits above the fade
+}
 function hoodArt(x){
   const spot = (NB_PT[x.world.id] || {})[x.name], box = (NB_BOX[x.world.id] || {})[x.name], n = x.lots.length;
   // a neighbourhood Jemma wants centred on its box doesn't slide (14 Oct: Whispering Glen showed too much cloud above)
@@ -368,7 +379,7 @@ function hoodPage(x){
   const figs = [[x.lots.length, x.lots.length===1?"lot":"lots"]];
   if (hhSet.length) figs.push([hhSet.length, hhSet.length===1?"household":"households"],[simCount(hhSet), simCount(hhSet)===1?"Sim":"Sims"]);
   let h = mapHero(w, `Neighbourhood · ${esc(w.name)}`, esc(x.name), x.desc ? esc(x.desc) : "", figs,
-    w.hoods.filter(o => o !== x).map(o => `<a href="#n-${o.id}">${esc(o.name)}</a>`).join(""), true);
+    w.hoods.filter(o => o !== x).map(o => `<a href="#n-${o.id}">${esc(o.name)}</a>`).join(""), true, hoodHeroView(x));
   h += `<section class="hood" style="--h:${x.color}"><div class="hood-head"><span class="label">${esc(x.name)}</span><div><h2>The <em>lots</em></h2><p>Open a home to meet the household who lives there.</p>${hoodExtras(x, true) ? `<div class="hood-extras">${hoodExtras(x, true)}</div>` : ""}<p class="dot-key"><span class="yes">${ic("hammer")}</span>Built <span class="yes">${ic("share")}</span>Shared <span class="yes">${ic("sim")}</span>Sims made <small>Faded means not yet.</small></p></div><span class="count">${built} of ${x.lots.length} built</span></div>
     <div class="listings">${hoodItems(x).join("")}</div></section>`;
   return h;
