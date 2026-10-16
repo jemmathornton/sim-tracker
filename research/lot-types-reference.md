@@ -174,7 +174,7 @@ These are not placeable, or are fixed to one world. The type usually can't be ch
 | **Clandestine** | Royalty & Legacy | "No matter what you get up to, your Secrets are safe here." Secret-revealing actions don't expose Sims on this lot. | Pairs with Backroom lots and secret passageways. Suited to affair dates, stolen-goods sales, rival-dynasty meetings and scheming. [C] (named by the EA Q&A and simscommunity) |
 | **Regal Residence** | Free Lost Legacies event reward, Feb–Mar 2026 (week 3 quests) | Needs decay more slowly and moods last longer. The effect scales with lot value; the key threshold is **§250,000** (a notice appears when value crosses it). | Suited to palaces and expensive homes. Known bug: the value notification repeats. [C] |
 | **Singles Hangout** | Lovestruck (2024) | Draws single Sims to the lot. | Dating venues. [S] |
-| **Maintenance Troubles** (challenge) | For Rent | Frequent breakages and maintenance events. Applied automatically to Residential Rentals. | Can also be added to other residential lots. [C] |
+| **Maintenance Troubles** (challenge) | For Rent | Frequent breakages and maintenance events. **Ordinary Residential lots only: the game doesn’t allow it on rentals** (corrected 17 Oct, from the game’s tuning). | [C] |
 | **Mold** (challenge) | For Rent | Mould growth. | [S] |
 | **Wild Prairie Grass** (challenge) | Horse Ranch | Grass that spreads across the lot. | Ranch builds. [S] |
 | Businesses & Hobbies / Adventure Awaits | — | **No new lot traits or challenges found** in any source checked. | [?] |

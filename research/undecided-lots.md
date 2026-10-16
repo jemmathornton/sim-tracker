@@ -26,7 +26,7 @@ For the open **[Jemma]** lot decisions in TODO.md. Research only; nothing is cha
 
 | Option | For | Against |
 |---|---|---|
-| **Vacation Rental: a castaway hut** | Tiny build; Off-the-Grid becomes the point of the stay; Mua Pel’am is the wild island | Sulani already has Lagoon of Love; check in game that Off-the-Grid stays on a Vacation Rental |
+| **Vacation Rental: a castaway hut** | Tiny build; Off-the-Grid becomes the point of the stay; Mua Pel’am is the wild island | Sulani already has Lagoon of Love; **Off-the-Grid doesn’t work on a Vacation Rental** (the game allows it only on homes, rentals, small businesses and Generic; research/lot-trait-ideas.md, 17 Oct) |
 | **Generic: a bare islet** with a dock, a fire pit and a hammock | Least building of all; Off-the-Grid works on Generic | Townies never visit; only her own Sims would go |
 | **Tiny Home Residential: a hermit’s beach shack** | Uses the game’s “perfect for a small home”. Sulani’s four homeless locals are mermaids; Kalamainu’u Iona is a Loner, a natural fit | She has kept homeless townies homeless elsewhere; still a build |
 | **Leave it an empty lot** | Truest to “untouched”; nothing to build | Stays “To be decided” in spirit; the site shows an empty lot |
@@ -63,7 +63,7 @@ For the open **[Jemma]** lot decisions in TODO.md. Research only; nothing is cha
 
 | Option | For | Against |
 |---|---|---|
-| **Residential Rental, 2 units, On Hallowed Grounds on both** | Keeps her “Specters’ home + tenants”; the trait keeps it spooky; For Rent’s automatic Maintenance Troubles suits a creaky old house | No Guidry, specters or haunted-house nights |
+| **Residential Rental, 2 units, On Hallowed Grounds on both** | Keeps her “Specters’ home + tenants”; the trait keeps it spooky; (not Maintenance Troubles: the game doesn’t allow it on rentals; corrected 17 Oct) | No Guidry, specters or haunted-house nights |
 | **Haunted House Residential, the Specters alone** | The full spooky gameplay; fits EA’s hints | No tenants; a third haunted house in one small world |
 | **Haunted House Residential with paying roommates** (Discover University’s roommate service) | Spooky gameplay *and* lodgers | Roommates are random townies, not her chosen households, and won’t show as tenants on the site; check in game that roommates can be had on a haunted house |
 

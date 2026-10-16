@@ -254,7 +254,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [ ] [Jemma] Starlight Accolades: Hottest Spot in Town on Studio PBP (the game’s venue) once built; keep Calico’s too?
 - [ ] [Jemma] Caldera Camp: add Geothermal and Natural Well? Key Point: Off-the-Grid only works if it’s a home, Tiny Home or Generic (not a Vacation Rental)
 - [ ] [Jemma] 88 shared lots have fewer than 3 traits: the note has ideas for each free slot, for when she’s in game
-- [ ] [Claude] Correct research/undecided-lots.md (Off-the-Grid isn’t allowed on a Vacation Rental) and research/lot-types-reference.md (Maintenance Troubles isn’t allowed on rentals at all)
+- [x] Corrected research/undecided-lots.md (Off-the-Grid isn’t allowed on a Vacation Rental) and research/lot-types-reference.md (Maintenance Troubles isn’t allowed on rentals) (17 Oct)
 
 ### Neighbourhood banners (research/hood-banners-review.md; pictures in for-jemma/hood-banners/)
 - [ ] [Claude] Bug: the banner zoom is worked out for a banner about 352px tall, but the real ones are 380–686px (the title and text make them taller), so each neighbourhood only fills the middle and its lowest part sits under the fade. Work out the zoom from the banner’s real height and keep the box above the fade (fixes most of the so-so ones: Lykke Center / University of Windenburg, Hopewell Hills, Deadgrass Isle, The Crumbling Isle, Plumbite Cove). Fix when she’s back
