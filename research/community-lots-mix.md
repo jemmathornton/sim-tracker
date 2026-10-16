@@ -12,7 +12,7 @@ Caveats: types are matched by words in the plan's lot type, so it's approximate.
 | Nightclub | 8 | 7 | 5–8 |
 | Lounge | 5 | 4 | 3–6 |
 | Karaoke | 2 | 1 (San Myshuno) | 2–4 |
-| Backroom | 4 | 4 | 3–6 |
+| Backroom | 5 (16 Oct) | 5 | 5–8 (raised 16 Oct, her view; "about one per world" loosened to "where it makes sense") |
 | Library | 15 | 14 | 12–18 |
 | Museum | 6 | 6 | 5–8 |
 | Arts Center | 2 | 2 | 2–4 |
