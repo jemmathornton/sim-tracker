@@ -214,6 +214,27 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [ ] [Jemma] Sim pictures: decode the Library portraits for Sim cards, or stick to her screenshots and monograms?
 - [ ] [Claude] When Sims go in: key each Sim by the game’s sim id, not its name (two Sims can share a name)
 
+### Rentals unit by unit (research/rental-units.md)
+- [ ] [Jemma] Suggested fits: Upland units 1–3 the Eclectic Arts, 4 Johnny Zest; Tail’s End 3 (Cat Hangout) Catarina Lynx; Spring Steppes 1 Elderberry, 2 the Pleasant twins; 3 Cobblebottom 3A Cecilia Kang (Cat Hangout), 3B Moody & McMillan (Chef’s Kitchen). OK?
+- [ ] [Jemma] BFF, the Roomies and the Eclectic Arts don’t fit one flat each (the flats are one-bed): split them into separate households, or keep each together?
+- [ ] [Jemma] Empty units at Rockridge Springs, Old Torget House, Manzanita Terrace and Slip 42: fill or leave?
+- [ ] [Jemma] In game (optional): most rentals keep traits, and bedroom/bathroom counts, only on unit 1; give units 2+ their own. Rippling Flats, Specter Row and Casa do Corsário are still one home in the save
+
+### Undecided lots (research/undecided-lots.md; options and pros/cons for each)
+- [ ] [Jemma] Key Point: a castaway hut as a Vacation Rental (suggested), or Generic? (Residential Rental isn’t allowed there)
+- [ ] [Jemma] LaSuli Point: Park (suggested; needs one piece of playground kit), or Cemetery?
+- [ ] [Jemma] Specter Row: a 2-unit Residential Rental with On Hallowed Ground on both (suggested), or a Haunted House?
+- [ ] [Jemma] 1 Cobblebottom Street: a Small Business Residential tea room (owner idea: the Crumplebottom cousins, to check in game), or a Vacation Rental?
+- [ ] [Jemma] Paradise Stables: a new horse family of hers running Riding Stables (Small Business Residential)?
+- [ ] [Jemma] Owners: the Izadi-Gomes ghosts for Mystic Crossroads, the Landgraabs for Magnolia Mall, Judith Ward for Plumbob Pictures Museum?
+- [ ] [Jemma] Casa do Corsário: 2 units? Britechester: only The Old Clocktower as a Backroom (7 in all)? Hay Hill Landing: “Residential (Farm)” (“Vineyard/Farm” isn’t a game type)?
+
+### Small business lots (research/small-business-check.md)
+- [ ] [Jemma] “Small Business Residential” is the game’s own name after all. Rename plain “Small Business” to the game’s “Small Business Venue”? Add a bracket note of what each sells?
+- [ ] [Jemma] The Portsmouth Promenade is a venue lot, so Mary and Blossom Greenburg have no home: rent at Rockridge Springs (empty), or make it their home again?
+- [ ] [Jemma] No owner named yet: Optimist’s Outlook, The Llama Picturehouse (or make it a Bar), Plumbob Pictures Museum, Canalside Daycare. Greenwood Hamlet Residence has a venue type but residents listed
+- [ ] [Jemma] Venue lots: show “Run by” instead of “Residents” on the site?
+
 ### Neighbourhood banners (research/hood-banners-review.md; pictures in for-jemma/hood-banners/)
 - [ ] [Claude] Bug: the banner zoom is worked out for a banner about 352px tall, but the real ones are 380–686px (the title and text make them taller), so each neighbourhood only fills the middle and its lowest part sits under the fade. Work out the zoom from the banner’s real height and keep the box above the fade (fixes most of the so-so ones: Lykke Center / University of Windenburg, Hopewell Hills, Deadgrass Isle, The Crumbling Isle, Plumbite Cove). Fix when she’s back
 - [ ] [Jemma] None looks worse than the whole map (48 good, 29 so-so). Her taste: put Belomisia Jungle, Campground, Glimmerbrook (loses its sunset) and Conifer Station back to the whole map? They barely zoom (1.01–1.15×)
