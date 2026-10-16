@@ -51,7 +51,7 @@
    "mapSpot": [0.75, 0.65],
    "mapBox": [0.63, 0.54, 0.87, 0.76],
    "lots": [
-    {"lot": "Deadgrass Discoveries", "myName": "Deadgrass Discoveries", "type": "Cemetery", "size": "30x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
+    {"lot": "Deadgrass Discoveries", "myName": "Deadgrass Discoveries", "type": "Museum", "size": "30x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ]
   }
  ],
