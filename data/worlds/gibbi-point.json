@@ -40,7 +40,7 @@
    "lots": [
     {"lot": "Prospector's Paradise", "myName": "Paradise Stables", "type": "Residential", "size": "40x30", "residents": "? (Horses!)", "built": true, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Crystal Cottage", "myName": "Crystal Cottage", "type": "Onsen Bathhouse", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
-    {"lot": "Love Highland", "myName": "Love Highland", "type": "Custom Venue", "size": "50x50", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "Love Highland", "myName": "Love Highland", "type": "Custom Venue", "size": "50x50", "residents": "Addam Commune (their Getaway business; they live at Miner's Manse)", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Fearful Fish Lounge", "myName": "Thrift 'n' Fish", "type": "Thrift and Boba Store", "size": "20x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Miner's Manse", "myName": "Miner's Manse", "type": "Residential", "size": "30x20", "residents": "Addam Commune", "built": false, "shared": false, "screenshots": false, "simsMade": false}
    ],
