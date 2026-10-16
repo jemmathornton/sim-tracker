@@ -155,6 +155,7 @@ def gallery_history(lot_of):
 # ---------- assemble ----------
 def build():
     out, stats, households = [], [], {}
+    no_landlord = []
     family_links, tenants, name_fix, nb_pt, nb_box, nb_centred, nb_zoom, cs_versions = {}, {}, {}, {}, {}, {}, {}, {}
     lot_of = {}   # Gallery id -> the lot page it belongs to
     for wf in world_files():
@@ -174,12 +175,13 @@ def build():
             for l in hood['lots']:
                 name, unsure, note = residents(l['residents'])
                 who = name or note or None
-                if name and l.get('tenants'): who = f"{name} (owners) + " + ", ".join(f"{t['name']} (tenant)" for t in l['tenants'])
+                if name and l.get('tenants'): who = f"{name} ({'tenant' if l.get('noLandlord') else 'owners'}) + " + ", ".join(f"{t['name']} (tenant)" for t in l['tenants'])
                 stats.append({"w": n, "n": hood['name'], "lot": l['lot'], "mine": l['myName'], "type": l['type'], "size": l['size'],
                               "built": l['built'], "shared": l['shared'], "sims": l['simsMade'], "who": l.get('statsResidents') or who})
                 key = n + '|' + l['lot']
                 if l.get('displayName'): name_fix[key] = l['displayName']
                 if l.get('tenants'): tenants[key] = l['tenants']
+                if l.get('noLandlord'): no_landlord.append(key)   # the household rents too: nobody on the lot is the landlord
                 if not owned: continue
                 for i in l.get('gallery', []) + [v['upload'] for v in l.get('versions', [])]:
                     lot_of.setdefault(i, {"id": f"l-{ws}--{slug(l['lot'])}", "world": n})
@@ -203,7 +205,7 @@ def build():
         out.append(w)
     checked = max((u['checked'] for u in uploads.values()), default=None)
     return {"worlds": out, "households": households, "stats": stats,
-            "familyLinks": family_links, "tenants": tenants, "nameFix": name_fix, "nbPt": nb_pt, "nbBox": nb_box, "nbCentred": nb_centred, "nbZoom": nb_zoom, "csVersions": cs_versions,
+            "familyLinks": family_links, "tenants": tenants, "noLandlord": no_landlord, "nameFix": name_fix, "nbPt": nb_pt, "nbBox": nb_box, "nbCentred": nb_centred, "nbZoom": nb_zoom, "csVersions": cs_versions,
             "galleryHistory": gallery_history(lot_of),
             "meta": {"built": date.today().isoformat(), "galleryChecked": checked, "game": game_version()}}
 
