@@ -15,7 +15,7 @@ Her game is on **1.128.90.1030**, the 22 Sep 2026 update (from `GameVersion.txt`
 - **New lot types:** Custom Venue (Adventure Awaits), Backroom and Community Market (Royalty & Legacy), plus Playground (free update, 18 Sep 2025). All four are already in her plan (5, 5, 4 and 4 lots).
 - **New lot traits:** Clandestine (Royalty & Legacy) and Regal Residence (a free event reward, Feb–Mar 2026). There are no new lot challenges. Her tools already know both trait names.
 - **The big one for the family tree idea:** the free update of 3 Feb 2026 rebuilt the in-game family tree. It added in-law, step, half and great- labels, shows 10 generations, and gave six premade families ancestors (new saves only). EA plans more family-tree and relationship work for Sept–Dec 2026.
-- **Rentals:** since 4 Nov 2025, turning a dorm or penthouse into a Residential Rental no longer hangs the game. This matters for Mossy Lane, which is University Housing in her save but planned as a 4-unit rental. There were also several fixes to rent and lot taxes.
+- **Rentals:** since 4 Nov 2025, turning a dorm or penthouse into a Residential Rental no longer hangs the game. (Mossy Lane was once planned as a 4-unit rental, but she settled it as University Housing on 14 Oct, so this no longer applies to it.) There were also several fixes to rent and lot taxes.
 - **Gallery:** until 22 Sep 2026, Wedding Venues placed from the Gallery could stay Residential underneath.
 - **Next:** an October update about food and dining (no date yet), then family trees and relationships. A rumour says the next single-player Sims game (“Project X”) must be finished by Sep 2027.
 
@@ -154,7 +154,7 @@ No update in the period added a lot type to the base game after Playground. None
 ## What she might need to do (short)
 
 1. **Nothing to add to the app:** no new world, lot type or lot trait beyond what it already has.
-2. **Mossy Lane** (and the penthouse, if wanted): converting to a Residential Rental is safe now.
+2. ~~Mossy Lane~~: settled as University Housing on 14 Oct, so no conversion needed (corrected 17 Oct). The fix still matters for any penthouse she makes a rental.
 3. **Wedding Venues placed from the Gallery:** check in game that they show as Wedding Venue.
 4. **Family tree:** decide whether to wait for EA’s late-2026 family-tree work before reading Sims from a save, and whether a fresh save (with EA’s Goth ancestors) is wanted. Her judgement; not on `TODO.md`.
 5. **After the October update:** the usual rerun of the game research (§7 step 1) and `tools/lot_traits.py --game`.
