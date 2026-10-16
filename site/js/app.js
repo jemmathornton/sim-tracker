@@ -266,19 +266,19 @@ const roleTxt = u => u ? (u.role === "owners" ? "Landlord" : u.role === "tenant"
 function rentalStrip(l){
   const units = rentalUnits(l), ph = unitPhotos(l);
   return units.map((u, i) => { const p = (ph[i + 1] || [])[0];
-    return `<i data-lot-link="${u ? u.hh.id : l.id}" class="${roleOf(u)}" title="Unit ${i + 1}: ${esc(u ? u.hh.name : "")}${u ? " · " : ""}${roleTxt(u)}" ${p ? `style="background-image:url('${p.thumb}')"` : ""}>${p ? "" : i + 1}</i>`; }).join("");
+    return `<i ${u ? `data-lot-link="${u.hh.id}"` : ""} class="${roleOf(u)}" title="Unit ${i + 1}: ${esc(u ? u.hh.name : "")}${u ? " · " : ""}${roleTxt(u)}" ${p ? `style="background-image:url('${p.thumb}')"` : ""}>${p ? "" : i + 1}</i>`; }).join("");
 }
 // the units as a table on the lot page (layouts 4, 5 and 6): picture, unit, who, and a landlord / tenant / free label
 function unitsTable(l){
   const units = rentalUnits(l), ph = unitPhotos(l);
   return `<section class="block" style="--h:${l.hood.color}"><div class="block-head"><h2>The <em>units</em></h2><span class="count">${units.length} units</span></div><div class="unit-table">${units.map((u, i) => { const p = (ph[i + 1] || [])[0];
-    return `<a class="unit-row" href="#${u ? u.hh.id : l.id}"><span class="u-pic" ${p ? `style="background-image:url('${p.thumb}')"` : ""}>${p ? "" : i + 1}</span><span class="u-name">Unit ${i + 1}</span><span class="u-who">${u ? `<b>${esc(u.hh.name)}</b>` : "<i>Nobody yet</i>"}</span><span class="role-chip ${roleOf(u)}">${roleTxt(u)}</span></a>`; }).join("")}</div></section>`;
+    return `<${u ? `a href="#${u.hh.id}"` : "div"} class="unit-row${u ? "" : " free"}"><span class="u-pic" ${p ? `style="background-image:url('${p.thumb}')"` : ""}>${p ? "" : i + 1}</span><span class="u-name">Unit ${i + 1}</span><span class="u-who">${u ? `<b>${esc(u.hh.name)}</b>` : "<i>Nobody yet</i>"}</span><span class="role-chip ${roleOf(u)}">${roleTxt(u)}</span></${u ? "a" : "div"}>`; }).join("")}</div></section>`;
 }
 // apartment buildings in layouts 4 and 5: one card with the building's front picture, its apartments as circles or a strip
 function buildingFront(b, mode){
   const cover = (b.units.find(u => u.photos[0]) || {}).photos?.[0], lived = b.units.filter(u => u.hh).length;
   const circ = b.units.map(u => nbTile(u).replace("<i ", `<i data-lot-link="${u.id}" aria-label="${esc(u.name)}" `).replace(/ title="[^"]*"/, ` data-name="${esc(u.name)}"`)).join("");
-  const strip = b.units.map(u => `<i data-lot-link="${u.id}" class="${u.hh ? "r-lives" : "r-empty"}" title="${esc(u.name)}${u.hh ? " · " + esc(u.hh.name) : " · Free"}" ${u.photos[0] ? `style="background-image:url('${u.photos[0].thumb}')"` : ""}>${u.photos[0] ? "" : esc(u.unit || "")}</i>`).join("");
+  const strip = b.units.map(u => `<i ${u.hh ? `data-lot-link="${u.id}"` : ""} class="${u.hh ? "r-lives" : "r-empty"}" title="${esc(u.name)}${u.hh ? " · " + esc(u.hh.name) : " · Free"}" ${u.photos[0] ? `style="background-image:url('${u.photos[0].thumb}')"` : ""}>${u.photos[0] ? "" : esc(u.unit || "")}</i>`).join("");
   return `<div class="listing" style="--h:${b.hood.color}"><div class="photo ${cover?"shot":""}" ${cover?`style="--img:url('${cover.thumb}')"`:""}>${cover ? "" : plot("40x30", 120, false)}${mode === "4" ? `<span class="nb-bubbles${b.units.length > 5 ? " many" : ""}">${circ}</span>` : ""}<span class="type">Apartment building · ${b.units.length} apartments</span></div>${mode === "5" ? `<div class="unit-strip">${strip}</div>` : ""}
     <h3>${esc(b.name)}</h3><div class="meta"><span>${ic("home")}${lived} lived in, ${b.units.length - lived} free</span></div></div>`;
 }
@@ -293,7 +293,7 @@ document.addEventListener("click", e => { const b = e.target.closest("[data-rv]"
 
 function listing(l){
   const cover = l.photos[0];
-  return `<a class="listing" href="#${l.id}" style="--h:${l.hood.color}"><div class="photo ${cover?"shot":""}" ${cover?`data-lazy="--img" data-src="${cover.thumb}"`:""}>${cover ? "" : lotArt(l)}${rvOf(l) === "4" && unitCount(l) ? `<span class="nb-bubbles${unitCount(l) > 5 ? " many" : ""}">${rentalBubbles(l)}</span>` : ""}<span class="type">${["2", "4", "5", "6"].includes(rvOf(l)) && unitCount(l) ? `Rental · ${unitCount(l)} units` : esc(l.type || "Lot")}</span><span class="status">${statusDots(l)}</span>${sizeTxt(l.size) && !isApt(l) ? `<span class="size">${sizeTxt(l.size)}</span>` : ""}${cardPills(l)}</div>${rvOf(l) === "5" && unitCount(l) ? `<div class="unit-strip">${rentalStrip(l)}</div>` : ""}
+  return `<a class="listing" href="#${l.id}" style="--h:${l.hood.color}"><div class="photo ${cover?"shot":""}" ${cover?`data-lazy="--img" data-src="${cover.thumb}"`:""}>${cover ? "" : lotArt(l)}${rvOf(l) === "4" && unitCount(l) ? `<span class="nb-bubbles${unitCount(l) > 5 ? " many" : ""}">${rentalBubbles(l)}</span>` : ""}<span class="type">${["2", "4", "5", "6"].includes(rvOf(l)) && unitCount(l) ? `Residential Rental · ${unitCount(l)} units` : esc(l.type || "Lot")}</span><span class="status">${statusDots(l)}</span>${sizeTxt(l.size) && !isApt(l) ? `<span class="size">${sizeTxt(l.size)}</span>` : ""}${cardPills(l)}</div>${rvOf(l) === "5" && unitCount(l) ? `<div class="unit-strip">${rentalStrip(l)}</div>` : ""}
     <h3>${esc(l.name)}</h3>
     <div class="meta">${["4", "5", "6"].includes(rvOf(l)) && unitCount(l) ? rentalMeta(l) : l.hh ? `<span>${ic("users")}<b>${esc(l.hh.name)}</b>${l.hh.unsure?" (unsure)":""}</span>` : l.whoNote ? `<span>${ic("users")}${esc(emptyNote(l.whoNote))}</span>` : ""}${l.gallery ? `<span title="Downloads on the Sims 4 Gallery">${ic("share")}${l.gallery.downloads} downloads</span>` : ""}</div></a>`;
 }
@@ -306,7 +306,7 @@ function buildingCard(b){
     <div class="meta"><span>${ic("hammer")}<b>${built} of ${b.units.length}</b> built</span></div></div>`;
 }
 // units of a building sit together under a small heading, each keeping its own card and picture
-const hoodItems = x => { const seen = new Set(); return x.lots.flatMap(l => { if (!l.building) return [rvOf(l) === "1" && unitCount(l) ? rentalCard(l) : rvOf(l) === "u" && unitCount(l) ? `<div class="bgroup"><div class="bgroup-head">${ic("home")}<h3><a href="#${l.id}">${esc(l.name)}</a></h3><span>Rental · ${unitCount(l)} units · ${rentalUnits(l).filter(Boolean).length} lived in</span></div><div class="listings">${unitCards(l)}</div></div>` : listing(l)]; const b = l.building; if (seen.has(b)) return []; seen.add(b);
+const hoodItems = x => { const seen = new Set(); return x.lots.flatMap(l => { if (!l.building) return [rvOf(l) === "1" && unitCount(l) ? rentalCard(l) : rvOf(l) === "u" && unitCount(l) ? `<div class="bgroup"><div class="bgroup-head">${ic("home")}<h3><a href="#${l.id}">${esc(l.name)}</a></h3><span>Residential Rental · ${unitCount(l)} units · ${rentalUnits(l).filter(Boolean).length} lived in</span></div><div class="listings">${unitCards(l)}</div></div>` : listing(l)]; const b = l.building; if (seen.has(b)) return []; seen.add(b);
   const built = b.units.filter(u => u.built === true).length;
   if (RV === "4" || RV === "5") return [buildingFront(b, RV)];
   return [`<div class="bgroup"><div class="bgroup-head">${ic("home")}<h3>${esc(b.name)}</h3><span>${b.units.length} apartments · ${built} built</span></div><div class="listings">${b.units.map(listing).join("")}</div></div>`]; }); };
