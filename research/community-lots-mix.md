@@ -6,7 +6,7 @@ Caveats: types are matched by words in the plan's lot type, so it's approximate.
 
 | Type | Lots | Worlds with one | Realistic for 25 small towns |
 |---|---|---|---|
-| Restaurant | 15 | 15 | 18–25 |
+| Restaurant | 14 (16 Oct) | 14 | 12–18 lots (lowered 16 Oct: markets, pubs that serve food, cafés, Thrift and Boba Stores, food stalls and cafeterias also feed Sims) |
 | Café | 12 | 12 | 10–15 |
 | Bar/pub | 19 | 15 | 15–20 |
 | Nightclub | 8 | 7 | 5–8 |
