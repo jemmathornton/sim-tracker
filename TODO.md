@@ -54,7 +54,7 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
 | Tomarang | Sungai Point | 3 | Linh-Sadya & Linh |
 | Ravenwood | Specter Row (Moppy Manor) | ? (not finished, 14 Oct) | Specters' home + tenants |
 | Nordhaven | Old Torget House | 3 | Empty |
-| Del Sol Valley | Upland Trailer Park | 4 | Eclectic Arts; Johnny Zest renting a unit (16 Oct) |
+| Del Sol Valley | Upland Trailer Park | 4 | Eclectic Arts (StrangerVille's 3 friends, a trailer each; she may split them into 3 households) + Johnny Zest in the 4th (16 Oct) |
 | Ondarion | Casa Do Corsário | 2 or 3 (to decide, 16 Oct) | Aloisio Romualdo own |
 | Nordhaven | ~~Lighthouse Lookout~~ | no longer a rental: the Library since 15 Oct | – |
 
