@@ -1,48 +1,52 @@
-// Sims prototypes (16 Oct): shared data and drawing code. Nothing here is used by the app, and nothing in site/ or data/ changes.
+// Sims prototypes (16–17 Oct): shared data and drawing code. Nothing here is used by the app, and nothing in site/ or data/ changes.
 // Loaded after the app's own scripts (site/js/icons.js, data.js, app.js, read only), so the pages use the app's real worlds,
 // households, colours and drawing functions (listing, famCard, renderNav…).
-// Sim details are EA's starting ones from The Sims Wiki (fetched 16–17 Oct), checked against research/ea-family-lore.md.
-// Nothing here is from Jemma's save.
+// Sim details come from the game's data as given on The Sims Wiki (fetched 16–17 Oct), checked against research/ea-family-lore.md.
+// Her decisions, 17 Oct: a page per Sim; the household page is the family overview; the game's words (Spouse, Partner, Engaged)
+// with no switch; a family tree per household from family links only; relationships only between Sims, on Sim pages; a page per
+// group (dynasty, club, university organisation); origin is "Premade" or "Mine"; no "EA's version vs mine" anywhere.
 
 /* ================= the page frame ================= */
 const PROTO = "../for-jemma/prototypes/sims/";   // each page's <base> is site/, so links between prototype pages need this
-const PAGES = [
+const P_PAGES = [
   ["index.html", "Contents", "list-tree"],
   ["household.html", "Household page", "users"],
   ["sim.html", "Sim pages", "user-round", "?sim=mortimer-goth"],
+  ["group.html", "Group pages", "flag", "?g=goth-dynasty"],
   ["family-tree.html", "Family tree", "network"],
-  ["relationships.html", "Links between households", "link"],
+  ["relationships.html", "Relationships", "link"],
   ["tags.html", "Relationship tags", "tag"],
 ];
-let PAGE = "", CUR_SIM = "";
-// Sims with their own page (17 Oct: every Sim in the end; the Goths first). Cornelia is on the Goth tree but in no household.
-const SIM_PAGES = ["mortimer-goth", "bella-goth", "cassandra-goth", "alexander-goth", "cornelia-goth"];
-const simHref = id => `${PROTO}sim.html?sim=${id}`;
+let P_PAGE = "", P_CUR_SIM = "";
+// Sims with their own page (every Sim in the end; the Goths first). Cornelia is on the Goths' tree but in no household.
+const P_SIM_PAGES = ["mortimer-goth", "bella-goth", "cassandra-goth", "alexander-goth", "cornelia-goth"];
+const pSimHref = id => `${PROTO}sim.html?sim=${id}`;
+const pGroupHref = id => `${PROTO}group.html?g=${id}`;
 // the sidebar is the app's own, with a "Prototypes" group added at the top, and the Goths' Sims under their household
-const appRenderNav = renderNav;
+const pAppRenderNav = renderNav;
 renderNav = function (...a) {
-  appRenderNav(...a);
+  pAppRenderNav(...a);
   const nav = document.getElementById("nav");
-  nav.insertAdjacentHTML("afterbegin", `<div class="nav-group"><div class="label">Prototypes · 16–17 Oct</div>${PAGES.map(([f, t, i, q]) =>
-    `<a href="${PROTO}${f}${q || ""}" class="${f === PAGE ? "on" : ""}">${ic(i)}${t}</a>`).join("")}</div>`);
+  nav.insertAdjacentHTML("afterbegin", `<div class="nav-group"><div class="label">Prototypes · 16–17 Oct</div>${P_PAGES.map(([f, t, i, q]) =>
+    `<a href="${PROTO}${f}${q || ""}" class="${f === P_PAGE ? "on" : ""}">${ic(i)}${t}</a>`).join("")}</div>`);
   // world → neighbourhood → lot → household → Sims, as in the app; here the household and its Sims open the prototype pages
   const fl = nav.querySelector('a.fam-link[href="#h-willow-creek--goth"]');
   if (!fl) return;
   fl.setAttribute("href", PROTO + "household.html");
-  if (CUR_SIM) { fl.classList.remove("cur"); fl.classList.add("path"); }
+  if (P_CUR_SIM) { fl.classList.remove("cur"); fl.classList.add("path"); }
   if (fl.nextElementSibling && fl.nextElementSibling.classList.contains("lotnav")) fl.nextElementSibling.remove();   // the app's own list (links to its household page)
-  fl.insertAdjacentHTML("afterend", `<div class="lotnav proto-sims">${SIM_PAGES.map(id => { const s = SIMS[id];
-    return `<a href="${simHref(id)}" class="${id === CUR_SIM ? "cur" : ""} ${s.hh ? "" : "away"}">${esc(s.name)}${s.late ? "<small>late</small>" : ""}</a>`; }).join("")}</div>`);
+  fl.insertAdjacentHTML("afterend", `<div class="lotnav proto-sims">${P_SIM_PAGES.map(id => { const s = P_SIMS[id];
+    return `<a href="${pSimHref(id)}" class="${id === P_CUR_SIM ? "cur" : ""} ${s.hh ? "" : "away"}">${esc(s.name)}${s.late ? "<small>late</small>" : ""}</a>`; }).join("")}</div>`);
 };
 function protoStart(o) {
-  PAGE = o.page;
+  P_PAGE = o.page;
   removeEventListener("hashchange", route);   // the app's own pages stay in the app
   const w = o.world ? worlds.find(x => x.id === o.world) : null, root = document.documentElement.style;
   if (w && w.deep) { root.setProperty("--deep", w.deep[0]); root.setProperty("--deep-2", w.deep[1]); }
   else { root.removeProperty("--deep"); root.removeProperty("--deep-2"); }
   const hh = o.hh ? hhIndex[o.hh] : null;
   renderNav(w ? w.id : "", hh ? hh.id : "", hh ? {hh, lot: hh.lots[0], hood: hh.lots[0].hood} : {});
-  document.title = o.title + " · Prototype · Jemma's Sim World";
+  document.title = o.title + " · Prototype · Jemma’s Sim World";
 }
 // links to the app's pages ("#h-…", "#l-…") open the real app
 document.addEventListener("click", e => {
@@ -54,27 +58,30 @@ document.addEventListener("click", e => {
 const protoBar = (title, opts, choices = "", date = "16 Oct") =>
   `<div class="proto-bar"><span class="proto-tag">Prototype, ${date}</span><b>${title}</b><div class="choices">${choices}</div></div><p class="proto-opts">${opts}</p>`;
 // segmented choice buttons; each page has an onSeg(name, value)
-const seg = (name, label, items, cur) => `<div class="seg" data-seg="${name}"><span>${label}</span>${items.map(([v, t, no]) =>
+const pSeg = (name, label, items, cur) => `<div class="seg" data-seg="${name}"><span>${label}</span>${items.map(([v, t, no]) =>
   `<button type="button" data-v="${v}" class="${v === cur ? "on" : ""}" aria-pressed="${v === cur}">${no ? `<i>${no}</i>` : ""}${t}</button>`).join("")}</div>`;
 document.addEventListener("click", e => {
   const b = e.target.closest(".seg button"); if (!b) return;
   const s = b.closest(".seg"); s.querySelectorAll("button").forEach(x => { x.classList.toggle("on", x === b); x.setAttribute("aria-pressed", x === b); });
   if (typeof onSeg === "function") onSeg(s.dataset.seg, b.dataset.v);
 });
-const worldById = id => worlds.find(w => w.id === id);
-const wColour = w => w ? (w.glow || w.color) : "#8A918C";
+const pWorldById = id => worlds.find(w => w.id === id);
+const pWColour = w => w ? (w.glow || w.color) : "#8A918C";
+// origin (her words, 17 Oct): "Premade" for the game's Sims and households (even when she changes them), "Mine" for hers
+// and for children born in her game
+const pOriginTag = o => `<span class="otag ${o === "mine" ? "mine" : ""}">${o === "mine" ? "Mine" : "Premade"}</span>`;
 
 /* ================= relationship tags (§6, option B) ================= */
-const GROUPS = {
-  family:   {name: "Family",        icon: "network",   line: "solid",  sample: "Worked out from parents and partners"},
-  romance:  {name: "Romance",       icon: "heart",     line: "solid2", sample: ""},
-  friends:  {name: "Friends",       icon: "smile",     line: "dash",   sample: ""},
-  conflict: {name: "Conflict",      icon: "swords",    line: "zigzag", sample: ""},
-  work:     {name: "Work & school", icon: "briefcase", line: "dots",   sample: ""},
-  dynasty:  {name: "Dynasty",       icon: "crown",     line: "double", sample: ""},
+const P_TAG_GROUPS = {
+  family:   {name: "Family",        icon: "network",   line: "solid"},
+  romance:  {name: "Romance",       icon: "heart",     line: "solid2"},
+  friends:  {name: "Friends",       icon: "smile",     line: "dash"},
+  conflict: {name: "Conflict",      icon: "swords",    line: "zigzag"},
+  work:     {name: "Work & school", icon: "briefcase", line: "dots"},
+  dynasty:  {name: "Dynasty",       icon: "crown",     line: "double"},
 };
 // romance words are the game's since patch 162 (Spouse, Engaged, Partner): her decision, 17 Oct, everywhere and with no switch
-const TAGS = {
+const P_TAGS = {
   family:         {g: "family",   name: "Family"},
   spouse:         {g: "romance",  name: "Spouse"},
   engaged:        {g: "romance",  name: "Engaged"},
@@ -95,185 +102,204 @@ const TAGS = {
   "dyn-rival":    {g: "dynasty",  name: "Dynasty Rival"},
   outcast:        {g: "dynasty",  name: "Outcast"},
 };
-const tagName = t => TAGS[t].name;
-const tagPill = (t, cls = "") => `<span class="tg ${TAGS[t].g} ${cls}">${ic(GROUPS[TAGS[t].g].icon)}${esc(tagName(t))}</span>`;
-const SOURCES = {
-  game:    ["info", "In the game"],
-  gallery: ["info", "From EA’s Gallery household"],
-  site:    ["info", "On the site now"],
-  plan:    ["flag", "Your plan"],
-  idea:    ["sparkles", "Idea, not in The Sims 4"],
-};
-const srcLine = l => `<span class="src ${l.src}">${ic(SOURCES[l.src][0])}${esc(SOURCES[l.src][1])}${l.note ? " · " + esc(l.note) : ""}</span>`;
+const pTagName = t => P_TAGS[t].name;
+const pTagPill = (t, cls = "") => `<span class="tg ${P_TAGS[t].g} ${cls}">${ic(P_TAG_GROUPS[P_TAGS[t].g].icon)}${esc(pTagName(t))}</span>`;
 
 /* ================= Sims (§9's proposed data, as it would look) =================
    Save-wide ids. parents on the child; partners as [id, kind]; every other family word is worked out.
-   line = the family they were born into (null = not in the game); into = the family they married into.
-   hh = the app's household; world + home for Sims with no household on the site. */
-const SIMS = {
-  // the Goths (The Sims 4; family tree as of patch 193)
+   line = the family they were born into (null = not known); into = the family they married into.
+   hh = the app's household; world + home for Sims with no household on the site. origin: "premade" (all of these) or "mine". */
+const P_SIMS = {
+  // the Goths, and Mortimer's mother's family
   "simon-crumplebottom":    {name: "Simon Crumplebottom", sex: "m", age: "Elder", late: true, line: "crumplebottom", partners: [["prudence-crumplebottom", "spouse"]]},
   "prudence-crumplebottom": {name: "Prudence Crumplebottom", sex: "f", age: "Elder", late: true, line: "crumplebottom"},
-  "cornelia-goth":   {name: "Cornelia Goth", sex: "f", age: "Elder", late: true, line: "crumplebottom", into: "goth", parents: ["simon-crumplebottom", "prudence-crumplebottom"], partners: [["gunther-goth", "unknown"]],
-                      start: "Not a Sim you can play: she is on the Goth family tree since patch 193 (February 2026), already late. She died in a fire, and the game won’t let her come back as a ghost."},
-  "gunther-goth":    {name: "Gunther Goth", sex: "m", ph: true, line: "goth", phText: "Father not in the game’s tree", phNote: "Gunther, in earlier games"},
+  "cornelia-goth":   {name: "Cornelia Goth", sex: "f", age: "Elder", late: true, died: "In a fire", line: "crumplebottom", into: "goth", parents: ["simon-crumplebottom", "prudence-crumplebottom"], partners: [["gunther-goth", "unknown"]]},
+  "gunther-goth":    {name: "Gunther Goth", sex: "m", ph: true, line: "goth", phText: "Father not on the family tree"},
   "agnes-crumplebottom": {name: "Agnes Crumplebottom", sex: "f", age: "Elder", line: "crumplebottom", parents: ["simon-crumplebottom", "prudence-crumplebottom"],
                      partners: [["robert-crumplebottom", "ex"], ["erik-darling", "late-spouse"]], world: "henford-on-bagley", home: "a townie", noHome: true},
   "robert-crumplebottom": {name: "Robert Crumplebottom", sex: "m", age: "", line: null, treeOnly: true},
   "erik-darling":    {name: "Erik Darling", sex: "m", age: "", late: true, line: null},
-  "mortimer-goth":   {name: "Mortimer Goth", sex: "m", age: "Adult", hh: "h-willow-creek--goth", line: "goth", parents: ["cornelia-goth", "gunther-goth"], partners: [["bella-goth", "spouse"]], dyn: ["head", "goth"],
-                      traits: ["Bookworm", "Outgoing", "Creative"], bonus: "Quick Learner", aspiration: "Renaissance Sim", career: "Writer",
-                      start: "An Adult, 42 days from Elder. Writer career at level 3 (Freelance Article Writer), Writing at 4."},
+  "mortimer-goth":   {name: "Mortimer Goth", sex: "m", age: "Adult", hh: "h-willow-creek--goth", line: "goth", parents: ["cornelia-goth", "gunther-goth"], partners: [["bella-goth", "spouse"]],
+                      traits: ["Bookworm", "Outgoing", "Creative"], bonus: "Quick Learner", aspiration: "Renaissance Sim", career: "Writer"},
   "bella-goth":      {name: "Bella Goth", sex: "f", age: "Young Adult", hh: "h-willow-creek--goth", line: "bachelor", into: "goth",
-                      traits: ["Good", "Family-Oriented", "Romantic"], bonus: "Gregarious", aspiration: "Party Animal", career: "Secret Agent",
-                      start: "A Young Adult, younger than Mortimer in this game. Secret Agent (Intelligence Researcher); Charisma, Fitness and Programming at 2. No friends outside the household."},
-  "cassandra-goth":  {name: "Cassandra Goth", sex: "f", age: "Teen", hh: "h-willow-creek--goth", line: "goth", parents: ["mortimer-goth", "bella-goth"], dyn: ["heir", "goth"],
-                      traits: ["Creative", "Gloomy"], bonus: "Muser", aspiration: "Musical Genius", school: "High school",
-                      start: "A Teen at grade C; Violin at 2. Heir of the Goth dynasty (Royalty & Legacy)."},
+                      traits: ["Good", "Family-Oriented", "Romantic"], bonus: "Gregarious", aspiration: "Party Animal", career: "Secret Agent"},
+  "cassandra-goth":  {name: "Cassandra Goth", sex: "f", age: "Teen", hh: "h-willow-creek--goth", line: "goth", parents: ["mortimer-goth", "bella-goth"],
+                      traits: ["Creative", "Gloomy"], bonus: "Muser", aspiration: "Musical Genius", school: "High school"},
   "alexander-goth":  {name: "Alexander Goth", sex: "m", age: "Child", hh: "h-willow-creek--goth", line: "goth", parents: ["mortimer-goth", "bella-goth"],
-                      traits: ["Bookworm"], aspiration: "Whiz Kid", school: "Grade school",
-                      start: "A Child, 14 days from Teen; Creativity, Mental, Motor and Social at 1."},
+                      traits: ["Bookworm"], aspiration: "Whiz Kid", school: "Grade school"},
   // the Pancakes (basics only, for the comparison)
   "bob-pancakes":    {name: "Bob Pancakes", sex: "m", age: "Young Adult", hh: "h-willow-creek--pancakes", line: "pancakes", partners: [["eliza-pancakes", "spouse"]]},
   "eliza-pancakes":  {name: "Eliza Pancakes", sex: "f", age: "Young Adult", hh: "h-willow-creek--pancakes", line: "hastings", into: "pancakes"},
-  // Mortimer and Bella's classmates, and Tybalt's friend (names only, for the relationships)
-  "nancy-landgraab":    {name: "Nancy Landgraab", sex: "f", age: "Adult", hh: "h-oasis-springs--landgraab", line: "landgraab", partners: [["geoffrey-landgraab", "spouse"]], dyn: ["head", "landgraab"]},
-  "geoffrey-landgraab": {name: "Geoffrey Landgraab", sex: "m", age: "Adult", hh: "h-oasis-springs--landgraab", line: "osteer", into: "landgraab"},
-  "enzo-alto":       {name: "Enzo Alto", sex: "m", age: "", hh: "h-ondarion--enzo-alto", line: "alto", dyn: ["head", "alto"]},
-  // the Capps and Montys (Royalty & Legacy): her test case for families across worlds
-  "consort-capp":    {name: "Consort Capp", sex: "m", age: "Elder", state: "Ghost", line: "thebe", into: "capp", partners: [["contessa-capp", "late-spouse"]], world: "ondarion", home: "stays homeless, as the game has him", noHome: true},
+  // the Capps and Montys (Royalty & Legacy): a family across Ondarion and Tartosa (Tartosa is her plan)
+  "consort-capp":    {name: "Consort Capp", sex: "m", age: "Elder", state: "Ghost", line: "thebe", into: "capp", partners: [["contessa-capp", "late-spouse"]], world: "ondarion", home: "no home", noHome: true},
   "contessa-capp":   {name: "Contessa Capp", sex: "f", age: "", late: true, line: "capp"},
   "cordelia-capp":   {name: "Cordelia Capp", sex: "f", age: "", late: true, line: "capp", parents: ["consort-capp", "contessa-capp"], partners: [["caliban-capp", "spouse"]]},
   "caliban-capp":    {name: "Caliban Capp", sex: "m", age: "", late: true, line: null, into: "capp"},
-  "tybalt-capp":     {name: "Tybalt Capp", sex: "m", age: "Adult", hh: "h-ondarion--capp", line: "capp", parents: ["cordelia-capp", "caliban-capp"], dyn: ["head", "capp"]},
-  "juliette-monty":  {name: "Juliette Monty", sex: "f", age: "Adult", line: "capp", into: "monty", parents: ["cordelia-capp", "caliban-capp"], partners: [["romeo-monty", "spouse"]], dyn: ["head", "monty"], world: "tartosa", home: "Rifugio dei Pirati", hhName: "Monty"},
+  "tybalt-capp":     {name: "Tybalt Capp", sex: "m", age: "Adult", hh: "h-ondarion--capp", line: "capp", parents: ["cordelia-capp", "caliban-capp"]},
+  "juliette-monty":  {name: "Juliette Monty", sex: "f", age: "Adult", line: "capp", into: "monty", parents: ["cordelia-capp", "caliban-capp"], partners: [["romeo-monty", "spouse"]], world: "tartosa", home: "Rifugio dei Pirati", hhName: "Monty"},
   "romeo-monty":     {name: "Romeo Monty", sex: "m", age: "Adult", line: "monty", world: "tartosa", home: "Rifugio dei Pirati", hhName: "Monty"},
-  "beatrice-capp":   {name: "Beatrice Capp", sex: "f", age: "Young Adult", hh: "h-ondarion--capp", line: "capp", parents: ["tybalt-capp"], dyn: ["heir", "capp"]},
+  "beatrice-capp":   {name: "Beatrice Capp", sex: "f", age: "Young Adult", hh: "h-ondarion--capp", line: "capp", parents: ["tybalt-capp"]},
   "celeste-capp":    {name: "Celeste Capp", sex: "x", age: "Young Adult", hh: "h-ondarion--capp", line: "capp", parents: ["tybalt-capp"]},
-  "virgilio-capp":   {name: "Virgilio Capp", sex: "m", age: "Young Adult", hh: "h-ondarion--capp", line: "capp", parents: ["tybalt-capp"], dyn: ["outcast", "capp"]},
-  "dante-monty":     {name: "Dante Monty", sex: "m", age: "Teen", line: "monty", parents: ["romeo-monty", "juliette-monty"], dyn: ["heir", "monty"], world: "tartosa", home: "Rifugio dei Pirati", hhName: "Monty"},
+  "virgilio-capp":   {name: "Virgilio Capp", sex: "m", age: "Young Adult", hh: "h-ondarion--capp", line: "capp", parents: ["tybalt-capp"]},
+  "dante-monty":     {name: "Dante Monty", sex: "m", age: "Teen", line: "monty", parents: ["romeo-monty", "juliette-monty"], world: "tartosa", home: "Rifugio dei Pirati", hhName: "Monty"},
+  "enzo-alto":       {name: "Enzo Alto", sex: "m", age: "", hh: "h-ondarion--enzo-alto", line: "alto"},
+  // the Avant Gardes club (Get Together): Windenburg, Willow Creek and San Myshuno in her plan
+  "maaike-haas":     {name: "Maaike Haas", sex: "f", age: "Young Adult", hh: "h-windenburg--free-spirits", line: "haas"},
+  "gunther-munch":   {name: "Gunther Munch", sex: "m", age: "Young Adult", hh: "h-windenburg--munch", line: "munch"},
+  "hugo-villareal":  {name: "Hugo Villareal", sex: "m", age: "Teen", hh: "h-willow-creek--villareal", line: "villareal"},
+  "yuki-behr":       {name: "Yuki Behr", sex: "f", age: "Teen", hh: "h-san-myshuno--behr", line: "behr"},
 };
-Object.entries(SIMS).forEach(([id, s]) => s.id = id);
-const FAMILIES = {
-  goth:          {name: "Goth", dynasty: {head: "mortimer-goth", heir: "cassandra-goth", ideals: ["Passionate", "Mysterious"], prestige: 3}},
+Object.entries(P_SIMS).forEach(([id, s]) => { s.id = id; s.origin ||= "premade"; });
+const P_HH_ORIGIN = {"h-willow-creek--goth": "premade", "h-willow-creek--pancakes": "premade"};
+const P_FAMILIES = {
+  goth:          {name: "Goth"},
   crumplebottom: {name: "Crumplebottom"},
-  bachelor:      {name: "Bachelor", note: "Bella Bachelor in EA’s Copperdale Class of ’00 Gallery household; the game’s tree has no Bachelors"},
-  hastings:      {name: "Hastings", note: "Eliza Hastings in EA’s Copperdale Class of ’00 Gallery household"},
+  bachelor:      {name: "Bachelor", note: "No Bachelors on the family tree"},
+  hastings:      {name: "Hastings"},
   pancakes:      {name: "Pancakes"},
-  capp:          {name: "Capp", dynasty: {head: "tybalt-capp", heir: "beatrice-capp", ideals: ["Diplomatic", "Connoisseur", "Artistic"], prestige: 7, allies: ["Alto"], rivals: ["Monty"]}},
-  monty:         {name: "Monty", dynasty: {head: "juliette-monty", heir: "dante-monty", ideals: ["Passionate", "Hardworking"], prestige: 1, rivals: ["Capp"]}},
-  landgraab:     {name: "Landgraab", dynasty: {head: "nancy-landgraab", allies: ["Abrantes"], rivals: ["Alto"]}},
-  alto:          {name: "Alto", dynasty: {head: "enzo-alto", allies: ["Capp"], rivals: ["Landgraab"]}},
-  osteer:        {name: "Osteer", note: "Geoffrey Osteer in EA’s Copperdale Class of ’00 Gallery household"},
+  capp:          {name: "Capp"},
+  monty:         {name: "Monty"},
   thebe:         {name: "Thebe"},
 };
-const GOTHS = ["mortimer-goth", "bella-goth", "cassandra-goth", "alexander-goth"];
-const membersOf = hhId => Object.keys(SIMS).filter(id => SIMS[id].hh === hhId);
+const pMembersOf = hhId => Object.keys(P_SIMS).filter(id => P_SIMS[id].hh === hhId);
+
+/* ================= groups: dynasties, clubs, university organisations (her decision, 17 Oct) =================
+   One page each, the same layout for all three. A Sim is in at most one dynasty. home = where the group is based (a dynasty:
+   its head's household; a club: the world of its meeting place); members living elsewhere show lighter, with a world chip. */
+const P_GROUP_KINDS = {
+  dynasty: {name: "Dynasty", icon: "crown", roles: {head: "Head", heir: "Heir", member: "Member", outcast: "Outcast"}},
+  club:    {name: "Club", icon: "flag", roles: {leader: "Leader", member: "Member"}},
+  org:     {name: "University organisation", icon: "graduation-cap", roles: {member: "Member"}},
+};
+const P_SIM_GROUPS = {
+  "goth-dynasty":  {kind: "dynasty", name: "Goth", homeHh: "h-willow-creek--goth", world: "willow-creek", prestige: 3, ideals: ["Passionate", "Mysterious"], allies: [], rivals: [],
+                    note: "Only in saves started after Royalty & Legacy.",
+                    members: [["mortimer-goth", "head"], ["cassandra-goth", "heir"], ["bella-goth", "member"], ["alexander-goth", "member"]]},
+  "capp-dynasty":  {kind: "dynasty", name: "Capp", homeHh: "h-ondarion--capp", world: "ondarion", prestige: 7, ideals: ["Diplomatic", "Connoisseur", "Artistic"], allies: ["Alto"], rivals: ["monty-dynasty"],
+                    members: [["tybalt-capp", "head"], ["beatrice-capp", "heir"], ["celeste-capp", "member"], ["consort-capp", "member"], ["virgilio-capp", "outcast"]]},
+  "monty-dynasty": {kind: "dynasty", name: "Monty", homeWorld: "tartosa", homeName: "Monty", world: "tartosa", prestige: 1, ideals: ["Passionate", "Hardworking"], allies: [], rivals: ["capp-dynasty"],
+                    members: [["juliette-monty", "head"], ["dante-monty", "heir"], ["romeo-monty", "member"]]},
+  "avant-gardes":  {kind: "club", name: "Avant Gardes", world: "windenburg", place: "l-windenburg--south-square-coffee",
+                    activities: ["Coffee", "Reading", "Homework", "Writing", "Video games"], rules: ["Invite only"],
+                    members: [["maaike-haas", "leader"], ["gunther-munch", "member"], ["hugo-villareal", "member"], ["yuki-behr", "member"]]},
+};
+const pGroupTitle = g => g.kind === "dynasty" ? `${g.name} dynasty` : g.name;
+const pGroupsOf = id => Object.entries(P_SIM_GROUPS).filter(([, g]) => g.members.some(([m]) => m === id)).map(([gid, g]) => [gid, g, g.members.find(([m]) => m === id)[1]]);
+const pDynastyOf = id => pGroupsOf(id).find(([, g]) => g.kind === "dynasty");
+// is this member based where the group is?
+function pAtHome(g, id) {
+  const s = P_SIMS[id];
+  if (g.homeHh) return s.hh === g.homeHh;
+  if (g.homeWorld) return !s.hh && s.world === g.homeWorld && s.hhName === g.homeName;
+  const hh = s.hh && hhIndex[s.hh]; return hh ? hh.world.id === g.world : s.world === g.world;
+}
+// a member as a small box, like the tree's cards: based here = highlighted; elsewhere = lighter, with a world chip
+function pMemberCard(gid, id, role) {
+  const g = P_SIM_GROUPS[gid], s = P_SIMS[id], here = pAtHome(g, id), href = pSimLinkTo(id);
+  const R = P_GROUP_KINDS[g.kind].roles[role], crown = ["head", "heir", "leader"].includes(role);
+  return `<div class="mcard ${here ? "here" : "away"} ${s.late ? "late" : ""}" style="--w:${pSimColour(id)}"><span class="tm">${initial(s.name)}</span>
+    <div class="tn">${href ? `<a href="${href}">${esc(s.name)}</a>` : esc(s.name)}</div><div class="ts">${esc([s.age, s.state].filter(Boolean).join(" · "))}</div>
+    <div class="tchip">${here ? "" : pHomeChip(s)}</div><span class="badge ${role === "outcast" ? "out" : role === "member" ? "plain" : ""}">${crown ? ic(g.kind === "club" ? "flag" : "crown") : ""}${esc(R)}</span></div>`;
+}
 
 /* ---------- a household's family tree (her rules, 17 Oct) ----------
    Centred on the Sims who live there; built from family links only (parents and partners), never from who lives together.
    Everyone in the household, all their blood relatives wherever they live, and those relatives' partners ("plus ones").
    Worlds don't matter. A Sim with no family anywhere isn't drawn; a household where nobody has family gets no tree at all. */
-function treeOf(hhId) {
-  const all = Object.keys(SIMS), set = new Set();
-  membersOf(hhId).forEach(m => all.forEach(o => { if (!SIMS[o].ph && blood(m, o)) set.add(o); }));   // blood(m, m) counts: members are in
-  [...set].forEach(id => partnersOf(id).forEach(([p]) => { if (SIMS[p]) set.add(p); }));            // plus ones (and placeholders like Gunther)
-  [...set].forEach(id => (SIMS[id].parents || []).forEach(p => { if (SIMS[p] && SIMS[p].ph) set.add(p); }));
-  const famLinked = (a, b) => (SIMS[a].parents || []).includes(b) || (SIMS[b].parents || []).includes(a) || partnersOf(a).some(([p]) => p === b);
+function pTreeOf(hhId) {
+  const all = Object.keys(P_SIMS), set = new Set();
+  pMembersOf(hhId).forEach(m => all.forEach(o => { if (!P_SIMS[o].ph && pBlood(m, o)) set.add(o); }));   // pBlood(m, m) counts: members are in
+  [...set].forEach(id => pPartnersOf(id).forEach(([p]) => { if (P_SIMS[p]) set.add(p); }));            // plus ones (and placeholders like Mortimer's father)
+  [...set].forEach(id => (P_SIMS[id].parents || []).forEach(p => { if (P_SIMS[p] && P_SIMS[p].ph) set.add(p); }));
+  const famLinked = (a, b) => (P_SIMS[a].parents || []).includes(b) || (P_SIMS[b].parents || []).includes(a) || pPartnersOf(a).some(([p]) => p === b);
   const ids = [...set].filter(a => [...set].some(b => b !== a && famLinked(a, b)));
   return ids.length > 1 ? ids.sort((a, b) => all.indexOf(a) - all.indexOf(b)) : [];
 }
-// EA's side of the Goths' story, oldest first: the story prototype's lines (../stories/story-data.js, 17 Oct), summarised in our
-// own words from The Sims Wiki. Her own story isn't here: every Sim page ends with "Yours to write".
-const STORY_FROM = {game: "In the game", older: "Older games", gallery: "EA’s Gallery household", plan: "Your plan"};
-const STORY_ICON = {born: "baby", married: "gem", died: "flower-2", dynasty: "crown", home: "house", school: "graduation-cap", older: "scroll-text"};
-const STORY = [
-  {kind: "born", src: "game", title: "Mortimer is born a Goth", text: "His mother is Cornelia, born a Crumplebottom; his father isn’t on the game’s family tree. Cornelia’s sister Agnes is his aunt.", sims: ["mortimer-goth", "cornelia-goth"]},
-  {kind: "school", src: "gallery", title: "Classmates at Copperdale High", text: "EA’s “Copperdale Class of ’00” Gallery household has teenage Mortimer and Bella Bachelor in one class with Bob Pancakes, Eliza Hastings, Nancy Landgraab and Geoffrey (then Osteer).", sims: ["mortimer-goth", "bella-goth"]},
-  {kind: "married", src: "game", title: "Mortimer and Bella marry", text: "Bella was born a Bachelor.", sims: ["mortimer-goth", "bella-goth"]},
-  {kind: "died", src: "game", title: "Cornelia dies in a fire", text: "She is on the family tree since the February 2026 update, but can’t come back as a ghost.", sims: ["cornelia-goth", "mortimer-goth"]},
-  {kind: "born", src: "game", title: "Cassandra and Alexander are born", text: "", sims: ["cassandra-goth", "alexander-goth", "mortimer-goth", "bella-goth"]},
-  {kind: "dynasty", src: "game", title: "The Goth dynasty", text: "With Royalty & Legacy, Mortimer heads it and Cassandra is the heir (only in saves started after the pack).", sims: ["mortimer-goth", "cassandra-goth"]},
-  {kind: "home", src: "game", title: "At Ophelia Villa, Pendula View", text: "As a new save starts: Mortimer is a freelance writer, Bella a secret agent, Cassandra a teen at high school and Alexander a child, 14 days from his teens.", sims: ["mortimer-goth", "bella-goth", "cassandra-goth", "alexander-goth"]},
-  {kind: "older", src: "older", title: "Pleasantview and Sunset Valley (The Sims 2 and 3)", text: "In the older games Bella vanishes and Mortimer raises the children alone, and Mortimer’s parents Gunther and Cornelia appear. The Sims 4 is its own timeline, so none of this happened here unless you say so.", sims: ["bella-goth", "mortimer-goth", "cornelia-goth"]},
-];
 
 /* ---------- family words, worked out (never typed) ---------- */
-const sx = (s, m, f, x) => s === "m" ? m : s === "f" ? f : x;
-function partnersOf(id) {
-  const out = (SIMS[id].partners || []).slice();
-  Object.values(SIMS).forEach(t => (t.partners || []).forEach(([p, k]) => { if (p === id && !out.some(x => x[0] === t.id)) out.push([t.id, k]); }));
+const pSx = (s, m, f, x) => s === "m" ? m : s === "f" ? f : x;
+function pPartnersOf(id) {
+  const out = (P_SIMS[id].partners || []).slice();
+  Object.values(P_SIMS).forEach(t => (t.partners || []).forEach(([p, k]) => { if (p === id && !out.some(x => x[0] === t.id)) out.push([t.id, k]); }));
   return out;
 }
-function ancestors(id, d = 0, out = new Map()) {
+function pAncestors(id, d = 0, out = new Map()) {
   if (!out.has(id) || out.get(id) > d) out.set(id, d);
-  (SIMS[id].parents || []).forEach(p => { if (SIMS[p] && !SIMS[p].ph) ancestors(p, d + 1, out); });
+  (P_SIMS[id].parents || []).forEach(p => { if (P_SIMS[p] && !P_SIMS[p].ph) pAncestors(p, d + 1, out); });
   return out;
 }
-function blood(a, b) {
-  const A = ancestors(a), B = ancestors(b); let best = null;
+function pBlood(a, b) {
+  const A = pAncestors(a), B = pAncestors(b); let best = null;
   A.forEach((da, x) => { if (B.has(x)) { const db = B.get(x); if (!best || da + db < best[0] + best[1]) best = [da, db]; } });
   return best;
 }
-function partnerWord(kind) {
-  const T = TAGS[kind]; if (!T || kind === "unknown") return "Partner";
+function pPartnerWord(kind) {
+  const T = P_TAGS[kind]; if (!T || kind === "unknown") return "Partner";
   return kind === "ex" ? "Ex-Spouse" : T.name;
 }
-function relWord(a, b) {   // what b is to a
-  const s = SIMS[b].sex, p = partnersOf(a).find(x => x[0] === b);
-  if (p) return partnerWord(p[1]);
-  const r = blood(a, b);
+function pRelWord(a, b) {   // what b is to a
+  const s = P_SIMS[b].sex, p = pPartnersOf(a).find(x => x[0] === b);
+  if (p) return pPartnerWord(p[1]);
+  const r = pBlood(a, b);
   if (r) {
     const [da, db] = r;
-    if (da === 0) return [null, sx(s, "Son", "Daughter", "Child"), sx(s, "Grandson", "Granddaughter", "Grandchild"), sx(s, "Great-grandson", "Great-granddaughter", "Great-grandchild")][db] || "Descendant";
-    if (db === 0) return [null, sx(s, "Father", "Mother", "Parent"), sx(s, "Grandfather", "Grandmother", "Grandparent"), sx(s, "Great-grandfather", "Great-grandmother", "Great-grandparent")][da] || "Ancestor";
-    if (da === 1 && db === 1) return sx(s, "Brother", "Sister", "Sibling");
-    if (da === 2 && db === 1) return sx(s, "Uncle", "Aunt", "Parent’s sibling");
-    if (da === 3 && db === 1) return sx(s, "Great-uncle", "Great-aunt", "Grandparent’s sibling");
-    if (da === 1 && db === 2) return sx(s, "Nephew", "Niece", "Sibling’s child");
+    if (da === 0) return [null, pSx(s, "Son", "Daughter", "Child"), pSx(s, "Grandson", "Granddaughter", "Grandchild"), pSx(s, "Great-grandson", "Great-granddaughter", "Great-grandchild")][db] || "Descendant";
+    if (db === 0) return [null, pSx(s, "Father", "Mother", "Parent"), pSx(s, "Grandfather", "Grandmother", "Grandparent"), pSx(s, "Great-grandfather", "Great-grandmother", "Great-grandparent")][da] || "Ancestor";
+    if (da === 1 && db === 1) return pSx(s, "Brother", "Sister", "Sibling");
+    if (da === 2 && db === 1) return pSx(s, "Uncle", "Aunt", "Parent’s sibling");
+    if (da === 3 && db === 1) return pSx(s, "Great-uncle", "Great-aunt", "Grandparent’s sibling");
+    if (da === 1 && db === 2) return pSx(s, "Nephew", "Niece", "Sibling’s child");
     if (da === 2 && db === 2) return "Cousin";
     return "Relative";
   }
-  for (const [q, k] of partnersOf(a)) {   // in-laws
+  for (const [q, k] of pPartnersOf(a)) {   // in-laws
     if (k !== "spouse") continue;
-    const r2 = blood(q, b);
-    if (r2 && r2[1] === 0 && r2[0] === 1) return sx(s, "Father-in-law", "Mother-in-law", "Parent-in-law");
-    if (r2 && r2[0] === 1 && r2[1] === 1) return sx(s, "Brother-in-law", "Sister-in-law", "Sibling-in-law");
+    const r2 = pBlood(q, b);
+    if (r2 && r2[1] === 0 && r2[0] === 1) return pSx(s, "Father-in-law", "Mother-in-law", "Parent-in-law");
+    if (r2 && r2[0] === 1 && r2[1] === 1) return pSx(s, "Brother-in-law", "Sister-in-law", "Sibling-in-law");
   }
-  for (const c of Object.keys(SIMS)) {   // a child's spouse
-    const r3 = blood(a, c);
-    if (r3 && r3[0] === 0 && r3[1] === 1 && partnersOf(c).some(([q, k]) => q === b && k === "spouse")) return sx(s, "Son-in-law", "Daughter-in-law", "Child-in-law");
+  for (const c of Object.keys(P_SIMS)) {   // a child's spouse
+    const r3 = pBlood(a, c);
+    if (r3 && r3[0] === 0 && r3[1] === 1 && pPartnersOf(c).some(([q, k]) => q === b && k === "spouse")) return pSx(s, "Son-in-law", "Daughter-in-law", "Child-in-law");
   }
   return null;
 }
 // a Sim's family, closest first (partners, parents, children, siblings, then the rest)
-const FAMILY_ORDER = ["Spouse", "Engaged", "Partner", "Ex-Spouse", "Late Spouse", "Mother", "Father", "Parent", "Daughter", "Son", "Child", "Sister", "Brother", "Sibling",
+const P_FAMILY_ORDER = ["Spouse", "Engaged", "Partner", "Ex-Spouse", "Late Spouse", "Mother", "Father", "Parent", "Daughter", "Son", "Child", "Sister", "Brother", "Sibling",
   "Grandmother", "Grandfather", "Grandparent", "Granddaughter", "Grandson", "Grandchild", "Great-grandmother", "Great-grandfather", "Great-grandparent",
   "Aunt", "Uncle", "Great-aunt", "Great-uncle", "Niece", "Nephew", "Cousin", "Mother-in-law", "Father-in-law", "Daughter-in-law", "Son-in-law", "Sister-in-law", "Brother-in-law"];
-function familyOf(id) {
-  const s = SIMS[id], rank = w => { const i = FAMILY_ORDER.indexOf(w); return i < 0 ? 99 : i; };
-  const band = o => SIMS[o].hh && SIMS[o].hh === s.hh ? 0 : SIMS[o].late ? 2 : 1;   // household, living elsewhere, late
-  return Object.keys(SIMS).filter(o => o !== id && !SIMS[o].ph).map(o => [o, relWord(id, o)]).filter(([, w]) => w)
-    .sort((x, y) => band(x[0]) - band(y[0]) || rank(x[1]) - rank(y[1]));
+function pFamilyOf(id) {
+  const s = P_SIMS[id], rank = w => { const i = P_FAMILY_ORDER.indexOf(w); return i < 0 ? 99 : i; };
+  const band = o => P_SIMS[o].hh && P_SIMS[o].hh === s.hh ? 0 : P_SIMS[o].late ? 2 : 1;   // household, living elsewhere, late
+  return Object.keys(P_SIMS).filter(o => o !== id && !P_SIMS[o].ph).map(o => [o, pRelWord(id, o)]).filter(([, w]) => w)
+    .sort((x, y) => rank(x[1]) - rank(y[1]) || band(x[0]) - band(y[0]));
 }
 // where a Sim lives, as a coloured chip (the world's colour)
-function homeChip(s) {
+function pHomeChip(s) {
   const hh = s.hh ? hhIndex[s.hh] : null;
-  if (hh) return `<a class="hhchip" href="#${hh.id}" style="--w:${wColour(hh.world)}">${esc(hh.name)} · ${esc(hh.world.name)}</a>`;
-  const w = worldById(s.world);
-  if (w) return `<span class="hhchip" style="--w:${wColour(w)}" title="${esc([s.home, w.name + (w.owned ? "" : " (not owned)")].filter(Boolean).join(", "))}">${s.hhName ? esc(s.hhName) + " · " : ""}${esc(w.name)}</span>`;
+  if (hh) return `<a class="hhchip" href="#${hh.id}" style="--w:${pWColour(hh.world)}">${esc(hh.name)} · ${esc(hh.world.name)}</a>`;
+  const w = pWorldById(s.world);
+  if (w) return `<span class="hhchip" style="--w:${pWColour(w)}" title="${esc([s.home, w.name + (w.owned ? "" : " (not owned)")].filter(Boolean).join(", "))}">${s.hhName ? esc(s.hhName) + " · " : ""}${esc(w.name)}</span>`;
   return "";
 }
+// where another Sim's link goes: their Sim page, else their household in the app, else nowhere
+const pSimLinkTo = o => P_SIM_PAGES.includes(o) ? pSimHref(o) : P_SIMS[o].hh && hhIndex[P_SIMS[o].hh] ? "#" + P_SIMS[o].hh : "";
+function pSimWhere(o) {
+  const t = P_SIMS[o]; if (t.late) return "late";
+  const hh = t.hh && hhIndex[t.hh]; if (hh) return `${hh.name} household · ${hh.world.name}`;
+  const w = pWorldById(t.world); return w ? `${t.hhName ? t.hhName + " · " : ""}${w.name}${w.owned ? "" : " (not owned)"}${t.noHome ? " · no home" : ""}` : "";
+}
+const pSimColour = o => { const t = P_SIMS[o], hh = t.hh && hhIndex[t.hh]; return t.late ? "#A3AAA5" : pWColour(hh ? hh.world : pWorldById(t.world)); };
 
-/* ================= drawn family tree (§7a, option A) =================
+/* ================= drawn family tree (§7a, option A, decided 17 Oct) =================
    Founders at the top, one row per generation, couples side by side (solid line = spouses, dashed = partners,
    broken = ex, faint = late spouse), children hang below. Cards: monogram, name, life stage, where they live.
    o: {line (the household's family), here (the household: its Sims highlighted), compact, cw, ch, labels (generation labels)} */
-function drawTree(ids, o = {}) {
+function pDrawTree(ids, o = {}) {
   const C = o.compact, CW = o.cw || (C ? 136 : 188), CH = o.ch || (C ? 112 : 128), CG = C ? 28 : 38, SG = C ? 14 : 26, RG = C ? 44 : 58, LX = o.labels === false ? 6 : 96, PAD = 14;
-  const inT = new Set(ids), S = id => SIMS[id];
+  const inT = new Set(ids), S = id => P_SIMS[id];
   const ps = id => (S(id).parents || []).filter(p => inT.has(p));
-  const prs = id => partnersOf(id).filter(([p]) => inT.has(p));
+  const prs = id => pPartnersOf(id).filter(([p]) => inT.has(p));
   // generations: children one below their parents; married-in partners beside their partner
   const gen = Object.fromEntries(ids.map(id => [id, 0]));
   for (let k = 0, ch = true; ch && k < 40; k++) { ch = false;
@@ -324,31 +350,32 @@ function drawTree(ids, o = {}) {
   });
   const labels = o.labels === false ? "" : Array.from({length: maxG + 1}, (_, g) => `<span class="gen" style="top:${top(g) + CH / 2 - 14}px">Generation ${g + 1}</span>`).join("");
   o.inTree = inT;
-  const cards = ids.map(id => tcard(id, cardX(id), unitOf[id].y, CW, CH, o)).join("");
+  const cards = ids.map(id => pTcard(id, cardX(id), unitOf[id].y, CW, CH, o)).join("");
   return `<div class="tree" style="width:${width}px;height:${height}px"><svg class="lines" width="${width}" height="${height}" aria-hidden="true">${svg}</svg>${labels}${cards}</div>`;
 }
-// a household tree's card: the household's own Sims highlighted; everyone else lighter, with a chip for the world they live in
-function tcard(id, x, y, CW, CH, o) {
-  const s = SIMS[id], C = o.compact ? "compact" : "", pos = `left:${x}px;top:${y}px;width:${CW}px;height:${CH}px`;
-  if (s.ph) return `<div class="tc ph ${C}" style="${pos}"><span class="tm">?</span><div class="tn">${esc(s.phText)}</div><div class="ts">${esc(s.phNote || "")}</div></div>`;
-  const hh = s.hh ? hhIndex[s.hh] : null, w = hh ? hh.world : worldById(s.world), here = o.here && s.hh === o.here;
-  const sub = [s.age, s.state, s.late ? "late" : "", s.noHome ? "no home" : "", s.treeOnly ? "in the game’s tree only" : ""].filter(Boolean).join(" · ") || (s.late ? "late" : "");
+// a household tree's card: the household's own Sims highlighted; everyone else lighter, with a chip for where they live
+function pTcard(id, x, y, CW, CH, o) {
+  const s = P_SIMS[id], C = o.compact ? "compact" : "", pos = `left:${x}px;top:${y}px;width:${CW}px;height:${CH}px`;
+  if (s.ph) return `<div class="tc ph ${C} ${o.here ? "away" : ""}" style="${pos}"><span class="tm">?</span><div class="tn">${esc(s.phText)}</div></div>`;
+  const hh = s.hh ? hhIndex[s.hh] : null, w = hh ? hh.world : pWorldById(s.world), here = o.here && s.hh === o.here;
+  const sub = [s.age, s.state, s.late ? "late" : "", s.noHome ? "no home" : "", s.treeOnly ? "on the family tree only" : ""].filter(Boolean).join(" · ") || (s.late ? "late" : "");
   // married-in Sims: the family they were born into (or married into), as a plain chip
-  const born = f => `<span class="bornchip" ${FAMILIES[f] && FAMILIES[f].note ? `title="${esc(FAMILIES[f].note)}"` : ""}>${s.line === f ? "born a" : "married a"} ${esc(FAMILIES[f] ? FAMILIES[f].name : f)}</span>`;
+  const born = f => `<span class="bornchip" ${P_FAMILIES[f] && P_FAMILIES[f].note ? `title="${esc(P_FAMILIES[f].note)}"` : ""}>${s.line === f ? "born a" : "married a"} ${esc(P_FAMILIES[f] ? P_FAMILIES[f].name : f)}</span>`;
   const chips = [];
   const marriedIn = !(s.parents || []).some(p => o.inTree && o.inTree.has(p));   // descendants don't need a "born a…" chip
-  if (s.line && s.line !== o.line && marriedIn) chips.push(born(s.line));
+  if (s.line && s.into && s.line !== o.line && marriedIn) chips.push(born(s.line));
   else if (!s.line && !s.late && !s.treeOnly) chips.push(`<span class="bornchip">married in</span>`);
   if (s.into && s.into !== o.line && s.line === o.line) chips.push(born(s.into));
-  if (!s.late && !here) chips.push(homeChip(s));
-  const d = s.dyn, badge = d ? `<span class="badge ${d[0] === "head" ? "head" : d[0] === "outcast" ? "out" : ""}">${d[0] === "outcast" ? "" : ic("crown")}${d[0] === "head" ? "Head" : d[0] === "heir" ? "Heir" : "Outcast"}${d[1] !== o.line ? " · " + esc(FAMILIES[d[1]].name) : ""}</span>` : "";
+  if (!s.late && !here) chips.push(pHomeChip(s));
+  // dynasty heads and heirs keep a small badge (the dynasty itself has its own page)
+  const dy = pDynastyOf(id), role = dy && dy[2], badge = role === "head" || role === "heir" || role === "outcast" ? `<span class="badge ${role === "head" ? "head" : role === "outcast" ? "out" : ""}">${role === "outcast" ? "" : ic("crown")}${P_GROUP_KINDS.dynasty.roles[role]}${dy[1].name.toLowerCase() !== o.line ? " · " + esc(dy[1].name) : ""}</span>` : "";
   // names open the Sim's own page, or their household in the app where there's no Sim page yet
-  const nm = SIM_PAGES.includes(id) ? `<a href="${simHref(id)}">${esc(s.name)}</a>` : s.hh && hhIndex[s.hh] ? `<a href="#${s.hh}">${esc(s.name)}</a>` : esc(s.name);
-  return `<div class="tc ${C} ${s.late ? "late" : ""} ${o.here ? (here ? "here" : "away") : ""}" style="${pos};--w:${wColour(w)}" data-sim="${id}"><span class="tm">${initial(s.name)}</span><div class="tn">${nm}</div><div class="ts">${esc(sub)}</div>
+  const nm = P_SIM_PAGES.includes(id) ? `<a href="${pSimHref(id)}">${esc(s.name)}</a>` : s.hh && hhIndex[s.hh] ? `<a href="#${s.hh}">${esc(s.name)}</a>` : esc(s.name);
+  return `<div class="tc ${C} ${s.late ? "late" : ""} ${o.here ? (here ? "here" : "away") : ""}" style="${pos};--w:${pWColour(w)}" data-sim="${id}"><span class="tm">${initial(s.name)}</span><div class="tn">${nm}</div><div class="ts">${esc(sub)}</div>
     <div class="tchip" style="display:flex;flex-wrap:wrap;gap:4px">${chips.filter(Boolean).join("")}</div>${badge}</div>`;
 }
-const treeKey = (here = false) => `<div class="tree-key">
-  ${here ? `<span><span class="k-box here"></span>Lives here</span><span><span class="k-box away"></span>Lives elsewhere (any world), with a chip for where</span>` : ""}
+const pTreeKey = (here = false, colour = "") => `<div class="tree-key">
+  ${here ? `<span><span class="k-box here" ${colour ? `style="--w:${colour}"` : ""}></span>Lives here</span><span><span class="k-box away"></span>Lives elsewhere (any world), with a chip for where</span>` : ""}
   <span><svg class="k" viewBox="0 0 34 10"><line x1="0" y1="3" x2="34" y2="3" stroke="var(--muted)" stroke-width="2.5"/><line x1="0" y1="7" x2="34" y2="7" stroke="var(--muted)" stroke-width="1.2"/></svg>Spouses</span>
   <span><svg class="k" viewBox="0 0 34 10"><line x1="0" y1="5" x2="34" y2="5" stroke="var(--muted)" stroke-width="2.5" stroke-dasharray="5 4"/></svg>Partners</span>
   <span><svg class="k" viewBox="0 0 34 12"><line x1="0" y1="6" x2="34" y2="6" stroke="var(--muted)" stroke-width="2.5" stroke-dasharray="5 4"/><path d="M12 12 L16 0 M18 12 L22 0" stroke="var(--muted)" stroke-width="1.6"/></svg>Ex</span>
@@ -356,72 +383,50 @@ const treeKey = (here = false) => `<div class="tree-key">
   <span><span style="width:14px;height:14px;border-radius:50%;background:#A3AAA5;display:inline-block"></span>Late Sims greyed</span>
   <span>${ic("crown")} Dynasty head and heir</span></div>`;
 
-/* ================= links between households (§7d) ================= */
-// Sims with no household on the site, shown as dashed circles
-const XNODES = {
-  "x-agnes":        {name: "Agnes Crumplebottom", world: "henford-on-bagley", where: "a townie, no home on the site"},
-  "x-tartosa-monty": {name: "Monty", world: "tartosa", where: "Romeo, Juliette, Dante · Rifugio dei Pirati"},
-};
-const LINKS = [
-  {a: "h-willow-creek--goth", b: "x-agnes", tag: "family", who: "Agnes is Mortimer’s aunt (his late mother Cornelia’s sister)", src: "game", note: "with Cottage Living, since patch 193"},
-  {a: "h-willow-creek--goth", b: "h-willow-creek--pancakes", tag: "classmates", label: "Copperdale Class of ’00", who: "Mortimer, Bella ↔ Bob, Eliza, as teens", src: "gallery"},
-  {a: "h-willow-creek--goth", b: "h-oasis-springs--landgraab", tag: "classmates", label: "Copperdale Class of ’00", who: "Mortimer, Bella ↔ Nancy, Geoffrey, as teens", src: "gallery"},
-  {a: "h-willow-creek--pancakes", b: "h-oasis-springs--landgraab", tag: "classmates", label: "Copperdale Class of ’00", who: "Bob, Eliza ↔ Nancy, Geoffrey, as teens", src: "gallery"},
-  {a: "h-willow-creek--goth", b: "h-ravenwood--gomes", tag: "family", who: "Distant relatives: the Gomeses descend from Lady Ravendancer Goth", src: "game", note: "Tziporah’s Ravenwood Rumours"},
-  {a: "h-willow-creek--goth", b: "h-ondarion--enzo-alto", tag: "dyn-rival", label: "Old rivals", who: "Goths ↔ Altos", src: "idea", note: "in The Sims 3 the Altos’ uptown ideals clashed with the Goths"},
-  {a: "h-willow-creek--davidson-1", b: "h-willow-creek--davidson-2", tag: "family", who: "Same family, separate homes", src: "site"},
-  {a: "h-oasis-springs--landgraab", b: "h-del-sol-valley--zest", tag: "family", who: "Johnny is Nancy and Geoffrey’s son", src: "game"},
-  {a: "h-oasis-springs--landgraab", b: "h-del-sol-valley--zest", tag: "outcast", who: "Johnny, outcast of the Landgraab dynasty", src: "game"},
-  {a: "h-oasis-springs--landgraab", b: "h-ondarion--abrantes", tag: "ally", who: "Landgraab and Abrantes dynasties", src: "game"},
-  {a: "h-oasis-springs--landgraab", b: "h-ondarion--enzo-alto", tag: "dyn-rival", who: "Landgraab and Alto dynasties (Enzo is the Alto dynasty)", src: "game"},
-  {a: "h-ondarion--capp", b: "h-ondarion--enzo-alto", tag: "ally", who: "Capp and Alto dynasties (Enzo is the Alto dynasty)", src: "game"},
-  {a: "h-ondarion--capp", b: "x-tartosa-monty", tag: "dyn-rival", who: "Capp and Monty dynasties", src: "game"},
-  {a: "h-ondarion--capp", b: "x-tartosa-monty", tag: "family", who: "Juliette is Tybalt’s sister; Consort Capp is her grandfather", src: "game"},
-  {a: "h-ondarion--capp", b: "x-tartosa-monty", tag: "enemies", who: "Tybalt ↔ Juliette and Romeo: they despise each other", src: "game"},
-  {a: "h-ondarion--capp", b: "x-tartosa-monty", tag: "good-friends", who: "Celeste ↔ Dante, cousins", src: "game"},
-  {a: "h-ondarion--capp", b: "h-ondarion--thebe", tag: "family", who: "Consort Capp, the Capps’ ghostly ancestor, was born a Thebe", src: "game"},
-  {a: "h-ondarion--thebe", b: "h-ondarion--abrantes", tag: "ally", who: "Thebe and Abrantes dynasties", src: "game"},
-  {a: "h-ondarion--thebe", b: "h-ondarion--abrantes", tag: "family", who: "Thiago, Cordelia’s spouse, was born an Abrantes", src: "game"},
-  {a: "h-ondarion--alto", b: "h-ondarion--enzo-alto", tag: "family", who: "Enzo’s mother, sister and brother-in-law", src: "plan", note: "the vineyard family, still to create"},
-  {a: "h-willow-creek--bjergsen", b: "h-willow-creek--villareal", tag: "friends", who: "Bjorn ↔ Jacques; Sofia ↔ Luna; Elsa ↔ Max", src: "game", note: "neighbours in Windenburg; your plan moves both families here"},
-  {a: "h-willow-creek--bjergsen", b: "h-windenburg--munch", tag: "coworkers", who: "Clara ↔ Mila", src: "game"},
-  {a: "h-willow-creek--bjergsen", b: "h-windenburg--munch", tag: "friends", who: "Elsa ↔ Lucas", src: "game"},
-  {a: "h-willow-creek--villareal", b: "h-windenburg--munch", tag: "friends", who: "Max ↔ Lucas", src: "game"},
-  {a: "h-willow-creek--bjergsen", b: "h-windenburg--fyres", tag: "friends", who: "Sofia ↔ Siobhan", src: "game"},
-  {a: "h-willow-creek--villareal", b: "h-windenburg--fyres", tag: "friends", who: "Luna ↔ Siobhan", src: "game"},
-  {a: "h-willow-creek--villareal", b: "h-san-myshuno--behr", tag: "friends", who: "Hugo, Jacques ↔ Yuki", src: "game"},
-  {a: "h-oasis-springs--lothario", b: "h-oasis-springs--caliente", tag: "crush", label: "Romantic interest", who: "Don ↔ Katrina", src: "game", note: "in the game Don lives with the Calientes; your plan gives him Agave Abode"},
+/* ================= relationships between Sims (§6, §7d) =================
+   Her decision, 17 Oct: relationships are between Sims, so they live only on Sim pages (none on household pages).
+   Family words and partners are worked out from P_SIMS; everything else is a pair, stored once (data/relationships.json in the proposal).
+   These are the game's own starting relationships (research/ea-family-lore.md). */
+const P_RELS = [
+  {a: "tybalt-capp", b: "juliette-monty", tag: "enemies", label: "They despise each other"},
+  {a: "tybalt-capp", b: "romeo-monty", tag: "enemies", label: "They despise each other"},
+  {a: "celeste-capp", b: "dante-monty", tag: "good-friends", label: "Cousins"},
+  {a: "tybalt-capp", b: "enzo-alto", tag: "friends"},
+  {a: "tybalt-capp", b: "enzo-alto", tag: "coworkers"},
 ];
-function nodeInfo(id) {
-  const hh = hhIndex[id];
-  if (hh) return {id, name: hh.name, world: hh.world, colour: wColour(hh.world), href: "#" + hh.id, where: hh.lots.map(l => l.name).join(" & ")};
-  const x = XNODES[id], w = worldById(x.world);
-  return {id, name: x.name, world: w, colour: wColour(w), nohome: true, where: x.where};
+const P_CLOSE = new Set(["Mother", "Father", "Parent", "Daughter", "Son", "Child", "Sister", "Brother", "Sibling"]);
+// everything a Sim has with other Sims, as {o (the other Sim), g (tag group), tag, word, label}
+function pSimRels(id) {
+  const out = [], prs = pPartnersOf(id);
+  prs.forEach(([o, k]) => { if (!P_SIMS[o].ph && P_TAGS[k]) out.push({o, g: "romance", tag: k, word: pPartnerWord(k)}); });
+  pFamilyOf(id).forEach(([o, w]) => { if (!prs.some(([p]) => p === o)) out.push({o, g: "family", word: w}); });
+  P_RELS.forEach(r => { if (r.a === id || r.b === id) out.push({o: r.a === id ? r.b : r.a, g: P_TAGS[r.tag].g, tag: r.tag, word: pTagName(r.tag), label: r.label, idea: r.idea}); });
+  return out;
 }
-const linksOf = id => LINKS.filter(l => l.a === id || l.b === id);
-const otherEnd = (l, id) => l.a === id ? l.b : l.a;
-
-// grouped lists (option A)
-function relGroups(centre) {
+const pRelPill = r => r.g === "family" ? `<span class="tg family">${ic("network")}${esc(r.word)}</span>` : r.tag === "spouse" || r.tag === "ex" ? `<span class="tg romance">${ic("heart")}${esc(r.word)}</span>` : pTagPill(r.tag, r.idea ? "free" : "");
+function pSimRelCard(r) {
+  const t = P_SIMS[r.o], href = pSimLinkTo(r.o), T = href ? "a" : "div";
+  return `<${T} class="rel-card ${t.late ? "late" : ""}" ${href ? `href="${href}"` : ""} style="--w:${pSimColour(r.o)};--g:var(--t-${r.g})"><span class="mono">${initial(t.name)}</span>
+    <b>${esc(t.name)}</b><span class="where">${esc(pSimWhere(r.o))}</span>
+    <span class="tagrow">${pRelPill(r)}${r.label ? `<span class="lbl">${esc(r.label)}</span>` : ""}</span>${r.note ? `<span class="who">${esc(r.note)}</span>` : ""}</${T}>`;
+}
+// grouped lists (option A), in the tag groups. o.family: close family as a group too (on Sim pages family has its own section).
+// Dynasties are groups with their own pages now, so the Dynasty tag group isn't listed for a Sim.
+function pSimRelGroups(id, o = {}) {
   const by = {};
-  linksOf(centre).forEach(l => { ((by[TAGS[l.tag].g] ||= {})[otherEnd(l, centre)] ||= []).push(l); });
-  const gs = Object.keys(GROUPS).filter(g => by[g]);
-  if (!gs.length) return `<div class="empty">${ic("link")}No links yet.</div>`;
-  return `<div class="rel-groups">${gs.map(g => { const n = Object.keys(by[g]).length;
-    return `<div class="rel-group" style="--g:var(--t-${g})"><h3><span class="ico">${ic(GROUPS[g].icon)}</span>${GROUPS[g].name}<small>${n} ${n === 1 ? "household" : "households"}</small></h3>
-      <div class="rel-list">${Object.entries(by[g]).map(([o, ls]) => relCard(o, ls)).join("")}</div></div>`; }).join("")}</div>`;
-}
-function relCard(id, ls) {
-  const n = nodeInfo(id), T = n.href ? "a" : "div";
-  return `<${T} class="rel-card" ${n.href ? `href="${n.href}"` : ""} style="--w:${n.colour};--g:var(--t-${TAGS[ls[0].tag].g})"><span class="mono ${n.nohome ? "nohome" : ""}">${initial(n.name)}</span>
-    <b>${esc(n.name)}</b><span class="where">${esc(n.where)} · ${esc(n.world.name)}${n.world.owned ? "" : " (not owned)"}</span>
-    ${ls.map(l => `<span class="tagrow">${tagPill(l.tag, l.src === "idea" ? "free" : "")}${l.label ? `<span class="lbl">${esc(l.label)}</span>` : ""}</span><span class="who">${esc(l.who)}</span>${srcLine(l)}`).join("")}</${T}>`;
+  pSimRels(id).filter(r => r.g !== "family" || (o.family && P_CLOSE.has(r.word))).forEach(r => (by[r.g] ||= []).push(r));
+  const order = Object.keys(P_TAG_GROUPS).filter(g => g !== "dynasty" && (g !== "family" || o.family));
+  const gs = order.filter(g => by[g]), none = order.filter(g => !by[g]);
+  const count = list => { const n = new Set(list.map(r => r.o)).size; return `${n} ${n === 1 ? "Sim" : "Sims"}`; };
+  return `${gs.length ? `<div class="rel-groups">${gs.map(g => `<div class="rel-group" style="--g:var(--t-${g})"><h3><span class="ico">${ic(P_TAG_GROUPS[g].icon)}</span>${P_TAG_GROUPS[g].name}<small>${count(by[g])}</small></h3>
+      <div class="rel-list">${by[g].map(pSimRelCard).join("")}</div></div>`).join("")}</div>` : ""}
+    ${none.length ? `<p class="rel-none">Nothing noted yet: ${none.map(g => P_TAG_GROUPS[g].name).join(", ")}.</p>` : ""}`;
 }
 
-/* ---------- line styles (shared by the web, the map and the key) ---------- */
-function edge(x1, y1, x2, y2, g, faint, halo) {
-  const c = `var(--t-${g})`, op = faint ? ' opacity=".6"' : "", st = GROUPS[g].line;
-  if (halo) return `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="rgba(255,255,255,.8)" stroke-width="10" stroke-linecap="round"/>` + edge(x1, y1, x2, y2, g, faint);
+/* ---------- line styles (shared by the web and the key) ---------- */
+function pEdge(x1, y1, x2, y2, g, faint, halo) {
+  const c = `var(--t-${g})`, op = faint ? ' opacity=".6"' : "", st = P_TAG_GROUPS[g].line;
+  if (halo) return `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="rgba(255,255,255,.8)" stroke-width="10" stroke-linecap="round"/>` + pEdge(x1, y1, x2, y2, g, faint);
   const L = (w, extra = "") => `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${c}" stroke-width="${w}" stroke-linecap="round" ${extra}${op}/>`;
   if (st === "solid") return L(3.2);
   if (st === "solid2") return L(2.6);
@@ -435,29 +440,30 @@ function edge(x1, y1, x2, y2, g, faint, halo) {
   pts.push(`${x2},${y2}`);
   return `<polyline points="${pts.join(" ")}" fill="none" stroke="${c}" stroke-width="2.2" stroke-linejoin="round"${op}/>`;
 }
-const webKey = () => `<div class="web-key">${Object.entries(GROUPS).map(([g, G]) =>
-  `<span><svg viewBox="0 0 40 12" aria-hidden="true">${edge(2, 6, 38, 6, g)}</svg><span style="color:var(--t-${g});display:inline-flex">${ic(G.icon)}</span>${G.name}</span>`).join("")}
-  <span><svg viewBox="0 0 40 12" aria-hidden="true">${edge(2, 6, 38, 6, "dynasty", true)}</svg>Faded = an idea, not in the game</span></div>`;
+const pWebKey = (groups = Object.keys(P_TAG_GROUPS)) => `<div class="web-key">${groups.map(g =>
+  `<span><svg viewBox="0 0 40 12" aria-hidden="true">${pEdge(2, 6, 38, 6, g)}</svg><span style="color:var(--t-${g});display:inline-flex">${ic(P_TAG_GROUPS[g].icon)}</span>${P_TAG_GROUPS[g].name}</span>`).join("")}</div>`;
 
-// one household in the middle (option B): lines styled by tag group; each household lists its tags under its name
-function drawWeb(centre, W = 470, H = 580) {
-  const cx = W / 2, cy = H / 2 + 10, others = [...new Set(linksOf(centre).map(l => otherEnd(l, centre)))];
-  const gi = id => Math.min(...linksOf(centre).filter(l => otherEnd(l, centre) === id).map(l => Object.keys(GROUPS).indexOf(TAGS[l.tag].g)));
+// one Sim in the middle (option B): their close family and everyone they have a link with; lines styled by tag group
+function pDrawSimWeb(id, W = 470, H = 580) {
+  const rs = pSimRels(id).filter(r => r.g !== "family" || P_CLOSE.has(r.word));
+  const cx = W / 2, cy = H / 2 + 10, others = [...new Set(rs.map(r => r.o))];
+  const gi = o => Math.min(...rs.filter(r => r.o === o).map(r => Object.keys(P_TAG_GROUPS).indexOf(r.g)));
   others.sort((a, b) => gi(a) - gi(b));
-  const n = others.length, rx = W / 2 - 85, ry = Math.min(H / 2 - 130, 160), pos = {};
-  others.forEach((id, i) => { const a = n === 2 ? i * Math.PI : -Math.PI / 2 + i * 2 * Math.PI / n; pos[id] = [cx + rx * Math.cos(a), cy + ry * Math.sin(a)]; });
+  const n = others.length, rx = W / 2 - 80, ry = Math.min(H / 2 - 100, 230), pos = {};
+  others.forEach((o, i) => { const a = n === 2 ? i * Math.PI : -Math.PI / 2 + i * 2 * Math.PI / n; pos[o] = [cx + rx * Math.cos(a), cy + ry * Math.sin(a)]; });
   let svg = "";
-  others.forEach(id => {
-    const ls = linksOf(centre).filter(l => otherEnd(l, centre) === id), [x2, y2] = pos[id];
+  others.forEach(o => {
+    const ls = rs.filter(r => r.o === o), [x2, y2] = pos[o];
     const dx = x2 - cx, dy = y2 - cy, len = Math.hypot(dx, dy), ux = dx / len, uy = dy / len, s0 = uy > .3 ? 84 : 42;
-    ls.forEach((l, j) => {
-      const off = (j - (ls.length - 1) / 2) * 8, px = -uy * off, py = ux * off;
-      svg += edge(cx + ux * s0 + px, cy + uy * s0 + py, x2 - ux * 32 + px, y2 - uy * 32 + py, TAGS[l.tag].g, l.src === "idea");
-    });
+    ls.forEach((r, j) => { const off = (j - (ls.length - 1) / 2) * 8, px = -uy * off, py = ux * off;
+      svg += pEdge(cx + ux * s0 + px, cy + uy * s0 + py, x2 - ux * 32 + px, y2 - uy * 32 + py, r.g, r.idea); });
   });
-  const node = (id, c) => { const k = nodeInfo(id), w = k.world.id !== nodeInfo(centre).world.id || c ? k.world.name : "";
-    const [x, y] = c ? [cx, cy] : pos[id], T = k.href ? "a" : "span", ls = c ? [] : linksOf(centre).filter(l => otherEnd(l, centre) === id);
-    const pills = ls.length ? `<span class="npills">${ls.map(l => tagPill(l.tag, l.src === "idea" ? "free" : "")).join("")}</span>` : "";
-    return `<${T} class="node ${c ? "centre" : ""} ${!c && y < cy - 20 ? "up" : ""} ${k.nohome ? "nohome" : ""}" ${k.href ? `href="${k.href}"` : ""} style="left:${x}px;top:${y}px;--w:${k.colour}" title="${esc(ls.map(l => tagName(l.tag) + ": " + l.who).join("\n"))}"><span class="c">${initial(k.name)}</span><b>${esc(k.name)}</b>${w ? `<small>${esc(w)}${k.world.owned ? "" : " (not owned)"}${k.nohome ? " · no home" : ""}</small>` : ""}${pills}</${T}>`; };
-  return `<div class="web" style="width:${W}px;height:${H}px"><svg width="${W}" height="${H}" aria-hidden="true">${svg}</svg>${others.map(id => node(id)).join("")}${node(centre, true)}</div>`;
+  // under each name: "late", or the world when it isn't the centre Sim's (keeps the drawing quiet)
+  const worldOf = o => { const t = P_SIMS[o], hh = t.hh && hhIndex[t.hh]; return hh ? hh.world : pWorldById(t.world); };
+  const sub = (o, c) => { if (c) return pSimWhere(o); const t = P_SIMS[o], w = worldOf(o);
+    return t.late ? "late" : w && w !== worldOf(id) ? w.name + (w.owned ? "" : " (not owned)") : ""; };
+  const node = (o, c) => { const t = P_SIMS[o], [x, y] = c ? [cx, cy] : pos[o], href = c ? "" : pSimLinkTo(o), T = href ? "a" : "span", ls = c ? [] : rs.filter(r => r.o === o), s = sub(o, c);
+    const pills = ls.length ? `<span class="npills">${ls.map(pRelPill).join("")}</span>` : "";
+    return `<${T} class="node ${c ? "centre" : ""} ${!c && y < cy - 20 ? "up" : ""} ${t.late ? "late" : ""}" ${href ? `href="${href}"` : ""} style="left:${x}px;top:${y}px;--w:${pSimColour(o)}"><span class="c">${initial(t.name)}</span><b>${esc(t.name)}</b>${s ? `<small>${esc(s)}</small>` : ""}${pills}</${T}>`; };
+  return `<div class="web" style="width:${W}px;height:${H}px"><svg width="${W}" height="${H}" aria-hidden="true">${svg}</svg>${others.map(o => node(o)).join("")}${node(id, true)}</div>`;
 }

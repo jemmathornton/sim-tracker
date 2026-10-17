@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Group Page Prototype</title>
+<!-- Prototype, 17 Oct: one page per group (her decision, 17 Oct), the same layout for dynasties, clubs (Get Together) and
+     university organisations (Discover University): group.html?g=goth-dynasty. Members across households and worlds with their
+     role; members living elsewhere are lighter, with a world chip, like the family trees. Opens straight from the folder.
+     Reads the app's own files in site/ and changes nothing. -->
+<base href="../../../site/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="../for-jemma/prototypes/sims/proto.css">
+</head>
+<body>
+<div class="topbar"><button id="menuBtn" aria-label="Open worlds menu" type="button"><span id="menuIco"></span>Worlds</button><b>Jemma's Sim World</b></div>
+<div class="scrim" id="scrim"></div>
+<aside class="side" id="side" aria-label="Worlds">
+  <a class="brand" href="#home"><b>Jemma's <em>Sim World</em></b><small>Every world, rebuilt</small></a>
+  <div class="search"><span class="search-ico" id="searchIco"></span><input id="q" type="search" placeholder="Search…" aria-label="Search the site" autocomplete="off" spellcheck="false"></div>
+  <nav class="nav" id="nav"></nav>
+</aside>
+<main id="main"><div class="wrap" id="view"></div></main>
+
+<script src="js/icons.js"></script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script src="../for-jemma/prototypes/sims/proto-icons.js"></script>
+<script src="../for-jemma/prototypes/sims/proto.js"></script>
+<script>
+{ // a block, so this page's names stay out of the app's global scope
+const asked = new URLSearchParams(location.search).get("g");
+const GID = P_SIM_GROUPS[asked] ? asked : "goth-dynasty", G = P_SIM_GROUPS[GID], K = P_GROUP_KINDS[G.kind], W = pWorldById(G.world);
+protoStart({page: "group.html", title: pGroupTitle(G), world: G.world, hh: G.homeHh});
+window.onSeg = function (name, v) { if (name === "g") location.href = new URL(pGroupHref(v), document.baseURI).href; }
+const ROLE_ORDER = ["head", "leader", "heir", "member", "outcast"];
+const groupLink = x => P_SIM_GROUPS[x] ? `<a href="${pGroupHref(x)}">${esc(pGroupTitle(P_SIM_GROUPS[x]))}</a>` : esc(x + " dynasty");
+const who = role => G.members.filter(([, r]) => r === role).map(([id]) => pSimLinkTo(id) ? `<a href="${pSimLinkTo(id)}">${esc(P_SIMS[id].name)}</a>` : esc(P_SIMS[id].name)).join(", ");
+
+function based() {
+  if (G.homeHh) { const hh = hhIndex[G.homeHh], l = hh.lots[0]; return `<a href="${G.homeHh === "h-willow-creek--goth" ? PROTO + "household.html" : "#" + hh.id}">${esc(hh.name)} household</a> (<a href="#${l.id}">${esc(l.name)}</a>, ${esc(l.world.name)})`; }
+  if (G.place) { const l = lotIndex[G.place]; return `<a href="#${l.id}">${esc(l.name)}</a> (${esc(l.hood.name)}, ${esc(l.world.name)})`; }
+  const head = P_SIMS[G.members[0][0]]; return `${esc(head.home)}, ${esc(W.name)}${W.owned ? "" : " (not owned)"}`;
+}
+
+function page() {
+  const lotOf = G.place ? lotIndex[G.place] : G.homeHh ? hhIndex[G.homeHh].lots[0] : null, c = lotOf ? (lotOf.hood.glow || lotOf.hood.color) : pWColour(W);
+  const ids = G.members.slice().sort((a, b) => ROLE_ORDER.indexOf(a[1]) - ROLE_ORDER.indexOf(b[1]));
+  const away = ids.filter(([id]) => !pAtHome(G, id)).length;
+  let h = protoBar(esc(pGroupTitle(G)), "One page per group (her decision, 17 Oct): dynasties, clubs and university organisations share this layout. Members across households and worlds with their role; members based elsewhere are lighter, with a world chip, as on the family trees. Sim pages list each Sim’s groups; household pages show only a dynasty line.",
+    pSeg("g", "Group", Object.entries(P_SIM_GROUPS).map(([id, g]) => [id, pGroupTitle(g)]), GID), "17 Oct");
+  h += `<section class="hero small" style="--c:${c}"><div class="crumbs">${W.ready && W.owned ? `<a href="#w-${W.id}">${ic("map")}${esc(W.name)}</a>` : `<span>${ic("map")}${esc(W.name)} (not owned)</span>`}${lotOf ? `<a href="#${lotOf.id}">${ic(G.place ? "pin" : "home")}${esc(lotOf.name)}</a>` : ""}</div>
+    <div style="display:flex;gap:26px;align-items:center;flex-wrap:wrap;margin-top:22px"><div class="monogram ico-mono">${ic(K.icon)}</div><div><span class="label" style="color:var(--on-deep-mute)">${esc(K.name)}</span><h1 style="margin-top:6px">${esc(pGroupTitle(G))}</h1></div></div></section>`;
+  // the group's own details
+  const rows = G.kind === "dynasty" ? [["Head", who("head")], ["Heir", who("heir")], ["Based at", based()], ["Prestige", `${G.prestige} ${G.prestige === 1 ? "star" : "stars"}`],
+      ["Ideals", esc(G.ideals.join(", "))], ["Heirloom", "None noted yet"], ["Allies", G.allies.map(groupLink).join(", ") || "None"], ["Rivals", G.rivals.map(groupLink).join(", ") || "None"]]
+    : [["Leader", who("leader")], ["Meets at", based()], ["Activities", esc(G.activities.join(", "))], ["Rules", esc((G.rules || []).join(", ") || "None")]];
+  const half = Math.ceil(rows.length / 2), dl = rs => `<dl class="facts">${rs.map(([t, v]) => `<div><dt>${t}</dt><dd>${v}</dd></div>`).join("")}</dl>`;
+  h += `<div class="detail" style="--h:${c}"><div>${dl(rows.slice(0, half))}</div><div>${dl(rows.slice(half))}${G.note ? `<p class="src" style="margin-top:10px">${ic("info")}${esc(G.note)}</p>` : ""}</div></div>`;
+  // members
+  h += `<section class="block" style="--h:${c}"><div class="block-head"><h2>The <em>members</em></h2><span class="count">${ids.length} Sims${away ? ` · ${away} based elsewhere` : ""}</span></div>
+    <p class="say">Each name opens the Sim’s page, or their household where there’s no Sim page yet.</p>
+    <div class="mcards">${ids.map(([id, r]) => pMemberCard(GID, id, r)).join("")}</div>
+    <div class="tree-key"><span><span class="k-box here" style="--w:${pWColour(W)}"></span>${G.kind === "club" ? "Lives in " + esc(W.name) + ", where the club meets" : "Lives in the dynasty’s home"}</span><span><span class="k-box away"></span>Lives elsewhere (any world), with a chip for where</span></div></section>`;
+  h += `<footer><span>Prototype only: nothing on the site has changed. Groups from The Sims Wiki and research/fame-and-clubs-check.md.</span><span>Icons by Lucide</span></footer>`;
+  return h;
+}
+const v = document.getElementById("view"); v.innerHTML = page(); lazyPics(v);
+}
+</script>
+</body>
+</html>

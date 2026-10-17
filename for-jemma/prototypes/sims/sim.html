@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sim Page Prototype</title>
+<!-- Prototype, 17 Oct: one page per Sim (her decision, 17 Oct), tried on the Goths: sim.html?sim=bella-goth. Details, their
+     own family, relationships by tag group, groups (dynasty, clubs, university organisations), homes and story. Same look as
+     the household page. Opens straight from the folder. Reads the app's own files in site/ and changes nothing. -->
+<base href="../../../site/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="../for-jemma/prototypes/sims/proto.css">
+</head>
+<body>
+<div class="topbar"><button id="menuBtn" aria-label="Open worlds menu" type="button"><span id="menuIco"></span>Worlds</button><b>Jemma's Sim World</b></div>
+<div class="scrim" id="scrim"></div>
+<aside class="side" id="side" aria-label="Worlds">
+  <a class="brand" href="#home"><b>Jemma's <em>Sim World</em></b><small>Every world, rebuilt</small></a>
+  <div class="search"><span class="search-ico" id="searchIco"></span><input id="q" type="search" placeholder="Search…" aria-label="Search the site" autocomplete="off" spellcheck="false"></div>
+  <nav class="nav" id="nav"></nav>
+</aside>
+<main id="main"><div class="wrap" id="view"></div></main>
+
+<script src="js/icons.js"></script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script src="../for-jemma/prototypes/sims/proto-icons.js"></script>
+<script src="../for-jemma/prototypes/sims/proto.js"></script>
+<script>
+{ // a block, so this page's names stay out of the app's global scope
+const asked = new URLSearchParams(location.search).get("sim");
+const ID = P_SIM_PAGES.includes(asked) ? asked : null, S = ID ? P_SIMS[ID] : null;
+const GOTH = hhIndex["h-willow-creek--goth"];
+P_CUR_SIM = ID || "";
+protoStart({page: "sim.html", title: S ? S.name : "Sim pages", world: "willow-creek", hh: GOTH.id});
+window.onSeg = function (name, v) { if (name === "sim") location.href = new URL(pSimHref(v), document.baseURI).href; }
+const first = s => s.name.split(" ")[0];
+const hhOf = s => s.hh ? hhIndex[s.hh] : null;
+
+// one Sim as a small card: monogram in their world's colour (grey when late), name linking to their page or household
+function famItem(o, word) {
+  const t = P_SIMS[o];
+  if (t.ph) return `<li><div class="card ph"><span class="mono">?</span><span><b>${esc(word === "parent" ? t.phText : "Not on the family tree")}</b></span></div></li>`;
+  const href = pSimLinkTo(o), T = href ? "a" : "div", where = pSimWhere(o);
+  return `<li><${T} class="card ${t.late ? "late" : ""}" ${href ? `href="${href}"` : ""} style="--w:${pSimColour(o)}"><span class="mono">${initial(t.name)}</span><span><b>${esc(t.name)}</b><small>${esc([word, where].filter(Boolean).join(" · "))}</small></span></${T}></li>`;
+}
+
+function family(id) {
+  const s = P_SIMS[id], fam = pFamilyOf(id), words = ws => fam.filter(([, w]) => ws.includes(w));
+  const parents = (s.parents || []).map(p => [p, P_SIMS[p].ph ? "parent" : pRelWord(id, p)]);
+  const partners = pPartnersOf(id).map(([p, k]) => [p, pPartnerWord(k)]);
+  const kids = words(["Son", "Daughter", "Child"]), sibs = words(["Brother", "Sister", "Sibling"]);
+  const shown = new Set([...parents, ...partners, ...kids, ...sibs].map(([o]) => o));
+  const wider = fam.filter(([o]) => !shown.has(o));
+  const born = s.line && P_FAMILIES[s.line] && s.into && s.line !== s.into ? `No parents on the family tree (born a ${P_FAMILIES[s.line].name})` : "None on the family tree";
+  const grp = (label, list, none) => `<div class="fam-group"><span class="label">${label}</span>${list.length ? `<ul class="sim-list">${list.map(([o, w]) => famItem(o, w)).join("")}</ul>` : `<p class="none">${esc(none)}</p>`}</div>`;
+  return `<div class="fam-groups">${grp("Parents", parents, born)}${grp(partners.length > 1 ? "Partners" : "Partner", partners, "None")}${grp("Children", kids, "None")}${grp("Brothers and sisters", sibs, "None")}</div>
+    ${wider.length ? `<div class="fam-group wide"><span class="label">More family</span><ul class="sim-list cols">${wider.map(([o, w]) => famItem(o, w)).join("")}</ul></div>` : ""}`;
+}
+
+function groups(id) {
+  const gs = pGroupsOf(id);
+  const card = ([gid, g, role]) => `<a class="memb" href="${pGroupHref(gid)}"><span class="ico">${ic(P_GROUP_KINDS[g.kind].icon)}</span><span><b>${esc(pGroupTitle(g))}</b><small>${esc(P_GROUP_KINDS[g.kind].name)}</small></span><span class="role-pill">${esc(P_GROUP_KINDS[g.kind].roles[role])}</span></a>`;
+  const missing = ["club", "org"].filter(k => !gs.some(([, g]) => g.kind === k)).map(k => k === "club" ? "clubs" : "university organisations");
+  return `${gs.length ? `<div class="membs">${gs.map(card).join("")}</div>` : ""}${missing.length ? `<p class="rel-none">No ${missing.join(" or ")} noted yet.</p>` : ""}`;
+}
+
+function homes(s) {
+  const hh = hhOf(s);
+  if (!hh) return `<p class="rel-none">${s.late ? "No home: she’s on the family tree only." : "No home on the site."}</p>`;
+  return `<ul class="homes">${hh.lots.filter(l => !l.owned).map(l => `<li>${ic("home")}<a href="#${l.id}">${esc(l.name)}</a><span>${esc(l.hood.name)}, ${esc(l.world.name)}</span><em>Now</em></li>`).join("")}</ul>
+    <p class="rel-none">Earlier homes and moves go here as they happen.</p>`;
+}
+
+function page() {
+  if (!S) return chooser();
+  const hh = hhOf(S), home1 = hh ? hh.lots[0] : GOTH.lots[0], hc = home1.hood.color, w = home1.world;
+  let h = protoBar(esc(S.name), "One page per Sim (her decision, 17 Oct), tried on the Goths. In order: details, their own family (worked out from parents and partners), relationships by tag group (6B), groups (dynasty, clubs, university organisations), homes and story. The game’s words: Spouse, Partner, Engaged.",
+    pSeg("sim", "Sim", P_SIM_PAGES.map(id => [id, first(P_SIMS[id])]), ID), "17 Oct");
+  // header
+  const chips = [S.age + (S.late ? " · late" : ""), S.state ? `${ic("ghost")}${esc(S.state)}` : "Human"];
+  h += `<section class="hero small" style="--c:${home1.hood.glow || hc}"><div class="crumbs">${hh ? `<a href="#w-${w.id}">${ic("map")}${esc(w.name)}</a><a href="#n-${home1.hood.id}">${ic("pin")}${esc(home1.hood.name)}</a><a href="#${home1.id}">${ic("home")}${esc(home1.name)}</a>` : ""}<a href="${PROTO}household.html">${ic("users")}${hh ? "Goth household" : "Her family: the Goth household"}</a></div>
+    <div style="display:flex;gap:26px;align-items:center;flex-wrap:wrap;margin-top:22px"><div class="monogram">${initial(S.name)}</div><div><span class="label" style="color:var(--on-deep-mute)">Sim</span><h1 style="margin-top:6px">${esc(S.name)}</h1></div></div>
+    <div class="sim-chips"><span>${esc(chips[0])}</span><span class="${S.state ? "occult" : ""}">${chips[1]}</span>${hh ? "" : `<span>No household: on the family tree only</span>`}${pOriginTag(S.origin)}</div></section>`;
+  // details
+  const facts = [["Aspiration", S.aspiration], ["Career", S.career], ["School", S.school], ["Lifestyles", (S.lifestyles || []).join(", ")], ["Likes", (S.likes || []).join(", ")], ["Died", S.died]].filter(([, v]) => v);
+  h += `<section class="block" style="--h:${hc}"><div class="block-head"><h2>About <em>${esc(first(S))}</em></h2></div>
+    <div class="sim-about"><div>${S.traits ? `<span class="label">Traits</span><div class="traits">${S.traits.map(t => `<span>${esc(t)}</span>`).join("")}${S.bonus ? `<span class="bonus">${esc(S.bonus)}</span>` : ""}</div>${S.bonus ? `<p class="hint">Dashed: the bonus trait that comes with the aspiration.</p>` : ""}`
+      : `<p class="rel-none">No traits, aspiration or career: she’s on the family tree only.</p>`}</div>
+      ${facts.length ? `<dl class="facts">${facts.map(([t, v]) => `<div><dt>${t}</dt><dd>${esc(v)}</dd></div>`).join("")}</dl>` : "<div></div>"}</div></section>`;
+  // family
+  h += `<section class="block" id="family" style="--h:${hc}"><div class="block-head"><h2>Their <em>family</em></h2><a class="count" href="${PROTO}household.html">The household’s tree</a></div>
+    <p class="say">Worked out from parents and partners. Names open their Sim page, or their household where there’s no Sim page yet.</p>${family(ID)}</section>`;
+  // relationships
+  h += `<section class="block" style="--h:${hc}"><div class="block-head"><h2>Their <em>relationships</em></h2><span class="count">by tag group</span></div>
+    <p class="say">Everyone ${esc(first(S))} has a link with, grouped by tag, each opening the other Sim’s page (or household). Family is in the section above.</p>${pSimRelGroups(ID)}</section>`;
+  // groups
+  h += `<section class="block" style="--h:${hc}"><div class="block-head"><h2>Their <em>groups</em></h2></div>
+    <p class="say">Dynasty (one at most), clubs and university organisations, with ${esc(first(S))}’s role. Each opens the group’s page.</p>${groups(ID)}</section>`;
+  // homes
+  h += `<section class="block" style="--h:${hc}"><div class="block-head"><h2>Where they’ve <em>lived</em></h2></div>${homes(S)}</section>`;
+  // story
+  h += `<section class="block" style="--h:${hc}"><div class="block-head"><h2>Their <em>story</em></h2></div><div class="empty">${ic("note")}Yours to write.</div></section>`;
+  h += `<footer><span>Prototype only: nothing on the site has changed. Sim details from The Sims Wiki.</span><span>Icons by Lucide</span></footer>`;
+  return h;
+}
+// no ?sim= (or an unknown one): the list of Sim pages
+function chooser() {
+  return protoBar("Sim pages", "One page per Sim (her decision, 17 Oct), tried on the Goths. Pick a Sim.", "", "17 Oct") +
+    `<section class="hero small" style="--c:${GOTH.lots[0].hood.glow || GOTH.lots[0].hood.color}"><div class="kicker"><i></i><span class="label">The Goths</span></div><h1 style="margin-top:14px">Sim <em>pages</em></h1></section>
+    <section class="block" style="--h:${GOTH.lots[0].hood.color}"><ul class="sim-list cols">${P_SIM_PAGES.map(id => famItem(id, P_SIMS[id].age)).join("")}</ul></section>`;
+}
+const v = document.getElementById("view"); v.innerHTML = page(); lazyPics(v);
+}
+</script>
+</body>
+</html>

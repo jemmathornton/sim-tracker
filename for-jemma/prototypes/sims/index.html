@@ -29,31 +29,47 @@
 <script src="../for-jemma/prototypes/sims/proto-icons.js"></script>
 <script src="../for-jemma/prototypes/sims/proto.js"></script>
 <script>
+{ // a block, so this page's names stay out of the app's global scope
 protoStart({page: "index.html", title: "Sims prototypes"});
 const ITEMS = [
-  ["household.html", "users", "Household page", "The Goths’ page: a roster table and Sim cards, a mini family tree, and connected households grouped by tag. Switch between roster first and a family portrait.", "5B · 5C · 7a-A · 7d-A · 8A · 8C · 4B"],
-  ["family-tree.html", "network", "Family tree", "The Goth line drawn top-down next to a plain generations list. Cornelia’s chip opens the Crumplebottoms. The Capps and Montys across Ondarion and Tartosa, drawn both ways.", "7a-A · 7a-B · 7b-A · 7c-A · 7c-B · 7c-C"],
-  ["relationships.html", "link", "Links between households", "Grouped lists next to a small web around one household (Goth, Landgraab, Enzo Alto, Capp or Thebe), lines on the Willow Creek map, and the eight dynasties as a diagram and a grid.", "7d-A · 7d-B · 7d-C · 7d-D"],
-  ["tags.html", "tag", "Relationship tags", "The six tag groups with their colours, icons and line styles; a free label and a dynamic; Spouse or Husband and Wife; the other two options.", "6A · 6B · 6C · decision 4"],
+  ["household.html", "users", "Household page", "The Goths’ page as the family overview: family portrait, then a roster where each name opens the Sim’s page; plain links to their lots; a dynasty line; the household’s family tree; their story.", "5C · 7a-A · 4B"],
+  ["sim.html?sim=mortimer-goth", "user-round", "Sim pages", "One page per Sim, tried on the Goths (Mortimer, Bella, Cassandra, Alexander and Cornelia): details, their own family, relationships by tag, groups, homes and story.", "17 Oct"],
+  ["group.html?g=goth-dynasty", "flag", "Group pages", "One page per dynasty, club or university organisation: the Goth, Capp and Monty dynasties and the Avant Gardes club. Members with their role; those based elsewhere lighter, with a world chip.", "17 Oct"],
+  ["family-tree.html", "network", "Family tree", "One drawn tree per household: the Goths and the Capps. Everyone who lives there highlighted; blood relatives and their partners, wherever they live, lighter with a world chip.", "7a-A"],
+  ["relationships.html", "link", "Relationships", "Between Sims, on Sim pages: grouped lists next to a small web around one Sim (Bella, Mortimer, Tybalt, Juliette or Celeste).", "7d-A · 7d-B"],
+  ["tags.html", "tag", "Relationship tags", "The six tag groups with their colours, icons and line styles; a free label and a dynamic; the other two options.", "6A · 6B · 6C"],
+];
+// her decisions so far (17 Oct)
+const DECIDED = [
+  "Each Sim now has their own page; the household page is slimmed down to the family overview.",
+  "The game’s words, Spouse, Partner and Engaged, everywhere, with no switch.",
+  "Household page: family portrait first, roster underneath (roster first when there’s no portrait); plain links to their home and any lots they own or run, and who they rent from or to; no picture of the house; just a dynasty line.",
+  "Family trees: the drawn top-down tree, one per household, built from family links only. Everyone who lives there, all their blood relatives and those relatives’ partners, wherever they live. Worlds don’t matter. No tree when nobody in the household has family anywhere.",
+  "Relationships are between Sims, so they’re only on Sim pages, grouped by tag.",
+  "Group pages for dynasties, clubs and university organisations, all alike; Sim pages list each Sim’s groups with their role (one dynasty at most); clubs and organisations aren’t on household pages.",
+  "Origin is a small tag: Premade (the game’s Sims and households, even when changed) or Mine (yours, and children born in your game).",
 ];
 const ASKS = [
-  ["Household page", "a roster first (5B) or a family portrait at the top (5C)? Origin and “In the game / In my save” on EA’s Sims (8A, 8C)? Does the basics-only version (4B) look enough for most households?"],
-  ["Family tree", "start with the drawn tree (A) or the generations list (B)? Families that move: one tree across worlds (7c-A) or a tree per world with “moved” stubs (7c-B)?"],
-  ["Links", "grouped lists first, then the small web around one household? Is the map version worth having?"],
-  ["Tags", "the six groups, plus a free label? Add or drop any tag? The game’s “Spouse” or “Husband / Wife”?"],
+  ["Sim pages", "is the order right (details, family, relationships, groups, homes, story)? Anything to add or leave off?"],
+  ["Group pages", "do members based elsewhere read well as lighter boxes? Anything else a dynasty or club page should show?"],
+  ["Household page", "does the basics-only version (4B) look enough for most households?"],
+  ["Relationships", "grouped lists first, then the small web around a Sim?"],
+  ["Tags", "the six groups, plus a free label? Add or drop any tag?"],
 ];
-let h = protoBar("Contents", "Prototypes for research/sims-display.md (overnight 16–17 Oct). Option letters match that file.");
-h += `<section class="hero small" style="--c:#8E62CF"><div class="kicker"><i></i><span class="label">Prototypes · 16 Oct</span></div><h1 style="margin-top:14px">Showing <em>Sims</em></h1>
-  <p>How households, family trees and relationships could look, drawn with the site’s own styles. Nothing here changes the site.</p></section>`;
+let h = protoBar("Contents", "Prototypes for research/sims-display.md (overnight 16–17 Oct), updated with your decisions of 17 Oct. Option letters match that file.", "", "17 Oct");
+h += `<section class="hero small" style="--c:#8E62CF"><div class="kicker"><i></i><span class="label">Prototypes · 16–17 Oct</span></div><h1 style="margin-top:14px">Showing <em>Sims</em></h1>
+  <p>How households, Sims, groups, family trees and relationships could look, drawn with the site’s own styles. Nothing here changes the site.</p></section>`;
+h += `<div class="note">17 Oct: each Sim now has its own page; household page slimmed down.</div>`;
 h += `<div class="contents">${ITEMS.map(([f, i, t, d, o]) => `<a href="${PROTO}${f}"><span class="ico">${ic(i)}</span><b>${t}</b><em>${o}</em><span>${d}</span></a>`).join("")}</div>`;
+h += `<div class="opt-head"><h2>Decided on 17 Oct</h2></div><ul class="asks">${DECIDED.map(d => `<li>${d}</li>`).join("")}</ul>`;
 h += `<div class="opt-head"><h2>What each page asks you</h2></div><ul class="asks">${ASKS.map(([p, q]) => `<li><b>${p}:</b> ${q}</li>`).join("")}</ul>`;
 h += `<div class="opt-head"><h2>Where things come from</h2></div><ul class="asks">
-  <li><b>Sims:</b> EA’s starting versions from The Sims Wiki (the Goths, Crumplebottoms, Pancakes, Capps and Montys), checked against tonight’s research/ea-family-lore.md. Nothing is from your save yet, so every “In my save” line is empty.</li>
-  <li><b>Links:</b> the game (family, Royalty & Legacy dynasties), EA’s <i>Copperdale Class of ’00</i> Gallery household (Mortimer, Bella, the Pancakes and the Landgraabs as teens), your plan (Romeo, Juliette and Dante in Tartosa; Enzo’s family), and ideas, shown with dashed pills.</li>
-  <li><b>Households, homes, colours and maps:</b> the site’s own data. No pictures of Sims: monograms, plus one of your screenshots as a stand-in on the household page. Maps by 20th Century Plumbob, icons by Lucide.</li>
+  <li><b>Sims, family links, relationships and groups:</b> the game’s data as given on The Sims Wiki (the Goths, Crumplebottoms, Pancakes, Capps, Montys and the Avant Gardes), checked against research/ea-family-lore.md and research/fame-and-clubs-check.md. Tartosa for Romeo, Juliette and Dante is your plan.</li>
+  <li><b>Households, homes, colours and maps:</b> the site’s own data. No pictures of Sims: monograms, plus one of your screenshots as a stand-in portrait on the household page. Icons by Lucide.</li>
   <li><b>Opening them:</b> double-click any page in this folder. Fonts load from Google Fonts like the app does; without internet they fall back to similar ones. Household and lot links open the real app.</li></ul>`;
 h += `<footer><span>Prototype only: nothing on the site has changed.</span><span>Icons by Lucide</span></footer>`;
 document.getElementById("view").innerHTML = h;
+}
 </script>
 </body>
 </html>

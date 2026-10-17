@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Household Links Prototype</title>
-<!-- Prototype, 16 Oct: links between households (research/sims-display.md §7d): A grouped lists next to B one household in the
-     middle; C lines on the Willow Creek map; D the dynasty web as a diagram and as a grid. Opens straight from the folder.
-     Reads the app's files in site/ and changes nothing. -->
+<title>Relationships Prototype</title>
+<!-- Prototype, 16 Oct (redone 17 Oct to her decision): relationships are between Sims, so they live only on Sim pages.
+     The two ways to show them there, centred on one Sim: A grouped lists, B a small web around the Sim
+     (research/sims-display.md §7d). Opens straight from the folder. Reads the app's files in site/ and changes nothing. -->
 <base href="../../../site/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,96 +30,39 @@
 <script src="../for-jemma/prototypes/sims/proto-icons.js"></script>
 <script src="../for-jemma/prototypes/sims/proto.js"></script>
 <script>
-protoStart({page: "relationships.html", title: "Links between households", world: "willow-creek"});
-const WC = worldById("willow-creek");
-const CENTRES = [["h-willow-creek--goth", "Goth"], ["h-oasis-springs--landgraab", "Landgraab"], ["h-ondarion--enzo-alto", "Enzo Alto"], ["h-ondarion--capp", "Capp"], ["h-ondarion--thebe", "Thebe"]];
-let CENTRE = new URLSearchParams(location.search).get("c") || "h-willow-creek--goth";
-function onSeg(name, v) { if (name === "centre") { CENTRE = v; drawAB(); } }
+{ // a block, so this page's names stay out of the app's global scope
+protoStart({page: "relationships.html", title: "Relationships", world: "willow-creek"});
+const CENTRES = ["bella-goth", "mortimer-goth", "tybalt-capp", "juliette-monty", "celeste-capp"];
+let CENTRE = new URLSearchParams(location.search).get("c");
+if (!CENTRES.includes(CENTRE)) CENTRE = "bella-goth";
+window.onSeg = function (name, v) { if (name === "centre") { CENTRE = v; drawAB(); } }
+const rec = t => `<span class="rec" style="font-size:10px;font-weight:800;letter-spacing:.1em;color:var(--done);border:1.5px solid color-mix(in srgb,var(--done) 50%,var(--line));padding:2px 7px;border-radius:99px">${t}</span>`;
 
 function drawAB() {
-  const n = nodeInfo(CENTRE);
+  const s = P_SIMS[CENTRE], nm = s.name.split(" ")[0];
   document.getElementById("ab").innerHTML = `
-    <div class="pane"><div class="label"><span class="no">A</span><b>Grouped lists</b><span class="rec" style="font-size:10px;font-weight:800;letter-spacing:.1em;color:var(--done);border:1.5px solid color-mix(in srgb,var(--done) 50%,var(--line));padding:2px 7px;border-radius:99px">To start</span></div>
-      <p class="say" style="margin-top:0">The ${esc(n.name)} household page’s “Connected households” block, one group per tag.</p>
-      <div class="ab-list">${relGroups(CENTRE)}</div>
+    <div class="pane"><div class="label"><span class="no">A</span><b>Grouped lists</b>${rec("To start")}</div>
+      <p class="say" style="margin-top:0">${esc(nm)}’s close family and everyone ${esc(nm)} has a link with, one group per tag. Each card opens the other Sim’s page, or their household.</p>
+      <div class="ab-list">${pSimRelGroups(CENTRE, {family: true})}</div>
       <div class="verdict"><span>Readable, and fine with very few links</span><span class="minus">No picture of the whole web</span></div></div>
-    <div class="pane"><div class="label"><span class="no">B</span><b>One household in the middle</b><span class="rec" style="font-size:10px;font-weight:800;letter-spacing:.1em;color:var(--done);border:1.5px solid color-mix(in srgb,var(--done) 50%,var(--line));padding:2px 7px;border-radius:99px">Next</span></div>
-      <p class="say" style="margin-top:0">A small drawing on the same page: lines styled by tag group, each household’s tags under its name, and a key. Hover a household for who.</p>
-      ${drawWeb(CENTRE)}${webKey()}
-      <div class="verdict"><span>Never messy: only this household’s links</span><span class="minus">One household at a time</span></div></div>`;
-}
-
-// C: Willow Creek's households at their neighbourhood's spot on the map, lines between them, other worlds at the edge
-function drawMap() {
-  const box = document.getElementById("mapweb"), W = box.clientWidth, H = box.clientHeight, spots = DATA.nbPt["willow-creek"];
-  const hhs = Object.values(WC.households), linked = new Set(LINKS.flatMap(l => [l.a, l.b]));
-  const byHood = {}; hhs.forEach(x => (byHood[x.lots[0].hood.name] ||= []).push(x));
-  const pos = {}, up = new Set();
-  Object.entries(byHood).forEach(([hood, xs]) => { const sp = spots[hood]; if (!sp) return;
-    xs.forEach((x, i) => { const a = -Math.PI / 2 + i * 2 * Math.PI / xs.length, r = xs.length > 1 ? 30 : 0; pos[x.id] = [sp[0] * W + r * Math.cos(a), sp[1] * H + r * Math.sin(a)]; if (r && Math.sin(a) < -.1) up.add(x.id); }); });
-  const here = LINKS.filter(l => pos[l.a] || pos[l.b]);
-  const outIds = [...new Set(here.flatMap(l => [l.a, l.b]).filter(id => !pos[id]))];
-  const outY = {}; outIds.forEach((id, i) => outY[id] = H * .16 + i * 46);
-  let svg = "";
-  const nodes = hhs.filter(x => pos[x.id]).map(x => { const [px, py] = pos[x.id], on = linked.has(x.id);
-    return `<a class="mn ${on ? "" : "dim"} ${up.has(x.id) ? "up" : ""}" href="#${x.id}" style="left:${px}px;top:${py}px;--w:${wColour(WC)}" title="${esc(x.name)}">${initial(x.name)}<span>${esc(x.name)}</span></a>`; }).join("");
-  const outs = outIds.map(id => { const k = nodeInfo(id); return `<${k.href ? "a" : "span"} class="out" data-out="${id}" ${k.href ? `href="${k.href}"` : ""} style="top:${outY[id]}px;--w:${k.colour}">${ic("arrow-right")}${esc(k.world.name)} · ${esc(k.name)}</${k.href ? "a" : "span"}>`; }).join("");
-  box.innerHTML = `<span class="credit">Map by 20th Century Plumbob</span>${nodes}${outs}`;
-  const outX = {}; box.querySelectorAll("[data-out]").forEach(el => outX[el.dataset.out] = el.offsetLeft);
-  here.forEach(l => { const g = TAGS[l.tag].g, A = pos[l.a] || [outX[l.a], outY[l.a]], B = pos[l.b] || [outX[l.b], outY[l.b]];
-    svg += edge(A[0], A[1], B[0], B[1], g, l.src === "idea", true); });
-  box.insertAdjacentHTML("afterbegin", `<svg aria-hidden="true">${svg}</svg>`);
-}
-
-// D: the dynasties as a plain diagram and as a grid
-const DYN = [["h-willow-creek--goth", "Goth"], ["h-ondarion--enzo-alto", "Alto"], ["h-ondarion--capp", "Capp"], ["x-tartosa-monty", "Monty"],
-             ["h-ondarion--thebe", "Thebe"], ["h-ondarion--abrantes", "Abrantes"], ["h-oasis-springs--landgraab", "Landgraab"], ["h-ondarion--darong", "Darong"]];
-const dynLinks = () => LINKS.filter(l => DYN.some(d => d[0] === l.a) && DYN.some(d => d[0] === l.b) && ["dynasty", "family"].includes(TAGS[l.tag].g));
-function dynWeb(W = 840, H = 470) {
-  const cx = W / 2, cy = H / 2 + 4, pos = {};
-  DYN.forEach(([id], i) => { const a = -Math.PI / 2 + i * 2 * Math.PI / DYN.length; pos[id] = [cx + 320 * Math.cos(a), cy + 168 * Math.sin(a)]; });
-  const ls = dynLinks();
-  let svg = "", labs = "";
-  const pairs = {}; ls.forEach(l => (pairs[[l.a, l.b].sort().join("|")] ||= []).push(l));
-  Object.values(pairs).forEach(group => group.forEach((l, j) => {
-    const [x1, y1] = pos[l.a], [x2, y2] = pos[l.b], dx = x2 - x1, dy = y2 - y1, len = Math.hypot(dx, dy), ux = dx / len, uy = dy / len;
-    const off = (j - (group.length - 1) / 2) * 9, px = -uy * off, py = ux * off, g = TAGS[l.tag].g;
-    svg += edge(x1 + ux * 30 + px, y1 + uy * 30 + py, x2 - ux * 30 + px, y2 - uy * 30 + py, g, l.src === "idea");
-    const t = group.length > 1 ? .4 + j * .2 : .5;
-    labs += `<span class="elab ${l.src === "idea" ? "idea" : ""}" style="--g:var(--t-${g});left:${x1 + dx * t + px * 2.4}px;top:${y1 + dy * t + py * 2.4}px" title="${esc(l.who)}">${ic(GROUPS[g].icon)}${len < 170 ? "" : esc(l.src === "idea" ? "Idea" : TAGS[l.tag].name.replace("Dynasty ", ""))}</span>`;   // short lines: icon only (hover for who)
-  }));
-  const nodes = DYN.map(([id, nm]) => { const k = nodeInfo(id), [x, y] = pos[id];
-    return `<${k.href ? "a" : "span"} class="node small ${y < cy - 20 ? "up" : ""} ${k.nohome ? "nohome" : ""}" ${k.href ? `href="${k.href}"` : ""} style="left:${x}px;top:${y}px;--w:${k.colour}"><span class="c">${initial(nm)}</span><b>${esc(nm)}</b><small>${esc(k.world.name)}</small></${k.href ? "a" : "span"}>`; }).join("");
-  return `<div class="web" style="width:${W}px;height:${H}px"><svg width="${W}" height="${H}" aria-hidden="true">${svg}</svg>${labs}${nodes}</div>`;
-}
-function dynGrid() {
-  const cell = (a, b) => { if (a === b) return `<td class="self"></td>`;
-    const ls = dynLinks().filter(l => (l.a === a && l.b === b) || (l.a === b && l.b === a));
-    return `<td>${ls.map(l => `<span class="tg ${TAGS[l.tag].g} ${l.src === "idea" ? "free" : ""}" title="${esc(TAGS[l.tag].name)}: ${esc(l.who)}">${ic(GROUPS[TAGS[l.tag].g].icon)}</span>`).join(" ")}</td>`; };
-  return `<div class="sheet-wrap"><table class="sheet matrix"><thead><tr><th></th>${DYN.map(([, n]) => `<th scope="col">${esc(n)}</th>`).join("")}</tr></thead>
-    <tbody>${DYN.map(([a, n]) => `<tr><th scope="row">${esc(n)}</th>${DYN.map(([b]) => cell(a, b)).join("")}</tr>`).join("")}</tbody></table></div>`;
+    <div class="pane"><div class="label"><span class="no">B</span><b>${esc(nm)} in the middle</b>${rec("Next")}</div>
+      <p class="say" style="margin-top:0">A small drawing on the same page: lines styled by tag group, each Sim’s tags under their name, and a key.</p>
+      ${pDrawSimWeb(CENTRE, 820, 600)}${pWebKey(["family", "romance", "friends", "conflict", "work"])}
+      <div class="verdict"><span>Never messy: only this Sim’s links</span><span class="minus">One Sim at a time</span></div></div>`;
 }
 
 function page() {
-  let h = protoBar("Links between households", "Options shown: 7d-A grouped lists next to 7d-B one household in the middle (pick the household above); 7d-C lines on the Willow Creek map; 7d-D the dynasty web as a diagram and as a grid.",
-    seg("centre", "Household", CENTRES, CENTRE));
-  h += `<section class="hero small" style="--c:${WC.color}"><div class="kicker"><i></i><span class="label">Relationships · beyond family</span></div><h1 style="margin-top:14px">Who <em>knows</em> whom</h1>
-    <p>Links come from the game (family, dynasties, starting friendships), EA’s Gallery households, your plan, or ideas (dashed). Nothing here is from your save yet.</p></section>`;
-  h += `<div class="opt-head"><span class="no">7d</span><h2>On a household page</h2></div><div class="pair even" id="ab"></div>`;
-  h += `<div class="opt-head"><span class="no">C</span><h2>Lines on the world map</h2><span class="rec alt">If you want it</span></div>
-    <p class="say">Willow Creek’s households at their neighbourhood’s spot (several share a spot, so they’re nudged into a ring). Faint dots have no links yet. Links to other worlds run to the edge.</p>
-    <div class="mapweb" id="mapweb" style="background-image:url('${WC.map}')"></div>${webKey()}
-    <div class="verdict"><span>Uses your maps; very “your site”</span><span class="minus">Busy in big worlds (San Myshuno has 12 households in 4 spots); households sharing a spot need nudging</span></div>`;
-  h += `<div class="opt-head"><span class="no">D</span><h2>A whole web: the dynasties</h2><span class="rec alt">For comparison</span></div>
-    <p class="say">The eight dynasties from Royalty & Legacy, across Willow Creek, Oasis Springs, Ondarion and Tartosa: the game’s alliances and rivalries, the family ties between them, and one idea (Goth and Alto). Drawn as a diagram and as a grid.</p>
-    <div class="pane" style="overflow-x:auto"><div class="label"><b>As a diagram</b></div>${dynWeb()}${webKey()}</div>
-    <div class="pane" style="margin-top:18px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:24px;align-items:start"><div><div class="label"><b>As a grid</b></div>${dynGrid()}</div><p class="say" style="margin:34px 0 0">The same links as a grid: each row and column is a dynasty. Hover a cell for who. It’s exact, but most people find it harder to read than the drawing; a drawing gets messy past about 15 households.</p></div>`;
-  h += `<footer><span>Prototype only: nothing on the site has changed. Links are EA’s (Sims Wiki), EA’s Gallery households, your plan, or marked as ideas.</span><span>Map by 20th Century Plumbob · Icons by Lucide</span></footer>`;
+  let h = protoBar("Relationships", "Her decision, 17 Oct: relationships are between Sims, so they live only on Sim pages, grouped by tag (none on household pages). The two ways to show them, centred on one Sim (pick above): 7d-A grouped lists and 7d-B a small web. Family words are worked out from parents and partners.",
+    pSeg("centre", "Sim", CENTRES.map(id => [id, P_SIMS[id].name.split(" ")[0]]), CENTRE), "17 Oct");
+  h += `<section class="hero small" style="--c:${pWorldById("willow-creek").color}"><div class="kicker"><i></i><span class="label">On each Sim’s page</span></div><h1 style="margin-top:14px">Who <em>knows</em> whom</h1>
+    <p>The Goths have only family so far; Tybalt, Juliette and Celeste show friends, coworkers and enemies across Ondarion and Tartosa.</p></section>`;
+  h += `<div class="opt-head"><span class="no">7d</span><h2>On a Sim’s page</h2></div><div class="ab-stack" id="ab"></div>`;
+  h += `<footer><span>Prototype only: nothing on the site has changed. Relationships from The Sims Wiki; Tartosa is your plan.</span><span>Icons by Lucide</span></footer>`;
   return h;
 }
 document.getElementById("view").innerHTML = page();
-drawAB(); drawMap();
-addEventListener("resize", drawMap);
+drawAB();
+}
 </script>
 </body>
 </html>

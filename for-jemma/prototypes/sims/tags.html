@@ -4,9 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Relationship Tags Prototype</title>
-<!-- Prototype, 16 Oct: the relationship tags research/sims-display.md proposes (§6 option B: six groups, game wording where it
-     exists, plus a free label and a dynamic), next to options A (game labels only) and C (free text), and the Spouse vs
-     Husband / Wife wording. Opens straight from the folder. Reads the app's files in site/ and changes nothing. -->
+<!-- Prototype, 16 Oct (updated 17 Oct): the relationship tags research/sims-display.md proposes (§6 option B: six groups, game
+     wording where it exists, plus a free label and a dynamic), next to options A (game labels only) and C (free text).
+     Decided 17 Oct: the game's Spouse, Partner and Engaged everywhere, with no switch. Opens straight from the folder.
+     Reads the app's files in site/ and changes nothing. -->
 <base href="../../../site/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,26 +31,24 @@
 <script src="../for-jemma/prototypes/sims/proto-icons.js"></script>
 <script src="../for-jemma/prototypes/sims/proto.js"></script>
 <script>
+{ // a block, so this page's names stay out of the app's global scope
 protoStart({page: "tags.html", title: "Relationship tags"});
-function onSeg(name, v) { if (name === "words") { OLD_WORDS = v === "old"; draw(); } }
-// with "Husband / Wife" chosen, romance tags read the older way
-const shownName = t => OLD_WORDS && TAGS[t].old ? TAGS[t].old.join(" / ") : TAGS[t].name;
-const pill = (t, cls = "") => `<span class="tg ${TAGS[t].g} ${cls}">${ic(GROUPS[TAGS[t].g].icon)}${esc(shownName(t))}</span>`;
-const nm = id => esc(SIMS[id].name.split(" ")[0]);
+const pill = (t, cls = "") => pTagPill(t, cls);
+const nm = id => esc(P_SIMS[id].name.split(" ")[0]);
 
-// real examples where the data has them (the game, EA's Gallery households, or the site now)
+// real examples where the game's data has them
 const EXAMPLES = {
   family:   [`${nm("agnes-crumplebottom")} ↔ ${nm("mortimer-goth")}: <b>Aunt</b> (worked out: she is his late mother’s sister)`],
   romance:  [`${nm("mortimer-goth")} ↔ ${nm("bella-goth")}: ${pill("spouse")}`, `Agnes ↔ Robert: ${pill("ex")} · Agnes ↔ Erik: ${pill("late-spouse")}`, `Don ↔ Katrina: ${pill("crush")} <span class="lbl">Romantic interest</span>`],
   friends:  [`Bjorn Bjergsen ↔ Jacques Villareal: ${pill("friends")}`, `Celeste Capp ↔ Dante Monty: ${pill("good-friends")} <span class="lbl">Cousins</span>`],
   conflict: [`Tybalt Capp ↔ Juliette Monty: ${pill("enemies")} <span class="lbl">They despise each other</span>`],
-  work:     [`Clara Bjergsen ↔ Mila Munch: ${pill("coworkers")}`, `Mortimer, Bella ↔ Bob, Eliza: ${pill("classmates")} <span class="lbl">Copperdale Class of ’00</span>`, `Elderberry ↔ Pleasant: ${pill("landlord")} <span class="src" style="display:inline-flex">${ic("info")}on the site now (Spring Steppes)</span>`],
+  work:     [`Clara Bjergsen ↔ Mila Munch: ${pill("coworkers")}`, `Tybalt Capp ↔ Enzo Alto: ${pill("coworkers")}`],
   dynasty:  [`Landgraab ↔ Abrantes: ${pill("ally")}`, `Capp ↔ Monty: ${pill("dyn-rival")}`, `Johnny Zest: ${pill("outcast")} of the Landgraabs`],
 };
 const WORKED_OUT = ["Parent", "Child", "Sibling", "Grandparent", "Grandchild", "Aunt or uncle", "Niece or nephew", "Cousin", "In-law", "Step- and half-", "Great-grand…", "Ancestor", "Descendant"];
 const NOTES = {
   family: "Never typed: worked out from each Sim’s parents and partners, as the game does since patch 193.",
-  romance: "Game words since patch 162. Crush is ours (the game has many romance labels; one word is enough).",
+  romance: "The game’s words since patch 162: Spouse, Engaged, Partner (decided 17 Oct, used everywhere). Crush is ours (the game has many romance labels; one word is enough).",
   friends: "The game’s friendship labels. Store the label, never the bar.",
   conflict: "Rivals and Enemies (the game only has Disliked and Despised).",
   work: "Coworkers is the game’s; Classmates, Boss and Landlord / Tenant are ours.",
@@ -57,34 +56,26 @@ const NOTES = {
 };
 
 function page() {
-  let h = protoBar("Relationship tags", "Options shown: 6B six groups with game wording (suggested), plus a free label and a dynamic; 6A game labels only and 6C free text for comparison; and the Spouse vs Husband / Wife wording.",
-    seg("words", "Words", [["game", "Spouse"], ["old", "Husband / Wife"]], OLD_WORDS ? "old" : "game"));
+  let h = protoBar("Relationship tags", "Options shown: 6B six groups with game wording (suggested), plus a free label and a dynamic; 6A game labels only and 6C free text for comparison. Decided 17 Oct: the game’s Spouse, Partner and Engaged everywhere; relationships are between Sims, shown on Sim pages.", "", "17 Oct");
   h += `<section class="hero small" style="--c:#8E62CF"><div class="kicker"><i></i><span class="label">How links are named</span></div><h1 style="margin-top:14px">Relationship <em>tags</em></h1>
     <p>A fixed list in six groups. Each group has its own colour, Lucide icon and line style, so colour is never the only clue.</p></section>`;
   h += `<div class="opt-head"><span class="no">6B</span><h2>Six groups</h2><span class="rec">Suggested</span></div>
-    <div class="tag-groups">${Object.entries(GROUPS).map(([g, G]) => `<div class="tag-group" style="--g:var(--t-${g})">
+    <div class="tag-groups">${Object.entries(P_TAG_GROUPS).map(([g, G]) => `<div class="tag-group" style="--g:var(--t-${g})">
       <h3><span class="ico">${ic(G.icon)}</span>${G.name}</h3>
-      <div class="tagrow" style="display:flex;flex-wrap:wrap;gap:6px">${g === "family" ? WORKED_OUT.map(w => `<span class="tg family plain">${esc(w)}</span>`).join("") : Object.keys(TAGS).filter(t => TAGS[t].g === g).map(t => pill(t)).join("")}</div>
+      <div class="tagrow" style="display:flex;flex-wrap:wrap;gap:6px">${g === "family" ? WORKED_OUT.map(w => `<span class="tg family plain">${esc(w)}</span>`).join("") : Object.keys(P_TAGS).filter(t => P_TAGS[t].g === g).map(t => pill(t)).join("")}</div>
       <p>${esc(NOTES[g])}</p>
-      <div class="line-eg"><svg viewBox="0 0 120 16" aria-hidden="true">${edge(4, 8, 116, 8, g)}</svg>on drawings</div>
+      <div class="line-eg"><svg viewBox="0 0 120 16" aria-hidden="true">${pEdge(4, 8, 116, 8, g)}</svg>on drawings</div>
       ${EXAMPLES[g].map(e => `<div class="eg-line">${e}</div>`).join("")}</div>`).join("")}</div>`;
   // extras: free label, dynamic, and an idea
   h += `<div class="opt-head"><span class="no">+</span><h2>A label and a dynamic, if wanted</h2></div>
-    <p class="say">Any link can carry a short free <b>label</b> (like the game’s custom relationships), and an optional <b>dynamic</b> word from the game (family: Close, Distant, Difficult, Jokesters; romantic: Steamy, Strained, Unpredictable, Wholesome). Ideas that aren’t in the game get a dashed pill.</p>
+    <p class="say">Any link between two Sims can carry a short free <b>label</b> (like the game’s custom relationships), and an optional <b>dynamic</b> word from the game (family: Close, Distant, Difficult, Jokesters; romantic: Steamy, Strained, Unpredictable, Wholesome). Ideas that aren’t in the game get a dashed pill.</p>
     <div class="rel-list" style="grid-template-columns:repeat(3,minmax(0,1fr))">
-      ${relCard("h-willow-creek--pancakes", [LINKS.find(l => l.b === "h-willow-creek--pancakes" && l.a === "h-willow-creek--goth")])}
-      <div class="rel-card" style="--w:${wColour(worldById("tartosa"))};--g:var(--t-romance)"><span class="mono">M</span><b>Monty</b><span class="where">Rifugio dei Pirati · Tartosa (not owned)</span>
-        <span class="tagrow">${pill("spouse")}<span class="lbl">Ran away together</span><span class="dyn">Wholesome</span></span><span class="who">Romeo ↔ Juliette</span><span class="src">${ic("info")}How a label and a dynamic read <span class="eg">example</span></span></div>
-      ${relCard("h-ondarion--enzo-alto", [LINKS.find(l => l.a === "h-willow-creek--goth" && l.b === "h-ondarion--enzo-alto")])}
+      ${pSimRelCard({o: "dante-monty", g: "friends", tag: "good-friends", label: "Cousins", note: "On Celeste Capp’s page"})}
+      <div class="rel-card" style="--w:${pSimColour("juliette-monty")};--g:var(--t-romance)"><span class="mono">J</span><b>Juliette Monty</b><span class="where">${esc(pSimWhere("juliette-monty"))}</span>
+        <span class="tagrow">${pill("spouse")}<span class="lbl">Ran away together</span><span class="dyn">Wholesome</span></span><span class="who">On Romeo’s page: how a label and a dynamic read <span class="eg">example</span></span></div>
+      <div class="rel-card" style="--w:${pSimColour("enzo-alto")};--g:var(--t-dynasty)"><span class="mono">E</span><b>Enzo Alto</b><span class="where">${esc(pSimWhere("enzo-alto"))}</span>
+        <span class="tagrow">${pill("dyn-rival", "free")}<span class="lbl">Old rivals</span></span><span class="who">On Mortimer’s page: an idea, not something in The Sims 4 <span class="eg">example</span></span></div>
     </div>`;
-  // the wording choice
-  const rows = ["spouse", "engaged", "partner", "ex", "late-spouse"];
-  h += `<div class="opt-head"><span class="no">4</span><h2>Spouse, or Husband and Wife?</h2></div>
-    <p class="say">Since patch 162 the game says Spouse, Engaged and Partner. The Goth cards on the site say Husband and Wife now. The Words switch at the top (here and on the household page) shows both.</p>
-    <div class="pair even"><div class="pane"><div class="label"><b>The game’s words</b></div><div class="sheet-wrap" style="margin:0"><table class="sheet words"><tbody>${rows.map(t => `<tr><td>${esc(TAGS[t].name === "Ex" ? "Ex-Spouse" : TAGS[t].name)}</td></tr>`).join("")}</tbody></table></div>
-        <p class="say" style="margin:12px 0 0">Bella’s card: <b>Mortimer Goth</b> Spouse</p></div>
-      <div class="pane"><div class="label"><b>Husband / Wife</b></div><div class="sheet-wrap" style="margin:0"><table class="sheet words"><tbody>${rows.map(t => `<tr><td>${esc(TAGS[t].old.join(" / "))}</td></tr>`).join("")}</tbody></table></div>
-        <p class="say" style="margin:12px 0 0">Bella’s card: <b>Mortimer Goth</b> Husband</p></div></div>`;
   // the alternatives
   const GAME = ["Spouse", "Engaged", "Partner", "Ex-Spouse", "Late Spouse", "Best Friends Forever", "Good Friends", "Friends", "Acquaintances", "Disliked", "Despised", "Coworkers", "Neighbours", "Roommates"];
   const FREE = ["childhood sweethearts", "Mortimer’s old classmate", "can’t stand each other", "landlady", "best mates", "secret admirer"];
@@ -97,11 +88,12 @@ function page() {
         <div style="display:flex;flex-wrap:wrap;gap:6px">${FREE.map(w => `<span class="tg plain free">${esc(w)}</span>`).join("")}</div>
         <div class="verdict"><span>Say anything</span><span class="minus">Can’t group, colour or count links (two people type “best mates” and “BFFs”)</span></div></div></div>
     <div class="note" style="margin-top:28px">To decide: keep the six groups? Add or drop any tag (Classmates, Boss, Landlord / Tenant, Crush, Enemies are ours, not the game’s)?</div>`;
-  h += `<footer><span>Prototype only: nothing on the site has changed. Examples are EA’s (Sims Wiki), EA’s Gallery households, or the site now; one is marked as an example.</span><span>Icons by Lucide</span></footer>`;
+  h += `<footer><span>Prototype only: nothing on the site has changed. Examples from The Sims Wiki; two are marked as examples.</span><span>Icons by Lucide</span></footer>`;
   return h;
 }
 function draw() { const y = scrollY; document.getElementById("view").innerHTML = page(); window.scrollTo(0, y); }
 draw();
+}
 </script>
 </body>
 </html>
