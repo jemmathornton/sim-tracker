@@ -261,7 +261,7 @@
       ["Mila Munch", "Friend"],
       ["Yuki Behr", "Friend"]
      ],
-     "parents": ["jacques-villareal"],
+     "parents": ["jacques-villareal", "villareal-mother"],
      "clubs": [
       {
        "name": "Avant Gardes",
@@ -295,7 +295,7 @@
       ["Siobhan Fyres", "Friend"],
       ["Sofia Bjergsen", "Friend"]
      ],
-     "parents": ["jacques-villareal"],
+     "parents": ["jacques-villareal", "villareal-mother"],
      "clubs": [
       {
        "name": "Paragons",
@@ -326,7 +326,7 @@
       ["Ulrike Faust", "Friend"],
       ["Wolfgang Munch", "Friend"]
      ],
-     "parents": ["jacques-villareal"],
+     "parents": ["jacques-villareal", "villareal-mother"],
      "clubs": [
       {
        "name": "Renegades",

@@ -963,12 +963,11 @@ function hhLotLines(hh){
 const dynLine = ids => [...new Set(ids.map(id => (dynastyOf(id) || [])[0]).filter(Boolean))].map(gid => { const roles = ids.map(dynastyOf).filter(d => d && d[0] === gid).map(d => d[2]);
   return `<a href="#${gid}">${ic("crown")}${esc(GROUP_PAGES[gid].name)}</a>${roles.every(r => r === "outcast") ? " (outcast)" : ""}`; }).join(", ");
 function simRoster(ids){
-  return `<div class="sheet-wrap"><table class="sheet roster"><thead><tr><th scope="col">Sim</th><th scope="col">Life stage</th><th scope="col">Life state</th><th scope="col">Aspiration</th><th scope="col">Career or school</th><th scope="col">Details</th></tr></thead><tbody>
-    ${ids.map(id => { const s = SIMS[id], has = s.traits && s.traits.length, job = (s.career || s.school || "").split(" · ")[0];
+  return `<div class="sheet-wrap"><table class="sheet roster"><thead><tr><th scope="col">Sim</th><th scope="col">Life stage</th><th scope="col">Life state</th><th scope="col">Aspiration</th><th scope="col">Career or school</th></tr></thead><tbody>
+    ${ids.map(id => { const s = SIMS[id], job = (s.career || s.school || "").split(" · ")[0];
       return `<tr><td><span class="who"><span class="mono">${initial(s.name)}</span><a href="#s-${id}">${esc(s.name)}</a></span></td>
         <td>${esc(s.age)}</td><td>${s.state ? `<span class="state occult">${ic("ghost")}${esc(s.state)}</span>` : `<span class="muted">Human</span>`}</td>
-        <td>${s.aspiration ? esc(s.aspiration) : `<span class="muted">—</span>`}</td><td>${job ? esc(job) : `<span class="muted">—</span>`}</td>
-        <td><span class="lvl ${has ? "profile" : ""}">${has ? "Profile" : "Basics"}</span></td></tr>`; }).join("")}</tbody></table></div>`;
+        <td>${s.aspiration ? esc(s.aspiration) : `<span class="muted">—</span>`}</td><td>${job ? esc(job) : `<span class="muted">—</span>`}</td></tr>`; }).join("")}</tbody></table></div>`;
 }
 function householdNew(hh){
   const w = hh.world, home1 = hh.lots[0], hc = home1.hood.color, ids = membersOf(hh), n = ids.length, hoods = [...new Set(hh.lots.map(l => l.hood))];
