@@ -25,7 +25,7 @@
    "mapSpot": [0.59, 0.58],
    "mapBox": [0.43, 0.46, 0.75, 0.7],
    "lots": [
-    {"lot": "Isda Riverfront", "myName": "Isda Riverfront", "type": "Residential Rental (2)", "size": "20x20", "residents": "Rochana/Caberry own", "built": true, "shared": false, "screenshots": false, "simsMade": false, "units": [{"name": "1"}, {"name": "2"}]},
+    {"lot": "Isda Riverfront", "myName": "Isda Riverfront", "type": "Residential Rental (2)", "size": "20x20", "residents": "Cadberry", "built": true, "shared": false, "screenshots": false, "simsMade": false, "units": [{"name": "1"}, {"name": "2"}], "tenants": [{"name": "Rochana"}]},
     {"lot": "Sungai Point", "myName": "Sungai Point", "type": "Residential Rental (3)", "size": "30x20", "residents": "Linh-Sadya & Linh", "built": false, "shared": false, "screenshots": false, "simsMade": false, "units": [{"name": "11A", "traits": ["Homey"]}, {"name": "11B", "traits": ["Great Acoustics", "Gnomes"]}, {"name": "11C", "challenges": ["Spooky", "Mold"]}]},
     {"lot": "The Screaming Gecko", "myName": "The Screaming Gecko", "type": "Karaoke Bar", "size": "20x20", "residents": "N/A", "built": true, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Tam Nang Sands", "myName": "Tam Nang Sands", "type": "Spa", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
