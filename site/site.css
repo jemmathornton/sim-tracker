@@ -674,6 +674,6 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 .membs{margin-top:18px}
 /* role badges, the same on trees and group pages: gold getting stronger with rank; outcasts grey (17 Oct) */
 .badge.r-head{background:var(--brass);color:#1A1F1C;border:1px solid var(--brass)}
-.badge.r-heir{background:color-mix(in srgb,var(--brass) 50%,var(--surface));color:#1A1F1C;border:1px solid var(--brass)}
+.badge.r-heir{background:color-mix(in srgb,var(--brass) 32%,var(--surface));color:#1A1F1C;border:1px solid var(--brass)}
 .badge.r-member{background:color-mix(in srgb,var(--brass) 5%,var(--surface));color:color-mix(in srgb,var(--t-dynasty) 85%,var(--ink));border:1px solid color-mix(in srgb,var(--brass) 35%,var(--line))}
 .badge.r-outcast{background:var(--soft);color:var(--muted);border:1px solid var(--line)}
