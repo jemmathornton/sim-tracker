@@ -247,6 +247,13 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [ ] [Jemma] Owners who live away from their rental (the Robles at Manzanita Terrace, the Lovejoys at Sequoia Cottage, Rochana/Caberry at Isda Riverfront) lose it if merged into another household elsewhere: merge the other household into theirs instead
 - [x] Corrected research/worlds/gibbi-point.md: Laxmi and Raheel Kunal are homeless premade townies (17 Oct)
 
+### Universities and high school (research/students-and-schools.md)
+- [ ] [Jemma] The Copperdale boarding houses won’t work as University Housing: only enrolled uni students can live there, so high-school teens would be moved out. Make them Residential (a teens-only household is allowed), or a rental with a unit per team?
+- [ ] [Jemma] Mossy Lane: a UoB or a Foxbury hall, with a gender or organisation limit? (It needs a university picked; a stove or grill blocks it.) And which university does each Windenburg and StrangerVille hall belong to?
+- [ ] [Jemma] Is Robert Piggott School (64×64, saved as Generic, which is how a high school saves to the Gallery) the build for Copperdale High, or still a bonus build? When Rohan Elderberry enrols, does he stay at Spring Steppes or move into a hall?
+- [ ] [Jemma] In game: Laurel Library was Generic in her Building save on 14 Oct; it must be a Library for the study sessions. The prom after-party is on Plumbite Cove’s street, which makes LaSuli Point as a Park more useful
+- Fine as it is: every other lot the game needs is there and typed right; 9 halls hold up to 90 students (only 3 premade students live in them); The Royal Crown must stay a Bar for the student organisations
+
 ### Rentals unit by unit (research/rental-units.md)
 - [ ] [Jemma] Suggested fits: Upland units 1–3 the Eclectic Arts, 4 Johnny Zest; Tail’s End 3 (Cat Hangout) Catarina Lynx; Spring Steppes 1 Elderberry, 2 the Pleasant twins; 3 Cobblebottom 3A Cecilia Kang (Cat Hangout), 3B Moody & McMillan (Chef’s Kitchen). OK?
 - [ ] [Jemma] BFF, the Roomies and the Eclectic Arts don’t fit one flat each (the flats are one-bed): split them into separate households, or keep each together?
