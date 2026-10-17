@@ -234,7 +234,8 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [ ] [Jemma] Bio: hers first with EA’s underneath (suggested), or EA’s until she writes her own? EA’s as our summary with a link, or EA’s exact text read from her game?
 - [ ] [Jemma] A dated timeline per household? By the month she played it, by story time (“Year 1, Spring”), or both? A whole-save timeline too (10 “moved world” events already follow from her plan)?
 - [x] (Settled 17 Oct: no EA comparison at all, see Showing Sims) Chapters for any household? Empty parts hidden, or one quiet “Yours to write” line? Writing in chat (as now), or a text file per household?
-- [ ] [Jemma] Questions: are the Cadberrys a Not So Berry legacy (her “Spectra” Gallery household is tagged #notsoberry #mint #founder)? In the game Romeo and Juliette are already married with a teenage son: is the Tartosa wedding their first?
+- [x] The Cadberrys are her Not So Berry legacy (18 Oct). Each generation stays alive when they move out, so Cadberry households are spread across many worlds; show them as one family tree once she adds them.
+- [ ] [Jemma] In the game Romeo and Juliette are already married with a teenage son: is the Tartosa wedding their first?
 
 ### Occults (research/occults.md)
 - [ ] [Jemma] Nothing in her plan breaks the game. Care points: Specter Row can’t be both a rental and a Haunted House (already open above); Henford’s fairy area probably needs “Limit Fairies to Innisgreen” off, and Cordelia’s Secret Cottage has no free trait slot for Fairy Passage; the Ravenwood Wedding Hall may still have the old manor’s On Hallowed Grounds (keep or remove?)
