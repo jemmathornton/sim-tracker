@@ -174,8 +174,8 @@ const kindName = g => g.kind === "org" && g.uni === "secret" ? "Secret society" 
 Object.entries((DATA.groups || {}).organisations || {}).forEach(([name, o]) => { const id = "g-org-" + slug(name);
   GROUP_PAGES[id] = {...o, kind: "org", name, id, members: [], colour: (UNIS[o.uni] || {}).colour, trim: (UNIS[o.uni] || {}).trim, world: worlds.find(w => w.id === "britechester") || null}; });
 Object.values(SIMS).forEach(s => (s.orgs || []).forEach(c => { const g = GROUP_PAGES["g-org-" + slug(c.name)]; if (g && !g.members.some(([m]) => m === s.id)) g.members.push([s.id, c.role || "member"]); }));
-Object.values(GROUP_PAGES).filter(g => !g.members.length).forEach(g => delete GROUP_PAGES[g.id]);   // only groups someone on the site is in
 Object.values(SIMS).forEach(s => (s.clubs || []).forEach(c => { const g = GROUP_PAGES["g-club-" + slug(c.name)]; if (g && !g.members.some(([m]) => m === s.id)) g.members.push([s.id, c.role || "member"]); }));
+Object.values(GROUP_PAGES).filter(g => !g.members.length).forEach(g => delete GROUP_PAGES[g.id]);   // only groups someone on the site is in
 const groupTitle = g => g.kind === "dynasty" ? `${g.name} dynasty` : g.name;
 const groupsOf = id => Object.values(GROUP_PAGES).filter(g => g.members.some(([m]) => m === id)).map(g => [g.id, g, g.members.find(([m]) => m === id)[1]]);
 const dynastyOf = id => groupsOf(id).find(([, g]) => g.kind === "dynasty");

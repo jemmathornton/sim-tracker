@@ -90,6 +90,19 @@
    ],
    "anyType": "Restaurant",
    "world": "willow-creek"
+  },
+  "Spin Masters": {
+   "place": "l-san-myshuno--stargazer-lounge",
+   "activities": ["DJ mixing", "Dancing"],
+   "rules": ["Invite only", "DJ Mixing and Dancing level 2 or more"],
+   "others": [
+    ["Joaquin Le Chien", "member", "h-san-myshuno--bro-and-kennedy"]
+   ]
+  },
+  "Partihaus": {
+   "place": "l-windenburg--the-narwhal-arms",
+   "activities": ["Drinking", "Dancing", "Flirting"],
+   "rules": ["Invite only"]
   }
  },
  "organisations": {
