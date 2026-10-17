@@ -166,10 +166,10 @@ const dynastyOf = id => groupsOf(id).find(([, g]) => g.kind === "dynasty");
 function atHome(g, id){ const s = SIMS[id]; return g.homeHh ? s.hh === g.homeHh : (s.hh ? s.hh.world : s.world) === g.world; }
 // a member as a small box, like the tree's cards: based here = highlighted; elsewhere = lighter, with a chip for where they live
 function memberCard(g, id, role){
-  const s = SIMS[id], here = atHome(g, id), href = simLinkTo(id), R = GROUP_KINDS[g.kind].roles[role] || role, crown = ["head", "heir", "leader"].includes(role);
+  const s = SIMS[id], dyn = g.kind === "dynasty", here = dyn || atHome(g, id), href = simLinkTo(id), R = GROUP_KINDS[g.kind].roles[role] || role, crown = ["head", "heir", "leader"].includes(role);
   return `<div class="mcard ${here ? "here" : "away"} ${s.late ? "late" : ""}" style="--w:${simColour(id)}"><span class="tm">${initial(s.name)}</span>
     <div class="tn">${href ? `<a href="${href}">${esc(s.name)}</a>` : esc(s.name)}</div><div class="ts">${esc([s.age, s.state].filter(Boolean).join(" · "))}</div>
-    <div class="tchip">${here ? "" : homeChip(s)}</div><span class="badge ${role === "outcast" ? "out" : role === "member" ? "plain" : ""}">${crown ? ic(g.kind === "club" ? "flag" : "crown") : ""}${esc(R)}</span></div>`;
+    <div class="tchip">${here && !dyn ? "" : homeChip(s)}</div><span class="badge ${role === "outcast" ? "out" : role === "member" ? "plain" : ""}">${crown ? ic(g.kind === "club" ? "flag" : "crown") : ""}${esc(R)}</span></div>`;
 }
 
 /* ---------- family words, worked out (never typed) ---------- */
@@ -341,7 +341,7 @@ function treeCard(id, x, y, CW, CH, o){
   if (s.into && s.into !== o.line && s.line === o.line) chips.push(born(s.into));
   if (!s.late && !here) chips.push(homeChip(s));
   // dynasty heads and heirs keep a small badge (the dynasty itself has its own page)
-  const dy = dynastyOf(id), role = dy && dy[2], badge = role === "head" || role === "heir" || role === "outcast" ? `<span class="badge ${role === "head" ? "head" : role === "outcast" ? "out" : ""}">${role === "outcast" ? "" : ic("crown")}${GROUP_KINDS.dynasty.roles[role]}${slug(dy[1].name) !== o.line ? " · " + esc(dy[1].name) : ""}</span>` : "";
+  const dy = dynastyOf(id), role = dy && dy[2], badge = role ? `<span class="badge ${role === "head" ? "head" : role === "outcast" ? "out" : role === "member" ? "plain" : ""}">${role === "head" || role === "heir" ? ic("crown") : ""}${GROUP_KINDS.dynasty.roles[role]}${slug(dy[1].name) !== o.line ? " · " + esc(dy[1].name) : ""}</span>` : "";
   // names open the Sim's own page, or their household where there's no Sim page yet
   const href = simLinkTo(id), nm = href ? `<a href="${href}">${esc(s.name)}</a>` : esc(s.name);
   return `<div class="tc ${C} ${s.late ? "late" : ""} ${o.here ? (here ? "here" : "away") : ""}" style="${pos};--w:${wColour(w)}" data-sim="${id}"><span class="tm">${initial(s.name)}</span><div class="tn">${nm}</div><div class="ts">${esc(sub)}</div>
@@ -354,7 +354,7 @@ const treeKey = (here = false, colour = "") => `<div class="tree-key">
   <span><svg class="k" viewBox="0 0 34 12"><line x1="0" y1="6" x2="34" y2="6" stroke="var(--muted)" stroke-width="2.5" stroke-dasharray="5 4"/><path d="M12 12 L16 0 M18 12 L22 0" stroke="var(--muted)" stroke-width="1.6"/></svg>Ex</span>
   <span><svg class="k" viewBox="0 0 34 10" opacity=".5"><line x1="0" y1="3" x2="34" y2="3" stroke="var(--muted)" stroke-width="2.5"/><line x1="0" y1="7" x2="34" y2="7" stroke="var(--muted)" stroke-width="1.2"/></svg>Late Spouse</span>
   <span><span style="width:14px;height:14px;border-radius:50%;background:#A3AAA5;display:inline-block"></span>Late</span>
-  <span>${ic("crown")} Dynasty head and heir</span></div>`;
+  <span>${ic("crown")} Dynasty roles</span></div>`;
 
 /* ---------- relationships between Sims: only on Sim pages, grouped by tag group (her decision, 17 Oct) ---------- */
 const CLOSE_FAMILY = new Set(["Mother", "Father", "Parent", "Daughter", "Son", "Child", "Sister", "Brother", "Sibling"]);
@@ -448,17 +448,18 @@ function simPage(s){
 const ROLE_ORDER = ["head", "leader", "heir", "member", "outcast"];
 function groupPage(g){
   const K = GROUP_KINDS[g.kind], W = g.world, lotOf = g.place ? lotIndex[g.place] : g.homeHh ? g.homeHh.lots[0] : null, c = lotOf ? (lotOf.hood.glow || lotOf.hood.color) : wColour(W);
-  const ids = g.members.slice().sort((a, b) => ROLE_ORDER.indexOf(a[1]) - ROLE_ORDER.indexOf(b[1])), away = ids.filter(([id]) => !atHome(g, id)).length;
+  const dyn = g.kind === "dynasty", ids = g.members.slice().sort((a, b) => ROLE_ORDER.indexOf(a[1]) - ROLE_ORDER.indexOf(b[1])), away = dyn ? 0 : ids.filter(([id]) => !atHome(g, id)).length;
+  const hhs = [...new Set(ids.map(([id]) => SIMS[id].hh).filter(Boolean))].map(hh => `<a href="#${hh.id}">${esc(hh.name)}</a> (${esc(hh.world.name)})`).join(", ");
   const link = x => GROUP_PAGES["g-dynasty-" + slug(x)] ? `<a href="#g-dynasty-${slug(x)}">${esc(groupTitle(GROUP_PAGES["g-dynasty-" + slug(x)]))}</a>` : esc(x + " dynasty");
   const who = role => g.members.filter(([, r]) => r === role).map(([id]) => simLinkTo(id) ? `<a href="${simLinkTo(id)}">${esc(SIMS[id].name)}</a>` : esc(SIMS[id].name)).join(", ") || "None";
   const based = () => { if (g.homeHh) { const hh = g.homeHh, l = hh.lots[0]; return `<a href="#${hh.id}">${esc(hh.name)} household</a> (<a href="#${l.id}">${esc(l.name)}</a>, ${esc(l.world.name)})`; }
     if (lotOf) return `<a href="#${lotOf.id}">${esc(lotOf.name)}</a> (${esc(lotOf.hood.name)}, ${esc(lotOf.world.name)})`;
     return W ? `${esc(W.name)}${W.owned ? "" : " (not owned)"}` : ""; };
-  let h = `<section class="hero small" style="--c:${c}"><div class="crumbs">${W ? (W.ready && W.owned ? `<a href="#w-${W.id}">${ic("map")}${esc(W.name)}</a>` : `<span>${ic("map")}${esc(W.name)} (not owned)</span>`) : ""}${lotOf ? `<a href="#${lotOf.id}">${ic(g.place ? "pin" : "home")}${esc(lotOf.name)}</a>` : ""}</div>
+  let h = `<section class="hero small" style="--c:${c}"><div class="crumbs">${W ? (W.ready && W.owned ? `<a href="#w-${W.id}">${ic("map")}${esc(W.name)}</a>` : `<span>${ic("map")}${esc(W.name)} (not owned)</span>`) : ""}${lotOf && g.kind !== "dynasty" ? `<a href="#${lotOf.id}">${ic(g.place ? "pin" : "home")}${esc(lotOf.name)}</a>` : ""}</div>
     <div style="display:flex;gap:26px;align-items:center;flex-wrap:wrap;margin-top:22px"><div class="monogram ico-mono">${ic(K.icon)}</div><div><span class="label" style="color:var(--on-deep-mute)">${esc(K.name)}</span><h1 style="margin-top:6px">${esc(groupTitle(g))}</h1></div></div></section>`;
   // the group's own details
   const list = xs => xs && xs.length ? xs.map(esc).join(", ") : "";
-  const rows = (g.kind === "dynasty" ? [["Head", who("head")], ["Heir", who("heir")], ["Based at", based()], ["Prestige", g.prestige != null ? `${g.prestige} ${g.prestige === 1 ? "star" : "stars"}` : ""],
+  const rows = (g.kind === "dynasty" ? [["Head", who("head")], ["Heir", who("heir")], ["Households", hhs], ["Prestige", g.prestige != null ? `${g.prestige} ${g.prestige === 1 ? "star" : "stars"}` : ""],
       ["Ideals", list(g.ideals)], ["Heirloom", g.heirloom ? esc(g.heirloom) : ""], ["Allies", (g.allies || []).map(link).join(", ")], ["Rivals", (g.rivals || []).map(link).join(", ")]]
     : [["Leader", who("leader")], ["Meets at", based()], ["Activities", list(g.activities)], ["Rules", (g.rules || []).map(esc).join(", ")]]).filter(([, v]) => v && v !== "None");
   const half = Math.ceil(rows.length / 2), dl = rs => `<dl class="facts">${rs.map(([t, v]) => `<div><dt>${t}</dt><dd>${v}</dd></div>`).join("")}</dl>`;
@@ -466,7 +467,7 @@ function groupPage(g){
   // members
   h += `<section class="block" style="--h:${c}"><div class="block-head"><h2>The <em>members</em></h2><span class="count">${ids.length} ${ids.length === 1 ? "Sim" : "Sims"}${away ? ` · ${away} based elsewhere` : ""}</span></div>
     <div class="mcards">${ids.map(([id, r]) => memberCard(g, id, r)).join("")}</div>
-    <div class="tree-key"><span><span class="k-box here" style="--w:${wColour(W)}"></span>${g.kind === "club" ? "Lives in " + esc(W.name) : "Lives in the dynasty’s home"}</span><span><span class="k-box away"></span>Lives elsewhere</span></div></section>`;
+    ${dyn ? "" : `<div class="tree-key"><span><span class="k-box here" style="--w:${wColour(W)}"></span>Lives in ${esc(W.name)}</span><span><span class="k-box away"></span>Lives elsewhere</span></div>`}</section>`;
   return h;
 }
 
