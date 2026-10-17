@@ -489,6 +489,7 @@ const titleWord = name => { const p = esc(name).split(" "); return p.length > 1 
 
 // sidebar follows where things live: world → neighbourhood → lot → household → Sims
 let navArgs = null;   // the page the sidebar belongs to, so it can come back after a search
+// households live only under "Households" in the sidebar (her choice, 17 Oct), never under lots; the list opens on any household, Sim or dynasty page
 function renderNav(active, key, ctx){
   navArgs = [active, key, ctx];
   const nav = document.getElementById("nav");
@@ -501,20 +502,18 @@ function renderNav(active, key, ctx){
       : `<a class="soon" aria-disabled="true" style="--c:${w.glow||w.color}"><span class="dot"></span>${esc(w.name)}${grey ? "" : `<span class="pct">soon</span>`}</a>`;
     if (open && on) {
       h += `<div class="subnav">${w.hoods.map(x => {
-        let t = `<a href="#n-${x.id}" class="${ctx.hood===x ? (ctx.lot ? "path" : "cur") : ""}">${esc(x.name)}</a>`;
+        let t = `<a href="#n-${x.id}" class="${ctx.hood===x && !ctx.hh ? (ctx.lot ? "path" : "cur") : ""}">${esc(x.name)}</a>`;
         const seenB = new Set();
-        if (ctx.hood === x) t += `<div class="lotnav">${x.lots.map(l => {
+        if (ctx.hood === x && !ctx.hh) t += `<div class="lotnav">${x.lots.map(l => {
           let pre = "";
           if (l.building) { if (seenB.has(l.building)) return ""; seenB.add(l.building);
             const b = l.building, inB = b.units.includes(ctx.lot);
-            return `<span class="bld-label ${inB?"path":""}">${ic("home")}${esc(b.name)}</span><div class="lotnav">${b.units.map(u2 => { let v = `<a href="#${u2.id}" class="${ctx.lot===u2 ? (ctx.hh ? "path" : "cur") : ""}">${esc(u2.name)}</a>`;
-              if (ctx.lot === u2 && u2.hh) v += `<div class="lotnav"><a href="#${u2.hh.id}" class="fam-link ${ctx.hh===u2.hh ? "cur" : ""}">${ic("users")}${esc(u2.hh.name)}</a></div>`; return v; }).join("")}</div>`; }
-          let u = pre + `<a href="#${l.id}" class="${ctx.lot===l ? (ctx.hh ? "path" : "cur") : ""}">${esc(l.name)}</a>`;
-          // the lot's household, then any tenants renting a unit there, each opening to its Sims when it's the page's household
-          const famNav = hx => `<a href="#${hx.id}" class="fam-link ${ctx.hh===hx ? (ctx.sim || ctx.group ? "path" : "cur") : ""}">${ic("users")}${esc(hx.name)}</a>${ctx.hh===hx && hx.sims.length ? `<div class="lotnav">${hx.sims.map(sm => sm.sid ? `<a href="#s-${sm.sid}" class="${ctx.sim===sm ? "cur" : ""}">${esc(sm.name)}</a>` : `<a href="#${hx.id}" data-sim="${sm.id}">${esc(sm.name)}</a>`).join("")}</div>` : ""}`;
-          if (ctx.lot === l && (l.hh || l.tenants)) u += `<div class="lotnav">${[l.hh, ...(l.tenants || [])].filter(Boolean).map(famNav).join("")}</div>`;
+            return `<span class="bld-label ${inB?"path":""}">${ic("home")}${esc(b.name)}</span><div class="lotnav">${b.units.map(u2 => { let v = `<a href="#${u2.id}" class="${ctx.lot===u2 ? "cur" : ""}">${esc(u2.name)}</a>`;
+              return v; }).join("")}</div>`; }
+          let u = pre + `<a href="#${l.id}" class="${ctx.lot===l ? "cur" : ""}">${esc(l.name)}</a>`;
           return u; }).join("")}</div>`;
-        return t; }).join("")}<a class="hh-link ${key==="f-"+w.id?"cur":""}" href="#f-${w.id}">${ic("users")}Households</a></div>`;
+        return t; }).join("")}<a class="hh-link ${key==="f-"+w.id ? "cur" : ctx.hh ? "path" : ""}" href="#f-${w.id}">${ic("users")}Households</a>${key === "f-" + w.id || (ctx.hh && ctx.hh.world === w) ? `<div class="lotnav">${Object.values(w.households).map(hx =>
+          `<a href="#${hx.id}" class="${ctx.hh === hx ? (ctx.sim || ctx.group ? "path" : "cur") : ""}">${esc(hx.name)}</a>${ctx.hh === hx && hx.sims.length ? `<div class="lotnav">${hx.sims.map(sm => sm.sid ? `<a href="#s-${sm.sid}" class="${ctx.sim === sm ? "cur" : ""}">${esc(sm.name)}</a>` : `<a href="#${hx.id}" data-sim="${sm.id}">${esc(sm.name)}</a>`).join("")}</div>` : ""}`).join("")}</div>` : ""}</div>`;
     }
     return h; };
   owned.forEach(w => h += navWorld(w));
