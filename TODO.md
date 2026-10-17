@@ -263,6 +263,12 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [ ] [Jemma] Owners who live away from their rental (the Robles at Manzanita Terrace, the Lovejoys at Sequoia Cottage, Rochana/Caberry at Isda Riverfront) lose it if merged into another household elsewhere: merge the other household into theirs instead
 - [x] Corrected research/worlds/gibbi-point.md: Laxmi and Raheel Kunal are homeless premade townies (17 Oct)
 
+### Fame and clubs (research/fame-and-clubs-check.md)
+- [ ] [Jemma] Nothing in her plan breaks fame. Starlight Accolades: if EA’s Studio PBP still stands in her save it probably has Hottest Spot in Town (check in game); otherwise only Calico has it. Judith Ward for the Plumbob Pictures Museum (Acting 7, Business Savvy)?
+- [ ] [Jemma] 7 game celebrities are homeless (Holly Alto, Dustin Broke, Dirk Dreamer, Baby Ariel, Brytani Cho, Izzy Fabulous, Kayla Flemming) and would be deleted first if the town fills: heart them, or put some in “My Celebs” at Chateau Peak?
+- [ ] [Jemma] 5 of Windenburg’s 11 premade clubs now meet somewhere that no longer fits (Garden Gnomes and League of Adventurers at an empty student hall, Powerhouse at the Students Union, Spin Masters at the Sports Center, Upper Crusts at The Lighthouse, now the Tiquelles’ home). Move them (suggested: Powerhouse to UoW Sports Center, Spin Masters to La Discotheque, League of Adventurers to Courtyard Lane Playground, Garden Gnomes to Coorinberg Cottage, Upper Crusts to Brook Bungalow), or leave them as story?
+- [ ] [Jemma] Clubs on the Sims pages: a “Clubs” block on household pages and one hub per club in the relationship web (a 7th tag group)? Fame stars and quirks on Sim cards?
+
 ### Getaways (research/getaways-check.md)
 - [ ] [Jemma] Love Highland: as a Custom Venue it can’t be the Addams’ business in the game (a Custom Venue can’t be owned, and only a played household earns, at its own home). Keep it a Custom Venue run by them as story only, or make it their home again (as in the game, 8 beds)?
 - [ ] [Jemma] Revive and Thrive has no beds (per the Gallery), so only day Getaways work there: add beds for overnight stays?
