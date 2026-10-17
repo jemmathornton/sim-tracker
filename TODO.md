@@ -254,6 +254,12 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [ ] [Jemma] In game: Laurel Library was Generic in her Building save on 14 Oct; it must be a Library for the study sessions. The prom after-party is on Plumbite Cove’s street, which makes LaSuli Point as a Park more useful
 - Fine as it is: every other lot the game needs is there and typed right; 9 halls hold up to 90 students (only 3 premade students live in them); The Royal Crown must stay a Bar for the student organisations
 
+### Her World Plans spreadsheet (research/world-plans-review.md; read from a copy, her file untouched)
+- [ ] [Jemma] Two Overview bugs from when the Innisgreen row was added on 15 Oct (ours): Nordhaven’s Overall shows 10% instead of 20% (its formula takes in Innisgreen’s row), and the table stops before Ondarion. Fix them, with a backup first? Also: Spring Steppes says 9 bedrooms in the sheet and 8 in the app (two Gallery versions); count ranges on world tabs stop at the last lot row (a new lot at the bottom would be missed)
+- [ ] [Jemma] What should “Overall” mean? Now it’s a plain average of Built, Shared, Screenshots and Sims Made, so even Britechester (all built and shared) shows 50%; worlds with no homes average three columns; Shared is out of all lots, not built lots
+- [ ] [Jemma] Four notes of hers beside the Statistics blocks: Willow Creek “Ella-Mint Cadberry”, Chestnut Ridge “One of Duo’s Parents”, and “Lynx” on Tomarang and Ciudad Enamorada. What do they mean? (The app doesn’t show them)
+- [ ] [Claude] The import doesn’t read the Overview’s Owned column, so marking a world owned there won’t reach the app; keep Owned in one place
+
 ### Rentals unit by unit (research/rental-units.md)
 - [ ] [Jemma] Suggested fits: Upland units 1–3 the Eclectic Arts, 4 Johnny Zest; Tail’s End 3 (Cat Hangout) Catarina Lynx; Spring Steppes 1 Elderberry, 2 the Pleasant twins; 3 Cobblebottom 3A Cecilia Kang (Cat Hangout), 3B Moody & McMillan (Chef’s Kitchen). OK?
 - [ ] [Jemma] BFF, the Roomies and the Eclectic Arts don’t fit one flat each (the flats are one-bed): split them into separate households, or keep each together?
