@@ -184,6 +184,33 @@ function miniTreeIds(hhId) {
   return ids.length > 1 ? ids.sort((a, b) => order.indexOf(a) - order.indexOf(b)) : [];
 }
 
+/* ---------- for the Sim pages (17 Oct) ----------
+   SIM_LINKS: a Sim's links that aren't family or romance (relationships.json in the proposal; family and partners are worked out).
+   to = another household (or Sim); a line with no "to" is a note under its tag group (g). */
+const SIM_LINKS = {
+  "mortimer-goth": [
+    {to: "h-willow-creek--pancakes", tag: "classmates", label: "Copperdale Class of ’00", who: "Bob and Eliza, as teens", src: "gallery"},
+    {to: "h-oasis-springs--landgraab", tag: "classmates", label: "Copperdale Class of ’00", who: "Nancy and Geoffrey, as teens", src: "gallery"}],
+  "bella-goth": [
+    {g: "friends", who: "No friends outside the household as the game starts", src: "game"},
+    {to: "h-willow-creek--pancakes", tag: "classmates", label: "Copperdale Class of ’00", who: "Bob and Eliza, as teens", src: "gallery"},
+    {to: "h-oasis-springs--landgraab", tag: "classmates", label: "Copperdale Class of ’00", who: "Nancy and Geoffrey, as teens", src: "gallery"}],
+};
+// EA's side of the Goths' story, oldest first: the story prototype's lines (../stories/story-data.js, 17 Oct), summarised in our
+// own words from The Sims Wiki. Her own story isn't here: every Sim page ends with "Yours to write".
+const STORY_FROM = {game: "In the game", older: "Older games", gallery: "EA’s Gallery household", plan: "Your plan"};
+const STORY_ICON = {born: "baby", married: "gem", died: "flower-2", dynasty: "crown", home: "house", school: "graduation-cap", older: "scroll-text"};
+const STORY = [
+  {kind: "born", src: "game", title: "Mortimer is born a Goth", text: "His mother is Cornelia, born a Crumplebottom; his father isn’t on the game’s family tree. Cornelia’s sister Agnes is his aunt.", sims: ["mortimer-goth", "cornelia-goth"]},
+  {kind: "school", src: "gallery", title: "Classmates at Copperdale High", text: "EA’s “Copperdale Class of ’00” Gallery household has teenage Mortimer and Bella Bachelor in one class with Bob Pancakes, Eliza Hastings, Nancy Landgraab and Geoffrey (then Osteer).", sims: ["mortimer-goth", "bella-goth"]},
+  {kind: "married", src: "game", title: "Mortimer and Bella marry", text: "Bella was born a Bachelor.", sims: ["mortimer-goth", "bella-goth"]},
+  {kind: "died", src: "game", title: "Cornelia dies in a fire", text: "She is on the family tree since the February 2026 update, but can’t come back as a ghost.", sims: ["cornelia-goth", "mortimer-goth"]},
+  {kind: "born", src: "game", title: "Cassandra and Alexander are born", text: "", sims: ["cassandra-goth", "alexander-goth", "mortimer-goth", "bella-goth"]},
+  {kind: "dynasty", src: "game", title: "The Goth dynasty", text: "With Royalty & Legacy, Mortimer heads it and Cassandra is the heir (only in saves started after the pack).", sims: ["mortimer-goth", "cassandra-goth"]},
+  {kind: "home", src: "game", title: "At Ophelia Villa, Pendula View", text: "As a new save starts: Mortimer is a freelance writer, Bella a secret agent, Cassandra a teen at high school and Alexander a child, 14 days from his teens.", sims: ["mortimer-goth", "bella-goth", "cassandra-goth", "alexander-goth"]},
+  {kind: "older", src: "older", title: "Pleasantview and Sunset Valley (The Sims 2 and 3)", text: "In the older games Bella vanishes and Mortimer raises the children alone, and Mortimer’s parents Gunther and Cornelia appear. The Sims 4 is its own timeline, so none of this happened here unless you say so.", sims: ["bella-goth", "mortimer-goth", "cornelia-goth"]},
+];
+
 /* ---------- family words, worked out (never typed) ---------- */
 const sx = (s, m, f, x) => s === "m" ? m : s === "f" ? f : x;
 function partnersOf(id) {

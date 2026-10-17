@@ -197,7 +197,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 **Start here:** for-jemma/overnight-17-oct.md (what to look at first, the biggest decisions, every note)
 
 ### Showing Sims (research/sims-display.md)
-- [x] Decided 17 Oct: family trees are built from family links (parents, partners), never from who lives together. On a household page, a mini tree shows only for Sims who are related; a household of unrelated housemates shows no tree (no extra line either), just the roster
+- [x] Decided 17 Oct: family trees are built from family links (parents, partners), never from who lives together (no extra line for housemates; see the household-tree decision below for when a tree shows)
 - [x] Decided 17 Oct: each Sim gets its own page (in the end every Sim; trying it out on the Goths first in the prototype). The household page keeps the family overview (roster linking to each Sim, mini tree, connected households, story)
 - [ ] [Jemma] **Look at the prototype first:** for-jemma/prototypes/sims/index.html (opens from the folder): a Goth household page, a drawn family tree next to a generations list, links between households (lists, a small web, lines on the map), and the relationship tags, with switches for each choice below
 - [ ] [Jemma] How much to track: three levels (basics for every household, profiles for played ones, extras for favourites)?
@@ -205,7 +205,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [ ] [Jemma] Relationship tags: six groups (Family, Romance, Friends, Conflict, Work & school, Dynasty) plus an optional free label? Add or drop any?
 - [x] Decided 17 Oct: use the game’s own words, “Spouse / Partner / Engaged” (since patch 162), not “Husband / Wife”
 - [x] Decided 17 Oct: family trees are drawn top-down trees (not a generations list); married-in Sims get a chip that opens their own family’s tree
-- [x] Decided 17 Oct: a family tree on each household page, centred on the Sims who live there and showing their relatives wherever they live (Capps: all Capps + Juliette, Romeo, Dante; Montys: all Montys + R&J; R&J’s household: both families). Worlds don’t matter: anyone outside the household is a lighter box with a world chip, linking to their household. Still to settle: how far out the tree goes, and housemates with family elsewhere
+- [x] Decided 17 Oct: a family tree on each household page, centred on the Sims who live there and showing their relatives wherever they live (Capps: all Capps + Juliette, Romeo, Dante; Montys: all Montys + R&J; R&J’s household: both families). Worlds don’t matter: anyone outside the household is a lighter box with a world chip, linking to their household. How far: all blood relatives of the household’s Sims, plus their partners (“plus ones”); revisit only if a tree gets too big. Housemates get a tree if they have family anywhere in the game; no tree only for a household where nobody has any family at all (this replaces the earlier “no tree for unrelated housemates”)
 - [ ] [Jemma] Links between households: grouped lists first, then a small web around one household; try lines on the world map later?
 - [ ] [Jemma] EA’s families vs hers: an origin tag, plus “In the game / In my save” for premade families?
 - [ ] [Jemma] Story questions: how is Romeo related to the recreated Sims 2 Montys, and who heads each dynasty in her save?
