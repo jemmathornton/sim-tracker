@@ -213,6 +213,13 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [ ] [Jemma] Relatives that only exist on the Gallery (Iggy Pancakes, Daniel and Mary-Sue Pleasant and others): show them on family trees?
 - Cross-world links worth showing (from the game): Agnes Crumplebottom is Mortimer Goth’s aunt; Lily Zhu is the Vatores’ cousin; Skip Broke is Dustin Broke’s father; Enzo Alto is Holly Alto’s cousin; Arnessa Thebe is Consort Capp’s cousin; the Gomes family shares an ancestor with the Goths. Her moves add more (Juliette Monty, now in Tartosa, is Tybalt Capp’s sister)
 
+### Pets and horses (research/pets-and-horses.md)
+- [ ] [Jemma] On household pages: pets in the same roster as the Sims (suggested), a one-line strip, or full cards plus a Horses page? An Animals tab on family trees where there are young ones? Small animals (goats, hens, llamas…) as a counts line, or left off?
+- [ ] [Jemma] Vets: one for the city area or the desert worlds, or is a trip to Brindleton Bay fine? 3 vets have no owner: should the Delgatos own Brindleton Pawspital (Supriya dreams of being a vet)?
+- [ ] [Jemma] New Appaloosa has no public horse stop now Duke’s Hall is Appaloosa Stables (which is full: 2 Sims and 6 horses, so no foals): give The Cozy Corner House hay feeders and troughs, or let the Stables be the stop?
+- [ ] [Jemma] Use For Rent’s pet households (Kitty Lu and her cats, Dara Kham and her dog) for empty rental units? In game: turn off “Adopt Cats & Dogs” and “Rescue Horses” in Neighbourhood Stories?
+- Lore find: Roberto Crinkletop (Chestnut Ridge’s hidden “Mysterious Rancher”) is Agnes Crumplebottom’s ex-husband
+
 ### Where Sims could come from (research/sims-sources.md)
 - [ ] [Jemma] Which save is the Sims source: an exception to the Building rule for households in “Building #2” (like the rental-units one), or a separate save kept for Sims (what would it be called)? Her other 30 saves hold everything but are old (newest “Season Events”, 15 Mar 2026) and don’t have her rebuilt lots
 - [ ] [Jemma] EA’s families: fill them in automatically from the game’s own files (197 premade households, their family links, and 348 starting friendships between households), or only the ones she has played?
