@@ -581,8 +581,6 @@ a.rel-card:hover{border-color:color-mix(in srgb,var(--g) 60%,var(--line));border
 .tc .tchip{grid-column:1/-1;margin-top:6px;justify-self:start;max-width:100%}
 .tc .badge{position:absolute;right:8px;top:-12px;display:inline-flex;align-items:center;gap:4px;font-size:10.5px;font-weight:800;letter-spacing:.04em;padding:2px 8px;border-radius:99px;background:var(--brass);color:#1A1F1C}
 .tc .badge svg{width:11px;height:11px}
-.tc .badge.head{background:var(--surface);color:color-mix(in srgb,var(--t-dynasty) 80%,var(--ink));border:1px solid color-mix(in srgb,var(--brass) 70%,var(--line))}
-.tc .badge.out{background:var(--soft);color:var(--muted);border:1px solid var(--line)}
 .tc.late{background:color-mix(in srgb,var(--soft) 55%,var(--surface))}
 .tc.late .tm{background:#A3AAA5}
 .tc.late .tn{color:var(--muted)}
@@ -658,8 +656,6 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 .mcard .tchip{grid-column:1/-1;margin-top:6px;min-width:0}
 .mcard .badge{position:absolute;right:10px;top:-11px;display:inline-flex;align-items:center;gap:4px;font-size:10.5px;font-weight:800;letter-spacing:.04em;padding:2px 8px;border-radius:99px;background:var(--brass);color:#1A1F1C}
 .mcard .badge svg{width:11px;height:11px}
-.mcard .badge.plain{background:var(--surface);color:var(--muted);border:1px solid var(--line)}
-.mcard .badge.out{background:var(--soft);color:var(--muted);border:1px solid var(--line)}
 .mcard.here{border:2px solid var(--w);background:color-mix(in srgb,var(--w) 10%,var(--surface))}
 .mcard.away{background:color-mix(in srgb,var(--paper) 70%,var(--surface))}
 .mcard.away .tm{opacity:.75}
@@ -673,8 +669,11 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 /* tree boxes: smaller role badges (gold only for head and heir), one-line world chips (17 Oct) */
 .tc .badge{top:-9px;font-size:9.5px;letter-spacing:.03em;padding:1px 6px;gap:3px}
 .tc .badge svg{width:9px;height:9px}
-.tc .badge.plain{background:var(--surface);color:var(--muted);border:1px solid var(--line);font-weight:700}
-.tc .badge.out{font-weight:700}
 .tc .hhchip{display:inline-block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;font-size:10px;padding:2px 6px;vertical-align:top}
 .tc .hhchip::before{display:inline-block;margin-right:4px;vertical-align:0}
 .membs{margin-top:18px}
+/* role badges, the same on trees and group pages: gold getting stronger with rank; outcasts grey (17 Oct) */
+.badge.r-head{background:var(--brass);color:#1A1F1C;border:1px solid var(--brass)}
+.badge.r-heir{background:var(--surface);color:color-mix(in srgb,var(--t-dynasty) 85%,var(--ink));border:1px solid var(--brass)}
+.badge.r-member{background:color-mix(in srgb,var(--brass) 16%,var(--surface));color:color-mix(in srgb,var(--t-dynasty) 85%,var(--ink));border:1px solid color-mix(in srgb,var(--brass) 35%,var(--line))}
+.badge.r-outcast{background:var(--soft);color:var(--muted);border:1px solid var(--line)}

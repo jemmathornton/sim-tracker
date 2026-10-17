@@ -165,11 +165,13 @@ const dynastyOf = id => groupsOf(id).find(([, g]) => g.kind === "dynasty");
 // is this member based where the group is?
 function atHome(g, id){ const s = SIMS[id]; return g.homeHh ? s.hh === g.homeHh : (s.hh ? s.hh.world : s.world) === g.world; }
 // a member as a small box, like the tree's cards: based here = highlighted; elsewhere = lighter, with a chip for where they live
+const roleBadge = (kind, role) => { const R = GROUP_KINDS[kind].roles[role] || role, dyn = kind === "dynasty";
+  return `<span class="badge r-${role}">${dyn ? ic("crown") : role === "leader" ? ic("flag") : ""}${esc(R)}</span>`; };
 function memberCard(g, id, role){
   const s = SIMS[id], dyn = g.kind === "dynasty", here = dyn || atHome(g, id), href = simLinkTo(id), R = GROUP_KINDS[g.kind].roles[role] || role, crown = ["head", "heir", "leader"].includes(role);
   return `<div class="mcard ${here ? "here" : "away"} ${s.late ? "late" : ""}" style="--w:${simColour(id)}"><span class="tm">${initial(s.name)}</span>
     <div class="tn">${href ? `<a href="${href}">${esc(s.name)}</a>` : esc(s.name)}</div><div class="ts">${esc([s.age, s.state].filter(Boolean).join(" · "))}</div>
-    <div class="tchip">${here && !dyn ? "" : homeChip(s)}</div><span class="badge ${role === "outcast" ? "out" : role === "member" ? "plain" : ""}">${crown ? ic(g.kind === "club" ? "flag" : "crown") : ""}${esc(R)}</span></div>`;
+    <div class="tchip">${here && !dyn ? "" : homeChip(s)}</div>${roleBadge(g.kind, role)}</div>`;
 }
 
 /* ---------- family words, worked out (never typed) ---------- */
@@ -342,7 +344,7 @@ function treeCard(id, x, y, CW, CH, o){
   const housemate = o.me && s.hh && s.hh === SIMS[o.me].hh;   // on a Sim page, their own household needs no chip either
   if (!s.late && !here && !housemate) chips.push(homeChip(s));
   // dynasty heads and heirs keep a small badge (the dynasty itself has its own page)
-  const dy = dynastyOf(id), role = dy && dy[2], badge = role ? `<span class="badge ${role === "head" ? "head" : role === "outcast" ? "out" : role === "member" ? "plain" : ""}">${ic("crown")}${GROUP_KINDS.dynasty.roles[role]}</span>` : "";
+  const dy = dynastyOf(id), role = dy && dy[2], badge = role ? roleBadge("dynasty", role) : "";
   // names open the Sim's own page, or their household where there's no Sim page yet
   const href = simLinkTo(id), nm = href ? `<a href="${href}">${esc(s.name)}</a>` : esc(s.name);
   return `<div class="tc ${C} ${s.late ? "late" : ""} ${o.here ? (here ? "here" : "away") : ""}" style="${pos};--w:${wColour(w)}" data-sim="${id}"><span class="tm">${initial(s.name)}</span>${s.late ? `<span class="dead" title="Deceased">†</span>` : ""}<div class="tn">${nm}</div><div class="ts">${esc(sub)}</div>
