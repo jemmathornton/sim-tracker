@@ -250,7 +250,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 
 ### Where Sims could come from (research/sims-sources.md)
 - [ ] [Jemma] Which save is the Sims source: an exception to the Building rule for households in “Building #2” (like the rental-units one), or a separate save kept for Sims (what would it be called)? Her other 30 saves hold everything but are old (newest “Season Events”, 15 Mar 2026) and don’t have her rebuilt lots
-- [ ] [Jemma] EA’s families: fill them in automatically from the game’s own files (197 premade households, their family links, and 348 starting friendships between households), or only the ones she has played?
+- [x] EA’s families: from the game’s own files, only households that match her spreadsheet; EA townies checked against the Sims Wiki too; her own households from her save, to double-check later (17 Oct). 81 filled so far; paused 18 Oct.
 - [ ] [Jemma] Show EA’s starting friendships, or only relationships from her own save?
 - [ ] [Jemma] Her Library (122 households, 56 her own uploads): use it as a top-up (only her own, or Maxis and others too), or not at all?
 - [ ] [Jemma] Typing Sims in: chat only, or a Sims tab in World Plans? **Prototype to try:** for-jemma/prototypes/world-plans-sims-tab.xlsx (a copy of her workbook with a Sims tab and a Relationships tab, drop-downs, mistake highlighting and 24 example premade Sims; her own file untouched), explained in world-plans-sims-tab.md with 10 choices. If used, the importer needs a one-line change so it doesn’t treat the new tabs as worlds
