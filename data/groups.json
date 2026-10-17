@@ -12,6 +12,84 @@
    "rivals": ["Alto"]
   }
  },
- "clubs": {},
+ "clubs": {
+  "Avant Gardes": {
+   "place": "l-windenburg--south-square-coffee",
+   "activities": ["Homework", "Coffee", "Writing", "Video games", "Reading"],
+   "rules": ["Invite only"],
+   "others": [
+    ["Maaike Haas", "leader", "h-windenburg--free-spirits"],
+    ["Gunther Munch", "member", "h-windenburg--munch"],
+    ["Yuki Behr", "member", "h-san-myshuno--behr"]
+   ]
+  },
+  "Garden Gnomes": {
+   "place": "l-windenburg--hare-square",
+   "activities": ["Gardening", "Fishing", "Looking for frogs"],
+   "others": [
+    ["Moira Fyres", "leader", "h-windenburg--fyres"],
+    ["Lucas Munch", "member", "h-windenburg--munch"]
+   ]
+  },
+  "Knights of the Hedge": {
+   "place": "l-windenburg--von-haunt-estate",
+   "activities": ["Wandering the maze", "Chess"],
+   "others": [
+    ["Wolfgang Munch", "member", "h-windenburg--munch"],
+    ["Yuki Behr", "member", "h-san-myshuno--behr"]
+   ]
+  },
+  "League of Adventurers": {
+   "place": "l-windenburg--hare-square",
+   "activities": ["Playground", "Playing in the closet"],
+   "rules": ["Children only"],
+   "others": [
+    ["Lucas Munch", "member", "h-windenburg--munch"]
+   ]
+  },
+  "Paragons": {
+   "place": "l-windenburg--bathe-de-rill",
+   "activities": ["Being mean to Renegades", "Coffee", "Trying on outfits"],
+   "rules": ["Invite only"],
+   "others": [
+    ["Siobhan Fyres", "leader", "h-windenburg--fyres"],
+    ["Sergio Romeo", "member", "h-san-myshuno--bro-and-kennedy"]
+   ]
+  },
+  "Powerhouse": {
+   "place": "l-windenburg--harbor-quarter-gym",
+   "activities": ["Working out", "Swimming"],
+   "others": [
+    ["Marcus Flex", "leader", "h-windenburg--partihaus"],
+    ["Paolo Rocca", "member", "h-windenburg--partihaus"]
+   ]
+  },
+  "Renegades": {
+   "place": "l-windenburg--bathe-de-rill",
+   "activities": ["Being mean to Paragons", "Mischief", "Sabotaging objects"],
+   "rules": ["Invite only"],
+   "others": [
+    ["Morgan Fyres", "member", "h-windenburg--fyres"],
+    ["Wolfgang Munch", "member", "h-windenburg--munch"],
+    ["Ulrike Faust", "member", null]
+   ]
+  },
+  "The Good Timers": {
+   "place": "l-windenburg--the-shrieking-llama",
+   "activities": ["Pub games", "Bar drinks"],
+   "rules": ["Teens and older"],
+   "others": [
+    ["Dominic Fyres", "member", "h-windenburg--fyres"],
+    ["Mila Munch", "member", "h-windenburg--munch"]
+   ]
+  },
+  "Upper Crusts": {
+   "place": "l-windenburg--the-lighthouse",
+   "activities": ["Eating", "Cooking", "Mixing and drinking bar drinks"],
+   "others": [
+    ["Mila Munch", "member", "h-windenburg--munch"]
+   ]
+  }
+ },
  "organisations": {}
 }

@@ -200,6 +200,279 @@
   },
   "Ella-Mint Cadberry": {
    "single": true
+  },
+  "Villareal": {
+   "sims": [
+    {
+     "id": "jacques-villareal",
+     "name": "Jacques Villareal",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Elder",
+     "aspiration": "Public Enemy",
+     "traits": ["Erratic", "Childish", "Genius"],
+     "bonus": "Dastardly",
+     "career": "Criminal · The Brains (level 9)",
+     "skills": [
+      ["Logic", 9, 10]
+     ],
+     "rels": [
+      ["Luna Villareal", "Daughter"],
+      ["Hugo Villareal", "Son"],
+      ["Max Villareal", "Son"],
+      ["Bjorn Bjergsen", "Friend"],
+      ["Dominic Fyres", "Friend"],
+      ["Mila Munch", "Friend"],
+      ["Wolfgang Munch", "Friend"],
+      ["Yuki Behr", "Friend"]
+     ],
+     "clubs": [
+      {
+       "name": "Knights of the Hedge",
+       "role": "leader"
+      },
+      {
+       "name": "The Good Timers",
+       "role": "member"
+      }
+     ]
+    },
+    {
+     "id": "hugo-villareal",
+     "name": "Hugo Villareal",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Teen",
+     "aspiration": "Master Chef",
+     "traits": ["Loner", "Foodie"],
+     "bonus": "Essence of Flavor",
+     "career": "",
+     "school": "High school · grade C",
+     "skills": [
+      ["Cooking", 7, 10]
+     ],
+     "rels": [
+      ["Jacques Villareal", "Father"],
+      ["Luna Villareal", "Sister"],
+      ["Max Villareal", "Brother"],
+      ["Clara Bjergsen", "Friend"],
+      ["Gunther Munch", "Friend"],
+      ["Maaike Haas", "Friend"],
+      ["Mila Munch", "Friend"],
+      ["Yuki Behr", "Friend"]
+     ],
+     "parents": ["jacques-villareal"],
+     "clubs": [
+      {
+       "name": "Avant Gardes",
+       "role": "member"
+      },
+      {
+       "name": "Upper Crusts",
+       "role": "member"
+      }
+     ]
+    },
+    {
+     "id": "luna-villareal",
+     "name": "Luna Villareal",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Teen",
+     "aspiration": "Friend of the World",
+     "traits": ["Romantic", "Childish"],
+     "bonus": "Gregarious",
+     "career": "",
+     "school": "High school · grade C",
+     "skills": [
+      ["Charisma", 5, 10]
+     ],
+     "rels": [
+      ["Jacques Villareal", "Father"],
+      ["Hugo Villareal", "Brother"],
+      ["Max Villareal", "Brother"],
+      ["Sergio Romeo", "Friend"],
+      ["Siobhan Fyres", "Friend"],
+      ["Sofia Bjergsen", "Friend"]
+     ],
+     "parents": ["jacques-villareal"],
+     "clubs": [
+      {
+       "name": "Paragons",
+       "role": "member"
+      }
+     ]
+    },
+    {
+     "id": "max-villareal",
+     "name": "Max Villareal",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Child",
+     "aspiration": "Rambunctious Scamp",
+     "traits": ["Evil"],
+     "career": "",
+     "school": "Grade school · grade D",
+     "skills": [
+      ["Motor", 6, 10]
+     ],
+     "rels": [
+      ["Jacques Villareal", "Father"],
+      ["Luna Villareal", "Sister"],
+      ["Hugo Villareal", "Brother"],
+      ["Elsa Bjergsen", "Friend"],
+      ["Lucas Munch", "Friend"],
+      ["Morgan Fyres", "Friend"],
+      ["Ulrike Faust", "Friend"],
+      ["Wolfgang Munch", "Friend"]
+     ],
+     "parents": ["jacques-villareal"],
+     "clubs": [
+      {
+       "name": "Renegades",
+       "role": "leader"
+      },
+      {
+       "name": "League of Adventurers",
+       "role": "member"
+      }
+     ]
+    }
+   ]
+  },
+  "Bjergsen": {
+   "sims": [
+    {
+     "id": "bjorn-bjergsen",
+     "name": "Bjorn Bjergsen",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Soulmate",
+     "traits": ["Gloomy", "Slob", "Good"],
+     "bonus": "Alluring",
+     "career": "Secret Agent · Agent Handler (level 3)",
+     "skills": [
+      ["Charisma", 4, 10],
+      ["Fitness", 8, 10],
+      ["Logic", 5, 10]
+     ],
+     "rels": [
+      ["Clara Bjergsen", "Spouse"],
+      ["Sofia Bjergsen", "Daughter"],
+      ["Elsa Bjergsen", "Daughter"],
+      ["Dominic Fyres", "Friend"],
+      ["Jacques Villareal", "Friend"],
+      ["Mila Munch", "Friend"]
+     ],
+     "partners": [
+      ["clara-bjergsen", "Spouse"]
+     ],
+     "clubs": [
+      {
+       "name": "The Good Timers",
+       "role": "leader"
+      },
+      {
+       "name": "Garden Gnomes",
+       "role": "member"
+      }
+     ]
+    },
+    {
+     "id": "clara-bjergsen",
+     "name": "Clara Bjergsen",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Successful Lineage",
+     "traits": ["Family-Oriented", "Foodie", "Perfectionist"],
+     "bonus": "Domestic",
+     "career": "Culinary · Caterer (level 3)",
+     "skills": [
+      ["Cooking", 6, 10]
+     ],
+     "rels": [
+      ["Bjorn Bjergsen", "Spouse"],
+      ["Sofia Bjergsen", "Daughter"],
+      ["Elsa Bjergsen", "Daughter"],
+      ["Hugo Villareal", "Friend"],
+      ["Mila Munch", "Friend"]
+     ],
+     "partners": [
+      ["bjorn-bjergsen", "Spouse"]
+     ],
+     "clubs": [
+      {
+       "name": "Upper Crusts",
+       "role": "leader"
+      },
+      {
+       "name": "Powerhouse",
+       "role": "member"
+      }
+     ]
+    },
+    {
+     "id": "sofia-bjergsen",
+     "name": "Sofia Bjergsen",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Teen",
+     "aspiration": "Musical Genius",
+     "traits": ["Cheerful", "Music Lover"],
+     "bonus": "Muser",
+     "career": "",
+     "school": "High school · grade C",
+     "skills": [
+      ["Charisma", 6, 10],
+      ["Guitar", 8, 10]
+     ],
+     "rels": [
+      ["Bjorn Bjergsen", "Father"],
+      ["Clara Bjergsen", "Mother"],
+      ["Elsa Bjergsen", "Sister"],
+      ["Luna Villareal", "Friend"],
+      ["Sergio Romeo", "Friend"],
+      ["Siobhan Fyres", "Friend"]
+     ],
+     "parents": ["bjorn-bjergsen", "clara-bjergsen"],
+     "clubs": [
+      {
+       "name": "Paragons",
+       "role": "member"
+      }
+     ]
+    },
+    {
+     "id": "elsa-bjergsen",
+     "name": "Elsa Bjergsen",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Child",
+     "aspiration": "Whiz Kid",
+     "traits": ["Genius"],
+     "career": "",
+     "school": "Grade school · grade B",
+     "skills": [
+      ["Mental", 10, 10]
+     ],
+     "rels": [
+      ["Bjorn Bjergsen", "Father"],
+      ["Clara Bjergsen", "Mother"],
+      ["Sofia Bjergsen", "Sister"],
+      ["Lucas Munch", "Friend"],
+      ["Max Villareal", "Friend"]
+     ],
+     "parents": ["bjorn-bjergsen", "clara-bjergsen"],
+     "clubs": [
+      {
+       "name": "League of Adventurers",
+       "role": "leader"
+      }
+     ]
+    }
+   ]
   }
  },
  "weather": "Snowy winters, heat waves and thunderstorms in summer",

@@ -159,6 +159,16 @@ const GROUP_KINDS = {
 Object.values(SIMS).forEach(s => { const d = s.dynasty; if (!d || !d.name) return; const id = "g-dynasty-" + slug(d.name);
   (GROUP_PAGES[id] ||= {...(((DATA.groups || {}).dynasties || {})[d.name] || {}), kind: "dynasty", name: d.name, id, members: []}).members.push([s.id, d.role || "member"]); });
 Object.values(GROUP_PAGES).forEach(g => { const head = SIMS[(g.members.find(([, r]) => r === "head") || g.members[0])[0]]; g.homeHh = head.hh; g.world = head.hh ? head.hh.world : head.world; });
+// clubs (Get Together): members from each Sim's "clubs" [{name, role}]; the club's own details, and members who aren't on the
+// site yet ("others": [name, role, household id]), from data/groups.json. Based in the world of the lot where it meets.
+Object.entries((DATA.groups || {}).clubs || {}).forEach(([name, c]) => {
+  const id = "g-club-" + slug(name), place = c.place && lotIndex[c.place] ? c.place : null;
+  const g = GROUP_PAGES[id] = {...c, kind: "club", name, id, place, members: [], world: place ? lotIndex[place].world : worlds.find(w => w.id === c.world) || null};
+  (c.others || []).forEach(([who, role, hhId]) => { const o = SIM_BY_NAME[who] || "x-" + slug(who);
+    SIMS[o] ||= {id: o, name: who, sex: "x", stub: true, partners: []}; if (hhId && hhIndex[hhId]) SIMS[o].hh ||= hhIndex[hhId]; SIM_BY_NAME[who] ||= o;
+    g.members.push([o, role || "member"]); });
+});
+Object.values(SIMS).forEach(s => (s.clubs || []).forEach(c => { const g = GROUP_PAGES["g-club-" + slug(c.name)]; if (g && !g.members.some(([m]) => m === s.id)) g.members.push([s.id, c.role || "member"]); }));
 const groupTitle = g => g.kind === "dynasty" ? `${g.name} dynasty` : g.name;
 const groupsOf = id => Object.values(GROUP_PAGES).filter(g => g.members.some(([m]) => m === id)).map(g => [g.id, g, g.members.find(([m]) => m === id)[1]]);
 const dynastyOf = id => groupsOf(id).find(([, g]) => g.kind === "dynasty");
@@ -166,7 +176,7 @@ const dynastyOf = id => groupsOf(id).find(([, g]) => g.kind === "dynasty");
 function atHome(g, id){ const s = SIMS[id]; return g.homeHh ? s.hh === g.homeHh : (s.hh ? s.hh.world : s.world) === g.world; }
 // a member as a small box, like the tree's cards: based here = highlighted; elsewhere = lighter, with a chip for where they live
 const roleBadge = (kind, role) => { const R = GROUP_KINDS[kind].roles[role] || role, dyn = kind === "dynasty";
-  return `<span class="badge r-${role}">${dyn ? ic("crown") : role === "leader" ? ic("flag") : ""}${esc(R)}</span>`; };
+  return `<span class="badge ${dyn ? "r-" + role : "c-" + role}">${dyn ? ic("crown") : role === "leader" ? ic("flag") : ""}${esc(R)}</span>`; };
 function memberCard(g, id, role){
   const s = SIMS[id], dyn = g.kind === "dynasty", here = dyn || atHome(g, id), href = simLinkTo(id), R = GROUP_KINDS[g.kind].roles[role] || role, crown = ["head", "heir", "leader"].includes(role);
   return `<div class="mcard ${here ? "here" : "away"} ${s.late ? "late" : ""}" style="--w:${simColour(id)}"><span class="tm">${initial(s.name)}</span>
@@ -264,7 +274,7 @@ function treeAround(centre){
   return ids.length > 1 ? ids.sort((a, b) => all.indexOf(a) - all.indexOf(b)) : [];
 }
 // Sim pages: every household Sim, and anyone else on a household's tree (Cornelia, Agnes…), who belongs to the first such household
-Object.values(SIMS).forEach(s => { if (s.hh) SIM_PAGES["s-" + s.id] = s; });
+Object.values(SIMS).forEach(s => { if (s.hh && !s.stub) SIM_PAGES["s-" + s.id] = s; });
 worlds.forEach(w => Object.values(w.households).forEach(hh => { if (hh.sims.some(sm => sm.sid)) treeOf(hh).forEach(id => { ANCHOR[id] ||= hh; }); }));
 Object.values(SIMS).forEach(s => { if (!s.hh && !s.ph && !s.stub && ANCHOR[s.id]) SIM_PAGES["s-" + s.id] = s; });
 
@@ -350,14 +360,20 @@ function treeCard(id, x, y, CW, CH, o){
   return `<div class="tc ${C} ${s.late ? "late" : ""} ${o.here ? (here ? "here" : "away") : ""}" style="${pos};--w:${wColour(w)}" data-sim="${id}"><span class="tm">${initial(s.name)}</span>${s.late ? `<span class="dead" title="Deceased">†</span>` : ""}<div class="tn">${nm}</div><div class="ts">${esc(sub)}</div>
     <div class="tchip" style="display:flex;flex-wrap:wrap;gap:4px">${chips.filter(Boolean).join("")}</div>${badge}</div>`;
 }
-const treeKey = (here = false, colour = "") => `<div class="tree-key">
-  ${here ? `<span><span class="k-box here" ${colour ? `style="--w:${colour}"` : ""}></span>Lives here</span><span><span class="k-box away"></span>Lives elsewhere</span>` : ""}
-  <span><svg class="k" viewBox="0 0 34 10"><line x1="0" y1="3" x2="34" y2="3" stroke="var(--muted)" stroke-width="2.5"/><line x1="0" y1="7" x2="34" y2="7" stroke="var(--muted)" stroke-width="1.2"/></svg>Spouses</span>
-  <span><svg class="k" viewBox="0 0 34 10"><line x1="0" y1="5" x2="34" y2="5" stroke="var(--muted)" stroke-width="2.5" stroke-dasharray="5 4"/></svg>Partners</span>
-  <span><svg class="k" viewBox="0 0 34 12"><line x1="0" y1="6" x2="34" y2="6" stroke="var(--muted)" stroke-width="2.5" stroke-dasharray="5 4"/><path d="M12 12 L16 0 M18 12 L22 0" stroke="var(--muted)" stroke-width="1.6"/></svg>Ex</span>
-  <span><svg class="k" viewBox="0 0 34 10" opacity=".5"><line x1="0" y1="3" x2="34" y2="3" stroke="var(--muted)" stroke-width="2.5"/><line x1="0" y1="7" x2="34" y2="7" stroke="var(--muted)" stroke-width="1.2"/></svg>Deceased spouse</span>
-  <span><span class="dead-k">†</span>Deceased</span>
-  <span>${ic("crown")} Dynasty roles</span></div>`;
+// the key lists only what this tree actually shows
+function treeKey(ids, here = false, colour = "", away = false){
+  const inTree = new Set(ids), kinds = new Set();
+  ids.forEach(id => (SIMS[id].partners || []).forEach(([p, k]) => { if (inTree.has(p)) kinds.add(k); }));
+  const item = (on, html) => on ? `<span>${html}</span>` : "";
+  return `<div class="tree-key">
+  ${here && away ? `<span><span class="k-box here" ${colour ? `style="--w:${colour}"` : ""}></span>Lives here</span><span><span class="k-box away"></span>Lives elsewhere</span>` : ""}
+  ${item(kinds.has("spouse"), `<svg class="k" viewBox="0 0 34 10"><line x1="0" y1="3" x2="34" y2="3" stroke="var(--muted)" stroke-width="2.5"/><line x1="0" y1="7" x2="34" y2="7" stroke="var(--muted)" stroke-width="1.2"/></svg>Spouses`)}
+  ${item(kinds.has("partner") || kinds.has("engaged"), `<svg class="k" viewBox="0 0 34 10"><line x1="0" y1="5" x2="34" y2="5" stroke="var(--muted)" stroke-width="2.5" stroke-dasharray="5 4"/></svg>Partners`)}
+  ${item(kinds.has("ex"), `<svg class="k" viewBox="0 0 34 12"><line x1="0" y1="6" x2="34" y2="6" stroke="var(--muted)" stroke-width="2.5" stroke-dasharray="5 4"/><path d="M12 12 L16 0 M18 12 L22 0" stroke="var(--muted)" stroke-width="1.6"/></svg>Ex`)}
+  ${item(kinds.has("late-spouse"), `<svg class="k" viewBox="0 0 34 10" opacity=".5"><line x1="0" y1="3" x2="34" y2="3" stroke="var(--muted)" stroke-width="2.5"/><line x1="0" y1="7" x2="34" y2="7" stroke="var(--muted)" stroke-width="1.2"/></svg>Deceased spouse`)}
+  ${item(ids.some(id => SIMS[id].late), `<span class="dead-k">†</span>Deceased`)}
+  ${item(ids.some(id => dynastyOf(id)), `${ic("crown")} Dynasty roles`)}</div>`;
+}
 
 /* ---------- relationships between Sims: only on Sim pages, grouped by tag group (her decision, 17 Oct) ---------- */
 const CLOSE_FAMILY = new Set(["Mother", "Father", "Parent", "Daughter", "Son", "Child", "Sister", "Brother", "Sibling"]);
@@ -434,7 +450,7 @@ function simPage(s){
   // family
   const fam = simFamily(s.id), own = s.hh ? treeOf(s.hh) : treeAround([s.id]);   // their household’s whole family tree, with them highlighted
   if (fam.trim() || own.length) h += `<section class="block" id="family" style="--h:${hc}"><div class="block-head"><h2>Their <em>family</em></h2></div>
-    ${own.length ? `<div class="tree-box">${fitTree(own, {line: s.line, compact: true, ch: 96, labels: false, here: true, me: s.id})}</div>${treeKey(false)}` : ""}
+    ${own.length ? `<div class="tree-box">${fitTree(own, {line: s.line, compact: true, ch: 96, labels: false, here: true, me: s.id})}</div>${treeKey(own)}` : ""}
     ${fam.trim() ? `<div style="margin-top:22px">${fam}</div>` : ""}</section>`;
   // relationships
   const rels = simRelGroups(s.id);
@@ -976,7 +992,7 @@ function householdNew(hh){
       ${simRoster(ids)}
       </section>
     ${tree.length ? `<section class="block" style="--h:${hc}"><div class="block-head"><h2>Family <em>tree</em></h2></div>
-      <div class="tree-box">${fitTree(tree, {line: slug(hh.family), compact: true, ch: 96, labels: false, here: hh})}</div>${treeKey(true, wColour(w))}</section>` : ""}
+      <div class="tree-box">${fitTree(tree, {line: slug(hh.family), compact: true, ch: 96, labels: false, here: hh})}</div>${treeKey(tree, true, wColour(w), tree.some(id => SIMS[id].hh !== hh))}</section>` : ""}
     ${hh.story ? `<section class="block" style="--h:${hc}"><div class="block-head"><h2>Their <em>story</em></h2></div><p class="lede">${esc(hh.story)}</p></section>` : ""}
     ${neighbours.length ? `<section class="block"><div class="block-head"><h2>Neighbours</h2></div><div class="families">${neighbours.map(x => famCard(x)).join("")}</div></section>` : ""}`;
 }
