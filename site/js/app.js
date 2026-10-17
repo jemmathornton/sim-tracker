@@ -437,7 +437,7 @@ function simGroups(id){
 function simHomes(s){
   const hh = s.hh;
   if (!hh) return "";
-  return `<ul class="homes">${hh.lots.filter(l => !l.owned).map(l => `<li>${ic("home")}<a href="#${l.id}">${esc(l.name)}</a><span><a href="#n-${l.hood.id}">${esc(l.hood.name)}</a>, <a href="#w-${l.world.id}">${esc(l.world.name)}</a></span></li>`).join("")}</ul>`;
+  return `<ul class="homes">${hh.lots.filter(l => !l.owned || hh.tenantOf === l).map(l => `<li>${ic("home")}<a href="#${l.id}">${esc(l.name)}</a><span><a href="#n-${l.hood.id}">${esc(l.hood.name)}</a>, <a href="#w-${l.world.id}">${esc(l.world.name)}</a></span></li>`).join("")}</ul>`;
 }
 function simPage(s){
   const hh = s.hh, base = hh || ANCHOR[s.id], home1 = base.lots[0], hc = home1.hood.color, w = home1.world, first = firstName(s);
@@ -650,7 +650,8 @@ const isRental = l => /residential rental/i.test(l.type || "");
 const unitCount = l => { const m = /\((\d+)\)/.exec(l.type || ""); return isRental(l) && m ? +m[1] : null; };
 // who lives in which unit isn't decided yet: the plan's household fills the first unit, tenants the next, the rest show as empty
 const rentalUnits = l => { const n = unitCount(l), who = [];
-  if (l.hh) who.push({hh: l.hh, role: (l.tenants && !NO_LANDLORD.has(l.world.name + "|" + l.lot)) || /\sown\??$/i.test(l.who || "") ? "owners" : ""});
+  const away = l.hh && l.owned && l.hh.lots.some(x => x !== l && !x.owned);
+  if (l.hh && !away) who.push({hh: l.hh, role: (l.tenants && !NO_LANDLORD.has(l.world.name + "|" + l.lot)) || /\sown\??$/i.test(l.who || "") ? "owners" : ""});
   (l.tenants || []).forEach(t => who.push({hh: t, role: "tenant"}));
   return Array.from({length: n}, (_, i) => who[i] || null); };
 // a unit's own pictures: photos named flat-N or unit-N
@@ -929,7 +930,7 @@ function families(w){
 const lotsLabel = hh => { const o = hh.lots.some(l => l.owned), n = hh.lots.filter(l => !l.owned).length; return (n > 1 ? "Homes" : "Home") + (o ? " & business" : ""); };
 function household(hh){
   if (hh.sims.some(sm => sm.sid)) return householdNew(hh);
-  const w = hh.world, home1 = hh.lots[0], hc = home1.hood.color, homes = hh.lots.filter(l => !l.owned), owns = hh.lots.filter(l => l.owned);
+  const w = hh.world, home1 = hh.lots[0], hc = home1.hood.color, homes = hh.lots.filter(l => !l.owned || hh.tenantOf === l), owns = hh.lots.filter(l => l.owned && hh.tenantOf !== l);
   const hoods = [...new Set(hh.lots.map(l => l.hood))];
   const neighbours = Object.values(w.households).filter(x => x !== hh && !hh.links.some(k => k.hh === x) && x.lots.some(l => hoods.includes(l.hood)));
   return `<section class="hero small" style="--c:${home1.hood.glow||hc}"><div class="crumbs"><a href="#w-${w.id}">${ic("map")}${esc(w.name)}</a><a href="#n-${home1.hood.id}">${ic("pin")}${esc(home1.hood.name)}</a>${hh.lots.map(l => `<a href="#${l.id}">${ic(l.owned ? "pin" : "home")}${esc(l.name)}</a>`).join("")}</div>
@@ -962,7 +963,7 @@ function hhPicture(hh, ids){
 // plain-link lines for where they live and what they own, run, rent and let
 function hhLotLines(hh){
   const link = l => `<a href="#${l.id}">${esc(l.name)}</a>`, hhA = x => `<a href="#${x.id}">${esc(x.name)}</a>`, noLord = l => NO_LANDLORD.has(l.world.name + "|" + l.lot);
-  const homes = hh.lots.filter(l => !l.owned), owns = hh.lots.filter(l => l.owned);
+  const homes = hh.lots.filter(l => !l.owned || hh.tenantOf === l), owns = hh.lots.filter(l => l.owned && hh.tenantOf !== l);
   const landlord = hh.tenantOf && hh.tenantOf.hh && hh.tenantOf.hh !== hh && !noLord(hh.tenantOf) ? hh.tenantOf.hh : null;
   const lets = homes.concat(owns).filter(l => l.hh === hh && l.tenants && l.tenants.length && !noLord(l)).flatMap(l => l.tenants);
   const rows = [[homes.length > 1 ? "Homes" : "Home", homes.map(l => link(l) + (hh.tenantOf === l && !landlord ? " (renting)" : "")).join(", ")],

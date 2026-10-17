@@ -224,7 +224,8 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 ### Pets and horses (research/pets-and-horses.md)
 - [ ] [Jemma] On household pages: pets in the same roster as the Sims (suggested), a one-line strip, or full cards plus a Horses page? An Animals tab on family trees where there are young ones? Small animals (goats, hens, llamas…) as a counts line, or left off?
 - [x] Delgatos moved to Domus Familiaris (Sable Square) and own Brindleton Pawspital next door; Chateau Frise now empty (18 Oct). Copy into World Plans (Residents for the three lots). The Summer Home and Canter Clinic stay NPC-run.
-- [ ] [Jemma] Vets: one for the city area or the desert worlds, or is a trip to Brindleton Bay fine?
+- [x] Vets (18 Oct, by her world areas): none needed in the San Myshuno area (city flats, fewer pets); 36 Bayani Place (San Sequoia) becomes a Vet Clinic, NPC-run for now, and the Luna-Sullivans move into Sequoia Cottage’s other half. The desert has Canter Clinic. Copy into World Plans: 36 Bayani Place (type Vet Clinic, residents N/A), Sequoia Cottage (residents Lovejoy, the second household; tenants Luna-Sullivan), Manzanita Terrace (Residential Rental (3)).
+- [ ] [Jemma] Movers & Shakers (Willow Creek): no longer a Recreation Center? Come back to what it should be (18 Oct).
 - [ ] [Jemma] New Appaloosa has no public horse stop now Duke’s Hall is Appaloosa Stables (which is full: 2 Sims and 6 horses, so no foals): give The Cozy Corner House hay feeders and troughs, or let the Stables be the stop?
 - [ ] [Jemma] Use For Rent’s pet households (Kitty Lu and her cats, Dara Kham and her dog) for empty rental units? In game: turn off “Adopt Cats & Dogs” and “Rescue Horses” in Neighbourhood Stories?
 - Lore find: Roberto Crinkletop (Chestnut Ridge’s hidden “Mysterious Rancher”) is Agnes Crumplebottom’s ex-husband
@@ -261,7 +262,8 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 ### Empty homes page and filters (prototypes: for-jemma/prototypes/lots/index.html, opens from the folder)
 - [ ] [Jemma] Empty homes page (27 empty homes, 14 empty apartments, 41 free rental units, 7 University Housing lots): compact table (A) or cards (B)? Its own page in the sidebar or a part of Stats? Count University Housing and lots not built yet?
 - [ ] [Jemma] Filters (pack, lot type, lot trait, built/shared, empty/lived in): every group always showing (A) or one bar that opens (B)? Above the neighbourhood cards or on an “All lots” page per world? Chips on Stats instead of, or as well as, the “Show” dropdown?
-- [ ] [Claude] Bugs it found: Sequoia Cottage’s card puts the Lovejoys in unit 1 as landlord although they live at 23 Eucalyptus Lane (so 1 free, should be 2); Upland Trailer Park shows Johnny Zest in unit 2 but the plan has him in the 4th trailer
+- [x] Sequoia Cottage: not a bug, a second Lovejoy household (one of the grandparents’ children) lives in unit 1 and lets unit 2, now to the Luna-Sullivans (her story, 18 Oct).
+- [ ] [Claude] Bug it found: Upland Trailer Park shows Johnny Zest in unit 2 but the plan has him in the 4th trailer
 
 ### Townies and NPC roles (research/townies-and-roles.md)
 - [ ] [Jemma] Moonwood Mill Library: settle it as a Library, not a Backroom? As a Backroom it would get no librarian by day and no bartender by night (the game has no Moonwood version of either), and Wolfgang Wilder loses his job
