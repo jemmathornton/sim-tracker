@@ -608,10 +608,6 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 .k-box{width:22px;height:14px;border-radius:4px;display:inline-block;border:1px solid var(--line)}
 .k-box.here{border:2px solid var(--w,var(--brass));background:color-mix(in srgb,var(--w,var(--brass)) 12%,var(--surface))}
 .k-box.away{background:color-mix(in srgb,var(--paper) 70%,var(--surface))}
-/* origin tag: Premade or Mine */
-.otag{display:inline-flex;align-items:center;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:99px;border:1px solid var(--line);color:var(--muted);background:var(--surface)}
-.otag.mine{border-color:color-mix(in srgb,var(--brass) 70%,var(--line));color:color-mix(in srgb,var(--brass) 75%,var(--ink))}
-.hero .otag{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.3);color:var(--on-deep);padding:7px 12px}
 /* Sim page: header chips, about, family, groups, homes */
 .sim-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;align-items:center}
 .sim-chips>span:not(.otag){display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border-radius:99px;border:1px solid rgba(255,255,255,.22);font-weight:600;font-size:13px}
@@ -674,3 +670,9 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 .tree-key .dead-k{font:400 17px/1 var(--display);color:var(--muted);margin-right:2px}
 .tree-key svg.i{width:14px;height:14px;vertical-align:-2px}
 .hero .nee{margin:6px 0 0;font:italic 400 22px var(--display);color:var(--on-deep-mute)}
+/* tree boxes: smaller role badges (gold only for head and heir), one-line world chips (17 Oct) */
+.tc .badge{top:-9px;font-size:9.5px;letter-spacing:.03em;padding:1px 6px;gap:3px}
+.tc .badge svg{width:9px;height:9px}
+.tc .badge.plain{background:var(--surface);color:var(--muted);border:1px solid var(--line);font-weight:700}
+.tc .badge.out{font-weight:700}
+.tc .hhchip{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
