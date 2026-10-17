@@ -675,4 +675,6 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 .tc .badge svg{width:9px;height:9px}
 .tc .badge.plain{background:var(--surface);color:var(--muted);border:1px solid var(--line);font-weight:700}
 .tc .badge.out{font-weight:700}
-.tc .hhchip{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.tc .hhchip{display:inline-block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;font-size:10px;padding:2px 6px;vertical-align:top}
+.tc .hhchip::before{display:inline-block;margin-right:4px;vertical-align:0}
+.membs{margin-top:18px}
