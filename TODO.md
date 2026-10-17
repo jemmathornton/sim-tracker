@@ -276,7 +276,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 
 ### Fame and clubs (research/fame-and-clubs-check.md)
 - [ ] [Jemma] Nothing in her plan breaks fame. Starlight Accolades: if EA’s Studio PBP still stands in her save it probably has Hottest Spot in Town (check in game); otherwise only Calico has it. Judith Ward for the Plumbob Pictures Museum (Acting 7, Business Savvy)?
-- [ ] [Jemma] 7 game celebrities are homeless (Holly Alto, Dustin Broke, Dirk Dreamer, Baby Ariel, Brytani Cho, Izzy Fabulous, Kayla Flemming) and would be deleted first if the town fills: heart them, or put some in “My Celebs” at Chateau Peak?
+- [x] 7 game celebrities are homeless (Holly Alto, Dustin Broke, Dirk Dreamer, Baby Ariel, Brytani Cho, Izzy Fabulous, Kayla Flemming): left homeless for now, some are meant to be; she’ll set the game to delete fewer Sims (18 Oct).
 - [x] Club meeting places decided 17–18 Oct, on the site: Powerhouse → Skye Fitness, Garden Gnomes → Magnolia Blossom Park (for now), League of Adventurers → Courtyard Lane Playground, Upper Crusts → any Restaurant, Paragons and Renegades → Magnolia Mall, Spin Masters → Stargazer, Partihaus → La Discotheque (Avant Gardes, Knights of the Hedge and The Good Timers unchanged).
 - [ ] [Jemma] In game: change those clubs' hangouts in the Club panel (may need a played member). Make sure Magnolia Mall has coffee, a wardrobe or racks, and things to sabotage; Skye Fitness has no pool (Powerhouse swims).
 - [ ] [Jemma] Powerhouse: add some San Myshuno Sims as members?
