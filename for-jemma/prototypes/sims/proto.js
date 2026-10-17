@@ -9,17 +9,30 @@ const PROTO = "../for-jemma/prototypes/sims/";   // each page's <base> is site/,
 const PAGES = [
   ["index.html", "Contents", "list-tree"],
   ["household.html", "Household page", "users"],
+  ["sim.html", "Sim pages", "user-round", "?sim=mortimer-goth"],
   ["family-tree.html", "Family tree", "network"],
   ["relationships.html", "Links between households", "link"],
   ["tags.html", "Relationship tags", "tag"],
 ];
-let PAGE = "";
-// the sidebar is the app's own, with a "Prototypes" group added at the top
+let PAGE = "", CUR_SIM = "";
+// Sims with their own page (17 Oct: every Sim in the end; the Goths first). Cornelia is on the Goth tree but in no household.
+const SIM_PAGES = ["mortimer-goth", "bella-goth", "cassandra-goth", "alexander-goth", "cornelia-goth"];
+const simHref = id => `${PROTO}sim.html?sim=${id}`;
+// the sidebar is the app's own, with a "Prototypes" group added at the top, and the Goths' Sims under their household
 const appRenderNav = renderNav;
 renderNav = function (...a) {
   appRenderNav(...a);
-  document.getElementById("nav").insertAdjacentHTML("afterbegin", `<div class="nav-group"><div class="label">Prototypes · 16 Oct</div>${PAGES.map(([f, t, i]) =>
-    `<a href="${PROTO}${f}" class="${f === PAGE ? "on" : ""}">${ic(i)}${t}</a>`).join("")}</div>`);
+  const nav = document.getElementById("nav");
+  nav.insertAdjacentHTML("afterbegin", `<div class="nav-group"><div class="label">Prototypes · 16–17 Oct</div>${PAGES.map(([f, t, i, q]) =>
+    `<a href="${PROTO}${f}${q || ""}" class="${f === PAGE ? "on" : ""}">${ic(i)}${t}</a>`).join("")}</div>`);
+  // world → neighbourhood → lot → household → Sims, as in the app; here the household and its Sims open the prototype pages
+  const fl = nav.querySelector('a.fam-link[href="#h-willow-creek--goth"]');
+  if (!fl) return;
+  fl.setAttribute("href", PROTO + "household.html");
+  if (CUR_SIM) { fl.classList.remove("cur"); fl.classList.add("path"); }
+  if (fl.nextElementSibling && fl.nextElementSibling.classList.contains("lotnav")) fl.nextElementSibling.remove();   // the app's own list (links to its household page)
+  fl.insertAdjacentHTML("afterend", `<div class="lotnav proto-sims">${SIM_PAGES.map(id => { const s = SIMS[id];
+    return `<a href="${simHref(id)}" class="${id === CUR_SIM ? "cur" : ""} ${s.hh ? "" : "away"}">${esc(s.name)}${s.late ? "<small>late</small>" : ""}</a>`; }).join("")}</div>`);
 };
 function protoStart(o) {
   PAGE = o.page;
@@ -38,8 +51,8 @@ document.addEventListener("click", e => {
   location.href = "index.html" + a.getAttribute("href");
 }, true);
 // the bar stays in view (with the page's choices); the options it shows go on the line under it
-const protoBar = (title, opts, choices = "") =>
-  `<div class="proto-bar"><span class="proto-tag">Prototype, 16 Oct</span><b>${title}</b><div class="choices">${choices}</div></div><p class="proto-opts">${opts}</p>`;
+const protoBar = (title, opts, choices = "", date = "16 Oct") =>
+  `<div class="proto-bar"><span class="proto-tag">Prototype, ${date}</span><b>${title}</b><div class="choices">${choices}</div></div><p class="proto-opts">${opts}</p>`;
 // segmented choice buttons; each page has an onSeg(name, value)
 const seg = (name, label, items, cur) => `<div class="seg" data-seg="${name}"><span>${label}</span>${items.map(([v, t, no]) =>
   `<button type="button" data-v="${v}" class="${v === cur ? "on" : ""}" aria-pressed="${v === cur}">${no ? `<i>${no}</i>` : ""}${t}</button>`).join("")}</div>`;
@@ -60,13 +73,14 @@ const GROUPS = {
   work:     {name: "Work & school", icon: "briefcase", line: "dots",   sample: ""},
   dynasty:  {name: "Dynasty",       icon: "crown",     line: "double", sample: ""},
 };
+// romance words are the game's since patch 162 (Spouse, Engaged, Partner): her decision, 17 Oct, everywhere and with no switch
 const TAGS = {
   family:         {g: "family",   name: "Family"},
-  spouse:         {g: "romance",  name: "Spouse",        old: ["Husband", "Wife"]},
-  engaged:        {g: "romance",  name: "Engaged",       old: ["Fiancé", "Fiancée"]},
-  partner:        {g: "romance",  name: "Partner",       old: ["Boyfriend", "Girlfriend"]},
-  ex:             {g: "romance",  name: "Ex",            old: ["Ex-husband", "Ex-wife"]},
-  "late-spouse":  {g: "romance",  name: "Late Spouse",   old: ["Late husband", "Late wife"]},
+  spouse:         {g: "romance",  name: "Spouse"},
+  engaged:        {g: "romance",  name: "Engaged"},
+  partner:        {g: "romance",  name: "Partner"},
+  ex:             {g: "romance",  name: "Ex"},
+  "late-spouse":  {g: "romance",  name: "Late Spouse"},
   crush:          {g: "romance",  name: "Crush"},
   bff:            {g: "friends",  name: "Best Friends"},
   "good-friends": {g: "friends",  name: "Good Friends"},
@@ -81,7 +95,6 @@ const TAGS = {
   "dyn-rival":    {g: "dynasty",  name: "Dynasty Rival"},
   outcast:        {g: "dynasty",  name: "Outcast"},
 };
-let OLD_WORDS = false;   // decision 4: the game's "Spouse / Partner / Engaged" (false) or "Husband / Wife" (true)
 const tagName = t => TAGS[t].name;
 const tagPill = (t, cls = "") => `<span class="tg ${TAGS[t].g} ${cls}">${ic(GROUPS[TAGS[t].g].icon)}${esc(tagName(t))}</span>`;
 const SOURCES = {
@@ -101,7 +114,8 @@ const SIMS = {
   // the Goths (The Sims 4; family tree as of patch 193)
   "simon-crumplebottom":    {name: "Simon Crumplebottom", sex: "m", age: "Elder", late: true, line: "crumplebottom", partners: [["prudence-crumplebottom", "spouse"]]},
   "prudence-crumplebottom": {name: "Prudence Crumplebottom", sex: "f", age: "Elder", late: true, line: "crumplebottom"},
-  "cornelia-goth":   {name: "Cornelia Goth", sex: "f", age: "Elder", late: true, line: "crumplebottom", into: "goth", parents: ["simon-crumplebottom", "prudence-crumplebottom"], partners: [["gunther-goth", "unknown"]]},
+  "cornelia-goth":   {name: "Cornelia Goth", sex: "f", age: "Elder", late: true, line: "crumplebottom", into: "goth", parents: ["simon-crumplebottom", "prudence-crumplebottom"], partners: [["gunther-goth", "unknown"]],
+                      start: "Not a Sim you can play: she is on the Goth family tree since patch 193 (February 2026), already late. She died in a fire, and the game won’t let her come back as a ghost."},
   "gunther-goth":    {name: "Gunther Goth", sex: "m", ph: true, line: "goth", phText: "Father not in the game’s tree", phNote: "Gunther, in earlier games"},
   "agnes-crumplebottom": {name: "Agnes Crumplebottom", sex: "f", age: "Elder", line: "crumplebottom", parents: ["simon-crumplebottom", "prudence-crumplebottom"],
                      partners: [["robert-crumplebottom", "ex"], ["erik-darling", "late-spouse"]], world: "henford-on-bagley", home: "a townie", noHome: true},
@@ -153,6 +167,22 @@ const TREES = {
   capp:          ["consort-capp", "contessa-capp", "cordelia-capp", "caliban-capp", "tybalt-capp", "juliette-monty", "romeo-monty", "beatrice-capp", "celeste-capp", "virgilio-capp", "dante-monty"],
 };
 const GOTHS = ["mortimer-goth", "bella-goth", "cassandra-goth", "alexander-goth"];
+const membersOf = hhId => Object.keys(SIMS).filter(id => SIMS[id].hh === hhId);
+
+/* ---------- a household's mini tree: family links only (her rule, 17 Oct) ----------
+   Built from parents and partners, never from who lives together. The household's Sims, their parents and their children
+   who live elsewhere; then only the Sims joined to someone else by a family link stay. Unrelated housemates: no tree at all. */
+const famLinked = (a, b) => (SIMS[a].parents || []).includes(b) || (SIMS[b].parents || []).includes(a) || partnersOf(a).some(([p]) => p === b);
+function miniTreeIds(hhId) {
+  const set = new Set(membersOf(hhId));
+  [...set].forEach(id => {
+    (SIMS[id].parents || []).forEach(p => { if (SIMS[p]) set.add(p); });
+    Object.values(SIMS).forEach(t => { if ((t.parents || []).includes(id)) set.add(t.id); });
+  });
+  const all = [...set], ids = all.filter(a => all.some(b => b !== a && famLinked(a, b)));
+  const order = Object.keys(SIMS);
+  return ids.length > 1 ? ids.sort((a, b) => order.indexOf(a) - order.indexOf(b)) : [];
+}
 
 /* ---------- family words, worked out (never typed) ---------- */
 const sx = (s, m, f, x) => s === "m" ? m : s === "f" ? f : x;
@@ -171,15 +201,13 @@ function blood(a, b) {
   A.forEach((da, x) => { if (B.has(x)) { const db = B.get(x); if (!best || da + db < best[0] + best[1]) best = [da, db]; } });
   return best;
 }
-function partnerWord(kind, s) {
-  if (kind === "unknown") return "Partner";
-  const T = TAGS[kind]; if (!T) return "Partner";
-  if (OLD_WORDS && T.old) return sx(s, T.old[0], T.old[1], T.name);
+function partnerWord(kind) {
+  const T = TAGS[kind]; if (!T || kind === "unknown") return "Partner";
   return kind === "ex" ? "Ex-Spouse" : T.name;
 }
 function relWord(a, b) {   // what b is to a
   const s = SIMS[b].sex, p = partnersOf(a).find(x => x[0] === b);
-  if (p) return partnerWord(p[1], s);
+  if (p) return partnerWord(p[1]);
   const r = blood(a, b);
   if (r) {
     const [da, db] = r;
@@ -198,11 +226,16 @@ function relWord(a, b) {   // what b is to a
     if (r2 && r2[1] === 0 && r2[0] === 1) return sx(s, "Father-in-law", "Mother-in-law", "Parent-in-law");
     if (r2 && r2[0] === 1 && r2[1] === 1) return sx(s, "Brother-in-law", "Sister-in-law", "Sibling-in-law");
   }
+  for (const c of Object.keys(SIMS)) {   // a child's spouse
+    const r3 = blood(a, c);
+    if (r3 && r3[0] === 0 && r3[1] === 1 && partnersOf(c).some(([q, k]) => q === b && k === "spouse")) return sx(s, "Son-in-law", "Daughter-in-law", "Child-in-law");
+  }
   return null;
 }
 // a Sim's family, closest first (partners, parents, children, siblings, then the rest)
-const FAMILY_ORDER = ["Spouse", "Husband", "Wife", "Engaged", "Partner", "Ex-Spouse", "Late Spouse", "Mother", "Father", "Parent", "Daughter", "Son", "Child", "Sister", "Brother", "Sibling",
-  "Grandmother", "Grandfather", "Grandparent", "Granddaughter", "Grandson", "Grandchild", "Aunt", "Uncle", "Niece", "Nephew", "Cousin", "Mother-in-law", "Father-in-law"];
+const FAMILY_ORDER = ["Spouse", "Engaged", "Partner", "Ex-Spouse", "Late Spouse", "Mother", "Father", "Parent", "Daughter", "Son", "Child", "Sister", "Brother", "Sibling",
+  "Grandmother", "Grandfather", "Grandparent", "Granddaughter", "Grandson", "Grandchild", "Great-grandmother", "Great-grandfather", "Great-grandparent",
+  "Aunt", "Uncle", "Great-aunt", "Great-uncle", "Niece", "Nephew", "Cousin", "Mother-in-law", "Father-in-law", "Daughter-in-law", "Son-in-law", "Sister-in-law", "Brother-in-law"];
 function familyOf(id) {
   const s = SIMS[id], rank = w => { const i = FAMILY_ORDER.indexOf(w); return i < 0 ? 99 : i; };
   const band = o => SIMS[o].hh && SIMS[o].hh === s.hh ? 0 : SIMS[o].late ? 2 : 1;   // household, living elsewhere, late
@@ -301,7 +334,8 @@ function tcard(id, x, y, CW, CH, o) {
     if (!s.late && !(o.here && s.hh === o.here)) chips.push(homeChip(s));
   }
   const d = s.dyn, badge = d ? `<span class="badge ${d[0] === "head" ? "head" : d[0] === "outcast" ? "out" : ""}">${d[0] === "outcast" ? "" : ic("crown")}${d[0] === "head" ? "Head" : d[0] === "heir" ? "Heir" : "Outcast"}${d[1] !== o.line ? " · " + esc(FAMILIES[d[1]].name) : ""}</span>` : "";
-  return `<div class="tc ${C} ${s.late ? "late" : ""} ${stub ? "stub" : ""}" style="${pos};--w:${wColour(w)}" data-sim="${id}"><span class="tm">${initial(s.name)}</span><div class="tn">${esc(s.name)}</div><div class="ts">${esc(sub)}</div>
+  const nm = o.simLinks && SIM_PAGES.includes(id) ? `<a href="${simHref(id)}">${esc(s.name)}</a>` : esc(s.name);   // names open the Sim's own page
+  return `<div class="tc ${C} ${s.late ? "late" : ""} ${stub ? "stub" : ""}" style="${pos};--w:${wColour(w)}" data-sim="${id}"><span class="tm">${initial(s.name)}</span><div class="tn">${nm}</div><div class="ts">${esc(sub)}</div>
     <div class="tchip" style="display:flex;flex-wrap:wrap;gap:4px">${chips.filter(Boolean).join("")}</div>${badge}</div>`;
 }
 const treeKey = () => `<div class="tree-key">

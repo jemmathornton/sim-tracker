@@ -205,7 +205,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [ ] [Jemma] Relationship tags: six groups (Family, Romance, Friends, Conflict, Work & school, Dynasty) plus an optional free label? Add or drop any?
 - [x] Decided 17 Oct: use the game’s own words, “Spouse / Partner / Engaged” (since patch 162), not “Husband / Wife”
 - [x] Decided 17 Oct: family trees are drawn top-down trees (not a generations list); married-in Sims get a chip that opens their own family’s tree
-- [ ] [Jemma] Families that move between worlds: one tree per family across worlds, or per-world trees with “moved to …” stubs? (test case: the Montys and Capps across Ondarion and Tartosa)
+- [x] Decided 17 Oct: a family tree on each household page, centred on the Sims who live there and showing their relatives wherever they live (Capps: all Capps + Juliette, Romeo, Dante; Montys: all Montys + R&J; R&J’s household: both families). Worlds don’t matter: anyone outside the household is a lighter box with a world chip, linking to their household. Still to settle: how far out the tree goes, and housemates with family elsewhere
 - [ ] [Jemma] Links between households: grouped lists first, then a small web around one household; try lines on the world map later?
 - [ ] [Jemma] EA’s families vs hers: an origin tag, plus “In the game / In my save” for premade families?
 - [ ] [Jemma] Story questions: how is Romeo related to the recreated Sims 2 Montys, and who heads each dynasty in her save?
