@@ -172,16 +172,14 @@ Object.values(SIMS).forEach(s => (s.clubs || []).forEach(c => { const g = GROUP_
 const groupTitle = g => g.kind === "dynasty" ? `${g.name} dynasty` : g.name;
 const groupsOf = id => Object.values(GROUP_PAGES).filter(g => g.members.some(([m]) => m === id)).map(g => [g.id, g, g.members.find(([m]) => m === id)[1]]);
 const dynastyOf = id => groupsOf(id).find(([, g]) => g.kind === "dynasty");
-// is this member based where the group is?
-function atHome(g, id){ const s = SIMS[id]; return g.homeHh ? s.hh === g.homeHh : (s.hh ? s.hh.world : s.world) === g.world; }
 // a member as a small box, like the tree's cards: based here = highlighted; elsewhere = lighter, with a chip for where they live
 const roleBadge = (kind, role) => { const R = GROUP_KINDS[kind].roles[role] || role, dyn = kind === "dynasty";
   return `<span class="badge ${dyn ? "r-" + role : "c-" + role}">${dyn ? ic("crown") : role === "leader" ? ic("flag") : ""}${esc(R)}</span>`; };
 function memberCard(g, id, role){
-  const s = SIMS[id], dyn = g.kind === "dynasty", here = dyn || atHome(g, id), href = simLinkTo(id), R = GROUP_KINDS[g.kind].roles[role] || role, crown = ["head", "heir", "leader"].includes(role);
+  const s = SIMS[id], dyn = g.kind === "dynasty", here = true, href = simLinkTo(id), R = GROUP_KINDS[g.kind].roles[role] || role, crown = ["head", "heir", "leader"].includes(role);
   return `<div class="mcard ${here ? "here" : "away"} ${s.late ? "late" : ""}" style="--w:${simColour(id)}"><span class="tm">${initial(s.name)}</span>
     <div class="tn">${href ? `<a href="${href}">${esc(s.name)}</a>` : esc(s.name)}</div><div class="ts">${esc([s.age, s.state].filter(Boolean).join(" · "))}</div>
-    <div class="tchip">${here && !dyn ? "" : homeChip(s)}</div>${roleBadge(g.kind, role)}</div>`;
+    <div class="tchip">${homeChip(s)}</div>${roleBadge(g.kind, role)}</div>`;
 }
 
 /* ---------- family words, worked out (never typed) ---------- */
@@ -470,7 +468,7 @@ function simPage(s){
 const ROLE_ORDER = ["head", "leader", "heir", "member", "outcast"];
 function groupPage(g){
   const K = GROUP_KINDS[g.kind], W = g.world, lotOf = g.place ? lotIndex[g.place] : g.homeHh ? g.homeHh.lots[0] : null, c = lotOf ? (lotOf.hood.glow || lotOf.hood.color) : wColour(W);
-  const dyn = g.kind === "dynasty", ids = g.members.slice().sort((a, b) => ROLE_ORDER.indexOf(a[1]) - ROLE_ORDER.indexOf(b[1])), away = dyn ? 0 : ids.filter(([id]) => !atHome(g, id)).length;
+  const dyn = g.kind === "dynasty", ids = g.members.slice().sort((a, b) => ROLE_ORDER.indexOf(a[1]) - ROLE_ORDER.indexOf(b[1]));
   const hhs = [...new Set(ids.map(([id]) => SIMS[id].hh).filter(Boolean))].map(hh => `<a href="#${hh.id}">${esc(hh.name)}</a> (${esc(hh.world.name)})`).join(", ");
   const link = x => GROUP_PAGES["g-dynasty-" + slug(x)] ? `<a href="#g-dynasty-${slug(x)}">${esc(groupTitle(GROUP_PAGES["g-dynasty-" + slug(x)]))}</a>` : esc(x + " dynasty");
   const who = role => g.members.filter(([, r]) => r === role).map(([id]) => simLinkTo(id) ? `<a href="${simLinkTo(id)}">${esc(SIMS[id].name)}</a>` : esc(SIMS[id].name)).join(", ") || "None";
@@ -487,9 +485,9 @@ function groupPage(g){
   const half = Math.ceil(rows.length / 2), dl = rs => `<dl class="facts">${rs.map(([t, v]) => `<div><dt>${t}</dt><dd>${v}</dd></div>`).join("")}</dl>`;
   h += `<div class="detail" style="--h:${c}"><div>${dl(rows.slice(0, half))}</div><div>${dl(rows.slice(half))}</div></div>`;
   // members
-  h += `<section class="block" style="--h:${c}"><div class="block-head"><h2>The <em>members</em></h2><span class="count">${ids.length} ${ids.length === 1 ? "Sim" : "Sims"}${away ? ` · ${away} based elsewhere` : ""}</span></div>
-    <div class="mcards">${ids.map(([id, r]) => memberCard(g, id, r)).join("")}</div>
-    ${dyn ? "" : `<div class="tree-key"><span><span class="k-box here" style="--w:${wColour(W)}"></span>Lives in ${esc(W.name)}</span><span><span class="k-box away"></span>Lives elsewhere</span></div>`}</section>`;
+  h += `<section class="block" style="--h:${c}"><div class="block-head"><h2>The <em>members</em></h2><span class="count">${ids.length} ${ids.length === 1 ? "Sim" : "Sims"}</span></div>
+    <div class="mcards">${ids.map(([id, r]) => memberCard(g, id, r)).join("")}</div></section>`;
+
   return h;
 }
 

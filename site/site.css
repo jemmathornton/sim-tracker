@@ -515,7 +515,7 @@ footer .as-of{flex-basis:100%}
 .u-traits{font-size:12.5px;color:var(--muted);text-align:right}
 /* ---------- Sim pages, household pages with Sims, group pages (17 Oct): the prototype's design (for-jemma/prototypes/sims/proto.css) ---------- */
 /* relationship tag groups: one colour + one Lucide icon each (so colour is never the only clue) */
-:root{--t-family:#2F6E9C; --t-romance:#AE5578; --t-friends:#3C8459; --t-conflict:#B4573E; --t-work:#6A5A9E; --t-dynasty:#A07A22; --t-club:#2C7A82}
+:root{--t-family:#2F6E9C; --t-romance:#AE5578; --t-friends:#3C8459; --t-conflict:#B4573E; --t-work:#6A5A9E; --t-dynasty:#A07A22; --t-club:#8C949B}
 .muted{color:var(--muted)}
 .say{color:var(--muted);max-width:72ch;font-size:14.5px;margin:10px 0 18px}
 .src{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:6px}
@@ -677,6 +677,6 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 .badge.r-heir{background:color-mix(in srgb,var(--brass) 32%,var(--surface));color:#1A1F1C;border:1px solid var(--brass)}
 .badge.r-member{background:color-mix(in srgb,var(--brass) 5%,var(--surface));color:#1A1F1C;border:1px solid var(--brass)}
 .badge.r-outcast{background:color-mix(in srgb,var(--muted) 12%,var(--surface));color:var(--muted);border:1px solid color-mix(in srgb,var(--muted) 70%,var(--surface))}
-/* club badges: their own colour, so they never read as dynasty roles (trial, 17 Oct) */
-.badge.c-leader{background:var(--t-club);color:#fff;border:1px solid var(--t-club)}
-.badge.c-member{background:color-mix(in srgb,var(--t-club) 6%,var(--surface));color:color-mix(in srgb,var(--t-club) 80%,var(--ink));border:1px solid color-mix(in srgb,var(--t-club) 60%,var(--surface))}
+/* club badges: silver, so they never read as dynasty roles (trial, 17 Oct) */
+.badge.c-leader{background:linear-gradient(#D9DDE0,#AEB5BA);color:#1A1F1C;border:1px solid #9AA2A8}
+.badge.c-member{background:color-mix(in srgb,#AEB5BA 10%,var(--surface));color:#1A1F1C;border:1px solid #9AA2A8}
