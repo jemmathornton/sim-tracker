@@ -235,7 +235,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [ ] [Jemma] A dated timeline per household? By the month she played it, by story time (“Year 1, Spring”), or both? A whole-save timeline too (10 “moved world” events already follow from her plan)?
 - [x] (Settled 17 Oct: no EA comparison at all, see Showing Sims) Chapters for any household? Empty parts hidden, or one quiet “Yours to write” line? Writing in chat (as now), or a text file per household?
 - [x] The Cadberrys are her Not So Berry legacy (18 Oct). Each generation stays alive when they move out, so Cadberry households are spread across many worlds; show them as one family tree once she adds them.
-- [ ] [Jemma] In the game Romeo and Juliette are already married with a teenage son: is the Tartosa wedding their first?
+- [x] Romeo and Juliette ran away to Tartosa purely to marry and live away from their families, then had Dante (now a teen). Renamed Monticapp (18 Oct); no dynasty of their own: Juliette (née Capp) is a Capp outcast, Romeo (né Monty) a Monty outcast. Copy into World Plans: Rifugio dei Pirati residents “Monticapp (Romeo, Juliette and Dante, from Ondarion)”.
 
 ### Occults (research/occults.md)
 - [ ] [Jemma] Nothing in her plan breaks the game. Care points: Specter Row can’t be both a rental and a Haunted House (already open above); Henford’s fairy area probably needs “Limit Fairies to Innisgreen” off, and Cordelia’s Secret Cottage has no free trait slot for Fairy Passage; the Ravenwood Wedding Hall may still have the old manor’s On Hallowed Grounds (keep or remove?)

@@ -21,7 +21,7 @@
    "name": "Terra Amorosa",
    "lots": [
     {"lot": "The Old Wood Nectary", "myName": "The Old Wood Nectary", "type": "Residential", "size": "40x30", "residents": "Markovic", "built": false, "shared": false, "screenshots": false, "simsMade": false},
-    {"lot": "Rifugio dei Pirati", "myName": "Rifugio dei Pirati", "type": "Residential", "size": "30x20", "residents": "Monty (Romeo, Juliette and Dante, from Ondarion)", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Rifugio dei Pirati", "myName": "Rifugio dei Pirati", "type": "Residential", "size": "30x20", "residents": "Monticapp (Romeo, Juliette and Dante, from Ondarion)", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Via Romanza", "myName": "Via Romanza", "type": "Residential", "size": "30x30", "residents": "Soto", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "La Coppia Serena", "myName": "La Coppia Serena", "type": "Wedding Venue", "size": "50x40", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ],
@@ -262,11 +262,11 @@
     }
    ]
   },
-  "Monty": {
+  "Monticapp": {
    "sims": [
     {
      "id": "juliette-monty",
-     "name": "Juliette Monty",
+     "name": "Juliette Monticapp",
      "sex": "f",
      "origin": "Premade",
      "age": "Adult",
@@ -280,20 +280,21 @@
       ["Piano", 4, 10]
      ],
      "rels": [
-      ["Dante Monty", "Acquaintances"],
+      ["Dante Monticapp", "Acquaintances"],
       ["Tybalt Capp", "Despised"]
      ],
      "partners": [
       ["romeo-monty", "Spouse"]
      ],
      "dynasty": {
-      "name": "Monty",
-      "role": "head"
-     }
+      "name": "Capp",
+      "role": "outcast"
+     },
+     "born": "Capp"
     },
     {
      "id": "romeo-monty",
-     "name": "Romeo Monty",
+     "name": "Romeo Monticapp",
      "sex": "m",
      "origin": "Premade",
      "age": "Adult",
@@ -308,7 +309,7 @@
       ["Video Gaming", 3, 10]
      ],
      "rels": [
-      ["Dante Monty", "Good Friends"],
+      ["Dante Monticapp", "Good Friends"],
       ["Tybalt Capp", "Despised"]
      ],
      "partners": [
@@ -316,12 +317,13 @@
      ],
      "dynasty": {
       "name": "Monty",
-      "role": "member"
-     }
+      "role": "outcast"
+     },
+     "born": "Monty"
     },
     {
      "id": "dante-monty",
-     "name": "Dante Monty",
+     "name": "Dante Monticapp",
      "sex": "m",
      "origin": "Premade",
      "age": "Teen",
@@ -335,16 +337,12 @@
       ["Video Gaming", 8, 10]
      ],
      "rels": [
-      ["Romeo Monty", "Good Friends"],
-      ["Juliette Monty", "Acquaintances"],
+      ["Romeo Monticapp", "Good Friends"],
+      ["Juliette Monticapp", "Acquaintances"],
       ["Celeste Capp", "Cousin"],
       ["Tybalt Capp", "Acquaintances"]
      ],
-     "parents": ["juliette-monty", "romeo-monty"],
-     "dynasty": {
-      "name": "Monty",
-      "role": "member"
-     }
+     "parents": ["juliette-monty", "romeo-monty"]
     }
    ]
   }

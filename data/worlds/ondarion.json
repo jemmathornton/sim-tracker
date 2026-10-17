@@ -238,10 +238,10 @@
      "rels": [
       ["Virgilio Capp", "Despised"],
       ["Beatrice Capp", "Good Friends"],
-      ["Juliette Monty", "Despised"],
-      ["Romeo Monty", "Despised"],
+      ["Juliette Monticapp", "Despised"],
+      ["Romeo Monticapp", "Despised"],
       ["Enzo Alto", "Friends"],
-      ["Dante Monty", "Acquaintances"]
+      ["Dante Monticapp", "Acquaintances"]
      ],
      "dynasty": {
       "name": "Capp",
@@ -296,7 +296,7 @@
       ["Video Gaming", 2, 10]
      ],
      "rels": [
-      ["Dante Monty", "Cousin"],
+      ["Dante Monticapp", "Cousin"],
       ["Beatrice Capp", "Friends"],
       ["Enzo Alto", "Acquaintances"]
      ],
