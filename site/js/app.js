@@ -128,7 +128,7 @@ const TAG_GROUPS = {
 };
 const TAGS = {
   family: {g: "family", name: "Family"}, spouse: {g: "romance", name: "Spouse"}, engaged: {g: "romance", name: "Engaged"}, partner: {g: "romance", name: "Partner"},
-  ex: {g: "romance", name: "Ex"}, "late-spouse": {g: "romance", name: "Deceased Spouse"}, crush: {g: "romance", name: "Crush"},
+  ex: {g: "romance", name: "Ex"}, "late-spouse": {g: "romance", name: "Deceased spouse"}, crush: {g: "romance", name: "Crush"},
   bff: {g: "friends", name: "Best Friends"}, "good-friends": {g: "friends", name: "Good Friends"}, friends: {g: "friends", name: "Friends"}, acquaintance: {g: "friends", name: "Acquaintances"},
   rivals: {g: "conflict", name: "Rivals"}, enemies: {g: "conflict", name: "Enemies"},
   coworkers: {g: "work", name: "Coworkers"}, classmates: {g: "work", name: "Classmates"}, boss: {g: "work", name: "Boss"}, landlord: {g: "work", name: "Landlord / Tenant"},
@@ -209,7 +209,7 @@ function blood(a, b){
 const partnerWord = kind => !TAGS[kind] ? "Partner" : kind === "ex" ? "Ex-Spouse" : TAGS[kind].name;
 function relWord(a, b){   // what b is to a
   const s = SIMS[b].sex, p = partnersOf(a).find(x => x[0] === b);
-  if (p) return partnerWord(p[1]);
+  if (p) return p[1] === "late-spouse" && SIMS[a].late && !SIMS[b].late && !SIMS[b].ph ? sx(s, "Widower", "Widow", "Spouse") : partnerWord(p[1]);
   const r = blood(a, b);
   if (r) {
     const [da, db] = r;
@@ -219,6 +219,7 @@ function relWord(a, b){   // what b is to a
     if (da === 2 && db === 1) return sx(s, "Uncle", "Aunt", "Parent’s sibling");
     if (da === 3 && db === 1) return sx(s, "Great-uncle", "Great-aunt", "Grandparent’s sibling");
     if (da === 1 && db === 2) return sx(s, "Nephew", "Niece", "Sibling’s child");
+    if (da === 1 && db === 3) return sx(s, "Great-nephew", "Great-niece", "Sibling’s grandchild");
     if (da === 2 && db === 2) return "Cousin";
     return "Relative";
   }
@@ -235,9 +236,9 @@ function relWord(a, b){   // what b is to a
   return null;
 }
 // a Sim's family, closest first (partners, parents, children, siblings, then the rest)
-const FAMILY_ORDER = ["Spouse", "Engaged", "Partner", "Ex-Spouse", "Deceased Spouse", "Mother", "Father", "Parent", "Daughter", "Son", "Child", "Sister", "Brother", "Sibling",
+const FAMILY_ORDER = ["Spouse", "Engaged", "Partner", "Ex-Spouse", "Deceased spouse", "Mother", "Father", "Parent", "Daughter", "Son", "Child", "Sister", "Brother", "Sibling",
   "Grandmother", "Grandfather", "Grandparent", "Granddaughter", "Grandson", "Grandchild", "Great-grandmother", "Great-grandfather", "Great-grandparent",
-  "Aunt", "Uncle", "Great-aunt", "Great-uncle", "Niece", "Nephew", "Cousin", "Mother-in-law", "Father-in-law", "Daughter-in-law", "Son-in-law", "Sister-in-law", "Brother-in-law"];
+  "Aunt", "Uncle", "Great-aunt", "Great-uncle", "Niece", "Nephew", "Great-niece", "Great-nephew", "Cousin", "Widow", "Widower", "Mother-in-law", "Father-in-law", "Daughter-in-law", "Son-in-law", "Sister-in-law", "Brother-in-law"];
 function familyOf(id){
   const s = SIMS[id], rank = w => { const i = FAMILY_ORDER.indexOf(w); return i < 0 ? 99 : i; };
   const band = o => SIMS[o].hh && SIMS[o].hh === s.hh ? 0 : SIMS[o].late ? 2 : 1;   // household, living elsewhere, late
@@ -415,12 +416,12 @@ function simFamItem(o, word){
   const t = SIMS[o];
   if (t.ph) return `<li><div class="card ph"><span class="mono">?</span><span><b>Unknown</b><small>${esc(word === "parent" ? sx(t.sex, "Father", "Mother", "Parent") : word ? word.charAt(0).toUpperCase() + word.slice(1).toLowerCase() : "Relative")}</small></span></div></li>`;
   const href = simLinkTo(o), T = href ? "a" : "div", where = simWhere(o);
-  return `<li><${T} class="card ${t.late ? "late" : ""}" ${href ? `href="${href}"` : ""} style="--w:${simColour(o)}"><span class="mono">${initial(t.name)}</span><span><b>${esc(t.name)}</b><small>${esc([word, nee(t), where].filter(Boolean).join(" · "))}</small></span></${T}></li>`;
+  return `<li><${T} class="card ${t.late ? "late" : ""}" ${href ? `href="${href}"` : ""} style="--w:${simColour(o)}"><span class="mono">${initial(t.name)}</span><span><b>${esc(t.name)}</b><small>${esc([word, nee(t), /^Deceased/.test(word || "") && where === "deceased" ? "" : where].filter(Boolean).join(" · "))}</small></span></${T}></li>`;
 }
 function simFamily(id){
   const s = SIMS[id], fam = familyOf(id), words = ws => fam.filter(([, w]) => ws.includes(w));
   const parents = (s.parents || []).filter(p => SIMS[p]).map(p => [p, SIMS[p].ph ? "parent" : relWord(id, p)]);
-  const partners = partnersOf(id).map(([p, k]) => [p, partnerWord(k)]);
+  const partners = partnersOf(id).map(([p]) => [p, relWord(id, p)]);
   const kids = words(["Son", "Daughter", "Child"]), sibs = words(["Brother", "Sister", "Sibling"]);
   const shown = new Set([...parents, ...partners, ...kids, ...sibs].map(([o]) => o));
   const wider = fam.filter(([o]) => !shown.has(o));
@@ -445,7 +446,7 @@ function simPage(s){
   const stage = [s.age, s.late ? "deceased" : ""].filter(Boolean).join(" · ");
   let h = `<section class="hero small" style="--c:${home1.hood.glow || hc}"><div class="crumbs">${hh ? `<a href="#w-${w.id}">${ic("map")}${esc(w.name)}</a><a href="#n-${home1.hood.id}">${ic("pin")}${esc(home1.hood.name)}</a><a href="#${home1.id}">${ic("home")}${esc(home1.name)}</a>` : ""}<a href="#${base.id}">${ic("users")}${hhCrumb}</a></div>
     <div style="display:flex;gap:26px;align-items:center;flex-wrap:wrap;margin-top:22px"><div class="monogram">${initial(s.name)}</div><div><span class="label" style="color:var(--on-deep-mute)">Sim</span><h1 style="margin-top:6px">${esc(s.name)}</h1>${nee(s) ? `<p class="nee">${esc(nee(s))}</p>` : ""}</div></div>
-    <div class="sim-chips">${stage ? `<span>${esc(stage.charAt(0).toUpperCase() + stage.slice(1))}</span>` : ""}<span class="${s.state ? "occult" : ""}">${s.state ? `${ic("ghost")}${esc(s.state)}` : "Human"}</span>${hh || s.late ? "" : `<span>No home</span>`}<span>${originTag(s.origin)}</span></div></section>`;
+    <div class="sim-chips">${stage ? `<span>${esc(stage.charAt(0).toUpperCase() + stage.slice(1))}</span>` : ""}<span class="${s.state ? "occult" : ""}">${s.state ? `${ic("ghost")}${esc(s.state)}` : "Human"}</span>${s.noHome ? `<span>No home</span>` : ""}<span>${originTag(s.origin)}</span></div></section>`;
   // details
   const facts = [["Aspiration", s.aspiration], ["Career", s.career], ["School", s.school], ["Lifestyles", (s.lifestyles || []).join(", ")], ["Likes", (s.likes || []).join(", ")], ["Died", s.died]].filter(([, v]) => v);
   const hasTraits = s.traits && s.traits.length;
@@ -998,7 +999,7 @@ function householdNew(hh){
       ${simRoster(ids)}
       </section>
     ${tree.length ? `<section class="block" style="--h:${hc}"><div class="block-head"><h2>Family <em>tree</em></h2></div>
-      <div class="tree-box">${fitTree(tree, {line: slug(hh.family), compact: true, ch: 96, labels: false, here: hh})}</div>${treeKey(tree, true, wColour(w), tree.some(id => SIMS[id].hh !== hh))}</section>` : ""}
+      <div class="tree-box">${fitTree(tree, {line: slug(hh.family), compact: true, ch: 96, labels: false, here: hh})}</div>${treeKey(tree, true, wColour(w), tree.some(id => !SIMS[id].ph && SIMS[id].hh !== hh))}</section>` : ""}
     ${hh.story ? `<section class="block" style="--h:${hc}"><div class="block-head"><h2>Their <em>story</em></h2></div><p class="lede">${esc(hh.story)}</p></section>` : ""}
     ${neighbours.length ? `<section class="block"><div class="block-head"><h2>Neighbours</h2></div><div class="families">${neighbours.map(x => famCard(x)).join("")}</div></section>` : ""}`;
 }
