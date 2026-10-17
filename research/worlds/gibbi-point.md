@@ -44,7 +44,7 @@ For future lot decisions. Sources: the Sims Wiki's Gibbi Point page, the game's 
 
 - **No bar, lounge or nightclub now.** Fearful Fish Lounge was the only one, and Thrift 'n' Fish counts as a café. Jellyfish Jubilee (restaurant, not built) is the only evening place. For a holiday world that may be enough.
 - **No holiday rental now.** Jellyfish Jubilee was the game's only one. Visitors would come for Getaways at the three custom venues (Revive and Thrive, Camp Gibbi Gibbi, Love Highland) instead.
-- **Love Highland:** in the game it's both the Addams' home and their getaway business. A Getaway can run on a home lot too, with guests paying the household (research/lot-types-reference.md). Worth knowing before it's built.
+- **Love Highland:** in the game it's both the Addams' home and their getaway business. A Getaway can run on a home lot too, with guests paying the household, but only a household she is playing, at its own home; as a Custom Venue, Love Highland can’t earn the Addams anything (corrected 17 Oct, research/getaways-check.md). Worth knowing before it's built.
 - **Wellness three ways:** the Rec Center (gym, pool), Revive and Thrive (fitness, spa, hot spring) and the Crystal Cottage onsen. That fits the hot springs and Fitness Fest, and covers the missing gym in practice.
 - **Paradise Stables (TODO §5):** residents still to decide. All three game families are housed, and no home in the world stands empty. The game sets the lot by Scoop's Gold for crystal panning.
 - **Custom Venues:** Gibbi Point has 3 of the 5 in her save.

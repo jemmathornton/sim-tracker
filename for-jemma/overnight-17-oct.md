@@ -48,6 +48,7 @@ Then your decisions, starting with the Sims prototype.
 | townies-and-roles.md | Who staffs venues; game settings |
 | students-and-schools.md | Universities and Copperdale High |
 | royalty-and-legacy-check.md | Palaces, Grand Balls, dynasties and the Monty story |
+| getaways-check.md | Adventure Awaits getaways and Custom Venues |
 | rental-units.md | Rentals unit by unit |
 | undecided-lots.md | Options for each open lot |
 | small-business-check.md | Small business lots |

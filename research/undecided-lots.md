@@ -117,7 +117,7 @@ That keeps her story, and Ravenwood already has two haunted houses.
 
 **Facts:**
 - A Small Business Venue needs an owner household; one household can run only one business.
-- **Activities that fit:** Browse and Buy Items, View Collectibles, Do Seances (Paranormal Stuff) and Drink Tea. There’s no tarot activity as such; tarot can be the décor and the stock.
+- **Activities that fit:** Browse and Buy Items, View Collectibles, Do Seances (Paranormal Stuff) and Drink Tea. “Do Tarot Readings” does exist as a job for small business staff (corrected 17 Oct, research/getaways-check.md).
 
 | Candidate | For | Against |
 |---|---|---|

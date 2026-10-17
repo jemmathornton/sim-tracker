@@ -263,6 +263,11 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [ ] [Jemma] Owners who live away from their rental (the Robles at Manzanita Terrace, the Lovejoys at Sequoia Cottage, Rochana/Caberry at Isda Riverfront) lose it if merged into another household elsewhere: merge the other household into theirs instead
 - [x] Corrected research/worlds/gibbi-point.md: Laxmi and Raheel Kunal are homeless premade townies (17 Oct)
 
+### Getaways (research/getaways-check.md)
+- [ ] [Jemma] Love Highland: as a Custom Venue it can’t be the Addams’ business in the game (a Custom Venue can’t be owned, and only a played household earns, at its own home). Keep it a Custom Venue run by them as story only, or make it their home again (as in the game, 8 beds)?
+- [ ] [Jemma] Revive and Thrive has no beds (per the Gallery), so only day Getaways work there: add beds for overnight stays?
+- Also found: her 14 Vacation Rentals can’t host Getaways (fine as holiday lets); Key Point as Generic could host one, as a Vacation Rental it couldn’t; Excavate, massages and hiking can’t go on a Custom Venue’s schedule (Belomisia Field Station, Revive and Thrive, The Watering Hole, Kiyomatsu Point); Care for Animals covers the mini goats and sheep (answers the Cozy Corner House check)
+
 ### Royalty & Legacy (research/royalty-and-legacy-check.md)
 - [ ] [Jemma] Ophelia Villa as a Haunted House means the Goths can’t host a Grand Ball or hold court there (both need a plain Residential home; worth one test in game). Keep it haunted (balls elsewhere), or make it Residential?
 - [ ] [Jemma] The Monty story: the Capp side (Romeo and Juliette cast out) is already true in the game; the Monty side needs steps in game, as Juliette heads the Monty dynasty (link the Sims 2 Montys to Romeo in Create a Sim, Juliette steps down to Romeo, he brings in Patrizio and steps down, Patrizio casts them out). Patrizio’s family take over the game’s Monty dynasty, or start a new one? Dante: heir, plain member, or cast out with his parents?
