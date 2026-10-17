@@ -203,7 +203,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [ ] [Jemma] How much to track: three levels (basics for every household, profiles for played ones, extras for favourites)?
 - [ ] [Jemma] Household page: Sims as a roster table first with cards below, or a family-portrait screenshot at the top?
 - [ ] [Jemma] Relationship tags: six groups (Family, Romance, Friends, Conflict, Work & school, Dynasty) plus an optional free label? Add or drop any?
-- [ ] [Jemma] Use the game’s own words “Spouse / Partner / Engaged” (since patch 162) instead of “Husband / Wife” (the Goth cards say Husband and Wife now)?
+- [x] Decided 17 Oct: use the game’s own words, “Spouse / Partner / Engaged” (since patch 162), not “Husband / Wife”
 - [ ] [Jemma] Family tree: a drawn top-down tree, or a simple generations list to start with?
 - [ ] [Jemma] Families that move between worlds: one tree per family across worlds, or per-world trees with “moved to …” stubs? (test case: the Montys and Capps across Ondarion and Tartosa)
 - [ ] [Jemma] Links between households: grouped lists first, then a small web around one household; try lines on the world map later?
