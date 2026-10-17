@@ -263,6 +263,12 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [ ] [Jemma] Owners who live away from their rental (the Robles at Manzanita Terrace, the Lovejoys at Sequoia Cottage, Rochana/Caberry at Isda Riverfront) lose it if merged into another household elsewhere: merge the other household into theirs instead
 - [x] Corrected research/worlds/gibbi-point.md: Laxmi and Raheel Kunal are homeless premade townies (17 Oct)
 
+### Royalty & Legacy (research/royalty-and-legacy-check.md)
+- [ ] [Jemma] Ophelia Villa as a Haunted House means the Goths can’t host a Grand Ball or hold court there (both need a plain Residential home; worth one test in game). Keep it haunted (balls elsewhere), or make it Residential?
+- [ ] [Jemma] The Monty story: the Capp side (Romeo and Juliette cast out) is already true in the game; the Monty side needs steps in game, as Juliette heads the Monty dynasty (link the Sims 2 Montys to Romeo in Create a Sim, Juliette steps down to Romeo, he brings in Patrizio and steps down, Patrizio casts them out). Patrizio’s family take over the game’s Monty dynasty, or start a new one? Dante: heir, plain member, or cast out with his parents?
+- [ ] [Jemma] Tartosa isn’t owned yet: wait before making the Sims 2 Montys, or house Romeo’s family at 13 Lakeview or 17 Bright Cliff for now? Which save holds the dynasties (Building #2 predates the pack, so no Goth or Landgraab dynasties)?
+- [ ] [Jemma] Add a Waltzing Dance Floor when rebuilding La Vivace, the palaces and Giardino (balls can’t be held at Sankofa, Fisherman’s Hut, Ye Olde Voyager, Hardcover, Zanbira or Casa Do Corsário)? Did she unlock Regal Residence in the Feb–Mar event?
+
 ### Universities and high school (research/students-and-schools.md)
 - [ ] [Jemma] The Copperdale boarding houses won’t work as University Housing: only enrolled uni students can live there, so high-school teens would be moved out. Make them Residential (a teens-only household is allowed), or a rental with a unit per team?
 - [ ] [Jemma] Mossy Lane: a UoB or a Foxbury hall, with a gender or organisation limit? (It needs a university picked; a stove or grill blocks it.) And which university does each Windenburg and StrangerVille hall belong to?

@@ -47,6 +47,7 @@ Then your decisions, starting with the Sims prototype.
 | occults.md | Vampires, spellcasters, fairies, ghosts and where they live |
 | townies-and-roles.md | Who staffs venues; game settings |
 | students-and-schools.md | Universities and Copperdale High |
+| royalty-and-legacy-check.md | Palaces, Grand Balls, dynasties and the Monty story |
 | rental-units.md | Rentals unit by unit |
 | undecided-lots.md | Options for each open lot |
 | small-business-check.md | Small business lots |
