@@ -209,6 +209,7 @@ function blood(a, b){
 const partnerWord = kind => !TAGS[kind] ? "Partner" : kind === "ex" ? "Ex-Spouse" : TAGS[kind].name;
 function relWord(a, b){   // what b is to a
   const s = SIMS[b].sex, p = partnersOf(a).find(x => x[0] === b);
+  if (p && p[1] === "spouse" && SIMS[b].late && !SIMS[a].late) return "Deceased spouse";
   if (p) return p[1] === "late-spouse" && SIMS[a].late && !SIMS[b].late && !SIMS[b].ph ? sx(s, "Widower", "Widow", "Spouse") : partnerWord(p[1]);
   const r = blood(a, b);
   if (r) {
@@ -974,7 +975,8 @@ const dynLine = ids => [...new Set(ids.map(id => (dynastyOf(id) || [])[0]).filte
   return `<a href="#${gid}">${ic("crown")}${esc(GROUP_PAGES[gid].name)}</a>${roles.every(r => r === "outcast") ? " (outcast)" : ""}`; }).join(", ");
 function simRoster(ids){
   return `<div class="sheet-wrap"><table class="sheet roster"><thead><tr><th scope="col">Sim</th><th scope="col">Life stage</th><th scope="col">Life state</th><th scope="col">Aspiration</th><th scope="col">Career or school</th></tr></thead><tbody>
-    ${ids.map(id => { const s = SIMS[id], job = (s.career || s.school || "").split(" · ")[0];
+    ${ids.map(id => { const s = SIMS[id], uni = /^(University of Britechester|Foxbury Institute) · (.+?)( \(distinguished\))?$/.exec(s.school || ""),
+        job = uni ? `${uni[2]} (${uni[1].startsWith("Foxbury") ? "Foxbury" : "UoB"})` : (s.career || s.school || "").split(" · ")[0];
       return `<tr><td><span class="who"><span class="mono">${initial(s.name)}</span><a href="#s-${id}">${esc(s.name)}</a></span></td>
         <td>${esc(s.age)}</td><td>${s.state ? `<span class="state occult">${ic("ghost")}${esc(s.state)}</span>` : `<span class="muted">Human</span>`}</td>
         <td>${s.aspiration ? esc(s.aspiration) : `<span class="muted">—</span>`}</td><td>${job ? esc(job) : `<span class="muted">—</span>`}</td></tr>`; }).join("")}</tbody></table></div>`;
