@@ -106,7 +106,7 @@ function addSim(id, s, hh){
   const sur = surname(s.name), born = s.born || sur, line = slug(born), into = s.born && slug(s.born) !== slug(sur) ? slug(sur) : null;
   FAMILIES[line] ||= {name: born}; if (into) FAMILIES[into] ||= {name: sur};
   SIMS[id] = {...s, id, src: s, hh: hh || null, world: hh ? hh.world : worlds.find(w => w.id === s.world) || null, home: s.where, line, into,
-    ph: !!s.placeholder, phText: s.placeholder ? sx(s.sex, "Father", "Mother", "Parent") + " not on the family tree" : "",
+    ph: !!s.placeholder, phText: s.placeholder ? sx(s.sex, "Father", "Mother", "Parent") + " unknown" : "",
     partners: (s.partners || []).map(([p, k]) => [p, PARTNER_KINDS[k] || "unknown"])};
 }
 worlds.forEach(w => Object.values(w.households).forEach(hh => hh.sims.forEach(sm => { if (sm.sid) addSim(sm.sid, sm, hh); })));
@@ -331,7 +331,7 @@ function treeCard(id, x, y, CW, CH, o){
   const s = SIMS[id], C = o.compact ? "compact" : "", pos = `left:${x}px;top:${y}px;width:${CW}px;height:${CH}px`;
   if (s.ph) return `<div class="tc ph ${C} ${o.here ? "away" : ""}" style="${pos}"><span class="tm">?</span><div class="tn">${esc(s.phText)}</div></div>`;
   const w = s.hh ? s.hh.world : s.world, here = o.here && s.hh === o.here;
-  const sub = [s.age, s.state, s.late ? "late" : "", s.noHome ? "no home" : "", s.treeOnly ? "on the family tree only" : ""].filter(Boolean).join(" · ");
+  const sub = [s.age, s.state, s.late ? "late" : "", s.noHome ? "no home" : ""].filter(Boolean).join(" · ");
   // married-in Sims: the family they were born into (or married into), as a plain chip
   const born = f => `<span class="bornchip" ${FAMILIES[f] && FAMILIES[f].note ? `title="${esc(FAMILIES[f].note)}"` : ""}>${s.line === f ? "born" : "married"} ${aAn(FAMILIES[f] ? FAMILIES[f].name : f)} ${esc(FAMILIES[f] ? FAMILIES[f].name : f)}</span>`;
   const chips = [];
@@ -348,12 +348,12 @@ function treeCard(id, x, y, CW, CH, o){
     <div class="tchip" style="display:flex;flex-wrap:wrap;gap:4px">${chips.filter(Boolean).join("")}</div>${badge}</div>`;
 }
 const treeKey = (here = false, colour = "") => `<div class="tree-key">
-  ${here ? `<span><span class="k-box here" ${colour ? `style="--w:${colour}"` : ""}></span>Lives here</span><span><span class="k-box away"></span>Lives elsewhere (any world), with a chip for where</span>` : ""}
+  ${here ? `<span><span class="k-box here" ${colour ? `style="--w:${colour}"` : ""}></span>Lives here</span><span><span class="k-box away"></span>Lives elsewhere</span>` : ""}
   <span><svg class="k" viewBox="0 0 34 10"><line x1="0" y1="3" x2="34" y2="3" stroke="var(--muted)" stroke-width="2.5"/><line x1="0" y1="7" x2="34" y2="7" stroke="var(--muted)" stroke-width="1.2"/></svg>Spouses</span>
   <span><svg class="k" viewBox="0 0 34 10"><line x1="0" y1="5" x2="34" y2="5" stroke="var(--muted)" stroke-width="2.5" stroke-dasharray="5 4"/></svg>Partners</span>
   <span><svg class="k" viewBox="0 0 34 12"><line x1="0" y1="6" x2="34" y2="6" stroke="var(--muted)" stroke-width="2.5" stroke-dasharray="5 4"/><path d="M12 12 L16 0 M18 12 L22 0" stroke="var(--muted)" stroke-width="1.6"/></svg>Ex</span>
   <span><svg class="k" viewBox="0 0 34 10" opacity=".5"><line x1="0" y1="3" x2="34" y2="3" stroke="var(--muted)" stroke-width="2.5"/><line x1="0" y1="7" x2="34" y2="7" stroke="var(--muted)" stroke-width="1.2"/></svg>Late Spouse</span>
-  <span><span style="width:14px;height:14px;border-radius:50%;background:#A3AAA5;display:inline-block"></span>Late Sims greyed</span>
+  <span><span style="width:14px;height:14px;border-radius:50%;background:#A3AAA5;display:inline-block"></span>Late</span>
   <span>${ic("crown")} Dynasty head and heir</span></div>`;
 
 /* ---------- relationships between Sims: only on Sim pages, grouped by tag group (her decision, 17 Oct) ---------- */
@@ -361,7 +361,6 @@ const CLOSE_FAMILY = new Set(["Mother", "Father", "Parent", "Daughter", "Son", "
 // everything a Sim has with other Sims, as {o (the other Sim), g (tag group), tag, word}
 function simRels(id){
   const out = [], prs = partnersOf(id);
-  prs.forEach(([o, k]) => { if (!SIMS[o].ph && TAGS[k]) out.push({o, g: "romance", tag: k, word: partnerWord(k)}); });
   familyOf(id).forEach(([o, w]) => { if (!prs.some(([p]) => p === o)) out.push({o, g: "family", word: w}); });
   REL_PAIRS.forEach(r => { if (r.a === id || r.b === id) out.push({o: r.a === id ? r.b : r.a, g: r.g, tag: r.tag, word: r.word}); });
   return out;
@@ -382,7 +381,7 @@ function simRelGroups(id, o = {}){
   const count = list => { const n = new Set(list.map(r => r.o)).size; return `${n} ${n === 1 ? "Sim" : "Sims"}`; };
   return `${gs.length ? `<div class="rel-groups">${gs.map(g => `<div class="rel-group" style="--g:var(--t-${g})"><h3><span class="ico">${ic(TAG_GROUPS[g].icon)}</span>${TAG_GROUPS[g].name}<small>${count(by[g])}</small></h3>
       <div class="rel-list">${by[g].map(simRelCard).join("")}</div></div>`).join("")}</div>` : ""}
-    ${none.length ? `<p class="rel-none">Nothing noted yet: ${none.map(g => TAG_GROUPS[g].name).join(", ")}.</p>` : ""}`;
+`;
 }
 
 /* ---------- the Sim page (as the prototype's sim.html) ---------- */
@@ -400,51 +399,48 @@ function simFamily(id){
   const kids = words(["Son", "Daughter", "Child"]), sibs = words(["Brother", "Sister", "Sibling"]);
   const shown = new Set([...parents, ...partners, ...kids, ...sibs].map(([o]) => o));
   const wider = fam.filter(([o]) => !shown.has(o));
-  const born = s.line && FAMILIES[s.line] && s.into && s.line !== s.into ? `No parents on the family tree (born ${aAn(FAMILIES[s.line].name)} ${FAMILIES[s.line].name})` : "None on the family tree";
-  const grp = (label, list, none) => `<div class="fam-group"><span class="label">${label}</span>${list.length ? `<ul class="sim-list">${list.map(([o, w]) => simFamItem(o, w)).join("")}</ul>` : `<p class="none">${esc(none)}</p>`}</div>`;
-  return `<div class="fam-groups">${grp("Parents", parents, born)}${grp(partners.length > 1 ? "Partners" : "Partner", partners, "None")}${grp("Children", kids, "None")}${grp("Brothers and sisters", sibs, "None")}</div>
-    ${wider.length ? `<div class="fam-group wide"><span class="label">More family</span><ul class="sim-list cols">${wider.map(([o, w]) => simFamItem(o, w)).join("")}</ul></div>` : ""}`;
+  const all = [...parents, ...partners, ...kids, ...sibs, ...wider];
+  return all.length ? `<ul class="sim-list cols fam-grid">${all.map(([o, w]) => simFamItem(o, w)).join("")}</ul>` : "";
 }
 function simGroups(id){
   const gs = groupsOf(id);
   const card = ([gid, g, role]) => `<a class="memb" href="#${gid}"><span class="ico">${ic(GROUP_KINDS[g.kind].icon)}</span><span><b>${esc(groupTitle(g))}</b><small>${esc(GROUP_KINDS[g.kind].name)}</small></span><span class="role-pill">${esc(GROUP_KINDS[g.kind].roles[role] || role)}</span></a>`;
-  const missing = ["club", "org"].filter(k => !gs.some(([, g]) => g.kind === k)).map(k => k === "club" ? "clubs" : "university organisations");
-  return `${gs.length ? `<div class="membs">${gs.map(card).join("")}</div>` : ""}${missing.length ? `<p class="rel-none">No ${missing.join(" or ")} noted yet.</p>` : ""}`;
+  return gs.length ? `<div class="membs">${gs.map(card).join("")}</div>` : "";
 }
 function simHomes(s){
   const hh = s.hh;
-  if (!hh) return `<p class="rel-none">${s.late ? `No home: ${sx(s.sex, "he’s", "she’s", "they’re")} on the family tree only.` : "No home on the site."}</p>`;
-  return `<ul class="homes">${hh.lots.filter(l => !l.owned).map(l => `<li>${ic("home")}<a href="#${l.id}">${esc(l.name)}</a><span>${esc(l.hood.name)}, ${esc(l.world.name)}</span><em>Now</em></li>`).join("")}</ul>
-    <p class="rel-none">Earlier homes and moves go here as they happen.</p>`;
+  if (!hh) return "";
+  return `<ul class="homes">${hh.lots.filter(l => !l.owned).map(l => `<li>${ic("home")}<a href="#${l.id}">${esc(l.name)}</a><span>${esc(l.hood.name)}, ${esc(l.world.name)}</span></li>`).join("")}</ul>`;
 }
 function simPage(s){
   const hh = s.hh, base = hh || ANCHOR[s.id], home1 = base.lots[0], hc = home1.hood.color, w = home1.world, first = firstName(s);
   // Sims with no household: their family's household (for a blood relative), or the household whose tree they're on
   const kin = !hh && membersOf(base).some(m => blood(m, s.id));
-  const hhCrumb = hh ? `${esc(hh.name)} household` : kin ? `${sx(s.sex, "His", "Her", "Their")} family: the ${esc(base.name)} household` : `On the ${esc(base.name)} household’s family tree`;
+  const hhCrumb = hh ? `${esc(hh.name)} household` : `Related to the ${esc(base.name)} household`;
   const stage = [s.age, s.late ? "late" : ""].filter(Boolean).join(" · ");
   let h = `<section class="hero small" style="--c:${home1.hood.glow || hc}"><div class="crumbs">${hh ? `<a href="#w-${w.id}">${ic("map")}${esc(w.name)}</a><a href="#n-${home1.hood.id}">${ic("pin")}${esc(home1.hood.name)}</a><a href="#${home1.id}">${ic("home")}${esc(home1.name)}</a>` : ""}<a href="#${base.id}">${ic("users")}${hhCrumb}</a></div>
     <div style="display:flex;gap:26px;align-items:center;flex-wrap:wrap;margin-top:22px"><div class="monogram">${initial(s.name)}</div><div><span class="label" style="color:var(--on-deep-mute)">Sim</span><h1 style="margin-top:6px">${esc(s.name)}</h1></div></div>
-    <div class="sim-chips">${stage ? `<span>${esc(stage.charAt(0).toUpperCase() + stage.slice(1))}</span>` : ""}<span class="${s.state ? "occult" : ""}">${s.state ? `${ic("ghost")}${esc(s.state)}` : "Human"}</span>${hh ? "" : `<span>No household: on the family tree only</span>`}${originTag(s.origin)}</div></section>`;
+    <div class="sim-chips">${stage ? `<span>${esc(stage.charAt(0).toUpperCase() + stage.slice(1))}</span>` : ""}<span class="${s.state ? "occult" : ""}">${s.state ? `${ic("ghost")}${esc(s.state)}` : "Human"}</span>${hh || s.late ? "" : `<span>No home</span>`}${originTag(s.origin)}</div></section>`;
   // details
   const facts = [["Aspiration", s.aspiration], ["Career", s.career], ["School", s.school], ["Lifestyles", (s.lifestyles || []).join(", ")], ["Likes", (s.likes || []).join(", ")], ["Died", s.died]].filter(([, v]) => v);
-  h += `<section class="block" style="--h:${hc}"><div class="block-head"><h2>About <em>${esc(first)}</em></h2></div>
-    <div class="sim-about"><div>${s.traits && s.traits.length ? `<span class="label">Traits</span><div class="traits">${s.traits.map(t => `<span>${esc(t)}</span>`).join("")}${s.bonus ? `<span class="bonus">${esc(s.bonus)}</span>` : ""}</div>${s.bonus ? `<p class="hint">Dashed: the bonus trait that comes with the aspiration.</p>` : ""}`
-      : `<p class="rel-none">${hh ? "No traits noted yet." : `No traits, aspiration or career: ${sx(s.sex, "he’s", "she’s", "they’re")} on the family tree only.`}</p>`}</div>
+  const hasTraits = s.traits && s.traits.length;
+  if (hasTraits || facts.length) h += `<section class="block" style="--h:${hc}"><div class="block-head"><h2>About <em>${esc(first)}</em></h2></div>
+    <div class="sim-about"><div>${hasTraits ? `<span class="label">Traits</span><div class="traits">${s.traits.map(t => `<span>${esc(t)}</span>`).join("")}${s.bonus ? `<span class="bonus" title="Bonus trait">${esc(s.bonus)}</span>` : ""}</div>` : ""}</div>
       ${facts.length ? `<dl class="facts">${facts.map(([t, v]) => `<div><dt>${t}</dt><dd>${esc(v)}</dd></div>`).join("")}</dl>` : "<div></div>"}</div></section>`;
   // family
-  h += `<section class="block" id="family" style="--h:${hc}"><div class="block-head"><h2>Their <em>family</em></h2>${treeOf(base).length ? `<a class="count" href="#${base.id}">The household’s tree</a>` : ""}</div>
-    <p class="say">Worked out from parents and partners. Names open their Sim page, or their household where there’s no Sim page yet.</p>${simFamily(s.id)}</section>`;
+  const fam = simFamily(s.id);
+  if (fam.trim()) h += `<section class="block" id="family" style="--h:${hc}"><div class="block-head"><h2>Their <em>family</em></h2>${treeOf(base).length ? `<a class="count" href="#${base.id}">Family tree</a>` : ""}</div>${fam}</section>`;
   // relationships
-  h += `<section class="block" style="--h:${hc}"><div class="block-head"><h2>Their <em>relationships</em></h2><span class="count">by tag group</span></div>
-    <p class="say">Everyone ${esc(first)} has a link with, grouped by tag, each opening the other Sim’s page (or household). Family is in the section above.</p>${simRelGroups(s.id)}</section>`;
+  const rels = simRelGroups(s.id);
+  if (rels.trim()) h += `<section class="block" style="--h:${hc}"><div class="block-head"><h2>Their <em>relationships</em></h2></div>${rels}</section>`;
   // groups
-  h += `<section class="block" style="--h:${hc}"><div class="block-head"><h2>Their <em>groups</em></h2></div>
-    <p class="say">Dynasty (one at most), clubs and university organisations, with ${esc(first)}’s role. Each opens the group’s page.</p>${simGroups(s.id)}</section>`;
+  const grps = simGroups(s.id);
+  if (grps) h += `<section class="block" style="--h:${hc}"><div class="block-head"><h2>Their <em>groups</em></h2></div>${grps}</section>`;
   // homes
-  h += `<section class="block" style="--h:${hc}"><div class="block-head"><h2>Where they’ve <em>lived</em></h2></div>${simHomes(s)}</section>`;
+  const homes = simHomes(s);
+  if (homes) h += `<section class="block" style="--h:${hc}"><div class="block-head"><h2>Where they <em>live</em></h2></div>${homes}</section>`;
   // story
-  h += `<section class="block" style="--h:${hc}"><div class="block-head"><h2>Their <em>story</em></h2></div><div class="empty">${ic("note")}Yours to write.</div></section>`;
+  if (s.story) h += `<section class="block" style="--h:${hc}"><div class="block-head"><h2>Their <em>story</em></h2></div><p class="lede">${esc(s.story)}</p></section>`;
   return h;
 }
 
@@ -457,21 +453,20 @@ function groupPage(g){
   const who = role => g.members.filter(([, r]) => r === role).map(([id]) => simLinkTo(id) ? `<a href="${simLinkTo(id)}">${esc(SIMS[id].name)}</a>` : esc(SIMS[id].name)).join(", ") || "None";
   const based = () => { if (g.homeHh) { const hh = g.homeHh, l = hh.lots[0]; return `<a href="#${hh.id}">${esc(hh.name)} household</a> (<a href="#${l.id}">${esc(l.name)}</a>, ${esc(l.world.name)})`; }
     if (lotOf) return `<a href="#${lotOf.id}">${esc(lotOf.name)}</a> (${esc(lotOf.hood.name)}, ${esc(lotOf.world.name)})`;
-    return W ? `${esc(W.name)}${W.owned ? "" : " (not owned)"}` : "Not noted yet"; };
+    return W ? `${esc(W.name)}${W.owned ? "" : " (not owned)"}` : ""; };
   let h = `<section class="hero small" style="--c:${c}"><div class="crumbs">${W ? (W.ready && W.owned ? `<a href="#w-${W.id}">${ic("map")}${esc(W.name)}</a>` : `<span>${ic("map")}${esc(W.name)} (not owned)</span>`) : ""}${lotOf ? `<a href="#${lotOf.id}">${ic(g.place ? "pin" : "home")}${esc(lotOf.name)}</a>` : ""}</div>
     <div style="display:flex;gap:26px;align-items:center;flex-wrap:wrap;margin-top:22px"><div class="monogram ico-mono">${ic(K.icon)}</div><div><span class="label" style="color:var(--on-deep-mute)">${esc(K.name)}</span><h1 style="margin-top:6px">${esc(groupTitle(g))}</h1></div></div></section>`;
   // the group's own details
-  const list = xs => xs && xs.length ? xs.map(esc).join(", ") : "Not noted yet";
-  const rows = g.kind === "dynasty" ? [["Head", who("head")], ["Heir", who("heir")], ["Based at", based()], ["Prestige", g.prestige != null ? `${g.prestige} ${g.prestige === 1 ? "star" : "stars"}` : "Not noted yet"],
-      ["Ideals", list(g.ideals)], ["Heirloom", g.heirloom ? esc(g.heirloom) : "None noted yet"], ["Allies", (g.allies || []).map(link).join(", ") || "None"], ["Rivals", (g.rivals || []).map(link).join(", ") || "None"]]
-    : [["Leader", who("leader")], ["Meets at", based()], ["Activities", list(g.activities)], ["Rules", (g.rules || []).map(esc).join(", ") || "None"]];
+  const list = xs => xs && xs.length ? xs.map(esc).join(", ") : "";
+  const rows = (g.kind === "dynasty" ? [["Head", who("head")], ["Heir", who("heir")], ["Based at", based()], ["Prestige", g.prestige != null ? `${g.prestige} ${g.prestige === 1 ? "star" : "stars"}` : ""],
+      ["Ideals", list(g.ideals)], ["Heirloom", g.heirloom ? esc(g.heirloom) : ""], ["Allies", (g.allies || []).map(link).join(", ")], ["Rivals", (g.rivals || []).map(link).join(", ")]]
+    : [["Leader", who("leader")], ["Meets at", based()], ["Activities", list(g.activities)], ["Rules", (g.rules || []).map(esc).join(", ")]]).filter(([, v]) => v && v !== "None");
   const half = Math.ceil(rows.length / 2), dl = rs => `<dl class="facts">${rs.map(([t, v]) => `<div><dt>${t}</dt><dd>${v}</dd></div>`).join("")}</dl>`;
-  h += `<div class="detail" style="--h:${c}"><div>${dl(rows.slice(0, half))}</div><div>${dl(rows.slice(half))}${g.note ? `<p class="src" style="margin-top:10px">${ic("info")}${esc(g.note)}</p>` : ""}</div></div>`;
+  h += `<div class="detail" style="--h:${c}"><div>${dl(rows.slice(0, half))}</div><div>${dl(rows.slice(half))}</div></div>`;
   // members
   h += `<section class="block" style="--h:${c}"><div class="block-head"><h2>The <em>members</em></h2><span class="count">${ids.length} ${ids.length === 1 ? "Sim" : "Sims"}${away ? ` · ${away} based elsewhere` : ""}</span></div>
-    <p class="say">Each name opens the Sim’s page, or their household where there’s no Sim page yet.</p>
     <div class="mcards">${ids.map(([id, r]) => memberCard(g, id, r)).join("")}</div>
-    <div class="tree-key"><span><span class="k-box here" style="--w:${wColour(W)}"></span>${g.kind === "club" ? "Lives in " + esc(W.name) + ", where the club meets" : "Lives in the dynasty’s home"}</span><span><span class="k-box away"></span>Lives elsewhere (any world), with a chip for where</span></div></section>`;
+    <div class="tree-key"><span><span class="k-box here" style="--w:${wColour(W)}"></span>${g.kind === "club" ? "Lives in " + esc(W.name) : "Lives in the dynasty’s home"}</span><span><span class="k-box away"></span>Lives elsewhere</span></div></section>`;
   return h;
 }
 
@@ -782,7 +777,7 @@ function hoodPage(x){
 
 // screenshot carousel (replaces the lot plan); click the photo for full screen
 function carousel(l){
-  if (!l.photos.length) return `<div class="carousel empty-car"><div class="empty" style="margin:0;height:100%">${ic("image")}No screenshots yet. Photos of this build will go here.</div></div>`;
+  if (!l.photos.length) return `<div class="carousel empty-car"><div class="empty" style="margin:0;height:100%">${ic("image")}No screenshots yet.</div></div>`;
   const many = l.photos.length > 1;
   return `<div class="carousel" data-car="${l.id}" data-i="0">
     <div class="car-view"><div class="car-track">${l.photos.map((ph,i) => `<button type="button" class="car-slide shot-btn" data-lot="${l.id}" data-i="${i}" ${i?'tabindex="-1"':""} aria-label="Open ${esc(ph.caption)} full screen"><img src="${ph.src}" alt="${esc(l.name)}: ${esc(ph.caption)}" ${i?'loading="lazy"':""}></button>`).join("")}</div>
@@ -926,7 +921,7 @@ function household(hh){
 function hhPicture(hh, ids){
   if (hh.portrait) return `<div class="portrait hh-pic" style="background-image:url('${hh.portrait}')" role="img" aria-label="The ${esc(hh.name)} household">
     <div class="names">${ids.map(id => `<div><a href="#s-${id}"><b>${esc(firstName(SIMS[id]))}</b></a><small>${esc(SIMS[id].age)}</small></div>`).join("")}</div></div>`;
-  return `<div class="hh-pic none"><span class="hh-pic-mono">${initial(hh.name)}</span><span class="hh-pic-txt">${ic("camera")}Household picture to come</span></div>`;
+  return `<div class="hh-pic none" aria-hidden="true"><span class="hh-pic-mono">${initial(hh.name)}</span><span class="hh-pic-txt">${ic("camera")}</span></div>`;
 }
 // plain-link lines for where they live and what they own, run, rent and let
 function hhLotLines(hh){
@@ -964,18 +959,15 @@ function householdNew(hh){
         <div><dt>Sims made in game</dt><dd>${simsMade(hh) ? `<span class="ok">${ic("sim")} Yes</span>` : "Not yet"}</dd></div>
         <div><dt>Origin</dt><dd>${originTag(origin)}</dd></div>
         <div><dt>Played</dt><dd>${esc(hh.played || "Not yet")}</dd></div>
-        <div><dt>Neighbourhood Stories</dt><dd>${esc(hh.stories || "Not noted yet")}</dd></div>
+        <div><dt>Neighbourhood Stories</dt><dd>${esc(hh.stories || "Not set")}</dd></div>
         ${dyn ? `<div><dt>Dynasty</dt><dd class="dynline">${dyn}</dd></div>` : ""}</dl></div>
     </div>
     <section class="block" style="--h:${hc}"><div class="block-head"><h2>The <em>Sims</em></h2><span class="count">${n} ${n === 1 ? "Sim" : "Sims"} · no pets</span></div>
       ${simRoster(ids)}
-      <p class="pets">${ic("paw-print")}No pets. Cats, dogs and horses would be listed here (name, species, life stage).</p>
-      <p class="source">Each name opens the Sim’s own page. Skill levels are left out: they change every time you play.${hh.source ? ` Starting details from The Sims Wiki: ${hh.source.map(([t, u]) => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(t)}</a>`).join(", ")}.` : ""}</p></section>
+      ${hh.source ? `<p class="source">Starting details from The Sims Wiki: ${hh.source.map(([t, u]) => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(t)}</a>`).join(", ")}.</p>` : ""}</section>
     ${tree.length ? `<section class="block" style="--h:${hc}"><div class="block-head"><h2>Family <em>tree</em></h2></div>
-      <p class="say">Everyone who lives here (highlighted), all their blood relatives and those relatives’ partners, wherever they live. Built from family links only, never from who lives together. Names open the Sim pages.</p>
       <div class="tree-box">${drawTree(tree, {line: slug(hh.family), compact: true, cw: 146, ch: 96, labels: false, here: hh})}</div>${treeKey(true, wColour(w))}</section>` : ""}
-    ${hh.links.length ? `<section class="block" style="--h:${hc}"><div class="block-head"><h2>Connected <em>households</em></h2></div><div class="families">${hh.links.map(x => x.hh ? famCard(x.hh, x) : "").join("")}</div></section>` : ""}
-    <section class="block" style="--h:${hc}"><div class="block-head"><h2>Their <em>story</em></h2></div><div class="empty">${ic("note")}No story yet: yours to write.</div></section>
+    ${hh.story ? `<section class="block" style="--h:${hc}"><div class="block-head"><h2>Their <em>story</em></h2></div><p class="lede">${esc(hh.story)}</p></section>` : ""}
     ${neighbours.length ? `<section class="block"><div class="block-head"><h2>Neighbours</h2></div><div class="families">${neighbours.map(x => famCard(x)).join("")}</div></section>` : ""}`;
 }
 
