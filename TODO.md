@@ -308,7 +308,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [ ] [Jemma] Nothing new to add: no new world since Ondarion and none announced; the new lot types (Custom Venue, Backroom, Community Market, Playground) and traits are already in her plan and tools. Her game is up to date (22 Sep 2026 patch)
 - [ ] [Jemma] In game: Wedding Venues placed from the Gallery could stay Residential underneath until the 22 Sep patch; worth checking hers (Celebration Center, La Coppia Serena, Caminito del Deseo and the others)
 - [ ] [Jemma] For the family tree: the 3 Feb 2026 update gave six premade families ancestors (Goths, Landgraabs, Thebes, Capps, Montys, Darongs), but only in new saves; EA plans more family and relationship work for late 2026
-- [ ] [Claude] Correct research/lot-types-reference.md: Penthouses can be Residential Rentals since Jul 2024; Gibbi Point’s waterfront lots are excluded like Sulani’s; Backroom is allowed in every world
+- [x] Corrected research/lot-types-reference.md: penthouses can be rentals since Jul 2024; Gibbi Point’s waterfront lots are excluded like Sulani’s; Backroom is allowed in every world (17 Oct)
 
 ### Lot traits (research/lot-trait-ideas.md: what each trait does, a check of hers, ideas)
 - [ ] [Jemma] In game: The Old Dockyard has Off-the-Grid, which a Community Space can’t use (left over from when it was a home): take it off?

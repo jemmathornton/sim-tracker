@@ -71,7 +71,7 @@ These can be assigned to any normal lot in any non-destination world, unless a n
 | In-game name | Pack | Notes |
 |---|---|---|
 | **Residential** | Base game | No required objects. Palaces and estates in Royalty & Legacy are ordinary Residential lots; Grand Balls are hosted from them. Royalty & Legacy also added new buildable lot sizes (29 Jan 2026 update). [C] |
-| **Residential Rental** | For Rent (EP), Dec 2023 | A permanent home split into units. **2–6 units** by default (`bb.increaserentalunitcap` lifts the cap), up to **99 units per save**, up to 8 Sims per unit. Units don't need to connect. Each has a tenant agreement (rent, lease, rules). Not allowed on Sulani waterfront lots, San Myshuno penthouses, vacation worlds or hidden lots. **Maintenance Troubles** lot challenge is applied automatically and cannot be removed. Cannot host a small business. [C] |
+| **Residential Rental** | For Rent (EP), Dec 2023 | A permanent home split into units. **2–6 units** by default (`bb.increaserentalunitcap` lifts the cap), up to **99 units per save**, up to 8 Sims per unit. Units don't need to connect. Each has a tenant agreement (rent, lease, rules). Not allowed on Sulani or Gibbi Point waterfront lots, vacation worlds or hidden lots; **penthouses can be rentals since Jul 2024** (corrected 17 Oct, research/game-changes-2026.md). **Maintenance Troubles:** web sources say it’s applied automatically, but the game’s trait tuning doesn’t let it be picked on rentals (research/lot-trait-ideas.md, 17 Oct); check in game. Cannot host a small business. [C] |
 | **Vacation Rental** (formerly "Rental") | Outdoor Retreat, now apparently base game | Non-permanent holiday home. [?] Pack history unconfirmed. |
 | **Tiny Home Residential** | Tiny Living (SP), Jan 2020 | Indoor tile limit 100. Tiers: **Small Home ≤100**, **Tiny Home ≤64**, **Micro Home ≤32** tiles. Smaller tiers unlock more perks (lower bills, relationship and skill bonuses). Reportedly not offered alongside some lot challenges. [C] |
 | **Haunted House Residential** | **Paranormal Stuff (SP)**, Jan 2021, *not* Life & Death | Any residential lot can be set to this, even an occupied one. Nightly specters and a spiritual balance meter (cursed objects push it down; the séance table and gifts restore it). Guidry visits nightly. Temperance turns up on night 5. Successful nights earn reward points. Leads to the Paranormal Investigator career. [C] |
@@ -174,7 +174,7 @@ These are not placeable, or are fixed to one world. The type usually can't be ch
 | **Clandestine** | Royalty & Legacy | "No matter what you get up to, your Secrets are safe here." Secret-revealing actions don't expose Sims on this lot. | Pairs with Backroom lots and secret passageways. Suited to affair dates, stolen-goods sales, rival-dynasty meetings and scheming. [C] (named by the EA Q&A and simscommunity) |
 | **Regal Residence** | Free Lost Legacies event reward, Feb–Mar 2026 (week 3 quests) | Needs decay more slowly and moods last longer. The effect scales with lot value; the key threshold is **§250,000** (a notice appears when value crosses it). | Suited to palaces and expensive homes. Known bug: the value notification repeats. [C] |
 | **Singles Hangout** | Lovestruck (2024) | Draws single Sims to the lot. | Dating venues. [S] |
-| **Maintenance Troubles** (challenge) | For Rent | Frequent breakages and maintenance events. **Ordinary Residential lots only: the game doesn’t allow it on rentals** (corrected 17 Oct, from the game’s tuning). | [C] |
+| **Maintenance Troubles** (challenge) | For Rent | Frequent breakages and maintenance events. **The game’s trait tuning allows picking it on ordinary Residential lots only, not rentals** (17 Oct); web sources say rentals get it automatically, so check in game. | [C] |
 | **Mold** (challenge) | For Rent | Mould growth. | [S] |
 | **Wild Prairie Grass** (challenge) | Horse Ranch | Grass that spreads across the lot. | Ranch builds. [S] |
 | Businesses & Hobbies / Adventure Awaits | — | **No new lot traits or challenges found** in any source checked. | [?] |
@@ -186,7 +186,7 @@ The Discover University traits **University Student Hangout** (not allowed on re
 ## Unconfirmed or conflicting points
 
 1. Exact in-game names of the two small-business lot types. Sources say "Small Business Venue Lot", "Business Venue Lot" and "Residential Small Business" / "Small Business Residential".
-2. Whether the **Backroom** can be placed outside Ondarion. It is probably allowed but I found no explicit statement. The Community Market *is* confirmed to work in other worlds.
+2. ~~Whether the **Backroom** can be placed outside Ondarion.~~ Settled 17 Oct: the game’s files allow it in every world (research/game-changes-2026.md).
 3. Backroom requirements. The EA Forums Q&A gives one fixed list; simscommunity says "3 of any one type" of daytime object. Check the in-game Venue Info.
 4. Whether "Getaway Venue" is a separate lot type or just Custom Venue with a Getaway attached.
 5. The ThrifTea lot type's exact name and whether it works outside Copperdale.
