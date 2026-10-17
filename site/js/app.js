@@ -355,7 +355,6 @@ const treeKey = (here = false, colour = "") => `<div class="tree-key">
   <span><svg class="k" viewBox="0 0 34 10"><line x1="0" y1="5" x2="34" y2="5" stroke="var(--muted)" stroke-width="2.5" stroke-dasharray="5 4"/></svg>Partners</span>
   <span><svg class="k" viewBox="0 0 34 12"><line x1="0" y1="6" x2="34" y2="6" stroke="var(--muted)" stroke-width="2.5" stroke-dasharray="5 4"/><path d="M12 12 L16 0 M18 12 L22 0" stroke="var(--muted)" stroke-width="1.6"/></svg>Ex</span>
   <span><svg class="k" viewBox="0 0 34 10" opacity=".5"><line x1="0" y1="3" x2="34" y2="3" stroke="var(--muted)" stroke-width="2.5"/><line x1="0" y1="7" x2="34" y2="7" stroke="var(--muted)" stroke-width="1.2"/></svg>Late Spouse</span>
-  <span><span style="width:14px;height:14px;border-radius:50%;background:#A3AAA5;display:inline-block"></span>Late</span>
   <span>${ic("crown")} Dynasty roles</span></div>`;
 
 /* ---------- relationships between Sims: only on Sim pages, grouped by tag group (her decision, 17 Oct) ---------- */
@@ -512,7 +511,7 @@ function renderNav(active, key, ctx){
               return v; }).join("")}</div>`; }
           let u = pre + `<a href="#${l.id}" class="${ctx.lot===l ? "cur" : ""}">${esc(l.name)}</a>`;
           return u; }).join("")}</div>`;
-        return t; }).join("")}<a class="hh-link ${key==="f-"+w.id ? "cur" : ctx.hh ? "path" : ""}" href="#f-${w.id}">${ic("users")}Households</a>${key === "f-" + w.id || (ctx.hh && ctx.hh.world === w) ? `<div class="lotnav">${Object.values(w.households).map(hx =>
+        return t; }).join("")}<a class="hh-link ${key==="f-"+w.id ? "cur" : ctx.hh ? "path" : ""}" href="#f-${w.id}">${ic("users")}Households</a>${key === "f-" + w.id || (ctx.hh && ctx.hh.world === w) ? `<div class="lotnav">${Object.values(w.households).sort((a, b) => a.name.localeCompare(b.name)).map(hx =>
           `<a href="#${hx.id}" class="${ctx.hh === hx ? (ctx.sim || ctx.group ? "path" : "cur") : ""}">${esc(hx.name)}</a>${ctx.hh === hx && hx.sims.length ? `<div class="lotnav">${hx.sims.map(sm => sm.sid ? `<a href="#s-${sm.sid}" class="${ctx.sim === sm ? "cur" : ""}">${esc(sm.name)}</a>` : `<a href="#${hx.id}" data-sim="${sm.id}">${esc(sm.name)}</a>`).join("")}</div>` : ""}`).join("")}</div>` : ""}</div>`;
     }
     return h; };
