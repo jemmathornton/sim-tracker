@@ -2,7 +2,8 @@
  "name": "Oasis Springs",
  "pack": "Base Game",
  "owned": true,
- "colour": "#C08440", "heroY": 40,
+ "colour": "#C08440",
+ "heroY": 40,
  "deep": ["#43280F", "#5E3A18"],
  "blurb": "An oasis nestled in the austere beauty of the western desert, this haven of eclectic culture is fringed by countless soaring palms, and lent vibrant colour through impossibly lush landscaping. Oasis Springs offers relaxing retreats from the sun to any traveler who discovers it.",
  "neighbourhoods": [
@@ -92,5 +93,101 @@
    "name": "Mirage Canyon Lookout",
    "text": "Visit Oasis Spring's namesake body of water while passing through Mirage Canyon"
   }
- ]
+ ],
+ "households": {
+  "Landgraab": {
+   "source": [
+    ["Geoffrey", "https://sims.fandom.com/wiki/Geoffrey_Landgraab"],
+    ["Nancy", "https://sims.fandom.com/wiki/Nancy_Landgraab"],
+    ["Malcolm", "https://sims.fandom.com/wiki/Malcolm_Landgraab"],
+    ["Landgraab family", "https://sims.fandom.com/wiki/Landgraab_family"],
+    ["Dynasty", "https://sims.fandom.com/wiki/Dynasty"],
+    ["Patch 193", "https://sims.fandom.com/wiki/The_Sims_4/Patch_193"]
+   ],
+   "sims": [
+    {
+     "id": "geoffrey-landgraab",
+     "name": "Geoffrey Landgraab",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Successful Lineage",
+     "traits": ["Family-Oriented", "Outgoing", "Good"],
+     "bonus": "Domestic",
+     "career": "Secret Agent · Lead Detective (level 5)",
+     "skills": [
+      ["Charisma", 1, 10],
+      ["Fitness", 4, 10],
+      ["Mischief", 6, 10],
+      ["Video Gaming", 1, 10]
+     ],
+     "rels": [
+      ["Nancy Landgraab", "Spouse"],
+      ["Malcolm Landgraab", "Son"],
+      ["Johnny Zest", "Son"]
+     ],
+     "partners": [
+      ["nancy-landgraab", "Spouse"]
+     ],
+     "dynasty": {
+      "name": "Landgraab",
+      "role": "member"
+     }
+    },
+    {
+     "id": "nancy-landgraab",
+     "name": "Nancy Landgraab",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Fabulously Wealthy",
+     "traits": ["Ambitious", "Snob", "Materialistic"],
+     "bonus": "Business Savvy",
+     "career": "Criminal · Minor Crimelord (level 5)",
+     "skills": [
+      ["Charisma", 4, 10],
+      ["Comedy", 1, 10],
+      ["Fitness", 3, 10],
+      ["Programming", 2, 10]
+     ],
+     "rels": [
+      ["Geoffrey Landgraab", "Spouse"],
+      ["Malcolm Landgraab", "Son"],
+      ["Johnny Zest", "Son"]
+     ],
+     "partners": [
+      ["geoffrey-landgraab", "Spouse"]
+     ],
+     "dynasty": {
+      "name": "Landgraab",
+      "role": "head"
+     }
+    },
+    {
+     "id": "malcolm-landgraab",
+     "name": "Malcolm Landgraab",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Teen",
+     "aspiration": "Public Enemy",
+     "traits": ["Snob", "Evil"],
+     "bonus": "Dastardly",
+     "school": "High school · grade C",
+     "skills": [
+      ["Charisma", 3, 10],
+      ["Mischief", 3, 10]
+     ],
+     "rels": [
+      ["Geoffrey Landgraab", "Father"],
+      ["Nancy Landgraab", "Mother"]
+     ],
+     "parents": ["geoffrey-landgraab", "nancy-landgraab"],
+     "dynasty": {
+      "name": "Landgraab",
+      "role": "heir"
+     }
+    }
+   ]
+  }
+ }
 }

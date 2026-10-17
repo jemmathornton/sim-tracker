@@ -1,0 +1,64 @@
+{
+ "_note": "Sims with no household on the site who appear on family trees: late relatives and townies. Same fields as household Sims (id, name, sex, age, origin, parents, partners); 'world' and 'where' say where they are. Ids are save-wide.",
+ "simon-crumplebottom": {
+  "name": "Simon Crumplebottom",
+  "sex": "m",
+  "age": "Elder",
+  "late": true,
+  "origin": "Premade",
+  "partners": [
+   ["prudence-crumplebottom", "Spouse"]
+  ]
+ },
+ "prudence-crumplebottom": {
+  "name": "Prudence Crumplebottom",
+  "sex": "f",
+  "age": "Elder",
+  "late": true,
+  "origin": "Premade",
+  "partners": [
+   ["simon-crumplebottom", "Spouse"]
+  ]
+ },
+ "cornelia-goth": {
+  "name": "Cornelia Goth",
+  "sex": "f",
+  "age": "Elder",
+  "late": true,
+  "origin": "Premade",
+  "born": "Crumplebottom",
+  "parents": ["simon-crumplebottom", "prudence-crumplebottom"]
+ },
+ "agnes-crumplebottom": {
+  "name": "Agnes Crumplebottom",
+  "sex": "f",
+  "age": "Elder",
+  "origin": "Premade",
+  "parents": ["simon-crumplebottom", "prudence-crumplebottom"],
+  "partners": [
+   ["robert-crumplebottom", "Ex-Spouse"],
+   ["erik-darling", "Late Spouse"]
+  ],
+  "world": "henford-on-bagley",
+  "where": "Henford-on-Bagley townie"
+ },
+ "robert-crumplebottom": {
+  "name": "Robert Crumplebottom",
+  "sex": "m",
+  "origin": "Premade",
+  "partners": [
+   ["agnes-crumplebottom", "Ex-Spouse"]
+  ],
+  "world": "chestnut-ridge",
+  "where": "Chestnut Ridge, as the hidden “Mysterious Rancher”"
+ },
+ "erik-darling": {
+  "name": "Erik Darling",
+  "sex": "m",
+  "late": true,
+  "origin": "Premade",
+  "partners": [
+   ["agnes-crumplebottom", "Late Spouse"]
+  ]
+ }
+}

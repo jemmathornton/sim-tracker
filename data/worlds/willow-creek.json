@@ -2,7 +2,8 @@
  "name": "Willow Creek",
  "pack": "Base Game",
  "owned": true,
- "colour": "#2E6F80", "heroY": 45,
+ "colour": "#2E6F80",
+ "heroY": 45,
  "deep": ["#123A4B", "#1B5468"],
  "blurb": "A lush bayou of rolling hills and marshy riverways, inspired by New Orleans. Long-standing reputations, simple lifestyles and plenty of coastal hospitality.",
  "neighbourhoods": [
@@ -88,7 +89,10 @@
    ],
    "sims": [
     {
+     "id": "bella-goth",
      "name": "Bella Goth",
+     "sex": "f",
+     "origin": "Premade",
      "age": "Young Adult",
      "aspiration": "Party Animal",
      "traits": ["Good", "Family-Oriented", "Romantic"],
@@ -100,13 +104,23 @@
       ["Programming", 2, 10]
      ],
      "rels": [
-      ["Mortimer Goth", "Husband"],
+      ["Mortimer Goth", "Spouse"],
       ["Cassandra Goth", "Daughter"],
       ["Alexander Goth", "Son"]
-     ]
+     ],
+     "partners": [
+      ["mortimer-goth", "Spouse"]
+     ],
+     "dynasty": {
+      "name": "Goth",
+      "role": "member"
+     }
     },
     {
+     "id": "mortimer-goth",
      "name": "Mortimer Goth",
+     "sex": "m",
+     "origin": "Premade",
      "age": "Adult",
      "aspiration": "Renaissance Sim",
      "traits": ["Bookworm", "Outgoing", "Creative"],
@@ -116,13 +130,24 @@
       ["Writing", 4, 10]
      ],
      "rels": [
-      ["Bella Goth", "Wife"],
+      ["Bella Goth", "Spouse"],
       ["Cassandra Goth", "Daughter"],
       ["Alexander Goth", "Son"]
-     ]
+     ],
+     "parents": ["cornelia-goth"],
+     "partners": [
+      ["bella-goth", "Spouse"]
+     ],
+     "dynasty": {
+      "name": "Goth",
+      "role": "head"
+     }
     },
     {
+     "id": "cassandra-goth",
      "name": "Cassandra Goth",
+     "sex": "f",
+     "origin": "Premade",
      "age": "Teen",
      "aspiration": "Musical Genius",
      "traits": ["Creative", "Gloomy"],
@@ -136,10 +161,18 @@
       ["Bella Goth", "Mother"],
       ["Mortimer Goth", "Father"],
       ["Alexander Goth", "Brother"]
-     ]
+     ],
+     "parents": ["mortimer-goth", "bella-goth"],
+     "dynasty": {
+      "name": "Goth",
+      "role": "heir"
+     }
     },
     {
+     "id": "alexander-goth",
      "name": "Alexander Goth",
+     "sex": "m",
+     "origin": "Premade",
      "age": "Child",
      "aspiration": "Whiz Kid",
      "traits": ["Bookworm"],
@@ -155,7 +188,12 @@
       ["Bella Goth", "Mother"],
       ["Mortimer Goth", "Father"],
       ["Cassandra Goth", "Sister"]
-     ]
+     ],
+     "parents": ["mortimer-goth", "bella-goth"],
+     "dynasty": {
+      "name": "Goth",
+      "role": "member"
+     }
     }
    ]
   }

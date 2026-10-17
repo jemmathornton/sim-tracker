@@ -2,7 +2,8 @@
  "name": "Del Sol Valley",
  "pack": "Get Famous",
  "owned": true,
- "colour": "#AE8A30", "heroY": 55,
+ "colour": "#AE8A30",
+ "heroY": 55,
  "deep": ["#382A0D", "#523E14"],
  "blurb": "A densely populated city brimming with opportunities to make it big!",
  "neighbourhoods": [
@@ -63,5 +64,128 @@
    "name": "Celebrities!",
    "text": "Del Sol Valley is the prime location for a chance at meeting a Proper Celebrity!"
   }
- ]
+ ],
+ "households": {
+  "Zest": {
+   "source": [
+    ["Johnny", "https://sims.fandom.com/wiki/Johnny_Zest"],
+    ["Dynasty", "https://sims.fandom.com/wiki/Dynasty"],
+    ["Patch 193", "https://sims.fandom.com/wiki/The_Sims_4/Patch_193"]
+   ],
+   "sims": [
+    {
+     "id": "johnny-zest",
+     "name": "Johnny Zest",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Joke Star",
+     "traits": ["Ambitious", "Goofball", "Outgoing"],
+     "bonus": "Gregarious",
+     "career": "Entertainer · Open Mic Seeker (level 2)",
+     "skills": [
+      ["Comedy", 2, 10]
+     ],
+     "rels": [
+      ["Geoffrey Landgraab", "Father"],
+      ["Nancy Landgraab", "Mother"]
+     ],
+     "parents": ["geoffrey-landgraab", "nancy-landgraab"],
+     "dynasty": {
+      "name": "Landgraab",
+      "role": "outcast"
+     }
+    }
+   ]
+  },
+  "Roomies": {
+   "source": [
+    ["J", "https://sims.fandom.com/wiki/J_Huntington_III"],
+    ["Mitchell", "https://sims.fandom.com/wiki/Mitchell_Kalani"],
+    ["Gavin", "https://sims.fandom.com/wiki/Gavin_Richards"],
+    ["Zoe", "https://sims.fandom.com/wiki/Zoe_Patel"],
+    ["Roomies household", "https://sims.fandom.com/wiki/Roomies_household_(Oasis_Springs)"]
+   ],
+   "sims": [
+    {
+     "id": "j-huntington-iii",
+     "name": "J Huntington III",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Bodybuilder",
+     "traits": ["Active", "Bro", "Noncommittal"],
+     "bonus": "High Metabolism",
+     "career": "Tech Guru · Quality Assurance (level 2)",
+     "skills": [
+      ["Fitness", 2, 10],
+      ["Programming", 2, 10]
+     ],
+     "rels": [
+      ["Gavin Richards", "Acquaintance"],
+      ["Mitchell Kalani", "Acquaintance"],
+      ["Zoe Patel", "Acquaintance"]
+     ]
+    },
+    {
+     "id": "mitchell-kalani",
+     "name": "Mitchell Kalani",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Joke Star",
+     "traits": ["Bro", "Lazy", "Outgoing"],
+     "bonus": "Gregarious",
+     "career": "Culinary · Assistant Dishwasher (level 1)",
+     "skills": [
+      ["Comedy", 2, 10],
+      ["Mixology", 2, 10]
+     ],
+     "rels": [
+      ["Gavin Richards", "Acquaintance"],
+      ["J Huntington III", "Acquaintance"],
+      ["Zoe Patel", "Acquaintance"]
+     ]
+    },
+    {
+     "id": "gavin-richards",
+     "name": "Gavin Richards",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Bestselling Author",
+     "traits": ["Bro", "Creative", "Neat"],
+     "bonus": "Muser",
+     "career": "Writer · Blogger (level 2)",
+     "skills": [
+      ["Writing", 3, 10]
+     ],
+     "rels": [
+      ["J Huntington III", "Acquaintance"],
+      ["Mitchell Kalani", "Acquaintance"],
+      ["Zoe Patel", "Acquaintance"]
+     ]
+    },
+    {
+     "id": "zoe-patel",
+     "name": "Zoe Patel",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Friend of the World",
+     "traits": ["Goofball", "Cheerful", "Clumsy"],
+     "bonus": "Gregarious",
+     "skills": [
+      ["Charisma", 2, 10],
+      ["Mischief", 1, 10]
+     ],
+     "rels": [
+      ["Gavin Richards", "Acquaintance"],
+      ["J Huntington III", "Acquaintance"],
+      ["Mitchell Kalani", "Acquaintance"]
+     ]
+    }
+   ]
+  }
+ }
 }

@@ -1,0 +1,17 @@
+{
+ "_note": "Group pages (her decision, 17 Oct): dynasties (Royalty & Legacy), clubs (Get Together), university organisations (Discover University). Members are listed on each Sim ('dynasty', 'clubs'); this file holds each group's own details.",
+ "dynasties": {
+  "Goth": {
+   "ideals": ["Passionate", "Mysterious"],
+   "prestige": 3
+  },
+  "Landgraab": {
+   "ideals": ["Devious", "Connoisseur"],
+   "prestige": 5,
+   "allies": ["Abrantes"],
+   "rivals": ["Alto"]
+  }
+ },
+ "clubs": {},
+ "organisations": {}
+}

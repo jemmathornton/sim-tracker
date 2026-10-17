@@ -513,3 +513,47 @@ footer .as-of{flex-basis:100%}
 .listing.bfront:hover h3{text-decoration:none}.listing.bfront:hover .plot-svg{transform:none}.listing.bfront:hover .photo.shot{filter:none}
 .listing .meta .unit-list li.free{font-style:italic}
 .u-traits{font-size:12.5px;color:var(--muted);text-align:right}
+/* ---------- Sim pages, household family trees, dynasty pages (17 Oct) ---------- */
+.otag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:2px 8px;border-radius:99px;background:color-mix(in srgb,var(--h,var(--brass)) 14%,var(--surface));color:var(--muted);vertical-align:middle}
+.wchip{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:600;color:var(--muted);white-space:nowrap}
+.wchip i{width:8px;height:8px;border-radius:50%;background:var(--c)}
+.muted{color:var(--muted)}
+.roster{width:100%;border-collapse:collapse;margin-top:14px;font-size:14.5px}
+.roster th{text-align:left;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:700;padding:0 12px 8px}
+.roster td{padding:11px 12px;border-top:1px solid var(--line);background:var(--surface)}
+.roster td:first-child a{font:400 21px/1.1 var(--display);text-decoration:none;color:var(--ink)}
+.roster td:first-child a:hover{text-decoration:underline;text-decoration-color:var(--h)}
+.portrait{display:block;width:100%;max-height:420px;object-fit:cover;border-radius:18px;margin-top:14px}
+.ftree{position:relative;overflow-x:auto;overflow-y:hidden;padding:10px 0 6px;margin-top:10px}
+.ftree-lines{position:absolute;left:0;top:0;height:100%;pointer-events:none;overflow:visible}
+.ftree-lines path{fill:none;stroke:color-mix(in srgb,var(--h) 55%,var(--muted));stroke-width:1.6}
+.ftree-lines path.dash{stroke-dasharray:5 4}
+.trow{display:flex;justify-content:center;gap:34px;margin:0 auto 46px;width:max-content;min-width:100%}
+.trow:last-child{margin-bottom:6px}
+.tbox{position:relative;z-index:1;display:grid;gap:3px;min-width:150px;max-width:200px;padding:11px 14px;border-radius:14px;text-decoration:none;color:var(--ink);background:var(--surface);border:1px solid var(--line)}
+.tbox b{font:400 19px/1.1 var(--display)}
+.tbox small{font-size:12px;color:var(--muted)}
+.tbox.in{border:2px solid var(--h);box-shadow:0 2px 10px color-mix(in srgb,var(--h) 18%,transparent)}
+.tbox.out{background:color-mix(in srgb,var(--surface) 55%,var(--paper));border-style:dashed;border-color:color-mix(in srgb,var(--muted) 45%,var(--line))}
+.tbox.late b{font-style:italic;color:var(--muted)}
+a.tbox:hover{border-color:var(--h)}
+.tree-key{display:flex;gap:10px;align-items:center;font-size:12.5px;color:var(--muted);margin-top:6px}
+.tbox-key{width:22px;height:14px;border-radius:5px;display:inline-block}
+.tbox-key.in{border:2px solid var(--h);background:var(--surface)}
+.tbox-key.out{border:1px dashed var(--muted);background:color-mix(in srgb,var(--surface) 55%,var(--paper));margin-left:10px}
+.famlist{display:grid;gap:14px;margin-top:12px}
+.famlist>div{display:grid;grid-template-columns:130px 1fr;gap:14px;align-items:start}
+.famlist dt{font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:700;padding-top:8px}
+.famlist dd{display:flex;flex-wrap:wrap;gap:8px;margin:0}
+.fchip{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border-radius:12px;background:var(--surface);border:1px solid var(--line);font-size:14.5px}
+.fchip a{font-weight:600;text-decoration:none;color:var(--ink)}
+.fchip a:hover{text-decoration:underline;text-decoration-color:var(--h)}
+.fchip small{color:var(--muted);font-size:12px}
+.fchip.out{border-style:dashed;background:color-mix(in srgb,var(--surface) 55%,var(--paper))}
+.rel-wrap{display:grid;grid-template-columns:minmax(0,1fr) 420px;gap:24px;align-items:start}
+.relweb-box{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:14px}
+.relweb{width:100%;height:auto;margin-top:6px}
+.relweb line{stroke-width:2;opacity:.7}
+.relweb text{font:600 12px var(--body);fill:var(--ink)}
+.relweb .me{fill:var(--h)}
+.relweb .me-t{fill:#fff;font:400 15px var(--display);font-style:italic}
