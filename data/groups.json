@@ -91,5 +91,41 @@
    ]
   }
  },
- "organisations": {}
+ "organisations": {
+  "Art Society": {
+   "uni": "uob",
+   "events": ["Figure Painting by the canal (Sun, Mon, Thu, 3–7 pm)", "Bar night (Tue, 8 pm–midnight)"],
+   "join": "Talk to a member or go to an event"
+  },
+  "The Debate Guild": {
+   "uni": "uob",
+   "events": ["Debate Practice near the commons (Tue, 4–8 pm)", "Bar night (Thu, 8 pm–midnight)", "Debate Showdown on the quad (Sat, 8 am–2 pm)"],
+   "join": "Talk to a member or go to an event"
+  },
+  "Britechester Spirit Corps": {
+   "uni": "uob",
+   "events": ["Creativity Celebration on the quad (Sun, 3–9 pm)", "Game Day Party on the quad (Fri, 3–7 pm)"],
+   "join": "Talk to a member or go to an event"
+  },
+  "The Brainiacs": {
+   "uni": "foxbury",
+   "events": ["Study Session near the library (Mon, Tue, Thu, 3–7 pm)", "Bar night (Fri, 8 pm–midnight)"],
+   "join": "Talk to a member or go to an event"
+  },
+  "Bot Savants": {
+   "uni": "foxbury",
+   "events": ["Utili-Bot Contest on the quad (Sun, 12–6 pm)", "Bar night (Mon, 8 pm–midnight)", "Robot Building Meetup near the commons (Tue, Thu, 7–11 pm)"],
+   "join": "Talk to a member or go to an event"
+  },
+  "Foxbury Spirit Squad": {
+   "uni": "foxbury",
+   "events": ["Game Day Party on the quad (Fri, 3–7 pm)", "School Spirit Day on the quad (Sat, 10 am–6 pm)", "Bar nights (Wed, Sun)"],
+   "join": "Talk to a member or go to an event"
+  },
+  "The Order of Enchantment": {
+   "uni": "secret",
+   "events": ["Sprite Celebration Ritual at the Ritual Grounds, Gibbs Hill (Fri, Sun, 10 pm–2 am)"],
+   "join": "Invitation only: leave a high-quality offering at your campus statue"
+  }
+ }
 }

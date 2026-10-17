@@ -2,7 +2,8 @@
  "name": "Britechester",
  "pack": "Discover University",
  "owned": true,
- "colour": "#8F7756", "heroY": 45,
+ "colour": "#8F7756",
+ "heroY": 45,
  "deep": ["#6A5C4A", "#817059"],
  "glow": "#EBDAC2",
  "blurb": "Begin a new chapter in the historical University of Britechester or modern Foxbury Institute. Live in a dorm room or off-campus in the welcoming town of Gibbs Hill. Explore Britechester on a bicycle, spend time in the student commons, and have a study session at the library. Cheer on the student body at a school spirit event and wear school colours to show your Sim’s pride.",
@@ -62,5 +63,100 @@
    "name": "Historic Mysteries",
    "text": "From campus ghosts to an elusive Secret Society, Britechester boasts its share of the unexplained"
   }
- ]
+ ],
+ "households": {
+  "Best of Friends": {
+   "sims": [
+    {
+     "id": "julia-wright",
+     "name": "Julia Wright",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Renaissance Sim",
+     "traits": ["Ambitious", "Outgoing", "Perfectionist"],
+     "bonus": "Quick Learner",
+     "career": "",
+     "school": "University of Britechester",
+     "skills": [
+      ["Charisma", 4, 10],
+      ["Logic", 5, 10]
+     ],
+     "rels": [
+      ["Becca Clarke", "Best Friend"]
+     ],
+     "orgs": [
+      {
+       "name": "The Debate Guild",
+       "role": "member"
+      },
+      {
+       "name": "The Order of Enchantment",
+       "role": "member"
+      }
+     ]
+    },
+    {
+     "id": "becca-clarke",
+     "name": "Becca Clarke",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Academic",
+     "traits": ["Bookworm", "Active", "Romantic"],
+     "bonus": "Quick Learner",
+     "career": "",
+     "school": "University of Britechester · Language & Literature",
+     "skills": [
+      ["Programming", 3, 10],
+      ["Writing", 5, 10]
+     ],
+     "rels": [
+      ["Julia Wright", "Best Friend"]
+     ],
+     "orgs": [
+      {
+       "name": "Art Society",
+       "role": "member"
+      },
+      {
+       "name": "Britechester Spirit Corps",
+       "role": "member"
+      }
+     ]
+    }
+   ]
+  },
+  "Fletcher": {
+   "sims": [
+    {
+     "id": "cameron-fletcher",
+     "name": "Cameron Fletcher",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Computer Whiz",
+     "traits": ["Genius", "Goofball", "Geek"],
+     "bonus": "Quick Learner",
+     "career": "",
+     "school": "Foxbury Institute · Computer Science",
+     "skills": [
+      ["Programming", 4, 10],
+      ["Video Gaming", 3, 10]
+     ],
+     "rels": [],
+     "orgs": [
+      {
+       "name": "Bot Savants",
+       "role": "member"
+      },
+      {
+       "name": "The Brainiacs",
+       "role": "member"
+      }
+     ]
+    }
+   ]
+  }
+ }
 }

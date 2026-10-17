@@ -106,7 +106,7 @@ function addSim(id, s, hh){
   const sur = surname(s.name), born = s.born || sur, line = slug(born), into = s.born && slug(s.born) !== slug(sur) ? slug(sur) : null;
   FAMILIES[line] ||= {name: born}; if (into) FAMILIES[into] ||= {name: sur};
   SIMS[id] = {...s, id, src: s, hh: hh || null, world: hh ? hh.world : worlds.find(w => w.id === s.world) || null, home: s.where, line, into,
-    ph: !!s.placeholder, phText: s.placeholder ? sx(s.sex, "Father", "Mother", "Parent") + " unknown" : "",
+    ph: !!s.placeholder, phText: s.placeholder ? "Unknown" : "",
     partners: (s.partners || []).map(([p, k]) => [p, PARTNER_KINDS[k] || "unknown"])};
 }
 worlds.forEach(w => Object.values(w.households).forEach(hh => hh.sims.forEach(sm => { if (sm.sid) addSim(sm.sid, sm, hh); })));
@@ -168,18 +168,26 @@ Object.entries((DATA.groups || {}).clubs || {}).forEach(([name, c]) => {
     SIMS[o] ||= {id: o, name: who, sex: "x", stub: true, partners: []}; if (hhId && hhIndex[hhId]) SIMS[o].hh ||= hhIndex[hhId]; SIM_BY_NAME[who] ||= o;
     g.members.push([o, role || "member"]); });
 });
+// university organisations (Discover University): members from each Sim's "orgs"; details from data/groups.json; coloured by university
+const UNIS = {uob: {name: "University of Britechester", colour: "#2F7A4A"}, foxbury: {name: "Foxbury Institute", colour: "#A8322D"}, secret: {name: "Both (it’s secret)", colour: "#3E2458"}};
+const kindName = g => g.kind === "org" && g.uni === "secret" ? "Secret society" : GROUP_KINDS[g.kind].name;
+Object.entries((DATA.groups || {}).organisations || {}).forEach(([name, o]) => { const id = "g-org-" + slug(name);
+  GROUP_PAGES[id] = {...o, kind: "org", name, id, members: [], colour: (UNIS[o.uni] || {}).colour, world: worlds.find(w => w.id === "britechester") || null}; });
+Object.values(SIMS).forEach(s => (s.orgs || []).forEach(c => { const g = GROUP_PAGES["g-org-" + slug(c.name)]; if (g && !g.members.some(([m]) => m === s.id)) g.members.push([s.id, c.role || "member"]); }));
+Object.values(GROUP_PAGES).filter(g => !g.members.length).forEach(g => delete GROUP_PAGES[g.id]);   // only groups someone on the site is in
 Object.values(SIMS).forEach(s => (s.clubs || []).forEach(c => { const g = GROUP_PAGES["g-club-" + slug(c.name)]; if (g && !g.members.some(([m]) => m === s.id)) g.members.push([s.id, c.role || "member"]); }));
 const groupTitle = g => g.kind === "dynasty" ? `${g.name} dynasty` : g.name;
 const groupsOf = id => Object.values(GROUP_PAGES).filter(g => g.members.some(([m]) => m === id)).map(g => [g.id, g, g.members.find(([m]) => m === id)[1]]);
 const dynastyOf = id => groupsOf(id).find(([, g]) => g.kind === "dynasty");
 // a member as a small box, like the tree's cards: based here = highlighted; elsewhere = lighter, with a chip for where they live
-const roleBadge = (kind, role) => { const R = GROUP_KINDS[kind].roles[role] || role, dyn = kind === "dynasty";
+const roleBadge = (kind, role, g) => { const R = GROUP_KINDS[kind].roles[role] || role, dyn = kind === "dynasty";
+  if (kind === "org") return `<span class="badge o-badge" style="--u:${g.colour}">${ic(g.uni === "secret" ? "moon" : "graduation-cap")}${esc(R)}</span>`;
   return `<span class="badge ${dyn ? "r-" + role : "c-" + role}">${dyn ? ic("crown") : role === "leader" ? ic("flag") : ""}${esc(R)}</span>`; };
 function memberCard(g, id, role){
   const s = SIMS[id], dyn = g.kind === "dynasty", here = true, href = simLinkTo(id), R = GROUP_KINDS[g.kind].roles[role] || role, crown = ["head", "heir", "leader"].includes(role);
   return `<div class="mcard ${here ? "here" : "away"} ${s.late ? "late" : ""}" style="--w:${simColour(id)}"><span class="tm">${initial(s.name)}</span>
     <div class="tn">${href ? `<a href="${href}">${esc(s.name)}</a>` : esc(s.name)}</div><div class="ts">${esc([s.age, s.state].filter(Boolean).join(" · "))}</div>
-    <div class="tchip">${homeChip(s)}</div>${roleBadge(g.kind, role)}</div>`;
+    <div class="tchip">${homeChip(s)}</div>${roleBadge(g.kind, role, g)}</div>`;
 }
 
 /* ---------- family words, worked out (never typed) ---------- */
@@ -405,7 +413,7 @@ function simRelGroups(id, o = {}){
 // one Sim as a small card: monogram in their world's colour (grey when late), name linking to their page or household
 function simFamItem(o, word){
   const t = SIMS[o];
-  if (t.ph) return `<li><div class="card ph"><span class="mono">?</span><span><b>${esc(word === "parent" ? t.phText : (word ? word.charAt(0).toUpperCase() + word.slice(1) : "Relative") + " unknown")}</b></span></div></li>`;
+  if (t.ph) return `<li><div class="card ph"><span class="mono">?</span><span><b>Unknown</b><small>${esc(word === "parent" ? sx(t.sex, "Father", "Mother", "Parent") : word ? word.charAt(0).toUpperCase() + word.slice(1).toLowerCase() : "Relative")}</small></span></div></li>`;
   const href = simLinkTo(o), T = href ? "a" : "div", where = simWhere(o);
   return `<li><${T} class="card ${t.late ? "late" : ""}" ${href ? `href="${href}"` : ""} style="--w:${simColour(o)}"><span class="mono">${initial(t.name)}</span><span><b>${esc(t.name)}</b><small>${esc([word, nee(t), where].filter(Boolean).join(" · "))}</small></span></${T}></li>`;
 }
@@ -421,7 +429,7 @@ function simFamily(id){
 }
 function simGroups(id){
   const gs = groupsOf(id);
-  const card = ([gid, g, role]) => `<a class="memb" href="#${gid}"><span class="ico">${ic(GROUP_KINDS[g.kind].icon)}</span><span><b>${esc(groupTitle(g))}</b><small>${esc(GROUP_KINDS[g.kind].name)}</small></span><span class="role-pill">${esc(GROUP_KINDS[g.kind].roles[role] || role)}</span></a>`;
+  const card = ([gid, g, role]) => `<a class="memb" href="#${gid}"><span class="ico">${ic(GROUP_KINDS[g.kind].icon)}</span><span><b>${esc(groupTitle(g))}</b><small>${esc(kindName(g))}</small></span><span class="role-pill">${esc(GROUP_KINDS[g.kind].roles[role] || role)}</span></a>`;
   return gs.length ? `<div class="membs">${gs.map(card).join("")}</div>` : "";
 }
 function simHomes(s){
@@ -467,7 +475,7 @@ function simPage(s){
 /* ---------- the group page (as the prototype's group.html): dynasties now, clubs and university organisations later ---------- */
 const ROLE_ORDER = ["head", "leader", "heir", "member", "outcast"];
 function groupPage(g){
-  const K = GROUP_KINDS[g.kind], W = g.world, lotOf = g.place ? lotIndex[g.place] : g.homeHh ? g.homeHh.lots[0] : null, c = lotOf ? (lotOf.hood.glow || lotOf.hood.color) : wColour(W);
+  const K = GROUP_KINDS[g.kind], W = g.world, lotOf = g.place ? lotIndex[g.place] : g.homeHh ? g.homeHh.lots[0] : null, c = g.colour || (lotOf ? (lotOf.hood.glow || lotOf.hood.color) : wColour(W));
   const dyn = g.kind === "dynasty", ids = g.members.slice().sort((a, b) => ROLE_ORDER.indexOf(a[1]) - ROLE_ORDER.indexOf(b[1]));
   const hhs = [...new Set(ids.map(([id]) => SIMS[id].hh).filter(Boolean))].map(hh => `<a href="#${hh.id}">${esc(hh.name)}</a> (${esc(hh.world.name)})`).join(", ");
   const link = x => GROUP_PAGES["g-dynasty-" + slug(x)] ? `<a href="#g-dynasty-${slug(x)}">${esc(groupTitle(GROUP_PAGES["g-dynasty-" + slug(x)]))}</a>` : esc(x + " dynasty");
@@ -476,11 +484,12 @@ function groupPage(g){
     if (lotOf) return `<a href="#${lotOf.id}">${esc(lotOf.name)}</a> (${esc(lotOf.hood.name)}, ${esc(lotOf.world.name)})`;
     return W ? `${esc(W.name)}${W.owned ? "" : " (not owned)"}` : ""; };
   let h = `<section class="hero small" style="--c:${c}"><div class="crumbs">${W ? (W.ready && W.owned ? `<a href="#w-${W.id}">${ic("map")}${esc(W.name)}</a>` : `<span>${ic("map")}${esc(W.name)} (not owned)</span>`) : ""}${lotOf && g.kind !== "dynasty" ? `<a href="#${lotOf.id}">${ic(g.place ? "pin" : "home")}${esc(lotOf.name)}</a>` : ""}</div>
-    <div style="display:flex;gap:26px;align-items:center;flex-wrap:wrap;margin-top:22px"><div class="monogram ico-mono">${ic(K.icon)}</div><div><span class="label" style="color:var(--on-deep-mute)">${esc(K.name)}</span><h1 style="margin-top:6px">${esc(groupTitle(g))}</h1></div></div></section>`;
+    <div style="display:flex;gap:26px;align-items:center;flex-wrap:wrap;margin-top:22px"><div class="monogram ico-mono">${ic(g.uni === "secret" ? "moon" : K.icon)}</div><div><span class="label" style="color:var(--on-deep-mute)">${esc(kindName(g))}</span><h1 style="margin-top:6px">${esc(groupTitle(g))}</h1></div></div></section>`;
   // the group's own details
   const list = xs => xs && xs.length ? xs.map(esc).join(", ") : "";
   const rows = (g.kind === "dynasty" ? [["Head", who("head")], ["Heir", who("heir")], ["Households", hhs], ["Prestige", g.prestige != null ? `${g.prestige} ${g.prestige === 1 ? "star" : "stars"}` : ""],
       ["Ideals", list(g.ideals)], ["Heirloom", g.heirloom ? esc(g.heirloom) : ""], ["Allies", (g.allies || []).map(link).join(", ")], ["Rivals", (g.rivals || []).map(link).join(", ")]]
+    : g.kind === "org" ? [["University", esc((UNIS[g.uni] || {}).name || "")], ["How to join", esc(g.join || "")], ["Events", (g.events || []).map(esc).join("<br>")]]
     : [["Leader", who("leader")], ["Meets at", based()], ["Activities", list(g.activities)], ["Rules", (g.rules || []).map(esc).join(", ")]]).filter(([, v]) => v && v !== "None");
   const half = Math.ceil(rows.length / 2), dl = rs => `<dl class="facts">${rs.map(([t, v]) => `<div><dt>${t}</dt><dd>${v}</dd></div>`).join("")}</dl>`;
   h += `<div class="detail" style="--h:${c}"><div>${dl(rows.slice(0, half))}</div><div>${dl(rows.slice(half))}</div></div>`;
