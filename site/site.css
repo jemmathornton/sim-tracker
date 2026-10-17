@@ -670,3 +670,6 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 .mcard.late .tm{background:#A3AAA5}
 .monogram.ico-mono svg{width:42px;height:42px}
 @media (max-width:1000px){.sim-about,.fam-groups{grid-template-columns:1fr}}
+.tc .dead{position:absolute;top:7px;right:8px;color:var(--muted);display:grid;place-items:center}
+.tc .dead svg{width:15px;height:15px}
+.tree-key svg.i{width:14px;height:14px;vertical-align:-2px}

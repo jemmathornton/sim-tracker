@@ -2,7 +2,8 @@
  "name": "Evergreen Harbor",
  "pack": "Eco Lifestyle",
  "owned": true,
- "colour": "#4F7A6B", "heroY": 45,
+ "colour": "#4F7A6B",
+ "heroY": 45,
  "deep": ["#1A2D27", "#263F37"],
  "blurb": "Sandwiched between rolling hills of evergreen forest on one side and the waters of the Willupette Sound on the other, Evergreen Harbor used to be the industrial hub of the region. However, as the world changed around it, the region has struggled to keep up. Evergreen Harbor now stands on the precipice of making its own future. The only question is: what kind of future will it be?",
  "neighbourhoods": [
@@ -65,5 +66,10 @@
    "name": "Conifer Station",
    "text": "This pretty area on the outskirts of the city has a historic train station to visit"
   }
- ]
+ ],
+ "households": {
+  "Knox Greenburg": {
+   "single": true
+  }
+ }
 }

@@ -2,7 +2,8 @@
  "name": "Henford-on-Bagley",
  "pack": "Cottage Living",
  "owned": true,
- "colour": "#6E8B5E", "heroY": 45,
+ "colour": "#6E8B5E",
+ "heroY": 45,
  "deep": ["#232E1F", "#33432D"],
  "blurb": "From the natural beauty of Cordelia Falls to the clear, brisk currents of the River Bagley, the mingling of earth and water makes Henford-on-Bagley a lovely place to visit, but perhaps an even lovelier place to live. Villagers here connect with the history of the land while finding friendship in the furry and feathery creatures that inhabit the woods.",
  "neighbourhoods": [
@@ -60,5 +61,10 @@
    "name": "Weekly Fair",
    "text": "Enter the weekly fair for a chance to prove that your animal, produce, or cooking is the cream of the crop"
   }
- ]
+ ],
+ "households": {
+  "Cecilia Kang": {
+   "single": true
+  }
+ }
 }
