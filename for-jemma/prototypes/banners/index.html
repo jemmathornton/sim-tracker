@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Banner Text Options</title>
+<!-- Prototype, 17 Oct: ways to make the small pack line and the brass title readable over the map banners.
+     Opens straight from the folder. Reads the app's files in site/ and changes nothing. measure.py makes measured.js. -->
+<base href="../../../site/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="../for-jemma/prototypes/banners/proto-banners.css">
+<style>
+  /* the app's own page frame is loaded only so its banner code can run; it's kept off screen */
+  .bp-shell{position:absolute;left:-20000px;top:0;width:985px;height:1px;overflow:hidden}
+  .bp-shell .side,.bp-shell .topbar,.bp-shell .scrim{display:none!important}
+  .bp-shell main{margin:0;width:985px;min-height:0}
+
+  /* B: the same deep shade, darker at the top and reaching further up (bottom edge unchanged: solid deep) */
+  .opt-b .hero.mapped{background:linear-gradient(180deg,color-mix(in srgb,var(--deep) 32%,transparent) 0%,color-mix(in srgb,var(--deep) 50%,transparent) 30%,color-mix(in srgb,var(--deep) 66%,transparent) 50%,color-mix(in srgb,var(--deep) 88%,transparent) 76%,var(--deep) 100%),var(--map) var(--mapview,center 35%/cover)}
+
+  /* C: a dark wash on the left, behind the text only, under the usual fade (bottom edge unchanged: solid deep) */
+  .opt-c .hero.mapped{--side-dark:color-mix(in srgb,var(--deep) 45%,#000);
+    background:linear-gradient(180deg,color-mix(in srgb,var(--deep) 5%,transparent) 0%,color-mix(in srgb,var(--deep) 25%,transparent) 40%,color-mix(in srgb,var(--deep) 86%,transparent) 78%,var(--deep) 100%),
+    linear-gradient(90deg,color-mix(in srgb,var(--side-dark) 74%,transparent) 0%,color-mix(in srgb,var(--side-dark) 62%,transparent) 30%,color-mix(in srgb,var(--side-dark) 30%,transparent) 55%,transparent 78%),
+    var(--map) var(--mapview,center 35%/cover)}
+</style>
+</head>
+<body>
+<div class="bp-shell" aria-hidden="true">
+  <div class="topbar"><button id="menuBtn" type="button" tabindex="-1"><span id="menuIco"></span></button></div>
+  <div class="scrim" id="scrim"></div>
+  <aside class="side" id="side"><input id="q" type="search" tabindex="-1"><span id="searchIco"></span><nav class="nav" id="nav"></nav></aside>
+  <main id="main"><div class="wrap" id="view"></div></main>
+</div>
+<div class="bp" id="bp"></div>
+
+<script src="js/icons.js"></script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script>document.getElementById("view").innerHTML = ""; document.getElementById("nav").innerHTML = ""; document.title = "Banner Text Options";</script>
+<script src="../for-jemma/prototypes/banners/measured.js"></script>
+<script src="../for-jemma/prototypes/banners/proto-banners.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+/* Prototype, 17 Oct: banner text over the maps. Only for this page; the app's own site.css is loaded first and left alone. */
+
+/* ---------- the page ---------- */
+.bp{max-width:1060px;margin:0 auto;padding:40px 24px 120px}
+.bp-head{display:grid;gap:14px;margin-bottom:28px}
+.bp-head h1{font-size:64px;line-height:.95}
+.bp-head h1 em{color:var(--brass)}
+.bp-head p{margin:0;max-width:74ch;color:var(--muted)}
+.bp-head p b{color:var(--ink)}
+.bp-tag{justify-self:start;font:700 11px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;padding:6px 10px;border-radius:99px;background:color-mix(in srgb,var(--brass) 22%,transparent);color:var(--ink)}
+
+.bp-opts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:6px 0 0;padding:0;list-style:none}
+.bp-opts li{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:13px;line-height:1.45;color:var(--muted)}
+.bp-opts li b{display:flex;align-items:center;gap:8px;color:var(--ink);font-size:14px;margin-bottom:4px}
+
+.bp-letter{display:inline-grid;place-items:center;min-width:26px;height:26px;padding:0 7px;border-radius:99px;background:var(--ink);color:var(--paper);font:700 13px/1 var(--body)}
+.bp-letter.now{background:transparent;color:var(--ink);border:1px solid var(--line)}
+
+.bp-bar{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;margin:22px 0 8px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.bp-bar .label{margin-right:2px}
+.bp-seg{display:inline-flex;border:1px solid var(--line);border-radius:99px;overflow:hidden}
+.bp-seg button{border:0;background:transparent;padding:7px 14px;font:600 13px var(--body);cursor:pointer;color:var(--muted)}
+.bp-seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.bp-jump{display:flex;flex-wrap:wrap;gap:6px}
+.bp-jump a{font-size:12.5px;font-weight:600;padding:4px 10px;border-radius:99px;border:1px solid var(--line);text-decoration:none}
+.bp-jump a:hover{background:var(--soft)}
+
+/* summary table */
+.bp-sum{width:100%;border-collapse:collapse;margin-top:14px;font-size:14px;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.bp-sum th,.bp-sum td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line)}
+.bp-sum thead th{font:700 11px/1.2 var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.bp-sum tbody tr:last-child td,.bp-sum tbody tr:last-child th{border-bottom:0}
+.bp-sum td{font-variant-numeric:tabular-nums}
+.bp-sum td small{color:var(--muted)}
+.bp-sum th .bp-letter{margin-right:9px}
+.bp-note{font-size:13px;color:var(--muted);margin:10px 0 0}
+
+/* one section per world or neighbourhood */
+.bp-sec{margin-top:56px;scroll-margin-top:16px}
+.bp-sec h2{font-size:40px;line-height:1}
+.bp-sec h2 small{font:600 14px var(--body);color:var(--muted);margin-left:10px;letter-spacing:0}
+.bp-sec>p{margin:6px 0 16px;color:var(--muted)}
+.bp-grid{display:grid;grid-template-columns:repeat(2,minmax(0,492.5px));gap:26px 22px;justify-content:space-between}
+body.real .bp-grid{grid-template-columns:985px;justify-content:center}
+
+.bp-card{margin:0;display:grid;gap:8px;align-content:start}
+.bp-card figcaption{display:flex;align-items:center;gap:9px;font-weight:700;font-size:14px}
+.bp-card figcaption small{font-weight:500;color:var(--muted);font-size:12.5px}
+.bp-scale{zoom:.5;border-radius:24px;overflow:hidden}
+body.real .bp-scale{zoom:1;border-radius:14px}
+.bp-nums{display:flex;flex-wrap:wrap;gap:6px}
+.bp-nums span{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;padding:3px 9px 3px 7px;border-radius:99px;border:1px solid var(--line);background:var(--surface);font-variant-numeric:tabular-nums}
+.bp-nums span::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--muted)}
+.bp-nums .ok::before{background:#2E8B57}
+.bp-nums .low::before{background:#C0392B}
+.bp-nums b{font-weight:800}
+.bp-swatch{display:inline-block;width:14px;height:14px;border-radius:4px;vertical-align:-2px;margin:0 4px 0 2px;border:1px solid rgba(0,0,0,.15)}
+
+/* ---------- the banners, fixed at her laptop's size (1280 × 800 window: 985 wide, as in the app) ---------- */
+.bp-frame{width:985px;--on-deep-mute:color-mix(in srgb,#fff 64%,var(--deep))}
+.bp-frame .hero{margin:0;padding-left:51.2px;padding-right:51.2px}
+.bp-frame .hero.mapped{min-height:448px}            /* min(56vh,520px) at 800 high */
+.bp-frame .hh-hero.mapped{min-height:352px}         /* min(44vh,420px) at 800 high */
+.bp-frame .hero h1{font-size:128px}                 /* clamp(64px,10vw,132px) at 1280 wide */
+.bp-frame a{pointer-events:none}
+
+/* A: a soft dark shadow behind the small line, the title and the description (colours unchanged) */
+.opt-a .kicker .label,.opt-d .kicker .label{text-shadow:0 1px 2px rgba(0,0,0,.6),0 0 10px rgba(0,0,0,.45)}
+.opt-a .hero.mapped h1,.opt-d .hero.mapped h1{text-shadow:0 1px 3px rgba(0,0,0,.4),0 2px 12px rgba(0,0,0,.35),0 4px 30px rgba(0,0,0,.4)}
+.opt-a .hero>p,.opt-d .hero>p{text-shadow:0 1px 2px rgba(0,0,0,.55),0 0 12px rgba(0,0,0,.4)}
+.opt-a .figures span,.opt-d .figures span{text-shadow:0 1px 2px rgba(0,0,0,.45)}
+
+/* B and C redraw the map layer, so their rules are in index.html: the map's address (--map) is read relative to the
+   stylesheet that uses it, and only the page's own <style> sees it from site/ */
+
+/* D: slightly lighter brass and white, a brighter small line, plus A's shadow */
+.opt-d{--brass-light:color-mix(in srgb,var(--brass) 72%,#fff)}
+.opt-d .kicker .label{color:color-mix(in srgb,#fff 90%,var(--deep))}
+.opt-d .hero.mapped h1{color:#fff}
+.opt-d .hero.mapped h1 em{color:var(--brass-light)}
+.opt-d .hero>p{color:#fff}
+
+/* ---------- measuring (used by measure.py only): the banners stacked at full size, text hidden on the second pass ---------- */
+body.measuring{margin:0;background:#fff}
+body.measuring .bp{max-width:none;margin:0;padding:0}
+body.measuring .bp-scale{zoom:1;border-radius:0}
+body.hide-text .bp-frame .kicker .label,body.hide-text .bp-frame .hero h1,body.hide-text .bp-frame .hero h1 em,body.hide-text .bp-frame .hero>p{color:transparent!important}
+body.mark-text .bp-frame .kicker .label,body.mark-text .bp-frame .hero h1,body.mark-text .bp-frame .hero h1 em,body.mark-text .bp-frame .hero>p{color:#f0f!important}
+
+@media (max-width:1060px){.bp-opts{grid-template-columns:repeat(2,minmax(0,1fr))}}
