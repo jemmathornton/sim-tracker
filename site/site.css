@@ -676,4 +676,4 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 .badge.r-head{background:var(--brass);color:#1A1F1C;border:1px solid var(--brass)}
 .badge.r-heir{background:color-mix(in srgb,var(--brass) 32%,var(--surface));color:#1A1F1C;border:1px solid var(--brass)}
 .badge.r-member{background:color-mix(in srgb,var(--brass) 5%,var(--surface));color:#1A1F1C;border:1px solid var(--brass)}
-.badge.r-outcast{background:var(--soft);color:var(--muted);border:1px solid var(--line)}
+.badge.r-outcast{background:var(--surface);color:var(--muted);border:1px solid color-mix(in srgb,var(--muted) 70%,var(--surface))}
