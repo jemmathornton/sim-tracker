@@ -49,7 +49,7 @@ The weekly Gallery refresh can stop if a new upload can’t be read (one line); 
 | gallery-refresh-health.md | Health check of the weekly refresh |
 | game-changes-2026.md | Packs and updates of the last year |
 | festivals-calendar.md | Festivals and events (if finished) |
-| story-ideas.md | Lore-friendly story ideas per world (if finished) |
+| story-ideas.md | Lore-friendly story ideas per world (ideas only) |
 | world-plans-review.md | Your spreadsheet, read from a copy |
 | hood-banners-review.md | Every neighbourhood banner |
 | taskbar-icon.md | Why the taskbar icon is blurry |

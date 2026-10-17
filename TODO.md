@@ -234,6 +234,9 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [ ] [Jemma] Heart Consort Capp and the four Sulani mermaids so the game never deletes them? Later, if she buys Vampires or Werewolves: keep the Grimtooth bunker, leave the garlic out of Garliclauter, keep Widowshild a home
 - [ ] [Jemma] Showing occults: a life-state pill plus a born or turned line, ghosts shown in their household and generation, faded for late Sims (suggested); or a pill only; or a save-wide Occults page later? Trailer lore (Vlad turned Lilith…) shown with an “In the game: not linked” note, or only what her save says? Icons OK (droplet for vampires, moon, wand, sparkles, shell, orbit, ghost)?
 
+### Story ideas (research/story-ideas.md: ideas only, for her to pick from)
+- [ ] [Jemma] Browse when in the mood: 76 lore-friendly hooks across her 25 worlds (most change nothing the game ships) and 15 loose ends EA never finished (e.g. Roberto Crinkletop and Agnes; Princess Cordelia tying Henford, Tartosa and Ondarion together, which suits the Montys’ move). Some would also settle open items: the Kunals for Paradise Stables, Moody & McMillan running the 1 Cobblebottom Street tea room from next door, Supriya buying the Pawspital, the Koopmans’ daughter for Canalside Daycare, one of Fia’s outlaws as Aloisio’s tenant
+
 ### Where Sims could come from (research/sims-sources.md)
 - [ ] [Jemma] Which save is the Sims source: an exception to the Building rule for households in “Building #2” (like the rental-units one), or a separate save kept for Sims (what would it be called)? Her other 30 saves hold everything but are old (newest “Season Events”, 15 Mar 2026) and don’t have her rebuilt lots
 - [ ] [Jemma] EA’s families: fill them in automatically from the game’s own files (197 premade households, their family links, and 348 starting friendships between households), or only the ones she has played?
