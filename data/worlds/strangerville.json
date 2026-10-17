@@ -2,7 +2,8 @@
  "name": "StrangerVille",
  "pack": "StrangerVille",
  "owned": true,
- "colour": "#C8675F", "heroY": 24,
+ "colour": "#C8675F",
+ "heroY": 24,
  "deep": ["#4A1D1E", "#6A2E2D"],
  "blurb": "The only thing stranger than the people is the flora! StrangerVille is a quiet little town with a strange problem. The residents are very friendly, but at night things start to get more interesting.",
  "neighbourhoods": [
@@ -57,5 +58,128 @@
    "name": "Interesting Locals",
    "text": "You’d be hard pressed to find hospitality like this anywhere else. Just try not to let them get too close…"
   }
- ]
+ ],
+ "households": {
+  "Cahill": {
+   "sims": [
+    {
+     "id": "george-cahill",
+     "name": "George Cahill",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Elder",
+     "aspiration": "Public Enemy",
+     "traits": ["Hot-Headed", "Paranoid", "Active"],
+     "bonus": "Dastardly",
+     "career": "",
+     "skills": [
+      ["Charisma", 4, 10],
+      ["Writing", 3, 10],
+      ["Fitness", 2, 10]
+     ]
+    }
+   ]
+  },
+  "Roswell": {
+   "sims": [
+    {
+     "id": "ted-roswell",
+     "name": "Ted Roswell",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Fabulously Wealthy",
+     "traits": ["Hot-Headed", "Evil", "Paranoid"],
+     "bonus": "Business Savvy",
+     "career": "",
+     "skills": [
+      ["Charisma", 5, 10],
+      ["Gardening", 7, 10],
+      ["Logic", 4, 10]
+     ],
+     "partners": [
+      ["meredith-roswell", "Partner"]
+     ]
+    },
+    {
+     "id": "meredith-roswell",
+     "name": "Meredith Roswell",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Fabulously Wealthy",
+     "traits": ["Neat", "Outgoing", "Good"],
+     "bonus": "Business Savvy",
+     "career": "",
+     "skills": [
+      ["Gardening", 2, 10],
+      ["Gourmet Cooking", 3, 10],
+      ["Cooking", 7, 10],
+      ["Handiness", 6, 10]
+     ],
+     "partners": [
+      ["ted-roswell", "Partner"]
+     ]
+    }
+   ]
+  },
+  "Sigworth": {
+   "sims": [
+    {
+     "id": "jess-sigworth",
+     "name": "Jess Sigworth",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Successful Lineage",
+     "traits": ["Family-Oriented", "Active", "Outgoing"],
+     "bonus": "Domestic",
+     "career": "Military · Lacking Corporal (level 3)",
+     "skills": [
+      ["Fitness", 5, 10],
+      ["Charisma", 3, 10],
+      ["Handiness", 3, 10]
+     ],
+     "partners": [
+      ["dylan-sigworth", "Partner"]
+     ]
+    },
+    {
+     "id": "dylan-sigworth",
+     "name": "Dylan Sigworth",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Nerd Brain",
+     "traits": ["Bookworm", "Genius", "Perfectionist"],
+     "bonus": "Quick Learner",
+     "career": "",
+     "skills": [
+      ["Cooking", 6, 10],
+      ["Gourmet Cooking", 4, 10],
+      ["Gardening", 2, 10]
+     ],
+     "partners": [
+      ["jess-sigworth", "Partner"]
+     ]
+    },
+    {
+     "id": "christie-sigworth",
+     "name": "Christie Sigworth",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Child",
+     "aspiration": "Artistic Prodigy",
+     "traits": ["Active"],
+     "career": "",
+     "skills": [
+      ["Social", 3, 10],
+      ["Motor", 2, 10],
+      ["Creativity", 9, 10]
+     ],
+     "parents": ["jess-sigworth", "dylan-sigworth"]
+    }
+   ]
+  }
+ }
 }

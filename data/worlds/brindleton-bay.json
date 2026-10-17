@@ -2,7 +2,8 @@
  "name": "Brindleton Bay",
  "pack": "Cats & Dogs",
  "owned": true,
- "colour": "#2E5E73", "heroY": 40,
+ "colour": "#2E5E73",
+ "heroY": 40,
  "deep": ["#112632", "#1A3846"],
  "blurb": "Discover the coastal shores of Brindleton Bay, a new world where your Sims and their pets can live and enjoy outdoor activities.",
  "neighbourhoods": [
@@ -69,5 +70,223 @@
    "name": "Whiskerman's Wharf",
    "text": "Come for the sea breeze, chowder, and lobster rolls. Stay for the cuddly local kitties"
   }
- ]
+ ],
+ "households": {
+  "Delgato": {
+   "sims": [
+    {
+     "id": "supriya-delgato",
+     "name": "Supriya Delgato",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Friend of the Animals",
+     "traits": ["Genius", "Active", "Dog Lover"],
+     "bonus": "Animal Affection",
+     "career": "",
+     "skills": [
+      ["Veterinarian", 4, 10],
+      ["Cooking", 3, 10],
+      ["Piano", 2, 10]
+     ],
+     "partners": [
+      ["justin-delgato", "Partner"]
+     ]
+    },
+    {
+     "id": "justin-delgato",
+     "name": "Justin Delgato",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Renaissance Sim",
+     "traits": ["Neat", "Cat Lover", "Family-Oriented"],
+     "bonus": "Quick Learner",
+     "career": "Business · Regional Manager (level 5)",
+     "skills": [
+      ["Logic", 2, 10],
+      ["Comedy", 3, 10],
+      ["Charisma", 3, 10]
+     ],
+     "partners": [
+      ["supriya-delgato", "Partner"]
+     ]
+    },
+    {
+     "id": "evie-delgato",
+     "name": "Evie Delgato",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Toddler",
+     "aspiration": "Super Parent",
+     "traits": ["Angelic"],
+     "bonus": "Domestic",
+     "career": "",
+     "skills": [
+      ["Communication", 2, 5],
+      ["Movement", 3, 5],
+      ["Potty", 3, 3]
+     ],
+     "parents": ["supriya-delgato", "justin-delgato"]
+    },
+    {
+     "id": "pierce-delgato",
+     "name": "Pierce Delgato",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Child",
+     "aspiration": "Social Butterfly",
+     "traits": ["Self-Assured"],
+     "career": "",
+     "school": "Grade school · grade B",
+     "skills": [
+      ["Social", 3, 10],
+      ["Mental", 2, 10]
+     ],
+     "parents": ["supriya-delgato", "justin-delgato"]
+    },
+    {
+     "id": "blue",
+     "name": "Blue",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Adult",
+     "state": "Dog",
+     "aspiration": "Successful Lineage",
+     "bonus": "Domestic",
+     "career": ""
+    },
+    {
+     "id": "bartholomew-a-bittlebun-sr",
+     "name": "Bartholomew A. Bittlebun, Sr.",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Adult",
+     "state": "Cat",
+     "aspiration": "Party Animal",
+     "bonus": "Gregarious",
+     "career": ""
+    }
+   ]
+  },
+  "Hecking": {
+   "sims": [
+    {
+     "id": "brant-hecking",
+     "name": "Brant Hecking",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "The Curator",
+     "traits": ["Loves Outdoors", "Art Lover", "Good"],
+     "bonus": "Collector",
+     "career": "Athlete · Personal Trainer (level 5)",
+     "skills": [
+      ["Charisma", 4, 10],
+      ["Fitness", 4, 10],
+      ["Mixology", 3, 10],
+      ["Photography", 2, 5]
+     ],
+     "partners": [
+      ["brent-hecking", "Partner"]
+     ]
+    },
+    {
+     "id": "brent-hecking",
+     "name": "Brent Hecking",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Painter Extraordinaire",
+     "traits": ["Goofball", "Romantic", "Dog Lover"],
+     "bonus": "Muser",
+     "career": "Painter · Watercolor Dabbler (level 4)",
+     "skills": [
+      ["Fitness", 3, 10],
+      ["Painting", 4, 10],
+      ["Handiness", 3, 10],
+      ["Pet Training", 2, 5]
+     ],
+     "partners": [
+      ["brant-hecking", "Partner"]
+     ]
+    },
+    {
+     "id": "rosie",
+     "name": "Rosie",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Adult",
+     "state": "Dog",
+     "aspiration": "Musical Genius",
+     "bonus": "Muser",
+     "career": ""
+    }
+   ]
+  },
+  "Lynx": {
+   "sims": [
+    {
+     "id": "catarina-lynx",
+     "name": "Catarina Lynx",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Friend of the Animals",
+     "traits": ["Bookworm", "Foodie", "Cat Lover"],
+     "bonus": "Animal Affection",
+     "career": "Culinary · Caterer (level 3)",
+     "skills": [
+      ["Gardening", 4, 10],
+      ["Fishing", 3, 10],
+      ["Cooking", 3, 10]
+     ]
+    },
+    {
+     "id": "doc",
+     "name": "Doc",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Elder",
+     "state": "Cat",
+     "aspiration": "Public Enemy",
+     "bonus": "Dastardly",
+     "career": ""
+    },
+    {
+     "id": "josie",
+     "name": "Josie",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Adult",
+     "state": "Cat",
+     "aspiration": "Joke Star",
+     "bonus": "Gregarious",
+     "career": ""
+    },
+    {
+     "id": "cleo",
+     "name": "Cleo",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Adult",
+     "state": "Cat",
+     "aspiration": "Fabulously Wealthy",
+     "bonus": "Business Savvy",
+     "career": ""
+    },
+    {
+     "id": "bartholomew-a-bittlebun-jr",
+     "name": "Bartholomew A. Bittlebun, Jr.",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Child",
+     "state": "Cat",
+     "aspiration": "Rambunctious Scamp",
+     "career": "",
+     "parents": ["josie"]
+    }
+   ]
+  }
+ }
 }

@@ -65,6 +65,220 @@
  "households": {
   "Cecilia Kang": {
    "single": true
+  },
+  "Moody & McMillan": {
+   "sims": [
+    {
+     "id": "ian-moody",
+     "name": "Ian Moody",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Elder",
+     "aspiration": "Friend of the World",
+     "traits": ["Outgoing", "Foodie", "Goofball"],
+     "bonus": "Gregarious",
+     "career": "",
+     "skills": [
+      ["Charisma", 8, 10],
+      ["Comedy", 5, 10],
+      ["Handiness", 2, 10],
+      ["Mischief", 2, 10],
+      ["Piano", 5, 10],
+      ["Dancing", 3, 5],
+      ["Singing", 6, 10],
+      ["Acting", 4, 10]
+     ],
+     "rels": [
+      ["Sara Scott", "Acquaintances"],
+      ["Rahmi Watson", "Acquaintances"]
+     ],
+     "partners": [
+      ["derek-mcmillan", "Spouse"]
+     ]
+    },
+    {
+     "id": "derek-mcmillan",
+     "name": "Derek McMillan",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Elder",
+     "aspiration": "Bestselling Author",
+     "traits": ["Neat", "Bookworm", "Animal Enthusiast"],
+     "bonus": "Muser",
+     "career": "",
+     "skills": [
+      ["Cross-stitch", 4, 5],
+      ["Cooking", 9, 10],
+      ["Gourmet Cooking", 5, 10],
+      ["Writing", 6, 10],
+      ["Gardening", 6, 10],
+      ["Herbalism", 5, 10],
+      ["Pet Training", 5, 5],
+      ["Vampire Lore", 2, 15]
+     ],
+     "partners": [
+      ["ian-moody", "Spouse"]
+     ]
+    }
+   ]
+  },
+  "The Scotts": {
+   "sims": [
+    {
+     "id": "sara-scott",
+     "name": "Sara Scott",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Party Animal",
+     "traits": ["Outgoing", "Cheerful", "Self-Assured"],
+     "bonus": "Gregarious",
+     "career": "Pub Owner · Pub Owner (level 1)",
+     "skills": [
+      ["Mixology", 10, 10],
+      ["Charisma", 6, 10],
+      ["Fitness", 5, 10],
+      ["Video Gaming", 2, 10],
+      ["Flower Arranging", 3, 10]
+     ],
+     "rels": [
+      ["Ian Moody", "Acquaintances"]
+     ],
+     "partners": [
+      ["simon-scott", "Spouse"]
+     ]
+    },
+    {
+     "id": "simon-scott",
+     "name": "Simon Scott",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Big Happy Family",
+     "traits": ["Goofball", "Clumsy", "Family-Oriented"],
+     "bonus": "Domestic",
+     "career": "",
+     "skills": [
+      ["Mixology", 3, 10],
+      ["Cooking", 5, 10],
+      ["Charisma", 6, 10],
+      ["Dancing", 3, 5],
+      ["Comedy", 2, 10]
+     ],
+     "rels": [
+      ["Thomas Watson", "Acquaintances"]
+     ],
+     "partners": [
+      ["sara-scott", "Spouse"]
+     ]
+    }
+   ]
+  },
+  "The Watsons": {
+   "sims": [
+    {
+     "id": "imran-watson",
+     "name": "Imran Watson",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Child",
+     "aspiration": "Artistic Prodigy",
+     "traits": ["Animal Enthusiast"],
+     "career": "",
+     "school": "Grade school · grade C",
+     "skills": [
+      ["Creativity", 5, 10],
+      ["Mental", 2, 10],
+      ["Motor", 2, 10]
+     ],
+     "parents": ["thomas-watson", "rahmi-watson"]
+    },
+    {
+     "id": "maira-watson",
+     "name": "Maira Watson",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Child",
+     "aspiration": "Rambunctious Scamp",
+     "traits": ["Active"],
+     "career": "",
+     "school": "Grade school · grade B",
+     "skills": [
+      ["Motor", 7, 10],
+      ["Social", 5, 10],
+      ["Mental", 2, 10]
+     ],
+     "parents": ["thomas-watson", "rahmi-watson"]
+    },
+    {
+     "id": "rahmi-watson",
+     "name": "Rahmi Watson",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "The Curator",
+     "traits": ["Loves Outdoors", "Romantic", "Perfectionist"],
+     "bonus": "Collector",
+     "career": "Style Influencer · Consignment Commentator (level 2)",
+     "skills": [
+      ["Gardening", 6, 10],
+      ["Comedy", 2, 10],
+      ["Cooking", 8, 10],
+      ["Gourmet Cooking", 3, 10],
+      ["Parenting", 6, 10]
+     ],
+     "rels": [
+      ["Thomas Watson", "Partner"],
+      ["Ian Moody", "Acquaintances"]
+     ],
+     "partners": [
+      ["thomas-watson", "Spouse"]
+     ]
+    },
+    {
+     "id": "rashidah-watson",
+     "name": "Rashidah Watson",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Teen",
+     "aspiration": "Soulmate",
+     "traits": ["Gloomy", "Lactose Intolerant"],
+     "bonus": "Alluring",
+     "career": "Babysitter · Baby Sitter (level 1)",
+     "skills": [
+      ["Cooking", 2, 10],
+      ["Mischief", 3, 10],
+      ["Video Gaming", 3, 10],
+      ["Writing", 2, 10]
+     ],
+     "parents": ["thomas-watson", "rahmi-watson"]
+    },
+    {
+     "id": "thomas-watson",
+     "name": "Thomas Watson",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Country Caretaker",
+     "traits": ["Hot-Headed", "Active", "Materialistic"],
+     "bonus": "Collector",
+     "career": "",
+     "skills": [
+      ["Fitness", 6, 10],
+      ["Gardening", 6, 10],
+      ["Violin", 2, 10],
+      ["Singing", 3, 10],
+      ["Parenting", 2, 10]
+     ],
+     "rels": [
+      ["Rahmi Watson", "Partner"],
+      ["Simon Scott", "Acquaintances"]
+     ],
+     "partners": [
+      ["rahmi-watson", "Spouse"]
+     ]
+    }
+   ]
   }
  }
 }

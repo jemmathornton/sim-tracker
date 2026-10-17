@@ -2,7 +2,8 @@
  "name": "Sulani",
  "pack": "Island Living",
  "owned": true,
- "colour": "#DDBC34", "heroY": 25,
+ "colour": "#DDBC34",
+ "heroY": 25,
  "deep": ["#4A3E08", "#6C5B0E"],
  "blurb": "The gorgeous Sulani island chain welcomes all to a life of blue oceans and friendly neighbours. The main islands show off the many walks of life from the community centred Ohan'ali Town, to the more lavish upscale Lani St. Taz, and even down to the seemingly vacant Mua Pel'am. All around is the beauty of nature no matter where you look.",
  "neighbourhoods": [
@@ -61,5 +62,215 @@
    "name": "Local Culture",
    "text": "Meet new friends and learn about local culture at various local events in Ohan’ali Town"
   }
- ]
+ ],
+ "households": {
+  "Hoapili": {
+   "sims": [
+    {
+     "id": "keala-hoapili",
+     "name": "Keala Hoapili",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Elder",
+     "aspiration": "Freelance Botanist",
+     "traits": ["Erratic", "Hot-Headed", "Child of the Islands"],
+     "bonus": "Collector",
+     "career": "",
+     "skills": [
+      ["Cooking", 6, 10],
+      ["Gardening", 5, 10]
+     ]
+    },
+    {
+     "id": "lia-hauata",
+     "name": "Lia Hauata",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Renaissance Sim",
+     "traits": ["Gloomy", "Bookworm", "Perfectionist"],
+     "bonus": "Quick Learner",
+     "career": "Writer · Advice Columnist (level 4)",
+     "skills": [
+      ["Writing", 3, 10],
+      ["Guitar", 3, 10]
+     ]
+    }
+   ]
+  },
+  "Kahananui": {
+   "sims": [
+    {
+     "id": "alika-kahananui",
+     "name": "Alika Kahananui",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Fabulously Wealthy",
+     "traits": ["Self-Assured", "Snob", "Foodie"],
+     "bonus": "Business Savvy",
+     "career": "Business · Assistant Manager (level 4)",
+     "skills": [
+      ["Charisma", 4, 10],
+      ["Handiness", 4, 10],
+      ["Logic", 3, 10]
+     ],
+     "partners": [
+      ["mele-kahananui", "Partner"]
+     ]
+    },
+    {
+     "id": "mele-kahananui",
+     "name": "Mele Kahananui",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Mansion Baron",
+     "traits": ["Outgoing", "Neat", "Materialistic"],
+     "bonus": "Business Savvy",
+     "career": "Culinary · Line Cook (level 5)",
+     "skills": [
+      ["Cooking", 4, 10],
+      ["Gourmet Cooking", 2, 10],
+      ["Charisma", 2, 10]
+     ],
+     "partners": [
+      ["alika-kahananui", "Partner"]
+     ]
+    }
+   ]
+  },
+  "Kealoha": {
+   "sims": [
+    {
+     "id": "makoa-kealoha",
+     "name": "Makoa Kealoha",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Successful Lineage",
+     "traits": ["Active", "Child of the Ocean", "Ambitious"],
+     "bonus": "Domestic",
+     "career": "Conservationist · Land Surveyor (level 3)",
+     "skills": [
+      ["Fishing", 6, 10],
+      ["Fitness", 4, 10],
+      ["Logic", 3, 10]
+     ],
+     "partners": [
+      ["lilliana-kealoha", "Partner"]
+     ]
+    },
+    {
+     "id": "lilliana-kealoha",
+     "name": "Lilliana Kealoha",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Big Happy Family",
+     "traits": ["Family-Oriented", "Good", "Cheerful"],
+     "bonus": "Domestic",
+     "career": "Culinary · Head Mixologist (level 6)",
+     "skills": [
+      ["Mixology", 5, 10],
+      ["Cooking", 3, 10],
+      ["Charisma", 3, 10]
+     ],
+     "partners": [
+      ["makoa-kealoha", "Partner"]
+     ]
+    },
+    {
+     "id": "duane-talla",
+     "name": "Duane Talla",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Teen",
+     "aspiration": "Angling Ace",
+     "traits": ["Goofball", "Bro"],
+     "bonus": "Collector",
+     "career": "Lifeguard · Wave Watcher (level 2)",
+     "skills": [
+      ["Fitness", 4, 10],
+      ["Fishing", 3, 10],
+      ["Mischief", 2, 10]
+     ]
+    },
+    {
+     "id": "nani-kealoha",
+     "name": "Nani Kealoha",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Toddler",
+     "aspiration": "Big Happy Family",
+     "traits": ["Charmer"],
+     "bonus": "Domestic",
+     "career": "",
+     "skills": [
+      ["Communication", 3, 5],
+      ["Movement", 2, 5],
+      ["Thinking", 2, 5]
+     ],
+     "parents": ["makoa-kealoha", "lilliana-kealoha"]
+    }
+   ]
+  },
+  "Ngata": {
+   "sims": [
+    {
+     "id": "oliana-ngata",
+     "name": "Oliana Ngata",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Bodybuilder",
+     "traits": ["Active", "Slob", "Jealous"],
+     "bonus": "High Metabolism",
+     "career": "Athlete · Personal Trainer (level 5)",
+     "skills": [
+      ["Fitness", 6, 10],
+      ["Handiness", 2, 10]
+     ],
+     "partners": [
+      ["leila-illes", "Spouse"]
+     ]
+    },
+    {
+     "id": "leila-illes",
+     "name": "Leila Illes",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Painter Extraordinaire",
+     "traits": ["Clumsy", "Loves Outdoors", "Creative"],
+     "bonus": "Muser",
+     "career": "Painter · Watercolor Dabbler (level 4)",
+     "skills": [
+      ["Painting", 4, 10],
+      ["Photography", 3, 5]
+     ],
+     "partners": [
+      ["oliana-ngata", "Spouse"]
+     ]
+    },
+    {
+     "id": "tane-ngata",
+     "name": "Tane Ngata",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Child",
+     "aspiration": "Whiz Kid",
+     "traits": ["Geek"],
+     "career": "",
+     "school": "Grade school · grade A",
+     "skills": [
+      ["Mental", 4, 10],
+      ["Motor", 2, 10],
+      ["Creativity", 2, 10]
+     ],
+     "parents": ["oliana-ngata"]
+    }
+   ]
+  }
+ }
 }

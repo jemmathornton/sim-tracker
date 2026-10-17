@@ -186,6 +186,86 @@
      ]
     }
    ]
+  },
+  "Bailey-Moon": {
+   "sims": [
+    {
+     "id": "thorne-bailey",
+     "name": "Thorne Bailey",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Chief of Mischief",
+     "traits": ["Active", "Music Lover", "Self-Assured"],
+     "bonus": "Dastardly",
+     "career": "Entertainer · Serious Musician (level 6)",
+     "skills": [
+      ["Guitar", 5, 10],
+      ["Piano", 3, 10],
+      ["Charisma", 3, 10],
+      ["Violin", 2, 10]
+     ],
+     "partners": [
+      ["octavia-moon", "Partner"]
+     ]
+    },
+    {
+     "id": "octavia-moon",
+     "name": "Octavia Moon",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Musical Genius",
+     "traits": ["Family-Oriented", "Good", "Creative"],
+     "bonus": "Muser",
+     "career": "Writer · Short Story Writer (level 6)",
+     "skills": [
+      ["Writing", 6, 10],
+      ["Comedy", 4, 10]
+     ],
+     "partners": [
+      ["thorne-bailey", "Partner"]
+     ]
+    },
+    {
+     "id": "orange-bailey-moon",
+     "name": "Orange Bailey-Moon",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Child",
+     "aspiration": "Social Butterfly",
+     "traits": ["Outgoing"],
+     "career": "",
+     "school": "Grade school · grade C",
+     "skills": [
+      ["Social", 6, 10],
+      ["Creativity", 4, 10],
+      ["Motor", 3, 10],
+      ["Mental", 2, 10]
+     ],
+     "parents": ["thorne-bailey", "octavia-moon"]
+    }
+   ]
+  },
+  "Ward": {
+   "sims": [
+    {
+     "id": "judith-ward",
+     "name": "Judith Ward",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Mansion Baron",
+     "traits": ["Materialistic", "Mean", "Snob"],
+     "bonus": "Business Savvy",
+     "career": "{M0.Actor}{F0.Actress} · Seasoned Thespian (level 8)",
+     "skills": [
+      ["Acting", 7, 10],
+      ["Gourmet Cooking", 5, 10],
+      ["Gardening", 3, 10]
+     ]
+    }
+   ]
   }
  }
 }

@@ -66,10 +66,449 @@
  ],
  "households": {
   "Aloisio Romualdo": {
-   "single": true
+   "single": true,
+   "sims": [
+    {
+     "id": "aloisio-romualdo",
+     "name": "Aloisio Romualdo",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Bodybuilder",
+     "traits": ["Self-Assured", "Kleptomaniac", "Loyal"],
+     "bonus": "High Metabolism",
+     "career": "Criminal · Minor Crimelord (level 5)",
+     "skills": [
+      ["Swordsmanship", 8, 10],
+      ["Mischief", 8, 10]
+     ]
+    }
+   ]
   },
   "Enzo Alto": {
-   "single": true
+   "single": true,
+   "sims": [
+    {
+     "id": "enzo-alto",
+     "name": "Enzo Alto",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Serial Romantic",
+     "traits": ["Hates Children", "Hot-Headed", "Jealous"],
+     "bonus": "Alluring",
+     "career": "Noble · Opulent Overseer (level 7)",
+     "skills": [
+      ["Swordsmanship", 9, 10],
+      ["Charisma", 3, 10],
+      ["Romance", 2, 10]
+     ],
+     "rels": [
+      ["Beatrice Capp", "Acquaintances"],
+      ["Virgilio Capp", "Acquaintances"],
+      ["Celeste Capp", "Acquaintances"],
+      ["Tybalt Capp", "Friends"]
+     ],
+     "dynasty": {
+      "name": "Alto",
+      "role": "head"
+     }
+    }
+   ]
+  },
+  "Abrantes": {
+   "sims": [
+    {
+     "id": "ermelinda-abrantes",
+     "name": "Ermelinda Abrantes",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Elder",
+     "aspiration": "Successful Lineage",
+     "traits": ["Ambitious", "Materialistic", "Hot-Headed"],
+     "bonus": "Domestic",
+     "career": "Noble · Admirable Aristocrat (level 6)",
+     "skills": [
+      ["Logic", 7, 10],
+      ["Swordsmanship", 5, 10],
+      ["Charisma", 8, 10]
+     ],
+     "rels": [
+      ["Cordelia Thebe V", "Disliked"],
+      ["Thiago Abrantes", "Acquaintances"],
+      ["Sofia Abrantes", "Friends"]
+     ],
+     "dynasty": {
+      "name": "Abrantes",
+      "role": "head"
+     }
+    },
+    {
+     "id": "sofia-abrantes",
+     "name": "Sofia Abrantes",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Teen",
+     "aspiration": "Neighborhood Confidante",
+     "traits": ["Loyal", "Cheerful"],
+     "bonus": "Gregarious",
+     "career": "",
+     "school": "High school · grade A",
+     "skills": [
+      ["Logic", 5, 10],
+      ["Swordsmanship", 5, 10],
+      ["Charisma", 8, 10]
+     ],
+     "rels": [
+      ["Ermelinda Abrantes", "Friends"],
+      ["Thiago Abrantes", "Good Friends"],
+      ["Cordelia Thebe V", "Acquaintances"]
+     ],
+     "parents": ["ermelinda-abrantes"],
+     "dynasty": {
+      "name": "Abrantes",
+      "role": "member"
+     }
+    }
+   ]
+  },
+  "Ananou": {
+   "sims": [
+    {
+     "id": "ekene-ananou",
+     "name": "Ekene Ananou",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Elder",
+     "aspiration": "Galactic Privateer",
+     "traits": ["Practice Makes Perfect", "Good", "Childish"],
+     "bonus": "Prepared Voyager",
+     "career": "",
+     "skills": [
+      ["Mischief", 6, 10],
+      ["Handiness", 10, 10],
+      ["Charisma", 4, 10],
+      ["Comedy", 6, 10]
+     ],
+     "rels": [
+      ["Afua Ananou", "Good Friends"],
+      ["Adekoya Darong", "Disliked"]
+     ]
+    },
+    {
+     "id": "afua-ananou",
+     "name": "Afua Ananou",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Child",
+     "aspiration": "Playtime Captain",
+     "traits": ["Self-Assured"],
+     "career": "",
+     "school": "Grade school · grade D",
+     "skills": [
+      ["Mischief", 7, 10],
+      ["Social", 2, 10]
+     ],
+     "rels": [
+      ["Ekene Ananou", "Good Friends"],
+      ["Adekoya Darong", "Acquaintances"]
+     ],
+     "parents": ["adekoya-darong"]
+    }
+   ]
+  },
+  "Capp": {
+   "sims": [
+    {
+     "id": "tybalt-capp",
+     "name": "Tybalt Capp",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Mansion Baron",
+     "traits": ["Ambitious", "Materialistic", "Snob"],
+     "bonus": "Business Savvy",
+     "career": "Noble · Respected Regent (level 9)",
+     "skills": [
+      ["Painting", 8, 10],
+      ["Piano", 6, 10],
+      ["Swordsmanship", 7, 10],
+      ["Charisma", 9, 10]
+     ],
+     "rels": [
+      ["Virgilio Capp", "Despised"],
+      ["Beatrice Capp", "Good Friends"],
+      ["Juliette Monty", "Despised"],
+      ["Romeo Monty", "Despised"],
+      ["Enzo Alto", "Friends"],
+      ["Dante Monty", "Acquaintances"]
+     ],
+     "dynasty": {
+      "name": "Capp",
+      "role": "head"
+     }
+    },
+    {
+     "id": "beatrice-capp",
+     "name": "Beatrice Capp",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Friend of the World",
+     "traits": ["Loyal", "Materialistic", "Snob"],
+     "bonus": "Gregarious",
+     "career": "Writer · Page Two Journalist (level 6)",
+     "skills": [
+      ["Painting", 6, 10],
+      ["Piano", 9, 10],
+      ["Swordsmanship", 7, 10],
+      ["Charisma", 9, 10],
+      ["Writing", 5, 10]
+     ],
+     "rels": [
+      ["Tybalt Capp", "Good Friends"],
+      ["Virgilio Capp", "Disliked"],
+      ["Celeste Capp", "Friends"],
+      ["Enzo Alto", "Acquaintances"]
+     ],
+     "parents": ["tybalt-capp"],
+     "dynasty": {
+      "name": "Capp",
+      "role": "member"
+     }
+    },
+    {
+     "id": "celeste-capp",
+     "name": "Celeste Capp",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Musical Genius",
+     "traits": ["Cheerful", "Art Lover", "Outgoing"],
+     "bonus": "Muser",
+     "career": "Entertainer · Serious Musician (level 6)",
+     "skills": [
+      ["Painting", 8, 10],
+      ["Piano", 6, 10],
+      ["Swordsmanship", 6, 10],
+      ["Charisma", 9, 10],
+      ["Guitar", 4, 10],
+      ["Video Gaming", 2, 10]
+     ],
+     "rels": [
+      ["Dante Monty", "Cousin"],
+      ["Beatrice Capp", "Friends"],
+      ["Enzo Alto", "Acquaintances"]
+     ],
+     "parents": ["tybalt-capp"],
+     "dynasty": {
+      "name": "Capp",
+      "role": "member"
+     }
+    },
+    {
+     "id": "virgilio-capp",
+     "name": "Virgilio Capp",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Chief of Mischief",
+     "traits": ["Geek", "Goofball", "Mean"],
+     "bonus": "Dastardly",
+     "career": "Business · Assistant to the Manager (level 3)",
+     "skills": [
+      ["Painting", 2, 10],
+      ["Piano", 2, 10],
+      ["Swordsmanship", 5, 10],
+      ["Charisma", 9, 10],
+      ["Mischief", 6, 10],
+      ["Logic", 2, 10]
+     ],
+     "rels": [
+      ["Tybalt Capp", "Despised"],
+      ["Beatrice Capp", "Disliked"],
+      ["Enzo Alto", "Acquaintances"]
+     ],
+     "parents": ["tybalt-capp"],
+     "dynasty": {
+      "name": "Capp",
+      "role": "member"
+     }
+    }
+   ]
+  },
+  "Darong": {
+   "sims": [
+    {
+     "id": "adekoya-darong",
+     "name": "Adekoya Darong",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Elder",
+     "aspiration": "Bestselling Author",
+     "traits": ["Bookworm", "Ambitious", "Perfectionist"],
+     "bonus": "Muser",
+     "career": "",
+     "skills": [
+      ["Writing", 10, 10],
+      ["Painting", 4, 10],
+      ["Swordsmanship", 8, 10],
+      ["Charisma", 9, 10]
+     ],
+     "rels": [
+      ["Ekene Ananou", "Disliked"],
+      ["Jawara Darong", "Acquaintances"],
+      ["Afua Ananou", "Acquaintances"],
+      ["Obi Darong", "Good Friends"]
+     ],
+     "dynasty": {
+      "name": "Darong",
+      "role": "head"
+     }
+    },
+    {
+     "id": "jawara-darong",
+     "name": "Jawara Darong",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Friend of the World",
+     "traits": ["Ambitious", "Good", "Family-Oriented"],
+     "bonus": "Gregarious",
+     "career": "Noble · Respected Regent (level 9)",
+     "skills": [
+      ["Writing", 8, 10],
+      ["Painting", 6, 10],
+      ["Swordsmanship", 8, 10],
+      ["Charisma", 9, 10]
+     ],
+     "rels": [
+      ["Adekoya Darong", "Acquaintances"],
+      ["Amarachi Darong", "Good Friends"]
+     ],
+     "parents": ["adekoya-darong"],
+     "dynasty": {
+      "name": "Darong",
+      "role": "member"
+     }
+    },
+    {
+     "id": "amarachi-darong",
+     "name": "Amarachi Darong",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Teen",
+     "aspiration": "Painter Extraordinaire",
+     "traits": ["Art Lover", "Creative"],
+     "bonus": "Muser",
+     "career": "",
+     "school": "High school · grade B",
+     "skills": [
+      ["Charisma", 5, 10],
+      ["Writing", 4, 10],
+      ["Painting", 9, 10],
+      ["Swordsmanship", 2, 10]
+     ],
+     "rels": [
+      ["Jawara Darong", "Good Friends"],
+      ["Obi Darong", "Friends"]
+     ],
+     "parents": ["jawara-darong"],
+     "dynasty": {
+      "name": "Darong",
+      "role": "member"
+     }
+    },
+    {
+     "id": "obi-darong",
+     "name": "Obi Darong",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Child",
+     "aspiration": "Whiz Kid",
+     "traits": ["Genius"],
+     "career": "",
+     "school": "Grade school · grade A",
+     "skills": [
+      ["Mental", 5, 10],
+      ["Video Gaming", 2, 10],
+      ["Logic", 2, 10]
+     ],
+     "rels": [
+      ["Amarachi Darong", "Friends"],
+      ["Adekoya Darong", "Good Friends"]
+     ],
+     "parents": ["jawara-darong"],
+     "dynasty": {
+      "name": "Darong",
+      "role": "member"
+     }
+    }
+   ]
+  },
+  "Thebe": {
+   "sims": [
+    {
+     "id": "cordelia-thebe-v",
+     "name": "Cordelia Thebe V",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "The Curator",
+     "traits": ["Loves Outdoors", "Materialistic", "Romantic"],
+     "bonus": "Collector",
+     "career": "Noble · Respected Regent (level 9)",
+     "skills": [
+      ["Fishing", 3, 10],
+      ["Handiness", 3, 10],
+      ["Swordsmanship", 8, 10],
+      ["Mischief", 4, 10],
+      ["Charisma", 9, 10],
+      ["Fitness", 6, 10],
+      ["Logic", 6, 10]
+     ],
+     "rels": [
+      ["Thiago Abrantes", "Good Friends"],
+      ["Ermelinda Abrantes", "Disliked"],
+      ["Sofia Abrantes", "Acquaintances"]
+     ],
+     "partners": [
+      ["thiago-abrantes", "Spouse"]
+     ],
+     "dynasty": {
+      "name": "Thebe",
+      "role": "head"
+     }
+    },
+    {
+     "id": "thiago-abrantes",
+     "name": "Thiago Abrantes",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Renaissance Sim",
+     "traits": ["Perfectionist", "Materialistic", "Loyal"],
+     "bonus": "Quick Learner",
+     "career": "Noble · Distinguished Dignitary (level 8)",
+     "skills": [
+      ["Logic", 7, 10],
+      ["Swordsmanship", 5, 10],
+      ["Charisma", 8, 10]
+     ],
+     "rels": [
+      ["Cordelia Thebe V", "Good Friends"],
+      ["Ermelinda Abrantes", "Acquaintances"],
+      ["Sofia Abrantes", "Good Friends"]
+     ],
+     "partners": [
+      ["cordelia-thebe-v", "Spouse"]
+     ],
+     "dynasty": {
+      "name": "Thebe",
+      "role": "member"
+     }
+    }
+   ]
   }
  }
 }

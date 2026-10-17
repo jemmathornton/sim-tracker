@@ -2,7 +2,8 @@
  "name": "Gibbi Point",
  "pack": "Adventure Awaits",
  "owned": true,
- "colour": "#2F7FB8", "heroY": 50,
+ "colour": "#2F7FB8",
+ "heroY": 50,
  "deep": ["#0F2A40", "#173D5C"],
  "blurb": "It's been many years since Gibbi Point experienced the Great Wave, a seismic event that carved out unique landmarks and created lush flora and fauna. Its many underground hot springs keep the waters tepid and inviting, allowing for swimming and water activities year-round.",
  "neighbourhoods": [
@@ -61,5 +62,221 @@
    "name": "Fluttery and Feathery",
    "text": "You'll want to fly over to Gibbi Point as fast as you can once you hear that it hosts many winged delights; from its unique butterfly and moth population to the storied Peculiar Plumbird, there's a flock-o-fun to be had here."
   }
- ]
+ ],
+ "households": {
+  "Addam Commune": {
+   "sims": [
+    {
+     "id": "jane-addam",
+     "name": "Jane Addam",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Master Mixologist",
+     "traits": ["Jealous", "Loyal", "Ambitious"],
+     "bonus": "Essence of Flavor",
+     "career": "",
+     "skills": [
+      ["Handiness", 3, 10],
+      ["Charisma", 3, 10],
+      ["Fitness", 2, 10],
+      ["Cooking", 8, 10],
+      ["Gourmet Cooking", 7, 10],
+      ["Mixology", 5, 10]
+     ],
+     "rels": [
+      ["Sara Chavez-Ralston", "Despised"]
+     ],
+     "partners": [
+      ["star-addam", "Spouse"]
+     ]
+    },
+    {
+     "id": "star-addam",
+     "name": "Star Addam",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Friend of the World",
+     "traits": ["Erratic", "Outgoing", "Ambitious"],
+     "bonus": "Gregarious",
+     "career": "",
+     "skills": [
+      ["Charisma", 7, 10],
+      ["Logic", 6, 10],
+      ["Fishing", 6, 10],
+      ["Piano", 7, 10]
+     ],
+     "partners": [
+      ["jane-addam", "Spouse"]
+     ]
+    },
+    {
+     "id": "skip-broke",
+     "name": "Skip Broke",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Fabulously Wealthy",
+     "traits": ["Active", "Slob", "Snob"],
+     "bonus": "Business Savvy",
+     "career": "Freelance Programmer · Freelance Programmer (level 1)",
+     "skills": [
+      ["Handiness", 5, 10],
+      ["Charisma", 7, 10],
+      ["Fitness", 7, 10],
+      ["Violin", 5, 10],
+      ["Gourmet Cooking", 8, 10],
+      ["Logic", 6, 10]
+     ],
+     "rels": [
+      ["Dustin Broke", "Friends"]
+     ]
+    },
+    {
+     "id": "agora-tchotchke",
+     "name": "Agora Tchotchke",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Public Enemy",
+     "traits": ["Gloomy", "Lazy", "Snob"],
+     "bonus": "Dastardly",
+     "career": "",
+     "skills": [
+      ["Fishing", 4, 10],
+      ["Charisma", 5, 10],
+      ["Cooking", 2, 10]
+     ]
+    }
+   ]
+  },
+  "Chavez-Ralston": {
+   "sims": [
+    {
+     "id": "nigel-chavez-ralston",
+     "name": "Nigel Chavez-Ralston",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Big Happy Family",
+     "traits": ["Active", "Family-Oriented", "Loves Outdoors"],
+     "bonus": "Domestic",
+     "career": "",
+     "skills": [
+      ["Papercraft", 4, 10],
+      ["Charisma", 8, 10],
+      ["Fishing", 5, 10],
+      ["Painting", 5, 10],
+      ["Guitar", 5, 10],
+      ["Archery", 5, 5],
+      ["Diving", 3, 5]
+     ],
+     "partners": [
+      ["sara-chavez-ralston", "Spouse"]
+     ]
+    },
+    {
+     "id": "sara-chavez-ralston",
+     "name": "Sara Chavez-Ralston",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Big Happy Family",
+     "traits": ["Family-Oriented", "Loves Outdoors", "Neat"],
+     "bonus": "Domestic",
+     "career": "Park Worker · Head Counselor (level 10)",
+     "skills": [
+      ["Handiness", 2, 10],
+      ["Painting", 4, 10],
+      ["Papercraft", 7, 10],
+      ["Gardening", 6, 10],
+      ["Charisma", 9, 10],
+      ["Logic", 8, 10],
+      ["Archery", 2, 5]
+     ],
+     "rels": [
+      ["Jane Addam", "Despised"]
+     ],
+     "partners": [
+      ["nigel-chavez-ralston", "Spouse"]
+     ]
+    },
+    {
+     "id": "aeris-chavez-ralston",
+     "name": "Aeris Chavez-Ralston",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Child",
+     "aspiration": "Artistic Prodigy",
+     "traits": ["Creative"],
+     "career": "",
+     "skills": [
+      ["Creativity", 4, 10]
+     ],
+     "rels": [
+      ["Dougie Perry", "Friends"]
+     ],
+     "parents": ["nigel-chavez-ralston", "sara-chavez-ralston"]
+    },
+    {
+     "id": "erin-chavez-ralston",
+     "name": "Erin Chavez-Ralston",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Child",
+     "aspiration": "Cool Kid on the Block",
+     "traits": ["Competitive"],
+     "career": "",
+     "skills": [
+      ["Social", 4, 10]
+     ],
+     "rels": [
+      ["Dougie Perry", "Friends"]
+     ],
+     "parents": ["nigel-chavez-ralston", "sara-chavez-ralston"]
+    }
+   ]
+  },
+  "Perry": {
+   "sims": [
+    {
+     "id": "freeda-perry",
+     "name": "Freeda Perry",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Elder",
+     "aspiration": "Bodybuilder",
+     "traits": ["Self-Assured", "Perfectionist", "Snob"],
+     "bonus": "High Metabolism",
+     "career": "",
+     "skills": [
+      ["Papercraft", 5, 10],
+      ["Piano", 9, 10],
+      ["Fitness", 6, 10],
+      ["Cooking", 8, 10],
+      ["Charisma", 8, 10],
+      ["Mixology", 6, 10]
+     ]
+    },
+    {
+     "id": "dougie-perry",
+     "name": "Dougie Perry",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Child",
+     "aspiration": "Whiz Kid",
+     "traits": ["Loner"],
+     "career": "",
+     "skills": [
+      ["Mental", 5, 10]
+     ],
+     "rels": [
+      ["Aeris Chavez-Ralston", "Friends"],
+      ["Erin Chavez-Ralston", "Friends"]
+     ]
+    }
+   ]
+  }
+ }
 }

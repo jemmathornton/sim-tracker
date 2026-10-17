@@ -2,7 +2,8 @@
  "name": "Chestnut Ridge",
  "pack": "Horse Ranch",
  "owned": true,
- "colour": "#8A5434", "heroY": 52,
+ "colour": "#8A5434",
+ "heroY": 52,
  "deep": ["#301B10", "#462818"],
  "blurb": "This community formed when several groups embraced their mutual connection to Horses and the land. The area soon became known as a hub for all things Equestrian, set against a beautiful and expansive landscape. Over time, the area became famous for another endeavor, as the rich soil brought in the new enterprise of Nectar Making.",
  "neighbourhoods": [
@@ -58,5 +59,186 @@
    "name": "Rare Fishing Spots",
    "text": "Find incredible fishing spots with some of the rarest fish you'll ever catch in your life! There's no better place to cast out a line and let yourself relax and unwind from the hustle and bustle of daily life."
   }
- ]
+ ],
+ "households": {
+  "Gooseman": {
+   "sims": [
+    {
+     "id": "duke-gooseman",
+     "name": "Duke Gooseman",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Adult",
+     "state": "Horse",
+     "aspiration": "Chief of Mischief",
+     "bonus": "Dastardly",
+     "career": "",
+     "skills": [
+      ["Agility", 10, 10],
+      ["Endurance", 10, 10],
+      ["Jumping", 8, 10],
+      ["Temperament", 10, 10]
+     ]
+    },
+    {
+     "id": "don-gooseman",
+     "name": "Don Gooseman",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Elder",
+     "aspiration": "Angling Ace",
+     "traits": ["Loner", "Loves Outdoors", "Horse Lover"],
+     "bonus": "Collector",
+     "career": "",
+     "skills": [
+      ["Horse Riding", 7, 10],
+      ["Fishing", 3, 10]
+     ],
+     "rels": [
+      ["Umber Grove", "Friends"],
+      ["Sienna Grove", "Best Friends"]
+     ]
+    }
+   ]
+  },
+  "The Grove Family": {
+   "sims": [
+    {
+     "id": "luna",
+     "name": "Luna",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Adult",
+     "state": "Horse",
+     "aspiration": "Soulmate",
+     "bonus": "Alluring",
+     "career": ""
+    },
+    {
+     "id": "umber-grove",
+     "name": "Umber Grove",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Big Happy Family",
+     "traits": ["Romantic", "Family-Oriented", "Neat"],
+     "bonus": "Domestic",
+     "career": "Freelance Artist · Freelance Artist (level 1)",
+     "skills": [
+      ["Guitar", 4, 10],
+      ["Gourmet Cooking", 4, 10],
+      ["Cooking", 6, 10]
+     ],
+     "rels": [
+      ["Wren Grove", "Good Friends"],
+      ["Sienna Grove", "Friends"],
+      ["Don Gooseman", "Friends"],
+      ["Juniper Grove", "Partner"]
+     ],
+     "partners": [
+      ["juniper-grove", "Spouse"]
+     ]
+    },
+    {
+     "id": "starbrite",
+     "name": "Starbrite",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Child",
+     "state": "Horse",
+     "aspiration": "Successful Lineage",
+     "bonus": "Domestic",
+     "career": "",
+     "parents": ["luna"]
+    },
+    {
+     "id": "juniper-grove",
+     "name": "Juniper Grove",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Freelance Botanist",
+     "traits": ["Horse Lover", "Rancher", "Active"],
+     "bonus": "Collector",
+     "career": "",
+     "skills": [
+      ["Fitness", 5, 10],
+      ["Gardening", 2, 10],
+      ["Handiness", 6, 10],
+      ["Horse Riding", 6, 10]
+     ],
+     "rels": [
+      ["Wren Grove", "Friends"],
+      ["Sienna Grove", "Best Friends"],
+      ["Umber Grove", "Partner"]
+     ],
+     "partners": [
+      ["umber-grove", "Spouse"]
+     ]
+    },
+    {
+     "id": "wren-grove",
+     "name": "Wren Grove",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Child",
+     "aspiration": "Rambunctious Scamp",
+     "traits": ["Loves Outdoors"],
+     "career": "",
+     "skills": [
+      ["Horse Riding", 7, 10]
+     ],
+     "rels": [
+      ["Sienna Grove", "Friends"],
+      ["Juniper Grove", "Friends"],
+      ["Umber Grove", "Good Friends"]
+     ],
+     "parents": ["umber-grove", "juniper-grove"]
+    }
+   ]
+  },
+  "Sienna & Flapjack": {
+   "sims": [
+    {
+     "id": "flapjack",
+     "name": "Flapjack",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Adult",
+     "state": "Horse",
+     "aspiration": "Successful Lineage",
+     "bonus": "Domestic",
+     "career": "",
+     "skills": [
+      ["Agility", 10, 10],
+      ["Endurance", 10, 10],
+      ["Jumping", 9, 10],
+      ["Temperament", 10, 10]
+     ]
+    },
+    {
+     "id": "sienna-grove",
+     "name": "Sienna Grove",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Championship Rider",
+     "traits": ["Horse Lover", "Loves Outdoors", "Outgoing"],
+     "bonus": "High Metabolism",
+     "career": "Horse Trainer · Horse Trainer (level 1)",
+     "skills": [
+      ["Horse Riding", 8, 10],
+      ["Charisma", 5, 10],
+      ["Fitness", 2, 10]
+     ],
+     "rels": [
+      ["Wren Grove", "Friends"],
+      ["Umber Grove", "Friends"],
+      ["Juniper Grove", "Best Friends"],
+      ["Don Gooseman", "Best Friends"]
+     ]
+    }
+   ]
+  }
+ }
 }

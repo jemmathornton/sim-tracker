@@ -100,6 +100,317 @@
  "households": {
   "Santiago Ojo": {
    "single": true
+  },
+  "Behr": {
+   "sims": [
+    {
+     "id": "yuki-behr",
+     "name": "Yuki Behr",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Teen",
+     "aspiration": "Computer Whiz",
+     "traits": ["Loner", "Geek"],
+     "bonus": "Quick Learner",
+     "career": "",
+     "school": "High school · grade C",
+     "skills": [
+      ["Video Gaming", 6, 10]
+     ],
+     "rels": [
+      ["Gunther Munch", "Friends"],
+      ["Maaike Haas", "Friends"]
+     ],
+     "clubs": [
+      {
+       "name": "Avant Gardes",
+       "role": "member"
+      },
+      {
+       "name": "Knights of the Hedge",
+       "role": "member"
+      }
+     ]
+    },
+    {
+     "id": "candy-behr",
+     "name": "Candy Behr",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Party Animal",
+     "traits": ["Music Lover", "Outgoing", "Cheerful"],
+     "bonus": "Gregarious",
+     "career": "Entertainer · Open Mic Seeker (level 2)",
+     "skills": [
+      ["Dancing", 5, 5],
+      ["DJ Mixing", 6, 10]
+     ],
+     "rels": [
+      ["Dominic Fyres", "Friends"]
+     ],
+     "clubs": [
+      {
+       "name": "Spin Masters",
+       "role": "member"
+      }
+     ]
+    }
+   ]
+  },
+  "Benali": {
+   "sims": [
+    {
+     "id": "salim-benali",
+     "name": "Salim Benali",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Bestselling Author",
+     "traits": ["Lazy", "Creative", "Bookworm"],
+     "bonus": "Muser",
+     "career": "Writer · Blogger (level 2)",
+     "skills": [
+      ["Writing", 8, 10],
+      ["Cooking", 3, 10],
+      ["Video Gaming", 4, 10]
+     ]
+    }
+   ]
+  },
+  "Bheeda": {
+   "sims": [
+    {
+     "id": "arun-bheeda",
+     "name": "Arun Bheeda",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Fabulously Wealthy",
+     "traits": ["Family-Oriented", "Ambitious", "Vegetarian"],
+     "bonus": "Business Savvy",
+     "career": "Tech Guru · Quality Assurance (level 2)",
+     "skills": [
+      ["Programming", 5, 10],
+      ["Writing", 4, 10],
+      ["Video Gaming", 4, 10]
+     ],
+     "partners": [
+      ["jesminder-bheeda", "Partner"]
+     ]
+    },
+    {
+     "id": "jesminder-bheeda",
+     "name": "Jesminder Bheeda",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Master Mixologist",
+     "traits": ["Vegetarian", "Hot-Headed", "Romantic"],
+     "bonus": "Essence of Flavor",
+     "career": "Culinary · Head Mixologist (level 6)",
+     "skills": [
+      ["Painting", 5, 10],
+      ["Cooking", 6, 10],
+      ["Mixology", 7, 10]
+     ],
+     "partners": [
+      ["arun-bheeda", "Partner"]
+     ]
+    }
+   ]
+  },
+  "Jang": {
+   "sims": [
+    {
+     "id": "anaya-jang",
+     "name": "Anaya Jang",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Painter Extraordinaire",
+     "traits": ["Art Lover", "Music Lover", "Romantic"],
+     "bonus": "Muser",
+     "career": "Painter · Illustrious Illustrator (level 9)",
+     "skills": [
+      ["Singing", 5, 10],
+      ["Guitar", 4, 10],
+      ["Painting", 5, 10]
+     ],
+     "partners": [
+      ["baako-jang", "Partner"]
+     ]
+    },
+    {
+     "id": "baako-jang",
+     "name": "Baako Jang",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Joke Star",
+     "traits": ["Music Lover", "Goofball", "Family-Oriented"],
+     "bonus": "Gregarious",
+     "career": "Entertainer · Stand Up Star (level 9)",
+     "skills": [
+      ["Piano", 4, 10],
+      ["Guitar", 4, 10],
+      ["Charisma", 5, 10]
+     ],
+     "partners": [
+      ["anaya-jang", "Partner"]
+     ]
+    },
+    {
+     "id": "billie-jang",
+     "name": "Billie Jang",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Child",
+     "aspiration": "Social Butterfly",
+     "traits": ["Goofball"],
+     "career": "",
+     "school": "Grade school · grade A",
+     "parents": ["anaya-jang", "baako-jang"]
+    }
+   ]
+  },
+  "Jeong": {
+   "sims": [
+    {
+     "id": "venessa-jeong",
+     "name": "Venessa Jeong",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "World-Famous Celebrity",
+     "traits": ["Neat", "Cheerful", "Ambitious"],
+     "bonus": "Gregarious",
+     "career": "{M0.Actor}{F0.Actress} · Commercial Spokesperson (level 3)",
+     "skills": [
+      ["Acting", 3, 10],
+      ["Mixology", 4, 10]
+     ]
+    }
+   ]
+  },
+  "Lobo": {
+   "sims": [
+    {
+     "id": "diego-lobo",
+     "name": "Diego Lobo",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Fabulously Wealthy",
+     "traits": ["Art Lover", "Hot-Headed", "Snob"],
+     "bonus": "Business Savvy",
+     "career": "Critic · Cultural Connoisseur (level 7)",
+     "skills": [
+      ["Comedy", 8, 10],
+      ["Gourmet Cooking", 5, 10],
+      ["Writing", 5, 10]
+     ]
+    }
+   ]
+  },
+  "Pizzazz": {
+   "sims": [
+    {
+     "id": "penny-pizzazz",
+     "name": "Penny Pizzazz",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "City Native",
+     "traits": ["Ambitious", "Romantic", "Outgoing"],
+     "bonus": "Home Turf",
+     "career": "Social Media · Online A-Lister (level 8)",
+     "skills": [
+      ["Comedy", 6, 10],
+      ["Programming", 5, 10],
+      ["Cooking", 7, 10],
+      ["Video Gaming", 7, 10],
+      ["Charisma", 8, 10]
+     ]
+    }
+   ]
+  },
+  "Rasoya": {
+   "sims": [
+    {
+     "id": "raj-rasoya",
+     "name": "Raj Rasoya",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Big Happy Family",
+     "traits": ["Slob", "Foodie", "Unflirty"],
+     "bonus": "Domestic",
+     "career": "Culinary · Pastry Chef (level 7)",
+     "skills": [
+      ["Cooking", 10, 10],
+      ["Gourmet Cooking", 7, 10]
+     ],
+     "parents": ["geeta-rasoya"]
+    },
+    {
+     "id": "geeta-rasoya",
+     "name": "Geeta Rasoya",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Elder",
+     "aspiration": "Successful Lineage",
+     "traits": ["Family-Oriented", "Snob", "Self-Assured"],
+     "bonus": "Domestic",
+     "career": "Critic · Food Stall Frequenter (level 5)",
+     "skills": [
+      ["Gardening", 3, 10],
+      ["Writing", 6, 10],
+      ["Cooking", 8, 10]
+     ]
+    }
+   ]
+  },
+  "Feng": {
+   "sims": [
+    {
+     "id": "lily-feng",
+     "name": "Lily Feng",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Mansion Baron",
+     "traits": ["Unflirty", "Hates Children", "Genius"],
+     "bonus": "Business Savvy",
+     "career": "Business · CEO (level 9)",
+     "skills": [
+      ["Violin", 3, 10],
+      ["Logic", 9, 10],
+      ["Mischief", 2, 10]
+     ],
+     "partners": [
+      ["victor-feng", "Partner"]
+     ]
+    },
+    {
+     "id": "victor-feng",
+     "name": "Victor Feng",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Fabulously Wealthy",
+     "traits": ["Perfectionist", "Materialistic", "Genius"],
+     "bonus": "Business Savvy",
+     "career": "Politician · Representative (level 8)",
+     "skills": [
+      ["Logic", 6, 10],
+      ["Charisma", 7, 10]
+     ],
+     "partners": [
+      ["lily-feng", "Partner"]
+     ]
+    }
+   ]
   }
  }
 }

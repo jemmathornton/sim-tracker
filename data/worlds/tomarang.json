@@ -2,7 +2,8 @@
  "name": "Tomarang",
  "pack": "For Rent",
  "owned": true,
- "colour": "#2C8A78", "heroY": 40,
+ "colour": "#2C8A78",
+ "heroY": 40,
  "deep": ["#0F332C", "#164A40"],
  "blurb": "Grown from humble roots off the coast of Shih Sea, Tomarang is lively with local fare, community chaos, and legends of lore. Known for its tight-knit communities and sun-filled shared spaces, Tomarang is a lush landscape of possibilities.",
  "neighbourhoods": [
@@ -46,5 +47,109 @@
    "name": "Rich History",
    "text": "Dive into the lore of the land and discover hidden secrets, historical battles, and legendary tails."
   }
- ]
+ ],
+ "households": {
+  "Bun Ma": {
+   "sims": [
+    {
+     "id": "bua-bun-ma",
+     "name": "Bua Bun Ma",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Elder",
+     "aspiration": "The Curator",
+     "traits": ["Wise", "Noncommittal", "Music Lover"],
+     "bonus": "Collector",
+     "career": "",
+     "rels": [
+      ["Nin Bun Ma", "Acquaintances"]
+     ]
+    },
+    {
+     "id": "kasem-bun-ma",
+     "name": "Kasem Bun Ma",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Big Happy Family",
+     "traits": ["Cheerful", "Family-Oriented", "Perfectionist"],
+     "bonus": "Domestic",
+     "career": "Tech Guru · Independent Consultant (level 8)",
+     "skills": [
+      ["Programming", 8, 10],
+      ["Charisma", 3, 10]
+     ],
+     "parents": ["bua-bun-ma"],
+     "partners": [
+      ["nin-bun-ma", "Spouse"]
+     ]
+    },
+    {
+     "id": "nin-bun-ma",
+     "name": "Nin Bun Ma",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Fount of Tomarani Knowledge",
+     "traits": ["Child of the Village", "Bookworm", "Romantic"],
+     "bonus": "Home Turf",
+     "career": "Athlete · Personal Trainer (level 5)",
+     "skills": [
+      ["Charisma", 4, 10],
+      ["Fitness", 7, 10]
+     ],
+     "rels": [
+      ["Bua Bun Ma", "Acquaintances"]
+     ],
+     "partners": [
+      ["kasem-bun-ma", "Spouse"]
+     ]
+    },
+    {
+     "id": "sud-bun-ma",
+     "name": "Sud Bun Ma",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Toddler",
+     "aspiration": "Good Vampire",
+     "traits": ["Clingy"],
+     "bonus": "Gregarious",
+     "career": "",
+     "parents": ["kasem-bun-ma", "nin-bun-ma"]
+    }
+   ]
+  },
+  "Cahyaputri": {
+   "sims": [
+    {
+     "id": "vanesha-cahyaputri",
+     "name": "Vanesha Cahyaputri",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Five-Star Property Owner",
+     "traits": ["Child of the Village", "Good", "Creative"],
+     "bonus": "Business Savvy",
+     "career": "Barista · Bean Blender (level 2)",
+     "rels": [
+      ["Zhafira Cahyaputri", "Disliked"]
+     ]
+    },
+    {
+     "id": "zhafira-cahyaputri",
+     "name": "Zhafira Cahyaputri",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Teen",
+     "aspiration": "Seeker of Secrets",
+     "traits": ["Nosy", "Clumsy"],
+     "bonus": "Dastardly",
+     "career": "Babysitter · Baby Sitter (level 1)",
+     "rels": [
+      ["Vanesha Cahyaputri", "Disliked"]
+     ]
+    }
+   ]
+  }
+ }
 }

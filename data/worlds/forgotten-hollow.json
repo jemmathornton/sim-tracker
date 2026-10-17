@@ -2,7 +2,8 @@
  "name": "Forgotten Hollow",
  "pack": "Vampires",
  "owned": false,
- "colour": "#6A4A6E", "heroY": 40,
+ "colour": "#6A4A6E",
+ "heroY": 40,
  "deep": null,
  "blurb": "",
  "neighbourhoods": [
@@ -31,5 +32,61 @@
    "name": "Unique Flora",
    "text": "Rare plants like Plasmafruit and the Sixam Mosquito Trap can be only found here"
   }
- ]
+ ],
+ "households": {
+  "Straud": {
+   "sims": [
+    {
+     "id": "vladislaus-straud",
+     "name": "Vladislaus Straud",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "state": "Vampire",
+     "aspiration": "Master Vampire",
+     "traits": ["Evil", "Music Lover", "Loner"],
+     "bonus": "Quick Learner",
+     "career": "",
+     "skills": [
+      ["Charisma", 8, 10],
+      ["Pipe Organ", 10, 10]
+     ]
+    }
+   ]
+  },
+  "Vatore": {
+   "sims": [
+    {
+     "id": "lilith-vatore",
+     "name": "Lilith Vatore",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "state": "Vampire",
+     "aspiration": "Vampire Family",
+     "traits": ["Outgoing", "Creative", "Active"],
+     "bonus": "Domestic",
+     "career": "",
+     "rels": [
+      ["Lily Zhu", "Friends"]
+     ]
+    },
+    {
+     "id": "caleb-vatore",
+     "name": "Caleb Vatore",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "state": "Vampire",
+     "aspiration": "Good Vampire",
+     "traits": ["Foodie", "Ambitious", "Materialistic"],
+     "bonus": "Gregarious",
+     "career": "",
+     "rels": [
+      ["Lily Zhu", "Friends"]
+     ]
+    }
+   ]
+  }
+ }
 }

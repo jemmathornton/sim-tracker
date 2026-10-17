@@ -2,7 +2,8 @@
  "name": "Tartosa",
  "pack": "My Wedding Stories",
  "owned": false,
- "colour": "#B86A6A", "heroY": 35,
+ "colour": "#B86A6A",
+ "heroY": 35,
  "deep": null,
  "blurb": "",
  "neighbourhoods": [
@@ -41,5 +42,311 @@
    "name": "Local History",
    "text": "Word travels fast through Tartosa's Grapevine, and myths and legends about the area's history abound."
   }
- ]
+ ],
+ "households": {
+  "Laurent": {
+   "sims": [
+    {
+     "id": "greta-laurent",
+     "name": "Greta Laurent",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Teen",
+     "aspiration": "Freelance Botanist",
+     "traits": ["Gloomy", "Loves Outdoors"],
+     "bonus": "Collector",
+     "career": "",
+     "school": "High school · grade A",
+     "skills": [
+      ["Painting", 10, 10],
+      ["Handiness", 6, 10]
+     ],
+     "parents": ["hector-laurent", "hilary-laurent"]
+    },
+    {
+     "id": "hector-laurent",
+     "name": "Hector Laurent",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Master Mixologist",
+     "traits": ["Cheerful", "Outgoing", "Family-Oriented"],
+     "bonus": "Essence of Flavor",
+     "career": "",
+     "skills": [
+      ["Mixology", 3, 10],
+      ["DJ Mixing", 5, 10],
+      ["Parenting", 6, 10],
+      ["Dancing", 3, 5]
+     ],
+     "rels": [
+      ["Lucia Markovic", "Broken Up"]
+     ],
+     "parents": ["arnessa-thebe"],
+     "partners": [
+      ["hilary-laurent", "Spouse"]
+     ]
+    },
+    {
+     "id": "hilary-laurent",
+     "name": "Hilary Laurent",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Master Chef",
+     "traits": ["Foodie", "Romantic", "Active"],
+     "bonus": "Essence of Flavor",
+     "career": "Culinary · Caterer (level 3)",
+     "skills": [
+      ["Gourmet Cooking", 7, 10],
+      ["Baking", 5, 10],
+      ["Comedy", 2, 10],
+      ["Cooking", 5, 10]
+     ],
+     "rels": [
+      ["Lucia Markovic", "Good Friends"]
+     ],
+     "partners": [
+      ["hector-laurent", "Spouse"]
+     ]
+    },
+    {
+     "id": "jace-laurent",
+     "name": "Jace Laurent",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Child",
+     "aspiration": "Social Butterfly",
+     "traits": ["Cheerful"],
+     "career": "",
+     "school": "Grade school · grade C",
+     "skills": [
+      ["Mental", 5, 10],
+      ["Motor", 2, 10],
+      ["Social", 3, 10]
+     ],
+     "parents": ["hector-laurent", "hilary-laurent"]
+    },
+    {
+     "id": "arnessa-thebe",
+     "name": "Arnessa Thebe",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Elder",
+     "aspiration": "Successful Lineage",
+     "traits": ["Loner", "Bookworm", "Music Lover"],
+     "bonus": "Domestic",
+     "career": "",
+     "skills": [
+      ["Painting", 5, 10],
+      ["Piano", 8, 10]
+     ],
+     "rels": [
+      ["Mateo Markovic", "Disliked"]
+     ]
+    }
+   ]
+  },
+  "Markovic": {
+   "sims": [
+    {
+     "id": "mateo-markovic",
+     "name": "Mateo Markovic",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Big Happy Family",
+     "traits": ["Loves Outdoors", "Goofball", "Romantic"],
+     "bonus": "Domestic",
+     "career": "Entertainer · Professional Pianist (level 7)",
+     "skills": [
+      ["Piano", 7, 10],
+      ["Singing", 5, 10],
+      ["Fishing", 6, 10]
+     ],
+     "rels": [
+      ["Arnessa Thebe", "Disliked"],
+      ["Camille Soto", "Good Friends"]
+     ],
+     "partners": [
+      ["lucia-markovic", "Engaged"]
+     ]
+    },
+    {
+     "id": "lucia-markovic",
+     "name": "Lucia Markovic",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Musical Genius",
+     "traits": ["Ambitious", "Music Lover", "Outgoing"],
+     "bonus": "Muser",
+     "career": "Entertainer · Professional Pianist (level 7)",
+     "skills": [
+      ["Guitar", 5, 10],
+      ["Singing", 6, 10],
+      ["Baking", 5, 10]
+     ],
+     "rels": [
+      ["Hector Laurent", "Broken Up"],
+      ["Hilary Laurent", "Good Friends"]
+     ],
+     "partners": [
+      ["mateo-markovic", "Engaged"]
+     ]
+    },
+    {
+     "id": "tomi-markovic",
+     "name": "Tomi Markovic",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Child",
+     "aspiration": "Artistic Prodigy",
+     "traits": ["Creative"],
+     "career": "",
+     "school": "Grade school · grade D",
+     "skills": [
+      ["Creativity", 5, 10],
+      ["Mental", 3, 10],
+      ["Motor", 5, 10]
+     ],
+     "parents": ["mateo-markovic", "lucia-markovic"]
+    }
+   ]
+  },
+  "Soto": {
+   "sims": [
+    {
+     "id": "camille-soto",
+     "name": "Camille Soto",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Elder",
+     "aspiration": "Bestselling Author",
+     "traits": ["Genius", "Romantic", "Creative"],
+     "bonus": "Muser",
+     "career": "",
+     "skills": [
+      ["Charisma", 5, 10],
+      ["Cross-stitch", 2, 5],
+      ["Writing", 6, 10],
+      ["Logic", 6, 10],
+      ["Gardening", 3, 10]
+     ],
+     "rels": [
+      ["Mateo Markovic", "Good Friends"]
+     ],
+     "partners": [
+      ["dominique-soto", "Spouse"]
+     ]
+    },
+    {
+     "id": "dominique-soto",
+     "name": "Dominique Soto",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Elder",
+     "aspiration": "Painter Extraordinaire",
+     "traits": ["Neat", "Bookworm", "Creative"],
+     "bonus": "Muser",
+     "career": "",
+     "skills": [
+      ["Dancing", 3, 5],
+      ["Cooking", 6, 10],
+      ["Painting", 8, 10],
+      ["Handiness", 2, 10]
+     ],
+     "partners": [
+      ["camille-soto", "Spouse"]
+     ]
+    }
+   ]
+  },
+  "Monty": {
+   "sims": [
+    {
+     "id": "juliette-monty",
+     "name": "Juliette Monty",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Mansion Baron",
+     "traits": ["Ambitious", "Family-Oriented", "Foodie"],
+     "bonus": "Business Savvy",
+     "career": "",
+     "skills": [
+      ["Charisma", 10, 10],
+      ["Swordsmanship", 6, 10],
+      ["Piano", 4, 10]
+     ],
+     "rels": [
+      ["Dante Monty", "Acquaintances"],
+      ["Tybalt Capp", "Despised"]
+     ],
+     "partners": [
+      ["romeo-monty", "Spouse"]
+     ],
+     "dynasty": {
+      "name": "Monty",
+      "role": "head"
+     }
+    },
+    {
+     "id": "romeo-monty",
+     "name": "Romeo Monty",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Soulmate",
+     "traits": ["Foodie", "Bro", "Outgoing"],
+     "bonus": "Alluring",
+     "career": "Culinary · Line Cook (level 5)",
+     "skills": [
+      ["Cooking", 10, 10],
+      ["Gourmet Cooking", 8, 10],
+      ["Mixology", 7, 10],
+      ["Video Gaming", 3, 10]
+     ],
+     "rels": [
+      ["Dante Monty", "Good Friends"],
+      ["Tybalt Capp", "Despised"]
+     ],
+     "partners": [
+      ["juliette-monty", "Spouse"]
+     ],
+     "dynasty": {
+      "name": "Monty",
+      "role": "member"
+     }
+    },
+    {
+     "id": "dante-monty",
+     "name": "Dante Monty",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Teen",
+     "aspiration": "Joke Star",
+     "traits": ["Goofball", "Good"],
+     "bonus": "Gregarious",
+     "career": "",
+     "school": "High school · grade C",
+     "skills": [
+      ["Cooking", 5, 10],
+      ["Video Gaming", 8, 10]
+     ],
+     "rels": [
+      ["Romeo Monty", "Good Friends"],
+      ["Juliette Monty", "Acquaintances"],
+      ["Celeste Capp", "Cousin"],
+      ["Tybalt Capp", "Acquaintances"]
+     ],
+     "parents": ["juliette-monty", "romeo-monty"],
+     "dynasty": {
+      "name": "Monty",
+      "role": "member"
+     }
+    }
+   ]
+  }
+ }
 }

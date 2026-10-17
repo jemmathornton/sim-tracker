@@ -69,7 +69,276 @@
  ],
  "households": {
   "Knox Greenburg": {
-   "single": true
+   "single": true,
+   "sims": [
+    {
+     "id": "knox-greenburg",
+     "name": "Knox Greenburg",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Freelance Botanist",
+     "traits": ["Loves Outdoors", "Green Fiend", "Recycle Disciple"],
+     "bonus": "Collector",
+     "career": "",
+     "skills": [
+      ["Fitness", 5, 10],
+      ["Gardening", 3, 10]
+     ],
+     "rels": [
+      ["Bess Sterling", "Disliked"],
+      ["Jules Rico", "Disliked"]
+     ],
+     "parents": ["mary-greenburg", "blossom-greenburg"]
+    }
+   ]
+  },
+  "Harris": {
+   "sims": [
+    {
+     "id": "cletus-harris",
+     "name": "Cletus Harris",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Big Happy Family",
+     "traits": ["Slob", "Family-Oriented", "Freegan"],
+     "bonus": "Domestic",
+     "career": "",
+     "skills": [
+      ["Fishing", 5, 10],
+      ["Guitar", 2, 10]
+     ],
+     "parents": ["francine-spencer"],
+     "partners": [
+      ["faye-harris", "Spouse"]
+     ]
+    },
+    {
+     "id": "faye-harris",
+     "name": "Faye Harris",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Master Chef",
+     "traits": ["Glutton", "Freegan", "Goofball"],
+     "bonus": "Essence of Flavor",
+     "career": "Culinary · Head Caterer (level 6)",
+     "skills": [
+      ["Cooking", 7, 10],
+      ["Gourmet Cooking", 4, 10],
+      ["Mixology", 4, 10]
+     ],
+     "rels": [
+      ["Yasemin Tinker", "Acquaintances"]
+     ],
+     "partners": [
+      ["cletus-harris", "Spouse"]
+     ]
+    },
+    {
+     "id": "jeb-harris",
+     "name": "Jeb Harris",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Teen",
+     "aspiration": "Bestselling Author",
+     "traits": ["Good", "Gloomy"],
+     "bonus": "Muser",
+     "career": "",
+     "skills": [
+      ["Piano", 4, 10],
+      ["Handiness", 3, 10]
+     ],
+     "parents": ["cletus-harris", "faye-harris"]
+    },
+    {
+     "id": "gideon-harris",
+     "name": "Gideon Harris",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Child",
+     "aspiration": "Social Butterfly",
+     "traits": ["Cheerful"],
+     "career": "",
+     "skills": [
+      ["Social", 5, 10]
+     ],
+     "rels": [
+      ["Olive Tinker", "Acquaintances"]
+     ],
+     "parents": ["cletus-harris", "faye-harris"]
+    },
+    {
+     "id": "francine-spencer",
+     "name": "Francine Spencer",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Elder",
+     "aspiration": "Master Maker",
+     "traits": ["Romantic", "Outgoing", "Noncommittal"],
+     "bonus": "Muser",
+     "career": "",
+     "skills": [
+      ["Charisma", 7, 10],
+      ["Mischief", 3, 10]
+     ],
+     "rels": [
+      ["Mary Greenburg", "Friends"],
+      ["Blossom Greenburg", "Friends"]
+     ]
+    }
+   ]
+  },
+  "Sterling Rico": {
+   "sims": [
+    {
+     "id": "bess-sterling",
+     "name": "Bess Sterling",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Eco Innovator",
+     "traits": ["Bro", "Cheerful", "Ambitious"],
+     "bonus": "Collector",
+     "career": "Civil Designer · Construction Technician (level 3)",
+     "skills": [
+      ["Logic", 5, 10],
+      ["Handiness", 3, 10],
+      ["Charisma", 6, 10],
+      ["Juice Fizzing", 4, 5]
+     ],
+     "rels": [
+      ["Knox Greenburg", "Disliked"]
+     ]
+    },
+    {
+     "id": "jules-rico",
+     "name": "Jules Rico",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Mansion Baron",
+     "traits": ["Materialistic", "Bro", "Ambitious"],
+     "bonus": "Business Savvy",
+     "career": "Style Influencer · Ensemble Author (level 4)",
+     "skills": [
+      ["Writing", 4, 10],
+      ["Photography", 2, 5],
+      ["Charisma", 3, 10]
+     ],
+     "rels": [
+      ["Knox Greenburg", "Disliked"]
+     ]
+    }
+   ]
+  },
+  "Tinker": {
+   "sims": [
+    {
+     "id": "tina-tinker",
+     "name": "Tina Tinker",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Master Maker",
+     "traits": ["Maker", "Gloomy", "Perfectionist"],
+     "bonus": "Muser",
+     "career": "Freelance Crafter · Freelance Crafter (level 1)",
+     "skills": [
+      ["Fabrication", 7, 10],
+      ["Handiness", 5, 10]
+     ],
+     "partners": [
+      ["yasemin-tinker", "Spouse"]
+     ]
+    },
+    {
+     "id": "yasemin-tinker",
+     "name": "Yasemin Tinker",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Bestselling Author",
+     "traits": ["Clumsy", "Bookworm", "Creative"],
+     "bonus": "Muser",
+     "career": "Freelance Writer · Freelance Writer (level 1)",
+     "skills": [
+      ["Writing", 8, 10],
+      ["Charisma", 3, 10]
+     ],
+     "rels": [
+      ["Faye Harris", "Acquaintances"]
+     ],
+     "partners": [
+      ["tina-tinker", "Spouse"]
+     ]
+    },
+    {
+     "id": "olive-tinker",
+     "name": "Olive Tinker",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Child",
+     "aspiration": "Whiz Kid",
+     "traits": ["Bookworm"],
+     "career": "",
+     "skills": [
+      ["Creativity", 4, 10],
+      ["Mental", 2, 10]
+     ],
+     "rels": [
+      ["Gideon Harris", "Acquaintances"]
+     ],
+     "parents": ["tina-tinker", "yasemin-tinker"]
+    }
+   ]
+  },
+  "Greenburg": {
+   "sims": [
+    {
+     "id": "mary-greenburg",
+     "name": "Mary Greenburg",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Elder",
+     "aspiration": "Freelance Botanist",
+     "traits": ["Loves Outdoors", "Green Fiend", "Family-Oriented"],
+     "bonus": "Collector",
+     "career": "",
+     "skills": [
+      ["Gardening", 4, 10],
+      ["Juice Fizzing", 3, 5]
+     ],
+     "rels": [
+      ["Francine Spencer", "Friends"]
+     ],
+     "partners": [
+      ["blossom-greenburg", "Spouse"]
+     ]
+    },
+    {
+     "id": "blossom-greenburg",
+     "name": "Blossom Greenburg",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Elder",
+     "aspiration": "Master Maker",
+     "traits": ["Maker", "Creative", "Recycle Disciple"],
+     "bonus": "Muser",
+     "career": "",
+     "skills": [
+      ["Fabrication", 2, 10],
+      ["Painting", 4, 10]
+     ],
+     "rels": [
+      ["Francine Spencer", "Friends"]
+     ],
+     "partners": [
+      ["mary-greenburg", "Spouse"]
+     ]
+    }
+   ]
   }
  }
 }

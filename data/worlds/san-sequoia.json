@@ -2,7 +2,8 @@
  "name": "San Sequoia",
  "pack": "Growing Together",
  "owned": true,
- "colour": "#2A7D93", "heroY": 47,
+ "colour": "#2A7D93",
+ "heroY": 47,
  "deep": ["#0F2F38", "#164552"],
  "blurb": "San Sequoia began as a small fishing town, then became a hub of the fishing and canning industry. Today, San Sequoia is home to cosy streets, a beautiful park with gardens, and quiet suburban neighbourhoods. It's the perfect place to raise a family!",
  "neighbourhoods": [
@@ -62,5 +63,293 @@
    "name": "Family Friendly",
    "text": "Bring the whole family along to enjoy a movie at the wharf or a bit of a nosh at the Around the World in 80 Bites food cart.  There's plenty for all ages to see and explore!"
   }
- ]
+ ],
+ "households": {
+  "Michaelson": {
+   "sims": [
+    {
+     "id": "celeste-michaelson",
+     "name": "Celeste Michaelson",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Big Happy Family",
+     "traits": ["Self-Assured", "Cheerful", "Ambitious"],
+     "bonus": "Domestic",
+     "career": "Tech Guru · Start-up Genius (level 10)",
+     "skills": [
+      ["Charisma", 6, 10],
+      ["Programming", 9, 10]
+     ],
+     "rels": [
+      ["Ian Robles", "Friends"]
+     ],
+     "partners": [
+      ["christopher-michaelson", "Spouse"]
+     ]
+    },
+    {
+     "id": "christopher-michaelson",
+     "name": "Christopher Michaelson",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Nerd Brain",
+     "traits": ["Art Lover", "Geek", "Family-Oriented"],
+     "bonus": "Quick Learner",
+     "career": "Tech Guru · Dot-Com Pioneer (level 9)",
+     "skills": [
+      ["Painting", 8, 10],
+      ["Programming", 5, 10],
+      ["Charisma", 7, 10]
+     ],
+     "rels": [
+      ["Doli Ruano", "Friends"],
+      ["Xochitl Luna", "Broken Up"]
+     ],
+     "partners": [
+      ["celeste-michaelson", "Spouse"]
+     ]
+    },
+    {
+     "id": "atlas-michaelson",
+     "name": "Atlas Michaelson",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Child",
+     "aspiration": "Playtime Captain",
+     "traits": ["Hot-Headed"],
+     "career": "",
+     "parents": ["celeste-michaelson", "christopher-michaelson"]
+    },
+    {
+     "id": "orion-michaelson",
+     "name": "Orion Michaelson",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Infant",
+     "aspiration": "Eco Innovator",
+     "traits": ["Wiggly"],
+     "bonus": "Collector",
+     "career": "",
+     "parents": ["celeste-michaelson", "christopher-michaelson"]
+    }
+   ]
+  },
+  "Robles": {
+   "sims": [
+    {
+     "id": "ignacio-robles",
+     "name": "Ignacio Robles",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Elder",
+     "aspiration": "Serial Romantic",
+     "traits": ["Family-Oriented", "Foodie", "Geek"],
+     "bonus": "Alluring",
+     "career": "",
+     "skills": [
+      ["Gourmet Cooking", 8, 10],
+      ["Logic", 7, 10],
+      ["Cooking", 8, 10]
+     ],
+     "rels": [
+      ["Eleanor Sullivan", "Romantic Interest"],
+      ["Tala Ruano", "Good Friends"],
+      ["Jay Robles", "Good Friends"]
+     ]
+    },
+    {
+     "id": "bernice-robles",
+     "name": "Bernice Robles",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Angling Ace",
+     "traits": ["Cheerful", "Geek", "Neat"],
+     "bonus": "Collector",
+     "career": "Business · Corporate Raider (level 9)",
+     "skills": [
+      ["Comedy", 6, 10],
+      ["Piano", 5, 10],
+      ["Fishing", 8, 10],
+      ["Logic", 5, 10]
+     ],
+     "rels": [
+      ["Jay Robles", "Acquaintances"],
+      ["Tala Ruano", "Friends"],
+      ["Xochitl Luna", "Good Friends"]
+     ],
+     "parents": ["ignacio-robles"],
+     "partners": [
+      ["ian-robles", "Spouse"]
+     ]
+    },
+    {
+     "id": "ian-robles",
+     "name": "Ian Robles",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Successful Lineage",
+     "traits": ["Bookworm", "Active", "Ambitious"],
+     "bonus": "Domestic",
+     "career": "Writer · Bestselling Author (level 9)",
+     "skills": [
+      ["Handiness", 6, 10],
+      ["Writing", 9, 10],
+      ["Fishing", 7, 10]
+     ],
+     "rels": [
+      ["Celeste Michaelson", "Friends"],
+      ["Jay Robles", "Friends"],
+      ["Xochitl Luna", "Despised"],
+      ["Tala Ruano", "Friends"]
+     ],
+     "partners": [
+      ["bernice-robles", "Spouse"]
+     ]
+    },
+    {
+     "id": "aurelio-robles",
+     "name": "Aurelio Robles",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Teen",
+     "aspiration": "Musical Genius",
+     "traits": ["Perfectionist", "Music Lover"],
+     "bonus": "Muser",
+     "career": "",
+     "school": "High school · grade B",
+     "skills": [
+      ["Violin", 6, 10]
+     ],
+     "rels": [
+      ["Tala Ruano", "Cousin"],
+      ["Jay Robles", "Good Friends"]
+     ],
+     "parents": ["bernice-robles", "ian-robles"]
+    }
+   ]
+  },
+  "Robles-Ruano": {
+   "sims": [
+    {
+     "id": "jay-robles",
+     "name": "Jay Robles",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Master Chef",
+     "traits": ["Foodie", "Ambitious", "Hot-Headed"],
+     "bonus": "Essence of Flavor",
+     "career": "Freelancer · Freelancer (level 1)",
+     "skills": [
+      ["Gourmet Cooking", 7, 10],
+      ["Logic", 5, 10]
+     ],
+     "rels": [
+      ["Bernice Robles", "Acquaintances"],
+      ["Ian Robles", "Friends"],
+      ["Aurelio Robles", "Good Friends"],
+      ["Ignacio Robles", "Good Friends"]
+     ],
+     "partners": [
+      ["doli-ruano", "Spouse"]
+     ]
+    },
+    {
+     "id": "doli-ruano",
+     "name": "Doli Ruano",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Renaissance Sim",
+     "traits": ["Art Lover", "Materialistic", "Romantic"],
+     "bonus": "Quick Learner",
+     "career": "Style Influencer · Best-Self-Helper (level 8)",
+     "skills": [
+      ["Mixology", 9, 10]
+     ],
+     "rels": [
+      ["Christopher Michaelson", "Friends"]
+     ],
+     "partners": [
+      ["jay-robles", "Spouse"]
+     ]
+    },
+    {
+     "id": "tala-ruano",
+     "name": "Tala Ruano",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Toddler",
+     "aspiration": "Mt. Komorebi Sightseer",
+     "traits": ["Clingy"],
+     "bonus": "Home Turf",
+     "career": "",
+     "rels": [
+      ["Aurelio Robles", "Cousin"],
+      ["Bernice Robles", "Friends"],
+      ["Ignacio Robles", "Good Friends"],
+      ["Ian Robles", "Friends"]
+     ],
+     "parents": ["jay-robles", "doli-ruano"]
+    }
+   ]
+  },
+  "Luna-Sullivan": {
+   "sims": [
+    {
+     "id": "xochitl-luna",
+     "name": "Xochitl Luna",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Soulmate",
+     "traits": ["Active", "Outgoing", "Loyal"],
+     "bonus": "Alluring",
+     "career": "Athlete · All-Star (level 8)",
+     "skills": [
+      ["Handiness", 8, 10],
+      ["Fitness", 6, 10]
+     ],
+     "rels": [
+      ["Bernice Robles", "Good Friends"],
+      ["Ian Robles", "Despised"],
+      ["Christopher Michaelson", "Broken Up"]
+     ]
+    },
+    {
+     "id": "eleanor-sullivan",
+     "name": "Eleanor Sullivan",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Elder",
+     "aspiration": "Chief of Mischief",
+     "traits": ["Childish", "Neat", "Cheerful"],
+     "bonus": "Dastardly",
+     "career": "Babysitter · Daycare Admin (level 3)",
+     "skills": [
+      ["Comedy", 7, 10],
+      ["Mischief", 9, 10]
+     ],
+     "rels": [
+      ["Ignacio Robles", "Romantic Interest"]
+     ]
+    },
+    {
+     "id": "karmine-luna",
+     "name": "Karmine Luna",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Child",
+     "aspiration": "Creative Genius",
+     "traits": ["Creative"],
+     "career": "",
+     "parents": ["xochitl-luna"]
+    }
+   ]
+  }
+ }
 }

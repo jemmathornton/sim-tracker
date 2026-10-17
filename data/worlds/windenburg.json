@@ -2,7 +2,8 @@
  "name": "Windenburg",
  "pack": "Get Together",
  "owned": true,
- "colour": "#3F5E8C", "heroY": 40,
+ "colour": "#3F5E8C",
+ "heroY": 40,
  "deep": ["#162238", "#213252"],
  "blurb": "Take ye olde deep breath and enjoy the mountain air. This green, expansive playground has got it all: lush countryside, serene and rocky cliffs, a quaint village with remnants of the old world all nestled around the modern shore side business centre.",
  "neighbourhoods": [
@@ -86,5 +87,377 @@
    "name": "Olde Platz Ruins",
    "text": "Take a leisurely stroll around the old ruins that used to circle Windenburg Castle"
   }
- ]
+ ],
+ "households": {
+  "Fyres": {
+   "sims": [
+    {
+     "id": "dominic-fyres",
+     "name": "Dominic Fyres",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Musical Genius",
+     "traits": ["Self-Assured", "Neat", "Music Lover"],
+     "bonus": "Muser",
+     "career": "Entertainer · Opening Act (level 4)",
+     "skills": [
+      ["Dancing", 3, 5],
+      ["DJ Mixing", 6, 10]
+     ],
+     "rels": [
+      ["Candy Behr", "Friends"],
+      ["Mila Munch", "Friends"]
+     ],
+     "partners": [
+      ["moira-fyres", "Partner"]
+     ],
+     "clubs": [
+      {
+       "name": "Spin Masters",
+       "role": "leader"
+      },
+      {
+       "name": "The Good Timers",
+       "role": "member"
+      }
+     ]
+    },
+    {
+     "id": "moira-fyres",
+     "name": "Moira Fyres",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Freelance Botanist",
+     "traits": ["Loves Outdoors", "Good", "Outgoing"],
+     "bonus": "Collector",
+     "career": "",
+     "skills": [
+      ["Gardening", 5, 10]
+     ],
+     "partners": [
+      ["dominic-fyres", "Partner"]
+     ],
+     "clubs": [
+      {
+       "name": "Garden Gnomes",
+       "role": "leader"
+      }
+     ]
+    },
+    {
+     "id": "siobhan-fyres",
+     "name": "Siobhan Fyres",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Leader of the Pack",
+     "traits": ["Ambitious", "Self-Assured", "Insider"],
+     "bonus": "Gregarious",
+     "career": "Business · Office Assistant (level 2)",
+     "skills": [
+      ["Charisma", 4, 10]
+     ],
+     "parents": ["moira-fyres", "dominic-fyres"],
+     "clubs": [
+      {
+       "name": "Paragons",
+       "role": "leader"
+      }
+     ]
+    },
+    {
+     "id": "morgan-fyres",
+     "name": "Morgan Fyres",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Teen",
+     "aspiration": "Party Animal",
+     "traits": ["Good", "Outgoing"],
+     "bonus": "Gregarious",
+     "career": "",
+     "school": "High school · grade C",
+     "skills": [
+      ["Mischief", 4, 10]
+     ],
+     "rels": [
+      ["Ulrike Faust", "Friends"],
+      ["Wolfgang Munch", "Friends"]
+     ],
+     "parents": ["moira-fyres", "dominic-fyres"],
+     "clubs": [
+      {
+       "name": "Renegades",
+       "role": "member"
+      }
+     ]
+    }
+   ]
+  },
+  "Munch": {
+   "sims": [
+    {
+     "id": "mila-munch",
+     "name": "Mila Munch",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Big Happy Family",
+     "traits": ["Cheerful", "Good", "Foodie"],
+     "bonus": "Domestic",
+     "career": "Culinary · Caterer (level 3)",
+     "skills": [
+      ["Mixology", 8, 10],
+      ["Gourmet Cooking", 8, 10],
+      ["Cooking", 6, 10]
+     ],
+     "rels": [
+      ["Dominic Fyres", "Friends"]
+     ],
+     "clubs": [
+      {
+       "name": "The Good Timers",
+       "role": "member"
+      },
+      {
+       "name": "Upper Crusts",
+       "role": "member"
+      }
+     ]
+    },
+    {
+     "id": "gunther-munch",
+     "name": "Gunther Munch",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Renaissance Sim",
+     "traits": ["Clumsy", "Creative", "Bookworm"],
+     "bonus": "Quick Learner",
+     "career": "Writer · Writer's Assistant (level 1)",
+     "skills": [
+      ["Writing", 7, 10]
+     ],
+     "rels": [
+      ["Maaike Haas", "Friends"],
+      ["Yuki Behr", "Friends"]
+     ],
+     "parents": ["mila-munch"],
+     "clubs": [
+      {
+       "name": "Avant Gardes",
+       "role": "member"
+      }
+     ]
+    },
+    {
+     "id": "wolfgang-munch",
+     "name": "Wolfgang Munch",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Teen",
+     "aspiration": "Public Enemy",
+     "traits": ["Mean", "Gloomy"],
+     "bonus": "Dastardly",
+     "career": "",
+     "school": "High school · grade C",
+     "skills": [
+      ["Logic", 3, 10],
+      ["Mischief", 4, 10]
+     ],
+     "rels": [
+      ["Morgan Fyres", "Friends"],
+      ["Ulrike Faust", "Friends"]
+     ],
+     "parents": ["mila-munch"],
+     "clubs": [
+      {
+       "name": "Renegades",
+       "role": "member"
+      },
+      {
+       "name": "Knights of the Hedge",
+       "role": "member"
+      }
+     ]
+    },
+    {
+     "id": "lucas-munch",
+     "name": "Lucas Munch",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Child",
+     "aspiration": "Artistic Prodigy",
+     "traits": ["Loves Outdoors"],
+     "career": "",
+     "school": "Grade school · grade C",
+     "skills": [
+      ["Motor", 4, 10],
+      ["Creativity", 7, 10]
+     ],
+     "parents": ["mila-munch"],
+     "clubs": [
+      {
+       "name": "League of Adventurers",
+       "role": "member"
+      },
+      {
+       "name": "Garden Gnomes",
+       "role": "member"
+      }
+     ]
+    }
+   ]
+  },
+  "Partihaus": {
+   "sims": [
+    {
+     "id": "eva-capricciosa",
+     "name": "Eva Capricciosa",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Serial Romantic",
+     "traits": ["Materialistic", "Romantic", "Hot-Headed"],
+     "bonus": "Alluring",
+     "career": "",
+     "skills": [
+      ["Charisma", 5, 10]
+     ],
+     "clubs": [
+      {
+       "name": "Partihaus",
+       "role": "member"
+      }
+     ]
+    },
+    {
+     "id": "jade-rosa",
+     "name": "Jade Rosa",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Mansion Baron",
+     "traits": ["Outgoing", "Neat", "Ambitious"],
+     "bonus": "Business Savvy",
+     "career": "Business · Office Assistant (level 2)",
+     "skills": [
+      ["Dancing", 3, 5],
+      ["Charisma", 6, 10]
+     ],
+     "clubs": [
+      {
+       "name": "Partihaus",
+       "role": "leader"
+      }
+     ]
+    },
+    {
+     "id": "marcus-flex",
+     "name": "Marcus Flex",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Friend of the World",
+     "traits": ["Active", "Bro", "Noncommittal"],
+     "bonus": "Gregarious",
+     "career": "",
+     "skills": [
+      ["Charisma", 4, 10],
+      ["Fitness", 7, 10]
+     ],
+     "clubs": [
+      {
+       "name": "Partihaus",
+       "role": "member"
+      },
+      {
+       "name": "Powerhouse",
+       "role": "leader"
+      }
+     ]
+    },
+    {
+     "id": "paolo-rocca",
+     "name": "Paolo Rocca",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Bodybuilder",
+     "traits": ["Active", "Bro", "Music Lover"],
+     "bonus": "High Metabolism",
+     "career": "Athlete · Locker Room Attendant (level 2)",
+     "skills": [
+      ["Charisma", 2, 10],
+      ["DJ Mixing", 6, 10],
+      ["Fitness", 3, 10]
+     ],
+     "clubs": [
+      {
+       "name": "Partihaus",
+       "role": "member"
+      },
+      {
+       "name": "Powerhouse",
+       "role": "member"
+      }
+     ]
+    }
+   ]
+  },
+  "Free Spirits": {
+   "sims": [
+    {
+     "id": "maaike-haas",
+     "name": "Maaike Haas",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Bestselling Author",
+     "traits": ["Creative", "Bookworm", "Snob"],
+     "bonus": "Muser",
+     "career": "Writer · Blogger (level 2)",
+     "skills": [
+      ["Writing", 5, 10]
+     ],
+     "rels": [
+      ["Gunther Munch", "Friends"],
+      ["Yuki Behr", "Friends"]
+     ],
+     "clubs": [
+      {
+       "name": "Avant Gardes",
+       "role": "leader"
+      }
+     ]
+    },
+    {
+     "id": "ulrike-faust",
+     "name": "Ulrike Faust",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Painter Extraordinaire",
+     "traits": ["Art Lover", "Creative", "Perfectionist"],
+     "bonus": "Muser",
+     "career": "Painter · Art Book Collator (level 2)",
+     "skills": [
+      ["Painting", 5, 10],
+      ["Mischief", 5, 10]
+     ],
+     "rels": [
+      ["Morgan Fyres", "Friends"],
+      ["Wolfgang Munch", "Friends"]
+     ],
+     "clubs": [
+      {
+       "name": "Renegades",
+       "role": "member"
+      }
+     ]
+    }
+   ]
+  }
+ }
 }

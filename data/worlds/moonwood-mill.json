@@ -2,7 +2,8 @@
  "name": "Moonwood Mill",
  "pack": "Werewolves",
  "owned": false,
- "colour": "#5A6E5E", "heroY": 40,
+ "colour": "#5A6E5E",
+ "heroY": 40,
  "deep": null,
  "blurb": "",
  "neighbourhoods": [
@@ -31,5 +32,84 @@
    "name": "Mysterious Sightings",
    "text": "The mysterious silhouettes lurking in the wilderness' trees are enough to make any visitor's fur - erm, hair - stand on end."
   }
- ]
+ ],
+ "households": {
+  "Volkov": {
+   "sims": [
+    {
+     "id": "kristopher-volkov",
+     "name": "Kristopher Volkov",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Adult",
+     "state": "Werewolf",
+     "aspiration": "Successful Lineage",
+     "traits": ["Family-Oriented", "Perfectionist", "Genius"],
+     "bonus": "Domestic",
+     "career": "Freelance Programmer · Freelance Programmer (level 1)",
+     "skills": [
+      ["Fitness", 8, 10],
+      ["Gardening", 6, 10],
+      ["Logic", 5, 10],
+      ["Handiness", 3, 10],
+      ["Programming", 5, 10],
+      ["Parenting", 3, 10]
+     ],
+     "rels": [
+      ["Jacob Volkov", "Friends"],
+      ["Lily Zhu", "Friends"]
+     ]
+    },
+    {
+     "id": "jacob-volkov",
+     "name": "Jacob Volkov",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Teen",
+     "state": "Werewolf",
+     "aspiration": "Werewolf Initiate",
+     "traits": ["Outgoing", "Vegetarian"],
+     "bonus": "Lunar Confidant",
+     "career": "",
+     "school": "High school · grade A",
+     "skills": [
+      ["Fitness", 5, 10],
+      ["Guitar", 4, 10],
+      ["Cooking", 3, 10],
+      ["Handiness", 2, 10]
+     ],
+     "rels": [
+      ["Kristopher Volkov", "Friends"],
+      ["Lily Zhu", "Friends"]
+     ],
+     "parents": ["kristopher-volkov"]
+    },
+    {
+     "id": "lily-zhu",
+     "name": "Lily Zhu",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Elder",
+     "state": "Werewolf",
+     "aspiration": "Friend of the World",
+     "traits": ["Cheerful", "Foodie", "Loves Outdoors"],
+     "bonus": "Gregarious",
+     "career": "",
+     "skills": [
+      ["Fitness", 5, 10],
+      ["Fishing", 4, 10],
+      ["Cooking", 4, 10],
+      ["Vampire Lore", 3, 15],
+      ["Handiness", 3, 10]
+     ],
+     "rels": [
+      ["Kristopher Volkov", "Friends"],
+      ["Jacob Volkov", "Friends"],
+      ["Caleb Vatore", "Friends"],
+      ["Lilith Vatore", "Friends"]
+     ]
+    }
+   ]
+  }
+ }
 }

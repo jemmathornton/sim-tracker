@@ -2,7 +2,8 @@
  "name": "Mt. Komorebi",
  "pack": "Snowy Escape",
  "owned": true,
- "colour": "#7F8FA0", "heroY": 41,
+ "colour": "#7F8FA0",
+ "heroY": 41,
  "deep": ["#5A6573", "#8E9BAA"],
  "glow": "#AAB9C8",
  "blurb": "Locals have enjoyed the healing hot springs of Mt. Komorebi for centuries. Now, thanks to the modern snow sports resort in Yukimatsu, everyone else can, too! The region has become a hotspot for tourists looking for a vacation that's equal parts relaxing and adventurous.",
@@ -66,5 +67,239 @@
    "name": "Mountain Climbing Excursion",
    "text": "Plan a group Excursion and attempt to reach the summit of Mt. Komorebi"
   }
- ]
+ ],
+ "households": {
+  "Akiyama": {
+   "sims": [
+    {
+     "id": "kado-akiyama",
+     "name": "Kado Akiyama",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Mt. Komorebi Sightseer",
+     "traits": ["Outgoing", "Adventurous", "Proper"],
+     "bonus": "Home Turf",
+     "career": "Salaryperson · Data Wrangler (level 5)",
+     "skills": [
+      ["Rock Climbing", 5, 10],
+      ["Cooking", 4, 10],
+      ["Handiness", 5, 10],
+      ["Fishing", 4, 10]
+     ],
+     "rels": [
+      ["Megumi Ito", "Acquaintances"]
+     ],
+     "partners": [
+      ["jenna-akiyama", "Spouse"]
+     ]
+    },
+    {
+     "id": "jenna-akiyama",
+     "name": "Jenna Akiyama",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Mt. Komorebi Sightseer",
+     "traits": ["Loves Outdoors", "Active", "Perfectionist"],
+     "bonus": "Home Turf",
+     "career": "Salaryperson · Team Leader (level 6)",
+     "skills": [
+      ["Snowboarding", 4, 10],
+      ["Rock Climbing", 4, 10],
+      ["Fitness", 6, 10],
+      ["Video Gaming", 4, 10]
+     ],
+     "partners": [
+      ["kado-akiyama", "Spouse"]
+     ]
+    },
+    {
+     "id": "taku-akiyama",
+     "name": "Taku Akiyama",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Child",
+     "aspiration": "Artistic Prodigy",
+     "traits": ["Art Lover"],
+     "career": "",
+     "skills": [
+      ["Creativity", 5, 10],
+      ["Mental", 5, 10]
+     ],
+     "parents": ["kado-akiyama", "jenna-akiyama"]
+    },
+    {
+     "id": "miki-akiyama",
+     "name": "Miki Akiyama",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Child",
+     "aspiration": "Social Butterfly",
+     "traits": ["Goofball"],
+     "career": "",
+     "skills": [
+      ["Motor", 5, 10],
+      ["Social", 5, 10]
+     ],
+     "parents": ["kado-akiyama", "jenna-akiyama"]
+    }
+   ]
+  },
+  "Ito": {
+   "sims": [
+    {
+     "id": "naoki-ito",
+     "name": "Naoki Ito",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Successful Lineage",
+     "traits": ["Materialistic", "Mean", "Family-Oriented"],
+     "bonus": "Domestic",
+     "career": "Business · Senior Manager (level 6)",
+     "skills": [
+      ["Skiing", 9, 10],
+      ["Fitness", 7, 10],
+      ["Mischief", 4, 10]
+     ],
+     "rels": [
+      ["Shigeru Nishidake", "Despised"]
+     ],
+     "partners": [
+      ["megumi-ito", "Spouse"]
+     ]
+    },
+    {
+     "id": "megumi-ito",
+     "name": "Megumi Ito",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Extreme Sports Enthusiast",
+     "traits": ["Adventurous", "Proper", "Ambitious"],
+     "bonus": "High Metabolism",
+     "career": "Business · Senior Manager (level 6)",
+     "skills": [
+      ["Skiing", 10, 10],
+      ["Fitness", 7, 10],
+      ["Logic", 4, 10]
+     ],
+     "rels": [
+      ["Kado Akiyama", "Acquaintances"],
+      ["Sachiko Nishidake", "Good Friends"]
+     ],
+     "partners": [
+      ["naoki-ito", "Spouse"]
+     ]
+    },
+    {
+     "id": "kiyoshi-ito",
+     "name": "Kiyoshi Ito",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Teen",
+     "aspiration": "Extreme Sports Enthusiast",
+     "traits": ["Adventurous", "Romantic"],
+     "bonus": "High Metabolism",
+     "career": "",
+     "skills": [
+      ["Snowboarding", 6, 10],
+      ["Guitar", 5, 10],
+      ["Fitness", 5, 10]
+     ],
+     "rels": [
+      ["Kaori Nishidake", "Friends"]
+     ],
+     "parents": ["naoki-ito", "megumi-ito"]
+    },
+    {
+     "id": "nanami-ito",
+     "name": "Nanami Ito",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Child",
+     "aspiration": "Rambunctious Scamp",
+     "traits": ["Kleptomaniac"],
+     "career": "",
+     "skills": [
+      ["Motor", 5, 10],
+      ["Social", 5, 10]
+     ],
+     "parents": ["naoki-ito", "megumi-ito"]
+    }
+   ]
+  },
+  "Nishidake": {
+   "sims": [
+    {
+     "id": "shigeru-nishidake",
+     "name": "Shigeru Nishidake",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Elder",
+     "aspiration": "Successful Lineage",
+     "traits": ["Hot-Headed", "Adventurous", "Family-Oriented"],
+     "bonus": "Domestic",
+     "career": "",
+     "skills": [
+      ["Cooking", 5, 10],
+      ["Gardening", 5, 10],
+      ["Mischief", 5, 10],
+      ["Mixology", 6, 10],
+      ["Fishing", 7, 10]
+     ],
+     "rels": [
+      ["Naoki Ito", "Despised"]
+     ],
+     "partners": [
+      ["sachiko-nishidake", "Spouse"]
+     ]
+    },
+    {
+     "id": "sachiko-nishidake",
+     "name": "Sachiko Nishidake",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Elder",
+     "aspiration": "Big Happy Family",
+     "traits": ["Loves Outdoors", "Proper", "Family-Oriented"],
+     "bonus": "Domestic",
+     "career": "",
+     "skills": [
+      ["Cooking", 5, 10],
+      ["Gourmet Cooking", 4, 10],
+      ["Logic", 5, 10],
+      ["Comedy", 5, 10]
+     ],
+     "rels": [
+      ["Megumi Ito", "Good Friends"]
+     ],
+     "partners": [
+      ["shigeru-nishidake", "Spouse"]
+     ]
+    },
+    {
+     "id": "kaori-nishidake",
+     "name": "Kaori Nishidake",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Teen",
+     "aspiration": "Extreme Sports Enthusiast",
+     "traits": ["Adventurous", "Cheerful"],
+     "bonus": "High Metabolism",
+     "career": "",
+     "skills": [
+      ["Snowboarding", 7, 10],
+      ["Comedy", 5, 10],
+      ["Fitness", 5, 10],
+      ["Fishing", 4, 10]
+     ],
+     "rels": [
+      ["Kiyoshi Ito", "Friends"]
+     ]
+    }
+   ]
+  }
+ }
 }

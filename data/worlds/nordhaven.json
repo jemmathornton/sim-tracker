@@ -2,7 +2,8 @@
  "name": "Nordhaven",
  "pack": "Businesses & Hobbies",
  "owned": true,
- "colour": "#6C747B", "heroY": 32,
+ "colour": "#6C747B",
+ "heroY": 32,
  "deep": ["#25292D", "#383E44"],
  "blurb": "This northern coastal city is known for its thriving, independent local businesses and the enchanting beauty of its cold seasons. Whether you seek to make your business flourish or just want to practice your hobbies with a cosy community, you will always find an opportunity here.",
  "neighbourhoods": [
@@ -51,5 +52,324 @@
    "name": "Get Inked",
    "text": "Feeling daring? Visit a tattoo studio in Iverstad to mark your skin with a good memory."
   }
- ]
+ ],
+ "households": {
+  "Koopman": {
+   "sims": [
+    {
+     "id": "gert-koopman",
+     "name": "Gert Koopman",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Elder",
+     "aspiration": "Friend of the World",
+     "traits": ["Clumsy", "Romantic", "Self-Assured"],
+     "bonus": "Gregarious",
+     "career": "Ceramics Vendor · Ceramics Vendor (level 1)",
+     "skills": [
+      ["Pottery", 5, 10],
+      ["Parenting", 5, 10],
+      ["Knitting", 3, 10],
+      ["Cooking", 3, 10],
+      ["Handiness", 3, 10],
+      ["Charisma", 8, 10]
+     ],
+     "rels": [
+      ["Jolanda Koopman", "Partner"],
+      ["Dahlia Loden", "Friends"],
+      ["Gramma Hattie Loden", "Friends"]
+     ],
+     "partners": [
+      ["jolanda-koopman", "Spouse"]
+     ]
+    },
+    {
+     "id": "jolanda-koopman",
+     "name": "Jolanda Koopman",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Elder",
+     "aspiration": "Painter Extraordinaire",
+     "traits": ["Art Lover", "Goofball", "Perfectionist"],
+     "bonus": "Muser",
+     "career": "",
+     "skills": [
+      ["Pottery", 10, 10],
+      ["Handiness", 4, 10],
+      ["Flower Arranging", 2, 10],
+      ["Gardening", 4, 10]
+     ],
+     "rels": [
+      ["Gert Koopman", "Partner"],
+      ["Gramma Hattie Loden", "Friends"]
+     ],
+     "partners": [
+      ["gert-koopman", "Spouse"]
+     ]
+    }
+   ]
+  },
+  "Loden": {
+   "sims": [
+    {
+     "id": "dahlia-loden",
+     "name": "Dahlia Loden",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Bestselling Author",
+     "traits": ["Good", "Bookworm", "Loyal"],
+     "bonus": "Muser",
+     "career": "Freelance Writer · Freelance Writer (level 1)",
+     "skills": [
+      ["Cooking", 3, 10],
+      ["Writing", 8, 10],
+      ["Charisma", 3, 10],
+      ["Logic", 3, 10]
+     ],
+     "rels": [
+      ["Nora Loden", "Good Friends"],
+      ["Freya Loden", "Good Friends"],
+      ["Erik Loden", "Friends"],
+      ["Gramma Hattie Loden", "Friends"],
+      ["Gert Koopman", "Friends"]
+     ],
+     "partners": [
+      ["nora-loden", "Spouse"]
+     ]
+    },
+    {
+     "id": "erik-loden",
+     "name": "Erik Loden",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Child",
+     "aspiration": "Artistic Prodigy",
+     "traits": ["Creative"],
+     "career": "",
+     "school": "Grade school · grade C",
+     "skills": [
+      ["Creativity", 4, 10],
+      ["Motor", 2, 10],
+      ["Mental", 2, 10],
+      ["Social", 2, 10],
+      ["Pottery", 2, 10]
+     ],
+     "rels": [
+      ["Nora Loden", "Friends"],
+      ["Freya Loden", "Friends"],
+      ["Gramma Hattie Loden", "Good Friends"],
+      ["Dahlia Loden", "Friends"],
+      ["Lerato Sarpong", "Friends"]
+     ],
+     "parents": ["dahlia-loden", "nora-loden"]
+    },
+    {
+     "id": "freya-loden",
+     "name": "Freya Loden",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Teen",
+     "aspiration": "Bodybuilder",
+     "traits": ["Active", "Self-Assured"],
+     "bonus": "High Metabolism",
+     "career": "",
+     "school": "High school · grade C",
+     "skills": [
+      ["Fitness", 5, 10],
+      ["Cooking", 3, 10],
+      ["Dancing", 5, 5],
+      ["Wellness", 2, 10]
+     ],
+     "rels": [
+      ["Erik Loden", "Friends"],
+      ["Nora Loden", "Friends"],
+      ["Dahlia Loden", "Good Friends"],
+      ["Gramma Hattie Loden", "Good Friends"],
+      ["Ollie Mark", "Acquaintances"]
+     ],
+     "parents": ["nora-loden", "dahlia-loden"]
+    },
+    {
+     "id": "gramma-hattie-loden",
+     "name": "Gramma Hattie Loden",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Elder",
+     "aspiration": "Master Vampire",
+     "traits": ["Foodie", "Family-Oriented", "Idealist"],
+     "bonus": "Quick Learner",
+     "career": "Bakery Stall Vendor · Bakery Stall Vendor (level 1)",
+     "skills": [
+      ["Gourmet Cooking", 2, 10],
+      ["Charisma", 3, 10],
+      ["Cooking", 8, 10],
+      ["Baking", 8, 10],
+      ["Parenting", 3, 10]
+     ],
+     "rels": [
+      ["Freya Loden", "Good Friends"],
+      ["Erik Loden", "Good Friends"],
+      ["Nora Loden", "Friends"],
+      ["Dahlia Loden", "Friends"],
+      ["Cannonball Coleman", "Friends"],
+      ["Jolanda Koopman", "Friends"],
+      ["Gert Koopman", "Friends"]
+     ]
+    },
+    {
+     "id": "nora-loden",
+     "name": "Nora Loden",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Bodybuilder",
+     "traits": ["Neat", "Outgoing", "Ambitious"],
+     "bonus": "High Metabolism",
+     "career": "",
+     "skills": [
+      ["Cooking", 5, 10],
+      ["Gourmet Cooking", 5, 10],
+      ["Mixology", 2, 10],
+      ["Parenting", 4, 10],
+      ["Baking", 5, 10],
+      ["Handiness", 4, 10]
+     ],
+     "rels": [
+      ["Erik Loden", "Friends"],
+      ["Dahlia Loden", "Good Friends"],
+      ["Freya Loden", "Friends"],
+      ["Gramma Hattie Loden", "Friends"]
+     ],
+     "parents": ["gramma-hattie-loden"],
+     "partners": [
+      ["dahlia-loden", "Spouse"]
+     ]
+    }
+   ]
+  },
+  "Sarpong": {
+   "sims": [
+    {
+     "id": "lerato-sarpong",
+     "name": "Lerato Sarpong",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Child",
+     "aspiration": "Playtime Captain",
+     "traits": ["Geek"],
+     "career": "",
+     "school": "Grade school · grade A",
+     "skills": [
+      ["Mental", 5, 10],
+      ["Creativity", 2, 10],
+      ["Social", 4, 10],
+      ["Motor", 3, 10]
+     ],
+     "rels": [
+      ["Nia Sarpong", "Good Friends"],
+      ["Erik Loden", "Friends"]
+     ],
+     "parents": ["nia-sarpong"]
+    },
+    {
+     "id": "nia-sarpong",
+     "name": "Nia Sarpong",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Neighborhood Confidante",
+     "traits": ["Creative", "Perfectionist", "Family-Oriented"],
+     "bonus": "Gregarious",
+     "career": "",
+     "skills": [
+      ["Photography", 4, 5],
+      ["Painting", 7, 10],
+      ["Parenting", 3, 10],
+      ["Tattooing", 8, 10]
+     ],
+     "rels": [
+      ["Lerato Sarpong", "Good Friends"]
+     ]
+    }
+   ]
+  },
+  "Urbane Housesharers household": {
+   "sims": [
+    {
+     "id": "cannonball-coleman",
+     "name": "Cannonball Coleman",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Elder",
+     "aspiration": "Master Mixologist",
+     "traits": ["Good", "Outgoing", "Music Lover"],
+     "bonus": "Essence of Flavor",
+     "career": "Entertainer · Serious Musician (level 6)",
+     "skills": [
+      ["Cooking", 4, 10],
+      ["Piano", 8, 10],
+      ["Violin", 8, 10],
+      ["Charisma", 8, 10],
+      ["Singing", 5, 10],
+      ["Mixology", 6, 10],
+      ["Guitar", 5, 10]
+     ],
+     "rels": [
+      ["Crispin Black", "Acquaintances"],
+      ["Ollie Mark", "Good Friends"],
+      ["Gramma Hattie Loden", "Friends"]
+     ]
+    },
+    {
+     "id": "crispin-black",
+     "name": "Crispin Black",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Esteemed Entrepreneur",
+     "traits": ["Perfectionist", "Shady", "Hot-Headed"],
+     "bonus": "Gregarious",
+     "career": "Painter · Color Theory Critic (level 7)",
+     "skills": [
+      ["Cooking", 4, 10],
+      ["Painting", 5, 10],
+      ["Pottery", 5, 10],
+      ["Photography", 5, 5],
+      ["Parenting", 4, 10],
+      ["Violin", 4, 10],
+      ["Charisma", 5, 10]
+     ],
+     "rels": [
+      ["Cannonball Coleman", "Acquaintances"],
+      ["Ollie Mark", "Good Friends"]
+     ]
+    },
+    {
+     "id": "ollie-mark",
+     "name": "Ollie Mark",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Teen",
+     "aspiration": "Nerd Brain",
+     "traits": ["Geek", "Genius"],
+     "bonus": "Quick Learner",
+     "career": "",
+     "school": "High school · grade A",
+     "skills": [
+      ["Cooking", 4, 10],
+      ["Logic", 5, 10],
+      ["Video Gaming", 5, 10],
+      ["Programming", 4, 10]
+     ],
+     "rels": [
+      ["Cannonball Coleman", "Good Friends"],
+      ["Crispin Black", "Good Friends"],
+      ["Freya Loden", "Acquaintances"]
+     ],
+     "parents": ["crispin-black"]
+    }
+   ]
+  }
+ }
 }

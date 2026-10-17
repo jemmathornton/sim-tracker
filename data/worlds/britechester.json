@@ -157,6 +157,62 @@
      ]
     }
    ]
+  },
+  "Elderberry": {
+   "sims": [
+    {
+     "id": "eleanor-elderberry",
+     "name": "Eleanor Elderberry",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Elder",
+     "aspiration": "Successful Lineage",
+     "traits": ["Music Lover", "Loves Outdoors", "Cheerful"],
+     "bonus": "Domestic",
+     "career": "",
+     "skills": [
+      ["Piano", 4, 10],
+      ["Cooking", 5, 10]
+     ],
+     "partners": [
+      ["ekram-elderberry", "Spouse"]
+     ]
+    },
+    {
+     "id": "ekram-elderberry",
+     "name": "Ekram Elderberry",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Elder",
+     "aspiration": "Angling Ace",
+     "traits": ["Mean", "Gloomy", "Loves Outdoors"],
+     "bonus": "Collector",
+     "career": "",
+     "skills": [
+      ["Fishing", 8, 10],
+      ["Handiness", 3, 10]
+     ],
+     "partners": [
+      ["eleanor-elderberry", "Spouse"]
+     ]
+    },
+    {
+     "id": "rohan-elderberry",
+     "name": "Rohan Elderberry",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Teen",
+     "aspiration": "Academic",
+     "traits": ["Loner", "Perfectionist"],
+     "bonus": "Quick Learner",
+     "career": "",
+     "school": "High school · grade A",
+     "skills": [
+      ["Writing", 3, 10],
+      ["Charisma", 2, 10]
+     ]
+    }
+   ]
   }
  }
 }

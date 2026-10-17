@@ -65,6 +65,55 @@
  "households": {
   "Sylvia & Kenny Cadberry": {
    "single": true
+  },
+  "BFF": {
+   "sims": [
+    {
+     "id": "travis-scott",
+     "name": "Travis Scott",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Computer Whiz",
+     "traits": ["Outgoing", "Self-Assured", "Geek"],
+     "bonus": "Quick Learner",
+     "career": "Tech Guru · Quality Assurance (level 2)",
+     "skills": [
+      ["Programming", 2, 10],
+      ["Video Gaming", 2, 10]
+     ]
+    },
+    {
+     "id": "liberty-lee",
+     "name": "Liberty Lee",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Nerd Brain",
+     "traits": ["Geek", "Bookworm", "Clumsy"],
+     "bonus": "Quick Learner",
+     "career": "Astronaut · Module Cleaner (level 2)",
+     "skills": [
+      ["Logic", 2, 10]
+     ]
+    },
+    {
+     "id": "summer-holiday",
+     "name": "Summer Holiday",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Friend of the World",
+     "traits": ["Outgoing", "Active", "Cheerful"],
+     "bonus": "Gregarious",
+     "career": "Culinary · Head Dishwasher (level 2)",
+     "skills": [
+      ["Mixology", 2, 10],
+      ["Cooking", 2, 10],
+      ["Video Gaming", 1, 10]
+     ]
+    }
+   ]
   }
  }
 }

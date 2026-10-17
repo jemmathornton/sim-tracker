@@ -2,7 +2,8 @@
  "name": "Copperdale",
  "pack": "High School Years",
  "owned": true,
- "colour": "#A85C3A", "heroY": 40,
+ "colour": "#A85C3A",
+ "heroY": 40,
  "deep": ["#3A1E12", "#53301D"],
  "blurb": "Once renowned for its booming mining industry, the town of Copperdale, quaint and historic, lay nestled on the banks of Lake LaSuli. With academics and adventures abound, Copperdale is now home to many families seeking a small-town life with big-city dreams for themselves and their teens.",
  "neighbourhoods": [
@@ -58,5 +59,268 @@
    "name": "Town Centre",
    "text": "Home to residents and bustling with teens, come enjoy the tea, trends, and tales of Prescott Square, Copperdale's historic central hub."
   }
- ]
+ ],
+ "households": {
+  "Harjo": {
+   "sims": [
+    {
+     "id": "ash-harjo",
+     "name": "Ash Harjo",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Teen",
+     "aspiration": "Admired Icon",
+     "traits": ["Self-Assured", "Creative"],
+     "bonus": "Relatable",
+     "career": "Simfluencer · Macro-Simfluencer (level 2)",
+     "skills": [
+      ["Painting", 4, 10],
+      ["Entrepreneur", 3, 5],
+      ["Charisma", 2, 10]
+     ],
+     "rels": [
+      ["Molly Prescott", "Good Friends"],
+      ["Sidney Price", "Friends"]
+     ],
+     "parents": ["lucha-harjo"]
+    },
+    {
+     "id": "ava-harjo",
+     "name": "Ava Harjo",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Master Chef",
+     "traits": ["Good", "Outgoing", "Foodie"],
+     "bonus": "Essence of Flavor",
+     "career": "",
+     "skills": [
+      ["Cooking", 6, 10],
+      ["Gourmet Cooking", 4, 10],
+      ["Charisma", 2, 10]
+     ],
+     "partners": [
+      ["lucha-harjo", "Spouse"]
+     ]
+    },
+    {
+     "id": "lucha-harjo",
+     "name": "Lucha Harjo",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Master Chef",
+     "traits": ["Clumsy", "Family-Oriented", "Foodie"],
+     "bonus": "Essence of Flavor",
+     "career": "Culinary · Head Dishwasher (level 2)",
+     "skills": [
+      ["Cooking", 2, 10],
+      ["Comedy", 5, 10]
+     ],
+     "partners": [
+      ["ava-harjo", "Spouse"]
+     ]
+    },
+    {
+     "id": "noah-kane",
+     "name": "Noah Kane",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Teen",
+     "aspiration": "Chief of Mischief",
+     "traits": ["Goofball", "Party Animal"],
+     "bonus": "Dastardly",
+     "career": "Football Team Member · Football Team Fresh Recruit (level 1)",
+     "skills": [
+      ["Mischief", 4, 10],
+      ["Comedy", 3, 10]
+     ],
+     "rels": [
+      ["Sidney Price", "Acquaintances"]
+     ],
+     "parents": ["ava-harjo"]
+    }
+   ]
+  },
+  "Prescott": {
+   "sims": [
+    {
+     "id": "amy-prescott",
+     "name": "Amy Prescott",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Child",
+     "aspiration": "Rambunctious Scamp",
+     "traits": ["Kleptomaniac"],
+     "career": "",
+     "skills": [
+      ["Motor", 4, 10],
+      ["Social", 2, 10]
+     ],
+     "parents": ["mei-prescott"]
+    },
+    {
+     "id": "mei-prescott",
+     "name": "Mei Prescott",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Successful Lineage",
+     "traits": ["Neat", "Perfectionist", "Gloomy"],
+     "bonus": "Domestic",
+     "career": "",
+     "skills": [
+      ["Charisma", 5, 10],
+      ["Piano", 5, 10],
+      ["Logic", 5, 10]
+     ]
+    },
+    {
+     "id": "molly-prescott",
+     "name": "Molly Prescott",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Teen",
+     "aspiration": "Musical Genius",
+     "traits": ["Music Lover", "Genius"],
+     "bonus": "Muser",
+     "career": "Chess Team Member · Chess Team Fresh Recruit (level 1)",
+     "skills": [
+      ["Guitar", 4, 10],
+      ["Mischief", 3, 10],
+      ["Logic", 5, 10]
+     ],
+     "rels": [
+      ["Sidney Price", "Friends"],
+      ["Ash Harjo", "Good Friends"]
+     ],
+     "parents": ["mei-prescott"]
+    },
+    {
+     "id": "tai-lum",
+     "name": "Tai Lum",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Elder",
+     "aspiration": "Angling Ace",
+     "traits": ["Neat", "Snob", "Loves Outdoors"],
+     "bonus": "Collector",
+     "career": "",
+     "skills": [
+      ["Fishing", 4, 10],
+      ["Handiness", 7, 10]
+     ]
+    }
+   ]
+  },
+  "Price": {
+   "sims": [
+    {
+     "id": "janae-price",
+     "name": "Janae Price",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Renaissance Sim",
+     "traits": ["Active", "Self-Assured", "Clumsy"],
+     "bonus": "Quick Learner",
+     "career": "Business · Regional Manager (level 5)",
+     "skills": [
+      ["Charisma", 4, 10],
+      ["Programming", 5, 10],
+      ["Fitness", 5, 10]
+     ],
+     "partners": [
+      ["marcel-price", "Spouse"]
+     ]
+    },
+    {
+     "id": "marcel-price",
+     "name": "Marcel Price",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Nerd Brain",
+     "traits": ["Cheerful", "Goofball", "Bookworm"],
+     "bonus": "Quick Learner",
+     "career": "Writer · Novelist (level 7)",
+     "skills": [
+      ["Writing", 7, 10],
+      ["Cooking", 4, 10],
+      ["Logic", 3, 10]
+     ],
+     "partners": [
+      ["janae-price", "Spouse"]
+     ]
+    },
+    {
+     "id": "jayden-price",
+     "name": "Jayden Price",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Child",
+     "aspiration": "Social Butterfly",
+     "traits": ["Outgoing"],
+     "career": "",
+     "skills": [
+      ["Social", 2, 10],
+      ["Creativity", 2, 10]
+     ],
+     "parents": ["janae-price", "marcel-price"]
+    },
+    {
+     "id": "savannah-price",
+     "name": "Savannah Price",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Teen",
+     "aspiration": "Computer Whiz",
+     "traits": ["Geek", "Materialistic"],
+     "bonus": "Quick Learner",
+     "career": "Computer Team Member · Computer Team Fresh Recruit (level 1)",
+     "skills": [
+      ["Video Gaming", 2, 10],
+      ["Programming", 3, 10]
+     ],
+     "parents": ["janae-price", "marcel-price"]
+    },
+    {
+     "id": "sidney-price",
+     "name": "Sidney Price",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Teen",
+     "aspiration": "Friend of the World",
+     "traits": ["Active", "Overachiever"],
+     "bonus": "Gregarious",
+     "career": "Cheer Team Member · Cheerleading Teammate (level 2)",
+     "skills": [
+      ["Fitness", 3, 10],
+      ["Charisma", 4, 10]
+     ],
+     "rels": [
+      ["Noah Kane", "Acquaintances"],
+      ["Molly Prescott", "Friends"],
+      ["Ash Harjo", "Friends"]
+     ],
+     "parents": ["janae-price", "marcel-price"]
+    },
+    {
+     "id": "kevin-puri",
+     "name": "Kevin Puri",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Teen",
+     "aspiration": "Goal Oriented",
+     "traits": ["Socially Awkward", "Romantic"],
+     "bonus": "Relatable",
+     "career": "",
+     "skills": [
+      ["Handiness", 4, 10],
+      ["Rocket Science", 3, 10]
+     ]
+    }
+   ]
+  }
+ }
 }

@@ -476,6 +476,167 @@
      ]
     }
    ]
+  },
+  "Broke": {
+   "sims": [
+    {
+     "id": "dustin-broke",
+     "name": "Dustin Broke",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Fabulously Wealthy",
+     "traits": ["Hot-Headed", "Lazy", "Geek"],
+     "bonus": "Business Savvy",
+     "career": "Business · Senior Manager (level 6)",
+     "skills": [
+      ["Logic", 4, 10],
+      ["Mischief", 3, 10],
+      ["Media Production", 2, 5],
+      ["Charisma", 2, 10]
+     ],
+     "rels": [
+      ["Skip Broke", "Friends"]
+     ]
+    }
+   ]
+  },
+  "Pancakes": {
+   "sims": [
+    {
+     "id": "bob-pancakes",
+     "name": "Bob Pancakes",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Master Chef",
+     "traits": ["Slob", "Loner", "Gloomy"],
+     "bonus": "Essence of Flavor",
+     "career": "Culinary · Caterer (level 3)",
+     "skills": [
+      ["Video Gaming", 1, 10],
+      ["Cooking", 3, 10],
+      ["Mixology", 3, 10]
+     ],
+     "partners": [
+      ["eliza-pancakes", "Partner"]
+     ]
+    },
+    {
+     "id": "eliza-pancakes",
+     "name": "Eliza Pancakes",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Mansion Baron",
+     "traits": ["Neat", "Materialistic", "Perfectionist"],
+     "bonus": "Business Savvy",
+     "career": "",
+     "skills": [
+      ["Fitness", 3, 10]
+     ],
+     "partners": [
+      ["bob-pancakes", "Partner"]
+     ]
+    }
+   ]
+  },
+  "Spencer-Kim-Lewis": {
+   "sims": [
+    {
+     "id": "eric-lewis",
+     "name": "Eric Lewis",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Mansion Baron",
+     "traits": ["Materialistic", "Glutton", "Self-Assured"],
+     "bonus": "Business Savvy",
+     "career": "",
+     "skills": [
+      ["Programming", 3, 10],
+      ["Video Gaming", 1, 10],
+      ["Logic", 1, 10]
+     ],
+     "parents": ["vivian-lewis"],
+     "partners": [
+      ["alice-spencer-kim", "Partner"]
+     ]
+    },
+    {
+     "id": "vivian-lewis",
+     "name": "Vivian Lewis",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Elder",
+     "aspiration": "Big Happy Family",
+     "traits": ["Cheerful", "Family-Oriented", "Foodie"],
+     "bonus": "Domestic",
+     "career": "",
+     "skills": [
+      ["Comedy", 1, 10],
+      ["Cooking", 4, 10],
+      ["Video Gaming", 1, 10]
+     ]
+    },
+    {
+     "id": "alice-spencer-kim",
+     "name": "Alice Spencer-Kim",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Painter Extraordinaire",
+     "traits": ["Creative", "Childish", "Loves Outdoors"],
+     "bonus": "Muser",
+     "career": "",
+     "skills": [
+      ["Comedy", 1, 10],
+      ["Painting", 4, 10],
+      ["Cooking", 1, 10],
+      ["Mischief", 1, 10],
+      ["Video Gaming", 1, 10],
+      ["Charisma", 1, 10]
+     ],
+     "parents": ["dennis-kim"],
+     "partners": [
+      ["eric-lewis", "Partner"]
+     ]
+    },
+    {
+     "id": "dennis-kim",
+     "name": "Dennis Kim",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Elder",
+     "aspiration": "Successful Lineage",
+     "traits": ["Neat", "Perfectionist", "Loves Outdoors"],
+     "bonus": "Domestic",
+     "career": "",
+     "skills": [
+      ["Comedy", 1, 10],
+      ["Gardening", 4, 10],
+      ["Video Gaming", 1, 10]
+     ]
+    },
+    {
+     "id": "olivia-spencer-kim",
+     "name": "Olivia Spencer-Kim",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Child",
+     "aspiration": "Artistic Prodigy",
+     "traits": ["Goofball"],
+     "career": "",
+     "school": "Grade school · grade C",
+     "skills": [
+      ["Motor", 1, 10],
+      ["Social", 1, 10],
+      ["Creativity", 1, 10],
+      ["Mental", 1, 10]
+     ],
+     "parents": ["alice-spencer-kim", "eric-lewis"]
+    }
+   ]
   }
  },
  "weather": "Snowy winters, heat waves and thunderstorms in summer",

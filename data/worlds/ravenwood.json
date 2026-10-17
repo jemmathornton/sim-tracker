@@ -2,7 +2,8 @@
  "name": "Ravenwood",
  "pack": "Life & Death",
  "owned": true,
- "colour": "#6B5F8E", "heroY": 28,
+ "colour": "#6B5F8E",
+ "heroY": 28,
  "deep": ["#211C30", "#302943"],
  "blurb": "Things always get a little spooky in Ravenwood. Whispering Glen is perhaps the most \"normal\" part of the area, Crow's Crossing village is clearly quite haunted, and Mourningvale is where things get extra ethereal. Sometimes Grim even stops by!",
  "neighbourhoods": [
@@ -73,5 +74,177 @@
    "name": "Chilling Collections",
    "text": "Stop by the Collector Signs in any of the three neighborhoods, explore a Crypt, discover the secrets of the Tarot Tome Shrines, or check out the eerie ruins of Whispering Glen."
   }
- ]
+ ],
+ "households": {
+  "Aether": {
+   "sims": [
+    {
+     "id": "ekade-aether",
+     "name": "Ekade Aether",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Renaissance Sim",
+     "traits": ["Loves Outdoors", "Ambitious", "Chased by Death"],
+     "bonus": "Quick Learner",
+     "career": "Business · Senior Manager (level 6)",
+     "skills": [
+      ["Logic", 4, 10],
+      ["Charisma", 5, 10],
+      ["Dancing", 5, 5]
+     ],
+     "rels": [
+      ["Radwan Gomes", "Broken Up"]
+     ],
+     "partners": [
+      ["kai-aether", "Spouse"]
+     ]
+    },
+    {
+     "id": "kai-aether",
+     "name": "Kai Aether",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Nerd Brain",
+     "traits": ["Jealous", "Self-Assured", "Skeptical"],
+     "bonus": "Quick Learner",
+     "career": "Secret Agent · Secret Agent (level 7)",
+     "skills": [
+      ["Logic", 6, 10],
+      ["Charisma", 5, 10],
+      ["Handiness", 5, 10],
+      ["Writing", 4, 10]
+     ],
+     "rels": [
+      ["Esther Gomes", "Despised"]
+     ],
+     "partners": [
+      ["ekade-aether", "Spouse"]
+     ]
+    },
+    {
+     "id": "takama-aether",
+     "name": "Takama Aether",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Child",
+     "aspiration": "Artistic Prodigy",
+     "traits": ["Macabre"],
+     "career": "",
+     "school": "Grade school · grade A",
+     "parents": ["ekade-aether", "kai-aether"]
+    }
+   ]
+  },
+  "Gomes": {
+   "sims": [
+    {
+     "id": "radwan-gomes",
+     "name": "Radwan Gomes",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Soulmate",
+     "traits": ["Art Lover", "Family-Oriented", "Genius"],
+     "bonus": "Alluring",
+     "career": "Astronaut · Command Center Lead (level 4)",
+     "skills": [
+      ["Logic", 4, 10],
+      ["Fishing", 3, 10],
+      ["Fitness", 3, 10]
+     ],
+     "rels": [
+      ["Esther Gomes", "Acquaintances"],
+      ["Ekade Aether", "Broken Up"]
+     ],
+     "partners": [
+      ["tziporah-gomes", "Spouse"]
+     ]
+    },
+    {
+     "id": "tziporah-gomes",
+     "name": "Tziporah Gomes",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Bestselling Author",
+     "traits": ["Romantic", "Clumsy", "Chased by Death"],
+     "bonus": "Muser",
+     "career": "Writer · Creator of Worlds (level 10)",
+     "skills": [
+      ["Writing", 8, 10],
+      ["Fishing", 5, 10]
+     ],
+     "rels": [
+      ["Esther Gomes", "Acquaintances"]
+     ],
+     "partners": [
+      ["radwan-gomes", "Spouse"]
+     ]
+    },
+    {
+     "id": "zelmira-gomes",
+     "name": "Zelmira Gomes",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Teen",
+     "aspiration": "The Curator",
+     "traits": ["Music Lover", "Macabre"],
+     "bonus": "Collector",
+     "career": "",
+     "school": "High school · grade A",
+     "skills": [
+      ["Violin", 7, 10],
+      ["Thanatology", 3, 5]
+     ],
+     "rels": [
+      ["Esther Gomes", "Good Friends"]
+     ],
+     "parents": ["radwan-gomes", "tziporah-gomes"]
+    }
+   ]
+  },
+  "Izadi-Gomes": {
+   "sims": [
+    {
+     "id": "esther-gomes",
+     "name": "Esther Gomes",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Ghost Historian",
+     "traits": ["Self-Assured", "Perfectionist", "Macabre"],
+     "bonus": "Quick Learner",
+     "career": "Reaper · Spirit Expert (Extraction & Resolution) (level 6)",
+     "skills": [
+      ["Writing", 9, 10],
+      ["Thanatology", 5, 5]
+     ],
+     "rels": [
+      ["Kai Aether", "Despised"],
+      ["Radwan Gomes", "Acquaintances"],
+      ["Tziporah Gomes", "Acquaintances"],
+      ["Zelmira Gomes", "Good Friends"]
+     ]
+    },
+    {
+     "id": "zuleika-izadi",
+     "name": "Zuleika Izadi",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Freelance Botanist",
+     "traits": ["Self-Assured", "Romantic", "Macabre"],
+     "bonus": "Collector",
+     "career": "Reaper · Restceptionist (level 2)",
+     "skills": [
+      ["Gardening", 5, 10],
+      ["Mixology", 5, 10],
+      ["Flower Arranging", 7, 10]
+     ]
+    }
+   ]
+  }
+ }
 }

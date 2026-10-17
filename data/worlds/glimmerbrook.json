@@ -2,7 +2,8 @@
  "name": "Glimmerbrook",
  "pack": "Realm of Magic",
  "owned": true,
- "colour": "#8A5AA8", "heroY": 30,
+ "colour": "#8A5AA8",
+ "heroY": 30,
  "deep": ["#2A1838", "#3C2350"],
  "blurb": "The quiet town of Glimmerbrook may have more to it than meets the eye...",
  "neighbourhoods": [
@@ -41,5 +42,139 @@
    "name": "Enchantment",
    "text": "Make this a truly magical vacation. Cauldrons are brewing and spells are a-casting here in Glimmerbrook"
   }
- ]
+ ],
+ "households": {
+  "Charm": {
+   "sims": [
+    {
+     "id": "minerva-charm",
+     "name": "Minerva Charm",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Elder",
+     "aspiration": "Nerd Brain",
+     "traits": ["Self-Assured", "Bookworm", "Family-Oriented"],
+     "bonus": "Quick Learner",
+     "career": "",
+     "skills": [
+      ["Logic", 6, 10],
+      ["Charisma", 4, 10],
+      ["Cooking", 2, 10],
+      ["Handiness", 2, 10],
+      ["Writing", 2, 10]
+     ]
+    },
+    {
+     "id": "gemma-charm",
+     "name": "Gemma Charm",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Teen",
+     "aspiration": "Spellcraft & Sorcery",
+     "traits": ["Art Lover", "Goofball"],
+     "bonus": "Quick Learner",
+     "career": "",
+     "school": "High school · grade B",
+     "skills": [
+      ["Charisma", 3, 10],
+      ["Comedy", 2, 10],
+      ["Logic", 2, 10],
+      ["Mischief", 5, 10],
+      ["Painting", 3, 10]
+     ],
+     "parents": ["minerva-charm"]
+    },
+    {
+     "id": "darrel-charm",
+     "name": "Darrel Charm",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Soulmate",
+     "traits": ["Bookworm", "Hot-Headed", "Snob"],
+     "bonus": "Alluring",
+     "career": "Business · Office Assistant (level 2)",
+     "skills": [
+      ["Charisma", 5, 10],
+      ["Fitness", 4, 10],
+      ["Fishing", 2, 10],
+      ["Cooking", 4, 10]
+     ],
+     "rels": [
+      ["Grace Anansi", "Acquaintances"],
+      ["Tomax Collette", "Disliked"]
+     ],
+     "parents": ["minerva-charm"]
+    },
+    {
+     "id": "emilia-ernest",
+     "name": "Emilia Ernest",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Purveyor of Potions",
+     "traits": ["Cheerful", "Clumsy", "Perfectionist"],
+     "bonus": "Collector",
+     "career": "Culinary · Head Mixologist (level 6)",
+     "skills": [
+      ["Mixology", 4, 10],
+      ["Cooking", 4, 10],
+      ["Logic", 2, 10],
+      ["Video Gaming", 3, 10],
+      ["Violin", 4, 10]
+     ],
+     "rels": [
+      ["Grace Anansi", "Friends"],
+      ["Tomax Collette", "Friends"]
+     ]
+    }
+   ]
+  },
+  "Amicable Acolytes": {
+   "sims": [
+    {
+     "id": "grace-anansi",
+     "name": "Grace Anansi",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Purveyor of Potions",
+     "traits": ["Romantic", "Goofball", "Noncommittal"],
+     "bonus": "Collector",
+     "career": "Tech Guru · Live Chat Support Agent (level 1)",
+     "skills": [
+      ["Mischief", 2, 10],
+      ["Cooking", 3, 10],
+      ["Mixology", 2, 10],
+      ["Logic", 2, 10]
+     ],
+     "rels": [
+      ["Darrel Charm", "Acquaintances"],
+      ["Emilia Ernest", "Friends"]
+     ]
+    },
+    {
+     "id": "tomax-collette",
+     "name": "Tomax Collette",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Spellcraft & Sorcery",
+     "traits": ["Self-Assured", "Loves Outdoors", "Loner"],
+     "bonus": "Quick Learner",
+     "career": "Writer · Writer's Assistant (level 1)",
+     "skills": [
+      ["Writing", 2, 10],
+      ["Fishing", 3, 10],
+      ["Gardening", 2, 10],
+      ["Cooking", 2, 10]
+     ],
+     "rels": [
+      ["Emilia Ernest", "Friends"],
+      ["Darrel Charm", "Disliked"]
+     ]
+    }
+   ]
+  }
+ }
 }

@@ -2,7 +2,8 @@
  "name": "Ciudad Enamorada",
  "pack": "Lovestruck",
  "owned": false,
- "colour": "#C2456B", "heroY": 50,
+ "colour": "#C2456B",
+ "heroY": 50,
  "deep": null,
  "blurb": "",
  "neighbourhoods": [
@@ -49,5 +50,112 @@
    "name": "Enchanting Locale",
    "text": "Love is in the air thanks to the romantic vistas, charming park, and passionate Sims."
   }
- ]
+ ],
+ "households": {
+  "Nadir": {
+   "sims": [
+    {
+     "id": "aziz-nadir",
+     "name": "Aziz Nadir",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Bestselling Author",
+     "traits": ["Romantic", "Lazy", "Bookworm"],
+     "bonus": "Muser",
+     "career": "Freelance Writer · Freelance Writer (level 1)",
+     "skills": [
+      ["Romance", 7, 10],
+      ["Writing", 5, 10],
+      ["Cooking", 3, 10]
+     ],
+     "rels": [
+      ["Mónica López", "Acquaintances"],
+      ["Valentina Nadir", "Good Friends"]
+     ],
+     "partners": [
+      ["valentina-nadir", "Spouse"]
+     ]
+    },
+    {
+     "id": "valentina-nadir",
+     "name": "Valentina Nadir",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Fabulously Wealthy",
+     "traits": ["Romantic", "Ambitious", "Outgoing"],
+     "bonus": "Business Savvy",
+     "career": "Romance Consultant · Love Connection Specialist (level 8)",
+     "skills": [
+      ["Romance", 6, 10],
+      ["Charisma", 7, 10]
+     ],
+     "rels": [
+      ["Aziz Nadir", "Good Friends"],
+      ["Mónica López", "Friends"]
+     ],
+     "partners": [
+      ["aziz-nadir", "Spouse"]
+     ]
+    }
+   ]
+  },
+  "López": {
+   "sims": [
+    {
+     "id": "m-nica-l-pez",
+     "name": "Mónica López",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Romantic Explorer ",
+     "traits": ["Family-Oriented", "Good", "Genius"],
+     "bonus": "Alluring",
+     "career": "Astronaut · Astronaut (level 7)",
+     "skills": [
+      ["Romance", 3, 10],
+      ["Gourmet Cooking", 4, 10],
+      ["Cooking", 3, 10],
+      ["Rocket Science", 8, 10]
+     ],
+     "rels": [
+      ["Aziz Nadir", "Acquaintances"],
+      ["Valentina Nadir", "Friends"]
+     ]
+    },
+    {
+     "id": "carlos-l-pez",
+     "name": "Carlos López",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Bodybuilder",
+     "traits": ["Mean", "Childish", "Active"],
+     "bonus": "High Metabolism",
+     "career": "Athlete · Rookie (level 6)",
+     "skills": [
+      ["Fitness", 4, 10]
+     ],
+     "parents": ["m-nica-l-pez"]
+    },
+    {
+     "id": "luz-l-pez",
+     "name": "Luz López",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Teen",
+     "aspiration": "Renaissance Sim",
+     "traits": ["Creative", "Geek"],
+     "bonus": "Quick Learner",
+     "career": "",
+     "skills": [
+      ["Video Gaming", 5, 10],
+      ["Painting", 3, 10]
+     ],
+     "parents": ["m-nica-l-pez"]
+    }
+   ]
+  }
+ }
 }
