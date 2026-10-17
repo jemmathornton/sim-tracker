@@ -48,7 +48,7 @@
    ]
   },
   "Paragons": {
-   "place": "l-windenburg--bathe-de-rill",
+   "place": "l-magnolia-promenade--the-roadstead",
    "activities": ["Being mean to Renegades", "Coffee", "Trying on outfits"],
    "rules": ["Invite only"],
    "others": [
@@ -65,7 +65,7 @@
    ]
   },
   "Renegades": {
-   "place": "l-windenburg--bathe-de-rill",
+   "place": "l-magnolia-promenade--the-roadstead",
    "activities": ["Being mean to Paragons", "Mischief", "Sabotaging objects"],
    "rules": ["Invite only"],
    "others": [
