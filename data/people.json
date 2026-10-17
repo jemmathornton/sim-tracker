@@ -1,5 +1,5 @@
 {
- "_note": "Sims with no household on the site who appear on family trees: late relatives and townies. Same fields as household Sims (id, name, sex, age, origin, parents, partners); 'world' and 'where' say where they are. Ids are save-wide.",
+ "_note": "Sims with no household on the site who appear on family trees: late relatives and townies. Same fields as household Sims (id, name, sex, age, origin, born, parents, partners); 'world' and 'where' say where they are, 'noHome' marks a townie with no home, 'died' how a late Sim died. 'placeholder': a parent who isn't on the game's family tree (shown as an empty box, never by name). Ids are save-wide.",
  "simon-crumplebottom": {
   "name": "Simon Crumplebottom",
   "sex": "m",
@@ -27,7 +27,8 @@
   "late": true,
   "origin": "Premade",
   "born": "Crumplebottom",
-  "parents": ["simon-crumplebottom", "prudence-crumplebottom"]
+  "parents": ["simon-crumplebottom", "prudence-crumplebottom"],
+  "died": "In a fire"
  },
  "agnes-crumplebottom": {
   "name": "Agnes Crumplebottom",
@@ -40,7 +41,8 @@
    ["erik-darling", "Late Spouse"]
   ],
   "world": "henford-on-bagley",
-  "where": "Henford-on-Bagley townie"
+  "where": "Henford-on-Bagley townie",
+  "noHome": true
  },
  "robert-crumplebottom": {
   "name": "Robert Crumplebottom",
@@ -60,5 +62,10 @@
   "partners": [
    ["agnes-crumplebottom", "Late Spouse"]
   ]
+ },
+ "gunther-goth": {
+  "name": "Gunther Goth",
+  "sex": "m",
+  "placeholder": true
  }
 }

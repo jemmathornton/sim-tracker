@@ -3,13 +3,15 @@
  "dynasties": {
   "Goth": {
    "ideals": ["Passionate", "Mysterious"],
-   "prestige": 3
+   "prestige": 3,
+   "note": "Only in saves started after Royalty & Legacy."
   },
   "Landgraab": {
    "ideals": ["Devious", "Connoisseur"],
    "prestige": 5,
    "allies": ["Abrantes"],
-   "rivals": ["Alto"]
+   "rivals": ["Alto"],
+   "note": "Only in saves started after Royalty & Legacy."
   }
  },
  "clubs": {},
