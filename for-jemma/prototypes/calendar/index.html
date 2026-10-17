@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>What’s On Prototype</title>
+<!-- Prototype, 17 Oct: a save-wide "What's on" page. Opens straight from the folder; nothing here changes the site. Write-up: research/festivals-calendar.md -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="../../../site/site.css">
+<link rel="stylesheet" href="calendar.css">
+</head>
+<body class="solo">
+<section class="hero small" style="--c:#C9A04A"><div class="kicker"><span class="proto-tag">Prototype, 17 Oct</span><i></i><span class="label">Festivals and events</span></div>
+  <h1 style="margin-top:14px">What’s <em>on</em></h1>
+  <p>Every festival, holiday and regular event in your owned worlds, read from the game’s own files. Three ways to show it, side by side. Nothing here changes the site.</p></section>
+<div class="proto">
+  <div class="controls"><div class="seg" role="group" aria-label="Which option">
+    <button type="button" data-mode="all">All three</button><button type="button" data-mode="a">A Week calendar</button><button type="button" data-mode="b">B By world</button><button type="button" data-mode="c">C World page</button></div>
+    <span class="showing">Lots and neighbourhoods from the site’s data, as of the last build.</span></div>
+  <div id="opts" class="opts"></div>
+
+  <div class="footnote"><b>Where this comes from.</b> Days, times and how often from the game’s own settings (tuning) and the times it shows on festival signs and notice boards, checked against the Sims Wiki. Lot nights are worked out from your plan’s lot types and lot traits, so they follow the plan. Holidays assume the game’s default one-week seasons. Full write-up: <b>research/festivals-calendar.md</b>.</div>
+
+  <div class="pick"><h2>For you to choose</h2><ol>
+    <li><b>Which option</b>, if any: A a week calendar for the whole save, B a list by world, C a small box on each world page (or C’s days on the neighbourhood cards).</li>
+    <li><b>What counts:</b> festivals and holidays only, or also lot nights (lounges, thrift stores) and uni and high school events?</li>
+    <li><b>Week starts Monday or Sunday?</b> This starts on Monday; the game’s own calendar starts on Sunday.</li>
+    <li><b>Sulani’s unnamed events</b> (Town BBQ and the rest, marked *): show them with names made from the game’s settings, as the site does now, or leave them out?</li>
+    <li><b>Nordhaven’s meetups:</b> keep one line, “Hobby meetups”, or the game’s seven names (Writers &amp; Readers and the rest)?</li>
+  </ol></div>
+</div>
+<script src="../../../site/js/icons.js"></script>
+<script src="cal-icons.js"></script>
+<script src="../../../site/js/data.js"></script>
+<script src="events.js"></script>
+<script src="calendar.js"></script>
+</body>
+</html>

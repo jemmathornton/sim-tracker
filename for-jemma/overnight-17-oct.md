@@ -10,6 +10,7 @@ Research and prototypes only. Nothing in the app, its data or your own files cha
 | `prototypes/stories/index.html` | Household stories: bio, timeline, EA’s version vs yours (the Montys, the Goths) |
 | `prototypes/lots/index.html` | An “empty homes and units” page, and filters for world and Stats pages |
 | `prototypes/banners/index.html` | Ways to make the writing on map banners readable (option E passes everywhere) |
+| `prototypes/calendar/index.html` | A “What’s on” page: festivals, holidays and events, three layouts |
 | `prototypes/world-plans-sims-tab.xlsx` | A Sims tab and a Relationships tab, on a **copy** of World Plans (yours is untouched) |
 | `hood-banners/` | Every neighbourhood banner as now, against the whole map |
 
@@ -48,7 +49,7 @@ The weekly Gallery refresh can stop if a new upload can’t be read (one line); 
 | gallery-findability.md | How builds get found on the Gallery |
 | gallery-refresh-health.md | Health check of the weekly refresh |
 | game-changes-2026.md | Packs and updates of the last year |
-| festivals-calendar.md | Festivals and events (if finished) |
+| festivals-calendar.md | Festivals and events: what, where, when |
 | story-ideas.md | Lore-friendly story ideas per world (ideas only) |
 | world-plans-review.md | Your spreadsheet, read from a copy |
 | hood-banners-review.md | Every neighbourhood banner |

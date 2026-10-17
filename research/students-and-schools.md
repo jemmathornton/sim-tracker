@@ -88,7 +88,7 @@ Food is free for students, and they drop in to study late. Both types are allowe
 |---|---|---|---|
 | Copperdale High School, 64×64 | High School | 2 toilets, 2 sinks, 2 whiteboards, a cafeteria station, the principal’s desk, a loudspeaker, 8 desks, 8 lockers, 2 dining tables | Can only be replaced in build mode, not from Manage Worlds. It saves to the Gallery as Generic |
 | Auditorium, 30×20 | Auditorium, in 4 versions | Every version: toilet, sink, bin; a podium (except Career Day) | Prom (Formal Dance) also needs a speaker, photo booth, buffet table, and High School Years’ own notice board and punch fountain. Career Day needs 3 career day tables. Only Copperdale’s lot can have it |
-| Thrift and Boba Store | Thrift and Boba Store | 4 thrift racks, a shop counter, 2 dining tables, 4 chairs, a coffee table, a sofa, the bubble tea counter, a microphone, a speaker, a bin, a toilet, a sink | Any world. Eloise Hiddlestix runs it. Fashion shows Mon and Fri, comedy Fri, poetry Sun |
+| Thrift and Boba Store | Thrift and Boba Store | 4 thrift racks, a shop counter, 2 dining tables, 4 chairs, a coffee table, a sofa, the bubble tea counter, a microphone, a speaker, a bin, a toilet, a sink | Any world. Eloise Hiddlestix runs it. Fashion shows Mon and Fri, comedy Wed (the game’s tuning; corrected 17 Oct), poetry Sun |
 
 ### The big nights
 
