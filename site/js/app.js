@@ -250,9 +250,11 @@ const originTag = o => { const mine = /^mine$/i.test(o || ""); return `<span cla
    Centred on the Sims who live there; built from family links only (parents and partners), never from who lives together.
    Everyone in the household, all their blood relatives wherever they live, and those relatives' partners ("plus ones").
    Worlds don't matter. A Sim with no family anywhere isn't drawn; a household where nobody has family gets no tree at all. */
-function treeOf(hh){
+// a tree centred on some Sims: a household's (treeOf) or one Sim's own (on their page, 17 Oct)
+const treeOf = hh => treeAround(membersOf(hh));
+function treeAround(centre){
   const all = Object.keys(SIMS), set = new Set();
-  membersOf(hh).forEach(m => all.forEach(o => { if (!SIMS[o].ph && blood(m, o)) set.add(o); }));   // blood(m, m) counts: members are in
+  centre.forEach(m => all.forEach(o => { if (!SIMS[o].ph && blood(m, o)) set.add(o); }));   // blood(m, m) counts: members are in
   [...set].forEach(id => partnersOf(id).forEach(([p]) => set.add(p)));                               // plus ones (and placeholders like Mortimer's father)
   [...set].forEach(id => (SIMS[id].parents || []).forEach(p => { if (SIMS[p] && SIMS[p].ph) set.add(p); }));
   const famLinked = (a, b) => (SIMS[a].parents || []).includes(b) || (SIMS[b].parents || []).includes(a) || partnersOf(a).some(([p]) => p === b);
@@ -330,7 +332,7 @@ function drawTree(ids, o = {}){
 function treeCard(id, x, y, CW, CH, o){
   const s = SIMS[id], C = o.compact ? "compact" : "", pos = `left:${x}px;top:${y}px;width:${CW}px;height:${CH}px`;
   if (s.ph) return `<div class="tc ph ${C} ${o.here ? "away" : ""}" style="${pos}"><span class="tm">?</span><div class="tn">${esc(s.phText)}</div></div>`;
-  const w = s.hh ? s.hh.world : s.world, here = o.here && s.hh === o.here;
+  const w = s.hh ? s.hh.world : s.world, here = o.me ? id === o.me : o.here && s.hh === o.here;
   const sub = [s.age, s.state, s.late ? "late" : "", s.noHome ? "no home" : ""].filter(Boolean).join(" · ");
   // married-in Sims: the family they were born into (or married into), as a plain chip
   const born = f => `<span class="bornchip" ${FAMILIES[f] && FAMILIES[f].note ? `title="${esc(FAMILIES[f].note)}"` : ""}>${s.line === f ? "born" : "married"} ${aAn(FAMILIES[f] ? FAMILIES[f].name : f)} ${esc(FAMILIES[f] ? FAMILIES[f].name : f)}</span>`;
@@ -428,8 +430,10 @@ function simPage(s){
     <div class="sim-about"><div>${hasTraits ? `<span class="label">Traits</span><div class="traits">${s.traits.map(t => `<span>${esc(t)}</span>`).join("")}${s.bonus ? `<span class="bonus" title="Bonus trait">${esc(s.bonus)}</span>` : ""}</div>` : ""}</div>
       ${facts.length ? `<dl class="facts">${facts.map(([t, v]) => `<div><dt>${t}</dt><dd>${esc(v)}</dd></div>`).join("")}</dl>` : "<div></div>"}</div></section>`;
   // family
-  const fam = simFamily(s.id);
-  if (fam.trim()) h += `<section class="block" id="family" style="--h:${hc}"><div class="block-head"><h2>Their <em>family</em></h2>${treeOf(base).length ? `<a class="count" href="#${base.id}">Family tree</a>` : ""}</div>${fam}</section>`;
+  const fam = simFamily(s.id), own = s.hh ? treeOf(s.hh) : treeAround([s.id]);   // their household’s whole family tree, with them highlighted
+  if (fam.trim() || own.length) h += `<section class="block" id="family" style="--h:${hc}"><div class="block-head"><h2>Their <em>family</em></h2></div>
+    ${own.length ? `<div class="tree-box">${drawTree(own, {line: s.line, compact: true, cw: 146, ch: 96, labels: false, here: true, me: s.id})}</div>${treeKey(false)}` : ""}
+    ${fam.trim() ? `<div style="margin-top:22px">${fam}</div>` : ""}</section>`;
   // relationships
   const rels = simRelGroups(s.id);
   if (rels.trim()) h += `<section class="block" style="--h:${hc}"><div class="block-head"><h2>Their <em>relationships</em></h2></div>${rels}</section>`;
