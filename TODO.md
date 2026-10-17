@@ -223,7 +223,8 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 
 ### Pets and horses (research/pets-and-horses.md)
 - [ ] [Jemma] On household pages: pets in the same roster as the Sims (suggested), a one-line strip, or full cards plus a Horses page? An Animals tab on family trees where there are young ones? Small animals (goats, hens, llamas…) as a counts line, or left off?
-- [ ] [Jemma] Vets: one for the city area or the desert worlds, or is a trip to Brindleton Bay fine? 3 vets have no owner: should the Delgatos own Brindleton Pawspital (Supriya dreams of being a vet)?
+- [x] Delgatos moved to Domus Familiaris (Sable Square) and own Brindleton Pawspital next door; Chateau Frise now empty (18 Oct). Copy into World Plans (Residents for the three lots). The Summer Home and Canter Clinic stay NPC-run.
+- [ ] [Jemma] Vets: one for the city area or the desert worlds, or is a trip to Brindleton Bay fine?
 - [ ] [Jemma] New Appaloosa has no public horse stop now Duke’s Hall is Appaloosa Stables (which is full: 2 Sims and 6 horses, so no foals): give The Cozy Corner House hay feeders and troughs, or let the Stables be the stop?
 - [ ] [Jemma] Use For Rent’s pet households (Kitty Lu and her cats, Dara Kham and her dog) for empty rental units? In game: turn off “Adopt Cats & Dogs” and “Rescue Horses” in Neighbourhood Stories?
 - Lore find: Roberto Crinkletop (Chestnut Ridge’s hidden “Mysterious Rancher”) is Agnes Crumplebottom’s ex-husband
