@@ -204,7 +204,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [x] Decided 17 Oct: household page starts with a family portrait (her screenshot), the roster underneath; the roster leads when there’s no portrait yet. No picture of the house on the household page, just a link to their home (and other lots)
 - [ ] [Jemma] Relationship tags: six groups (Family, Romance, Friends, Conflict, Work & school, Dynasty) plus an optional free label? Add or drop any?
 - [x] Decided 17 Oct: use the game’s own words, “Spouse / Partner / Engaged” (since patch 162), not “Husband / Wife”
-- [ ] [Jemma] Family tree: a drawn top-down tree, or a simple generations list to start with?
+- [x] Decided 17 Oct: family trees are drawn top-down trees (not a generations list); married-in Sims get a chip that opens their own family’s tree
 - [ ] [Jemma] Families that move between worlds: one tree per family across worlds, or per-world trees with “moved to …” stubs? (test case: the Montys and Capps across Ondarion and Tartosa)
 - [ ] [Jemma] Links between households: grouped lists first, then a small web around one household; try lines on the world map later?
 - [ ] [Jemma] EA’s families vs hers: an origin tag, plus “In the game / In my save” for premade families?
