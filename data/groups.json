@@ -24,7 +24,7 @@
    ]
   },
   "Garden Gnomes": {
-   "place": "l-windenburg--hare-square",
+   "place": "l-willow-creek--magnolia-blossom-park",
    "activities": ["Gardening", "Fishing", "Looking for frogs"],
    "others": [
     ["Moira Fyres", "leader", "h-windenburg--fyres"],
@@ -40,7 +40,7 @@
    ]
   },
   "League of Adventurers": {
-   "place": "l-windenburg--hare-square",
+   "place": "l-willow-creek--pique-hearth",
    "activities": ["Playground", "Playing in the closet"],
    "rules": ["Children only"],
    "others": [
@@ -84,11 +84,12 @@
    ]
   },
   "Upper Crusts": {
-   "place": "l-windenburg--the-lighthouse",
    "activities": ["Eating", "Cooking", "Mixing and drinking bar drinks"],
    "others": [
     ["Mila Munch", "member", "h-windenburg--munch"]
-   ]
+   ],
+   "anyType": "Restaurant",
+   "world": "willow-creek"
   }
  },
  "organisations": {

@@ -484,6 +484,7 @@ function groupPage(g){
   const who = role => g.members.filter(([, r]) => r === role).map(([id]) => simLinkTo(id) ? `<a href="${simLinkTo(id)}">${esc(SIMS[id].name)}</a>` : esc(SIMS[id].name)).join(", ") || "None";
   const based = () => { if (g.homeHh) { const hh = g.homeHh, l = hh.lots[0]; return `<a href="#${hh.id}">${esc(hh.name)} household</a> (<a href="#${l.id}">${esc(l.name)}</a>, ${esc(l.world.name)})`; }
     if (lotOf) return `<a href="#${lotOf.id}">${esc(lotOf.name)}</a> (${esc(lotOf.hood.name)}, ${esc(lotOf.world.name)})`;
+    if (g.anyType) return `Any ${esc(g.anyType)}`;   // a club set to meet at a lot type rather than one lot
     return W ? `${esc(W.name)}${W.owned ? "" : " (not owned)"}` : ""; };
   let h = `<section class="hero small" style="--c:${c}"><div class="crumbs">${W ? (W.ready && W.owned ? `<a href="#w-${W.id}">${ic("map")}${esc(W.name)}</a>` : `<span>${ic("map")}${esc(W.name)} (not owned)</span>`) : ""}${lotOf && g.kind !== "dynasty" ? `<a href="#${lotOf.id}">${ic(g.place ? "pin" : "home")}${esc(lotOf.name)}</a>` : ""}</div>
     <div style="display:flex;gap:26px;align-items:center;flex-wrap:wrap;margin-top:22px"><div class="monogram ico-mono">${ic(g.uni === "secret" ? "moon" : K.icon)}</div><div><span class="label" style="color:var(--on-deep-mute)">${esc(kindName(g))}</span><h1 style="margin-top:6px">${esc(groupTitle(g))}</h1></div></div></section>`;
