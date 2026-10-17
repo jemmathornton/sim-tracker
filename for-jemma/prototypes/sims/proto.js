@@ -136,6 +136,10 @@ const SIMS = {
   // the Pancakes (basics only, for the comparison)
   "bob-pancakes":    {name: "Bob Pancakes", sex: "m", age: "Young Adult", hh: "h-willow-creek--pancakes", line: "pancakes", partners: [["eliza-pancakes", "spouse"]]},
   "eliza-pancakes":  {name: "Eliza Pancakes", sex: "f", age: "Young Adult", hh: "h-willow-creek--pancakes", line: "hastings", into: "pancakes"},
+  // Mortimer and Bella's classmates, and Tybalt's friend (names only, for the relationships)
+  "nancy-landgraab":    {name: "Nancy Landgraab", sex: "f", age: "Adult", hh: "h-oasis-springs--landgraab", line: "landgraab", partners: [["geoffrey-landgraab", "spouse"]], dyn: ["head", "landgraab"]},
+  "geoffrey-landgraab": {name: "Geoffrey Landgraab", sex: "m", age: "Adult", hh: "h-oasis-springs--landgraab", line: "osteer", into: "landgraab"},
+  "enzo-alto":       {name: "Enzo Alto", sex: "m", age: "", hh: "h-ondarion--enzo-alto", line: "alto", dyn: ["head", "alto"]},
   // the Capps and Montys (Royalty & Legacy): her test case for families across worlds
   "consort-capp":    {name: "Consort Capp", sex: "m", age: "Elder", state: "Ghost", line: "thebe", into: "capp", partners: [["contessa-capp", "late-spouse"]], world: "ondarion", home: "stays homeless, as the game has him", noHome: true},
   "contessa-capp":   {name: "Contessa Capp", sex: "f", age: "", late: true, line: "capp"},
@@ -156,46 +160,29 @@ const FAMILIES = {
   bachelor:      {name: "Bachelor", note: "Bella Bachelor in EA’s Copperdale Class of ’00 Gallery household; the game’s tree has no Bachelors"},
   hastings:      {name: "Hastings", note: "Eliza Hastings in EA’s Copperdale Class of ’00 Gallery household"},
   pancakes:      {name: "Pancakes"},
-  capp:          {name: "Capp", dynasty: {head: "tybalt-capp", heir: "beatrice-capp", ideals: ["Diplomatic", "Connoisseur", "Artistic"], prestige: 7}},
-  monty:         {name: "Monty", dynasty: {head: "juliette-monty", heir: "dante-monty", ideals: ["Passionate", "Hardworking"], prestige: 1}},
+  capp:          {name: "Capp", dynasty: {head: "tybalt-capp", heir: "beatrice-capp", ideals: ["Diplomatic", "Connoisseur", "Artistic"], prestige: 7, allies: ["Alto"], rivals: ["Monty"]}},
+  monty:         {name: "Monty", dynasty: {head: "juliette-monty", heir: "dante-monty", ideals: ["Passionate", "Hardworking"], prestige: 1, rivals: ["Capp"]}},
+  landgraab:     {name: "Landgraab", dynasty: {head: "nancy-landgraab", allies: ["Abrantes"], rivals: ["Alto"]}},
+  alto:          {name: "Alto", dynasty: {head: "enzo-alto", allies: ["Capp"], rivals: ["Landgraab"]}},
+  osteer:        {name: "Osteer", note: "Geoffrey Osteer in EA’s Copperdale Class of ’00 Gallery household"},
   thebe:         {name: "Thebe"},
-};
-// who appears in each drawn tree (blood members first, then the partners who married in)
-const TREES = {
-  goth:          ["cornelia-goth", "gunther-goth", "mortimer-goth", "bella-goth", "cassandra-goth", "alexander-goth"],
-  crumplebottom: ["simon-crumplebottom", "prudence-crumplebottom", "cornelia-goth", "agnes-crumplebottom", "robert-crumplebottom", "erik-darling"],
-  capp:          ["consort-capp", "contessa-capp", "cordelia-capp", "caliban-capp", "tybalt-capp", "juliette-monty", "romeo-monty", "beatrice-capp", "celeste-capp", "virgilio-capp", "dante-monty"],
 };
 const GOTHS = ["mortimer-goth", "bella-goth", "cassandra-goth", "alexander-goth"];
 const membersOf = hhId => Object.keys(SIMS).filter(id => SIMS[id].hh === hhId);
 
-/* ---------- a household's mini tree: family links only (her rule, 17 Oct) ----------
-   Built from parents and partners, never from who lives together. The household's Sims, their parents and their children
-   who live elsewhere; then only the Sims joined to someone else by a family link stay. Unrelated housemates: no tree at all. */
-const famLinked = (a, b) => (SIMS[a].parents || []).includes(b) || (SIMS[b].parents || []).includes(a) || partnersOf(a).some(([p]) => p === b);
-function miniTreeIds(hhId) {
-  const set = new Set(membersOf(hhId));
-  [...set].forEach(id => {
-    (SIMS[id].parents || []).forEach(p => { if (SIMS[p]) set.add(p); });
-    Object.values(SIMS).forEach(t => { if ((t.parents || []).includes(id)) set.add(t.id); });
-  });
-  const all = [...set], ids = all.filter(a => all.some(b => b !== a && famLinked(a, b)));
-  const order = Object.keys(SIMS);
-  return ids.length > 1 ? ids.sort((a, b) => order.indexOf(a) - order.indexOf(b)) : [];
+/* ---------- a household's family tree (her rules, 17 Oct) ----------
+   Centred on the Sims who live there; built from family links only (parents and partners), never from who lives together.
+   Everyone in the household, all their blood relatives wherever they live, and those relatives' partners ("plus ones").
+   Worlds don't matter. A Sim with no family anywhere isn't drawn; a household where nobody has family gets no tree at all. */
+function treeOf(hhId) {
+  const all = Object.keys(SIMS), set = new Set();
+  membersOf(hhId).forEach(m => all.forEach(o => { if (!SIMS[o].ph && blood(m, o)) set.add(o); }));   // blood(m, m) counts: members are in
+  [...set].forEach(id => partnersOf(id).forEach(([p]) => { if (SIMS[p]) set.add(p); }));            // plus ones (and placeholders like Gunther)
+  [...set].forEach(id => (SIMS[id].parents || []).forEach(p => { if (SIMS[p] && SIMS[p].ph) set.add(p); }));
+  const famLinked = (a, b) => (SIMS[a].parents || []).includes(b) || (SIMS[b].parents || []).includes(a) || partnersOf(a).some(([p]) => p === b);
+  const ids = [...set].filter(a => [...set].some(b => b !== a && famLinked(a, b)));
+  return ids.length > 1 ? ids.sort((a, b) => all.indexOf(a) - all.indexOf(b)) : [];
 }
-
-/* ---------- for the Sim pages (17 Oct) ----------
-   SIM_LINKS: a Sim's links that aren't family or romance (relationships.json in the proposal; family and partners are worked out).
-   to = another household (or Sim); a line with no "to" is a note under its tag group (g). */
-const SIM_LINKS = {
-  "mortimer-goth": [
-    {to: "h-willow-creek--pancakes", tag: "classmates", label: "Copperdale Class of ’00", who: "Bob and Eliza, as teens", src: "gallery"},
-    {to: "h-oasis-springs--landgraab", tag: "classmates", label: "Copperdale Class of ’00", who: "Nancy and Geoffrey, as teens", src: "gallery"}],
-  "bella-goth": [
-    {g: "friends", who: "No friends outside the household as the game starts", src: "game"},
-    {to: "h-willow-creek--pancakes", tag: "classmates", label: "Copperdale Class of ’00", who: "Bob and Eliza, as teens", src: "gallery"},
-    {to: "h-oasis-springs--landgraab", tag: "classmates", label: "Copperdale Class of ’00", who: "Nancy and Geoffrey, as teens", src: "gallery"}],
-};
 // EA's side of the Goths' story, oldest first: the story prototype's lines (../stories/story-data.js, 17 Oct), summarised in our
 // own words from The Sims Wiki. Her own story isn't here: every Sim page ends with "Yours to write".
 const STORY_FROM = {game: "In the game", older: "Older games", gallery: "EA’s Gallery household", plan: "Your plan"};
