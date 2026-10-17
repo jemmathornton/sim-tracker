@@ -220,6 +220,12 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [ ] [Jemma] Use For Rent’s pet households (Kitty Lu and her cats, Dara Kham and her dog) for empty rental units? In game: turn off “Adopt Cats & Dogs” and “Rescue Horses” in Neighbourhood Stories?
 - Lore find: Roberto Crinkletop (Chestnut Ridge’s hidden “Mysterious Rancher”) is Agnes Crumplebottom’s ex-husband
 
+### Household stories (research/household-stories.md; prototype: for-jemma/prototypes/stories/index.html, the Montys and the Goths)
+- [ ] [Jemma] Bio: hers first with EA’s underneath (suggested), or EA’s until she writes her own? EA’s as our summary with a link, or EA’s exact text read from her game?
+- [ ] [Jemma] A dated timeline per household? By the month she played it, by story time (“Year 1, Spring”), or both? A whole-save timeline too (10 “moved world” events already follow from her plan)?
+- [ ] [Jemma] EA’s families: an “In the game / In my save” table topic by topic (suggested), or two bios side by side? Chapters for any household? Empty parts hidden, or one quiet “Yours to write” line? Writing in chat (as now), or a text file per household?
+- [ ] [Jemma] Questions: are the Cadberrys a Not So Berry legacy (her “Spectra” Gallery household is tagged #notsoberry #mint #founder)? In the game Romeo and Juliette are already married with a teenage son: is the Tartosa wedding their first?
+
 ### Where Sims could come from (research/sims-sources.md)
 - [ ] [Jemma] Which save is the Sims source: an exception to the Building rule for households in “Building #2” (like the rental-units one), or a separate save kept for Sims (what would it be called)? Her other 30 saves hold everything but are old (newest “Season Events”, 15 Mar 2026) and don’t have her rebuilt lots
 - [ ] [Jemma] EA’s families: fill them in automatically from the game’s own files (197 premade households, their family links, and 348 starting friendships between households), or only the ones she has played?

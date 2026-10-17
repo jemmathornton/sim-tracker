@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Story Prototypes</title>
+<!-- Prototype, 17 Oct: contents page for the household story prototypes built from research/household-stories.md.
+     Opens straight from the folder. Reads the app's files in site/ and changes nothing. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="../../../site/site.css">
+<link rel="stylesheet" href="proto-stories.css">
+</head>
+<body>
+<div class="topbar"><button id="menuBtn" aria-label="Open the menu" type="button"><span id="menuIco"></span>Menu</button><b>Jemma’s Sim World</b></div>
+<div class="scrim" id="scrim"></div>
+<aside class="side" id="side" aria-label="Prototypes">
+  <a class="brand" href="../../../site/index.html"><b>Jemma’s <em>Sim World</em></b><small>Every world, rebuilt</small></a>
+  <nav class="nav" id="nav"></nav>
+</aside>
+<main id="main"><div class="wrap" id="view"></div></main>
+
+<script src="../../../site/js/icons.js"></script>
+<script src="../../../site/js/data.js"></script>
+<script src="proto-icons.js"></script>
+<script src="story-data.js"></script>
+<script src="proto-stories.js"></script>
+<script>
+frame("index.html", "Story prototypes");
+const tartosa = WORLDS["Tartosa"].color, wc = (LOTS["Willow Creek|Ophelia Villa"] || {}).color || WORLDS["Willow Creek"].color;
+const ITEMS = [
+  ["montys.html", "heart", tartosa, "Romeo, Juliette and Dante", "Their move from Ondarion to Tartosa in your plan: EA’s backstory, the older games kept apart, your plan, and gaps for your own story. Links to the Capps and your Sims 2 Montys.", "A1 · B1 · C1 · E1 · D"],
+  ["goths.html", "ghost", wc, "The Goths", "A family that stays put: EA’s lore across three worlds (Agnes in Henford-on-Bagley, a Ravenwood ancestor, the Copperdale classmates) and Ophelia Villa as your Haunted House.", "A1 · B1 · C1 · E1 · D"],
+  ["montys.html?view=options", "columns-2", "#8E62CF", "Each option, side by side", "The Montys’ page with every option and its alternatives next to each other, with what’s good and not so good about each.", "A1–A2 · B1–B2 · C1–C2 · D · E1–E2"],
+];
+const ASKS = [
+  ["Bio", "your own short bio first with EA’s underneath (A1), or EA’s until you write yours (A2)? EA’s in our words with a link (as here), or EA’s own text read from your game, as the neighbourhood descriptions are?"],
+  ["Timeline", "worth having? Date your events by the month you played them, by a time in the story (“Year 1, Spring”), or both? Show the older games (Sims 2 and 3) or leave them out? Show your builds on it?"],
+  ["EA’s version and yours", "the topic-by-topic table (C1) for EA’s families, or two bios side by side (C2)?"],
+  ["Chapters", "for which households, if any? Your Not So Berry family, maybe (your “Spectra” household on the Gallery is tagged #notsoberry #founder)?"],
+  ["People and places", "cards at the end of the story (E1), or only links on each event (E2)?"],
+  ["Writing it", "tell Claude in chat (as now), or a text file per household you can write in Notepad?"],
+];
+let h = protoBar("Contents", "Prototypes for research/household-stories.md (overnight 16–17 Oct). Option letters match that file.");
+h += `<section class="hero small" style="--c:#8E62CF"><div class="kicker"><i></i><span class="label">Prototypes · 17 Oct</span></div><h1 style="margin-top:14px">Their <em>story</em></h1>
+  <p>How a household’s story could look on its page: a short bio, a timeline, EA’s version next to yours, chapters, and links to everyone involved. Nothing here changes the site.</p></section>`;
+h += `<div class="contents">${ITEMS.map(([f, i, c, t, d, o]) => `<a href="${f}" style="--c:${c}"><span class="ico">${ic(i)}</span><b>${t}</b><em>${o}</em><span>${d}</span></a>`).join("")}</div>`;
+
+h += `<div class="opt-head"><h2>What the pages ask you</h2></div><ul class="asks">${ASKS.map(([p, q]) => `<li><b>${p}:</b> ${q}</li>`).join("")}</ul>`;
+
+h += `<div class="opt-head"><h2>Where each bit comes from</h2></div><p class="say">Every line of a story says where it came from, with a word and an icon (never colour alone).</p>
+  <div class="key"><span>${srcChip("ts4")} EA’s story in The Sims 4 (household bios, family trees, the milestones premade Sims start with)</span>
+  <span>${srcChip("older")} The Sims 2 or 3: background only, the Sims 4 is its own timeline</span>
+  <span>${srcChip("gallery")} A household EA put on the Gallery, not in the game’s worlds</span>
+  <span>${srcChip("plan")} Your plan: what you’ve decided (spreadsheet, TODO), not played yet</span>
+  <span>${srcChip("site")} Worked out from the site (your builds)</span>
+  <span>${srcChip("mine")} Your story: what happened when you played (none yet)</span>
+  <span>${srcChip("todo")} A gap for your own words: nothing is made up for you</span></div>`;
+
+const unsure = n => n ? `<span class="flag-unsure">${esc(n)}</span>` : "";
+h += `<div class="opt-head"><span class="no">F</span><h2>One timeline for the whole save</h2></div>
+  <p class="say">The same events could also make one save-wide timeline (a “What’s happened” page, filtered by world). It wouldn’t start empty: your plan already moves these premade households to another world, so each can get a “moved” event with no typing. 17 more moved within their own world.</p>
+  <div class="moves"><div class="sheet-wrap"><table class="sheet"><thead><tr><th scope="col">Household</th><th scope="col">In the game</th><th scope="col">In your plan</th></tr></thead><tbody>
+  ${WORLD_MOVES.map(([n, who, gw, glot, hk, lk, note]) => `<tr><td>${hhRef(hk) || esc(n)}<small>${esc(who)}${unsure(note)}</small></td><td><span class="ref off"><span class="wd" style="--c:${WORLDS[gw].dotColour}"></span>${ic("home")}${esc(glot)}<small>${esc(gw)}</small></span></td><td>${lotRef(lk)}</td></tr>`).join("")}
+  </tbody></table></div></div>
+  <p class="cmp-key">${srcChip("plan")} From research/ea-family-lore.md §4. Dashed: not on the site (the game’s old home, or a world you don’t own).</p>`;
+
+h += `<div class="opt-head"><h2>Where things come from</h2></div><ul class="asks">
+  <li><b>EA’s side:</b> The Sims Wiki (fetched 16–17 Oct) and research/ea-family-lore.md, summarised in our own words, with links to the wiki pages. Nothing is copied from EA’s bios.</li>
+  <li><b>Your side:</b> only what you’ve decided already (TODO.md, 15–16 Oct: the Montys’ move and wedding, Ophelia Villa as a Haunted House). Everything else is left as a gap for you.</li>
+  <li><b>Lots, households, colours:</b> the site’s own data. Tartosa isn’t on the site yet (not owned), so its lot is copied from data/worlds/tartosa.json. No pictures of Sims: monograms and empty picture spaces; icons by Lucide.</li>
+  <li><b>Opening them:</b> double-click any page in this folder. Links to households and lots open the real app. Fonts load from Google Fonts like the app does; without internet they fall back to similar ones.</li></ul>`;
+h += foot();
+document.getElementById("view").innerHTML = h;
+</script>
+</body>
+</html>
