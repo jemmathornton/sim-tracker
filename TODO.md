@@ -296,6 +296,11 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [ ] [Jemma] Old uploads can’t be edited, so fix tags only when re-uploading anyway: 17 have misspelt tags (e.g. #winderburg, #britchester), 14 have no world tag (incl. Izakaya Hanamigawa Koen), 2 are tagged #basegame but need a pack (Glimmerbrook Watch, the Cantina). The note lists which
 - [ ] [Jemma] Ideas: a small hashtag checker to run before uploading (a new script)? Report EA’s “Missing sims translation” label on Community Spaces and Recreation Centers to EA?
 
+### Speed and accessibility (research/speed-and-accessibility.md)
+- [ ] [Claude] Obvious fixes when she’s back: white initials on pale world colours (use the existing textOn()); keep focus on the sidebar link after choosing a page; smooth scrolls should respect reduced motion; remove leftover CSS
+- [ ] [Jemma] Her call: a soft shadow or darker fade behind banner text (the pack line and brass title half are too faint over most maps: the biggest gain); a darker world colour for small text on the light page (16 of 25 are faint, Sulani worst); a darker brass for text and focus outlines; keyboard access to the lot circles and apartment buildings; Stats waiting until she stops typing (its table redraws on every key, up to 1s); copy the two fonts into site/ so a slow connection can’t leave the window blank (needs a download)
+- Fine as it is: every page draws in under 20ms (Stats about 0.3s); picture sizes suit her 200% screen, though the Gallery’s own pictures (610×410) look soft as lot banners
+
 ### Neighbourhood banners (research/hood-banners-review.md; pictures in for-jemma/hood-banners/)
 - [ ] [Claude] Bug: the banner zoom is worked out for a banner about 352px tall, but the real ones are 380–686px (the title and text make them taller), so each neighbourhood only fills the middle and its lowest part sits under the fade. Work out the zoom from the banner’s real height and keep the box above the fade (fixes most of the so-so ones: Lykke Center / University of Windenburg, Hopewell Hills, Deadgrass Isle, The Crumbling Isle, Plumbite Cove). Fix when she’s back
 - [ ] [Jemma] None looks worse than the whole map (48 good, 29 so-so). Her taste: put Belomisia Jungle, Campground, Glimmerbrook (loses its sunset) and Conifer Station back to the whole map? They barely zoom (1.01–1.15×)
