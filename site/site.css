@@ -673,3 +673,4 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 .tc .dead{position:absolute;top:7px;right:8px;color:var(--muted);display:grid;place-items:center}
 .tc .dead svg{width:15px;height:15px}
 .tree-key svg.i{width:14px;height:14px;vertical-align:-2px}
+.hero .nee{margin:6px 0 0;font:italic 400 22px var(--display);color:var(--on-deep-mute)}

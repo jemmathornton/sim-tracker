@@ -333,14 +333,8 @@ function treeCard(id, x, y, CW, CH, o){
   const s = SIMS[id], C = o.compact ? "compact" : "", pos = `left:${x}px;top:${y}px;width:${CW}px;height:${CH}px`;
   if (s.ph) return `<div class="tc ph ${C} ${o.here ? "away" : ""}" style="${pos}"><span class="tm">?</span><div class="tn">${esc(s.phText)}</div></div>`;
   const w = s.hh ? s.hh.world : s.world, here = o.me ? id === o.me : o.here && s.hh === o.here;
-  const sub = [s.age, s.state, s.noHome ? "no home" : ""].filter(Boolean).join(" · ");
-  // married-in Sims: the family they were born into (or married into), as a plain chip
-  const born = f => `<span class="bornchip" ${FAMILIES[f] && FAMILIES[f].note ? `title="${esc(FAMILIES[f].note)}"` : ""}>${s.line === f ? "born" : "married"} ${aAn(FAMILIES[f] ? FAMILIES[f].name : f)} ${esc(FAMILIES[f] ? FAMILIES[f].name : f)}</span>`;
+  const sub = [nee(s), s.age, s.state, s.noHome ? "no home" : ""].filter(Boolean).join(" · ");
   const chips = [];
-  const marriedIn = !(s.parents || []).some(p => o.inTree && o.inTree.has(p));   // descendants don't need a "born a…" chip
-  if (s.line && s.into && s.line !== o.line && marriedIn) chips.push(born(s.line));
-  else if (!s.line && !s.late && !s.treeOnly) chips.push(`<span class="bornchip">married in</span>`);
-  if (s.into && s.into !== o.line && s.line === o.line) chips.push(born(s.into));
   if (!s.late && !here) chips.push(homeChip(s));
   // dynasty heads and heirs keep a small badge (the dynasty itself has its own page)
   const dy = dynastyOf(id), role = dy && dy[2], badge = role ? `<span class="badge ${role === "head" ? "head" : role === "outcast" ? "out" : role === "member" ? "plain" : ""}">${role === "head" || role === "heir" ? ic("crown") : ""}${GROUP_KINDS.dynasty.roles[role]}${slug(dy[1].name) !== o.line ? " · " + esc(dy[1].name) : ""}</span>` : "";
@@ -392,7 +386,7 @@ function simFamItem(o, word){
   const t = SIMS[o];
   if (t.ph) return `<li><div class="card ph"><span class="mono">?</span><span><b>${esc(word === "parent" ? t.phText : "Not on the family tree")}</b></span></div></li>`;
   const href = simLinkTo(o), T = href ? "a" : "div", where = simWhere(o);
-  return `<li><${T} class="card ${t.late ? "late" : ""}" ${href ? `href="${href}"` : ""} style="--w:${simColour(o)}"><span class="mono">${initial(t.name)}</span><span><b>${esc(t.name)}</b><small>${esc([word, where].filter(Boolean).join(" · "))}</small></span></${T}></li>`;
+  return `<li><${T} class="card ${t.late ? "late" : ""}" ${href ? `href="${href}"` : ""} style="--w:${simColour(o)}"><span class="mono">${initial(t.name)}</span><span><b>${esc(t.name)}</b><small>${esc([word, nee(t), where].filter(Boolean).join(" · "))}</small></span></${T}></li>`;
 }
 function simFamily(id){
   const s = SIMS[id], fam = familyOf(id), words = ws => fam.filter(([, w]) => ws.includes(w));
@@ -421,7 +415,7 @@ function simPage(s){
   const hhCrumb = hh ? `${esc(hh.name)} household` : `Related to the ${esc(base.name)} household`;
   const stage = [s.age, s.late ? "deceased" : ""].filter(Boolean).join(" · ");
   let h = `<section class="hero small" style="--c:${home1.hood.glow || hc}"><div class="crumbs">${hh ? `<a href="#w-${w.id}">${ic("map")}${esc(w.name)}</a><a href="#n-${home1.hood.id}">${ic("pin")}${esc(home1.hood.name)}</a><a href="#${home1.id}">${ic("home")}${esc(home1.name)}</a>` : ""}<a href="#${base.id}">${ic("users")}${hhCrumb}</a></div>
-    <div style="display:flex;gap:26px;align-items:center;flex-wrap:wrap;margin-top:22px"><div class="monogram">${initial(s.name)}</div><div><span class="label" style="color:var(--on-deep-mute)">Sim</span><h1 style="margin-top:6px">${esc(s.name)}</h1></div></div>
+    <div style="display:flex;gap:26px;align-items:center;flex-wrap:wrap;margin-top:22px"><div class="monogram">${initial(s.name)}</div><div><span class="label" style="color:var(--on-deep-mute)">Sim</span><h1 style="margin-top:6px">${esc(s.name)}</h1>${nee(s) ? `<p class="nee">${esc(nee(s))}</p>` : ""}</div></div>
     <div class="sim-chips">${stage ? `<span>${esc(stage.charAt(0).toUpperCase() + stage.slice(1))}</span>` : ""}<span class="${s.state ? "occult" : ""}">${s.state ? `${ic("ghost")}${esc(s.state)}` : "Human"}</span>${hh || s.late ? "" : `<span>No home</span>`}${originTag(s.origin)}</div></section>`;
   // details
   const facts = [["Aspiration", s.aspiration], ["Career", s.career], ["School", s.school], ["Lifestyles", (s.lifestyles || []).join(", ")], ["Likes", (s.likes || []).join(", ")], ["Died", s.died]].filter(([, v]) => v);
@@ -488,6 +482,7 @@ const initial = n => esc(n.trim()[0] || "?");
 const hhListName = hh => { if (!hh.single) return hh.name; const p = hh.name.split(" "); return p.at(-1) + ", " + p.slice(0, -1).join(" "); };
 const hhSortKey = hh => (hh.single ? hhListName(hh) : hh.name.replace(/^The /, "")).toLowerCase();
 const byHh = (a, b) => hhSortKey(a).localeCompare(hhSortKey(b));
+const nee = s => s.line && s.into && s.line !== s.into && FAMILIES[s.line] ? `${sx(s.sex, "né", "née", "né")} ${FAMILIES[s.line].name}` : "";
 const titleWord = name => { const p = esc(name).split(" "); return p.length > 1 ? p.slice(0,-1).join(" ") + " <em>" + p.at(-1) + "</em>" : "<em>" + p[0] + "</em>"; };
 
 // sidebar follows where things live: world → neighbourhood → lot → household → Sims
