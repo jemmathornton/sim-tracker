@@ -24,7 +24,7 @@ For the Evergreen Harbor community-lot discussion (TODO §5). Sources: the Sims 
   - The Portsmouth Promenade: the Greenburgs (Knox lives in Stonestreet #3). Built and shared as a community business with classes and a port clean-up.
   - Canal Corner: the Tinkers.
 - **Port Promise's community space moves.** The Waterfront becomes the Abandoned Views rental, and the community space goes on The Shipping Views (The Old Dockyard). All four versions are built and shared.
-- **Same number of community spaces as the game (3).** The Quarry Building is ticked as built but isn't shared; Sprucewood Square isn't built.
+- **Same number of community spaces as the game (3).** The Quarry Building is ticked as built but isn't shared; Sprucewood Square isn't built. (Out of date since 15–16 Oct: Sprucewood Square became a Community Market and The Quarry Building the Sterling Ricos’ small business, so Evergreen Harbor keeps one Community Space, The Old Dockyard. research/eco-and-community-spaces.md, 17 Oct.)
 
 ## Community spaces (Sims Wiki)
 

@@ -50,6 +50,7 @@ Then your decisions, starting with the Sims prototype.
 | royalty-and-legacy-check.md | Palaces, Grand Balls, dynasties and the Monty story |
 | getaways-check.md | Adventure Awaits getaways and Custom Venues |
 | fame-and-clubs-check.md | Get Famous and Get Together against your plan |
+| eco-and-community-spaces.md | Eco Lifestyle: action plans, eco footprint, Community Spaces |
 | rental-units.md | Rentals unit by unit |
 | undecided-lots.md | Options for each open lot |
 | small-business-check.md | Small business lots |

@@ -26,7 +26,7 @@ Caveats: types are matched by words in the plan's lot type, so it's approximate.
 | Beach | 2 | 1 | depends on the world |
 | Cemetery | 7 | 7 | 4–8 |
 | Shops | 23 | 13 | 15–25 |
-| Community Space | 6 | 4 | depends on the world |
+| Community Space | 4 (17 Oct; was 6 before her 15–16 Oct changes) | 3 | depends on the world |
 | Wedding Venue | 5 | 5 | 4–6 |
 | Vet | 5 | 4 | 4–6 |
 | Vacation Rental | 14 | 8 | depends on the world |
