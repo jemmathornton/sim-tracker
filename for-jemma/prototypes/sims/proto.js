@@ -268,7 +268,7 @@ function homeChip(s) {
 /* ================= drawn family tree (§7a, option A) =================
    Founders at the top, one row per generation, couples side by side (solid line = spouses, dashed = partners,
    broken = ex, faint = late spouse), children hang below. Cards: monogram, name, life stage, where they live.
-   o: {line (whose tree), compact, labels (generation labels), stubs: {simId: html}, link (chips link to the tree page)} */
+   o: {line (the household's family), here (the household: its Sims highlighted), compact, cw, ch, labels (generation labels)} */
 function drawTree(ids, o = {}) {
   const C = o.compact, CW = o.cw || (C ? 136 : 188), CH = o.ch || (C ? 112 : 128), CG = C ? 28 : 38, SG = C ? 14 : 26, RG = C ? 44 : 58, LX = o.labels === false ? 6 : 96, PAD = 14;
   const inT = new Set(ids), S = id => SIMS[id];
@@ -327,32 +327,28 @@ function drawTree(ids, o = {}) {
   const cards = ids.map(id => tcard(id, cardX(id), unitOf[id].y, CW, CH, o)).join("");
   return `<div class="tree" style="width:${width}px;height:${height}px"><svg class="lines" width="${width}" height="${height}" aria-hidden="true">${svg}</svg>${labels}${cards}</div>`;
 }
+// a household tree's card: the household's own Sims highlighted; everyone else lighter, with a chip for the world they live in
 function tcard(id, x, y, CW, CH, o) {
   const s = SIMS[id], C = o.compact ? "compact" : "", pos = `left:${x}px;top:${y}px;width:${CW}px;height:${CH}px`;
   if (s.ph) return `<div class="tc ph ${C}" style="${pos}"><span class="tm">?</span><div class="tn">${esc(s.phText)}</div><div class="ts">${esc(s.phNote || "")}</div></div>`;
-  const hh = s.hh ? hhIndex[s.hh] : null, w = hh ? hh.world : worldById(s.world);
-  const stub = o.stubs && o.stubs[id];
+  const hh = s.hh ? hhIndex[s.hh] : null, w = hh ? hh.world : worldById(s.world), here = o.here && s.hh === o.here;
   const sub = [s.age, s.state, s.late ? "late" : "", s.noHome ? "no home" : "", s.treeOnly ? "in the game’s tree only" : ""].filter(Boolean).join(" · ") || (s.late ? "late" : "");
-  // married-in Sims: a chip that opens the family they were born into (or married into)
-  const born = f => { const t = `${s.line === f ? "born a" : "married a"} ${esc(FAMILIES[f] ? FAMILIES[f].name : f)}`;
-    if (!TREES[f] || f === o.line) return `<span class="bornchip" title="${esc(FAMILIES[f] && FAMILIES[f].note || "No " + (FAMILIES[f] ? FAMILIES[f].name : f) + " tree in this prototype")}">${t}</span>`;
-    return o.link ? `<a class="bornchip" href="${PROTO}family-tree.html?open=${f}">${t} ${ic("chevron-right")}</a>`
-                  : `<button type="button" class="bornchip" data-tree="${f}">${t} ${ic("chevron-right")}</button>`; };
-  let chips = [];
-  if (stub) chips.push(stub);
-  else {
-    const marriedIn = !(s.parents || []).some(p => o.inTree && o.inTree.has(p));   // descendants don't need a "born a…" chip
-    if (s.line && s.line !== o.line && marriedIn) chips.push(born(s.line));
-    else if (!s.line && !s.late && !s.treeOnly) chips.push(`<span class="bornchip">married in</span>`);
-    if (s.into && s.into !== o.line && s.line === o.line) chips.push(born(s.into));
-    if (!s.late && !(o.here && s.hh === o.here)) chips.push(homeChip(s));
-  }
+  // married-in Sims: the family they were born into (or married into), as a plain chip
+  const born = f => `<span class="bornchip" ${FAMILIES[f] && FAMILIES[f].note ? `title="${esc(FAMILIES[f].note)}"` : ""}>${s.line === f ? "born a" : "married a"} ${esc(FAMILIES[f] ? FAMILIES[f].name : f)}</span>`;
+  const chips = [];
+  const marriedIn = !(s.parents || []).some(p => o.inTree && o.inTree.has(p));   // descendants don't need a "born a…" chip
+  if (s.line && s.line !== o.line && marriedIn) chips.push(born(s.line));
+  else if (!s.line && !s.late && !s.treeOnly) chips.push(`<span class="bornchip">married in</span>`);
+  if (s.into && s.into !== o.line && s.line === o.line) chips.push(born(s.into));
+  if (!s.late && !here) chips.push(homeChip(s));
   const d = s.dyn, badge = d ? `<span class="badge ${d[0] === "head" ? "head" : d[0] === "outcast" ? "out" : ""}">${d[0] === "outcast" ? "" : ic("crown")}${d[0] === "head" ? "Head" : d[0] === "heir" ? "Heir" : "Outcast"}${d[1] !== o.line ? " · " + esc(FAMILIES[d[1]].name) : ""}</span>` : "";
-  const nm = o.simLinks && SIM_PAGES.includes(id) ? `<a href="${simHref(id)}">${esc(s.name)}</a>` : esc(s.name);   // names open the Sim's own page
-  return `<div class="tc ${C} ${s.late ? "late" : ""} ${stub ? "stub" : ""}" style="${pos};--w:${wColour(w)}" data-sim="${id}"><span class="tm">${initial(s.name)}</span><div class="tn">${nm}</div><div class="ts">${esc(sub)}</div>
+  // names open the Sim's own page, or their household in the app where there's no Sim page yet
+  const nm = SIM_PAGES.includes(id) ? `<a href="${simHref(id)}">${esc(s.name)}</a>` : s.hh && hhIndex[s.hh] ? `<a href="#${s.hh}">${esc(s.name)}</a>` : esc(s.name);
+  return `<div class="tc ${C} ${s.late ? "late" : ""} ${o.here ? (here ? "here" : "away") : ""}" style="${pos};--w:${wColour(w)}" data-sim="${id}"><span class="tm">${initial(s.name)}</span><div class="tn">${nm}</div><div class="ts">${esc(sub)}</div>
     <div class="tchip" style="display:flex;flex-wrap:wrap;gap:4px">${chips.filter(Boolean).join("")}</div>${badge}</div>`;
 }
-const treeKey = () => `<div class="tree-key">
+const treeKey = (here = false) => `<div class="tree-key">
+  ${here ? `<span><span class="k-box here"></span>Lives here</span><span><span class="k-box away"></span>Lives elsewhere (any world), with a chip for where</span>` : ""}
   <span><svg class="k" viewBox="0 0 34 10"><line x1="0" y1="3" x2="34" y2="3" stroke="var(--muted)" stroke-width="2.5"/><line x1="0" y1="7" x2="34" y2="7" stroke="var(--muted)" stroke-width="1.2"/></svg>Spouses</span>
   <span><svg class="k" viewBox="0 0 34 10"><line x1="0" y1="5" x2="34" y2="5" stroke="var(--muted)" stroke-width="2.5" stroke-dasharray="5 4"/></svg>Partners</span>
   <span><svg class="k" viewBox="0 0 34 12"><line x1="0" y1="6" x2="34" y2="6" stroke="var(--muted)" stroke-width="2.5" stroke-dasharray="5 4"/><path d="M12 12 L16 0 M18 12 L22 0" stroke="var(--muted)" stroke-width="1.6"/></svg>Ex</span>
