@@ -197,6 +197,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 **Start here:** for-jemma/overnight-17-oct.md (what to look at first, the biggest decisions, every note)
 
 ### Showing Sims (research/sims-display.md)
+- [x] Decided 17 Oct: family trees are built from family links (parents, partners), never from who lives together. On a household page, a mini tree shows only for Sims who are related; a household of unrelated housemates shows no tree (no extra line either), just the roster
 - [x] Decided 17 Oct: each Sim gets its own page (in the end every Sim; trying it out on the Goths first in the prototype). The household page keeps the family overview (roster linking to each Sim, mini tree, connected households, story)
 - [ ] [Jemma] **Look at the prototype first:** for-jemma/prototypes/sims/index.html (opens from the folder): a Goth household page, a drawn family tree next to a generations list, links between households (lists, a small web, lines on the map), and the relationship tags, with switches for each choice below
 - [ ] [Jemma] How much to track: three levels (basics for every household, profiles for played ones, extras for favourites)?
