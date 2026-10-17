@@ -340,7 +340,7 @@ function treeCard(id, x, y, CW, CH, o){
   const dy = dynastyOf(id), role = dy && dy[2], badge = role ? `<span class="badge ${role === "head" ? "head" : role === "outcast" ? "out" : role === "member" ? "plain" : ""}">${role === "head" || role === "heir" ? ic("crown") : ""}${GROUP_KINDS.dynasty.roles[role]}${slug(dy[1].name) !== o.line ? " · " + esc(dy[1].name) : ""}</span>` : "";
   // names open the Sim's own page, or their household where there's no Sim page yet
   const href = simLinkTo(id), nm = href ? `<a href="${href}">${esc(s.name)}</a>` : esc(s.name);
-  return `<div class="tc ${C} ${s.late ? "late" : ""} ${o.here ? (here ? "here" : "away") : ""}" style="${pos};--w:${wColour(w)}" data-sim="${id}"><span class="tm">${initial(s.name)}</span>${s.late ? `<span class="dead" title="Deceased">${ic("flower-2")}</span>` : ""}<div class="tn">${nm}</div><div class="ts">${esc(sub)}</div>
+  return `<div class="tc ${C} ${s.late ? "late" : ""} ${o.here ? (here ? "here" : "away") : ""}" style="${pos};--w:${wColour(w)}" data-sim="${id}"><span class="tm">${initial(s.name)}</span>${s.late ? `<span class="dead" title="Deceased">†</span>` : ""}<div class="tn">${nm}</div><div class="ts">${esc(sub)}</div>
     <div class="tchip" style="display:flex;flex-wrap:wrap;gap:4px">${chips.filter(Boolean).join("")}</div>${badge}</div>`;
 }
 const treeKey = (here = false, colour = "") => `<div class="tree-key">
@@ -349,7 +349,7 @@ const treeKey = (here = false, colour = "") => `<div class="tree-key">
   <span><svg class="k" viewBox="0 0 34 10"><line x1="0" y1="5" x2="34" y2="5" stroke="var(--muted)" stroke-width="2.5" stroke-dasharray="5 4"/></svg>Partners</span>
   <span><svg class="k" viewBox="0 0 34 12"><line x1="0" y1="6" x2="34" y2="6" stroke="var(--muted)" stroke-width="2.5" stroke-dasharray="5 4"/><path d="M12 12 L16 0 M18 12 L22 0" stroke="var(--muted)" stroke-width="1.6"/></svg>Ex</span>
   <span><svg class="k" viewBox="0 0 34 10" opacity=".5"><line x1="0" y1="3" x2="34" y2="3" stroke="var(--muted)" stroke-width="2.5"/><line x1="0" y1="7" x2="34" y2="7" stroke="var(--muted)" stroke-width="1.2"/></svg>Deceased spouse</span>
-  <span>${ic("flower-2")} Deceased</span>
+  <span><span class="dead-k">†</span>Deceased</span>
   <span>${ic("crown")} Dynasty roles</span></div>`;
 
 /* ---------- relationships between Sims: only on Sim pages, grouped by tag group (her decision, 17 Oct) ---------- */
