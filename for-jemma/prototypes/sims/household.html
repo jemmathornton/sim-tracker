@@ -4,8 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Goth Household Prototype</title>
-<!-- Prototype, 16 Oct: the Goth household page as research/sims-display.md proposes it (options 5B/5C, 7a-A mini tree,
-     7d-A grouped links, 8A/8C). Opens straight from the folder. Reads the app's own files in site/ and changes nothing. -->
+<!-- Prototype, 16 Oct (slimmed 17 Oct): the Goth household page as the family overview. Each Sim has their own page now
+     (sim.html), so the Sim cards are gone from here. Her decisions, 17 Oct: family portrait first (5C, roster first when
+     there's no portrait), no picture of the house (plain links to their lots), the game's words (Spouse / Partner / Engaged),
+     the mini tree built from family links only. Opens straight from the folder. Reads the app's own files in site/ and
+     changes nothing. -->
 <base href="../../../site/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,103 +34,79 @@
 <script>
 protoStart({page: "household.html", title: "Goth household", world: "willow-creek", hh: "h-willow-creek--goth"});
 const HH = hhIndex["h-willow-creek--goth"];
-let TOP = "roster";   // 5B: roster first; 5C: family portrait first
-const Q = new URLSearchParams(location.search);   // ?top=portrait&words=old opens the page with those choices
-if (Q.get("top") === "portrait") TOP = "portrait"; if (Q.get("words") === "old") OLD_WORDS = true;
-function onSeg(name, v) { if (name === "top") TOP = v; if (name === "words") OLD_WORDS = v === "old"; draw(); }
-
-// Sim-to-Sim links that aren't family (from relationships.json in the proposal)
-const SIM_LINKS = {
-  "mortimer-goth": [["classmates", "Bob and Eliza Pancakes, Nancy and Geoffrey Landgraab", "Copperdale Class of ’00", "gallery"]],
-  "bella-goth":    [["classmates", "Bob and Eliza Pancakes, Nancy and Geoffrey Landgraab", "Copperdale Class of ’00", "gallery"]],
-};
 const isNew = (t = "new") => `<span class="eg">${t}</span>`;
-const whereLives = t => t.hh ? hhIndex[t.hh].name + " household" : (worldById(t.world) || {}).name || "";
 const roleOf = s => s.dyn ? `<span class="role ${s.dyn[0] === "outcast" ? "out" : ""}">${s.dyn[0] === "outcast" ? "" : ic("crown")}${s.dyn[0] === "head" ? "Dynasty head" : s.dyn[0] === "heir" ? "Heir" : "Outcast"}</span>` : `<span class="muted">—</span>`;
+const simName = id => SIM_PAGES.includes(id) ? `<a href="${simHref(id)}">${esc(SIMS[id].name)}</a>` : `<b>${esc(SIMS[id].name)}</b>`;
+
+// a household's family portrait (her screenshot). The Goths have none yet: a stand-in shows where it goes.
+const PORTRAITS = {
+  "h-willow-creek--goth": {lot: "l-willow-creek--bargain-bend", find: /dining/i, standIn: "Stand-in picture (your Willow’s dining room): a Goth household screenshot would go here"},
+};
+function portrait(hhId, ids) {
+  const p = PORTRAITS[hhId]; if (!p) return "";   // no portrait yet: the roster comes first, with no empty frame
+  const pic = (lotIndex[p.lot].photos.find(x => p.find.test(x.caption)) || {});
+  if (!pic.src) return "";
+  return `<div class="portrait" style="background-image:url('${pic.src}')">${p.standIn ? `<span class="cap">${esc(p.standIn)}</span>` : ""}
+    <div class="names">${ids.map(id => `<div>${SIM_PAGES.includes(id) ? `<a href="${simHref(id)}"><b>${esc(SIMS[id].name.split(" ")[0])}</b></a>` : `<b>${esc(SIMS[id].name.split(" ")[0])}</b>`}<small>${esc(SIMS[id].age)}</small></div>`).join("")}</div></div>`;
+}
 
 function roster(ids, profiles) {
   return `<div class="sheet-wrap"><table class="sheet roster"><thead><tr><th scope="col">Sim</th><th scope="col">Life stage</th><th scope="col">Life state</th><th scope="col">Role</th><th scope="col">Aspiration</th><th scope="col">Career or school</th><th scope="col">Details</th></tr></thead><tbody>
     ${ids.map(id => { const s = SIMS[id], has = profiles && s.traits;
-      return `<tr><td><span class="who"><span class="mono">${initial(s.name)}</span>${has ? `<button type="button" class="linkish" data-goto="${id}">${esc(s.name)}</button>` : `<b>${esc(s.name)}</b>`}</span></td>
+      return `<tr><td><span class="who"><span class="mono">${initial(s.name)}</span>${simName(id)}</span></td>
         <td>${esc(s.age)}</td><td>${s.state ? `<span class="state occult">${ic("ghost")}${esc(s.state)}</span>` : `<span class="muted">Human</span>`}</td><td>${roleOf(s)}</td>
         <td>${s.aspiration ? esc(s.aspiration) : `<span class="muted">—</span>`}</td><td>${esc(s.career || s.school || "") || `<span class="muted">—</span>`}</td>
         <td><span class="lvl ${has ? "profile" : ""}">${has ? "Profile" : "Basics"}</span></td></tr>`; }).join("")}</tbody></table></div>`;
 }
 
-function simCardP(id) {
-  const s = SIMS[id], fam = familyOf(id);
-  const order = [...fam.filter(([o]) => SIMS[o].hh === s.hh), ...fam.filter(([o]) => SIMS[o].hh !== s.hh)];
-  const show = order.slice(0, 6), more = order.length - show.length;
-  const li = ([o, word]) => { const t = SIMS[o], here = t.hh && t.hh === s.hh;
-    return `<li class="${t.late ? "late" : ""}">${here ? `<button type="button" class="linkish" data-goto="${o}">${esc(t.name)}</button>` : `<b>${esc(t.name)}</b>`}<span>${esc(word)}${t.late ? " (late)" : ""}</span>${!here && !t.late ? `<small>${esc(whereLives(t))}</small>` : ""}</li>`; };
-  const links = (SIM_LINKS[id] || []).map(([tag, who, label, src]) => `<li style="display:grid;gap:3px"><span style="display:flex;flex-wrap:wrap;gap:6px;align-items:center">${tagPill(tag)}<span class="lbl">${esc(label)}</span></span><span>${esc(who)}</span>${srcLine({src})}</li>`).join("");
-  return `<article class="sim" id="sim-${id}">
-    <header><span class="mono">${initial(s.name)}</span><div><h3>${esc(s.name)}</h3><div class="sim-sub">${esc([s.age, s.state || "Human"].join(" · "))}</div></div>${s.dyn ? roleOf(s) : ""}</header>
-    <div class="pills"><span class="origin">From the game</span>${s.into && s.line !== s.into ? `<span class="origin">Married in</span>` : ""}${isNew()}</div>
-    <div class="traits">${s.traits.map(t => `<span>${esc(t)}</span>`).join("")}${s.bonus ? `<span class="bonus">${esc(s.bonus)}</span>` : ""}</div>
-    <dl class="sim-facts"><div><dt>Aspiration</dt><dd>${esc(s.aspiration)}</dd></div>${s.career ? `<div><dt>Career</dt><dd>${esc(s.career)}</dd></div>` : ""}${s.school ? `<div><dt>School</dt><dd>${esc(s.school)}</dd></div>` : ""}</dl>
-    <div class="rels"><span class="label">Family ${isNew("worked out")}</span><ul>${show.map(li).join("")}</ul>${more ? `<p class="more-fam">and ${more} more in the <a href="${PROTO}family-tree.html">family tree</a></p>` : ""}</div>
-    ${links ? `<div class="rels"><span class="label">Other links</span><ul>${links}</ul></div>` : ""}
-    <div class="then-now"><div><span class="label">In the game ${isNew("8C")}</span><p>${esc(s.start)}</p></div><div><span class="label">In my save</span><p class="todo">Nothing noted yet. Anything that changed in your save goes here (a new life stage, a partner, a move).</p></div></div>
-  </article>`;
-}
-
-function portrait() {
-  const pic = lotIndex["l-willow-creek--bargain-bend"].photos.find(p => /dining/i.test(p.caption)) || {};
-  return `<div class="portrait" style="background-image:url('${pic.src}')"><span class="cap">Stand-in picture (your Willow’s dining room): a Goth household screenshot would go here</span>
-    <div class="names">${GOTHS.map(id => `<div><b>${esc(SIMS[id].name.split(" ")[0])}</b><small>${esc(SIMS[id].age)}</small></div>`).join("")}</div></div>`;
-}
-
 function page() {
-  const w = HH.world, home1 = HH.lots[0], hc = home1.hood.color, d = FAMILIES.goth.dynasty;
+  const w = HH.world, home1 = HH.lots[0], hc = home1.hood.color, d = FAMILIES.goth.dynasty, ids = membersOf(HH.id);
+  const homes = HH.lots.filter(l => !l.owned), owns = HH.lots.filter(l => l.owned), hoods = [...new Set(HH.lots.map(l => l.hood))];
+  const lotLink = l => `<a href="#${l.id}">${esc(l.name)}</a>`;
   const neighbours = Object.values(w.households).filter(x => x !== HH && x.lots.some(l => l.hood === home1.hood));
-  let h = protoBar("Goth household", "Options shown: 5B and 5C (top of the Sims), 7a-A (mini tree), 7d-A (links grouped by tag), 8A and 8C (origin, In the game / In my save), 4B (basics only, at the bottom).",
-    seg("top", "Top of the Sims", [["roster", "Roster first", "5B"], ["portrait", "Family portrait", "5C"]], TOP) +
-    seg("words", "Words", [["game", "Spouse"], ["old", "Husband / Wife"]], OLD_WORDS ? "old" : "game"));
-  h += `<section class="hero small" style="--c:${home1.hood.glow || hc}"><div class="crumbs"><a href="#w-${w.id}">${ic("map")}${esc(w.name)}</a><a href="#n-${home1.hood.id}">${ic("pin")}${esc(home1.hood.name)}</a><a href="#${home1.id}">${ic("home")}${esc(home1.name)}</a></div>
+  let h = protoBar("Goth household", "The family overview (17 Oct): each name opens the Sim’s own page. Decided 17 Oct: 5C family portrait first, roster underneath (roster first when there’s no portrait); plain links to their lots, no picture of the house; the game’s words (Spouse, Partner, Engaged). Also shown: 7a-A mini tree (family links only), 7d-A links grouped by tag, 8A origin, 4B basics only (at the bottom).");
+  h += `<section class="hero small" style="--c:${home1.hood.glow || hc}"><div class="crumbs"><a href="#w-${w.id}">${ic("map")}${esc(w.name)}</a><a href="#n-${home1.hood.id}">${ic("pin")}${esc(home1.hood.name)}</a>${HH.lots.map(l => `<a href="#${l.id}">${ic(l.owned ? "pin" : "home")}${esc(l.name)}</a>`).join("")}</div>
     <div style="display:flex;gap:26px;align-items:center;flex-wrap:wrap;margin-top:22px"><div class="monogram">${initial(HH.name)}</div><div><span class="label" style="color:var(--on-deep-mute)">Household</span><h1 style="margin-top:6px">${esc(HH.name)}</h1></div></div></section>
     <div class="detail" style="--h:${hc}">
-      <div><span class="label">Home</span><div class="home-list">${listing(home1)}</div></div>
-      <div><dl class="facts"><div><dt>World</dt><dd><a href="#w-${w.id}">${esc(w.name)}</a></dd></div><div><dt>Neighbourhood</dt><dd>${esc(home1.hood.name)}</dd></div>
-        <div><dt>Home</dt><dd><a href="#${home1.id}">${esc(home1.name)}</a></dd></div>
-        <div><dt>Sims made in game</dt><dd>Not yet</dd></div>
-        <div><dt>Origin ${isNew()}</dt><dd>From the game</dd></div>
+      <div><dl class="facts"><div><dt>World</dt><dd><a href="#w-${w.id}">${esc(w.name)}</a></dd></div><div><dt>Neighbourhood</dt><dd>${esc(hoods.map(x => x.name).join(", "))}</dd></div>
+        <div><dt>${homes.length > 1 ? "Homes" : "Home"}</dt><dd>${homes.map(lotLink).join(", ")}</dd></div>${owns.length ? `<div><dt>Owns</dt><dd>${owns.map(l => `${lotLink(l)} (${esc(l.type)})`).join(", ")}</dd></div>` : ""}
+        <div><dt>Sims made in game</dt><dd>Not yet</dd></div></dl></div>
+      <div><dl class="facts"><div><dt>Origin ${isNew()}</dt><dd>From the game</dd></div>
         <div><dt>Played ${isNew()}</dt><dd>Not yet</dd></div>
         <div><dt>Neighbourhood Stories ${isNew()}</dt><dd>Not noted yet</dd></div>
-        <div><dt>Dynasty ${isNew()}</dt><dd><span class="role">${ic("crown")}Goth</span><br><small style="font-weight:500;color:var(--muted)">Head ${esc(SIMS[d.head].name.split(" ")[0])}, heir ${esc(SIMS[d.heir].name.split(" ")[0])} · ${d.ideals.join(" and ")} · starts at ${d.prestige} stars</small></dd></div></dl>
+        <div><dt>Dynasty ${isNew()}</dt><dd><span class="role">${ic("crown")}Goth</span><br><small style="font-weight:500;color:var(--muted)">Head <a href="${simHref(d.head)}">${esc(SIMS[d.head].name.split(" ")[0])}</a>, heir <a href="${simHref(d.heir)}">${esc(SIMS[d.heir].name.split(" ")[0])}</a> · ${d.ideals.join(" and ")} · starts at ${d.prestige} stars</small></dd></div></dl>
         <p class="src" style="margin-top:10px">${ic("info")}The Goth dynasty is only in saves started after Royalty & Legacy.</p></div>
     </div>`;
-  // The Sims: roster (5B) or portrait then roster (5C), then the cards
-  h += `<section class="block" style="--h:${hc}"><div class="block-head"><h2>The <em>Sims</em></h2><span class="count">4 Sims · no pets</span></div>
-    ${TOP === "portrait" ? portrait() : ""}
-    <p class="say" style="margin-top:16px">${TOP === "portrait" ? "<b>5C:</b> your household screenshot across the top with names under it, then the roster." : "<b>5B:</b> a short roster for every household first; a card below only for Sims with a profile."} ${isNew()}</p>
-    ${roster(GOTHS, true)}
+  // The Sims: family portrait first (5C) when there is one, then the roster; each name opens the Sim's page
+  h += `<section class="block" style="--h:${hc}"><div class="block-head"><h2>The <em>Sims</em></h2><span class="count">${ids.length} Sims · no pets</span></div>
+    ${portrait(HH.id, ids)}
+    <p class="say" style="margin-top:16px">Each name opens the Sim’s own page: details, their family, relationships, homes and story. ${isNew("17 Oct")}</p>
+    ${roster(ids, true)}
     <p class="pets">${ic("paw-print")}No pets. Cats, dogs and horses would be listed here (name, species, life stage).</p>
-    <div class="sims">${GOTHS.map(simCardP).join("")}</div>
-    <p class="source">In-game starting details from The Sims Wiki. Family words are worked out from parents and partners. Skill levels are left out: they change every time you play.</p></section>`;
-  // mini tree
-  h += `<section class="block" style="--h:${hc}"><div class="block-head"><h2>Family <em>tree</em></h2>${isNew()}<a class="count" href="${PROTO}family-tree.html">Open the full tree</a></div>
-    <p class="say">Just this household, plus parents and grown-up children who live elsewhere. Chips show where a Sim lives when it isn’t here; Cornelia’s opens the family she was born into.</p>
-    <div class="tree-box">${drawTree(TREES.goth, {line: "goth", compact: true, cw: 178, ch: 84, link: true, here: HH.id})}</div>${treeKey()}</section>`;
+    <p class="source">In-game starting details from The Sims Wiki. Skill levels are left out: they change every time you play.</p></section>`;
+  // mini tree: only Sims joined by family links (none for a household of unrelated housemates)
+  const tree = miniTreeIds(HH.id);
+  if (tree.length) h += `<section class="block" style="--h:${hc}"><div class="block-head"><h2>Family <em>tree</em></h2>${isNew()}<a class="count" href="${PROTO}family-tree.html">Open the full tree</a></div>
+    <p class="say">This household, their parents and grown-up children who live elsewhere, drawn from family links only (never from who lives together). Names open the Sim pages; Cornelia’s chip opens the family she was born into.</p>
+    <div class="tree-box">${drawTree(tree, {line: "goth", compact: true, cw: 178, ch: 84, link: true, here: HH.id, simLinks: true})}</div>${treeKey()}</section>`;
   // connected households, grouped by tag
   h += `<section class="block" style="--h:${hc}"><div class="block-head"><h2>Connected <em>households</em></h2>${isNew("grouped by tag")}</div>
     <p class="say">Each link says who and why, and where it comes from. Dashed pills are ideas (here, an old rivalry from The Sims 3), not something in the game. The Alto dynasty in the game is Enzo alone.</p>
     ${relGroups(HH.id)}</section>`;
-  h += `<section class="block" style="--h:${hc}"><div class="block-head"><h2>Their <em>story</em></h2></div><div class="empty">${ic("note")}No story yet.</div></section>`;
+  h += `<section class="block" style="--h:${hc}"><div class="block-head"><h2>Their <em>story</em></h2></div><div class="empty">${ic("note")}<span>No story yet: yours to write.</span>
+    <small>EA’s side shows on each Sim’s page for now; <a href="../for-jemma/prototypes/stories/goths.html">the story prototype</a> tries out the whole thing.</small></div></section>`;
   h += neighbours.length ? `<section class="block"><div class="block-head"><h2>Neighbours</h2></div><div class="families">${neighbours.map(x => famCard(x)).join("")}</div></section>` : "";
-  // a household with basics only
+  // a household with basics only, and no portrait yet
   const P = hhIndex["h-willow-creek--pancakes"];
   h += `<div class="opt-head"><span class="no">4B</span><h2>The same block with basics only</h2></div>
-    <p class="say">The Pancakes (${esc(P.lots[0].name)}, ${esc(P.lots[0].hood.name)}) as they’d look with just the basics: names and life stages, no cards. Most households would start like this.</p>
+    <p class="say">The Pancakes (${esc(P.lots[0].name)}, ${esc(P.lots[0].hood.name)}) as they’d look with just the basics and no portrait yet: the roster comes first, with no empty frame. Most households would start like this.</p>
     <section class="block" style="--h:${P.lots[0].hood.color};margin-top:18px"><div class="block-head"><h2>The <em>Sims</em></h2><span class="count">2 Sims · no pets</span></div>
-    ${roster(["bob-pancakes", "eliza-pancakes"], false)}
-    <div class="empty" style="margin-top:14px">${ic("sim")}No profiles yet. A card appears here once a Sim has traits, an aspiration and a career noted.</div></section>`;
+    ${portrait(P.id, membersOf(P.id))}${roster(membersOf(P.id), false)}
+    <div class="empty" style="margin-top:14px">${ic("sim")}No profiles yet. Their Sim pages would show the basics until traits, an aspiration and a career are noted.</div></section>`;
   h += `<footer><span>Prototype only: nothing on the site has changed. Sims are EA’s starting versions from The Sims Wiki.</span><span>Icons by Lucide</span></footer>`;
   return h;
 }
-function draw() { const y = scrollY, v = document.getElementById("view"); v.innerHTML = page(); lazyPics(v); window.scrollTo(0, y); }
-document.addEventListener("click", e => { const b = e.target.closest("[data-goto]"); if (b) document.getElementById("sim-" + b.dataset.goto)?.scrollIntoView({behavior: "smooth", block: "start"}); });
-draw();
+const v = document.getElementById("view"); v.innerHTML = page(); lazyPics(v);
 </script>
 </body>
 </html>
