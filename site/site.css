@@ -680,5 +680,5 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 /* club badges: silver, so they never read as dynasty roles (trial, 17 Oct) */
 .badge.c-leader{background:linear-gradient(#D9DDE0,#AEB5BA);color:#1A1F1C;border:1px solid #9AA2A8}
 .badge.c-member{background:color-mix(in srgb,#AEB5BA 10%,var(--surface));color:#1A1F1C;border:1px solid #9AA2A8}
-/* university organisation badges: the university's colour (dark purple for the secret society) (trial, 17 Oct) */
-.badge.o-badge{background:var(--u);color:#fff;border:1px solid var(--u)}
+/* university organisation badges: the university's colour with its gold trim, as on the game's banners (dark purple for the secret society) */
+.badge.o-badge{background:var(--u);color:#fff;border:1.5px solid var(--t)}

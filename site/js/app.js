@@ -169,10 +169,10 @@ Object.entries((DATA.groups || {}).clubs || {}).forEach(([name, c]) => {
     g.members.push([o, role || "member"]); });
 });
 // university organisations (Discover University): members from each Sim's "orgs"; details from data/groups.json; coloured by university
-const UNIS = {uob: {name: "University of Britechester", colour: "#2F7A4A"}, foxbury: {name: "Foxbury Institute", colour: "#A8322D"}, secret: {name: "Both (it’s secret)", colour: "#3E2458"}};
+const UNIS = {uob: {name: "University of Britechester", colour: "#4E8B66", trim: "#D7AC0D"}, foxbury: {name: "Foxbury Institute", colour: "#CE3B3B", trim: "#D7AC0D"}, secret: {name: "Both (it’s secret)", colour: "#3E2458", trim: "#7A5A9E"}};
 const kindName = g => g.kind === "org" && g.uni === "secret" ? "Secret society" : GROUP_KINDS[g.kind].name;
 Object.entries((DATA.groups || {}).organisations || {}).forEach(([name, o]) => { const id = "g-org-" + slug(name);
-  GROUP_PAGES[id] = {...o, kind: "org", name, id, members: [], colour: (UNIS[o.uni] || {}).colour, world: worlds.find(w => w.id === "britechester") || null}; });
+  GROUP_PAGES[id] = {...o, kind: "org", name, id, members: [], colour: (UNIS[o.uni] || {}).colour, trim: (UNIS[o.uni] || {}).trim, world: worlds.find(w => w.id === "britechester") || null}; });
 Object.values(SIMS).forEach(s => (s.orgs || []).forEach(c => { const g = GROUP_PAGES["g-org-" + slug(c.name)]; if (g && !g.members.some(([m]) => m === s.id)) g.members.push([s.id, c.role || "member"]); }));
 Object.values(GROUP_PAGES).filter(g => !g.members.length).forEach(g => delete GROUP_PAGES[g.id]);   // only groups someone on the site is in
 Object.values(SIMS).forEach(s => (s.clubs || []).forEach(c => { const g = GROUP_PAGES["g-club-" + slug(c.name)]; if (g && !g.members.some(([m]) => m === s.id)) g.members.push([s.id, c.role || "member"]); }));
@@ -181,7 +181,7 @@ const groupsOf = id => Object.values(GROUP_PAGES).filter(g => g.members.some(([m
 const dynastyOf = id => groupsOf(id).find(([, g]) => g.kind === "dynasty");
 // a member as a small box, like the tree's cards: based here = highlighted; elsewhere = lighter, with a chip for where they live
 const roleBadge = (kind, role, g) => { const R = GROUP_KINDS[kind].roles[role] || role, dyn = kind === "dynasty";
-  if (kind === "org") return `<span class="badge o-badge" style="--u:${g.colour}">${ic(g.uni === "secret" ? "moon" : "graduation-cap")}${esc(R)}</span>`;
+  if (kind === "org") return `<span class="badge o-badge" style="--u:${g.colour};--t:${g.trim}">${ic(g.uni === "secret" ? "moon" : "graduation-cap")}${esc(R)}</span>`;
   return `<span class="badge ${dyn ? "r-" + role : "c-" + role}">${dyn ? ic("crown") : role === "leader" ? ic("flag") : ""}${esc(R)}</span>`; };
 function memberCard(g, id, role){
   const s = SIMS[id], dyn = g.kind === "dynasty", here = true, href = simLinkTo(id), R = GROUP_KINDS[g.kind].roles[role] || role, crown = ["head", "heir", "leader"].includes(role);

@@ -77,7 +77,7 @@
      "traits": ["Ambitious", "Outgoing", "Perfectionist"],
      "bonus": "Quick Learner",
      "career": "",
-     "school": "University of Britechester",
+     "school": "University of Britechester · Physics",
      "skills": [
       ["Charisma", 4, 10],
       ["Logic", 5, 10]
@@ -106,7 +106,7 @@
      "traits": ["Bookworm", "Active", "Romantic"],
      "bonus": "Quick Learner",
      "career": "",
-     "school": "University of Britechester · Language & Literature",
+     "school": "University of Britechester · Language & Literature (distinguished)",
      "skills": [
       ["Programming", 3, 10],
       ["Writing", 5, 10]
@@ -139,7 +139,7 @@
      "traits": ["Genius", "Goofball", "Geek"],
      "bonus": "Quick Learner",
      "career": "",
-     "school": "Foxbury Institute · Computer Science",
+     "school": "Foxbury Institute · Computer Science (distinguished)",
      "skills": [
       ["Programming", 4, 10],
       ["Video Gaming", 3, 10]
