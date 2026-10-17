@@ -339,7 +339,8 @@ function treeCard(id, x, y, CW, CH, o){
   const w = s.hh ? s.hh.world : s.world, here = o.me ? id === o.me : o.here && s.hh === o.here;
   const sub = [nee(s), s.age, s.state, s.noHome ? "no home" : ""].filter(Boolean).join(" · ");
   const chips = [];
-  if (!s.late && !here) chips.push(homeChip(s));
+  const housemate = o.me && s.hh && s.hh === SIMS[o.me].hh;   // on a Sim page, their own household needs no chip either
+  if (!s.late && !here && !housemate) chips.push(homeChip(s));
   // dynasty heads and heirs keep a small badge (the dynasty itself has its own page)
   const dy = dynastyOf(id), role = dy && dy[2], badge = role ? `<span class="badge ${role === "head" ? "head" : role === "outcast" ? "out" : role === "member" ? "plain" : ""}">${ic("crown")}${GROUP_KINDS.dynasty.roles[role]}</span>` : "";
   // names open the Sim's own page, or their household where there's no Sim page yet
