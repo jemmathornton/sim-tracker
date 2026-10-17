@@ -228,6 +228,12 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [ ] [Jemma] EA’s families: an “In the game / In my save” table topic by topic (suggested), or two bios side by side? Chapters for any household? Empty parts hidden, or one quiet “Yours to write” line? Writing in chat (as now), or a text file per household?
 - [ ] [Jemma] Questions: are the Cadberrys a Not So Berry legacy (her “Spectra” Gallery household is tagged #notsoberry #mint #founder)? In the game Romeo and Juliette are already married with a teenage son: is the Tartosa wedding their first?
 
+### Occults (research/occults.md)
+- [ ] [Jemma] Nothing in her plan breaks the game. Care points: Specter Row can’t be both a rental and a Haunted House (already open above); Henford’s fairy area probably needs “Limit Fairies to Innisgreen” off, and Cordelia’s Secret Cottage has no free trait slot for Fairy Passage; the Ravenwood Wedding Hall may still have the old manor’s On Hallowed Grounds (keep or remove?)
+- [ ] [Jemma] Her hints, to confirm: are the Tiquelles spellcasters, with Mid-NoWhere as their portal to the Magic Realm? Hallow Slough a Haunted House, or On Hallowed Grounds? 18 Culpepper House Spooky? If the Sultry Springside Smiths are Maxis’s Gallery family, Pollination Tech 9 is her save’s only alien
+- [ ] [Jemma] Heart Consort Capp and the four Sulani mermaids so the game never deletes them? Later, if she buys Vampires or Werewolves: keep the Grimtooth bunker, leave the garlic out of Garliclauter, keep Widowshild a home
+- [ ] [Jemma] Showing occults: a life-state pill plus a born or turned line, ghosts shown in their household and generation, faded for late Sims (suggested); or a pill only; or a save-wide Occults page later? Trailer lore (Vlad turned Lilith…) shown with an “In the game: not linked” note, or only what her save says? Icons OK (droplet for vampires, moon, wand, sparkles, shell, orbit, ghost)?
+
 ### Where Sims could come from (research/sims-sources.md)
 - [ ] [Jemma] Which save is the Sims source: an exception to the Building rule for households in “Building #2” (like the rental-units one), or a separate save kept for Sims (what would it be called)? Her other 30 saves hold everything but are old (newest “Season Events”, 15 Mar 2026) and don’t have her rebuilt lots
 - [ ] [Jemma] EA’s families: fill them in automatically from the game’s own files (197 premade households, their family links, and 348 starting friendships between households), or only the ones she has played?

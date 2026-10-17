@@ -36,7 +36,7 @@ The weekly Gallery refresh can stop if a new upload can’t be read (one line); 
 | ea-family-lore.md | EA’s families per world and the links between them |
 | household-stories.md | Recording each family’s story |
 | pets-and-horses.md | EA’s animals, vets, stables |
-| occults.md | Vampires, spellcasters, fairies, ghosts… (if finished) |
+| occults.md | Vampires, spellcasters, fairies, ghosts and where they live |
 | townies-and-roles.md | Who staffs venues; game settings |
 | students-and-schools.md | Universities and Copperdale High |
 | rental-units.md | Rentals unit by unit |
