@@ -24,9 +24,16 @@ Research and prototypes only. Nothing in the app, its data or your own files cha
 - **Blurry taskbar icon:** it’s Chrome; the fix is making the app an installed Chrome app.
 - **Two formula bugs** in your spreadsheet’s Overview (ours, from 15 Oct): Nordhaven shows 10% instead of 20%.
 
-## 3. Bugs to fix when you’re back (marked [Claude] on TODO)
+## 3. Fixes for when you’re back (marked [Claude] on TODO), in this order
 
-The weekly Gallery refresh can stop if a new upload can’t be read (one line); the neighbourhood banner zoom uses the wrong height; Manzanita Terrace shows no units; a few rental and text slips; small accessibility fixes.
+1. **Weekly Gallery refresh:** the one-line crash fix, before next Sunday (also: only count uploads by you; write files safely).
+2. **Rentals:** Manzanita Terrace shows no units (its type lacks “(3)”); Sequoia Cottage counts the Lovejoys as living there; Johnny Zest’s trailer number; Rippling Flats’ card and page disagree.
+3. **Text slips:** straight apostrophes in tab titles and the app’s name, “Open the The Scotts household”, “household household”, American spellings in our own text, game names spelt differently from the game.
+4. **Neighbourhood banners:** work out the zoom from the banner’s real height (fixes most of the so-so ones).
+5. **Small accessibility fixes:** white initials on pale colours, keyboard focus after choosing a page, reduced motion.
+6. **Tidy-up:** leftover rental-trial code, unused files in site/, out-of-date counts in TODO/HANDOVER/CLAUDE.md, research notes that predate your 16 Oct choices.
+
+Then your decisions, starting with the Sims prototype.
 
 ## 4. All the notes (in `research/`)
 
