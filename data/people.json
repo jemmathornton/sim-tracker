@@ -75,5 +75,88 @@
   "name": "Villareal mother",
   "sex": "f",
   "placeholder": true
+ },
+ "unknown-1": {
+  "name": "Unknown",
+  "sex": "f",
+  "placeholder": true,
+  "parents": ["freeda-perry"]
+ },
+ "unknown-2": {
+  "name": "Unknown",
+  "sex": "f",
+  "placeholder": true,
+  "parents": ["shigeru-nishidake", "sachiko-nishidake"]
+ },
+ "unknown-3": {
+  "name": "Unknown",
+  "sex": "m",
+  "placeholder": true,
+  "parents": ["eleanor-sullivan"]
+ },
+ "unknown-4": {
+  "name": "Unknown",
+  "sex": "f",
+  "placeholder": true,
+  "parents": ["keala-hoapili"]
+ },
+ "unknown-5": {
+  "name": "Unknown",
+  "sex": "m",
+  "placeholder": true,
+  "parents": ["eleanor-elderberry", "ekram-elderberry"]
+ },
+ "unknown-6": {
+  "name": "Unknown",
+  "sex": "f",
+  "placeholder": true
+ },
+ "unknown-7": {
+  "name": "Unknown",
+  "sex": "x",
+  "placeholder": true,
+  "parents": ["ekene-ananou"]
+ },
+ "unknown-8": {
+  "name": "Unknown",
+  "sex": "x",
+  "placeholder": true
+ },
+ "unknown-9": {
+  "name": "Unknown",
+  "sex": "x",
+  "placeholder": true
+ },
+ "unknown-10": {
+  "name": "Unknown",
+  "sex": "x",
+  "placeholder": true,
+  "parents": ["unknown-11"]
+ },
+ "unknown-11": {
+  "name": "Unknown",
+  "sex": "x",
+  "placeholder": true
+ },
+ "unknown-12": {
+  "name": "Unknown",
+  "sex": "x",
+  "placeholder": true,
+  "parents": ["unknown-11"]
+ },
+ "unknown-13": {
+  "name": "Unknown",
+  "sex": "x",
+  "placeholder": true
+ },
+ "unknown-14": {
+  "name": "Unknown",
+  "sex": "x",
+  "placeholder": true
+ },
+ "unknown-15": {
+  "name": "Unknown",
+  "sex": "x",
+  "placeholder": true
  }
 }

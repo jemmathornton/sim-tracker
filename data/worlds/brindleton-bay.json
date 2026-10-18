@@ -90,7 +90,7 @@
       ["Piano", 2, 10]
      ],
      "partners": [
-      ["justin-delgato", "Partner"]
+      ["justin-delgato", "Spouse"]
      ]
     },
     {
@@ -109,7 +109,7 @@
       ["Charisma", 3, 10]
      ],
      "partners": [
-      ["supriya-delgato", "Partner"]
+      ["supriya-delgato", "Spouse"]
      ]
     },
     {
@@ -118,9 +118,7 @@
      "sex": "f",
      "origin": "Premade",
      "age": "Toddler",
-     "aspiration": "Super Parent",
      "traits": ["Angelic"],
-     "bonus": "Domestic",
      "career": "",
      "skills": [
       ["Communication", 2, 5],
@@ -152,8 +150,6 @@
      "origin": "Premade",
      "age": "Adult",
      "state": "Dog",
-     "aspiration": "Successful Lineage",
-     "bonus": "Domestic",
      "career": ""
     },
     {
@@ -163,8 +159,6 @@
      "origin": "Premade",
      "age": "Adult",
      "state": "Cat",
-     "aspiration": "Party Animal",
-     "bonus": "Gregarious",
      "career": ""
     }
    ]
@@ -188,7 +182,7 @@
       ["Photography", 2, 5]
      ],
      "partners": [
-      ["brent-hecking", "Partner"]
+      ["brent-hecking", "Spouse"]
      ]
     },
     {
@@ -208,7 +202,7 @@
       ["Pet Training", 2, 5]
      ],
      "partners": [
-      ["brant-hecking", "Partner"]
+      ["brant-hecking", "Spouse"]
      ]
     },
     {
@@ -218,8 +212,6 @@
      "origin": "Premade",
      "age": "Adult",
      "state": "Dog",
-     "aspiration": "Musical Genius",
-     "bonus": "Muser",
      "career": ""
     }
    ]
@@ -249,8 +241,6 @@
      "origin": "Premade",
      "age": "Elder",
      "state": "Cat",
-     "aspiration": "Public Enemy",
-     "bonus": "Dastardly",
      "career": ""
     },
     {
@@ -260,8 +250,6 @@
      "origin": "Premade",
      "age": "Adult",
      "state": "Cat",
-     "aspiration": "Joke Star",
-     "bonus": "Gregarious",
      "career": ""
     },
     {
@@ -271,8 +259,6 @@
      "origin": "Premade",
      "age": "Adult",
      "state": "Cat",
-     "aspiration": "Fabulously Wealthy",
-     "bonus": "Business Savvy",
      "career": ""
     },
     {
@@ -282,7 +268,6 @@
      "origin": "Premade",
      "age": "Child",
      "state": "Cat",
-     "aspiration": "Rambunctious Scamp",
      "career": "",
      "parents": ["josie"]
     }

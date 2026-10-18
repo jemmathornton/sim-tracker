@@ -5,7 +5,7 @@ that match her spreadsheet; EA townies are checked against the Sims Wiki as well
     python tools/premade_import.py --apply   write the Sims into data/worlds/<world>.json (households[...].sims), then rebuild
 
 Reads research/data/premades.json (tools/research/premades.py). A household that already has Sims on the site is left
-alone. MATCHES below says which EA household fills which plan household, and which members go where when she has
+alone. After a fresh import, run tools/premade_family_fix.py --apply for the unknown parents that join siblings and cousins. MATCHES below says which EA household fills which plan household, and which members go where when she has
 split a family (Knox Greenburg lives apart from the rest). Anything not listed is hers to decide (or comes from her save).
 """
 import json, os, re, sys, subprocess
@@ -30,7 +30,7 @@ MATCHES = {
                          "Greenburg": ("Ecomaster", lambda s: s["name"] != "Knox Greenburg"), "Knox Greenburg": ("Ecomaster", lambda s: s["name"] == "Knox Greenburg")},
     "mt-komorebi": {"Akiyama": "Commuter", "Ito": "Affluent", "Nishidake": "Elder"},
     "henford-on-bagley": {"Moody & McMillan": "MoodyMacMillan", "The Scotts": "Scott", "The Watsons": "Watson"},
-    "tartosa": {"Laurent": "Laurent", "Markovic": "Markovic", "Soto": "Soto", "Monty": "Monty"},
+    "tartosa": {"Laurent": "Laurent", "Markovic": "Markovic", "Soto": "Soto", "Monticapp": "Monty"},   # renamed Monticapp (18 Oct)
     "moonwood-mill": {"Volkov": "WolfTown_Volkov"},
     "copperdale": {"Harjo": "HS_Harjo", "Prescott": "HS_Prescott", "Price": "HS_Price"},
     "san-sequoia": {"Michaelson": "Ep13_BayArea_Michaelson", "Robles": "Ep13_BayArea_Robles", "Robles-Ruano": "Ep13_BayArea_RoblesRuano",
@@ -133,7 +133,7 @@ def main(apply):
                 if rel in ("RELATIONSHIP_MOTHER", "RELATIONSHIP_FATHER"): add_parent(me, by_sim.get(other))
             if s.get("fiance") and by_sim.get(s["fiance"]): add_partner(me, by_sim[s["fiance"]], "Engaged")
             elif s.get("partner") and by_sim.get(s["partner"]) and not any(p == by_sim[s["partner"]] for p, _ in partners.get(me, [])):
-                add_partner(me, by_sim[s["partner"]], "Partner")
+                add_partner(me, by_sim[s["partner"]], "Spouse")   # the game's significant other is a spouse (a steady partner is kept elsewhere)
     for a, flag, b in P["between"]["family"]:
         A, B = by_tpl.get(a), by_tpl.get(b)
         if flag in ("PARENT", "SECRET_PARENT"): add_parent(B, A)
@@ -161,9 +161,10 @@ def main(apply):
             d = {"id": me, "name": s["name"], "sex": s["sex"] or "x", "origin": "Premade", "age": s["age"]}
             if s.get("species"): d["state"] = s["species"]
             elif s.get("occult"): d["state"] = OCCULT.get(s["occult"], s["occult"].title())
-            if s.get("aspiration"): d["aspiration"] = s["aspiration"]
+            young = s.get("species") or s["age"] in ("Baby", "Infant", "Toddler")   # pets and the very young have no aspiration
+            if s.get("aspiration") and not young: d["aspiration"] = s["aspiration"]
             if s["traits"]: d["traits"] = s["traits"]
-            if s.get("bonus"): d["bonus"] = s["bonus"]
+            if s.get("bonus") and not young: d["bonus"] = s["bonus"]
             sc = school(s)
             d["career"] = "" if sc or not c else " · ".join(x for x in (c["career"], c["title"]) if x) + (f" (level {c['level']})" if c.get("level") else "")
             if sc: d["school"] = sc

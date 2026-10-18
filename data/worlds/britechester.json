@@ -210,7 +210,8 @@
      "skills": [
       ["Writing", 3, 10],
       ["Charisma", 2, 10]
-     ]
+     ],
+     "parents": ["unknown-5"]
     }
    ]
   }

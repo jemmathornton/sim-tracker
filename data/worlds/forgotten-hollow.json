@@ -69,7 +69,8 @@
      "career": "",
      "rels": [
       ["Lily Zhu", "Friends"]
-     ]
+     ],
+     "parents": ["unknown-10"]
     },
     {
      "id": "caleb-vatore",
@@ -84,7 +85,8 @@
      "career": "",
      "rels": [
       ["Lily Zhu", "Friends"]
-     ]
+     ],
+     "parents": ["unknown-10"]
     }
    ]
   }

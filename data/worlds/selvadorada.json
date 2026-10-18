@@ -2,7 +2,8 @@
  "name": "Selvadorada",
  "pack": "Jungle Adventure",
  "owned": true,
- "colour": "#2E7D5B", "heroY": 40,
+ "colour": "#2E7D5B",
+ "heroY": 40,
  "deep": ["#0F2E22", "#164333"],
  "blurb": "Enjoy learning about the Selvadorada culture, or explore the jungle's hidden secrets. But be prepared! It won't be an easy trek through the jungle.",
  "neighbourhoods": [

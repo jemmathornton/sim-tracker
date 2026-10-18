@@ -297,7 +297,8 @@
      ],
      "rels": [
       ["Kiyoshi Ito", "Friends"]
-     ]
+     ],
+     "parents": ["unknown-2"]
     }
    ]
   }

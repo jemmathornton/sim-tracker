@@ -181,7 +181,8 @@
      ],
      "partners": [
       ["radwan-gomes", "Spouse"]
-     ]
+     ],
+     "parents": ["unknown-15"]
     },
     {
      "id": "zelmira-gomes",
@@ -226,7 +227,8 @@
       ["Radwan Gomes", "Acquaintances"],
       ["Tziporah Gomes", "Acquaintances"],
       ["Zelmira Gomes", "Good Friends"]
-     ]
+     ],
+     "parents": ["unknown-15"]
     },
     {
      "id": "zuleika-izadi",

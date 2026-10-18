@@ -519,7 +519,7 @@
       ["Mixology", 3, 10]
      ],
      "partners": [
-      ["eliza-pancakes", "Partner"]
+      ["eliza-pancakes", "Spouse"]
      ]
     },
     {
@@ -536,7 +536,7 @@
       ["Fitness", 3, 10]
      ],
      "partners": [
-      ["bob-pancakes", "Partner"]
+      ["bob-pancakes", "Spouse"]
      ]
     }
    ]
@@ -560,7 +560,7 @@
      ],
      "parents": ["vivian-lewis"],
      "partners": [
-      ["alice-spencer-kim", "Partner"]
+      ["alice-spencer-kim", "Spouse"]
      ]
     },
     {
@@ -599,7 +599,7 @@
      ],
      "parents": ["dennis-kim"],
      "partners": [
-      ["eric-lewis", "Partner"]
+      ["eric-lewis", "Spouse"]
      ]
     },
     {

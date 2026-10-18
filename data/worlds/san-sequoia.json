@@ -128,9 +128,7 @@
      "sex": "f",
      "origin": "Premade",
      "age": "Infant",
-     "aspiration": "Eco Innovator",
      "traits": ["Wiggly"],
-     "bonus": "Collector",
      "career": "",
      "parents": ["celeste-michaelson", "christopher-michaelson"]
     }
@@ -284,9 +282,7 @@
      "sex": "f",
      "origin": "Premade",
      "age": "Toddler",
-     "aspiration": "Mt. Komorebi Sightseer",
      "traits": ["Clingy"],
-     "bonus": "Home Turf",
      "career": "",
      "rels": [
       ["Aurelio Robles", "Cousin"],
@@ -347,7 +343,7 @@
      "aspiration": "Creative Genius",
      "traits": ["Creative"],
      "career": "",
-     "parents": ["xochitl-luna"]
+     "parents": ["xochitl-luna", "unknown-3"]
     }
    ]
   }

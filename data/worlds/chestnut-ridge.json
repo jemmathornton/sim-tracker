@@ -70,8 +70,6 @@
      "origin": "Premade",
      "age": "Adult",
      "state": "Horse",
-     "aspiration": "Chief of Mischief",
-     "bonus": "Dastardly",
      "career": "",
      "skills": [
       ["Agility", 10, 10],
@@ -110,8 +108,6 @@
      "origin": "Premade",
      "age": "Adult",
      "state": "Horse",
-     "aspiration": "Soulmate",
-     "bonus": "Alluring",
      "career": ""
     },
     {
@@ -137,7 +133,8 @@
      ],
      "partners": [
       ["juniper-grove", "Spouse"]
-     ]
+     ],
+     "parents": ["unknown-14"]
     },
     {
      "id": "starbrite",
@@ -146,8 +143,6 @@
      "origin": "Premade",
      "age": "Child",
      "state": "Horse",
-     "aspiration": "Successful Lineage",
-     "bonus": "Domestic",
      "career": "",
      "parents": ["luna"]
     },
@@ -206,8 +201,6 @@
      "origin": "Premade",
      "age": "Adult",
      "state": "Horse",
-     "aspiration": "Successful Lineage",
-     "bonus": "Domestic",
      "career": "",
      "skills": [
       ["Agility", 10, 10],
@@ -236,7 +229,8 @@
       ["Umber Grove", "Friends"],
       ["Juniper Grove", "Best Friends"],
       ["Don Gooseman", "Best Friends"]
-     ]
+     ],
+     "parents": ["unknown-14"]
     }
    ]
   }

@@ -130,7 +130,8 @@
        "name": "Knights of the Hedge",
        "role": "member"
       }
-     ]
+     ],
+     "parents": ["unknown-6"]
     },
     {
      "id": "candy-behr",
@@ -154,7 +155,8 @@
        "name": "Spin Masters",
        "role": "member"
       }
-     ]
+     ],
+     "parents": ["unknown-6"]
     }
    ]
   },
@@ -196,7 +198,7 @@
       ["Video Gaming", 4, 10]
      ],
      "partners": [
-      ["jesminder-bheeda", "Partner"]
+      ["jesminder-bheeda", "Spouse"]
      ]
     },
     {
@@ -215,7 +217,7 @@
       ["Mixology", 7, 10]
      ],
      "partners": [
-      ["arun-bheeda", "Partner"]
+      ["arun-bheeda", "Spouse"]
      ]
     }
    ]
@@ -238,7 +240,7 @@
       ["Painting", 5, 10]
      ],
      "partners": [
-      ["baako-jang", "Partner"]
+      ["baako-jang", "Spouse"]
      ]
     },
     {
@@ -257,7 +259,7 @@
       ["Charisma", 5, 10]
      ],
      "partners": [
-      ["anaya-jang", "Partner"]
+      ["anaya-jang", "Spouse"]
      ]
     },
     {
@@ -389,7 +391,7 @@
       ["Mischief", 2, 10]
      ],
      "partners": [
-      ["victor-feng", "Partner"]
+      ["victor-feng", "Spouse"]
      ]
     },
     {
@@ -407,7 +409,7 @@
       ["Charisma", 7, 10]
      ],
      "partners": [
-      ["lily-feng", "Partner"]
+      ["lily-feng", "Spouse"]
      ]
     }
    ]

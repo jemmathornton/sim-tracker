@@ -198,7 +198,7 @@ function partnersOf(id){
 }
 function ancestors(id, d = 0, out = new Map()){
   if (!out.has(id) || out.get(id) > d) out.set(id, d);
-  (SIMS[id].parents || []).forEach(p => { if (SIMS[p] && !SIMS[p].ph) ancestors(p, d + 1, out); });
+  (SIMS[id].parents || []).forEach(p => { if (SIMS[p]) ancestors(p, d + 1, out); });   // through unknown parents too, so their children count as siblings
   return out;
 }
 function blood(a, b){

@@ -111,9 +111,7 @@
      "sex": "m",
      "origin": "Premade",
      "age": "Toddler",
-     "aspiration": "Good Vampire",
      "traits": ["Clingy"],
-     "bonus": "Gregarious",
      "career": "",
      "parents": ["kasem-bun-ma", "nin-bun-ma"]
     }
@@ -133,7 +131,8 @@
      "career": "Barista · Bean Blender (level 2)",
      "rels": [
       ["Zhafira Cahyaputri", "Disliked"]
-     ]
+     ],
+     "parents": ["unknown-8", "unknown-9"]
     },
     {
      "id": "zhafira-cahyaputri",
@@ -147,7 +146,8 @@
      "career": "Babysitter · Baby Sitter (level 1)",
      "rels": [
       ["Vanesha Cahyaputri", "Disliked"]
-     ]
+     ],
+     "parents": ["unknown-8", "unknown-9"]
     }
    ]
   }
