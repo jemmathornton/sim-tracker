@@ -198,7 +198,7 @@ const groupsOf = id => Object.values(GROUP_PAGES).filter(g => g.members.some(([m
 const dynastyOf = id => groupsOf(id).find(([, g]) => g.kind === "dynasty");
 // a member as a small box, like the tree's cards: based here = highlighted; elsewhere = lighter, with a chip for where they live
 const roleBadge = (kind, role, g) => { const R = GROUP_KINDS[kind].roles[role] || role, dyn = kind === "dynasty";
-  if (kind === "org") return `<span class="badge o-badge" style="--u:${g.colour};--t:${g.trim}">${ic(g.uni === "secret" ? "moon" : "graduation-cap")}${esc(R)}</span>`;
+  if (kind === "org") return `<span class="badge o-badge" style="--u:${g.colour};--t:${g.trim}">${ic(g.uni === "secret" ? "book-open-text" : "graduation-cap")}${esc(R)}</span>`;
   return `<span class="badge ${dyn ? "r-" + role : "c-" + role}">${ic(dyn ? "crown" : "flag")}${esc(R)}</span>`; };
 function memberCard(g, id, role){
   const s = SIMS[id], dyn = g.kind === "dynasty", here = true, href = simLinkTo(id), R = GROUP_KINDS[g.kind].roles[role] || role, crown = ["head", "heir", "leader"].includes(role);
@@ -477,7 +477,7 @@ function simFamily(id){
 function simGroups(id){
   const gs = groupsOf(id);
   // the role uses the same badge as tree and member cards: gold for dynasties, silver for clubs, university colours (19 Oct, her ask)
-  const card = ([gid, g, role]) => `<a class="memb k-${g.kind}" href="#${gid}" style="${g.kind === "org" ? `--u:${g.colour};--t:${g.trim}` : ""}"><span class="ico">${ic(g.uni === "secret" ? "moon" : GROUP_KINDS[g.kind].icon)}</span><span><b>${esc(groupTitle(g))}</b><small>${esc(kindName(g))}</small></span>${roleBadge(g.kind, role, g)}</a>`;
+  const card = ([gid, g, role]) => `<a class="memb k-${g.kind}" href="#${gid}" style="${g.kind === "org" ? `--u:${g.colour};--t:${g.trim}` : ""}"><span class="ico">${ic(g.uni === "secret" ? "book-open-text" : GROUP_KINDS[g.kind].icon)}</span><span><b>${esc(groupTitle(g))}</b><small>${esc(kindName(g))}</small></span>${roleBadge(g.kind, role, g)}</a>`;
   return gs.length ? `<div class="membs">${gs.map(card).join("")}</div>` : "";
 }
 function simHomes(s){
@@ -538,7 +538,7 @@ function groupPage(g){
     if (g.anyType) return `Any ${esc(g.anyType)}`;   // a club set to meet at a lot type rather than one lot
     return W ? `${esc(W.name)}${W.owned ? "" : " (not owned)"}` : ""; };
   let h = `<section class="hero small" style="--c:${c}"><div class="crumbs">${W ? (W.ready && W.owned ? `<a href="#w-${W.id}">${ic("map")}${esc(W.name)}</a>` : `<span>${ic("map")}${esc(W.name)} (not owned)</span>`) : ""}${lotOf && g.kind !== "dynasty" ? `<a href="#${lotOf.id}">${ic(g.place ? "pin" : "home")}${esc(lotOf.name)}</a>` : ""}</div>
-    <div style="display:flex;gap:26px;align-items:center;flex-wrap:wrap;margin-top:22px"><div class="monogram ico-mono${g.kind === "club" ? " silver" : ""}">${ic(g.uni === "secret" ? "moon" : K.icon)}</div><div><span class="label" style="color:var(--on-deep-mute)">${esc(kindName(g))}</span><h1 style="margin-top:6px">${esc(groupTitle(g))}</h1></div></div></section>`;
+    <div style="display:flex;gap:26px;align-items:center;flex-wrap:wrap;margin-top:22px"><div class="monogram ico-mono${g.kind === "club" ? " silver" : ""}">${ic(g.uni === "secret" ? "book-open-text" : K.icon)}</div><div><span class="label" style="color:var(--on-deep-mute)">${esc(kindName(g))}</span><h1 style="margin-top:6px">${esc(groupTitle(g))}</h1></div></div></section>`;
   // the group's own details
   const list = xs => xs && xs.length ? xs.map(esc).join(", ") : "";
   const rows = (g.kind === "dynasty" ? [["Head", who("head")], ["Heir", who("heir")], ["Households", hhs], ["Prestige", g.prestige != null ? `${g.prestige} ${g.prestige === 1 ? "star" : "stars"}` : ""],
