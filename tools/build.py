@@ -219,7 +219,8 @@ def build():
             for l in hood['lots']:
                 name, unsure, note = residents(l['residents'])
                 who = name or note or None
-                if name and l.get('tenants'): who = f"{name} ({'tenant' if l.get('noLandlord') else 'landlord'}) + " + ", ".join(f"{t['name']} (tenant)" for t in l['tenants'])
+                if name and l.get('tenants'): who = f"{name.removesuffix(' own')} ({'tenant' if l.get('noLandlord') else 'landlord'}) + " + ", ".join(f"{t['name']} (tenant)" for t in l['tenants'])
+                elif name and 'rental' in (l['type'] or '').lower() and name.endswith(' own'): who = name[:-4] + ' (landlord)'   # her wording for rental owners (19 Oct)
                 stats.append({"w": n, "n": hood['name'], "lot": l['lot'], "mine": l['myName'], "type": l['type'], "size": l['size'],
                               "built": l['built'], "shared": l['shared'], "sims": l['simsMade'], "who": l.get('statsResidents') or who})
                 key = n + '|' + l['lot']
