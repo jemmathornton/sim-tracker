@@ -63,7 +63,7 @@ def shared_on(i):
 # where the capitalised form is a proper name from the game (Evergreen Harbor, Rec Center, Information Center, a Theater's name).
 BRITISH_ANY = {'neighborhood': 'neighbourhood', 'neighbor': 'neighbour', 'neighboring': 'neighbouring', 'color': 'colour', 'colorful': 'colourful',
                'colored': 'coloured', 'favorite': 'favourite', 'favor': 'favour', 'flavor': 'flavour', 'cozy': 'cosy', 'cozier': 'cosier',
-               'coziest': 'cosiest', 'coziness': 'cosiness', 'gray': 'grey', 'honor': 'honour', 'labor': 'labour', 'organize': 'organise',
+               'coziest': 'cosiest', 'coziness': 'cosiness', 'gray': 'grey', 'honor': 'honour', 'labor': 'labour', 'organize': 'organise', 'organization': 'organisation', 'organizations': 'organisations',
                'organized': 'organised', 'organizing': 'organising', 'realize': 'realise', 'realized': 'realised', 'apologize': 'apologise',
                'traveler': 'traveller', 'travelers': 'travellers', 'traveling': 'travelling', 'traveled': 'travelled', 'jewelry': 'jewellery',
                'mom': 'mum', 'moms': 'mums', 'catalog': 'catalogue', 'aluminum': 'aluminium', 'pajamas': 'pyjamas', 'defense': 'defence',
@@ -208,6 +208,7 @@ def build():
         if W.get('glow'): w["glow"] = W['glow']
         if W.get('heroY') is not None: w["heroY"] = W['heroY']   # how far down the world banner looks at its map (0 top, 100 bottom; her call)
         w.update({k: W[k] for k in ("weather", "highlights") if W.get(k)})   # from the game (tools/research/world_extras.py --apply)
+        if w.get("highlights"): w["highlights"] = [{**x, "text": british(x["text"])} for x in w["highlights"]]   # British spelling, like EA's bios (19 Oct)
         for hood in W['neighbourhoods']:
             lots = []
             if hood.get('mapSpot'): nb_pt.setdefault(ws, {})[hood['name']] = hood['mapSpot']
@@ -245,6 +246,8 @@ def build():
             if owned: w["hoods"].append({"name": hood['name'], "desc": hood.get('desc', ''), "color": W['colour'], "lots": lots,
                                          **{k: hood[k] for k in ("festivals", "ecoStart") if hood.get(k)}})
         if W.get('households'):
+            for h in W['households'].values():   # EA's bios in British spelling too, proper names kept (her call, 19 Oct)
+                if h.get('bio'): h['bio'] = british(h['bio'])
             for hn, h in W['households'].items():   # her Library pictures, stand-ins until her own screenshots (tools/library_pictures.py, 19 Oct)
                 if lib_pics['households'].get(ws + '|' + hn): h['libraryPic'] = stamped(lib_pics['households'][ws + '|' + hn])
                 for sm in h.get('sims', []):
