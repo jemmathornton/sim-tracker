@@ -269,6 +269,14 @@ function familyOf(id){
     .sort((x, y) => rank(x[1]) - rank(y[1]) || band(x[0]) - band(y[0]));
 }
 const membersOf = hh => Object.keys(SIMS).filter(id => SIMS[id].hh === hh);
+/* ---------- pets and horses (trial, 19 Oct: her choice A, "more info") ----------
+   Stored with the Sims (their kind in `state`), but not Sims: left out of Sim counts and the Sims family tree, listed under the
+   Sims as "The animals", with their own small family tree where one has a mother or father, and a pet page instead of a Sim page. */
+const ANIMAL = /^(Horse|Cat|Dog|Small Dog|Large Dog)$/i, isAnimal = s => !!s && ANIMAL.test(s.state || "");
+const animalIcon = s => ic(/cat/i.test(s.state) ? "cat" : /dog/i.test(s.state) ? "dog" : "paw-print");
+// the game's words for young animals
+const stageOf = s => isAnimal(s) && /^(Child|Baby|Toddler)$/.test(s.age || "") ? ({Horse: "Foal", Cat: "Kitten"}[s.state] || "Puppy") : s.age;
+const isChampion = s => (s.wins || []).includes("Ultimate Horse Championship") || !!s.champion;
 // where a Sim lives, as a chip in the world's colour
 function homeChip(s, worldOnly){
   const hh = s.hh, w = s.world;
@@ -293,9 +301,10 @@ const originTag = o => /^mine$/i.test(o || "") ? "Mine" : "Premade";   // plain,
    Everyone in the household, all their blood relatives wherever they live, and those relatives' partners ("plus ones").
    Worlds don't matter. A Sim with no family anywhere isn't drawn; a household where nobody has family gets no tree at all. */
 // a tree centred on some Sims: a household's (treeOf) or one Sim's own (on their page, 17 Oct)
-const treeOf = hh => treeAround(membersOf(hh));
-function treeAround(centre){
-  const all = Object.keys(SIMS), set = new Set();
+const treeOf = hh => treeAround(membersOf(hh).filter(id => !isAnimal(SIMS[id])));
+const animalTreeOf = hh => treeAround(membersOf(hh).filter(id => isAnimal(SIMS[id])), true);
+function treeAround(centre, animals = false){
+  const all = Object.keys(SIMS).filter(o => isAnimal(SIMS[o]) === animals), set = new Set();
   centre.forEach(m => all.forEach(o => { if (!SIMS[o].ph && blood(m, o)) set.add(o); }));   // blood(m, m) counts: members are in
   [...set].forEach(id => partnersOf(id).forEach(([p]) => set.add(p)));                               // plus ones (and placeholders like Mortimer's father)
   [...set].forEach(id => (SIMS[id].parents || []).forEach(p => { if (SIMS[p] && SIMS[p].ph) set.add(p); }));
@@ -380,7 +389,7 @@ function treeCard(id, x, y, CW, CH, o){
   const s = SIMS[id], C = o.compact ? "compact" : "", pos = `left:${x}px;top:${y}px;width:${CW}px;height:${CH}px`;
   if (s.ph) return `<div class="tc ph ${C} ${o.here ? "away" : ""}" style="${pos}"><span class="tm">?</span><div class="tn">${esc(s.phText)}</div></div>`;
   const w = s.hh ? s.hh.world : s.world, here = o.me ? id === o.me : o.here && s.hh === o.here;
-  const sub = [nee(s), s.age, s.state, s.noHome ? "no home" : ""].filter(Boolean).join(" · ");
+  const sub = [nee(s), stageOf(s), s.state, s.noHome ? "no home" : ""].filter(Boolean).join(" · ");
   const chips = [];
   const housemate = o.me && s.hh && s.hh === SIMS[o.me].hh;   // on a Sim page, their own household needs no chip either
   if (!s.late && !here && !housemate) chips.push(homeChip(s));
@@ -469,19 +478,19 @@ function simPage(s){
   // Sims with no household: their family's household (for a blood relative), or the household whose tree they're on
   const kin = !hh && membersOf(base).some(m => blood(m, s.id));
   const hhCrumb = hh ? `${esc(hhWord(hh.name))}` : `Related to ${esc(theHh(base.name))}`;
-  const stage = [s.age, s.late ? "deceased" : ""].filter(Boolean).join(" · ");
+  const stage = [stageOf(s), s.late ? "deceased" : ""].filter(Boolean).join(" · ");
   let h = `<section class="hero small" style="--c:${home1.hood.glow || hc}"><div class="crumbs">${hh ? `<a href="#w-${w.id}">${ic("map")}${esc(w.name)}</a><a href="#n-${home1.hood.id}">${ic("pin")}${esc(home1.hood.name)}</a><a href="#${home1.id}">${ic("home")}${esc(home1.name)}</a>` : ""}<a href="#${base.id}">${ic("users")}${hhCrumb}</a></div>
-    <div style="display:flex;gap:26px;align-items:center;flex-wrap:wrap;margin-top:22px"><div class="monogram">${initial(s.name)}</div><div><span class="label" style="color:var(--on-deep-mute)">Sim</span><h1 style="margin-top:6px">${esc(s.name)}</h1>${nee(s) ? `<p class="nee">${esc(nee(s))}</p>` : ""}</div></div>
-    <div class="sim-chips">${stage ? `<span>${esc(stage.charAt(0).toUpperCase() + stage.slice(1))}</span>` : ""}${s.state ? lifeState(s, "") : "<span>Human</span>"}${s.noHome ? `<span>No home</span>` : ""}${s.notInGame ? `<span title="Named on the Sims Wiki">Never in the game</span>` : ""}${s.notInGame ? "" : `<span>${originTag(s.origin)}</span>`}</div></section>`;
+    <div style="display:flex;gap:26px;align-items:center;flex-wrap:wrap;margin-top:22px"><div class="monogram">${initial(s.name)}</div><div><span class="label" style="color:var(--on-deep-mute)">${isAnimal(s) ? esc(s.state) : "Sim"}</span><h1 style="margin-top:6px">${esc(s.name)}</h1>${nee(s) ? `<p class="nee">${esc(nee(s))}</p>` : ""}</div></div>
+    <div class="sim-chips">${stage ? `<span>${esc(stage.charAt(0).toUpperCase() + stage.slice(1))}</span>` : ""}${s.state ? lifeState(s, "") : "<span>Human</span>"}${isChampion(s) ? `<span class="champ">${ic("trophy")}Champion</span>` : ""}${s.noHome ? `<span>No home</span>` : ""}${s.notInGame ? `<span title="Named on the Sims Wiki">Never in the game</span>` : ""}${s.notInGame ? "" : `<span>${originTag(s.origin)}</span>`}</div></section>`;
   // details
-  const facts = [["Aspiration", s.aspiration], ["Career", s.career], ["School", s.school], ["Lifestyles", (s.lifestyles || []).join(", ")], ["Likes", (s.likes || []).join(", ")], ["Died", s.died]].filter(([, v]) => v);
+  const facts = [["Breed", s.breed], ["Competitions won", (s.wins || []).join(", ")], ["Aspiration", s.aspiration], ["Career", s.career], ["School", s.school], ["Lifestyles", (s.lifestyles || []).join(", ")], ["Likes", (s.likes || []).join(", ")], ["Died", s.died]].filter(([, v]) => v);
   const hasTraits = s.traits && s.traits.length;
   const skills = (s.skills || []).map(([n, lv, max]) => `<div class="skill"><span>${esc(n)}</span><div class="pips" style="--max:${max||10}">${Array.from({length:max||10},(_,i)=>`<i class="${i<lv?"on":""}"></i>`).join("")}</div><b>${lv}</b></div>`).join("");
   if (hasTraits || facts.length || skills) h += `<section class="block" style="--h:${hc}"><div class="block-head"><h2>About <em>${esc(first)}</em></h2></div>
     <div class="sim-about"><div>${hasTraits ? `<span class="label">Traits</span><div class="traits">${s.traits.map(t => `<span>${esc(t)}</span>`).join("")}${s.bonus ? `<span class="bonus" title="Bonus trait">${esc(s.bonus)}</span>` : ""}</div>` : ""}${skills ? `<div class="skills" style="margin-top:${hasTraits ? 22 : 0}px"><span class="label">Skills</span>${skills}</div>` : ""}${s.notes ? `<p class="sim-note">${esc(s.notes)}</p>` : ""}</div>
       ${facts.length ? `<dl class="facts">${facts.map(([t, v]) => `<div><dt>${t}</dt><dd>${esc(v)}</dd></div>`).join("")}</dl>` : "<div></div>"}</div></section>`;
   // family
-  const fam = simFamily(s.id), own = s.hh ? treeOf(s.hh) : treeAround([s.id]);   // their household’s whole family tree, with them highlighted
+  const fam = simFamily(s.id), own = isAnimal(s) ? (s.hh ? animalTreeOf(s.hh) : []) : s.hh ? treeOf(s.hh) : treeAround([s.id]);   // their household’s whole family tree, with them highlighted
   if (fam.trim() || own.length) h += `<section class="block" id="family" style="--h:${hc}"><div class="block-head"><h2>Their <em>family</em></h2></div>
     ${own.length ? `<div class="tree-box">${fitTree(own, {line: s.line, compact: true, ch: 96, labels: false, here: true, me: s.id})}</div>${treeKey(own)}` : ""}
     ${fam.trim() ? `<div style="margin-top:22px">${fam}</div>` : ""}</section>`;
@@ -892,7 +901,7 @@ function lot(l){
     <div class="detail" style="--h:${hc}">${carousel(l)}
     <div><dl class="facts">${l.ea ? `<div><dt>In-game name</dt><dd>${esc(l.ea)}</dd></div>` : ""}<div><dt>Lot type</dt><dd>${esc(unitCount(l) ? l.type.replace(/\s*\((\d+)\)/, " · $1 units") : l.type || "Not set")}</dd></div>${isApt(l) ? "" : `<div><dt>Lot size</dt><dd>${esc(sizeTxt(l.size) || "Not checked yet")}</dd></div>`}${l.traits ? `<div><dt>Lot traits</dt><dd>${l.traits.map(esc).join(", ")}</dd></div>` : ""}${l.challenges ? `<div><dt>${l.challenges.length > 1 ? "Lot challenges" : "Lot challenge"}</dt><dd>${l.challenges.map(esc).join(", ")}</dd></div>` : ""}
       <div><dt>Neighbourhood</dt><dd><a href="#n-${l.hood.id}">${esc(l.hood.name)}</a></dd></div>${progressRow(l)}${l.building ? `<div><dt>Building</dt><dd>${esc(l.building.name)} · ${l.building.units.length} Apartments</dd></div>` : ""}
-      ${l.hh || l.whoNote ? `<div><dt>${l.owned ? "Owned by" : "Household"}</dt><dd>${l.hh ? `<a href="#${l.hh.id}">${esc(l.hh.name)}</a>${l.hh.unsure?" (unsure)":""}${l.tenants && !l.owned && !NO_LANDLORD.has(l.world.name + "|" + l.lot) ? " (landlord)" : ""}` : esc(emptyNote(l.whoNote))}</dd></div>` : ""}${unitCount(l) ? (u => `<div><dt>Units</dt><dd>${u.length}: ${u.filter(Boolean).length} lived in, ${u.filter(x => !x).length} free</dd></div>`)(rentalUnits(l)) : ""}${l.tenants ? `<div><dt>${l.tenants.length > 1 ? "Tenants" : "Tenant"}</dt><dd>${l.tenants.map(t => `<a href="#${t.id}">${esc(t.name)}</a>${t.note ? ` <small>“${esc(t.note)}”</small>` : ""}`).join(", ")}</dd></div>` : ""}</dl>${l.versions ? versionTabs(l) : ""}
+      ${l.hh || l.whoNote ? `<div><dt>${l.owned ? "Owned by" : "Household"}</dt><dd>${l.hh ? `<a href="#${l.hh.id}">${esc(l.hh.name)}</a>${l.hh.unsure?" (unsure)":""}${l.tenants && !l.owned && !NO_LANDLORD.has(l.world.name + "|" + l.lot) ? " (landlord)" : ""}` : esc(emptyNote(l.whoNote))}</dd></div>` : ""}${unitCount(l) ? (u => `<div><dt>Units</dt><dd>${u.length}: ${u.filter(Boolean).length} lived in, ${u.filter(x => !x).length} free</dd></div>`)(rentalUnits(l)) : ""}${l.hh && !l.owned && l.hh.sims.some(isAnimal) ? `<div><dt>Animals</dt><dd>${esc(whoCount(l.hh.sims.filter(isAnimal)).replace(/^0 Sims · /, ""))}</dd></div>` : ""}${l.tenants ? `<div><dt>${l.tenants.length > 1 ? "Tenants" : "Tenant"}</dt><dd>${l.tenants.map(t => `<a href="#${t.id}">${esc(t.name)}</a>${t.note ? ` <small>“${esc(t.note)}”</small>` : ""}`).join(", ")}</dd></div>` : ""}</dl>${l.versions ? versionTabs(l) : ""}
 </div></div>
     ${l.hh ? `<section class="block" style="--h:${hc}"><div class="block-head"><h2>${l.owned ? "Who <em>owns it</em>" : "Who <em>lives here</em>"}</h2></div>
       <div class="lives"><div class="lives-card">${hhListing(l.hh)}</div>
@@ -963,9 +972,6 @@ function textOn(hex){ const c = (hex || "#000").replace("#",""), L = [0,2,4].map
   return (1.05)/(Y+.05) >= (Y+.05)/(.0185+.05) ? "#fff" : "#1A1F1C"; }
 const emptyNote = n => /bed|empty/i.test(n) ? "Empty" : n;
 const simsMade = x => x.lots.some(l => l.sims === true);
-// pets and horses are stored with the Sims (their kind in `state`) but aren't Sims: they're left out of Sim counts and shown with a paw,
-// not as an occult (19 Oct, a bug: the Palumbos read "8 Sims" for 2 Sims and 6 horses)
-const ANIMAL = /^(Horse|Cat|Dog|Small Dog|Large Dog)$/i, isAnimal = s => !!s && ANIMAL.test(s.state || "");
 const simCount = hhs => hhs.reduce((n, x) => n + x.sims.filter(sm => !isAnimal(sm)).length, 0);
 // "2 Sims · 6 horses" (a list of Sims, or of ids)
 function whoCount(list){
@@ -973,7 +979,7 @@ function whoCount(list){
   xs.filter(isAnimal).forEach(x => { const k = x.state.toLowerCase().replace(/^(small|large) /, ""); pets[k] = (pets[k] || 0) + 1; });
   return [`${n} ${n === 1 ? "Sim" : "Sims"}`, ...Object.entries(pets).map(([k, c]) => `${c} ${c === 1 ? k : k + "s"}`)].join(" · ");
 }
-const lifeState = (s, cls) => isAnimal(s) ? `<span class="${cls} animal">${ic("paw-print")}${esc(s.state)}</span>` : `<span class="${cls} occult">${ic("ghost")}${esc(s.state)}</span>`;
+const lifeState = (s, cls) => isAnimal(s) ? `<span class="${cls} animal">${animalIcon(s)}${esc(s.state)}</span>` : `<span class="${cls} occult">${ic("ghost")}${esc(s.state)}</span>`;
 function hhListing(x, listed){   // listed: on the households page, one-Sim households read surname first
   const n = x.sims.length, hc = x.lots[0].hood.color, made = simsMade(x);
   return `<a class="listing" href="#${x.id}" style="--h:${hc}"><div class="photo"><span class="initial">${initial(x.name)}</span><span class="type">Household</span><span class="status">${x.unsure ? `<span class="flag">unsure</span>` : ""}<span class="${made?"yes":""}" title="Sims made: ${made?"yes":"not yet"}">${ic("sim")}</span></span><span class="size">${esc(x.lots.map(l => l.name).join(" & "))}</span></div>
@@ -1043,8 +1049,15 @@ function simRoster(ids){
         <td>${esc(s.age)}</td><td>${s.state ? lifeState(s, "state") : `<span class="muted">Human</span>`}</td>
         <td>${s.aspiration ? esc(s.aspiration) : `<span class="muted">—</span>`}</td><td>${job ? esc(job) : `<span class="muted">—</span>`}</td></tr>`; }).join("")}</tbody></table></div>`;
 }
+function animalRoster(ids){
+  return `<div class="sheet-wrap"><table class="sheet roster animals"><thead><tr><th scope="col">Name</th><th scope="col">Animal</th><th scope="col">Life stage</th><th scope="col">Breed</th><th scope="col">Traits</th><th scope="col">Competitions won</th></tr></thead><tbody>
+    ${ids.map(id => { const s = SIMS[id], dash = `<span class="muted">—</span>`;
+      return `<tr><td><span class="who"><span class="mono">${initial(s.name)}</span><a href="#s-${id}">${esc(s.name)}</a>${isChampion(s) ? `<span class="champ small" title="Champion">${ic("trophy")}</span>` : ""}</span></td>
+        <td><span class="state animal">${animalIcon(s)}${esc(s.state)}</span></td><td>${esc(stageOf(s) || "")}</td><td>${s.breed ? esc(s.breed) : dash}</td>
+        <td>${s.traits && s.traits.length ? esc(s.traits.join(", ")) : dash}</td><td>${s.wins && s.wins.length ? s.wins.length : dash}</td></tr>`; }).join("")}</tbody></table></div>`;
+}
 function householdNew(hh){
-  const w = hh.world, home1 = hh.lots[0], hc = home1.hood.color, ids = membersOf(hh), n = ids.length, hoods = [...new Set(hh.lots.map(l => l.hood))];
+  const w = hh.world, home1 = hh.lots[0], hc = home1.hood.color, all = membersOf(hh), ids = all.filter(id => !isAnimal(SIMS[id])), pets = all.filter(id => isAnimal(SIMS[id])), n = ids.length, hoods = [...new Set(hh.lots.map(l => l.hood))];
   const neighbours = Object.values(w.households).filter(x => x !== hh && !hh.links.some(k => k.hh === x) && x.lots.some(l => l.hood === home1.hood));
   const dyn = dynLine(ids), tree = treeOf(hh), origin = hh.origin || (ids.some(id => !/^mine$/i.test(SIMS[id].origin || "")) ? "Premade" : "Mine");
   return `<section class="hero small" style="--c:${home1.hood.glow || hc}"><div class="crumbs"><a href="#w-${w.id}">${ic("map")}${esc(w.name)}</a><a href="#n-${home1.hood.id}">${ic("pin")}${esc(home1.hood.name)}</a>${hh.lots.map(l => `<a href="#${l.id}">${ic(l.owned ? "pin" : "home")}${esc(l.name)}</a>`).join("")}</div>
@@ -1063,6 +1076,8 @@ function householdNew(hh){
     <section class="block" style="--h:${hc}"><div class="block-head"><h2>The <em>Sims</em></h2><span class="count">${whoCount(ids)}</span></div>
       ${simRoster(ids)}
       </section>
+    ${pets.length ? `<section class="block" style="--h:${hc}"><div class="block-head"><h2>The <em>animals</em></h2><span class="count">${whoCount(pets).replace(/^0 Sims · /, "")}</span></div>
+      ${animalRoster(pets)}${(t => t.length ? `<h3 class="sub-h">Animal <em>family</em></h3><div class="tree-box">${fitTree(t, {compact: true, ch: 96, labels: false, here: hh})}</div>` : "")(animalTreeOf(hh))}</section>` : ""}
     ${tree.length ? `<section class="block" style="--h:${hc}"><div class="block-head"><h2>Family <em>tree</em></h2></div>
       <div class="tree-box">${fitTree(tree, {line: slug(hh.family), compact: true, ch: 96, labels: false, here: hh})}</div>${treeKey(tree, true, wColour(w), tree.some(id => !SIMS[id].ph && SIMS[id].hh !== hh))}</section>` : ""}
     ${hh.story ? `<section class="block" style="--h:${hc}"><div class="block-head"><h2>Their <em>story</em></h2></div><p class="lede">${esc(hh.story)}</p></section>` : ""}

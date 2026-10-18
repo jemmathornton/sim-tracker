@@ -712,3 +712,10 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 .hero.mapped{height:min(62vh,560px);min-height:0}
 .hero.mapped h1.long{font-size:clamp(52px,7vw,96px)}
 .hero.mapped p{display:-webkit-box;-webkit-line-clamp:3;line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+/* pets and horses (trial, 19 Oct) */
+.sub-h{font:400 26px/1.1 var(--display);margin:30px 0 12px}
+.champ{display:inline-flex;align-items:center;gap:5px;color:#8A6A12}
+.sim-chips .champ{color:#F1D58A;border-color:rgba(241,213,138,.6)}
+.champ svg{width:14px;height:14px}
+.champ.small{margin-left:6px}
+.roster.animals td:nth-child(5){color:var(--muted);font-size:13px}

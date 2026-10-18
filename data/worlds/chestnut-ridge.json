@@ -296,7 +296,10 @@
       ["Agility", 5, 10],
       ["Jumping", 6, 10],
       ["Endurance", 6, 10]
-     ]
+     ],
+     "traits": ["Defiant", "Needy", "Mellow"],
+     "breed": "Lusitano",
+     "wins": ["Show Jumping", "Western Pleasure", "Endurance Racing", "Barrel Racing"]
     },
     {
      "id": "beatrice-palumbo",
@@ -375,7 +378,10 @@
       ["Agility", 6, 10],
       ["Jumping", 4, 10],
       ["Endurance", 8, 10]
-     ]
+     ],
+     "traits": ["Aggressive", "Defiant", "Fearful"],
+     "breed": "Mixed Breed",
+     "wins": ["Show Jumping", "Endurance Racing", "Western Pleasure", "Barrel Racing"]
     },
     {
      "id": "bluebell",
@@ -391,7 +397,10 @@
       ["Agility", 10, 10],
       ["Jumping", 10, 10],
       ["Endurance", 9, 10]
-     ]
+     ],
+     "traits": ["Mellow", "Defiant", "Aggressive"],
+     "breed": "Clydesdale",
+     "wins": ["Show Jumping", "Western Pleasure", "Endurance Racing", "Ultimate Horse Championship", "Barrel Racing"]
     },
     {
      "id": "queen",
@@ -404,7 +413,9 @@
      "career": "",
      "skills": [
       ["Temperament", 2, 10]
-     ]
+     ],
+     "traits": ["Intelligent", "Defiant", "Free Spirit"],
+     "breed": "Lusitano"
     },
     {
      "id": "pie",
@@ -417,7 +428,9 @@
      "career": "",
      "skills": [
       ["Temperament", 4, 10]
-     ]
+     ],
+     "traits": ["Fearful", "Aggressive", "Energetic"],
+     "breed": "Thoroughbred"
     },
     {
      "id": "buttercup",
@@ -431,7 +444,9 @@
      "skills": [
       ["Temperament", 3, 10]
      ],
-     "parents": ["bluebell", "longface"]
+     "parents": ["bluebell", "longface"],
+     "traits": ["Energetic", "Defiant", "Aggressive"],
+     "breed": "Mixed Breed"
     }
    ]
   }
