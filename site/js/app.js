@@ -914,7 +914,8 @@ const SEASON_ICON = {Spring: "flower", Summer: "sun", Autumn: "leaf", Winter: "s
 // the world's weather and the three highlights the game shows when you pick it (14 Oct, read from the game's own files)
 function worldAbout(w){
   if (!w.weather && !w.highlights) return "";
-  return `<section class="block" style="--h:${w.color}"><div class="block-head"><h2>Weather and <em>highlights</em></h2><span class="count">from the game</span></div>
+  // a slim strip under the banner with no heading of its own, so Neighbourhoods stays the page's first heading (her feedback, 19 Oct)
+  return `<section class="world-strip" style="--h:${w.color}">
     ${w.weatherSeasons ? `<div class="wx-seasons">${CAL_SEASONS.filter(n => w.weatherSeasons[n]).map(n => `<div class="s-${n.toLowerCase()}">${ic(SEASON_ICON[n])}<b>${n}:</b><span>${esc(w.weatherSeasons[n].toLowerCase())}</span></div>`).join("")}</div>`
       : w.weather ? `<p class="home-to world-weather">${ic("weather")}<span>${esc(w.weather)}</span></p>` : ""}
     ${w.highlights ? `<div class="wx-highlights">${w.highlights.map(x => `<div>${ic("landmark")}<b>${esc(x.name)}:</b><span>${esc(x.text)}</span></div>`).join("")}</div>` : ""}</section>`;

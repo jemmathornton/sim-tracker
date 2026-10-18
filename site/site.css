@@ -472,7 +472,9 @@ footer .as-of{flex-basis:100%}
 .nav a.hit.on{background:rgba(255,255,255,.12)}
 /* world extras from the game (14 Oct): weather line, highlights, festivals and eco start */
 .world-weather{margin-top:16px;font-size:15px}
-.wx-seasons{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px 22px;margin-top:12px;font-size:13px;line-height:1.45}
+.world-strip{padding:18px 0 4px;margin-bottom:6px;border-bottom:1px solid var(--line)}
+.world-strip .wx-highlights{padding-bottom:16px}
+.wx-seasons{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px 22px;margin-top:0;font-size:13px;line-height:1.45}
 .wx-seasons div{--s:#7FA36B}
 .wx-seasons .s-summer{--s:#D9A23B}.wx-seasons .s-autumn{--s:#C2703D}.wx-seasons .s-winter{--s:#6F95B8}
 .wx-seasons svg{color:var(--s);font-size:14px;vertical-align:-2px;margin-right:5px}
