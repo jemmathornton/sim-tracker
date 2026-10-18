@@ -171,14 +171,20 @@
   "sex": "m",
   "late": true,
   "notInGame": true,
-  "fromFix": true
+  "fromFix": true,
+  "partners": [
+   ["wulan-cahyaputri", "Spouse"]
+  ]
  },
  "wulan-cahyaputri": {
   "name": "Wulan Cahyaputri",
   "sex": "f",
   "late": true,
   "notInGame": true,
-  "fromFix": true
+  "fromFix": true,
+  "partners": [
+   ["cahya-cahyaputri", "Spouse"]
+  ]
  },
  "gioia-vatore": {
   "name": "Gioia Vatore",

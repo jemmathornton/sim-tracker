@@ -381,6 +381,19 @@ function drawTree(ids, o = {}){
   // lines
   const ink = "var(--muted)";
   let svg = "";
+  // couples who were both born into the tree sit in their own parents' groups: their marriage line joins the two cards (Eric Lewis and Alice Spencer-Kim, 19 Oct)
+  const kindOf = (a, b) => (prs(a).find(([p]) => p === b) || prs(b).find(([p]) => p === a) || [])[1];
+  const cross = [];
+  ids.forEach(a => prs(a).forEach(([b]) => { if (a < b && inT.has(b) && unitOf[a] !== unitOf[b] && unitOf[a].y === unitOf[b].y) cross.push([a, b]); }));
+  const crossMid = (a, b) => { const [l, r] = cardX(a) < cardX(b) ? [a, b] : [b, a]; return [(cardX(l) + CW + cardX(r)) / 2, cardX(l) + CW, cardX(r)]; };
+  const coupleLine = (x1, x2, y, k) => {
+    const dash = k === "partner" || k === "ex" ? 'stroke-dasharray="5 4"' : k === "unknown" ? 'stroke-dasharray="2 4"' : "";
+    const op = k === "late-spouse" || k === "unknown" ? 'opacity=".5"' : "";
+    let l = `<line x1="${x1}" y1="${y}" x2="${x2}" y2="${y}" stroke="${ink}" stroke-width="2.5" ${dash} ${op}/>`;
+    if (k === "spouse" || k === "late-spouse") l += `<line x1="${x1}" y1="${y + 4}" x2="${x2}" y2="${y + 4}" stroke="${ink}" stroke-width="1.2" ${op}/>`;
+    if (k === "ex") { const m = (x1 + x2) / 2; l += `<path d="M${m - 5} ${y + 6} L${m - 1} ${y - 6} M${m + 1} ${y + 6} L${m + 5} ${y - 6}" stroke="${ink}" stroke-width="1.6"/>`; }
+    return l; };
+  cross.forEach(([a, b]) => { const [, x1, x2] = crossMid(a, b); svg += coupleLine(x1, x2, unitOf[a].y + CH / 2, kindOf(a, b)); });
   units.forEach(u => u.kinds.forEach((k, i) => {
     const x1 = u.x + (i + 1) * CW + i * CG, x2 = x1 + CG, y = u.y + CH / 2;
     const dash = k === "partner" || k === "ex" ? 'stroke-dasharray="5 4"' : k === "unknown" ? 'stroke-dasharray="2 4"' : "";
@@ -395,12 +408,20 @@ function drawTree(ids, o = {}){
     Object.entries(groups).forEach(([key, kids]) => {
       const pp = key.split("+"), idx = pp.map(p => u.members.indexOf(p)).filter(i => i >= 0).sort((a, b) => a - b);
       let ox, oy;
+      const other = pp.find(p => u.members.indexOf(p) < 0), cp = other && cross.find(([a, c]) => (a === other || c === other) && pp.includes(a) && pp.includes(c));
       if (idx.length === 2 && idx[1] - idx[0] === 1) { ox = u.x + idx[1] * (CW + CG) - CG / 2; oy = u.y + CH / 2 + 4; }
+      else if (cp) { ox = crossMid(...cp)[0]; oy = u.y + CH / 2 + 4; }
       else { ox = u.x + idx[0] * (CW + CG) + CW / 2; oy = u.y + CH; }
       const by = u.y + CH + RG / 2, cxs = kids.map(c => cardX(c) + CW / 2);
       svg += `<path d="M${ox} ${oy} V${by} M${Math.min(ox, ...cxs)} ${by} H${Math.max(ox, ...cxs)} ${cxs.map(c => `M${c} ${by} V${top(gen[kids[0]])}`).join(" ")}" fill="none" stroke="${ink}" stroke-width="1.6"/>`;
     });
   });
+  // a child whose other parent sits elsewhere in the tree, not as a partner (Afua Ananou: Adekoya Darong's secret daughter, 19 Oct):
+  // a thin dashed line from that parent down to the child
+  ids.forEach(c => { const pp = ps(c); if (pp.length !== 2) return; const home = unitOf[c].parent;
+    if (cross.some(([a, b]) => pp.includes(a) && pp.includes(b))) return;
+    pp.filter(p => unitOf[p] !== home).forEach(p => { const px = cardX(p) + CW / 2, py = unitOf[p].y + CH, cx = cardX(c) + CW / 2, cy = unitOf[c].y, my = cy - RG / 2 + 8;
+      svg += `<path d="M${px} ${py} V${my} H${cx} V${cy}" fill="none" stroke="${ink}" stroke-width="1.2" stroke-dasharray="3 4"/>`; }); });
   const labels = o.labels === false ? "" : Array.from({length: maxG + 1}, (_, g) => `<span class="gen" style="top:${top(g) + CH / 2 - 14}px">Generation ${g + 1}</span>`).join("");
   o.inTree = inT;
   const cards = ids.map(id => treeCard(id, cardX(id), unitOf[id].y, CW, CH, o)).join("");
