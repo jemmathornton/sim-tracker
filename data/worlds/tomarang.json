@@ -26,7 +26,7 @@
    "mapBox": [0.43, 0.46, 0.75, 0.7],
    "lots": [
     {"lot": "Isda Riverfront", "myName": "Isda Riverfront", "type": "Residential Rental (2)", "size": "20x20", "residents": "Cadberry", "built": true, "shared": false, "screenshots": false, "simsMade": false, "units": [{"name": "1"}, {"name": "2"}], "tenants": [{"name": "Rochana"}]},
-    {"lot": "Sungai Point", "myName": "Sungai Point", "type": "Residential Rental (3)", "size": "30x20", "residents": "Linh-Sadya & Linh", "built": false, "shared": false, "screenshots": false, "simsMade": false, "units": [{"name": "11A", "traits": ["Homey"]}, {"name": "11B", "traits": ["Great Acoustics", "Gnomes"]}, {"name": "11C", "challenges": ["Spooky", "Mold"]}]},
+    {"lot": "Sungai Point", "myName": "Sungai Point", "type": "Residential Rental (3)", "size": "30x20", "residents": "Linh-Sadya", "built": false, "shared": false, "screenshots": false, "simsMade": false, "units": [{"name": "11A", "traits": ["Homey"]}, {"name": "11B", "traits": ["Great Acoustics", "Gnomes"]}, {"name": "11C", "challenges": ["Spooky", "Mold"]}], "tenants": [{"name": "Linh"}], "noLandlord": true},
     {"lot": "The Screaming Gecko", "myName": "The Screaming Gecko", "type": "Karaoke Bar", "size": "20x20", "residents": "N/A", "built": true, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Tam Nang Sands", "myName": "Tam Nang Sands", "type": "Spa", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Hothotok Shore", "myName": "Hothotok Shore", "type": "Residential", "size": "20x15", "residents": "Bun Ma", "built": false, "shared": false, "screenshots": false, "simsMade": false}
@@ -156,32 +156,45 @@
    "bio": "Since the unfortunate microwavable water incident that resulted in the loss of their parents Cahya and Wulan, Vanesha has had to take on major responsibilities. As both \"Big Sister\" and \"Guardian\", it can be hard juggling a teenager and tenant shenanigans all under one roof!",
    "bioFrom": "EA"
   },
-  "Linh-Sadya & Linh": {
+  "Rochana": {
    "sims": [
     {
-     "id": "thi-linh",
-     "name": "Thi Linh",
+     "id": "ratana-rochana",
+     "name": "Ratana Rochana",
      "sex": "f",
-     "origin": "Premade",
-     "age": "Young Adult",
-     "aspiration": "Discerning Dweller",
-     "traits": ["Cringe", "Genius", "Slob"],
-     "bonus": "Gregarious",
-     "career": "Secret Agent · Secret Agent (level 7)",
-     "skills": [
-      ["Logic", 5, 10],
-      ["Charisma", 5, 10]
-     ],
-     "rels": [
-      ["Chánh Linh", "Friends"],
-      ["Arturo Linh", "Friends"],
-      ["Liên Sadya", "Friends"],
-      ["Cam Sadya", "Friends"],
-      ["Alon Sadya", "Friends"],
-      ["Vanesha Cahyaputri", "Friends"]
-     ],
-     "parents": ["ch-nh-linh", "arturo-linh"]
+     "origin": "Mine",
+     "from": "save “Not So Berry” (2025-10-11)",
+     "age": "Adult",
+     "aspiration": "Fount of Tomarani Knowledge",
+     "traits": ["Cat Lover", "Party Animal", "Geek"],
+     "bonus": "Home Turf",
+     "career": "",
+     "partners": [
+      ["colette-rochana", "Spouse"]
+     ]
     },
+    {
+     "id": "colette-rochana",
+     "name": "Colette Rochana",
+     "sex": "f",
+     "origin": "Mine",
+     "from": "save “Not So Berry” (2025-10-11)",
+     "age": "Elder",
+     "aspiration": "Renaissance Sim",
+     "traits": ["Gloomy", "Outgoing", "Lazy"],
+     "bonus": "Quick Learner",
+     "career": "",
+     "skills": [
+      ["Programming", 3, 10]
+     ],
+     "partners": [
+      ["ratana-rochana", "Spouse"]
+     ]
+    }
+   ]
+  },
+  "Linh-Sadya": {
+   "sims": [
     {
      "id": "ch-nh-linh",
      "name": "Chánh Linh",
@@ -285,44 +298,40 @@
      "parents": ["li-n-sadya", "alon-sadya"],
      "school": "Grade school"
     }
-   ]
+   ],
+   "bio": "When it comes to the Linh-Sadya household, it certainly takes a village. Caring for both a child and elderly parents, Liên and Alon have their hands full. Luckily, with multiple streams of income, making rent is a breeze. A bustling house, on the other hand, is cause for some chaos. Luckily, it only takes a step outside to regain some peace.",
+   "bioFrom": "EA"
   },
-  "Rochana": {
+  "Linh": {
    "sims": [
     {
-     "id": "ratana-rochana",
-     "name": "Ratana Rochana",
+     "id": "thi-linh",
+     "name": "Thi Linh",
      "sex": "f",
-     "origin": "Mine",
-     "from": "save “Not So Berry” (2025-10-11)",
-     "age": "Adult",
-     "aspiration": "Fount of Tomarani Knowledge",
-     "traits": ["Cat Lover", "Party Animal", "Geek"],
-     "bonus": "Home Turf",
-     "career": "",
-     "partners": [
-      ["colette-rochana", "Spouse"]
-     ]
-    },
-    {
-     "id": "colette-rochana",
-     "name": "Colette Rochana",
-     "sex": "f",
-     "origin": "Mine",
-     "from": "save “Not So Berry” (2025-10-11)",
-     "age": "Elder",
-     "aspiration": "Renaissance Sim",
-     "traits": ["Gloomy", "Outgoing", "Lazy"],
-     "bonus": "Quick Learner",
-     "career": "",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Discerning Dweller",
+     "traits": ["Cringe", "Genius", "Slob"],
+     "bonus": "Gregarious",
+     "career": "Secret Agent · Secret Agent (level 7)",
      "skills": [
-      ["Programming", 3, 10]
+      ["Logic", 5, 10],
+      ["Charisma", 5, 10]
      ],
-     "partners": [
-      ["ratana-rochana", "Spouse"]
-     ]
+     "rels": [
+      ["Chánh Linh", "Friends"],
+      ["Arturo Linh", "Friends"],
+      ["Liên Sadya", "Friends"],
+      ["Cam Sadya", "Friends"],
+      ["Alon Sadya", "Friends"],
+      ["Vanesha Cahyaputri", "Friends"]
+     ],
+     "parents": ["ch-nh-linh", "arturo-linh"]
     }
-   ]
+   ],
+   "bio": "A household of one may seem lonely, but not with Thi's entire family living above her! Wearing the badge of \"Weird Aunt\" with pride, Thi's quirky existence extends beyond her interior decorating. However, not everything can be included in her open book. Sometimes solitary has its confidential perks...beyond concealing her clown painting that is.",
+   "bioFrom": "EA",
+   "single": true
   }
  }
 }
