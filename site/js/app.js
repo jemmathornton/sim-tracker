@@ -88,6 +88,10 @@ worlds.forEach(w => {
   w.stats.hhMade = Object.values(w.households).filter(x => x.lots.some(l => l.sims === true)).length;
   w.stats.pHH = w.stats.hh ? Math.round(100 * w.stats.hhMade / w.stats.hh) : 0;
 });
+// owners of a residential rental with no home anywhere else live in one of its units, as the landlord (the Cahyaputris at Taka Soi 15,
+// Aloisio Romualdo at Casa Do Corsário; 19 Oct check); owners with a home elsewhere (the Kirklands, the Robles) stay owners only
+Object.values(hhIndex).forEach(h => { if (h.tenantOf || h.lots.some(l => !l.owned && l.hh === h)) return;
+  const r = h.lots.find(l => l.hh === h && l.owned && /rental/i.test(l.type) && !/vacation/i.test(l.type)); if (r) r.owned = false; });
 // a business owned from another world (the Newcrest Kirklands own Magnolia Mall, 19 Oct): when the owners have no Sims or home in the
 // lot's world and exactly one household of that family elsewhere has Sims, the lot joins that household instead of an empty one
 Object.values(hhIndex).filter(h => !h.sims.length && h.lots.every(l => l.owned)).forEach(h => {
@@ -295,7 +299,7 @@ function horseComps(s){   // the game keeps each horse's best result per competi
   const wins = s.wins || [], best = c => wins.filter(w => w[0] === c).sort((a, b) => LEVELS.indexOf(b[1]) - LEVELS.indexOf(a[1]) || a[2].localeCompare(b[2]))[0];
   return `<div class="sheet-wrap"><table class="sheet comps"><thead><tr><th scope="col">Competition</th><th scope="col">Best level</th><th scope="col">Medal</th></tr></thead><tbody>
     ${[...COMPS, ["Ultimate Horse Championship", "Ultimate Horse Championship"]].map(([k, n]) => { const b = best(k);
-      return `<tr><th scope="row">${n}</th><td>${b ? esc(b[1] || "—") : `<span class="muted">Not won yet</span>`}</td><td>${b ? medal(b[2]) : ""}</td></tr>`; }).join("")}</tbody></table></div>`;
+      return `<tr><th scope="row">${n}</th><td>${b ? esc(b[1] || "—") : `<span class="muted">Not won yet</span>`}</td><td>${b ? medal(b[2]) : `<span class="muted">—</span>`}</td></tr>`; }).join("")}</tbody></table></div>`;
 }
 // where a Sim lives, as a chip in the world's colour
 function homeChip(s, worldOnly){
@@ -514,7 +518,9 @@ function simGroups(id){
 function simHomes(s){
   const hh = s.hh;
   if (!hh) return "";
-  return `<ul class="homes">${hh.lots.filter(l => !l.owned || hh.tenantOf === l).map(l => `<li>${ic("home")}<a href="#${l.id}">${esc(l.name)}</a><span><a href="#n-${l.hood.id}">${esc(l.hood.name)}</a>, <a href="#w-${l.world.id}">${esc(l.world.name)}</a></span></li>`).join("")}</ul>`;
+  const homes = hh.lots.filter(l => !l.owned || hh.tenantOf === l);
+  if (!homes.length) return "";   // a household that only runs a venue (the Scotts at The Gnome’s Arms) has no home to list
+  return `<ul class="homes">${homes.map(l => `<li>${ic("home")}<a href="#${l.id}">${esc(l.name)}</a><span><a href="#n-${l.hood.id}">${esc(l.hood.name)}</a>, <a href="#w-${l.world.id}">${esc(l.world.name)}</a></span></li>`).join("")}</ul>`;
 }
 function simPage(s){
   const hh = s.hh, base = hh || ANCHOR[s.id], home1 = base.lots[0], hc = home1.hood.color, w = home1.world, first = firstName(s);
@@ -1276,12 +1282,13 @@ function route(){
   else if (key.startsWith("f-") && worlds.find(w => open(w) && w.id === key.slice(2))) { const w = worlds.find(w => w.id === key.slice(2)); html = families(w); active = w.id; document.title = "Households · " + w.name + " · Jemma’s Sim World"; }
   else if (SIM_PAGES[key]) { const s = SIM_PAGES[key], base = s.hh || ANCHOR[s.id]; ctx.sim = s.src; ctx.hh = base; ctx.lot = base.lots[0]; ctx.hood = ctx.lot.hood; html = simPage(s); active = base.world.id; document.title = s.name + " · Jemma’s Sim World"; }
   else if (GROUP_PAGES[key]) { const g = GROUP_PAGES[key], base = g.homeHh; ctx.group = g; if (base) { ctx.hh = base; ctx.lot = base.lots[0]; ctx.hood = ctx.lot.hood; } html = groupPage(g); active = g.world && g.world.ready && g.world.owned ? g.world.id : ""; document.title = groupTitle(g) + " · Jemma’s Sim World"; }
-  else if (hhIndex[key]) { const x = hhIndex[key]; ctx.hh = x; ctx.lot = x.lots[0]; ctx.hood = x.lots[0].hood; html = household(x); active = x.world.id; document.title = hhWord(x.name) + " · Jemma’s Sim World"; }
-  else if (key === "stats" || key.startsWith("stats-")) { const w = worlds.find(x => "stats-" + x.id === key); html = statsPage(w ? w.name : (key === "stats" ? null : "")); active = "stats"; document.title = "Stats · Jemma’s Sim World"; }
+  else if (hhIndex[key]) { const x = hhIndex[key]; ctx.hh = x; ctx.lot = x.lots[0]; ctx.hood = x.lots[0].hood; html = household(x); active = x.world.id; document.title = hhWord(x.name) + " · " + x.world.name + " · Jemma’s Sim World"; }
+  else if (key === "stats" || key.startsWith("stats-")) { const w = worlds.find(x => "stats-" + x.id === key); html = statsPage(w ? w.name : (key === "stats" ? null : "")); active = "stats"; document.title = (w ? "Stats · " + w.name : "Stats") + " · Jemma’s Sim World"; }
   else if (key === "calendar") { html = calendarPage(); active = "calendar"; document.title = "Calendar · Jemma’s Sim World"; }
   else if (key === "home") { html = home(); document.title = "Jemma’s Sim World"; }
   else { html = `<section class="hero small" style="--c:#8E62CF"><div class="kicker"><i></i><span class="label">Page not found</span></div><h1 style="margin-top:14px">Nothing <em>here</em></h1><p>This link doesn't match any world, neighbourhood, lot or household. It may be an old link from before something was renamed.</p></section>
     <section class="block"><p class="notfound"><a href="#home">${ic("home")}Go to the home page</a><a href="#stats">Search every lot on the Stats page</a></p></section>`; document.title = "Page not found · Jemma’s Sim World"; active = ""; }
+  document.title = curly(document.title);   // curly apostrophes in the tab title too (Crow’s Crossing, 19 Oct check)
   const cw = worlds.find(w => w.id === active);
   const root = document.documentElement.style;
   if (cw && cw.deep) { root.setProperty("--deep", cw.deep[0]); root.setProperty("--deep-2", cw.deep[1]); }
