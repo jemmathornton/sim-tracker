@@ -31,7 +31,7 @@
    "lots": [
     {"lot": "Teardrop Cottage", "myName": null, "type": "Residential", "size": "30x30", "residents": "Gomes", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "The Marigold Chateau", "myName": null, "type": "Residential", "size": "50x50", "residents": "Aether", "built": false, "shared": false, "screenshots": false, "simsMade": false},
-    {"lot": "Hay Hill Landing", "myName": null, "type": "Vineyard/Farm", "size": "64x64", "residents": "Empty", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Hay Hill Landing", "myName": null, "type": "Residential (Farm)", "size": "64x64", "residents": "Empty", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "The Final Draught", "myName": null, "type": "Bar", "size": "30x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ],
    "festivals": ["Full Moon Revelry", "Moon Revelry"]

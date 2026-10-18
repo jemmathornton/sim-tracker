@@ -337,7 +337,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [x] [Jemma] 1 Cobblebottom Street: a Small Business Residential tea room (owner idea: the Crumplebottom cousins, to check in game), or a Vacation Rental? — 19 Oct: Small Business Residential, owner to pick
 - [ ] [Jemma] Paradise Stables: a new horse family of hers running Riding Stables (Small Business Residential)?
 - [ ] [Jemma] Owners: the Izadi-Gomes ghosts for Mystic Crossroads, the Landgraabs for Magnolia Mall, Judith Ward for Plumbob Pictures Museum?
-- [ ] [Jemma] Casa do Corsário: 2 units (her call, 19 Oct, done). The Old Clocktower a Backroom (done 19 Oct; convert it in game). Hay Hill Landing: “Residential (Farm)” (“Vineyard/Farm” isn’t a game type)?
+- [x] [Jemma] 19 Oct: Casa do Corsário 2 units; The Old Clocktower a Backroom (convert it in game); Hay Hill Landing “Residential (Farm)”.
 
 ### Small business lots (research/small-business-check.md)
 - [ ] [Jemma] “Small Business Residential” is the game’s own name after all. Rename plain “Small Business” to the game’s “Small Business Venue”? Add a bracket note of what each sells?
