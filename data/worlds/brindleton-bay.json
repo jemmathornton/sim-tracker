@@ -151,7 +151,9 @@
      "origin": "Premade",
      "age": "Adult",
      "state": "Dog",
-     "career": ""
+     "career": "",
+     "breed": "Shar Pei",
+     "traits": ["Friendly", "Smart", "Adventurous"]
     },
     {
      "id": "bartholomew-a-bittlebun-sr",
@@ -160,7 +162,9 @@
      "origin": "Premade",
      "age": "Adult",
      "state": "Cat",
-     "career": ""
+     "career": "",
+     "breed": "Persian",
+     "traits": ["Friendly", "Fluffy", "Talkative"]
     }
    ]
   },
@@ -213,7 +217,9 @@
      "origin": "Premade",
      "age": "Adult",
      "state": "Dog",
-     "career": ""
+     "career": "",
+     "breed": "French Bulldog",
+     "traits": ["Glutton", "Playful", "Loyal"]
     }
    ]
   },
@@ -242,7 +248,9 @@
      "origin": "Premade",
      "age": "Elder",
      "state": "Cat",
-     "career": ""
+     "career": "",
+     "breed": "Siamese",
+     "traits": ["Aloof", "Talkative", "Glutton"]
     },
     {
      "id": "josie",
@@ -251,7 +259,9 @@
      "origin": "Premade",
      "age": "Adult",
      "state": "Cat",
-     "career": ""
+     "career": "",
+     "breed": "Abyssinian",
+     "traits": ["Free Spirit", "Mischievous", "Prowler"]
     },
     {
      "id": "cleo",
@@ -260,7 +270,9 @@
      "origin": "Premade",
      "age": "Adult",
      "state": "Cat",
-     "career": ""
+     "career": "",
+     "breed": "Sphynx",
+     "traits": ["Friendly", "Curious", "Clever"]
     },
     {
      "id": "bartholomew-a-bittlebun-jr",
@@ -270,7 +282,9 @@
      "age": "Child",
      "state": "Cat",
      "career": "",
-     "parents": ["josie"]
+     "parents": ["josie"],
+     "breed": "Mixed Breed",
+     "traits": ["Fluffy", "Affectionate", "Spoiled"]
     }
    ]
   },

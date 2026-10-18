@@ -490,7 +490,7 @@ function simPage(s){
     <div class="sim-about"><div>${hasTraits ? `<span class="label">Traits</span><div class="traits">${s.traits.map(t => `<span>${esc(t)}</span>`).join("")}${s.bonus ? `<span class="bonus" title="Bonus trait">${esc(s.bonus)}</span>` : ""}</div>` : ""}${skills ? `<div class="skills" style="margin-top:${hasTraits ? 22 : 0}px"><span class="label">Skills</span>${skills}</div>` : ""}${s.notes ? `<p class="sim-note">${esc(s.notes)}</p>` : ""}</div>
       ${facts.length ? `<dl class="facts">${facts.map(([t, v]) => `<div><dt>${t}</dt><dd>${esc(v)}</dd></div>`).join("")}</dl>` : "<div></div>"}</div></section>`;
   // family
-  const fam = simFamily(s.id), own = isAnimal(s) ? (s.hh ? animalTreeOf(s.hh) : []) : s.hh ? treeOf(s.hh) : treeAround([s.id]);   // their household’s whole family tree, with them highlighted
+  const fam = simFamily(s.id), own = isAnimal(s) ? (t => t.includes(s.id) ? t : [])(s.hh ? animalTreeOf(s.hh) : []) : s.hh ? treeOf(s.hh) : treeAround([s.id]);   // their household’s whole family tree, with them highlighted
   if (fam.trim() || own.length) h += `<section class="block" id="family" style="--h:${hc}"><div class="block-head"><h2>Their <em>family</em></h2></div>
     ${own.length ? `<div class="tree-box">${fitTree(own, {line: s.line, compact: true, ch: 96, labels: false, here: true, me: s.id})}</div>${treeKey(own)}` : ""}
     ${fam.trim() ? `<div style="margin-top:22px">${fam}</div>` : ""}</section>`;
@@ -1050,11 +1050,11 @@ function simRoster(ids){
         <td>${s.aspiration ? esc(s.aspiration) : `<span class="muted">—</span>`}</td><td>${job ? esc(job) : `<span class="muted">—</span>`}</td></tr>`; }).join("")}</tbody></table></div>`;
 }
 function animalRoster(ids){
-  return `<div class="sheet-wrap"><table class="sheet roster animals"><thead><tr><th scope="col">Name</th><th scope="col">Animal</th><th scope="col">Life stage</th><th scope="col">Breed</th><th scope="col">Traits</th><th scope="col">Competitions won</th></tr></thead><tbody>
+  return `<div class="sheet-wrap"><table class="sheet roster animals"><thead><tr><th scope="col">Name</th><th scope="col">Animal</th><th scope="col">Life stage</th><th scope="col">Breed</th><th scope="col">Traits</th></tr></thead><tbody>
     ${ids.map(id => { const s = SIMS[id], dash = `<span class="muted">—</span>`;
       return `<tr><td><span class="who"><span class="mono">${initial(s.name)}</span><a href="#s-${id}">${esc(s.name)}</a>${isChampion(s) ? `<span class="champ small" title="Champion">${ic("trophy")}</span>` : ""}</span></td>
         <td><span class="state animal">${animalIcon(s)}${esc(s.state)}</span></td><td>${esc(stageOf(s) || "")}</td><td>${s.breed ? esc(s.breed) : dash}</td>
-        <td>${s.traits && s.traits.length ? esc(s.traits.join(", ")) : dash}</td><td>${s.wins && s.wins.length ? s.wins.length : dash}</td></tr>`; }).join("")}</tbody></table></div>`;
+        <td>${s.traits && s.traits.length ? esc(s.traits.join(", ")) : dash}</td></tr>`; }).join("")}</tbody></table></div>`;
 }
 function householdNew(hh){
   const w = hh.world, home1 = hh.lots[0], hc = home1.hood.color, all = membersOf(hh), ids = all.filter(id => !isAnimal(SIMS[id])), pets = all.filter(id => isAnimal(SIMS[id])), n = ids.length, hoods = [...new Set(hh.lots.map(l => l.hood))];

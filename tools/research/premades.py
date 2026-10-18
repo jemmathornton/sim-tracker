@@ -143,10 +143,12 @@ def main():
             if not ids and key:   # some keep their traits only in their own Sim file
                 hit = siminfo.get(int(key.split(':')[2], 16))
                 if hit: ids = traits_in(s4.read(*hit))
-            occ = None
+            occ, wins = None, []
             for t in ids:
                 ty = val(t, 'trait_type'); nm = text(val(t, 'display_name'), en)
                 if ty == 'PERSONALITY' and nm and nm not in traits: traits.append(nm)
+                elif ty is None and nm and nm not in traits and SPECIES.get(s.get('extended_species')): traits.append(nm)   # a pet's traits have no type (19 Oct)
+                elif ty == 'HORSE_ACCOLADE' and nm and nm != 'No Competitions Won' and nm not in wins: wins.append(nm)   # a horse's competition wins
                 # life state from the Sim's own traits (19 Oct: spellcasters and ghosts have no occult on their template)
                 if ty == 'GHOST': occ = occ or 'GHOST'
                 elif ty == 'HIDDEN' and nm in ('Spellcaster', 'Mermaid', 'Alien', 'Vampire', 'Werewolf', 'Fairy'): occ = occ or {'Spellcaster': 'WITCH'}.get(nm, nm.upper())
@@ -157,7 +159,7 @@ def main():
             if not [c for c in cs if c] and info.get('career_level'): cs = [career_from_level(info['career_level'])]
             skills = [x for x in (skill(k.get('name_hash'), k.get('value', 0)) for k in (at.get('skill_tracker') or {}).get('skills', [])) if x and x[1] > 0]
             sims.append({"sim_id": s.get('sim_id'), "template": st, "name": (first + ' ' + last).strip(), "first": first, "last": last,
-                         "sex": SEX.get(s.get('gender')), "age": AGES.get(s.get('age')), "species": SPECIES.get(s.get('extended_species'), s.get('extended_species')), "aspiration": text(val(asp, 'display_text'), en) if asp in I else None,
+                         "sex": SEX.get(s.get('gender')), "age": AGES.get(s.get('age')), "species": SPECIES.get(s.get('extended_species'), s.get('extended_species')), "breed": s.get('breed_name') or text(s.get('breed_name_key'), en) or None, **({"wins": wins} if wins else {}), "aspiration": text(val(asp, 'display_text'), en) if asp in I else None,
                          "traits": traits, "bonus": bonus, "careers": [c for c in cs if c], "skills": skills,
                          "partner": s.get('significant_other') or None, "fiance": s.get('fiance') or None,
                          "rels": [[r.get('target_id'), [text(val(b, 'display_name'), en) for b in (r.get('bits') or []) if b in I and text(val(b, 'display_name'), en)]]

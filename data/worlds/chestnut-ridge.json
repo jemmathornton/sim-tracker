@@ -78,7 +78,10 @@
       ["Endurance", 10, 10],
       ["Jumping", 8, 10],
       ["Temperament", 10, 10]
-     ]
+     ],
+     "breed": "Clydesdale",
+     "traits": ["Brave", "Mellow", "Free Spirit"],
+     "champion": true
     },
     {
      "id": "don-gooseman",
@@ -110,7 +113,9 @@
      "origin": "Premade",
      "age": "Adult",
      "state": "Horse",
-     "career": ""
+     "career": "",
+     "breed": "Mustang Cross",
+     "traits": ["Mellow", "Intelligent", "Friendly"]
     },
     {
      "id": "umber-grove",
@@ -146,7 +151,9 @@
      "age": "Child",
      "state": "Horse",
      "career": "",
-     "parents": ["luna"]
+     "parents": ["luna"],
+     "breed": "Mustang",
+     "traits": ["Energetic", "Friendly", "Needy"]
     },
     {
      "id": "juniper-grove",
@@ -210,7 +217,9 @@
       ["Endurance", 10, 10],
       ["Jumping", 9, 10],
       ["Temperament", 10, 10]
-     ]
+     ],
+     "breed": "Nez Perce",
+     "traits": ["Friendly", "Intelligent", "Brave"]
     },
     {
      "id": "sienna-grove",

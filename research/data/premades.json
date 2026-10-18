@@ -25,6 +25,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Computer Whiz",
      "traits": [
       "Outgoing",
@@ -66,6 +67,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Nerd Brain",
      "traits": [
       "Geek",
@@ -102,6 +104,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Friend of the World",
      "traits": [
       "Outgoing",
@@ -165,6 +168,7 @@
      "sex": "f",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Soulmate",
      "traits": [
       "Romantic",
@@ -211,6 +215,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Fabulously Wealthy",
      "traits": [
       "Romantic",
@@ -257,6 +262,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Villainous Valentine",
      "traits": [
       "Romantic",
@@ -292,6 +298,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Serial Romantic",
      "traits": [
       "Self-Assured",
@@ -338,6 +345,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Computer Whiz",
      "traits": [
       "Geek",
@@ -414,6 +422,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Computer Whiz",
      "traits": [
       "Genius",
@@ -454,6 +463,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Joke Star",
      "traits": [
       "Goofball",
@@ -494,6 +504,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Party Animal",
      "traits": [
       "Romantic",
@@ -549,6 +560,7 @@
      "sex": "m",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Renaissance Sim",
      "traits": [
       "Outgoing",
@@ -594,6 +606,7 @@
      "sex": "f",
      "age": "Teen",
      "species": null,
+     "breed": null,
      "aspiration": "Musical Genius",
      "traits": [
       "Creative",
@@ -647,6 +660,7 @@
      "sex": "m",
      "age": "Child",
      "species": null,
+     "breed": null,
      "aspiration": "Whiz Kid",
      "traits": [
       "Bookworm"
@@ -761,6 +775,7 @@
      "sex": "f",
      "age": "Teen",
      "species": null,
+     "breed": null,
      "aspiration": "Computer Whiz",
      "traits": [
       "Loner",
@@ -814,6 +829,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Party Animal",
      "traits": [
       "Music Lover",
@@ -885,6 +901,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Fabulously Wealthy",
      "traits": [
       "Family-Oriented",
@@ -935,6 +952,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Master Mixologist",
      "traits": [
       "Vegetarian",
@@ -1001,6 +1019,7 @@
      "sex": "m",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Soulmate",
      "traits": [
       "Good",
@@ -1060,6 +1079,7 @@
      "sex": "f",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Successful Lineage",
      "traits": [
       "Family-Oriented",
@@ -1109,6 +1129,7 @@
      "sex": "f",
      "age": "Teen",
      "species": null,
+     "breed": null,
      "aspiration": "Musical Genius",
      "traits": [
       "Cheerful",
@@ -1167,6 +1188,7 @@
      "sex": "f",
      "age": "Child",
      "species": null,
+     "breed": null,
      "aspiration": "Whiz Kid",
      "traits": [
       "Genius"
@@ -1236,6 +1258,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Bestselling Author",
      "traits": [
       "Creative",
@@ -1281,6 +1304,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Painter Extraordinaire",
      "traits": [
       "Art Lover",
@@ -1348,6 +1372,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Fabulously Wealthy",
      "traits": [
       "Music Lover",
@@ -1398,6 +1423,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Fabulously Wealthy",
      "traits": [
       "Hates Children",
@@ -1459,6 +1485,7 @@
      "sex": "m",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Musical Genius",
      "traits": [
       "Self-Assured",
@@ -1513,6 +1540,7 @@
      "sex": "f",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Freelance Botanist",
      "traits": [
       "Loves Outdoors",
@@ -1552,6 +1580,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Leader of the Pack",
      "traits": [
       "Ambitious",
@@ -1606,6 +1635,7 @@
      "sex": "f",
      "age": "Teen",
      "species": null,
+     "breed": null,
      "aspiration": "Party Animal",
      "traits": [
       "Good",
@@ -1675,6 +1705,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Painter Extraordinaire",
      "traits": [
       "Art Lover",
@@ -1725,6 +1756,7 @@
      "sex": "m",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Joke Star",
      "traits": [
       "Music Lover",
@@ -1775,6 +1807,7 @@
      "sex": "f",
      "age": "Child",
      "species": null,
+     "breed": null,
      "aspiration": "Social Butterfly",
      "traits": [
       "Goofball"
@@ -1832,6 +1865,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Fabulously Wealthy",
      "traits": [
       "Art Lover",
@@ -1898,6 +1932,7 @@
      "sex": "f",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Big Happy Family",
      "traits": [
       "Cheerful",
@@ -1957,6 +1992,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Renaissance Sim",
      "traits": [
       "Clumsy",
@@ -2007,6 +2043,7 @@
      "sex": "m",
      "age": "Teen",
      "species": null,
+     "breed": null,
      "aspiration": "Public Enemy",
      "traits": [
       "Mean",
@@ -2065,6 +2102,7 @@
      "sex": "m",
      "age": "Child",
      "species": null,
+     "breed": null,
      "aspiration": "Artistic Prodigy",
      "traits": [
       "Loves Outdoors"
@@ -2141,6 +2179,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Serial Romantic",
      "traits": [
       "Materialistic",
@@ -2180,6 +2219,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Mansion Baron",
      "traits": [
       "Outgoing",
@@ -2230,6 +2270,7 @@
      "sex": "m",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Friend of the World",
      "traits": [
       "Active",
@@ -2278,6 +2319,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Bodybuilder",
      "traits": [
       "Active",
@@ -2353,6 +2395,7 @@
      "sex": "m",
      "age": "Elder",
      "species": null,
+     "breed": null,
      "aspiration": "Public Enemy",
      "traits": [
       "Genius",
@@ -2402,6 +2445,7 @@
      "sex": "f",
      "age": "Teen",
      "species": null,
+     "breed": null,
      "aspiration": "Friend of the World",
      "traits": [
       "Romantic",
@@ -2451,6 +2495,7 @@
      "sex": "m",
      "age": "Teen",
      "species": null,
+     "breed": null,
      "aspiration": "Master Chef",
      "traits": [
       "Foodie",
@@ -2504,6 +2549,7 @@
      "sex": "m",
      "age": "Child",
      "species": null,
+     "breed": null,
      "aspiration": "Rambunctious Scamp",
      "traits": [
       "Evil"
@@ -2572,6 +2618,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Master Vampire",
      "traits": [
       "Evil",
@@ -2627,6 +2674,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Vampire Family",
      "traits": [
       "Outgoing",
@@ -2655,6 +2703,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Good Vampire",
      "traits": [
       "Foodie",
@@ -2700,6 +2749,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Bodybuilder",
      "traits": [
       "Animal Enthusiast",
@@ -2724,6 +2774,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Villainous Valentine",
      "traits": [
       "Gloomy",
@@ -2764,6 +2815,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Master Chef",
      "traits": [
       "Foodie",
@@ -2804,6 +2856,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Serial Romantic",
      "traits": [
       "Materialistic",
@@ -2844,6 +2897,7 @@
      "sex": "m",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Successful Lineage",
      "traits": [
       "Good",
@@ -2904,6 +2958,7 @@
      "sex": "f",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Fabulously Wealthy",
      "traits": [
       "Materialistic",
@@ -2964,6 +3019,7 @@
      "sex": "m",
      "age": "Teen",
      "species": null,
+     "breed": null,
      "aspiration": "Public Enemy",
      "traits": [
       "Snob",
@@ -3057,6 +3113,7 @@
      "sex": "f",
      "age": "Elder",
      "species": null,
+     "breed": null,
      "aspiration": "Successful Lineage",
      "traits": [
       "Family-Oriented",
@@ -3102,6 +3159,7 @@
      "sex": "f",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Fabulously Wealthy",
      "traits": [
       "Mean",
@@ -3150,6 +3208,7 @@
      "sex": "m",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Computer Whiz",
      "traits": [
       "Lazy",
@@ -3198,6 +3257,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Musical Genius",
      "traits": [
       "Hot-Headed",
@@ -3262,6 +3322,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Soulmate",
      "traits": [
       "Loves Outdoors",
@@ -3298,6 +3359,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Soulmate",
      "traits": [
       "Vegetarian",
@@ -3344,6 +3406,7 @@
      "sex": "f",
      "age": "Child",
      "species": null,
+     "breed": null,
      "aspiration": "Rambunctious Scamp",
      "traits": [
       "Hot-Headed"
@@ -3391,6 +3454,7 @@
      "sex": "m",
      "age": "Child",
      "species": null,
+     "breed": null,
      "aspiration": "Artistic Prodigy",
      "traits": [
       "Mean"
@@ -3448,6 +3512,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Soulmate",
      "traits": [
       "Loves Outdoors",
@@ -3484,6 +3549,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Soulmate",
      "traits": [
       "Vegetarian",
@@ -3530,6 +3596,7 @@
      "sex": "f",
      "age": "Child",
      "species": null,
+     "breed": null,
      "aspiration": "Rambunctious Scamp",
      "traits": [
       "Hot-Headed"
@@ -3577,6 +3644,7 @@
      "sex": "m",
      "age": "Child",
      "species": null,
+     "breed": null,
      "aspiration": "Artistic Prodigy",
      "traits": [
       "Mean"
@@ -3634,6 +3702,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Friend of the World",
      "traits": [
       "Outgoing",
@@ -3685,6 +3754,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Friend of the World",
      "traits": [
       "Active",
@@ -3725,6 +3795,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Master Chef",
      "traits": [
       "Slob",
@@ -3771,6 +3842,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Mansion Baron",
      "traits": [
       "Neat",
@@ -3817,6 +3889,7 @@
      "sex": "f",
      "age": "Elder",
      "species": null,
+     "breed": null,
      "aspiration": "Good Vampire",
      "traits": [
       "Lazy",
@@ -3845,8 +3918,13 @@
      "sex": "m",
      "age": "Elder",
      "species": "Cat",
+     "breed": "Calico",
      "aspiration": null,
-     "traits": [],
+     "traits": [
+      "Glutton",
+      "Lazy",
+      "Territorial"
+     ],
      "bonus": null,
      "careers": [],
      "skills": [],
@@ -3869,8 +3947,13 @@
      "sex": "f",
      "age": "Adult",
      "species": "Cat",
+     "breed": "Himalayan",
      "aspiration": null,
-     "traits": [],
+     "traits": [
+      "Affectionate",
+      "Fluffy",
+      "Spoiled"
+     ],
      "bonus": null,
      "careers": [],
      "skills": [],
@@ -3893,8 +3976,13 @@
      "sex": "f",
      "age": "Adult",
      "species": "Cat",
+     "breed": "Sphynx",
      "aspiration": null,
-     "traits": [],
+     "traits": [
+      "Frisky",
+      "Playful",
+      "Clever"
+     ],
      "bonus": null,
      "careers": [],
      "skills": [],
@@ -3933,6 +4021,7 @@
      "sex": "f",
      "age": "Teen",
      "species": null,
+     "breed": null,
      "aspiration": "Party Animal",
      "traits": [
       "Materialistic",
@@ -3960,6 +4049,7 @@
      "sex": "m",
      "age": "Adult",
      "species": "Dog",
+     "breed": "Chihuahua",
      "aspiration": null,
      "traits": [],
      "bonus": null,
@@ -4000,6 +4090,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Musical Genius",
      "traits": [
       "Music Lover",
@@ -4029,6 +4120,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Painter Extraordinaire",
      "traits": [
       "Creative",
@@ -4077,6 +4169,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Friend of the World",
      "traits": [
       "Clumsy",
@@ -4112,6 +4205,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Joke Star",
      "traits": [
       "Outgoing",
@@ -4153,6 +4247,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Bodybuilder",
      "traits": [
       "Active",
@@ -4194,6 +4289,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Bestselling Author",
      "traits": [
       "Neat",
@@ -4246,6 +4342,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Party Animal",
      "traits": [
       "Ambitious",
@@ -4294,6 +4391,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Mansion Baron",
      "traits": [
       "Materialistic",
@@ -4339,6 +4437,7 @@
      "sex": "f",
      "age": "Elder",
      "species": null,
+     "breed": null,
      "aspiration": "Big Happy Family",
      "traits": [
       "Cheerful",
@@ -4379,6 +4478,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Painter Extraordinaire",
      "traits": [
       "Creative",
@@ -4439,6 +4539,7 @@
      "sex": "m",
      "age": "Elder",
      "species": null,
+     "breed": null,
      "aspiration": "Successful Lineage",
      "traits": [
       "Neat",
@@ -4479,6 +4580,7 @@
      "sex": "f",
      "age": "Child",
      "species": null,
+     "breed": null,
      "aspiration": "Artistic Prodigy",
      "traits": [
       "Goofball"
@@ -4561,6 +4663,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Joke Star",
      "traits": [
       "Goofball",
@@ -4624,6 +4727,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Party Animal",
      "traits": [
       "Hot-Headed",
@@ -4652,6 +4756,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Painter Extraordinaire",
      "traits": [
       "Kleptomaniac",
@@ -4680,6 +4785,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Joke Star",
      "traits": [
       "Art Lover",
@@ -4724,6 +4830,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Bestselling Author",
      "traits": [
       "Lazy",
@@ -4790,6 +4897,7 @@
      "sex": "f",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Mansion Baron",
      "traits": [
       "Unflirty",
@@ -4840,6 +4948,7 @@
      "sex": "m",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Fabulously Wealthy",
      "traits": [
       "Perfectionist",
@@ -4903,6 +5012,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "The Curator",
      "traits": [
       "Self-Assured",
@@ -4953,6 +5063,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Serial Romantic",
      "traits": [
       "Neat",
@@ -5003,6 +5114,7 @@
      "sex": "f",
      "age": "Teen",
      "species": null,
+     "breed": null,
      "aspiration": "Chief of Mischief",
      "traits": [
       "Unflirty",
@@ -5068,6 +5180,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Computer Whiz",
      "traits": [
       "Creative",
@@ -5144,6 +5257,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "City Native",
      "traits": [
       "Ambitious",
@@ -5220,6 +5334,7 @@
      "sex": "m",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Serial Romantic",
      "traits": [
       "Self-Assured",
@@ -5275,6 +5390,7 @@
      "sex": "f",
      "age": "Child",
      "species": null,
+     "breed": null,
      "aspiration": "Whiz Kid",
      "traits": [
       "Bookworm"
@@ -5328,6 +5444,7 @@
      "sex": "f",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Fabulously Wealthy",
      "traits": [
       "Unflirty",
@@ -5373,6 +5490,7 @@
      "sex": "m",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Mansion Baron",
      "traits": [
       "Slob",
@@ -5423,6 +5541,7 @@
      "sex": "f",
      "age": "Child",
      "species": null,
+     "breed": null,
      "aspiration": "Social Butterfly",
      "traits": [
       "Slob"
@@ -5480,6 +5599,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Big Happy Family",
      "traits": [
       "Slob",
@@ -5530,6 +5650,7 @@
      "sex": "f",
      "age": "Elder",
      "species": null,
+     "breed": null,
      "aspiration": "Successful Lineage",
      "traits": [
       "Family-Oriented",
@@ -5597,6 +5718,7 @@
      "sex": "f",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Painter Extraordinaire",
      "traits": [
       "Unflirty",
@@ -5647,6 +5769,7 @@
      "sex": "m",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Musical Genius",
      "traits": [
       "Music Lover",
@@ -5714,6 +5837,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Purveyor of Potions",
      "traits": [
       "Romantic",
@@ -5769,6 +5893,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Spellcraft & Sorcery",
      "traits": [
       "Self-Assured",
@@ -5850,6 +5975,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Painter Extraordinaire",
      "traits": [
       "Art Lover",
@@ -5909,6 +6035,7 @@
      "sex": "f",
      "age": "Teen",
      "species": null,
+     "breed": null,
      "aspiration": "Musical Genius",
      "traits": [
       "Music Lover",
@@ -5965,6 +6092,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Chief of Mischief",
      "traits": [
       "Active",
@@ -6020,6 +6148,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Musical Genius",
      "traits": [
       "Family-Oriented",
@@ -6065,6 +6194,7 @@
      "sex": "m",
      "age": "Child",
      "species": null,
+     "breed": null,
      "aspiration": "Social Butterfly",
      "traits": [
       "Outgoing"
@@ -6143,6 +6273,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Fabulously Wealthy",
      "traits": [
       "Hot-Headed",
@@ -6214,6 +6345,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Archaeology Scholar",
      "traits": [
       "Kleptomaniac",
@@ -6276,6 +6408,7 @@
      "sex": "f",
      "age": "Elder",
      "species": null,
+     "breed": null,
      "aspiration": "Nerd Brain",
      "traits": [
       "Self-Assured",
@@ -6330,6 +6463,7 @@
      "sex": "f",
      "age": "Teen",
      "species": null,
+     "breed": null,
      "aspiration": "Spellcraft & Sorcery",
      "traits": [
       "Art Lover",
@@ -6394,6 +6528,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Soulmate",
      "traits": [
       "Bookworm",
@@ -6454,6 +6589,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Purveyor of Potions",
      "traits": [
       "Cheerful",
@@ -6580,6 +6716,7 @@
      "sex": "f",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Joke Star",
      "traits": [
       "Noncommittal",
@@ -6646,6 +6783,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Critter Hunter",
      "traits": [
       "Cheerful",
@@ -6718,6 +6856,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Friend of the Animals",
      "traits": [
       "Genius",
@@ -6762,6 +6901,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Renaissance Sim",
      "traits": [
       "Neat",
@@ -6812,6 +6952,7 @@
      "sex": "f",
      "age": "Toddler",
      "species": null,
+     "breed": null,
      "aspiration": "Super Parent",
      "traits": [
       "Angelic"
@@ -6863,6 +7004,7 @@
      "sex": "m",
      "age": "Child",
      "species": null,
+     "breed": null,
      "aspiration": "Social Butterfly",
      "traits": [
       "Self-Assured"
@@ -6915,8 +7057,13 @@
      "sex": "f",
      "age": "Adult",
      "species": "Dog",
+     "breed": "Shar Pei",
      "aspiration": "Successful Lineage",
-     "traits": [],
+     "traits": [
+      "Friendly",
+      "Smart",
+      "Adventurous"
+     ],
      "bonus": "Domestic",
      "careers": [],
      "skills": [],
@@ -6939,8 +7086,13 @@
      "sex": "m",
      "age": "Adult",
      "species": "Cat",
+     "breed": "Persian",
      "aspiration": "Party Animal",
-     "traits": [],
+     "traits": [
+      "Friendly",
+      "Fluffy",
+      "Talkative"
+     ],
      "bonus": "Gregarious",
      "careers": [],
      "skills": [],
@@ -6979,6 +7131,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Computer Whiz",
      "traits": [
       "Bookworm",
@@ -7045,8 +7198,13 @@
      "sex": "m",
      "age": "Adult",
      "species": "Cat",
+     "breed": null,
      "aspiration": "Computer Whiz",
-     "traits": [],
+     "traits": [
+      "Talkative",
+      "Friendly",
+      "Frisky"
+     ],
      "bonus": "Quick Learner",
      "careers": [],
      "skills": [],
@@ -7086,6 +7244,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Academic",
      "traits": [
       "Active",
@@ -7128,6 +7287,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Renaissance Sim",
      "traits": [
       "Perfectionist",
@@ -7203,6 +7363,7 @@
      "sex": "f",
      "age": "Elder",
      "species": null,
+     "breed": null,
      "aspiration": "Successful Lineage",
      "traits": [
       "Music Lover",
@@ -7242,6 +7403,7 @@
      "sex": "m",
      "age": "Elder",
      "species": null,
+     "breed": null,
      "aspiration": "Angling Ace",
      "traits": [
       "Mean",
@@ -7281,6 +7443,7 @@
      "sex": "m",
      "age": "Teen",
      "species": null,
+     "breed": null,
      "aspiration": "Academic",
      "traits": [
       "Loner",
@@ -7369,6 +7532,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Computer Whiz",
      "traits": [
       "Genius",
@@ -7427,6 +7591,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Painter Extraordinaire",
      "traits": [
       "Good",
@@ -7474,6 +7639,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Public Enemy",
      "traits": [
       "Loner",
@@ -7546,6 +7712,7 @@
      "sex": "f",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Public Enemy",
      "traits": [
       "Hot-Headed",
@@ -7612,6 +7779,7 @@
      "sex": "m",
      "age": "Elder",
      "species": null,
+     "breed": null,
      "aspiration": "Chief of Mischief",
      "traits": [
       "Evil",
@@ -7678,6 +7846,7 @@
      "sex": "m",
      "age": "Elder",
      "species": null,
+     "breed": null,
      "aspiration": "Renaissance Sim",
      "traits": [
       "Ambitious",
@@ -7744,6 +7913,7 @@
      "sex": "f",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Computer Whiz",
      "traits": [
       "Creative",
@@ -7810,6 +7980,7 @@
      "sex": "m",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Friend of the World",
      "traits": [
       "Goofball",
@@ -7870,6 +8041,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Successful Lineage",
      "traits": [
       "Materialistic",
@@ -7920,6 +8092,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Extreme Sports Enthusiast",
      "traits": [
       "Adventurous",
@@ -7970,6 +8143,7 @@
      "sex": "m",
      "age": "Teen",
      "species": null,
+     "breed": null,
      "aspiration": "Extreme Sports Enthusiast",
      "traits": [
       "Adventurous",
@@ -8022,6 +8196,7 @@
      "sex": "f",
      "age": "Child",
      "species": null,
+     "breed": null,
      "aspiration": "Rambunctious Scamp",
      "traits": [
       "Kleptomaniac"
@@ -8115,6 +8290,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Mt. Komorebi Sightseer",
      "traits": [
       "Outgoing",
@@ -8170,6 +8346,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Mt. Komorebi Sightseer",
      "traits": [
       "Loves Outdoors",
@@ -8225,6 +8402,7 @@
      "sex": "m",
      "age": "Child",
      "species": null,
+     "breed": null,
      "aspiration": "Artistic Prodigy",
      "traits": [
       "Art Lover"
@@ -8271,6 +8449,7 @@
      "sex": "f",
      "age": "Child",
      "species": null,
+     "breed": null,
      "aspiration": "Social Butterfly",
      "traits": [
       "Goofball"
@@ -8364,6 +8543,7 @@
      "sex": "m",
      "age": "Elder",
      "species": null,
+     "breed": null,
      "aspiration": "Successful Lineage",
      "traits": [
       "Hot-Headed",
@@ -8418,6 +8598,7 @@
      "sex": "f",
      "age": "Elder",
      "species": null,
+     "breed": null,
      "aspiration": "Big Happy Family",
      "traits": [
       "Loves Outdoors",
@@ -8467,6 +8648,7 @@
      "sex": "f",
      "age": "Teen",
      "species": null,
+     "breed": null,
      "aspiration": "Extreme Sports Enthusiast",
      "traits": [
       "Adventurous",
@@ -8559,6 +8741,7 @@
      "sex": "m",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Country Caretaker",
      "traits": [
       "Loves Outdoors",
@@ -8639,6 +8822,7 @@
      "sex": "f",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Successful Lineage",
      "traits": [
       "Gloomy",
@@ -8704,6 +8888,7 @@
      "sex": "m",
      "age": "Teen",
      "species": null,
+     "breed": null,
      "aspiration": "Renaissance Sim",
      "traits": [
       "Loves Outdoors",
@@ -8786,6 +8971,7 @@
      "sex": "f",
      "age": "Elder",
      "species": null,
+     "breed": null,
      "aspiration": "Freelance Botanist",
      "traits": [
       "Hot-Headed",
@@ -8846,6 +9032,7 @@
      "sex": "f",
      "age": "Elder",
      "species": null,
+     "breed": null,
      "aspiration": "Serial Romantic",
      "traits": [
       "Outgoing",
@@ -8922,6 +9109,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Friend of the World",
      "traits": [
       "Outgoing",
@@ -8993,6 +9181,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Country Caretaker",
      "traits": [
       "Ambitious",
@@ -9080,6 +9269,7 @@
      "sex": "m",
      "age": "Elder",
      "species": null,
+     "breed": null,
      "aspiration": "Friend of the World",
      "traits": [
       "Outgoing",
@@ -9149,6 +9339,7 @@
      "sex": "m",
      "age": "Elder",
      "species": null,
+     "breed": null,
      "aspiration": "Bestselling Author",
      "traits": [
       "Neat",
@@ -9241,6 +9432,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Party Animal",
      "traits": [
       "Outgoing",
@@ -9301,6 +9493,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Big Happy Family",
      "traits": [
       "Goofball",
@@ -9378,6 +9571,7 @@
      "sex": "m",
      "age": "Child",
      "species": null,
+     "breed": null,
      "aspiration": "Artistic Prodigy",
      "traits": [
       "Animal Enthusiast"
@@ -9435,6 +9629,7 @@
      "sex": "f",
      "age": "Child",
      "species": null,
+     "breed": null,
      "aspiration": "Rambunctious Scamp",
      "traits": [
       "Active"
@@ -9492,6 +9687,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "The Curator",
      "traits": [
       "Loves Outdoors",
@@ -9552,6 +9748,7 @@
      "sex": "f",
      "age": "Teen",
      "species": null,
+     "breed": null,
      "aspiration": "Soulmate",
      "traits": [
       "Gloomy",
@@ -9615,6 +9812,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Country Caretaker",
      "traits": [
       "Hot-Headed",
@@ -9728,8 +9926,13 @@
      "sex": "f",
      "age": "Adult",
      "species": "Horse",
+     "breed": "Mustang Cross",
      "aspiration": "Soulmate",
-     "traits": [],
+     "traits": [
+      "Mellow",
+      "Intelligent",
+      "Friendly"
+     ],
      "bonus": "Alluring",
      "careers": [],
      "skills": [],
@@ -9752,6 +9955,7 @@
      "sex": "m",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Big Happy Family",
      "traits": [
       "Romantic",
@@ -9802,8 +10006,13 @@
      "sex": "f",
      "age": "Child",
      "species": "Horse",
+     "breed": "Mustang",
      "aspiration": "Successful Lineage",
-     "traits": [],
+     "traits": [
+      "Energetic",
+      "Friendly",
+      "Needy"
+     ],
      "bonus": "Domestic",
      "careers": [],
      "skills": [],
@@ -9831,6 +10040,7 @@
      "sex": "f",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Freelance Botanist",
      "traits": [
       "Horse Lover",
@@ -9880,6 +10090,7 @@
      "sex": "m",
      "age": "Child",
      "species": null,
+     "breed": null,
      "aspiration": "Rambunctious Scamp",
      "traits": [
       "Loves Outdoors"
@@ -9962,8 +10173,13 @@
      "sex": "m",
      "age": "Adult",
      "species": "Horse",
+     "breed": "Nez Perce",
      "aspiration": "Successful Lineage",
-     "traits": [],
+     "traits": [
+      "Friendly",
+      "Intelligent",
+      "Brave"
+     ],
      "bonus": "Domestic",
      "careers": [],
      "skills": [
@@ -10007,6 +10223,7 @@
      "sex": "f",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Championship Rider",
      "traits": [
       "Horse Lover",
@@ -10073,6 +10290,7 @@
      "sex": "m",
      "age": "Elder",
      "species": null,
+     "breed": null,
      "aspiration": "Angling Ace",
      "traits": [
       "Good",
@@ -10140,6 +10358,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Fabulously Wealthy",
      "traits": [
       "Ambitious",
@@ -10184,6 +10403,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Expert Nectar Maker",
      "traits": [
       "Foodie",
@@ -10244,8 +10464,13 @@
      "sex": "m",
      "age": "Adult",
      "species": "Horse",
+     "breed": "Clydesdale",
      "aspiration": "Chief of Mischief",
-     "traits": [],
+     "traits": [
+      "Brave",
+      "Mellow",
+      "Free Spirit"
+     ],
      "bonus": "Dastardly",
      "careers": [],
      "skills": [
@@ -10289,6 +10514,7 @@
      "sex": "m",
      "age": "Elder",
      "species": null,
+     "breed": null,
      "aspiration": "Angling Ace",
      "traits": [
       "Loner",
@@ -10344,6 +10570,7 @@
      "sex": "f",
      "age": "Elder",
      "species": null,
+     "breed": null,
      "aspiration": "The Curator",
      "traits": [
       "Wise",
@@ -10372,6 +10599,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Big Happy Family",
      "traits": [
       "Cheerful",
@@ -10422,6 +10650,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Fount of Tomarani Knowledge",
      "traits": [
       "Child of the Village",
@@ -10467,6 +10696,7 @@
      "sex": "m",
      "age": "Toddler",
      "species": null,
+     "breed": null,
      "aspiration": "Good Vampire",
      "traits": [
       "Clingy"
@@ -10553,6 +10783,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Five-Star Property Owner",
      "traits": [
       "Child of the Village",
@@ -10587,6 +10818,7 @@
      "sex": "f",
      "age": "Teen",
      "species": null,
+     "breed": null,
      "aspiration": "Seeker of Secrets",
      "traits": [
       "Nosy",
@@ -10636,6 +10868,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Discerning Dweller",
      "traits": [
       "Cringe",
@@ -10697,6 +10930,7 @@
      "sex": "m",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Five-Star Property Owner",
      "traits": [
       "Active",
@@ -10753,6 +10987,7 @@
      "sex": "m",
      "age": "Elder",
      "species": null,
+     "breed": null,
      "aspiration": "Angling Ace",
      "traits": [
       "Foodie",
@@ -10781,6 +11016,7 @@
      "sex": "m",
      "age": "Elder",
      "species": null,
+     "breed": null,
      "aspiration": "Nerd Brain",
      "traits": [
       "Geek",
@@ -10826,6 +11062,7 @@
      "sex": "f",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Neighborhood Confidante",
      "traits": [
       "Generous",
@@ -10881,6 +11118,7 @@
      "sex": "m",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Freelance Botanist",
      "traits": [
       "Loves Outdoors",
@@ -10921,6 +11159,7 @@
      "sex": "f",
      "age": "Child",
      "species": null,
+     "breed": null,
      "aspiration": "Artistic Prodigy",
      "traits": [
       "Loves Outdoors"
@@ -11025,6 +11264,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Bodybuilder",
      "traits": [
       "Active",
@@ -11072,6 +11312,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Joke Star",
      "traits": [
       "Cringe",
@@ -11122,6 +11363,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Painter Extraordinaire",
      "traits": [
       "Creative",
@@ -11175,6 +11417,7 @@
      "sex": "f",
      "age": "Elder",
      "species": null,
+     "breed": null,
      "aspiration": "Big Happy Family",
      "traits": [
       "Foodie",
@@ -11203,6 +11446,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Mansion Baron",
      "traits": [
       "Ambitious",
@@ -11236,6 +11480,7 @@
      "sex": "m",
      "age": "Child",
      "species": null,
+     "breed": null,
      "aspiration": "Rambunctious Scamp",
      "traits": [
       "Active"
@@ -11271,6 +11516,7 @@
      "sex": "f",
      "age": "Toddler",
      "species": null,
+     "breed": null,
      "aspiration": null,
      "traits": [
       "Clingy"
@@ -11353,6 +11599,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Fabulously Wealthy",
      "traits": [
       "Ambitious",
@@ -11412,6 +11659,7 @@
      "sex": "m",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Soulmate",
      "traits": [
       "Clumsy",
@@ -11465,6 +11713,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Nerd Brain",
      "traits": [
       "Ambitious",
@@ -11499,6 +11748,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Big Happy Family",
      "traits": [
       "Goofball",
@@ -11527,6 +11777,7 @@
      "sex": "m",
      "age": "Infant",
      "species": null,
+     "breed": null,
      "aspiration": "Renaissance Sim",
      "traits": [
       "Wiggly"
@@ -11562,6 +11813,7 @@
      "sex": "f",
      "age": "Infant",
      "species": null,
+     "breed": null,
      "aspiration": "Bestselling Author",
      "traits": [
       "Sunny"
@@ -11645,6 +11897,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Successful Lineage",
      "traits": [
       "Family-Oriented",
@@ -11673,6 +11926,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Master Mixologist",
      "traits": [
       "Romantic",
@@ -11724,6 +11978,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Musical Genius",
      "traits": [
       "Music Lover",
@@ -11771,6 +12026,7 @@
      "sex": "f",
      "age": "Elder",
      "species": null,
+     "breed": null,
      "aspiration": "The Curator",
      "traits": [
       "Loves Outdoors",
@@ -11802,6 +12058,7 @@
      "sex": "m",
      "age": "Elder",
      "species": null,
+     "breed": null,
      "aspiration": "Fount of Tomarani Knowledge",
      "traits": [
       "Childish",
@@ -11859,6 +12116,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Computer Whiz",
      "traits": [
       "Genius",
@@ -11902,6 +12160,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Neighborhood Confidante",
      "traits": [
       "Lazy",
@@ -11939,6 +12198,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Discerning Dweller",
      "traits": [
       "Clumsy",
@@ -11970,6 +12230,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Fount of Tomarani Knowledge",
      "traits": [
       "Loves Outdoors",
@@ -12072,6 +12333,7 @@
      "sex": "m",
      "age": "Elder",
      "species": null,
+     "breed": null,
      "aspiration": "Bestselling Author",
      "traits": [
       "Bookworm",
@@ -12131,6 +12393,7 @@
      "sex": "f",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Successful Lineage",
      "traits": [
       "Genius",
@@ -12168,6 +12431,7 @@
      "sex": "f",
      "age": "Teen",
      "species": null,
+     "breed": null,
      "aspiration": "Renaissance Sim",
      "traits": [
       "Bookworm",
@@ -12200,6 +12464,7 @@
      "sex": "m",
      "age": "Child",
      "species": null,
+     "breed": null,
      "aspiration": "Social Butterfly",
      "traits": [
       "Goofball"
@@ -12261,6 +12526,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Seeker of Secrets",
      "traits": [
       "Mean",
@@ -12295,6 +12561,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Friend of the World",
      "traits": [
       "Generous",
@@ -12355,6 +12622,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Bestselling Author",
      "traits": [
       "Good",
@@ -12405,6 +12673,7 @@
      "sex": "m",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Bestselling Author",
      "traits": [
       "Romantic",
@@ -12455,6 +12724,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Fabulously Wealthy",
      "traits": [
       "Romantic",
@@ -12523,6 +12793,7 @@
      "sex": "f",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Romantic Explorer ",
      "traits": [
       "Family-Oriented",
@@ -12578,6 +12849,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Bodybuilder",
      "traits": [
       "Mean",
@@ -12623,6 +12895,7 @@
      "sex": "f",
      "age": "Teen",
      "species": null,
+     "breed": null,
      "aspiration": "Renaissance Sim",
      "traits": [
       "Creative",
@@ -12708,6 +12981,7 @@
      "sex": "f",
      "age": "Elder",
      "species": null,
+     "breed": null,
      "aspiration": "Friend of the World",
      "traits": [
       "Art Lover",
@@ -12747,6 +13021,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Master Chef",
      "traits": [
       "Foodie",
@@ -12802,6 +13077,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Serial Romantic",
      "traits": [
       "Self-Assured",
@@ -12862,6 +13138,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Soulmate",
      "traits": [
       "Romantically Reserved",
@@ -12969,6 +13246,7 @@
      "sex": "m",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Renaissance Sim",
      "traits": [
       "Loves Outdoors",
@@ -13019,6 +13297,7 @@
      "sex": "m",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Nerd Brain",
      "traits": [
       "Jealous",
@@ -13074,6 +13353,7 @@
      "sex": "m",
      "age": "Child",
      "species": null,
+     "breed": null,
      "aspiration": "Artistic Prodigy",
      "traits": [
       "Macabre"
@@ -13146,6 +13426,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Big Happy Family",
      "traits": [
       "Ambitious",
@@ -13199,6 +13480,7 @@
      "sex": "f",
      "age": "Child",
      "species": null,
+     "breed": null,
      "aspiration": "Rambunctious Scamp",
      "traits": [
       "Mean"
@@ -13252,6 +13534,7 @@
      "sex": "m",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Soulmate",
      "traits": [
       "Art Lover",
@@ -13302,6 +13585,7 @@
      "sex": "f",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Bestselling Author",
      "traits": [
       "Romantic",
@@ -13347,6 +13631,7 @@
      "sex": "f",
      "age": "Teen",
      "species": null,
+     "breed": null,
      "aspiration": "The Curator",
      "traits": [
       "Music Lover",
@@ -13436,6 +13721,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Ghost Historian",
      "traits": [
       "Self-Assured",
@@ -13481,6 +13767,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Freelance Botanist",
      "traits": [
       "Self-Assured",
@@ -13556,6 +13843,7 @@
      "sex": "f",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Ghost Historian",
      "traits": [
       "Romantic",
@@ -13612,6 +13900,7 @@
      "sex": "m",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Neighborhood Confidante",
      "traits": [
       "Loyal",
@@ -13667,6 +13956,7 @@
      "sex": "m",
      "age": "Teen",
      "species": null,
+     "breed": null,
      "aspiration": "Bestselling Author",
      "traits": [
       "Loner",
@@ -13721,6 +14011,7 @@
      "sex": "f",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Serial Romantic",
      "traits": [
       "Bookworm",
@@ -13812,6 +14103,7 @@
      "sex": "m",
      "age": "Elder",
      "species": null,
+     "breed": null,
      "aspiration": "Ghost Historian",
      "traits": [
       "Hates Children",
@@ -13869,6 +14161,7 @@
      "sex": "f",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Master Mixologist",
      "traits": [
       "Jealous",
@@ -13928,6 +14221,7 @@
      "sex": "f",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Friend of the World",
      "traits": [
       "Erratic",
@@ -13977,6 +14271,7 @@
      "sex": "m",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Fabulously Wealthy",
      "traits": [
       "Active",
@@ -14042,6 +14337,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Public Enemy",
      "traits": [
       "Gloomy",
@@ -14109,6 +14405,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Bestselling Author",
      "traits": [
       "Outgoing",
@@ -14180,6 +14477,7 @@
      "sex": "m",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Big Happy Family",
      "traits": [
       "Active",
@@ -14244,6 +14542,7 @@
      "sex": "f",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Big Happy Family",
      "traits": [
       "Family-Oriented",
@@ -14314,6 +14613,7 @@
      "sex": "f",
      "age": "Child",
      "species": null,
+     "breed": null,
      "aspiration": "Artistic Prodigy",
      "traits": [
       "Creative"
@@ -14355,6 +14655,7 @@
      "sex": "f",
      "age": "Child",
      "species": null,
+     "breed": null,
      "aspiration": "Cool Kid on the Block",
      "traits": [
       "Competitive"
@@ -14443,6 +14744,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Critter Hunter",
      "traits": [
       "Romantic",
@@ -14513,6 +14815,7 @@
      "sex": "f",
      "age": "Elder",
      "species": null,
+     "breed": null,
      "aspiration": "Bodybuilder",
      "traits": [
       "Self-Assured",
@@ -14572,6 +14875,7 @@
      "sex": "m",
      "age": "Child",
      "species": null,
+     "breed": null,
      "aspiration": "Whiz Kid",
      "traits": [
       "Loner"
@@ -14632,6 +14936,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Angling Ace",
      "traits": [
       "Loves Outdoors",
@@ -14707,6 +15012,7 @@
      "sex": "m",
      "age": "Child",
      "species": null,
+     "breed": null,
      "aspiration": "Rambunctious Scamp",
      "traits": [
       "Competitive"
@@ -14755,6 +15061,7 @@
      "sex": "f",
      "age": "Elder",
      "species": null,
+     "breed": null,
      "aspiration": "Successful Lineage",
      "traits": [
       "Ambitious",
@@ -14810,6 +15117,7 @@
      "sex": "f",
      "age": "Teen",
      "species": null,
+     "breed": null,
      "aspiration": "Neighborhood Confidante",
      "traits": [
       "Loyal",
@@ -14892,6 +15200,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Public Enemy",
      "traits": [
       "Noncommittal",
@@ -14983,6 +15292,7 @@
      "sex": "m",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Serial Romantic",
      "traits": [
       "Hates Children",
@@ -15054,6 +15364,7 @@
      "sex": "m",
      "age": "Elder",
      "species": null,
+     "breed": null,
      "aspiration": "Galactic Privateer",
      "traits": [
       "Practice Makes Perfect",
@@ -15103,6 +15414,7 @@
      "sex": "f",
      "age": "Child",
      "species": null,
+     "breed": null,
      "aspiration": "Playtime Captain",
      "traits": [
       "Self-Assured"
@@ -15162,6 +15474,7 @@
      "sex": "m",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Mansion Baron",
      "traits": [
       "Ambitious",
@@ -15222,6 +15535,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Friend of the World",
      "traits": [
       "Loyal",
@@ -15292,6 +15606,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Musical Genius",
      "traits": [
       "Cheerful",
@@ -15367,6 +15682,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Chief of Mischief",
      "traits": [
       "Geek",
@@ -15477,6 +15793,7 @@
      "sex": "m",
      "age": "Elder",
      "species": null,
+     "breed": null,
      "aspiration": "Successful Lineage",
      "traits": [
       "Erratic",
@@ -15542,6 +15859,7 @@
      "sex": "m",
      "age": "Elder",
      "species": null,
+     "breed": null,
      "aspiration": "Bestselling Author",
      "traits": [
       "Bookworm",
@@ -15596,6 +15914,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Friend of the World",
      "traits": [
       "Ambitious",
@@ -15661,6 +15980,7 @@
      "sex": "f",
      "age": "Teen",
      "species": null,
+     "breed": null,
      "aspiration": "Painter Extraordinaire",
      "traits": [
       "Art Lover",
@@ -15729,6 +16049,7 @@
      "sex": "m",
      "age": "Child",
      "species": null,
+     "breed": null,
      "aspiration": "Whiz Kid",
      "traits": [
       "Genius"
@@ -15826,6 +16147,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Master Vampire",
      "traits": [
       "Outgoing",
@@ -15870,6 +16192,7 @@
      "sex": "f",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Mansion Baron",
      "traits": [
       "Ambitious",
@@ -15919,6 +16242,7 @@
      "sex": "m",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Soulmate",
      "traits": [
       "Foodie",
@@ -15979,6 +16303,7 @@
      "sex": "m",
      "age": "Teen",
      "species": null,
+     "breed": null,
      "aspiration": "Joke Star",
      "traits": [
       "Goofball",
@@ -16072,6 +16397,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "StrangerVille Mystery",
      "traits": [
       "Active",
@@ -16138,6 +16464,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Bodybuilder",
      "traits": [
       "Self-Assured",
@@ -16200,6 +16527,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "The Curator",
      "traits": [
       "Loves Outdoors",
@@ -16275,6 +16603,7 @@
      "sex": "m",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Renaissance Sim",
      "traits": [
       "Perfectionist",
@@ -16353,6 +16682,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Freelance Botanist",
      "traits": [
       "Loves Outdoors",
@@ -16397,6 +16727,7 @@
      "sex": "f",
      "age": "Elder",
      "species": null,
+     "breed": null,
      "aspiration": "Freelance Botanist",
      "traits": [
       "Loves Outdoors",
@@ -16436,6 +16767,7 @@
      "sex": "f",
      "age": "Elder",
      "species": null,
+     "breed": null,
      "aspiration": "Master Maker",
      "traits": [
       "Maker",
@@ -16510,6 +16842,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Spellcraft & Sorcery",
      "traits": [
       "Ambitious",
@@ -16555,6 +16888,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Eco Innovator",
      "traits": [
       "Bro",
@@ -16610,6 +16944,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Mansion Baron",
      "traits": [
       "Materialistic",
@@ -16688,6 +17023,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Party Animal",
      "traits": [
       "Genius",
@@ -16744,6 +17080,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Soulmate",
      "traits": [
       "Active",
@@ -16789,6 +17126,7 @@
      "sex": "f",
      "age": "Elder",
      "species": null,
+     "breed": null,
      "aspiration": "Chief of Mischief",
      "traits": [
       "Childish",
@@ -16834,6 +17172,7 @@
      "sex": "f",
      "age": "Child",
      "species": null,
+     "breed": null,
      "aspiration": "Creative Genius",
      "traits": [
       "Creative"
@@ -16904,6 +17243,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Big Happy Family",
      "traits": [
       "Self-Assured",
@@ -16949,6 +17289,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Nerd Brain",
      "traits": [
       "Art Lover",
@@ -16999,6 +17340,7 @@
      "sex": "m",
      "age": "Child",
      "species": null,
+     "breed": null,
      "aspiration": "Playtime Captain",
      "traits": [
       "Hot-Headed"
@@ -17034,6 +17376,7 @@
      "sex": "f",
      "age": "Infant",
      "species": null,
+     "breed": null,
      "aspiration": "Eco Innovator",
      "traits": [
       "Wiggly"
@@ -17126,6 +17469,7 @@
      "sex": "m",
      "age": "Elder",
      "species": null,
+     "breed": null,
      "aspiration": "Serial Romantic",
      "traits": [
       "Family-Oriented",
@@ -17170,6 +17514,7 @@
      "sex": "f",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Angling Ace",
      "traits": [
       "Cheerful",
@@ -17230,6 +17575,7 @@
      "sex": "m",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Successful Lineage",
      "traits": [
       "Bookworm",
@@ -17280,6 +17626,7 @@
      "sex": "m",
      "age": "Teen",
      "species": null,
+     "breed": null,
      "aspiration": "Musical Genius",
      "traits": [
       "Perfectionist",
@@ -17388,6 +17735,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Master Chef",
      "traits": [
       "Foodie",
@@ -17433,6 +17781,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Renaissance Sim",
      "traits": [
       "Art Lover",
@@ -17473,6 +17822,7 @@
      "sex": "f",
      "age": "Toddler",
      "species": null,
+     "breed": null,
      "aspiration": "Mt. Komorebi Sightseer",
      "traits": [
       "Clingy"
@@ -17545,6 +17895,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Mansion Baron",
      "traits": [
       "Lazy",
@@ -17605,6 +17956,7 @@
      "sex": "f",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Chief of Mischief",
      "traits": [
       "Foodie",
@@ -17670,6 +18022,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Friend of the World",
      "traits": [
       "Cheerful",
@@ -17731,6 +18084,7 @@
      "sex": "m",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Friend of the World",
      "traits": [
       "Childish",
@@ -17812,6 +18166,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Bodybuilder",
      "traits": [
       "Active",
@@ -17878,6 +18233,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Soulmate",
      "traits": [
       "Loves Outdoors",
@@ -17950,6 +18306,7 @@
      "sex": "f",
      "age": "Teen",
      "species": null,
+     "breed": null,
      "aspiration": "Freelance Botanist",
      "traits": [
       "Gloomy",
@@ -18003,6 +18360,7 @@
      "sex": "m",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Master Mixologist",
      "traits": [
       "Cheerful",
@@ -18057,6 +18415,7 @@
      "sex": "f",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Master Chef",
      "traits": [
       "Foodie",
@@ -18112,6 +18471,7 @@
      "sex": "m",
      "age": "Child",
      "species": null,
+     "breed": null,
      "aspiration": "Social Butterfly",
      "traits": [
       "Cheerful"
@@ -18169,6 +18529,7 @@
      "sex": "f",
      "age": "Elder",
      "species": null,
+     "breed": null,
      "aspiration": "Successful Lineage",
      "traits": [
       "Loner",
@@ -18261,6 +18622,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Big Happy Family",
      "traits": [
       "Loves Outdoors",
@@ -18311,6 +18673,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Musical Genius",
      "traits": [
       "Ambitious",
@@ -18361,6 +18724,7 @@
      "sex": "f",
      "age": "Child",
      "species": null,
+     "breed": null,
      "aspiration": "Artistic Prodigy",
      "traits": [
       "Creative"
@@ -18455,6 +18819,7 @@
      "sex": "f",
      "age": "Elder",
      "species": null,
+     "breed": null,
      "aspiration": "Bestselling Author",
      "traits": [
       "Genius",
@@ -18509,6 +18874,7 @@
      "sex": "f",
      "age": "Elder",
      "species": null,
+     "breed": null,
      "aspiration": "Painter Extraordinaire",
      "traits": [
       "Neat",
@@ -18581,6 +18947,7 @@
      "sex": "f",
      "age": "Elder",
      "species": null,
+     "breed": null,
      "aspiration": "The Curator",
      "traits": [
       "Socially Awkward",
@@ -18642,6 +19009,7 @@
      "sex": "f",
      "age": "Teen",
      "species": null,
+     "breed": null,
      "aspiration": "Admired Icon",
      "traits": [
       "Self-Assured",
@@ -18696,6 +19064,7 @@
      "sex": "f",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Master Chef",
      "traits": [
       "Good",
@@ -18740,6 +19109,7 @@
      "sex": "m",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Master Chef",
      "traits": [
       "Clumsy",
@@ -18785,6 +19155,7 @@
      "sex": "m",
      "age": "Teen",
      "species": null,
+     "breed": null,
      "aspiration": "Chief of Mischief",
      "traits": [
       "Goofball",
@@ -18869,6 +19240,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Fabulously Wealthy",
      "traits": [
       "Art Lover",
@@ -18924,6 +19296,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Renaissance Sim",
      "traits": [
       "Creative",
@@ -18990,6 +19363,7 @@
      "sex": "f",
      "age": "Child",
      "species": null,
+     "breed": null,
      "aspiration": "Rambunctious Scamp",
      "traits": [
       "Kleptomaniac"
@@ -19036,6 +19410,7 @@
      "sex": "f",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Successful Lineage",
      "traits": [
       "Neat",
@@ -19080,6 +19455,7 @@
      "sex": "f",
      "age": "Teen",
      "species": null,
+     "breed": null,
      "aspiration": "Musical Genius",
      "traits": [
       "Music Lover",
@@ -19138,6 +19514,7 @@
      "sex": "m",
      "age": "Elder",
      "species": null,
+     "breed": null,
      "aspiration": "Angling Ace",
      "traits": [
       "Neat",
@@ -19219,6 +19596,7 @@
      "sex": "f",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Renaissance Sim",
      "traits": [
       "Active",
@@ -19269,6 +19647,7 @@
      "sex": "m",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Nerd Brain",
      "traits": [
       "Cheerful",
@@ -19319,6 +19698,7 @@
      "sex": "m",
      "age": "Child",
      "species": null,
+     "breed": null,
      "aspiration": "Social Butterfly",
      "traits": [
       "Outgoing"
@@ -19365,6 +19745,7 @@
      "sex": "f",
      "age": "Teen",
      "species": null,
+     "breed": null,
      "aspiration": "Computer Whiz",
      "traits": [
       "Geek",
@@ -19418,6 +19799,7 @@
      "sex": "m",
      "age": "Teen",
      "species": null,
+     "breed": null,
      "aspiration": "Friend of the World",
      "traits": [
       "Active",
@@ -19471,6 +19853,7 @@
      "sex": "m",
      "age": "Teen",
      "species": null,
+     "breed": null,
      "aspiration": "Goal Oriented",
      "traits": [
       "Socially Awkward",
@@ -19587,6 +19970,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Big Happy Family",
      "traits": [
       "Slob",
@@ -19631,6 +20015,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Master Chef",
      "traits": [
       "Glutton",
@@ -19681,6 +20066,7 @@
      "sex": "m",
      "age": "Teen",
      "species": null,
+     "breed": null,
      "aspiration": "Bestselling Author",
      "traits": [
       "Good",
@@ -19732,6 +20118,7 @@
      "sex": "m",
      "age": "Child",
      "species": null,
+     "breed": null,
      "aspiration": "Social Butterfly",
      "traits": [
       "Cheerful"
@@ -19777,6 +20164,7 @@
      "sex": "f",
      "age": "Elder",
      "species": null,
+     "breed": null,
      "aspiration": "Master Maker",
      "traits": [
       "Romantic",
@@ -19902,6 +20290,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "The Curator",
      "traits": [
       "Loves Outdoors",
@@ -19957,6 +20346,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Painter Extraordinaire",
      "traits": [
       "Goofball",
@@ -20012,8 +20402,13 @@
      "sex": "f",
      "age": "Adult",
      "species": "Dog",
+     "breed": "French Bulldog",
      "aspiration": "Musical Genius",
-     "traits": [],
+     "traits": [
+      "Glutton",
+      "Playful",
+      "Loyal"
+     ],
      "bonus": "Muser",
      "careers": [],
      "skills": [],
@@ -20053,6 +20448,7 @@
      "sex": "f",
      "age": "Elder",
      "species": null,
+     "breed": null,
      "aspiration": "Freelance Botanist",
      "traits": [
       "Erratic",
@@ -20092,6 +20488,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Renaissance Sim",
      "traits": [
       "Gloomy",
@@ -20158,6 +20555,7 @@
      "sex": "m",
      "age": "Elder",
      "species": null,
+     "breed": null,
      "aspiration": "Bodybuilder",
      "traits": [
       "Kleptomaniac",
@@ -20207,6 +20605,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Bodybuilder",
      "traits": [
       "Hates Children",
@@ -20295,6 +20694,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "World-Famous Celebrity",
      "traits": [
       "Neat",
@@ -20356,6 +20756,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Musical Genius",
      "traits": [
       "Music Lover",
@@ -20441,6 +20842,7 @@
      "sex": "m",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Fabulously Wealthy",
      "traits": [
       "Self-Assured",
@@ -20491,6 +20893,7 @@
      "sex": "f",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Mansion Baron",
      "traits": [
       "Outgoing",
@@ -20558,6 +20961,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Successful Lineage",
      "traits": [
       "Active",
@@ -20608,6 +21012,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Big Happy Family",
      "traits": [
       "Family-Oriented",
@@ -20658,6 +21063,7 @@
      "sex": "m",
      "age": "Teen",
      "species": null,
+     "breed": null,
      "aspiration": "Angling Ace",
      "traits": [
       "Goofball",
@@ -20707,6 +21113,7 @@
      "sex": "f",
      "age": "Toddler",
      "species": null,
+     "breed": null,
      "aspiration": "Big Happy Family",
      "traits": [
       "Charmer"
@@ -20774,6 +21181,7 @@
      "sex": "m",
      "age": "Elder",
      "species": null,
+     "breed": null,
      "aspiration": "Friend of the World",
      "traits": [
       "Clumsy",
@@ -20839,6 +21247,7 @@
      "sex": "f",
      "age": "Elder",
      "species": null,
+     "breed": null,
      "aspiration": "Painter Extraordinaire",
      "traits": [
       "Art Lover",
@@ -20911,6 +21320,7 @@
      "sex": "f",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Bestselling Author",
      "traits": [
       "Good",
@@ -20966,6 +21376,7 @@
      "sex": "m",
      "age": "Child",
      "species": null,
+     "breed": null,
      "aspiration": "Artistic Prodigy",
      "traits": [
       "Creative"
@@ -21037,6 +21448,7 @@
      "sex": "f",
      "age": "Teen",
      "species": null,
+     "breed": null,
      "aspiration": "Bodybuilder",
      "traits": [
       "Active",
@@ -21104,6 +21516,7 @@
      "sex": "f",
      "age": "Elder",
      "species": null,
+     "breed": null,
      "aspiration": "Master Vampire",
      "traits": [
       "Foodie",
@@ -21164,6 +21577,7 @@
      "sex": "f",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Bodybuilder",
      "traits": [
       "Neat",
@@ -21294,6 +21708,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Friend of the Animals",
      "traits": [
       "Bookworm",
@@ -21344,8 +21759,13 @@
      "sex": "m",
      "age": "Elder",
      "species": "Cat",
+     "breed": "Siamese",
      "aspiration": "Public Enemy",
-     "traits": [],
+     "traits": [
+      "Aloof",
+      "Talkative",
+      "Glutton"
+     ],
      "bonus": "Dastardly",
      "careers": [],
      "skills": [],
@@ -21368,8 +21788,13 @@
      "sex": "f",
      "age": "Adult",
      "species": "Cat",
+     "breed": "Abyssinian",
      "aspiration": "Joke Star",
-     "traits": [],
+     "traits": [
+      "Free Spirit",
+      "Mischievous",
+      "Prowler"
+     ],
      "bonus": "Gregarious",
      "careers": [],
      "skills": [],
@@ -21392,8 +21817,13 @@
      "sex": "f",
      "age": "Adult",
      "species": "Cat",
+     "breed": "Sphynx",
      "aspiration": "Fabulously Wealthy",
-     "traits": [],
+     "traits": [
+      "Friendly",
+      "Curious",
+      "Clever"
+     ],
      "bonus": "Business Savvy",
      "careers": [],
      "skills": [],
@@ -21416,8 +21846,13 @@
      "sex": "m",
      "age": "Child",
      "species": "Cat",
+     "breed": "Mixed Breed",
      "aspiration": "Rambunctious Scamp",
-     "traits": [],
+     "traits": [
+      "Fluffy",
+      "Affectionate",
+      "Spoiled"
+     ],
      "bonus": null,
      "careers": [],
      "skills": [],
@@ -21461,6 +21896,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Master Maker",
      "traits": [
       "Maker",
@@ -21506,6 +21942,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Bestselling Author",
      "traits": [
       "Clumsy",
@@ -21551,6 +21988,7 @@
      "sex": "f",
      "age": "Child",
      "species": null,
+     "breed": null,
      "aspiration": "Whiz Kid",
      "traits": [
       "Bookworm"
@@ -21633,6 +22071,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Bodybuilder",
      "traits": [
       "Active",
@@ -21678,6 +22117,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Painter Extraordinaire",
      "traits": [
       "Clumsy",
@@ -21723,6 +22163,7 @@
      "sex": "m",
      "age": "Child",
      "species": null,
+     "breed": null,
      "aspiration": "Whiz Kid",
      "traits": [
       "Geek"
@@ -21813,6 +22254,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Public Enemy",
      "traits": [
       "Romantic",
@@ -21896,6 +22338,7 @@
      "sex": "m",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Enforcer of Order",
      "traits": [
       "Mean",
@@ -21944,6 +22387,7 @@
      "sex": "m",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Galactic Privateer",
      "traits": [
       "Noncommittal",
@@ -22002,6 +22446,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Enforcer of Order",
      "traits": [
       "Hot-Headed",
@@ -22050,6 +22495,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Paragon of Hope",
      "traits": [
       "Self-Assured",
@@ -22103,6 +22549,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Paragon of Hope",
      "traits": [
       "Good",
@@ -22163,6 +22610,7 @@
      "sex": "f",
      "age": "Child",
      "species": null,
+     "breed": null,
      "aspiration": "Playtime Captain",
      "traits": [
       "Geek"
@@ -22221,6 +22669,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Neighborhood Confidante",
      "traits": [
       "Creative",
@@ -22293,6 +22742,7 @@
      "sex": "m",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Renaissance Sim",
      "traits": [
       "Geek",
@@ -22353,6 +22803,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Renaissance Sim",
      "traits": [
       "Erratic",
@@ -22419,6 +22870,7 @@
      "sex": "m",
      "age": "Elder",
      "species": null,
+     "breed": null,
      "aspiration": "Public Enemy",
      "traits": [
       "Hot-Headed",
@@ -22481,6 +22933,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Friend of the World",
      "traits": [
       "Art Lover",
@@ -22525,6 +22978,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Painter Extraordinaire",
      "traits": [
       "Music Lover",
@@ -22569,6 +23023,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Bestselling Author",
      "traits": [
       "Geek",
@@ -22629,6 +23084,7 @@
      "sex": "m",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Fabulously Wealthy",
      "traits": [
       "Hot-Headed",
@@ -22673,6 +23129,7 @@
      "sex": "f",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Fabulously Wealthy",
      "traits": [
       "Neat",
@@ -22738,6 +23195,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Successful Lineage",
      "traits": [
       "Family-Oriented",
@@ -22788,6 +23246,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Nerd Brain",
      "traits": [
       "Bookworm",
@@ -22832,6 +23291,7 @@
      "sex": "f",
      "age": "Child",
      "species": null,
+     "breed": null,
      "aspiration": "Artistic Prodigy",
      "traits": [
       "Active"
@@ -22899,8 +23359,13 @@
      "sex": "m",
      "age": "Adult",
      "species": "Dog",
+     "breed": "Chesapeake Bay Retriever",
      "aspiration": "Bodybuilder",
-     "traits": [],
+     "traits": [
+      "Playful",
+      "Adventurous",
+      "Vocal"
+     ],
      "bonus": "High Metabolism",
      "careers": [],
      "skills": [],
@@ -22937,8 +23402,13 @@
      "sex": "m",
      "age": "Adult",
      "species": "Cat",
+     "breed": "Tuxedo",
      "aspiration": "Freelance Botanist",
-     "traits": [],
+     "traits": [
+      "Aloof",
+      "Friendly",
+      "Talkative"
+     ],
      "bonus": "Collector",
      "careers": [],
      "skills": [],
@@ -22975,6 +23445,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Master Chef",
      "traits": [
       "Cheerful",
@@ -23033,6 +23504,7 @@
      "sex": "m",
      "age": "Elder",
      "species": null,
+     "breed": null,
      "aspiration": "Master Mixologist",
      "traits": [
       "Good",
@@ -23103,6 +23575,7 @@
      "sex": "m",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Esteemed Entrepreneur",
      "traits": [
       "Perfectionist",
@@ -23173,6 +23646,7 @@
      "sex": "m",
      "age": "Teen",
      "species": null,
+     "breed": null,
      "aspiration": "Nerd Brain",
      "traits": [
       "Geek",
@@ -23271,6 +23745,7 @@
      "sex": "f",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Mansion Baron",
      "traits": [
       "Materialistic",
@@ -23335,6 +23810,7 @@
      "sex": "m",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Renaissance Sim",
      "traits": [
       "Mean",
@@ -23385,6 +23861,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Werewolf Initiate",
      "traits": [
       "Romantic",
@@ -23460,6 +23937,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Neighborhood Confidante",
      "traits": [
       "Outgoing",
@@ -23531,6 +24009,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Renaissance Sim",
      "traits": [
       "Hot-Headed",
@@ -23613,6 +24092,7 @@
      "sex": "m",
      "age": "Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Successful Lineage",
      "traits": [
       "Family-Oriented",
@@ -23678,6 +24158,7 @@
      "sex": "m",
      "age": "Teen",
      "species": null,
+     "breed": null,
      "aspiration": "Werewolf Initiate",
      "traits": [
       "Outgoing",
@@ -23737,6 +24218,7 @@
      "sex": "f",
      "age": "Elder",
      "species": null,
+     "breed": null,
      "aspiration": "Friend of the World",
      "traits": [
       "Cheerful",
@@ -23814,6 +24296,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Bestselling Author",
      "traits": [
       "Bookworm",
@@ -23885,6 +24368,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Beach Life",
      "traits": [
       "Self-Assured",
@@ -23940,6 +24424,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Bestselling Author",
      "traits": [
       "Loner",
@@ -23995,6 +24480,7 @@
      "sex": "f",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Beach Life",
      "traits": [
       "Child of the Islands",
@@ -24050,6 +24536,7 @@
      "sex": "m",
      "age": "Young Adult",
      "species": null,
+     "breed": null,
      "aspiration": "Friend of the World",
      "traits": [
       "Child of the Ocean",
