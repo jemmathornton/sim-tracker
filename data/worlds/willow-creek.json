@@ -545,9 +545,18 @@
      "partners": [
       ["bob-pancakes", "Spouse"]
      ]
+    },
+    {
+     "id": "iggy-pancakes",
+     "name": "Iggy Pancakes",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Toddler",
+     "traits": ["Charmer"],
+     "parents": ["bob-pancakes", "eliza-pancakes"]
     }
    ],
-   "bio": "Poor, poor Bob and Eliza – have they ever been happy? It seems there’s nothing one can do to please the other. Just what is keeping this couple together? Or, conversely, what is the spark that will finally drive them apart?",
+   "bio": "Is that a Silver Dollar Pancake? Nope, it’s just the newest little addition to Bob & Eliza’s pancake stack! Meet their son Iggy, a charming toddler who’s bringing a small measure of harmony to the Pancakes’ household.",
    "bioFrom": "EA"
   },
   "Spencer-Kim-Lewis": {
