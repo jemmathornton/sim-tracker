@@ -117,7 +117,8 @@
      "dynasty": {
       "name": "Alto",
       "role": "head"
-     }
+     },
+     "parents": ["bert-alto", "alto-enzo-mother"]
     }
    ],
    "bio": "Listen here, Enzo is the hottest and most charming eligible bachelor in all of Ondarion. At least according to his mother, who's been waiting desperately for him to stop having fun and do something with his life. The dozens of exes he's left behind might have different opinions of him.",

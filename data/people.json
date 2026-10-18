@@ -207,5 +207,53 @@
   "late": true,
   "notInGame": true,
   "fromFix": true
+ },
+ "alto-parent-1": {
+  "name": "Unknown",
+  "sex": "x",
+  "placeholder": true
+ },
+ "bert-alto": {
+  "name": "Bert Alto",
+  "sex": "m",
+  "age": "Elder",
+  "late": true,
+  "origin": "Premade",
+  "parents": ["alto-parent-1"],
+  "world": "ondarion"
+ },
+ "alto-enzo-mother": {
+  "name": "Unknown",
+  "sex": "f",
+  "placeholder": true
+ },
+ "nick-alto": {
+  "name": "Nick Alto",
+  "sex": "m",
+  "late": true,
+  "origin": "Premade",
+  "parents": ["alto-parent-1"],
+  "partners": [
+   ["vita-alto", "Spouse"]
+  ]
+ },
+ "vita-alto": {
+  "name": "Vita Alto",
+  "sex": "f",
+  "late": true,
+  "origin": "Premade",
+  "partners": [
+   ["nick-alto", "Spouse"]
+  ]
+ },
+ "holly-alto": {
+  "name": "Holly Alto",
+  "sex": "f",
+  "age": "Young Adult",
+  "origin": "Premade",
+  "parents": ["nick-alto", "vita-alto"],
+  "world": "del-sol-valley",
+  "where": "Del Sol Valley, a celebrity with no home",
+  "noHome": true
  }
 }
