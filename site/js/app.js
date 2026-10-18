@@ -504,7 +504,7 @@ function simPage(s){
     <div class="sim-about"><div>${hasTraits ? `<span class="label">Traits</span><div class="traits">${s.traits.map(t => `<span>${esc(t)}</span>`).join("")}${s.bonus ? `<span class="bonus" title="Bonus trait">${esc(s.bonus)}</span>` : ""}</div>` : ""}${s.notes ? `<p class="sim-note">${esc(s.notes)}</p>` : ""}</div>
       ${skills ? `<div class="skills"><span class="label">Skills</span>${skills}</div>` : "<div></div>"}</div></section>`;
   // a horse's competitions: best place at each level (her ask, 19 Oct)
-  if (s.state === "Horse") h += `<section class="block" style="--h:${hc}"><div class="block-head"><h2>Competitions</h2>${(s.wins || []).length ? "" : `<span class="count">None won yet</span>`}</div>${horseComps(s)}</section>`;
+  if (s.state === "Horse") h += `<section class="block" style="--h:${hc}"><div class="block-head"><h2>Competitions</h2></div>${horseComps(s)}</section>`;
   // family
   const fam = simFamily(s.id), own = isAnimal(s) ? (t => t.includes(s.id) ? t : [])(s.hh ? animalTreeOf(s.hh) : []) : s.hh ? treeOf(s.hh) : treeAround([s.id]);   // their household’s whole family tree, with them highlighted
   if (fam.trim() || own.length) h += `<section class="block" id="family" style="--h:${hc}"><div class="block-head"><h2>Their <em>family</em></h2></div>
