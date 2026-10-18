@@ -27,7 +27,7 @@ DATA.worlds.filter(w => !w.owned && DATA.households[w.name]).forEach(w => {
 const SMOOTH = () => matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
 const worlds = DATA.worlds, lotIndex = {}, hhIndex = {}, hoodIndex = {};
 // a household's own extras from the data: its picture (a screenshot in shots/), origin (Premade or Mine), played, Neighbourhood Stories
-const hhMore = x => ({portrait: x.portrait, origin: x.origin, played: x.played, stories: x.stories, single: x.single});
+const hhMore = x => ({portrait: x.portrait, origin: x.origin, played: x.played, stories: x.stories, single: x.single, bio: x.bio, story: x.story});
 worlds.forEach(w => {
   w.id = slug(w.name); w.households = {};
   // a surname on more than one home = related but separate households: "Davidson 1", "Davidson 2"
@@ -1101,7 +1101,7 @@ function householdNew(hh){
     ${tree.length ? `<section class="block" style="--h:${hc}"><div class="block-head"><h2>Family <em>tree</em></h2></div>
       <div class="tree-box">${fitTree(tree, {line: slug(hh.family), compact: true, ch: 96, labels: false, here: hh})}</div>${treeKey(tree, true, wColour(w), tree.some(id => !SIMS[id].ph && SIMS[id].hh !== hh))}</section>` : ""}
     ${(t => t.length ? `<section class="block" style="--h:${hc}"><div class="block-head"><h2>Animal <em>family</em></h2></div><div class="tree-box">${fitTree(t, {compact: true, ch: 96, labels: false, here: hh})}</div></section>` : "")(animalTreeOf(hh))}
-    ${hh.story ? `<section class="block" style="--h:${hc}"><div class="block-head"><h2>Their <em>story</em></h2></div><p class="lede">${esc(hh.story)}</p></section>` : ""}
+    ${hh.bio || hh.story ? `<section class="block" style="--h:${hc}"><div class="block-head"><h2>Their <em>story</em></h2></div>${hh.bio ? `<p class="lede">${esc(hh.bio)}</p>` : ""}${hh.story ? `<p class="lede">${esc(hh.story)}</p>` : ""}</section>` : ""}
     ${neighbours.length ? `<section class="block"><div class="block-head"><h2>Neighbours</h2></div><div class="families">${neighbours.map(x => famCard(x)).join("")}</div></section>` : ""}`;
 }
 

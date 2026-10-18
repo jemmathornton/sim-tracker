@@ -102,7 +102,9 @@
       ["Sienna Grove", "Best Friends"]
      ]
     }
-   ]
+   ],
+   "bio": "Mentor to Sienna and Umber's mother, this legendary Horse Champion retired and settled in Galloping Gulch with his trusty steed, Duke, to live a life of simple pleasures. Don and Duke enjoy the spoils of their hard work in the vast beauty of the Gulch.",
+   "bioFrom": "EA"
   },
   "The Grove Family": {
    "sims": [
@@ -200,7 +202,9 @@
      "parents": ["umber-grove", "juniper-grove"],
      "school": "Grade school"
     }
-   ]
+   ],
+   "bio": "Umber and Juniper became childhood sweethearts when Umber would serenade Juniper with odes to her Equestrian prowess after taking Horse Riding lessons from his mother. When Umber's parents passed away, he took on the family ranch to honor his native heritage and his sister, Sienna, became the Horse Trainer in town. The son, Wren, has a passion for animals and is training Starbrite, the foal of Umber's childhood rescue horse, Luna... all set to the sweet, peaceful soundtrack of Umber's odes on the porch.",
+   "bioFrom": "EA"
   },
   "Sienna & Flapjack": {
    "sims": [
@@ -244,7 +248,9 @@
      ],
      "parents": ["tallulah-grove"]
     }
-   ]
+   ],
+   "bio": "As a multiple-time Ultimate Horse Championship winner with her Horse, Salt Lake Flapjack (or “Flapjack” for short), Sienna is happy to share her indigenous wisdom and train Horses to become skilled competitors. After her parents passed and her brother took over the family ranch, she began training and competing full-time. She now runs the Hay Now! Equestrian Center, where she serves as an encouraging and knowledgeable mentor for aspiring equestrians.",
+   "bioFrom": "EA"
   },
   "The Nectar Making Duo": {
    "sims": [
@@ -287,7 +293,9 @@
       ["Marissa Tracey", "Friends"]
      ]
     }
-   ]
+   ],
+   "bio": "This duo is working to get their name out into the Nectar Making scene. Marissa uses her outgoing personality and ambition to network. Dani is a connoisseur who lives for the delicate intricacies of their craft in Nectar Making. Their relationship can be strained at times, but, deep down, they have each other's back.",
+   "bioFrom": "EA"
   },
   "Palumbo": {
    "sims": [

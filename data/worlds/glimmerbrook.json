@@ -132,7 +132,9 @@
      ],
      "state": "Spellcaster"
     }
-   ]
+   ],
+   "bio": "The Charm family has produced generations of distinguished Spellcasters, as Minerva often reminds her children. Gemma resents her family's high expectations even though she secretly wants to make them proud. Darrel is an aspiring duelist who just got engaged to Emilia, a newly ascended Spellcaster who has a lot to live up to.",
+   "bioFrom": "EA"
   },
   "Amicable Acolytes": {
    "sims": [
@@ -180,7 +182,9 @@
      ],
      "state": "Spellcaster"
     }
-   ]
+   ],
+   "bio": "Grace and Tomax have been roommates ever since they first became Spellcasters. They have day jobs, but magic is their main focus, and they've got a friendly competition going to see who will become an Adept Spellcaster first!",
+   "bioFrom": "EA"
   }
  }
 }

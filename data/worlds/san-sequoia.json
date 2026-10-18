@@ -135,7 +135,9 @@
      "career": "",
      "parents": ["celeste-michaelson", "christopher-michaelson"]
     }
-   ]
+   ],
+   "bio": "Celeste and Christopher met working at the same startup. They couldn't believe how much they had in common when they first went out for coffee together! After they got married, they adopted Atlas and promptly began spoiling him rotten. Now they've also adopted Orion and are hard at work raising two kids to be just as nerdy as they are.",
+   "bioFrom": "EA"
   },
   "Robles": {
    "sims": [
@@ -231,7 +233,9 @@
      ],
      "parents": ["bernice-robles", "ian-robles"]
     }
-   ]
+   ],
+   "bio": "The Robles family is pretty entrenched in this community—they've been here ever since the fishing trade started taking off, and for years had a thriving family business. Ignacio's the patriarch of this family, but just because they have deep roots doesn't make them all that conventional. They know everyone and anyone, and love being a part of everything this community has to offer—from spending way too much of their free time down by the waterfront to organizing big family gatherings at Gilbert Gardens park.",
+   "bioFrom": "EA"
   },
   "Robles-Ruano": {
    "sims": [
@@ -296,7 +300,9 @@
      ],
      "parents": ["jay-robles", "doli-ruano"]
     }
-   ]
+   ],
+   "bio": "The Robles-Ruano Family is a bit on the unconventional side, but being conventional is soooo boring, right? These folks are all about expressing themselves and their personality no matter what. Both parents are hoping that their unique ways will rub off on their slightly clingy daughter, Tala. With a little love, Tala is sure to grow into a confident (and creative!) kid.",
+   "bioFrom": "EA"
   },
   "Luna-Sullivan": {
    "sims": [
@@ -350,7 +356,9 @@
      "parents": ["xochitl-luna", "colin-sullivan"],
      "school": "Grade school"
     }
-   ]
+   ],
+   "bio": "The Luna-Sullivan family's a little unusual; Karmine's dad died in a tragic cooking accident, and her mom needed help...so Gramma Eleanor moved in to be the Gramma-in-charge-ish. Except Gramma's just as silly as Karmine is!",
+   "bioFrom": "EA"
   }
  }
 }

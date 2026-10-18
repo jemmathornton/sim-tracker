@@ -132,7 +132,9 @@
       }
      ]
     }
-   ]
+   ],
+   "bio": "Julia and Becca have been the best of friends since they first met in kindergarten. Nobody that knows them could imagine them going to university without the other one by her side. Now as they're starting a whole new journey into university it's up to the pair to see if their friendship will survive this new adventure and carry them through to adulthood.",
+   "bioFrom": "EA"
   },
   "Fletcher": {
    "sims": [
@@ -163,7 +165,9 @@
       }
      ]
     }
-   ]
+   ],
+   "bio": "Cameron Fletcher is all about learning new things at school, he's just not sure how to make friends with the people around him. But with just a little nudge in the right direction Cameron is sure to master university life.",
+   "bioFrom": "EA"
   },
   "Elderberry": {
    "sims": [
@@ -220,7 +224,9 @@
      ],
      "parents": ["unknown-5"]
     }
-   ]
+   ],
+   "bio": "Ekram and Eleanore have lived in Gibbs Hill all their lives from young love, to a growing family, and finally into retirement. Eleanore loves seeing the new students appear each term, but Ekram isn't always as fond of the young adults taking over their quiet town. Recently the couple's teenage grandson, Rohan, came to live with them as he prepares to go to university soon. Rohan will soon finish high school and have to make his final decision on what university he wants to attend.",
+   "bioFrom": "EA"
   },
   "Pleasant": {
    "sims": [
@@ -258,7 +264,9 @@
       ["Cooking", 3, 10]
      ]
     }
-   ]
+   ],
+   "bio": "Angela and Lilith Pleasant have moved into an old family home located in Gibbs Hill to attend the prestigious universities in Britechester. It will be a true test to find out whether their bond as twins can overcome their differences. Their majors have already split them into separate universities, but whether they will be at odds or work together to make it through is a new challenge in their life.",
+   "bioFrom": "EA"
   }
  }
 }

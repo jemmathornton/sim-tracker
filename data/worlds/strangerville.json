@@ -78,7 +78,9 @@
       ["Fitness", 2, 10]
      ]
     }
-   ]
+   ],
+   "bio": "George Cahill was a retired pilot who enjoyed taking his beloved plane Penelope for long flights across the world. After passing over StrangerVille there was a large flash of light causing his plane to short circuit and crash. George has since set up camp in the cargo bay of Old Penelope, and has lived on the outskirts of StrangerVille ever since. Although he has grown skeptical of the residents of StrangerVille he means no harm and mostly keeps to himself.",
+   "bioFrom": "EA"
   },
   "Roswell": {
    "sims": [
@@ -121,7 +123,9 @@
       ["ted-roswell", "Spouse"]
      ]
     }
-   ]
+   ],
+   "bio": "The Roswell's are the oldest residents in StrangerVille. Ted Roswell has since become the mayor and has been aggressively pushing to get StrangerVille to be more technologically advanced. He has made some shady deals, but his crowning achievement has been the construction of the Crater Base and Secret Lab. Ted's wife, Meredith, has been noticing Ted acting very strange at night. It might have something to do with his frequent visits to the Secret Lab to try and cover things up.",
+   "bioFrom": "EA"
   },
   "Sigworth": {
    "sims": [
@@ -180,7 +184,9 @@
      "parents": ["jess-sigworth", "dylan-sigworth"],
      "school": "Grade school"
     }
-   ]
+   ],
+   "bio": "The Sigworth family is rather new in town. Jess, the mom, had to transfer to the StrangerVille National Base. After spending a few days on the base Dylan has started to notice something is a bit off about his wife. Although Dylan is doing all he can to reassure their daughter that everything is okay. Christie is starting to catch on and it is only a matter of time until she realizes what is going on.",
+   "bioFrom": "EA"
   }
  }
 }

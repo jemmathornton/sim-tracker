@@ -214,7 +214,9 @@
      ],
      "parents": ["unknown-6"]
     }
-   ]
+   ],
+   "bio": "Yuki and Candy recently inherited a quaint, modest home from their dearly departed Grandma Behr. Geeky teen Yuki absolutely idolizes her cool DJ sister, Candy, but Yuki’s got some mad skills of her own. Sure, she may not be the edgy Spinmaster Candy is, but she can annihilate anyone at Blicblock. She’s also quickly becoming Windenburg’s most infamous underground hacker.",
+   "bioFrom": "EA"
   },
   "Benali": {
    "sims": [
@@ -234,7 +236,9 @@
       ["Video Gaming", 4, 10]
      ]
     }
-   ]
+   ],
+   "bio": "Salim has grown up in the Arts Quarter, surrounded by poets, musicians and artists. He's determined to become a great writer… right after he's finished that book. Oh, and that video game he needs to beat. Come to think of it, he needs a nap too.",
+   "bioFrom": "EA"
   },
   "Bheeda": {
    "sims": [
@@ -276,7 +280,9 @@
       ["arun-bheeda", "Spouse"]
      ]
     }
-   ]
+   ],
+   "bio": "With a baby on the way and a tiny city apartment, will Jesminder and Arun find space for their bundle of joy? Will Jesminder keep her mixology job when the baby comes, or would she rather stay at home and paint?",
+   "bioFrom": "EA"
   },
   "Jang": {
    "sims": [
@@ -330,7 +336,9 @@
      "school": "Grade school · grade A",
      "parents": ["anaya-jang", "baako-jang"]
     }
-   ]
+   ],
+   "bio": "Baako and Anaya came to the bustling city of San Myshuno so Baako could broaden his career as a rising comedian and so Anaya could get clarity on which one of her passions to focus on as her career: inspiring songstress or successful painter? Their quirky kiddo, Billie is happy to be along for the ride. This social butterfly has no filter when it comes to making new friends - even if that involves barging in uninvited to her neighbors' apartments!",
+   "bioFrom": "EA"
   },
   "Jeong": {
    "sims": [
@@ -349,7 +357,9 @@
       ["Mixology", 4, 10]
      ]
     }
-   ]
+   ],
+   "bio": "Venessa Jeong just moved to Del Sol Valley from her quaint country town. She is looking to make it big as a rising actress. She has stared in a few low level commercials, but her agent always tells her she has what it takes she just needs to find that breakthrough role.",
+   "bioFrom": "EA"
   },
   "Lobo": {
    "sims": [
@@ -369,7 +379,9 @@
       ["Writing", 5, 10]
      ]
     }
-   ]
+   ],
+   "bio": "Established and novice artists alike shudder in anticipation for the day Diego Lobo steps his critical foot into their gallery. Impress him and you'll have it made for life. But if one brush stroke is off, if just one hue is not quite to his liking, you may never work in this town again.",
+   "bioFrom": "EA"
   },
   "Pizzazz": {
    "sims": [
@@ -391,7 +403,9 @@
       ["Charisma", 8, 10]
      ]
     }
-   ]
+   ],
+   "bio": "Penny is THE source of the coolest happenings and the latest trends in San Myshuno. But will this Online A-Lister's staunch dedication to her career get in the way of finding romance?",
+   "bioFrom": "EA"
   },
   "Rasoya": {
    "sims": [
@@ -427,7 +441,9 @@
       ["Cooking", 8, 10]
      ]
     }
-   ]
+   ],
+   "bio": "Raj may be a successful Chef, but his critical mother still worries about when he's going to find a nice girl and carry on the family line…",
+   "bioFrom": "EA"
   },
   "Feng": {
    "sims": [
@@ -468,7 +484,9 @@
       ["lily-feng", "Spouse"]
      ]
     }
-   ]
+   ],
+   "bio": "Victor is a respected and high-powered politician. Lily is a tough businesswoman. Their respectful, yet somber nature masks their sinister, secret plans to one day take over San Myshuno!",
+   "bioFrom": "EA"
   },
   "Livin' In The City": {
    "sims": [
@@ -620,7 +638,9 @@
       }
      ]
     }
-   ]
+   ],
+   "bio": "Tech-savvy hunk Sergio and brash DJ Joaquin have little in common... except for the finer things in life. As they climb the ranks and rake in the bucks, just how awesome can they make their sweet pad?",
+   "bioFrom": "EA"
   }
  }
 }

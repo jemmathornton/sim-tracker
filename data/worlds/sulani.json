@@ -99,7 +99,9 @@
      ],
      "parents": ["unknown-4"]
     }
-   ]
+   ],
+   "bio": "Sitting high above the center of Ohan'ali Town, Keala watches over the townsfolk that look to her for guidance. This spirited, young-at-heart grandmother has taken young Lia under her wing to pass on the knowledge and cultural history of Sulani through the generations.",
+   "bioFrom": "EA"
   },
   "Kahananui": {
    "sims": [
@@ -141,7 +143,9 @@
       ["alika-kahananui", "Spouse"]
      ]
     }
-   ]
+   ],
+   "bio": "As the self-appointed “Sulani ambassadors” this enterprising couple, Mele and Alika, have decided to live out their golden years in a dream retreat away from the bustle of Ohan’ali Town.",
+   "bioFrom": "EA"
   },
   "Kealoha": {
    "sims": [
@@ -217,7 +221,9 @@
      ],
      "parents": ["makoa-kealoha", "lilliana-kealoha"]
     }
-   ]
+   ],
+   "bio": "The Kealohas are the epitome of Sulani: an industrious, welcoming, and tight-knit young family firmly rooted in island tradition to honor the past while supporting the bright future of their extended-family community.",
+   "bioFrom": "EA"
   },
   "Ngata": {
    "sims": [
@@ -274,7 +280,9 @@
      ],
      "parents": ["oliana-ngata"]
     }
-   ]
+   ],
+   "bio": "Coming to Sulani for inspiration Leila didn't expect to fall in love so deeply with the islands. And it wasn't just the scenery that she fell for, but also for Oliana and her son Tane that welcomed her so easily into their family. The three are now an insperable trio that call Sulani their home enjoying the sand and ocean at their own pace.",
+   "bioFrom": "EA"
   }
  }
 }

@@ -145,7 +145,9 @@
       ["Mateo Markovic", "Disliked"]
      ]
     }
-   ]
+   ],
+   "bio": "\"Laurent\" may be a newer name in the area, but the family certainly isn't. For generations, they've owned the local wedding venue, the cornerstone of the wedding industry in the area. And Hilary's family opened the first food stall in the village square back when they moved to the area. Now she's a chef in her parent's restaurant, and the local food market has flourished. Together, this family forms a wedding-industry powerhouse.",
+   "bioFrom": "EA"
   },
   "Markovic": {
    "sims": [
@@ -212,7 +214,9 @@
      ],
      "parents": ["mateo-markovic", "lucia-markovic"]
     }
-   ]
+   ],
+   "bio": "The Markovic family are locally-renowned for their contribution to the musical-side of the wedding industry, despite having put off their own wedding time and time again. This is in no small part due to relations between them and the Laurent family being rather strained. Mateo believes the Laurents have a stranglehold on local wedding business and works hard to retain relevance. While Lucia's animosity is directed at Hector, a former lover, all the drama and work has kept them busy and unwed!",
+   "bioFrom": "EA"
   },
   "Soto": {
    "sims": [
@@ -260,7 +264,9 @@
       ["camille-soto", "Spouse"]
      ]
     }
-   ]
+   ],
+   "bio": "Years ago, Dominique and Camille were married in Tartosa. Each year they returned on vacation in hopes of re-experiencing the love - and rich local culture - only Tartosa offers. Once both women retired, they decided to make their yearly trip more permanent. \\n\\nDominique is an artist who now spends her days painting landscapes and portraits in the village square and Camille is a writer who has taken an interest in the area's storied history. Many consider her to be the Porto Luminoso historian and she can often be found enjoying the outdoors alongside Dominique while chatting about local history with anyone willing to listen.",
+   "bioFrom": "EA"
   },
   "Monticapp": {
    "sims": [
@@ -345,7 +351,9 @@
      ],
      "parents": ["juliette-monty", "romeo-monty"]
     }
-   ]
+   ],
+   "bio": "Following her heart had drastic consequences for Juliette Monty (formerly Capp). Disowned by her old Dynasty, she's lost her Noble ranking and most of her fortunes. Yet life is so much better with her sweetheart Romeo. It has truly filled her heart to see their son Dante grow up to be as kind-hearted as his father. However—now that her new family is rooted and settled—she keeps daydreaming about claiming back all that was taken from her.",
+   "bioFrom": "EA"
   }
  }
 }

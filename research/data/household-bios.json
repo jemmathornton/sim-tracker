@@ -1,0 +1,630 @@
+{
+ "Brindleton Bay|Delgato": {
+  "bio": "While Supriya loves her full-time job as a stay-at-home mom, it’s been getting harder and harder to suppress her dreams of being a full-fledged veterinarian. Especially now that the owner of the Brindleton Pawspital is looking to sell the business. Her husband Justin has always been supportive, and keeps offering to take a break from work so she can follow her dream. But can Supriya really trust him to keep the peace at home between Blue and Bartholomew? Not to mention Pierce and Evie too!",
+  "key": "0x3B1740DB",
+  "how": "house description 0x729F6C4F:00000000:000000000002839E (Delta\\EP04\\SimulationPreload.package) -> text key next to household id 131034729628450194 (household file B3C438F0:00000000:01D1876470BE3D92, 'premadeHouseholdTemplate_Delgato')",
+  "sure": true
+ },
+ "Brindleton Bay|Hecking": {
+  "bio": "Life in their new home seems to agree with newlyweds Brent and Brant. The small-town bustle inspires Brent’s painting, and Brant loves to explore the Bay's beautiful neighborhoods. But will they ever agree on who gets to take their beloved Rosie with them?",
+  "key": "0xECA07882",
+  "how": "house description 0x729F6C4F:00000000:00000000000283A3 (Delta\\EP04\\SimulationPreload.package) -> text key next to household id 141098678837670443 (household file B3C438F0:00000000:01F548803665722B, 'premadeHouseholdTemplate_Hecking')",
+  "sure": true
+ },
+ "Brindleton Bay|Lynx": {
+  "bio": "Cats in the neighborhood know where to go for a good meal. Catarina’s always had a soft spot for animals, and the cats she lives with have the best home a cat could ask for.  Sometimes Catarina asks herself if there’s something more to life than cats… usually right before she adopts another stray.",
+  "key": "0xB42F4B3F",
+  "how": "house description 0x729F6C4F:00000000:00000000000283A0 (Delta\\EP04\\SimulationPreload.package) -> text key next to household id 91566975938315031 (household file B3C438F0:00000000:01454FADF1F5C317, 'premadeHouseholdTemplate_Lynx')",
+  "sure": true
+ },
+ "Britechester|Best of Friends": {
+  "bio": "Julia and Becca have been the best of friends since they first met in kindergarten. Nobody that knows them could imagine them going to university without the other one by her side. Now as they're starting a whole new journey into university it's up to the pair to see if their friendship will survive this new adventure and carry them through to adulthood.",
+  "key": "0xFBFA2480",
+  "how": "house description 0x729F6C4F:00000000:000000000003640A (Delta\\EP08\\SimulationPreload.package) -> text key next to household id 98183129586120909 (household file B3C438F0:00000000:015CD10941EAB8CD, 'premadeHouseholdTemplate_EP08_BFFs')",
+  "sure": true
+ },
+ "Britechester|Fletcher": {
+  "bio": "Cameron Fletcher is all about learning new things at school, he's just not sure how to make friends with the people around him. But with just a little nudge in the right direction Cameron is sure to master university life.",
+  "key": "0x244959CA",
+  "how": "house description 0x729F6C4F:00000000:000000000003625A (Delta\\EP08\\SimulationPreload.package) -> text key next to household id 95288805891742516 (household file B3C438F0:00000000:015288AA023F9B34, 'premadeHouseholdTemplate_EP08_NewKid')",
+  "sure": true
+ },
+ "Britechester|Elderberry": {
+  "bio": "Ekram and Eleanore have lived in Gibbs Hill all their lives from young love, to a growing family, and finally into retirement. Eleanore loves seeing the new students appear each term, but Ekram isn't always as fond of the young adults taking over their quiet town. Recently the couple's teenage grandson, Rohan, came to live with them as he prepares to go to university soon. Rohan will soon finish high school and have to make his final decision on what university he wants to attend.",
+  "key": "0x4A6AB51B",
+  "how": "house description 0x729F6C4F:00000000:00000000000361B1 (Delta\\EP08\\SimulationPreload.package) -> text key next to household id 138394700627937505 (household file B3C438F0:00000000:01EBAD3F39B988E1, 'premadeHouseholdTemplate_EP08_ElderlyCouple')",
+  "sure": true
+ },
+ "Britechester|Pleasant": {
+  "bio": "Angela and Lilith Pleasant have moved into an old family home located in Gibbs Hill to attend the prestigious universities in Britechester. It will be a true test to find out whether their bond as twins can overcome their differences. Their majors have already split them into separate universities, but whether they will be at odds or work together to make it through is a new challenge in their life.",
+  "key": "0xC1B0093E",
+  "how": "house description 0x729F6C4F:00000000:00000000000364FC (Delta\\EP08\\SimulationPreload.package) -> text key next to household id 109424414887413822 (household file B3C438F0:00000000:0184C0ECF31E883E, 'premadeHouseholdTemplate_EP08_OddTwins')",
+  "sure": true
+ },
+ "Chestnut Ridge|Gooseman": {
+  "bio": "Mentor to Sienna and Umber's mother, this legendary Horse Champion retired and settled in Galloping Gulch with his trusty steed, Duke, to live a life of simple pleasures. Don and Duke enjoy the spoils of their hard work in the vast beauty of the Gulch.",
+  "key": "0x28A5698A",
+  "how": "house description 0x729F6C4F:00000000:00000000000513C6 (EP14\\SimulationPreload.package) -> text key next to household id 87956741230589747 (household file B3C438F0:00000000:01387C30ACA67733, 'premadeHouseholdTemplate_EP14_RetiredHorseChampion')",
+  "sure": true
+ },
+ "Chestnut Ridge|The Grove Family": {
+  "bio": "Umber and Juniper became childhood sweethearts when Umber would serenade Juniper with odes to her Equestrian prowess after taking Horse Riding lessons from his mother. When Umber's parents passed away, he took on the family ranch to honor his native heritage and his sister, Sienna, became the Horse Trainer in town. The son, Wren, has a passion for animals and is training Starbrite, the foal of Umber's childhood rescue horse, Luna... all set to the sweet, peaceful soundtrack of Umber's odes on the porch.",
+  "key": "0x6D196F95",
+  "how": "house description 0x729F6C4F:00000000:00000000000513C9 (EP14\\SimulationPreload.package) -> text key next to household id 111218469131194262 (household file B3C438F0:00000000:018B209BC1070F96, 'premadeHouseholdTemplate_EP14_AnimalFamily')",
+  "sure": true
+ },
+ "Chestnut Ridge|Sienna & Flapjack": {
+  "bio": "As a multiple-time Ultimate Horse Championship winner with her Horse, Salt Lake Flapjack (or “Flapjack” for short), Sienna is happy to share her indigenous wisdom and train Horses to become skilled competitors. After her parents passed and her brother took over the family ranch, she began training and competing full-time. She now runs the Hay Now! Equestrian Center, where she serves as an encouraging and knowledgeable mentor for aspiring equestrians.",
+  "key": "0x6C86613E",
+  "how": "house description 0x729F6C4F:00000000:00000000000513CD (EP14\\SimulationPreload.package) -> text key next to household id 81041946714582068 (household file B3C438F0:00000000:011FEB389DD42C34, 'premadeHouseholdTemplate_EP14_HorseTrainer')",
+  "sure": true
+ },
+ "Chestnut Ridge|The Nectar Making Duo": {
+  "bio": "This duo is working to get their name out into the Nectar Making scene. Marissa uses her outgoing personality and ambition to network. Dani is a connoisseur who lives for the delicate intricacies of their craft in Nectar Making. Their relationship can be strained at times, but, deep down, they have each other's back.",
+  "key": "0x149E8C1A",
+  "how": "house description 0x729F6C4F:00000000:00000000000513C8 (EP14\\SimulationPreload.package) -> text key next to household id 133860226525553748 (household file B3C438F0:00000000:01DB912AB39BE454, 'premadeHouseholdTemplate_EP14_NectarFriend')",
+  "sure": true
+ },
+ "Ciudad Enamorada|Nadir": {
+  "bio": "When Aziz and Valentina first met, they were drawn to each other by their mutual passion for love as two high schoolers working at a flower store creating anniversary bouquets for couples in their rural hometown. While this peaceful lifestyle felt perfect for Aziz, Valentina always wanted to move to the city and turn her romance obsession into a more ambitious career. After overcoming many ups and downs in their youth to save up and move to the city, they've finally made it big—well, at least Valentina feels like she has. Valentina, the renowned Matchmaker of Ciudad Enamorada, puts all her effort into her newfound life passion: helping others find spectacular love like her and Aziz's. Aziz, however, feels a little left behind in this whole plan. This was never his dream, and his wife is constantly preoccupied with other couples' problems rather than their own. Will Valentina spend so much energy on other couples to the point of her own relationship falling apart? Or will she learn to find a balance between her passions for love, work, and Aziz?",
+  "key": "0x380D7395",
+  "how": "house description 0x729F6C4F:00000000:0000000000062379 (Delta\\EP16\\SimulationPreload.package) -> text key next to household id 129955118570461034 (household file B3C438F0:00000000:01CDB17DE722D76A, 'premadeHouseholdTemplate_EP16_RockyRelationship')",
+  "sure": true
+ },
+ "Ciudad Enamorada|López": {
+  "bio": "After Monica's ex-husband discovered a hidden talent for competitive lawn gnome sculpting and decided to leave the family to pursue a career in the quirky world of gnome artistry, things have been a bit different for the López household. Monica was struggling to believe she could ever find love again and dedicated her livelihood to the wellbeing of her children instead. However, now that the children are getting older and she is faced with the terrifying prospect of an empty nest, Monica decides it is time to rediscover her romantic side—little did she know this would happen by her falling for the one and only Manuel Aguilar, the notorious dreamboat in town...who just happened to have attended high school with her son. With Carlos feeling particularly threatened by his former classmate as he enters the unpredictable adult dating world alongside his mother and Luz entering teenhood with an already nervous approach to romance, is there a future of happiness and love for the family?",
+  "key": "0xCB25144B",
+  "how": "house description 0x729F6C4F:00000000:00000000000609C0 (Delta\\EP16\\SimulationPreload.package) -> text key next to household id 99756848968958611 (household file B3C438F0:00000000:016268535AB50293, 'premadeHouseholdTemplate_EP16_SingleParent')",
+  "sure": true
+ },
+ "Copperdale|Harjo": {
+  "bio": "Brought together by their mutual obsession over food, Ava and Lucha fell in love. Ava was recently hired at the High School to work in the cafeteria, and with her expert cooking skills, the food has never been better! Lucha, still learning some chops, was promoted to Head Dishwasher and couldn't be happier. Ash has decided to fully commit to a life of fashion, diving into the Simfluencer lifestyle and spending loads of their time on Trendi. Noah, a bit of a prankster, spends his time training for football and daydreaming about his secret crush, Sidney Price. With teens to raise and recipes to create, the Harjos are in for some wild adventures.",
+  "key": "0x0B1CDA36",
+  "how": "house description 0x729F6C4F:00000000:0000000000047E42 (Delta\\EP12\\SimulationPreload.package) -> text key next to household id 81391739549765845 (household file B3C438F0:00000000:0121295B1B83D0D5, 'premadeHouseholdTemplate_HS_Harjo')",
+  "sure": true
+ },
+ "Copperdale|Prescott": {
+  "bio": "Passed down through generations, this historic estate is home to the Prescott Family. Mei Prescott, Copperdale's High School Principal, lives here with her two daughters and her father, Tai Lum. After her husband's passing, Mei put all her efforts into protecting her girls and showering them with affection. Often times to an embarrassing degree. Molly is a star student with a secret passion for music. Taking a page from her troublemaker little sister Amy, she's learning to embrace her more rebellious side. Tai enjoys time with his grandchildren, especially the extra moments he has with Molly when working at the school as a janitor. Together, the family proudly carries on the legacy of the Prescott name.",
+  "key": "0x8DCABA18",
+  "how": "house description 0x729F6C4F:00000000:0000000000047E40 (Delta\\EP12\\SimulationPreload.package) -> text key next to household id 110965528215720085 (household file B3C438F0:00000000:018A3A8F5B9C9095, 'premadeHouseholdTemplate_HS_Prescott')",
+  "sure": true
+ },
+ "Copperdale|Price": {
+  "bio": "High school sweethearts and Copperdale alumni Janae and Marcel Price have returned, moving back into their old neighborhood with their three children: Sidney, Savannah, and Jayden. They also welcomed Kevin, a foreign exchange student, into their lively home. It's a busy household, stirring with activity and thriving pursuits. While Marcel works on his latest novel, Janae works full-time as a successful Regional Manager. The twins, Savannah and Sidney, each enjoy their own interests while trying to keep up good grades. Jayden looks up to his siblings a lot, and can't wait to be just like them, his buddy Kevin included. Life can certainly get away from them, but they know they can always depend on one another.",
+  "key": "0x079F2DFF",
+  "how": "house description 0x729F6C4F:00000000:000000000004804D (Delta\\EP12\\SimulationPreload.package) -> text key next to household id 96344231678515257 (household file B3C438F0:00000000:01564891795B1839, 'premadeHouseholdTemplate_HS_Price')",
+  "sure": true
+ },
+ "Del Sol Valley|Zest": {
+  "bio": "Johnny Zest has the stage name and the dream, but maybe not the talent... Disowned by the Landgraabs for quitting school, Johnny wants to make his own fame and fortune as a standup comedian.",
+  "key": "0xFC126ADC",
+  "how": "house description 0x729F6C4F:00000000:0000000000005B02 (Data\\Simulation\\SimulationPreload.package) -> text key next to household id 90715750176934085 (household file B3C438F0:00000000:0142497E80D448C5, 'Zest')",
+  "sure": true
+ },
+ "Del Sol Valley|Roomies": {
+  "bio": "This household seems to have stepped right out of a TV sitcom. What wacky misadventures will the perky Zoe, easygoing Mitchell, uptight ladies’ man J, and intellectual Gavin suffer this week? Tune in and find out!",
+  "key": "0x7B140EA7",
+  "how": "house description 0x729F6C4F:00000000:0000000000005B0B (Data\\Simulation\\SimulationPreload.package) -> text key next to household id 100126244975611216 (household file B3C438F0:00000000:0163B84A10770D50, 'Roomies')",
+  "sure": true,
+  "note": "Sims not matched by full name: J Huntington III"
+ },
+ "Del Sol Valley|Bailey-Moon": {
+  "bio": "Octavia Moon and Thorne Bailey are the power couple of the century. Octavia is the lyrical genius behind all of Thorne's greatest hits. Due to Thorne's most recent misshap on social media his public image has started to falter. His fans are starting to realize that Octavia is the real talent. Orange is their good natured son but due to his entire life of wanting-for-nothing, he is also a bit naive.",
+  "key": "0xBB40F437",
+  "how": "house description 0x729F6C4F:00000000:00000000000311BB (Delta\\EP06\\SimulationPreload.package) -> text key next to household id 121420411550704333 (household file B3C438F0:00000000:01AF5F3892F622CD, 'premadeHouseholdTemplate_BaileyMoon')",
+  "sure": true
+ },
+ "Del Sol Valley|Ward": {
+  "bio": "Judith Ward is a legend in the acting community. She has starred in everything from comedies to dramas. You name it Judith has played the role. That is not to say she is an easy person to befriend. Judith has burned her fair share of bridges along the way. Her mentality is to get rich at all costs. She will be the first to throw you under the bus to advance her career. She has been married several times, but all of her partners have only slowed her down. She prefers to live fast and does not settle for mediocrity.",
+  "key": "0x9BEE91BC",
+  "how": "house description 0x729F6C4F:00000000:00000000000311BA (Delta\\EP06\\SimulationPreload.package) -> text key next to household id 87211811135481415 (household file B3C438F0:00000000:0135D6AE1EF2E647, 'premadeHouseholdTemplate_Ward')",
+  "sure": true
+ },
+ "Del Sol Valley|Eclectic Arts": {
+  "bio": "The Eclectic Arts Household consists of three friends who have decided to cut ties with the modern world in order to explore their inner creativity. They received a large sum of money from their parents, and are using it to explore their creative dreams in a less hectic town.",
+  "key": "0x0FED678F",
+  "how": "house description 0x729F6C4F:00000000:0000000000032FBE (Delta\\GP07\\SimulationPreload.package) -> text key next to household id 137769727303387120 (household file B3C438F0:00000000:01E974D648B887F0, 'premadeHouseholdTemplate_Strangerville_NewBlood')",
+  "sure": true
+ },
+ "Evergreen Harbor|Knox Greenburg": {
+  "bio": "Mary and Blossom are a couple of old timers in this town. They're trying to spruce up the place, with Mary focused on her garden and Blossom painting up unused spaces. Age isn't on their side anymore, however. It's a good thing their adopted son Knox is fighting for the family name to help make the world a little more green. Unfortunately, sometimes he takes \"fighting\" a little too literally.",
+  "key": "0xCB9B2783",
+  "how": "house description 0x729F6C4F:00000000:000000000003B276 (Delta\\EP09\\SimulationPreload.package) -> text key next to household id 123650763648061246 (household file B3C438F0:00000000:01B74BB6E372CF3E, 'premadeHouseholdTemplate_Ecomaster')",
+  "sure": false,
+  "note": "EA's household also has Mary Greenburg, Blossom Greenburg (not in this one); same bio as Evergreen Harbor|Greenburg (she split EA's family)"
+ },
+ "Evergreen Harbor|Harris": {
+  "bio": "Cletus and Faye found this heritage home in Grims Quarry for dirt cheap. Nothing seems wrong with it, and the Harris' weren't about to question a good deal. Cletus' free-spirited mother soon joined them, completing the big, happy family. Mysteriously, their eldest son always wears a shameful bag on his head. Also, it doesn't seem like any of them other than Faye has a job, but the house is well furnished. What is going on here?",
+  "key": "0x6C6E2C14",
+  "how": "house description 0x729F6C4F:00000000:000000000003A42C (Delta\\EP09\\SimulationPreload.package) -> text key next to household id 96920958020876572 (household file B3C438F0:00000000:015855190A1FF91C, 'premadeHouseholdTemplate_Harris')",
+  "sure": true
+ },
+ "Evergreen Harbor|Sterling Rico": {
+  "bio": "Bess and Jules are a power couple with big dreams. Big dreams about sweet, sweet money. A Civil Designer by trade, Bess placed herself in the perfect position to convince city officials and residents alike to enact programs that would benefit her bottom line. Her partner-in-crime, Jules, is a Style Influencer that loves fashion as much as he loves convincing people to buy his rejected styles. Cheerful and charismatic, together they hustle around Evergreen Harbor like an entrepreneurial whirlwind.",
+  "key": "0x3DE7D825",
+  "how": "house description 0x729F6C4F:00000000:000000000003B274 (Delta\\EP09\\SimulationPreload.package) -> text key next to household id 113369299152341998 (household file B3C438F0:00000000:0192C4C6E4690BEE, 'premadeHouseholdTemplate_Entrepreneur')",
+  "sure": true
+ },
+ "Evergreen Harbor|Tinker": {
+  "bio": "The talented, but perpetually stressed Tina Tinker is a very successful Freelance Crafter. Her equally successful spouse, Yasemin, managed to convince her to move to Conifer Station with their daughter, Olive. Tina takes on too much work, and Yasemin just wants her to relax and spend more time with family. Meanwhile, curious little Olive loves nothing more than to admire her two mothers' works and dream of following in their footsteps.",
+  "key": "0xF1ED688C",
+  "how": "house description 0x729F6C4F:00000000:000000000003B153 (Delta\\EP09\\SimulationPreload.package) -> text key next to household id 106803858950721356 (household file B3C438F0:00000000:017B718B39660F4C, 'premadeHouseholdTemplate_Maker')",
+  "sure": true
+ },
+ "Evergreen Harbor|Greenburg": {
+  "bio": "Mary and Blossom are a couple of old timers in this town. They're trying to spruce up the place, with Mary focused on her garden and Blossom painting up unused spaces. Age isn't on their side anymore, however. It's a good thing their adopted son Knox is fighting for the family name to help make the world a little more green. Unfortunately, sometimes he takes \"fighting\" a little too literally.",
+  "key": "0xCB9B2783",
+  "how": "house description 0x729F6C4F:00000000:000000000003B276 (Delta\\EP09\\SimulationPreload.package) -> text key next to household id 123650763648061246 (household file B3C438F0:00000000:01B74BB6E372CF3E, 'premadeHouseholdTemplate_Ecomaster')",
+  "sure": false,
+  "note": "EA's household also has Knox Greenburg (not in this one); same bio as Evergreen Harbor|Knox Greenburg (she split EA's family)"
+ },
+ "Forgotten Hollow|Straud": {
+  "bio": "Count Vladislaus Straud IV is the latest descendant to occupy Straud Mansion. His oddly similar looking line of ancestors has resided here since the founding of Forgotten Hollow.",
+  "key": "0x024325F8",
+  "how": "house description 0x729F6C4F:00000000:0000000000023B9B (Delta\\GP04\\SimulationPreload.package) -> text key next to household id 72624697152761648 (household file B3C438F0:00000000:010203C6FBB5EF30, 'HH_template_NPC_VS_Nosferatu')",
+  "sure": true
+ },
+ "Forgotten Hollow|Vatore": {
+  "bio": "The Vatore siblings moved into Forgotten Hollow a few years ago and are striving to make it their home. This can be quite challenging at times since they are not exactly on the best terms with Vladislaus Straud, but when asked they only ever mention a difference in their culinary tastes.",
+  "key": "0x6DAE8AF1",
+  "how": "house description 0x729F6C4F:00000000:0000000000024F34 (Delta\\GP04\\SimulationPreload.package) -> text key next to household id 104785779422833925 (household file B3C438F0:00000000:0174461C7802AD05, 'HH_template_NPC_VS_Wilsons')",
+  "sure": true
+ },
+ "Gibbi Point|Addam Commune": {
+  "bio": "Jane and Star Addam are known for their Love Highland Getaway—and for their prickly personalities. They're joined by two roommates, Skip and Agora. Between the four of them, it's a wonder they need to look outside the four walls of their home for any extra drama in their lives.",
+  "key": "0x8B6F7F87",
+  "how": "house description 0x729F6C4F:00000000:00000000000750BB (EP20\\SimulationPreload.package) -> text key next to household id 133535987808458218 (household file B3C438F0:00000000:01DA6A45FE0DD5EA, 'premadeHouseholdTemplate_EP20_Addam')",
+  "sure": true
+ },
+ "Gibbi Point|Chavez-Ralston": {
+  "bio": "Family patriarch Nigel is living out his childhood dream as a Camp Director at Camp Gibbi Gibbi while his wife Sara is channeling her love of creativity and chaos as a Camp Counselor. Their twin daughters, Aeris and Erin, often seem like polar opposites as well.",
+  "key": "0xC0FD6307",
+  "how": "house description 0x729F6C4F:00000000:0000000000073CDC (EP20\\SimulationPreload.package) -> text key next to household id 136210324129077229 (household file B3C438F0:00000000:01E3EA91707457ED, 'premadeHouseholdTemplate_EP20_GomesRalston')",
+  "sure": true
+ },
+ "Gibbi Point|Perry": {
+  "bio": "Freeda Perry never expected to be juggling her Revive and Thrive Fitness Retreat along with her shy, thoughtful grandson Dougie—but here we are anyway! Freeda spends her days spinning and encouraging others to reach for new gains while nudging Dougie to get outside and explore the world and perhaps unleash his own Wild Child.",
+  "key": "0x01DEBD26",
+  "how": "house description 0x729F6C4F:00000000:00000000000750BE (EP20\\SimulationPreload.package) -> text key next to household id 120053239711435142 (household file B3C438F0:00000000:01AA83C913228986, 'premadeHouseholdTemplate_EP20_Perry')",
+  "sure": true
+ },
+ "Glimmerbrook|Charm": {
+  "bio": "The Charm family has produced generations of distinguished Spellcasters, as Minerva often reminds her children. Gemma resents her family's high expectations even though she secretly wants to make them proud. Darrel is an aspiring duelist who just got engaged to Emilia, a newly ascended Spellcaster who has a lot to live up to.",
+  "key": "0xAC2AB5DE",
+  "how": "house description 0x729F6C4F:00000000:0000000000036DD4 (Delta\\GP08\\SimulationPreload.package) -> text key next to household id 96004098272237975 (household file B3C438F0:00000000:01551337FE7F9997, 'premadeHouseholdTemplate_Charm')",
+  "sure": true
+ },
+ "Glimmerbrook|Amicable Acolytes": {
+  "bio": "Grace and Tomax have been roommates ever since they first became Spellcasters. They have day jobs, but magic is their main focus, and they've got a friendly competition going to see who will become an Adept Spellcaster first!",
+  "key": "0xD25AE920",
+  "how": "house description 0x729F6C4F:00000000:0000000000036DD5 (Delta\\GP08\\SimulationPreload.package) -> text key next to household id 86064131044928498 (household file B3C438F0:00000000:0131C2DF06D5EBF2, 'premadeHouseholdTemplate_Acolytes')",
+  "sure": true
+ },
+ "Henford-on-Bagley|Cecilia Kang": {
+  "bio": "After living in the big city and having her heart broken, Cecilia decided to ditch everything she knew for a small garden plot and some chickens. She's still looking for someone to share this life with, though after a date she'd love to forget with local Creature Keeper Michael Bell, she's happy to only form long-term attachments with the critters that visit for now.",
+  "key": "0xA710A5FB",
+  "how": "house description 0x729F6C4F:00000000:0000000000040A89 (Delta\\EP11\\SimulationPreload.package) -> text key next to household id 97728584658491139 (household file B3C438F0:00000000:015B33A144F89703, 'premadeHouseholdTemplate_EP11_Kang')",
+  "sure": true
+ },
+ "Henford-on-Bagley|Moody & McMillan": {
+  "bio": "After working an office job for more years than he'd care to admit, Derek found a man willing to live the rustic dream of his youth and the two moved to his family cottage and never left. When not fending off financial offers from developers who see their home as a prime target, Ian and Derek balance their days between adventure and quiet, depending on who's in charge of the agenda. Despite - or perhaps because of - their differences, time has been most kind to these elderly lovebirds, who live a contented retirement as key members of the Henford-on-Bagley community.",
+  "key": "0x8BF1A225",
+  "how": "house description 0x729F6C4F:00000000:000000000004066B (Delta\\EP11\\SimulationPreload.package) -> text key next to household id 94043455298428233 (household file B3C438F0:00000000:014E1C063A835D49, 'premadeHouseholdTemplate_EP11_MoodyMacMillan')",
+  "sure": true
+ },
+ "Henford-on-Bagley|The Scotts": {
+  "bio": "As owners of The Gnome's Arms, Finchwick's beloved pub, the Scotts are living the dream! Well, Sara's dream at least. Simon - a city boy with no more city around - still feels a bit awkward every time he runs into a chicken. Still, he's here to support his wife's dream. Will their hopes of adding a new member to their tiny family changes things up for better or worse?",
+  "key": "0xAAD15687",
+  "how": "house description 0x729F6C4F:00000000:000000000004043E (Delta\\EP11\\SimulationPreload.package) -> text key next to household id 134451386145052029 (household file B3C438F0:00000000:01DDAAD2C6BC157D, 'premadeHouseholdTemplate_EP11_Scott')",
+  "sure": true
+ },
+ "Henford-on-Bagley|The Watsons": {
+  "bio": "Inheriting the family estate was always the plan, but Thomas may be in over his head. For a man who equates success with crop size, he's losing both his confidence and his family. While his wife Rahmi loves the country air, her feelings for her husband are becoming stale and her affections have wandered. The oldest of their three children, Rashidah, feels trapped, preferring to dream of a future outside Henford-on-Bagley - dreams that have sparked something between her and a kindred soul. The two youngest couldn't be more different! Imran treasures the security of life at home while Maira can be found bravely venturing out into the unknown. Will this hectic family come together or fall apart in their \"old new\" home?",
+  "key": "0x15074A44",
+  "how": "house description 0x729F6C4F:00000000:0000000000040A83 (Delta\\EP11\\SimulationPreload.package) -> text key next to household id 123522719319268298 (household file B3C438F0:00000000:01B6D7423EB71BCA, 'premadeHouseholdTemplate_EP11_Watson')",
+  "sure": true
+ },
+ "Moonwood Mill|Volkov": {
+  "bio": "Kristopher Volkov has been around longer than most can remember. He founded and leads the Moonwood Collective, and is eager to take in any werewolf feeling displaced or lost.\\n\\nLily joined the household long ago, a lonely wanderer who had lost her closest friends to the vampires. After her came Rory, then Jacob. Though Rory's relationship with her adoptive father has soured, Jacob and Kristopher's connection has flourished. Both bear the same calm yet intense soul, and everyone in Moonwood Mill knows Kristopher intends for Jacob to be the heir to his pack.",
+  "key": "0xAB78C9B2",
+  "how": "house description 0x729F6C4F:00000000:000000000004BD61 (Delta\\GP12\\SimulationPreload.package) -> text key next to household id 129924397494628188 (household file B3C438F0:00000000:01CD958D1852EF5C, 'premadeHouseholdTemplate_WolfTown_Volkov')",
+  "sure": true
+ },
+ "Mt. Komorebi|Akiyama": {
+  "bio": "The Akiyamas moved away from the hustle and bustle of the city to the quiet town where Kado was raised. The commute will be a sacrifice, but Jenna and Kado hope the close knit community and beautiful natural atmosphere of the region will be worth it. Kado was surprised at the recent news that his childhood sweetheart Megumi Ito has also moved back to Mt. Komorebi. He'd love nothing more to leave the past in the past, but the pieces of his broken teenaged heart are still tender.",
+  "key": "0xC5776F37",
+  "how": "house description 0x729F6C4F:00000000:000000000003D71F (Delta\\EP10\\SimulationPreload.package) -> text key next to household id 111137787829325843 (household file B3C438F0:00000000:018AD73AACB09013, 'premadeHouseholdTemplate_EP10_Commuter')",
+  "sure": true
+ },
+ "Mt. Komorebi|Ito": {
+  "bio": "Megumi Ito grew up in Senbamachi. A gold medalist skier, she aims to give her children the same upbringing, but memories of an old flame might drive her to distraction. Naoki Ito is a former medalist himself. A calculating businessman, his controversial vision of Mt. Komorebi includes more tourism, more money, and modernization. Nanami and Kiyoshi have their parents' athletic talent, but their hearts lie elsewhere. Nanami just wants to be a kid and Kiyoshi is crushing on more than the slopes...",
+  "key": "0xB3013EEA",
+  "how": "house description 0x729F6C4F:00000000:000000000003CCB6 (Delta\\EP10\\SimulationPreload.package) -> text key next to household id 139844355307079746 (household file B3C438F0:00000000:01F0D3B341EC0842, 'premadeHouseholdTemplate_EP10_Affluent')",
+  "sure": true
+ },
+ "Mt. Komorebi|Nishidake": {
+  "bio": "Rumor says the Nishidake family are sacred guardians of Mt. Komorebi. Indeed, Shigeru fumes over the Ito family's local development plans. Sachiko, however, feels warmly toward Megumi due to an old friendship with the young woman's mom. Plus, she knows what's in her granddaughter's heart... Kaori moved to Mt. Komorebi after losing her parents. She soon discovered two loves: the slopes, and the son of her grandfather's sworn enemy! If she had one wish, she’d melt her grandfather's hardened heart.",
+  "key": "0xDE330436",
+  "how": "house description 0x729F6C4F:00000000:000000000003D71C (Delta\\EP10\\SimulationPreload.package) -> text key next to household id 72726582471642360 (household file B3C438F0:00000000:0102607101F34CF8, 'premadeHouseholdTemplate_EP10_Elder')",
+  "sure": true
+ },
+ "Newcrest|BFF": {
+  "bio": "Free spirit Liberty, cheerful Summer, and geeky Travis are unlikely friends, and nothing can come between these three. Except perhaps the growing feelings both Summer and Liberty have for Travis...",
+  "key": "0x1658A3DA",
+  "how": "house description 0x729F6C4F:00000000:0000000000007A4E (Data\\Simulation\\SimulationPreload.package) -> text key next to household id 133313690730311885 (household file B3C438F0:00000000:01D9A0186BAD30CD, 'BFF')",
+  "sure": true
+ },
+ "Nordhaven|Koopman": {
+  "bio": "For decades, the beautifully fired ceramics of the Koopman family have been a staple in Nordhaven. But when Gert took over the family shop in his youth he wasn't confident he could run it all on his own, that is until he met Jolanda. It was love at first glaze, and together the Terra-Potta grew more successful than ever. Yet things can change with time. After many years of marriage, including a daughter who has moved out to university, Jolanda and Gert are not seeing eye to eye as much as they used to. Much of their time is spent apart; while she looks after the main shop, he often handles the stalls at the local markets—where he's been noticed as particularly friendly with some of the clientele, at least according to the gossips. Can this couple reignite their passion, or is this love broken beyond repair?",
+  "key": "0x4C48CBD3",
+  "how": "house description 0x729F6C4F:00000000:0000000000067BDF (EP18\\SimulationPreload.package) -> text key next to household id 135785956878928206 (household file B3C438F0:00000000:01E2689BBD41494E, 'premadeHouseholdTemplate_Koopman_Ep18World')",
+  "sure": true
+ },
+ "Nordhaven|Loden": {
+  "bio": "Since Gammelvik's founding there's always been a Koffieboon cafe, and it's always had the Lodens behind it. When it was her turn to run the business, Nora stepped in happily, but who will step in after her? Nora's daughter, Freya, never had much interest in inheriting the cafe, much preferring her deep love for dancing. Meanwhile the younger son, Erik, shows a lot more aptitude for crafting with clays and paints than he does business. Now Nora's feeling pressured to not disappoint the legacy of her late father and the many Lodens before him, even despite reassurances from her mama, Hattie. Thankfully, she has her wife Dahlia there to support her—and provide an escape or two through her critically acclaimed, titillating romance novels.",
+  "key": "0x1BD57444",
+  "how": "house description 0x729F6C4F:00000000:0000000000067BE2 (EP18\\SimulationPreload.package) -> text key next to household id 114251386875955706 (household file B3C438F0:00000000:0195E707F1D649FA, 'premadeHouseholdTemplate_Loden_Ep18World')",
+  "sure": true
+ },
+ "Nordhaven|Sarpong": {
+  "bio": "After years of apprenticeship with a pair of underground tattoo artists, Nia moved back to Nordhaven to pursue the dream of opening her own tattoo studio in the city where she grew up. But on top of the new set of skills and business ambition, she also came back with a child. Her daughter, Lerato, was just as thrilled to move to a new place...hoping to get the highest room and be even closer to the constellations she loves studying. This is the beginning of a new chapter in Nia's life, as she begins to wonder what will be more challenging: being a single parent or starting her own business?",
+  "key": "0xF469B5F8",
+  "how": "house description 0x729F6C4F:00000000:0000000000067BDA (EP18\\SimulationPreload.package) -> text key next to household id 79296538312574509 (household file B3C438F0:00000000:0119B7C80E0A062D, 'premadeHouseholdTemplate_Sarpong_Ep18World')",
+  "sure": true
+ },
+ "Nordhaven|Urbane Housesharers household": {
+  "bio": "When Cannonball moved to Nordhaven he first made his coin performing at The Rouge Note. Locals loved his music, and it wasn't long before he set his sights on buying the venue and fulfilling the old dream of running his own jazz lounge—alas, he was still a few coins short. A new opportunity came around when Cannonball met Crispin, who in his own youth had spent a little too much on post-modern art sculptures, but was now looking to save some Simoleons for his adoptive kid Ollie. Before long they all moved in together and have been splitting the bills since. Now yes, Crispin can sometimes be too pompous, and sure, Cannonball can't afford the lounge quite just yet, but our dreamer has really found his groove in this new city. And as a man who's never had a chance to be a father, he's grown quite fond of having Ollie in his life.",
+  "key": "0x07CC5996",
+  "how": "house description 0x729F6C4F:00000000:0000000000067BDC (EP18\\SimulationPreload.package) -> text key next to household id 86883394045012356 (household file B3C438F0:00000000:0134ABFC8EEEE984, 'premadeHouseholdTemplate_Urbz_Ep18World')",
+  "sure": true
+ },
+ "Oasis Springs|Landgraab": {
+  "bio": "The Landgraabs seem like the perfect family; wealthy, well-mannered, brilliant. But Nancy and Geoffrey are each hiding something. Will their secrets tear them apart or will they continue to build a wealthy dynasty?",
+  "key": "0x5C612B40",
+  "how": "house description 0x729F6C4F:00000000:0000000000007AC6 (Data\\Simulation\\SimulationPreload.package) -> text key next to household id 88936454131737248 (household file B3C438F0:00000000:013BF73BDC1AE2A0, 'Landgraab')",
+  "sure": true
+ },
+ "Oasis Springs|Caliente": {
+  "bio": "It’s no longer girls-only now that Caliente matriarch Katrina has moved in her mooching boy toy, Don. With three fiery, attractive ladies in the house, will Don remain faithful or will he get involved with more than one Caliente woman?",
+  "key": "0xBCC7AD4C",
+  "how": "house description 0x729F6C4F:00000000:0000000000007A60 (Data\\Simulation\\SimulationPreload.package) -> text key next to household id 105727253937662715 (household file B3C438F0:00000000:01779E6096082AFB, 'Caliente')",
+  "sure": false,
+  "note": "EA's household also has Don Lothario (not in this one); same bio as Oasis Springs|Lothario (she split EA's family)"
+ },
+ "Oasis Springs|Lothario": {
+  "bio": "It’s no longer girls-only now that Caliente matriarch Katrina has moved in her mooching boy toy, Don. With three fiery, attractive ladies in the house, will Don remain faithful or will he get involved with more than one Caliente woman?",
+  "key": "0xBCC7AD4C",
+  "how": "house description 0x729F6C4F:00000000:0000000000007A60 (Data\\Simulation\\SimulationPreload.package) -> text key next to household id 105727253937662715 (household file B3C438F0:00000000:01779E6096082AFB, 'Caliente')",
+  "sure": false,
+  "note": "EA's household also has Katrina Caliente, Dina Caliente, Nina Caliente (not in this one); same bio as Oasis Springs|Caliente (she split EA's family)"
+ },
+ "Ondarion|Aloisio Romualdo": {
+  "bio": "Aloisio learned his greatest life lesson at a young age: the end...always justifies the means. And you know, growing up in Dambele was nice, but he knew he wanted a little more thrill in his life. So he moved to Verdemar, where his father originally came from. Here he quickly noticed that if you're ambitious, and shrewd, there's a lot of intriguing work to be found in fighting the inequality between Commoners and Nobles...or in taking advantage of it.",
+  "key": "0x9F3CE39D",
+  "how": "house description 0x729F6C4F:00000000:0000000000078D2C (EP21\\SimulationPreload.package) -> text key next to household id 110442996543101835 (household file B3C438F0:00000000:01885F51F8E19B8B, 'premadeHouseholdTemplate_EP21_Romualdo')",
+  "sure": true
+ },
+ "Ondarion|Enzo Alto": {
+  "bio": "Listen here, Enzo is the hottest and most charming eligible bachelor in all of Ondarion. At least according to his mother, who's been waiting desperately for him to stop having fun and do something with his life. The dozens of exes he's left behind might have different opinions of him.",
+  "key": "0x674B6011",
+  "how": "house description 0x729F6C4F:00000000:0000000000078D38 (EP21\\SimulationPreload.package) -> text key next to household id 130645274297033155 (household file B3C438F0:00000000:01D0252F4E0EE1C3, 'premadeHouseholdTemplate_EP21_Alto')",
+  "sure": true
+ },
+ "Ondarion|Abrantes": {
+  "bio": "After the successful marriage between her eldest son and the heiress of the Thebe family, Ermelinda Abrantes would now be in the perfect position to retire. Unfortunately, her desire for her family to climb up more ranks didn't really go away with old age. In between the family's politics and power plays, her teen daughter Sofia often finds herself as a naive observer to Noble life, occasionally picking up court Scandals that might otherwise go unnoticed.",
+  "key": "0xBE0DBB22",
+  "how": "house description 0x729F6C4F:00000000:0000000000078D2B (EP21\\SimulationPreload.package) -> text key next to household id 113302241664451804 (household file B3C438F0:00000000:019287C9DAAA44DC, 'premadeHouseholdTemplate_EP21_Abrantes')",
+  "sure": true
+ },
+ "Ondarion|Ananou": {
+  "bio": "Playful and goofy, the Ananous are a warm and welcoming family—as long as you don't mind the pranks! But there's more to them than just fun and games. Ekene Ananou, who spent his life as a modest artisan, is now raising his granddaughter Afua after her mother's passing. And the father? Well, no one knows who that truly is. Ekene says he was too different from the rest of them. It was a mutual agreement that Afua would stay an Ananou and grow up to have a \"regular life\", whatever that means. But many still gossip about the mystery. Some even swear they've seen some sizeable donations in the Ananou's mailbox.",
+  "key": "0x11CEA2FE",
+  "how": "house description 0x729F6C4F:00000000:000000000007A602 (EP21\\SimulationPreload.package) -> text key next to household id 99546456292671305 (household file B3C438F0:00000000:0161A8F97DF93F49, 'premadeHouseholdTemplate_EP21_Ananou')",
+  "sure": true
+ },
+ "Ondarion|Capp": {
+  "bio": "Tybalt certainly got plenty from life—all the Simoleons one could wish for and a dream home to enjoy his lavish parties. Oh, and ever since he ousted his sister Juliette he's the highest ranking Noble in Bellacorde. But maybe there's more he could get? After all, who better than a wealthy man like him to be King of Ondarion? There's only one small stain in his perfect image: his three kids are grown, yet they insist on being chronically single and not settling down! First Beatrice, a diamond beloved across the Kingdom, she could have anyone yet complains about dreaming of something more \"meaningful\". Then there's Celeste, the idealist, who believes the family mottos of honor and chivalry are meant to be taken quite seriously. How naive. And finally Virgilio. UGH. What a disgrace of a son, always criticising high society and calling them hypocrites. Why can't he just enjoy his money like Tybalt does!",
+  "key": "0x3B3824B6",
+  "how": "house description 0x729F6C4F:00000000:0000000000078D39 (EP21\\SimulationPreload.package) -> text key next to household id 120969571796423609 (household file B3C438F0:00000000:01ADC52F438E93B9, 'premadeHouseholdTemplate_EP21_Capp')",
+  "sure": true
+ },
+ "Ondarion|Darong": {
+  "bio": "Strength Through Union, the Darong's family motto. And united they've been for generations...but can it last forever? The old Adekoya, head of the Dynasty, has dreamed of his daughter Jawara becoming Queen since her youth. Over the years she proved herself a wonderful candidate, gathering favor across the kingdom through her philanthropic efforts. Her path to the crown seemed to be smoothly falling in place, right until the premature and sudden passing of her husband. As if that wasn't enough, with her growing popularity more rabble-rousers began to pry into the Darongs, probing into whether this seemingly perfect family had truly no Scandals to hide. As challenges pile on, Jawara forges ahead, mustering the strength of her beloved family to support her in the race to the crown.",
+  "key": "0x4A4B2275",
+  "how": "house description 0x729F6C4F:00000000:0000000000078296 (EP21\\SimulationPreload.package) -> text key next to household id 92876291029211545 (household file B3C438F0:00000000:0149F67E9EDA1999, 'premadeHouseholdTemplate_EP21_Darong')",
+  "sure": true
+ },
+ "Ondarion|Thebe": {
+  "bio": "After years of adventures at Sea, Cordelia Thebe V has returned to Verdemar and seemingly settled down. Now happily married to Thiago of the Abrantes Dynasty, she seems to have everything one needs to win the race to the throne. But many do wonder if she's truly interested in ruling, or if her appetite for adventure would inevitably take over. There's plenty of eyes on her, thirsty for a potential new Scandal...",
+  "key": "0x6952D93F",
+  "how": "house description 0x729F6C4F:00000000:0000000000078D2A (EP21\\SimulationPreload.package) -> text key next to household id 109898346338319589 (household file B3C438F0:00000000:01866FF6B6E5FCE5, 'premadeHouseholdTemplate_EP21_Thebe')",
+  "sure": true
+ },
+ "Ravenwood|Aether": {
+  "bio": "After a miscommunication with a pet Crow, Kai Aether found himself in a less corporeal form than expected. It's a story familiar to many families, but there's an unfortunate wrinkle to this story that has made things extremely stressful for not just Kai's husband, Ekade, but also for their son, Takama—you see, not only does Kai not seem to understand that he's dead, he also doesn't believe in Ghosts. Period. Awkward, right? But with the help of a local support group and with the love of his family, maybe Kai will start to see the light.",
+  "key": "0xD87B3B73",
+  "how": "house description 0x729F6C4F:00000000:0000000000065C6F (EP17\\SimulationPreload.package) -> text key next to household id 76100709119039197 (household file B3C438F0:00000000:010E5D31163216DD, 'premadeHouseholdTemplate_EP17_Aether')",
+  "sure": true
+ },
+ "Ravenwood|Gomes": {
+  "bio": "Having tried being a ghost on for size, Radwan and Tziporah Gomes have decided that being a Ghost isn't for them—at least, not quite yet. Meanwhile, Radwan has his hands full keeping his clumsy wife from meeting Grim a little too soon. In the midst of all this chaos, their teenage child Zelmira has plunged headfirst into their own study of the afterlife after finding a tarot card on a walk one day. Now, Zelmira's embracing their inner Macabre side and finding unique connections in the family's past to a very special member of the Goth family. Things definitely seem to be getting a bit spooky for this household!",
+  "key": "0x7D13315A",
+  "how": "house description 0x729F6C4F:00000000:0000000000065C6E (EP17\\SimulationPreload.package) -> text key next to household id 72937425680032516 (household file B3C438F0:00000000:01032033C47D6304, 'premadeHouseholdTemplate_EP17_Gomes')",
+  "sure": true
+ },
+ "Ravenwood|Izadi-Gomes": {
+  "bio": "Esther Gomes was already looking for a ghostly roommate when poor Zuleika met her end in a rather unfortunate Cowplant \"accident\" and also found herself looking for a new home in the same neighborhood. Now the two are sharing a home, and Esther is teaching Zuleika the ins-and-outs of ghostly living and career development working for Grim.",
+  "key": "0xF7CA6EF2",
+  "how": "house description 0x729F6C4F:00000000:0000000000065C6A (EP17\\SimulationPreload.package) -> text key next to household id 141016190578874529 (household file B3C438F0:00000000:01F4FD7A6B0858A1, 'premadeHouseholdTemplate_EP17_IzadiGomes')",
+  "sure": true
+ },
+ "San Myshuno|Santiago Ojo": {
+  "bio": "Miko’s a peppy aspiring politician who shares a room with her basketball-loving buddy, Darling. Their charismatic roommate, Kibo is downright dreamy in Miko’s eyes, but he couldn't be more oblivious to her obvious flirting. Will their mutual love for karaoke bring them together?",
+  "key": "0x564528B0",
+  "how": "house description 0x729F6C4F:00000000:000000000001FFC7 (Delta\\EP03\\SimulationPreload.package) -> text key next to household id 80471420271235638 (household file B3C438F0:00000000:011DE45493D69236, 'hH_Template_Kibo')",
+  "sure": false,
+  "note": "EA's household also has Akira Kibo, Darling Walsh (not in this one); her own Sims live here too: Alicia Santiago"
+ },
+ "San Myshuno|Behr": {
+  "bio": "Yuki and Candy recently inherited a quaint, modest home from their dearly departed Grandma Behr. Geeky teen Yuki absolutely idolizes her cool DJ sister, Candy, but Yuki’s got some mad skills of her own. Sure, she may not be the edgy Spinmaster Candy is, but she can annihilate anyone at Blicblock. She’s also quickly becoming Windenburg’s most infamous underground hacker.",
+  "key": "0x20165918",
+  "how": "house description 0x729F6C4F:00000000:000000000001902C (Delta\\EP02\\SimulationPreload.package) -> text key next to household id 104125213328572728 (household file B3C438F0:00000000:0171ED54709C8138, 'HH_Template_Behr')",
+  "sure": true
+ },
+ "San Myshuno|Benali": {
+  "bio": "Salim has grown up in the Arts Quarter, surrounded by poets, musicians and artists. He's determined to become a great writer… right after he's finished that book. Oh, and that video game he needs to beat. Come to think of it, he needs a nap too.",
+  "key": "0x876742F3",
+  "how": "house description 0x729F6C4F:00000000:000000000001FFA4 (Delta\\EP03\\SimulationPreload.package) -> text key next to household id 118289419656273948 (household file B3C438F0:00000000:01A43F99B74CA01C, 'hH_Template_Benali')",
+  "sure": true
+ },
+ "San Myshuno|Bheeda": {
+  "bio": "With a baby on the way and a tiny city apartment, will Jesminder and Arun find space for their bundle of joy? Will Jesminder keep her mixology job when the baby comes, or would she rather stay at home and paint?",
+  "key": "0x29978FA2",
+  "how": "house description 0x729F6C4F:00000000:000000000001FE1D (Delta\\EP03\\SimulationPreload.package) -> text key next to household id 83833917063506516 (household file B3C438F0:00000000:0129D680DEB32A54, 'HH_Template_Bheeda')",
+  "sure": true
+ },
+ "San Myshuno|Jang": {
+  "bio": "Baako and Anaya came to the bustling city of San Myshuno so Baako could broaden his career as a rising comedian and so Anaya could get clarity on which one of her passions to focus on as her career: inspiring songstress or successful painter? Their quirky kiddo, Billie is happy to be along for the ride. This social butterfly has no filter when it comes to making new friends - even if that involves barging in uninvited to her neighbors' apartments!",
+  "key": "0x549C2543",
+  "how": "house description 0x729F6C4F:00000000:000000000001FF9F (Delta\\EP03\\SimulationPreload.package) -> text key next to household id 140226578762155135 (household file B3C438F0:00000000:01F22F54972FC47F, 'HH_Template_Jang')",
+  "sure": true
+ },
+ "San Myshuno|Jeong": {
+  "bio": "Venessa Jeong just moved to Del Sol Valley from her quaint country town. She is looking to make it big as a rising actress. She has stared in a few low level commercials, but her agent always tells her she has what it takes she just needs to find that breakthrough role.",
+  "key": "0xAAC5CAD2",
+  "how": "house description 0x729F6C4F:00000000:00000000000311B6 (Delta\\EP06\\SimulationPreload.package) -> text key next to household id 101832920680153346 (household file B3C438F0:00000000:0169C8807794C102, 'premadeHouseholdTemplate_Jeong')",
+  "sure": true
+ },
+ "San Myshuno|Lobo": {
+  "bio": "Established and novice artists alike shudder in anticipation for the day Diego Lobo steps his critical foot into their gallery. Impress him and you'll have it made for life. But if one brush stroke is off, if just one hue is not quite to his liking, you may never work in this town again.",
+  "key": "0xCB94A867",
+  "how": "house description 0x729F6C4F:00000000:000000000001FF8F (Delta\\EP03\\SimulationPreload.package) -> text key next to household id 97602910874084425 (household file B3C438F0:00000000:015AC1548FB1A449, 'HH_Template_Lobo')",
+  "sure": true
+ },
+ "San Myshuno|Pizzazz": {
+  "bio": "Penny is THE source of the coolest happenings and the latest trends in San Myshuno. But will this Online A-Lister's staunch dedication to her career get in the way of finding romance?",
+  "key": "0xD13388F0",
+  "how": "house description 0x729F6C4F:00000000:000000000001FFC5 (Delta\\EP03\\SimulationPreload.package) -> text key next to household id 127385148153662013 (household file B3C438F0:00000000:01C4901E095C0A3D, 'hH_Template_Pizzazz')",
+  "sure": true,
+  "note": "Sims from more than one EA household: hH_Template_Pinku, hH_Template_Pizzazz; no bio for hH_Template_Pinku"
+ },
+ "San Myshuno|Rasoya": {
+  "bio": "Raj may be a successful Chef, but his critical mother still worries about when he's going to find a nice girl and carry on the family line…",
+  "key": "0x4DA039B6",
+  "how": "house description 0x729F6C4F:00000000:000000000001D0F2 (Delta\\EP03\\SimulationPreload.package) -> text key next to household id 76452619996903357 (household file B3C438F0:00000000:010F9D40B91037BD, 'hH_Template_Rasoya')",
+  "sure": true
+ },
+ "San Myshuno|Feng": {
+  "bio": "Victor is a respected and high-powered politician. Lily is a tough businesswoman. Their respectful, yet somber nature masks their sinister, secret plans to one day take over San Myshuno!",
+  "key": "0x411AF714",
+  "how": "house description 0x729F6C4F:00000000:000000000001FF94 (Delta\\EP03\\SimulationPreload.package) -> text key next to household id 122890633019959860 (household file B3C438F0:00000000:01B498612F60AA34, 'hH_Template_Hu')",
+  "sure": true
+ },
+ "San Myshuno|Bro & Kennedy": {
+  "bio": "Tech-savvy hunk Sergio and brash DJ Joaquin have little in common... except for the finer things in life. As they climb the ranks and rake in the bucks, just how awesome can they make their sweet pad?",
+  "key": "0x6F2DAF33",
+  "how": "house description 0x729F6C4F:00000000:00000000000190A0 (Delta\\EP02\\SimulationPreload.package) -> text key next to household id 101098047641248319 (household file B3C438F0:00000000:01672C238124623F, 'HH_Template_Bro')",
+  "sure": true
+ },
+ "San Sequoia|Michaelson": {
+  "bio": "Celeste and Christopher met working at the same startup. They couldn't believe how much they had in common when they first went out for coffee together! After they got married, they adopted Atlas and promptly began spoiling him rotten. Now they've also adopted Orion and are hard at work raising two kids to be just as nerdy as they are.",
+  "key": "0xBF6F14B2",
+  "how": "house description 0x729F6C4F:00000000:000000000004FE6E (EP13\\SimulationPreload.package) -> text key next to household id 76826970605895223 (household file B3C438F0:00000000:0110F1B904223E37, 'premadeHouseholdTemplate_Ep13_BayArea_Michaelson')",
+  "sure": true
+ },
+ "San Sequoia|Robles": {
+  "bio": "The Robles family is pretty entrenched in this community—they've been here ever since the fishing trade started taking off, and for years had a thriving family business. Ignacio's the patriarch of this family, but just because they have deep roots doesn't make them all that conventional. They know everyone and anyone, and love being a part of everything this community has to offer—from spending way too much of their free time down by the waterfront to organizing big family gatherings at Gilbert Gardens park.",
+  "key": "0xB3656710",
+  "how": "house description 0x729F6C4F:00000000:000000000004FD53 (EP13\\SimulationPreload.package) -> text key next to household id 109520565244124865 (household file B3C438F0:00000000:0185185FB2F9DEC1, 'premadeHouseholdTemplate_Ep13_BayArea_Robles')",
+  "sure": true
+ },
+ "San Sequoia|Robles-Ruano": {
+  "bio": "The Robles-Ruano Family is a bit on the unconventional side, but being conventional is soooo boring, right? These folks are all about expressing themselves and their personality no matter what. Both parents are hoping that their unique ways will rub off on their slightly clingy daughter, Tala. With a little love, Tala is sure to grow into a confident (and creative!) kid.",
+  "key": "0x318BE06A",
+  "how": "house description 0x729F6C4F:00000000:000000000004FC53 (EP13\\SimulationPreload.package) -> text key next to household id 135692813501116919 (household file B3C438F0:00000000:01E213E51B4EB1F7, 'premadeHouseholdTemplate_Ep13_BayArea_RoblesRuano')",
+  "sure": true
+ },
+ "San Sequoia|Luna-Sullivan": {
+  "bio": "The Luna-Sullivan family's a little unusual; Karmine's dad died in a tragic cooking accident, and her mom needed help...so Gramma Eleanor moved in to be the Gramma-in-charge-ish. Except Gramma's just as silly as Karmine is!",
+  "key": "0x64C1407B",
+  "how": "house description 0x729F6C4F:00000000:000000000004FE6D (EP13\\SimulationPreload.package) -> text key next to household id 117446916973958621 (household file B3C438F0:00000000:01A14159463295DD, 'premadeHouseholdTemplate_Ep13_BayArea_LunaSullivan')",
+  "sure": true
+ },
+ "StrangerVille|Cahill": {
+  "bio": "George Cahill was a retired pilot who enjoyed taking his beloved plane Penelope for long flights across the world. After passing over StrangerVille there was a large flash of light causing his plane to short circuit and crash. George has since set up camp in the cargo bay of Old Penelope, and has lived on the outskirts of StrangerVille ever since. Although he has grown skeptical of the residents of StrangerVille he means no harm and mostly keeps to himself.",
+  "key": "0x9CA2CEBB",
+  "how": "house description 0x729F6C4F:00000000:0000000000032F94 (Delta\\GP07\\SimulationPreload.package) -> text key next to household id 133603633504155923 (household file B3C438F0:00000000:01DAA7CBFBB77913, 'premadeHouseholdTemplate_Strangerville_Hermit')",
+  "sure": true
+ },
+ "StrangerVille|Roswell": {
+  "bio": "The Roswell's are the oldest residents in StrangerVille. Ted Roswell has since become the mayor and has been aggressively pushing to get StrangerVille to be more technologically advanced. He has made some shady deals, but his crowning achievement has been the construction of the Crater Base and Secret Lab. Ted's wife, Meredith, has been noticing Ted acting very strange at night. It might have something to do with his frequent visits to the Secret Lab to try and cover things up.",
+  "key": "0xC4D4ED6E",
+  "how": "house description 0x729F6C4F:00000000:0000000000032FC1 (Delta\\GP07\\SimulationPreload.package) -> text key next to household id 85558419190709778 (household file B3C438F0:00000000:012FF6EDCF67FE12, 'premadeHouseholdTemplate_Strangerville_OldBlood')",
+  "sure": true
+ },
+ "StrangerVille|Sigworth": {
+  "bio": "The Sigworth family is rather new in town. Jess, the mom, had to transfer to the StrangerVille National Base. After spending a few days on the base Dylan has started to notice something is a bit off about his wife. Although Dylan is doing all he can to reassure their daughter that everything is okay. Christie is starting to catch on and it is only a matter of time until she realizes what is going on.",
+  "key": "0x27D18D5E",
+  "how": "house description 0x729F6C4F:00000000:0000000000032F93 (Delta\\GP07\\SimulationPreload.package) -> text key next to household id 91611764248526884 (household file B3C438F0:00000000:0145786A0947C024, 'premadeHouseholdTemplate_Strangerville_PatientZero')",
+  "sure": true
+ },
+ "Sulani|Hoapili": {
+  "bio": "Sitting high above the center of Ohan'ali Town, Keala watches over the townsfolk that look to her for guidance. This spirited, young-at-heart grandmother has taken young Lia under her wing to pass on the knowledge and cultural history of Sulani through the generations.",
+  "key": "0xDB15CFB8",
+  "how": "house description 0x729F6C4F:00000000:0000000000033D6D (Delta\\EP07\\SimulationPreload.package) -> text key next to household id 74898639127028432 (household file B3C438F0:00000000:010A17EA5B53A2D0, 'premadeHouseholdTemplate_Hoapili')",
+  "sure": true
+ },
+ "Sulani|Kahananui": {
+  "bio": "As the self-appointed “Sulani ambassadors” this enterprising couple, Mele and Alika, have decided to live out their golden years in a dream retreat away from the bustle of Ohan’ali Town.",
+  "key": "0x9833D337",
+  "how": "house description 0x729F6C4F:00000000:00000000000341B0 (Delta\\EP07\\SimulationPreload.package) -> text key next to household id 82648186341660305 (household file B3C438F0:00000000:0125A0166C399691, 'premadeHouseholdTemplate_Kahananui')",
+  "sure": true
+ },
+ "Sulani|Kealoha": {
+  "bio": "The Kealohas are the epitome of Sulani: an industrious, welcoming, and tight-knit young family firmly rooted in island tradition to honor the past while supporting the bright future of their extended-family community.",
+  "key": "0xFAA2FD75",
+  "how": "house description 0x729F6C4F:00000000:00000000000345BE (Delta\\EP07\\SimulationPreload.package) -> text key next to household id 80187659720999108 (household file B3C438F0:00000000:011CE2406D0A40C4, 'premadeHouseholdTemplate_Kealoha')",
+  "sure": true
+ },
+ "Sulani|Ngata": {
+  "bio": "Coming to Sulani for inspiration Leila didn't expect to fall in love so deeply with the islands. And it wasn't just the scenery that she fell for, but also for Oliana and her son Tane that welcomed her so easily into their family. The three are now an insperable trio that call Sulani their home enjoying the sand and ocean at their own pace.",
+  "key": "0xB2270CDA",
+  "how": "house description 0x729F6C4F:00000000:00000000000328E8 (Delta\\EP07\\SimulationPreload.package) -> text key next to household id 88594953950160363 (household file B3C438F0:00000000:013AC0A4271765EB, 'premadeHouseholdTemplate_Ngata')",
+  "sure": true
+ },
+ "Tartosa|Laurent": {
+  "bio": "\"Laurent\" may be a newer name in the area, but the family certainly isn't. For generations, they've owned the local wedding venue, the cornerstone of the wedding industry in the area. And Hilary's family opened the first food stall in the village square back when they moved to the area. Now she's a chef in her parent's restaurant, and the local food market has flourished. Together, this family forms a wedding-industry powerhouse.",
+  "key": "0x4404A66F",
+  "how": "house description 0x729F6C4F:00000000:0000000000047D59 (Delta\\GP11\\SimulationPreload.package) -> text key next to household id 121662317564972503 (household file B3C438F0:00000000:01B03B3BB502CDD7, 'premadeHouseholdTemplate_GP11_Laurent')",
+  "sure": true
+ },
+ "Tartosa|Markovic": {
+  "bio": "The Markovic family are locally-renowned for their contribution to the musical-side of the wedding industry, despite having put off their own wedding time and time again. This is in no small part due to relations between them and the Laurent family being rather strained. Mateo believes the Laurents have a stranglehold on local wedding business and works hard to retain relevance. While Lucia's animosity is directed at Hector, a former lover, all the drama and work has kept them busy and unwed!",
+  "key": "0xD25558FB",
+  "how": "house description 0x729F6C4F:00000000:0000000000047BAB (Delta\\GP11\\SimulationPreload.package) -> text key next to household id 110508594174001888 (household file B3C438F0:00000000:01889AFB1C5E82E0, 'premadeHouseholdTemplate_GP11_Markovic')",
+  "sure": true
+ },
+ "Tartosa|Soto": {
+  "bio": "Years ago, Dominique and Camille were married in Tartosa. Each year they returned on vacation in hopes of re-experiencing the love - and rich local culture - only Tartosa offers. Once both women retired, they decided to make their yearly trip more permanent. \\n\\nDominique is an artist who now spends her days painting landscapes and portraits in the village square and Camille is a writer who has taken an interest in the area's storied history. Many consider her to be the Porto Luminoso historian and she can often be found enjoying the outdoors alongside Dominique while chatting about local history with anyone willing to listen.",
+  "key": "0xF611E633",
+  "how": "house description 0x729F6C4F:00000000:0000000000049B21 (Delta\\GP11\\SimulationPreload.package) -> text key next to household id 119230350975798518 (household file B3C438F0:00000000:01A7975F5C5B8CF6, 'premadeHouseholdTemplate_GP11_Soto')",
+  "sure": true
+ },
+ "Tartosa|Monticapp": {
+  "bio": "Following her heart had drastic consequences for Juliette Monty (formerly Capp). Disowned by her old Dynasty, she's lost her Noble ranking and most of her fortunes. Yet life is so much better with her sweetheart Romeo. It has truly filled her heart to see their son Dante grow up to be as kind-hearted as his father. However—now that her new family is rooted and settled—she keeps daydreaming about claiming back all that was taken from her.",
+  "key": "0x032A2D3C",
+  "how": "house description 0x729F6C4F:00000000:0000000000078D37 (EP21\\SimulationPreload.package) -> text key next to household id 85792447513034683 (household file B3C438F0:00000000:0130CBC6C66CFFBB, 'premadeHouseholdTemplate_EP21_Monty')",
+  "sure": false,
+  "note": "Sims not matched by full name: Juliette Monticapp, Romeo Monticapp, Dante Monticapp"
+ },
+ "Tomarang|Bun Ma": {
+  "bio": "From traditional roots, the Bun Ma family relies on strong familial bonds to get them through life's ups and downs. Bua insisted her son's family move in with her so that she could help raise her grandson, Sud. He can be a bit clingy at times, but Bua cherishes being able to pass down her generations of wisdom while Kasem and Nin work hard and enjoy newlywed life.",
+  "key": "0x100E28D2",
+  "how": "house description 0x729F6C4F:00000000:0000000000059B4E (EP15\\SimulationPreload.package) -> text key next to household id 94600398644604094 (household file B3C438F0:00000000:0150168FB4D26CBE, 'premadeHouseholdTemplate_EP15_BunMaFamily')",
+  "sure": true
+ },
+ "Tomarang|Cahyaputri": {
+  "bio": "Since the unfortunate microwavable water incident that resulted in the loss of their parents Cahya and Wulan, Vanesha has had to take on major responsibilities. As both \"Big Sister\" and \"Guardian\", it can be hard juggling a teenager and tenant shenanigans all under one roof!",
+  "key": "0xF5D7B31A",
+  "how": "house description 0x729F6C4F:00000000:000000000005B5B7 (EP15\\SimulationPreload.package) -> text key next to household id 97686149905117506 (household file B3C438F0:00000000:015B0D092891F142, 'premadeHouseholdTemplate_EP15_CahyaputriFamily')",
+  "sure": true
+ },
+ "Tomarang|Linh-Sadya & Linh": {
+  "bio": [
+   "When it comes to the Linh-Sadya household, it certainly takes a village. Caring for both a child and elderly parents, Liên and Alon have their hands full. Luckily, with multiple streams of income, making rent is a breeze. A bustling house, on the other hand, is cause for some chaos. Luckily, it only takes a step outside to regain some peace.",
+   "A household of one may seem lonely, but not with Thi's entire family living above her! Wearing the badge of \"Weird Aunt\" with pride, Thi's quirky existence extends beyond her interior decorating. However, not everything can be included in her open book. Sometimes solitary has its confidential perks...beyond concealing her clown painting that is."
+  ],
+  "key": [
+   "0xA34082DA",
+   "0xF50EB262"
+  ],
+  "how": [
+   "house description 0x729F6C4F:00000000:000000000005B5B8 (EP15\\SimulationPreload.package) -> text key next to household id 141702024360673412 (household file B3C438F0:00000000:01F76D3D89F8C084, 'premadeHouseholdTemplate_EP15_SadyaLinhFamily')",
+   "house description 0x729F6C4F:00000000:000000000005B5B9 (EP15\\SimulationPreload.package) -> text key next to household id 99389365707873486 (household file B3C438F0:00000000:01611A19FD781CCE, 'premadeHouseholdTemplate_EP15_LinhFamily')"
+  ],
+  "sure": false,
+  "note": "Sims from more than one EA household: premadeHouseholdTemplate_EP15_SadyaLinhFamily, premadeHouseholdTemplate_EP15_LinhFamily"
+ },
+ "Willow Creek|Goth": {
+  "bio": "The Goths are an aristocratic family with a dreary aura. Between Mortimer writing macabre stories and Bella's mysterious disappearances will Cassandra and Alexander grow up to be gloomy, too?",
+  "key": "0x43CAAED5",
+  "how": "house description 0x729F6C4F:00000000:0000000000007A55 (Data\\Simulation\\SimulationPreload.package) -> text key next to household id 125326178772849712 (household file B3C438F0:00000000:01BD3F7EDED01430, 'Goth')",
+  "sure": true
+ },
+ "Willow Creek|Villareal": {
+  "bio": "After Jacques’ wife disappeared under... ahem, mysterious circumstances, he was left raising three kids in his enormous mansion. Luna and Hugo are good kids with typical teen problems, but the youngest, Max, is a terrifying force of nature. Will the kids drive Jacques crazy before his eccentric habits and hobbies drive them crazy?",
+  "key": "0xFE41DA77",
+  "how": "house description 0x729F6C4F:00000000:0000000000018FFF (Delta\\EP02\\SimulationPreload.package) -> text key next to household id 95302333745834477 (household file B3C438F0:00000000:015294F7B52FA9ED, 'HH_Template_Villareal')",
+  "sure": true
+ },
+ "Willow Creek|Bjergsen": {
+  "bio": "Teen musical prodigy Sofia has dreams -- she's going to make it big. Not even her gloomy dad, perfectionist mom, or pesky genius kid sister can stop her from making her way to the top!",
+  "key": "0x2A03E71A",
+  "how": "house description 0x729F6C4F:00000000:000000000001909D (Delta\\EP02\\SimulationPreload.package) -> text key next to household id 108123410315623688 (household file B3C438F0:00000000:018021AB37C43D08, 'HH_Template_Bjergsen')",
+  "sure": true
+ },
+ "Willow Creek|Pancakes": {
+  "bio": "Poor, poor Bob and Eliza – have they ever been happy? It seems there’s nothing one can do to please the other. Just what is keeping this couple together? Or, conversely, what is the spark that will finally drive them apart?",
+  "key": "0x3C4FAE5D",
+  "how": "house description 0x729F6C4F:00000000:0000000000007A51 (Data\\Simulation\\SimulationPreload.package) -> text key next to household id 116862434712406780 (household file B3C438F0:00000000:019F2DC3E49ECAFC, 'Pancakes')",
+  "sure": true
+ },
+ "Willow Creek|Spencer-Kim-Lewis": {
+  "bio": "Okay, here’s the breakdown: Dennis Kim and Lydia Spencer had a daughter named Alice Spencer-Kim, then divorced. Alice married Eric Lewis and had her own little girl, Olivia Kim-Lewis. They live with Alice’s dad (Dennis, remember?) and Eric’s mom, Vivian Lewis. Hey, no one ever said family was easy!",
+  "key": "0xF8C2211B",
+  "how": "house description 0x729F6C4F:00000000:0000000000005341 (Data\\Simulation\\SimulationPreload.package) -> text key next to household id 136288168000458451 (household file B3C438F0:00000000:01E4315DE0C18ED3, 'Spencer-Kim-Lewis')",
+  "sure": true
+ },
+ "Windenburg|Fyres": {
+  "bio": "Things couldn't be better between lovebirds Dominic and Moira -- too bad the same can't be said for their daughters! Free spirit Morgan just wants to have fun with her Renegade friends, but Siobhan can't stand that attitude. Siobhan is determined to build a network of popular friends who can help her career aspirations. Will Siobhan move out on her own before the tension in the house explodes?",
+  "key": "0x68B4505B",
+  "how": "house description 0x729F6C4F:00000000:000000000001903D (Delta\\EP02\\SimulationPreload.package) -> text key next to household id 125728454534993837 (household file B3C438F0:00000000:01BEAD5CFEB797AD, 'HH_Template_Fyres')",
+  "sure": true
+ },
+ "Windenburg|Munch": {
+  "bio": "Raising three kids is never easy -- particularly when one refuses to move out of the house, and one is a gloomy rebel. But Mila Munch is nothing if not dedicated to her family, and her sweet little Lucas always cheers her up after a hard day of restaurant work.",
+  "key": "0x312E2382",
+  "how": "house description 0x729F6C4F:00000000:000000000001903C (Delta\\EP02\\SimulationPreload.package) -> text key next to household id 86324467714515968 (household file B3C438F0:00000000:0132AFA5618C6400, 'HH_Template_Munch')",
+  "sure": true
+ },
+ "Windenburg|Partihaus": {
+  "bio": "Drink, flirt, dance, repeat. Jade, Eva, and Paolo jumped at the opportunity to explore the world and set up the ultimate crib in Windenburg as soon as Marcus extended the invite. And the party hasn’t stopped since. Drama is never far behind when they’re together - and they’re always together! With only one and a half jobs between the four of them, how in the world do they manage to pay their bills?",
+  "key": "0xFA0827F3",
+  "how": "house description 0x729F6C4F:00000000:000000000001902D (Delta\\EP02\\SimulationPreload.package) -> text key next to household id 97160356749971384 (household file B3C438F0:00000000:01592ED466550FB8, 'HH_Template_Partihaus')",
+  "sure": true
+ },
+ "Windenburg|Free Spirits": {
+  "bio": "Bookish Maaike and artsy Ulrike aren't materialistic, but even these two roommates admit they could use a few upgrades around the house. Will Maaike be able to sell a few stories, or will Ulrike finally put out a painting that meets her exacting standards?",
+  "key": "0x6FA1CF7D",
+  "how": "house description 0x729F6C4F:00000000:0000000000018D54 (Delta\\EP02\\SimulationPreload.package) -> text key next to household id 140663718811231038 (household file B3C438F0:00000000:01F3BCE83087633E, 'HH_Template_Bohemian')",
+  "sure": true
+ },
+ "Windenburg|Specter": {
+  "bio": "The Specter family has an air of mystery to them; rumor has it that Olive's prior husbands all met unfortunate ends, which makes things rather awkward now that she's engaged to Layne Coffin, the founding and sole member of the band Withering Widdershins. Does Layne know his soon-to-be Specter spouse has skeletons in her closet? He's definitely not going to be asking too many questions about her son Nyon's mysterious parentage. Let's just say that maybe Grim's not keeping tabs on their household solely because of Olive's past loves.",
+  "key": "0x9A165886",
+  "how": "house description 0x729F6C4F:00000000:000000000006570D (EP17\\SimulationPreload.package) -> text key next to household id 88850277922108833 (household file B3C438F0:00000000:013BA8DB65BDF5A1, 'premadeHouseholdTemplate_EP17_Specter')",
+  "sure": true
+ },
+ "_missing": [
+  {
+   "household": "Oasis Springs|Curious",
+   "ea_households": [
+    "Curious"
+   ],
+   "why": "no bio linked in the game"
+  },
+  {
+   "household": "Oasis Springs|Smith",
+   "ea_households": [],
+   "why": "no EA household file matched"
+  },
+  {
+   "household": "Willow Creek|Broke",
+   "ea_households": [
+    "premadeHouseholdTemplate_Broke"
+   ],
+   "why": "no bio linked in the game"
+  }
+ ],
+ "_note": "EA's household bios, read from the game by tools/research/household_bios.py. Key = the English text key; 'how' = where the link is."
+}

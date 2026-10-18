@@ -86,7 +86,9 @@
       ["Mischief", 8, 10]
      ]
     }
-   ]
+   ],
+   "bio": "Aloisio learned his greatest life lesson at a young age: the end...always justifies the means. And you know, growing up in Dambele was nice, but he knew he wanted a little more thrill in his life. So he moved to Verdemar, where his father originally came from. Here he quickly noticed that if you're ambitious, and shrewd, there's a lot of intriguing work to be found in fighting the inequality between Commoners and Nobles...or in taking advantage of it.",
+   "bioFrom": "EA"
   },
   "Enzo Alto": {
    "single": true,
@@ -117,7 +119,9 @@
       "role": "head"
      }
     }
-   ]
+   ],
+   "bio": "Listen here, Enzo is the hottest and most charming eligible bachelor in all of Ondarion. At least according to his mother, who's been waiting desperately for him to stop having fun and do something with his life. The dozens of exes he's left behind might have different opinions of him.",
+   "bioFrom": "EA"
   },
   "Abrantes": {
    "sims": [
@@ -173,7 +177,9 @@
       "role": "heir"
      }
     }
-   ]
+   ],
+   "bio": "After the successful marriage between her eldest son and the heiress of the Thebe family, Ermelinda Abrantes would now be in the perfect position to retire. Unfortunately, her desire for her family to climb up more ranks didn't really go away with old age. In between the family's politics and power plays, her teen daughter Sofia often finds herself as a naive observer to Noble life, occasionally picking up court Scandals that might otherwise go unnoticed.",
+   "bioFrom": "EA"
   },
   "Ananou": {
    "sims": [
@@ -218,7 +224,9 @@
      ],
      "parents": ["adekoya-darong", "aghata-ananou"]
     }
-   ]
+   ],
+   "bio": "Playful and goofy, the Ananous are a warm and welcoming family—as long as you don't mind the pranks! But there's more to them than just fun and games. Ekene Ananou, who spent his life as a modest artisan, is now raising his granddaughter Afua after her mother's passing. And the father? Well, no one knows who that truly is. Ekene says he was too different from the rest of them. It was a mutual agreement that Afua would stay an Ananou and grow up to have a \"regular life\", whatever that means. But many still gossip about the mystery. Some even swear they've seen some sizeable donations in the Ananou's mailbox.",
+   "bioFrom": "EA"
   },
   "Capp": {
    "sims": [
@@ -339,7 +347,9 @@
       "role": "outcast"
      }
     }
-   ]
+   ],
+   "bio": "Tybalt certainly got plenty from life—all the Simoleons one could wish for and a dream home to enjoy his lavish parties. Oh, and ever since he ousted his sister Juliette he's the highest ranking Noble in Bellacorde. But maybe there's more he could get? After all, who better than a wealthy man like him to be King of Ondarion? There's only one small stain in his perfect image: his three kids are grown, yet they insist on being chronically single and not settling down! First Beatrice, a diamond beloved across the Kingdom, she could have anyone yet complains about dreaming of something more \"meaningful\". Then there's Celeste, the idealist, who believes the family mottos of honor and chivalry are meant to be taken quite seriously. How naive. And finally Virgilio. UGH. What a disgrace of a son, always criticising high society and calling them hypocrites. Why can't he just enjoy his money like Tybalt does!",
+   "bioFrom": "EA"
   },
   "Darong": {
    "sims": [
@@ -448,7 +458,9 @@
       "role": "member"
      }
     }
-   ]
+   ],
+   "bio": "Strength Through Union, the Darong's family motto. And united they've been for generations...but can it last forever? The old Adekoya, head of the Dynasty, has dreamed of his daughter Jawara becoming Queen since her youth. Over the years she proved herself a wonderful candidate, gathering favor across the kingdom through her philanthropic efforts. Her path to the crown seemed to be smoothly falling in place, right until the premature and sudden passing of her husband. As if that wasn't enough, with her growing popularity more rabble-rousers began to pry into the Darongs, probing into whether this seemingly perfect family had truly no Scandals to hide. As challenges pile on, Jawara forges ahead, mustering the strength of her beloved family to support her in the race to the crown.",
+   "bioFrom": "EA"
   },
   "Thebe": {
    "sims": [
@@ -513,7 +525,9 @@
      },
      "parents": ["ermelinda-abrantes"]
     }
-   ]
+   ],
+   "bio": "After years of adventures at Sea, Cordelia Thebe V has returned to Verdemar and seemingly settled down. Now happily married to Thiago of the Abrantes Dynasty, she seems to have everything one needs to win the race to the throne. But many do wonder if she's truly interested in ruling, or if her appetite for adventure would inevitably take over. There's plenty of eyes on her, thirsty for a potential new Scandal...",
+   "bioFrom": "EA"
   }
  }
 }

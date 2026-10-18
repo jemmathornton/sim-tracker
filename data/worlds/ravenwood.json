@@ -136,7 +136,9 @@
      "school": "Grade school · grade A",
      "parents": ["ekade-aether", "kai-aether"]
     }
-   ]
+   ],
+   "bio": "After a miscommunication with a pet Crow, Kai Aether found himself in a less corporeal form than expected. It's a story familiar to many families, but there's an unfortunate wrinkle to this story that has made things extremely stressful for not just Kai's husband, Ekade, but also for their son, Takama—you see, not only does Kai not seem to understand that he's dead, he also doesn't believe in Ghosts. Period. Awkward, right? But with the help of a local support group and with the love of his family, maybe Kai will start to see the light.",
+   "bioFrom": "EA"
   },
   "Gomes": {
    "sims": [
@@ -205,7 +207,9 @@
      ],
      "parents": ["radwan-gomes", "tziporah-gomes"]
     }
-   ]
+   ],
+   "bio": "Having tried being a ghost on for size, Radwan and Tziporah Gomes have decided that being a Ghost isn't for them—at least, not quite yet. Meanwhile, Radwan has his hands full keeping his clumsy wife from meeting Grim a little too soon. In the midst of all this chaos, their teenage child Zelmira has plunged headfirst into their own study of the afterlife after finding a tarot card on a walk one day. Now, Zelmira's embracing their inner Macabre side and finding unique connections in the family's past to a very special member of the Goth family. Things definitely seem to be getting a bit spooky for this household!",
+   "bioFrom": "EA"
   },
   "Izadi-Gomes": {
    "sims": [
@@ -249,7 +253,9 @@
      ],
      "state": "Ghost"
     }
-   ]
+   ],
+   "bio": "Esther Gomes was already looking for a ghostly roommate when poor Zuleika met her end in a rather unfortunate Cowplant \"accident\" and also found herself looking for a new home in the same neighborhood. Now the two are sharing a home, and Esther is teaching Zuleika the ins-and-outs of ghostly living and career development working for Grim.",
+   "bioFrom": "EA"
   }
  }
 }

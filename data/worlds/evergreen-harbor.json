@@ -192,7 +192,9 @@
       ["Blossom Greenburg", "Friends"]
      ]
     }
-   ]
+   ],
+   "bio": "Cletus and Faye found this heritage home in Grims Quarry for dirt cheap. Nothing seems wrong with it, and the Harris' weren't about to question a good deal. Cletus' free-spirited mother soon joined them, completing the big, happy family. Mysteriously, their eldest son always wears a shameful bag on his head. Also, it doesn't seem like any of them other than Faye has a job, but the house is well furnished. What is going on here?",
+   "bioFrom": "EA"
   },
   "Sterling Rico": {
    "sims": [
@@ -235,7 +237,9 @@
       ["Knox Greenburg", "Disliked"]
      ]
     }
-   ]
+   ],
+   "bio": "Bess and Jules are a power couple with big dreams. Big dreams about sweet, sweet money. A Civil Designer by trade, Bess placed herself in the perfect position to convince city officials and residents alike to enact programs that would benefit her bottom line. Her partner-in-crime, Jules, is a Style Influencer that loves fashion as much as he loves convincing people to buy his rejected styles. Cheerful and charismatic, together they hustle around Evergreen Harbor like an entrepreneurial whirlwind.",
+   "bioFrom": "EA"
   },
   "Tinker": {
    "sims": [
@@ -297,7 +301,9 @@
      "parents": ["tina-tinker", "yasemin-tinker"],
      "school": "Grade school"
     }
-   ]
+   ],
+   "bio": "The talented, but perpetually stressed Tina Tinker is a very successful Freelance Crafter. Her equally successful spouse, Yasemin, managed to convince her to move to Conifer Station with their daughter, Olive. Tina takes on too much work, and Yasemin just wants her to relax and spend more time with family. Meanwhile, curious little Olive loves nothing more than to admire her two mothers' works and dream of following in their footsteps.",
+   "bioFrom": "EA"
   },
   "Greenburg": {
    "sims": [

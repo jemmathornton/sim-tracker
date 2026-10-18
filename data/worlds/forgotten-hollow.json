@@ -52,7 +52,9 @@
       ["Pipe Organ", 10, 10]
      ]
     }
-   ]
+   ],
+   "bio": "Count Vladislaus Straud IV is the latest descendant to occupy Straud Mansion. His oddly similar looking line of ancestors has resided here since the founding of Forgotten Hollow.",
+   "bioFrom": "EA"
   },
   "Vatore": {
    "sims": [
@@ -88,7 +90,9 @@
      ],
      "parents": ["gioia-vatore"]
     }
-   ]
+   ],
+   "bio": "The Vatore siblings moved into Forgotten Hollow a few years ago and are striving to make it their home. This can be quite challenging at times since they are not exactly on the best terms with Vladislaus Straud, but when asked they only ever mention a difference in their culinary tastes.",
+   "bioFrom": "EA"
   }
  }
 }

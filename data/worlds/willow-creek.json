@@ -196,7 +196,9 @@
       "role": "member"
      }
     }
-   ]
+   ],
+   "bio": "The Goths are an aristocratic family with a dreary aura. Between Mortimer writing macabre stories and Bella's mysterious disappearances will Cassandra and Alexander grow up to be gloomy, too?",
+   "bioFrom": "EA"
   },
   "Ella-Mint Cadberry": {
    "single": true
@@ -341,7 +343,9 @@
       }
      ]
     }
-   ]
+   ],
+   "bio": "After Jacques’ wife disappeared under... ahem, mysterious circumstances, he was left raising three kids in his enormous mansion. Luna and Hugo are good kids with typical teen problems, but the youngest, Max, is a terrifying force of nature. Will the kids drive Jacques crazy before his eccentric habits and hobbies drive them crazy?",
+   "bioFrom": "EA"
   },
   "Bjergsen": {
    "sims": [
@@ -475,7 +479,9 @@
       }
      ]
     }
-   ]
+   ],
+   "bio": "Teen musical prodigy Sofia has dreams -- she's going to make it big. Not even her gloomy dad, perfectionist mom, or pesky genius kid sister can stop her from making her way to the top!",
+   "bioFrom": "EA"
   },
   "Broke": {
    "sims": [
@@ -540,7 +546,9 @@
       ["bob-pancakes", "Spouse"]
      ]
     }
-   ]
+   ],
+   "bio": "Poor, poor Bob and Eliza – have they ever been happy? It seems there’s nothing one can do to please the other. Just what is keeping this couple together? Or, conversely, what is the spark that will finally drive them apart?",
+   "bioFrom": "EA"
   },
   "Spencer-Kim-Lewis": {
    "sims": [
@@ -637,7 +645,9 @@
      ],
      "parents": ["alice-spencer-kim", "eric-lewis"]
     }
-   ]
+   ],
+   "bio": "Okay, here’s the breakdown: Dennis Kim and Lydia Spencer had a daughter named Alice Spencer-Kim, then divorced. Alice married Eric Lewis and had her own little girl, Olivia Kim-Lewis. They live with Alice’s dad (Dennis, remember?) and Eric’s mom, Vivian Lewis. Hey, no one ever said family was easy!",
+   "bioFrom": "EA"
   },
   "Winters": {
    "sims": [

@@ -150,7 +150,9 @@
       ["Cooking", 2, 10]
      ]
     }
-   ]
+   ],
+   "bio": "Jane and Star Addam are known for their Love Highland Getaway—and for their prickly personalities. They're joined by two roommates, Skip and Agora. Between the four of them, it's a wonder they need to look outside the four walls of their home for any extra drama in their lives.",
+   "bioFrom": "EA"
   },
   "Chavez-Ralston": {
    "sims": [
@@ -239,7 +241,9 @@
      "parents": ["nigel-chavez-ralston", "sara-chavez-ralston"],
      "school": "Grade school"
     }
-   ]
+   ],
+   "bio": "Family patriarch Nigel is living out his childhood dream as a Camp Director at Camp Gibbi Gibbi while his wife Sara is channeling her love of creativity and chaos as a Camp Counselor. Their twin daughters, Aeris and Erin, often seem like polar opposites as well.",
+   "bioFrom": "EA"
   },
   "Perry": {
    "sims": [
@@ -281,7 +285,9 @@
      "parents": ["unknown-1"],
      "school": "Grade school"
     }
-   ]
+   ],
+   "bio": "Freeda Perry never expected to be juggling her Revive and Thrive Fitness Retreat along with her shy, thoughtful grandson Dougie—but here we are anyway! Freeda spends her days spinning and encouraging others to reach for new gains while nudging Dougie to get outside and explore the world and perhaps unleash his own Wild Child.",
+   "bioFrom": "EA"
   }
  }
 }
