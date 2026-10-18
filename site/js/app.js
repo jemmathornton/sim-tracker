@@ -495,7 +495,7 @@ function simPage(s){
     <div style="display:flex;gap:26px;align-items:center;flex-wrap:wrap;margin-top:22px"><div class="monogram">${initial(s.name)}</div><div><span class="label" style="color:var(--on-deep-mute)">${isAnimal(s) ? esc(s.state) : "Sim"}</span><h1 style="margin-top:6px">${esc(s.name)}</h1>${nee(s) ? `<p class="nee">${esc(nee(s))}</p>` : ""}</div></div>
     <div class="sim-chips">${stage ? `<span>${esc(stage.charAt(0).toUpperCase() + stage.slice(1))}</span>` : ""}${s.state ? lifeState(s, "") : "<span>Human</span>"}${isChampion(s) ? `<span class="champ">${ic("trophy")}Champion</span>` : ""}${s.noHome ? `<span>No home</span>` : ""}${s.notInGame ? `<span title="Named on the Sims Wiki">Never in the game</span>` : ""}${s.notInGame ? "" : `<span>${originTag(s.origin)}</span>`}</div></section>`;
   // details
-  const facts = [["Breed", s.breed], ["Aspiration", s.aspiration], ["Career", s.career], ["School", s.school], ["Lifestyles", (s.lifestyles || []).join(", ")], ["Likes", (s.likes || []).join(", ")], ["Died", s.died]].filter(([, v]) => v);
+  const facts = [["Breed", s.breed], ["Cause of death", s.state === "Ghost" ? s.death : null], ["Aspiration", s.aspiration], ["Career", s.career], ["School", s.school], ["Lifestyles", (s.lifestyles || []).join(", ")], ["Likes", (s.likes || []).join(", ")], ["Died", s.died]].filter(([, v]) => v);
   const hasTraits = s.traits && s.traits.length;
   const skills = (s.skills || []).map(([n, lv, max]) => `<div class="skill"><span>${esc(n)}</span><div class="pips" style="--max:${max||10}">${Array.from({length:max||10},(_,i)=>`<i class="${i<lv?"on":""}"></i>`).join("")}</div><b>${lv}</b></div>`).join("");
   // picture top left with the facts beside it, as on household pages (her ask, 19 Oct: Sims and animals had no picture box)
@@ -998,7 +998,9 @@ function whoCount(list){
   xs.filter(isAnimal).forEach(x => { const k = x.state.toLowerCase().replace(/^(small|large) /, ""); pets[k] = (pets[k] || 0) + 1; });
   return [`${n} ${n === 1 ? "Sim" : "Sims"}`, ...Object.entries(pets).map(([k, c]) => `${c} ${c === 1 ? k : k + "s"}`)].join(" · ");
 }
-const lifeState = (s, cls) => isAnimal(s) ? `<span class="${cls} animal">${animalIcon(s)}${esc(s.state)}</span>` : `<span class="${cls} occult">${ic("ghost")}${esc(s.state)}</span>`;
+// each life state its own icon (her picks, 19 Oct); mermaids still to choose
+const OCCULT_ICON = {Spellcaster: "cauldron", Vampire: "bat", Werewolf: "moon", Ghost: "ghost", Alien: "face-alien", Fairy: "butterfly", "Plant Sim": "sprout", Servo: "bot"};
+const lifeState = (s, cls) => isAnimal(s) ? `<span class="${cls} animal">${animalIcon(s)}${esc(s.state)}</span>` : `<span class="${cls} occult">${ic(OCCULT_ICON[s.state] || "sparkle")}${esc(s.state)}</span>`;
 function hhListing(x, listed){   // listed: on the households page, one-Sim households read surname first
   const n = x.sims.length, hc = x.lots[0].hood.color, made = simsMade(x);
   return `<a class="listing" href="#${x.id}" style="--h:${hc}"><div class="photo"><span class="initial">${initial(x.name)}</span><span class="type">Household</span><span class="status">${x.unsure ? `<span class="flag">unsure</span>` : ""}<span class="${made?"yes":""}" title="Sims made: ${made?"yes":"not yet"}">${ic("sim")}</span></span><span class="size">${esc(x.lots.map(l => l.name).join(" & "))}</span></div>

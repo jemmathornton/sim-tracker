@@ -121,7 +121,8 @@
   "sex": "m",
   "origin": "Premade",
   "state": "Ghost",
-  "fromFix": true
+  "fromFix": true,
+  "death": "Old Age"
  },
  "aghata-ananou": {
   "name": "Aghata Ananou",

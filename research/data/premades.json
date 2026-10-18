@@ -8014,7 +8014,8 @@
      "dynasty": null,
      "clubs": [],
      "degree": [],
-     "occult": "GHOST"
+     "occult": "GHOST",
+     "death": "Laughter"
     }
    ],
    "relationships": []
@@ -13342,7 +13343,8 @@
      "dynasty": null,
      "clubs": [],
      "degree": [],
-     "occult": "GHOST"
+     "occult": "GHOST",
+     "death": "Murder of Crows"
     },
     {
      "sim_id": 1055834050150342879,
@@ -13455,7 +13457,8 @@
      "dynasty": null,
      "clubs": [],
      "degree": [],
-     "occult": "GHOST"
+     "occult": "GHOST",
+     "death": "Drowning"
     }
    ],
    "relationships": []
@@ -13507,7 +13510,8 @@
      "dynasty": null,
      "clubs": [],
      "degree": [],
-     "occult": "GHOST"
+     "occult": "GHOST",
+     "death": "Drowning"
     }
    ],
    "relationships": []
@@ -13756,7 +13760,8 @@
      "dynasty": null,
      "clubs": [],
      "degree": [],
-     "occult": "GHOST"
+     "occult": "GHOST",
+     "death": "Fire"
     },
     {
      "sim_id": 30139229340452006,
@@ -13807,7 +13812,8 @@
      "dynasty": null,
      "clubs": [],
      "degree": [],
-     "occult": "GHOST"
+     "occult": "GHOST",
+     "death": "Cow Plant"
     }
    ],
    "relationships": [
@@ -13872,7 +13878,8 @@
      "dynasty": null,
      "clubs": [],
      "degree": [],
-     "occult": "WITCH"
+     "occult": "WITCH",
+     "death": "Murder of Crows"
     }
    ],
    "relationships": []
@@ -14132,7 +14139,8 @@
      "dynasty": null,
      "clubs": [],
      "degree": [],
-     "occult": "GHOST"
+     "occult": "GHOST",
+     "death": "Old Age"
     }
    ],
    "relationships": []
@@ -15832,7 +15840,8 @@
      },
      "clubs": [],
      "degree": [],
-     "occult": "GHOST"
+     "occult": "GHOST",
+     "death": "Old Age"
     }
    ],
    "relationships": []
@@ -23377,7 +23386,8 @@
      "dynasty": null,
      "clubs": [],
      "degree": [],
-     "occult": "GHOST"
+     "occult": "GHOST",
+     "death": "Old Age"
     }
    ],
    "relationships": []

@@ -122,7 +122,8 @@
      "partners": [
       ["ekade-aether", "Spouse"]
      ],
-     "state": "Ghost"
+     "state": "Ghost",
+     "death": "Murder of Crows"
     },
     {
      "id": "takama-aether",
@@ -234,7 +235,8 @@
       ["Zelmira Gomes", "Good Friends"]
      ],
      "parents": ["orodueynna-gomes"],
-     "state": "Ghost"
+     "state": "Ghost",
+     "death": "Fire"
     },
     {
      "id": "zuleika-izadi",
@@ -251,7 +253,8 @@
       ["Mixology", 5, 10],
       ["Flower Arranging", 7, 10]
      ],
-     "state": "Ghost"
+     "state": "Ghost",
+     "death": "Cow Plant"
     }
    ],
    "bio": "Esther Gomes was already looking for a ghostly roommate when poor Zuleika met her end in a rather unfortunate Cowplant \"accident\" and also found herself looking for a new home in the same neighborhood. Now the two are sharing a home, and Esther is teaching Zuleika the ins-and-outs of ghostly living and career development working for Grim.",
