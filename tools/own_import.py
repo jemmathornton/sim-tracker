@@ -22,14 +22,18 @@ SEX = {4096: "m", 8192: "f"}
 SPECIES = {2: "Dog", 3: "Cat", 4: "Dog", 5: "Fox", 6: "Horse"}
 # households to leave for her (she'll upload them, or they need her answer first), with why
 SKIP = {"San Sequoia|Lovejoy": "she’ll upload the Lovejoys herself (two related households)",
-        "Willow Creek|Davidson": "two Davidson households in her plan; which Sims go where is hers to say",
         "Windenburg|Tiquelle": "four Tiquelle households in her plan",
         "Ondarion|Monty": "her recreated Sims 2 Montys (the save copies are EA’s Montys)",
         "Ondarion|Alto": "the vineyard Altos are still to be created",
         "Tomarang|Cadberry": "which Cadberrys live at Isda Riverfront is hers to say",
         "Ravenwood|Specter": "waiting on her answer (who owns Specter Row)",
         "San Myshuno|Bro & Kennedy": "waiting on her answer (who Kennedy is)"}
-EA = {"Britechester|Pleasant"}   # EA's own household (the Pleasant twins): game files, not a save
+EA = {"Britechester|Pleasant"}
+# her choice (19 Oct): her "Rotational" save matches her plan best, so these use its copy (save, world it lives in), replacing what's there
+PREFER = {k: ("Rotational", w) for k, w in {"Brindleton Bay|Ventura": "Brindleton Bay", "Newcrest|LeBlanc": "Newcrest", "Oasis Springs|De Costa": "Oasis Springs",
+          "Oasis Springs|Rivera": "Oasis Springs", "Willow Creek|Reynolds": "Willow Creek", "Willow Creek|Kopf": "Willow Creek",
+          "Willow Creek|Davidson": "Willow Creek", "Willow Creek|Barraza": "Willow Creek"}.items()}
+TARGET = {"Willow Creek|Davidson": "Davidson 1"}   # the plan has two Davidson homes; Evelyn, Ray and George live at Streamlet Single (the first)   # EA's own household (the Pleasant twins): game files, not a save
 norm = lambda x: re.sub(r'[^a-z]', '', (x or '').lower())
 
 
@@ -61,6 +65,10 @@ def main(apply):
             ok = [c for c in copies if all(any(s['name'] == n for s in c['sims']) for n in want)]
             if ok: ok.sort(key=rank); plan[key] = (ok[0], want); review.append((key, 'filled', copies)); continue
             # not a Sim's name after all ("Santiago Ojo" is Alicia Santiago and Miko Ojo): fall back to the household name
+        if key in PREFER:
+            sv, ww = PREFER[key]
+            pick = [c for c in copies if c['source'] == 'save' and c.get('save') == sv and c.get('world') == ww]
+            if pick: plan[key] = (pick[0], None); review.append((key, 'filled', copies)); continue
         exact = [c for c in copies if norm(re.sub(r' Household$', '', c['household'] or '')) == norm(hn)]   # "Eclectic Arts Household" is her Eclectic Arts
         if not exact: review.append((key, 'not found in any save or the Library (only other names)', copies)); continue
         exact.sort(key=rank); plan[key] = (exact[0], None); review.append((key, 'filled', exact))
@@ -112,7 +120,9 @@ def main(apply):
     worlds = {load(p)['name']: p for p in glob.glob(os.path.join(ROOT, 'data', 'worlds', '*.json'))}
     used = set()
     for p in worlds.values():
-        for hh in (load(p).get('households') or {}).values():
+        W0 = load(p)
+        for hn0, hh in (W0.get('households') or {}).items():
+            if f"{W0['name']}|{hn0}" in PREFER or any(f"{W0['name']}|{k}" in TARGET and TARGET[f"{W0['name']}|{k}"] == hn0 for k in [hn0.rsplit(' ', 1)[0]]): continue   # being replaced
             used.update(s.get('id') for s in hh.get('sims', []) if s.get('id'))
     out_by_world = {}
     for key, sims in full.items():
@@ -151,7 +161,7 @@ def main(apply):
             if so in idmap: d["partners"] = [[idmap[so][0], "Spouse"]]
             elif s.get('fiance') in idmap: d["partners"] = [[idmap[s['fiance']][0], "Engaged"]]
             rows.append(d)
-        out_by_world.setdefault(w, {})[hn] = (rows, src)
+        out_by_world.setdefault(w, {})[TARGET.get(key, hn)] = (rows, src)
     # report and review list
     lines = ["# Your own households: where their Sims came from (18 Oct)", "",
              "Your spreadsheet says which households exist and where; these copies only fill in their Sims for now. "
@@ -174,7 +184,7 @@ def main(apply):
             p = worlds[w]; W = load(p)
             for hn, (rows, src) in hhs.items():
                 h = W.setdefault('households', {}).setdefault(hn, {})
-                if h.get('sims'): continue
+                if h.get('sims') and f"{w}|{hn}" not in PREFER and hn not in TARGET.values(): continue
                 h['sims'] = rows
                 if h.get('single') and len(rows) > 1: h.pop('single')
             save(p, W)

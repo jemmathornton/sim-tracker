@@ -276,22 +276,38 @@
   "Ventura": {
    "sims": [
     {
-     "id": "jamie-ventura",
-     "name": "Jamie Ventura",
-     "sex": "m",
+     "id": "daisy-ventura",
+     "name": "Daisy Ventura",
+     "sex": "f",
      "origin": "Mine",
-     "from": "save “100 Baby Challenge!!” (2025-09-24)",
+     "from": "save “Rotational” (2023-12-21)",
      "age": "Young Adult",
-     "aspiration": "Computer Whiz",
-     "traits": ["Art Lover", "Bookworm", "Overachiever"],
-     "bonus": "Quick Learner",
-     "career": "",
+     "aspiration": "Friend of the Animals",
+     "traits": ["Vegetarian", "Loves Outdoors", "Dog Lover"],
+     "bonus": "Animal Affection",
+     "career": "Athlete · Rookie (level 6)",
      "skills": [
-      ["Writing", 6, 10],
-      ["Charisma", 5, 10],
-      ["Painting", 8, 10],
-      ["Fitness", 1, 10]
+      ["Photography", 2, 5],
+      ["Charisma", 4, 10],
+      ["Gardening", 1, 10],
+      ["Handiness", 2, 10],
+      ["Cooking", 1, 10],
+      ["Comedy", 2, 10],
+      ["Fitness", 6, 10],
+      ["Video Gaming", 1, 10],
+      ["Pet Training", 2, 5],
+      ["Fishing", 2, 10]
      ]
+    },
+    {
+     "id": "cocoa-ventura",
+     "name": "Cocoa Ventura",
+     "sex": "f",
+     "origin": "Mine",
+     "from": "save “Rotational” (2023-12-21)",
+     "age": "Adult",
+     "state": "Dog",
+     "career": ""
     }
    ]
   }

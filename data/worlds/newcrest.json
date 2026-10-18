@@ -231,26 +231,145 @@
   "LeBlanc": {
    "sims": [
     {
+     "id": "marvin-leblanc",
+     "name": "Marvin LeBlanc",
+     "sex": "m",
+     "origin": "Mine",
+     "from": "save “Rotational” (2023-12-21)",
+     "age": "Adult",
+     "aspiration": "Super Parent",
+     "traits": ["Creative", "Family-Oriented", "Bookworm"],
+     "bonus": "Domestic",
+     "career": "Writer · Bestselling Author (level 9)",
+     "skills": [
+      ["Painting", 1, 10],
+      ["Gourmet Cooking", 6, 10],
+      ["Bowling", 1, 5],
+      ["Video Gaming", 3, 10],
+      ["Handiness", 4, 10],
+      ["Cooking", 10, 10],
+      ["Comedy", 4, 10],
+      ["Writing", 10, 10],
+      ["Fishing", 4, 10],
+      ["Photography", 1, 5],
+      ["Gardening", 1, 10],
+      ["Fitness", 2, 10],
+      ["Wellness", 2, 10],
+      ["Logic", 5, 10],
+      ["Baking", 1, 10],
+      ["Parenting", 10, 10],
+      ["Singing", 1, 10],
+      ["Charisma", 6, 10]
+     ],
+     "partners": [
+      ["tricia-leblanc", "Spouse"]
+     ]
+    },
+    {
+     "id": "max-leblanc",
+     "name": "Max LeBlanc",
+     "sex": "m",
+     "origin": "Mine",
+     "from": "save “Rotational” (2023-12-21)",
+     "age": "Teen",
+     "aspiration": "Master {F0.Actress}{M0.Actor}",
+     "traits": ["Creative", "Outgoing"],
+     "bonus": "Muser",
+     "career": "",
+     "school": "High school · grade B",
+     "parents": ["tricia-leblanc", "marvin-leblanc"]
+    },
+    {
+     "id": "mia-leblanc",
+     "name": "Mia LeBlanc",
+     "sex": "f",
+     "origin": "Mine",
+     "from": "save “Rotational” (2023-12-21)",
+     "age": "Teen",
+     "aspiration": "Nerd Brain",
+     "traits": ["Geek", "Gloomy"],
+     "bonus": "Quick Learner",
+     "career": "",
+     "school": "High school · grade B",
+     "skills": [
+      ["Fitness", 1, 10]
+     ],
+     "parents": ["tricia-leblanc", "marvin-leblanc"]
+    },
+    {
+     "id": "tim-leblanc",
+     "name": "Tim LeBlanc",
+     "sex": "m",
+     "origin": "Mine",
+     "from": "save “Rotational” (2023-12-21)",
+     "age": "Child",
+     "aspiration": "Social Butterfly",
+     "traits": ["Cheerful"],
+     "career": "",
+     "school": "Grade school · grade C",
+     "skills": [
+      ["Motor", 7, 10],
+      ["Social", 6, 10],
+      ["Creativity", 3, 10],
+      ["Mental", 3, 10]
+     ],
+     "parents": ["tricia-leblanc", "marvin-leblanc"]
+    },
+    {
+     "id": "tara-leblanc",
+     "name": "Tara LeBlanc",
+     "sex": "f",
+     "origin": "Mine",
+     "from": "save “Rotational” (2023-12-21)",
+     "age": "Child",
+     "aspiration": "Social Butterfly",
+     "traits": ["Outgoing"],
+     "career": "",
+     "school": "Grade school · grade C",
+     "skills": [
+      ["Motor", 5, 10],
+      ["Social", 10, 10],
+      ["Creativity", 2, 10],
+      ["Mental", 2, 10],
+      ["Charisma", 1, 10]
+     ],
+     "parents": ["tricia-leblanc", "marvin-leblanc"]
+    },
+    {
      "id": "tricia-leblanc",
      "name": "Tricia LeBlanc",
      "sex": "f",
      "origin": "Mine",
-     "from": "save “My Saved Game 4,370” (2023-12-21)",
+     "from": "save “Rotational” (2023-12-21)",
      "age": "Adult",
-     "aspiration": "Big Happy Family",
-     "traits": ["Bookworm", "Gloomy", "Creative"],
+     "aspiration": "Super Parent",
+     "traits": ["Creative", "Bookworm", "Gloomy"],
      "bonus": "Domestic",
-     "career": "",
+     "career": "Doctor · Chief of Staff (level 10)",
      "skills": [
-      ["Fitness", 2, 10],
-      ["Video Gaming", 1, 10],
-      ["Charisma", 4, 10],
-      ["Cooking", 1, 10],
-      ["Comedy", 3, 10],
-      ["Logic", 1, 10],
       ["Mischief", 1, 10],
-      ["Dancing", 1, 5],
-      ["Fishing", 5, 10]
+      ["Gourmet Cooking", 3, 10],
+      ["Bowling", 2, 5],
+      ["DJ Mixing", 1, 10],
+      ["Handiness", 6, 10],
+      ["Cooking", 10, 10],
+      ["Painting", 5, 10],
+      ["Video Gaming", 4, 10],
+      ["Writing", 1, 10],
+      ["Dancing", 2, 5],
+      ["Photography", 1, 5],
+      ["Fitness", 6, 10],
+      ["Wellness", 2, 10],
+      ["Comedy", 4, 10],
+      ["Parenting", 10, 10],
+      ["Baking", 2, 10],
+      ["Logic", 7, 10],
+      ["Singing", 4, 10],
+      ["Fishing", 5, 10],
+      ["Charisma", 8, 10]
+     ],
+     "partners": [
+      ["marvin-leblanc", "Spouse"]
      ]
     }
    ]

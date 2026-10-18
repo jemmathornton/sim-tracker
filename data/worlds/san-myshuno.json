@@ -473,7 +473,7 @@
   "Livin' In The City": {
    "sims": [
     {
-     "id": "alfie-reynolds-san-myshuno",
+     "id": "alfie-reynolds",
      "name": "Alfie Reynolds",
      "sex": "m",
      "origin": "Mine",
@@ -500,10 +500,11 @@
       ["Comedy", 4, 10],
       ["Singing", 2, 10],
       ["Photography", 1, 5]
-     ]
+     ],
+     "parents": ["britney-reynolds", "joe-reynolds"]
     },
     {
-     "id": "lucy-kopf-san-myshuno",
+     "id": "lucy-kopf",
      "name": "Lucy Kopf",
      "sex": "f",
      "origin": "Mine",
@@ -527,7 +528,8 @@
       ["Singing", 1, 10],
       ["Handiness", 1, 10],
       ["Photography", 1, 5]
-     ]
+     ],
+     "parents": ["emilee-kopf", "kristian-kopf"]
     },
     {
      "id": "lisa-davidson",
@@ -561,7 +563,8 @@
       ["Parenting", 1, 10],
       ["Baking", 2, 10],
       ["Photography", 1, 5]
-     ]
+     ],
+     "parents": ["evelyn-davidson", "ray-davidson"]
     }
    ]
   },
