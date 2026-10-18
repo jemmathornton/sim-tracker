@@ -330,7 +330,9 @@ function drawTree(ids, o = {}){
   const C = o.compact, CW = o.cw || (C ? 136 : 188), CH = o.ch || (C ? 112 : 128), CG = C ? 28 : 38, SG = C ? 14 : 26, RG = C ? 44 : 58, LX = o.labels === false ? 6 : 96, PAD = 14;
   const inT = new Set(ids), S = id => SIMS[id];
   const ps = id => (S(id).parents || []).filter(p => inT.has(p));
-  const prs = id => partnersOf(id).filter(([p]) => inT.has(p));
+  // animals have no partners in the game: a foal's mother and father are drawn side by side, joined by a thin line (her feedback, 19 Oct: Longface)
+  const coParents = id => !isAnimal(S(id)) ? [] : [...new Set(ids.filter(c => (S(c).parents || []).includes(id)).flatMap(c => S(c).parents.filter(p => p !== id && inT.has(p))))].map(p => [p, "coparent"]);
+  const prs = id => [...partnersOf(id).filter(([p]) => inT.has(p)), ...coParents(id)];
   // generations: children one below their parents; married-in partners beside their partner
   const gen = Object.fromEntries(ids.map(id => [id, 0]));
   for (let k = 0, ch = true; ch && k < 40; k++) { ch = false;
