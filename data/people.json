@@ -109,12 +109,18 @@
   "name": "Unknown",
   "sex": "m",
   "placeholder": true,
-  "parents": ["eleanor-elderberry", "ekram-elderberry"]
+  "parents": ["ekram-elderberry", "eleanor-elderberry"]
  },
  "unknown-6": {
   "name": "Unknown",
   "sex": "f",
   "placeholder": true
+ },
+ "consort-capp": {
+  "name": "Consort Capp",
+  "sex": "m",
+  "origin": "Premade",
+  "fromFix": true
  },
  "aghata-ananou": {
   "name": "Aghata Ananou",
@@ -123,6 +129,26 @@
   "notInGame": true,
   "fromFix": true,
   "parents": ["ekene-ananou"]
+ },
+ "caliban-capp": {
+  "name": "Caliban Capp",
+  "sex": "m",
+  "notInGame": true,
+  "fromFix": true,
+  "parents": ["consort-capp", "contessa-capp"]
+ },
+ "contessa-capp": {
+  "name": "Contessa Capp",
+  "sex": "f",
+  "late": true,
+  "notInGame": true,
+  "fromFix": true
+ },
+ "cordelia-capp": {
+  "name": "Cordelia Capp",
+  "sex": "f",
+  "notInGame": true,
+  "fromFix": true
  },
  "cahya-cahyaputri": {
   "name": "Cahya Cahyaputri",

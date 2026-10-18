@@ -29,6 +29,9 @@ WIKI_NAMES = {
     ("karmine-luna",): [{"name": "Colin Sullivan", "sex": "m", "late": True, "partners": [["xochitl-luna", "Late Spouse"]]}],
     ("afua-ananou",): [{"name": "Aghata Ananou", "sex": "f", "late": True}],
 }
+# the wiki's names for unnamed ancestors the game links by template (Tybalt and Juliette's parents and grandmother)
+WIKI_BY_TEMPLATE = {493286: {"name": "Caliban Capp", "sex": "m"}, 493290: {"name": "Cordelia Capp", "sex": "f"},
+                    493289: {"name": "Contessa Capp", "sex": "f", "late": True}}
 GRANDS = {"RELATIONSHIP_FATHERS_MOM": ("m", "f"), "RELATIONSHIP_FATHERS_FATHER": ("m", "m"),
           "RELATIONSHIP_MOTHERS_MOM": ("f", "f"), "RELATIONSHIP_MOTHERS_FATHER": ("f", "m")}
 
@@ -56,6 +59,10 @@ def main(apply):
                 if s.pop(f, None): report[f'{f} removed'] += 1
     # 3. unknown parents. Game Sims -> site ids (by name; the importer made ids from names)
     by_name = {s['name']: i for i, s in site.items()}
+    game_names = {s['name'] for h in P['households'] for s in h['sims']}
+    for i in site:   # Sims she has renamed keep the game's id (Juliette Monticapp is still "juliette-monty")
+        for gn in game_names:
+            if gn not in by_name and re.sub(r'[^a-z0-9]+', '-', gn.lower()).strip('-') == i: by_name[gn] = i
     game = {s['name']: s for h in P['households'] for s in h['sims']}
     node_of = {}   # template id / sim id -> site id
     for nm, s in game.items():
@@ -114,7 +121,13 @@ def main(apply):
             elif c in keep and c not in seen: out |= desc(c, seen + (n,))
         return out
     named, used_names = {}, collections.Counter()
+    tpl_sim = {s['template']: s for h in P['households'] for s in h['sims'] if s.get('template')}
     for n in sorted(ph_id, key=str):
+        if isinstance(n, tuple) and n[0] == 't' and (n[1] in tpl_sim or n[1] in WIKI_BY_TEMPLATE):
+            g = tpl_sim.get(n[1])   # a game Sim who isn't on the site (Consort Capp), or an unnamed ancestor the wiki names
+            named[n] = {"name": g['name'], "sex": g.get('sex') or 'x', "origin": "Premade"} if g else WIKI_BY_TEMPLATE[n[1]]
+            if g: named[n]['inGame'] = True
+            ph_id[n] = re.sub(r'[^a-z0-9]+', '-', named[n]['name'].lower()).strip('-'); continue
         k = tuple(sorted(desc(n))); opts = WIKI_NAMES.get(k, [])
         if used_names[k] < len(opts):
             named[n] = opts[used_names[k]]; used_names[k] += 1
@@ -127,7 +140,9 @@ def main(apply):
         if not s.get('parents'): s.pop('parents', None)
     for n, pid in ph_id.items():
         ps = [ph_id[p] if p in ph_id else p for p in up.get(n, ()) if p in ph_id or isinstance(p, str)]
-        if n in named: people[pid] = {**named[n], "notInGame": True, "fromFix": True, **({"parents": ps[:2]} if ps else {})}
+        if n in named:
+            rec = {k: v for k, v in named[n].items() if k != 'inGame'}
+            people[pid] = {**rec, **({} if named[n].get('inGame') else {"notInGame": True}), "fromFix": True, **({"parents": ps[:2]} if ps else {})}
         else: people[pid] = {"name": "Unknown", "sex": sex.get(n, "x"), "placeholder": True, **({"parents": ps[:2]} if ps else {})}
     report['unknown parents added'] = len(ph_id); report['parent links added'] = added
     for k, v in report.items(): print(f"{k}: {v}")

@@ -246,7 +246,8 @@
      "dynasty": {
       "name": "Capp",
       "role": "head"
-     }
+     },
+     "parents": ["cordelia-capp", "caliban-capp"]
     },
     {
      "id": "beatrice-capp",
