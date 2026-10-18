@@ -49,7 +49,8 @@
     {"lot": "La Vivace", "myName": "La Vivace", "type": "Lounge", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Giardino Del Grandioso", "myName": "Giardino Del Grandioso", "type": "Small Business Residential", "size": "64x64", "residents": "Alto (vineyard: Enzo's mother, sister and brother-in-law, to create)", "built": false, "shared": false, "screenshots": false, "simsMade": false}
    ],
-   "bannerZoom": 1.15
+   "bannerZoom": 1.15,
+   "bannerShift": [0, 0.04]
   }
  ],
  "highlights": [
