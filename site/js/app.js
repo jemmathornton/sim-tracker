@@ -916,7 +916,7 @@ function worldAbout(w){
   if (!w.weather && !w.highlights) return "";
   // a slim strip under the banner with no heading of its own, so Neighbourhoods stays the page's first heading (her feedback, 19 Oct)
   return `<section class="world-strip" style="--h:${w.color}">
-    ${w.weatherSeasons ? `<div class="wx-seasons">${CAL_SEASONS.filter(n => w.weatherSeasons[n]).map(n => `<div class="s-${n.toLowerCase()}">${ic(SEASON_ICON[n])}<b>${n}:</b><span>${esc(w.weatherSeasons[n].toLowerCase())}</span></div>`).join("")}</div>`
+    ${w.weatherSeasons ? `<div class="wx-seasons">${CAL_SEASONS.filter(n => w.weatherSeasons[n]).map(n => `<div class="s-${n.toLowerCase()}">${ic(SEASON_ICON[n])}<b>${n}:</b><span>${esc(w.weatherSeasons[n].replace(/, ([^,]+)$/, " and $1"))}</span></div>`).join("")}</div>`
       : w.weather ? `<p class="home-to world-weather">${ic("weather")}<span>${esc(w.weather)}</span></p>` : ""}
     ${w.highlights ? `<div class="wx-highlights">${w.highlights.map(x => `<div>${ic("landmark")}<b>${esc(x.name)}:</b><span>${esc(x.text)}</span></div>`).join("")}</div>` : ""}</section>`;
 }
