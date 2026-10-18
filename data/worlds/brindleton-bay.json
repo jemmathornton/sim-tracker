@@ -54,7 +54,7 @@
    "lots": [
     {"lot": "Deadgrass Discoveries", "myName": "Deadgrass Discoveries", "type": "Museum", "size": "30x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ],
-   "bannerShift": [0.05, 0]
+   "bannerShift": [0.12, 0]
   }
  ],
  "weather": "Snowy winters, thunderstorms in summer, plenty of rain",
