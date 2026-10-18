@@ -560,7 +560,7 @@ function renderNav(active, key, ctx){
       : `<a class="soon" aria-disabled="true" style="--c:${w.glow||w.color}"><span class="dot"></span>${esc(w.name)}${grey ? "" : `<span class="pct">soon</span>`}</a>`;
     if (open && on) {
       h += `<div class="subnav">${w.hoods.map(x => {
-        let t = `<a href="#n-${x.id}" class="${ctx.hood===x && !ctx.hh ? (ctx.lot ? "path" : "cur") : ""}">${esc(x.name)}</a>`;
+        let t = `<a href="#n-${x.id}" class="${ctx.hood===x && !ctx.hh ? (ctx.lot ? "path" : "cur") : ""}">${esc(((NB_BANNER[w.id] || {})[x.name] || {}).title || x.name)}</a>`;   // her own order for a two-part name (bannerTitle)
         const seenB = new Set();
         if (ctx.hood === x && !ctx.hh) t += `<div class="lotnav">${x.lots.map(l => {
           let pre = "";
