@@ -78,7 +78,9 @@ const store = () => { try { localStorage.setItem(KEY, JSON.stringify(saved)); } 
 const square = (x, y) => COLS[Math.min(7, Math.floor(x * 8))] + (Math.min(ROWS - 1, Math.floor(y * ROWS)) + 1);
 
 // every owned world with a map; spots and boxes already on the site are shown to start with (Willow Creek had spots only)
-const todo = typeof DATA === "undefined" ? [] : DATA.worlds.filter(w => w.owned && w.map);
+// ?world=selvadorada shows just that world (for redoing one world's boxes)
+const ONLY = new URLSearchParams(location.search).get("world");
+const todo = typeof DATA === "undefined" ? [] : DATA.worlds.filter(w => w.owned && w.map && (!ONLY || slug(w.name) === ONLY));
 todo.forEach(w => { const pts = (DATA.nbPt || {})[slug(w.name)] || {}, boxes = (DATA.nbBox || {})[slug(w.name)] || {};
   w.hoods.forEach(h => { const pt = pts[h.name]; if (!pt || (saved[w.name] || {})[h.name]) return;
     (saved[w.name] ||= {})[h.name] = {sq: square(pt[0], pt[1]), x: pt[0], y: pt[1], ...(boxes[h.name] ? {box: boxes[h.name]} : {})}; }); });
