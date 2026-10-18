@@ -134,7 +134,7 @@
      "partners": [
       ["juniper-grove", "Spouse"]
      ],
-     "parents": ["unknown-14"]
+     "parents": ["tallulah-grove"]
     },
     {
      "id": "starbrite",
@@ -231,7 +231,7 @@
       ["Juniper Grove", "Best Friends"],
       ["Don Gooseman", "Best Friends"]
      ],
-     "parents": ["unknown-14"]
+     "parents": ["tallulah-grove"]
     }
    ]
   },

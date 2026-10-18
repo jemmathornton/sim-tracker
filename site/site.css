@@ -682,3 +682,6 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 .badge.c-member{background:color-mix(in srgb,#AEB5BA 10%,var(--surface));color:#1A1F1C;border:1px solid #9AA2A8}
 /* university organisation badges: the university's colour with its gold trim, as on the game's banners (dark purple for the secret society) */
 .badge.o-badge{background:var(--u);color:#fff;border:1.5px solid var(--t)}
+/* relatives who were never in the game (named on the Sims Wiki): dashed outline */
+.tc.nig{border:1.5px dashed color-mix(in srgb,var(--muted) 75%,var(--surface))}
+.tree-key .nig-k{border:1.5px dashed var(--muted);background:transparent}

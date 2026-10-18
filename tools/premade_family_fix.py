@@ -10,12 +10,25 @@
     python tools/premade_family_fix.py           report
     python tools/premade_family_fix.py --apply   write data/worlds/*.json and data/people.json, then rebuild
 """
-import glob, os, sys, subprocess, collections
+import glob, os, re, sys, subprocess, collections
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import ROOT, load, save
 
 NO_ASPIRATION = {"Baby", "Infant", "Toddler"}
 PETS = {"Dog", "Cat", "Horse", "Fox"}
+# the Sims Wiki's names for some of these relatives (her OK, 19 Oct; research/ea-families-extra.md), keyed by the Sims on the site
+# they're an ancestor of. They have never been in the game ("notInGame"), so the site marks them. Two for the same Sims: in order.
+WIKI_NAMES = {
+    ("caleb-vatore", "lilith-vatore"): [{"name": "Gioia Vatore", "sex": "f", "born": "Pasquale"}],
+    ("caleb-vatore", "lilith-vatore", "lily-zhu"): [{"name": "Vittorio Pasquale", "sex": "m"}],
+    ("lily-zhu",): [{"name": "Fiorenza Zhu", "sex": "f", "born": "Pasquale"}],
+    ("duane-talla", "lilliana-kealoha"): [{"name": "Manu Kealoha", "sex": "m"}],
+    ("sienna-grove", "umber-grove"): [{"name": "Tallulah Grove", "sex": "f", "late": True}],
+    ("esther-gomes", "tziporah-gomes"): [{"name": "Orodueynna Gomes", "sex": "f", "late": True}],
+    ("vanesha-cahyaputri", "zhafira-cahyaputri"): [{"name": "Cahya Cahyaputri", "sex": "m", "late": True}, {"name": "Wulan Cahyaputri", "sex": "f", "late": True}],
+    ("karmine-luna",): [{"name": "Colin Sullivan", "sex": "m", "late": True, "partners": [["xochitl-luna", "Late Spouse"]]}],
+    ("afua-ananou",): [{"name": "Aghata Ananou", "sex": "f", "late": True}],
+}
 GRANDS = {"RELATIONSHIP_FATHERS_MOM": ("m", "f"), "RELATIONSHIP_FATHERS_FATHER": ("m", "m"),
           "RELATIONSHIP_MOTHERS_MOM": ("f", "f"), "RELATIONSHIP_MOTHERS_FATHER": ("f", "m")}
 
@@ -24,14 +37,15 @@ def main(apply):
     P = load(os.path.join(ROOT, 'research', 'data', 'premades.json'))
     worlds = {p: load(p) for p in glob.glob(os.path.join(ROOT, 'data', 'worlds', '*.json'))}
     ppath = os.path.join(ROOT, 'data', 'people.json'); people = load(ppath)
-    for k in [k for k in people if k.startswith('unknown-')]: del people[k]   # made by this script last time: worked out again below
+    made = {k for k, v in people.items() if k.startswith('unknown-') or (isinstance(v, dict) and v.get('fromFix'))}
+    for k in made: del people[k]   # made by this script last time: worked out again below
     site = {}   # site id -> Sim dict (premade Sims only)
     for W in worlds.values():
         for hh in (W.get('households') or {}).values():
             for s in hh.get('sims', []):
                 if s.get('id') and s.get('origin') == 'Premade':
                     site[s['id']] = s
-                    if any(p.startswith('unknown-') for p in s.get('parents', [])): s['parents'] = [p for p in s['parents'] if not p.startswith('unknown-')]
+                    if any(p in made for p in s.get('parents', [])): s['parents'] = [p for p in s['parents'] if p not in made]
     report = collections.Counter()
     # 1. married couples, 2. no aspirations for pets and the very young
     for s in site.values():
@@ -93,6 +107,18 @@ def main(apply):
     keep = {n for n in keep if has_kids(n)}   # an unknown with no one to be a parent of is left out
     existing = [k for k in people if k.startswith('unknown-')]   # numbering carries on after any already there
     ph_id = {n: f"unknown-{len(existing) + i + 1}" for i, n in enumerate(sorted(keep, key=str))}
+    def desc(n, seen=()):   # the Sims on the site a kept unknown is an ancestor of
+        out = set()
+        for c in kids_of[n]:
+            if isinstance(c, str): out.add(c)
+            elif c in keep and c not in seen: out |= desc(c, seen + (n,))
+        return out
+    named, used_names = {}, collections.Counter()
+    for n in sorted(ph_id, key=str):
+        k = tuple(sorted(desc(n))); opts = WIKI_NAMES.get(k, [])
+        if used_names[k] < len(opts):
+            named[n] = opts[used_names[k]]; used_names[k] += 1
+            ph_id[n] = re.sub(r'[^a-z0-9]+', '-', named[n]['name'].lower()).strip('-')
     added = 0
     for sid, s in site.items():
         for p in up.get(sid, ()):
@@ -101,7 +127,8 @@ def main(apply):
         if not s.get('parents'): s.pop('parents', None)
     for n, pid in ph_id.items():
         ps = [ph_id[p] if p in ph_id else p for p in up.get(n, ()) if p in ph_id or isinstance(p, str)]
-        people[pid] = {"name": "Unknown", "sex": sex.get(n, "x"), "placeholder": True, **({"parents": ps[:2]} if ps else {})}
+        if n in named: people[pid] = {**named[n], "notInGame": True, "fromFix": True, **({"parents": ps[:2]} if ps else {})}
+        else: people[pid] = {"name": "Unknown", "sex": sex.get(n, "x"), "placeholder": True, **({"parents": ps[:2]} if ps else {})}
     report['unknown parents added'] = len(ph_id); report['parent links added'] = added
     for k, v in report.items(): print(f"{k}: {v}")
     for n, pid in ph_id.items():

@@ -132,7 +132,7 @@
      "rels": [
       ["Zhafira Cahyaputri", "Disliked"]
      ],
-     "parents": ["unknown-8", "unknown-9"]
+     "parents": ["cahya-cahyaputri", "wulan-cahyaputri"]
     },
     {
      "id": "zhafira-cahyaputri",
@@ -147,7 +147,7 @@
      "rels": [
       ["Vanesha Cahyaputri", "Disliked"]
      ],
-     "parents": ["unknown-8", "unknown-9"],
+     "parents": ["cahya-cahyaputri", "wulan-cahyaputri"],
      "school": "High school"
     }
    ]

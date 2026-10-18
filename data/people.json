@@ -86,12 +86,17 @@
   "name": "Unknown",
   "sex": "f",
   "placeholder": true,
-  "parents": ["shigeru-nishidake", "sachiko-nishidake"]
+  "parents": ["sachiko-nishidake", "shigeru-nishidake"]
  },
- "unknown-3": {
-  "name": "Unknown",
+ "colin-sullivan": {
+  "name": "Colin Sullivan",
   "sex": "m",
-  "placeholder": true,
+  "late": true,
+  "partners": [
+   ["xochitl-luna", "Late Spouse"]
+  ],
+  "notInGame": true,
+  "fromFix": true,
   "parents": ["eleanor-sullivan"]
  },
  "unknown-4": {
@@ -111,52 +116,68 @@
   "sex": "f",
   "placeholder": true
  },
- "unknown-7": {
-  "name": "Unknown",
-  "sex": "x",
-  "placeholder": true,
+ "aghata-ananou": {
+  "name": "Aghata Ananou",
+  "sex": "f",
+  "late": true,
+  "notInGame": true,
+  "fromFix": true,
   "parents": ["ekene-ananou"]
  },
- "unknown-8": {
-  "name": "Unknown",
-  "sex": "x",
-  "placeholder": true
+ "cahya-cahyaputri": {
+  "name": "Cahya Cahyaputri",
+  "sex": "m",
+  "late": true,
+  "notInGame": true,
+  "fromFix": true
  },
- "unknown-9": {
-  "name": "Unknown",
-  "sex": "x",
-  "placeholder": true
+ "wulan-cahyaputri": {
+  "name": "Wulan Cahyaputri",
+  "sex": "f",
+  "late": true,
+  "notInGame": true,
+  "fromFix": true
  },
- "unknown-10": {
-  "name": "Unknown",
-  "sex": "x",
-  "placeholder": true,
-  "parents": ["unknown-11"]
+ "gioia-vatore": {
+  "name": "Gioia Vatore",
+  "sex": "f",
+  "born": "Pasquale",
+  "notInGame": true,
+  "fromFix": true,
+  "parents": ["vittorio-pasquale"]
  },
- "unknown-11": {
-  "name": "Unknown",
-  "sex": "x",
-  "placeholder": true
+ "vittorio-pasquale": {
+  "name": "Vittorio Pasquale",
+  "sex": "m",
+  "notInGame": true,
+  "fromFix": true
  },
- "unknown-12": {
-  "name": "Unknown",
-  "sex": "x",
-  "placeholder": true,
-  "parents": ["unknown-11"]
+ "fiorenza-zhu": {
+  "name": "Fiorenza Zhu",
+  "sex": "f",
+  "born": "Pasquale",
+  "notInGame": true,
+  "fromFix": true,
+  "parents": ["vittorio-pasquale"]
  },
- "unknown-13": {
-  "name": "Unknown",
-  "sex": "x",
-  "placeholder": true
+ "manu-kealoha": {
+  "name": "Manu Kealoha",
+  "sex": "m",
+  "notInGame": true,
+  "fromFix": true
  },
- "unknown-14": {
-  "name": "Unknown",
-  "sex": "x",
-  "placeholder": true
+ "tallulah-grove": {
+  "name": "Tallulah Grove",
+  "sex": "f",
+  "late": true,
+  "notInGame": true,
+  "fromFix": true
  },
- "unknown-15": {
-  "name": "Unknown",
-  "sex": "x",
-  "placeholder": true
+ "orodueynna-gomes": {
+  "name": "Orodueynna Gomes",
+  "sex": "f",
+  "late": true,
+  "notInGame": true,
+  "fromFix": true
  }
 }
