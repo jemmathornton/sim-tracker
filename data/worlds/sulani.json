@@ -17,7 +17,8 @@
     {"lot": "Caldera Camp", "myName": "Caldera Camp", "type": "Residential", "size": "30x20", "residents": "Mine", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["bTN95hlYEeuNKWEZzJ8AzQ=="], "traits": ["Eco Lot"], "challenges": ["Volcanic Activity", "Off-the-Grid"]},
     {"lot": "Key Point", "myName": "Key Point", "type": "To be decided", "size": "40x30", "residents": null, "built": false, "shared": false, "screenshots": false, "simsMade": false}
    ],
-   "festivals": ["Turtle Hatching"]
+   "festivals": ["Turtle Hatching"],
+   "bannerShift": [0, -0.04]
   },
   {
    "name": "Ohan'ali Town",
@@ -45,7 +46,8 @@
     {"lot": "Pier Perfection", "myName": "Pier Perfection", "type": "Residential", "size": "30x20", "residents": "Empty", "built": true, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Sand Simoleon Beach", "myName": "Sand Simoleon Beach", "type": "Beach", "size": "40x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["o96LYe1NEeqKMCQfmaYcsw=="], "traits": ["Oceanic Paradise", "Sunny Aspect"]},
     {"lot": "Sapphire Shores", "myName": "Sapphire Shores", "type": "Residential", "size": "50x50", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["2laHTe1NEeqLICQfmaYcsw=="], "traits": ["Oceanic Paradise", "Child's Play", "Sunny Aspect"]}
-   ]
+   ],
+   "bannerShift": [0, -0.04]
   }
  ],
  "weather": "Sunny most of the year, no snow, monsoons in summer and autumn",
