@@ -800,7 +800,8 @@ function hoodArt(x){
   const nudge = (NB_BANNER[x.world.id] || {})[x.name] || {zoom: 1, shift: [0, 0]};
   const z = box ? Math.max(CARD_RATIO / MAP_RATIO + .01, boxZoom(box) * ((NB_ZOOM[x.world.id] || {})[x.name] || 1) * nudge.zoom) : 0;   // her own closer zoom for a card (14 Oct: Whispering Glen)
   const at = box ? boxCentre(box, z, others) : null;
-  const v = box ? nbView([at[0] + nudge.shift[0], at[1] + nudge.shift[1]], z) : spot ? nbView([spot[0] + nudge.shift[0], spot[1] + nudge.shift[1]], ZOOM * nudge.zoom) : null;
+  const cs = nudge.card || [0, 0];   // cardShift: a little extra for the card only (19 Oct: Deadgrass Isle's island sat left of centre)
+  const v = box ? nbView([at[0] + nudge.shift[0] + cs[0], at[1] + nudge.shift[1] + cs[1]], z) : spot ? nbView([spot[0] + nudge.shift[0], spot[1] + nudge.shift[1]], ZOOM * nudge.zoom) : null;
   const bg = !x.world.map ? "" : v ? `background:url('${x.world.map}') ${v.bg}` : `background:url('${x.world.map}') center 45%/cover`;
   const circles = x.lots.map(l => nbTile(l).replace("<i ", `<i data-lot-link="${l.id}" aria-label="${esc(l.name)}" `).replace(/ title="[^"]*"/, ` data-name="${esc(l.name)}"`)).join("");
   return `<div class="photo nb-map" style="${bg}"><span class="nb-bubbles${n > 5 ? " many" : ""}">${circles}</span><span class="type">Neighbourhood</span></div>`;
