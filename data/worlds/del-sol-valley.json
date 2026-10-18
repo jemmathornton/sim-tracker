@@ -14,8 +14,8 @@
    "mapBox": [0.32, 0.3, 0.46, 0.43],
    "lots": [
     {"lot": "Vacuous Green", "myName": "Strike Out!", "type": "Nightclub", "size": "50x40", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["+RyMyQ0wEeqC+TQshgnHrQ=="], "traits": ["Up-and-Coming Hotspot", "Party Place"]},
-    {"lot": "Inner Circle", "myName": "Inner Circle", "type": "Residential Rental (4)", "size": "40x30", "residents": "Roomies", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["loFJviHeSPiqw5EI645QUg==", "5mQygaPJEeuPieWcoywPdA=="], "traits": ["Party Place"], "challenges": ["Quake Zone", "Filthy"], "units": [{"name": "1", "traits": ["Party Place"], "challenges": ["Quake Zone", "Filthy"]}, {"name": "2"}, {"name": "3"}, {"name": "4"}]},
-    {"lot": "Upland Place", "myName": "Upland Trailer Park", "type": "Residential Rental (4)", "size": "40x30", "residents": "Eclectic Arts", "noLandlord": true, "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["sf2Tcm6GSAOVENYPoOEwGw==", "01zLurUYEeuL/ecawTB/JA=="], "traits": ["Sunny Aspect"], "challenges": ["Filthy", "Quake Zone"], "tenants": [{"name": "Zest", "note": "Johnny Zest, from Oasis Springs", "unit": 4}], "units": [{"name": "1", "challenges": ["Filthy", "Quake Zone"], "traits": ["Sunny Aspect"]}, {"name": "2"}, {"name": "3"}, {"name": "4"}]}
+    {"lot": "Inner Circle", "myName": "Inner Circle", "type": "Residential Rental (4)", "size": "40x30", "residents": "Huntington", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["loFJviHeSPiqw5EI645QUg==", "5mQygaPJEeuPieWcoywPdA=="], "traits": ["Party Place"], "challenges": ["Quake Zone", "Filthy"], "units": [{"name": "1", "traits": ["Party Place"], "challenges": ["Quake Zone", "Filthy"]}, {"name": "2"}, {"name": "3"}, {"name": "4"}], "noLandlord": true, "statsResidents": "Roomies (Huntington, Kalani, Richards, Patel)", "tenants": [{"name": "Kalani", "unit": 2}, {"name": "Richards", "unit": 3}, {"name": "Patel", "unit": 4}]},
+    {"lot": "Upland Place", "myName": "Upland Trailer Park", "type": "Residential Rental (4)", "size": "40x30", "residents": "Eggleston", "noLandlord": true, "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["sf2Tcm6GSAOVENYPoOEwGw==", "01zLurUYEeuL/ecawTB/JA=="], "traits": ["Sunny Aspect"], "challenges": ["Filthy", "Quake Zone"], "tenants": [{"name": "Martin", "unit": 2}, {"name": "Holland", "unit": 3}, {"name": "Zest", "note": "Johnny Zest, from Oasis Springs", "unit": 4}], "units": [{"name": "1", "challenges": ["Filthy", "Quake Zone"], "traits": ["Sunny Aspect"]}, {"name": "2"}, {"name": "3"}, {"name": "4"}], "statsResidents": "Eclectic Arts (Eggleston, Martin, Holland); tenant Zest"}
    ]
   },
   {
@@ -98,98 +98,6 @@
     }
    ],
    "bio": "Johnny Zest has the stage name and the dream, but maybe not the talent... Disowned by the Landgraabs for quitting school, Johnny wants to make his own fame and fortune as a standup comedian.",
-   "bioFrom": "EA"
-  },
-  "Roomies": {
-   "source": [
-    ["J", "https://sims.fandom.com/wiki/J_Huntington_III"],
-    ["Mitchell", "https://sims.fandom.com/wiki/Mitchell_Kalani"],
-    ["Gavin", "https://sims.fandom.com/wiki/Gavin_Richards"],
-    ["Zoe", "https://sims.fandom.com/wiki/Zoe_Patel"],
-    ["Roomies household", "https://sims.fandom.com/wiki/Roomies_household_(Oasis_Springs)"]
-   ],
-   "sims": [
-    {
-     "id": "j-huntington-iii",
-     "name": "J Huntington III",
-     "sex": "m",
-     "origin": "Premade",
-     "age": "Young Adult",
-     "aspiration": "Bodybuilder",
-     "traits": ["Active", "Bro", "Noncommittal"],
-     "bonus": "High Metabolism",
-     "career": "Tech Guru · Quality Assurance (level 2)",
-     "skills": [
-      ["Fitness", 2, 10],
-      ["Programming", 2, 10]
-     ],
-     "rels": [
-      ["Gavin Richards", "Acquaintance"],
-      ["Mitchell Kalani", "Acquaintance"],
-      ["Zoe Patel", "Acquaintance"]
-     ]
-    },
-    {
-     "id": "mitchell-kalani",
-     "name": "Mitchell Kalani",
-     "sex": "m",
-     "origin": "Premade",
-     "age": "Young Adult",
-     "aspiration": "Joke Star",
-     "traits": ["Bro", "Lazy", "Outgoing"],
-     "bonus": "Gregarious",
-     "career": "Culinary · Assistant Dishwasher (level 1)",
-     "skills": [
-      ["Comedy", 2, 10],
-      ["Mixology", 2, 10]
-     ],
-     "rels": [
-      ["Gavin Richards", "Acquaintance"],
-      ["J Huntington III", "Acquaintance"],
-      ["Zoe Patel", "Acquaintance"]
-     ]
-    },
-    {
-     "id": "gavin-richards",
-     "name": "Gavin Richards",
-     "sex": "m",
-     "origin": "Premade",
-     "age": "Young Adult",
-     "aspiration": "Bestselling Author",
-     "traits": ["Bro", "Creative", "Neat"],
-     "bonus": "Muser",
-     "career": "Writer · Blogger (level 2)",
-     "skills": [
-      ["Writing", 3, 10]
-     ],
-     "rels": [
-      ["J Huntington III", "Acquaintance"],
-      ["Mitchell Kalani", "Acquaintance"],
-      ["Zoe Patel", "Acquaintance"]
-     ]
-    },
-    {
-     "id": "zoe-patel",
-     "name": "Zoe Patel",
-     "sex": "f",
-     "origin": "Premade",
-     "age": "Young Adult",
-     "aspiration": "Friend of the World",
-     "traits": ["Goofball", "Cheerful", "Clumsy"],
-     "bonus": "Gregarious",
-     "skills": [
-      ["Charisma", 2, 10],
-      ["Mischief", 1, 10]
-     ],
-     "rels": [
-      ["Gavin Richards", "Acquaintance"],
-      ["J Huntington III", "Acquaintance"],
-      ["Mitchell Kalani", "Acquaintance"]
-     ],
-     "career": ""
-    }
-   ],
-   "bio": "This household seems to have stepped right out of a TV sitcom. What wacky misadventures will the perky Zoe, easygoing Mitchell, uptight ladies’ man J, and intellectual Gavin suffer this week? Tune in and find out!",
    "bioFrom": "EA"
   },
   "Bailey-Moon": {
@@ -276,7 +184,150 @@
    "bio": "Judith Ward is a legend in the acting community. She has starred in everything from comedies to dramas. You name it Judith has played the role. That is not to say she is an easy person to befriend. Judith has burned her fair share of bridges along the way. Her mentality is to get rich at all costs. She will be the first to throw you under the bus to advance her career. She has been married several times, but all of her partners have only slowed her down. She prefers to live fast and does not settle for mediocrity.",
    "bioFrom": "EA"
   },
-  "Eclectic Arts": {
+  "Huntington": {
+   "source": [
+    ["J", "https://sims.fandom.com/wiki/J_Huntington_III"],
+    ["Mitchell", "https://sims.fandom.com/wiki/Mitchell_Kalani"],
+    ["Gavin", "https://sims.fandom.com/wiki/Gavin_Richards"],
+    ["Zoe", "https://sims.fandom.com/wiki/Zoe_Patel"],
+    ["Roomies household", "https://sims.fandom.com/wiki/Roomies_household_(Oasis_Springs)"]
+   ],
+   "bio": "This household seems to have stepped right out of a TV sitcom. What wacky misadventures will the perky Zoe, easygoing Mitchell, uptight ladies’ man J, and intellectual Gavin suffer this week? Tune in and find out!",
+   "bioFrom": "EA",
+   "single": true,
+   "group": "Roomies",
+   "sims": [
+    {
+     "id": "j-huntington-iii",
+     "name": "J Huntington III",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Bodybuilder",
+     "traits": ["Active", "Bro", "Noncommittal"],
+     "bonus": "High Metabolism",
+     "career": "Tech Guru · Quality Assurance (level 2)",
+     "skills": [
+      ["Fitness", 2, 10],
+      ["Programming", 2, 10]
+     ],
+     "rels": [
+      ["Gavin Richards", "Acquaintance"],
+      ["Mitchell Kalani", "Acquaintance"],
+      ["Zoe Patel", "Acquaintance"]
+     ]
+    }
+   ]
+  },
+  "Kalani": {
+   "source": [
+    ["J", "https://sims.fandom.com/wiki/J_Huntington_III"],
+    ["Mitchell", "https://sims.fandom.com/wiki/Mitchell_Kalani"],
+    ["Gavin", "https://sims.fandom.com/wiki/Gavin_Richards"],
+    ["Zoe", "https://sims.fandom.com/wiki/Zoe_Patel"],
+    ["Roomies household", "https://sims.fandom.com/wiki/Roomies_household_(Oasis_Springs)"]
+   ],
+   "bio": "This household seems to have stepped right out of a TV sitcom. What wacky misadventures will the perky Zoe, easygoing Mitchell, uptight ladies’ man J, and intellectual Gavin suffer this week? Tune in and find out!",
+   "bioFrom": "EA",
+   "single": true,
+   "group": "Roomies",
+   "sims": [
+    {
+     "id": "mitchell-kalani",
+     "name": "Mitchell Kalani",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Joke Star",
+     "traits": ["Bro", "Lazy", "Outgoing"],
+     "bonus": "Gregarious",
+     "career": "Culinary · Assistant Dishwasher (level 1)",
+     "skills": [
+      ["Comedy", 2, 10],
+      ["Mixology", 2, 10]
+     ],
+     "rels": [
+      ["Gavin Richards", "Acquaintance"],
+      ["J Huntington III", "Acquaintance"],
+      ["Zoe Patel", "Acquaintance"]
+     ]
+    }
+   ]
+  },
+  "Richards": {
+   "source": [
+    ["J", "https://sims.fandom.com/wiki/J_Huntington_III"],
+    ["Mitchell", "https://sims.fandom.com/wiki/Mitchell_Kalani"],
+    ["Gavin", "https://sims.fandom.com/wiki/Gavin_Richards"],
+    ["Zoe", "https://sims.fandom.com/wiki/Zoe_Patel"],
+    ["Roomies household", "https://sims.fandom.com/wiki/Roomies_household_(Oasis_Springs)"]
+   ],
+   "bio": "This household seems to have stepped right out of a TV sitcom. What wacky misadventures will the perky Zoe, easygoing Mitchell, uptight ladies’ man J, and intellectual Gavin suffer this week? Tune in and find out!",
+   "bioFrom": "EA",
+   "single": true,
+   "group": "Roomies",
+   "sims": [
+    {
+     "id": "gavin-richards",
+     "name": "Gavin Richards",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Bestselling Author",
+     "traits": ["Bro", "Creative", "Neat"],
+     "bonus": "Muser",
+     "career": "Writer · Blogger (level 2)",
+     "skills": [
+      ["Writing", 3, 10]
+     ],
+     "rels": [
+      ["J Huntington III", "Acquaintance"],
+      ["Mitchell Kalani", "Acquaintance"],
+      ["Zoe Patel", "Acquaintance"]
+     ]
+    }
+   ]
+  },
+  "Patel": {
+   "source": [
+    ["J", "https://sims.fandom.com/wiki/J_Huntington_III"],
+    ["Mitchell", "https://sims.fandom.com/wiki/Mitchell_Kalani"],
+    ["Gavin", "https://sims.fandom.com/wiki/Gavin_Richards"],
+    ["Zoe", "https://sims.fandom.com/wiki/Zoe_Patel"],
+    ["Roomies household", "https://sims.fandom.com/wiki/Roomies_household_(Oasis_Springs)"]
+   ],
+   "bio": "This household seems to have stepped right out of a TV sitcom. What wacky misadventures will the perky Zoe, easygoing Mitchell, uptight ladies’ man J, and intellectual Gavin suffer this week? Tune in and find out!",
+   "bioFrom": "EA",
+   "single": true,
+   "group": "Roomies",
+   "sims": [
+    {
+     "id": "zoe-patel",
+     "name": "Zoe Patel",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Friend of the World",
+     "traits": ["Goofball", "Cheerful", "Clumsy"],
+     "bonus": "Gregarious",
+     "skills": [
+      ["Charisma", 2, 10],
+      ["Mischief", 1, 10]
+     ],
+     "rels": [
+      ["Gavin Richards", "Acquaintance"],
+      ["J Huntington III", "Acquaintance"],
+      ["Mitchell Kalani", "Acquaintance"]
+     ],
+     "career": ""
+    }
+   ]
+  },
+  "Eggleston": {
+   "bio": "The Eclectic Arts Household consists of three friends who have decided to cut ties with the modern world in order to explore their inner creativity. They received a large sum of money from their parents, and are using it to explore their creative dreams in a less hectic town.",
+   "bioFrom": "EA",
+   "single": true,
+   "group": "Eclectic Arts",
    "sims": [
     {
      "id": "mark-eggleston",
@@ -296,7 +347,15 @@
       ["Wellness", 1, 10],
       ["Dancing", 1, 5]
      ]
-    },
+    }
+   ]
+  },
+  "Martin": {
+   "bio": "The Eclectic Arts Household consists of three friends who have decided to cut ties with the modern world in order to explore their inner creativity. They received a large sum of money from their parents, and are using it to explore their creative dreams in a less hectic town.",
+   "bioFrom": "EA",
+   "single": true,
+   "group": "Eclectic Arts",
+   "sims": [
     {
      "id": "alice-martin",
      "name": "Alice Martin",
@@ -316,7 +375,15 @@
       ["Charisma", 1, 10],
       ["Dancing", 1, 5]
      ]
-    },
+    }
+   ]
+  },
+  "Holland": {
+   "bio": "The Eclectic Arts Household consists of three friends who have decided to cut ties with the modern world in order to explore their inner creativity. They received a large sum of money from their parents, and are using it to explore their creative dreams in a less hectic town.",
+   "bioFrom": "EA",
+   "single": true,
+   "group": "Eclectic Arts",
+   "sims": [
     {
      "id": "leslie-holland",
      "name": "Leslie Holland",
@@ -337,9 +404,7 @@
       ["Video Gaming", 1, 10]
      ]
     }
-   ],
-   "bio": "The Eclectic Arts Household consists of three friends who have decided to cut ties with the modern world in order to explore their inner creativity. They received a large sum of money from their parents, and are using it to explore their creative dreams in a less hectic town.",
-   "bioFrom": "EA"
+   ]
   }
  }
 }
