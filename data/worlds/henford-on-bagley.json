@@ -306,6 +306,106 @@
      ]
     }
    ]
+  },
+  "Watson-Holmes": {
+   "sims": [
+    {
+     "id": "natalie-watson",
+     "name": "Natalie Watson",
+     "sex": "f",
+     "origin": "Mine",
+     "from": "save “Return to the HOB” (2023-12-21)",
+     "age": "Adult",
+     "aspiration": "Musical Genius",
+     "traits": ["Ambitious", "Materialistic", "Creative"],
+     "bonus": "Muser",
+     "career": "Social Media · Vice President of Public Relations (level 9)",
+     "skills": [
+      ["Charisma", 8, 10],
+      ["Media Production", 4, 5],
+      ["Fitness", 2, 10],
+      ["Dancing", 4, 5],
+      ["Comedy", 3, 10],
+      ["Writing", 4, 10],
+      ["Cooking", 2, 10],
+      ["DJ Mixing", 2, 10],
+      ["Singing", 5, 10],
+      ["Mischief", 2, 10],
+      ["Painting", 4, 10],
+      ["Guitar", 9, 10],
+      ["Photography", 4, 5],
+      ["Piano", 2, 10],
+      ["Video Gaming", 1, 10],
+      ["Parenting", 3, 10],
+      ["Gardening", 1, 10],
+      ["Handiness", 1, 10]
+     ],
+     "partners": [
+      ["julian-holmes", "Spouse"]
+     ]
+    },
+    {
+     "id": "julian-holmes",
+     "name": "Julian Holmes",
+     "sex": "m",
+     "origin": "Mine",
+     "from": "save “Return to the HOB” (2023-12-21)",
+     "age": "Adult",
+     "aspiration": "Country Caretaker",
+     "traits": ["Clumsy", "Animal Enthusiast", "Loves Outdoors"],
+     "bonus": "Collector",
+     "career": "Village Errands · Village Errands (level 1)",
+     "skills": [
+      ["Charisma", 2, 10],
+      ["Gardening", 9, 10],
+      ["Fitness", 2, 10],
+      ["Handiness", 6, 10],
+      ["Cooking", 10, 10],
+      ["Baking", 4, 10],
+      ["Logic", 4, 10],
+      ["Comedy", 2, 10],
+      ["Singing", 1, 10],
+      ["Dancing", 1, 5],
+      ["Photography", 1, 5],
+      ["Fishing", 1, 10],
+      ["Video Gaming", 1, 10],
+      ["Parenting", 4, 10]
+     ],
+     "partners": [
+      ["natalie-watson", "Spouse"]
+     ]
+    },
+    {
+     "id": "daisy-watson-holmes",
+     "name": "Daisy Watson-Holmes",
+     "sex": "f",
+     "origin": "Mine",
+     "from": "save “Return to the HOB” (2023-12-21)",
+     "age": "Child",
+     "aspiration": "Rambunctious Scamp",
+     "traits": ["Loner"],
+     "career": "Scout · Griffon Scout (level 2)",
+     "school": "Grade school · grade B",
+     "skills": [
+      ["Motor", 3, 10],
+      ["Mental", 1, 10],
+      ["Social", 2, 10],
+      ["Creativity", 2, 10],
+      ["Cross-stitch", 1, 5]
+     ],
+     "parents": ["natalie-watson", "julian-holmes"]
+    },
+    {
+     "id": "peanut",
+     "name": "Peanut",
+     "sex": "f",
+     "origin": "Mine",
+     "from": "save “Return to the HOB” (2023-12-21)",
+     "age": "Adult",
+     "state": "Cat",
+     "career": ""
+    }
+   ]
   }
  }
 }

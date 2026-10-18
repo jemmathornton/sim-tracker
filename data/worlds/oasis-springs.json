@@ -190,7 +190,52 @@
    ]
   },
   "Leah-Moon Cadberry": {
-   "single": true
+   "single": true,
+   "sims": [
+    {
+     "id": "leah-moon-cadberry",
+     "name": "Leah-Moon Cadberry",
+     "sex": "f",
+     "origin": "Mine",
+     "from": "Library (2025-06-22)",
+     "age": "Elder",
+     "aspiration": "Bodybuilder",
+     "traits": ["Loner", "Clumsy", "Ambitious"],
+     "bonus": "High Metabolism",
+     "career": "Odd Jobs · Odd Jobs Rating: 3 Stars (level 4)",
+     "skills": [
+      ["Charisma", 6, 10],
+      ["Logic", 10, 10],
+      ["Video Gaming", 9, 10],
+      ["Mischief", 2, 10],
+      ["Fitness", 10, 10],
+      ["Writing", 1, 10],
+      ["Dancing", 4, 5],
+      ["Comedy", 4, 10],
+      ["Handiness", 10, 10],
+      ["Entrepreneur", 5, 5],
+      ["Cooking", 10, 10],
+      ["Bowling", 2, 5],
+      ["Robotics", 7, 10],
+      ["Photography", 2, 5],
+      ["Rocket Science", 10, 10],
+      ["Singing", 3, 10],
+      ["Painting", 1, 10],
+      ["Ping Pong", 1, 5],
+      ["Selvadoradian Culture", 1, 5],
+      ["Mixology", 1, 10],
+      ["Parenting", 10, 10],
+      ["Acting", 9, 10],
+      ["Wellness", 5, 10],
+      ["Research & Debate", 9, 10],
+      ["Gourmet Cooking", 2, 10],
+      ["Gemology", 1, 10],
+      ["Herbalism", 1, 10],
+      ["Piano", 2, 10],
+      ["Programming", 2, 10]
+     ]
+    }
+   ]
   },
   "Caliente": {
    "sims": [
@@ -281,6 +326,141 @@
       ["Mischief", 3, 10],
       ["Cooking", 4, 10],
       ["Fitness", 5, 10]
+     ]
+    }
+   ]
+  },
+  "Smith": {
+   "sims": [
+    {
+     "id": "chia-smith",
+     "name": "Chia Smith",
+     "sex": "f",
+     "origin": "Mine",
+     "from": "save “Horses!” (2024-01-12)",
+     "age": "Young Adult",
+     "aspiration": "Freelance Botanist",
+     "traits": ["Bro", "Materialistic", "Child of the Ocean"],
+     "bonus": "Collector",
+     "career": "Lifeguard · Wave Watcher (level 2)",
+     "skills": [
+      ["Piano", 2, 10],
+      ["Writing", 2, 10],
+      ["Mischief", 1, 10],
+      ["Fitness", 1, 10],
+      ["Dancing", 1, 5]
+     ]
+    }
+   ]
+  },
+  "De Costa": {
+   "sims": [
+    {
+     "id": "alexa-de-costa",
+     "name": "Alexa De Costa",
+     "sex": "f",
+     "origin": "Mine",
+     "from": "save “My Saved Game 4,370” (2023-12-21)",
+     "age": "Child",
+     "aspiration": "Artistic Prodigy",
+     "traits": ["Loner"],
+     "career": "",
+     "school": "Grade school · grade C",
+     "skills": [
+      ["Social", 1, 10]
+     ],
+     "parents": ["josie-de-costa", "tara-de-costa"]
+    },
+    {
+     "id": "josie-de-costa",
+     "name": "Josie De Costa",
+     "sex": "f",
+     "origin": "Mine",
+     "from": "save “My Saved Game 4,370” (2023-12-21)",
+     "age": "Adult",
+     "aspiration": "The Curator",
+     "traits": ["Self-Assured", "Genius", "Family-Oriented"],
+     "bonus": "Collector",
+     "career": "",
+     "skills": [
+      ["Fitness", 1, 10],
+      ["Handiness", 7, 10],
+      ["Video Gaming", 3, 10],
+      ["Cooking", 3, 10],
+      ["Comedy", 3, 10],
+      ["Gardening", 3, 10],
+      ["Fishing", 3, 10],
+      ["Baking", 1, 10],
+      ["Mixology", 6, 10],
+      ["Piano", 2, 10],
+      ["Logic", 2, 10],
+      ["Charisma", 3, 10],
+      ["Photography", 1, 5]
+     ],
+     "partners": [
+      ["tara-de-costa", "Spouse"]
+     ]
+    },
+    {
+     "id": "tara-de-costa",
+     "name": "Tara De Costa",
+     "sex": "f",
+     "origin": "Mine",
+     "from": "save “My Saved Game 4,370” (2023-12-21)",
+     "age": "Adult",
+     "aspiration": "Freelance Botanist",
+     "traits": ["Ambitious", "Materialistic", "Neat"],
+     "bonus": "Collector",
+     "career": "Scientist · Pioneer of New Technologies (level 8)",
+     "skills": [
+      ["Fitness", 1, 10],
+      ["Charisma", 6, 10],
+      ["Video Gaming", 6, 10],
+      ["Logic", 7, 10],
+      ["Gourmet Cooking", 1, 10],
+      ["Mischief", 1, 10],
+      ["Handiness", 1, 10],
+      ["Programming", 3, 10],
+      ["Cooking", 7, 10],
+      ["Comedy", 3, 10],
+      ["Gardening", 9, 10]
+     ],
+     "partners": [
+      ["josie-de-costa", "Spouse"]
+     ]
+    }
+   ]
+  },
+  "Rivera": {
+   "sims": [
+    {
+     "id": "carlos-rivera",
+     "name": "Carlos Rivera",
+     "sex": "m",
+     "origin": "Mine",
+     "from": "save “Rotational” (2023-12-21)",
+     "age": "Young Adult",
+     "aspiration": "Freelance Botanist",
+     "traits": ["Loves Outdoors", "Green Fiend", "Maker"],
+     "bonus": "Collector",
+     "career": "Engineer · Engineering Technician (level 5)",
+     "partners": [
+      ["marissa-rivera", "Spouse"]
+     ]
+    },
+    {
+     "id": "marissa-rivera",
+     "name": "Marissa Rivera",
+     "sex": "f",
+     "origin": "Mine",
+     "from": "save “Rotational” (2023-12-21)",
+     "age": "Young Adult",
+     "aspiration": "Eco Innovator",
+     "traits": ["Green Fiend", "Genius", "Self-Assured"],
+     "bonus": "Collector",
+     "career": "",
+     "partners": [
+      ["carlos-rivera", "Spouse"]
      ]
     }
    ]

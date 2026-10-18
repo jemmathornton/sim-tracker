@@ -64,7 +64,84 @@
  ],
  "households": {
   "Sylvia & Kenny Cadberry": {
-   "single": true
+   "sims": [
+    {
+     "id": "sylvia-cadberry",
+     "name": "Sylvia Cadberry",
+     "sex": "f",
+     "origin": "Mine",
+     "from": "save “Not So Berry” (2025-10-11)",
+     "age": "Elder",
+     "aspiration": "Super Parent",
+     "traits": ["Slob", "Music Lover", "Active", "Self-Assured"],
+     "bonus": "Domestic",
+     "career": "Entertainer · Concert Virtuoso (level 10)",
+     "skills": [
+      ["Charisma", 9, 10],
+      ["Logic", 9, 10],
+      ["Video Gaming", 6, 10],
+      ["Singing", 10, 10],
+      ["Mischief", 3, 10],
+      ["Rock Climbing", 2, 5],
+      ["Fitness", 10, 10],
+      ["Rock Climbing", 1, 10],
+      ["Comedy", 4, 10],
+      ["Cooking", 5, 10],
+      ["Piano", 10, 10],
+      ["Handiness", 5, 10],
+      ["Dancing", 3, 5],
+      ["Selvadoradian Culture", 1, 5],
+      ["Writing", 1, 10],
+      ["Archaeology", 1, 10],
+      ["Rocket Science", 2, 10],
+      ["Photography", 2, 5],
+      ["Fishing", 2, 10],
+      ["Wellness", 7, 10],
+      ["Bowling", 2, 5],
+      ["DJ Mixing", 1, 10],
+      ["Entrepreneur", 5, 5],
+      ["Parenting", 10, 10],
+      ["Violin", 9, 10],
+      ["Guitar", 1, 10]
+     ],
+     "partners": [
+      ["kenny-cadberry", "Spouse"]
+     ]
+    },
+    {
+     "id": "kenny-cadberry",
+     "name": "Kenny Cadberry",
+     "sex": "m",
+     "origin": "Mine",
+     "from": "save “Not So Berry” (2025-10-11)",
+     "age": "Elder",
+     "aspiration": "Master Chef",
+     "traits": ["Geek", "Ambitious", "Neat", "Wise", "Generous"],
+     "bonus": "Essence of Flavor",
+     "career": "Tech Guru · Start-up Genius (level 10)",
+     "skills": [
+      ["Charisma", 7, 10],
+      ["Fitness", 3, 10],
+      ["DJ Mixing", 1, 10],
+      ["Dancing", 3, 5],
+      ["Logic", 4, 10],
+      ["Video Gaming", 9, 10],
+      ["Comedy", 1, 10],
+      ["Cooking", 10, 10],
+      ["Programming", 10, 10],
+      ["Parenting", 8, 10],
+      ["Mischief", 1, 10],
+      ["Singing", 1, 10],
+      ["Gourmet Cooking", 9, 10],
+      ["Handiness", 1, 10],
+      ["Gardening", 1, 10],
+      ["Piano", 3, 10]
+     ],
+     "partners": [
+      ["sylvia-cadberry", "Spouse"]
+     ]
+    }
+   ]
   },
   "BFF": {
    "sims": [
@@ -111,6 +188,68 @@
       ["Mixology", 2, 10],
       ["Cooking", 2, 10],
       ["Video Gaming", 1, 10]
+     ]
+    }
+   ]
+  },
+  "Versaree": {
+   "sims": [
+    {
+     "id": "annie-versaree",
+     "name": "Annie Versaree",
+     "sex": "f",
+     "origin": "Mine",
+     "from": "save “Season Events” (2026-03-15)",
+     "age": "Young Adult",
+     "aspiration": "Fabulously Wealthy",
+     "traits": ["Materialistic", "Genius", "Loner"],
+     "bonus": "Business Savvy",
+     "career": "Astronaut · Space Ranger (level 10)",
+     "skills": [
+      ["Video Gaming", 1, 10],
+      ["Charisma", 2, 10],
+      ["Logic", 9, 10],
+      ["Fitness", 10, 10],
+      ["Cooking", 5, 10],
+      ["Rock Climbing", 1, 10],
+      ["Handiness", 5, 10],
+      ["Fabrication", 5, 10],
+      ["Comedy", 1, 10],
+      ["Rocket Science", 10, 10],
+      ["Juice Fizzing", 1, 5],
+      ["Gemology", 1, 10],
+      ["Singing", 1, 10],
+      ["Dancing", 1, 5],
+      ["Mischief", 1, 10],
+      ["Programming", 1, 10],
+      ["Pottery", 1, 10]
+     ]
+    }
+   ]
+  },
+  "LeBlanc": {
+   "sims": [
+    {
+     "id": "tricia-leblanc",
+     "name": "Tricia LeBlanc",
+     "sex": "f",
+     "origin": "Mine",
+     "from": "save “My Saved Game 4,370” (2023-12-21)",
+     "age": "Adult",
+     "aspiration": "Big Happy Family",
+     "traits": ["Bookworm", "Gloomy", "Creative"],
+     "bonus": "Domestic",
+     "career": "",
+     "skills": [
+      ["Fitness", 2, 10],
+      ["Video Gaming", 1, 10],
+      ["Charisma", 4, 10],
+      ["Cooking", 1, 10],
+      ["Comedy", 3, 10],
+      ["Logic", 1, 10],
+      ["Mischief", 1, 10],
+      ["Dancing", 1, 5],
+      ["Fishing", 5, 10]
      ]
     }
    ]

@@ -638,6 +638,391 @@
      "parents": ["alice-spencer-kim", "eric-lewis"]
     }
    ]
+  },
+  "Winters": {
+   "sims": [
+    {
+     "id": "chris-winters",
+     "name": "Chris Winters",
+     "sex": "m",
+     "origin": "Mine",
+     "from": "save “Season Events” (2026-03-15)",
+     "age": "Young Adult",
+     "aspiration": "Super Parent",
+     "traits": ["Family-Oriented", "Romantic", "Creative"],
+     "bonus": "Domestic",
+     "career": "Education · Tenured Professor (level 9)",
+     "skills": [
+      ["Charisma", 4, 10],
+      ["Cooking", 10, 10],
+      ["Parenting", 6, 10],
+      ["Logic", 6, 10],
+      ["Comedy", 4, 10],
+      ["Video Gaming", 1, 10],
+      ["Writing", 1, 10],
+      ["Research & Debate", 8, 10],
+      ["Fitness", 1, 10],
+      ["Mixology", 3, 10],
+      ["Painting", 1, 10],
+      ["Singing", 1, 10],
+      ["Dancing", 1, 5],
+      ["Guitar", 3, 10],
+      ["Gourmet Cooking", 3, 10],
+      ["Photography", 1, 5],
+      ["Mischief", 1, 10],
+      ["Handiness", 1, 10]
+     ]
+    },
+    {
+     "id": "teddy-winters",
+     "name": "Teddy Winters",
+     "sex": "m",
+     "origin": "Mine",
+     "from": "save “Season Events” (2026-03-15)",
+     "age": "Child",
+     "aspiration": "Rambunctious Scamp",
+     "traits": ["Creative"],
+     "career": "",
+     "school": "Grade school · grade A",
+     "skills": [
+      ["Motor", 10, 10],
+      ["Social", 10, 10],
+      ["Creativity", 10, 10],
+      ["Mental", 10, 10],
+      ["Video Gaming", 1, 10],
+      ["Violin", 3, 10],
+      ["Charisma", 1, 10],
+      ["Logic", 4, 10],
+      ["Singing", 1, 10]
+     ],
+     "parents": ["chris-winters"]
+    },
+    {
+     "id": "savanna-winters",
+     "name": "Savanna Winters",
+     "sex": "f",
+     "origin": "Mine",
+     "from": "save “Season Events” (2026-03-15)",
+     "age": "Adult",
+     "aspiration": "Neighborhood Confidante",
+     "traits": ["Materialistic", "Cat Lover", "Family-Oriented"],
+     "bonus": "Gregarious",
+     "career": "Style Influencer · Culture Columnist (level 5)",
+     "skills": [
+      ["Cooking", 3, 10],
+      ["Programming", 2, 10],
+      ["Comedy", 4, 10],
+      ["Parenting", 4, 10],
+      ["Video Gaming", 2, 10],
+      ["Charisma", 8, 10],
+      ["Logic", 1, 10],
+      ["Dancing", 2, 5],
+      ["Research & Debate", 5, 10],
+      ["Fitness", 1, 10],
+      ["Writing", 5, 10],
+      ["Mischief", 1, 10],
+      ["Gourmet Cooking", 1, 10],
+      ["Photography", 1, 5],
+      ["Snowboarding", 1, 10],
+      ["Skiing", 1, 10]
+     ],
+     "partners": [
+      ["chris-winters", "Engaged"]
+     ]
+    },
+    {
+     "id": "noel-winters",
+     "name": "Noel Winters",
+     "sex": "m",
+     "origin": "Mine",
+     "from": "save “Season Events” (2026-03-15)",
+     "age": "Infant",
+     "traits": ["Calm"],
+     "career": "",
+     "skills": [
+      ["Social", 3, 5]
+     ],
+     "parents": ["savanna-winters", "chris-winters"]
+    }
+   ]
+  },
+  "Barraza": {
+   "sims": [
+    {
+     "id": "david-barraza",
+     "name": "David Barraza",
+     "sex": "m",
+     "origin": "Mine",
+     "from": "save “My Saved Game 4,370” (2023-12-21)",
+     "age": "Child",
+     "aspiration": "Social Butterfly",
+     "traits": ["Outgoing"],
+     "career": "",
+     "school": "Grade school · grade C",
+     "parents": ["alexa-barraza", "simon-barraza"]
+    },
+    {
+     "id": "daniel-barraza",
+     "name": "Daniel Barraza",
+     "sex": "m",
+     "origin": "Mine",
+     "from": "save “My Saved Game 4,370” (2023-12-21)",
+     "age": "Child",
+     "aspiration": "Whiz Kid",
+     "traits": ["Bookworm"],
+     "career": "",
+     "school": "Grade school · grade C",
+     "parents": ["alexa-barraza", "simon-barraza"]
+    },
+    {
+     "id": "simon-barraza",
+     "name": "Simon Barraza",
+     "sex": "m",
+     "origin": "Mine",
+     "from": "save “My Saved Game 4,370” (2023-12-21)",
+     "age": "Young Adult",
+     "aspiration": "Successful Lineage",
+     "traits": ["Active", "Cheerful", "Self-Assured"],
+     "bonus": "Domestic",
+     "career": "Astronaut · Low-Orbit Specialist (level 5)",
+     "partners": [
+      ["alexa-barraza", "Spouse"]
+     ]
+    },
+    {
+     "id": "alexa-barraza",
+     "name": "Alexa Barraza",
+     "sex": "f",
+     "origin": "Mine",
+     "from": "save “My Saved Game 4,370” (2023-12-21)",
+     "age": "Young Adult",
+     "aspiration": "Big Happy Family",
+     "traits": ["Romantic", "Family-Oriented", "Neat"],
+     "bonus": "Domestic",
+     "career": "",
+     "skills": [
+      ["Mixology", 9, 10],
+      ["Fitness", 10, 10]
+     ],
+     "partners": [
+      ["simon-barraza", "Spouse"]
+     ]
+    }
+   ]
+  },
+  "Kopf": {
+   "sims": [
+    {
+     "id": "leon-kopf",
+     "name": "Leon Kopf",
+     "sex": "m",
+     "origin": "Mine",
+     "from": "save “My Saved Game 4,370” (2023-12-21)",
+     "age": "Child",
+     "aspiration": "Artistic Prodigy",
+     "traits": ["Active"],
+     "career": "",
+     "school": "Grade school · grade C",
+     "skills": [
+      ["Motor", 2, 10],
+      ["Mental", 1, 10],
+      ["Social", 5, 10]
+     ]
+    },
+    {
+     "id": "lucy-kopf",
+     "name": "Lucy Kopf",
+     "sex": "f",
+     "origin": "Mine",
+     "from": "save “My Saved Game 4,370” (2023-12-21)",
+     "age": "Child",
+     "aspiration": "Artistic Prodigy",
+     "traits": ["Music Lover"],
+     "career": "",
+     "school": "Grade school · grade C",
+     "skills": [
+      ["Creativity", 3, 10],
+      ["Social", 4, 10]
+     ]
+    },
+    {
+     "id": "anja-kopf",
+     "name": "Anja Kopf",
+     "sex": "f",
+     "origin": "Mine",
+     "from": "save “My Saved Game 4,370” (2023-12-21)",
+     "age": "Young Adult",
+     "aspiration": "Master Chef",
+     "traits": ["Foodie", "Hot-Headed", "Neat"],
+     "bonus": "Essence of Flavor",
+     "career": "Astronaut · Low-Orbit Specialist (level 5)",
+     "skills": [
+      ["Dancing", 2, 5],
+      ["Comedy", 1, 10],
+      ["Singing", 1, 10]
+     ]
+    }
+   ]
+  },
+  "Reynolds": {
+   "sims": [
+    {
+     "id": "britney-reynolds",
+     "name": "Britney Reynolds",
+     "sex": "f",
+     "origin": "Mine",
+     "from": "save “My Saved Game 4,370” (2023-12-21)",
+     "age": "Adult",
+     "aspiration": "Soulmate",
+     "traits": ["Family-Oriented", "Foodie", "Neat"],
+     "bonus": "Alluring",
+     "career": "Social Media · Simstagram Searcher (level 4)",
+     "skills": [
+      ["Piano", 1, 10],
+      ["Gardening", 1, 10],
+      ["Comedy", 4, 10],
+      ["Wellness", 1, 10],
+      ["Fishing", 2, 10],
+      ["Logic", 6, 10],
+      ["Baking", 3, 10],
+      ["Cooking", 10, 10],
+      ["Fitness", 10, 10],
+      ["Video Gaming", 5, 10],
+      ["Photography", 1, 5],
+      ["Rocket Science", 1, 10],
+      ["Charisma", 6, 10],
+      ["Painting", 10, 10],
+      ["Gourmet Cooking", 10, 10],
+      ["Mischief", 1, 10],
+      ["Writing", 10, 10],
+      ["Herbalism", 5, 10],
+      ["Handiness", 10, 10]
+     ],
+     "partners": [
+      ["joe-reynolds", "Spouse"]
+     ]
+    },
+    {
+     "id": "joe-reynolds",
+     "name": "Joe Reynolds",
+     "sex": "m",
+     "origin": "Mine",
+     "from": "save “My Saved Game 4,370” (2023-12-21)",
+     "age": "Adult",
+     "aspiration": "Soulmate",
+     "traits": ["Perfectionist", "Outgoing", "Ambitious"],
+     "bonus": "Alluring",
+     "career": "Tech Guru · Dot-Com Pioneer (level 9)",
+     "skills": [
+      ["Charisma", 10, 10],
+      ["Gardening", 1, 10],
+      ["Wellness", 1, 10],
+      ["Fishing", 2, 10],
+      ["Handiness", 7, 10],
+      ["Mixology", 1, 10],
+      ["Logic", 10, 10],
+      ["Cooking", 4, 10],
+      ["Fitness", 10, 10],
+      ["Video Gaming", 9, 10],
+      ["Mischief", 1, 10],
+      ["Herbalism", 1, 10],
+      ["Programming", 10, 10],
+      ["Comedy", 6, 10]
+     ],
+     "partners": [
+      ["britney-reynolds", "Spouse"]
+     ]
+    },
+    {
+     "id": "melanie-reynolds",
+     "name": "Melanie Reynolds",
+     "sex": "f",
+     "origin": "Mine",
+     "from": "save “My Saved Game 4,370” (2023-12-21)",
+     "age": "Child",
+     "aspiration": "Whiz Kid",
+     "traits": ["Outgoing"],
+     "career": "",
+     "school": "Grade school · grade C",
+     "skills": [
+      ["Motor", 7, 10],
+      ["Creativity", 6, 10],
+      ["Mental", 4, 10],
+      ["Social", 7, 10]
+     ],
+     "parents": ["britney-reynolds", "joe-reynolds"]
+    },
+    {
+     "id": "alfie-reynolds",
+     "name": "Alfie Reynolds",
+     "sex": "m",
+     "origin": "Mine",
+     "from": "save “My Saved Game 4,370” (2023-12-21)",
+     "age": "Child",
+     "aspiration": "Social Butterfly",
+     "traits": ["Creative"],
+     "career": "",
+     "school": "Grade school · grade A",
+     "skills": [
+      ["Mental", 10, 10],
+      ["Video Gaming", 6, 10],
+      ["Motor", 10, 10],
+      ["Creativity", 10, 10],
+      ["Charisma", 3, 10],
+      ["Mischief", 1, 10],
+      ["Fishing", 3, 10],
+      ["Violin", 5, 10],
+      ["Logic", 7, 10],
+      ["Social", 10, 10]
+     ],
+     "parents": ["britney-reynolds", "joe-reynolds"]
+    },
+    {
+     "id": "rosie-reynolds",
+     "name": "Rosie Reynolds",
+     "sex": "f",
+     "origin": "Mine",
+     "from": "save “My Saved Game 4,370” (2023-12-21)",
+     "age": "Child",
+     "aspiration": "Social Butterfly",
+     "traits": ["Art Lover"],
+     "career": "",
+     "school": "Grade school · grade A",
+     "skills": [
+      ["Charisma", 5, 10],
+      ["Video Gaming", 6, 10],
+      ["Mental", 10, 10],
+      ["Motor", 10, 10],
+      ["Mischief", 1, 10],
+      ["Creativity", 10, 10],
+      ["Logic", 6, 10],
+      ["Social", 10, 10]
+     ],
+     "parents": ["britney-reynolds", "joe-reynolds"]
+    },
+    {
+     "id": "lucie-reynolds",
+     "name": "Lucie Reynolds",
+     "sex": "f",
+     "origin": "Mine",
+     "from": "save “My Saved Game 4,370” (2023-12-21)",
+     "age": "Child",
+     "aspiration": "Social Butterfly",
+     "traits": ["Loves Outdoors"],
+     "career": "",
+     "school": "Grade school · grade A",
+     "skills": [
+      ["Charisma", 3, 10],
+      ["Mental", 10, 10],
+      ["Video Gaming", 1, 10],
+      ["Motor", 10, 10],
+      ["Creativity", 10, 10],
+      ["Logic", 1, 10],
+      ["Social", 10, 10]
+     ],
+     "parents": ["britney-reynolds", "joe-reynolds"]
+    }
+   ]
   }
  },
  "weather": "Snowy winters, heat waves and thunderstorms in summer",

@@ -272,6 +272,28 @@
      "parents": ["josie"]
     }
    ]
+  },
+  "Ventura": {
+   "sims": [
+    {
+     "id": "jamie-ventura",
+     "name": "Jamie Ventura",
+     "sex": "m",
+     "origin": "Mine",
+     "from": "save “100 Baby Challenge!!” (2025-09-24)",
+     "age": "Young Adult",
+     "aspiration": "Computer Whiz",
+     "traits": ["Art Lover", "Bookworm", "Overachiever"],
+     "bonus": "Quick Learner",
+     "career": "",
+     "skills": [
+      ["Writing", 6, 10],
+      ["Charisma", 5, 10],
+      ["Painting", 8, 10],
+      ["Fitness", 1, 10]
+     ]
+    }
+   ]
   }
  }
 }

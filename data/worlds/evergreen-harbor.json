@@ -339,6 +339,102 @@
      ]
     }
    ]
+  },
+  "Eco Roomies": {
+   "sims": [
+    {
+     "id": "robyn-andersen",
+     "name": "Robyn Andersen",
+     "sex": "f",
+     "origin": "Mine",
+     "from": "save “Horses!” (2024-01-12)",
+     "age": "Young Adult",
+     "aspiration": "Renaissance Sim",
+     "traits": ["Geek", "Ambitious", "Green Fiend"],
+     "bonus": "Quick Learner",
+     "career": "",
+     "skills": [
+      ["Fabrication", 1, 10],
+      ["Fishing", 1, 10]
+     ]
+    },
+    {
+     "id": "tatiana-estrada",
+     "name": "Tatiana Estrada",
+     "sex": "f",
+     "origin": "Mine",
+     "from": "save “Horses!” (2024-01-12)",
+     "age": "Young Adult",
+     "aspiration": "Friend of the World",
+     "traits": ["Outgoing", "Maker", "Green Fiend"],
+     "bonus": "Gregarious",
+     "career": "",
+     "skills": [
+      ["Research & Debate", 1, 10],
+      ["Cooking", 1, 10],
+      ["Fitness", 1, 10]
+     ]
+    }
+   ]
+  },
+  "Henley": {
+   "sims": [
+    {
+     "id": "kaleb-henley",
+     "name": "Kaleb Henley",
+     "sex": "m",
+     "origin": "Mine",
+     "from": "save “Will the port be Promising?” (2023-12-21)",
+     "age": "Young Adult",
+     "aspiration": "Master Maker",
+     "traits": ["Clumsy", "Freegan", "Recycle Disciple"],
+     "bonus": "Muser",
+     "career": "Freelance Crafter · Freelance Crafter (level 1)",
+     "skills": [
+      ["Charisma", 2, 10],
+      ["Fitness", 3, 10],
+      ["Cooking", 6, 10],
+      ["Mischief", 2, 10],
+      ["Handiness", 5, 10],
+      ["Logic", 3, 10],
+      ["Fabrication", 6, 10],
+      ["Comedy", 2, 10],
+      ["Singing", 1, 10],
+      ["Painting", 4, 10],
+      ["Dancing", 1, 5],
+      ["Rocket Science", 1, 10],
+      ["Gourmet Cooking", 1, 10],
+      ["Gardening", 1, 10]
+     ]
+    },
+    {
+     "id": "april-carr",
+     "name": "April Carr",
+     "sex": "f",
+     "origin": "Mine",
+     "from": "save “Will the port be Promising?” (2023-12-21)",
+     "age": "Young Adult",
+     "aspiration": "Musical Genius",
+     "traits": ["Vegetarian", "Music Lover", "Childish"],
+     "bonus": "Muser",
+     "career": "Civil Designer · Junior Draftsperson (level 1)",
+     "skills": [
+      ["Charisma", 6, 10],
+      ["Cooking", 2, 10],
+      ["Writing", 4, 10],
+      ["Video Gaming", 1, 10],
+      ["Comedy", 2, 10],
+      ["Fitness", 1, 10],
+      ["Painting", 2, 10],
+      ["Dancing", 1, 5],
+      ["Programming", 2, 10],
+      ["Logic", 4, 10],
+      ["Handiness", 1, 10],
+      ["Singing", 1, 10],
+      ["Mischief", 1, 10]
+     ]
+    }
+   ]
   }
  }
 }

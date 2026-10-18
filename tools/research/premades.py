@@ -229,6 +229,17 @@ def main():
            "templates": {str(i): (lambda ci: ' '.join(x for x in (text(T.value(T.field(ci, 'first_name')), en),
                                                                text(T.value(T.field(T.field(ci, 'last_name'), 'specify_last_name')), en)) if x))(T.field(t['tree'], '_sim_creation_info'))
                          for i, t in sim_tpl.items()}}
+    # the game's names for traits, aspirations, skills and careers, for reading Sims from her own saves (tools/own_import.py)
+    names = {"traits": {str(i): [text(val(i, 'display_name'), en), val(i, 'trait_type')] for i, v in I.items() if v['class'] == 'Trait' and text(val(i, 'display_name'), en)},
+             "aspirations": {str(i): [text(val(i, 'display_text'), en), text(val(int(val(i, 'primary_trait')), 'display_name'), en) if (val(i, 'primary_trait') or '').isdigit() and int(val(i, 'primary_trait')) in I else None]
+                             for i, v in I.items() if v['class'] == 'AspirationTrack'},
+             "skills": {str(i): [text(val(i, 'stat_name'), en), float(val(i, 'initial_value') or 0), val(i, 'skill_level_type') or 'MAJOR'] for i, v in I.items() if v['class'] in ('Skill',) and text(val(i, 'stat_name'), en)},
+             "skill_levels": LEVELS,
+             "tracks": {str(i): {"career": (lambda r: text(T.value(T.field(I[r]['tree'], 'career_name')), en))(next(r for r in [i] + [None] * 0) if i not in parent else (lambda t: (lambda f: f(f, t))(lambda f, t: f(f, parent[t]) if t in parent else t))(i)),
+                                 "titles": [text(val(int(l), 'title'), en) if l.isdigit() and int(l) in I else None for l in T.leaves(T.field(v['tree'], 'career_levels') or ['', {}, []])]}
+                        for i, v in I.items() if v['class'] == 'TunableCareerTrack'},
+             "majors": {str(i): tname(i) for i, v in I.items() if v['class'] in ('UniversityMajor',)}}
+    json.dump(names, open(os.path.join(ROOT, 'research', 'data', 'game-names.json'), 'w', encoding='utf-8'), ensure_ascii=False)
     path = os.path.join(ROOT, 'research', 'data', 'premades.json')
     json.dump(res, open(path, 'w', encoding='utf-8'), indent=1, ensure_ascii=False)
     print(len(out), 'households,', sum(len(h['sims']) for h in out), 'Sims;', len(between['relationships']), 'relationships,', len(between['family']), 'family links ->', path)

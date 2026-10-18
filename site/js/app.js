@@ -98,6 +98,7 @@ worlds.forEach(w => Object.values(w.households).forEach(hh => hh.sims.forEach(sm
 // into = the family they married into. Household Sims get a page (#s-<id>); so does anyone else on a household's family tree.
 const PARTNER_KINDS = {"Spouse": "spouse", "Partner": "partner", "Engaged": "engaged", "Ex-Spouse": "ex", "Late Spouse": "late-spouse", "Deceased Spouse": "late-spouse"};
 const SIMS = {}, SIM_PAGES = {}, GROUP_PAGES = {}, FAMILIES = {}, ANCHOR = {};
+const FAMILY_CACHE = {partners: new Map(), ancestors: new Map()};   // see partnersOf
 const sx = (s, m, f, x) => s === "m" ? m : s === "f" ? f : x;
 const surname = n => n.trim().split(/\s+/).slice(1).join(" ") || n.trim();
 const firstName = s => s.name.trim().split(/\s+/)[0];
@@ -114,6 +115,7 @@ Object.entries(DATA.people || {}).forEach(([id, p]) => addSim(id, p));
 // a parent who isn't on the family tree stands beside the other parent, joined by a faint dotted line
 Object.values(SIMS).forEach(s => { const pp = (s.parents || []).filter(p => SIMS[p]);
   pp.filter(p => SIMS[p].ph).forEach(ph => pp.filter(q => !SIMS[q].ph).forEach(q => { if (!partnersOf(q).some(([x]) => x === ph)) SIMS[q].partners.push([ph, "unknown"]); })); });
+FAMILY_CACHE.partners.clear(); FAMILY_CACHE.ancestors.clear();   // partners were just added above
 // a family nobody on the site was born into and stayed in (Bella was born a Bachelor)
 Object.keys(FAMILIES).forEach(f => { const own = Object.values(SIMS).filter(s => !s.ph && s.line === f); if (own.length && own.every(s => s.into)) FAMILIES[f].note = `No ${FAMILIES[f].name}s on the family tree`; });
 
@@ -191,7 +193,12 @@ function memberCard(g, id, role){
 }
 
 /* ---------- family words, worked out (never typed) ---------- */
+// family look-ups are cached once the data is set up (300+ Sims made every Sim page slow); FAMILY_CACHE is cleared after setup
 function partnersOf(id){
+  if (FAMILY_CACHE.partners.has(id)) return FAMILY_CACHE.partners.get(id);
+  const out = partnersAll(id); FAMILY_CACHE.partners.set(id, out); return out;
+}
+function partnersAll(id){
   const out = (SIMS[id].partners || []).filter(([p]) => SIMS[p]);
   Object.values(SIMS).forEach(t => (t.partners || []).forEach(([p, k]) => { if (p === id && !out.some(x => x[0] === t.id)) out.push([t.id, k]); }));
   return out;
@@ -201,8 +208,9 @@ function ancestors(id, d = 0, out = new Map()){
   (SIMS[id].parents || []).forEach(p => { if (SIMS[p]) ancestors(p, d + 1, out); });   // through unknown parents too, so their children count as siblings
   return out;
 }
+const ancestorsOf = id => { if (!FAMILY_CACHE.ancestors.has(id)) FAMILY_CACHE.ancestors.set(id, ancestors(id)); return FAMILY_CACHE.ancestors.get(id); };
 function blood(a, b){
-  const A = ancestors(a), B = ancestors(b); let best = null;
+  const A = ancestorsOf(a), B = ancestorsOf(b); let best = null;
   A.forEach((da, x) => { if (B.has(x)) { const db = B.get(x); if (!best || da + db < best[0] + best[1]) best = [da, db]; } });
   return best;
 }
@@ -284,6 +292,7 @@ function treeAround(centre){
 // Sim pages: every household Sim, and anyone else on a household's tree (Cornelia, Agnes…), who belongs to the first such household
 Object.values(SIMS).forEach(s => { if (s.hh && !s.stub) SIM_PAGES["s-" + s.id] = s; });
 worlds.forEach(w => Object.values(w.households).forEach(hh => { if (hh.sims.some(sm => sm.sid)) treeOf(hh).forEach(id => { ANCHOR[id] ||= hh; }); }));
+FAMILY_CACHE.partners.clear(); FAMILY_CACHE.ancestors.clear();   // set-up done: cache from here on
 Object.values(SIMS).forEach(s => { if (!s.hh && !s.ph && !s.stub && ANCHOR[s.id]) SIM_PAGES["s-" + s.id] = s; });
 
 /* ---------- the drawn family tree (decided 17 Oct) ----------
@@ -997,7 +1006,8 @@ function householdNew(hh){
         <div><dt>Origin</dt><dd>${originTag(origin)}</dd></div>
         <div><dt>Played</dt><dd>${esc(hh.played || "Not yet")}</dd></div>
         <div><dt>Neighbourhood Stories</dt><dd>${esc(hh.stories || "Not set")}</dd></div>
-        ${dyn ? `<div><dt>Dynasty</dt><dd class="dynline">${dyn}</dd></div>` : ""}</dl></div>
+        ${dyn ? `<div><dt>Dynasty</dt><dd class="dynline">${dyn}</dd></div>` : ""}
+        ${(() => { const f = ids.map(id => SIMS[id].src && SIMS[id].src.from).find(Boolean); return f ? `<div><dt>Sims from</dt><dd>${esc(f)}, to check</dd></div>` : ""; })()}</dl></div>
     </div>
     <section class="block" style="--h:${hc}"><div class="block-head"><h2>The <em>Sims</em></h2><span class="count">${n} ${n === 1 ? "Sim" : "Sims"}</span></div>
       ${simRoster(ids)}

@@ -279,6 +279,43 @@
      "parents": ["li-n-sadya", "alon-sadya"]
     }
    ]
+  },
+  "Rochana": {
+   "sims": [
+    {
+     "id": "ratana-rochana",
+     "name": "Ratana Rochana",
+     "sex": "f",
+     "origin": "Mine",
+     "from": "save “Not So Berry” (2025-10-11)",
+     "age": "Adult",
+     "aspiration": "Fount of Tomarani Knowledge",
+     "traits": ["Cat Lover", "Party Animal", "Geek"],
+     "bonus": "Home Turf",
+     "career": "",
+     "partners": [
+      ["colette-rochana", "Spouse"]
+     ]
+    },
+    {
+     "id": "colette-rochana",
+     "name": "Colette Rochana",
+     "sex": "f",
+     "origin": "Mine",
+     "from": "save “Not So Berry” (2025-10-11)",
+     "age": "Elder",
+     "aspiration": "Renaissance Sim",
+     "traits": ["Gloomy", "Outgoing", "Lazy"],
+     "bonus": "Quick Learner",
+     "career": "",
+     "skills": [
+      ["Programming", 3, 10]
+     ],
+     "partners": [
+      ["ratana-rochana", "Spouse"]
+     ]
+    }
+   ]
   }
  }
 }

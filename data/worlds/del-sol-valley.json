@@ -266,6 +266,69 @@
      ]
     }
    ]
+  },
+  "Eclectic Arts": {
+   "sims": [
+    {
+     "id": "mark-eggleston",
+     "name": "Mark Eggleston",
+     "sex": "m",
+     "origin": "Mine",
+     "from": "save “100 Baby Challenge!!” (2025-09-24)",
+     "age": "Young Adult",
+     "aspiration": "Friend of the World",
+     "traits": ["Art Lover", "Bookworm", "Cheerful"],
+     "bonus": "Gregarious",
+     "career": "Style Influencer · It Sim (level 9)",
+     "skills": [
+      ["Painting", 2, 10],
+      ["Gardening", 2, 10],
+      ["Logic", 4, 10],
+      ["Wellness", 1, 10],
+      ["Dancing", 1, 5]
+     ]
+    },
+    {
+     "id": "alice-martin",
+     "name": "Alice Martin",
+     "sex": "f",
+     "origin": "Mine",
+     "from": "save “100 Baby Challenge!!” (2025-09-24)",
+     "age": "Young Adult",
+     "aspiration": "Painter Extraordinaire",
+     "traits": ["Bookworm", "Music Lover", "Creative"],
+     "bonus": "Muser",
+     "career": "",
+     "skills": [
+      ["Guitar", 3, 10],
+      ["Piano", 6, 10],
+      ["Violin", 6, 10],
+      ["Cooking", 1, 10],
+      ["Charisma", 1, 10],
+      ["Dancing", 1, 5]
+     ]
+    },
+    {
+     "id": "leslie-holland",
+     "name": "Leslie Holland",
+     "sex": "f",
+     "origin": "Mine",
+     "from": "save “100 Baby Challenge!!” (2025-09-24)",
+     "age": "Young Adult",
+     "aspiration": "Bestselling Author",
+     "traits": ["Bookworm", "Geek", "Goofball"],
+     "bonus": "Muser",
+     "career": "Business · Mailroom Technician (level 1)",
+     "skills": [
+      ["Logic", 5, 10],
+      ["Comedy", 4, 10],
+      ["Programming", 5, 10],
+      ["Mischief", 1, 10],
+      ["Dancing", 1, 5],
+      ["Video Gaming", 1, 10]
+     ]
+    }
+   ]
   }
  }
 }

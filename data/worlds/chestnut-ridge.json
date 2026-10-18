@@ -276,6 +276,155 @@
      ]
     }
    ]
+  },
+  "Palumbo": {
+   "sims": [
+    {
+     "id": "puzzles",
+     "name": "Puzzles",
+     "sex": "f",
+     "origin": "Mine",
+     "from": "save “Horses!” (2024-01-12)",
+     "age": "Elder",
+     "state": "Horse",
+     "career": "",
+     "skills": [
+      ["Temperament", 8, 10],
+      ["Agility", 5, 10],
+      ["Jumping", 6, 10],
+      ["Endurance", 6, 10]
+     ]
+    },
+    {
+     "id": "beatrice-palumbo",
+     "name": "Beatrice Palumbo",
+     "sex": "f",
+     "origin": "Mine",
+     "from": "save “Horses!” (2024-01-12)",
+     "age": "Young Adult",
+     "aspiration": "Master Chef",
+     "traits": ["Horse Lover", "Loves Outdoors", "Ambitious"],
+     "bonus": "Essence of Flavor",
+     "career": "",
+     "skills": [
+      ["Charisma", 9, 10],
+      ["Video Gaming", 1, 10],
+      ["Logic", 1, 10],
+      ["Fitness", 3, 10],
+      ["Comedy", 3, 10],
+      ["Dancing", 5, 5],
+      ["Horse Riding", 10, 10],
+      ["Cooking", 10, 10],
+      ["Singing", 1, 10],
+      ["Handiness", 4, 10],
+      ["Gardening", 3, 10],
+      ["Photography", 4, 5],
+      ["Gourmet Cooking", 3, 10]
+     ]
+    },
+    {
+     "id": "lacy-tompkins",
+     "name": "Lacy Tompkins",
+     "sex": "f",
+     "origin": "Mine",
+     "from": "save “Horses!” (2024-01-12)",
+     "age": "Adult",
+     "aspiration": "Expert Nectar Maker",
+     "traits": ["Dog Lover", "Loves Outdoors", "Child of the Ocean"],
+     "bonus": "Essence of Flavor",
+     "career": "Diver · Snorkel Guide (level 1)",
+     "skills": [
+      ["Gardening", 7, 10],
+      ["Horse Riding", 10, 10],
+      ["Dancing", 5, 5],
+      ["Charisma", 7, 10],
+      ["Mischief", 1, 10],
+      ["Comedy", 4, 10],
+      ["Cooking", 2, 10],
+      ["Fitness", 3, 10],
+      ["Handiness", 9, 10],
+      ["Video Gaming", 1, 10],
+      ["Singing", 1, 10],
+      ["Nectar Making", 5, 5],
+      ["Photography", 3, 5],
+      ["Piano", 2, 10],
+      ["Mixology", 1, 10],
+      ["Logic", 1, 10]
+     ]
+    },
+    {
+     "id": "longface",
+     "name": "Longface",
+     "sex": "m",
+     "origin": "Mine",
+     "from": "save “Horses!” (2024-01-12)",
+     "age": "Adult",
+     "state": "Horse",
+     "career": "",
+     "skills": [
+      ["Temperament", 7, 10],
+      ["Agility", 6, 10],
+      ["Jumping", 4, 10],
+      ["Endurance", 8, 10]
+     ]
+    },
+    {
+     "id": "bluebell",
+     "name": "Bluebell",
+     "sex": "f",
+     "origin": "Mine",
+     "from": "save “Horses!” (2024-01-12)",
+     "age": "Adult",
+     "state": "Horse",
+     "career": "",
+     "skills": [
+      ["Temperament", 10, 10],
+      ["Agility", 10, 10],
+      ["Jumping", 10, 10],
+      ["Endurance", 9, 10]
+     ]
+    },
+    {
+     "id": "queen",
+     "name": "Queen",
+     "sex": "f",
+     "origin": "Mine",
+     "from": "save “Horses!” (2024-01-12)",
+     "age": "Elder",
+     "state": "Horse",
+     "career": "",
+     "skills": [
+      ["Temperament", 2, 10]
+     ]
+    },
+    {
+     "id": "pie",
+     "name": "Pie",
+     "sex": "m",
+     "origin": "Mine",
+     "from": "save “Horses!” (2024-01-12)",
+     "age": "Child",
+     "state": "Horse",
+     "career": "",
+     "skills": [
+      ["Temperament", 4, 10]
+     ]
+    },
+    {
+     "id": "buttercup",
+     "name": "Buttercup",
+     "sex": "f",
+     "origin": "Mine",
+     "from": "save “Horses!” (2024-01-12)",
+     "age": "Child",
+     "state": "Horse",
+     "career": "",
+     "skills": [
+      ["Temperament", 3, 10]
+     ],
+     "parents": ["bluebell", "longface"]
+    }
+   ]
   }
  }
 }

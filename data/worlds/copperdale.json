@@ -321,6 +321,136 @@
      ]
     }
    ]
+  },
+  "Donovan": {
+   "sims": [
+    {
+     "id": "josie-donovan",
+     "name": "Josie Donovan",
+     "sex": "f",
+     "origin": "Mine",
+     "from": "save “Season Events” (2026-03-15)",
+     "age": "Young Adult",
+     "aspiration": "Crystal Crafter",
+     "traits": ["Gloomy", "Overachiever", "Loner"],
+     "bonus": "Collector",
+     "career": "Paranormal Investigator · Paranormal Investigator (level 1)",
+     "skills": [
+      ["Cooking", 10, 10],
+      ["Charisma", 7, 10],
+      ["Logic", 6, 10],
+      ["Gardening", 7, 10],
+      ["Mischief", 4, 10],
+      ["Medium", 5, 5],
+      ["Fishing", 6, 10],
+      ["Gemology", 10, 10],
+      ["Comedy", 3, 10],
+      ["Video Gaming", 4, 10],
+      ["Gourmet Cooking", 10, 10],
+      ["Handiness", 9, 10],
+      ["Fitness", 7, 10],
+      ["Mixology", 4, 10],
+      ["Entrepreneur", 3, 5],
+      ["Skating", 2, 5],
+      ["Singing", 1, 10],
+      ["Photography", 1, 5],
+      ["Dancing", 1, 5],
+      ["Bowling", 2, 5],
+      ["Acting", 3, 10]
+     ],
+     "partners": [
+      ["madelyn-haynes", "Spouse"]
+     ]
+    },
+    {
+     "id": "madelyn-haynes",
+     "name": "Madelyn Haynes",
+     "sex": "f",
+     "origin": "Mine",
+     "from": "save “Season Events” (2026-03-15)",
+     "age": "Young Adult",
+     "aspiration": "Nerd Brain",
+     "traits": ["Unflirty", "Recycle Disciple", "Art Lover"],
+     "bonus": "Quick Learner",
+     "career": "Secret Agent · Intelligence Researcher (level 2)",
+     "skills": [
+      ["Writing", 2, 10],
+      ["Painting", 2, 10],
+      ["Violin", 2, 10],
+      ["Fishing", 1, 10],
+      ["Logic", 2, 10],
+      ["Cooking", 1, 10],
+      ["Fitness", 2, 10],
+      ["Mixology", 6, 10],
+      ["Comedy", 1, 10],
+      ["Dancing", 1, 5],
+      ["Charisma", 2, 10],
+      ["Bowling", 2, 5],
+      ["Mischief", 1, 10],
+      ["Photography", 1, 5],
+      ["Parenting", 1, 10],
+      ["Handiness", 3, 10]
+     ],
+     "partners": [
+      ["josie-donovan", "Spouse"]
+     ]
+    },
+    {
+     "id": "misty-haynes",
+     "name": "Misty Haynes",
+     "sex": "f",
+     "origin": "Mine",
+     "from": "save “Season Events” (2026-03-15)",
+     "age": "Teen",
+     "aspiration": "Inner Peace ",
+     "traits": ["Self-Assured", "Green Fiend"],
+     "bonus": "Spa Membership",
+     "career": "",
+     "school": "High school · grade B",
+     "skills": [
+      ["Gardening", 2, 10],
+      ["Charisma", 2, 10],
+      ["Fishing", 1, 10],
+      ["Comedy", 1, 10],
+      ["Fitness", 3, 10],
+      ["Guitar", 3, 10],
+      ["Handiness", 1, 10],
+      ["Video Gaming", 1, 10]
+     ],
+     "parents": ["madelyn-haynes"]
+    },
+    {
+     "id": "davin-haynes",
+     "name": "Davin Haynes",
+     "sex": "m",
+     "origin": "Mine",
+     "from": "save “Season Events” (2026-03-15)",
+     "age": "Child",
+     "aspiration": "Social Butterfly",
+     "traits": ["Erratic"],
+     "career": "Scout · Griffon Scout (level 2)",
+     "school": "Grade school · grade B",
+     "skills": [
+      ["Motor", 4, 10],
+      ["Mental", 3, 10],
+      ["Social", 6, 10],
+      ["Creativity", 3, 10],
+      ["Logic", 1, 10],
+      ["Mischief", 1, 10]
+     ],
+     "parents": ["madelyn-haynes"]
+    },
+    {
+     "id": "bonnie-donovan",
+     "name": "Bonnie Donovan",
+     "sex": "f",
+     "origin": "Mine",
+     "from": "save “Season Events” (2026-03-15)",
+     "age": "Baby",
+     "career": "",
+     "parents": ["josie-donovan", "madelyn-haynes"]
+    }
+   ]
   }
  }
 }

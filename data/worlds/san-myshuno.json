@@ -99,7 +99,57 @@
  ],
  "households": {
   "Santiago Ojo": {
-   "single": true
+   "sims": [
+    {
+     "id": "miko-ojo",
+     "name": "Miko Ojo",
+     "sex": "f",
+     "origin": "Mine",
+     "from": "save “Rotational” (2023-12-21)",
+     "age": "Young Adult",
+     "aspiration": "City Native",
+     "traits": ["Good", "Geek", "Neat"],
+     "bonus": "Home Turf",
+     "career": "Politician · Community Organizer (level 4)",
+     "skills": [
+      ["Charisma", 6, 10],
+      ["Video Gaming", 1, 10],
+      ["Mischief", 1, 10],
+      ["Cooking", 3, 10],
+      ["Fitness", 1, 10],
+      ["Comedy", 3, 10],
+      ["Dancing", 5, 5],
+      ["Painting", 4, 10],
+      ["Singing", 9, 10]
+     ]
+    },
+    {
+     "id": "alicia-santiago",
+     "name": "Alicia Santiago",
+     "sex": "f",
+     "origin": "Mine",
+     "from": "save “Rotational” (2023-12-21)",
+     "age": "Young Adult",
+     "aspiration": "City Native",
+     "traits": ["Vegetarian", "Creative", "Ambitious"],
+     "bonus": "Home Turf",
+     "career": "Social Media · Spin Doctor (level 10)",
+     "skills": [
+      ["Mischief", 3, 10],
+      ["Painting", 2, 10],
+      ["Gourmet Cooking", 2, 10],
+      ["Cooking", 6, 10],
+      ["Singing", 6, 10],
+      ["Video Gaming", 1, 10],
+      ["Writing", 5, 10],
+      ["Fitness", 4, 10],
+      ["Comedy", 4, 10],
+      ["Logic", 1, 10],
+      ["Dancing", 5, 5],
+      ["Charisma", 10, 10]
+     ]
+    }
+   ]
   },
   "Behr": {
    "sims": [
@@ -410,6 +460,101 @@
      ],
      "partners": [
       ["lily-feng", "Spouse"]
+     ]
+    }
+   ]
+  },
+  "Livin' In The City": {
+   "sims": [
+    {
+     "id": "alfie-reynolds-san-myshuno",
+     "name": "Alfie Reynolds",
+     "sex": "m",
+     "origin": "Mine",
+     "from": "save “Rotational” (2023-12-21)",
+     "age": "Young Adult",
+     "aspiration": "Bestselling Author",
+     "traits": ["Creative", "Perfectionist", "Bookworm"],
+     "bonus": "Muser",
+     "career": "Writer · Advice Columnist (level 4)",
+     "skills": [
+      ["Mischief", 1, 10],
+      ["Writing", 8, 10],
+      ["Violin", 8, 10],
+      ["Guitar", 1, 10],
+      ["Logic", 7, 10],
+      ["Fitness", 1, 10],
+      ["Dancing", 3, 5],
+      ["Programming", 2, 10],
+      ["Fishing", 3, 10],
+      ["Charisma", 6, 10],
+      ["Cooking", 3, 10],
+      ["Video Gaming", 8, 10],
+      ["Gardening", 2, 10],
+      ["Comedy", 4, 10],
+      ["Singing", 2, 10],
+      ["Photography", 1, 5]
+     ]
+    },
+    {
+     "id": "lucy-kopf-san-myshuno",
+     "name": "Lucy Kopf",
+     "sex": "f",
+     "origin": "Mine",
+     "from": "save “Rotational” (2023-12-21)",
+     "age": "Young Adult",
+     "aspiration": "The Curator",
+     "traits": ["Music Lover", "Loner", "Active"],
+     "bonus": "Collector",
+     "career": "Painter · Palette Cleaner (level 1)",
+     "skills": [
+      ["Cooking", 1, 10],
+      ["Video Gaming", 3, 10],
+      ["Dancing", 2, 5],
+      ["Mischief", 1, 10],
+      ["Comedy", 2, 10],
+      ["Charisma", 1, 10],
+      ["Logic", 1, 10],
+      ["Fitness", 1, 10],
+      ["Guitar", 1, 10],
+      ["Painting", 2, 10],
+      ["Singing", 1, 10],
+      ["Handiness", 1, 10],
+      ["Photography", 1, 5]
+     ]
+    },
+    {
+     "id": "lisa-davidson",
+     "name": "Lisa Davidson",
+     "sex": "f",
+     "origin": "Mine",
+     "from": "save “Rotational” (2023-12-21)",
+     "age": "Young Adult",
+     "aspiration": "Painter Extraordinaire",
+     "traits": ["Creative", "Music Lover", "Neat"],
+     "bonus": "Muser",
+     "career": "Freelance Artist · Freelance Artist (level 1)",
+     "skills": [
+      ["Mischief", 1, 10],
+      ["Painting", 10, 10],
+      ["Charisma", 7, 10],
+      ["Handiness", 2, 10],
+      ["Cooking", 5, 10],
+      ["Violin", 10, 10],
+      ["Video Gaming", 6, 10],
+      ["Dancing", 5, 5],
+      ["Comedy", 5, 10],
+      ["Logic", 5, 10],
+      ["Mixology", 2, 10],
+      ["Fitness", 6, 10],
+      ["Singing", 4, 10],
+      ["Writing", 1, 10],
+      ["Programming", 3, 10],
+      ["Piano", 3, 10],
+      ["Guitar", 1, 10],
+      ["Parenting", 1, 10],
+      ["Baking", 2, 10],
+      ["Photography", 1, 5]
      ]
     }
    ]

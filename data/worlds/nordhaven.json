@@ -370,6 +370,40 @@
      "parents": ["crispin-black"]
     }
    ]
+  },
+  "Johansson": {
+   "sims": [
+    {
+     "id": "frida-johansson",
+     "name": "Frida Johansson",
+     "sex": "f",
+     "origin": "Mine",
+     "from": "Library (2025-03-08)",
+     "age": "Adult",
+     "aspiration": "Esteemed Entrepreneur",
+     "traits": ["Ambitious", "Practice Makes Perfect", "Maker"],
+     "bonus": "Gregarious",
+     "career": "",
+     "partners": [
+      ["erik-johansson", "Spouse"]
+     ]
+    },
+    {
+     "id": "erik-johansson",
+     "name": "Erik Johansson",
+     "sex": "m",
+     "origin": "Mine",
+     "from": "Library (2025-03-08)",
+     "age": "Adult",
+     "aspiration": "Master Mentor",
+     "traits": ["Maker", "Idealist", "Cheerful"],
+     "bonus": "Quick Learner",
+     "career": "",
+     "partners": [
+      ["frida-johansson", "Spouse"]
+     ]
+    }
+   ]
   }
  }
 }
