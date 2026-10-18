@@ -35,8 +35,8 @@
     {"lot": "Harbor Quarter Gym", "myName": "UoW Students Union", "type": "Library", "size": "30x30", "residents": "N/A", "built": true, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Discotheque Pan Europa", "myName": "UoW Sports Center", "type": "Gym/Pool", "size": "30x20", "residents": "N/A", "built": true, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ],
-   "bannerZoom": 1.25,
-   "bannerShift": [-0.04, 0],
+   "bannerZoom": 1.45,
+   "bannerShift": [0.03, 0],
    "bannerTitle": "University of Windenburg / Lykke Center"
   },
   {
