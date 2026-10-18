@@ -6,7 +6,8 @@ const NAME_FIX = DATA.nameFix;
 const ic = n => ICONS[n].replace("<svg ", '<svg class="i" aria-hidden="true" ');
 // shown text uses curly apostrophes and single quotes (12 Oct); ids and links are untouched
 // ’n’, ’Round, ’til and ’tis are apostrophes, not opening quotes (Thrift ’n’ Fish, ’Round the Fire Festival)
-const curly = s => String(s ?? "").replace(/(^|[\s(])'(?=n'|Round\b|til\b|tis\b)/g, "$1’").replace(/(^|[\s(\[“"—-])'/g, "$1‘").replace(/'/g, "’");
+const curly = s => String(s ?? "").replace(/(^|[\s(])'(?=n'|Round\b|til\b|tis\b)/g, "$1’").replace(/(^|[\s(\[“"—-])'/g, "$1‘").replace(/'/g, "’")
+  .replace(/(^|[\s(\[‘—-])"/g, "$1“").replace(/"/g, "”");   // double quotes too (19 Oct)
 const esc = s => curly(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const slug = s => String(s).toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/&/g,"and").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
 // neighbourhood colours: muted jewel tones
