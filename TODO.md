@@ -253,6 +253,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 
 ### Where Sims could come from (research/sims-sources.md)
 - [ ] [Jemma] Copy into World Plans (19 Oct): Twin Oracle Point → Kirkland; Optimist’s Outlook → Kirkland; Fern Park Flats and Midtown Meadows → “Kirkland own”, with tenants BFF (Fern Park) and Washburn and Bridges (Midtown Meadows, replacing “Single Mum Friends”); Magnolia Mall → Kirkland.
+- [ ] [Jemma] In game: Eco Roomies’ flat, #402 (your plan) or #404 (your saves)? Cheer/Football Teens skipped for now (maybe Sporty Girls and Sporty Boys from Season Events).
 - [ ] [Jemma] The Kirklands on the site start from your 4-Sim Library copy, with Kennedy and Kayleigh taken down from elders to adults and Kamila and Kendrick as teens; age them as you want them. Are Kennedy and Kayleigh married (the copy doesn’t say)?
 - [ ] [Jemma] Your own households (18 Oct): 22 filled from the newest copy in your saves or Library, marked “Sims from …, to check” on each household page. Every other copy is listed in research/own-households-review.md (many households are in several saves, with different Sims); say which copy to use where it’s wrong.
 - [x] Horse Elder Couple (Chestnut Ridge): not made yet (19 Oct); left empty.
