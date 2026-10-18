@@ -596,6 +596,8 @@ document.addEventListener("click", e => {
   const next = a.nextElementSibling, list = next && (next.classList.contains("lotnav") || next.classList.contains("subnav")) ? next : null;
   const here = location.hash === a.getAttribute("href") || (location.hash === "" && a.getAttribute("href") === "#home");
   if (list && here) { e.preventDefault(); list.hidden = !list.hidden; a.classList.toggle("folded", list.hidden); return; }
+  // a world whose list is open (with a household or Sim open under it, say) closes completely in one click (her ask, 19 Oct); click again to go to the world
+  if (list && list.classList.contains("subnav") && !list.hidden && a.closest(".nav-group") && !a.closest(".subnav")) { e.preventDefault(); list.hidden = true; a.classList.add("folded"); return; }
   if (here) window.scrollTo({top:0, behavior: SMOOTH()});
 });
 // ---------- search (13 Oct): lots by any of their names, households, Sims, neighbourhoods and worlds; results take the sidebar's place while typing ----------
