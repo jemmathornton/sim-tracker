@@ -56,7 +56,7 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
 | Ravenwood | Specter Row (Moppy Manor) | ? (not finished, 14 Oct) | Specters' home + tenants |
 | Nordhaven | Old Torget House | 3 | Empty |
 | Del Sol Valley | Upland Trailer Park | 4 | Eclectic Arts (StrangerVille's 3 friends, a trailer each; she may split them into 3 households) + Johnny Zest in the 4th (16 Oct) |
-| Ondarion | Casa Do Corsário | 2 or 3 (to decide, 16 Oct) | Aloisio Romualdo own |
+| Ondarion | Casa Do Corsário | 2 (her call, 19 Oct) | Aloisio Romualdo own |
 | Nordhaven | ~~Lighthouse Lookout~~ | no longer a rental: the Library since 15 Oct | – |
 
 - [x] Rental layout picked (16 Oct): **4**, the front photo with a circle per unit, “Residential Rental · N units” badge, and under the card each household with a house icon and its unit (landlord marked), then “N let, N free” (the landlord’s own unit isn’t counted as let). Lot pages have a units table. Only the landlord is marked, “(landlord)”, on the card list, the circles and the table; tenants aren’t marked. Apartment buildings are one card with their front photo and a circle per apartment (an inside shot until there are outside screenshots). The other trial layouts and the switch are gone.
@@ -337,7 +337,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [x] [Jemma] 1 Cobblebottom Street: a Small Business Residential tea room (owner idea: the Crumplebottom cousins, to check in game), or a Vacation Rental? — 19 Oct: Small Business Residential, owner to pick
 - [ ] [Jemma] Paradise Stables: a new horse family of hers running Riding Stables (Small Business Residential)?
 - [ ] [Jemma] Owners: the Izadi-Gomes ghosts for Mystic Crossroads, the Landgraabs for Magnolia Mall, Judith Ward for Plumbob Pictures Museum?
-- [ ] [Jemma] Casa do Corsário: 2 units? Britechester: only The Old Clocktower as a Backroom (7 in all)? Hay Hill Landing: “Residential (Farm)” (“Vineyard/Farm” isn’t a game type)?
+- [ ] [Jemma] Casa do Corsário: 2 units (her call, 19 Oct, done)? Britechester: only The Old Clocktower as a Backroom (7 in all)? Hay Hill Landing: “Residential (Farm)” (“Vineyard/Farm” isn’t a game type)?
 
 ### Small business lots (research/small-business-check.md)
 - [ ] [Jemma] “Small Business Residential” is the game’s own name after all. Rename plain “Small Business” to the game’s “Small Business Venue”? Add a bracket note of what each sells?

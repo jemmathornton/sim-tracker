@@ -28,7 +28,7 @@
    "mapBox": [0.23, 0.24, 0.49, 0.5],
    "lots": [
     {"lot": "Verdemar Palace", "myName": "Verdemar Palace", "type": "Residential", "size": "50x50", "residents": "Thebe", "built": false, "shared": false, "screenshots": false, "simsMade": false},
-    {"lot": "Casa Do Corsário", "myName": "Casa Do Corsário", "type": "Residential Rental", "size": "20x15", "residents": "Aloisio Romualdo (own)", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Casa Do Corsário", "myName": "Casa Do Corsário", "type": "Residential Rental (2)", "size": "20x15", "residents": "Aloisio Romualdo (own)", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Abrantes Estate", "myName": "Abrantes Estate", "type": "Residential", "size": "30x30", "residents": "Abrantes", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Fisherman's Hut", "myName": null, "type": "Restaurant (Seafood)", "size": "20x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Ye Olde Voyager", "myName": null, "type": "Bar", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
