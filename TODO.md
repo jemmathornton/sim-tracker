@@ -343,7 +343,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [x] [Jemma] 19 Oct, her call: lots use the game’s two names, “Small Business Residential” (owners live there) and “Small Business Venue” (nobody lives there; 8 renamed, her bracket notes kept). Was: “Small Business Residential” is the game’s own name after all. Rename plain “Small Business” to the game’s “Small Business Venue”? Add a bracket note of what each sells?
 - [ ] [Jemma] The Portsmouth Promenade is a venue lot, so Mary and Blossom Greenburg have no home: rent at Rockridge Springs (empty), or make it their home again?
 - [ ] [Jemma] No owner named yet: Optimist’s Outlook, The Llama Picturehouse (or make it a Bar), Plumbob Pictures Museum, Canalside Daycare. Greenwood Hamlet Residence has a venue type but residents listed
-- [ ] [Jemma] Venue lots: show “Run by” instead of “Residents” on the site?
+- [x] [Jemma] Venue lots: no “Run by” (her call, 19 Oct): they say “Owned by”, the same as vet clinics and every other owned lot.
 
 ### What to build next (research/build-priorities.md)
 - [ ] [Jemma] Have a look when planning builds: Britechester is complete; Newcrest needs only Rippling Flats; Granite Falls and Glimmerbrook have 2 lots left each; 28 lots are built but not shared (e.g. Boba Ippai); a suggested order for the next 15 builds, with reasons (based on what does well on her Gallery: 30×20 community lots, newer worlds, builds needing 3 packs or fewer)
