@@ -33,7 +33,7 @@
     {"lot": "Pinecrest Apartments #402", "myName": "Pinecrest Apartments #402", "type": "Apartment", "size": "N/A", "residents": "Eco Roomies", "built": true, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Pinecrest Apartments #404", "myName": "Pinecrest Apartments #404", "type": "Apartment", "size": "N/A", "residents": "2 Bed", "built": true, "shared": true, "screenshots": false, "simsMade": false, "displayName": "Pinecrest Apartments #404", "gallery": ["rZY+UsMqEeuDL+WcoywPdA=="], "beds": 2, "baths": 1}
    ],
-   "bannerZoom": 1.7
+   "bannerZoom": 1.35
   },
   {
    "name": "Port Promise",
@@ -48,7 +48,7 @@
     {"lot": "The Portsmouth Promenade", "myName": "The Portsmouth Promenade", "type": "Small Business", "size": "30x20", "residents": "Greenburg", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["WzZP/f/sT6inGdN6AXBE6Q=="], "traits": ["Study Spot"]}
    ],
    "ecoStart": "Industrial",
-   "bannerZoom": 1.7
+   "bannerZoom": 1.35
   }
  ],
  "familyLinks": [
