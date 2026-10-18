@@ -368,8 +368,8 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [ ] [Jemma] Show each lot’s Gallery upload date on its page? (169 of 226 uploads have it in their Gallery id)
 
 ### Weekly Gallery refresh (research/gallery-refresh-health.md)
-- [ ] [Claude] Bug, fix first thing when she’s back: if a new upload is listed but can’t be read, the linking step crashes (KeyError in auto_link), so no lots get linked and the site isn’t rebuilt that Sunday (the numbers are already saved). One-line fix. Sunday 18 Oct should still run fine unless that happens
-- [ ] [Claude] Also: the Gallery search isn’t filtered by creator (someone else’s upload naming her could be counted); files aren’t written safely (a power cut mid-write could break history.csv); deleted uploads are never marked gone; results aren’t committed to git after a run
+- [x] [Claude] Bug, fix first thing when she’s back: if a new upload is listed but can’t be read, the linking step crashes (KeyError in auto_link), so no lots get linked and the site isn’t rebuilt that Sunday (the numbers are already saved). One-line fix. Sunday 18 Oct should still run fine unless that happens — fixed 19 Oct (skipped and tried again next week)
+- [x] [Claude] Also: the Gallery search isn’t filtered by creator (someone else’s upload naming her could be counted); files aren’t written safely (a power cut mid-write could break history.csv); deleted uploads are never marked gone; results aren’t committed to git after a run — creator filter and safe writing done 19 Oct; still open: deleted uploads never marked gone, results not committed after a run
 - [ ] [Jemma] Optional extras: a notice in the app when the last refresh failed; commit after each refresh. The task only runs while she’s signed in and won’t wake the laptop, but catches up after a missed Sunday
 
 ### Text check (research/text-check.md)
