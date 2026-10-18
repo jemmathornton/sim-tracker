@@ -1012,7 +1012,7 @@ function whoCount(list){
   return [`${n} ${n === 1 ? "Sim" : "Sims"}`, ...Object.entries(pets).map(([k, c]) => `${c} ${c === 1 ? k : k + "s"}`)].join(" · ");
 }
 // each life state its own icon (her picks, 19 Oct); mermaids still to choose
-const OCCULT_ICON = {Spellcaster: "cauldron", Vampire: "bat", Werewolf: "ph-moon", Ghost: "ghost", Alien: "ph-alien", Fairy: "ph-butterfly", "Plant Sim": "ph-plant", Servo: "bot"};
+const OCCULT_ICON = {Spellcaster: "cauldron", Vampire: "bat", Werewolf: "ph-moon", Ghost: "ghost", Alien: "ph-alien", Fairy: "ph-butterfly", "Plant Sim": "ph-plant", Servo: "bot", Mermaid: "trident"};
 const lifeState = (s, cls) => isAnimal(s) ? `<span class="${cls} animal">${animalIcon(s)}${esc(s.state)}</span>` : `<span class="${cls} occult">${ic(OCCULT_ICON[s.state] || "sparkle")}${esc(s.state)}</span>`;
 function hhListing(x, listed){   // listed: on the households page, one-Sim households read surname first
   const n = x.sims.length, hc = x.lots[0].hood.color, made = simsMade(x);

@@ -65,6 +65,8 @@ Ghosts on trees: already where they should be (Kai sits next to Ekade, above Tak
 
 ## Icons (Lucide, ISC; all real Lucide names)
 
+**Her final picks (19 Oct), in the app:** Spellcaster cauldron (Lucide Lab), Vampire bat (Tabler), Werewolf moon (Phosphor), Ghost ghost, Alien alien (Phosphor), Fairy butterfly (Phosphor), Plant Sim plant (Phosphor), Servo bot, Mermaid trident (Tabler). The table below was the first suggestion.
+
 | Life state | Icon | | Life state | Icon |
 |---|---|---|---|---|
 | Ghost | `ghost` | | Mermaid | `shell` |

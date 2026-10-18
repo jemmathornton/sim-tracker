@@ -16,7 +16,7 @@ WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
-The dog, cat and bat icons come from Tabler Icons (https://tabler.io/icons), used under the MIT licence:
+The dog, cat, bat and trident icons come from Tabler Icons (https://tabler.io/icons), used under the MIT licence:
 
 MIT License
 
