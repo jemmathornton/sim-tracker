@@ -34,6 +34,7 @@ Read `HANDOVER.md` once for the full story, then `TODO.md` for everything still 
   - `gallery/`: `uploads.json` + `comments.json` (refreshed weekly, don't hand-edit), `history.csv` (a row per upload per refresh), `unlinked.json` (uploads deliberately not on a lot, and why), `text-fixes.json` (typo fixes shown on the site).
   - `spreadsheet/last-import.json`: her spreadsheet as last imported (the base for the three-way import).
 - `tools/` – the scripts (see below). `tools/one-off/` – the 13 Oct move from the chat, kept for the record (they refuse to run again).
+- `not-shown-yet/` – pictures kept out of `site/` because nothing shows them yet (full maps of worlds she doesn't own: move one back to `site/maps/` when she buys the pack).
 - `for-jemma/` – things for her to look at (e.g. `map-grids/`).
 - `live-site/` – snapshot of the old claude.ai page on 13 Oct (reference). `old-chat-build/` – the chat's generator and data (retired; `live_overrides.json` is folded into `data/`).
 - `research/`, `old-chat-notes/` – reference only. `research/data/` holds what the `tools/research/` scripts read from the game and her save.
