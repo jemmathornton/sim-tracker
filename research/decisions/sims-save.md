@@ -1,5 +1,7 @@
 # Which save the Sims come from (19 Oct)
 
+**Her decision (19 Oct):** none for now; the site stays a mix. In the end she uploads all her households to the Gallery, and those uploads become the source for her own Sims.
+
 **In short**
 - None of your saves today is a good Sims source: Building #2 has your lots but mostly stand-in households; the other 30 are old games.
 - Best: the **new save you’re making from the Gallery** becomes the one save for Sims too. Until then, keep what the site has (EA families from the game, 23 of yours from old copies, marked to check).
