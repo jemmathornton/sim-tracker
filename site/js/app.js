@@ -1355,7 +1355,7 @@ const CAL_DAY_NAMES = {Mon: "Monday", Tue: "Tuesday", Wed: "Wednesday", Thu: "Th
 const CAL_OFTEN = {week: "every week", fortnight: "every other week", third: "every third week", lounge: "the game picks each week"};
 const CAL_KINDS = {holiday: "Holidays", festival: "Festivals", community: "Community events", school: "Education", lot: "Lot nights"};   // split up (her asks, 19 Oct)
 const calKind = e => e.kind === "uni" || e.kind === "highschool" ? "school" : e.kind;
-// festivals and community events are filtered by world; school events by university or high school; lot nights by lot type (her ask, 19 Oct)
+// festivals, community events and lot nights are filtered by world; education by university or high school (her asks, 19 Oct)
 const calSub = e => e.kind === "uni" ? "University" : e.kind === "highschool" ? "High school" : e.kind === "lot" ? (/^Lounge/.test(e.lotType) ? "Lounges" : e.lotType + "s") : null;
 const SEASON_ICON = {Spring: "flower", Summer: "sun", Autumn: "leaf", Winter: "snowflake"};
 const calW = name => worlds.find(w => w.name === name);
@@ -1389,7 +1389,7 @@ const calHolidays = sn => [...(CAL.gameHolidays || []).filter(x => !CAL.holidays
 calState.season ||= "Spring";
 function calendarPage(){
   // lot nights are listed lot by lot, named by their lot, after the other events of the day (her ask, 19 Oct)
-  const on = e => calState.kinds.has(calKind(e)), byWorld = e => e.kind === "festival" || e.kind === "community";
+  const on = e => calState.kinds.has(calKind(e)), byWorld = e => e.kind === "festival" || e.kind === "community" || e.kind === "lot";   // lot nights by world too (her call, 19 Oct: only two lot types have them)
   const shown = calEvents().filter(e => on(e) && (byWorld(e) ? !calState.world || e.w === calState.world : e.kind === "lot" ? !calState.lots || calSub(e) === calState.lots : !calState.school || calSub(e) === calState.school))
     .map(e => e.kind === "lot" ? {...e, label: e.where + ": " + e.name} : e);
   const withEv = worlds.filter(w => w.owned && calEvents().some(e => e.w === w.name && on(e) && byWorld(e)));
@@ -1403,7 +1403,7 @@ function calendarPage(){
     <div class="kinds">${Object.entries(CAL_KINDS).map(([k, t]) => `<label><input type="checkbox" data-cal-kind="${k}" ${calState.kinds.has(k) ? "checked" : ""}> ${esc(t)}</label>`).join("")}</div></div>
     ${withEv.length ? chipRow("Worlds", "world", "All worlds", withEv.map(w => [w.name, calHues(w.name)])) : ""}
     ${calState.kinds.has("school") ? chipRow("Education", "school", "Both", subs("school").map(v => [v])) : ""}
-    ${calState.kinds.has("lot") ? chipRow("Lot nights", "lots", "All lot types", subs("lot").map(v => [v])) : ""}`;
+`;
   if (daily.length) h += `<div class="band"><span class="band-l">${ic("repeat")}Every day</span><div class="band-evs">${daily.map(calPill).join("")}</div></div>`;
   // the month: four weeks, Monday first
   h += `<div class="month s-${sn.toLowerCase()}"><div class="m-head"><span></span>${CAL_DAYS.map(d => `<b>${CAL_DAY_NAMES[d]}</b>`).join("")}</div>
