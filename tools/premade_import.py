@@ -147,6 +147,7 @@ def main(apply):
                 lst = rels.setdefault(x, [])
                 if not any(n == names[y] for n, _ in lst): lst.append([names[y], label])
     for a, loot, b, bits, tracks in P["between"]["relationships"]:
+        if 'Starting_NPC_Parent' in loot: add_parent(by_tpl.get(a), by_tpl.get(b))   # sim_b is sim_a's parent (Skip Broke and Dustin, the Landgraabs and Johnny Zest)
         add_rel(by_tpl.get(a), by_tpl.get(b), rel_label(loot, bits, tracks))
     for w, name, h, sims in chosen:
         for s in sims:

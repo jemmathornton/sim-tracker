@@ -142,7 +142,8 @@
       ["Flower Arranging", 3, 10]
      ],
      "rels": [
-      ["Ian Moody", "Acquaintances"]
+      ["Ian Moody", "Acquaintances"],
+      ["Agnes Crumplebottom", "Friends"]
      ],
      "partners": [
       ["simon-scott", "Spouse"]
@@ -166,7 +167,8 @@
       ["Comedy", 2, 10]
      ],
      "rels": [
-      ["Thomas Watson", "Acquaintances"]
+      ["Thomas Watson", "Acquaintances"],
+      ["Agnes Crumplebottom", "Disliked"]
      ],
      "partners": [
       ["sara-scott", "Spouse"]
