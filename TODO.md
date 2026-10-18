@@ -340,7 +340,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [x] [Jemma] 19 Oct: Casa do Corsário 2 units; The Old Clocktower a Backroom (convert it in game); Hay Hill Landing “Residential (Farm)”.
 
 ### Small business lots (research/small-business-check.md)
-- [ ] [Jemma] “Small Business Residential” is the game’s own name after all. Rename plain “Small Business” to the game’s “Small Business Venue”? Add a bracket note of what each sells?
+- [x] [Jemma] 19 Oct, her call: lots use the game’s two names, “Small Business Residential” (owners live there) and “Small Business Venue” (nobody lives there; 8 renamed, her bracket notes kept). Was: “Small Business Residential” is the game’s own name after all. Rename plain “Small Business” to the game’s “Small Business Venue”? Add a bracket note of what each sells?
 - [ ] [Jemma] The Portsmouth Promenade is a venue lot, so Mary and Blossom Greenburg have no home: rent at Rockridge Springs (empty), or make it their home again?
 - [ ] [Jemma] No owner named yet: Optimist’s Outlook, The Llama Picturehouse (or make it a Bar), Plumbob Pictures Museum, Canalside Daycare. Greenwood Hamlet Residence has a venue type but residents listed
 - [ ] [Jemma] Venue lots: show “Run by” instead of “Residents” on the site?

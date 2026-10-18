@@ -38,7 +38,7 @@
     {"lot": "Orchid A Go Go", "myName": "Orchid A Go Go", "type": "Lounge", "size": "30x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["F9KVZ6FaEeuHNfwg9JDtjA=="], "traits": ["Great Acoustics", "Up-and-Coming Hotspot", "Convivial"]},
     {"lot": "Ward Park", "myName": "Starlight Fitness", "type": "Gym", "size": "20x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["lRs1caFSEeuGj/wg9JDtjA=="], "traits": ["Bracing Breezes", "Up-and-Coming Hotspot", "Sunny Aspect"]},
     {"lot": "Studio PBP", "myName": "Studio PBP", "type": "Lounge", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
-    {"lot": "Plumbob Pictures Museum", "myName": "Plumbob Pictures Museum", "type": "Small Business (Museum, Acting Classes & Café)", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "Plumbob Pictures Museum", "myName": "Plumbob Pictures Museum", "type": "Small Business Venue (Museum, Acting Classes & Café)", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Pectoral Fitness", "myName": "Valley Views", "type": "Restaurant", "size": "30x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["S0OY6pUkEe2C1FdEVD8H2Q=="], "traits": ["Chef's Kitchen", "Hottest Spot in Town", "Convivial"]}
    ]
   },

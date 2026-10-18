@@ -45,7 +45,7 @@
     {"lot": "The Cozy Casket House", "myName": null, "type": "Haunted House Residential", "size": "30x20", "residents": "Empty", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Mourning Mist Manor", "myName": null, "type": "Residential", "size": "20x20", "residents": "Izadi-Gomes", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Club Eternity", "myName": null, "type": "Nightclub", "size": "30x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
-    {"lot": "Mystic Crossroads", "myName": null, "type": "Small Business (Tarot & Curiosities)", "size": "30x30", "residents": "? (owner to pick)", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
+    {"lot": "Mystic Crossroads", "myName": null, "type": "Small Business Venue (Tarot & Curiosities)", "size": "30x30", "residents": "? (owner to pick)", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ],
    "festivals": ["Afterlife Anonymous", "Thinned Festiveil"]
   },

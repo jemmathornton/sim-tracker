@@ -28,7 +28,7 @@
    "mapBox": [0.55, 0.27, 0.9, 0.61],
    "lots": [
     {"lot": "Pigulock Manor", "myName": "Pigulock Manor", "type": "Residential", "size": "30x20", "residents": "Tinker", "built": false, "shared": false, "screenshots": false, "simsMade": false},
-    {"lot": "Canal Corner", "myName": "Canal Corner", "type": "Small Business", "size": "20x15", "residents": "Tinker", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "Canal Corner", "myName": "Canal Corner", "type": "Small Business Venue", "size": "20x15", "residents": "Tinker", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Sprucewood Square", "myName": "Sprucewood Square", "type": "Community Market", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Pinecrest Apartments #402", "myName": "Pinecrest Apartments #402", "type": "Apartment", "size": "N/A", "residents": "Eco Roomies", "built": true, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Pinecrest Apartments #404", "myName": "Pinecrest Apartments #404", "type": "Apartment", "size": "N/A", "residents": "2 Bed", "built": true, "shared": true, "screenshots": false, "simsMade": false, "displayName": "Pinecrest Apartments #404", "gallery": ["rZY+UsMqEeuDL+WcoywPdA=="], "beds": 2, "baths": 1}
@@ -45,7 +45,7 @@
     {"lot": "The Caboose", "myName": "The Caboose", "type": "Bar", "size": "30x20", "residents": "N/A", "built": true, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "The Shipping Views", "myName": "The Old Dockyard", "type": "Community Space", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["ZQSlwRx6EeuFnhriosBzww==", "YkcpxBx6EeuFjhriosBzww==", "Zz52rhx6EeuFrhriosBzww==", "aP66fRx6EeuFtxriosBzww=="], "versions": [{"label": "Market", "upload": "Zz52rhx6EeuFrhriosBzww=="}, {"label": "Garden", "upload": "ZQSlwRx6EeuFnhriosBzww=="}, {"label": "Makers", "upload": "aP66fRx6EeuFtxriosBzww=="}, {"label": "Community space", "upload": "YkcpxBx6EeuFjhriosBzww=="}], "traits": ["Sunny Aspect", "Convivial"], "challenges": ["Reduce and Recycle", "Off-the-Grid"]},
     {"lot": "The Waterfront", "myName": "Abandoned Views", "type": "Residential Rental", "size": "40x30", "residents": "Henley", "built": false, "shared": false, "screenshots": false, "simsMade": false},
-    {"lot": "The Portsmouth Promenade", "myName": "The Portsmouth Promenade", "type": "Small Business", "size": "30x20", "residents": "Greenburg", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["WzZP/f/sT6inGdN6AXBE6Q=="], "traits": ["Study Spot"]}
+    {"lot": "The Portsmouth Promenade", "myName": "The Portsmouth Promenade", "type": "Small Business Venue", "size": "30x20", "residents": "Greenburg", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["WzZP/f/sT6inGdN6AXBE6Q=="], "traits": ["Study Spot"]}
    ],
    "ecoStart": "Industrial",
    "bannerZoom": 1.35
