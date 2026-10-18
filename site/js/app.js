@@ -11,6 +11,17 @@ const slug = s => String(s).toLowerCase().normalize("NFD").replace(/[\u0300-\u03
 // neighbourhood colours: muted jewel tones
 const HOOD_COLORS = ["#B4573E","#6A5A9E","#2F6E9C","#B98A2E","#3C8459","#AE5578","#2B8A86","#8C7A3A"];
 
+// families in worlds she doesn't own yet (her choice A, 19 Oct; ported from for-jemma/prototypes/not-owned): the build keeps a
+// not-owned world's lots only in DATA.stats, so give those worlds back the neighbourhoods and lots their households live on
+// (homes only). The households, Sims, trees and dynasties are then made exactly as for owned worlds.
+DATA.worlds.filter(w => !w.owned && DATA.households[w.name]).forEach(w => {
+  const names = Object.keys(DATA.households[w.name]), hoods = {};
+  DATA.stats.filter(r => r.w === w.name && r.who && names.includes(r.who.replace(/\?$/, "").trim())).forEach(r =>
+    (hoods[r.n] ||= {name: r.n, desc: "", color: w.color, lots: []}).lots.push({lot: r.lot, mine: r.mine, type: r.type, size: r.size,
+      who: r.who, whoNote: null, built: r.built, shared: r.shared, sims: r.sims, gallery: null, photos: []}));
+  w.hoods = Object.values(hoods);
+});
+
 const worlds = DATA.worlds, lotIndex = {}, hhIndex = {}, hoodIndex = {};
 // a household's own extras from the data: its picture (a screenshot in shots/), origin (Premade or Mine), played, Neighbourhood Stories
 const hhMore = x => ({portrait: x.portrait, origin: x.origin, played: x.played, stories: x.stories, single: x.single});
@@ -1151,6 +1162,7 @@ function route(){
   if (cw && cw.deep) { root.setProperty("--deep", cw.deep[0]); root.setProperty("--deep-2", cw.deep[1]); }
   else { root.removeProperty("--deep"); root.removeProperty("--deep-2"); }
   view.innerHTML = html;
+  notOwnedLinks(view);
   lazyPics(view);
   clearSearch();
   renderNav(active, key, ctx);
@@ -1173,6 +1185,88 @@ function versionTabs(l){
 }
 document.addEventListener("click", e => { const b = e.target.closest("[data-ver]"); if (!b) return; const l = lotIndex[location.hash.slice(1)]; if (!l || !l.versions) return;
   applyVersion(l, +b.dataset.ver); const y = scrollY; document.getElementById("view").innerHTML = lot(l); lazyPics(document.getElementById("view")); window.scrollTo(0, y); document.querySelector(`[data-ver="${b.dataset.ver}"]`)?.focus(); });
+/* ---------- families in worlds she doesn't own yet (her choice A, 19 Oct; ported from for-jemma/prototypes/not-owned) ----------
+   Their household and Sim pages are the usual ones with a lighter banner and one plain line; they're listed under their world
+   in the sidebar's Not owned list. Marks: a hollow dot or monogram, like the sidebar's not-owned worlds. Their lots,
+   neighbourhoods and worlds don't open, so links to them become plain text. */
+const notOwnedW = w => !!w && !w.owned;
+const simWorldOf = id => { const s = SIMS[id]; return s ? (s.hh ? s.hh.world : s.world) : null; };
+const awaySim = id => !!SIMS[id] && !SIMS[id].ph && notOwnedW(simWorldOf(id));
+const NO_LOTS = {}, NO_HOODS = {};   // lots and neighbourhoods of not-owned worlds never get pages; kept here to spot links to them
+Object.keys(lotIndex).forEach(k => { if (notOwnedW(lotIndex[k].world)) { NO_LOTS[k] = lotIndex[k]; delete lotIndex[k]; } });
+Object.keys(hoodIndex).forEach(k => { if (notOwnedW(hoodIndex[k].world)) { NO_HOODS[k] = hoodIndex[k]; delete hoodIndex[k]; } });
+// homeChip: a hollow dot, and the tooltip says so
+const homeChipOwned = homeChip;
+homeChip = function (s, worldOnly) {
+  const h = homeChipOwned(s, worldOnly), w = s.hh ? s.hh.world : s.world;
+  if (!h || !notOwnedW(w)) return h;
+  const who = s.hh ? s.hh.name + " household" : s.hhName ? s.hhName + " household" : "";
+  return h.replace('class="hhchip"', 'class="hhchip notown"').replace(/title="[^"]*"/, `title="${esc((who ? who + ", " : "") + w.name)}, a world you don’t own yet"`);
+};
+// simWhere: "Monticapp household · Tartosa (not owned)"
+const simWhereOwned = simWhere;
+simWhere = function (o) { const t = SIMS[o], out = simWhereOwned(o); return t && t.hh && notOwnedW(t.hh.world) ? out + " (not owned)" : out; };
+// tree cards, family cards, relationship cards and dynasty member cards: a hollow monogram
+const markAway = (html, id, cls) => awaySim(id) ? html.replace(`class="${cls} `, `class="${cls} notown `) : html;
+const treeCardOwned = treeCard;     treeCard = (id, ...a) => markAway(treeCardOwned(id, ...a), id, "tc");
+const simFamItemOwned = simFamItem; simFamItem = (o, w) => markAway(simFamItemOwned(o, w), o, "card");
+const simRelCardOwned = simRelCard; simRelCard = r => markAway(simRelCardOwned(r), r.o, "rel-card");
+const memberCardOwned = memberCard; memberCard = (g, id, r) => markAway(memberCardOwned(g, id, r), id, "mcard");
+// the tree key gets one more line when the tree has someone from a world she doesn't own
+const treeKeyOwned = treeKey;
+treeKey = function (ids, ...a) {
+  const h = treeKeyOwned(ids, ...a);
+  return ids.some(awaySim) ? h.replace(/<\/div>\s*$/, `<span><span class="k-notown"></span>In a world you don’t own yet</span></div>`) : h;
+};
+// the pages: a lighter banner and one plain line under it
+const notOwnedNote = w => `<div class="note notown-note">This family lives in ${esc(w.name)} (${esc(w.pack)}), a world you don’t own yet. Their home and the world will open once the pack is in.</div>`;
+const afterHero = (h, extra) => { const i = h.indexOf("</section>") + 10; return h.slice(0, i).replace('class="hero small"', 'class="hero small notown"') + extra + h.slice(i); };
+const householdNewOwned = householdNew;
+householdNew = hh => notOwnedW(hh.world) ? afterHero(householdNewOwned(hh), notOwnedNote(hh.world)) : householdNewOwned(hh);
+const householdOwned = household;
+household = hh => notOwnedW(hh.world) && !hh.sims.some(sm => sm.sid) ? afterHero(householdOwned(hh), notOwnedNote(hh.world)) : householdOwned(hh);
+const simPageOwned = simPage;
+simPage = function (s) {
+  const w = simWorldOf(s.id); if (!notOwnedW(w)) return simPageOwned(s);
+  return afterHero(simPageOwned(s), `<div class="note notown-note">Lives in ${esc(w.name)} (${esc(w.pack)}), a world you don’t own yet.</div>`);
+};
+// links to lots, neighbourhoods and worlds that don't open become plain text (a world crumb says "(not owned)")
+function notOwnedLinks(root){
+  root.querySelectorAll('a[href^="#"]').forEach(a => {
+    const k = a.getAttribute("href").slice(1);
+    const w = NO_LOTS[k] ? NO_LOTS[k].world : k.startsWith("n-") && NO_HOODS[k.slice(2)] ? NO_HOODS[k.slice(2)].world : /^[wf]-/.test(k) ? worlds.find(x => x.id === k.slice(2)) : null;
+    if (!w || w.ready) return;
+    const sp = document.createElement("span"); sp.className = (a.className + " nolink").trim(); sp.innerHTML = a.innerHTML;
+    if (k.startsWith("w-") && a.closest(".crumbs")) sp.append(" (not owned)");
+    a.replaceWith(sp);
+  });
+}
+// sidebar: a not-owned world with families unfolds to its households, like an owned world's list
+const renderNavOwned = renderNav, NO_FOLD = new Set();
+renderNav = function (active, key, ctx) {
+  renderNavOwned(active, key, ctx);
+  const cur = ctx && ctx.hh && notOwnedW(ctx.hh.world) ? ctx.hh.world : null;
+  document.querySelectorAll("#nav .nav-group.dim a.soon").forEach(a => {
+    const w = worlds.find(x => x.name === a.textContent.trim()), hhs = w ? Object.values(w.households).sort(byHh) : [];
+    if (!hhs.length) return;
+    const open = w === cur || NO_FOLD.has(w.id);
+    a.classList.add("has-hh"); a.dataset.nofold = w.id; a.setAttribute("role", "button"); a.setAttribute("aria-expanded", open); a.removeAttribute("aria-disabled");
+    a.insertAdjacentHTML("beforeend", `<span class="pct">${hhs.length}</span>`);
+    a.insertAdjacentHTML("afterend", `<div class="subnav" ${open ? "" : "hidden"}>${hhs.map(hx => `<a href="#${hx.id}" class="${ctx.hh === hx ? (ctx.sim ? "path" : "cur") : ""}">${esc(hhListName(hx))}</a>${ctx.hh === hx ? `<div class="lotnav">${hx.sims.map(sm => `<a href="#s-${sm.sid}" class="${ctx.sim === sm ? "cur" : ""}">${esc(sm.name)}</a>`).join("")}</div>` : ""}`).join("")}</div>`);
+  });
+};
+document.addEventListener("click", e => { const a = e.target.closest("#nav a[data-nofold]"); if (!a) return; e.preventDefault();
+  const id = a.dataset.nofold, list = a.nextElementSibling, show = list.hidden; list.hidden = !show; a.setAttribute("aria-expanded", show); show ? NO_FOLD.add(id) : NO_FOLD.delete(id); });
+// search: their households and Sims can be found, marked "not owned"
+const searchIndexOwned = searchIndex;
+searchIndex = function () {
+  const out = searchIndexOwned();
+  const add = (kind, name, where, href) => out.push({kind, name, where, href, keys: [[name, fold(name)]]});
+  worlds.filter(w => !w.owned).forEach(w => Object.values(w.households).forEach(x => { add("Household", x.name, w.name + " (not owned)", "#" + x.id);
+    x.sims.forEach(sm => add("Sim", sm.name, x.name + " household · not owned", sm.sid ? "#s-" + sm.sid : "#" + x.id)); }));
+  return out;
+};
+
 document.getElementById("menuIco").innerHTML = ic("menu");
 document.getElementById("searchIco").innerHTML = ic("search");
 addEventListener("hashchange", route);

@@ -685,3 +685,17 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 /* relatives who were never in the game (named on the Sims Wiki): dashed outline */
 .tc.nig{border:1.5px dashed color-mix(in srgb,var(--muted) 75%,var(--surface))}
 .tree-key .nig-k{border:1.5px dashed var(--muted);background:transparent}
+/* families in worlds she doesn't own yet (19 Oct): marks echo the sidebar's hollow dots for not-owned worlds */
+.hhchip.notown::before{background:transparent;box-shadow:inset 0 0 0 1.5px var(--w)}
+.tc.notown .tm,.sim-list .card.notown .mono,.rel-card.notown .mono,.mcard.notown .tm{background:transparent;color:var(--w);box-shadow:inset 0 0 0 1.5px var(--w)}
+.k-notown{width:14px;height:14px;border-radius:50%;display:inline-block;box-shadow:inset 0 0 0 1.5px var(--muted)}
+.hero.notown{filter:saturate(.45)}
+.notown-note{border-color:var(--line);background:color-mix(in srgb,var(--soft) 60%,var(--surface));font-weight:600}
+.homes li .nolink{font:400 21px/1.1 var(--display)}
+/* the Not owned list: still lighter, but a world with families unfolds to them */
+.nav-group.dim{opacity:1}
+.nav-group.dim .label{opacity:.55}
+.nav-group.dim a.soon.has-hh{cursor:pointer}
+.nav-group.dim a.soon.has-hh:hover{background:rgba(255,255,255,.05);color:rgba(234,242,236,.7)}
+.nav-group.dim .subnav a{opacity:.8}
+.nav-group.dim .subnav a.cur,.nav-group.dim .subnav a.path{opacity:1}
