@@ -20,7 +20,8 @@
     {"lot": "Wyvern Hall", "myName": "Wyvern Hall", "type": "University Housing", "size": "30x20", "residents": "Best of Friends", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["yJusUxFnEeqOJ0u/SNc3OA=="], "traits": ["Party Place", "Study Spot", "Sunny Aspect"]}
    ],
    "festivals": ["Britechester Game Day Party", "Creativity Celebration", "Debate Showdown", "Figure Painting"],
-   "bannerZoom": 1.15
+   "bannerZoom": 1.15,
+   "bannerOnlyZoom": 0.9
   },
   {
    "name": "Foxbury Institute",
@@ -34,7 +35,8 @@
     {"lot": "Briny Tower", "myName": "Briny Tower", "type": "University Housing", "size": "30x20", "residents": "Fletcher", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["dUmUl8fLSFC7Tb8ux2J66Q=="], "traits": ["Study Spot", "Party Place", "Sunny Aspect"]}
    ],
    "festivals": ["Foxbury Game Day Party", "School Spirit Day", "Utili-Bot Contest"],
-   "bannerShift": [-0.06, 0]
+   "bannerShift": [-0.06, 0],
+   "bannerOnlyZoom": 0.9
   },
   {
    "name": "Gibbs Hill",

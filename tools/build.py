@@ -188,7 +188,7 @@ def build():
             if hood.get('mapBox'): nb_box.setdefault(ws, {})[hood['name']] = hood['mapBox']
             if hood.get('mapCentred'): nb_centred.setdefault(ws, []).append(hood['name'])   # card stays centred on its box (her choice)
             if hood.get('mapZoom'): nb_zoom.setdefault(ws, {})[hood['name']] = hood['mapZoom']   # card zoomed in closer than its box (her choice)
-            if hood.get('bannerZoom') or hood.get('bannerShift') or hood.get('bannerTitle') or hood.get('cardShift'): nb_banner.setdefault(ws, {})[hood['name']] = {'zoom': hood.get('bannerZoom', 1), 'shift': hood.get('bannerShift', [0, 0]), 'title': hood.get('bannerTitle'), 'card': hood.get('cardShift', [0, 0])}   # her own nudges to the banner (19 Oct)
+            if hood.get('bannerZoom') or hood.get('bannerShift') or hood.get('bannerTitle') or hood.get('cardShift') or hood.get('bannerOnlyZoom'): nb_banner.setdefault(ws, {})[hood['name']] = {'zoom': hood.get('bannerZoom', 1), 'shift': hood.get('bannerShift', [0, 0]), 'title': hood.get('bannerTitle'), 'card': hood.get('cardShift', [0, 0]), 'heroOnly': hood.get('bannerOnlyZoom', 1)}   # her own nudges to the banner (19 Oct)
             for l in hood['lots']:
                 name, unsure, note = residents(l['residents'])
                 who = name or note or None

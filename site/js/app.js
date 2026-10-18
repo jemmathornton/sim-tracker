@@ -791,7 +791,8 @@ function hoodHeroView(x, raw){
   const nudge = (NB_BANNER[x.world.id] || {})[x.name] || {zoom: 1, shift: [0, 0]};   // her own nudges (bannerZoom, bannerShift)
   const z = Math.max(1.01, Math.min(HERO_ZOOM * nudge.zoom, fit * nudge.zoom));
   if (raw) return {z, ratio: HERO_RATIO, c: [c[0] + nudge.shift[0], c[1] + nudge.shift[1]]};   // for the card (hoodArt)
-  return nbView([c[0] + nudge.shift[0], Math.min(1, c[1] + nudge.shift[1] + .04 / z)], z, HERO_RATIO).bg;   // a touch lower, so the neighbourhood sits above the fade
+  const zh = Math.max(1.01, z * (nudge.heroOnly || 1));   // bannerOnlyZoom: the banner alone, the card stays (19 Oct: UoB, Foxbury)
+  return nbView([c[0] + nudge.shift[0], Math.min(1, c[1] + nudge.shift[1] + .04 / zh)], zh, HERO_RATIO).bg;   // a touch lower, so the neighbourhood sits above the fade
 }
 function hoodArt(x){
   const spot = (NB_PT[x.world.id] || {})[x.name], box = (NB_BOX[x.world.id] || {})[x.name], n = x.lots.length;
