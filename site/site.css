@@ -791,3 +791,28 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 .cal .mini .wk{font-size:10.5px;font-weight:800;color:var(--muted);display:grid;place-items:center}
 .cal .wchips{margin-bottom:6px}
 .nav-group.stats-nav a+a{margin-top:2px}
+/* the Calendar as a month: four weeks, Monday first (her ask, 19 Oct) */
+.cal .cal-top{display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px;margin-bottom:12px}
+.cal .seg{display:inline-flex;flex-wrap:wrap;border:1px solid var(--line);border-radius:99px;background:var(--surface);padding:3px}
+.cal .seg button{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:6px;padding:7px 15px;border-radius:99px;font-weight:700;font-size:14px;color:var(--muted)}
+.cal .seg button.on{background:var(--ink);color:var(--paper)}
+.cal .seg button:focus-visible{outline:2px solid var(--brass)}
+.cal .month{--s:#7FA36B;margin-top:14px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--surface)}
+.cal .month.s-summer{--s:#D9A23B}.cal .month.s-autumn{--s:#C2703D}.cal .month.s-winter{--s:#6F95B8}
+.cal .m-head,.cal .m-week{display:grid;grid-template-columns:34px repeat(7,minmax(0,1fr))}
+.cal .m-head{background:color-mix(in srgb,var(--s) 14%,var(--surface));border-bottom:1px solid var(--line)}
+.cal .m-head b{font:400 18px/1 var(--display);padding:10px 8px}
+.cal .m-week+.m-week{border-top:1px solid var(--line)}
+.cal .m-wk{writing-mode:vertical-rl;transform:rotate(180deg);display:grid;place-items:center;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:var(--soft)}
+.cal .m-day{min-width:0;min-height:130px;padding:6px 6px 8px;border-left:1px solid var(--line);display:grid;align-content:start;gap:2px}
+.cal .m-day.hol{background:color-mix(in srgb,var(--s) 9%,var(--surface))}
+.cal .m-n{font-weight:800;font-size:12px;color:var(--muted)}
+.cal .m-hol{min-width:0;display:flex;flex-wrap:wrap;align-items:center;gap:4px 6px;padding:5px 7px;border-radius:8px;background:var(--s);color:#fff;font-size:12.5px;line-height:1.2}
+.cal .m-hol svg{width:13px;height:13px}
+.cal .m-hol small{font-size:10.5px;font-weight:700;opacity:.85}
+.cal .m-ev{display:grid;grid-template-columns:7px minmax(0,1fr);gap:5px;align-items:start;font-size:11.5px;line-height:1.3;padding:2px 4px;border-radius:5px;cursor:default}
+.cal .m-ev i{width:7px;height:7px;border-radius:50%;background:var(--h);margin-top:4px}
+.cal .m-ev .t{color:var(--muted);font-weight:700;white-space:nowrap;font-size:10.5px}
+.cal .m-ev:hover{background:color-mix(in srgb,var(--h) 12%,transparent)}
+.cal .m-ev.unbuilt{opacity:.6}
+.cal .key i.k-hol{width:14px;height:14px;border:0;background:#7FA36B}

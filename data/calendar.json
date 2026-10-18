@@ -1,5 +1,5 @@
 {
- "_note": "The save's calendar (19 Oct): festivals and regular events from the game's own files, checked against the Sims Wiki (research/festivals-calendar.md); lotEvents are made from her lots' types and traits; holidays are hers (season, week 1-4, day). Weeks start on Monday; a season is 4 weeks (her choice).",
+ "_note": "The save's calendar (19 Oct): festivals and regular events from the game's own files, checked against the Sims Wiki (research/festivals-calendar.md); lotEvents are made from her lots' types and traits; holidays are hers (season, week 1-4, day). Weeks start on Monday; a season is 4 weeks (her choice). gameHolidays: the game's own holidays where it puts them with four-week seasons (each season's tuning, VERY_LONG; 19 Oct); hers in holidays can replace or add to them.",
  "seasonWeeks": 4,
  "seasons": [
   "Spring",
@@ -1062,5 +1062,35 @@
    "Sun",
    "New Skill Day"
   ]
+ ],
+ "gameHolidays": [
+  {
+   "name": "Love Day",
+   "season": "Spring",
+   "week": 3,
+   "day": "Fri",
+   "off": false
+  },
+  {
+   "name": "Harvestfest",
+   "season": "Autumn",
+   "week": 4,
+   "day": "Thu",
+   "off": true
+  },
+  {
+   "name": "Winterfest",
+   "season": "Winter",
+   "week": 3,
+   "day": "Wed",
+   "off": true
+  },
+  {
+   "name": "New Year’s Eve",
+   "season": "Winter",
+   "week": 4,
+   "day": "Sat",
+   "off": true
+  }
  ]
 }

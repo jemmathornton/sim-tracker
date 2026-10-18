@@ -1379,38 +1379,40 @@ const calStar = e => e.star ? `<sup title="The game never shows this name; it’
 const calPill = e => `<div class="ev k-${e.kind} o-${slug(e.often || "")}${e.built === false ? " unbuilt" : ""}" style="${e.agg ? "--h:#9A7B3A;--on:#fff" : calHues(e.w)}">
   <span class="t">${esc(e.time)}</span><b>${esc(e.name)}${calStar(e)}</b>
   <small>${[e.agg ? "" : `<a href="#w-${calW(e.w).id}">${esc(e.w)}</a>`, e.agg ? esc(e.where) : calPlace(e)].filter(Boolean).join(" · ")}</small>${calTag(e)}</div>`;
+// which weeks of a season an event is on (1-4): every week, or every other week (pairs take turns; which week depends on her save)
+const calWeeks = e => e.often === "fortnight" ? (e.pair && e.name.toLowerCase() > e.pair.toLowerCase().replace(/^the /, "") ? [2, 4] : e.name === "Flea Market" ? [2, 4] : [1, 3]) : e.often === "third" ? [1, 4] : [1, 2, 3, 4];
+const calHolidays = sn => [...(CAL.gameHolidays || []).filter(x => !CAL.holidays.some(y => y.replaces === x.name)), ...CAL.holidays].filter(x => x.season === sn);
+calState.season ||= "Spring";
 function calendarPage(){
   const picked = calEvents().filter(e => calState.kinds.has(e.kind) && (!calState.world || e.w === calState.world)), groups = {};
-  // lot nights: one pill per night, naming every lot that has it
+  // lot nights: one entry per night, naming every lot that has it
   picked.filter(e => e.kind === "lot").forEach(e => (groups[e.name + "|" + e.time] ||= []).push(e));
   const shown = picked.filter(e => e.kind !== "lot").concat(Object.values(groups).map(list => ({...list[0], agg: true, built: list.some(e => e.built), order: 99,
     where: `${list[0].lotType}${list.length > 1 ? "s" : ""}: ${list.map(e => e.where + (e.built ? "" : " (not built)")).join(", ")}`})));
   const withEv = worlds.filter(w => w.owned && calEvents().some(e => e.w === w.name && calState.kinds.has(e.kind)));
   const byStart = (a, b) => a.start - b.start || a.order - b.order;
   const daily = shown.filter(e => e.special === "daily").sort(byStart), loose = shown.filter(e => e.special && e.special !== "daily").sort(byStart);
-  let h = `<section class="hero small" style="--c:#C9A04A"><div class="kicker"><i></i><span class="label">Across the save</span></div><h1 style="margin-top:14px">The <em>calendar</em></h1><p>Your seasons and holidays, and every festival and regular event in your worlds, Monday to Sunday.</p></section>`;
-  // the year: four-week seasons with her holidays
-  const weeks = CAL.seasonWeeks || 4;
-  h += `<section class="block cal"><div class="block-head"><h2>The <em>year</em></h2><span class="count">${weeks}-week seasons</span></div><div class="seasons">${CAL.seasons.map(sn => {
-    const hols = CAL.holidays.filter(x => x.season === sn);
-    return `<div class="season s-${sn.toLowerCase()}"><div class="s-h">${ic(SEASON_ICON[sn] || "calendar")}<b>${esc(sn)}</b></div>
-      <div class="mini"><span></span>${CAL_DAYS.map(d => `<span class="dh">${d.slice(0, 2)}</span>`).join("")}${Array.from({length: weeks}, (_, wk) => `<span class="wk">${wk + 1}</span>${CAL_DAYS.map(d => { const ho = hols.find(x => x.week === wk + 1 && x.day === d);
-        return `<i class="${ho ? "on" : ""}" title="${ho ? esc(ho.name) : ""}">${wk * 7 + CAL_DAYS.indexOf(d) + 1}</i>`; }).join("")}`).join("")}</div>
-      ${hols.length ? hols.map(x => `<p><b>${esc(x.name)}</b> ${CAL_DAY_NAMES[x.day]}, week ${x.week}</p>`).join("") : `<p class="none">No holidays yet</p>`}</div>`; }).join("")}</div>
-    ${CAL.holidays.length ? "" : `<p class="yr-note">${ic("sparkle")}<span>You’ll make your own holidays for this save; they’ll show here.</span></p>`}
-    <p class="yr-note">${ic("sparkle")}<span><b>Surprise holidays</b>, a few days’ notice, at random: ${CAL.surprise.map(([d, n]) => `${esc(n)} (${d})`).join(", ")}.</span></p>
-    <p class="yr-note">${ic("leaf")}<span><b>Neighbourhood action plan voting</b> every week from Friday 8 am to Monday 6 pm, in every neighbourhood with residents.</span></p></section>`;
-  // every week
-  h += `<section class="block cal"><div class="block-head"><h2>Every <em>week</em></h2><span class="count">faint outlines are every other week; which week depends on your save</span></div>
-    <div class="a-filters"><div class="kinds">${Object.entries(CAL_KINDS).map(([k, t]) => `<label><input type="checkbox" data-cal-kind="${k}" ${calState.kinds.has(k) ? "checked" : ""}> ${esc(t)}</label>`).join("")}</div>
-    <div class="wchips"><button type="button" class="wchip ${calState.world ? "" : "on"}" data-cal-world="">All worlds</button>${withEv.map(w => `<button type="button" class="wchip ${calState.world === w.name ? "on" : ""}" data-cal-world="${esc(w.name)}" style="${calHues(w.name)}"><i></i>${esc(w.name)}</button>`).join("")}</div></div>`;
+  const weeks = CAL.seasonWeeks || 4, sn = calState.season, hols = calHolidays(sn);
+  let h = `<section class="hero small" style="--c:#C9A04A"><div class="kicker"><i></i><span class="label">Across the save</span></div><h1 style="margin-top:14px">The <em>calendar</em></h1><p>Each season is four weeks, Monday to Sunday: its holidays, and every festival and regular event in your worlds.</p></section>`;
+  h += `<section class="block cal"><div class="cal-top"><div class="seg" role="group" aria-label="Season">${CAL.seasons.map(s => `<button type="button" class="${s === sn ? "on" : ""} s-${s.toLowerCase()}" data-cal-season="${s}">${ic(SEASON_ICON[s] || "calendar")}${esc(s)}</button>`).join("")}</div>
+    <div class="kinds">${Object.entries(CAL_KINDS).map(([k, t]) => `<label><input type="checkbox" data-cal-kind="${k}" ${calState.kinds.has(k) ? "checked" : ""}> ${esc(t)}</label>`).join("")}</div></div>
+    <div class="wchips"><button type="button" class="wchip ${calState.world ? "" : "on"}" data-cal-world="">All worlds</button>${withEv.map(w => `<button type="button" class="wchip ${calState.world === w.name ? "on" : ""}" data-cal-world="${esc(w.name)}" style="${calHues(w.name)}"><i></i>${esc(w.name)}</button>`).join("")}</div>`;
   if (daily.length) h += `<div class="band"><span class="band-l">${ic("repeat")}Every day</span><div class="band-evs">${daily.map(calPill).join("")}</div></div>`;
-  h += `<div class="week">${CAL_DAYS.map(d => { const evs = shown.filter(e => e.days && e.days.includes(d)).sort(byStart);
-    return `<div class="day"><div class="day-h"><b>${CAL_DAY_NAMES[d]}</b><small>${evs.length || ""}</small></div>${evs.map(calPill).join("") || `<p class="none">Nothing on</p>`}</div>`; }).join("")}</div>`;
+  // the month: four weeks, Monday first
+  h += `<div class="month s-${sn.toLowerCase()}"><div class="m-head"><span></span>${CAL_DAYS.map(d => `<b>${CAL_DAY_NAMES[d]}</b>`).join("")}</div>
+    ${Array.from({length: weeks}, (_, i) => { const wk = i + 1;
+      return `<div class="m-week"><span class="m-wk">Week ${wk}</span>${CAL_DAYS.map((d, j) => { const ho = hols.filter(x => x.week === wk && x.day === d);
+        const evs = shown.filter(e => e.days && e.days.includes(d) && calWeeks(e).includes(wk)).sort(byStart);
+        return `<div class="m-day${ho.length ? " hol" : ""}"><span class="m-n">${i * 7 + j + 1}</span>${ho.map(x => `<div class="m-hol">${ic(SEASON_ICON[sn] || "sparkle")}<b>${esc(x.name)}</b>${x.off ? "<small>day off</small>" : ""}</div>`).join("")}
+          ${evs.map(e => `<div class="m-ev${e.built === false ? " unbuilt" : ""}" style="${e.agg ? "--h:#9A7B3A" : calHues(e.w)}" title="${esc(e.name + " · " + e.time + " · " + (e.agg ? e.where : e.w + (e.where || e.hood ? ", " + (e.where || e.hood) : "")))}"><i></i><span>${esc(e.name)}${calStar(e)}</span></div>`).join("")}</div>`; }).join("")}</div>`; }).join("")}</div>`;
   if (loose.length) h += `<div class="band"><span class="band-l">${ic("moon")}No fixed day</span><div class="band-evs">${loose.map(e => calPill(e).replace('<span class="t">', `<span class="t">${esc(CAL_OFTEN[e.often] || e.often || "")} · `)).join("")}</div></div>`;
-  h += `<div class="key"><span><i class="k1"></i>every week</span><span><i class="k2"></i>every other week</span><span><i class="k3"></i>every third week</span><span><sup>*</sup> the game never shows this name</span><span>Times are the game’s own; “about” where it shows none.</span></div></section>`;
+  h += `<div class="key"><span><i class="k-hol"></i>holiday</span><span>Every-other-week festivals are shown on weeks 1 and 3 (or 2 and 4 for the one they take turns with); which week depends on your save.</span><span><sup>*</sup> the game never shows this name</span><span>Hover an event for its place and time.</span></div>`;
+  h += `<p class="yr-note">${ic("sparkle")}<span>${CAL.holidays.length ? "" : "These are the game’s own holidays; you’ll make your own for this save. "}<b>Surprise holidays</b>, a few days’ notice, at random: ${CAL.surprise.map(([d, n]) => `${esc(n)} (${d})`).join(", ")}.</span></p>
+    <p class="yr-note">${ic("leaf")}<span><b>Neighbourhood action plan voting</b> every week from Friday 8 am to Monday 6 pm, in every neighbourhood with residents.</span></p></section>`;
   return h;
 }
+document.addEventListener("click", e => { const b = e.target.closest("[data-cal-season]"); if (!b) return;
+  calState.season = b.dataset.calSeason; const y = scrollY; document.getElementById("view").innerHTML = calendarPage(); window.scrollTo(0, y); });
 document.addEventListener("change", e => { const k = e.target.dataset && e.target.dataset.calKind; if (!k) return;
   e.target.checked ? calState.kinds.add(k) : calState.kinds.delete(k); calKeep(); const y = scrollY; document.getElementById("view").innerHTML = calendarPage(); window.scrollTo(0, y); });
 document.addEventListener("click", e => { const b = e.target.closest("[data-cal-world]"); if (!b) return;
