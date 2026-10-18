@@ -237,7 +237,7 @@
      "lot": "Ophelia Villa",
      "myName": null,
      "planSize": "30x20",
-     "planType": "Residential",
+     "planType": "Haunted House Residential",
      "shared": false,
      "game": {
       "name": "Ophelia Villa",
@@ -299,7 +299,7 @@
     {
      "neighbourhood": "Crawdad Quarter",
      "lot": "The Blue Velvet",
-     "myName": "The Llama Café",
+     "myName": "Café Llama",
      "planSize": "30x20",
      "planType": "Café",
      "shared": true,
@@ -318,7 +318,7 @@
      "lot": "Movers & Shakers",
      "myName": null,
      "planSize": "30x20",
-     "planType": "Gym",
+     "planType": "Arts Center",
      "shared": false,
      "game": {
       "name": "Movers & Shakers",
@@ -470,7 +470,7 @@
     {
      "neighbourhood": "Parched Prospect",
      "lot": "Vista Quarry",
-     "myName": "Vista Quarry",
+     "myName": "Vista Quarry Villa",
      "planSize": "30x20",
      "planType": "Residential",
      "shared": true,
@@ -719,7 +719,7 @@
     {
      "neighbourhood": "Desert Bloom Park",
      "lot": "Desert Bloom Park",
-     "myName": "Desert Bloom Park",
+     "myName": "Desert Bloom",
      "planSize": "50x50",
      "planType": "Park",
      "shared": true,
@@ -992,7 +992,7 @@
     {
      "neighbourhood": "Ridgeline Drive",
      "lot": "Hillside Highlands",
-     "myName": "Cookes 'n' Cream",
+     "myName": "Cookies 'n' Cream",
      "planSize": "30x20",
      "planType": "Retail (Bakery & Ice Cream)",
      "shared": true,
@@ -1011,7 +1011,7 @@
      "lot": "Optimist's Outlook",
      "myName": "Optimist's Outlook",
      "planSize": "40x30",
-     "planType": "Small Business",
+     "planType": "Small Business Venue",
      "shared": true,
      "game": {
       "name": "Optimist's Outlook",
@@ -1179,7 +1179,7 @@
      "lot": "JF&S Clothiers",
      "myName": "Llama Picturehouse",
      "planSize": "20x20",
-     "planType": "Small Business/Bar",
+     "planType": "Small Business Venue/Bar",
      "shared": true,
      "game": {
       "name": "JF&S Clothiers",
@@ -1196,7 +1196,7 @@
      "lot": "The Roadstead",
      "myName": "Magnolia Mall",
      "planSize": "40x30",
-     "planType": "Retail/Boba & Thrift",
+     "planType": "Small Business Venue",
      "shared": false,
      "game": {
       "name": "The Roadstead",
@@ -1243,7 +1243,7 @@
      "lot": "FutureSim Labs",
      "myName": "FutureSim Labs",
      "planSize": "50x50",
-     "planType": "Science Lab",
+     "planType": "FutureSim Labs",
      "shared": false,
      "game": {
       "name": "FutureSim Labs",
@@ -1667,7 +1667,7 @@
     {
      "neighbourhood": "The Crumbling Isle",
      "lot": "Von-Windenburg Estate",
-     "myName": "Von-Windenburg Estate",
+     "myName": "Von-Windenburg Castle",
      "planSize": "64x64",
      "planType": "Residential",
      "shared": true,
@@ -2074,7 +2074,7 @@
      "lot": "Planet Honey Pop!",
      "myName": "Planet Honey Pop!",
      "planSize": "30x20",
-     "planType": "Boba & Thrift",
+     "planType": "Thrift and Boba Store",
      "shared": false,
      "game": {
       "name": "Planet Honey Pop!",
@@ -2170,7 +2170,7 @@
     {
      "neighbourhood": "Uptown",
      "lot": "Stargazer Lounge",
-     "myName": "Stargazer Lounge",
+     "myName": "Stargazer",
      "planSize": "40x30",
      "planType": "Nightclub",
      "shared": true,
@@ -2189,7 +2189,7 @@
      "lot": "Myshuno Meadows",
      "myName": "Myshuno Meadows",
      "planSize": "64x64",
-     "planType": "Central Park",
+     "planType": "Center Park",
      "shared": false,
      "game": {
       "name": "Myshuno Meadows",
@@ -2230,7 +2230,7 @@
      "lot": "Straud Mansion",
      "myName": null,
      "planSize": "40x30",
-     "planType": null,
+     "planType": "Residential",
      "shared": false,
      "game": {
       "name": "Straud Mansion",
@@ -2245,7 +2245,7 @@
      "lot": "Wolfsbane Manor",
      "myName": null,
      "planSize": "30x30",
-     "planType": null,
+     "planType": "Residential",
      "shared": false,
      "game": {
       "name": "Wolfsbane Manor",
@@ -2260,7 +2260,7 @@
      "lot": "Garliclauter Place",
      "myName": null,
      "planSize": "30x20",
-     "planType": null,
+     "planType": "Backroom",
      "shared": false,
      "game": {
       "name": "Garliclauter Place",
@@ -2275,7 +2275,7 @@
      "lot": "Widowshild Townhome",
      "myName": null,
      "planSize": "30x20",
-     "planType": null,
+     "planType": "Residential",
      "shared": false,
      "game": {
       "name": "Widowshild Townhome",
@@ -2290,7 +2290,7 @@
      "lot": "Fledermaus Bend",
      "myName": null,
      "planSize": "30x30",
-     "planType": null,
+     "planType": "Cemetery",
      "shared": false,
      "game": {
       "name": "Fledermaus Bend",
@@ -2380,7 +2380,7 @@
      "lot": "Belomisia Trailhead",
      "myName": "Belomisia Trailhead",
      "planSize": "40x20",
-     "planType": "Campground",
+     "planType": "National Park",
      "shared": false,
      "game": {
       "name": "Belomisia Trailhead",
@@ -2423,21 +2423,24 @@
      "unitOf": null,
      "typeInGame": "Custom Venue",
      "typeOnGallery": "Custom Venue"
+    },
+    {
+     "neighbourhood": "Belomisia Jungle",
+     "lot": "Omiscan Royal Baths",
+     "myName": null,
+     "planSize": "40x30",
+     "planType": "Omiscan Royal Baths",
+     "shared": false,
+     "game": {
+      "name": "Omiscan Royal Baths",
+      "size": "40x30",
+      "area": "GP06_Jungle_01",
+      "id": "3238723589"
+     },
+     "unitOf": null
     }
    ],
    "gameLotsNotInPlan": [
-    {
-     "id": "3238723589",
-     "name": "Omiscan Royal Baths",
-     "description": "",
-     "size": "40x30",
-     "area": "GP06_Jungle_01",
-     "pos": [
-      141.91,
-      287.51,
-      234.15
-     ]
-    },
     {
      "id": "1439301663",
      "name": "Omiscan Temple",
@@ -2709,7 +2712,7 @@
      "lot": "Deadgrass Discoveries",
      "myName": "Deadgrass Discoveries",
      "planSize": "30x30",
-     "planType": "Cemetery",
+     "planType": "Museum",
      "shared": false,
      "game": {
       "name": "Deadgrass Discoveries",
@@ -2885,7 +2888,7 @@
      "lot": "Plumbob Pictures Museum",
      "myName": "Plumbob Pictures Museum",
      "planSize": "40x30",
-     "planType": "Small Business (Museum & Acting Classes)",
+     "planType": "Small Business Venue (Museum, Acting Classes & Café)",
      "shared": false,
      "game": {
       "name": "Plumbob Pictures Museum",
@@ -2917,7 +2920,7 @@
      "lot": "Plumbob Pictures",
      "myName": "Plumbob Pictures",
      "planSize": "50x50",
-     "planType": "Plumbob Pictures",
+     "planType": "Acting Studio",
      "shared": "N/A",
      "game": null,
      "unitOf": null
@@ -2967,7 +2970,7 @@
      "lot": "StrangerVille Information Center",
      "myName": "StrangerVille Information Center",
      "planSize": "20x20",
-     "planType": "Museum",
+     "planType": "Backroom",
      "shared": false,
      "game": {
       "name": "StrangerVille Information Center",
@@ -3121,7 +3124,7 @@
      "lot": "The ██████ Lab",
      "myName": "The ██████ Lab",
      "planSize": "64x64",
-     "planType": "Special",
+     "planType": "Secret Lab",
      "shared": "N/A",
      "game": {
       "name": "The ██████ Lab",
@@ -3435,7 +3438,7 @@
     {
      "neighbourhood": "Glimmerbrook",
      "lot": "Brooks Bridge Borough",
-     "myName": "Brooks Bridge Borough",
+     "myName": "Brooks Bridge",
      "planSize": "30x20",
      "planType": "Haunted House Residential",
      "shared": true,
@@ -3454,7 +3457,7 @@
      "lot": "Elixirs and Brews",
      "myName": "Glimmer & Books",
      "planSize": "30x20",
-     "planType": "Library",
+     "planType": "Backroom",
      "shared": true,
      "game": {
       "name": "Elixirs and Brews",
@@ -3514,7 +3517,7 @@
      "lot": "Darkwing House",
      "myName": "The Old Clocktower",
      "planSize": "30x20",
-     "planType": "Nightclub/Retail",
+     "planType": "Backroom",
      "shared": true,
      "game": {
       "name": "Darkwing House",
@@ -3580,9 +3583,9 @@
     {
      "neighbourhood": "Foxbury Institute",
      "lot": "Maritime Manor",
-     "myName": "Maritime Manor",
+     "myName": "Foxbury Court",
      "planSize": "30x20",
-     "planType": "Nightclub/Retail",
+     "planType": "Nightclub",
      "shared": true,
      "game": {
       "name": "Maritime Manor",
@@ -3665,7 +3668,7 @@
     {
      "neighbourhood": "Gibbs Hill",
      "lot": "Pepper's Pub",
-     "myName": "The Old Crown",
+     "myName": "The Royal Crown",
      "planSize": "20x20",
      "planType": "Bar",
      "shared": true,
@@ -3793,7 +3796,7 @@
      "lot": "The Quarry Building",
      "myName": "The Quarry Building",
      "planSize": "40x30",
-     "planType": "Community Space",
+     "planType": "Small Business Residential",
      "shared": false,
      "game": {
       "name": "The Quarry Building",
@@ -3823,7 +3826,7 @@
      "lot": "Canal Corner",
      "myName": "Canal Corner",
      "planSize": "20x15",
-     "planType": "Small Business",
+     "planType": "Small Business Venue",
      "shared": false,
      "game": {
       "name": "Canal Corner",
@@ -3838,7 +3841,7 @@
      "lot": "Sprucewood Square",
      "myName": "Sprucewood Square",
      "planSize": "40x30",
-     "planType": "Community Space",
+     "planType": "Community Market",
      "shared": false,
      "game": {
       "name": "Sprucewood Square",
@@ -3884,7 +3887,7 @@
      "lot": "The Old Mill",
      "myName": "The Old Mill",
      "planSize": "30x20",
-     "planType": "Small Business",
+     "planType": "Backroom",
      "shared": false,
      "game": {
       "name": "The Old Mill",
@@ -3946,7 +3949,7 @@
      "lot": "The Portsmouth Promenade",
      "myName": "The Portsmouth Promenade",
      "planSize": "30x20",
-     "planType": "Small Business",
+     "planType": "Small Business Venue",
      "shared": true,
      "game": {
       "name": "The Portsmouth Promenade",
@@ -4117,7 +4120,7 @@
      "lot": "Izakaya Ippai",
      "myName": "Boba Ippai",
      "planSize": "30x20",
-     "planType": "Boba & Thrift",
+     "planType": "Thrift and Boba Store",
      "shared": false,
      "game": {
       "name": "Izakaya Ippai",
@@ -4193,6 +4196,36 @@
     },
     {
      "neighbourhood": "Yukimatsu",
+     "lot": "Mt. Komorebi Base Camp",
+     "myName": null,
+     "planSize": "20x15",
+     "planType": null,
+     "shared": false,
+     "game": {
+      "name": "Mt. Komorebi Base Camp",
+      "size": "20x15",
+      "area": "EP10_BaseCamp_01",
+      "id": "2366832680"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Yukimatsu",
+     "lot": "The Croft Icefall",
+     "myName": null,
+     "planSize": "20x15",
+     "planType": null,
+     "shared": false,
+     "game": {
+      "name": "The Croft Icefall",
+      "size": "20x15",
+      "area": "EP10_BaseCamp_02",
+      "id": "3718447143"
+     },
+     "unitOf": null
+    },
+    {
+     "neighbourhood": "Yukimatsu",
      "lot": "Mt. Komorebi Peak",
      "myName": null,
      "planSize": "20x20",
@@ -4207,32 +4240,7 @@
      "unitOf": null
     }
    ],
-   "gameLotsNotInPlan": [
-    {
-     "id": "2366832680",
-     "name": "Mt. Komorebi Base Camp",
-     "description": "",
-     "size": "20x15",
-     "area": "EP10_BaseCamp_01",
-     "pos": [
-      186.92,
-      199.1,
-      138.33
-     ]
-    },
-    {
-     "id": "3718447143",
-     "name": "The Croft Icefall",
-     "description": "",
-     "size": "20x15",
-     "area": "EP10_BaseCamp_02",
-     "pos": [
-      227.22,
-      88.7,
-      133.0
-     ]
-    }
-   ],
+   "gameLotsNotInPlan": [],
    "areas": [
     "EP10_BaseCamp_01",
     "EP10_BaseCamp_02",
@@ -4265,7 +4273,7 @@
      "lot": "1 Cobblebottom Street",
      "myName": "1 Cobblebottom Street",
      "planSize": "20x15",
-     "planType": "Residential",
+     "planType": "Small Business Residential",
      "shared": false,
      "game": {
       "name": "1 Cobblebottom Street",
@@ -4485,7 +4493,7 @@
      "lot": "Baia dell'Amore",
      "myName": "Baia dell'Amore",
      "planSize": "40x20",
-     "planType": "Wedding Venue",
+     "planType": "Beach",
      "shared": false,
      "game": {
       "name": "Baia dell'amore",
@@ -4500,7 +4508,7 @@
      "lot": "Villa Vigna",
      "myName": "?",
      "planSize": "30x20",
-     "planType": "Lounge/Restaurant?",
+     "planType": "Restaurant",
      "shared": false,
      "game": {
       "name": "Villa Vigna",
@@ -4515,7 +4523,7 @@
      "lot": "Celebrazioni d'Amore",
      "myName": "?",
      "planSize": "50x40",
-     "planType": "Residential",
+     "planType": "Lounge",
      "shared": false,
      "game": {
       "name": "Celebrazioni d'Amore",
@@ -4545,7 +4553,7 @@
      "lot": "Rifugio dei Pirati",
      "myName": "Rifugio dei Pirati",
      "planSize": "30x20",
-     "planType": "?",
+     "planType": "Residential",
      "shared": false,
      "game": {
       "name": "Rifugio dei Pirati",
@@ -4560,7 +4568,7 @@
      "lot": "Via Romanza",
      "myName": "Via Romanza",
      "planSize": "30x30",
-     "planType": "?",
+     "planType": "Residential",
      "shared": false,
      "game": {
       "name": "Via Romanza",
@@ -4575,7 +4583,7 @@
      "lot": "La Coppia Serena",
      "myName": "La Coppia Serena",
      "planSize": "50x40",
-     "planType": "Residential",
+     "planType": "Wedding Venue",
      "shared": false,
      "game": {
       "name": "La Coppia Serena",
@@ -4628,9 +4636,9 @@
     {
      "neighbourhood": "Moonwood Mill",
      "lot": "Prowler's Patch",
-     "myName": "Moonwood Mill Library",
+     "myName": "New Moon Cabins",
      "planSize": "30x30",
-     "planType": "Library",
+     "planType": "Residential Rental",
      "shared": false,
      "game": {
       "name": "Prowler's Patch",
@@ -4643,9 +4651,9 @@
     {
      "neighbourhood": "Moonwood Mill",
      "lot": "The Grimtooth Bar & Bunker",
-     "myName": "New Moon Cabins",
+     "myName": "Grimtooth Bar",
      "planSize": "50x40",
-     "planType": "Residential",
+     "planType": "Bar",
      "shared": false,
      "game": null,
      "unitOf": null
@@ -4653,9 +4661,9 @@
     {
      "neighbourhood": "Moonwood Mill",
      "lot": "The Moonwood Mill Library",
-     "myName": "Grimtooth Bar",
+     "myName": "Moonwood Mill Library",
      "planSize": "40x30",
-     "planType": "Bar",
+     "planType": "Library/Backroom",
      "shared": false,
      "game": {
       "name": "The Moonwood Mill Library",
@@ -4739,7 +4747,7 @@
      "lot": "Town Square Terrace",
      "myName": "Town Square Stores",
      "planSize": "20x15",
-     "planType": "Boba & Thrift",
+     "planType": "Thrift and Boba Store",
      "shared": true,
      "game": {
       "name": "Town Square Terrace",
@@ -4756,7 +4764,7 @@
      "lot": "ThrifTea",
      "myName": "Prescott Boarding House",
      "planSize": "20x15",
-     "planType": "Dorms #1",
+     "planType": "University Housing",
      "shared": false,
      "game": {
       "name": "ThrifTea",
@@ -4771,7 +4779,7 @@
      "lot": "Lakeview Library",
      "myName": "Lakeview Boarding House",
      "planSize": "20x20",
-     "planType": "Dorms #2",
+     "planType": "University Housing",
      "shared": false,
      "game": {
       "name": "Lakeview Library",
@@ -4801,7 +4809,7 @@
      "lot": "LaSuli Point",
      "myName": "LaSuli Point",
      "planSize": "20x15",
-     "planType": "Restaurant",
+     "planType": "Park/Cemetery",
      "shared": false,
      "game": {
       "name": "LaSuli Point",
@@ -4816,7 +4824,7 @@
      "lot": "Totter Park",
      "myName": "Totter Park",
      "planSize": "50x40",
-     "planType": "Cemetery",
+     "planType": "Residential",
      "shared": false,
      "game": {
       "name": "Totter Park",
@@ -4831,7 +4839,7 @@
      "lot": "BridgeCreek Drive",
      "myName": "BridgeCreek Drive",
      "planSize": "30x30",
-     "planType": "Residential",
+     "planType": "Backroom",
      "shared": false,
      "game": {
       "name": "BridgeCreek Drive",
@@ -4902,7 +4910,7 @@
      "lot": "Manzanita Terrace",
      "myName": "Manzanita Terrace",
      "planSize": "30x20",
-     "planType": "Residential Rental",
+     "planType": "Residential Rental (3)",
      "shared": true,
      "game": {
       "name": "Manzanita Terrace",
@@ -4919,7 +4927,7 @@
      "lot": "Anchorpoint Library",
      "myName": "Anchorpoint Rec Center",
      "planSize": "30x20",
-     "planType": "Rec Center",
+     "planType": "Recreation Center",
      "shared": true,
      "game": {
       "name": "Anchorpoint Library",
@@ -4966,7 +4974,7 @@
     {
      "neighbourhood": "Gilbert Gardens",
      "lot": "Parkside Place",
-     "myName": "Parkside Place",
+     "myName": "Parkside Playground",
      "planSize": "30x20",
      "planType": "Playground",
      "shared": true,
@@ -4985,7 +4993,7 @@
      "lot": "18 Celebration Way",
      "myName": "18 Celebration Way",
      "planSize": "40x20",
-     "planType": "Boba & Thrift",
+     "planType": "Community Market",
      "shared": false,
      "game": {
       "name": "18 Celebration Way",
@@ -5000,7 +5008,7 @@
      "lot": "Celebration Center",
      "myName": "Celebration Center",
      "planSize": "64x64",
-     "planType": "Wedding Venue/Cemetery",
+     "planType": "Wedding Venue",
      "shared": false,
      "game": {
       "name": "Celebration Center",
@@ -5047,7 +5055,7 @@
      "lot": "36 Bayani Place",
      "myName": "36 Bayani Place",
      "planSize": "30x20",
-     "planType": "Residential",
+     "planType": "Vet Clinic",
      "shared": false,
      "game": {
       "name": "36 Bayani Place",
@@ -5103,7 +5111,7 @@
      "lot": "The Cozy Corner House",
      "myName": null,
      "planSize": "20x20",
-     "planType": "Library",
+     "planType": "Custom Venue (Community Farm)",
      "shared": false,
      "game": {
       "name": "The Cozy Corner House",
@@ -5304,7 +5312,7 @@
      "lot": "Ro Kaya Rockside",
      "myName": "Ro Kaya Rockside",
      "planSize": "40x30",
-     "planType": "Restaurant",
+     "planType": "Community Market",
      "shared": false,
      "game": {
       "name": "Ro Kaya Rockside",
@@ -5334,7 +5342,7 @@
      "lot": "Chee-wit Chee-waa Kanto",
      "myName": "Chee-wit Chee-waa Kanto",
      "planSize": "20x15",
-     "planType": "Boba & Thrift",
+     "planType": "Thrift and Boba Store",
      "shared": true,
      "game": {
       "name": "Chee-wít Chee-waa Kanto",
@@ -5396,7 +5404,7 @@
      "lot": "The Screaming Gecko",
      "myName": "The Screaming Gecko",
      "planSize": "20x20",
-     "planType": "Bar",
+     "planType": "Karaoke Bar",
      "shared": false,
      "game": {
       "name": "The Screaming Gecko",
@@ -5411,7 +5419,7 @@
      "lot": "Tam Nang Sands",
      "myName": "Tam Nang Sands",
      "planSize": "30x20",
-     "planType": "Cemetery",
+     "planType": "Spa",
      "shared": false,
      "game": {
       "name": "Tam Nang Sands",
@@ -5466,7 +5474,7 @@
      "lot": "Torres Amanecer",
      "myName": null,
      "planSize": "20x20",
-     "planType": "Residential",
+     "planType": "Restaurant",
      "shared": false,
      "game": {
       "name": "Torres Amanecer",
@@ -5526,7 +5534,7 @@
      "lot": "Calle del Ensueño",
      "myName": null,
      "planSize": "50x40",
-     "planType": null,
+     "planType": "Community Market",
      "shared": false,
      "game": {
       "name": "Calle del Ensueño",
@@ -5601,7 +5609,7 @@
      "lot": "Casita del Amor",
      "myName": null,
      "planSize": "30x20",
-     "planType": "Residential",
+     "planType": "Recreation Center",
      "shared": false,
      "game": {
       "name": "Casita del Amor",
@@ -5616,7 +5624,7 @@
      "lot": "Caminito del Deseo",
      "myName": null,
      "planSize": "50x40",
-     "planType": null,
+     "planType": "Wedding Venue",
      "shared": false,
      "game": {
       "name": "Caminito del Deseo",
@@ -5631,7 +5639,7 @@
      "lot": "Laguna del Abrazo",
      "myName": null,
      "planSize": "30x20",
-     "planType": "Lounge",
+     "planType": "Karaoke Bar",
      "shared": false,
      "game": {
       "name": "Laguna del Abrazo",
@@ -5689,7 +5697,7 @@
      "lot": "Moppy Manor",
      "myName": "Specter Row",
      "planSize": "30x20",
-     "planType": "Residential Rental",
+     "planType": "Residential Rental/Haunted House Residential",
      "shared": false,
      "game": {
       "name": "Moppy Manor",
@@ -5704,7 +5712,7 @@
      "lot": "Old Ravenwood Estate",
      "myName": null,
      "planSize": "50x50",
-     "planType": "Residential",
+     "planType": "Haunted House Residential",
      "shared": false,
      "game": {
       "name": "Old Ravenwood Estate",
@@ -5764,7 +5772,7 @@
      "lot": "Hay Hill Landing",
      "myName": null,
      "planSize": "64x64",
-     "planType": "Vineyard/Farm",
+     "planType": "Residential (Farm)",
      "shared": false,
      "game": {
       "name": "Hay Hill Landing",
@@ -5779,7 +5787,7 @@
      "lot": "The Final Draught",
      "myName": null,
      "planSize": "30x30",
-     "planType": "Restaurant",
+     "planType": "Bar",
      "shared": false,
      "game": {
       "name": "The Final Draught",
@@ -5794,7 +5802,7 @@
      "lot": "The Cozy Casket House",
      "myName": null,
      "planSize": "30x20",
-     "planType": "Residential",
+     "planType": "Haunted House Residential",
      "shared": false,
      "game": {
       "name": "The Cozy Casket House",
@@ -5839,7 +5847,7 @@
      "lot": "Mystic Crossroads",
      "myName": null,
      "planSize": "30x30",
-     "planType": "To be decided",
+     "planType": "Small Business Venue (Tarot & Curiosities)",
      "shared": false,
      "game": {
       "name": "Mystic Crossroads",
@@ -5987,7 +5995,7 @@
      "lot": "New Harbor Park",
      "myName": null,
      "planSize": "50x40",
-     "planType": "Small Business Residential",
+     "planType": "Community Space",
      "shared": false,
      "game": {
       "name": "New Harbor Park",
@@ -6047,7 +6055,7 @@
      "lot": "Inked Inlet",
      "myName": null,
      "planSize": "20x20",
-     "planType": "Library",
+     "planType": "Playground",
      "shared": false,
      "game": {
       "name": "Inked Inlet",
@@ -6062,7 +6070,7 @@
      "lot": "Lighthouse Lookout",
      "myName": null,
      "planSize": "50x40",
-     "planType": "Residential Rental",
+     "planType": "Library",
      "shared": false,
      "game": {
       "name": "Lighthouse Lookout",
@@ -6081,177 +6089,219 @@
   },
   "Innisgreen": {
    "owned": false,
-   "lots": [],
-   "gameLotsNotInPlan": [
+   "lots": [
     {
-     "id": "980090978",
-     "name": "1 Mari Shores Road",
-     "description": "Those looking for a short trek to the coast and some good ol' gnome vibes will love this charming two-story home. Visit the museum or chat up the locals for the juice on the town's history with the enchanted, all within walking distance.",
-     "size": "30x20",
-     "area": "EP19_Coastal_01",
-     "pos": [
-      389.02,
-      150.0,
-      431.24
-     ]
+     "neighbourhood": "Coast of Adhmor",
+     "lot": "8 Gnome Coast Street",
+     "myName": null,
+     "planSize": "30x20",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "8 Gnome Coast Street",
+      "size": "30x20",
+      "area": "EP19_Coastal_01",
+      "id": "183894035"
+     },
+     "unitOf": null
     },
     {
-     "id": "219807785",
-     "name": "42 Normfair Drive",
-     "description": "Just a stone's throw away from the coast's center sits a home with simple beginnings. With no need for flair, this place is perfect for any family seeking a modern touch amongst nature.",
-     "size": "40x30",
-     "area": "EP19_Coastal_01",
-     "pos": [
-      301.11,
-      150.0,
-      436.67
-     ]
+     "neighbourhood": "Coast of Adhmor",
+     "lot": "1 Mari Shores Road",
+     "myName": null,
+     "planSize": "30x20",
+     "planType": "Café",
+     "shared": false,
+     "game": {
+      "name": "1 Mari Shores Road",
+      "size": "30x20",
+      "area": "EP19_Coastal_01",
+      "id": "980090978"
+     },
+     "unitOf": null
     },
     {
-     "id": "213712936",
-     "name": "The GNOM Exhibit",
-     "description": "The GNOM Exhibit (short for The Gallery of Notable and Ornamental Miniatures Exhibition) holds much of this coastal town's history and fascination with Gnomes. The bones of an old lighthouse are still prevalent atop the museum, with grandiose views that can be a sight to behold.",
-     "size": "40x30",
-     "area": "EP19_Coastal_01",
-     "pos": [
-      385.04,
-      151.25,
-      356.84
-     ]
+     "neighbourhood": "Coast of Adhmor",
+     "lot": "42 Normfair Drive",
+     "myName": null,
+     "planSize": "40x30",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "42 Normfair Drive",
+      "size": "40x30",
+      "area": "EP19_Coastal_01",
+      "id": "219807785"
+     },
+     "unitOf": null
     },
     {
-     "id": "183894035",
-     "name": "8 Gnome Coast Street",
-     "description": "The scenic residence by the sea is perfect for anyone looking to house their hobbies. With plentiful space for gardening and crafting, there's gnome place like home!",
-     "size": "30x20",
-     "area": "EP19_Coastal_01",
-     "pos": [
-      434.64,
-      150.0,
-      411.62
-     ]
+     "neighbourhood": "Coast of Adhmor",
+     "lot": "The GNOM Exhibit",
+     "myName": null,
+     "planSize": "40x30",
+     "planType": "Museum",
+     "shared": false,
+     "game": {
+      "name": "The GNOM Exhibit",
+      "size": "40x30",
+      "area": "EP19_Coastal_01",
+      "id": "213712936"
+     },
+     "unitOf": null
     },
     {
-     "id": "2259157008",
-     "name": "Puckitt Hall",
-     "description": "A Fairy estate fit for high status, this château makes a prominent statement far beyond hefty household funds. Passed down through generations, it carries a versatility for both indoor and outdoor needs. Ethereal and elegant, there are no illusions of grandeur here.",
-     "size": "50x50",
-     "area": "EP19_Forest_01",
-     "pos": [
-      238.08,
-      171.5,
-      346.07
-     ]
+     "neighbourhood": "Sprucederry Grove",
+     "lot": "Fern & Frond Wading Pond",
+     "myName": null,
+     "planSize": "64x64",
+     "planType": "Community Market",
+     "shared": false,
+     "game": {
+      "name": "Fern & Frond Wading Pond",
+      "size": "64x64",
+      "area": "EP19_Grove_01",
+      "id": "2262171653"
+     },
+     "unitOf": null
     },
     {
-     "id": "2026701128",
-     "name": "Bard Boulevard",
-     "description": "Sequestered at the edge of the wood, this cozy plot of land is the perfect spot for a humble abode with a not-so-humble view. Complete with everything a bard could need, such a whimsical cottage won't stay empty for long!",
-     "size": "30x20",
-     "area": "EP19_Forest_01",
-     "pos": [
-      333.84,
-      173.0,
-      327.04
-     ]
+     "neighbourhood": "Sprucederry Grove",
+     "lot": "Whistling Thistle Gardens",
+     "myName": null,
+     "planSize": "40x30",
+     "planType": "Park",
+     "shared": false,
+     "game": {
+      "name": "Whistling Thistle Gardens",
+      "size": "40x30",
+      "area": "EP19_Grove_01",
+      "id": "3491102727"
+     },
+     "unitOf": null
     },
     {
-     "id": "1556218060",
-     "name": "The Watering Hole",
-     "description": "The Watering Hole resides in Everdew amidst a backdrop of green and blue enchanted hues. Those living off the land will have just enough to live off of this empty lot.",
-     "size": "40x30",
-     "area": "EP19_Forest_01",
-     "pos": [
-      301.28,
-      171.51,
-      446.77
-     ]
+     "neighbourhood": "Sprucederry Grove",
+     "lot": "Greenwood Hamlet Residence",
+     "myName": null,
+     "planSize": "30x20",
+     "planType": "Small Business Venue (Apothecary)",
+     "shared": false,
+     "game": {
+      "name": "Greenwood Hamlet Residence",
+      "size": "30x20",
+      "area": "EP19_Grove_01",
+      "id": "270073869"
+     },
+     "unitOf": null
     },
     {
-     "id": "1509425336",
-     "name": "Starsong Lounge",
-     "description": "The ethereal vibes of the Starsong Lounge attracts unique Sims from near and far. Locals are free to embody their true form and catch up with friends, or make new ones. Come for the otherworldly ambiance, and stay for the drinks and music!",
-     "size": "30x30",
-     "area": "EP19_Forest_01",
-     "pos": [
-      241.87,
-      171.47,
-      419.93
-     ]
+     "neighbourhood": "Sprucederry Grove",
+     "lot": "Gringle's",
+     "myName": null,
+     "planSize": "30x30",
+     "planType": "Bar",
+     "shared": false,
+     "game": {
+      "name": "Gringle's",
+      "size": "30x30",
+      "area": "EP19_Grove_01",
+      "id": "584187924"
+     },
+     "unitOf": null
     },
     {
-     "id": "313458714",
-     "name": "Crannamor Residential",
-     "description": "Along the outskirts of Everdew lies this quaint home, built into one of the largest trees in the forest. The breathtaking scenery is made more beautiful by the neighborhood's denizens, who can be seen out and about, using their enchantments on the world and Sims alike.",
-     "size": "20x20",
-     "area": "EP19_Forest_01",
-     "pos": [
-      385.86,
-      171.64,
-      386.69
-     ]
+     "neighbourhood": "Sprucederry Grove",
+     "lot": "Gimmley Gardensbrook",
+     "myName": null,
+     "planSize": "30x30",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Gimmley Gardensbrook",
+      "size": "30x30",
+      "area": "EP19_Grove_01",
+      "id": "395313183"
+     },
+     "unitOf": null
     },
     {
-     "id": "3491102727",
-     "name": "Whistling Thistle Gardens",
-     "description": "Catching up with Sims at the Whistling Thistle Gardens is a favorite pastime of the Sprucederry Grove residents. This community garden has been carefully curated over the years to grow all of the residents' favorite harvests. Besides socializing and gardening, painting and photography are especially enjoyable here as the light and natural ambience ignite creativity.",
-     "size": "40x30",
-     "area": "EP19_Grove_01",
-     "pos": [
-      376.58,
-      150.0,
-      412.19
-     ]
+     "neighbourhood": "Everdew",
+     "lot": "Crannamor Residential",
+     "myName": null,
+     "planSize": "20x20",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Crannamor Residential",
+      "size": "20x20",
+      "area": "EP19_Forest_01",
+      "id": "313458714"
+     },
+     "unitOf": null
     },
     {
-     "id": "2262171653",
-     "name": "Fern & Frond Wading Pond",
-     "description": "This empty lot provides enough resources for those living off the land. The lush greenery provides a habitable environment that Sims can thrive off of. But don't worry, there's also some local shops if you really need anything.",
-     "size": "64x64",
-     "area": "EP19_Grove_01",
-     "pos": [
-      435.43,
-      149.97,
-      422.95
-     ]
+     "neighbourhood": "Everdew",
+     "lot": "The Watering Hole",
+     "myName": null,
+     "planSize": "40x30",
+     "planType": "Custom Venue",
+     "shared": false,
+     "game": {
+      "name": "The Watering Hole",
+      "size": "40x30",
+      "area": "EP19_Forest_01",
+      "id": "1556218060"
+     },
+     "unitOf": null
     },
     {
-     "id": "584187924",
-     "name": "Gringle's",
-     "description": "Gringle's has been the local hot spot for Sims to enjoy mixed drinks after a long day of mixing Elixirs. Located near the center of Sprucederry Grove, Sims come to take in the greenery and partake in delectable conversation.",
-     "size": "30x30",
-     "area": "EP19_Grove_01",
-     "pos": [
-      412.0,
-      150.0,
-      372.99
-     ]
+     "neighbourhood": "Everdew",
+     "lot": "Starsong Lounge",
+     "myName": null,
+     "planSize": "30x30",
+     "planType": "Nightclub",
+     "shared": false,
+     "game": {
+      "name": "Starsong Lounge",
+      "size": "30x30",
+      "area": "EP19_Forest_01",
+      "id": "1509425336"
+     },
+     "unitOf": null
     },
     {
-     "id": "395313183",
-     "name": "Gimmley Gardensbrook",
-     "description": "A garden oasis filled with luscious greenery, placing residents on a hill they'll want to die on. Plentiful plots, gracious greens, and quaint carvings all give this storybook home two green thumbs up!",
-     "size": "30x30",
-     "area": "EP19_Grove_01",
-     "pos": [
-      484.97,
-      150.0,
-      340.19
-     ]
+     "neighbourhood": "Everdew",
+     "lot": "Puckitt Hall",
+     "myName": null,
+     "planSize": "50x50",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Puckitt Hall",
+      "size": "50x50",
+      "area": "EP19_Forest_01",
+      "id": "2259157008"
+     },
+     "unitOf": null
     },
     {
-     "id": "270073869",
-     "name": "Greenwood Hamlet Residence",
-     "description": "This charming village home is conveniently located within a hop and skip away from a local park as well as the garden shop Clover's Seeds and Supplies. it's an ideal starter home for Sims that want to practice their Apothecary skills with access to the local stalls and shops.",
-     "size": "30x20",
-     "area": "EP19_Grove_01",
-     "pos": [
-      342.04,
-      150.0,
-      384.1
-     ]
+     "neighbourhood": "Everdew",
+     "lot": "Bard Boulevard",
+     "myName": null,
+     "planSize": "30x20",
+     "planType": "Residential",
+     "shared": false,
+     "game": {
+      "name": "Bard Boulevard",
+      "size": "30x20",
+      "area": "EP19_Forest_01",
+      "id": "2026701128"
+     },
+     "unitOf": null
     }
    ],
+   "gameLotsNotInPlan": [],
    "areas": [
     "EP19_Coastal_01",
     "EP19_Forest_01",
@@ -6264,7 +6314,7 @@
     {
      "neighbourhood": "Wanderwood Wilds",
      "lot": "Hothead Rock Hideaway",
-     "myName": "Revive and Thrive Retreat",
+     "myName": "Revive and Thrive",
      "planSize": "64x64",
      "planType": "Custom Venue",
      "shared": true,
@@ -6328,7 +6378,7 @@
      "lot": "Jellyfish Jubilee",
      "myName": "Jellyfish Jubilee",
      "planSize": "40x30",
-     "planType": "Restaurant",
+     "planType": "Bar",
      "shared": false,
      "game": {
       "name": "Jellyfish Jubilee",
@@ -6375,7 +6425,7 @@
      "lot": "Revive and Thrive Retreat",
      "myName": "Gibbi Rec Center",
      "planSize": "64x64",
-     "planType": "Rec Center",
+     "planType": "Recreation Center",
      "shared": true,
      "game": {
       "name": "Revive and Thrive Retreat",
@@ -6407,7 +6457,7 @@
      "lot": "Crystal Cottage",
      "myName": "Crystal Cottage",
      "planSize": "30x20",
-     "planType": "Residential",
+     "planType": "Onsen Bathhouse",
      "shared": false,
      "game": {
       "name": "Crystal Cottage",
@@ -6437,7 +6487,7 @@
      "lot": "Fearful Fish Lounge",
      "myName": "Thrift 'n' Fish",
      "planSize": "20x20",
-     "planType": "Boba & Thrift",
+     "planType": "Thrift and Boba Store",
      "shared": false,
      "game": {
       "name": "Fearful Fish Lounge",
@@ -6553,7 +6603,7 @@
      "lot": "Sankofa Residence",
      "myName": "Sankofa Residence",
      "planSize": "30x20",
-     "planType": "Residential",
+     "planType": "Museum",
      "shared": false,
      "game": {
       "name": "Sankofa Residence",
@@ -6583,7 +6633,7 @@
      "lot": "Casa Do Corsário",
      "myName": "Casa Do Corsário",
      "planSize": "20x15",
-     "planType": "Residential",
+     "planType": "Residential Rental (2)",
      "shared": false,
      "game": {
       "name": "Casa do Corsário",
@@ -6613,7 +6663,7 @@
      "lot": "Fisherman's Hut",
      "myName": null,
      "planSize": "20x20",
-     "planType": "Residential",
+     "planType": "Restaurant (Seafood)",
      "shared": false,
      "game": {
       "name": "Fisherman's Hut",
@@ -6643,7 +6693,7 @@
      "lot": "The Lair in the Open-Air",
      "myName": null,
      "planSize": "30x20",
-     "planType": "Residential",
+     "planType": "Park",
      "shared": false,
      "game": {
       "name": "The Lair in the Open-Air",
@@ -6733,7 +6783,7 @@
      "lot": "Giardino Del Grandioso",
      "myName": "Giardino Del Grandioso",
      "planSize": "64x64",
-     "planType": "Residential",
+     "planType": "Small Business Residential",
      "shared": false,
      "game": {
       "name": "Giardino Del Grandioso",
