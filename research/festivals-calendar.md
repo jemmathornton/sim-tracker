@@ -163,7 +163,7 @@ Seven hobby meetups, each twice a week (once in each neighbourhood), five hours 
 | Spotlight Stars | Friday 6–11 pm | Sunday 6–11 pm |
 | Creative Cowork | Sunday 8 am–1 pm | Saturday 8 am–1 pm |
 
-(The site shows these as one line, “Hobby meetups”; the game’s own names are above.)
+(The site’s calendar shows each meetup by its game name, twice a week; 19 Oct.)
 
 ### Gibbi Point (Adventure Awaits)
 
