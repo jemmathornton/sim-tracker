@@ -200,10 +200,10 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 **Start here:** for-jemma/overnight-17-oct.md (what to look at first, the biggest decisions, every note)
 
 ### Showing Sims (research/sims-display.md)
-- [ ] [Jemma] **In the app now (17 Oct), to try:** Sim pages, the new household page, and dynasty pages, ported from the prototype as it is (17 Oct, after a first simpler version missed things): household picture top left (placeholder until she adds a screenshot) with the facts beside it (incl. Origin, Played, Neighbourhood Stories, Dynasty), the prototype’s Sims table, its drawn family tree, for four households: the Goths (Willow Creek; tree with Cornelia’s Crumplebottom side), the Landgraabs (Oasis Springs) and Johnny Zest (Del Sol Valley, renting at Upland Trailer Park; each shows on the other’s tree), and the Roomies (Del Sol Valley; no family anywhere, so no tree). Every other household keeps the old page until she’s happy
+- [x] Done (17–19 Oct): every household and Sim now has the new pages. Was: **In the app now (17 Oct), to try:** Sim pages, the new household page, and dynasty pages, ported from the prototype as it is (17 Oct, after a first simpler version missed things): household picture top left (placeholder until she adds a screenshot) with the facts beside it (incl. Origin, Played, Neighbourhood Stories, Dynasty), the prototype’s Sims table, its drawn family tree, for four households: the Goths (Willow Creek; tree with Cornelia’s Crumplebottom side), the Landgraabs (Oasis Springs) and Johnny Zest (Del Sol Valley, renting at Upland Trailer Park; each shows on the other’s tree), and the Roomies (Del Sol Valley; no family anywhere, so no tree). Every other household keeps the old page until she’s happy
 - [x] Decided 17 Oct: family trees are built from family links (parents, partners), never from who lives together (no extra line for housemates; see the household-tree decision below for when a tree shows)
 - [x] Decided 17 Oct: each Sim gets its own page (in the end every Sim; trying it out on the Goths first in the prototype). The household page keeps the family overview (roster linking to each Sim, mini tree, connected households, story)
-- [ ] [Jemma] **Look at the prototype first:** for-jemma/prototypes/sims/index.html (opens from the folder): a Goth household page, a drawn family tree next to a generations list, links between households (lists, a small web, lines on the map), and the relationship tags, with switches for each choice below
+- [x] (Done: the prototype is in the app) **Look at the prototype first:** for-jemma/prototypes/sims/index.html (opens from the folder): a Goth household page, a drawn family tree next to a generations list, links between households (lists, a small web, lines on the map), and the relationship tags, with switches for each choice below
 - [ ] [Jemma] How much to track: three levels (basics for every household, profiles for played ones, extras for favourites)?
 - [x] Decided 17 Oct: household page starts with a family portrait (her screenshot), the roster underneath; the roster leads when there’s no portrait yet. No picture of the house on the household page, just a link to their home (and other lots)
 - [ ] [Jemma] Relationship tags: six groups (Family, Romance, Friends, Conflict, Work & school, Dynasty) plus an optional free label? Add or drop any?
@@ -221,7 +221,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [ ] [Jemma] Romeo has no relatives in the Sims 4. Should her recreated Montys follow the Sims 2 tree (Patrizio and Isabella as grandparents, Mercutio his brother, Antonio and Bianca uncle and aunt, Beatrice and Benedick cousins)?
 - [ ] [Jemma] Dynasties: keep the game’s heads (Juliette heads the Montys in the game), or do the Renaissance Road Montys hold the Monty dynasty, with Romeo and Juliette outcasts of both? Was her save started after Royalty & Legacy (the Goth and Landgraab dynasties need a newer save)?
 - [ ] [Jemma] Who’s who in her plan: are the Specters (Havisham House), Curious (Granada Place) and Smiths (Sultry Springside) Maxis’s Sims 2 families from the Gallery (then she has two Olive Specters)? What does “*WithUpdates*” mean? The Broke household at Crick Cabana: hers, or Dustin Broke? Is Santiago Ojo related to Miko Ojo? Who is the Kennedy in “Bro & Kennedy”? Does “My Celebs” include any of the game’s celebrities? Is BFF the Willow Creek trio? Is “Rochana/Caberry” meant to be Cadberry?
-- [ ] [Jemma] Relatives that only exist on the Gallery (Iggy Pancakes, Daniel and Mary-Sue Pleasant and others): show them on family trees?
+- [ ] [Jemma] Relatives that only exist on the Gallery: Iggy done 19 Oct (her call: the Pancakes are EA’s version with toddler Iggy and his bio). Still open: Daniel and Mary-Sue Pleasant and others
 - Cross-world links worth showing (from the game): Agnes Crumplebottom is Mortimer Goth’s aunt; Lily Zhu is the Vatores’ cousin; Skip Broke is Dustin Broke’s father; Enzo Alto is Holly Alto’s cousin; Arnessa Thebe is Consort Capp’s cousin; the Gomes family shares an ancestor with the Goths. Her moves add more (Juliette Monty, now in Tartosa, is Tybalt Capp’s sister)
 
 ### Pets and horses (research/pets-and-horses.md; 19 Oct decision note: research/decisions/pets.md)
@@ -250,7 +250,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 ### Festivals and events (19 Oct decision note: research/decisions/whats-on.md; research/festivals-calendar.md; prototype: for-jemma/prototypes/calendar/index.html)
 - [x] 19 Oct, her choice: a Calendar page next to Stats (weeks start Monday, four-week seasons), festivals by default with uni/school and lot nights as filters. **Still hers:** make the save’s holidays (season, week, day) and tell Claude. Was: A “What’s on” page? A week calendar for the whole save (A), a list by world (B), a small box on each world page (C), or none? Festivals and holidays only, or lot nights and uni/school events too? Week starting Monday or Sunday (the game’s)?
 - [ ] [Jemma] Found: no festival needs a lot (all are on open streets), so nothing broke. But the Starlight Accolades only go to a lounge with Hottest Spot in Town (only Calico has it, in Brindleton Bay), and Gibbi Point and Tomarang lost their lounge nights (Fearful Fish Lounge and The Screaming Gecko were re-typed). Ondarion has no scheduled festivals
-- [ ] [Jemma] Small ones: Sulani’s unnamed events shown with made-up names (as now) or left out? Nordhaven: one “Hobby meetups” line, or the game’s seven names?
+- [ ] [Jemma] Small ones: Sulani’s unnamed events stay, with their made-up names (her call, 19 Oct). Still open: Nordhaven: one “Hobby meetups” line, or the game’s seven names?
 
 ### Story ideas (research/story-ideas.md: ideas only, for her to pick from)
 - [ ] [Jemma] Browse when in the mood: 76 lore-friendly hooks across her 25 worlds (most change nothing the game ships) and 15 loose ends EA never finished (e.g. Roberto Crinkletop and Agnes; Princess Cordelia tying Henford, Tartosa and Ondarion together, which suits the Montys’ move). Some would also settle open items: the Kunals for Paradise Stables, Moody & McMillan running the 1 Cobblebottom Street tea room from next door, Supriya buying the Pawspital, the Koopmans’ daughter for Canalside Daycare, one of Fia’s outlaws as Aloisio’s tenant
@@ -262,16 +262,16 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [ ] [Jemma] The Cadberrys: you’ll sort them yourself later (19 Oct). Options found: research/own-households-recommendations.md (Ella-Mint as Spectra or with Madalyn, Leah-Moon’s “+” = Sterling?, Sylvia & Kenny’s sons, Isda Riverfront).
 - [ ] [Jemma] In game: Eco Roomies’ flat, #402 (your plan) or #404 (your saves)? Cheer/Football Teens skipped for now (maybe Sporty Girls and Sporty Boys from Season Events).
 - [ ] [Jemma] The Kirklands on the site start from your 4-Sim Library copy, with Kennedy and Kayleigh taken down from elders to adults and Kamila and Kendrick as teens; age them as you want them. Kennedy and Kayleigh are married (her answer, 19 Oct).
-- [ ] [Jemma] Your own households (18 Oct): 22 filled from the newest copy in your saves or Library, marked “Sims from …, to check” on each household page. Every other copy is listed in research/own-households-review.md (many households are in several saves, with different Sims); say which copy to use where it’s wrong.
+- [ ] [Jemma] Your own households (18 Oct): 22 filled from the newest copy in your saves or Library (no marker on the pages: no admin notes, her call 19 Oct). Every other copy is listed in research/own-households-review.md (many households are in several saves, with different Sims); say which copy to use where it’s wrong.
 - [x] Horse Elder Couple (Chestnut Ridge): not made yet (19 Oct); left empty.
 - [ ] [Jemma] Not found in any save or the Library, to add yourself: Mine (Chestnut Ridge and Sulani), Dynamic Daters, Cheer/Football Teens, Chess/Comp Teens (your Library “Teens!” may be them?), My Celebs, Elders, Single Mum Friends, Ella-Mint Cadberry, Rory & Friend, Werewolves in Training, and Innisgreen’s five (Enchanted Lovers, Ladipo, Mystical Besties, Nhoam, Summerdream).
 - [ ] [Jemma] Left for you: the Lovejoys (you’ll upload them), the two Davidson households, the four Tiquelle households, your recreated Sims 2 Montys (Ondarion), the vineyard Altos (to create), which Cadberrys live at Isda Riverfront, Specter Row’s owners (Ravenwood), and who Kennedy is (Bro & Kennedy: Sergio and Joaquin are in; likely Kennedy Kirkland, yours, in your Library and Not So Berry save, or Kennedy Rouse, a homeless young adult with a cat, Paco, in Season Events).
 - [ ] [Jemma] Which save is the Sims source: an exception to the Building rule for households in “Building #2” (like the rental-units one), or a separate save kept for Sims (what would it be called)? Her other 30 saves hold everything but are old (newest “Season Events”, 15 Mar 2026) and don’t have her rebuilt lots
 - [x] EA’s families: from the game’s own files, only households that match her spreadsheet; EA townies checked against the Sims Wiki too; her own households from her save, to double-check later (17 Oct). 81 filled so far; paused 18 Oct.
 - [x] EA’s starting friendships are shown (18 Oct).
-- [ ] [Jemma] Her Library (122 households, 56 her own uploads): use it as a top-up (only her own, or Maxis and others too), or not at all?
+- [ ] [Jemma] Her Library (122 households, 56 her own uploads): use it as a top-up for Sims (only her own, or Maxis and others too), or not at all? (Its pictures are used, see below)
 - [ ] [Jemma] Typing Sims in: chat only, or a Sims tab in World Plans? **Prototype to try:** for-jemma/prototypes/world-plans-sims-tab.xlsx (a copy of her workbook with a Sims tab and a Relationships tab, drop-downs, mistake highlighting and 24 example premade Sims; her own file untouched), explained in world-plans-sims-tab.md with 10 choices. If used, the importer needs a one-line change so it doesn’t treat the new tabs as worlds
-- [ ] [Jemma] Sim pictures: decode the Library portraits for Sim cards, or stick to her screenshots and monograms?
+- [x] Sim pictures (her call, 19 Oct: “pull Gallery Sim pics, same as placeholders for lots”): her own Library pictures stand in until she has screenshots: 9 households and 27 Sims so far (tools/library_pictures.py; her screenshots always win). The rest keep the placeholder
 - [ ] [Claude] When Sims go in: key each Sim by the game’s sim id, not its name (two Sims can share a name)
 
 ### Empty homes page and filters (prototypes: for-jemma/prototypes/lots/index.html, opens from the folder)
@@ -298,7 +298,8 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [x] Club meeting places decided 17–18 Oct, on the site: Powerhouse → Skye Fitness, Garden Gnomes → Magnolia Blossom Park (for now), League of Adventurers → Courtyard Lane Playground, Upper Crusts → any Restaurant, Paragons and Renegades → Magnolia Mall, Spin Masters → Stargazer, Partihaus → La Discotheque (Avant Gardes, Knights of the Hedge and The Good Timers unchanged).
 - [ ] [Jemma] In game: change those clubs' hangouts in the Club panel (may need a played member). Make sure Magnolia Mall has coffee, a wardrobe or racks, and things to sabotage; Skye Fitness has no pool (Powerhouse swims).
 - [ ] [Jemma] Powerhouse: add some San Myshuno Sims as members?
-- [ ] [Jemma] Clubs on the Sims pages: a “Clubs” block on household pages and one hub per club in the relationship web (a 7th tag group)? Fame stars and quirks on Sim cards?
+- [x] Clubs on household pages: not wanted (her call, 19 Oct: often only one Sim of a household is in a club); they stay on Sim pages
+- [ ] [Jemma] Fame stars and quirks on Sim pages? A club hub in the relationship web?
 
 ### Getaways (research/getaways-check.md)
 - [ ] [Jemma] Love Highland: as a Custom Venue it can’t be the Addams’ business in the game (a Custom Venue can’t be owned, and only a played household earns, at its own home). Keep it a Custom Venue run by them as story only, or make it their home again (as in the game, 8 beds)?
@@ -370,7 +371,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 ### Screenshots (research/screenshot-coverage.md)
 - [ ] [Jemma] Her Sims 4 Screenshots folder probably has pictures for 15 more lots, found by matching picture times to Gallery upload times (she takes them minutes before uploading). Strong: Bailey-Moon Manor and Izakaya Hanamigawa Koen (so their ticks are right), 122 Hakim House, Valley Views, Town Square Stores, Oak Alcove, Sultry Springside. Likely: Granada Place, Stonestreet Apartments 3 and 4, Museum of the Arts, Newcrest Community Space, Hindquarter Hideaway, The Forest Tavern, Twin Oracle Point. With her OK: copy each set into a new Builds folder (her folder, so she does it or says yes), name the pictures, add them to the site
 - [ ] [Jemma] 137 shared lots have no pictures anywhere; they’d need screenshots taken in game (biggest gaps: Oasis Springs 14, Britechester 13, Willow Creek 12, San Myshuno 12). Midtown Meadows’ and Rio Verde’s photos are older than their current uploads: retake?
-- [ ] [Jemma] Show each lot’s Gallery upload date on its page? (169 of 226 uploads have it in their Gallery id)
+- [x] Gallery upload date on lot pages: not for now (her call, 19 Oct: “not sure it’s worth having dates”)
 
 ### Weekly Gallery refresh (research/gallery-refresh-health.md)
 - [x] [Claude] Bug, fix first thing when she’s back: if a new upload is listed but can’t be read, the linking step crashes (KeyError in auto_link), so no lots get linked and the site isn’t rebuilt that Sunday (the numbers are already saved). One-line fix. Sunday 18 Oct should still run fine unless that happens — fixed 19 Oct (skipped and tried again next week)
@@ -398,7 +399,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [x] [Jemma] None looks worse than the whole map (48 good, 29 so-so). Her taste: put Belomisia Jungle, Campground, Glimmerbrook (loses its sunset) and Conifer Station back to the whole map? They barely zoom (1.01–1.15×) — 19 Oct: keep them as they are (her call)
 - [x] [Jemma] Zoom out a bit: Acquisition Butte, Desert Bloom Park, Galloping Gulch (mostly bare rock at 3×), Myshuno Meadows (soft), Yukimatsu (mostly snow)? Needs a small per-neighbourhood banner setting — the per-neighbourhood setting exists now (bannerZoom, bannerShift, 19 Oct); say which to change. 19 Oct: Galloping Gulch zoomed out; Acquisition Butte, Desert Bloom Park and Yukimatsu are fine as they are (her call)
 
-- [ ] [Claude] The shortcut opened in a normal Chrome window instead of its own app window (her report, 19 Oct). Check the shortcut’s target and arguments (tools/make_shortcuts.ps1 uses chrome --app=…) and fix.
+- [ ] [Jemma] The shortcut opened in a normal Chrome window instead of its own app window (her report, 19 Oct). Fixed in another session (tools/make_shortcuts.ps1 now sets the app’s own taskbar id, commit 03a9558): does it open as an app now?
 
 ### Blurry taskbar icon (research/taskbar-icon.md)
 - [ ] [Jemma] Cause found: a plain Chrome app window takes its taskbar icon from the page’s 16px icon and Windows stretches it (her PC runs at 200% scaling, so the taskbar wants 48px). A restart won’t fix it. Fix: make it an installed Chrome app served from http://127.0.0.1 (a small local server started at sign-in, a web manifest; she clicks Install once). Cheaper, untested: pin a shortcut with Chrome’s own taskbar id. Her call
@@ -444,17 +445,17 @@ Site ideas, bigger (13 Oct: she chose the five marked; no preference on the othe
 - [ ] What's new page (dated changelog) (13 Oct: no preference yet)
 - [x] Gallery numbers over time (keep each weekly refresh), top builds and biggest gains (13 Oct: Stats → On the Gallery)
 - [ ] Automatic Checks panel (spreadsheet vs Gallery mismatches, missing sizes or types, duplicate names) (13 Oct: no preference yet)
-- [ ] Empty homes and units page, built with the rentals per-unit view
+- [x] Empty homes and units page: not wanted (her call, 19 Oct)
 - [ ] Before and after pictures on rebuilt EA lots (needs her screenshots of the originals)
-- [ ] **Chosen 13 Oct:** Household basics for all households (Sims and pets, life stages, family type, played, Neighbourhood Stories)
-- [ ] **Chosen 13 Oct:** Relationships between households beyond family
-- [ ] **Chosen 13 Oct:** Family tree, Goths first
+- [x] **Chosen 13 Oct:** Household basics for all households (Sims and pets, life stages, family type, played, Neighbourhood Stories). Done 17–19 Oct (household and Sim pages)
+- [x] **Chosen 13 Oct:** Relationships between households beyond family. Done: relationships are on Sim pages (17 Oct decision), EA’s starting friendships included
+- [x] **Chosen 13 Oct:** Family tree, Goths first. Done: a tree on every household with family (and an animal tree for pets)
 - [ ] Challenge builds grouping (her Simsie shell builds)
 From the research but not on the list until 13 Oct (suggestions only):
 - [ ] Beds by age group / capacity for homes and rental units (e.g. "3 beds: 1 double, 2 single; fits 4"), to see where a family fits (research/rentals-and-apartments.md)
 - [ ] Lot value as a Stats column (it's already on each lot's Gallery card)
 - [ ] Original vs new lot size for lots she resized ("40×30, was 30×20"). Note (15 Oct audit): probably nothing to show yet: her plan sizes match her uploads (research/data-check-up.md) and the game's own sizes (research/plan-vs-game.md, apart from two plan typos since fixed)
-- [ ] Filters on world and Stats pages: pack, lot type, lot trait (now that traits are in), built/shared, empty/occupied
+- [x] Filters on world and Stats pages: not wanted (her call, 19 Oct)
 - [x] "New since you looked" markers (15 Oct): a "New" pill on lot cards and a note on the lot page when a build has new favourites or comments, or is a new upload, since its page was last opened in this browser
 - [ ] Timeline of builds by the month they were shared, on the home page (13 Oct: no preference yet)
 - [x] Newest Gallery comments on the Stats page (15 Oct)
@@ -466,7 +467,7 @@ From the research but not on the list until 13 Oct (suggestions only):
 - [x] 9 shared lots had a different name in the save: settled 13 Oct (shell builds keep their challenge names in the game; The Old Salt House's traits come from the older "Building" save)
 - [x] Anchorpoint Works keeps its name on the site (15 Oct, her choice; "On Point" in her game)
 - [x] Bedlington Barn: shared 14 Oct, upload linked. (Desert Bloom Park has no lot traits set in the game)
-- [ ] [Jemma] Household basics, relationships and family tree need Sims, which aren't to come from the Building saves: which save (if any) should they come from, or will you give them?
+- [x] (Same question as “Which save is the Sims source” in §6d; kept there.) Household basics, relationships and family tree need Sims, which aren't to come from the Building saves
 - [x] **Chosen 13 Oct:** Neighbourhood eco footprint and festivals/events: on the neighbourhood cards (first three) and pages (all), 14 Oct
 - [ ] [Jemma] Look over the 14 Oct world extras (research/world-extras.md): the weather lines are made from the game's forecasts by simple rules (e.g. "Often cloudy, snowy winters"), so reword any; some Sulani, Ravenwood and Nordhaven event names had no on-screen name in the game and were made from its settings (Beach Bonfire, Funeral BBQ, Hobby meetups…); highlight texts are the game's own (US spelling)
 
