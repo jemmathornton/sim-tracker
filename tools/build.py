@@ -170,7 +170,7 @@ def gallery_history(lot_of):
 def build():
     out, stats, households = [], [], {}
     no_landlord = []
-    family_links, tenants, name_fix, nb_pt, nb_box, nb_centred, nb_zoom, cs_versions = {}, {}, {}, {}, {}, {}, {}, {}
+    family_links, tenants, name_fix, nb_pt, nb_box, nb_centred, nb_zoom, nb_banner, cs_versions = {}, {}, {}, {}, {}, {}, {}, {}, {}
     lot_of = {}   # Gallery id -> the lot page it belongs to
     for wf in world_files():
         W = load(wf); n, ws, owned = W['name'], slug(W['name']), W['owned']
@@ -188,6 +188,7 @@ def build():
             if hood.get('mapBox'): nb_box.setdefault(ws, {})[hood['name']] = hood['mapBox']
             if hood.get('mapCentred'): nb_centred.setdefault(ws, []).append(hood['name'])   # card stays centred on its box (her choice)
             if hood.get('mapZoom'): nb_zoom.setdefault(ws, {})[hood['name']] = hood['mapZoom']   # card zoomed in closer than its box (her choice)
+            if hood.get('bannerZoom') or hood.get('bannerShift'): nb_banner.setdefault(ws, {})[hood['name']] = {'zoom': hood.get('bannerZoom', 1), 'shift': hood.get('bannerShift', [0, 0])}   # her own nudges to the banner (19 Oct)
             for l in hood['lots']:
                 name, unsure, note = residents(l['residents'])
                 who = name or note or None
@@ -223,7 +224,7 @@ def build():
     return {"worlds": out, "households": households, "stats": stats,
             "people": {k: v for k, v in load(os.path.join(DATA, 'people.json')).items() if not k.startswith('_')} if os.path.exists(os.path.join(DATA, 'people.json')) else {},   # relatives with no household on the site (17 Oct)
             "groups": {k: v for k, v in load(os.path.join(DATA, 'groups.json')).items() if not k.startswith('_')} if os.path.exists(os.path.join(DATA, 'groups.json')) else {},   # dynasties, clubs, university organisations (17 Oct)
-            "familyLinks": family_links, "tenants": tenants, "noLandlord": no_landlord, "nameFix": name_fix, "nbPt": nb_pt, "nbBox": nb_box, "nbCentred": nb_centred, "nbZoom": nb_zoom, "csVersions": cs_versions,
+            "familyLinks": family_links, "tenants": tenants, "noLandlord": no_landlord, "nameFix": name_fix, "nbPt": nb_pt, "nbBox": nb_box, "nbCentred": nb_centred, "nbZoom": nb_zoom, "nbBanner": nb_banner, "csVersions": cs_versions,
             "galleryHistory": gallery_history(lot_of),
             "meta": {"built": date.today().isoformat(), "galleryChecked": checked, "game": game_version()}}
 

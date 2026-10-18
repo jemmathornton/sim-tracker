@@ -743,7 +743,7 @@ function mapHero(w, kicker, title, text, figures, chapters, small, view){
 // Neighbourhood cards (chosen 12 Oct, "D1"): a close-up of the world map at the neighbourhood's spot (no pin, Jemma's choice),
 // and a row of circles, one per lot, each linking to its lot.
 // Spots are fractions of the map's width/height, placed by Jemma on a gridded map. Worlds without spots show the whole map, no pin.
-const NB_PT = DATA.nbPt, NB_BOX = DATA.nbBox || {}, NB_CENTRED = DATA.nbCentred || {}, NB_ZOOM = DATA.nbZoom || {};
+const NB_PT = DATA.nbPt, NB_BOX = DATA.nbBox || {}, NB_CENTRED = DATA.nbCentred || {}, NB_ZOOM = DATA.nbZoom || {}, NB_BANNER = DATA.nbBanner || {};
 const MAP_RATIO = 1266/1800, CARD_RATIO = 3/4, ZOOM = 3.2;
 // a box Jemma drew around a neighbourhood (14 Oct): zoom so the whole box fits the card, with a little room around it
 // (never so far out that the map no longer fills the card, nor closer than a quarter of the map's width)
@@ -787,8 +787,9 @@ function hoodHeroView(x){
   const HERO_ZOOM = Math.max(1.01, Math.min(3, (x.world.mapW || 1800) / (W * .85)));
   const room = 1.3, c = box ? [(box[0] + box[2]) / 2, (box[1] + box[3]) / 2] : spot;
   const fit = box ? Math.min(1 / ((box[2] - box[0]) * room), HERO_RATIO / (MAP_RATIO * (box[3] - box[1]) * room)) : HERO_ZOOM;
-  const z = Math.max(1.01, Math.min(HERO_ZOOM, fit));
-  return nbView([c[0], Math.min(1, c[1] + .04 / z)], z, HERO_RATIO).bg;   // a touch lower, so the neighbourhood sits above the fade
+  const nudge = (NB_BANNER[x.world.id] || {})[x.name] || {zoom: 1, shift: [0, 0]};   // her own nudges (bannerZoom, bannerShift)
+  const z = Math.max(1.01, Math.min(HERO_ZOOM * nudge.zoom, fit * nudge.zoom));
+  return nbView([c[0] + nudge.shift[0], Math.min(1, c[1] + nudge.shift[1] + .04 / z)], z, HERO_RATIO).bg;   // a touch lower, so the neighbourhood sits above the fade
 }
 function hoodArt(x){
   const spot = (NB_PT[x.world.id] || {})[x.name], box = (NB_BOX[x.world.id] || {})[x.name], n = x.lots.length;
