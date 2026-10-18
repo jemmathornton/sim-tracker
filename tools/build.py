@@ -59,10 +59,34 @@ def shared_on(i):
     d = datetime(1582, 10, 15) + timedelta(microseconds=u.time // 10)
     return f"{MONTHS[d.month - 1]} {d.year}"
 
+# British spelling in her Gallery descriptions on the site (her call, 19 Oct; her uploads on EA are unchanged). Lower-case words only
+# where the capitalised form is a proper name from the game (Evergreen Harbor, Rec Center, Information Center, a Theater's name).
+BRITISH_ANY = {'neighborhood': 'neighbourhood', 'neighbor': 'neighbour', 'neighboring': 'neighbouring', 'color': 'colour', 'colorful': 'colourful',
+               'colored': 'coloured', 'favorite': 'favourite', 'favor': 'favour', 'flavor': 'flavour', 'cozy': 'cosy', 'cozier': 'cosier',
+               'coziest': 'cosiest', 'coziness': 'cosiness', 'gray': 'grey', 'honor': 'honour', 'labor': 'labour', 'organize': 'organise',
+               'organized': 'organised', 'organizing': 'organising', 'realize': 'realise', 'realized': 'realised', 'apologize': 'apologise',
+               'traveler': 'traveller', 'travelers': 'travellers', 'traveling': 'travelling', 'traveled': 'travelled', 'jewelry': 'jewellery',
+               'mom': 'mum', 'moms': 'mums', 'catalog': 'catalogue', 'aluminum': 'aluminium', 'pajamas': 'pyjamas', 'defense': 'defence',
+               'mold': 'mould', 'moldy': 'mouldy', 'specialize': 'specialise', 'specialized': 'specialised', 'personalize': 'personalise',
+               'personalized': 'personalised', 'modernized': 'modernised', 'modernize': 'modernise', 'center': 'centre', 'centers': 'centres',
+               'harbor': 'harbour', 'theater': 'theatre', 'theaters': 'theatres'}
+BRITISH_LOWER_ONLY = {'center', 'centers', 'harbor', 'theater', 'theaters'}
+def british(text):
+    def swap(m):
+        w = m.group(0); low = w.lower(); plural = ''
+        if low not in BRITISH_ANY and low.endswith('s') and low[:-1] in BRITISH_ANY: low, plural = low[:-1], 's'
+        if low not in BRITISH_ANY: return w
+        if w[0].isupper() and (low in BRITISH_LOWER_ONLY or low + plural in BRITISH_LOWER_ONLY): return w
+        out = BRITISH_ANY[low] + plural
+        return out.upper() if w.isupper() and len(w) > 1 else out[0].upper() + out[1:] if w[0].isupper() else out
+    return re.sub(r"[A-Za-z]+", swap, text)
+
+
 def upload_entry(i):
     u = uploads[i]; desc = u['description'] or ''; k = desc.find('#')
     text = re.sub(r'\s+', ' ', desc[:k] if k >= 0 else desc).strip().replace("''", "'")
     for a, b in fixes.get(i, {}).get('description', []): text = text.replace(a, b)
+    text = british(text)
     # EA sends some comment text HTML-escaped ("&lt;3"); the page escapes text itself, so turn it back into plain text first
     cl = [dict(c, m=html.unescape(c.get('m') or '')) for c in comments.get(i, [])]
     return {"url": GALLERY_ITEM + urllib.parse.quote(i, safe=''), "title": clean_title(u['title']), "description": text,
