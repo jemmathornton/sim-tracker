@@ -816,3 +816,4 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 .cal .m-ev:hover{background:color-mix(in srgb,var(--h) 12%,transparent)}
 .cal .m-ev.unbuilt{opacity:.6}
 .cal .key i.k-hol{width:14px;height:14px;border:0;background:#7FA36B}
+.cal .m-ev.k-lot{font-style:italic}   /* lot nights: named by their lot */

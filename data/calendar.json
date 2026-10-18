@@ -1,5 +1,5 @@
 {
- "_note": "The save's calendar (19 Oct): festivals and regular events from the game's own files, checked against the Sims Wiki (research/festivals-calendar.md); lotEvents are made from her lots' types and traits; holidays are hers (season, week 1-4, day). Weeks start on Monday; a season is 4 weeks (her choice). gameHolidays: the game's own holidays where it puts them with four-week seasons (each season's tuning, VERY_LONG; 19 Oct); hers in holidays can replace or add to them.",
+ "_note": "The save's calendar (19 Oct): festivals, community events, uni and high school events from the game's own files, checked against the Sims Wiki (research/festivals-calendar.md); lotEvents are made from her lots' types and traits; holidays are hers (season, week 1-4, day). Weeks start on Monday; a season is 4 weeks (her choice). gameHolidays: the game's own holidays where it puts them with four-week seasons (each season's tuning, VERY_LONG; 19 Oct); hers in holidays can replace or add to them. kind: festival | community (meetups, markets, competitions, Sulani's daily events) | uni | highschool (her split, 19 Oct).",
  "seasonWeeks": 4,
  "seasons": [
   "Spring",
@@ -137,7 +137,7 @@
    "time": "about 4–10 pm",
    "start": 980,
    "often": "week",
-   "kind": "festival"
+   "kind": "community"
   },
   {
    "w": "Sulani",
@@ -150,7 +150,7 @@
    "time": "about 8 am–2 pm",
    "start": 485,
    "often": "third",
-   "kind": "festival"
+   "kind": "community"
   },
   {
    "w": "Sulani",
@@ -163,7 +163,7 @@
    "time": "about 1–7 pm",
    "start": 800,
    "often": "week",
-   "kind": "festival"
+   "kind": "community"
   },
   {
    "w": "Sulani",
@@ -176,7 +176,7 @@
    "time": "about 6 pm–midnight",
    "start": 1100,
    "often": "week",
-   "kind": "festival"
+   "kind": "community"
   },
   {
    "w": "Sulani",
@@ -189,7 +189,7 @@
    "time": "9 am–midnight",
    "start": 540,
    "often": "fortnight",
-   "kind": "festival"
+   "kind": "community"
   },
   {
    "w": "Sulani",
@@ -202,7 +202,7 @@
    "time": "about 6 pm–midnight",
    "start": 1100,
    "often": "week",
-   "kind": "festival"
+   "kind": "community"
   },
   {
    "w": "Sulani",
@@ -215,7 +215,7 @@
    "time": "noon–6 pm",
    "start": 720,
    "often": "week",
-   "kind": "festival"
+   "kind": "community"
   },
   {
    "w": "Sulani",
@@ -228,7 +228,7 @@
    "time": "about 9 am–4 pm",
    "start": 560,
    "often": "week",
-   "kind": "festival"
+   "kind": "community"
   },
   {
    "w": "Ravenwood",
@@ -242,7 +242,7 @@
    "time": "6–11 pm",
    "start": 1080,
    "often": "week",
-   "kind": "festival",
+   "kind": "community",
    "note": "A meeting for ghosts"
   },
   {
@@ -256,7 +256,7 @@
    "time": "10 am–3 pm",
    "start": 600,
    "often": "week",
-   "kind": "festival",
+   "kind": "community",
    "note": "A meeting for ghosts"
   },
   {
@@ -272,7 +272,7 @@
    "time": "11 am–5 pm",
    "start": 660,
    "often": "week",
-   "kind": "festival"
+   "kind": "community"
   },
   {
    "w": "Ravenwood",
@@ -287,7 +287,7 @@
    "time": "11 am–5 pm",
    "start": 660,
    "often": "week",
-   "kind": "festival"
+   "kind": "community"
   },
   {
    "w": "Ravenwood",
@@ -343,7 +343,7 @@
    "time": "2–7 pm",
    "start": 840,
    "often": "week",
-   "kind": "festival",
+   "kind": "community",
    "group": "Hobby meetup"
   },
   {
@@ -356,7 +356,7 @@
    "time": "noon–5 pm",
    "start": 720,
    "often": "week",
-   "kind": "festival",
+   "kind": "community",
    "group": "Hobby meetup"
   },
   {
@@ -369,7 +369,7 @@
    "time": "8 pm–1 am",
    "start": 1200,
    "often": "week",
-   "kind": "festival",
+   "kind": "community",
    "group": "Hobby meetup"
   },
   {
@@ -382,7 +382,7 @@
    "time": "8 pm–1 am",
    "start": 1200,
    "often": "week",
-   "kind": "festival",
+   "kind": "community",
    "group": "Hobby meetup"
   },
   {
@@ -395,7 +395,7 @@
    "time": "6–11 am",
    "start": 360,
    "often": "week",
-   "kind": "festival",
+   "kind": "community",
    "group": "Hobby meetup"
   },
   {
@@ -408,7 +408,7 @@
    "time": "6–11 am",
    "start": 360,
    "often": "week",
-   "kind": "festival",
+   "kind": "community",
    "group": "Hobby meetup"
   },
   {
@@ -421,7 +421,7 @@
    "time": "5–10 pm",
    "start": 1020,
    "often": "week",
-   "kind": "festival",
+   "kind": "community",
    "group": "Hobby meetup"
   },
   {
@@ -434,7 +434,7 @@
    "time": "5–10 pm",
    "start": 1020,
    "often": "week",
-   "kind": "festival",
+   "kind": "community",
    "group": "Hobby meetup"
   },
   {
@@ -447,7 +447,7 @@
    "time": "11 am–4 pm",
    "start": 660,
    "often": "week",
-   "kind": "festival",
+   "kind": "community",
    "group": "Hobby meetup"
   },
   {
@@ -460,7 +460,7 @@
    "time": "11 am–4 pm",
    "start": 660,
    "often": "week",
-   "kind": "festival",
+   "kind": "community",
    "group": "Hobby meetup"
   },
   {
@@ -473,7 +473,7 @@
    "time": "6–11 pm",
    "start": 1080,
    "often": "week",
-   "kind": "festival",
+   "kind": "community",
    "group": "Hobby meetup"
   },
   {
@@ -486,7 +486,7 @@
    "time": "6–11 pm",
    "start": 1080,
    "often": "week",
-   "kind": "festival",
+   "kind": "community",
    "group": "Hobby meetup"
   },
   {
@@ -499,7 +499,7 @@
    "time": "8 am–1 pm",
    "start": 480,
    "often": "week",
-   "kind": "festival",
+   "kind": "community",
    "group": "Hobby meetup"
   },
   {
@@ -512,7 +512,7 @@
    "time": "8 am–1 pm",
    "start": 480,
    "often": "week",
-   "kind": "festival",
+   "kind": "community",
    "group": "Hobby meetup"
   },
   {
@@ -576,7 +576,7 @@
    "time": "6 pm–2 am",
    "start": 1080,
    "often": "Every night",
-   "kind": "festival",
+   "kind": "community",
    "note": "Food and shopping stalls on the street"
   },
   {
@@ -589,7 +589,7 @@
    "time": "7 am–7 pm",
    "start": 420,
    "often": "week",
-   "kind": "festival",
+   "kind": "community",
    "where": "Hay Now! Equestrian Center, New Appaloosa",
    "note": "For horses that have placed in every Master event; entry §2,000"
   },
@@ -601,7 +601,7 @@
    "time": "7 am–7 pm",
    "start": 420,
    "often": "Any day",
-   "kind": "festival",
+   "kind": "community",
    "where": "Hay Now! Equestrian Center, New Appaloosa",
    "note": "Barrel Racing, Endurance Racing, Show Jumping, Western Pleasure"
   },
@@ -613,7 +613,7 @@
    "time": "when you enter one",
    "start": 600,
    "often": "Any day",
-   "kind": "festival",
+   "kind": "community",
    "where": "",
    "note": "Gunther Goth’s Cup, Regional Ondarion Invitational, SimNation Grand Masters"
   },
@@ -627,7 +627,7 @@
    "time": "10 am–2 pm",
    "start": 600,
    "often": "week",
-   "kind": "school",
+   "kind": "uni",
    "where": "by the canal near the UoB Commons",
    "note": "Art Society"
   },
@@ -642,7 +642,7 @@
    "time": "3–7 pm",
    "start": 900,
    "often": "week",
-   "kind": "school",
+   "kind": "uni",
    "where": "by the canal near the UoB Commons",
    "note": "Art Society"
   },
@@ -656,7 +656,7 @@
    "time": "noon–6 pm",
    "start": 720,
    "often": "week",
-   "kind": "school",
+   "kind": "uni",
    "where": "Foxbury quad",
    "note": "Bot Savants"
   },
@@ -670,7 +670,7 @@
    "time": "3–9 pm",
    "start": 900,
    "often": "week",
-   "kind": "school",
+   "kind": "uni",
    "where": "UoB quad",
    "note": "Spirit Corps"
   },
@@ -685,7 +685,7 @@
    "time": "4–8 pm",
    "start": 960,
    "often": "week",
-   "kind": "school",
+   "kind": "uni",
    "where": "Darby’s Den (UoB Commons)",
    "note": "Debate Guild"
   },
@@ -700,7 +700,7 @@
    "time": "7–11 pm",
    "start": 1140,
    "often": "week",
-   "kind": "school",
+   "kind": "uni",
    "where": "Larry’s Lagoon (Foxbury Commons)",
    "note": "Bot Savants"
   },
@@ -717,7 +717,7 @@
    "time": "3–7 pm",
    "start": 900,
    "often": "week",
-   "kind": "school",
+   "kind": "uni",
    "where": "Laurel Library",
    "note": "Brainiacs",
    "needs": {
@@ -733,7 +733,7 @@
    "time": "8 pm–midnight",
    "start": 1200,
    "often": "Every night, one organisation a night",
-   "kind": "school",
+   "kind": "uni",
    "where": "The Royal Crown",
    "needs": {
     "txt": "A Bar: The Royal Crown",
@@ -750,7 +750,7 @@
    "time": "3–7 pm",
    "start": 900,
    "often": "week",
-   "kind": "school",
+   "kind": "uni",
    "where": "Foxbury quad"
   },
   {
@@ -764,7 +764,7 @@
    "time": "3–7 pm",
    "start": 900,
    "often": "week",
-   "kind": "school",
+   "kind": "uni",
    "where": "UoB quad"
   },
   {
@@ -777,7 +777,7 @@
    "time": "8 am–2 pm",
    "start": 480,
    "often": "week",
-   "kind": "school",
+   "kind": "uni",
    "where": "UoB quad"
   },
   {
@@ -790,7 +790,7 @@
    "time": "11 am–5 pm",
    "start": 660,
    "often": "week",
-   "kind": "school",
+   "kind": "uni",
    "where": "Foxbury quad"
   },
   {
@@ -805,7 +805,7 @@
    "time": "10 pm–2 am",
    "start": 1320,
    "often": "week",
-   "kind": "school",
+   "kind": "uni",
    "where": "Ritual Grounds, Gibbs Hill",
    "note": "The secret society"
   },
@@ -819,7 +819,7 @@
    "time": "10 pm–6 am",
    "start": 1320,
    "often": "Most weeks",
-   "kind": "school",
+   "kind": "uni",
    "where": "Darby’s Den and Larry’s Lagoon"
   },
   {
@@ -832,7 +832,7 @@
    "time": "2–6 pm",
    "start": 840,
    "often": "week",
-   "kind": "school",
+   "kind": "uni",
    "where": "Larry’s Lagoon (Foxbury Commons)"
   },
   {
@@ -845,7 +845,7 @@
    "time": "8 pm–midnight",
    "start": 1200,
    "often": "week",
-   "kind": "school",
+   "kind": "uni",
    "where": "Darby’s Den (UoB Commons)"
   },
   {
@@ -858,7 +858,7 @@
    "time": "8 pm–1 am",
    "start": 1200,
    "often": "Most weeks",
-   "kind": "school",
+   "kind": "uni",
    "where": "Darby’s Den and Larry’s Lagoon"
   },
   {
@@ -871,7 +871,7 @@
    "time": "5–10 pm",
    "start": 1020,
    "often": "week",
-   "kind": "school",
+   "kind": "highschool",
    "where": "the football field behind the high school"
   },
   {
@@ -884,7 +884,7 @@
    "time": "5–10 pm",
    "start": 1020,
    "often": "week",
-   "kind": "school",
+   "kind": "highschool",
    "where": "the football field"
   },
   {
@@ -897,7 +897,7 @@
    "time": "10 am–3 pm",
    "start": 600,
    "often": "week",
-   "kind": "school",
+   "kind": "highschool",
    "where": "Copperdale High School",
    "needs": {
     "txt": "The High School: the game’s build",
@@ -914,7 +914,7 @@
    "time": "7–11 pm",
    "start": 1140,
    "often": "week",
-   "kind": "school",
+   "kind": "highschool",
    "where": "the Auditorium",
    "note": "When a teen is played; after-party on Plumbite Cove’s pier",
    "needs": {
@@ -932,7 +932,7 @@
    "time": "from 6 pm",
    "start": 1080,
    "often": "After a teen ages up",
-   "kind": "school",
+   "kind": "highschool",
    "where": "the Auditorium",
    "needs": {
     "txt": "The Auditorium: the game’s build",
@@ -947,7 +947,7 @@
    "time": "a school day",
    "start": 600,
    "often": "The game picks the day",
-   "kind": "school",
+   "kind": "highschool",
    "where": "the Auditorium"
   },
   {
@@ -958,7 +958,7 @@
    "time": "5–10 pm",
    "start": 1020,
    "often": "When the chess or computer team calls one",
-   "kind": "school",
+   "kind": "highschool",
    "where": "the school grounds"
   }
  ],

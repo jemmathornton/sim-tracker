@@ -5,7 +5,8 @@ const NO_LANDLORD = new Set(DATA.noLandlord || []);
 const NAME_FIX = DATA.nameFix;
 const ic = n => ICONS[n].replace("<svg ", '<svg class="i" aria-hidden="true" ');
 // shown text uses curly apostrophes and single quotes (12 Oct); ids and links are untouched
-const curly = s => String(s ?? "").replace(/(^|[\s(\[“"—-])'/g, "$1‘").replace(/'/g, "’");
+// ’n’, ’Round, ’til and ’tis are apostrophes, not opening quotes (Thrift ’n’ Fish, ’Round the Fire Festival)
+const curly = s => String(s ?? "").replace(/(^|[\s(])'(?=n'|Round\b|til\b|tis\b)/g, "$1’").replace(/(^|[\s(\[“"—-])'/g, "$1‘").replace(/'/g, "’");
 const esc = s => curly(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const slug = s => String(s).toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/&/g,"and").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
 // neighbourhood colours: muted jewel tones
@@ -1352,7 +1353,7 @@ const CAL = Object.assign({events: [], lotEvents: [], holidays: [], seasons: ["S
 const CAL_DAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 const CAL_DAY_NAMES = {Mon: "Monday", Tue: "Tuesday", Wed: "Wednesday", Thu: "Thursday", Fri: "Friday", Sat: "Saturday", Sun: "Sunday"};
 const CAL_OFTEN = {week: "every week", fortnight: "every other week", third: "every third week", lounge: "the game picks each week"};
-const CAL_KINDS = {holiday: "Holidays", festival: "Festivals and world events", school: "Uni and high school", lot: "Lot nights (lounges, thrift stores)"};
+const CAL_KINDS = {holiday: "Holidays", festival: "Festivals", community: "Community events", uni: "University", highschool: "High school", lot: "Lot nights"};   // split up (her ask, 19 Oct)
 const SEASON_ICON = {Spring: "flower", Summer: "sun", Autumn: "leaf", Winter: "snowflake"};
 const calW = name => worlds.find(w => w.name === name);
 // text on a world-coloured chip: dark on the light colours (Sulani's yellow), white on the rest
@@ -1369,28 +1370,25 @@ function calEvents(){
       link: "#" + l.id, often: /^Lounge/.test(l.type) ? "lounge" : "week", built: l.built === true}); }))));
   return CAL_ALL = all.filter(e => calW(e.w) && calW(e.w).owned).map(e => ({...e, order: worlds.indexOf(calW(e.w))}));
 }
-const calState = {kinds: new Set(["holiday", "festival"]), world: null};
-try { const s = JSON.parse(localStorage.getItem("calendar-2") || "{}"); if (s.kinds) calState.kinds = new Set(s.kinds.filter(k => CAL_KINDS[k])); } catch (e) {}
-const calKeep = () => { try { localStorage.setItem("calendar-2", JSON.stringify({kinds: [...calState.kinds]})); } catch (e) {} };
+const calState = {kinds: new Set(["holiday", "festival", "community"]), world: null};
+try { const s = JSON.parse(localStorage.getItem("calendar-3") || "{}"); if (s.kinds) calState.kinds = new Set(s.kinds.filter(k => CAL_KINDS[k])); } catch (e) {}
+const calKeep = () => { try { localStorage.setItem("calendar-3", JSON.stringify({kinds: [...calState.kinds]})); } catch (e) {} };
 const calPlace = e => { const w = calW(e.w), hid = w && e.hood ? w.id + "-" + slug(e.hood) : null;
   return e.link ? `<a href="${e.link}">${esc(e.where)}</a>` : hid && hoodIndex[hid] ? `<a href="#n-${hid}">${esc(e.where || e.hood)}</a>` : esc(e.where || e.hood || ""); };
 const calTag = e => e.often === "fortnight" ? `<span class="often">${ic("repeat")}every other week</span>` : e.often === "third" ? `<span class="often">${ic("repeat")}every third week</span>` : "";
 const calStar = e => e.star ? `<sup title="The game never shows this name; it’s made from the game’s settings">*</sup>` : "";
 const calPill = e => `<div class="ev k-${e.kind} o-${slug(e.often || "")}${e.built === false ? " unbuilt" : ""}" style="${e.agg ? "--h:#9A7B3A;--on:#fff" : calHues(e.w)}">
-  <span class="t">${esc(e.time)}</span><b>${esc(e.name)}${calStar(e)}</b>
+  <span class="t">${esc(e.time)}</span><b>${esc(e.label || e.name)}${calStar(e)}</b>
   <small>${[e.agg ? "" : `<a href="#w-${calW(e.w).id}">${esc(e.w)}</a>`, e.agg ? esc(e.where) : calPlace(e)].filter(Boolean).join(" · ")}</small>${calTag(e)}</div>`;
 // which weeks of a season an event is on (1-4): every week, or every other week (pairs take turns; which week depends on her save)
 const calWeeks = e => e.often === "fortnight" ? (e.pair && e.name.toLowerCase() > e.pair.toLowerCase().replace(/^the /, "") ? [2, 4] : e.name === "Flea Market" ? [2, 4] : [1, 3]) : e.often === "third" ? [1, 4] : [1, 2, 3, 4];
 const calHolidays = sn => [...(CAL.gameHolidays || []).filter(x => !CAL.holidays.some(y => y.replaces === x.name)), ...CAL.holidays].filter(x => x.season === sn);
 calState.season ||= "Spring";
 function calendarPage(){
-  const picked = calEvents().filter(e => calState.kinds.has(e.kind) && (!calState.world || e.w === calState.world)), groups = {};
-  // lot nights: one entry per night, naming every lot that has it
-  picked.filter(e => e.kind === "lot").forEach(e => (groups[e.name + "|" + e.time] ||= []).push(e));
-  const shown = picked.filter(e => e.kind !== "lot").concat(Object.values(groups).map(list => ({...list[0], agg: true, built: list.some(e => e.built), order: 99,
-    where: `${list[0].lotType}${list.length > 1 ? "s" : ""}: ${list.map(e => e.where + (e.built ? "" : " (not built)")).join(", ")}`})));
+  // lot nights are listed lot by lot, named by their lot, after the other events of the day (her ask, 19 Oct)
+  const shown = calEvents().filter(e => calState.kinds.has(e.kind) && (!calState.world || e.w === calState.world)).map(e => e.kind === "lot" ? {...e, label: e.where + ": " + e.name} : e);
   const withEv = worlds.filter(w => w.owned && calEvents().some(e => e.w === w.name && calState.kinds.has(e.kind)));
-  const byStart = (a, b) => a.start - b.start || a.order - b.order;
+  const byStart = (a, b) => (a.kind === "lot") - (b.kind === "lot") || (a.kind === "lot" ? a.where.localeCompare(b.where) || a.start - b.start : a.start - b.start || a.order - b.order);
   const daily = shown.filter(e => e.special === "daily").sort(byStart), loose = shown.filter(e => e.special && e.special !== "daily").sort(byStart);
   const weeks = CAL.seasonWeeks || 4, sn = calState.season, hols = calState.kinds.has("holiday") ? calHolidays(sn) : [];
   let h = `<section class="hero small" style="--c:#C9A04A"><div class="kicker"><i></i><span class="label">Across the save</span></div><h1 style="margin-top:14px">The <em>calendar</em></h1><p>Each season is four weeks, Monday to Sunday: its holidays, and every festival and regular event in your worlds.</p></section>`;
@@ -1404,7 +1402,7 @@ function calendarPage(){
       return `<div class="m-week"><span class="m-wk">Week ${wk}</span>${CAL_DAYS.map((d, j) => { const ho = hols.filter(x => x.week === wk && x.day === d);
         const evs = shown.filter(e => e.days && e.days.includes(d) && calWeeks(e).includes(wk)).sort(byStart);
         return `<div class="m-day${ho.length ? " hol" : ""}"><span class="m-n">${i * 7 + j + 1}</span>${ho.map(x => `<div class="m-hol">${ic(SEASON_ICON[sn] || "sparkle")}<b>${esc(x.name)}</b>${x.off ? "<small>day off</small>" : ""}</div>`).join("")}
-          ${evs.map(e => `<div class="m-ev${e.built === false ? " unbuilt" : ""}" style="${e.agg ? "--h:#9A7B3A" : calHues(e.w)}" title="${esc(e.name + " · " + e.time + " · " + (e.agg ? e.where : e.w + (e.where || e.hood ? ", " + (e.where || e.hood) : "")))}"><i></i><span>${esc(e.name)}${calStar(e)}</span></div>`).join("")}</div>`; }).join("")}</div>`; }).join("")}</div>`;
+          ${evs.map(e => `<div class="m-ev k-${e.kind}${e.built === false ? " unbuilt" : ""}" style="${calHues(e.w)}" title="${esc((e.label || e.name) + " · " + e.time + " · " + e.w + (e.kind !== "lot" && (e.where || e.hood) ? ", " + (e.where || e.hood) : "") + (e.built === false ? " (not built yet)" : ""))}"><i></i><span>${esc(e.label || e.name)}${calStar(e)}</span></div>`).join("")}</div>`; }).join("")}</div>`; }).join("")}</div>`;
   if (loose.length) h += `<div class="band"><span class="band-l">${ic("moon")}No fixed day</span><div class="band-evs">${loose.map(e => calPill(e).replace('<span class="t">', `<span class="t">${esc(CAL_OFTEN[e.often] || e.often || "")} · `)).join("")}</div></div>`;
   h += `<div class="key"><span><i class="k-hol"></i>holiday</span><span>Every-other-week festivals are shown on weeks 1 and 3 (or 2 and 4 for the one they take turns with); which week depends on your save.</span><span><sup>*</sup> the game never shows this name</span><span>Hover an event for its place and time.</span></div>`;
   h += `<p class="yr-note">${ic("sparkle")}<span>${CAL.holidays.length ? "" : "These are the game’s own holidays; you’ll make your own for this save. "}<b>Surprise holidays</b>, a few days’ notice, at random: ${CAL.surprise.map(([d, n]) => `${esc(n)} (${d})`).join(", ")}.</span></p>
