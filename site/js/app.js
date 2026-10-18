@@ -781,7 +781,7 @@ document.addEventListener("click", e => { const c = e.target.closest("[data-lot-
 // the banner on a neighbourhood page shows the same part of the map as its card (16 Oct, her idea), zoomed less:
 // (the banner's real shape is used, as it runs the full width of the page; it zooms only as far as the map picture stays sharp:
 // most maps are about 3075px wide, San Myshuno's 1800px, as its night map didn't come out right at full size)
-function hoodHeroView(x){
+function hoodHeroView(x, raw){
   const box = (NB_BOX[x.world.id] || {})[x.name], spot = (NB_PT[x.world.id] || {})[x.name];
   if (!x.world.map || !(box || spot)) return "";
   const W = document.querySelector("main")?.clientWidth || 1000, HERO_RATIO = Math.max(.3, Math.min(.7, Math.min(.62 * innerHeight, 560) / W));   // the banner's real height (site.css .hero.mapped)
@@ -790,18 +790,19 @@ function hoodHeroView(x){
   const fit = box ? Math.min(1 / ((box[2] - box[0]) * room), HERO_RATIO / (MAP_RATIO * (box[3] - box[1]) * room)) : HERO_ZOOM;
   const nudge = (NB_BANNER[x.world.id] || {})[x.name] || {zoom: 1, shift: [0, 0]};   // her own nudges (bannerZoom, bannerShift)
   const z = Math.max(1.01, Math.min(HERO_ZOOM * nudge.zoom, fit * nudge.zoom));
+  if (raw) return {z, c: [c[0] + nudge.shift[0], c[1] + nudge.shift[1]]};   // for the card (hoodArt)
   return nbView([c[0] + nudge.shift[0], Math.min(1, c[1] + nudge.shift[1] + .04 / z)], z, HERO_RATIO).bg;   // a touch lower, so the neighbourhood sits above the fade
 }
 function hoodArt(x){
   const spot = (NB_PT[x.world.id] || {})[x.name], box = (NB_BOX[x.world.id] || {})[x.name], n = x.lots.length;
   // a neighbourhood Jemma wants centred on its box doesn't slide (14 Oct: Whispering Glen showed too much cloud above)
   const others = (NB_CENTRED[x.world.id] || []).includes(x.name) ? [] : Object.entries(NB_BOX[x.world.id] || {}).filter(([n]) => n !== x.name).map(([, b]) => b);
-  // her banner nudges (bannerZoom, bannerShift) move the card the same way, so card and banner show the same part (19 Oct, her ask)
-  const nudge = (NB_BANNER[x.world.id] || {})[x.name] || {zoom: 1, shift: [0, 0]};
-  const z = box ? Math.max(CARD_RATIO / MAP_RATIO + .01, boxZoom(box) * ((NB_ZOOM[x.world.id] || {})[x.name] || 1) * nudge.zoom) : 0;   // her own closer zoom for a card (14 Oct: Whispering Glen)
-  const at = box ? boxCentre(box, z, others) : null;
-  const cs = nudge.card || [0, 0];   // cardShift: a little extra for the card only (19 Oct: Deadgrass Isle's island sat left of centre)
-  const v = box ? nbView([at[0] + nudge.shift[0] + cs[0], at[1] + nudge.shift[1] + cs[1]], z) : spot ? nbView([spot[0] + nudge.shift[0], spot[1] + nudge.shift[1]], ZOOM * nudge.zoom) : null;
+  // a neighbourhood whose banner she has nudged (bannerZoom, bannerShift) gets a card that shows what its banner shows: the same
+  // middle and the same width of map (the card is taller, so it shows a little more above and below) (19 Oct, her ask)
+  const nudge = (NB_BANNER[x.world.id] || {})[x.name], hero = nudge && (nudge.zoom !== 1 || nudge.shift[0] || nudge.shift[1]) ? hoodHeroView(x, true) : null;
+  const cs = (nudge && nudge.card) || [0, 0];   // cardShift: a little extra for the card only
+  const z = hero ? Math.max(CARD_RATIO / MAP_RATIO + .01, hero.z) : box ? boxZoom(box) * ((NB_ZOOM[x.world.id] || {})[x.name] || 1) : 0;   // her own closer zoom for a card (14 Oct: Whispering Glen)
+  const v = hero ? nbView([hero.c[0] + cs[0], hero.c[1] + cs[1]], z) : box ? nbView(boxCentre(box, z, others), z) : spot ? nbView(spot) : null;
   const bg = !x.world.map ? "" : v ? `background:url('${x.world.map}') ${v.bg}` : `background:url('${x.world.map}') center 45%/cover`;
   const circles = x.lots.map(l => nbTile(l).replace("<i ", `<i data-lot-link="${l.id}" aria-label="${esc(l.name)}" `).replace(/ title="[^"]*"/, ` data-name="${esc(l.name)}"`)).join("");
   return `<div class="photo nb-map" style="${bg}"><span class="nb-bubbles${n > 5 ? " many" : ""}">${circles}</span><span class="type">Neighbourhood</span></div>`;
