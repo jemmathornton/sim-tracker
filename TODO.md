@@ -322,7 +322,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [ ] [Jemma] Two Overview bugs from when the Innisgreen row was added on 15 Oct (ours): Nordhaven’s Overall shows 10% instead of 20% (its formula takes in Innisgreen’s row), and the table stops before Ondarion. Fix them, with a backup first? Also: Spring Steppes says 9 bedrooms in the sheet and 8 in the app (two Gallery versions); count ranges on world tabs stop at the last lot row (a new lot at the bottom would be missed)
 - [ ] [Jemma] What should “Overall” mean? Now it’s a plain average of Built, Shared, Screenshots and Sims Made, so even Britechester (all built and shared) shows 50%; worlds with no homes average three columns; Shared is out of all lots, not built lots
 - [ ] [Jemma] Four notes of hers beside the Statistics blocks: Willow Creek “Ella-Mint Cadberry”, Chestnut Ridge “One of Duo’s Parents”, and “Lynx” on Tomarang and Ciudad Enamorada. What do they mean? (The app doesn’t show them)
-- [ ] [Claude] The import doesn’t read the Overview’s Owned column, so marking a world owned there won’t reach the app; keep Owned in one place
+- [x] [Claude] Done 19 Oct: tools/import_spreadsheet.py now reads the Overview’s Owned column (same three-way rule as lots; --apply switches the world on). Was: The import doesn’t read the Overview’s Owned column, so marking a world owned there won’t reach the app; keep Owned in one place
 
 ### Rentals unit by unit (research/rental-units.md)
 - [ ] [Jemma] Suggested fits: Upland units 1–3 the Eclectic Arts, 4 Johnny Zest; Tail’s End 3 (Cat Hangout) Catarina Lynx; Spring Steppes 1 Elderberry, 2 the Pleasant twins; 3 Cobblebottom 3A Cecilia Kang (Cat Hangout), 3B Moody & McMillan (Chef’s Kitchen). OK?
@@ -350,7 +350,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 
 ### Going online one day (research/going-online.md)
 - [ ] [Jemma] Only if she ever wants it on other devices or for friends: Cloudflare Pages with Cloudflare Access is free and private (people she lists get an email code). A public version would first need other players’ Gallery comments and usernames left out, the map mod’s terms checked with 20th Century Plumbob, and a “not affiliated with EA” line. No need to go online for herself
-- [ ] [Claude] Small tidy-up whenever: 6 files in site/ are never shown (3.6 MB: the full maps of the 5 worlds she doesn’t own, and gallery/windenburg/von-windenburg-estate.jpg); add Lucide’s licence notice to site/
+- [x] [Claude] Done 19 Oct: the 6 unused pictures moved to not-shown-yet/ (README there); the licence notes are in site/js/LICENSE-lucide.txt. Was: Small tidy-up whenever: 6 files in site/ are never shown (3.6 MB: the full maps of the 5 worlds she doesn’t own, and gallery/windenburg/von-windenburg-estate.jpg); add Lucide’s licence notice to site/
 
 ### Game changes, Oct 2025 – Oct 2026 (research/game-changes-2026.md)
 - [ ] [Jemma] Nothing new to add: no new world since Ondarion and none announced; the new lot types (Custom Venue, Backroom, Community Market, Playground) and traits are already in her plan and tools. Her game is up to date (22 Sep 2026 patch)

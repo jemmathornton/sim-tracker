@@ -28,7 +28,14 @@ def read_sheet(xlsx):
     import openpyxl
     tmp = os.path.join(tempfile.mkdtemp(), 'world-plans.xlsx'); shutil.copy(xlsx, tmp)   # never open her file itself
     wb = openpyxl.load_workbook(tmp, data_only=True, read_only=True)
-    out = [{"tab": "Overview", "sections": []}]
+    out = [{"tab": "Overview", "sections": [], "owned": {}}]
+    # the Overview's Owned column (Yes/No per world): which packs she has (19 Oct; before, marking a world owned there never reached the app)
+    head = None
+    for r in wb.worksheets[0].iter_rows(values_only=True):
+        if r and r[0] == "World" and "Owned" in r: head = list(r); continue
+        if head and r and r[0]:
+            v = r[head.index("Owned")]
+            if isinstance(v, str) and v.strip().lower() in ("yes", "no"): out[0]["owned"][str(r[0]).strip()] = v.strip().lower() == "yes"
     for ws in wb.worksheets[1:]:
         rows = [[c for c in r[:9]] + [None] * (9 - len(r[:9])) for r in ws.iter_rows(values_only=True)]
         tab = {"tab": ws.title, "title": rows[0][0] if rows else ws.title, "sections": []}
@@ -94,6 +101,18 @@ def main():
                     clashes.append(f"{key[0]} / {key[1]}: {col}: spreadsheet {show(s)}, app {show(a)} (was {show(o)})")
             else:                             # changed in the app only
                 app_only.append(f"{key[0]} / {key[1]}: {col} is {show(a)} in the app, {show(s)} in the spreadsheet")
+    # Owned (Overview tab): the same three-way rule as the lots; owning a world switches on all its pages
+    so, bo = sheet[0].get("owned", {}), base[0].get("owned", {})
+    for wn, (_, W) in worlds.items():
+        if wn not in so or so[wn] == W['owned']: continue
+        yn = lambda v: "Yes" if v else "No"
+        if wn in bo and so[wn] != bo[wn] and W['owned'] == bo[wn]:
+            applied.append(f"{wn}: Owned {yn(W['owned'])} -> {yn(so[wn])}" + (" (its full map is in not-shown-yet/maps/: move it back to site/maps/)" if so[wn] else ""))
+            if apply: W['owned'] = so[wn]; touched.add(wn)
+        elif wn in bo and so[wn] != bo[wn]:
+            clashes.append(f"{wn}: Owned: spreadsheet {yn(so[wn])}, app {yn(W['owned'])} (was {yn(bo[wn])})")
+        else:
+            app_only.append(f"{wn}: Owned is {yn(W['owned'])} in the app, {yn(so[wn])} in the spreadsheet")
     for key in A:
         if key not in S and key[0] in {t['tab'] for t in sheet[1:]}:
             missing.append(f"{key[0]} / {key[1]}" + (" (gone from the spreadsheet since last import)" if key in B else ""))
