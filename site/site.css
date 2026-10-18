@@ -727,3 +727,4 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 .medal.m1{background:linear-gradient(#F3D77A,#C9A03A);border:1px solid #B08A2A}
 .medal.m2{background:linear-gradient(#E6E9EC,#AEB5BA);border:1px solid #9AA2A8}
 .medal.m3{background:linear-gradient(#E3A877,#B87333);border:1px solid #9C5F28;color:#fff}
+.comps tbody tr:hover{background:none}   /* nothing to click in the medals table (her feedback, 19 Oct) */
