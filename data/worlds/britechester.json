@@ -37,7 +37,8 @@
    "festivals": ["Foxbury Game Day Party", "School Spirit Day", "Utili-Bot Contest"],
    "bannerShift": [-0.06, 0],
    "bannerOnlyZoom": 0.9,
-   "cardShift": [-0.03, 0]
+   "cardShift": [-0.03, 0],
+   "bannerZoom": 1.1
   },
   {
    "name": "Gibbs Hill",
