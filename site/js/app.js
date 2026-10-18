@@ -813,7 +813,7 @@ function hoodExtras(x, all){
 function hoodCard(x){
   const hhSet = [...new Set(x.lots.filter(l => l.hh).map(l => l.hh))], hh = hhSet.length, built = x.lots.filter(l => l.built === true).length, made = hhSet.filter(simsMade).length;
   return `<a class="listing" href="#n-${x.id}" style="--h:${x.color}">${hoodArt(x)}
-    <h3>${esc(x.name)}</h3>${x.desc ? `<p class="desc">${esc(x.desc)}</p>` : ""}
+    <h3>${esc(((NB_BANNER[x.world.id] || {})[x.name] || {}).title || x.name)}</h3>${x.desc ? `<p class="desc">${esc(x.desc)}</p>` : ""}
     ${hh ? `<p class="home-to">${ic("users")}<span>Home to ${hhSet.map(f => `<b>${esc(f.name)}</b>`).join(", ")}</span></p>` : `<p class="home-to">${ic("pin")}<span>Community lots only</span></p>`}
     ${hoodExtras(x)}
     <div class="meta"><span>${ic("hammer")}<b>${built} of ${x.lots.length}</b> lots built</span>${hh ? `<span>${ic("sim")}<b>${made} of ${hh}</b> with Sims made</span>` : ""}</div></a>`;
