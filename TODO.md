@@ -328,6 +328,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [x] [Jemma] 19 Oct, “fine for now, I’ll look into more later”: the Lynxes in Tail’s End 3, the Pleasants in Spring Steppes 2, Cecilia Kang in 3A and Moody & McMillan in 3B (new lot field residentsUnit); Upland stays Eclectic Arts in trailer 1 (one household can’t fill three) and Johnny Zest in 4. Was: Suggested fits: Upland units 1–3 the Eclectic Arts, 4 Johnny Zest; Tail’s End 3 (Cat Hangout) Catarina Lynx; Spring Steppes 1 Elderberry, 2 the Pleasant twins; 3 Cobblebottom 3A Cecilia Kang (Cat Hangout), 3B Moody & McMillan (Chef’s Kitchen). OK?
 - [x] [Jemma] 19 Oct, her call: split, one household per Sim and a flat each (BFF: Scott, Lee, Holiday at Fern Park 1–3; Roomies: Huntington, Kalani, Richards, Patel at Inner Circle 1–4; Eclectic Arts: Eggleston, Martin, Holland at Upland 1–3, Johnny Zest 4). Each keeps the group’s EA bio for now. Was: BFF, the Roomies and the Eclectic Arts don’t fit one flat each (the flats are one-bed): split them into separate households, or keep each together?
 - [ ] [Jemma] Empty units at Rockridge Springs, Old Torget House, Manzanita Terrace and Slip 42: to be filled (19 Oct), with Sims who need homes or new ones she makes; decide later
+- [ ] [Jemma] In game: look round every rental and swap who lives in which unit where another fits better (19 Oct; the site’s unit picks are “fine for now”).
 - [ ] [Jemma] In game (optional): most rentals keep traits, and bedroom/bathroom counts, only on unit 1; give units 2+ their own. Rippling Flats, Specter Row and Casa do Corsário are still one home in the save
 
 ### Undecided lots (research/undecided-lots.md; options and pros/cons for each)
@@ -341,7 +342,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 
 ### Small business lots (research/small-business-check.md)
 - [x] [Jemma] 19 Oct, her call: lots use the game’s two names, “Small Business Residential” (owners live there) and “Small Business Venue” (nobody lives there; 8 renamed, her bracket notes kept). Was: “Small Business Residential” is the game’s own name after all. Rename plain “Small Business” to the game’s “Small Business Venue”? Add a bracket note of what each sells?
-- [ ] [Jemma] The Portsmouth Promenade is a venue lot, so Mary and Blossom Greenburg have no home: rent at Rockridge Springs (empty), or make it their home again?
+- [x] [Jemma] 19 Oct, her call: Mary and Blossom Greenburg own Rockridge Springs and live in unit 1, letting the other two (to be filled); the Promenade stays their Small Business Venue. Was: The Portsmouth Promenade is a venue lot, so Mary and Blossom Greenburg have no home
 - [ ] [Jemma] Later (19 Oct): no owner named yet: The Llama Picturehouse (or make it a Bar), Plumbob Pictures Museum, Canalside Daycare. Greenwood Hamlet Residence has a venue type but residents listed
 - [x] [Jemma] Venue lots: no “Run by” (her call, 19 Oct): they say “Owned by”, the same as vet clinics and every other owned lot.
 
