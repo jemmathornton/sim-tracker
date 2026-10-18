@@ -44,7 +44,8 @@
     {"lot": "Hillside Haven", "myName": "Hillside Haven", "type": "Residential", "size": "30x20", "residents": "Donovan (move!)", "built": false, "shared": false, "screenshots": false, "simsMade": false}
    ],
    "bannerZoom": 1.4,
-   "bannerShift": [0.03, 0]
+   "bannerShift": [0.03, 0],
+   "cardShift": [-0.03, 0]
   }
  ],
  "weather": "Often cloudy, snowy winters, heat waves in summer",
