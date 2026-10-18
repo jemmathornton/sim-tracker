@@ -37,8 +37,8 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
 | World | Rental | Units | Residents in the plan |
 | --- | --- | --- | --- |
 | Oasis Springs | Rio Verde Retirement Home | 6 | Elders |
-| Newcrest | Fern Park Flats | 5 | BFF |
-| Newcrest | Midtown Meadows | 5 | Single Mum Friends |
+| Newcrest | Fern Park Flats | 5 | Kirkland own; tenant BFF (19 Oct) |
+| Newcrest | Midtown Meadows | 5 | Kirkland own; tenants Washburn and Bridges (19 Oct) |
 | Newcrest | Rippling Flats | 2 | Current uni sims |
 | Brindleton Bay | Tail's End Apartments | 4 | Empty |
 | Del Sol Valley | Inner Circle | 4 | Roomies |
@@ -49,10 +49,10 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
 | Evergreen Harbor | Abandoned Views | ? (not finished, 14 Oct) | Henley |
 | Henford-on-Bagley | 3 Cobblebottom Street | 2 | Moody & McMillan (own, live there) + tenant Cecilia Kang "A New Start" |
 | San Sequoia | Manzanita Terrace | ? (3 per her Gallery text) | Robles own |
-| San Sequoia | Sequoia Cottage | 2 (14 Oct) | Lovejoy own |
+| San Sequoia | Sequoia Cottage | 2 (14 Oct) | Lovejoy; tenants Luna-Sullivan |
 | Tomarang | Taka Soi 15 | 2 (14 Oct) | Cahyaputri (own) |
-| Tomarang | Isda Riverfront | 2 | Rochana/Caberry own |
-| Tomarang | Sungai Point | 3 | Linh-Sadya & Linh |
+| Tomarang | Isda Riverfront | 2 | Cadberry own; tenant Rochana |
+| Tomarang | Sungai Point | 3 | Linh-Sadya (11A) and Linh (11B), both renting (19 Oct) |
 | Ravenwood | Specter Row (Moppy Manor) | ? (not finished, 14 Oct) | Specters' home + tenants |
 | Nordhaven | Old Torget House | 3 | Empty |
 | Del Sol Valley | Upland Trailer Park | 4 | Eclectic Arts (StrangerVille's 3 friends, a trailer each; she may split them into 3 households) + Johnny Zest in the 4th (16 Oct) |
@@ -76,7 +76,7 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
 - [x] Unit counts confirmed 14 Oct: Taka Soi 15 = 2, Sequoia Cottage = 2, Manzanita Terrace = 3; the save matches the plan for Rio Verde 6, Fern Park Flats 5, Tail's End 4, Inner Circle 4, Upland Trailer Park 4, Old Torget House 3
 - [ ] [Jemma] Abandoned Views and Specter Row: unit counts once they're finished
 - [x] Settled 14 Oct: Mossy Lane is University Housing (one home); Spring Steppes has 3 units; Rockridge Springs and Slip 42 keep their units and now have rental uploads too (Rockridge Springs' new upload wasn't on the Gallery listing yet on 14 Oct; the Sunday refresh links it)
-- [ ] [Claude] Once decided: show each rental's units on its page and neighbourhood card, a household or "Empty" per unit, bedrooms and bathrooms per unit where known
+- [x] [Claude] Done (layout 4, 16 Oct): each rental's units on its page (household or "Nobody yet", unit traits) and its households under the card. Only bedrooms and bathrooms per unit are missing: nothing records them for rental units yet (the Gallery has them for Rooms uploads only)
 
 ## 3. Apartments
 
