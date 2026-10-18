@@ -42,7 +42,9 @@
     {"lot": "BridgeCreek Drive", "myName": "BridgeCreek Drive", "type": "Backroom", "size": "30x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Little Falls Nook", "myName": "Little Falls Nook", "type": "Residential", "size": "20x20", "residents": "Harjo", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Hillside Haven", "myName": "Hillside Haven", "type": "Residential", "size": "30x20", "residents": "Donovan (move!)", "built": false, "shared": false, "screenshots": false, "simsMade": false}
-   ]
+   ],
+   "bannerZoom": 1.4,
+   "bannerShift": [0.06, 0]
   }
  ],
  "weather": "Often cloudy, snowy winters, heat waves in summer",
