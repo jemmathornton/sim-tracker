@@ -411,7 +411,7 @@ function treeCard(id, x, y, CW, CH, o){
   const s = SIMS[id], C = o.compact ? "compact" : "", pos = `left:${x}px;top:${y}px;width:${CW}px;height:${CH}px`;
   if (s.ph) return `<div class="tc ph ${C} ${o.here ? "away" : ""}" style="${pos}"><span class="tm">?</span><div class="tn">${esc(s.phText)}</div></div>`;
   const w = s.hh ? s.hh.world : s.world, here = o.me ? id === o.me : o.here && s.hh === o.here;
-  const sub = [nee(s), stageOf(s), s.state, s.noHome ? "no home" : ""].filter(Boolean).join(" · ");
+  const sub = [nee(s), stageOf(s), s.state, s.noHome ? "no home" : "", s.galleryOnly ? "on EA’s Gallery" : ""].filter(Boolean).join(" · ");   // galleryOnly: a Maxis Gallery relative, in no world (19 Oct)
   const chips = [];
   const housemate = o.me && s.hh && s.hh === SIMS[o.me].hh;   // on a Sim page, their own household needs no chip either
   if (!s.late && !here && !housemate) chips.push(homeChip(s));
@@ -503,7 +503,7 @@ function simPage(s){
   const stage = [stageOf(s), s.late ? "deceased" : ""].filter(Boolean).join(" · ");
   let h = `<section class="hero small" style="--c:${home1.hood.glow || hc}"><div class="crumbs">${hh ? `<a href="#w-${w.id}">${ic("map")}${esc(w.name)}</a><a href="#n-${home1.hood.id}">${ic("pin")}${esc(home1.hood.name)}</a><a href="#${home1.id}">${ic("home")}${esc(home1.name)}</a>` : ""}<a href="#${base.id}">${ic("users")}${hhCrumb}</a></div>
     <div style="display:flex;gap:26px;align-items:center;flex-wrap:wrap;margin-top:22px"><div class="monogram">${initial(s.name)}</div><div><span class="label" style="color:var(--on-deep-mute)">${isAnimal(s) ? esc(s.state) : "Sim"}</span><h1 style="margin-top:6px">${esc(s.name)}</h1>${nee(s) ? `<p class="nee">${esc(nee(s))}</p>` : ""}</div></div>
-    <div class="sim-chips">${stage ? `<span>${esc(stage.charAt(0).toUpperCase() + stage.slice(1))}</span>` : ""}${s.state ? lifeState(s, "") : "<span>Human</span>"}${isChampion(s) ? `<span class="champ">${ic("ph-trophy")}Champion</span>` : ""}${s.noHome ? `<span>No home</span>` : ""}${s.notInGame ? `<span title="Named on the Sims Wiki">Never in the game</span>` : ""}${s.notInGame ? "" : `<span>${originTag(s.origin)}</span>`}</div></section>`;
+    <div class="sim-chips">${stage ? `<span>${esc(stage.charAt(0).toUpperCase() + stage.slice(1))}</span>` : ""}${s.state ? lifeState(s, "") : "<span>Human</span>"}${isChampion(s) ? `<span class="champ">${ic("ph-trophy")}Champion</span>` : ""}${s.noHome ? `<span>No home</span>` : ""}${s.notInGame ? `<span title="Named on the Sims Wiki">Never in the game</span>` : ""}${s.galleryOnly ? `<span title="A Maxis upload on the Gallery, not placed in any world">On EA’s Gallery</span>` : ""}${s.notInGame ? "" : `<span>${originTag(s.origin)}</span>`}</div></section>`;
   // details
   // top right: where they live and what they do; who they are (aspiration, quirks, lifestyles, likes, fame) sits with traits and skills below (her ask, 19 Oct)
   const facts = [["Breed", s.breed], ["Cause of death", s.state === "Ghost" ? s.death : null], ["Career", s.career], ["School", s.school], ["Died", s.died]].filter(([, v]) => v);

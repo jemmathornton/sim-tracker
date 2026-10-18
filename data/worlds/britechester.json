@@ -245,7 +245,8 @@
       ["Writing", 2, 10],
       ["Painting", 5, 10],
       ["Cooking", 4, 10]
-     ]
+     ],
+     "parents": ["daniel-pleasant", "mary-sue-pleasant"]
     },
     {
      "id": "lilith-pleasant",
@@ -262,7 +263,8 @@
       ["Painting", 5, 10],
       ["Mischief", 4, 10],
       ["Cooking", 3, 10]
-     ]
+     ],
+     "parents": ["daniel-pleasant", "mary-sue-pleasant"]
     }
    ],
    "bio": "Angela and Lilith Pleasant have moved into an old family home located in Gibbs Hill to attend the prestigious universities in Britechester. It will be a true test to find out whether their bond as twins can overcome their differences. Their majors have already split them into separate universities, but whether they will be at odds or work together to make it through is a new challenge in their life.",
