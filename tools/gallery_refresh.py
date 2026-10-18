@@ -21,6 +21,17 @@ report = []
 def say(s): report.append(s); print(s)
 
 
+def save_safe(p, obj):
+    """save() to a temporary file next to p, then swap it in, so a crash or power cut mid-write never leaves half a file."""
+    tmp = p + '.tmp'; save(tmp, obj); os.replace(tmp, p)
+
+
+def write_safe(p, text):
+    tmp = p + '.tmp'
+    with open(tmp, 'w', encoding='utf-8', newline='\n') as f: f.write(text)
+    os.replace(tmp, p)
+
+
 def get(url, tries=3):
     """GET with a few retries. Returns (status, bytes); 204 means 'nothing here'."""
     for n in range(tries):
@@ -84,7 +95,8 @@ def auto_link(new_ids, uploads, worlds):
     nt = lambda x: re.sub(r'^the', '', norm(x))
     linked, unl = [], load(os.path.join(GALLERY, 'unlinked.json'))
     for i in new_ids:
-        u = uploads[i]
+        u = uploads.get(i)
+        if not u: say(f"  new upload {i} couldn't be read this time; it'll be tried again next week"); continue
         if u['kind'] not in ('lot', 'room'): continue
         t = re.sub(r'\s*[\[(][^\])]*[\])]\s*$', '', u['title'])          # "Hallow Slough (SoupShell)" -> "Hallow Slough"
         tags = [x.lower() for x in re.findall(r'#(\w+)', u['description'])]
@@ -100,7 +112,7 @@ def auto_link(new_ids, uploads, worlds):
         unl['uploads'][i] = {"title": u['title'], "lot": None, "why": f"New on {TODAY}; " + (
             "no lot in the plan has this name." if not maybe else "not linked automatically, could be " + ", ".join(f"{h[0]['name']} / {h[1]['lot']}" for h in maybe) + ".")}
         say(f"  new upload “{u['title']}” not linked to a lot; listed in data/gallery/unlinked.json")
-    save(os.path.join(GALLERY, 'unlinked.json'), unl)
+    save_safe(os.path.join(GALLERY, 'unlinked.json'), unl)
     return linked
 
 
@@ -119,7 +131,7 @@ def add_covers(worlds, uploads):
                 try:
                     im = Image.open(io.BytesIO(get(u['images'][0])[1])).convert('RGB')
                     if u['kind'] == 'lot' and im.size == (744, 410): im = im.crop((67, 0, 677, 410))
-                    os.makedirs(os.path.dirname(dest), exist_ok=True); im.save(dest, quality=88)
+                    os.makedirs(os.path.dirname(dest), exist_ok=True); im.save(dest + '.tmp', 'JPEG', quality=88); os.replace(dest + '.tmp', dest)
                     say(f"  added a Gallery picture for {W['name']} / {l['lot']}")
                 except Exception as e:
                     say(f"  couldn't get a picture for {W['name']} / {l['lot']}: {e}")
@@ -134,11 +146,14 @@ def main():
     ids = list(dict.fromkeys(list(uploads) + listed))
     new_ids = [i for i in listed if i not in uploads]
     say(f"{len(listed)} uploads listed on the Gallery, {len(new_ids)} new")
-    failed, gone = [], []
+    failed, gone, others = [], [], {}
     for n, i in enumerate(ids):
         try:
             rec = fetch_item(i)
             if rec is None: gone.append(i); continue
+            # the search lists anything that mentions her name: only new uploads by her are added (the 8
+            # shell-challenge uploads credited to lilsimsie are already in the data and stay)
+            if i not in uploads and rec['creator'].lower() != CREATOR.lower(): others[i] = rec; continue
             cl = fetch_comments(i)
         except Exception as e:
             failed.append(i); continue
@@ -151,18 +166,20 @@ def main():
         if i in uploads: uploads[i]['gone'] = True
     if gone: say(f"{len(gone)} uploads no longer on the Gallery: " + ", ".join(uploads[i]['title'] for i in gone if i in uploads))
     if failed: say(f"{len(failed)} uploads couldn't be fetched this time and keep last week's numbers")
-    save(up_file, U); save(c_file, C)
+    for rec in others.values(): say(f"  skipped “{rec['title']}” by {rec['creator'] or 'an unknown creator'}: it mentions her name but isn't her upload")
+    new_ids = [i for i in new_ids if i not in others]
+    save_safe(up_file, U); save_safe(c_file, C)
 
     # this week's numbers into the history (a second run on the same day replaces that day's rows)
     h_file = os.path.join(GALLERY, 'history.csv')
     rows = [r for r in open(h_file, encoding='utf-8').read().splitlines()[1:] if r and not r.startswith(TODAY + ',')]
     rows += [f"{TODAY},{i},{u['favourites']},{u['downloads']},{len(comments.get(i, []))}" for i, u in uploads.items() if u.get('checked') == TODAY]
-    with open(h_file, 'w', encoding='utf-8', newline='\n') as f: f.write('date,id,favourites,downloads,comments\n' + '\n'.join(rows) + '\n')
+    write_safe(h_file, 'date,id,favourites,downloads,comments\n' + '\n'.join(rows) + '\n')
 
     paths = world_files(); worlds = [load(p) for p in paths]
     changed = auto_link(new_ids, uploads, worlds)
     for p, W in zip(paths, worlds):
-        if any(W is c for c in changed): save(p, W)
+        if any(W is c for c in changed): save_safe(p, W)
     add_covers(worlds, uploads)
     fav, dl = sum(u['favourites'] for u in uploads.values()), sum(u['downloads'] for u in uploads.values())
     say(f"Done: {fav} favourites, {dl} downloads, {sum(len(v) for v in comments.values())} comments across {len(uploads)} uploads")
