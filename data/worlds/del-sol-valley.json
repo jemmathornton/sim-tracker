@@ -121,7 +121,8 @@
      ],
      "partners": [
       ["octavia-moon", "Spouse"]
-     ]
+     ],
+     "fame": 4
     },
     {
      "id": "octavia-moon",
@@ -139,7 +140,8 @@
      ],
      "partners": [
       ["thorne-bailey", "Spouse"]
-     ]
+     ],
+     "fame": 3
     },
     {
      "id": "orange-bailey-moon",
@@ -157,7 +159,8 @@
       ["Motor", 3, 10],
       ["Mental", 2, 10]
      ],
-     "parents": ["thorne-bailey", "octavia-moon"]
+     "parents": ["thorne-bailey", "octavia-moon"],
+     "fame": 2
     }
    ],
    "bio": "Octavia Moon and Thorne Bailey are the power couple of the century. Octavia is the lyrical genius behind all of Thorne's greatest hits. Due to Thorne's most recent misshap on social media his public image has started to falter. His fans are starting to realize that Octavia is the real talent. Orange is their good natured son but due to his entire life of wanting-for-nothing, he is also a bit naive.",
@@ -179,7 +182,8 @@
       ["Acting", 7, 10],
       ["Gourmet Cooking", 5, 10],
       ["Gardening", 3, 10]
-     ]
+     ],
+     "fame": 5
     }
    ],
    "bio": "Judith Ward is a legend in the acting community. She has starred in everything from comedies to dramas. You name it Judith has played the role. That is not to say she is an easy person to befriend. Judith has burned her fair share of bridges along the way. Her mentality is to get rich at all costs. She will be the first to throw you under the bus to advance her career. She has been married several times, but all of her partners have only slowed her down. She prefers to live fast and does not settle for mediocrity.",

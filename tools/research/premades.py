@@ -20,6 +20,7 @@ from common import ROOT
 HHBIN, SIMINFO = 0xB3C438F0, 0x025ED6F4
 AGES = {1: "Baby", 2: "Toddler", 4: "Child", 8: "Teen", 16: "Young Adult", 32: "Adult", 64: "Elder", 128: "Infant"}
 SEX = {4096: "m", 8192: "f"}
+FAME_LEVEL = {191807: 1, 191819: 2, 191820: 3, 191817: 4, 191818: 5}   # fameTrait_Level1-5 (Rising Star … Global Superstar)
 CLASSES = {'PremadeSimTemplate', 'PremadeHouseholdTemplate', 'Trait', 'AspirationTrack', 'Career', 'DetectiveCareer', 'NobleCareer',
            'SmallBusinessCareer', 'WorkFromHomeCareer', 'TunableCareerTrack', 'CareerLevel', 'Skill', 'LifeSkillStatistic', 'LootActions',
            'ClubSeed', 'DynastySeed', 'UniversityMajor', 'University', 'Clan', 'SmallBusinessSeed', 'RelationshipBit', 'Sentiment'}
@@ -144,6 +145,7 @@ def main():
                 hit = siminfo.get(int(key.split(':')[2], 16))
                 if hit: ids = traits_in(s4.read(*hit))
             occ, wins, death = None, [], None
+            fame = max([FAME_LEVEL[t] for t in ids if t in FAME_LEVEL], default=None)   # Get Famous stars, a hidden trait (19 Oct)
             for t in ids:
                 ty = val(t, 'trait_type'); nm = text(val(t, 'display_name'), en)
                 if ty == 'PERSONALITY' and nm and nm not in traits: traits.append(nm)
@@ -165,7 +167,7 @@ def main():
                          "rels": [[r.get('target_id'), [text(val(b, 'display_name'), en) for b in (r.get('bits') or []) if b in I and text(val(b, 'display_name'), en)]]
                                   for r in ((at.get('relationship_tracker') or {}).get('relationships') or [])],
                          "family": [[r.get('relation_type'), r.get('sim_id')] for r in ((at.get('genealogy_tracker') or {}).get('family_relations') or [])],
-                         **{k: v for k, v in info.items() if k not in ('siminfo', 'career_level')}, "occult": info.get('occult') or occ, **({"death": death} if death else {})})
+                         **{k: v for k, v in info.items() if k not in ('siminfo', 'career_level')}, "occult": info.get('occult') or occ, **({"death": death} if death else {}), **({"fame": fame} if fame else {})})
         # the template's own relationships (spouse, parent) between members
         rels = []
         if tpl in hh_tpl:

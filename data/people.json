@@ -254,6 +254,7 @@
   "parents": ["nick-alto", "vita-alto"],
   "world": "del-sol-valley",
   "where": "Del Sol Valley, a celebrity with no home",
-  "noHome": true
+  "noHome": true,
+  "fame": 3
  }
 }

@@ -177,6 +177,7 @@ def main(apply):
             if s.get("species"): d["state"] = s["species"]
             elif s.get("occult"): d["state"] = OCCULT.get(s["occult"], s["occult"].title())
             if s.get("death"): d["death"] = s["death"]   # a ghost's death type (its ghost trait)
+            if s.get("fame"): d["fame"] = s["fame"]   # Get Famous stars (19 Oct)
             young = s.get("species") or s["age"] in ("Baby", "Infant", "Toddler")   # pets and the very young have no aspiration
             if s.get("aspiration") and not young: d["aspiration"] = s["aspiration"]
             if s["traits"]: d["traits"] = s["traits"]

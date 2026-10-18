@@ -504,7 +504,8 @@
      "rels": [
       ["Skip Broke", "Friends"]
      ],
-     "parents": ["skip-broke"]
+     "parents": ["skip-broke"],
+     "fame": 3
     }
    ]
   },
