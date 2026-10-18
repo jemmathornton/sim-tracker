@@ -1,0 +1,258 @@
+{
+ "_note": "Horse competition traits from the game's tuning (19 Oct): id -> [competition, level, place]. Read by tools that import horses.",
+ "332577": [
+  "Barrel Racing",
+  "Beginner",
+  "1st"
+ ],
+ "332605": [
+  "Barrel Racing",
+  "Beginner",
+  "2nd"
+ ],
+ "332606": [
+  "Barrel Racing",
+  "Beginner",
+  "3rd"
+ ],
+ "332607": [
+  "Barrel Racing",
+  "Intermediate",
+  "1st"
+ ],
+ "332608": [
+  "Barrel Racing",
+  "Intermediate",
+  "2nd"
+ ],
+ "332609": [
+  "Barrel Racing",
+  "Intermediate",
+  "3rd"
+ ],
+ "332610": [
+  "Barrel Racing",
+  "Expert",
+  "1st"
+ ],
+ "332611": [
+  "Barrel Racing",
+  "Expert",
+  "2nd"
+ ],
+ "332612": [
+  "Barrel Racing",
+  "Expert",
+  "3rd"
+ ],
+ "332613": [
+  "Barrel Racing",
+  "Master",
+  "1st"
+ ],
+ "332614": [
+  "Barrel Racing",
+  "Master",
+  "2nd"
+ ],
+ "332615": [
+  "Barrel Racing",
+  "Master",
+  "3rd"
+ ],
+ "332617": [
+  "Show Jumping",
+  "Beginner",
+  "1st"
+ ],
+ "332618": [
+  "Show Jumping",
+  "Beginner",
+  "2nd"
+ ],
+ "332619": [
+  "Show Jumping",
+  "Beginner",
+  "3rd"
+ ],
+ "332620": [
+  "Show Jumping",
+  "Intermediate",
+  "1st"
+ ],
+ "332621": [
+  "Show Jumping",
+  "Intermediate",
+  "2nd"
+ ],
+ "332622": [
+  "Show Jumping",
+  "Intermediate",
+  "3rd"
+ ],
+ "332623": [
+  "Show Jumping",
+  "Expert",
+  "1st"
+ ],
+ "332624": [
+  "Show Jumping",
+  "Expert",
+  "2nd"
+ ],
+ "332625": [
+  "Show Jumping",
+  "Expert",
+  "3rd"
+ ],
+ "332626": [
+  "Show Jumping",
+  "Master",
+  "1st"
+ ],
+ "332627": [
+  "Show Jumping",
+  "Master",
+  "2nd"
+ ],
+ "332628": [
+  "Show Jumping",
+  "Master",
+  "3rd"
+ ],
+ "332630": [
+  "Endurance Racing",
+  "Beginner",
+  "1st"
+ ],
+ "332631": [
+  "Endurance Racing",
+  "Beginner",
+  "2nd"
+ ],
+ "332632": [
+  "Endurance Racing",
+  "Beginner",
+  "3rd"
+ ],
+ "332633": [
+  "Endurance Racing",
+  "Intermediate",
+  "1st"
+ ],
+ "332634": [
+  "Endurance Racing",
+  "Intermediate",
+  "2nd"
+ ],
+ "332635": [
+  "Endurance Racing",
+  "Intermediate",
+  "3rd"
+ ],
+ "332636": [
+  "Endurance Racing",
+  "Expert",
+  "1st"
+ ],
+ "332637": [
+  "Endurance Racing",
+  "Expert",
+  "2nd"
+ ],
+ "332638": [
+  "Endurance Racing",
+  "Expert",
+  "3rd"
+ ],
+ "332639": [
+  "Endurance Racing",
+  "Master",
+  "1st"
+ ],
+ "332640": [
+  "Endurance Racing",
+  "Master",
+  "2nd"
+ ],
+ "332641": [
+  "Endurance Racing",
+  "Master",
+  "3rd"
+ ],
+ "332643": [
+  "Western Pleasure",
+  "Beginner",
+  "1st"
+ ],
+ "332644": [
+  "Western Pleasure",
+  "Beginner",
+  "2nd"
+ ],
+ "332645": [
+  "Western Pleasure",
+  "Beginner",
+  "3rd"
+ ],
+ "332646": [
+  "Western Pleasure",
+  "Intermediate",
+  "1st"
+ ],
+ "332647": [
+  "Western Pleasure",
+  "Intermediate",
+  "2nd"
+ ],
+ "332648": [
+  "Western Pleasure",
+  "Intermediate",
+  "3rd"
+ ],
+ "332649": [
+  "Western Pleasure",
+  "Expert",
+  "1st"
+ ],
+ "332650": [
+  "Western Pleasure",
+  "Expert",
+  "2nd"
+ ],
+ "332651": [
+  "Western Pleasure",
+  "Expert",
+  "3rd"
+ ],
+ "332652": [
+  "Western Pleasure",
+  "Master",
+  "1st"
+ ],
+ "332653": [
+  "Western Pleasure",
+  "Master",
+  "2nd"
+ ],
+ "332654": [
+  "Western Pleasure",
+  "Master",
+  "3rd"
+ ],
+ "334426": [
+  "Ultimate Horse Championship",
+  "",
+  "1st"
+ ],
+ "334427": [
+  "Ultimate Horse Championship",
+  "",
+  "2nd"
+ ],
+ "334428": [
+  "Ultimate Horse Championship",
+  "",
+  "3rd"
+ ]
+}

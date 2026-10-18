@@ -276,7 +276,16 @@ const ANIMAL = /^(Horse|Cat|Dog|Small Dog|Large Dog)$/i, isAnimal = s => !!s && 
 const animalIcon = s => ic(/cat/i.test(s.state) ? "cat" : /dog/i.test(s.state) ? "dog" : /horse/i.test(s.state) ? "horse-head" : "paw-print");
 // the game's words for young animals
 const stageOf = s => isAnimal(s) && /^(Child|Baby|Toddler)$/.test(s.age || "") ? ({Horse: "Foal", Cat: "Kitten"}[s.state] || "Puppy") : s.age;
-const isChampion = s => (s.wins || []).includes("Ultimate Horse Championship") || !!s.champion;
+// horse competitions: wins are [competition, level, place] from the game (Beginner to Master; 1st, 2nd, 3rd = gold, silver, bronze)
+const COMPS = [["Show Jumping", "Show Jumping"], ["Barrel Racing", "Barrel Racing"], ["Endurance Racing", "Endurance Racing"], ["Western Pleasure", "Western Pleasure"]], LEVELS = ["Beginner", "Intermediate", "Expert", "Master"];
+const isChampion = s => (s.wins || []).some(w => w[0] === "Ultimate Horse Championship" && w[2] === "1st") || !!s.champion;
+const medal = place => place ? `<span class="medal m${place[0]}" title="${place} place">${place}</span>` : `<span class="muted">—</span>`;
+function horseComps(s){   // the game keeps each horse's best result per competition: its level and place
+  const wins = s.wins || [], best = c => wins.filter(w => w[0] === c).sort((a, b) => LEVELS.indexOf(b[1]) - LEVELS.indexOf(a[1]) || a[2].localeCompare(b[2]))[0];
+  return `<div class="sheet-wrap"><table class="sheet comps"><thead><tr><th scope="col">Competition</th><th scope="col">Best level</th><th scope="col">Medal</th></tr></thead><tbody>
+    ${[...COMPS, ["Ultimate Horse Championship", "Ultimate Horse Championship"]].map(([k, n]) => { const b = best(k);
+      return `<tr><th scope="row">${n}</th><td>${b ? esc(b[1] || "—") : `<span class="muted">Not won yet</span>`}</td><td>${b ? medal(b[2]) : ""}</td></tr>`; }).join("")}</tbody></table></div>`;
+}
 // where a Sim lives, as a chip in the world's colour
 function homeChip(s, worldOnly){
   const hh = s.hh, w = s.world;
@@ -485,7 +494,7 @@ function simPage(s){
     <div style="display:flex;gap:26px;align-items:center;flex-wrap:wrap;margin-top:22px"><div class="monogram">${initial(s.name)}</div><div><span class="label" style="color:var(--on-deep-mute)">${isAnimal(s) ? esc(s.state) : "Sim"}</span><h1 style="margin-top:6px">${esc(s.name)}</h1>${nee(s) ? `<p class="nee">${esc(nee(s))}</p>` : ""}</div></div>
     <div class="sim-chips">${stage ? `<span>${esc(stage.charAt(0).toUpperCase() + stage.slice(1))}</span>` : ""}${s.state ? lifeState(s, "") : "<span>Human</span>"}${isChampion(s) ? `<span class="champ">${ic("trophy")}Champion</span>` : ""}${s.noHome ? `<span>No home</span>` : ""}${s.notInGame ? `<span title="Named on the Sims Wiki">Never in the game</span>` : ""}${s.notInGame ? "" : `<span>${originTag(s.origin)}</span>`}</div></section>`;
   // details
-  const facts = [["Breed", s.breed], ["Competitions won", (s.wins || []).join(", ")], ["Aspiration", s.aspiration], ["Career", s.career], ["School", s.school], ["Lifestyles", (s.lifestyles || []).join(", ")], ["Likes", (s.likes || []).join(", ")], ["Died", s.died]].filter(([, v]) => v);
+  const facts = [["Breed", s.breed], ["Aspiration", s.aspiration], ["Career", s.career], ["School", s.school], ["Lifestyles", (s.lifestyles || []).join(", ")], ["Likes", (s.likes || []).join(", ")], ["Died", s.died]].filter(([, v]) => v);
   const hasTraits = s.traits && s.traits.length;
   const skills = (s.skills || []).map(([n, lv, max]) => `<div class="skill"><span>${esc(n)}</span><div class="pips" style="--max:${max||10}">${Array.from({length:max||10},(_,i)=>`<i class="${i<lv?"on":""}"></i>`).join("")}</div><b>${lv}</b></div>`).join("");
   // picture top left with the facts beside it, as on household pages (her ask, 19 Oct: Sims and animals had no picture box)
@@ -494,6 +503,8 @@ function simPage(s){
   if (hasTraits || skills || s.notes) h += `<section class="block" style="--h:${hc}"><div class="block-head"><h2>About <em>${esc(first)}</em></h2></div>
     <div class="sim-about"><div>${hasTraits ? `<span class="label">Traits</span><div class="traits">${s.traits.map(t => `<span>${esc(t)}</span>`).join("")}${s.bonus ? `<span class="bonus" title="Bonus trait">${esc(s.bonus)}</span>` : ""}</div>` : ""}${s.notes ? `<p class="sim-note">${esc(s.notes)}</p>` : ""}</div>
       ${skills ? `<div class="skills"><span class="label">Skills</span>${skills}</div>` : "<div></div>"}</div></section>`;
+  // a horse's competitions: best place at each level (her ask, 19 Oct)
+  if (s.state === "Horse") h += `<section class="block" style="--h:${hc}"><div class="block-head"><h2>Competitions</h2>${(s.wins || []).length ? "" : `<span class="count">None won yet</span>`}</div>${horseComps(s)}</section>`;
   // family
   const fam = simFamily(s.id), own = isAnimal(s) ? (t => t.includes(s.id) ? t : [])(s.hh ? animalTreeOf(s.hh) : []) : s.hh ? treeOf(s.hh) : treeAround([s.id]);   // their household’s whole family tree, with them highlighted
   if (fam.trim() || own.length) h += `<section class="block" id="family" style="--h:${hc}"><div class="block-head"><h2>Their <em>family</em></h2></div>

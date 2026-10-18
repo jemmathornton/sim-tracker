@@ -308,7 +308,20 @@
      ],
      "traits": ["Defiant", "Needy", "Mellow"],
      "breed": "Lusitano",
-     "wins": ["Show Jumping", "Western Pleasure", "Endurance Racing", "Barrel Racing"]
+     "wins": [
+      ["Show Jumping", "Master", "1st"],
+      ["Western Pleasure", "Master", "1st"],
+      ["Endurance Racing", "Expert", "1st"],
+      ["Barrel Racing", "Master", "2nd"]
+     ],
+     "rels": [
+      ["Beatrice Palumbo", "Good Friend"],
+      ["Lacy Tompkins", "Good Friend"],
+      ["Pie", "Acquaintance"],
+      ["Buttercup", "Acquaintance"],
+      ["Queen", "Acquaintance"],
+      ["Dani Davila", "Acquaintance"]
+     ]
     },
     {
      "id": "beatrice-palumbo",
@@ -390,7 +403,18 @@
      ],
      "traits": ["Aggressive", "Defiant", "Fearful"],
      "breed": "Mixed Breed",
-     "wins": ["Show Jumping", "Endurance Racing", "Western Pleasure", "Barrel Racing"]
+     "wins": [
+      ["Show Jumping", "Intermediate", "1st"],
+      ["Endurance Racing", "Master", "1st"],
+      ["Western Pleasure", "Expert", "3rd"],
+      ["Barrel Racing", "Master", "3rd"]
+     ],
+     "rels": [
+      ["Lacy Tompkins", "Good Friend"],
+      ["Beatrice Palumbo", "Acquaintance"],
+      ["Pie", "Acquaintance"],
+      ["Queen", "Acquaintance"]
+     ]
     },
     {
      "id": "bluebell",
@@ -409,7 +433,20 @@
      ],
      "traits": ["Mellow", "Defiant", "Aggressive"],
      "breed": "Clydesdale",
-     "wins": ["Show Jumping", "Western Pleasure", "Endurance Racing", "Ultimate Horse Championship", "Barrel Racing"]
+     "wins": [
+      ["Show Jumping", "Master", "1st"],
+      ["Western Pleasure", "Master", "1st"],
+      ["Endurance Racing", "Master", "1st"],
+      ["Ultimate Horse Championship", "", "1st"],
+      ["Barrel Racing", "Master", "1st"]
+     ],
+     "rels": [
+      ["Beatrice Palumbo", "Good Friend"],
+      ["Lacy Tompkins", "Friend"],
+      ["Pie", "Acquaintance"],
+      ["Buttercup", "Acquaintance"],
+      ["Queen", "Acquaintance"]
+     ]
     },
     {
      "id": "queen",
@@ -424,7 +461,16 @@
       ["Temperament", 2, 10]
      ],
      "traits": ["Intelligent", "Defiant", "Free Spirit"],
-     "breed": "Lusitano"
+     "breed": "Lusitano",
+     "rels": [
+      ["Puzzles", "Acquaintance"],
+      ["Beatrice Palumbo", "Friend"],
+      ["Lacy Tompkins", "Acquaintance"],
+      ["Longface", "Acquaintance"],
+      ["Bluebell", "Acquaintance"],
+      ["Pie", "Acquaintance"],
+      ["Buttercup", "Acquaintance"]
+     ]
     },
     {
      "id": "pie",
@@ -439,7 +485,15 @@
       ["Temperament", 4, 10]
      ],
      "traits": ["Fearful", "Aggressive", "Energetic"],
-     "breed": "Thoroughbred"
+     "breed": "Thoroughbred",
+     "rels": [
+      ["Puzzles", "Acquaintance"],
+      ["Beatrice Palumbo", "Good Friend"],
+      ["Lacy Tompkins", "Friend"],
+      ["Longface", "Acquaintance"],
+      ["Bluebell", "Acquaintance"],
+      ["Queen", "Acquaintance"]
+     ]
     },
     {
      "id": "buttercup",
@@ -455,7 +509,14 @@
      ],
      "parents": ["bluebell", "longface"],
      "traits": ["Energetic", "Defiant", "Aggressive"],
-     "breed": "Mixed Breed"
+     "breed": "Mixed Breed",
+     "rels": [
+      ["Puzzles", "Acquaintance"],
+      ["Beatrice Palumbo", "Friend"],
+      ["Lacy Tompkins", "Acquaintance"],
+      ["Bluebell", "Acquaintance"],
+      ["Queen", "Acquaintance"]
+     ]
     }
    ]
   }

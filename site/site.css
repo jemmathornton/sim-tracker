@@ -720,3 +720,10 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 .champ.small{margin-left:6px}
 .roster.animals td:nth-child(5){color:var(--muted);font-size:13px}
 .hh-pic-mono svg{width:54px;height:54px}   /* an animal's placeholder: its cat, dog or paw icon */
+/* horse competitions: medals for the best place at each level (19 Oct) */
+.comps th[scope=row]{font-weight:700;text-align:left}
+.comps td{text-align:left}
+.medal{display:inline-grid;place-items:center;min-width:42px;padding:3px 9px;border-radius:99px;font-size:12px;font-weight:800;color:#1A1F1C}
+.medal.m1{background:linear-gradient(#F3D77A,#C9A03A);border:1px solid #B08A2A}
+.medal.m2{background:linear-gradient(#E6E9EC,#AEB5BA);border:1px solid #9AA2A8}
+.medal.m3{background:linear-gradient(#E3A877,#B87333);border:1px solid #9C5F28;color:#fff}

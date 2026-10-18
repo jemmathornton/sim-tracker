@@ -406,7 +406,13 @@
      "state": "Cat",
      "career": "",
      "breed": "American Wirehair",
-     "traits": ["Free Spirit", "Playful", "Lazy"]
+     "traits": ["Free Spirit", "Playful", "Lazy"],
+     "rels": [
+      ["Julian Holmes", "Friend"],
+      ["Daisy Watson-Holmes", "Friend"],
+      ["Natalie Watson", "Acquaintance"],
+      ["Thomas Watson", "Acquaintance"]
+     ]
     }
    ]
   }

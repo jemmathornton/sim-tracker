@@ -324,7 +324,11 @@
      "state": "Dog",
      "career": "",
      "breed": "Large Yorkie",
-     "traits": ["Active", "Loyal", "Playful"]
+     "traits": ["Active", "Loyal", "Playful"],
+     "rels": [
+      ["Daisy Ventura", "Good Friend"],
+      ["Lisa Davidson", "Acquaintance"]
+     ]
     }
    ]
   }
