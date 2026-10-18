@@ -636,7 +636,8 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 .memb .ico svg{width:20px;height:20px}
 .memb b{font:400 22px/1.1 var(--display);display:block}
 .memb small{color:var(--muted);font-size:13px}
-.memb .badge{margin-left:auto;flex:none}
+.memb .badge{margin-left:auto;flex:none;display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:800;letter-spacing:.03em;padding:3px 10px;border-radius:99px;line-height:1.3}
+.memb .badge svg{width:12px;height:12px}
 .memb.k-club .ico{background:color-mix(in srgb,#AEB5BA 22%,var(--surface));color:#6E777E}
 .memb.k-club:hover{border-color:#9AA2A8}
 .memb.k-org .ico{background:color-mix(in srgb,var(--u) 16%,var(--surface));color:var(--u)}
