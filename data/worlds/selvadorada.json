@@ -10,8 +10,8 @@
   {
    "name": "Puerto Llamante Marketplace",
    "desc": "Come enjoy the sights and sounds of Selvadorada!",
-   "mapSpot": [0.66, 0.66],
-   "mapBox": [0.51, 0.51, 0.8, 0.8],
+   "mapSpot": [0.67, 0.67],
+   "mapBox": [0.49, 0.51, 0.85, 0.82],
    "lots": [
     {"lot": "Alam Museum of Archaeology", "myName": "Alam Museum of Archaeology", "type": "Museum", "size": "64x64", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Hillview Hideaway", "myName": "Hillside Hideaway", "type": "Vacation Rental", "size": "20x15", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["335sZpKTEeyL94KVX4KDoA=="], "traits": ["Sunny Aspect"], "challenges": ["Creepy Crawlies"]},
@@ -22,8 +22,8 @@
   {
    "name": "Belomisia Jungle",
    "desc": "The jungle is teeming with wondrous sights and hidden dangers. Brave adventurers can explore the ruins of the ancient Omiscans. Skilled Sims and those equipped with gear from the marketplace will do well here.",
-   "mapSpot": [0.38, 0.42],
-   "mapBox": [0.19, 0.21, 0.58, 0.63],
+   "mapSpot": [0.34, 0.47],
+   "mapBox": [0.19, 0.33, 0.49, 0.61],
    "lots": [
     {"lot": "Belomisia Trailhead", "myName": "Belomisia Trailhead", "type": "National Park", "size": "40x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Jungle Bungalow", "myName": "Jungle Bungalow", "type": "Vacation Rental", "size": "30x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["3nHPkj3IEemMPXldy2Ruvw=="], "traits": ["Romantic Aura", "Peace and Quiet"]},
