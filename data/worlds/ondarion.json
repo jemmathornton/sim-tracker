@@ -506,7 +506,8 @@
      "dynasty": {
       "name": "Thebe",
       "role": "member"
-     }
+     },
+     "parents": ["ermelinda-abrantes"]
     }
    ]
   }

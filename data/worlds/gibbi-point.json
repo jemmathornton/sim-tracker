@@ -217,7 +217,8 @@
      "rels": [
       ["Dougie Perry", "Friends"]
      ],
-     "parents": ["nigel-chavez-ralston", "sara-chavez-ralston"]
+     "parents": ["nigel-chavez-ralston", "sara-chavez-ralston"],
+     "school": "Grade school"
     },
     {
      "id": "erin-chavez-ralston",
@@ -234,7 +235,8 @@
      "rels": [
       ["Dougie Perry", "Friends"]
      ],
-     "parents": ["nigel-chavez-ralston", "sara-chavez-ralston"]
+     "parents": ["nigel-chavez-ralston", "sara-chavez-ralston"],
+     "school": "Grade school"
     }
    ]
   },
@@ -275,7 +277,8 @@
       ["Aeris Chavez-Ralston", "Friends"],
       ["Erin Chavez-Ralston", "Friends"]
      ],
-     "parents": ["unknown-1"]
+     "parents": ["unknown-1"],
+     "school": "Grade school"
     }
    ]
   }

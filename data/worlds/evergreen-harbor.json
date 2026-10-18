@@ -150,7 +150,8 @@
       ["Piano", 4, 10],
       ["Handiness", 3, 10]
      ],
-     "parents": ["cletus-harris", "faye-harris"]
+     "parents": ["cletus-harris", "faye-harris"],
+     "school": "High school"
     },
     {
      "id": "gideon-harris",
@@ -167,7 +168,8 @@
      "rels": [
       ["Olive Tinker", "Acquaintances"]
      ],
-     "parents": ["cletus-harris", "faye-harris"]
+     "parents": ["cletus-harris", "faye-harris"],
+     "school": "Grade school"
     },
     {
      "id": "francine-spencer",
@@ -290,7 +292,8 @@
      "rels": [
       ["Gideon Harris", "Acquaintances"]
      ],
-     "parents": ["tina-tinker", "yasemin-tinker"]
+     "parents": ["tina-tinker", "yasemin-tinker"],
+     "school": "Grade school"
     }
    ]
   },
@@ -405,6 +408,9 @@
       ["Rocket Science", 1, 10],
       ["Gourmet Cooking", 1, 10],
       ["Gardening", 1, 10]
+     ],
+     "partners": [
+      ["april-carr", "Partner"]
      ]
     },
     {
@@ -432,6 +438,9 @@
       ["Handiness", 1, 10],
       ["Singing", 1, 10],
       ["Mischief", 1, 10]
+     ],
+     "partners": [
+      ["kaleb-henley", "Partner"]
      ]
     }
    ]

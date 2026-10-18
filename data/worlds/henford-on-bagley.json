@@ -278,7 +278,8 @@
       ["Video Gaming", 3, 10],
       ["Writing", 2, 10]
      ],
-     "parents": ["thomas-watson", "rahmi-watson"]
+     "parents": ["thomas-watson", "rahmi-watson"],
+     "school": "High school"
     },
     {
      "id": "thomas-watson",

@@ -125,7 +125,7 @@
      "aspiration": "Party Animal",
      "traits": ["Good", "Family-Oriented", "Romantic"],
      "bonus": "Gregarious",
-     "career": "Secret Agent · Intelligence Researcher",
+     "career": "Secret Agent · Intelligence Researcher (level 2)",
      "skills": [
       ["Charisma", 2, 10],
       ["Fitness", 2, 10],
@@ -178,7 +178,7 @@
      "aspiration": "Whiz Kid",
      "traits": ["Bookworm"],
      "career": "",
-     "school": "Grade school",
+     "school": "Grade school · grade C",
      "skills": [
       ["Creativity", 1, 10],
       ["Mental", 1, 10],

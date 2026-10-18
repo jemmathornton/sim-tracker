@@ -183,7 +183,8 @@
       ["Gavin Richards", "Acquaintance"],
       ["J Huntington III", "Acquaintance"],
       ["Mitchell Kalani", "Acquaintance"]
-     ]
+     ],
+     "career": ""
     }
    ]
   },
@@ -258,7 +259,7 @@
      "aspiration": "Mansion Baron",
      "traits": ["Materialistic", "Mean", "Snob"],
      "bonus": "Business Savvy",
-     "career": "{M0.Actor}{F0.Actress} · Seasoned Thespian (level 8)",
+     "career": "Actress · Seasoned Thespian (level 8)",
      "skills": [
       ["Acting", 7, 10],
       ["Gourmet Cooking", 5, 10],
@@ -273,7 +274,7 @@
      "id": "mark-eggleston",
      "name": "Mark Eggleston",
      "sex": "m",
-     "origin": "Mine",
+     "origin": "Premade",
      "from": "save “100 Baby Challenge!!” (2025-09-24)",
      "age": "Young Adult",
      "aspiration": "Friend of the World",
@@ -292,7 +293,7 @@
      "id": "alice-martin",
      "name": "Alice Martin",
      "sex": "f",
-     "origin": "Mine",
+     "origin": "Premade",
      "from": "save “100 Baby Challenge!!” (2025-09-24)",
      "age": "Young Adult",
      "aspiration": "Painter Extraordinaire",
@@ -312,7 +313,7 @@
      "id": "leslie-holland",
      "name": "Leslie Holland",
      "sex": "f",
-     "origin": "Mine",
+     "origin": "Premade",
      "from": "save “100 Baby Challenge!!” (2025-09-24)",
      "age": "Young Adult",
      "aspiration": "Bestselling Author",

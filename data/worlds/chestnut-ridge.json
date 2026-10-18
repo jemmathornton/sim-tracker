@@ -188,7 +188,8 @@
       ["Juniper Grove", "Friends"],
       ["Umber Grove", "Good Friends"]
      ],
-     "parents": ["umber-grove", "juniper-grove"]
+     "parents": ["umber-grove", "juniper-grove"],
+     "school": "Grade school"
     }
    ]
   },
@@ -320,6 +321,9 @@
       ["Gardening", 3, 10],
       ["Photography", 4, 5],
       ["Gourmet Cooking", 3, 10]
+     ],
+     "partners": [
+      ["lacy-tompkins", "Partner"]
      ]
     },
     {
@@ -350,6 +354,9 @@
       ["Piano", 2, 10],
       ["Mixology", 1, 10],
       ["Logic", 1, 10]
+     ],
+     "partners": [
+      ["beatrice-palumbo", "Partner"]
      ]
     },
     {

@@ -214,6 +214,44 @@
      "parents": ["unknown-5"]
     }
    ]
+  },
+  "Pleasant": {
+   "sims": [
+    {
+     "id": "angela-pleasant",
+     "name": "Angela Pleasant",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Painter Extraordinaire",
+     "traits": ["Good", "Foodie", "Neat"],
+     "bonus": "Muser",
+     "career": "",
+     "school": "University of Britechester · Art History (distinguished)",
+     "skills": [
+      ["Writing", 2, 10],
+      ["Painting", 5, 10],
+      ["Cooking", 4, 10]
+     ]
+    },
+    {
+     "id": "lilith-pleasant",
+     "name": "Lilith Pleasant",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Public Enemy",
+     "traits": ["Loner", "Kleptomaniac", "Slob"],
+     "bonus": "Dastardly",
+     "career": "",
+     "school": "Foxbury Institute · Villainy (distinguished)",
+     "skills": [
+      ["Painting", 5, 10],
+      ["Mischief", 4, 10],
+      ["Cooking", 3, 10]
+     ]
+    }
+   ]
   }
  }
 }

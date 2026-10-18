@@ -104,7 +104,7 @@
      "id": "miko-ojo",
      "name": "Miko Ojo",
      "sex": "f",
-     "origin": "Mine",
+     "origin": "Premade",
      "from": "save “Rotational” (2023-12-21)",
      "age": "Young Adult",
      "aspiration": "City Native",
@@ -121,6 +121,9 @@
       ["Dancing", 5, 5],
       ["Painting", 4, 10],
       ["Singing", 9, 10]
+     ],
+     "partners": [
+      ["alicia-santiago", "Spouse"]
      ]
     },
     {
@@ -147,6 +150,9 @@
       ["Logic", 1, 10],
       ["Dancing", 5, 5],
       ["Charisma", 10, 10]
+     ],
+     "partners": [
+      ["miko-ojo", "Partner"]
      ]
     }
    ]
@@ -337,7 +343,7 @@
      "aspiration": "World-Famous Celebrity",
      "traits": ["Neat", "Cheerful", "Ambitious"],
      "bonus": "Gregarious",
-     "career": "{M0.Actor}{F0.Actress} · Commercial Spokesperson (level 3)",
+     "career": "Actress · Commercial Spokesperson (level 3)",
      "skills": [
       ["Acting", 3, 10],
       ["Mixology", 4, 10]
@@ -555,6 +561,60 @@
       ["Parenting", 1, 10],
       ["Baking", 2, 10],
       ["Photography", 1, 5]
+     ]
+    }
+   ]
+  },
+  "Bro & Kennedy": {
+   "sims": [
+    {
+     "id": "joaquin-le-chien",
+     "name": "Joaquin Le Chien",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Fabulously Wealthy",
+     "traits": ["Music Lover", "Outgoing", "Goofball"],
+     "bonus": "Business Savvy",
+     "career": "Entertainer · Open Mic Seeker (level 2)",
+     "skills": [
+      ["Dancing", 5, 5],
+      ["DJ Mixing", 6, 10]
+     ],
+     "rels": [
+      ["Dominic Fyres", "Friends"],
+      ["Candy Behr", "Friends"]
+     ],
+     "clubs": [
+      {
+       "name": "Spin Masters",
+       "role": "member"
+      }
+     ]
+    },
+    {
+     "id": "sergio-romeo",
+     "name": "Sergio Romeo",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Fabulously Wealthy",
+     "traits": ["Hates Children", "Active", "Materialistic"],
+     "bonus": "Business Savvy",
+     "career": "Tech Guru · Quality Assurance (level 2)",
+     "skills": [
+      ["Charisma", 5, 10]
+     ],
+     "rels": [
+      ["Luna Villareal", "Friends"],
+      ["Siobhan Fyres", "Partner"],
+      ["Sofia Bjergsen", "Friends"]
+     ],
+     "clubs": [
+      {
+       "name": "Paragons",
+       "role": "member"
+      }
      ]
     }
    ]

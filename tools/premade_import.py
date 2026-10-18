@@ -21,14 +21,14 @@ MATCHES = {
                       "Curious": "Curious"},
     "windenburg": {"Fyres": "Fyres", "Munch": "Munch", "Partihaus": "Partihaus", "Free Spirits": "Bohemian", "Specter": "Specter"},
     "san-myshuno": {"Behr": "Behr", "Benali": "Benali", "Bheeda": "Bheeda", "Jang": "Jang", "Jeong": "Jeong", "Lobo": "Lobo",
-                    "Pizzazz": "Pizzazz", "Rasoya": "Rasoya", "Feng": "Hu"},
+                    "Pizzazz": "Pizzazz", "Rasoya": "Rasoya", "Feng": "Hu", "Bro & Kennedy": "Bro"},   # Kennedy still to come (19 Oct)
     "forgotten-hollow": {"Straud": "NPC_VS_Nosferatu", "Vatore": "NPC_VS_Wilsons"},
     "brindleton-bay": {"Delgato": "Delgato", "Hecking": "Hecking", "Lynx": "Lynx"},
     "del-sol-valley": {"Bailey-Moon": "BaileyMoon", "Ward": "Ward"},
     "strangerville": {"Cahill": "Strangerville_Hermit", "Roswell": "Strangerville_OldBlood", "Sigworth": "Strangerville_PatientZero"},
     "sulani": {"Hoapili": "Hoapili", "Kahananui": "Kahananui", "Kealoha": "Kealoha", "Ngata": "Ngata"},
     "glimmerbrook": {"Charm": "Charm", "Amicable Acolytes": "Acolytes"},
-    "britechester": {"Elderberry": "ElderlyCouple"},
+    "britechester": {"Elderberry": "ElderlyCouple", "Pleasant": "OddTwins"},   # the Pleasant twins rent at Spring Steppes
     "evergreen-harbor": {"Harris": "Harris", "Sterling Rico": "Entrepreneur", "Tinker": "Maker",
                          "Greenburg": ("Ecomaster", lambda s: s["name"] != "Knox Greenburg"), "Knox Greenburg": ("Ecomaster", lambda s: s["name"] == "Knox Greenburg")},
     "mt-komorebi": {"Akiyama": "Commuter", "Ito": "Affluent", "Nishidake": "Elder"},

@@ -120,7 +120,8 @@
      "aspiration": "Playtime Captain",
      "traits": ["Hot-Headed"],
      "career": "",
-     "parents": ["celeste-michaelson", "christopher-michaelson"]
+     "parents": ["celeste-michaelson", "christopher-michaelson"],
+     "school": "Grade school"
     },
     {
      "id": "orion-michaelson",
@@ -254,7 +255,8 @@
      ],
      "partners": [
       ["doli-ruano", "Spouse"]
-     ]
+     ],
+     "parents": ["ignacio-robles"]
     },
     {
      "id": "doli-ruano",
@@ -343,7 +345,8 @@
      "aspiration": "Creative Genius",
      "traits": ["Creative"],
      "career": "",
-     "parents": ["xochitl-luna", "unknown-3"]
+     "parents": ["xochitl-luna", "unknown-3"],
+     "school": "Grade school"
     }
    ]
   }

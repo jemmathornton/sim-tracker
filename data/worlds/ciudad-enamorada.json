@@ -109,7 +109,7 @@
      "sex": "f",
      "origin": "Premade",
      "age": "Adult",
-     "aspiration": "Romantic Explorer ",
+     "aspiration": "Romantic Explorer",
      "traits": ["Family-Oriented", "Good", "Genius"],
      "bonus": "Alluring",
      "career": "Astronaut · Astronaut (level 7)",
@@ -153,7 +153,8 @@
       ["Video Gaming", 5, 10],
       ["Painting", 3, 10]
      ],
-     "parents": ["m-nica-l-pez"]
+     "parents": ["m-nica-l-pez"],
+     "school": "High school"
     }
    ]
   }

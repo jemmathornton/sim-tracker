@@ -197,7 +197,8 @@
       ["Fishing", 3, 10],
       ["Mischief", 2, 10]
      ],
-     "parents": ["unknown-13"]
+     "parents": ["unknown-13"],
+     "school": "High school"
     },
     {
      "id": "nani-kealoha",

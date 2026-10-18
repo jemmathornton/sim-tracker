@@ -177,7 +177,8 @@
       ["Motor", 2, 10],
       ["Creativity", 9, 10]
      ],
-     "parents": ["jess-sigworth", "dylan-sigworth"]
+     "parents": ["jess-sigworth", "dylan-sigworth"],
+     "school": "Grade school"
     }
    ]
   }

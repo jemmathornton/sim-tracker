@@ -82,7 +82,8 @@
       ["Molly Prescott", "Good Friends"],
       ["Sidney Price", "Friends"]
      ],
-     "parents": ["lucha-harjo"]
+     "parents": ["lucha-harjo"],
+     "school": "High school"
     },
     {
      "id": "ava-harjo",
@@ -138,7 +139,8 @@
      "rels": [
       ["Sidney Price", "Acquaintances"]
      ],
-     "parents": ["ava-harjo"]
+     "parents": ["ava-harjo"],
+     "school": "High school"
     }
    ]
   },
@@ -157,7 +159,8 @@
       ["Motor", 4, 10],
       ["Social", 2, 10]
      ],
-     "parents": ["mei-prescott"]
+     "parents": ["mei-prescott"],
+     "school": "Grade school"
     },
     {
      "id": "mei-prescott",
@@ -173,7 +176,8 @@
       ["Charisma", 5, 10],
       ["Piano", 5, 10],
       ["Logic", 5, 10]
-     ]
+     ],
+     "parents": ["tai-lum"]
     },
     {
      "id": "molly-prescott",
@@ -194,7 +198,8 @@
       ["Sidney Price", "Friends"],
       ["Ash Harjo", "Good Friends"]
      ],
-     "parents": ["mei-prescott"]
+     "parents": ["mei-prescott"],
+     "school": "High school"
     },
     {
      "id": "tai-lum",
@@ -266,7 +271,8 @@
       ["Social", 2, 10],
       ["Creativity", 2, 10]
      ],
-     "parents": ["janae-price", "marcel-price"]
+     "parents": ["janae-price", "marcel-price"],
+     "school": "Grade school"
     },
     {
      "id": "savannah-price",
@@ -282,7 +288,8 @@
       ["Video Gaming", 2, 10],
       ["Programming", 3, 10]
      ],
-     "parents": ["janae-price", "marcel-price"]
+     "parents": ["janae-price", "marcel-price"],
+     "school": "High school"
     },
     {
      "id": "sidney-price",
@@ -303,7 +310,8 @@
       ["Molly Prescott", "Friends"],
       ["Ash Harjo", "Friends"]
      ],
-     "parents": ["janae-price", "marcel-price"]
+     "parents": ["janae-price", "marcel-price"],
+     "school": "High school"
     },
     {
      "id": "kevin-puri",
@@ -318,7 +326,8 @@
      "skills": [
       ["Handiness", 4, 10],
       ["Rocket Science", 3, 10]
-     ]
+     ],
+     "school": "High school"
     }
    ]
   },
@@ -402,7 +411,7 @@
      "origin": "Mine",
      "from": "save “Season Events” (2026-03-15)",
      "age": "Teen",
-     "aspiration": "Inner Peace ",
+     "aspiration": "Inner Peace",
      "traits": ["Self-Assured", "Green Fiend"],
      "bonus": "Spa Membership",
      "career": "",

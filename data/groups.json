@@ -10,94 +10,81 @@
    "prestige": 5,
    "allies": ["Abrantes"],
    "rivals": ["Alto"]
+  },
+  "Darong": {
+   "ideals": ["Scholarly", "Caring", "Artistic"],
+   "prestige": 7
+  },
+  "Thebe": {
+   "ideals": ["Bold", "Jolly", "Nature-Loving"],
+   "prestige": 8,
+   "allies": ["Abrantes"]
+  },
+  "Abrantes": {
+   "ideals": ["Devious", "Connoisseur"],
+   "prestige": 5,
+   "allies": ["Thebe", "Landgraab"]
+  },
+  "Alto": {
+   "ideals": ["Devious", "Connoisseur", "Passionate"],
+   "prestige": 3,
+   "allies": ["Capp"],
+   "rivals": ["Landgraab"]
+  },
+  "Capp": {
+   "ideals": ["Diplomatic", "Connoisseur", "Artistic"],
+   "prestige": 7,
+   "allies": ["Alto"],
+   "rivals": ["Monty"]
   }
  },
  "clubs": {
   "Avant Gardes": {
    "place": "l-windenburg--south-square-coffee",
    "activities": ["Homework", "Coffee", "Writing", "Video games", "Reading"],
-   "rules": ["Invite only"],
-   "others": [
-    ["Maaike Haas", "leader", "h-windenburg--free-spirits"],
-    ["Gunther Munch", "member", "h-windenburg--munch"],
-    ["Yuki Behr", "member", "h-san-myshuno--behr"]
-   ]
+   "rules": ["Invite only"]
   },
   "Garden Gnomes": {
    "place": "l-willow-creek--magnolia-blossom-park",
-   "activities": ["Gardening", "Fishing", "Looking for frogs"],
-   "others": [
-    ["Moira Fyres", "leader", "h-windenburg--fyres"],
-    ["Lucas Munch", "member", "h-windenburg--munch"]
-   ]
+   "activities": ["Gardening", "Fishing", "Looking for frogs"]
   },
   "Knights of the Hedge": {
    "place": "l-windenburg--von-haunt-estate",
-   "activities": ["Wandering the maze", "Chess"],
-   "others": [
-    ["Wolfgang Munch", "member", "h-windenburg--munch"],
-    ["Yuki Behr", "member", "h-san-myshuno--behr"]
-   ]
+   "activities": ["Wandering the maze", "Chess"]
   },
   "League of Adventurers": {
    "place": "l-willow-creek--pique-hearth",
    "activities": ["Playground", "Playing in the closet"],
-   "rules": ["Children only"],
-   "others": [
-    ["Lucas Munch", "member", "h-windenburg--munch"]
-   ]
+   "rules": ["Children only"]
   },
   "Paragons": {
    "place": "l-magnolia-promenade--the-roadstead",
    "activities": ["Being mean to Renegades", "Coffee", "Trying on outfits"],
-   "rules": ["Invite only"],
-   "others": [
-    ["Siobhan Fyres", "leader", "h-windenburg--fyres"],
-    ["Sergio Romeo", "member", "h-san-myshuno--bro-and-kennedy"]
-   ]
+   "rules": ["Invite only"]
   },
   "Powerhouse": {
    "place": "l-san-myshuno--skye-fitness",
-   "activities": ["Working out", "Swimming"],
-   "others": [
-    ["Marcus Flex", "leader", "h-windenburg--partihaus"],
-    ["Paolo Rocca", "member", "h-windenburg--partihaus"]
-   ]
+   "activities": ["Working out", "Swimming"]
   },
   "Renegades": {
    "place": "l-magnolia-promenade--the-roadstead",
    "activities": ["Being mean to Paragons", "Mischief", "Sabotaging objects"],
-   "rules": ["Invite only"],
-   "others": [
-    ["Morgan Fyres", "member", "h-windenburg--fyres"],
-    ["Wolfgang Munch", "member", "h-windenburg--munch"],
-    ["Ulrike Faust", "member", null]
-   ]
+   "rules": ["Invite only"]
   },
   "The Good Timers": {
    "place": "l-windenburg--the-shrieking-llama",
    "activities": ["Pub games", "Bar drinks"],
-   "rules": ["Teens and older"],
-   "others": [
-    ["Dominic Fyres", "member", "h-windenburg--fyres"],
-    ["Mila Munch", "member", "h-windenburg--munch"]
-   ]
+   "rules": ["Teens and older"]
   },
   "Upper Crusts": {
    "activities": ["Eating", "Cooking", "Mixing and drinking bar drinks"],
-   "others": [
-    ["Mila Munch", "member", "h-windenburg--munch"]
-   ],
    "anyType": "Restaurant",
    "world": "willow-creek"
   },
   "Spin Masters": {
    "place": "l-san-myshuno--stargazer-lounge",
    "activities": ["DJ mixing", "Dancing"],
-   "rules": ["Invite only", "DJ Mixing and Dancing level 2 or more"],
-   "others": [
-    ["Joaquin Le Chien", "member", "h-san-myshuno--bro-and-kennedy"]
-   ]
+   "rules": ["Invite only", "DJ Mixing and Dancing level 2 or more"]
   },
   "Partihaus": {
    "place": "l-windenburg--bathe-de-rill",

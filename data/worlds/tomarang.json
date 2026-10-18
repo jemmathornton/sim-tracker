@@ -132,7 +132,7 @@
      "rels": [
       ["Zhafira Cahyaputri", "Disliked"]
      ],
-     "parents": ["unknown-9", "unknown-8"]
+     "parents": ["unknown-8", "unknown-9"]
     },
     {
      "id": "zhafira-cahyaputri",
@@ -147,7 +147,8 @@
      "rels": [
       ["Vanesha Cahyaputri", "Disliked"]
      ],
-     "parents": ["unknown-9", "unknown-8"]
+     "parents": ["unknown-8", "unknown-9"],
+     "school": "High school"
     }
    ]
   },
@@ -174,7 +175,8 @@
       ["Cam Sadya", "Friends"],
       ["Alon Sadya", "Friends"],
       ["Vanesha Cahyaputri", "Friends"]
-     ]
+     ],
+     "parents": ["ch-nh-linh", "arturo-linh"]
     },
     {
      "id": "ch-nh-linh",
@@ -276,7 +278,8 @@
      "rels": [
       ["Thi Linh", "Friends"]
      ],
-     "parents": ["li-n-sadya", "alon-sadya"]
+     "parents": ["li-n-sadya", "alon-sadya"],
+     "school": "Grade school"
     }
    ]
   },

@@ -127,7 +127,8 @@
       ["Creativity", 5, 10],
       ["Mental", 5, 10]
      ],
-     "parents": ["kado-akiyama", "jenna-akiyama"]
+     "parents": ["kado-akiyama", "jenna-akiyama"],
+     "school": "Grade school"
     },
     {
      "id": "miki-akiyama",
@@ -142,7 +143,8 @@
       ["Motor", 5, 10],
       ["Social", 5, 10]
      ],
-     "parents": ["kado-akiyama", "jenna-akiyama"]
+     "parents": ["kado-akiyama", "jenna-akiyama"],
+     "school": "Grade school"
     }
    ]
   },
@@ -211,7 +213,8 @@
      "rels": [
       ["Kaori Nishidake", "Friends"]
      ],
-     "parents": ["naoki-ito", "megumi-ito"]
+     "parents": ["naoki-ito", "megumi-ito"],
+     "school": "High school"
     },
     {
      "id": "nanami-ito",
@@ -226,7 +229,8 @@
       ["Motor", 5, 10],
       ["Social", 5, 10]
      ],
-     "parents": ["naoki-ito", "megumi-ito"]
+     "parents": ["naoki-ito", "megumi-ito"],
+     "school": "Grade school"
     }
    ]
   },
@@ -298,7 +302,8 @@
      "rels": [
       ["Kiyoshi Ito", "Friends"]
      ],
-     "parents": ["unknown-2"]
+     "parents": ["unknown-2"],
+     "school": "High school"
     }
    ]
   }
