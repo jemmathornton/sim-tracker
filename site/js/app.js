@@ -836,7 +836,9 @@ function hoodPage(x){
   const w = x.world, hhSet = [...new Set(x.lots.filter(l => l.hh).map(l => l.hh))], built = x.lots.filter(l => l.built === true).length;
   const figs = [[x.lots.length, x.lots.length===1?"lot":"lots"]];
   if (hhSet.length) figs.push([hhSet.length, hhSet.length===1?"household":"households"],[simCount(hhSet), simCount(hhSet)===1?"Sim":"Sims"]);
-  let h = mapHero(w, `Neighbourhood · ${esc(w.name)}`, esc(x.name), x.desc ? esc(x.desc) : "", figs,
+  // a two-part name ("Lykke Center / University of Windenburg") keeps its first part as the title, the rest on a smaller line
+  const [t1, ...t2] = x.name.split(" / ");
+  let h = mapHero(w, `Neighbourhood · ${esc(w.name)}`, esc(t1) + (t2.length ? `<small class="h1-sub">${esc(t2.join(" / "))}</small>` : ""), x.desc ? esc(x.desc) : "", figs,
     w.hoods.filter(o => o !== x).map(o => `<a href="#n-${o.id}">${esc(o.name)}</a>`).join(""), true, hoodHeroView(x));
   h += `<section class="hood" style="--h:${x.color}"><div class="hood-head"><span class="label">${esc(x.name)}</span><div><h2>The <em>lots</em></h2><p>Open a home to meet the household who lives there.</p>${hoodExtras(x, true) ? `<div class="hood-extras">${hoodExtras(x, true)}</div>` : ""}<p class="dot-key"><span class="yes">${ic("hammer")}</span>Built <span class="yes">${ic("share")}</span>Shared <span class="yes">${ic("sim")}</span>Sims made <small>Faded means not yet.</small></p></div><span class="count">${built} of ${x.lots.length} built</span></div>
     <div class="listings">${hoodItems(x).join("")}</div></section>`;

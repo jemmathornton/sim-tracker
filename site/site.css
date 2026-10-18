@@ -699,3 +699,4 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 .nav-group.dim a.soon.has-hh:hover{background:rgba(255,255,255,.05);color:rgba(234,242,236,.7)}
 .nav-group.dim .subnav a{opacity:.8}
 .nav-group.dim .subnav a.cur,.nav-group.dim .subnav a.path{opacity:1}
+.hero h1 .h1-sub{display:block;font-size:.42em;line-height:1.15;margin-top:.25em;font-style:italic;color:var(--on-deep-mute)}
