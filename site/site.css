@@ -636,7 +636,11 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 .memb .ico svg{width:20px;height:20px}
 .memb b{font:400 22px/1.1 var(--display);display:block}
 .memb small{color:var(--muted);font-size:13px}
-.memb .role-pill{margin-left:auto;font-size:12px;font-weight:800;padding:3px 10px;border-radius:99px;background:var(--brass);color:#1A1F1C}
+.memb .badge{margin-left:auto;flex:none}
+.memb.k-club .ico{background:color-mix(in srgb,#AEB5BA 22%,var(--surface));color:#6E777E}
+.memb.k-club:hover{border-color:#9AA2A8}
+.memb.k-org .ico{background:color-mix(in srgb,var(--u) 16%,var(--surface));color:var(--u)}
+.memb.k-org:hover{border-color:var(--u)}
 .homes{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:8px}
 .homes li{display:flex;align-items:center;gap:12px;padding:12px 16px;border:1px solid var(--line);border-radius:14px;background:var(--surface);font-size:14.5px}
 .homes li>svg{color:var(--h)}
@@ -679,7 +683,8 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 .badge.r-outcast{background:color-mix(in srgb,var(--muted) 12%,var(--surface));color:var(--muted);border:1px solid color-mix(in srgb,var(--muted) 70%,var(--surface))}
 /* club badges: silver, so they never read as dynasty roles (trial, 17 Oct) */
 .badge.c-leader{background:linear-gradient(#D9DDE0,#AEB5BA);color:#1A1F1C;border:1px solid #9AA2A8}
-.badge.c-member{background:color-mix(in srgb,#AEB5BA 10%,var(--surface));color:#1A1F1C;border:1px solid #9AA2A8}
+.badge.c-member{background:color-mix(in srgb,#AEB5BA 22%,var(--surface));color:#1A1F1C;border:1px solid #9AA2A8}
+.monogram.silver{color:#D3D8DC}   /* a club page’s flag: silver, as dynasty pages are gold (her ask, 19 Oct) */
 /* university organisation badges: the university's colour with its gold trim, as on the game's banners (dark purple for the secret society) */
 .badge.o-badge{background:var(--u);color:#fff;border:1.5px solid var(--t)}
 /* relatives who were never in the game (named on the Sims Wiki): dashed outline */
