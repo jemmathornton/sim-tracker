@@ -795,8 +795,11 @@ function hoodArt(x){
   const spot = (NB_PT[x.world.id] || {})[x.name], box = (NB_BOX[x.world.id] || {})[x.name], n = x.lots.length;
   // a neighbourhood Jemma wants centred on its box doesn't slide (14 Oct: Whispering Glen showed too much cloud above)
   const others = (NB_CENTRED[x.world.id] || []).includes(x.name) ? [] : Object.entries(NB_BOX[x.world.id] || {}).filter(([n]) => n !== x.name).map(([, b]) => b);
-  const z = box ? boxZoom(box) * ((NB_ZOOM[x.world.id] || {})[x.name] || 1) : 0;   // her own closer zoom for a card (14 Oct: Whispering Glen)
-  const v = box ? nbView(boxCentre(box, z, others), z) : spot ? nbView(spot) : null;
+  // her banner nudges (bannerZoom, bannerShift) move the card the same way, so card and banner show the same part (19 Oct, her ask)
+  const nudge = (NB_BANNER[x.world.id] || {})[x.name] || {zoom: 1, shift: [0, 0]};
+  const z = box ? Math.max(CARD_RATIO / MAP_RATIO + .01, boxZoom(box) * ((NB_ZOOM[x.world.id] || {})[x.name] || 1) * nudge.zoom) : 0;   // her own closer zoom for a card (14 Oct: Whispering Glen)
+  const at = box ? boxCentre(box, z, others) : null;
+  const v = box ? nbView([at[0] + nudge.shift[0], at[1] + nudge.shift[1]], z) : spot ? nbView([spot[0] + nudge.shift[0], spot[1] + nudge.shift[1]], ZOOM * nudge.zoom) : null;
   const bg = !x.world.map ? "" : v ? `background:url('${x.world.map}') ${v.bg}` : `background:url('${x.world.map}') center 45%/cover`;
   const circles = x.lots.map(l => nbTile(l).replace("<i ", `<i data-lot-link="${l.id}" aria-label="${esc(l.name)}" `).replace(/ title="[^"]*"/, ` data-name="${esc(l.name)}"`)).join("");
   return `<div class="photo nb-map" style="${bg}"><span class="nb-bubbles${n > 5 ? " many" : ""}">${circles}</span><span class="type">Neighbourhood</span></div>`;
