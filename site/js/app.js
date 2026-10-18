@@ -915,7 +915,7 @@ const SEASON_ICON = {Spring: "flower", Summer: "sun", Autumn: "leaf", Winter: "s
 function worldAbout(w){
   if (!w.weather && !w.highlights) return "";
   return `<section class="block" style="--h:${w.color}"><div class="block-head"><h2>Weather and <em>highlights</em></h2><span class="count">from the game</span></div>
-    ${w.weatherSeasons ? `<div class="wx-seasons">${CAL_SEASONS.filter(n => w.weatherSeasons[n]).map(n => `<div class="s-${n.toLowerCase()}">${ic(SEASON_ICON[n])}<b>${n}</b><span>${esc(w.weatherSeasons[n])}</span></div>`).join("")}</div>`
+    ${w.weatherSeasons ? `<div class="wx-seasons">${CAL_SEASONS.filter(n => w.weatherSeasons[n]).map(n => `<div class="s-${n.toLowerCase()}">${ic(SEASON_ICON[n])}<b>${n}:</b><span>${esc(w.weatherSeasons[n].toLowerCase())}</span></div>`).join("")}</div>`
       : w.weather ? `<p class="home-to world-weather">${ic("weather")}<span>${esc(w.weather)}</span></p>` : ""}
     ${w.highlights ? `<div class="highlights">${w.highlights.map(x => `<div>${ic("landmark")}<b>${esc(x.name)}</b><span>${esc(x.text)}</span></div>`).join("")}</div>` : ""}</section>`;
 }
