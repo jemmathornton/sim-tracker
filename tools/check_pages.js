@@ -8,7 +8,7 @@
 (() => {
   // draw a page directly (changing the address hundreds of times in a row gets throttled by the browser)
   const render = (0, eval)('(' + route.toString().replace(/^function route\(\)\{/, 'function(key0){').replace('location.hash.slice(1) || "home"', 'key0') + ')');
-  const keys = ['home', 'stats', ...worlds.filter(w => w.ready).flatMap(w => ['stats-' + w.id, 'w-' + w.id, 'f-' + w.id, ...w.hoods.map(h => 'n-' + h.id)]),
+  const keys = ['home', 'stats', 'calendar', ...worlds.filter(w => w.ready).flatMap(w => ['stats-' + w.id, 'w-' + w.id, 'f-' + w.id, ...w.hoods.map(h => 'n-' + h.id)]),
     ...Object.keys(lotIndex), ...Object.keys(hhIndex), ...Object.keys(typeof SIM_PAGES === 'object' ? SIM_PAGES : {}), ...Object.keys(typeof GROUP_PAGES === 'object' ? GROUP_PAGES : {})];
   const valid = new Set(keys), problems = [], view = document.getElementById('view');
   for (const k of keys) {

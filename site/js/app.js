@@ -602,7 +602,7 @@ function renderNav(active, key, ctx){
     return h; };
   owned.forEach(w => h += navWorld(w));
   h += `</div><div class="nav-group dim"><div class="label">Not owned</div>${notOwned.map(w => navWorld(w, true)).join("")}</div>
-    <div class="nav-group stats-nav"><a href="#stats" class="${active==="stats"?"on":""}">${ic("grid")}Stats</a></div>`;
+    <div class="nav-group stats-nav"><a href="#calendar" class="${active==="calendar"?"on":""}">${ic("calendar")}Calendar</a><a href="#stats" class="${active==="stats"?"on":""}">${ic("grid")}Stats</a></div>`;
   nav.innerHTML = h;
 }
 // clicking the page you're already on goes back to its top
@@ -1228,6 +1228,7 @@ function route(){
   else if (GROUP_PAGES[key]) { const g = GROUP_PAGES[key], base = g.homeHh; ctx.group = g; if (base) { ctx.hh = base; ctx.lot = base.lots[0]; ctx.hood = ctx.lot.hood; } html = groupPage(g); active = g.world && g.world.ready && g.world.owned ? g.world.id : ""; document.title = groupTitle(g) + " · Jemma’s Sim World"; }
   else if (hhIndex[key]) { const x = hhIndex[key]; ctx.hh = x; ctx.lot = x.lots[0]; ctx.hood = x.lots[0].hood; html = household(x); active = x.world.id; document.title = hhWord(x.name) + " · Jemma’s Sim World"; }
   else if (key === "stats" || key.startsWith("stats-")) { const w = worlds.find(x => "stats-" + x.id === key); html = statsPage(w ? w.name : (key === "stats" ? null : "")); active = "stats"; document.title = "Stats · Jemma’s Sim World"; }
+  else if (key === "calendar") { html = calendarPage(); active = "calendar"; document.title = "Calendar · Jemma’s Sim World"; }
   else if (key === "home") { html = home(); document.title = "Jemma’s Sim World"; }
   else { html = `<section class="hero small" style="--c:#8E62CF"><div class="kicker"><i></i><span class="label">Page not found</span></div><h1 style="margin-top:14px">Nothing <em>here</em></h1><p>This link doesn't match any world, neighbourhood, lot or household. It may be an old link from before something was renamed.</p></section>
     <section class="block"><p class="notfound"><a href="#home">${ic("home")}Go to the home page</a><a href="#stats">Search every lot on the Stats page</a></p></section>`; document.title = "Page not found · Jemma’s Sim World"; active = ""; }
@@ -1343,6 +1344,77 @@ searchIndex = function () {
     x.sims.forEach(sm => add("Sim", sm.name, hhWord(x.name) + " · not owned", sm.sid ? "#s-" + sm.sid : "#" + x.id)); }));
   return out;
 };
+
+/* ---------- the save's calendar (19 Oct, her choices: a Calendar page next to Stats, weeks start on Monday, four-week seasons,
+   holidays of her own). Ported from for-jemma/prototypes/calendar (option A, the week calendar). Festivals and regular events come
+   from data/calendar.json (the game's own files, checked against the Sims Wiki); lot nights are made from her lots' types and traits. */
+const CAL = Object.assign({events: [], lotEvents: [], holidays: [], seasons: ["Spring", "Summer", "Autumn", "Winter"], seasonWeeks: 4, surprise: []}, DATA.calendar || {});
+const CAL_DAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+const CAL_DAY_NAMES = {Mon: "Monday", Tue: "Tuesday", Wed: "Wednesday", Thu: "Thursday", Fri: "Friday", Sat: "Saturday", Sun: "Sunday"};
+const CAL_OFTEN = {week: "every week", fortnight: "every other week", third: "every third week", lounge: "the game picks each week"};
+const CAL_KINDS = {festival: "Festivals and world events", school: "Uni and high school", lot: "Lot nights (lounges, thrift stores)"};
+const SEASON_ICON = {Spring: "flower", Summer: "sun", Autumn: "leaf", Winter: "snowflake"};
+const calW = name => worlds.find(w => w.name === name);
+// text on a world-coloured chip: dark on the light colours (Sulani's yellow), white on the rest
+const onColour = hex => { const n = parseInt(String(hex).slice(1), 16), [r, g, b] = [n >> 16 & 255, n >> 8 & 255, n & 255];
+  return (0.299 * r + 0.587 * g + 0.114 * b) / 255 > 0.62 ? "#1A1F1C" : "#fff"; };
+const calHues = name => { const c = (calW(name) || {}).color || "#888"; return `--h:${c};--on:${onColour(c)}`; };
+let CAL_ALL = null;
+function calEvents(){
+  if (CAL_ALL) return CAL_ALL;
+  const all = CAL.events.map(e => ({...e}));
+  worlds.filter(w => w.owned && w.ready).forEach(w => w.hoods.forEach(h => h.lots.forEach(l => CAL.lotEvents.forEach(t => {
+    if (!(l.type || "").startsWith(t.type) || (t.trait && !(l.traits || []).includes(t.trait))) return;
+    all.push({w: w.name, hood: h.name, name: t.name, days: t.days, time: t.time, start: t.start, kind: "lot", where: l.name, lotType: l.type.split("/")[0],
+      link: "#" + l.id, often: /^Lounge/.test(l.type) ? "lounge" : "week", built: l.built === true}); }))));
+  return CAL_ALL = all.filter(e => calW(e.w) && calW(e.w).owned).map(e => ({...e, order: worlds.indexOf(calW(e.w))}));
+}
+const calState = {kinds: new Set(["festival"]), world: null};
+try { const s = JSON.parse(localStorage.getItem("calendar") || "{}"); if (s.kinds) calState.kinds = new Set(s.kinds.filter(k => CAL_KINDS[k])); } catch (e) {}
+const calKeep = () => { try { localStorage.setItem("calendar", JSON.stringify({kinds: [...calState.kinds]})); } catch (e) {} };
+const calPlace = e => { const w = calW(e.w), hid = w && e.hood ? w.id + "-" + slug(e.hood) : null;
+  return e.link ? `<a href="${e.link}">${esc(e.where)}</a>` : hid && hoodIndex[hid] ? `<a href="#n-${hid}">${esc(e.where || e.hood)}</a>` : esc(e.where || e.hood || ""); };
+const calTag = e => e.often === "fortnight" ? `<span class="often">${ic("repeat")}every other week</span>` : e.often === "third" ? `<span class="often">${ic("repeat")}every third week</span>` : "";
+const calStar = e => e.star ? `<sup title="The game never shows this name; it’s made from the game’s settings">*</sup>` : "";
+const calPill = e => `<div class="ev k-${e.kind} o-${slug(e.often || "")}${e.built === false ? " unbuilt" : ""}" style="${e.agg ? "--h:#9A7B3A;--on:#fff" : calHues(e.w)}">
+  <span class="t">${esc(e.time)}</span><b>${esc(e.name)}${calStar(e)}</b>
+  <small>${[e.agg ? "" : `<a href="#w-${calW(e.w).id}">${esc(e.w)}</a>`, e.agg ? esc(e.where) : calPlace(e)].filter(Boolean).join(" · ")}</small>${calTag(e)}</div>`;
+function calendarPage(){
+  const picked = calEvents().filter(e => calState.kinds.has(e.kind) && (!calState.world || e.w === calState.world)), groups = {};
+  // lot nights: one pill per night, naming every lot that has it
+  picked.filter(e => e.kind === "lot").forEach(e => (groups[e.name + "|" + e.time] ||= []).push(e));
+  const shown = picked.filter(e => e.kind !== "lot").concat(Object.values(groups).map(list => ({...list[0], agg: true, built: list.some(e => e.built), order: 99,
+    where: `${list[0].lotType}${list.length > 1 ? "s" : ""}: ${list.map(e => e.where + (e.built ? "" : " (not built)")).join(", ")}`})));
+  const withEv = worlds.filter(w => w.owned && calEvents().some(e => e.w === w.name && calState.kinds.has(e.kind)));
+  const byStart = (a, b) => a.start - b.start || a.order - b.order;
+  const daily = shown.filter(e => e.special === "daily").sort(byStart), loose = shown.filter(e => e.special && e.special !== "daily").sort(byStart);
+  let h = `<section class="hero small" style="--c:#C9A04A"><div class="kicker"><i></i><span class="label">Across the save</span></div><h1 style="margin-top:14px">The <em>calendar</em></h1><p>Your seasons and holidays, and every festival and regular event in your worlds, Monday to Sunday.</p></section>`;
+  // the year: four-week seasons with her holidays
+  const weeks = CAL.seasonWeeks || 4;
+  h += `<section class="block cal"><div class="block-head"><h2>The <em>year</em></h2><span class="count">${weeks}-week seasons</span></div><div class="seasons">${CAL.seasons.map(sn => {
+    const hols = CAL.holidays.filter(x => x.season === sn);
+    return `<div class="season s-${sn.toLowerCase()}"><div class="s-h">${ic(SEASON_ICON[sn] || "calendar")}<b>${esc(sn)}</b></div>
+      <div class="mini"><span></span>${CAL_DAYS.map(d => `<span class="dh">${d.slice(0, 2)}</span>`).join("")}${Array.from({length: weeks}, (_, wk) => `<span class="wk">${wk + 1}</span>${CAL_DAYS.map(d => { const ho = hols.find(x => x.week === wk + 1 && x.day === d);
+        return `<i class="${ho ? "on" : ""}" title="${ho ? esc(ho.name) : ""}">${wk * 7 + CAL_DAYS.indexOf(d) + 1}</i>`; }).join("")}`).join("")}</div>
+      ${hols.length ? hols.map(x => `<p><b>${esc(x.name)}</b> ${CAL_DAY_NAMES[x.day]}, week ${x.week}</p>`).join("") : `<p class="none">No holidays yet</p>`}</div>`; }).join("")}</div>
+    ${CAL.holidays.length ? "" : `<p class="yr-note">${ic("sparkle")}<span>You’ll make your own holidays for this save; they’ll show here.</span></p>`}
+    <p class="yr-note">${ic("sparkle")}<span><b>Surprise holidays</b>, a few days’ notice, at random: ${CAL.surprise.map(([d, n]) => `${esc(n)} (${d})`).join(", ")}.</span></p>
+    <p class="yr-note">${ic("leaf")}<span><b>Neighbourhood action plan voting</b> every week from Friday 8 am to Monday 6 pm, in every neighbourhood with residents.</span></p></section>`;
+  // every week
+  h += `<section class="block cal"><div class="block-head"><h2>Every <em>week</em></h2><span class="count">faint outlines are every other week; which week depends on your save</span></div>
+    <div class="a-filters"><div class="kinds">${Object.entries(CAL_KINDS).map(([k, t]) => `<label><input type="checkbox" data-cal-kind="${k}" ${calState.kinds.has(k) ? "checked" : ""}> ${esc(t)}</label>`).join("")}</div>
+    <div class="wchips"><button type="button" class="wchip ${calState.world ? "" : "on"}" data-cal-world="">All worlds</button>${withEv.map(w => `<button type="button" class="wchip ${calState.world === w.name ? "on" : ""}" data-cal-world="${esc(w.name)}" style="${calHues(w.name)}"><i></i>${esc(w.name)}</button>`).join("")}</div></div>`;
+  if (daily.length) h += `<div class="band"><span class="band-l">${ic("repeat")}Every day</span><div class="band-evs">${daily.map(calPill).join("")}</div></div>`;
+  h += `<div class="week">${CAL_DAYS.map(d => { const evs = shown.filter(e => e.days && e.days.includes(d)).sort(byStart);
+    return `<div class="day"><div class="day-h"><b>${CAL_DAY_NAMES[d]}</b><small>${evs.length || ""}</small></div>${evs.map(calPill).join("") || `<p class="none">Nothing on</p>`}</div>`; }).join("")}</div>`;
+  if (loose.length) h += `<div class="band"><span class="band-l">${ic("moon")}No fixed day</span><div class="band-evs">${loose.map(e => calPill(e).replace('<span class="t">', `<span class="t">${esc(CAL_OFTEN[e.often] || e.often || "")} · `)).join("")}</div></div>`;
+  h += `<div class="key"><span><i class="k1"></i>every week</span><span><i class="k2"></i>every other week</span><span><i class="k3"></i>every third week</span><span><sup>*</sup> the game never shows this name</span><span>Times are the game’s own; “about” where it shows none.</span></div></section>`;
+  return h;
+}
+document.addEventListener("change", e => { const k = e.target.dataset && e.target.dataset.calKind; if (!k) return;
+  e.target.checked ? calState.kinds.add(k) : calState.kinds.delete(k); calKeep(); const y = scrollY; document.getElementById("view").innerHTML = calendarPage(); window.scrollTo(0, y); });
+document.addEventListener("click", e => { const b = e.target.closest("[data-cal-world]"); if (!b) return;
+  calState.world = b.dataset.calWorld || null; const y = scrollY; document.getElementById("view").innerHTML = calendarPage(); window.scrollTo(0, y); });
 
 document.getElementById("menuIco").innerHTML = ic("menu");
 document.getElementById("searchIco").innerHTML = ic("search");

@@ -728,3 +728,66 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 .medal.m2{background:linear-gradient(#E6E9EC,#AEB5BA);border:1px solid #9AA2A8}
 .medal.m3{background:linear-gradient(#E3A877,#B87333);border:1px solid #9C5F28;color:#fff}
 .comps tbody tr:hover{background:none}   /* nothing to click in the medals table (her feedback, 19 Oct) */
+/* the Calendar page (19 Oct, ported from for-jemma/prototypes/calendar, option A; seasons of four weeks) */
+.cal .a-filters{display:grid;gap:12px;margin-bottom:16px}
+.cal .kinds{display:flex;flex-wrap:wrap;gap:8px 22px}
+.cal .kinds label{display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:600;cursor:pointer}
+.cal .kinds input{accent-color:var(--brass);width:16px;height:16px}
+.cal .wchips{display:flex;flex-wrap:wrap;gap:6px}
+.cal .wchip{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:7px;padding:4px 11px;border-radius:99px;border:1.5px solid var(--line);background:var(--surface);font-size:12.5px;font-weight:600}
+.cal .wchip i{width:8px;height:8px;border-radius:50%;background:var(--h)}
+.cal .wchip:hover{border-color:color-mix(in srgb,var(--h,var(--ink)) 60%,var(--line))}
+.cal .wchip.on{background:var(--h,var(--ink));border-color:var(--h,var(--ink));color:var(--on,#fff)}
+.cal .wchip.on i{background:var(--on,#fff)}
+.cal .wchip:focus-visible{outline:2px solid var(--brass)}
+.cal .week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px}
+.cal .day{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 8px 12px;display:grid;align-content:start;gap:6px;min-height:180px}
+.cal .day-h{display:flex;justify-content:space-between;align-items:baseline;padding:0 4px 6px;border-bottom:1px solid var(--line);margin-bottom:2px}
+.cal .day-h b{font:400 21px/1 var(--display)}
+.cal .day-h small{color:var(--muted);font-weight:700;font-size:12px}
+.cal .none{margin:6px 4px;color:var(--muted);font-size:13px;font-style:italic}
+.cal .ev{position:relative;display:grid;gap:1px;padding:7px 9px 8px 11px;border-radius:9px;background:color-mix(in srgb,var(--h) 9%,var(--surface));border:1.5px solid color-mix(in srgb,var(--h) 28%,transparent);font-size:12.5px;line-height:1.35}
+.cal .ev::before{content:"";position:absolute;left:-1.5px;top:7px;bottom:7px;width:3px;border-radius:3px;background:var(--h)}
+.cal .ev .t{color:var(--muted);font-size:11.5px;font-weight:700;font-variant-numeric:tabular-nums}
+.cal .ev b{font-weight:700;font-size:13px;color:var(--ink)}
+.cal .ev small{color:var(--muted);font-size:11.5px}
+.cal .ev small a{text-decoration:none;font-weight:600;color:color-mix(in srgb,var(--h) 70%,var(--ink))}
+.cal .ev small a:hover{text-decoration:underline}
+.cal .ev em{font-style:italic}
+.cal .ev.o-fortnight{border-style:dashed;background:transparent}
+.cal .ev.o-third{border-style:dotted;background:transparent}
+.cal .ev .often{display:inline-flex;align-items:center;gap:4px;margin-top:3px;font-size:11px;font-weight:700;color:color-mix(in srgb,var(--h) 70%,var(--ink))}
+.cal .ev.unbuilt{opacity:.62}
+.cal sup{font-size:.75em;margin-left:1px;color:var(--brass);font-weight:800}
+.cal .band{display:grid;grid-template-columns:130px minmax(0,1fr);gap:12px;align-items:start;margin:10px 0;padding:10px 12px;border-radius:14px;background:var(--soft)}
+.cal .band-l{display:inline-flex;align-items:center;gap:7px;font-weight:700;font-size:13px;padding-top:6px}
+.cal .band-evs{display:flex;flex-wrap:wrap;gap:8px;align-items:flex-start}
+.cal .band-evs .ev{flex:0 1 230px}
+.cal .ev{align-content:start}
+.cal .key{display:flex;flex-wrap:wrap;gap:6px 20px;margin-top:12px;color:var(--muted);font-size:12.5px}
+.cal .key span{display:inline-flex;align-items:center;gap:6px}
+.cal .key i{width:22px;height:12px;border-radius:4px;border:1.5px solid var(--muted)}
+.cal .key i.k2{border-style:dashed}.key i.k3{border-style:dotted}
+.cal .year{margin-top:30px}
+.cal .year h3{font-size:30px;line-height:1;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.cal .year h3 em{color:var(--brass)}
+.cal .year h3 small{font:600 13px var(--body);color:var(--muted)}
+.cal .seasons{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:14px}
+.cal .season{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;--s:#7FA36B}
+.cal .season.s-summer{--s:#D9A23B}.season.s-autumn{--s:#C2703D}.season.s-winter{--s:#6F95B8}
+.cal .s-h{display:flex;align-items:center;gap:8px;font-size:15px}
+.cal .s-h svg{color:var(--s)}
+.cal .mini{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;margin:10px 0 8px}
+.cal .mini i{font-style:normal;text-align:center;font-size:11px;font-weight:700;color:var(--muted);padding:3px 0;border-radius:5px;background:var(--soft)}
+.cal .mini i.on{background:var(--s);color:#fff}
+.cal .season p{margin:2px 0 0;font-size:13.5px}
+.cal .season p.none{font-size:13px}
+.cal .yr-note{display:flex;gap:8px;align-items:flex-start;margin:10px 0 0;font-size:13.5px;color:var(--muted)}
+.cal .yr-note svg{margin-top:3px;color:var(--brass)}
+.cal .yr-note b{color:var(--ink)}
+.cal .days{display:none}
+.cal .mini{grid-template-columns:22px repeat(7,1fr);gap:3px}
+.cal .mini .dh{font-size:10.5px;font-weight:800;color:var(--muted);text-align:center;text-transform:uppercase;letter-spacing:.04em}
+.cal .mini .wk{font-size:10.5px;font-weight:800;color:var(--muted);display:grid;place-items:center}
+.cal .wchips{margin-bottom:6px}
+.nav-group.stats-nav a+a{margin-top:2px}

@@ -1,0 +1,1066 @@
+{
+ "_note": "The save's calendar (19 Oct): festivals and regular events from the game's own files, checked against the Sims Wiki (research/festivals-calendar.md); lotEvents are made from her lots' types and traits; holidays are hers (season, week 1-4, day). Weeks start on Monday; a season is 4 weeks (her choice).",
+ "seasonWeeks": 4,
+ "seasons": [
+  "Spring",
+  "Summer",
+  "Autumn",
+  "Winter"
+ ],
+ "holidays": [],
+ "events": [
+  {
+   "w": "San Myshuno",
+   "hood": "Arts Quarter",
+   "name": "Humor and Hijinks Festival",
+   "days": [
+    "Mon"
+   ],
+   "time": "5–11 pm",
+   "start": 1020,
+   "often": "fortnight",
+   "kind": "festival",
+   "pair": "GeekCon"
+  },
+  {
+   "w": "San Myshuno",
+   "hood": "Fashion District",
+   "name": "GeekCon",
+   "days": [
+    "Tue"
+   ],
+   "time": "10 am–4 pm",
+   "start": 600,
+   "often": "fortnight",
+   "kind": "festival",
+   "pair": "Humor and Hijinks"
+  },
+  {
+   "w": "San Myshuno",
+   "hood": "Spice Market",
+   "name": "Spice Festival",
+   "days": [
+    "Fri"
+   ],
+   "time": "5 pm–1 am",
+   "start": 1020,
+   "often": "fortnight",
+   "kind": "festival",
+   "pair": "the Romance Festival"
+  },
+  {
+   "w": "San Myshuno",
+   "hood": "Fashion District",
+   "name": "Romance Festival",
+   "days": [
+    "Sat"
+   ],
+   "time": "5 pm–1 am",
+   "start": 1020,
+   "often": "fortnight",
+   "kind": "festival",
+   "pair": "the Spice Festival"
+  },
+  {
+   "w": "San Myshuno",
+   "hood": "Spice Market",
+   "name": "Flea Market",
+   "days": [
+    "Sun"
+   ],
+   "time": "10 am–6 pm",
+   "start": 600,
+   "often": "fortnight",
+   "kind": "festival"
+  },
+  {
+   "w": "Mt. Komorebi",
+   "hood": "Senbamachi",
+   "name": "Festival of Light",
+   "days": [
+    "Fri"
+   ],
+   "time": "6 pm–1 am",
+   "start": 1080,
+   "often": "fortnight",
+   "kind": "festival"
+  },
+  {
+   "w": "Mt. Komorebi",
+   "hood": "Yukimatsu",
+   "name": "Festival of Snow",
+   "days": [
+    "Sat"
+   ],
+   "time": "3 pm–midnight",
+   "start": 900,
+   "often": "fortnight",
+   "kind": "festival"
+  },
+  {
+   "w": "Mt. Komorebi",
+   "hood": "Wakaba",
+   "name": "Festival of Youth",
+   "days": [
+    "Sun"
+   ],
+   "time": "10 am–6 pm",
+   "start": 600,
+   "often": "fortnight",
+   "kind": "festival"
+  },
+  {
+   "w": "Henford-on-Bagley",
+   "hood": "Finchwick",
+   "name": "Finchwick Fair",
+   "days": [
+    "Sat"
+   ],
+   "time": "3.30–9.30 pm",
+   "start": 930,
+   "often": "week",
+   "kind": "festival",
+   "note": "Chicken, Cow, Garden, Llama or Oversized Crop fair, in turn",
+   "needs": {
+    "txt": "Lavina Chopra judges; homeless by your choice, still in the save",
+    "ok": null
+   }
+  },
+  {
+   "w": "Sulani",
+   "hood": "Ohan'ali Town",
+   "name": "Town BBQ",
+   "star": true,
+   "days": [
+    "Mon"
+   ],
+   "time": "about 4–10 pm",
+   "start": 980,
+   "often": "week",
+   "kind": "festival"
+  },
+  {
+   "w": "Sulani",
+   "hood": "Mua Pel'am",
+   "name": "Turtle Hatching",
+   "star": true,
+   "days": [
+    "Mon"
+   ],
+   "time": "about 8 am–2 pm",
+   "start": 485,
+   "often": "third",
+   "kind": "festival"
+  },
+  {
+   "w": "Sulani",
+   "hood": "Ohan'ali Town",
+   "name": "Flowers and Music",
+   "star": true,
+   "days": [
+    "Tue"
+   ],
+   "time": "about 1–7 pm",
+   "start": 800,
+   "often": "week",
+   "kind": "festival"
+  },
+  {
+   "w": "Sulani",
+   "hood": "Ohan'ali Town",
+   "name": "Town Potluck",
+   "star": true,
+   "days": [
+    "Wed"
+   ],
+   "time": "about 6 pm–midnight",
+   "start": 1100,
+   "often": "week",
+   "kind": "festival"
+  },
+  {
+   "w": "Sulani",
+   "hood": "Ohan'ali Town",
+   "name": "Island Celebration",
+   "star": true,
+   "days": [
+    "Thu"
+   ],
+   "time": "9 am–midnight",
+   "start": 540,
+   "often": "fortnight",
+   "kind": "festival"
+  },
+  {
+   "w": "Sulani",
+   "hood": "Ohan'ali Town",
+   "name": "Beach Bonfire",
+   "star": true,
+   "days": [
+    "Fri"
+   ],
+   "time": "about 6 pm–midnight",
+   "start": 1100,
+   "often": "week",
+   "kind": "festival"
+  },
+  {
+   "w": "Sulani",
+   "hood": "Ohan'ali Town",
+   "name": "Fishing Competition",
+   "star": true,
+   "days": [
+    "Sat"
+   ],
+   "time": "noon–6 pm",
+   "start": 720,
+   "often": "week",
+   "kind": "festival"
+  },
+  {
+   "w": "Sulani",
+   "hood": "Ohan'ali Town",
+   "name": "Family Fun Day",
+   "star": true,
+   "days": [
+    "Sun"
+   ],
+   "time": "about 9 am–4 pm",
+   "start": 560,
+   "often": "week",
+   "kind": "festival"
+  },
+  {
+   "w": "Ravenwood",
+   "hood": "Mourningvale",
+   "name": "Afterlife Anonymous",
+   "days": [
+    "Mon",
+    "Wed",
+    "Fri"
+   ],
+   "time": "6–11 pm",
+   "start": 1080,
+   "often": "week",
+   "kind": "festival",
+   "note": "A meeting for ghosts"
+  },
+  {
+   "w": "Ravenwood",
+   "hood": "Mourningvale",
+   "name": "Afterlife Anonymous",
+   "days": [
+    "Tue",
+    "Thu"
+   ],
+   "time": "10 am–3 pm",
+   "start": 600,
+   "often": "week",
+   "kind": "festival",
+   "note": "A meeting for ghosts"
+  },
+  {
+   "w": "Ravenwood",
+   "hood": "Crow's Crossing",
+   "name": "Casket Sale",
+   "star": true,
+   "days": [
+    "Mon",
+    "Wed",
+    "Fri"
+   ],
+   "time": "11 am–5 pm",
+   "start": 660,
+   "often": "week",
+   "kind": "festival"
+  },
+  {
+   "w": "Ravenwood",
+   "hood": "Crow's Crossing",
+   "name": "Funeral BBQ",
+   "star": true,
+   "days": [
+    "Tue",
+    "Thu",
+    "Sun"
+   ],
+   "time": "11 am–5 pm",
+   "start": 660,
+   "often": "week",
+   "kind": "festival"
+  },
+  {
+   "w": "Ravenwood",
+   "hood": "Mourningvale",
+   "name": "Thinned Festiveil",
+   "days": [
+    "Wed"
+   ],
+   "time": "10 am–6 pm",
+   "start": 600,
+   "often": "week",
+   "kind": "festival"
+  },
+  {
+   "w": "Ravenwood",
+   "hood": "Crow's Crossing",
+   "name": "Ravenwood Family Day",
+   "days": [
+    "Sat"
+   ],
+   "time": "noon–8 pm",
+   "start": 720,
+   "often": "week",
+   "kind": "festival"
+  },
+  {
+   "w": "Ravenwood",
+   "hood": "Whispering Glen",
+   "name": "Moon Revelry",
+   "special": "daily",
+   "time": "7 pm–1 am",
+   "start": 1140,
+   "often": "Every night but the new moon",
+   "kind": "festival"
+  },
+  {
+   "w": "Ravenwood",
+   "hood": "Whispering Glen",
+   "name": "Full Moon Revelry",
+   "special": "fullmoon",
+   "time": "at night",
+   "start": 1200,
+   "often": "Every full moon",
+   "kind": "festival"
+  },
+  {
+   "w": "Nordhaven",
+   "hood": "Gammelvik",
+   "name": "Writers & Readers",
+   "days": [
+    "Sat"
+   ],
+   "time": "2–7 pm",
+   "start": 840,
+   "often": "week",
+   "kind": "festival",
+   "group": "Hobby meetup"
+  },
+  {
+   "w": "Nordhaven",
+   "hood": "Iverstad",
+   "name": "Writers & Readers",
+   "days": [
+    "Mon"
+   ],
+   "time": "noon–5 pm",
+   "start": 720,
+   "often": "week",
+   "kind": "festival",
+   "group": "Hobby meetup"
+  },
+  {
+   "w": "Nordhaven",
+   "hood": "Gammelvik",
+   "name": "Galactic Gambits",
+   "days": [
+    "Mon"
+   ],
+   "time": "8 pm–1 am",
+   "start": 1200,
+   "often": "week",
+   "kind": "festival",
+   "group": "Hobby meetup"
+  },
+  {
+   "w": "Nordhaven",
+   "hood": "Iverstad",
+   "name": "Galactic Gambits",
+   "days": [
+    "Wed"
+   ],
+   "time": "8 pm–1 am",
+   "start": 1200,
+   "often": "week",
+   "kind": "festival",
+   "group": "Hobby meetup"
+  },
+  {
+   "w": "Nordhaven",
+   "hood": "Gammelvik",
+   "name": "Sweat & Socialize",
+   "days": [
+    "Tue"
+   ],
+   "time": "6–11 am",
+   "start": 360,
+   "often": "week",
+   "kind": "festival",
+   "group": "Hobby meetup"
+  },
+  {
+   "w": "Nordhaven",
+   "hood": "Iverstad",
+   "name": "Sweat & Socialize",
+   "days": [
+    "Thu"
+   ],
+   "time": "6–11 am",
+   "start": 360,
+   "often": "week",
+   "kind": "festival",
+   "group": "Hobby meetup"
+  },
+  {
+   "w": "Nordhaven",
+   "hood": "Gammelvik",
+   "name": "Pottery & Pals",
+   "days": [
+    "Thu"
+   ],
+   "time": "5–10 pm",
+   "start": 1020,
+   "often": "week",
+   "kind": "festival",
+   "group": "Hobby meetup"
+  },
+  {
+   "w": "Nordhaven",
+   "hood": "Iverstad",
+   "name": "Pottery & Pals",
+   "days": [
+    "Tue"
+   ],
+   "time": "5–10 pm",
+   "start": 1020,
+   "often": "week",
+   "kind": "festival",
+   "group": "Hobby meetup"
+  },
+  {
+   "w": "Nordhaven",
+   "hood": "Gammelvik",
+   "name": "Munch & Mingle",
+   "days": [
+    "Wed"
+   ],
+   "time": "11 am–4 pm",
+   "start": 660,
+   "often": "week",
+   "kind": "festival",
+   "group": "Hobby meetup"
+  },
+  {
+   "w": "Nordhaven",
+   "hood": "Iverstad",
+   "name": "Munch & Mingle",
+   "days": [
+    "Fri"
+   ],
+   "time": "11 am–4 pm",
+   "start": 660,
+   "often": "week",
+   "kind": "festival",
+   "group": "Hobby meetup"
+  },
+  {
+   "w": "Nordhaven",
+   "hood": "Gammelvik",
+   "name": "Spotlight Stars",
+   "days": [
+    "Fri"
+   ],
+   "time": "6–11 pm",
+   "start": 1080,
+   "often": "week",
+   "kind": "festival",
+   "group": "Hobby meetup"
+  },
+  {
+   "w": "Nordhaven",
+   "hood": "Iverstad",
+   "name": "Spotlight Stars",
+   "days": [
+    "Sun"
+   ],
+   "time": "6–11 pm",
+   "start": 1080,
+   "often": "week",
+   "kind": "festival",
+   "group": "Hobby meetup"
+  },
+  {
+   "w": "Nordhaven",
+   "hood": "Gammelvik",
+   "name": "Creative Cowork",
+   "days": [
+    "Sun"
+   ],
+   "time": "8 am–1 pm",
+   "start": 480,
+   "often": "week",
+   "kind": "festival",
+   "group": "Hobby meetup"
+  },
+  {
+   "w": "Nordhaven",
+   "hood": "Iverstad",
+   "name": "Creative Cowork",
+   "days": [
+    "Sat"
+   ],
+   "time": "8 am–1 pm",
+   "start": 480,
+   "often": "week",
+   "kind": "festival",
+   "group": "Hobby meetup"
+  },
+  {
+   "w": "Gibbi Point",
+   "hood": "Jellyfish Junction",
+   "name": "Fitness Fest",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed"
+   ],
+   "time": "9 am–6 pm",
+   "start": 540,
+   "often": "week",
+   "kind": "festival",
+   "note": "Wednesday is Wacky Wednesday",
+   "where": "Jellyfish Junction’s town square"
+  },
+  {
+   "w": "Gibbi Point",
+   "hood": "Jellyfish Junction",
+   "name": "Glow and Flow Festival",
+   "special": "newmoon",
+   "time": "7 pm–2 am",
+   "start": 1140,
+   "often": "Every new moon",
+   "kind": "festival",
+   "where": "Underlight Bay, Jellyfish Junction"
+  },
+  {
+   "w": "Gibbi Point",
+   "hood": "Crystal Valley",
+   "name": "Sunrise, Sunset Festival",
+   "days": [
+    "Sat",
+    "Sun"
+   ],
+   "time": "1–6 pm",
+   "start": 780,
+   "often": "week",
+   "kind": "festival"
+  },
+  {
+   "w": "Gibbi Point",
+   "hood": "Wanderwood Wilds",
+   "name": "'Round the Fire Festival",
+   "days": [
+    "Sat",
+    "Sun"
+   ],
+   "time": "7 pm–2 am",
+   "start": 1140,
+   "often": "week",
+   "kind": "festival"
+  },
+  {
+   "w": "Tomarang",
+   "hood": "Morensong",
+   "name": "Night Market",
+   "special": "daily",
+   "time": "6 pm–2 am",
+   "start": 1080,
+   "often": "Every night",
+   "kind": "festival",
+   "note": "Food and shopping stalls on the street"
+  },
+  {
+   "w": "Chestnut Ridge",
+   "hood": "New Appaloosa",
+   "name": "Ultimate Horse Championship",
+   "days": [
+    "Sat"
+   ],
+   "time": "7 am–7 pm",
+   "start": 420,
+   "often": "week",
+   "kind": "festival",
+   "where": "Hay Now! Equestrian Center, New Appaloosa",
+   "note": "For horses that have placed in every Master event; entry §2,000"
+  },
+  {
+   "w": "Chestnut Ridge",
+   "hood": "New Appaloosa",
+   "name": "Horse competitions",
+   "special": "any",
+   "time": "7 am–7 pm",
+   "start": 420,
+   "often": "Any day",
+   "kind": "festival",
+   "where": "Hay Now! Equestrian Center, New Appaloosa",
+   "note": "Barrel Racing, Endurance Racing, Show Jumping, Western Pleasure"
+  },
+  {
+   "w": "Ondarion",
+   "hood": null,
+   "name": "Swordsmanship tournaments",
+   "special": "any",
+   "time": "when you enter one",
+   "start": 600,
+   "often": "Any day",
+   "kind": "festival",
+   "where": "",
+   "note": "Gunther Goth’s Cup, Regional Ondarion Invitational, SimNation Grand Masters"
+  },
+  {
+   "w": "Britechester",
+   "hood": "University of Britechester",
+   "name": "Figure Painting",
+   "days": [
+    "Sun"
+   ],
+   "time": "10 am–2 pm",
+   "start": 600,
+   "often": "week",
+   "kind": "school",
+   "where": "by the canal near the UoB Commons",
+   "note": "Art Society"
+  },
+  {
+   "w": "Britechester",
+   "hood": "University of Britechester",
+   "name": "Figure Painting",
+   "days": [
+    "Mon",
+    "Thu"
+   ],
+   "time": "3–7 pm",
+   "start": 900,
+   "often": "week",
+   "kind": "school",
+   "where": "by the canal near the UoB Commons",
+   "note": "Art Society"
+  },
+  {
+   "w": "Britechester",
+   "hood": "Foxbury Institute",
+   "name": "Utili-Bot Contest",
+   "days": [
+    "Sun"
+   ],
+   "time": "noon–6 pm",
+   "start": 720,
+   "often": "week",
+   "kind": "school",
+   "where": "Foxbury quad",
+   "note": "Bot Savants"
+  },
+  {
+   "w": "Britechester",
+   "hood": "University of Britechester",
+   "name": "Creativity Celebration",
+   "days": [
+    "Sun"
+   ],
+   "time": "3–9 pm",
+   "start": 900,
+   "often": "week",
+   "kind": "school",
+   "where": "UoB quad",
+   "note": "Spirit Corps"
+  },
+  {
+   "w": "Britechester",
+   "hood": "University of Britechester",
+   "name": "Debate Practice",
+   "days": [
+    "Tue",
+    "Wed"
+   ],
+   "time": "4–8 pm",
+   "start": 960,
+   "often": "week",
+   "kind": "school",
+   "where": "Darby’s Den (UoB Commons)",
+   "note": "Debate Guild"
+  },
+  {
+   "w": "Britechester",
+   "hood": "Foxbury Institute",
+   "name": "Robot Building Meetup",
+   "days": [
+    "Tue",
+    "Thu"
+   ],
+   "time": "7–11 pm",
+   "start": 1140,
+   "often": "week",
+   "kind": "school",
+   "where": "Larry’s Lagoon (Foxbury Commons)",
+   "note": "Bot Savants"
+  },
+  {
+   "w": "Britechester",
+   "hood": "Gibbs Hill",
+   "name": "Study Session",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu"
+   ],
+   "time": "3–7 pm",
+   "start": 900,
+   "often": "week",
+   "kind": "school",
+   "where": "Laurel Library",
+   "note": "Brainiacs",
+   "needs": {
+    "txt": "A Library: Laurel Library",
+    "ok": true
+   }
+  },
+  {
+   "w": "Britechester",
+   "hood": "Gibbs Hill",
+   "name": "Bar nights",
+   "special": "daily",
+   "time": "8 pm–midnight",
+   "start": 1200,
+   "often": "Every night, one organisation a night",
+   "kind": "school",
+   "where": "The Royal Crown",
+   "needs": {
+    "txt": "A Bar: The Royal Crown",
+    "ok": true
+   }
+  },
+  {
+   "w": "Britechester",
+   "hood": "Foxbury Institute",
+   "name": "Foxbury Game Day Party",
+   "days": [
+    "Fri"
+   ],
+   "time": "3–7 pm",
+   "start": 900,
+   "often": "week",
+   "kind": "school",
+   "where": "Foxbury quad"
+  },
+  {
+   "w": "Britechester",
+   "hood": "University of Britechester",
+   "name": "Britechester Game Day Party",
+   "days": [
+    "Fri",
+    "Sat"
+   ],
+   "time": "3–7 pm",
+   "start": 900,
+   "often": "week",
+   "kind": "school",
+   "where": "UoB quad"
+  },
+  {
+   "w": "Britechester",
+   "hood": "University of Britechester",
+   "name": "Debate Showdown",
+   "days": [
+    "Sat"
+   ],
+   "time": "8 am–2 pm",
+   "start": 480,
+   "often": "week",
+   "kind": "school",
+   "where": "UoB quad"
+  },
+  {
+   "w": "Britechester",
+   "hood": "Foxbury Institute",
+   "name": "School Spirit Day",
+   "days": [
+    "Sat"
+   ],
+   "time": "11 am–5 pm",
+   "start": 660,
+   "often": "week",
+   "kind": "school",
+   "where": "Foxbury quad"
+  },
+  {
+   "w": "Britechester",
+   "hood": "Gibbs Hill",
+   "name": "Sprite Celebration Ritual",
+   "days": [
+    "Wed",
+    "Fri",
+    "Sun"
+   ],
+   "time": "10 pm–2 am",
+   "start": 1320,
+   "often": "week",
+   "kind": "school",
+   "where": "Ritual Grounds, Gibbs Hill",
+   "note": "The secret society"
+  },
+  {
+   "w": "Britechester",
+   "hood": "University of Britechester",
+   "name": "Exam Cram",
+   "days": [
+    "Mon"
+   ],
+   "time": "10 pm–6 am",
+   "start": 1320,
+   "often": "Most weeks",
+   "kind": "school",
+   "where": "Darby’s Den and Larry’s Lagoon"
+  },
+  {
+   "w": "Britechester",
+   "hood": "Foxbury Institute",
+   "name": "E-Sports",
+   "days": [
+    "Wed"
+   ],
+   "time": "2–6 pm",
+   "start": 840,
+   "often": "week",
+   "kind": "school",
+   "where": "Larry’s Lagoon (Foxbury Commons)"
+  },
+  {
+   "w": "Britechester",
+   "hood": "University of Britechester",
+   "name": "Poetry night",
+   "days": [
+    "Thu"
+   ],
+   "time": "8 pm–midnight",
+   "start": 1200,
+   "often": "week",
+   "kind": "school",
+   "where": "Darby’s Den (UoB Commons)"
+  },
+  {
+   "w": "Britechester",
+   "hood": "University of Britechester",
+   "name": "Mixer",
+   "days": [
+    "Sat"
+   ],
+   "time": "8 pm–1 am",
+   "start": 1200,
+   "often": "Most weeks",
+   "kind": "school",
+   "where": "Darby’s Den and Larry’s Lagoon"
+  },
+  {
+   "w": "Copperdale",
+   "hood": "Rockridge Heights",
+   "name": "Football Team Sports Day",
+   "days": [
+    "Thu"
+   ],
+   "time": "5–10 pm",
+   "start": 1020,
+   "often": "week",
+   "kind": "school",
+   "where": "the football field behind the high school"
+  },
+  {
+   "w": "Copperdale",
+   "hood": "Rockridge Heights",
+   "name": "Cheerleading Team Sports Day",
+   "days": [
+    "Fri"
+   ],
+   "time": "5–10 pm",
+   "start": 1020,
+   "often": "week",
+   "kind": "school",
+   "where": "the football field"
+  },
+  {
+   "w": "Copperdale",
+   "hood": "Rockridge Heights",
+   "name": "High School Exams",
+   "days": [
+    "Fri"
+   ],
+   "time": "10 am–3 pm",
+   "start": 600,
+   "often": "week",
+   "kind": "school",
+   "where": "Copperdale High School",
+   "needs": {
+    "txt": "The High School: the game’s build",
+    "ok": true
+   }
+  },
+  {
+   "w": "Copperdale",
+   "hood": "Rockridge Heights",
+   "name": "Prom",
+   "days": [
+    "Sat"
+   ],
+   "time": "7–11 pm",
+   "start": 1140,
+   "often": "week",
+   "kind": "school",
+   "where": "the Auditorium",
+   "note": "When a teen is played; after-party on Plumbite Cove’s pier",
+   "needs": {
+    "txt": "The Auditorium: the game’s build",
+    "ok": true
+   }
+  },
+  {
+   "w": "Copperdale",
+   "hood": "Rockridge Heights",
+   "name": "High School Graduation",
+   "days": [
+    "Sun"
+   ],
+   "time": "from 6 pm",
+   "start": 1080,
+   "often": "After a teen ages up",
+   "kind": "school",
+   "where": "the Auditorium",
+   "needs": {
+    "txt": "The Auditorium: the game’s build",
+    "ok": true
+   }
+  },
+  {
+   "w": "Copperdale",
+   "hood": "Rockridge Heights",
+   "name": "Career Day",
+   "special": "oncall",
+   "time": "a school day",
+   "start": 600,
+   "often": "The game picks the day",
+   "kind": "school",
+   "where": "the Auditorium"
+  },
+  {
+   "w": "Copperdale",
+   "hood": "Rockridge Heights",
+   "name": "Science fairs",
+   "special": "oncall",
+   "time": "5–10 pm",
+   "start": 1020,
+   "often": "When the chess or computer team calls one",
+   "kind": "school",
+   "where": "the school grounds"
+  }
+ ],
+ "lotEvents": [
+  {
+   "type": "Lounge",
+   "name": "Talent Showcase",
+   "days": [
+    "Fri",
+    "Sat"
+   ],
+   "time": "6–11 pm",
+   "start": 1080,
+   "pack": "Get Famous"
+  },
+  {
+   "type": "Lounge",
+   "trait": "Up-and-Coming Hotspot",
+   "name": "Meet A Celebrity",
+   "days": [
+    "Mon",
+    "Wed"
+   ],
+   "time": "10 am–4 pm",
+   "start": 600,
+   "pack": "Get Famous"
+  },
+  {
+   "type": "Lounge",
+   "trait": "Hottest Spot in Town",
+   "name": "Starlight Accolades",
+   "days": [
+    "Sun"
+   ],
+   "time": "6–11 pm",
+   "start": 1080,
+   "pack": "Get Famous"
+  },
+  {
+   "type": "Thrift and Boba Store",
+   "name": "Fashion show",
+   "days": [
+    "Mon",
+    "Fri"
+   ],
+   "time": "3–8 pm",
+   "start": 900,
+   "pack": "High School Years"
+  },
+  {
+   "type": "Thrift and Boba Store",
+   "name": "Comedy open mic",
+   "days": [
+    "Wed"
+   ],
+   "time": "3–8 pm",
+   "start": 900,
+   "pack": "High School Years"
+  },
+  {
+   "type": "Thrift and Boba Store",
+   "name": "Poetry open mic",
+   "days": [
+    "Sun"
+   ],
+   "time": "3–8 pm",
+   "start": 900,
+   "pack": "High School Years"
+  }
+ ],
+ "surprise": [
+  [
+   "Mon",
+   "Rebate Day"
+  ],
+  [
+   "Wed",
+   "The Lottery"
+  ],
+  [
+   "Thu",
+   "TV Season Premiere"
+  ],
+  [
+   "Fri",
+   "Night on the Town"
+  ],
+  [
+   "Sat",
+   "Talk Like a Pirate Day"
+  ],
+  [
+   "Sat",
+   "Neighborhood Brawl"
+  ],
+  [
+   "Sun",
+   "Prank Day"
+  ],
+  [
+   "Sun",
+   "New Skill Day"
+  ]
+ ]
+}
