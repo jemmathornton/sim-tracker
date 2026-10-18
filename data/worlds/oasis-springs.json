@@ -626,5 +626,11 @@
     }
    ]
   }
+ },
+ "weatherSeasons": {
+  "Spring": "Sunny, partly cloudy, cloudy",
+  "Summer": "Heat wave, sunny, partly cloudy",
+  "Autumn": "Sunny, partly cloudy, mysterious weather",
+  "Winter": "Sunny, rain, chance of rain"
  }
 }

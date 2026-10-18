@@ -270,5 +270,11 @@
    "bio": "Angela and Lilith Pleasant have moved into an old family home located in Gibbs Hill to attend the prestigious universities in Britechester. It will be a true test to find out whether their bond as twins can overcome their differences. Their majors have already split them into separate universities, but whether they will be at odds or work together to make it through is a new challenge in their life.",
    "bioFrom": "EA"
   }
+ },
+ "weatherSeasons": {
+  "Spring": "Cloudy, sunny, partly cloudy",
+  "Summer": "Cloudy, sunny, rain",
+  "Autumn": "Sunny, cloudy, partly cloudy",
+  "Winter": "Chance of snow, cloudy, partly cloudy"
  }
 }

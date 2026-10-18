@@ -558,5 +558,11 @@
    "bio": "The Specter family has an air of mystery to them; rumor has it that Olive's prior husbands all met unfortunate ends, which makes things rather awkward now that she's engaged to Layne Coffin, the founding and sole member of the band Withering Widdershins. Does Layne know his soon-to-be Specter spouse has skeletons in her closet? He's definitely not going to be asking too many questions about her son Nyon's mysterious parentage. Let's just say that maybe Grim's not keeping tabs on their household solely because of Olive's past loves.",
    "bioFrom": "EA"
   }
+ },
+ "weatherSeasons": {
+  "Spring": "Chance of snow, partly cloudy, sunny",
+  "Summer": "Cloudy, partly cloudy, sunny",
+  "Autumn": "Chance of rain, partly cloudy, sunny",
+  "Winter": "Snow, freezing, chance of snow"
  }
 }

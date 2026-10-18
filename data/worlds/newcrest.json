@@ -628,5 +628,11 @@
     }
    ]
   }
+ },
+ "weatherSeasons": {
+  "Spring": "Chance of rain, mysterious weather, partly cloudy",
+  "Summer": "Heat wave, thunderstorms, cloudy",
+  "Autumn": "Chance of rain, mysterious weather, partly cloudy",
+  "Winter": "Snow, freezing, chance of snow"
  }
 }

@@ -411,5 +411,11 @@
     }
    ]
   }
+ },
+ "weatherSeasons": {
+  "Spring": "Sunny, chance of rain, chance of snow",
+  "Summer": "Sunny, cloudy, partly cloudy",
+  "Autumn": "Sunny, windy, chance of rain",
+  "Winter": "Sunny, chance of rain, chance of thunderstorms"
  }
 }

@@ -284,5 +284,11 @@
    "bio": "Coming to Sulani for inspiration Leila didn't expect to fall in love so deeply with the islands. And it wasn't just the scenery that she fell for, but also for Oliana and her son Tane that welcomed her so easily into their family. The three are now an insperable trio that call Sulani their home enjoying the sand and ocean at their own pace.",
    "bioFrom": "EA"
   }
+ },
+ "weatherSeasons": {
+  "Spring": "Sunny, chance of rain, cloudy",
+  "Summer": "Sunny, windy, monsoons",
+  "Autumn": "Sunny, windy, monsoons",
+  "Winter": "Sunny, cloudy, windy"
  }
 }

@@ -355,5 +355,11 @@
    "bio": "Following her heart had drastic consequences for Juliette Monty (formerly Capp). Disowned by her old Dynasty, she's lost her Noble ranking and most of her fortunes. Yet life is so much better with her sweetheart Romeo. It has truly filled her heart to see their son Dante grow up to be as kind-hearted as his father. However—now that her new family is rooted and settled—she keeps daydreaming about claiming back all that was taken from her.",
    "bioFrom": "EA"
   }
+ },
+ "weatherSeasons": {
+  "Spring": "Sunny, partly cloudy, cloudy",
+  "Summer": "Sunny, partly cloudy, cloudy",
+  "Autumn": "Sunny, partly cloudy, cloudy",
+  "Winter": "Sunny, windy, partly cloudy"
  }
 }

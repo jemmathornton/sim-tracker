@@ -94,5 +94,11 @@
    "bio": "The Vatore siblings moved into Forgotten Hollow a few years ago and are striving to make it their home. This can be quite challenging at times since they are not exactly on the best terms with Vladislaus Straud, but when asked they only ever mention a difference in their culinary tastes.",
    "bioFrom": "EA"
   }
+ },
+ "weatherSeasons": {
+  "Spring": "Partly cloudy, cloudy, chance of rain",
+  "Summer": "Cloudy, heat wave, thunderstorms",
+  "Autumn": "Cloudy, partly cloudy, rain",
+  "Winter": "Chance of snow, cloudy, partly cloudy"
  }
 }

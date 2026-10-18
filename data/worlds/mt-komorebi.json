@@ -313,5 +313,11 @@
    "bio": "Rumor says the Nishidake family are sacred guardians of Mt. Komorebi. Indeed, Shigeru fumes over the Ito family's local development plans. Sachiko, however, feels warmly toward Megumi due to an old friendship with the young woman's mom. Plus, she knows what's in her granddaughter's heart... Kaori moved to Mt. Komorebi after losing her parents. She soon discovered two loves: the slopes, and the son of her grandfather's sworn enemy! If she had one wish, she’d melt her grandfather's hardened heart.",
    "bioFrom": "EA"
   }
+ },
+ "weatherSeasons": {
+  "Spring": "Sunny, rain, partly cloudy",
+  "Summer": "Sunny, partly cloudy, cloudy",
+  "Autumn": "Rain, chance of rain, partly cloudy",
+  "Winter": "Snow, freezing, chance of snow"
  }
 }

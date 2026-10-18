@@ -45,5 +45,11 @@
    "text": "Enjoy a quiet outdoor seating area by the river where the ducks like to play"
   }
  ],
- "households": {}
+ "households": {},
+ "weatherSeasons": {
+  "Spring": "Sunny, chance of rain, partly cloudy",
+  "Summer": "Heat wave, thunderstorms, cloudy",
+  "Autumn": "Partly cloudy, cloudy, rain",
+  "Winter": "Snow, chance of snow, freezing"
+ }
 }

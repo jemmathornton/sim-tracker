@@ -189,6 +189,19 @@ def weather_line(seasons):
     return line[0].upper() + line[1:]
 
 
+SEASON_NAMES = (("SPRING", "Spring"), ("SUMMER", "Summer"), ("FALL", "Autumn"), ("WINTER", "Winter"))
+
+
+def weather_seasons(seasons):
+    """Each season's three likeliest kinds of weather, as shown on the world page (her layout, 19 Oct): {"Spring": "Sunny, chance of rain, partly cloudy"}."""
+    if not seasons or not any(seasons.values()): return None
+    out = {}
+    for k, name in SEASON_NAMES:
+        top = [x.replace('!', '').lower() for x in seasons.get(k, [])[:3]]
+        if top: out[name] = (", ".join(top)).capitalize()
+    return out or None
+
+
 def festivals(names):
     """Event names for a card: one entry for a group of hobby meetups, no "X - variant" duplicates, game casing."""
     out = []
@@ -217,6 +230,9 @@ def apply():
         line = weather_line(o['weather'].get(wn))
         if line: W['weather'] = line; n['weather'] += 1
         else: W.pop('weather', None)
+        ws = weather_seasons(o['weather'].get(wn))
+        if ws: W['weatherSeasons'] = ws
+        else: W.pop('weatherSeasons', None)
         if hl.get(wn): W['highlights'] = [{"name": i['heading'], "text": i['text']} for i in hl[wn]]; n['highlights'] += 1
         for h in W['neighbourhoods']:
             h.pop('festivals', None); h.pop('ecoStart', None)

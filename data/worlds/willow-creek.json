@@ -1247,5 +1247,11 @@
    "name": "Home to Bob Pancakes",
    "text": "Stroll around Courtyard Lane for a chance to see the legendary Bob Pancakes!"
   }
- ]
+ ],
+ "weatherSeasons": {
+  "Spring": "Sunny, chance of rain, partly cloudy",
+  "Summer": "Heat wave, thunderstorms, cloudy",
+  "Autumn": "Partly cloudy, cloudy, rain",
+  "Winter": "Snow, chance of snow, freezing"
+ }
 }

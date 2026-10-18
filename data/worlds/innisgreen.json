@@ -54,5 +54,11 @@
    "name": "An Enchanting World",
    "text": "From the forested Everdew to the Coast of Adhmor, delight and discovery await in the special landmarks, plants, and stories of this world."
   }
- ]
+ ],
+ "weatherSeasons": {
+  "Spring": "Chance of rain, sunny, partly cloudy",
+  "Summer": "Sunny, cloudy, chance of rain",
+  "Autumn": "Sunny, chance of rain, partly cloudy",
+  "Winter": "Snow, chance of snow, sunny"
+ }
 }

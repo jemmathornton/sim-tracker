@@ -289,5 +289,11 @@
    "bio": "Freeda Perry never expected to be juggling her Revive and Thrive Fitness Retreat along with her shy, thoughtful grandson Dougie—but here we are anyway! Freeda spends her days spinning and encouraging others to reach for new gains while nudging Dougie to get outside and explore the world and perhaps unleash his own Wild Child.",
    "bioFrom": "EA"
   }
+ },
+ "weatherSeasons": {
+  "Spring": "Sunny, rain, partly cloudy",
+  "Summer": "Sunny, cloudy, partly cloudy",
+  "Autumn": "Cloudy, sunny, partly cloudy",
+  "Winter": "Sunny, cloudy, chance of snow"
  }
 }

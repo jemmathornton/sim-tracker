@@ -45,5 +45,11 @@
    "name": "Granite Falls Forest",
    "text": "Experience the true perfection of nature by exploring the lush and beautiful Granite Falls Forest"
   }
- ]
+ ],
+ "weatherSeasons": {
+  "Spring": "Chance of rain, rain, sunny",
+  "Summer": "Thunderstorms, heat wave, cloudy",
+  "Autumn": "Windy, partly cloudy, sunny",
+  "Winter": "Snow, chance of snow, windy"
+ }
 }

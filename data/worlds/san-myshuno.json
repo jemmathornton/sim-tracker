@@ -643,5 +643,11 @@
    "bio": "Tech-savvy hunk Sergio and brash DJ Joaquin have little in common... except for the finer things in life. As they climb the ranks and rake in the bucks, just how awesome can they make their sweet pad?",
    "bioFrom": "EA"
   }
+ },
+ "weatherSeasons": {
+  "Spring": "Chance of rain, partly cloudy, cloudy",
+  "Summer": "Cloudy, partly cloudy, sunny",
+  "Autumn": "Partly cloudy, sunny, windy",
+  "Winter": "Snow, chance of snow, sunny"
  }
 }

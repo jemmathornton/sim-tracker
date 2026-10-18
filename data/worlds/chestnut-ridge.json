@@ -528,5 +528,11 @@
     }
    ]
   }
+ },
+ "weatherSeasons": {
+  "Spring": "Sunny, windy, rain",
+  "Summer": "Sunny, partly cloudy, heat wave",
+  "Autumn": "Windy, sunny, rain",
+  "Winter": "Snow, chance of snow, freezing"
  }
 }

@@ -909,11 +909,14 @@ function world(w){
   h += `<a class="stats-link" href="#stats-${w.id}"><span>${ic("grid")}Progress, lot by lot</span><span class="go">See the stats for ${esc(w.name)} ${ic("arrow")}</span></a>`;
   return h;
 }
+const SEASON_ICON = {Spring: "flower", Summer: "sun", Autumn: "leaf", Winter: "snowflake"}, CAL_SEASONS = ["Spring", "Summer", "Autumn", "Winter"];
+// each season with its icon and the game's three likeliest kinds of weather (her layout, 19 Oct)
 // the world's weather and the three highlights the game shows when you pick it (14 Oct, read from the game's own files)
 function worldAbout(w){
   if (!w.weather && !w.highlights) return "";
   return `<section class="block" style="--h:${w.color}"><div class="block-head"><h2>Weather and <em>highlights</em></h2><span class="count">from the game</span></div>
-    ${w.weather ? `<p class="home-to world-weather">${ic("weather")}<span>${esc(w.weather)}</span></p>` : ""}
+    ${w.weatherSeasons ? `<div class="wx-seasons">${CAL_SEASONS.filter(n => w.weatherSeasons[n]).map(n => `<div class="s-${n.toLowerCase()}">${ic(SEASON_ICON[n])}<b>${n}</b><span>${esc(w.weatherSeasons[n])}</span></div>`).join("")}</div>`
+      : w.weather ? `<p class="home-to world-weather">${ic("weather")}<span>${esc(w.weather)}</span></p>` : ""}
     ${w.highlights ? `<div class="highlights">${w.highlights.map(x => `<div>${ic("landmark")}<b>${esc(x.name)}</b><span>${esc(x.text)}</span></div>`).join("")}</div>` : ""}</section>`;
 }
 function hoodPage(x){
@@ -1413,7 +1416,7 @@ const CAL_KINDS = {holiday: "Holidays", festival: "Festivals", community: "Commu
 const calKind = e => e.kind === "uni" || e.kind === "highschool" ? "school" : e.kind;
 // festivals, community events and lot nights are filtered by world; education by university or high school (her asks, 19 Oct)
 const calSub = e => e.kind === "uni" ? "University" : e.kind === "highschool" ? "High school" : e.kind === "lot" ? (/^Lounge/.test(e.lotType) ? "Lounges" : e.lotType + "s") : null;
-const SEASON_ICON = {Spring: "flower", Summer: "sun", Autumn: "leaf", Winter: "snowflake"};
+
 const calW = name => worlds.find(w => w.name === name);
 // text on a world-coloured chip: dark on the light colours (Sulani's yellow), white on the rest
 const onColour = hex => { const n = parseInt(String(hex).slice(1), 16), [r, g, b] = [n >> 16 & 255, n >> 8 & 255, n & 255];

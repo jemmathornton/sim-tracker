@@ -207,7 +207,7 @@ def build():
              "blurb": W.get('blurb', ''), "hoods": []}
         if W.get('glow'): w["glow"] = W['glow']
         if W.get('heroY') is not None: w["heroY"] = W['heroY']   # how far down the world banner looks at its map (0 top, 100 bottom; her call)
-        w.update({k: W[k] for k in ("weather", "highlights") if W.get(k)})   # from the game (tools/research/world_extras.py --apply)
+        w.update({k: W[k] for k in ("weather", "weatherSeasons", "highlights") if W.get(k)})   # from the game (tools/research/world_extras.py --apply)
         if w.get("highlights"): w["highlights"] = [{**x, "text": british(x["text"])} for x in w["highlights"]]   # British spelling, like EA's bios (19 Oct)
         for hood in W['neighbourhoods']:
             lots = []

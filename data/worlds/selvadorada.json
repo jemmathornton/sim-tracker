@@ -46,5 +46,11 @@
    "name": "Ancient Artifacts",
    "text": "Find, purchase, and collect ancient artifacts so you can bring a piece of the jungle home with you"
   }
- ]
+ ],
+ "weatherSeasons": {
+  "Spring": "Sunny, chance of rain, rain",
+  "Summer": "Sunny, heat wave, partly cloudy",
+  "Autumn": "Sunny, chance of rain, rain",
+  "Winter": "Chance of rain, rain, partly cloudy"
+ }
 }

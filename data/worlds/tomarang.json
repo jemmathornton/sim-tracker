@@ -333,5 +333,11 @@
    "bioFrom": "EA",
    "single": true
   }
+ },
+ "weatherSeasons": {
+  "Spring": "Rain, partly cloudy, cloudy",
+  "Summer": "Cloudy, partly cloudy, sunny",
+  "Autumn": "Chance of rain, sunny, partly cloudy",
+  "Winter": "Rain, sunny, cloudy"
  }
 }

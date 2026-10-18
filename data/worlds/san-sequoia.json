@@ -360,5 +360,11 @@
    "bio": "The Luna-Sullivan family's a little unusual; Karmine's dad died in a tragic cooking accident, and her mom needed help...so Gramma Eleanor moved in to be the Gramma-in-charge-ish. Except Gramma's just as silly as Karmine is!",
    "bioFrom": "EA"
   }
+ },
+ "weatherSeasons": {
+  "Spring": "Sunny, partly cloudy, rain",
+  "Summer": "Sunny, partly cloudy, cloudy",
+  "Autumn": "Cloudy, sunny, chance of rain",
+  "Winter": "Partly cloudy, sunny, chance of rain"
  }
 }

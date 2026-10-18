@@ -186,5 +186,11 @@
    "bio": "Grace and Tomax have been roommates ever since they first became Spellcasters. They have day jobs, but magic is their main focus, and they've got a friendly competition going to see who will become an Adept Spellcaster first!",
    "bioFrom": "EA"
   }
+ },
+ "weatherSeasons": {
+  "Spring": "Chance of rain, partly cloudy, sunny",
+  "Summer": "Cloudy, partly cloudy, sunny",
+  "Autumn": "Chance of rain, partly cloudy, sunny",
+  "Winter": "Snow, chance of snow, freezing"
  }
 }

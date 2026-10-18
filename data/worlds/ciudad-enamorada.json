@@ -162,5 +162,11 @@
    "bio": "After Monica's ex-husband discovered a hidden talent for competitive lawn gnome sculpting and decided to leave the family to pursue a career in the quirky world of gnome artistry, things have been a bit different for the López household. Monica was struggling to believe she could ever find love again and dedicated her livelihood to the wellbeing of her children instead. However, now that the children are getting older and she is faced with the terrifying prospect of an empty nest, Monica decides it is time to rediscover her romantic side—little did she know this would happen by her falling for the one and only Manuel Aguilar, the notorious dreamboat in town...who just happened to have attended high school with her son. With Carlos feeling particularly threatened by his former classmate as he enters the unpredictable adult dating world alongside his mother and Luz entering teenhood with an already nervous approach to romance, is there a future of happiness and love for the family?",
    "bioFrom": "EA"
   }
+ },
+ "weatherSeasons": {
+  "Spring": "Cloudy, rain, partly cloudy",
+  "Summer": "Sunny, partly cloudy, rain",
+  "Autumn": "Partly cloudy, sunny, chance of rain",
+  "Winter": "Sunny, windy, rain"
  }
 }

@@ -188,5 +188,11 @@
    "bio": "The Sigworth family is rather new in town. Jess, the mom, had to transfer to the StrangerVille National Base. After spending a few days on the base Dylan has started to notice something is a bit off about his wife. Although Dylan is doing all he can to reassure their daughter that everything is okay. Christie is starting to catch on and it is only a matter of time until she realizes what is going on.",
    "bioFrom": "EA"
   }
+ },
+ "weatherSeasons": {
+  "Spring": "Sunny, partly cloudy, cloudy",
+  "Summer": "Heat wave, sunny, partly cloudy",
+  "Autumn": "Sunny, partly cloudy, mysterious weather",
+  "Winter": "Sunny, rain, chance of rain"
  }
 }
