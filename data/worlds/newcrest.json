@@ -577,6 +577,9 @@
       ["Pottery", 2, 10],
       ["Video Gaming", 1, 10],
       ["Fishing", 1, 10]
+     ],
+     "partners": [
+      ["kennedy-kirkland", "Spouse"]
      ]
     },
     {
@@ -598,6 +601,9 @@
       ["Pottery", 2, 10],
       ["Fishing", 1, 10],
       ["Mischief", 1, 10]
+     ],
+     "partners": [
+      ["kayleigh-kirkland", "Spouse"]
      ]
     }
    ]
