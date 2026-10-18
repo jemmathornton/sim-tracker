@@ -1,0 +1,42 @@
+{
+ "households": {
+  "evergreen-harbor|Eco Roomies": "library/evergreen-harbor/eco-roomies.webp",
+  "evergreen-harbor|Henley": "library/evergreen-harbor/henley.webp",
+  "henford-on-bagley|Watson-Holmes": "library/henford-on-bagley/watson-holmes.webp",
+  "newcrest|Sylvia & Kenny Cadberry": "library/newcrest/sylvia-kenny-cadberry.webp",
+  "newcrest|Versaree": "library/newcrest/versaree.webp",
+  "newcrest|Kirkland": "library/newcrest/kirkland.webp",
+  "nordhaven|Johansson": "library/nordhaven/johansson.webp",
+  "oasis-springs|De Costa": "library/oasis-springs/de-costa.webp",
+  "oasis-springs|Rivera": "library/oasis-springs/rivera.webp"
+ },
+ "sims": {
+  "beatrice-palumbo": "library/sims/beatrice-palumbo.webp",
+  "josie-donovan": "library/sims/josie-donovan.webp",
+  "robyn-andersen": "library/sims/robyn-andersen.webp",
+  "tatiana-estrada": "library/sims/tatiana-estrada.webp",
+  "kaleb-henley": "library/sims/kaleb-henley.webp",
+  "natalie-watson": "library/sims/natalie-watson.webp",
+  "peanut": "library/sims/peanut.webp",
+  "sylvia-cadberry": "library/sims/sylvia-cadberry.webp",
+  "kenny-cadberry": "library/sims/kenny-cadberry.webp",
+  "annie-versaree": "library/sims/annie-versaree.webp",
+  "kamila-kirkland-newcrest": "library/sims/kamila-kirkland-newcrest.webp",
+  "kendrick-kirkland-newcrest": "library/sims/kendrick-kirkland-newcrest.webp",
+  "kayleigh-kirkland": "library/sims/kayleigh-kirkland.webp",
+  "kennedy-kirkland": "library/sims/kennedy-kirkland.webp",
+  "freya-loden": "library/sims/freya-loden.webp",
+  "frida-johansson": "library/sims/frida-johansson.webp",
+  "erik-johansson": "library/sims/erik-johansson.webp",
+  "leah-moon-cadberry": "library/sims/leah-moon-cadberry.webp",
+  "alexa-de-costa": "library/sims/alexa-de-costa.webp",
+  "josie-de-costa": "library/sims/josie-de-costa.webp",
+  "tara-de-costa": "library/sims/tara-de-costa.webp",
+  "sonya-rivera": "library/sims/sonya-rivera.webp",
+  "carlos-rivera": "library/sims/carlos-rivera.webp",
+  "marissa-rivera": "library/sims/marissa-rivera.webp",
+  "ratana-rochana": "library/sims/ratana-rochana.webp",
+  "chris-winters": "library/sims/chris-winters.webp",
+  "teddy-winters": "library/sims/teddy-winters.webp"
+ }
+}

@@ -27,7 +27,7 @@ DATA.worlds.filter(w => !w.owned && DATA.households[w.name]).forEach(w => {
 const SMOOTH = () => matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
 const worlds = DATA.worlds, lotIndex = {}, hhIndex = {}, hoodIndex = {};
 // a household's own extras from the data: its picture (a screenshot in shots/), origin (Premade or Mine), played, Neighbourhood Stories
-const hhMore = x => ({portrait: x.portrait, origin: x.origin, played: x.played, stories: x.stories, single: x.single, bio: x.bio, story: x.story});
+const hhMore = x => ({portrait: x.portrait, libraryPic: x.libraryPic, origin: x.origin, played: x.played, stories: x.stories, single: x.single, bio: x.bio, story: x.story});
 worlds.forEach(w => {
   w.id = slug(w.name); w.households = {};
   // a surname on more than one home = related but separate households: "Davidson 1", "Davidson 2"
@@ -1046,11 +1046,14 @@ function household(hh){
 // the roster (each name opens the Sim's page), the family tree from family links only, their story and the neighbours.
 // Relationships between Sims are only on Sim pages.
 // a Sim's or animal's own picture (her screenshot as `portrait`), or a placeholder like the household's
+// (her Library picture of them stands in until then, shown whole on a soft background: tools/library_pictures.py, 19 Oct)
 const simPicture = s => s.portrait ? `<div class="portrait hh-pic" style="background-image:url('${s.portrait}')" role="img" aria-label="${esc(s.name)}"></div>`
+  : s.libraryPic ? `<div class="hh-pic library" style="background-image:url('${s.libraryPic}')" role="img" aria-label="${esc(s.name)}"></div>`
   : `<div class="hh-pic none" aria-hidden="true"><span class="hh-pic-mono">${isAnimal(s) ? animalIcon(s) : initial(s.name)}</span><span class="hh-pic-txt">${ic("camera")}</span></div>`;
 function hhPicture(hh, ids){
   if (hh.portrait) return `<div class="portrait hh-pic" style="background-image:url('${hh.portrait}')" role="img" aria-label="${esc(hhWord(hh.name))}">
     <div class="names">${ids.map(id => `<div><a href="#s-${id}"><b>${esc(firstName(SIMS[id]))}</b></a><small>${esc(SIMS[id].age)}</small></div>`).join("")}</div></div>`;
+  if (hh.libraryPic) return `<div class="hh-pic library" style="background-image:url('${hh.libraryPic}')" role="img" aria-label="${esc(hhWord(hh.name))}"></div>`;
   return `<div class="hh-pic none" aria-hidden="true"><span class="hh-pic-mono">${initial(hh.name)}</span><span class="hh-pic-txt">${ic("camera")}</span></div>`;
 }
 // plain-link lines for where they live and what they own, run, rent and let

@@ -197,6 +197,7 @@ def build():
     residents_unit = {}
     family_links, tenants, name_fix, nb_pt, nb_box, nb_centred, nb_zoom, nb_banner, cs_versions = {}, {}, {}, {}, {}, {}, {}, {}, {}
     lot_of = {}   # Gallery id -> the lot page it belongs to
+    lib_pics = load(os.path.join(DATA, 'library-pictures.json')) if os.path.exists(os.path.join(DATA, 'library-pictures.json')) else {'households': {}, 'sims': {}}
     for wf in world_files():
         W = load(wf); n, ws, owned = W['name'], slug(W['name']), W['owned']
         w = {"name": n, "pack": W['pack'], "owned": owned, "color": W['colour'], "deep": W.get('deep'), "ready": owned,
@@ -243,7 +244,12 @@ def build():
                              **{k: l[k] for k in ("traits", "challenges", "units") if l.get(k)}})   # from her Building save (tools/lot_traits.py); units: a rental's own unit names and traits
             if owned: w["hoods"].append({"name": hood['name'], "desc": hood.get('desc', ''), "color": W['colour'], "lots": lots,
                                          **{k: hood[k] for k in ("festivals", "ecoStart") if hood.get(k)}})
-        if W.get('households'): households[n] = W['households']
+        if W.get('households'):
+            for hn, h in W['households'].items():   # her Library pictures, stand-ins until her own screenshots (tools/library_pictures.py, 19 Oct)
+                if lib_pics['households'].get(ws + '|' + hn): h['libraryPic'] = stamped(lib_pics['households'][ws + '|' + hn])
+                for sm in h.get('sims', []):
+                    if lib_pics['sims'].get(sm.get('id')): sm['libraryPic'] = stamped(lib_pics['sims'][sm['id']])
+            households[n] = W['households']
         if W.get('familyLinks'): family_links[n] = W['familyLinks']
         out.append(w)
     checked = max((u['checked'] for u in uploads.values()), default=None)
@@ -272,7 +278,7 @@ def missing_pictures(data):
     def walk(o):
         if isinstance(o, dict):
             for k, v in o.items():
-                if k in ('src', 'thumb', 'map') and isinstance(v, str) and v: found.add(v.split('?')[0])   # fingerprinted maps carry ?v=
+                if k in ('src', 'thumb', 'map', 'libraryPic') and isinstance(v, str) and v: found.add(v.split('?')[0])   # fingerprinted maps carry ?v=
                 else: walk(v)
         elif isinstance(o, list):
             for x in o: walk(x)
