@@ -33,7 +33,8 @@
     {"lot": "Fisherman's Hut", "myName": null, "type": "Restaurant (Seafood)", "size": "20x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Ye Olde Voyager", "myName": null, "type": "Bar", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "The Lair in the Open-Air", "myName": null, "type": "Park", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
-   ]
+   ],
+   "bannerZoom": 1.15
   },
   {
    "name": "Bellacorde",
@@ -47,7 +48,8 @@
     {"lot": "13 Lakeview Apartments", "myName": "13 Lakeview Apartments", "type": "Apartment", "size": "N/A", "residents": "Empty", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "La Vivace", "myName": "La Vivace", "type": "Lounge", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Giardino Del Grandioso", "myName": "Giardino Del Grandioso", "type": "Small Business Residential", "size": "64x64", "residents": "Alto (vineyard: Enzo's mother, sister and brother-in-law, to create)", "built": false, "shared": false, "screenshots": false, "simsMade": false}
-   ]
+   ],
+   "bannerZoom": 1.15
   }
  ],
  "highlights": [
