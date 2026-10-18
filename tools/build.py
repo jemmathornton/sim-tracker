@@ -170,6 +170,7 @@ def gallery_history(lot_of):
 def build():
     out, stats, households = [], [], {}
     no_landlord = []
+    residents_unit = {}
     family_links, tenants, name_fix, nb_pt, nb_box, nb_centred, nb_zoom, nb_banner, cs_versions = {}, {}, {}, {}, {}, {}, {}, {}, {}
     lot_of = {}   # Gallery id -> the lot page it belongs to
     for wf in world_files():
@@ -199,6 +200,7 @@ def build():
                 if l.get('displayName'): name_fix[key] = l['displayName']
                 if l.get('tenants'): tenants[key] = l['tenants']
                 if l.get('noLandlord'): no_landlord.append(key)   # the household rents too: nobody on the lot is the landlord
+                if l.get('residentsUnit'): residents_unit[key] = l['residentsUnit']   # which unit the residents live in (19 Oct)
                 if not owned: continue
                 for i in l.get('gallery', []) + [v['upload'] for v in l.get('versions', [])]:
                     lot_of.setdefault(i, {"id": f"l-{ws}--{slug(l['lot'])}", "world": n})
@@ -225,7 +227,7 @@ def build():
             "people": {k: v for k, v in load(os.path.join(DATA, 'people.json')).items() if not k.startswith('_')} if os.path.exists(os.path.join(DATA, 'people.json')) else {},   # relatives with no household on the site (17 Oct)
             "groups": {k: v for k, v in load(os.path.join(DATA, 'groups.json')).items() if not k.startswith('_')} if os.path.exists(os.path.join(DATA, 'groups.json')) else {},   # dynasties, clubs, university organisations (17 Oct)
             "calendar": {k: v for k, v in load(os.path.join(DATA, 'calendar.json')).items() if not k.startswith('_')} if os.path.exists(os.path.join(DATA, 'calendar.json')) else {},   # festivals, events and her holidays (19 Oct)
-            "familyLinks": family_links, "tenants": tenants, "noLandlord": no_landlord, "nameFix": name_fix, "nbPt": nb_pt, "nbBox": nb_box, "nbCentred": nb_centred, "nbZoom": nb_zoom, "nbBanner": nb_banner, "csVersions": cs_versions,
+            "familyLinks": family_links, "tenants": tenants, "noLandlord": no_landlord, "residentsUnit": residents_unit, "nameFix": name_fix, "nbPt": nb_pt, "nbBox": nb_box, "nbCentred": nb_centred, "nbZoom": nb_zoom, "nbBanner": nb_banner, "csVersions": cs_versions,
             "galleryHistory": gallery_history(lot_of),
             "meta": {"built": date.today().isoformat(), "galleryChecked": checked, "game": game_version()}}
 

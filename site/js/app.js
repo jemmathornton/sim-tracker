@@ -708,7 +708,10 @@ const rentalUnits = l => { const n = unitCount(l), who = [];
   const away = l.hh && l.owned && l.hh.lots.some(x => x !== l && !x.owned);
   if (l.hh && !away) who.push({hh: l.hh, role: (l.tenants && !NO_LANDLORD.has(l.world.name + "|" + l.lot)) || /\sown\??$/i.test(l.who || "") ? "owners" : ""});
   (l.tenants || []).filter(t => !t.unit).forEach(t => who.push({hh: t, role: "tenant"}));
-  const out = Array.from({length: n}, (_, i) => who[i] || null);
+  // the residents go in their own unit when one is set (19 Oct: the Lynxes in Tail's End 3, Moody & McMillan in 3B), everyone else fills from unit 1
+  const ru = ((DATA.residentsUnit || {})[l.world.name + "|" + l.lot] || 1) - 1, out = Array.from({length: n}, () => null);
+  const placed = who[0] && who[0].hh === l.hh && ru > 0 && ru < n ? (out[ru] = who[0], who.slice(1)) : who;
+  placed.forEach(x => { const k = out.indexOf(null); if (k >= 0) out[k] = x; });
   (l.tenants || []).filter(t => t.unit).forEach(t => { const i = t.unit - 1;   // a tenant in a given unit (Johnny Zest in trailer 4)
     if (i < n && !out[i]) out[i] = {hh: t, role: "tenant"}; else out[out.indexOf(null)] = {hh: t, role: "tenant"}; });
   return out; };

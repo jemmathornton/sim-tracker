@@ -325,7 +325,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [x] [Claude] Done 19 Oct: tools/import_spreadsheet.py now reads the Overview’s Owned column (same three-way rule as lots; --apply switches the world on). Was: The import doesn’t read the Overview’s Owned column, so marking a world owned there won’t reach the app; keep Owned in one place
 
 ### Rentals unit by unit (research/rental-units.md)
-- [ ] [Jemma] Suggested fits: Upland units 1–3 the Eclectic Arts, 4 Johnny Zest; Tail’s End 3 (Cat Hangout) Catarina Lynx; Spring Steppes 1 Elderberry, 2 the Pleasant twins; 3 Cobblebottom 3A Cecilia Kang (Cat Hangout), 3B Moody & McMillan (Chef’s Kitchen). OK?
+- [x] [Jemma] 19 Oct, “fine for now, I’ll look into more later”: the Lynxes in Tail’s End 3, the Pleasants in Spring Steppes 2, Cecilia Kang in 3A and Moody & McMillan in 3B (new lot field residentsUnit); Upland stays Eclectic Arts in trailer 1 (one household can’t fill three) and Johnny Zest in 4. Was: Suggested fits: Upland units 1–3 the Eclectic Arts, 4 Johnny Zest; Tail’s End 3 (Cat Hangout) Catarina Lynx; Spring Steppes 1 Elderberry, 2 the Pleasant twins; 3 Cobblebottom 3A Cecilia Kang (Cat Hangout), 3B Moody & McMillan (Chef’s Kitchen). OK?
 - [ ] [Jemma] BFF, the Roomies and the Eclectic Arts don’t fit one flat each (the flats are one-bed): split them into separate households, or keep each together?
 - [ ] [Jemma] Empty units at Rockridge Springs, Old Torget House, Manzanita Terrace and Slip 42: fill or leave?
 - [ ] [Jemma] In game (optional): most rentals keep traits, and bedroom/bathroom counts, only on unit 1; give units 2+ their own. Rippling Flats, Specter Row and Casa do Corsário are still one home in the save
