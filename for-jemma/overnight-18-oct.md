@@ -25,3 +25,7 @@ Research only: nothing on the site changed overnight. Five reports, each with qu
 3. Apply the wiki's dynasty heirs (and Virgilio Capp as an outcast)?
 4. Show worlds you don't own (as a lighter "not owned" section) so their families appear on trees?
 5. Who is Kennedy (Bro & Kennedy)?
+
+## Later overnight
+- Her household uploads on the Gallery (6: Ella-Mint as “Spectra”, Davidson, Barraza, Jameson x2, Barnes), matched to your plan, with questions: `research/gallery-households.md`
+- **Families in worlds you don't own** (Monticapps, Vatores and 7 more): three ways to show them, A suggested. Prototype `for-jemma/prototypes/not-owned/index.html`, notes `research/not-owned-sims.md`.

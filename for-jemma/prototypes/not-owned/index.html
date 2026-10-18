@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Not-Owned Families Prototype</title>
+<!-- Prototype, 18-19 Oct: how to show the 24 Sims in 9 households who live in worlds she doesn't own yet (Tartosa,
+     Forgotten Hollow, Moonwood Mill, Ciudad Enamorada). The whole app runs here on its real data, with a few of its
+     functions wrapped (post.js). Options A, B, C in the bar. Opens straight from the folder, or at
+     http://localhost:8002/for-jemma/prototypes/not-owned/. Reads the app's own files in site/ and changes nothing.
+     Notes: research/not-owned-sims.md -->
+<base href="../../../site/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="../for-jemma/prototypes/not-owned/not-owned.css">
+</head>
+<body>
+<div class="topbar"><button id="menuBtn" aria-label="Open worlds menu" type="button"><span id="menuIco"></span>Worlds</button><b>Jemma's Sim World</b></div>
+<div class="scrim" id="scrim"></div>
+<aside class="side" id="side" aria-label="Worlds">
+  <a class="brand" href="#home"><b>Jemma's <em>Sim World</em></b><small>Every world, rebuilt</small></a>
+  <div class="search"><span class="search-ico" id="searchIco"></span><input id="q" type="search" placeholder="Search…" aria-label="Search the site" autocomplete="off" spellcheck="false"></div>
+  <nav class="nav" id="nav"></nav>
+</aside>
+<main id="main"><div id="pbar"></div><div class="wrap" id="view"></div></main>
+
+<script src="js/icons.js"></script>
+<script src="js/data.js"></script>
+<script src="../for-jemma/prototypes/not-owned/pre.js"></script>
+<script src="js/app.js"></script>
+<script src="../for-jemma/prototypes/not-owned/post.js"></script>
+</body>
+</html>
