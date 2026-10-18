@@ -22,6 +22,8 @@ DATA.worlds.filter(w => !w.owned && DATA.households[w.name]).forEach(w => {
   w.hoods = Object.values(hoods);
 });
 
+// smooth scrolling only for people who haven't asked their system for less motion
+const SMOOTH = () => matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
 const worlds = DATA.worlds, lotIndex = {}, hhIndex = {}, hoodIndex = {};
 // a household's own extras from the data: its picture (a screenshot in shots/), origin (Premade or Mine), played, Neighbourhood Stories
 const hhMore = x => ({portrait: x.portrait, origin: x.origin, played: x.played, stories: x.stories, single: x.single});
@@ -65,6 +67,7 @@ worlds.forEach(w => {
   w.hoods.forEach(h => h.lots.forEach(l => (TENANTS[w.name + "|" + l.lot] || []).forEach(t => { const k = slug(t.name);
     const extra = (DATA.households[w.name] || {})[t.name] || {};
     const hh = w.households[k] ||= {name: t.name, family: t.name, unsure: false, lots: [], world: w, id: "h-" + w.id + "--" + k, sims: extra.sims || [], links: [], source: extra.source, ...hhMore(extra), note: t.note, tenantOf: l};
+    if (t.unit) hh.unit = t.unit;
     hh.lots.push(l); hhIndex[hh.id] = hh; (l.tenants ||= []).push(hh); })));
   // related households Jemma confirmed (12 Oct)
   (FAMILY_LINKS[w.name] || []).forEach(([a, b]) => { const A = Object.values(w.households).find(x => x.name === a), B = Object.values(w.households).find(x => x.name === b);
@@ -269,7 +272,7 @@ const membersOf = hh => Object.keys(SIMS).filter(id => SIMS[id].hh === hh);
 // where a Sim lives, as a chip in the world's colour
 function homeChip(s, worldOnly){
   const hh = s.hh, w = s.world;
-  if (hh) return `<a class="hhchip" href="#${hh.id}" style="--w:${wColour(hh.world)}" title="${esc(hh.name)} household, ${esc(hh.world.name)}">${worldOnly ? "" : esc(hh.name) + " · "}${esc(hh.world.name)}</a>`;
+  if (hh) return `<a class="hhchip" href="#${hh.id}" style="--w:${wColour(hh.world)}" title="${esc(hhWord(hh.name))}, ${esc(hh.world.name)}">${worldOnly ? "" : esc(hh.name) + " · "}${esc(hh.world.name)}</a>`;
   if (w) return `<span class="hhchip" style="--w:${wColour(w)}" title="${esc(s.home || w.name + (w.owned ? "" : " (not owned)"))}">${s.hhName && !worldOnly ? esc(s.hhName) + " · " : ""}${esc(w.name)}</span>`;
   return "";
 }
@@ -278,7 +281,7 @@ const wColour = w => w ? (w.glow || w.color) : "#8A918C";
 const simLinkTo = o => SIM_PAGES["s-" + o] ? "#s-" + o : SIMS[o].hh ? "#" + SIMS[o].hh.id : "";
 function simWhere(o){
   const t = SIMS[o]; if (t.late) return "deceased";
-  if (t.hh) return `${t.hh.name} household · ${t.hh.world.name}`;
+  if (t.hh) return `${hhWord(t.hh.name)} · ${t.hh.world.name}`;
   const w = t.world; return w ? `${t.hhName ? t.hhName + " · " : ""}${w.name}${w.owned ? "" : " (not owned)"}${t.noHome ? " · no home" : ""}` : "";
 }
 const simColour = o => { const t = SIMS[o]; return t.late ? "#A3AAA5" : wColour(t.hh ? t.hh.world : t.world); };
@@ -464,7 +467,7 @@ function simPage(s){
   const hh = s.hh, base = hh || ANCHOR[s.id], home1 = base.lots[0], hc = home1.hood.color, w = home1.world, first = firstName(s);
   // Sims with no household: their family's household (for a blood relative), or the household whose tree they're on
   const kin = !hh && membersOf(base).some(m => blood(m, s.id));
-  const hhCrumb = hh ? `${esc(hh.name)} household` : `Related to the ${esc(base.name)} household`;
+  const hhCrumb = hh ? `${esc(hhWord(hh.name))}` : `Related to ${esc(theHh(base.name))}`;
   const stage = [s.age, s.late ? "deceased" : ""].filter(Boolean).join(" · ");
   let h = `<section class="hero small" style="--c:${home1.hood.glow || hc}"><div class="crumbs">${hh ? `<a href="#w-${w.id}">${ic("map")}${esc(w.name)}</a><a href="#n-${home1.hood.id}">${ic("pin")}${esc(home1.hood.name)}</a><a href="#${home1.id}">${ic("home")}${esc(home1.name)}</a>` : ""}<a href="#${base.id}">${ic("users")}${hhCrumb}</a></div>
     <div style="display:flex;gap:26px;align-items:center;flex-wrap:wrap;margin-top:22px"><div class="monogram">${initial(s.name)}</div><div><span class="label" style="color:var(--on-deep-mute)">Sim</span><h1 style="margin-top:6px">${esc(s.name)}</h1>${nee(s) ? `<p class="nee">${esc(nee(s))}</p>` : ""}</div></div>
@@ -503,7 +506,7 @@ function groupPage(g){
   const hhs = [...new Set(ids.map(([id]) => SIMS[id].hh).filter(Boolean))].map(hh => `<a href="#${hh.id}">${esc(hh.name)}</a> (${esc(hh.world.name)})`).join(", ");
   const link = x => GROUP_PAGES["g-dynasty-" + slug(x)] ? `<a href="#g-dynasty-${slug(x)}">${esc(groupTitle(GROUP_PAGES["g-dynasty-" + slug(x)]))}</a>` : esc(x + " dynasty");
   const who = role => g.members.filter(([, r]) => r === role).map(([id]) => simLinkTo(id) ? `<a href="${simLinkTo(id)}">${esc(SIMS[id].name)}</a>` : esc(SIMS[id].name)).join(", ") || "None";
-  const based = () => { if (g.homeHh) { const hh = g.homeHh, l = hh.lots[0]; return `<a href="#${hh.id}">${esc(hh.name)} household</a> (<a href="#${l.id}">${esc(l.name)}</a>, ${esc(l.world.name)})`; }
+  const based = () => { if (g.homeHh) { const hh = g.homeHh, l = hh.lots[0]; return `<a href="#${hh.id}">${esc(hhWord(hh.name))}</a> (<a href="#${l.id}">${esc(l.name)}</a>, ${esc(l.world.name)})`; }
     if (lotOf) return `<a href="#${lotOf.id}">${esc(lotOf.name)}</a> (${esc(lotOf.hood.name)}, ${esc(lotOf.world.name)})`;
     if (g.anyType) return `Any ${esc(g.anyType)}`;   // a club set to meet at a lot type rather than one lot
     return W ? `${esc(W.name)}${W.owned ? "" : " (not owned)"}` : ""; };
@@ -538,6 +541,8 @@ const hhListName = hh => { if (!hh.single) return hh.name; const p = hh.name.spl
 const hhSortKey = hh => (hh.single ? hhListName(hh) : hh.name.replace(/^The /, "")).toLowerCase();
 const byHh = (a, b) => hhSortKey(a).localeCompare(hhSortKey(b));
 const nee = s => s.line && s.into && s.line !== s.into && FAMILIES[s.line] ? `${sx(s.sex, "né", "née", "né")} ${FAMILIES[s.line].name}` : "";
+const hhWord = name => /\bhousehold$/i.test(name) ? name : name + " household";   // "Urbane Housesharers household" stays as it is
+const theHh = name => (/^the /i.test(name) ? "" : "the ") + hhWord(name);              // "the Goth household", "The Scotts household"
 const titleWord = name => { const p = esc(name).split(" "); return p.length > 1 ? p.slice(0,-1).join(" ") + " <em>" + p.at(-1) + "</em>" : "<em>" + p[0] + "</em>"; };
 
 // sidebar follows where things live: world → neighbourhood → lot → household → Sims
@@ -581,7 +586,7 @@ document.addEventListener("click", e => {
   const next = a.nextElementSibling, list = next && (next.classList.contains("lotnav") || next.classList.contains("subnav")) ? next : null;
   const here = location.hash === a.getAttribute("href") || (location.hash === "" && a.getAttribute("href") === "#home");
   if (list && here) { e.preventDefault(); list.hidden = !list.hidden; a.classList.toggle("folded", list.hidden); return; }
-  if (here) window.scrollTo({top:0, behavior:"smooth"});
+  if (here) window.scrollTo({top:0, behavior: SMOOTH()});
 });
 // ---------- search (13 Oct): lots by any of their names, households, Sims, neighbourhoods and worlds; results take the sidebar's place while typing ----------
 const fold = s => String(s ?? "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[‘’'.]/g, "").replace(/&/g, "and").replace(/\s+/g, " ");
@@ -594,9 +599,9 @@ function searchIndex(){
     w.hoods.forEach(h => { add("Neighbourhood", h.name, w.name, "#n-" + h.id, []);
       h.lots.forEach(l => add("Lot", l.name, h.name + " · " + w.name, "#" + l.id, [l.lot, l.mine, l.gallery?.title, ...(l.versions || []).map(v => v.title), ...(l.gallery?.others || []).map(o => o.title)])); });
     Object.values(w.households).forEach(x => { add("Household", x.name, w.name, "#" + x.id, []);
-      x.sims.forEach(sm => sm.sid ? add("Sim", sm.name, x.name + " household", "#s-" + sm.sid, []) : add("Sim", sm.name, x.name + " household", "#" + x.id, [], sm.id)); });
+      x.sims.forEach(sm => sm.sid ? add("Sim", sm.name, hhWord(x.name), "#s-" + sm.sid, []) : add("Sim", sm.name, hhWord(x.name), "#" + x.id, [], sm.id)); });
   });
-  Object.values(SIM_PAGES).filter(s => !s.hh).forEach(s => add("Sim", s.name, ANCHOR[s.id].name + " household’s family tree", "#s-" + s.id, []));
+  Object.values(SIM_PAGES).filter(s => !s.hh).forEach(s => add("Sim", s.name, hhWord(ANCHOR[s.id].name) + "’s family tree", "#s-" + s.id, []));
   Object.values(GROUP_PAGES).forEach(g => add(GROUP_KINDS[g.kind].name, groupTitle(g), GROUP_KINDS[g.kind].name, "#" + g.id, [g.name]));
   return out;
 }
@@ -632,7 +637,7 @@ document.getElementById("q").addEventListener("keydown", e => {
 // a result for the page already open: no hashchange, so put the sidebar back here
 document.addEventListener("click", e => { const a = e.target.closest(".nav a.hit"); if (a && a.getAttribute("href") === location.hash) { clearSearch(); route(); } });
 // in-page jumps (households page chapter buttons)
-document.addEventListener("click", e => { const b = e.target.closest("[data-local]"); if (b) document.getElementById(b.dataset.hood)?.scrollIntoView({behavior:"smooth",block:"start"}); });
+document.addEventListener("click", e => { const b = e.target.closest("[data-local]"); if (b) document.getElementById(b.dataset.hood)?.scrollIntoView({behavior: SMOOTH(),block:"start"}); });
 
 function worldTile(w){
   const inner = `<div class="photo ${w.thumb?"pic":""}" ${w.thumb?`data-lazy="--map" data-src="${w.thumb}"`:""}><span class="big">${esc(w.name.slice(0,1))}</span><span class="type">${esc(w.pack)}</span></div>
@@ -646,7 +651,7 @@ function home(){
   const hhAll = ready.reduce((n,w) => n + w.stats.hh, 0), hhMade = ready.reduce((n,w) => n + w.stats.hhMade, 0);
   const owned = worlds.filter(w => w.owned), notOwned = worlds.filter(w => !w.owned);
   return `<section class="hero" style="--c:#8E62CF"><div class="kicker"><i></i><span class="label">A Sims 4 save, rebuilt by hand</span></div>
-    <h1>Jemma's <em>Sim World</em></h1>
+    <h1>Jemma’s <em>Sim World</em></h1>
     <p>Every world in the game, rebuilt one lot at a time. Wander the neighbourhoods, look around the homes and venues, and meet the households who live in them.</p>
     <div class="hero-foot"><div class="figures">${[[ready.length, ready.length===1?"world":"worlds"],[ready.reduce((n,w)=>n+w.hoods.length,0),"neighbourhoods"],[ready.reduce((n,w)=>n+w.stats.lots,0),"lots"],[ready.reduce((n,w)=>n+w.stats.hh,0),"households"],[simCount(ready.flatMap(w => Object.values(w.households))),"Sims"]].map(([n,t]) => `<div><b>${n}</b><span>${t}</span></div>`).join("")}</div></div></section>
     <div class="section-head"><h2>The <em>worlds</em></h2><span class="count">in the order they arrived</span></div><div class="worlds">${owned.map(worldTile).join("")}</div>
@@ -673,8 +678,11 @@ const unitCount = l => { const m = /\((\d+)\)/.exec(l.type || ""); return isRent
 const rentalUnits = l => { const n = unitCount(l), who = [];
   const away = l.hh && l.owned && l.hh.lots.some(x => x !== l && !x.owned);
   if (l.hh && !away) who.push({hh: l.hh, role: (l.tenants && !NO_LANDLORD.has(l.world.name + "|" + l.lot)) || /\sown\??$/i.test(l.who || "") ? "owners" : ""});
-  (l.tenants || []).forEach(t => who.push({hh: t, role: "tenant"}));
-  return Array.from({length: n}, (_, i) => who[i] || null); };
+  (l.tenants || []).filter(t => !t.unit).forEach(t => who.push({hh: t, role: "tenant"}));
+  const out = Array.from({length: n}, (_, i) => who[i] || null);
+  (l.tenants || []).filter(t => t.unit).forEach(t => { const i = t.unit - 1;   // a tenant in a given unit (Johnny Zest in trailer 4)
+    if (i < n && !out[i]) out[i] = {hh: t, role: "tenant"}; else out[out.indexOf(null)] = {hh: t, role: "tenant"}; });
+  return out; };
 // a unit's own pictures: photos named flat-N or unit-N
 const unitPhotos = l => { const m = {}; l.photos.forEach(p => { const r = /(?:flat|unit)[-_ ]?(\d+)/i.exec(p.thumb || p.src || ""); if (r) (m[+r[1]] ||= []).push(p); }); return m; };
 // the unit circles on the card (like the lot circles on neighbourhood cards), and the households listed under it
@@ -689,6 +697,8 @@ const unitLabel = (l, i) => { const n = l.units?.[i]?.name; return !n ? `Unit ${
 const unitTraits = (l, i) => [...(l.units?.[i]?.traits || []), ...(l.units?.[i]?.challenges || [])];
 const rentalMeta = l => { const units = rentalUnits(l), who = units.filter(Boolean), owned = who.filter(u => u.role === "owners").length, lived = who.length - owned, free = units.length - who.length;   // the landlord's own unit isn't "let"
   const rows = units.map((u, i) => `<li${u ? "" : ' class="free"'}>${ic("home")}${u ? hhLink(u.hh) + (u.role === "owners" ? " (landlord)" : "") : "Free"}<em>${esc(unitLabel(l, i))}</em></li>`).join("");
+  // no household named, only her note ("Current uni sims" at Rippling Flats): show the note, as the lot page does
+  if (!who.length && l.whoNote) return `<span>${ic("grid")}${esc(l.whoNote)}</span>`;
   return `${rows ? `<ul class="unit-list">${rows}</ul>` : ""}<span>${ic("grid")}${free ? `${lived} let, ${free} free` : "All let"}</span>`; };
 
 // the units as a table on the lot page: picture, unit, who (only the landlord is marked)
@@ -699,7 +709,7 @@ function unitsTable(l){
 }
 // apartment buildings: one card with the building's front picture and its apartments as circles; the card itself doesn't open (her choice, 16 Oct), the circles and household names do
 // a household's name on a card opens the household's page (the card itself opens the lot)
-const hhLink = hh => `<b class="hh-link" data-lot-link="${hh.id}" title="Open the ${esc(hh.name)} household">${esc(hh.name)}</b>`;
+const hhLink = hh => `<b class="hh-link" data-lot-link="${hh.id}" title="Open ${esc(theHh(hh.name))}">${esc(hh.name)}</b>`;
 function buildingFront(b){
   const cover = (b.units.find(u => u.photos[0]) || {}).photos?.[0], lived = b.units.filter(u => u.hh).length;
   const circ = b.units.map(u => nbTile(u).replace("<i ", `<i data-lot-link="${u.id}" aria-label="${esc(u.name)}" `).replace(/ title="[^"]*"/, ` data-name="${esc(u.name)}"`)).join("");
@@ -875,8 +885,8 @@ function lot(l){
 </div></div>
     ${l.hh ? `<section class="block" style="--h:${hc}"><div class="block-head"><h2>${l.owned ? "Who <em>owns it</em>" : "Who <em>lives here</em>"}</h2></div>
       <div class="lives"><div class="lives-card">${hhListing(l.hh)}</div>
-      <div>${l.hh.sims.length ? `<span class="label">The Sims</span><ul class="sim-list">${l.hh.sims.map(sm => `<li><a href="${sm.sid ? "#s-" + sm.sid : "#" + l.hh.id}" ${sm.sid ? "" : `data-sim="${sm.id}"`}><span class="mono">${initial(sm.name)}</span><span><b>${esc(sm.name)}</b><small>${esc([sm.age, sm.aspiration].filter(Boolean).join(" · "))}</small></span></a></li>`).join("")}</ul>` : `<div class="empty" style="margin-top:0">${ic("sim")}No Sims added for the ${esc(l.hh.name)} household yet.</div>`}
-      <a class="more" href="#${l.hh.id}">Open the ${esc(l.hh.name)} household ${ic("arrow")}</a></div></div></section>` : ""}
+      <div>${l.hh.sims.length ? `<span class="label">The Sims</span><ul class="sim-list">${l.hh.sims.map(sm => `<li><a href="${sm.sid ? "#s-" + sm.sid : "#" + l.hh.id}" ${sm.sid ? "" : `data-sim="${sm.id}"`}><span class="mono">${initial(sm.name)}</span><span><b>${esc(sm.name)}</b><small>${esc([sm.age, sm.aspiration].filter(Boolean).join(" · "))}</small></span></a></li>`).join("")}</ul>` : `<div class="empty" style="margin-top:0">${ic("sim")}No Sims added for ${esc(theHh(l.hh.name))} yet.</div>`}
+      <a class="more" href="#${l.hh.id}">Open ${esc(theHh(l.hh.name))} ${ic("arrow")}</a></div></div></section>` : ""}
     ${unitCount(l) ? unitsTable(l) : ""}
     <section class="block" style="--h:${hc}"><div class="block-head"><h2>Build <em>notes</em></h2></div>
       ${l.gallery ? `<div class="notes-wrap"><div class="notes-text">${l.gallery.title !== l.name ? `<span class="label">Uploaded as “${esc(l.gallery.title)}”</span>` : ""}${l.gallery.description ? `<p class="lede">${esc(l.gallery.description)}</p>` : ""}
@@ -901,7 +911,7 @@ function famCard(x, link){
 }
 function simCard(sm){
   const skills = (sm.skills || []).map(([n, lv, max]) => `<div class="skill"><span>${esc(n)}</span><div class="pips" style="--max:${max||10}">${Array.from({length:max||10},(_,i)=>`<i class="${i<lv?"on":""}"></i>`).join("")}</div><b>${lv}</b></div>`).join("");
-  const rels = (sm.rels || []).map(([who, label]) => { const t = simIndex[who]; const nm = t ? `<a href="#${t.hh.id}" data-sim="${t.id}">${esc(who)}</a>` : esc(who); return `<li>${nm}<span>${esc(label)}</span>${t && t.hh !== sm.hh ? `<small>${esc(t.hh.name)} household</small>` : ""}</li>`; }).join("");
+  const rels = (sm.rels || []).map(([who, label]) => { const t = simIndex[who]; const nm = t ? `<a href="#${t.hh.id}" data-sim="${t.id}">${esc(who)}</a>` : esc(who); return `<li>${nm}<span>${esc(label)}</span>${t && t.hh !== sm.hh ? `<small>${esc(hhWord(t.hh.name))}</small>` : ""}</li>`; }).join("");
   return `<article class="sim" id="${sm.id}">
     <header><span class="mono">${initial(sm.name)}</span><div><h3>${esc(sm.name)}</h3><div class="sim-sub">${[sm.age, sm.aspiration && "Aspiration: " + sm.aspiration].filter(Boolean).map(esc).join(" · ")}</div></div></header>
     ${sm.traits?.length ? `<div class="traits">${sm.traits.map(t => `<span>${esc(t)}</span>`).join("")}${sm.bonus ? `<span class="bonus">${esc(sm.bonus)}</span>` : ""}</div>` : ""}
@@ -911,7 +921,7 @@ function simCard(sm){
     ${sm.notes ? `<p class="sim-note">${esc(sm.notes)}</p>` : ""}
   </article>`;
 }
-document.addEventListener("click", e => { const a = e.target.closest("a[data-sim]"); if (a) { const id = a.dataset.sim; setTimeout(() => document.getElementById(id)?.scrollIntoView({block:"start", behavior:"smooth"}), 120); } });
+document.addEventListener("click", e => { const a = e.target.closest("a[data-sim]"); if (a) { const id = a.dataset.sim; setTimeout(() => document.getElementById(id)?.scrollIntoView({block:"start", behavior: SMOOTH()}), 120); } });
 // Jemma's own replies count towards the total but are not shown
 const theirs = l => (l.gallery?.commentList || []).filter(c => (c.u || "").toLowerCase() !== "jemmathesimmer");
 // builds that need no packs (15 Oct: base-game builds are the most downloaded)
@@ -930,6 +940,14 @@ const markSeen = l => { if (l.gallery) { seen[l.id] = seenNow(l); saveSeen(); } 
 const newTxt = n => n.fresh ? "New on the Gallery" : [n.f && `${n.f} new ${n.f === 1 ? "favourite" : "favourites"}`, n.c && `${n.c} new ${n.c === 1 ? "comment" : "comments"}`].filter(Boolean).join(", ");
 // a home with no household yet: bed-size planning notes just read "Empty" (bed counts live in the Gallery card)
 // dark text on light colours (Sulani yellow etc.), white on dark ones: whichever reads better
+// white initials are hard to read on pale world and neighbourhood colours: give each coloured element its readable text colour
+function initialsContrast(root){
+  root.querySelectorAll('[style*="--w:"],[style*="--h:"]').forEach(el => {
+    const w = /--w:\s*(#[0-9a-fA-F]{6})/.exec(el.getAttribute("style")), h = /--h:\s*(#[0-9a-fA-F]{6})/.exec(el.getAttribute("style"));
+    if (w) el.style.setProperty("--on-w", textOn(w[1]));
+    if (h) el.style.setProperty("--on-h", textOn(h[1]));
+  });
+}
 function textOn(hex){ const c = (hex || "#000").replace("#",""), L = [0,2,4].map(i => { const v = parseInt(c.slice(i,i+2),16)/255; return v <= .03928 ? v/12.92 : Math.pow((v+.055)/1.055, 2.4); }), Y = .2126*L[0] + .7152*L[1] + .0722*L[2];
   return (1.05)/(Y+.05) >= (Y+.05)/(.0185+.05) ? "#fff" : "#1A1F1C"; }
 const emptyNote = n => /bed|empty/i.test(n) ? "Empty" : n;
@@ -977,7 +995,7 @@ function household(hh){
 // the roster (each name opens the Sim's page), the family tree from family links only, their story and the neighbours.
 // Relationships between Sims are only on Sim pages.
 function hhPicture(hh, ids){
-  if (hh.portrait) return `<div class="portrait hh-pic" style="background-image:url('${hh.portrait}')" role="img" aria-label="The ${esc(hh.name)} household">
+  if (hh.portrait) return `<div class="portrait hh-pic" style="background-image:url('${hh.portrait}')" role="img" aria-label="${esc(hhWord(hh.name))}">
     <div class="names">${ids.map(id => `<div><a href="#s-${id}"><b>${esc(firstName(SIMS[id]))}</b></a><small>${esc(SIMS[id].age)}</small></div>`).join("")}</div></div>`;
   return `<div class="hh-pic none" aria-hidden="true"><span class="hh-pic-mono">${initial(hh.name)}</span><span class="hh-pic-txt">${ic("camera")}</span></div>`;
 }
@@ -988,7 +1006,7 @@ function hhLotLines(hh){
   const landlord = hh.tenantOf && hh.tenantOf.hh && hh.tenantOf.hh !== hh && !noLord(hh.tenantOf) ? hh.tenantOf.hh : null;
   const lets = homes.concat(owns).filter(l => l.hh === hh && l.tenants && l.tenants.length && !noLord(l)).flatMap(l => l.tenants);
   const rows = [[homes.length > 1 ? "Homes" : "Home", homes.map(l => link(l) + (hh.tenantOf === l && !landlord ? " (renting)" : "")).join(", ")],
-    [owns.length ? "Owns or runs" : "", owns.map(l => `${link(l)} (${esc(l.type)})`).join(", ")],
+    [owns.length ? "Owns or runs" : "", owns.map(l => `${link(l)} (${esc(l.type.replace(/\s*\(\d+\)$/, ""))})`).join(", ")],
     [landlord ? "Rents from" : "", landlord ? `${hhA(landlord)} (${link(hh.tenantOf)})` : ""],
     [lets.length ? "Rents to" : "", lets.map(hhA).join(", ")]];
   return rows.filter(([t, v]) => t && v).map(([t, v]) => `<div><dt>${t}</dt><dd>${v}</dd></div>`).join("");
@@ -1113,7 +1131,7 @@ document.addEventListener("change", e => { if (!e.target.closest("#lot-sheet")) 
   if (e.target.id === "f-status") { statsState.status = e.target.value; refreshStats(); } });
 document.addEventListener("input", e => { if (e.target.id === "f-q") { statsState.q = e.target.value; refreshStats(); } });
 document.addEventListener("click", e => { const so = e.target.closest("[data-sort]"); if (so) { statsState.dir = statsState.sort === so.dataset.sort ? -statsState.dir : 1; statsState.sort = so.dataset.sort; refreshStats(); }
-  const sw = e.target.closest("[data-sw]"); if (sw) { statsState.world = sw.dataset.sw; statsState.hood = ""; refreshStats(true); document.getElementById("lot-sheet").scrollIntoView({behavior:"smooth"}); } });
+  const sw = e.target.closest("[data-sw]"); if (sw) { statsState.world = sw.dataset.sw; statsState.hood = ""; refreshStats(true); document.getElementById("lot-sheet").scrollIntoView({behavior: SMOOTH()}); } });
 
 // full-size photo viewer
 let lb = null;
@@ -1146,26 +1164,29 @@ function route(){
   const view = document.getElementById("view");
   let html, active = "home"; const ctx = {};
   const wd = key.startsWith("w-") && worlds.find(w => open(w) && w.id === key.slice(2));
-  if (wd) { html = world(wd); active = wd.id; document.title = wd.name + " · Jemma's Sim World"; }
-  else if (lotIndex[key]) { const l = lotIndex[key]; ctx.hood = l.hood; ctx.lot = l; html = lot(l); markSeen(l); active = l.world.id; document.title = l.name + " · Jemma's Sim World"; }
-  else if (key.startsWith("n-") && hoodIndex[key.slice(2)]) { const x = hoodIndex[key.slice(2)]; ctx.hood = x; html = hoodPage(x); active = x.world.id; document.title = x.name + " · " + x.world.name + " · Jemma's Sim World"; }
-  else if (key.startsWith("f-") && worlds.find(w => open(w) && w.id === key.slice(2))) { const w = worlds.find(w => w.id === key.slice(2)); html = families(w); active = w.id; document.title = "Households · " + w.name + " · Jemma's Sim World"; }
-  else if (SIM_PAGES[key]) { const s = SIM_PAGES[key], base = s.hh || ANCHOR[s.id]; ctx.sim = s.src; ctx.hh = base; ctx.lot = base.lots[0]; ctx.hood = ctx.lot.hood; html = simPage(s); active = base.world.id; document.title = s.name + " · Jemma's Sim World"; }
-  else if (GROUP_PAGES[key]) { const g = GROUP_PAGES[key], base = g.homeHh; ctx.group = g; if (base) { ctx.hh = base; ctx.lot = base.lots[0]; ctx.hood = ctx.lot.hood; } html = groupPage(g); active = g.world && g.world.ready && g.world.owned ? g.world.id : ""; document.title = groupTitle(g) + " · Jemma's Sim World"; }
-  else if (hhIndex[key]) { const x = hhIndex[key]; ctx.hh = x; ctx.lot = x.lots[0]; ctx.hood = x.lots[0].hood; html = household(x); active = x.world.id; document.title = x.name + " household · Jemma's Sim World"; }
-  else if (key === "stats" || key.startsWith("stats-")) { const w = worlds.find(x => "stats-" + x.id === key); html = statsPage(w ? w.name : (key === "stats" ? null : "")); active = "stats"; document.title = "Stats · Jemma's Sim World"; }
-  else if (key === "home") { html = home(); document.title = "Jemma's Sim World"; }
+  if (wd) { html = world(wd); active = wd.id; document.title = wd.name + " · Jemma’s Sim World"; }
+  else if (lotIndex[key]) { const l = lotIndex[key]; ctx.hood = l.hood; ctx.lot = l; html = lot(l); markSeen(l); active = l.world.id; document.title = l.name + " · Jemma’s Sim World"; }
+  else if (key.startsWith("n-") && hoodIndex[key.slice(2)]) { const x = hoodIndex[key.slice(2)]; ctx.hood = x; html = hoodPage(x); active = x.world.id; document.title = x.name + " · " + x.world.name + " · Jemma’s Sim World"; }
+  else if (key.startsWith("f-") && worlds.find(w => open(w) && w.id === key.slice(2))) { const w = worlds.find(w => w.id === key.slice(2)); html = families(w); active = w.id; document.title = "Households · " + w.name + " · Jemma’s Sim World"; }
+  else if (SIM_PAGES[key]) { const s = SIM_PAGES[key], base = s.hh || ANCHOR[s.id]; ctx.sim = s.src; ctx.hh = base; ctx.lot = base.lots[0]; ctx.hood = ctx.lot.hood; html = simPage(s); active = base.world.id; document.title = s.name + " · Jemma’s Sim World"; }
+  else if (GROUP_PAGES[key]) { const g = GROUP_PAGES[key], base = g.homeHh; ctx.group = g; if (base) { ctx.hh = base; ctx.lot = base.lots[0]; ctx.hood = ctx.lot.hood; } html = groupPage(g); active = g.world && g.world.ready && g.world.owned ? g.world.id : ""; document.title = groupTitle(g) + " · Jemma’s Sim World"; }
+  else if (hhIndex[key]) { const x = hhIndex[key]; ctx.hh = x; ctx.lot = x.lots[0]; ctx.hood = x.lots[0].hood; html = household(x); active = x.world.id; document.title = hhWord(x.name) + " · Jemma’s Sim World"; }
+  else if (key === "stats" || key.startsWith("stats-")) { const w = worlds.find(x => "stats-" + x.id === key); html = statsPage(w ? w.name : (key === "stats" ? null : "")); active = "stats"; document.title = "Stats · Jemma’s Sim World"; }
+  else if (key === "home") { html = home(); document.title = "Jemma’s Sim World"; }
   else { html = `<section class="hero small" style="--c:#8E62CF"><div class="kicker"><i></i><span class="label">Page not found</span></div><h1 style="margin-top:14px">Nothing <em>here</em></h1><p>This link doesn't match any world, neighbourhood, lot or household. It may be an old link from before something was renamed.</p></section>
-    <section class="block"><p class="notfound"><a href="#home">${ic("home")}Go to the home page</a><a href="#stats">Search every lot on the Stats page</a></p></section>`; document.title = "Page not found · Jemma's Sim World"; active = ""; }
+    <section class="block"><p class="notfound"><a href="#home">${ic("home")}Go to the home page</a><a href="#stats">Search every lot on the Stats page</a></p></section>`; document.title = "Page not found · Jemma’s Sim World"; active = ""; }
   const cw = worlds.find(w => w.id === active);
   const root = document.documentElement.style;
   if (cw && cw.deep) { root.setProperty("--deep", cw.deep[0]); root.setProperty("--deep-2", cw.deep[1]); }
   else { root.removeProperty("--deep"); root.removeProperty("--deep-2"); }
   view.innerHTML = html;
   notOwnedLinks(view);
+  initialsContrast(view);
   lazyPics(view);
   clearSearch();
   renderNav(active, key, ctx);
+  // keyboard users: the sidebar is redrawn, so put focus back on the link they chose
+  if (navChosen) { document.querySelector("#nav a.cur, #nav a.path")?.focus({preventScroll: true}); navChosen = false; }
   window.scrollTo(0, 0);
   document.body.classList.remove("nav-open");
 }
@@ -1200,7 +1221,7 @@ const homeChipOwned = homeChip;
 homeChip = function (s, worldOnly) {
   const h = homeChipOwned(s, worldOnly), w = s.hh ? s.hh.world : s.world;
   if (!h || !notOwnedW(w)) return h;
-  const who = s.hh ? s.hh.name + " household" : s.hhName ? s.hhName + " household" : "";
+  const who = s.hh ? hhWord(s.hh.name) : s.hhName ? hhWord(s.hhName) : "";
   return h.replace('class="hhchip"', 'class="hhchip notown"').replace(/title="[^"]*"/, `title="${esc((who ? who + ", " : "") + w.name)}, a world you don’t own yet"`);
 };
 // simWhere: "Monticapp household · Tartosa (not owned)"
@@ -1263,12 +1284,14 @@ searchIndex = function () {
   const out = searchIndexOwned();
   const add = (kind, name, where, href) => out.push({kind, name, where, href, keys: [[name, fold(name)]]});
   worlds.filter(w => !w.owned).forEach(w => Object.values(w.households).forEach(x => { add("Household", x.name, w.name + " (not owned)", "#" + x.id);
-    x.sims.forEach(sm => add("Sim", sm.name, x.name + " household · not owned", sm.sid ? "#s-" + sm.sid : "#" + x.id)); }));
+    x.sims.forEach(sm => add("Sim", sm.name, hhWord(x.name) + " · not owned", sm.sid ? "#s-" + sm.sid : "#" + x.id)); }));
   return out;
 };
 
 document.getElementById("menuIco").innerHTML = ic("menu");
 document.getElementById("searchIco").innerHTML = ic("search");
+let navChosen = false;
+document.getElementById("nav").addEventListener("click", e => { if (e.target.closest("a[href^='#']") && e.detail === 0) navChosen = true; });   // a keyboard "click" (Enter) has detail 0
 addEventListener("hashchange", route);
 document.getElementById("menuBtn").addEventListener("click", () => document.body.classList.toggle("nav-open"));
 document.getElementById("scrim").addEventListener("click", () => document.body.classList.remove("nav-open"));
