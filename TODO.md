@@ -224,7 +224,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [ ] [Jemma] Relatives that only exist on the Gallery (Iggy Pancakes, Daniel and Mary-Sue Pleasant and others): show them on family trees?
 - Cross-world links worth showing (from the game): Agnes Crumplebottom is Mortimer Goth’s aunt; Lily Zhu is the Vatores’ cousin; Skip Broke is Dustin Broke’s father; Enzo Alto is Holly Alto’s cousin; Arnessa Thebe is Consort Capp’s cousin; the Gomes family shares an ancestor with the Goths. Her moves add more (Juliette Monty, now in Tartosa, is Tybalt Capp’s sister)
 
-### Pets and horses (research/pets-and-horses.md)
+### Pets and horses (research/pets-and-horses.md; 19 Oct decision note: research/decisions/pets.md)
 - [ ] [Jemma] On household pages: pets in the same roster as the Sims (suggested), a one-line strip, or full cards plus a Horses page? An Animals tab on family trees where there are young ones? Small animals (goats, hens, llamas…) as a counts line, or left off?
 - [x] Delgatos moved to Domus Familiaris (Sable Square) and own Brindleton Pawspital next door; Chateau Frise now empty (18 Oct). Copy into World Plans (Residents for the three lots). The Summer Home and Canter Clinic stay NPC-run.
 - [x] Vets (18 Oct, by her world areas): none needed in the San Myshuno area (city flats, fewer pets); 36 Bayani Place (San Sequoia) becomes a Vet Clinic, NPC-run for now, and the Luna-Sullivans move into Sequoia Cottage’s other half. The desert has Canter Clinic. Copy into World Plans: 36 Bayani Place (type Vet Clinic, residents N/A), Sequoia Cottage (residents Lovejoy, the second household; tenants Luna-Sullivan), Manzanita Terrace (Residential Rental (3)). Isda Riverfront (Tomarang): residents Cadberry (they live in one unit), Rochana renting the other.
@@ -233,20 +233,20 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [ ] [Jemma] Use For Rent’s pet households (Kitty Lu and her cats, Dara Kham and her dog) for empty rental units? In game: turn off “Adopt Cats & Dogs” and “Rescue Horses” in Neighbourhood Stories?
 - Lore find: Roberto Crinkletop (Chestnut Ridge’s hidden “Mysterious Rancher”) is Agnes Crumplebottom’s ex-husband
 
-### Household stories (research/household-stories.md; prototype: for-jemma/prototypes/stories/index.html, the Montys and the Goths)
+### Household stories (19 Oct decision note: research/decisions/stories.md; research/household-stories.md; prototype: for-jemma/prototypes/stories/index.html, the Montys and the Goths)
 - [ ] [Jemma] Bio: hers first with EA’s underneath (suggested), or EA’s until she writes her own? EA’s as our summary with a link, or EA’s exact text read from her game?
 - [ ] [Jemma] A dated timeline per household? By the month she played it, by story time (“Year 1, Spring”), or both? A whole-save timeline too (10 “moved world” events already follow from her plan)?
 - [x] (Settled 17 Oct: no EA comparison at all, see Showing Sims) Chapters for any household? Empty parts hidden, or one quiet “Yours to write” line? Writing in chat (as now), or a text file per household?
 - [x] The Cadberrys are her Not So Berry legacy (18 Oct). Each generation stays alive when they move out, so Cadberry households are spread across many worlds; show them as one family tree once she adds them.
 - [x] Romeo and Juliette ran away to Tartosa purely to marry and live away from their families, then had Dante (now a teen). Renamed Monticapp (18 Oct); no dynasty of their own: Juliette (née Capp) is a Capp outcast, Romeo (né Monty) a Monty outcast. Copy into World Plans: Rifugio dei Pirati residents “Monticapp (Romeo, Juliette and Dante, from Ondarion)”.
 
-### Occults (research/occults.md)
+### Occults (research/occults.md; 19 Oct decision note: research/decisions/occults.md)
 - [ ] [Jemma] Nothing in her plan breaks the game. Care points: Specter Row can’t be both a rental and a Haunted House (already open above); Henford’s fairy area probably needs “Limit Fairies to Innisgreen” off, and Cordelia’s Secret Cottage has no free trait slot for Fairy Passage; the Ravenwood Wedding Hall may still have the old manor’s On Hallowed Grounds (keep or remove?)
 - [ ] [Jemma] Her hints, to confirm: are the Tiquelles spellcasters, with Mid-NoWhere as their portal to the Magic Realm? Hallow Slough a Haunted House, or On Hallowed Grounds? 18 Culpepper House Spooky? If the Sultry Springside Smiths are Maxis’s Gallery family, Pollination Tech 9 is her save’s only alien
 - [ ] [Jemma] Heart Consort Capp and the four Sulani mermaids so the game never deletes them? Later, if she buys Vampires or Werewolves: keep the Grimtooth bunker, leave the garlic out of Garliclauter, keep Widowshild a home
 - [ ] [Jemma] Showing occults: a life-state pill plus a born or turned line, ghosts shown in their household and generation, faded for late Sims (suggested); or a pill only; or a save-wide Occults page later? Trailer lore (Vlad turned Lilith…) shown with an “In the game: not linked” note, or only what her save says? Icons OK (droplet for vampires, moon, wand, sparkles, shell, orbit, ghost)?
 
-### Festivals and events (research/festivals-calendar.md; prototype: for-jemma/prototypes/calendar/index.html)
+### Festivals and events (19 Oct decision note: research/decisions/whats-on.md; research/festivals-calendar.md; prototype: for-jemma/prototypes/calendar/index.html)
 - [ ] [Jemma] A “What’s on” page? A week calendar for the whole save (A), a list by world (B), a small box on each world page (C), or none? Festivals and holidays only, or lot nights and uni/school events too? Week starting Monday or Sunday (the game’s)?
 - [ ] [Jemma] Found: no festival needs a lot (all are on open streets), so nothing broke. But the Starlight Accolades only go to a lounge with Hottest Spot in Town (only Calico has it, in Brindleton Bay), and Gibbi Point and Tomarang lost their lounge nights (Fearful Fish Lounge and The Screaming Gecko were re-typed). Ondarion has no scheduled festivals
 - [ ] [Jemma] Small ones: Sulani’s unnamed events shown with made-up names (as now) or left out? Nordhaven: one “Hobby meetups” line, or the game’s seven names?
@@ -254,7 +254,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 ### Story ideas (research/story-ideas.md: ideas only, for her to pick from)
 - [ ] [Jemma] Browse when in the mood: 76 lore-friendly hooks across her 25 worlds (most change nothing the game ships) and 15 loose ends EA never finished (e.g. Roberto Crinkletop and Agnes; Princess Cordelia tying Henford, Tartosa and Ondarion together, which suits the Montys’ move). Some would also settle open items: the Kunals for Paradise Stables, Moody & McMillan running the 1 Cobblebottom Street tea room from next door, Supriya buying the Pawspital, the Koopmans’ daughter for Canalside Daycare, one of Fia’s outlaws as Aloisio’s tenant
 
-### Where Sims could come from (research/sims-sources.md)
+### Where Sims could come from (research/sims-sources.md; 19 Oct decision note on which save: research/decisions/sims-save.md)
 - [ ] [Jemma] Swap in for-jemma/World Plans (fixed) - updated 19 Oct.xlsx (all 19 site changes copied in; the site and it now match): copy it to Downloads as World Plans (fixed).xlsx. Was: Copy into World Plans (19 Oct): Twin Oracle Point → Kirkland; Optimist’s Outlook → Kirkland; Fern Park Flats and Midtown Meadows → “Kirkland own”, with tenants BFF (Fern Park) and Washburn and Bridges (Midtown Meadows, replacing “Single Mum Friends”); Magnolia Mall → Kirkland.
 - [ ] [Jemma] Kopf: the Rotational copy (Emilee and Kristian, Leon and Savannah née Fyres; Anja grown up with Omar in San Myshuno) seems off to you; come back to it (19 Oct).
 - [ ] [Jemma] Davidsons: Evelyn, Ray and George stay at Streamlet Single (you’ll make them older later); Garden Essence’s Davidsons not made yet (19 Oct; the 100 Baby Challenge Davidsons aren’t related).
