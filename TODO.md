@@ -235,7 +235,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - Lore find: Roberto Crinkletop (Chestnut Ridge’s hidden “Mysterious Rancher”) is Agnes Crumplebottom’s ex-husband
 
 ### Household stories (19 Oct decision note: research/decisions/stories.md; research/household-stories.md; prototype: for-jemma/prototypes/stories/index.html, the Montys and the Goths)
-- [ ] [Jemma] Rewrite the bios of Caliente and Lothario (Greenburg and Knox Greenburg done 19 Oct, her wording): each pair shows EA’s one bio for the whole family for now (19 Oct). Santiago Ojo: EA’s Karaoke Legends bio left off (only Miko lives there).
+- [x] Done 19 Oct, her wording: Caliente, Lothario, Greenburg and Knox Greenburg have their own bios. Was: Rewrite the bios of Caliente and Lothario, and of Greenburg and Knox Greenburg: each pair shows EA’s one bio for the whole family for now (19 Oct). Santiago Ojo: EA’s Karaoke Legends bio left off (only Miko lives there).
 - [x] [Jemma] Bio: hers first with EA’s underneath (suggested), or EA’s until she writes her own? EA’s as our summary with a link, or EA’s exact text read from her game? — 19 Oct: hers for her own Sims, EA’s own text word for word for EA’s (98 found; research/household-bios.md)
 - [ ] [Jemma] A dated timeline per household? By the month she played it, by story time (“Year 1, Spring”), or both? A whole-save timeline too (10 “moved world” events already follow from her plan)?
 - [x] (Settled 17 Oct: no EA comparison at all, see Showing Sims) Chapters for any household? Empty parts hidden, or one quiet “Yours to write” line? Writing in chat (as now), or a text file per household?
