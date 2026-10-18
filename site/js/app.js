@@ -574,7 +574,10 @@ function plot(size, px, labels){
 }
 const sizeTxt = s => s && s !== "N/A" ? s.replace("x"," × ") : "";
 const initial = n => esc(n.trim()[0] || "?");
-const hhListName = hh => { if (!hh.single) return hh.name; const p = hh.name.split(" "); return p.at(-1) + ", " + p.slice(0, -1).join(" "); };
+// one-Sim households list as "Surname, First"; a household named by surname only (the 19 Oct splits) takes its Sim's full name
+const hhListName = hh => { if (!hh.single) return hh.name; const full = !hh.name.includes(" ") && hh.sims.length === 1 ? hh.sims[0].name : hh.name, p = full.split(" ");
+  const k = p.length > 2 && /^(I{2,3}|IV|Jr\.?|Sr\.?)$/.test(p.at(-1)) ? 2 : 1;   // "J Huntington III" → "Huntington III, J"
+  return p.length > k ? p.slice(-k).join(" ") + ", " + p.slice(0, -k).join(" ") : full; };
 const hhSortKey = hh => (hh.single ? hhListName(hh) : hh.name.replace(/^The /, "")).toLowerCase();
 const byHh = (a, b) => hhSortKey(a).localeCompare(hhSortKey(b));
 const nee = s => s.line && s.into && s.line !== s.into && FAMILIES[s.line] ? `${sx(s.sex, "né", "née", "né")} ${FAMILIES[s.line].name}` : "";
