@@ -396,6 +396,8 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [x] [Jemma] None looks worse than the whole map (48 good, 29 so-so). Her taste: put Belomisia Jungle, Campground, Glimmerbrook (loses its sunset) and Conifer Station back to the whole map? They barely zoom (1.01–1.15×) — 19 Oct: keep them as they are (her call)
 - [x] [Jemma] Zoom out a bit: Acquisition Butte, Desert Bloom Park, Galloping Gulch (mostly bare rock at 3×), Myshuno Meadows (soft), Yukimatsu (mostly snow)? Needs a small per-neighbourhood banner setting — the per-neighbourhood setting exists now (bannerZoom, bannerShift, 19 Oct); say which to change. 19 Oct: Galloping Gulch zoomed out; Acquisition Butte, Desert Bloom Park and Yukimatsu are fine as they are (her call)
 
+- [ ] [Claude] The shortcut opened in a normal Chrome window instead of its own app window (her report, 19 Oct). Check the shortcut’s target and arguments (tools/make_shortcuts.ps1 uses chrome --app=…) and fix.
+
 ### Blurry taskbar icon (research/taskbar-icon.md)
 - [ ] [Jemma] Cause found: a plain Chrome app window takes its taskbar icon from the page’s 16px icon and Windows stretches it (her PC runs at 200% scaling, so the taskbar wants 48px). A restart won’t fix it. Fix: make it an installed Chrome app served from http://127.0.0.1 (a small local server started at sign-in, a web manifest; she clicks Install once). Cheaper, untested: pin a shortcut with Chrome’s own taskbar id. Her call
 
