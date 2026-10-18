@@ -253,6 +253,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 
 ### Where Sims could come from (research/sims-sources.md)
 - [ ] [Jemma] Copy into World Plans (19 Oct): Twin Oracle Point → Kirkland; Optimist’s Outlook → Kirkland; Fern Park Flats and Midtown Meadows → “Kirkland own”, with tenants BFF (Fern Park) and Washburn and Bridges (Midtown Meadows, replacing “Single Mum Friends”); Magnolia Mall → Kirkland.
+- [ ] [Jemma] Davidsons: Evelyn, Ray and George stay at Streamlet Single (you’ll make them older later); Garden Essence’s Davidsons not made yet (19 Oct; the 100 Baby Challenge Davidsons aren’t related).
 - [ ] [Jemma] The Cadberrys: you’ll sort them yourself later (19 Oct). Options found: research/own-households-recommendations.md (Ella-Mint as Spectra or with Madalyn, Leah-Moon’s “+” = Sterling?, Sylvia & Kenny’s sons, Isda Riverfront).
 - [ ] [Jemma] In game: Eco Roomies’ flat, #402 (your plan) or #404 (your saves)? Cheer/Football Teens skipped for now (maybe Sporty Girls and Sporty Boys from Season Events).
 - [ ] [Jemma] The Kirklands on the site start from your 4-Sim Library copy, with Kennedy and Kayleigh taken down from elders to adults and Kamila and Kendrick as teens; age them as you want them. Are Kennedy and Kayleigh married (the copy doesn’t say)?
