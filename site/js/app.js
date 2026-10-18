@@ -1079,8 +1079,7 @@ function householdNew(hh){
         <div><dt>Origin</dt><dd>${originTag(origin)}</dd></div>
         <div><dt>Played</dt><dd>${esc(hh.played || "Not yet")}</dd></div>
         <div><dt>Neighbourhood Stories</dt><dd>${esc(hh.stories || "Not set")}</dd></div>
-        ${dyn ? `<div><dt>Dynasty</dt><dd class="dynline">${dyn}</dd></div>` : ""}
-        ${(() => { const f = ids.map(id => SIMS[id].src && SIMS[id].src.from).find(Boolean); return f ? `<div><dt>Sims from</dt><dd>${esc(f)}, to check</dd></div>` : ""; })()}</dl></div>
+        ${dyn ? `<div><dt>Dynasty</dt><dd class="dynline">${dyn}</dd></div>` : ""}</dl></div>
     </div>
     <section class="block" style="--h:${hc}"><div class="block-head"><h2>The <em>Sims</em></h2><span class="count">${whoCount(ids)}</span></div>
       ${simRoster(ids)}
