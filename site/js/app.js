@@ -493,7 +493,7 @@ function simPage(s){
   const stage = [stageOf(s), s.late ? "deceased" : ""].filter(Boolean).join(" · ");
   let h = `<section class="hero small" style="--c:${home1.hood.glow || hc}"><div class="crumbs">${hh ? `<a href="#w-${w.id}">${ic("map")}${esc(w.name)}</a><a href="#n-${home1.hood.id}">${ic("pin")}${esc(home1.hood.name)}</a><a href="#${home1.id}">${ic("home")}${esc(home1.name)}</a>` : ""}<a href="#${base.id}">${ic("users")}${hhCrumb}</a></div>
     <div style="display:flex;gap:26px;align-items:center;flex-wrap:wrap;margin-top:22px"><div class="monogram">${initial(s.name)}</div><div><span class="label" style="color:var(--on-deep-mute)">${isAnimal(s) ? esc(s.state) : "Sim"}</span><h1 style="margin-top:6px">${esc(s.name)}</h1>${nee(s) ? `<p class="nee">${esc(nee(s))}</p>` : ""}</div></div>
-    <div class="sim-chips">${stage ? `<span>${esc(stage.charAt(0).toUpperCase() + stage.slice(1))}</span>` : ""}${s.state ? lifeState(s, "") : "<span>Human</span>"}${isChampion(s) ? `<span class="champ">${ic("trophy")}Champion</span>` : ""}${s.noHome ? `<span>No home</span>` : ""}${s.notInGame ? `<span title="Named on the Sims Wiki">Never in the game</span>` : ""}${s.notInGame ? "" : `<span>${originTag(s.origin)}</span>`}</div></section>`;
+    <div class="sim-chips">${stage ? `<span>${esc(stage.charAt(0).toUpperCase() + stage.slice(1))}</span>` : ""}${s.state ? lifeState(s, "") : "<span>Human</span>"}${isChampion(s) ? `<span class="champ">${ic("ph-trophy")}Champion</span>` : ""}${s.noHome ? `<span>No home</span>` : ""}${s.notInGame ? `<span title="Named on the Sims Wiki">Never in the game</span>` : ""}${s.notInGame ? "" : `<span>${originTag(s.origin)}</span>`}</div></section>`;
   // details
   const facts = [["Breed", s.breed], ["Cause of death", s.state === "Ghost" ? s.death : null], ["Aspiration", s.aspiration], ["Career", s.career], ["School", s.school], ["Lifestyles", (s.lifestyles || []).join(", ")], ["Likes", (s.likes || []).join(", ")], ["Died", s.died]].filter(([, v]) => v);
   const hasTraits = s.traits && s.traits.length;
@@ -999,7 +999,7 @@ function whoCount(list){
   return [`${n} ${n === 1 ? "Sim" : "Sims"}`, ...Object.entries(pets).map(([k, c]) => `${c} ${c === 1 ? k : k + "s"}`)].join(" · ");
 }
 // each life state its own icon (her picks, 19 Oct); mermaids still to choose
-const OCCULT_ICON = {Spellcaster: "cauldron", Vampire: "bat", Werewolf: "moon", Ghost: "ghost", Alien: "face-alien", Fairy: "butterfly", "Plant Sim": "sprout", Servo: "bot"};
+const OCCULT_ICON = {Spellcaster: "cauldron", Vampire: "bat", Werewolf: "ph-moon", Ghost: "ghost", Alien: "ph-alien", Fairy: "ph-butterfly", "Plant Sim": "ph-plant", Servo: "bot"};
 const lifeState = (s, cls) => isAnimal(s) ? `<span class="${cls} animal">${animalIcon(s)}${esc(s.state)}</span>` : `<span class="${cls} occult">${ic(OCCULT_ICON[s.state] || "sparkle")}${esc(s.state)}</span>`;
 function hhListing(x, listed){   // listed: on the households page, one-Sim households read surname first
   const n = x.sims.length, hc = x.lots[0].hood.color, made = simsMade(x);
@@ -1076,7 +1076,7 @@ function simRoster(ids){
 function animalRoster(ids){
   return `<div class="sheet-wrap"><table class="sheet roster animals"><thead><tr><th scope="col">Name</th><th scope="col">Animal</th><th scope="col">Life stage</th><th scope="col">Breed</th><th scope="col">Traits</th></tr></thead><tbody>
     ${ids.map(id => { const s = SIMS[id], dash = `<span class="muted">—</span>`;
-      return `<tr><td><span class="who"><span class="mono">${initial(s.name)}</span><a href="#s-${id}">${esc(s.name)}</a>${isChampion(s) ? `<span class="champ small" title="Champion">${ic("trophy")}</span>` : ""}</span></td>
+      return `<tr><td><span class="who"><span class="mono">${initial(s.name)}</span><a href="#s-${id}">${esc(s.name)}</a>${isChampion(s) ? `<span class="champ small" title="Champion">${ic("ph-trophy")}</span>` : ""}</span></td>
         <td><span class="state animal">${animalIcon(s)}${esc(s.state)}</span></td><td>${esc(stageOf(s) || "")}</td><td>${s.breed ? esc(s.breed) : dash}</td>
         <td>${s.traits && s.traits.length ? esc(s.traits.join(", ")) : dash}</td></tr>`; }).join("")}</tbody></table></div>`;
 }
