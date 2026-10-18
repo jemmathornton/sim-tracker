@@ -64,7 +64,32 @@
  ],
  "households": {
   "Cecilia Kang": {
-   "single": true
+   "single": true,
+   "sims": [
+    {
+     "id": "cecilia-kang",
+     "name": "Cecilia Kang",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Country Caretaker",
+     "traits": ["Ambitious", "Noncommittal", "Animal Enthusiast"],
+     "bonus": "Collector",
+     "career": "Freelance Programmer · Freelance Programmer (level 1)",
+     "skills": [
+      ["Gardening", 5, 10],
+      ["Cross-stitch", 2, 5],
+      ["Programming", 6, 10],
+      ["Logic", 6, 10],
+      ["Baking", 3, 10],
+      ["Cooking", 2, 10],
+      ["Rock Climbing", 2, 10]
+     ],
+     "rels": [
+      ["Ian Moody", "Acquaintances"]
+     ]
+    }
+   ]
   },
   "Moody & McMillan": {
    "sims": [

@@ -458,6 +458,92 @@
      ]
     }
    ]
+  },
+  "Specter": {
+   "sims": [
+    {
+     "id": "layne-coffin",
+     "name": "Layne Coffin",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Neighborhood Confidante",
+     "traits": ["Loyal", "Good", "Creative"],
+     "bonus": "Gregarious",
+     "career": "Entertainer · Concert Virtuoso (level 10)",
+     "skills": [
+      ["Charisma", 8, 10],
+      ["Piano", 9, 10],
+      ["Guitar", 9, 10],
+      ["Knitting", 10, 10]
+     ],
+     "rels": [
+      ["Ekade Aether", "Friends"],
+      ["Esther Gomes", "Friends"],
+      ["Kai Aether", "Good Friends"],
+      ["Nyon Specter", "Disliked"],
+      ["Radwan Gomes", "Good Friends"],
+      ["Tziporah Gomes", "Friends"],
+      ["Zelmira Gomes", "Friends"],
+      ["Zuleika Izadi", "Friends"]
+     ],
+     "partners": [
+      ["olive-specter", "Engaged"]
+     ]
+    },
+    {
+     "id": "nyon-specter",
+     "name": "Nyon Specter",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Teen",
+     "aspiration": "Bestselling Author",
+     "traits": ["Loner", "Chased by Death"],
+     "bonus": "Muser",
+     "career": "",
+     "school": "High school · grade C",
+     "skills": [
+      ["Writing", 4, 10],
+      ["Mischief", 9, 10],
+      ["Snowboarding", 4, 10]
+     ],
+     "rels": [
+      ["Layne Coffin", "Disliked"],
+      ["Takama Aether", "Friends"],
+      ["Radwan Gomes", "Friends"],
+      ["Tziporah Gomes", "Friends"],
+      ["Zelmira Gomes", "Good Friends"]
+     ],
+     "parents": ["olive-specter"]
+    },
+    {
+     "id": "olive-specter",
+     "name": "Olive Specter",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Serial Romantic",
+     "traits": ["Bookworm", "Neat", "Macabre"],
+     "bonus": "Alluring",
+     "career": "Undertaker · Mortuary Assistant (level 9)",
+     "skills": [
+      ["Charisma", 8, 10],
+      ["Fitness", 5, 10],
+      ["Logic", 7, 10],
+      ["Painting", 7, 10],
+      ["Writing", 4, 10]
+     ],
+     "rels": [
+      ["Esther Gomes", "Despised"],
+      ["Tziporah Gomes", "Despised"],
+      ["Zelmira Gomes", "Disliked"],
+      ["Zuleika Izadi", "Good Friends"]
+     ],
+     "partners": [
+      ["layne-coffin", "Engaged"]
+     ]
+    }
+   ]
   }
  }
 }

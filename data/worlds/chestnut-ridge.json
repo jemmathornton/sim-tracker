@@ -233,6 +233,49 @@
      "parents": ["unknown-14"]
     }
    ]
+  },
+  "The Nectar Making Duo": {
+   "sims": [
+    {
+     "id": "marissa-tracey",
+     "name": "Marissa Tracey",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Fabulously Wealthy",
+     "traits": ["Ambitious", "Materialistic", "Outgoing"],
+     "bonus": "Business Savvy",
+     "career": "",
+     "skills": [
+      ["Charisma", 5, 10],
+      ["Comedy", 6, 10],
+      ["Photography", 3, 5]
+     ],
+     "rels": [
+      ["Wren Grove", "Despised"],
+      ["Dani Davila", "Friends"]
+     ]
+    },
+    {
+     "id": "dani-davila",
+     "name": "Dani Davila",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Expert Nectar Maker",
+     "traits": ["Foodie", "Creative", "Snob"],
+     "bonus": "Essence of Flavor",
+     "career": "",
+     "skills": [
+      ["Nectar Making", 3, 5],
+      ["Gardening", 7, 10],
+      ["Violin", 5, 10]
+     ],
+     "rels": [
+      ["Marissa Tracey", "Friends"]
+     ]
+    }
+   ]
   }
  }
 }

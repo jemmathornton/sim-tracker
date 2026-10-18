@@ -24,11 +24,14 @@ def main(apply):
     P = load(os.path.join(ROOT, 'research', 'data', 'premades.json'))
     worlds = {p: load(p) for p in glob.glob(os.path.join(ROOT, 'data', 'worlds', '*.json'))}
     ppath = os.path.join(ROOT, 'data', 'people.json'); people = load(ppath)
+    for k in [k for k in people if k.startswith('unknown-')]: del people[k]   # made by this script last time: worked out again below
     site = {}   # site id -> Sim dict (premade Sims only)
     for W in worlds.values():
         for hh in (W.get('households') or {}).values():
             for s in hh.get('sims', []):
-                if s.get('id') and s.get('origin') == 'Premade': site[s['id']] = s
+                if s.get('id') and s.get('origin') == 'Premade':
+                    site[s['id']] = s
+                    if any(p.startswith('unknown-') for p in s.get('parents', [])): s['parents'] = [p for p in s['parents'] if not p.startswith('unknown-')]
     report = collections.Counter()
     # 1. married couples, 2. no aspirations for pets and the very young
     for s in site.values():

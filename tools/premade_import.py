@@ -16,7 +16,10 @@ from common import ROOT, load, save
 MATCHES = {
     "willow-creek": {"Broke": "Broke", "Pancakes": "Pancakes", "Spencer-Kim-Lewis": "Spencer-Kim-Lewis"},
     "newcrest": {"BFF": "BFF"},
-    "windenburg": {"Fyres": "Fyres", "Munch": "Munch", "Partihaus": "Partihaus", "Free Spirits": "Bohemian"},
+    # 18 Oct, EA's versions unless she says otherwise: Don Lothario has his own home in her plan, so he leaves the Calientes
+    "oasis-springs": {"Caliente": ("Caliente", lambda s: s["name"] != "Don Lothario"), "Lothario": ("Caliente", lambda s: s["name"] == "Don Lothario"),
+                      "Curious": "Curious"},
+    "windenburg": {"Fyres": "Fyres", "Munch": "Munch", "Partihaus": "Partihaus", "Free Spirits": "Bohemian", "Specter": "Specter"},
     "san-myshuno": {"Behr": "Behr", "Benali": "Benali", "Bheeda": "Bheeda", "Jang": "Jang", "Jeong": "Jeong", "Lobo": "Lobo",
                     "Pizzazz": "Pizzazz", "Rasoya": "Rasoya", "Feng": "Hu"},
     "forgotten-hollow": {"Straud": "NPC_VS_Nosferatu", "Vatore": "NPC_VS_Wilsons"},
@@ -29,14 +32,14 @@ MATCHES = {
     "evergreen-harbor": {"Harris": "Harris", "Sterling Rico": "Entrepreneur", "Tinker": "Maker",
                          "Greenburg": ("Ecomaster", lambda s: s["name"] != "Knox Greenburg"), "Knox Greenburg": ("Ecomaster", lambda s: s["name"] == "Knox Greenburg")},
     "mt-komorebi": {"Akiyama": "Commuter", "Ito": "Affluent", "Nishidake": "Elder"},
-    "henford-on-bagley": {"Moody & McMillan": "MoodyMacMillan", "The Scotts": "Scott", "The Watsons": "Watson"},
+    "henford-on-bagley": {"Moody & McMillan": "MoodyMacMillan", "The Scotts": "Scott", "The Watsons": "Watson", "Cecilia Kang": "Kang"},
     "tartosa": {"Laurent": "Laurent", "Markovic": "Markovic", "Soto": "Soto", "Monticapp": "Monty"},   # renamed Monticapp (18 Oct)
     "moonwood-mill": {"Volkov": "WolfTown_Volkov"},
     "copperdale": {"Harjo": "HS_Harjo", "Prescott": "HS_Prescott", "Price": "HS_Price"},
     "san-sequoia": {"Michaelson": "Ep13_BayArea_Michaelson", "Robles": "Ep13_BayArea_Robles", "Robles-Ruano": "Ep13_BayArea_RoblesRuano",
                     "Luna-Sullivan": "Ep13_BayArea_LunaSullivan"},
-    "chestnut-ridge": {"Gooseman": "RetiredHorseChampion", "The Grove Family": "AnimalFamily", "Sienna & Flapjack": "HorseTrainer"},
-    "tomarang": {"Bun Ma": "BunMaFamily", "Cahyaputri": "CahyaputriFamily"},
+    "chestnut-ridge": {"Gooseman": "RetiredHorseChampion", "The Grove Family": "AnimalFamily", "Sienna & Flapjack": "HorseTrainer", "The Nectar Making Duo": "NectarFriend"},
+    "tomarang": {"Bun Ma": "BunMaFamily", "Cahyaputri": "CahyaputriFamily", "Linh-Sadya & Linh": ["SadyaLinhFamily", "LinhFamily"]},
     "ciudad-enamorada": {"Nadir": "RockyRelationship", "López": "SingleParent"},
     "ravenwood": {"Aether": "Aether", "Gomes": "Gomes", "Izadi-Gomes": "IzadiGomes"},
     "nordhaven": {"Koopman": "Koopman_Ep18World", "Loden": "Loden_Ep18World", "Sarpong": "Sarpong_Ep18World", "Urbane Housesharers household": "Urbz_Ep18World"},
@@ -82,12 +85,12 @@ def school(s):
 def main(apply):
     P = load(os.path.join(ROOT, 'research', 'data', 'premades.json'))
     plan, report = {}, []
-    used_ids = set()
+    used_ids, on_site = set(), {}
     for wf in os.listdir(os.path.join(ROOT, 'data', 'worlds')):
         W = load(os.path.join(ROOT, 'data', 'worlds', wf))
         for hh in (W.get('households') or {}).values():
             for s in hh.get('sims', []):
-                if s.get('id'): used_ids.add(s['id'])
+                if s.get('id'): used_ids.add(s['id']); on_site[s['name']] = s['id']
     for w in (P and MATCHES):
         path = os.path.join(ROOT, 'data', 'worlds', f'{w}.json')
         if not os.path.exists(path): report.append(f"{w}: no world file"); continue
@@ -98,9 +101,14 @@ def main(apply):
         if w not in plan: continue
         W = plan[w][1]
         for name, spec in m.items():
-            short, keep = spec if isinstance(spec, tuple) else (spec, None)
-            cands = [h for h in P["households"] if h["short"] == short and (not keep or any(keep(s) for s in h["sims"]))]   # two EA households can share a name (the Altos)
-            h = cands[0] if cands else None
+            if isinstance(spec, list):   # several EA households in one plan household
+                hs = [h for h in P["households"] if h["short"] in spec]
+                h = {"short": " + ".join(spec), "sims": [x for hh in hs for x in hh["sims"]], "relationships": [r for hh in hs for r in hh["relationships"]]} if hs else None
+                short, keep = h["short"] if h else spec, None
+            else:
+                short, keep = spec if isinstance(spec, tuple) else (spec, None)
+                cands = [h for h in P["households"] if h["short"] == short and (not keep or any(keep(s) for s in h["sims"]))]   # two EA households can share a name (the Altos)
+                h = cands[0] if cands else None
             if not h: report.append(f"{w} / {name}: EA household {short} not found"); continue
             have = (W.get('households') or {}).get(name, {}).get('sims')
             if have: report.append(f"{w} / {name}: already has Sims, left alone"); continue
@@ -111,9 +119,15 @@ def main(apply):
                 ids[(s["template"], s["sim_id"])] = sid
             chosen.append((w, name, h, sims))
             report.append(f"{w} / {name}  <-  {short}: {', '.join(s['name'] for s in sims)}")
+    # Sims already on the site, so new households link to them (family, friendships)
+    chosen_names = {s["name"] for (w, n, h, sims) in chosen for s in sims}
+    for h in P["households"]:
+        for s in h["sims"]:
+            if s["name"] in on_site and s["name"] not in chosen_names: ids[(s["template"], s["sim_id"])] = on_site[s["name"]]
     by_tpl = {k[0]: v for k, v in ids.items() if k[0]}
     by_sim = {k[1]: v for k, v in ids.items()}
-    names = {v: s["name"] for (w, n, h, sims) in chosen for s in sims for k, v in ids.items() if k == (s["template"], s["sim_id"])}
+    names = {v: n for n, v in on_site.items()}
+    names.update({v: s["name"] for (w, n, h, sims) in chosen for s in sims for k, v in ids.items() if k == (s["template"], s["sim_id"])})
     # family: parents and partners from each household file and template, plus EA's links between households
     parents, partners = {}, {}
     def add_parent(child, par):

@@ -191,6 +191,99 @@
   },
   "Leah-Moon Cadberry": {
    "single": true
+  },
+  "Caliente": {
+   "sims": [
+    {
+     "id": "katrina-caliente",
+     "name": "Katrina Caliente",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Soulmate",
+     "traits": ["Romantic", "Family-Oriented", "Jealous"],
+     "bonus": "Alluring",
+     "career": "Entertainer · Opening Act (level 4)",
+     "skills": [
+      ["Fitness", 2, 10],
+      ["Comedy", 2, 10],
+      ["Piano", 2, 10]
+     ]
+    },
+    {
+     "id": "dina-caliente",
+     "name": "Dina Caliente",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Fabulously Wealthy",
+     "traits": ["Romantic", "Ambitious", "Materialistic"],
+     "bonus": "Business Savvy",
+     "career": "Culinary · Assistant Dishwasher (level 1)",
+     "skills": [
+      ["Fitness", 2, 10],
+      ["Mixology", 2, 10]
+     ],
+     "parents": ["katrina-caliente"]
+    },
+    {
+     "id": "nina-caliente",
+     "name": "Nina Caliente",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Villainous Valentine",
+     "traits": ["Romantic", "Hot-Headed", "Noncommittal"],
+     "bonus": "Dastardly",
+     "career": "",
+     "skills": [
+      ["Mischief", 2, 10]
+     ],
+     "parents": ["katrina-caliente"]
+    }
+   ]
+  },
+  "Lothario": {
+   "sims": [
+    {
+     "id": "don-lothario",
+     "name": "Don Lothario",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Serial Romantic",
+     "traits": ["Self-Assured", "Romantic", "Noncommittal"],
+     "bonus": "Alluring",
+     "career": "",
+     "skills": [
+      ["Fitness", 3, 10]
+     ]
+    }
+   ]
+  },
+  "Curious": {
+   "sims": [
+    {
+     "id": "nova-curious",
+     "name": "Nova Curious",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Computer Whiz",
+     "traits": ["Geek", "Genius", "Ambitious"],
+     "bonus": "Quick Learner",
+     "career": "",
+     "skills": [
+      ["Charisma", 4, 10],
+      ["Logic", 6, 10],
+      ["Programming", 3, 10],
+      ["Video Gaming", 5, 10],
+      ["Mischief", 3, 10],
+      ["Cooking", 4, 10],
+      ["Fitness", 5, 10]
+     ]
+    }
+   ]
   }
  }
 }

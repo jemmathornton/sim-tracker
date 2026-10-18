@@ -132,7 +132,7 @@
      "rels": [
       ["Zhafira Cahyaputri", "Disliked"]
      ],
-     "parents": ["unknown-8", "unknown-9"]
+     "parents": ["unknown-9", "unknown-8"]
     },
     {
      "id": "zhafira-cahyaputri",
@@ -147,7 +147,136 @@
      "rels": [
       ["Vanesha Cahyaputri", "Disliked"]
      ],
-     "parents": ["unknown-8", "unknown-9"]
+     "parents": ["unknown-9", "unknown-8"]
+    }
+   ]
+  },
+  "Linh-Sadya & Linh": {
+   "sims": [
+    {
+     "id": "thi-linh",
+     "name": "Thi Linh",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Discerning Dweller",
+     "traits": ["Cringe", "Genius", "Slob"],
+     "bonus": "Gregarious",
+     "career": "Secret Agent · Secret Agent (level 7)",
+     "skills": [
+      ["Logic", 5, 10],
+      ["Charisma", 5, 10]
+     ],
+     "rels": [
+      ["Chánh Linh", "Friends"],
+      ["Arturo Linh", "Friends"],
+      ["Liên Sadya", "Friends"],
+      ["Cam Sadya", "Friends"],
+      ["Alon Sadya", "Friends"],
+      ["Vanesha Cahyaputri", "Friends"]
+     ]
+    },
+    {
+     "id": "ch-nh-linh",
+     "name": "Chánh Linh",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Elder",
+     "aspiration": "Angling Ace",
+     "traits": ["Foodie", "Goofball", "Family-Oriented"],
+     "bonus": "Collector",
+     "career": "",
+     "rels": [
+      ["Thi Linh", "Friends"],
+      ["Liên Sadya", "Friends"],
+      ["Alon Sadya", "Friends"]
+     ],
+     "partners": [
+      ["arturo-linh", "Spouse"]
+     ]
+    },
+    {
+     "id": "arturo-linh",
+     "name": "Arturo Linh",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Elder",
+     "aspiration": "Nerd Brain",
+     "traits": ["Geek", "Wise", "Outgoing"],
+     "bonus": "Quick Learner",
+     "career": "Astronaut · Command Center Lead (level 4)",
+     "skills": [
+      ["Fitness", 2, 10],
+      ["Logic", 3, 10]
+     ],
+     "rels": [
+      ["Thi Linh", "Friends"],
+      ["Alon Sadya", "Friends"],
+      ["Bua Bun Ma", "Good Friends"]
+     ],
+     "partners": [
+      ["ch-nh-linh", "Spouse"]
+     ]
+    },
+    {
+     "id": "li-n-sadya",
+     "name": "Liên Sadya",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Neighborhood Confidante",
+     "traits": ["Generous", "Vegetarian", "Loyal"],
+     "bonus": "Gregarious",
+     "career": "Style Influencer · Wardrobe Wiz (level 8)",
+     "skills": [
+      ["Painting", 5, 10],
+      ["Charisma", 6, 10],
+      ["Writing", 7, 10]
+     ],
+     "rels": [
+      ["Thi Linh", "Friends"],
+      ["Chánh Linh", "Friends"]
+     ],
+     "parents": ["ch-nh-linh", "arturo-linh"],
+     "partners": [
+      ["alon-sadya", "Spouse"]
+     ]
+    },
+    {
+     "id": "alon-sadya",
+     "name": "Alon Sadya",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Freelance Botanist",
+     "traits": ["Loves Outdoors", "Neat", "Self-Assured"],
+     "bonus": "Collector",
+     "career": "Freelance Programmer · Freelance Programmer (level 1)",
+     "skills": [
+      ["Programming", 5, 10]
+     ],
+     "rels": [
+      ["Thi Linh", "Friends"],
+      ["Arturo Linh", "Friends"],
+      ["Chánh Linh", "Friends"]
+     ],
+     "partners": [
+      ["li-n-sadya", "Spouse"]
+     ]
+    },
+    {
+     "id": "cam-sadya",
+     "name": "Cam Sadya",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Child",
+     "aspiration": "Artistic Prodigy",
+     "traits": ["Loves Outdoors"],
+     "career": "",
+     "rels": [
+      ["Thi Linh", "Friends"]
+     ],
+     "parents": ["li-n-sadya", "alon-sadya"]
     }
    ]
   }
