@@ -20,7 +20,8 @@ Read `HANDOVER.md` once for the full story, then `TODO.md` for everything still 
 - **World colours** come from the world's map and her builds, never from one side of a world (e.g. Britechester must match neither UoB green nor Foxbury red). The "deep" shades drive the fade at the bottom of each map hero and must look the same as that world's neighbourhood cards.
 - **Never guess where a neighbourhood is on a map.** Give her a gridded copy (8 columns A–H × 6 rows 1–6) and let her name the squares.
 - **Phone layout is parked** until she asks; laptop (1280px) first.
-- **Her saves:** only the ones called "Building…" are for lot details, and from them only lots, never Sims. Only lots marked shared get anything from a save (unshared ones may not be finished); her one exception (16 Oct): rentals get their unit names and unit traits even before they’re shared. Saves are read from a temporary copy, never opened in place.
+- **Sims and households (18 Oct):** her spreadsheet says which households exist and where they live; it wins over any save. EA’s premade families come from the game’s own files and the Sims Wiki unless she has said otherwise. Her own households may be filled from any of her saves or her Library where one matches, for now, marked for her to double-check (she has many saves with different versions).
+- **Her saves:** only the ones called "Building…" are for lot details, and from them only lots (apart from the Sims rule above). Only lots marked shared get anything from a save (unshared ones may not be finished); her one exception (16 Oct): rentals get their unit names and unit traits even before they’re shared. Saves are read from a temporary copy, never opened in place.
 - Notion is no longer used for this project.
 
 ## Where things are
