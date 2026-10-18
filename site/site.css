@@ -819,3 +819,11 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 .cal .m-ev.k-lot{font-style:italic}   /* lot nights: named by their lot */
 .cal .chip-l{align-self:center;font-size:11.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);min-width:84px}
 .cal .wchip:not([style]) i{display:none}
+/* banner text over the maps: option D from for-jemma/prototypes/banners (her choice, 19 Oct): slightly lighter brass and white,
+   a brighter small line, and a soft dark shadow behind the small line, the title, the description and the figures */
+.hero.mapped{--brass-light:color-mix(in srgb,var(--brass) 72%,#fff)}
+.hero.mapped .kicker .label{color:color-mix(in srgb,#fff 90%,var(--deep));text-shadow:0 1px 2px rgba(0,0,0,.6),0 0 10px rgba(0,0,0,.45)}
+.hero.mapped h1{color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.4),0 2px 12px rgba(0,0,0,.35),0 4px 30px rgba(0,0,0,.4)}
+.hero.mapped h1 em{color:var(--brass-light)}
+.hero.mapped>p{text-shadow:0 1px 2px rgba(0,0,0,.55),0 0 12px rgba(0,0,0,.4)}
+.hero.mapped .figures span{text-shadow:0 1px 2px rgba(0,0,0,.45)}
