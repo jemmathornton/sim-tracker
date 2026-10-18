@@ -88,6 +88,15 @@ worlds.forEach(w => {
   w.stats.hhMade = Object.values(w.households).filter(x => x.lots.some(l => l.sims === true)).length;
   w.stats.pHH = w.stats.hh ? Math.round(100 * w.stats.hhMade / w.stats.hh) : 0;
 });
+// a business owned from another world (the Newcrest Kirklands own Magnolia Mall, 19 Oct): when the owners have no Sims or home in the
+// lot's world and exactly one household of that family elsewhere has Sims, the lot joins that household instead of an empty one
+Object.values(hhIndex).filter(h => !h.sims.length && h.lots.every(l => l.owned)).forEach(h => {
+  const homes = Object.values(hhIndex).filter(o => o !== h && o.family === h.family && o.sims.length && o.world !== h.world);
+  if (homes.length !== 1) return; const to = homes[0];
+  h.lots.forEach(l => { l.hh = to; to.lots.push(l); });
+  delete hhIndex[h.id]; delete h.world.households[slug(h.name)]; const st = h.world.stats, left = Object.values(h.world.households);
+  st.hh = left.length; st.hhMade = left.filter(x => x.lots.some(l => l.sims === true)).length; st.pHH = st.hh ? Math.round(100 * st.hhMade / st.hh) : 0;
+});
 // every Sim, by full name, so relationships can link across households
 // apartment buildings: units of one building grouped together (trial: Culpepper House only)
 // apartment buildings: apartments sharing a building name (minus their unit number) in the same neighbourhood are grouped
@@ -632,7 +641,7 @@ function searchIndex(){
       x.sims.forEach(sm => sm.sid ? add("Sim", sm.name, hhWord(x.name), "#s-" + sm.sid, []) : add("Sim", sm.name, hhWord(x.name), "#" + x.id, [], sm.id)); });
   });
   Object.values(SIM_PAGES).filter(s => !s.hh).forEach(s => add("Sim", s.name, hhWord(ANCHOR[s.id].name) + "’s family tree", "#s-" + s.id, []));
-  Object.values(GROUP_PAGES).forEach(g => add(GROUP_KINDS[g.kind].name, groupTitle(g), GROUP_KINDS[g.kind].name, "#" + g.id, [g.name]));
+  Object.values(GROUP_PAGES).forEach(g => add(kindName(g), groupTitle(g), g.world ? g.world.name : "Across the save", "#" + g.id, [g.name]));
   return out;
 }
 // best first: the name starts with it, then a word in the name does, then the name has it anywhere; matches on another name (in-game, Gallery title) after those
