@@ -903,9 +903,9 @@ function world(w){
   const s = w.stats;
   let h = mapHero(w, esc(w.pack) + (w.owned ? "" : " · not owned yet"), titleWord(w.name), w.blurb ? esc(w.blurb) : "", [[w.hoods.length,"neighbourhoods"],[s.lots,"lots"],[s.hh,"households"],[simCount(Object.values(w.households)),"Sims"]],
     w.hoods.map(x => `<a href="#n-${x.id}">${esc(hoodTitle(x))}</a>`).join(""));
+  h += worldAbout(w);   // weather and highlights first, small (her call, 19 Oct)
   h += `<section class="hood" style="--h:${w.color}"><div class="hood-head"><span class="label">Explore</span><div><h2>Neighbourhoods</h2><p>Open a neighbourhood to see its lots, then a home to meet the household living there.</p></div><a class="count" href="#f-${w.id}">All ${s.hh} households</a></div>
     <div class="listings">${w.hoods.map(hoodCard).join("")}</div></section>`;
-  h += worldAbout(w);
   h += `<a class="stats-link" href="#stats-${w.id}"><span>${ic("grid")}Progress, lot by lot</span><span class="go">See the stats for ${esc(w.name)} ${ic("arrow")}</span></a>`;
   return h;
 }
@@ -917,7 +917,7 @@ function worldAbout(w){
   return `<section class="block" style="--h:${w.color}"><div class="block-head"><h2>Weather and <em>highlights</em></h2><span class="count">from the game</span></div>
     ${w.weatherSeasons ? `<div class="wx-seasons">${CAL_SEASONS.filter(n => w.weatherSeasons[n]).map(n => `<div class="s-${n.toLowerCase()}">${ic(SEASON_ICON[n])}<b>${n}:</b><span>${esc(w.weatherSeasons[n].toLowerCase())}</span></div>`).join("")}</div>`
       : w.weather ? `<p class="home-to world-weather">${ic("weather")}<span>${esc(w.weather)}</span></p>` : ""}
-    ${w.highlights ? `<div class="highlights">${w.highlights.map(x => `<div>${ic("landmark")}<b>${esc(x.name)}</b><span>${esc(x.text)}</span></div>`).join("")}</div>` : ""}</section>`;
+    ${w.highlights ? `<div class="wx-highlights">${w.highlights.map(x => `<div>${ic("landmark")}<b>${esc(x.name)}:</b><span>${esc(x.text)}</span></div>`).join("")}</div>` : ""}</section>`;
 }
 function hoodPage(x){
   const w = x.world, hhSet = [...new Set(x.lots.filter(l => l.hh).map(l => l.hh))], built = x.lots.filter(l => l.built === true).length;

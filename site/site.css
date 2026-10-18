@@ -478,11 +478,10 @@ footer .as-of{flex-basis:100%}
 .wx-seasons svg{color:var(--s);font-size:14px;vertical-align:-2px;margin-right:5px}
 .wx-seasons b{font-weight:600;margin-right:4px}
 .wx-seasons span{color:var(--muted)}
-.highlights{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px}
-.highlights div{display:grid;grid-template-columns:auto 1fr;gap:4px 10px;padding:14px 16px;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
-.highlights svg{grid-row:span 2;margin-top:2px;color:var(--h)}
-.highlights b{font-weight:700}
-.highlights span{color:var(--muted);font-size:13.5px;line-height:1.5}
+.wx-highlights{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px 22px;margin-top:14px;padding-top:14px;border-top:1px solid var(--line);font-size:13px;line-height:1.45}
+.wx-highlights svg{color:var(--h);font-size:14px;vertical-align:-2px;margin-right:5px}
+.wx-highlights b{font-weight:600;margin-right:4px}
+.wx-highlights span{color:var(--muted)}
 .hood-extras{display:grid;gap:4px;margin:8px 0 6px}
 /* Stats → On the Gallery: most downloaded next to most loved, and the newest comments (15 Oct) */
 .gal-best{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:28px}
