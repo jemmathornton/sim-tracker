@@ -488,9 +488,12 @@ function simPage(s){
   const facts = [["Breed", s.breed], ["Competitions won", (s.wins || []).join(", ")], ["Aspiration", s.aspiration], ["Career", s.career], ["School", s.school], ["Lifestyles", (s.lifestyles || []).join(", ")], ["Likes", (s.likes || []).join(", ")], ["Died", s.died]].filter(([, v]) => v);
   const hasTraits = s.traits && s.traits.length;
   const skills = (s.skills || []).map(([n, lv, max]) => `<div class="skill"><span>${esc(n)}</span><div class="pips" style="--max:${max||10}">${Array.from({length:max||10},(_,i)=>`<i class="${i<lv?"on":""}"></i>`).join("")}</div><b>${lv}</b></div>`).join("");
-  if (hasTraits || facts.length || skills) h += `<section class="block" style="--h:${hc}"><div class="block-head"><h2>About <em>${esc(first)}</em></h2></div>
-    <div class="sim-about"><div>${hasTraits ? `<span class="label">Traits</span><div class="traits">${s.traits.map(t => `<span>${esc(t)}</span>`).join("")}${s.bonus ? `<span class="bonus" title="Bonus trait">${esc(s.bonus)}</span>` : ""}</div>` : ""}${skills ? `<div class="skills" style="margin-top:${hasTraits ? 22 : 0}px"><span class="label">Skills</span>${skills}</div>` : ""}${s.notes ? `<p class="sim-note">${esc(s.notes)}</p>` : ""}</div>
-      ${facts.length ? `<dl class="facts">${facts.map(([t, v]) => `<div><dt>${t}</dt><dd>${esc(v)}</dd></div>`).join("")}</dl>` : "<div></div>"}</div></section>`;
+  // picture top left with the facts beside it, as on household pages (her ask, 19 Oct: Sims and animals had no picture box)
+  const home = hh ? `<a href="#${hh.id}">${esc(hhWord(hh.name))}</a>` : `<a href="#${base.id}">${hhCrumb}</a>`;
+  h += `<div class="detail" style="--h:${hc}">${simPicture(s)}<div><dl class="facts"><div><dt>${hh ? "Household" : "Family"}</dt><dd>${home}</dd></div>${facts.map(([t, v]) => `<div><dt>${t}</dt><dd>${esc(v)}</dd></div>`).join("")}</dl></div></div>`;
+  if (hasTraits || skills || s.notes) h += `<section class="block" style="--h:${hc}"><div class="block-head"><h2>About <em>${esc(first)}</em></h2></div>
+    <div class="sim-about"><div>${hasTraits ? `<span class="label">Traits</span><div class="traits">${s.traits.map(t => `<span>${esc(t)}</span>`).join("")}${s.bonus ? `<span class="bonus" title="Bonus trait">${esc(s.bonus)}</span>` : ""}</div>` : ""}${s.notes ? `<p class="sim-note">${esc(s.notes)}</p>` : ""}</div>
+      ${skills ? `<div class="skills"><span class="label">Skills</span>${skills}</div>` : "<div></div>"}</div></section>`;
   // family
   const fam = simFamily(s.id), own = isAnimal(s) ? (t => t.includes(s.id) ? t : [])(s.hh ? animalTreeOf(s.hh) : []) : s.hh ? treeOf(s.hh) : treeAround([s.id]);   // their household’s whole family tree, with them highlighted
   if (fam.trim() || own.length) h += `<section class="block" id="family" style="--h:${hc}"><div class="block-head"><h2>Their <em>family</em></h2></div>
@@ -1025,6 +1028,9 @@ function household(hh){
 // the left where a lot page has its photos (a placeholder until her screenshot is in, as "portrait"), the facts on the right;
 // the roster (each name opens the Sim's page), the family tree from family links only, their story and the neighbours.
 // Relationships between Sims are only on Sim pages.
+// a Sim's or animal's own picture (her screenshot as `portrait`), or a placeholder like the household's
+const simPicture = s => s.portrait ? `<div class="portrait hh-pic" style="background-image:url('${s.portrait}')" role="img" aria-label="${esc(s.name)}"></div>`
+  : `<div class="hh-pic none" aria-hidden="true"><span class="hh-pic-mono">${isAnimal(s) ? animalIcon(s) : initial(s.name)}</span><span class="hh-pic-txt">${ic("camera")}</span></div>`;
 function hhPicture(hh, ids){
   if (hh.portrait) return `<div class="portrait hh-pic" style="background-image:url('${hh.portrait}')" role="img" aria-label="${esc(hhWord(hh.name))}">
     <div class="names">${ids.map(id => `<div><a href="#s-${id}"><b>${esc(firstName(SIMS[id]))}</b></a><small>${esc(SIMS[id].age)}</small></div>`).join("")}</div></div>`;
@@ -1081,9 +1087,10 @@ function householdNew(hh){
       ${simRoster(ids)}
       </section>
     ${pets.length ? `<section class="block" style="--h:${hc}"><div class="block-head"><h2>The <em>animals</em></h2><span class="count">${whoCount(pets).replace(/^0 Sims · /, "")}</span></div>
-      ${animalRoster(pets)}${(t => t.length ? `<h3 class="sub-h">Animal <em>family</em></h3><div class="tree-box">${fitTree(t, {compact: true, ch: 96, labels: false, here: hh})}</div>` : "")(animalTreeOf(hh))}</section>` : ""}
+      ${animalRoster(pets)}</section>` : ""}
     ${tree.length ? `<section class="block" style="--h:${hc}"><div class="block-head"><h2>Family <em>tree</em></h2></div>
       <div class="tree-box">${fitTree(tree, {line: slug(hh.family), compact: true, ch: 96, labels: false, here: hh})}</div>${treeKey(tree, true, wColour(w), tree.some(id => !SIMS[id].ph && SIMS[id].hh !== hh))}</section>` : ""}
+    ${(t => t.length ? `<section class="block" style="--h:${hc}"><div class="block-head"><h2>Animal <em>family</em></h2></div><div class="tree-box">${fitTree(t, {compact: true, ch: 96, labels: false, here: hh})}</div></section>` : "")(animalTreeOf(hh))}
     ${hh.story ? `<section class="block" style="--h:${hc}"><div class="block-head"><h2>Their <em>story</em></h2></div><p class="lede">${esc(hh.story)}</p></section>` : ""}
     ${neighbours.length ? `<section class="block"><div class="block-head"><h2>Neighbours</h2></div><div class="families">${neighbours.map(x => famCard(x)).join("")}</div></section>` : ""}`;
 }

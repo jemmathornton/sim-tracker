@@ -719,3 +719,4 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 .champ svg{width:14px;height:14px}
 .champ.small{margin-left:6px}
 .roster.animals td:nth-child(5){color:var(--muted);font-size:13px}
+.hh-pic-mono svg{width:54px;height:54px}   /* an animal's placeholder: its cat, dog or paw icon */
