@@ -43,7 +43,7 @@
     {"lot": "Little Falls Nook", "myName": "Little Falls Nook", "type": "Residential", "size": "20x20", "residents": "Harjo", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Hillside Haven", "myName": "Hillside Haven", "type": "Residential", "size": "30x20", "residents": "Donovan (move!)", "built": false, "shared": false, "screenshots": false, "simsMade": false}
    ],
-   "bannerZoom": 1.4,
+   "bannerZoom": 1.3,
    "bannerShift": [0.03, 0],
    "cardShift": [-0.03, 0]
   }
