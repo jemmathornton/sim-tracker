@@ -736,7 +736,7 @@ const hoodItems = x => { const seen = new Set(); return x.lots.flatMap(l => { if
   return [buildingFront(b)]; }); };
 function mapHero(w, kicker, title, text, figures, chapters, small, view){
   return `<section class="hero ${w.map?"mapped":""} ${small?"hh-hero":""}" style="--c:${w.glow||w.color};${w.map?`--map:url('${w.map}')`:""}${view ? `;--mapview:${view}` : w.heroY != null ? `;--mapview:center ${w.heroY}%/cover` : ""}">${w.map?`<span class="credit">Map by 20th Century Plumbob</span>`:""}<div class="kicker"><i></i><span class="label">${kicker}</span></div>
-    <h1>${title}</h1>${text ? `<p>${text}</p>` : ""}
+    <h1 class="${title.replace(/<small[\s\S]*$/, "").replace(/<[^>]+>/g, "").length > 16 ? "long" : ""}">${title}</h1>${text ? `<p>${text}</p>` : ""}
     <div class="hero-foot"><div class="figures">${figures.map(([n,t]) => `<div><b>${n}</b><span>${t}</span></div>`).join("")}</div><div class="chapters">${chapters}</div></div></section>`;
 }
 
@@ -783,7 +783,7 @@ document.addEventListener("click", e => { const c = e.target.closest("[data-lot-
 function hoodHeroView(x){
   const box = (NB_BOX[x.world.id] || {})[x.name], spot = (NB_PT[x.world.id] || {})[x.name];
   if (!x.world.map || !(box || spot)) return "";
-  const W = document.querySelector("main")?.clientWidth || 1000, HERO_RATIO = Math.max(.3, Math.min(.7, Math.min(.44 * innerHeight, 420) / W));
+  const W = document.querySelector("main")?.clientWidth || 1000, HERO_RATIO = Math.max(.3, Math.min(.7, Math.min(.62 * innerHeight, 560) / W));   // the banner's real height (site.css .hero.mapped)
   const HERO_ZOOM = Math.max(1.01, Math.min(3, (x.world.mapW || 1800) / (W * .85)));
   const room = 1.3, c = box ? [(box[0] + box[2]) / 2, (box[1] + box[3]) / 2] : spot;
   const fit = box ? Math.min(1 / ((box[2] - box[0]) * room), HERO_RATIO / (MAP_RATIO * (box[3] - box[1]) * room)) : HERO_ZOOM;

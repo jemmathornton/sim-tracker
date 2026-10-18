@@ -19,7 +19,8 @@
     {"lot": "Drake Hall", "myName": "Drake Hall", "type": "University Housing", "size": "30x20", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["xwKW8hFmEeqKVku/SNc3OA=="], "traits": ["Study Spot", "Natural Light", "Sunny Aspect"]},
     {"lot": "Wyvern Hall", "myName": "Wyvern Hall", "type": "University Housing", "size": "30x20", "residents": "Best of Friends", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["yJusUxFnEeqOJ0u/SNc3OA=="], "traits": ["Party Place", "Study Spot", "Sunny Aspect"]}
    ],
-   "festivals": ["Britechester Game Day Party", "Creativity Celebration", "Debate Showdown", "Figure Painting"]
+   "festivals": ["Britechester Game Day Party", "Creativity Celebration", "Debate Showdown", "Figure Painting"],
+   "bannerZoom": 1.35
   },
   {
    "name": "Foxbury Institute",
@@ -32,7 +33,8 @@
     {"lot": "Tidal Tower", "myName": "Tidal Tower", "type": "University Housing", "size": "30x20", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["hZKnQAU9RVSEhAqGTS7yyQ=="], "traits": ["Fast Internet", "Study Spot", "Sunny Aspect"]},
     {"lot": "Briny Tower", "myName": "Briny Tower", "type": "University Housing", "size": "30x20", "residents": "Fletcher", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["dUmUl8fLSFC7Tb8ux2J66Q=="], "traits": ["Study Spot", "Party Place", "Sunny Aspect"]}
    ],
-   "festivals": ["Foxbury Game Day Party", "School Spirit Day", "Utili-Bot Contest"]
+   "festivals": ["Foxbury Game Day Party", "School Spirit Day", "Utili-Bot Contest"],
+   "bannerShift": [-0.06, 0]
   },
   {
    "name": "Gibbs Hill",
@@ -46,7 +48,8 @@
     {"lot": "Mossy Lane", "myName": "Mossy Lane", "type": "University Housing", "size": "20x15", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["+1TuKO1OEeqP5iQfmaYcsw=="], "traits": ["Homey", "Cat Hangout"]},
     {"lot": "Spring Steppes", "myName": "Spring Steppes", "type": "Residential Rental (3)", "size": "20x15", "residents": "Elderberry", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["yQ7eyLWyEeuOBucawTB/JA==", "KSt/tE6iQq2vZ7znirZsAw=="], "traits": ["Homey", "Cat Hangout"], "tenants": [{"name": "Pleasant"}], "units": [{"name": "1", "traits": ["Homey", "Cat Hangout"]}, {"name": "2"}, {"name": "3"}]}
    ],
-   "festivals": ["Sprite Celebration Ritual"]
+   "festivals": ["Sprite Celebration Ritual"],
+   "bannerZoom": 1.8
   }
  ],
  "weather": "Often cloudy, a chance of snow in winter",

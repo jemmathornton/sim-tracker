@@ -9,7 +9,7 @@
  "neighbourhoods": [
   {
    "name": "Glimmerbrook",
-   "desc": "",
+   "desc": "The quiet town of Glimmerbrook may have more to it than meets the eye...",
    "mapSpot": [0.55, 0.55],
    "mapBox": [0.3, 0.37, 0.79, 0.73],
    "lots": [
