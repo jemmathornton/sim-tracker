@@ -744,6 +744,7 @@ function mapHero(w, kicker, title, text, figures, chapters, small, view){
 // and a row of circles, one per lot, each linking to its lot.
 // Spots are fractions of the map's width/height, placed by Jemma on a gridded map. Worlds without spots show the whole map, no pin.
 const NB_PT = DATA.nbPt, NB_BOX = DATA.nbBox || {}, NB_CENTRED = DATA.nbCentred || {}, NB_ZOOM = DATA.nbZoom || {}, NB_BANNER = DATA.nbBanner || {};
+const hoodTitle = x => ((NB_BANNER[x.world.id] || {})[x.name] || {}).title || x.name;   // her own order for a two-part name (bannerTitle)
 const MAP_RATIO = 1266/1800, CARD_RATIO = 3/4, ZOOM = 3.2;
 // a box Jemma drew around a neighbourhood (14 Oct): zoom so the whole box fits the card, with a little room around it
 // (never so far out that the map no longer fills the card, nor closer than a quarter of the map's width)
@@ -821,7 +822,7 @@ function hoodCard(x){
 function world(w){
   const s = w.stats;
   let h = mapHero(w, esc(w.pack) + (w.owned ? "" : " · not owned yet"), titleWord(w.name), w.blurb ? esc(w.blurb) : "", [[w.hoods.length,"neighbourhoods"],[s.lots,"lots"],[s.hh,"households"],[simCount(Object.values(w.households)),"Sims"]],
-    w.hoods.map(x => `<a href="#n-${x.id}">${esc(x.name)}</a>`).join(""));
+    w.hoods.map(x => `<a href="#n-${x.id}">${esc(hoodTitle(x))}</a>`).join(""));
   h += `<section class="hood" style="--h:${w.color}"><div class="hood-head"><span class="label">Explore</span><div><h2>Neighbourhoods</h2><p>Open a neighbourhood to see its lots, then a home to meet the household living there.</p></div><a class="count" href="#f-${w.id}">All ${s.hh} households</a></div>
     <div class="listings">${w.hoods.map(hoodCard).join("")}</div></section>`;
   h += worldAbout(w);
@@ -842,7 +843,7 @@ function hoodPage(x){
   // a two-part name ("Lykke Center / University of Windenburg") keeps its first part as the title, the rest on a smaller line
   const [t1, ...t2] = (((NB_BANNER[w.id] || {})[x.name] || {}).title || x.name).split(" / ");   // bannerTitle: her own order for the banner
   let h = mapHero(w, `Neighbourhood · ${esc(w.name)}`, esc(t1) + (t2.length ? `<small class="h1-sub">${esc(t2.join(" / "))}</small>` : ""), x.desc ? esc(x.desc) : "", figs,
-    w.hoods.filter(o => o !== x).map(o => `<a href="#n-${o.id}">${esc(o.name)}</a>`).join(""), true, hoodHeroView(x));
+    w.hoods.filter(o => o !== x).map(o => `<a href="#n-${o.id}">${esc(hoodTitle(o))}</a>`).join(""), true, hoodHeroView(x));
   h += `<section class="hood" style="--h:${x.color}"><div class="hood-head"><span class="label">${esc(x.name)}</span><div><h2>The <em>lots</em></h2><p>Open a home to meet the household who lives there.</p>${hoodExtras(x, true) ? `<div class="hood-extras">${hoodExtras(x, true)}</div>` : ""}<p class="dot-key"><span class="yes">${ic("hammer")}</span>Built <span class="yes">${ic("share")}</span>Shared <span class="yes">${ic("sim")}</span>Sims made <small>Faded means not yet.</small></p></div><span class="count">${built} of ${x.lots.length} built</span></div>
     <div class="listings">${hoodItems(x).join("")}</div></section>`;
   return h;
@@ -983,7 +984,7 @@ function household(hh){
     ${hh.unsure ? `<div class="note">Marked as unsure in the plan. Double-check which family lives here.</div>` : ""}
     <div class="detail" style="--h:${hc}">
       <div><span class="label">${lotsLabel(hh)}</span><div class="home-list">${hh.lots.map(listing).join("")}</div></div>
-      <div><dl class="facts"><div><dt>World</dt><dd><a href="#w-${w.id}">${esc(w.name)}</a></dd></div><div><dt>Neighbourhood</dt><dd>${hoods.map(x => `<a href="#n-${x.id}">${esc(x.name)}</a>`).join(", ")}</dd></div>
+      <div><dl class="facts"><div><dt>World</dt><dd><a href="#w-${w.id}">${esc(w.name)}</a></dd></div><div><dt>Neighbourhood</dt><dd>${hoods.map(x => `<a href="#n-${x.id}">${esc(hoodTitle(x))}</a>`).join(", ")}</dd></div>
         <div><dt>${homes.length > 1 ? "Homes" : "Home"}</dt><dd>${homes.map(l => `<a href="#${l.id}">${esc(l.name)}</a>${hh.tenantOf === l ? " (renting)" : ""}`).join(", ")}</dd></div>${(() => { const lets = owns.filter(l => /rental/i.test(l.type || "")).concat(homes.filter(l => l.tenants && l.hh === hh)), biz = owns.filter(l => !/rental/i.test(l.type || ""));
           return (lets.length ? `<div><dt>Landlord of</dt><dd>${lets.map(l => `<a href="#${l.id}">${esc(l.name)}</a>`).join(", ")}</dd></div>` : "") + (biz.length ? `<div><dt>Owns</dt><dd>${biz.map(l => `<a href="#${l.id}">${esc(l.name)}</a> (${esc(l.type)})`).join(", ")}</dd></div>` : ""); })()}
         <div><dt>Sims made in game</dt><dd>${simsMade(hh) ? `<span class="ok">${ic("sim")} Yes</span>` : "Not yet"}</dd></div></dl></div>
@@ -1036,7 +1037,7 @@ function householdNew(hh){
     <div style="display:flex;gap:26px;align-items:center;flex-wrap:wrap;margin-top:22px"><div class="monogram">${initial(hh.name)}</div><div><span class="label" style="color:var(--on-deep-mute)">Household</span><h1 style="margin-top:6px">${esc(hh.name)}</h1></div></div></section>
     ${hh.unsure ? `<div class="note">Marked as unsure in the plan. Double-check which family lives here.</div>` : ""}
     <div class="detail" style="--h:${hc}">${hhPicture(hh, ids)}
-      <div><dl class="facts"><div><dt>World</dt><dd><a href="#w-${w.id}">${esc(w.name)}</a></dd></div><div><dt>Neighbourhood</dt><dd>${hoods.map(x => `<a href="#n-${x.id}">${esc(x.name)}</a>`).join(", ")}</dd></div>
+      <div><dl class="facts"><div><dt>World</dt><dd><a href="#w-${w.id}">${esc(w.name)}</a></dd></div><div><dt>Neighbourhood</dt><dd>${hoods.map(x => `<a href="#n-${x.id}">${esc(hoodTitle(x))}</a>`).join(", ")}</dd></div>
         ${hhLotLines(hh)}
         <div><dt>Sims made in game</dt><dd>${simsMade(hh) ? `<span class="ok">${ic("sim")} Yes</span>` : "Not yet"}</dd></div>
         <div><dt>Origin</dt><dd>${originTag(origin)}</dd></div>
