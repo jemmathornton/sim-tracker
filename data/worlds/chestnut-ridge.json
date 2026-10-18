@@ -42,7 +42,9 @@
     {"lot": "Canyon Crossing", "myName": "Canyon Crossing", "type": "Residential", "size": "20x20", "residents": "Gooseman", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Palomino Junction", "myName": "Palomino Junction", "type": "Residential (Ranch)", "size": "50x50", "residents": "Palumbo", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["RZD6nwFCTjqQAXMiXhbgMg=="], "traits": ["Bracing Breezes", "Great Acoustics", "Homey"], "challenges": ["Wild Prairie Grass"]},
     {"lot": "Big Sky Reach", "myName": "Big Sky Reach", "type": "Vacation Rental", "size": "20x15", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["W6J+tA4mQGS/Zrj6G+qdpw=="], "traits": ["Peace and Quiet", "Sunny Aspect"]}
-   ]
+   ],
+   "bannerZoom": 0.75,
+   "bannerShift": [0, 0.03]
   }
  ],
  "weather": "Snowy winters, heat waves in summer",
