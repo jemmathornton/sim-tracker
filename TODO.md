@@ -11,7 +11,7 @@ Every open item carried over from the claude.ai project on 13 Oct 2026: the note
 - [x] [Claude] Rebuild the site in the new setup, matching the live page page for page (all 614 pages checked, 13 Oct)
 - [x] [Claude] Gallery pictures are normal files named by lot
 - [x] [Claude] Weekly Gallery refresh rebuilt (Windows task, Sundays 08:54) and run once (13 Oct)
-- [ ] [Jemma] Turn off the "Weekly Gallery stats refresh" scheduled task in claude.ai (the app has its own now, and the old one only updates the claude.ai page)
+- [x] [Jemma] Turn off the "Weekly Gallery stats refresh" scheduled task in claude.ai (the app has its own now, and the old one only updates the claude.ai page) — done 19 Oct, she deleted it
 - [x] [Claude] `live_overrides.json` folded into the app's data and retired
 - [x] Her spreadsheet updated with everything decided in the app (14 Oct, her request): 83 cells, the spelling fixes and the 4 secret lots as new rows (the percentages and the Overview take them in). Her old copy is kept as `World Plans (fixed) - backup 14 Oct.xlsx`. Only difference left: the Residents cell of 3 Cobblebottom Street and Spring Steppes still names owners and tenants together, which the app splits
 - [x] App icon settled 16 Oct: a plumbob outline (redrawn from the Sims Wiki's description: a hexagonal bipyramid, equal halves, front side twice the width of the side ones. Thinner lines; she's happy with it), yellow on a brighter purple, each size drawn separately so it stays sharp (16 Oct, her idea; the house looked near black and blurry). (Stats page "On the Gallery" at the bottom: kept as it is, 16 Oct)
@@ -235,7 +235,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 
 ### Household stories (19 Oct decision note: research/decisions/stories.md; research/household-stories.md; prototype: for-jemma/prototypes/stories/index.html, the Montys and the Goths)
 - [ ] [Jemma] Rewrite the bios of Caliente and Lothario, and of Greenburg and Knox Greenburg: each pair shows EA’s one bio for the whole family for now (19 Oct). Santiago Ojo: EA’s Karaoke Legends bio left off (only Miko lives there).
-- [ ] [Jemma] Bio: hers first with EA’s underneath (suggested), or EA’s until she writes her own? EA’s as our summary with a link, or EA’s exact text read from her game?
+- [x] [Jemma] Bio: hers first with EA’s underneath (suggested), or EA’s until she writes her own? EA’s as our summary with a link, or EA’s exact text read from her game? — 19 Oct: hers for her own Sims, EA’s own text word for word for EA’s (98 found; research/household-bios.md)
 - [ ] [Jemma] A dated timeline per household? By the month she played it, by story time (“Year 1, Spring”), or both? A whole-save timeline too (10 “moved world” events already follow from her plan)?
 - [x] (Settled 17 Oct: no EA comparison at all, see Showing Sims) Chapters for any household? Empty parts hidden, or one quiet “Yours to write” line? Writing in chat (as now), or a text file per household?
 - [x] The Cadberrys are her Not So Berry legacy (18 Oct). Each generation stays alive when they move out, so Cadberry households are spread across many worlds; show them as one family tree once she adds them.
@@ -282,7 +282,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 
 ### Townies and NPC roles (research/townies-and-roles.md)
 - [ ] [Jemma] Moonwood Mill Library: settle it as a Library, not a Backroom? As a Backroom it would get no librarian by day and no bartender by night (the game has no Moonwood version of either), and Wolfgang Wilder loses his job
-- [ ] [Jemma] 1 Cobblebottom Street tea room: the Crumplebottoms can’t run it cleanly (their household is hidden, and Agnes loses her village role once in a household). Her own Sim or a Henford household with no village job instead?
+- [x] [Jemma] 1 Cobblebottom Street tea room: the Crumplebottoms can’t run it cleanly (their household is hidden, and Agnes loses her village role once in a household). Her own Sim or a Henford household with no village job instead? — 19 Oct: settled as a Small Business Residential, someone living there runs it (household and business to pick)
 - [ ] [Jemma] In-game settings: Neighbourhood Stories off, or on with “Move In” and “Move Out” unticked for Other Households (so the game doesn’t fill her empty homes)? Raise Maximum Sim Count and heart her planned households (homeless premades are culled first)? Turn off ageing for unplayed Sims (so young role Sims like Eloise Hiddlestix don’t age out)?
 - [ ] [Jemma] Owners who live away from their rental (the Robles at Manzanita Terrace, the Lovejoys at Sequoia Cottage, Rochana/Caberry at Isda Riverfront) lose it if merged into another household elsewhere: merge the other household into theirs instead
 - [x] Corrected research/worlds/gibbi-point.md: Laxmi and Raheel Kunal are homeless premade townies (17 Oct)
@@ -334,7 +334,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [ ] [Jemma] Key Point: a castaway hut as a Vacation Rental (suggested), or Generic? (Residential Rental isn’t allowed there)
 - [ ] [Jemma] LaSuli Point: Park (suggested; needs one piece of playground kit), or Cemetery?
 - [ ] [Jemma] Specter Row: a 2-unit Residential Rental with On Hallowed Ground on both (suggested), or a Haunted House?
-- [ ] [Jemma] 1 Cobblebottom Street: a Small Business Residential tea room (owner idea: the Crumplebottom cousins, to check in game), or a Vacation Rental?
+- [x] [Jemma] 1 Cobblebottom Street: a Small Business Residential tea room (owner idea: the Crumplebottom cousins, to check in game), or a Vacation Rental? — 19 Oct: Small Business Residential, owner to pick
 - [ ] [Jemma] Paradise Stables: a new horse family of hers running Riding Stables (Small Business Residential)?
 - [ ] [Jemma] Owners: the Izadi-Gomes ghosts for Mystic Crossroads, the Landgraabs for Magnolia Mall, Judith Ward for Plumbob Pictures Museum?
 - [ ] [Jemma] Casa do Corsário: 2 units? Britechester: only The Old Clocktower as a Backroom (7 in all)? Hay Hill Landing: “Residential (Farm)” (“Vineyard/Farm” isn’t a game type)?
