@@ -26,6 +26,7 @@ SKIP = {"San Sequoia|Lovejoy": "she’ll upload the Lovejoys herself (two relate
         "Ondarion|Monty": "her recreated Sims 2 Montys (the save copies are EA’s Montys)",
         "Ondarion|Alto": "the vineyard Altos are still to be created",
         "Tomarang|Cadberry": "which Cadberrys live at Isda Riverfront is hers to say",
+        "Magnolia Promenade|Kirkland": "only their mall; the Kirklands live in Newcrest (Twin Oracle Point)",
         "Ravenwood|Specter": "waiting on her answer (who owns Specter Row)",
         "San Myshuno|Bro & Kennedy": "waiting on her answer (who Kennedy is)"}
 EA = {"Britechester|Pleasant"}
@@ -34,8 +35,15 @@ PREFER = {k: ("Rotational", w) for k, w in {"Brindleton Bay|Ventura": "Brindleto
           "Oasis Springs|Rivera": "Oasis Springs", "Willow Creek|Reynolds": "Willow Creek", "Willow Creek|Kopf": "Willow Creek",
           "Willow Creek|Davidson": "Willow Creek", "Willow Creek|Barraza": "Willow Creek"}.items()}
 # her choice (19 Oct): Maxis's Sims 2 Smiths from her Library (a Maxis household, so Premade), replacing Chia Smith
-PREFER_LIBRARY = {"Oasis Springs|Smith": "The Smith Family"}
+PREFER_LIBRARY = {"Oasis Springs|Smith": "The Smith Family",
+                  "Newcrest|Kirkland": ("Kirkland", 4)}   # her 4-Sim copy as a starting point (19 Oct)
+# life stages to take down a step: too much time passed in that copy (her Kirklands are 2 adults and 2 teens or children)
+AGE_DOWN = {"Newcrest|Kirkland": {"Elder": "Adult"}}
 PREMADE_COPY = {"Oasis Springs|Smith"}
+# households she has split from one save household (19 Oct: the two single mums at Midtown Meadows, a unit each):
+# plan key -> (save file, save name, household in that save, surname of the Sims to take)
+SPLIT = {"Newcrest|Washburn": ("Slot_00000017.save", "Season Events", "Washburn", "Washburn"),
+         "Newcrest|Bridges": ("Slot_00000017.save", "Season Events", "Washburn", "Bridges")}
 TARGET = {"Willow Creek|Davidson": "Davidson 1"}   # the plan has two Davidson homes; Evelyn, Ray and George live at Streamlet Single (the first)   # EA's own household (the Pleasant twins): game files, not a save
 norm = lambda x: re.sub(r'[^a-z]', '', (x or '').lower())
 
@@ -58,7 +66,11 @@ def main(apply):
     # pick a copy for each household
     plan, review = {}, []
     def rank(c): return (c['source'] == 'save' and c['save'].startswith('Building'), -int(c['date'].replace('-', '')))
+    for key, (f, sv, hname, sur) in SPLIT.items():
+        found.setdefault(key, [])
+        plan[key] = ({"source": "save", "file": f, "save": sv, "date": "2026-03-15", "household": hname, "sims": [], "split": (hname, sur)}, None)
     for key, copies in sorted(found.items()):
+        if key in SPLIT: review.append((key, 'filled', [])); continue
         w, hn = key.split('|', 1)
         if key in SKIP: review.append((key, 'left for you: ' + SKIP[key], copies)); continue
         if key in EA: continue
@@ -69,7 +81,8 @@ def main(apply):
             if ok: ok.sort(key=rank); plan[key] = (ok[0], want); review.append((key, 'filled', copies)); continue
             # not a Sim's name after all ("Santiago Ojo" is Alicia Santiago and Miko Ojo): fall back to the household name
         if key in PREFER_LIBRARY:
-            pick = [c for c in copies if c['source'] == 'library' and c['household'] == PREFER_LIBRARY[key]]
+            want_hh = PREFER_LIBRARY[key] if isinstance(PREFER_LIBRARY[key], tuple) else (PREFER_LIBRARY[key], None)
+            pick = [c for c in copies if c['source'] == 'library' and c['household'] == want_hh[0] and (want_hh[1] is None or len(c['sims']) == want_hh[1])]
             if pick: plan[key] = (pick[0], None); review.append((key, 'filled', copies)); continue
         if key in PREFER:
             sv, ww = PREFER[key]
@@ -94,6 +107,11 @@ def main(apply):
                     if fn == 6: sm = s4.decode(v, P + 'SimData', S, depth=8); sims[sm.get('sim_id')] = sm
                     elif fn == 5: hhs.append(s4.decode(v, P + 'HouseholdData', S, depth=2))
                 for key, c, want in items:
+                    if c.get('split'):   # take one family out of a shared save household, by surname
+                        hname, sur = c['split']
+                        h = next((h for h in hhs if h.get('name') == hname), {})
+                        ids = [i for i in ((h.get('sims') or {}).get('ids', []) if isinstance(h.get('sims'), dict) else []) if i in sims and sims[i].get('last_name') == sur]
+                        full[key] = [sims[i] for i in ids]; continue
                     ids = [s['sim_id'] for s in c['sims']]
                     if want: ids = [s['sim_id'] for s in c['sims'] if s['name'] in want]
                     full[key] = [sims[i] for i in ids if i in sims]
@@ -143,7 +161,7 @@ def main(apply):
         rows = []
         for s in sims:
             at = s.get('attributes') or {}; sid, nm = idmap[s.get('sim_id')]
-            d = {"id": sid, "name": nm, "sex": SEX.get(s.get('gender'), 'x'), "origin": "Premade" if key in PREMADE_COPY else "Mine", "from": src, "age": AGES.get(s.get('age'))}
+            d = {"id": sid, "name": nm, "sex": SEX.get(s.get('gender'), 'x'), "origin": "Premade" if key in PREMADE_COPY else "Mine", "from": src, "age": AGE_DOWN.get(key, {}).get(AGES.get(s.get('age')), AGES.get(s.get('age')))}
             sp = SPECIES.get(s.get('extended_species'))
             if sp: d["state"] = sp
             young = sp or d["age"] in ("Baby", "Infant", "Toddler")
@@ -180,7 +198,10 @@ def main(apply):
         for c in copies:
             where = 'Library' if c['source'] == 'library' else f"save “{c['save']}”" + (f", {c['world']} / {c['lot']}" if c.get('world') else '')
             lines.append(f"  - {where} ({c['date']}), “{c['household']}”: {', '.join(s['name'] + (' (' + s['age'] + ')' if s.get('age') else '') for s in c['sims'])}")
-    none = [k for k, v in found.items() if not v and k not in SKIP and k not in EA]
+    sys.path.insert(0, os.path.join(ROOT, 'tools', 'research'))
+    from own_households import plan_households   # only households still in her plan and still without Sims
+    still = {f"{w}|{n}" for w, ns in plan_households().items() for n in ns}
+    none = [k for k, v in found.items() if not v and k not in SKIP and k not in EA and k not in SPLIT and k in still]
     if none:
         lines += ["", "**Not found in any save or the Library:** " + ", ".join(f"{k.split('|')[1]} ({k.split('|')[0]})" for k in sorted(none))]
     text = "\n".join(lines) + "\n"
@@ -190,7 +211,7 @@ def main(apply):
             p = worlds[w]; W = load(p)
             for hn, (rows, src) in hhs.items():
                 h = W.setdefault('households', {}).setdefault(hn, {})
-                if h.get('sims') and f"{w}|{hn}" not in PREFER and f"{w}|{hn}" not in PREFER_LIBRARY and hn not in TARGET.values(): continue
+                if h.get('sims') and f"{w}|{hn}" not in PREFER and f"{w}|{hn}" not in PREFER_LIBRARY and f"{w}|{hn}" not in SPLIT and hn not in TARGET.values(): continue
                 h['sims'] = rows
                 if h.get('single') and len(rows) > 1: h.pop('single')
             save(p, W)
