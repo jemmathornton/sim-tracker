@@ -505,15 +505,19 @@ function simPage(s){
     <div style="display:flex;gap:26px;align-items:center;flex-wrap:wrap;margin-top:22px"><div class="monogram">${initial(s.name)}</div><div><span class="label" style="color:var(--on-deep-mute)">${isAnimal(s) ? esc(s.state) : "Sim"}</span><h1 style="margin-top:6px">${esc(s.name)}</h1>${nee(s) ? `<p class="nee">${esc(nee(s))}</p>` : ""}</div></div>
     <div class="sim-chips">${stage ? `<span>${esc(stage.charAt(0).toUpperCase() + stage.slice(1))}</span>` : ""}${s.state ? lifeState(s, "") : "<span>Human</span>"}${isChampion(s) ? `<span class="champ">${ic("ph-trophy")}Champion</span>` : ""}${s.noHome ? `<span>No home</span>` : ""}${s.notInGame ? `<span title="Named on the Sims Wiki">Never in the game</span>` : ""}${s.notInGame ? "" : `<span>${originTag(s.origin)}</span>`}</div></section>`;
   // details
-  const facts = [["Breed", s.breed], ["Cause of death", s.state === "Ghost" ? s.death : null], ["Aspiration", s.aspiration], ["Career", s.career], ["Fame", s.fame ? "★".repeat(s.fame) + " " + FAME_LEVELS[s.fame] : null], ["Quirks", (s.quirks || []).join(", ")], ["School", s.school], ["Lifestyles", (s.lifestyles || []).join(", ")], ["Likes", (s.likes || []).join(", ")], ["Died", s.died]].filter(([, v]) => v);
-  const hasTraits = s.traits && s.traits.length;
+  // top right: where they live and what they do; who they are (aspiration, quirks, lifestyles, likes, fame) sits with traits and skills below (her ask, 19 Oct)
+  const facts = [["Breed", s.breed], ["Cause of death", s.state === "Ghost" ? s.death : null], ["Career", s.career], ["School", s.school], ["Died", s.died]].filter(([, v]) => v);
+  const chipRow = (label, xs, cls) => xs && xs.length ? `<span class="label">${label}</span><div class="traits${cls ? " " + cls : ""}">${xs.map(t => `<span>${esc(t)}</span>`).join("")}</div>` : "";
+  const aboutMore = chipRow("Aspiration", s.aspiration ? [s.aspiration] : []) + chipRow("Quirks", s.quirks) + chipRow("Lifestyles", s.lifestyles) + chipRow("Likes", s.likes);
+  const fameRow = s.fame ? `<span class="label">Fame</span><div class="skill"><span>${esc(FAME_LEVELS[s.fame])}</span><div class="pips" style="--max:5">${[1, 2, 3, 4, 5].map(i => `<i class="${i <= s.fame ? "on" : ""}"></i>`).join("")}</div><b>${s.fame}</b></div>` : "";
+  const hasTraits = (s.traits && s.traits.length) || aboutMore || fameRow;
   const skills = (s.skills || []).map(([n, lv, max]) => `<div class="skill"><span>${esc(n)}</span><div class="pips" style="--max:${max||10}">${Array.from({length:max||10},(_,i)=>`<i class="${i<lv?"on":""}"></i>`).join("")}</div><b>${lv}</b></div>`).join("");
   // picture top left with the facts beside it, as on household pages (her ask, 19 Oct: Sims and animals had no picture box)
   const home = hh ? `<a href="#${hh.id}">${esc(hhWord(hh.name))}</a>` : `<a href="#${base.id}">${hhCrumb}</a>`;
   h += `<div class="detail" style="--h:${hc}">${simPicture(s)}<div><dl class="facts"><div><dt>${hh ? "Household" : "Family"}</dt><dd>${home}</dd></div>${facts.map(([t, v]) => `<div><dt>${t}</dt><dd>${esc(v)}</dd></div>`).join("")}</dl></div></div>`;
   if (hasTraits || skills || s.notes) h += `<section class="block" style="--h:${hc}"><div class="block-head"><h2>About <em>${esc(first)}</em></h2></div>
-    <div class="sim-about"><div>${hasTraits ? `<span class="label">Traits</span><div class="traits">${s.traits.map(t => `<span>${esc(t)}</span>`).join("")}${s.bonus ? `<span class="bonus" title="Bonus trait">${esc(s.bonus)}</span>` : ""}</div>` : ""}${s.notes ? `<p class="sim-note">${esc(s.notes)}</p>` : ""}</div>
-      ${skills ? `<div class="skills"><span class="label">Skills</span>${skills}</div>` : "<div></div>"}</div></section>`;
+    <div class="sim-about"><div>${s.traits && s.traits.length ? `<span class="label">Traits</span><div class="traits">${s.traits.map(t => `<span>${esc(t)}</span>`).join("")}${s.bonus ? `<span class="bonus" title="Bonus trait">${esc(s.bonus)}</span>` : ""}</div>` : ""}${aboutMore}${s.notes ? `<p class="sim-note">${esc(s.notes)}</p>` : ""}</div>
+      ${skills || fameRow ? `<div class="skills">${skills ? `<span class="label">Skills</span>${skills}` : ""}${fameRow}</div>` : "<div></div>"}</div></section>`;
   // a horse's competitions: best place at each level (her ask, 19 Oct)
   if (s.state === "Horse") h += `<section class="block" style="--h:${hc}"><div class="block-head"><h2>Competitions</h2></div>${horseComps(s)}</section>`;
   // family
