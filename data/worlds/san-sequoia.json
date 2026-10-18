@@ -31,7 +31,7 @@
     {"lot": "Celebration Center", "myName": "Celebration Center", "type": "Wedding Venue", "size": "64x64", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ],
    "ecoStart": "Green",
-   "bannerZoom": 1.3,
+   "bannerZoom": 1.2,
    "bannerShift": [0.03, 0]
   },
   {
