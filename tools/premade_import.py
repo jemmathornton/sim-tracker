@@ -51,7 +51,7 @@ MATCHES = {
 DISTINGUISHED = {"ScienceUniversity": {"Biology", "Computer Science", "Economics", "Physics", "Psychology", "Villainy"},
                  "ArtsUniversity": {"Art History", "Communications", "Culinary Arts", "Drama", "Fine Arts", "History", "Language & Literature"}}
 UNI = {"ScienceUniversity": "Foxbury Institute", "ArtsUniversity": "University of Britechester"}
-OCCULT = {"VAMPIRE": "Vampire", "MERMAID": "Mermaid", "WEREWOLF": "Werewolf", "WITCH": "Spellcaster"}
+OCCULT = {"VAMPIRE": "Vampire", "MERMAID": "Mermaid", "WEREWOLF": "Werewolf", "WITCH": "Spellcaster", "GHOST": "Ghost", "ALIEN": "Alien", "FAIRY": "Fairy"}
 FRIENDSHIP, ROMANCE = "16650", "16651"
 
 

@@ -143,9 +143,13 @@ def main():
             if not ids and key:   # some keep their traits only in their own Sim file
                 hit = siminfo.get(int(key.split(':')[2], 16))
                 if hit: ids = traits_in(s4.read(*hit))
+            occ = None
             for t in ids:
                 ty = val(t, 'trait_type'); nm = text(val(t, 'display_name'), en)
                 if ty == 'PERSONALITY' and nm and nm not in traits: traits.append(nm)
+                # life state from the Sim's own traits (19 Oct: spellcasters and ghosts have no occult on their template)
+                if ty == 'GHOST': occ = occ or 'GHOST'
+                elif ty == 'HIDDEN' and nm in ('Spellcaster', 'Mermaid', 'Alien', 'Vampire', 'Werewolf', 'Fairy'): occ = occ or {'Spellcaster': 'WITCH'}.get(nm, nm.upper())
             asp = s.get('primary_aspiration')
             if asp in I:
                 bt = val(asp, 'primary_trait'); bonus = text(val(int(bt), 'display_name'), en) if bt and int(bt) in I else None
@@ -159,7 +163,7 @@ def main():
                          "rels": [[r.get('target_id'), [text(val(b, 'display_name'), en) for b in (r.get('bits') or []) if b in I and text(val(b, 'display_name'), en)]]
                                   for r in ((at.get('relationship_tracker') or {}).get('relationships') or [])],
                          "family": [[r.get('relation_type'), r.get('sim_id')] for r in ((at.get('genealogy_tracker') or {}).get('family_relations') or [])],
-                         **{k: v for k, v in info.items() if k not in ('siminfo', 'career_level')}})
+                         **{k: v for k, v in info.items() if k not in ('siminfo', 'career_level')}, "occult": info.get('occult') or occ})
         # the template's own relationships (spouse, parent) between members
         rels = []
         if tpl in hh_tpl:

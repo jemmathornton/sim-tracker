@@ -62,7 +62,8 @@
       ["Cooking", 2, 10],
       ["Handiness", 2, 10],
       ["Writing", 2, 10]
-     ]
+     ],
+     "state": "Spellcaster"
     },
     {
      "id": "gemma-charm",
@@ -82,7 +83,8 @@
       ["Mischief", 5, 10],
       ["Painting", 3, 10]
      ],
-     "parents": ["minerva-charm"]
+     "parents": ["minerva-charm"],
+     "state": "Spellcaster"
     },
     {
      "id": "darrel-charm",
@@ -104,7 +106,8 @@
       ["Grace Anansi", "Acquaintances"],
       ["Tomax Collette", "Disliked"]
      ],
-     "parents": ["minerva-charm"]
+     "parents": ["minerva-charm"],
+     "state": "Spellcaster"
     },
     {
      "id": "emilia-ernest",
@@ -126,7 +129,8 @@
      "rels": [
       ["Grace Anansi", "Friends"],
       ["Tomax Collette", "Friends"]
-     ]
+     ],
+     "state": "Spellcaster"
     }
    ]
   },
@@ -151,7 +155,8 @@
      "rels": [
       ["Darrel Charm", "Acquaintances"],
       ["Emilia Ernest", "Friends"]
-     ]
+     ],
+     "state": "Spellcaster"
     },
     {
      "id": "tomax-collette",
@@ -172,7 +177,8 @@
      "rels": [
       ["Emilia Ernest", "Friends"],
       ["Darrel Charm", "Disliked"]
-     ]
+     ],
+     "state": "Spellcaster"
     }
    ]
   }

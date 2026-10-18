@@ -86,7 +86,7 @@
   "name": "Unknown",
   "sex": "f",
   "placeholder": true,
-  "parents": ["sachiko-nishidake", "shigeru-nishidake"]
+  "parents": ["shigeru-nishidake", "sachiko-nishidake"]
  },
  "colin-sullivan": {
   "name": "Colin Sullivan",
@@ -120,6 +120,7 @@
   "name": "Consort Capp",
   "sex": "m",
   "origin": "Premade",
+  "state": "Ghost",
   "fromFix": true
  },
  "aghata-ananou": {

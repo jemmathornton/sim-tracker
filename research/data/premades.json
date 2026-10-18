@@ -54,7 +54,8 @@
      "partner": null,
      "fiance": null,
      "rels": [],
-     "family": []
+     "family": [],
+     "occult": null
     },
     {
      "sim_id": 104427491352908596,
@@ -89,7 +90,8 @@
      "partner": null,
      "fiance": null,
      "rels": [],
-     "family": []
+     "family": [],
+     "occult": null
     },
     {
      "sim_id": 104427491352908597,
@@ -134,7 +136,8 @@
      "partner": null,
      "fiance": null,
      "rels": [],
-     "family": []
+     "family": [],
+     "occult": null
     }
    ],
    "relationships": []
@@ -196,7 +199,8 @@
      "partner": null,
      "fiance": null,
      "rels": [],
-     "family": []
+     "family": [],
+     "occult": null
     },
     {
      "sim_id": 661747809822967161,
@@ -241,7 +245,8 @@
        "RELATIONSHIP_MOTHER",
        661747809806714215
       ]
-     ]
+     ],
+     "occult": null
     },
     {
      "sim_id": 661747809824277904,
@@ -275,7 +280,8 @@
        "RELATIONSHIP_MOTHER",
        661747809806714215
       ]
-     ]
+     ],
+     "occult": null
     },
     {
      "sim_id": 661747809824802223,
@@ -304,7 +310,8 @@
      "partner": null,
      "fiance": null,
      "rels": [],
-     "family": []
+     "family": [],
+     "occult": null
     }
    ],
    "relationships": []
@@ -379,7 +386,8 @@
      "partner": null,
      "fiance": null,
      "rels": [],
-     "family": []
+     "family": [],
+     "occult": null
     }
    ],
    "relationships": []
@@ -418,7 +426,8 @@
      "partner": null,
      "fiance": null,
      "rels": [],
-     "family": []
+     "family": [],
+     "occult": null
     }
    ],
    "relationships": []
@@ -457,7 +466,8 @@
      "partner": null,
      "fiance": null,
      "rels": [],
-     "family": []
+     "family": [],
+     "occult": null
     }
    ],
    "relationships": []
@@ -2702,7 +2712,8 @@
      "partner": null,
      "fiance": 973919615913295889,
      "rels": [],
-     "family": []
+     "family": [],
+     "occult": null
     },
     {
      "sim_id": 973919615913295889,
@@ -2725,7 +2736,8 @@
      "partner": null,
      "fiance": 973919615912378373,
      "rels": [],
-     "family": []
+     "family": [],
+     "occult": null
     }
    ],
    "relationships": []
@@ -2764,7 +2776,8 @@
      "partner": null,
      "fiance": null,
      "rels": [],
-     "family": []
+     "family": [],
+     "occult": null
     }
    ],
    "relationships": []
@@ -2803,7 +2816,8 @@
      "partner": null,
      "fiance": null,
      "rels": [],
-     "family": []
+     "family": [],
+     "occult": null
     }
    ],
    "relationships": []
@@ -3076,7 +3090,8 @@
      "partner": null,
      "fiance": null,
      "rels": [],
-     "family": []
+     "family": [],
+     "occult": null
     },
     {
      "sim_id": 30417963863048218,
@@ -3123,7 +3138,8 @@
        "RELATIONSHIP_FATHERS_MOM",
        30417963863048217
       ]
-     ]
+     ],
+     "occult": null
     },
     {
      "sim_id": 30417963863048219,
@@ -3170,7 +3186,8 @@
        "RELATIONSHIP_FATHERS_MOM",
        30417963863048217
       ]
-     ]
+     ],
+     "occult": null
     },
     {
      "sim_id": 30417963863048220,
@@ -3217,7 +3234,8 @@
        "RELATIONSHIP_FATHERS_MOM",
        30417963863048217
       ]
-     ]
+     ],
+     "occult": null
     }
    ],
    "relationships": []
@@ -3268,7 +3286,8 @@
      "partner": 535382176754237872,
      "fiance": null,
      "rels": [],
-     "family": []
+     "family": [],
+     "occult": null
     },
     {
      "sim_id": 535382176754237872,
@@ -3313,7 +3332,8 @@
        "RELATIONSHIP_MOTHER",
        1060895712938385383
       ]
-     ]
+     ],
+     "occult": null
     },
     {
      "sim_id": 535382176754237873,
@@ -3359,7 +3379,8 @@
        "RELATIONSHIP_FATHERS_MOM",
        1060895712938385383
       ]
-     ]
+     ],
+     "occult": null
     },
     {
      "sim_id": 535382176754237874,
@@ -3399,7 +3420,8 @@
        "RELATIONSHIP_FATHERS_MOM",
        1060895712938385383
       ]
-     ]
+     ],
+     "occult": null
     }
    ],
    "relationships": []
@@ -3450,7 +3472,8 @@
      "partner": 53497135492628749,
      "fiance": null,
      "rels": [],
-     "family": []
+     "family": [],
+     "occult": null
     },
     {
      "sim_id": 53497135492628749,
@@ -3495,7 +3518,8 @@
        "RELATIONSHIP_MOTHER",
        1060895712938385383
       ]
-     ]
+     ],
+     "occult": null
     },
     {
      "sim_id": 53497135492628750,
@@ -3541,7 +3565,8 @@
        "RELATIONSHIP_FATHERS_MOM",
        1060895712938385383
       ]
-     ]
+     ],
+     "occult": null
     },
     {
      "sim_id": 53497135492628751,
@@ -3581,7 +3606,8 @@
        "RELATIONSHIP_FATHERS_MOM",
        1060895712938385383
       ]
-     ]
+     ],
+     "occult": null
     }
    ],
    "relationships": []
@@ -3631,7 +3657,8 @@
      "partner": null,
      "fiance": null,
      "rels": [],
-     "family": []
+     "family": [],
+     "occult": null
     }
    ],
    "relationships": []
@@ -3670,7 +3697,8 @@
      "partner": null,
      "fiance": null,
      "rels": [],
-     "family": []
+     "family": [],
+     "occult": null
     }
    ],
    "relationships": []
@@ -3731,7 +3759,8 @@
      "partner": 988258782435999874,
      "fiance": null,
      "rels": [],
-     "family": []
+     "family": [],
+     "occult": null
     },
     {
      "sim_id": 988258782435999874,
@@ -3760,7 +3789,8 @@
      "partner": 988258782425448558,
      "fiance": null,
      "rels": [],
-     "family": []
+     "family": [],
+     "occult": null
     }
    ],
    "relationships": []
@@ -3987,7 +4017,8 @@
        "RELATIONSHIP_MOTHER",
        140741783365340
       ]
-     ]
+     ],
+     "occult": null
     },
     {
      "sim_id": 140741783365322,
@@ -4015,7 +4046,8 @@
        "RELATIONSHIP_MOTHER",
        140741783365340
       ]
-     ]
+     ],
+     "occult": null
     }
    ],
    "relationships": []
@@ -4068,7 +4100,8 @@
      "partner": null,
      "fiance": null,
      "rels": [],
-     "family": []
+     "family": [],
+     "occult": null
     },
     {
      "sim_id": 661747809875265931,
@@ -4108,7 +4141,8 @@
      "partner": null,
      "fiance": null,
      "rels": [],
-     "family": []
+     "family": [],
+     "occult": null
     },
     {
      "sim_id": 661747809879394726,
@@ -4148,7 +4182,8 @@
      "partner": null,
      "fiance": null,
      "rels": [],
-     "family": []
+     "family": [],
+     "occult": null
     },
     {
      "sim_id": 661747809880967617,
@@ -4183,7 +4218,8 @@
      "partner": null,
      "fiance": null,
      "rels": [],
-     "family": []
+     "family": [],
+     "occult": null
     }
    ],
    "relationships": []
@@ -4228,7 +4264,8 @@
      "partner": null,
      "fiance": null,
      "rels": [],
-     "family": []
+     "family": [],
+     "occult": null
     }
    ],
    "relationships": []
@@ -4290,7 +4327,8 @@
        "RELATIONSHIP_MOTHER",
        993044502291876415
       ]
-     ]
+     ],
+     "occult": null
     },
     {
      "sim_id": 993044502291876415,
@@ -4329,7 +4367,8 @@
      "partner": null,
      "fiance": null,
      "rels": [],
-     "family": []
+     "family": [],
+     "occult": null
     },
     {
      "sim_id": 993044502291876416,
@@ -4388,7 +4427,8 @@
        "RELATIONSHIP_FATHER",
        993044502291876417
       ]
-     ]
+     ],
+     "occult": null
     },
     {
      "sim_id": 993044502291876417,
@@ -4427,7 +4467,8 @@
      "partner": null,
      "fiance": null,
      "rels": [],
-     "family": []
+     "family": [],
+     "occult": null
     },
     {
      "sim_id": 993044502291876418,
@@ -4492,7 +4533,8 @@
        "RELATIONSHIP_FATHERS_MOM",
        993044502291876415
       ]
-     ]
+     ],
+     "occult": null
     }
    ],
    "relationships": []
@@ -5716,7 +5758,7 @@
      "dynasty": null,
      "clubs": [],
      "degree": [],
-     "occult": null
+     "occult": "WITCH"
     },
     {
      "sim_id": 274730487953990901,
@@ -5771,7 +5813,7 @@
      "dynasty": null,
      "clubs": [],
      "degree": [],
-     "occult": null
+     "occult": "WITCH"
     }
    ],
    "relationships": [
@@ -6277,7 +6319,7 @@
      "dynasty": null,
      "clubs": [],
      "degree": [],
-     "occult": null
+     "occult": "WITCH"
     },
     {
      "sim_id": 274730487942522058,
@@ -6341,7 +6383,7 @@
      "dynasty": null,
      "clubs": [],
      "degree": [],
-     "occult": null
+     "occult": "WITCH"
     },
     {
      "sim_id": 274730487942522067,
@@ -6401,7 +6443,7 @@
      "dynasty": null,
      "clubs": [],
      "degree": [],
-     "occult": null
+     "occult": "WITCH"
     },
     {
      "sim_id": 274730487942522076,
@@ -6461,7 +6503,7 @@
      "dynasty": null,
      "clubs": [],
      "degree": [],
-     "occult": null
+     "occult": "WITCH"
     }
    ],
    "relationships": [
@@ -7801,7 +7843,7 @@
      "dynasty": null,
      "clubs": [],
      "degree": [],
-     "occult": null
+     "occult": "GHOST"
     }
    ],
    "relationships": []
@@ -13021,7 +13063,7 @@
      "dynasty": null,
      "clubs": [],
      "degree": [],
-     "occult": null
+     "occult": "GHOST"
     },
     {
      "sim_id": 1055834050150342879,
@@ -13132,7 +13174,7 @@
      "dynasty": null,
      "clubs": [],
      "degree": [],
-     "occult": null
+     "occult": "GHOST"
     }
    ],
    "relationships": []
@@ -13183,7 +13225,7 @@
      "dynasty": null,
      "clubs": [],
      "degree": [],
-     "occult": null
+     "occult": "GHOST"
     }
    ],
    "relationships": []
@@ -13428,7 +13470,7 @@
      "dynasty": null,
      "clubs": [],
      "degree": [],
-     "occult": null
+     "occult": "GHOST"
     },
     {
      "sim_id": 30139229340452006,
@@ -13478,7 +13520,7 @@
      "dynasty": null,
      "clubs": [],
      "degree": [],
-     "occult": null
+     "occult": "GHOST"
     }
    ],
    "relationships": [
@@ -13798,7 +13840,7 @@
      "dynasty": null,
      "clubs": [],
      "degree": [],
-     "occult": null
+     "occult": "GHOST"
     }
    ],
    "relationships": []
@@ -15473,7 +15515,7 @@
      },
      "clubs": [],
      "degree": [],
-     "occult": null
+     "occult": "GHOST"
     }
    ],
    "relationships": []
@@ -16485,7 +16527,7 @@
      "dynasty": null,
      "clubs": [],
      "degree": [],
-     "occult": null
+     "occult": "WITCH"
     }
    ],
    "relationships": []
@@ -17601,7 +17643,7 @@
      "dynasty": null,
      "clubs": [],
      "degree": [],
-     "occult": null
+     "occult": "WITCH"
     }
    ],
    "relationships": []
@@ -22284,7 +22326,7 @@
      "dynasty": null,
      "clubs": [],
      "degree": [],
-     "occult": null
+     "occult": "WITCH"
     }
    ],
    "relationships": []
@@ -22870,7 +22912,7 @@
      "dynasty": null,
      "clubs": [],
      "degree": [],
-     "occult": null
+     "occult": "GHOST"
     }
    ],
    "relationships": []
@@ -22961,7 +23003,8 @@
      "partner": null,
      "fiance": null,
      "rels": [],
-     "family": []
+     "family": [],
+     "occult": null
     }
    ],
    "relationships": []

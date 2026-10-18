@@ -121,11 +121,12 @@ def main(apply):
             elif c in keep and c not in seen: out |= desc(c, seen + (n,))
         return out
     named, used_names = {}, collections.Counter()
+    OCC = {"VAMPIRE": "Vampire", "MERMAID": "Mermaid", "WEREWOLF": "Werewolf", "WITCH": "Spellcaster", "GHOST": "Ghost"}   # life state, as in premade_import
     tpl_sim = {s['template']: s for h in P['households'] for s in h['sims'] if s.get('template')}
     for n in sorted(ph_id, key=str):
         if isinstance(n, tuple) and n[0] == 't' and (n[1] in tpl_sim or n[1] in WIKI_BY_TEMPLATE):
             g = tpl_sim.get(n[1])   # a game Sim who isn't on the site (Consort Capp), or an unnamed ancestor the wiki names
-            named[n] = {"name": g['name'], "sex": g.get('sex') or 'x', "origin": "Premade"} if g else WIKI_BY_TEMPLATE[n[1]]
+            named[n] = {"name": g['name'], "sex": g.get('sex') or 'x', "origin": "Premade", **({"state": OCC[g['occult']]} if g.get('occult') in OCC else {})} if g else WIKI_BY_TEMPLATE[n[1]]
             if g: named[n]['inGame'] = True
             ph_id[n] = re.sub(r'[^a-z0-9]+', '-', named[n]['name'].lower()).strip('-'); continue
         k = tuple(sorted(desc(n))); opts = WIKI_NAMES.get(k, [])
