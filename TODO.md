@@ -275,8 +275,8 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [ ] [Claude] When Sims go in: key each Sim by the game’s sim id, not its name (two Sims can share a name)
 
 ### Empty homes page and filters (prototypes: for-jemma/prototypes/lots/index.html, opens from the folder)
-- [ ] [Jemma] Empty homes page (27 empty homes, 14 empty apartments, 41 free rental units, 7 University Housing lots): compact table (A) or cards (B)? Its own page in the sidebar or a part of Stats? Count University Housing and lots not built yet?
-- [ ] [Jemma] Filters (pack, lot type, lot trait, built/shared, empty/lived in): every group always showing (A) or one bar that opens (B)? Above the neighbourhood cards or on an “All lots” page per world? Chips on Stats instead of, or as well as, the “Show” dropdown?
+- [x] [Jemma] Not wanted (her call, 19 Oct). Empty homes page (27 empty homes, 14 empty apartments, 41 free rental units, 7 University Housing lots): compact table (A) or cards (B)? Its own page in the sidebar or a part of Stats? Count University Housing and lots not built yet?
+- [x] [Jemma] Not wanted (her call, 19 Oct). Filters (pack, lot type, lot trait, built/shared, empty/lived in): every group always showing (A) or one bar that opens (B)? Above the neighbourhood cards or on an “All lots” page per world? Chips on Stats instead of, or as well as, the “Show” dropdown?
 - [x] Sequoia Cottage: not a bug, a second Lovejoy household (one of the grandparents’ children) lives in unit 1 and lets unit 2, now to the Luna-Sullivans (her story, 18 Oct).
 - [x] [Claude] Bug it found: Upland Trailer Park shows Johnny Zest in unit 2 but the plan has him in the 4th trailer — done 19 Oct (tenants can name their unit)
 
