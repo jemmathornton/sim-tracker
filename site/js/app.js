@@ -472,7 +472,7 @@ function simPage(s){
   const stage = [s.age, s.late ? "deceased" : ""].filter(Boolean).join(" · ");
   let h = `<section class="hero small" style="--c:${home1.hood.glow || hc}"><div class="crumbs">${hh ? `<a href="#w-${w.id}">${ic("map")}${esc(w.name)}</a><a href="#n-${home1.hood.id}">${ic("pin")}${esc(home1.hood.name)}</a><a href="#${home1.id}">${ic("home")}${esc(home1.name)}</a>` : ""}<a href="#${base.id}">${ic("users")}${hhCrumb}</a></div>
     <div style="display:flex;gap:26px;align-items:center;flex-wrap:wrap;margin-top:22px"><div class="monogram">${initial(s.name)}</div><div><span class="label" style="color:var(--on-deep-mute)">Sim</span><h1 style="margin-top:6px">${esc(s.name)}</h1>${nee(s) ? `<p class="nee">${esc(nee(s))}</p>` : ""}</div></div>
-    <div class="sim-chips">${stage ? `<span>${esc(stage.charAt(0).toUpperCase() + stage.slice(1))}</span>` : ""}<span class="${s.state ? "occult" : ""}">${s.state ? `${ic("ghost")}${esc(s.state)}` : "Human"}</span>${s.noHome ? `<span>No home</span>` : ""}${s.notInGame ? `<span title="Named on the Sims Wiki">Never in the game</span>` : ""}${s.notInGame ? "" : `<span>${originTag(s.origin)}</span>`}</div></section>`;
+    <div class="sim-chips">${stage ? `<span>${esc(stage.charAt(0).toUpperCase() + stage.slice(1))}</span>` : ""}${s.state ? lifeState(s, "") : "<span>Human</span>"}${s.noHome ? `<span>No home</span>` : ""}${s.notInGame ? `<span title="Named on the Sims Wiki">Never in the game</span>` : ""}${s.notInGame ? "" : `<span>${originTag(s.origin)}</span>`}</div></section>`;
   // details
   const facts = [["Aspiration", s.aspiration], ["Career", s.career], ["School", s.school], ["Lifestyles", (s.lifestyles || []).join(", ")], ["Likes", (s.likes || []).join(", ")], ["Died", s.died]].filter(([, v]) => v);
   const hasTraits = s.traits && s.traits.length;
@@ -963,7 +963,17 @@ function textOn(hex){ const c = (hex || "#000").replace("#",""), L = [0,2,4].map
   return (1.05)/(Y+.05) >= (Y+.05)/(.0185+.05) ? "#fff" : "#1A1F1C"; }
 const emptyNote = n => /bed|empty/i.test(n) ? "Empty" : n;
 const simsMade = x => x.lots.some(l => l.sims === true);
-const simCount = hhs => hhs.reduce((n, x) => n + x.sims.length, 0);
+// pets and horses are stored with the Sims (their kind in `state`) but aren't Sims: they're left out of Sim counts and shown with a paw,
+// not as an occult (19 Oct, a bug: the Palumbos read "8 Sims" for 2 Sims and 6 horses)
+const ANIMAL = /^(Horse|Cat|Dog|Small Dog|Large Dog)$/i, isAnimal = s => !!s && ANIMAL.test(s.state || "");
+const simCount = hhs => hhs.reduce((n, x) => n + x.sims.filter(sm => !isAnimal(sm)).length, 0);
+// "2 Sims · 6 horses" (a list of Sims, or of ids)
+function whoCount(list){
+  const xs = list.map(x => typeof x === "string" ? SIMS[x] : x).filter(Boolean), n = xs.filter(x => !isAnimal(x)).length, pets = {};
+  xs.filter(isAnimal).forEach(x => { const k = x.state.toLowerCase().replace(/^(small|large) /, ""); pets[k] = (pets[k] || 0) + 1; });
+  return [`${n} ${n === 1 ? "Sim" : "Sims"}`, ...Object.entries(pets).map(([k, c]) => `${c} ${c === 1 ? k : k + "s"}`)].join(" · ");
+}
+const lifeState = (s, cls) => isAnimal(s) ? `<span class="${cls} animal">${ic("paw-print")}${esc(s.state)}</span>` : `<span class="${cls} occult">${ic("ghost")}${esc(s.state)}</span>`;
 function hhListing(x, listed){   // listed: on the households page, one-Sim households read surname first
   const n = x.sims.length, hc = x.lots[0].hood.color, made = simsMade(x);
   return `<a class="listing" href="#${x.id}" style="--h:${hc}"><div class="photo"><span class="initial">${initial(x.name)}</span><span class="type">Household</span><span class="status">${x.unsure ? `<span class="flag">unsure</span>` : ""}<span class="${made?"yes":""}" title="Sims made: ${made?"yes":"not yet"}">${ic("sim")}</span></span><span class="size">${esc(x.lots.map(l => l.name).join(" & "))}</span></div>
@@ -993,7 +1003,7 @@ function household(hh){
           return (lets.length ? `<div><dt>Landlord of</dt><dd>${lets.map(l => `<a href="#${l.id}">${esc(l.name)}</a>`).join(", ")}</dd></div>` : "") + (biz.length ? `<div><dt>Owns</dt><dd>${biz.map(l => `<a href="#${l.id}">${esc(l.name)}</a> (${esc(l.type)})`).join(", ")}</dd></div>` : ""); })()}
         <div><dt>Sims made in game</dt><dd>${simsMade(hh) ? `<span class="ok">${ic("sim")} Yes</span>` : "Not yet"}</dd></div></dl></div>
     </div>
-    <section class="block" style="--h:${hc}"><div class="block-head"><h2>The <em>Sims</em></h2>${hh.sims.length ? `<span class="count">${hh.sims.length} ${hh.sims.length===1?"Sim":"Sims"}</span>` : ""}</div>
+    <section class="block" style="--h:${hc}"><div class="block-head"><h2>The <em>Sims</em></h2>${hh.sims.length ? `<span class="count">${whoCount(hh.sims)}</span>` : ""}</div>
       ${hh.sims.length ? `<div class="sims">${hh.sims.map(simCard).join("")}</div>` : `<div class="empty">${ic("sim")}No Sims added yet. Each Sim in the household will get a card here with their traits, career, skills and relationships.</div>`}
       ${hh.source ? `<p class="source">In-game starting details from The Sims Wiki: ${hh.source.map(([n,u]) => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(n)}</a>`).join(", ")}.</p>` : ""}</section>
     ${hh.links.length ? `<section class="block" style="--h:${hc}"><div class="block-head"><h2>Connected <em>households</em></h2></div><div class="families">${hh.links.map(x => x.hh ? famCard(x.hh, x) : "").join("")}</div></section>` : ""}
@@ -1030,7 +1040,7 @@ function simRoster(ids){
     ${ids.map(id => { const s = SIMS[id], uni = /^(University of Britechester|Foxbury Institute) · (.+?)( \(distinguished\))?$/.exec(s.school || ""),
         job = uni ? `${uni[2]} (${uni[1].startsWith("Foxbury") ? "Foxbury" : "UoB"})` : (s.career || s.school || "").split(" · ")[0];
       return `<tr><td><span class="who"><span class="mono">${initial(s.name)}</span><a href="#s-${id}">${esc(s.name)}</a></span></td>
-        <td>${esc(s.age)}</td><td>${s.state ? `<span class="state occult">${ic("ghost")}${esc(s.state)}</span>` : `<span class="muted">Human</span>`}</td>
+        <td>${esc(s.age)}</td><td>${s.state ? lifeState(s, "state") : `<span class="muted">Human</span>`}</td>
         <td>${s.aspiration ? esc(s.aspiration) : `<span class="muted">—</span>`}</td><td>${job ? esc(job) : `<span class="muted">—</span>`}</td></tr>`; }).join("")}</tbody></table></div>`;
 }
 function householdNew(hh){
@@ -1050,7 +1060,7 @@ function householdNew(hh){
         ${dyn ? `<div><dt>Dynasty</dt><dd class="dynline">${dyn}</dd></div>` : ""}
         ${(() => { const f = ids.map(id => SIMS[id].src && SIMS[id].src.from).find(Boolean); return f ? `<div><dt>Sims from</dt><dd>${esc(f)}, to check</dd></div>` : ""; })()}</dl></div>
     </div>
-    <section class="block" style="--h:${hc}"><div class="block-head"><h2>The <em>Sims</em></h2><span class="count">${n} ${n === 1 ? "Sim" : "Sims"}</span></div>
+    <section class="block" style="--h:${hc}"><div class="block-head"><h2>The <em>Sims</em></h2><span class="count">${whoCount(ids)}</span></div>
       ${simRoster(ids)}
       </section>
     ${tree.length ? `<section class="block" style="--h:${hc}"><div class="block-head"><h2>Family <em>tree</em></h2></div>
