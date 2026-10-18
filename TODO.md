@@ -342,7 +342,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 ### Small business lots (research/small-business-check.md)
 - [x] [Jemma] 19 Oct, her call: lots use the game’s two names, “Small Business Residential” (owners live there) and “Small Business Venue” (nobody lives there; 8 renamed, her bracket notes kept). Was: “Small Business Residential” is the game’s own name after all. Rename plain “Small Business” to the game’s “Small Business Venue”? Add a bracket note of what each sells?
 - [ ] [Jemma] The Portsmouth Promenade is a venue lot, so Mary and Blossom Greenburg have no home: rent at Rockridge Springs (empty), or make it their home again?
-- [ ] [Jemma] No owner named yet: Optimist’s Outlook, The Llama Picturehouse (or make it a Bar), Plumbob Pictures Museum, Canalside Daycare. Greenwood Hamlet Residence has a venue type but residents listed
+- [ ] [Jemma] Later (19 Oct): no owner named yet: The Llama Picturehouse (or make it a Bar), Plumbob Pictures Museum, Canalside Daycare. Greenwood Hamlet Residence has a venue type but residents listed
 - [x] [Jemma] Venue lots: no “Run by” (her call, 19 Oct): they say “Owned by”, the same as vet clinics and every other owned lot.
 
 ### What to build next (research/build-priorities.md)
