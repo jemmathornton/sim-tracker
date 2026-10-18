@@ -33,6 +33,9 @@ EA = {"Britechester|Pleasant"}
 PREFER = {k: ("Rotational", w) for k, w in {"Brindleton Bay|Ventura": "Brindleton Bay", "Newcrest|LeBlanc": "Newcrest", "Oasis Springs|De Costa": "Oasis Springs",
           "Oasis Springs|Rivera": "Oasis Springs", "Willow Creek|Reynolds": "Willow Creek", "Willow Creek|Kopf": "Willow Creek",
           "Willow Creek|Davidson": "Willow Creek", "Willow Creek|Barraza": "Willow Creek"}.items()}
+# her choice (19 Oct): Maxis's Sims 2 Smiths from her Library (a Maxis household, so Premade), replacing Chia Smith
+PREFER_LIBRARY = {"Oasis Springs|Smith": "The Smith Family"}
+PREMADE_COPY = {"Oasis Springs|Smith"}
 TARGET = {"Willow Creek|Davidson": "Davidson 1"}   # the plan has two Davidson homes; Evelyn, Ray and George live at Streamlet Single (the first)   # EA's own household (the Pleasant twins): game files, not a save
 norm = lambda x: re.sub(r'[^a-z]', '', (x or '').lower())
 
@@ -65,6 +68,9 @@ def main(apply):
             ok = [c for c in copies if all(any(s['name'] == n for s in c['sims']) for n in want)]
             if ok: ok.sort(key=rank); plan[key] = (ok[0], want); review.append((key, 'filled', copies)); continue
             # not a Sim's name after all ("Santiago Ojo" is Alicia Santiago and Miko Ojo): fall back to the household name
+        if key in PREFER_LIBRARY:
+            pick = [c for c in copies if c['source'] == 'library' and c['household'] == PREFER_LIBRARY[key]]
+            if pick: plan[key] = (pick[0], None); review.append((key, 'filled', copies)); continue
         if key in PREFER:
             sv, ww = PREFER[key]
             pick = [c for c in copies if c['source'] == 'save' and c.get('save') == sv and c.get('world') == ww]
@@ -122,7 +128,7 @@ def main(apply):
     for p in worlds.values():
         W0 = load(p)
         for hn0, hh in (W0.get('households') or {}).items():
-            if f"{W0['name']}|{hn0}" in PREFER or any(f"{W0['name']}|{k}" in TARGET and TARGET[f"{W0['name']}|{k}"] == hn0 for k in [hn0.rsplit(' ', 1)[0]]): continue   # being replaced
+            if f"{W0['name']}|{hn0}" in PREFER or f"{W0['name']}|{hn0}" in PREFER_LIBRARY or any(f"{W0['name']}|{k}" in TARGET and TARGET[f"{W0['name']}|{k}"] == hn0 for k in [hn0.rsplit(' ', 1)[0]]): continue   # being replaced
             used.update(s.get('id') for s in hh.get('sims', []) if s.get('id'))
     out_by_world = {}
     for key, sims in full.items():
@@ -137,7 +143,7 @@ def main(apply):
         rows = []
         for s in sims:
             at = s.get('attributes') or {}; sid, nm = idmap[s.get('sim_id')]
-            d = {"id": sid, "name": nm, "sex": SEX.get(s.get('gender'), 'x'), "origin": "Mine", "from": src, "age": AGES.get(s.get('age'))}
+            d = {"id": sid, "name": nm, "sex": SEX.get(s.get('gender'), 'x'), "origin": "Premade" if key in PREMADE_COPY else "Mine", "from": src, "age": AGES.get(s.get('age'))}
             sp = SPECIES.get(s.get('extended_species'))
             if sp: d["state"] = sp
             young = sp or d["age"] in ("Baby", "Infant", "Toddler")
@@ -184,7 +190,7 @@ def main(apply):
             p = worlds[w]; W = load(p)
             for hn, (rows, src) in hhs.items():
                 h = W.setdefault('households', {}).setdefault(hn, {})
-                if h.get('sims') and f"{w}|{hn}" not in PREFER and hn not in TARGET.values(): continue
+                if h.get('sims') and f"{w}|{hn}" not in PREFER and f"{w}|{hn}" not in PREFER_LIBRARY and hn not in TARGET.values(): continue
                 h['sims'] = rows
                 if h.get('single') and len(rows) > 1: h.pop('single')
             save(p, W)

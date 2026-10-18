@@ -334,23 +334,80 @@
   "Smith": {
    "sims": [
     {
-     "id": "chia-smith",
-     "name": "Chia Smith",
+     "id": "jenny-smith",
+     "name": "Jenny Smith",
      "sex": "f",
-     "origin": "Mine",
-     "from": "save “Horses!” (2024-01-12)",
-     "age": "Young Adult",
-     "aspiration": "Freelance Botanist",
-     "traits": ["Bro", "Materialistic", "Child of the Ocean"],
-     "bonus": "Collector",
-     "career": "Lifeguard · Wave Watcher (level 2)",
+     "origin": "Premade",
+     "from": "Library (2024-05-25)",
+     "age": "Adult",
+     "aspiration": "Big Happy Family",
+     "traits": ["Geek", "Family-Oriented", "Outgoing"],
+     "bonus": "Domestic",
+     "career": "Doctor · Orderly (level 2)",
      "skills": [
-      ["Piano", 2, 10],
-      ["Writing", 2, 10],
-      ["Mischief", 1, 10],
-      ["Fitness", 1, 10],
-      ["Dancing", 1, 5]
+      ["Logic", 6, 10],
+      ["Parenting", 7, 10],
+      ["Cooking", 5, 10]
+     ],
+     "partners": [
+      ["pol-tech-9-smith", "Spouse"]
      ]
+    },
+    {
+     "id": "pol-tech-9-smith",
+     "name": "Pol. Tech 9 Smith",
+     "sex": "m",
+     "origin": "Premade",
+     "from": "Library (2024-05-25)",
+     "age": "Elder",
+     "aspiration": "Big Happy Family",
+     "traits": ["Goofball", "Family-Oriented", "Neat"],
+     "bonus": "Domestic",
+     "career": "",
+     "skills": [
+      ["Fishing", 3, 10],
+      ["Flower Arranging", 5, 10],
+      ["Cooking", 5, 10],
+      ["Logic", 10, 10],
+      ["Rocket Science", 6, 10],
+      ["Parenting", 7, 10]
+     ],
+     "partners": [
+      ["jenny-smith", "Spouse"]
+     ]
+    },
+    {
+     "id": "johnny-smith",
+     "name": "Johnny Smith",
+     "sex": "m",
+     "origin": "Premade",
+     "from": "Library (2024-05-25)",
+     "age": "Teen",
+     "aspiration": "Friend of the World",
+     "traits": ["Good", "Outgoing"],
+     "bonus": "Gregarious",
+     "career": "",
+     "school": "High school · grade B",
+     "skills": [
+      ["Fitness", 2, 10]
+     ],
+     "parents": ["jenny-smith", "pol-tech-9-smith"]
+    },
+    {
+     "id": "jill-smith",
+     "name": "Jill Smith",
+     "sex": "f",
+     "origin": "Premade",
+     "from": "Library (2024-05-25)",
+     "age": "Child",
+     "aspiration": "Artistic Prodigy",
+     "traits": ["Neat"],
+     "career": "",
+     "school": "Grade school · grade B",
+     "skills": [
+      ["Social", 1, 10]
+     ],
+     "parents": ["jenny-smith", "pol-tech-9-smith"]
     }
    ]
   },
