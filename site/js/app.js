@@ -1076,7 +1076,6 @@ function householdNew(hh){
     <div class="detail" style="--h:${hc}">${hhPicture(hh, ids)}
       <div><dl class="facts"><div><dt>World</dt><dd><a href="#w-${w.id}">${esc(w.name)}</a></dd></div><div><dt>Neighbourhood</dt><dd>${hoods.map(x => `<a href="#n-${x.id}">${esc(hoodTitle(x))}</a>`).join(", ")}</dd></div>
         ${hhLotLines(hh)}
-        <div><dt>Sims made in game</dt><dd>${simsMade(hh) ? `<span class="ok">${ic("sim")} Yes</span>` : "Not yet"}</dd></div>
         <div><dt>Origin</dt><dd>${originTag(origin)}</dd></div>
         <div><dt>Played</dt><dd>${esc(hh.played || "Not yet")}</dd></div>
         <div><dt>Neighbourhood Stories</dt><dd>${esc(hh.stories || "Not set")}</dd></div>
