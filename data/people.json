@@ -122,7 +122,10 @@
   "origin": "Premade",
   "state": "Ghost",
   "fromFix": true,
-  "death": "Old Age"
+  "death": "Old Age",
+  "partners": [
+   ["contessa-capp", "Late Spouse"]
+  ]
  },
  "aghata-ananou": {
   "name": "Aghata Ananou",
@@ -137,20 +140,31 @@
   "sex": "m",
   "notInGame": true,
   "fromFix": true,
-  "parents": ["consort-capp", "contessa-capp"]
+  "parents": ["consort-capp", "contessa-capp"],
+  "partners": [
+   ["cordelia-capp", "Spouse"]
+  ],
+  "late": true
  },
  "contessa-capp": {
   "name": "Contessa Capp",
   "sex": "f",
   "late": true,
   "notInGame": true,
-  "fromFix": true
+  "fromFix": true,
+  "partners": [
+   ["consort-capp", "Spouse"]
+  ]
  },
  "cordelia-capp": {
   "name": "Cordelia Capp",
   "sex": "f",
   "notInGame": true,
-  "fromFix": true
+  "fromFix": true,
+  "partners": [
+   ["caliban-capp", "Spouse"]
+  ],
+  "late": true
  },
  "cahya-cahyaputri": {
   "name": "Cahya Cahyaputri",

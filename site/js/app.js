@@ -521,7 +521,8 @@ function simPage(s){
   // a horse's competitions: best place at each level (her ask, 19 Oct)
   if (s.state === "Horse") h += `<section class="block" style="--h:${hc}"><div class="block-head"><h2>Competitions</h2></div>${horseComps(s)}</section>`;
   // family
-  const fam = simFamily(s.id), own = isAnimal(s) ? (t => t.includes(s.id) ? t : [])(s.hh ? animalTreeOf(s.hh) : []) : s.hh ? treeOf(s.hh) : treeAround([s.id]);   // their household’s whole family tree, with them highlighted
+  // a Sim's own family (blood relatives plus partners), not their household's whole tree: Romeo shouldn't show Juliette's distant Capps (her call, 19 Oct)
+  const fam = simFamily(s.id), own = isAnimal(s) ? (t => t.includes(s.id) ? t : [])(s.hh ? animalTreeOf(s.hh) : []) : treeAround([s.id]);
   if (fam.trim() || own.length) h += `<section class="block" id="family" style="--h:${hc}"><div class="block-head"><h2>Their <em>family</em></h2></div>
     ${own.length ? `<div class="tree-box">${fitTree(own, {line: s.line, compact: true, ch: 96, labels: false, here: true, me: s.id})}</div>${treeKey(own)}` : ""}
     ${fam.trim() ? `<div style="margin-top:22px">${fam}</div>` : ""}</section>`;
