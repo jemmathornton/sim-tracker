@@ -187,7 +187,7 @@ def main(apply):
             if rels.get(me): d["rels"] = rels[me]
             if parents.get(me): d["parents"] = parents[me]
             if partners.get(me): d["partners"] = partners[me]
-            if s.get("dynasty") and s["dynasty"].get("name"): d["dynasty"] = {"name": s["dynasty"]["name"], "role": "head" if s["dynasty"].get("head") else "member"}
+            if s.get("dynasty") and s["dynasty"].get("name"): d["dynasty"] = {"name": s["dynasty"]["name"], "role": "head" if s["dynasty"].get("head") else "heir" if s["dynasty"].get("heir") else "outcast" if s["dynasty"].get("outcast") else "member"}
             if s.get("clubs"): d["clubs"] = [{"name": n, "role": "leader" if lead else "member"} for n, lead in s["clubs"] if n]
             out.append(d)
         W.setdefault('households', {}).setdefault(name, {})["sims"] = out

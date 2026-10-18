@@ -167,7 +167,7 @@
      "parents": ["ermelinda-abrantes"],
      "dynasty": {
       "name": "Abrantes",
-      "role": "member"
+      "role": "heir"
      }
     }
    ]
@@ -274,7 +274,7 @@
      "parents": ["tybalt-capp"],
      "dynasty": {
       "name": "Capp",
-      "role": "member"
+      "role": "heir"
      }
     },
     {
@@ -332,7 +332,7 @@
      "parents": ["tybalt-capp"],
      "dynasty": {
       "name": "Capp",
-      "role": "member"
+      "role": "outcast"
      }
     }
    ]
@@ -389,7 +389,7 @@
      "parents": ["adekoya-darong"],
      "dynasty": {
       "name": "Darong",
-      "role": "member"
+      "role": "heir"
      }
     },
     {
@@ -505,7 +505,7 @@
      ],
      "dynasty": {
       "name": "Thebe",
-      "role": "member"
+      "role": "heir"
      },
      "parents": ["ermelinda-abrantes"]
     }

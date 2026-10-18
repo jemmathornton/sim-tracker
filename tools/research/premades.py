@@ -123,7 +123,8 @@ def main():
         mj = [int(x) for x in T.leaves(T.field(t['tree'], '_major')) if x.isdigit() and int(x) in I] if T.field(t['tree'], '_major') else []
         oc = [x for x in T.leaves(T.field(t['tree'], 'occult')) if x.isupper()] if T.field(t['tree'], 'occult') else []
         return {"siminfo": key, "template_name": t['name'],
-                "dynasty": {"name": tname(int(seed)) if seed else None, "head": T.value(T.field(dyn_en, 'is_head')) == 'True'} if dyn_en else None,
+                "dynasty": {"name": tname(int(seed)) if seed else None, "head": T.value(T.field(dyn_en, 'is_head')) == 'True',
+                            "heir": T.value(T.field(dyn_en, 'is_heir')) == 'True', "outcast": T.value(T.field(dyn_en, 'is_black_sheep')) == 'True'} if dyn_en else None,
                 "career_level": int(cl[0]) if cl and cl[0].isdigit() else None, "clubs": clubs,
                 "degree": [tname(x) for x in mj], "occult": oc[0] if oc else None}
 

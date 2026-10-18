@@ -522,7 +522,9 @@
      "template_name": "premadeSimTemplate_BellaGoth",
      "dynasty": {
       "name": "Goth",
-      "head": false
+      "head": false,
+      "heir": false,
+      "outcast": false
      },
      "clubs": [],
      "degree": [],
@@ -565,7 +567,9 @@
      "template_name": "premadeSimTemplate_MortimerGoth",
      "dynasty": {
       "name": "Goth",
-      "head": true
+      "head": true,
+      "heir": false,
+      "outcast": false
      },
      "clubs": [],
      "degree": [],
@@ -616,7 +620,9 @@
      "template_name": "premadeSimTemplate_CassandraGoth",
      "dynasty": {
       "name": "Goth",
-      "head": false
+      "head": false,
+      "heir": true,
+      "outcast": false
      },
      "clubs": [],
      "degree": [],
@@ -681,7 +687,9 @@
      "template_name": "premadeSimTemplate_AlexanderGoth",
      "dynasty": {
       "name": "Goth",
-      "head": false
+      "head": false,
+      "heir": false,
+      "outcast": false
      },
      "clubs": [],
      "degree": [],
@@ -2865,7 +2873,9 @@
      "template_name": "premadeSimTemplate_GeoffreyLandgraab",
      "dynasty": {
       "name": "Landgraab",
-      "head": false
+      "head": false,
+      "heir": false,
+      "outcast": false
      },
      "clubs": [],
      "degree": [],
@@ -2923,7 +2933,9 @@
      "template_name": "premadeSimTemplate_NancyLandgraab",
      "dynasty": {
       "name": "Landgraab",
-      "head": true
+      "head": true,
+      "heir": false,
+      "outcast": false
      },
      "clubs": [],
      "degree": [],
@@ -2979,7 +2991,9 @@
      "template_name": "premadeSimTemplate_MalcomLandgraab",
      "dynasty": {
       "name": "Landgraab",
-      "head": false
+      "head": false,
+      "heir": true,
+      "outcast": false
      },
      "clubs": [],
      "degree": [],
@@ -4533,7 +4547,9 @@
      "template_name": "premadeSimTemplate_JohnnyZest",
      "dynasty": {
       "name": "Landgraab",
-      "head": false
+      "head": false,
+      "heir": false,
+      "outcast": true
      },
      "clubs": [],
      "degree": [],
@@ -14735,7 +14751,9 @@
      "template_name": "premadeSimTemplate_EP21_Abrantes_JoanaAbrantes",
      "dynasty": {
       "name": "Abrantes",
-      "head": true
+      "head": true,
+      "heir": false,
+      "outcast": false
      },
      "clubs": [],
      "degree": [],
@@ -14792,7 +14810,9 @@
      "template_name": "premadeSimTemplate_EP21_Abrantes_SofiaAbrantes",
      "dynasty": {
       "name": "Abrantes",
-      "head": false
+      "head": false,
+      "heir": true,
+      "outcast": false
      },
      "clubs": [],
      "degree": [],
@@ -14959,7 +14979,9 @@
      "template_name": "premadeSimTemplate_EP21_Alto_EnzoAlto",
      "dynasty": {
       "name": "Alto",
-      "head": true
+      "head": true,
+      "heir": false,
+      "outcast": false
      },
      "clubs": [],
      "degree": [],
@@ -15141,7 +15163,9 @@
      "template_name": "premadeSimTemplate_EP21_Capp_TybaltCapp",
      "dynasty": {
       "name": "Capp",
-      "head": true
+      "head": true,
+      "heir": false,
+      "outcast": false
      },
      "clubs": [],
      "degree": [],
@@ -15209,7 +15233,9 @@
      "template_name": "premadeSimTemplate_EP21_Capp_BeatriceCapp",
      "dynasty": {
       "name": "Capp",
-      "head": false
+      "head": false,
+      "heir": true,
+      "outcast": false
      },
      "clubs": [],
      "degree": [],
@@ -15282,7 +15308,9 @@
      "template_name": "premadeSimTemplate_EP21_Capp_CelesteCapp",
      "dynasty": {
       "name": "Capp",
-      "head": false
+      "head": false,
+      "heir": false,
+      "outcast": false
      },
      "clubs": [],
      "degree": [],
@@ -15355,7 +15383,9 @@
      "template_name": "premadeSimTemplate_EP21_Capp_VirgilioCapp",
      "dynasty": {
       "name": "Capp",
-      "head": false
+      "head": false,
+      "heir": false,
+      "outcast": true
      },
      "clubs": [],
      "degree": [],
@@ -15437,7 +15467,9 @@
      "template_name": "premadeSimTemplate_EP21_ConsortCapp",
      "dynasty": {
       "name": "Capp",
-      "head": false
+      "head": false,
+      "heir": false,
+      "outcast": false
      },
      "clubs": [],
      "degree": [],
@@ -15505,7 +15537,9 @@
      "template_name": "premadeSimTemplate_EP21_Darong_AdekoyaDarong",
      "dynasty": {
       "name": "Darong",
-      "head": true
+      "head": true,
+      "heir": false,
+      "outcast": false
      },
      "clubs": [],
      "degree": [],
@@ -15568,7 +15602,9 @@
      "template_name": "premadeSimTemplate_EP21_Darong_JawaraDarong",
      "dynasty": {
       "name": "Darong",
-      "head": false
+      "head": false,
+      "heir": true,
+      "outcast": false
      },
      "clubs": [],
      "degree": [],
@@ -15634,7 +15670,9 @@
      "template_name": "premadeSimTemplate_EP21_Darong_IkennaDarong",
      "dynasty": {
       "name": "Darong",
-      "head": false
+      "head": false,
+      "heir": false,
+      "outcast": false
      },
      "clubs": [],
      "degree": [],
@@ -15694,7 +15732,9 @@
      "template_name": "premadeSimTemplate_EP21_Darong_ObiDarong",
      "dynasty": {
       "name": "Darong",
-      "head": false
+      "head": false,
+      "heir": false,
+      "outcast": false
      },
      "clubs": [],
      "degree": [],
@@ -15820,7 +15860,9 @@
      "template_name": "premadeSimTemplate_EP21_Monty_JulietteMonty",
      "dynasty": {
       "name": "Monty",
-      "head": true
+      "head": true,
+      "heir": false,
+      "outcast": false
      },
      "clubs": [],
      "degree": [],
@@ -15878,7 +15920,9 @@
      "template_name": "premadeSimTemplate_EP21_Monty_RomeoMonty",
      "dynasty": {
       "name": "Monty",
-      "head": false
+      "head": false,
+      "heir": false,
+      "outcast": false
      },
      "clubs": [],
      "degree": [],
@@ -15934,7 +15978,9 @@
      "template_name": "premadeSimTemplate_EP21_Monty_DanteMonty",
      "dynasty": {
       "name": "Monty",
-      "head": false
+      "head": false,
+      "heir": true,
+      "outcast": false
      },
      "clubs": [],
      "degree": [],
@@ -16170,7 +16216,9 @@
      "template_name": "premadeSimTemplate_EP21_Thebe_CordeliaThebeTheV",
      "dynasty": {
       "name": "Thebe",
-      "head": true
+      "head": true,
+      "heir": false,
+      "outcast": false
      },
      "clubs": [],
      "degree": [],
@@ -16223,7 +16271,9 @@
      "template_name": "premadeSimTemplate_EP21_Thebe_ThiagoAbrantes",
      "dynasty": {
       "name": "Thebe",
-      "head": false
+      "head": false,
+      "heir": true,
+      "outcast": false
      },
      "clubs": [],
      "degree": [],
