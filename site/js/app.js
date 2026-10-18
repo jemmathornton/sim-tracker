@@ -273,7 +273,7 @@ const membersOf = hh => Object.keys(SIMS).filter(id => SIMS[id].hh === hh);
    Stored with the Sims (their kind in `state`), but not Sims: left out of Sim counts and the Sims family tree, listed under the
    Sims as "The animals", with their own small family tree where one has a mother or father, and a pet page instead of a Sim page. */
 const ANIMAL = /^(Horse|Cat|Dog|Small Dog|Large Dog)$/i, isAnimal = s => !!s && ANIMAL.test(s.state || "");
-const animalIcon = s => ic(/cat/i.test(s.state) ? "cat" : /dog/i.test(s.state) ? "dog" : "paw-print");
+const animalIcon = s => ic(/cat/i.test(s.state) ? "cat" : /dog/i.test(s.state) ? "dog" : /horse/i.test(s.state) ? "horse-head" : "paw-print");
 // the game's words for young animals
 const stageOf = s => isAnimal(s) && /^(Child|Baby|Toddler)$/.test(s.age || "") ? ({Horse: "Foal", Cat: "Kitten"}[s.state] || "Puppy") : s.age;
 const isChampion = s => (s.wins || []).includes("Ultimate Horse Championship") || !!s.champion;
