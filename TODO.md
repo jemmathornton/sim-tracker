@@ -67,7 +67,7 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
 - [x] [Jemma] Selvadorada: redo its map squares (the boxes you drew) so its banners and cards show the right parts (19 Oct). Done 19 Oct: her new boxes are in.
 - [ ] [Jemma] San Myshuno: all its neighbourhood banners seem off; you’ll make your own map adjustments first (19 Oct). Banners can now be nudged per neighbourhood (bannerZoom, bannerShift).
 - [x] [Jemma] 19 Oct: she went through every banner and card (outside San Myshuno) and is happy; a nudged neighbourhood’s card now shows what its banner shows (same middle, same amount of map), with `cardShift` and `bannerOnlyZoom` for one side only.
-- [ ] [Jemma] Neighbourhood page banners now zoom to the neighbourhood’s part of the world map (16 Oct, her idea; maps re-extracted at full size so it stays sharp). Some may look worse than the whole map: name any to put back (17 Oct review in §6d)
+- [x] [Jemma] Neighbourhood page banners now zoom to the neighbourhood’s part of the world map (16 Oct, her idea; maps re-extracted at full size so it stays sharp). Some may look worse than the whole map: name any to put back (17 Oct review in §6d)
 - [x] Rio Verde with six households: she looked with the “Pretend Rio Verde is full” tick box; box removed (16 Oct)
 - [ ] [Jemma] Photo tabs per unit (layout 4): for every rental once it has screenshots of each unit (16 Oct, her view; Rio Verde is the only one so far)
 - [ ] [Jemma] Decide each rental's households unit by unit, and landlords for the 17 rentals without one
@@ -393,7 +393,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 
 ### Neighbourhood banners (research/hood-banners-review.md; pictures in for-jemma/hood-banners/)
 - [x] [Claude] Bug: the banner zoom is worked out for a banner about 352px tall, but the real ones are 380–686px (the title and text make them taller), so each neighbourhood only fills the middle and its lowest part sits under the fade. Work out the zoom from the banner’s real height and keep the box above the fade (fixes most of the so-so ones: Lykke Center / University of Windenburg, Hopewell Hills, Deadgrass Isle, The Crumbling Isle, Plumbite Cove). Fix when she’s back — fixed 19 Oct: every banner is now the same height and the zoom uses it
-- [ ] [Jemma] None looks worse than the whole map (48 good, 29 so-so). Her taste: put Belomisia Jungle, Campground, Glimmerbrook (loses its sunset) and Conifer Station back to the whole map? They barely zoom (1.01–1.15×)
+- [x] [Jemma] None looks worse than the whole map (48 good, 29 so-so). Her taste: put Belomisia Jungle, Campground, Glimmerbrook (loses its sunset) and Conifer Station back to the whole map? They barely zoom (1.01–1.15×) — 19 Oct: keep them as they are (her call)
 - [x] [Jemma] Zoom out a bit: Acquisition Butte, Desert Bloom Park, Galloping Gulch (mostly bare rock at 3×), Myshuno Meadows (soft), Yukimatsu (mostly snow)? Needs a small per-neighbourhood banner setting — the per-neighbourhood setting exists now (bannerZoom, bannerShift, 19 Oct); say which to change. 19 Oct: Galloping Gulch zoomed out; Acquisition Butte, Desert Bloom Park and Yukimatsu are fine as they are (her call)
 
 ### Blurry taskbar icon (research/taskbar-icon.md)
