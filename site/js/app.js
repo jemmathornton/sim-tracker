@@ -1353,7 +1353,7 @@ const CAL = Object.assign({events: [], lotEvents: [], holidays: [], seasons: ["S
 const CAL_DAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 const CAL_DAY_NAMES = {Mon: "Monday", Tue: "Tuesday", Wed: "Wednesday", Thu: "Thursday", Fri: "Friday", Sat: "Saturday", Sun: "Sunday"};
 const CAL_OFTEN = {week: "every week", fortnight: "every other week", third: "every third week", lounge: "the game picks each week"};
-const CAL_KINDS = {holiday: "Holidays", festival: "Festivals", community: "Community events", school: "University and high school", lot: "Lot nights"};   // split up (her asks, 19 Oct)
+const CAL_KINDS = {holiday: "Holidays", festival: "Festivals", community: "Community events", school: "Education", lot: "Lot nights"};   // split up (her asks, 19 Oct)
 const calKind = e => e.kind === "uni" || e.kind === "highschool" ? "school" : e.kind;
 // festivals and community events are filtered by world; school events by university or high school; lot nights by lot type (her ask, 19 Oct)
 const calSub = e => e.kind === "uni" ? "University" : e.kind === "highschool" ? "High school" : e.kind === "lot" ? (/^Lounge/.test(e.lotType) ? "Lounges" : e.lotType + "s") : null;
@@ -1402,7 +1402,7 @@ function calendarPage(){
   h += `<section class="block cal"><div class="cal-top"><div class="seg" role="group" aria-label="Season">${CAL.seasons.map(s => `<button type="button" class="${s === sn ? "on" : ""} s-${s.toLowerCase()}" data-cal-season="${s}">${ic(SEASON_ICON[s] || "calendar")}${esc(s)}</button>`).join("")}</div>
     <div class="kinds">${Object.entries(CAL_KINDS).map(([k, t]) => `<label><input type="checkbox" data-cal-kind="${k}" ${calState.kinds.has(k) ? "checked" : ""}> ${esc(t)}</label>`).join("")}</div></div>
     ${withEv.length ? chipRow("Worlds", "world", "All worlds", withEv.map(w => [w.name, calHues(w.name)])) : ""}
-    ${calState.kinds.has("school") ? chipRow("School", "school", "Both", subs("school").map(v => [v])) : ""}
+    ${calState.kinds.has("school") ? chipRow("Education", "school", "Both", subs("school").map(v => [v])) : ""}
     ${calState.kinds.has("lot") ? chipRow("Lot nights", "lots", "All lot types", subs("lot").map(v => [v])) : ""}`;
   if (daily.length) h += `<div class="band"><span class="band-l">${ic("repeat")}Every day</span><div class="band-evs">${daily.map(calPill).join("")}</div></div>`;
   // the month: four weeks, Monday first
