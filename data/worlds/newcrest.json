@@ -32,7 +32,7 @@
     {"lot": "Tranquil Crescent", "myName": "The Ice Pavilion", "type": "Park", "size": "30x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "displayName": "The Ice Pavilion", "gallery": ["+DAFcj27EemJdXldy2Ruvw=="], "traits": ["Bracing Breezes", "Natural Light", "Romantic Aura"]},
     {"lot": "Asphalt Abodes", "myName": "Asphalt Abodes", "type": "Residential", "size": "30x20", "residents": "Sylvia & Kenny Cadberry", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["6DxqqjzOQTCrmkXX5Ym/tQ=="]}
    ],
-   "bannerZoom": 1.35
+   "bannerZoom": 1.25
   },
   {
    "name": "Ridgeline Drive",
@@ -46,7 +46,8 @@
     {"lot": "Hillside Highlands", "myName": "Cookies 'n' Cream", "type": "Retail (Bakery & Ice Cream)", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["5IgKUz28EemN+Hldy2Ruvw=="], "traits": ["Chef's Kitchen", "Convivial", "Party Place"]},
     {"lot": "Optimist's Outlook", "myName": "Optimist's Outlook", "type": "Small Business", "size": "40x30", "residents": "Kirkland", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["b8CLGvj5QeOG99APW33WlQ=="]}
    ],
-   "bannerShift": [0.06, 0]
+   "bannerShift": [0.06, 0],
+   "bannerZoom": 0.9
   }
  ],
  "weather": "Snowy winters, heat waves and thunderstorms in summer, plenty of rain, mysterious weather in autumn",
