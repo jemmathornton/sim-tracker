@@ -149,7 +149,7 @@ const TAG_GROUPS = {
   family:   {name: "Family",        icon: "network"},
   romance:  {name: "Romance",       icon: "heart"},
   friends:  {name: "Friends",       icon: "smile"},
-  conflict: {name: "Conflict",      icon: "swords"},
+  conflict: {name: "Enemies",       icon: "swords"},
   work:     {name: "Work & school", icon: "briefcase"},
   dynasty:  {name: "Dynasty",       icon: "crown"},
 };
