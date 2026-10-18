@@ -404,7 +404,9 @@
      "from": "save “Return to the HOB” (2023-12-21)",
      "age": "Adult",
      "state": "Cat",
-     "career": ""
+     "career": "",
+     "breed": "American Wirehair",
+     "traits": ["Free Spirit", "Playful", "Lazy"]
     }
    ]
   }

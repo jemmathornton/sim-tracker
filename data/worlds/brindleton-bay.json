@@ -322,7 +322,9 @@
      "from": "save “Rotational” (2023-12-21)",
      "age": "Adult",
      "state": "Dog",
-     "career": ""
+     "career": "",
+     "breed": "Large Yorkie",
+     "traits": ["Active", "Loyal", "Playful"]
     }
    ]
   }
