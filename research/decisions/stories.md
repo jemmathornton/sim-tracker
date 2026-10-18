@@ -30,6 +30,8 @@ The household page goes: banner, facts (world, home, origin, played…), **The S
 
 ## 3. EA’s words: a copyright note
 
+**Her call (19 Oct):** EA’s bios are fine to show word for word (they’re in the game and on the wiki everywhere). Use EA’s own text, read from her game.
+
 EA’s bios are EA’s writing. Showing them on a private site, for a game you own, is your call, and the risk is low while it stays on your PC. **If the site ever goes online,** copying them word for word for 100 families is the bit to think twice about.
 The safe option is **a one-line summary in our own words**, with a link to the family’s Sims Wiki page (the prototype already does this).
 
