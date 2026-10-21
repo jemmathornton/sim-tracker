@@ -51,7 +51,7 @@ Everything on the to-do list that needs the game open, grouped so you can go wor
 - Caldera Camp: Geothermal and Natural Well, not yet (21 Oct); two trait slots are free if you want them later.
 
 **Tomarang**
-- The Screaming Gecko: add a karaoke machine (now a Karaoke Bar).
+- ~~The Screaming Gecko~~ done 21 Oct: uploaded as a Karaoke Bar (Party Place, Convivial).
 
 **Chestnut Ridge**
 - New Appaloosa has no public horse stop: give The Cozy Corner House hay feeders and troughs, or let Appaloosa Stables be the stop?

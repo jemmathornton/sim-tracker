@@ -6,7 +6,7 @@ Every open item carried over from the claude.ai project on 13 Oct 2026: the note
 
 ## 0. Moving to the app
 
-- [ ] [Claude] Copy into World Plans (her spreadsheet, 21 Oct changes): Windenburg’s three special lots into their neighbourhoods; Foxbury Court → Backroom; Pinecrest #402 → Empty, #404 → Eco Roomies; Prescott and Lakeview Boarding Houses → Residential Rental (2); Lakeview residents Sporty Girls + Sporty Boys; Prescott residents Nerdy Girls + Nerdy Boys (was Chess/Comp Teens). Make an updated copy in for-jemma for her to swap in, as on 19 Oct
+- [ ] [Claude] Copy into World Plans (her spreadsheet, 21 Oct changes): Windenburg’s three special lots into their neighbourhoods; Foxbury Court → Backroom; Pinecrest #402 → Empty, #404 → Eco Roomies; Prescott and Lakeview Boarding Houses → Residential Rental (2); Lakeview residents Sporty Girls + Sporty Boys; Prescott residents Nerdy Girls + Nerdy Boys (was Chess/Comp Teens). The Screaming Gecko → Shared (her Karaoke Bar upload, traits Party Place and Convivial). Make an updated copy in for-jemma for her to swap in, as on 19 Oct
 
 - [x] [Jemma] What "an app" means (13 Oct): on her PC for now, easy to put online later
 - [ ] [Jemma] Where she edits: undecided, kept flexible. Today Claude edits the app's data; her spreadsheet can still be imported at any time (edits on both sides are kept). Decide later
