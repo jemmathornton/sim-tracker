@@ -27,7 +27,7 @@ Everything on the to-do list that needs the game open, grouped so you can go wor
 - ~~Von Haunt Estate~~ checked 21 Oct: in the Windslar area, not officially part of it.
 
 **Del Sol Valley** (Gallery comment)
-- Strike Out! (nightclub, Vacuous Green) needs a waste basket.
+- ~~Strike Out!~~ checked 21 Oct: fine (re-uploaded).
 
 **Britechester**
 - The Old Clocktower: convert it to a Backroom.
