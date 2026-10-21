@@ -19,6 +19,6 @@ Her answers so far, kept in case the idea comes back:
 - Nordhaven: Practice Your Hobby → both
 - Del Sol Valley: Celebrities! → Starlight Boulevard
 - Chestnut Ridge: Rare Fishing Spots → Riders' Glen (her view: it has the most water)
-- Windenburg: Von Haunt Estate → she'll check where the lot is in game
+- Windenburg: Von Haunt Estate → in the Windslar area, though not officially part of it (her check in game, 21 Oct). Windenburg's other special lots sit the same way: the Ancient Ruins by Olde Platz, The Bluffs by The Crumbling Isle
 - Not asked yet: Ravenwood (Memorial Sites, Chilling Collections, Ghosts & Grim), Britechester (Historic Mysteries), San Myshuno (Festivals, Night Life), StrangerVille (Interesting Locals), Sulani (Ocean Activities), Tomarang (Local Living, Rich History), Glimmerbrook (Enchantment, Magic Portal)
 - The rest name their neighbourhood outright.
