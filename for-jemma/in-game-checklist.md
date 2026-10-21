@@ -18,7 +18,7 @@ Everything on the to-do list that needs the game open, grouped so you can go wor
 - ~~Studio PBP~~ not built yet: give it Hottest Spot in Town when you build it (21 Oct).
 
 **Newcrest**
-- Someone on the Gallery found Newcrest Community Space's court bugged: worth a look.
+- ~~Newcrest Community Space's court~~ checked 21 Oct: works fine.
 
 **Magnolia Promenade**
 - Magnolia Mall needs coffee, a wardrobe or clothes racks, and things to sabotage (for the Paragons and Renegades clubs).

@@ -153,7 +153,7 @@ From the data check-up, 15 Oct (research/data-check-up.md; sizes, uploads and sh
 - [x] Game descriptions added for Acquisition Butte, Ridgeline Drive, Ohan'ali Town, Lani St. Taz and Magnolia Promenade (15 Oct). Still none (no game text): Desert Bloom Park, Campground, Glimmerbrook, the Secret/Special Lots groups
 - [x] Her "My Name" now matches her Gallery titles on 11 lots (15 Oct, plan and spreadsheet): Café Llama, Foxbury Court, The Royal Crown, Von-Windenburg Castle, Parkside Playground, Stargazer, Vista Quarry Villa, Revive and Thrive, Brooks Bridge, Desert Bloom, Cookies 'n' Cream
 - [ ] [Jemma] Re-upload Mossy Lane to the Gallery as University Housing (its only upload says Residential; Spring Steppes is the one with both a University Housing and a rental upload). 16 Oct: she'll do it later
-- [ ] [Jemma] From Gallery comments (research/gallery-deep-dive.md): Strike Out! asks for a waste basket in game; someone found Newcrest Community Space's court bugged
+- [ ] [Jemma] From Gallery comments (research/gallery-deep-dive.md): Strike Out! asks for a waste basket in game. (Newcrest Community Space's court: checked 21 Oct, works fine)
 - [x] Fixed 15 Oct: three Gallery comments showed "&lt;3" instead of "<3"
 
 ## 6b. Build notes (things to do or keep in game; collected 15 Oct)
