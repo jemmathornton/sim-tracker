@@ -60,7 +60,7 @@ Everything on the to-do list that needs the game open, grouped so you can go wor
 - ~~Wedding planner and Sankofa Residence~~ checked 21 Oct: it's offered. Build note (21 Oct): add a Waltzing Dance Floor when rebuilding La Vivace, the palaces and Giardino.
 
 **Wedding venues everywhere**
-- Venues placed from the Gallery could stay Residential underneath until the 22 Sep patch: check Celebration Center, La Coppia Serena, Caminito del Deseo and the others.
+- ~~Wedding venues~~ checked 21 Oct: Newcrest Wedding Hall is a Wedding Venue on the Gallery; the others aren't uploaded yet (check each when you share it).
 
 ## 3. Every rental
 - Look round each one and swap who lives in which unit where another fits better.

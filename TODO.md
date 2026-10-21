@@ -360,7 +360,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 
 ### Game changes, Oct 2025 – Oct 2026 (research/game-changes-2026.md)
 - [ ] [Jemma] Nothing new to add: no new world since Ondarion and none announced; the new lot types (Custom Venue, Backroom, Community Market, Playground) and traits are already in her plan and tools. Her game is up to date (22 Sep 2026 patch)
-- [ ] [Jemma] In game: Wedding Venues placed from the Gallery could stay Residential underneath until the 22 Sep patch; worth checking hers (Celebration Center, La Coppia Serena, Caminito del Deseo and the others)
+- [x] (21 Oct: Newcrest Wedding Hall, the only one uploaded, is a Wedding Venue on the Gallery; the rest aren’t uploaded yet, check each when shared) In game: Wedding Venues placed from the Gallery could stay Residential underneath until the 22 Sep patch; worth checking hers (Celebration Center, La Coppia Serena, Caminito del Deseo and the others)
 - [ ] [Jemma] For the family tree: the 3 Feb 2026 update gave six premade families ancestors (Goths, Landgraabs, Thebes, Capps, Montys, Darongs), but only in new saves; EA plans more family and relationship work for late 2026
 - [x] Corrected research/lot-types-reference.md: penthouses can be rentals since Jul 2024; Gibbi Point’s waterfront lots are excluded like Sulani’s; Backroom is allowed in every world (17 Oct)
 
