@@ -26,8 +26,8 @@
    "lots": [
     {"lot": "Water Tower Way", "myName": "Copperdale Library", "type": "Library", "size": "20x15", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["nFAht7I4Sdu8iwDUqLc6WA=="], "traits": ["Teen Neighborhood", "Study Spot", "Child's Play"]},
     {"lot": "Town Square Terrace", "myName": "Town Square Stores", "type": "Thrift and Boba Store", "size": "20x15", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["5e8Hz59OEe2D31rYHh8uGQ=="], "traits": ["Fast Internet", "Teen Neighborhood"]},
-    {"lot": "ThrifTea", "myName": "Prescott Boarding House", "type": "Residential Rental", "size": "20x15", "residents": "Chess/Comp Teens", "built": true, "shared": false, "screenshots": false, "simsMade": false},
-    {"lot": "Lakeview Library", "myName": "Lakeview Boarding House", "type": "Residential Rental", "size": "20x20", "residents": "Cheer/Football Teens", "built": true, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "ThrifTea", "myName": "Prescott Boarding House", "type": "Residential Rental (2)", "size": "20x15", "residents": "Chess/Comp Teens", "built": true, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "Lakeview Library", "myName": "Lakeview Boarding House", "type": "Residential Rental (2)", "size": "20x20", "residents": "Cheer/Football Teens", "built": true, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Golden Peak", "myName": "Golden Peak", "type": "Residential", "size": "30x30", "residents": "Prescott", "built": false, "shared": false, "screenshots": false, "simsMade": false}
    ]
   },
