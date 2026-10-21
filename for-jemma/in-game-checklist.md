@@ -35,12 +35,12 @@ Everything on the to-do list that needs the game open, grouped so you can go wor
 - ~~Mossy Lane~~ left open (21 Oct): pick the university in game as needed.
 
 **Evergreen Harbor**
-- The Old Dockyard: which Community Space version should it be? It has Off-the-Grid, which a Community Space can't use: take it off?
+- The Old Dockyard: checked 21 Oct in your save: a Maker Space with Landfill Lot and Reduce and Recycle, no Off-the-Grid (that was a home build on The Waterfront lot).
 - The Old Mill: make its 3 daytime objects ordinary gym kit, climbing walls on top.
 - Eco Roomies' flat: #402 (your plan) or #404 (your saves)?
 
 **Mt. Komorebi**
-- Base Camp and The Croft Icefall: what lot type does the game give them?
+- Base Camp and The Croft Icefall: what lot type does the game give them? (Your Building saves don't store one.)
 
 **Copperdale**
 - BridgeCreek Drive (Backroom): gym kit for the daytime side.

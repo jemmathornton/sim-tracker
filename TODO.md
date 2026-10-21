@@ -136,7 +136,7 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
 - [x] Harbor Quarter Gym (her UoW Students Union): now 30×30, the game's size (14 Oct, her choice)
 - [x] The Magic Realm: now 50×40, the game's size (14 Oct, her choice)
 - [x] Hidden lots added as secret lots, not built (15 Oct): Mt. Komorebi Base Camp and The Croft Icefall (Yukimatsu, before the Peak), Omiscan Royal Baths (Belomisia Jungle). Omiscan Temple left out (five game-controlled layouts)
-- [ ] [Jemma] Base Camp and The Croft Icefall: lot type to check in game (one Gallery copy suggests Mount Komorebi Summit, like the Peak) (research/hidden-lots-check.md)
+- [ ] [Jemma] Base Camp and The Croft Icefall: lot type to check in game (21 Oct: her Building saves have no lot type stored for them, or for the Peak) (one Gallery copy suggests Mount Komorebi Summit, like the Peak) (research/hidden-lots-check.md)
 - [x] Checked in the game's own text (13 Oct): "Plateau Place" (her spelling) is right, not "Plateau Palace"
 - [x] Batuu: Journey to Batuu isn't installed, so nothing to add
 - Left as the research suggested: Selvadorada's jungle areas (not lots in the game either); Netherworld Department stays 30×30 (her confirmed size; the game's file has it at 20×20)
@@ -363,7 +363,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [x] Corrected research/lot-types-reference.md: penthouses can be rentals since Jul 2024; Gibbi Point’s waterfront lots are excluded like Sulani’s; Backroom is allowed in every world (17 Oct)
 
 ### Lot traits (research/lot-trait-ideas.md: what each trait does, a check of hers, ideas)
-- [ ] [Jemma] In game: The Old Dockyard has Off-the-Grid, which a Community Space can’t use (left over from when it was a home): take it off?
+- [x] Checked 21 Oct in her Building saves: the Community Space (The Shipping Views lot, “The Old Dockyard Market” in the save) is a Maker Space with Landfill Lot and Reduce and Recycle, no Off-the-Grid. The Off-the-Grid copy was a Residential build called “The Old Dockyard” sitting on The Waterfront lot (Abandoned Views’ spot) in that save. Was: In game: The Old Dockyard has Off-the-Grid, which a Community Space can’t use: take it off?
 - [ ] [Jemma] Gnomes does nothing on venues (Burners & Builders, Pixel Café, Llama Picturehouse): swap for something that works?
 - [x] 21 Oct, her call: Studio PBP (not built yet) gets Hottest Spot in Town when she builds it; Calico keeps its too. Was: Starlight Accolades: Hottest Spot in Town on Studio PBP (the game’s venue) once built; keep Calico’s too?
 - [ ] [Jemma] Caldera Camp: add Geothermal and Natural Well? Key Point: Off-the-Grid only works if it’s a home, Tiny Home or Generic (not a Vacation Rental)
