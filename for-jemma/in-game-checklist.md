@@ -54,7 +54,7 @@ Everything on the to-do list that needs the game open, grouped so you can go wor
 - ~~The Screaming Gecko~~ done 21 Oct: uploaded as a Karaoke Bar (Party Place, Convivial).
 
 **Chestnut Ridge**
-- New Appaloosa has no public horse stop: give The Cozy Corner House hay feeders and troughs, or let Appaloosa Stables be the stop?
+- ~~Horse stop~~ settled 21 Oct: Appaloosa Stables (stables out the back).
 
 **Ondarion**
 - Wedding planner: does it offer Sankofa Residence (Museum) as a venue? Add a Waltzing Dance Floor when rebuilding La Vivace, the palaces and Giardino?
