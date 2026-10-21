@@ -30,7 +30,7 @@ Everything on the to-do list that needs the game open, grouped so you can go wor
 - ~~Strike Out!~~ checked 21 Oct: fine (re-uploaded).
 
 **Britechester**
-- The Old Clocktower: convert it to a Backroom.
+- ~~The Old Clocktower~~ done 21 Oct: re-uploaded as a Backroom, and Foxbury Court too.
 - Laurel Library was Generic in your Building save: set it to Library (needed for study sessions).
 - Mossy Lane: a UoB or Foxbury hall, with a gender or organisation limit?
 
