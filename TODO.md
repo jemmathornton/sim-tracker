@@ -161,7 +161,7 @@ From the data check-up, 15 Oct (research/data-check-up.md; sizes, uploads and sh
 
 ## 6b. Build notes (things to do or keep in game; collected 15 Oct)
 
-- The Screaming Gecko (Tomarang): add a karaoke machine (now a Karaoke Bar)
+- Ondarion rebuilds (her OK, 21 Oct): add a Waltzing Dance Floor (Medium or Grand) to La Vivace, the three palaces and Giardino del Grandioso, so Grand Balls can be held there
 - The Old Mill (Evergreen Harbor, Backroom): make its 3 daytime objects ordinary gym kit, climbing walls on top (not confirmed the wall counts); a Backroom also needs a bar, stereo, 4 barstools, sink, toilet and bin
 - BridgeCreek Drive (Copperdale, Backroom): gym kit for the daytime side
 - Community Markets (Sprucewood Square, 18 Celebration Way, Ro Kaya Rockside): 2 stoves, fridge, dining table with 4 chairs, podium, 3 sales tables, toilet, washbasin, bin; keep the stoves out of the rain
@@ -314,7 +314,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [x] 21 Oct, her call: the Goths stay a dynasty only, not nobles, so Ophelia Villa stays a Haunted House (Noble Court and press conferences are for nobles only; a Grand Ball can be held elsewhere, e.g. Cordelia Church, with a Waltzing Dance Floor, speaker and bar). If she ever revamps Ophelia Villa for balls at home, it would need Residential. Was: Ophelia Villa as a Haunted House means the Goths can’t host a Grand Ball or hold court there (both need a plain Residential home; worth one test in game). Keep it haunted (balls elsewhere), or make it Residential?
 - [ ] [Jemma] The Monty story: the Capp side (Romeo and Juliette cast out) is already true in the game; the Monty side needs steps in game, as Juliette heads the Monty dynasty (link the Sims 2 Montys to Romeo in Create a Sim, Juliette steps down to Romeo, he brings in Patrizio and steps down, Patrizio casts them out). Patrizio’s family take over the game’s Monty dynasty, or start a new one? Dante: heir, plain member, or cast out with his parents?
 - [ ] [Jemma] Tartosa isn’t owned yet: wait before making the Sims 2 Montys, or house Romeo’s family at 13 Lakeview or 17 Bright Cliff for now? Which save holds the dynasties (Building #2 predates the pack, so no Goth or Landgraab dynasties)?
-- [ ] [Jemma] Add a Waltzing Dance Floor when rebuilding La Vivace, the palaces and Giardino (balls can’t be held at Sankofa, Fisherman’s Hut, Ye Olde Voyager, Hardcover, Zanbira or Casa Do Corsário)? Did she unlock Regal Residence in the Feb–Mar event?
+- [x] (Yes, added to the build notes in §6b, 21 Oct) Add a Waltzing Dance Floor when rebuilding La Vivace, the palaces and Giardino (balls can’t be held at Sankofa, Fisherman’s Hut, Ye Olde Voyager, Hardcover, Zanbira or Casa Do Corsário)? Did she unlock Regal Residence in the Feb–Mar event?
 
 ### Universities and high school (research/students-and-schools.md)
 - [x] 21 Oct, her call: both boarding houses are Residential Rentals with 2 units each (teens share rooms, grouped into a boys’ and a girls’ household). Was: The Copperdale boarding houses won’t work as University Housing: only enrolled uni students can live there, so high-school teens would be moved out. Make them Residential (a teens-only household is allowed), or a rental with a unit per team?
