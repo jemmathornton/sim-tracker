@@ -48,7 +48,7 @@ Everything on the to-do list that needs the game open, grouped so you can go wor
 
 **Sulani**
 - ~~Admiral's Wreckage~~ checked 21 Oct: all four Gallery uploads are Community Space versions, fine.
-- Caldera Camp: add Geothermal and Natural Well?
+- Caldera Camp: Geothermal and Natural Well, not yet (21 Oct); two trait slots are free if you want them later.
 
 **Tomarang**
 - The Screaming Gecko: add a karaoke machine (now a Karaoke Bar).
