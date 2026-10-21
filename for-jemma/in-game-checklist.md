@@ -21,7 +21,7 @@ Everything on the to-do list that needs the game open, grouped so you can go wor
 - ~~Newcrest Community Space's court~~ checked 21 Oct: works fine.
 
 **Magnolia Promenade**
-- Magnolia Mall needs coffee, a wardrobe or clothes racks, and things to sabotage (for the Paragons and Renegades clubs).
+- Magnolia Mall isn't built yet: when you build it, include coffee, a wardrobe or clothes racks, and things to sabotage (for the Paragons and Renegades clubs).
 
 **Windenburg**
 - Where is the Von Haunt Estate (which neighbourhood)?
