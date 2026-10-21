@@ -64,7 +64,7 @@ Everything on the to-do list that needs the game open, grouped so you can go wor
 
 ## 3. Every rental
 - Look round each one and swap who lives in which unit where another fits better.
-- Optional: give units 2+ their own traits and bedroom/bathroom counts (most only have them on unit 1).
+- Give units 2+ their own traits and bedroom/bathroom counts (most only have them on unit 1; e.g. Midtown Meadows, 21 Oct). Then re-upload, and Claude reads them from your Building save.
 
 ## 4. Lot traits
 - 88 shared lots have fewer than 3 traits (ideas for each in research/lot-trait-ideas.md).
