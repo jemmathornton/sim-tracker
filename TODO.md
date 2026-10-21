@@ -6,7 +6,7 @@ Every open item carried over from the claude.ai project on 13 Oct 2026: the note
 
 ## 0. Moving to the app
 
-- [ ] [Claude] Copy into World Plans (her spreadsheet, 21 Oct changes): Windenburg’s three special lots into their neighbourhoods; Foxbury Court → Backroom; Pinecrest #402 → Empty, #404 → Eco Roomies; Prescott and Lakeview Boarding Houses → Residential Rental (2). Make an updated copy in for-jemma for her to swap in, as on 19 Oct
+- [ ] [Claude] Copy into World Plans (her spreadsheet, 21 Oct changes): Windenburg’s three special lots into their neighbourhoods; Foxbury Court → Backroom; Pinecrest #402 → Empty, #404 → Eco Roomies; Prescott and Lakeview Boarding Houses → Residential Rental (2); Lakeview residents Sporty Girls + Sporty Boys. Make an updated copy in for-jemma for her to swap in, as on 19 Oct
 
 - [x] [Jemma] What "an app" means (13 Oct): on her PC for now, easy to put online later
 - [ ] [Jemma] Where she edits: undecided, kept flexible. Today Claude edits the app's data; her spreadsheet can still be imported at any time (edits on both sides are kept). Decide later
@@ -264,7 +264,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [ ] [Jemma] Kopf: the Rotational copy (Emilee and Kristian, Leon and Savannah née Fyres; Anja grown up with Omar in San Myshuno) seems off to you; come back to it (19 Oct).
 - [ ] [Jemma] Davidsons: Evelyn, Ray and George stay at Streamlet Single (you’ll make them older later); Garden Essence’s Davidsons not made yet (19 Oct; the 100 Baby Challenge Davidsons aren’t related).
 - [ ] [Jemma] The Cadberrys: you’ll sort them yourself later (19 Oct). Options found: research/own-households-recommendations.md (Ella-Mint as Spectra or with Madalyn, Leah-Moon’s “+” = Sterling?, Sylvia & Kenny’s sons, Isda Riverfront).
-- [x] 21 Oct, her answer: the Eco Roomies live in Pinecrest #404 (moved on the site; #402 now Empty). Was: In game: Eco Roomies’ flat, #402 (your plan) or #404 (your saves)? Cheer/Football Teens skipped for now (maybe Sporty Girls and Sporty Boys from Season Events).
+- [x] 21 Oct, her answer: the Eco Roomies live in Pinecrest #404 (moved on the site; #402 now Empty). Was: In game: Eco Roomies’ flat, #402 (your plan) or #404 (your saves)? Cheer/Football Teens are Sporty Girls (unit 1) and Sporty Boys (unit 2) at Lakeview Boarding House (her names, 21 Oct); her Season Events save has households by those names to fill them from.
 - [ ] [Jemma] The Kirklands on the site start from your 4-Sim Library copy, with Kennedy and Kayleigh taken down from elders to adults and Kamila and Kendrick as teens; age them as you want them. Kennedy and Kayleigh are married (her answer, 19 Oct).
 - [ ] [Jemma] Your own households (18 Oct): 22 filled from the newest copy in your saves or Library (no marker on the pages: no admin notes, her call 19 Oct). Every other copy is listed in research/own-households-review.md (many households are in several saves, with different Sims); say which copy to use where it’s wrong.
 - [x] Horse Elder Couple (Chestnut Ridge): not made yet (19 Oct); left empty.
