@@ -294,7 +294,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [ ] [Jemma] Port Promise starts fully industrial (the game’s clean-up story) but neither Knox nor the Greenburgs live there to vote for it: another reason to give Mary and Blossom The Portsmouth Promenade as a home (open above)? Which Evergreen Harbor development plans in each neighbourhood? The Old Dockyard: Eco Lot in place of Off-the-Grid? Bess Sterling keeps her Civil Designer job alongside the business? (Its tasks need a Community Space: only The Old Dockyard is left in Evergreen Harbor)
 
 ### Fame and clubs (research/fame-and-clubs-check.md)
-- [ ] [Jemma] Nothing in her plan breaks fame. Starlight Accolades: if EA’s Studio PBP still stands in her save it probably has Hottest Spot in Town (check in game); otherwise only Calico has it. Judith Ward for the Plumbob Pictures Museum (Acting 7, Business Savvy)?
+- [x] (Studio PBP gets Hottest Spot in Town when built, her call 21 Oct) Nothing in her plan breaks fame. Starlight Accolades: if EA’s Studio PBP still stands in her save it probably has Hottest Spot in Town (check in game); otherwise only Calico has it. Judith Ward for the Plumbob Pictures Museum (Acting 7, Business Savvy)?
 - [x] 7 game celebrities are homeless (Holly Alto, Dustin Broke, Dirk Dreamer, Baby Ariel, Brytani Cho, Izzy Fabulous, Kayla Flemming): left homeless for now, some are meant to be; she’ll set the game to delete fewer Sims (18 Oct).
 - [x] Club meeting places decided 17–18 Oct, on the site: Powerhouse → Skye Fitness, Garden Gnomes → Magnolia Blossom Park (for now), League of Adventurers → Courtyard Lane Playground, Upper Crusts → any Restaurant, Paragons and Renegades → Magnolia Mall, Spin Masters → Stargazer, Partihaus → La Discotheque (Avant Gardes, Knights of the Hedge and The Good Timers unchanged).
 - [ ] [Jemma] In game: change those clubs' hangouts in the Club panel (may need a played member). Make sure Magnolia Mall has coffee, a wardrobe or racks, and things to sabotage; Skye Fitness has no pool (Powerhouse swims).
@@ -364,7 +364,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 ### Lot traits (research/lot-trait-ideas.md: what each trait does, a check of hers, ideas)
 - [ ] [Jemma] In game: The Old Dockyard has Off-the-Grid, which a Community Space can’t use (left over from when it was a home): take it off?
 - [ ] [Jemma] Gnomes does nothing on venues (Burners & Builders, Pixel Café, Llama Picturehouse): swap for something that works?
-- [ ] [Jemma] Starlight Accolades: Hottest Spot in Town on Studio PBP (the game’s venue) once built; keep Calico’s too?
+- [x] 21 Oct, her call: Studio PBP (not built yet) gets Hottest Spot in Town when she builds it; Calico keeps its too. Was: Starlight Accolades: Hottest Spot in Town on Studio PBP (the game’s venue) once built; keep Calico’s too?
 - [ ] [Jemma] Caldera Camp: add Geothermal and Natural Well? Key Point: Off-the-Grid only works if it’s a home, Tiny Home or Generic (not a Vacation Rental)
 - [ ] [Jemma] 88 shared lots have fewer than 3 traits: the note has ideas for each free slot, for when she’s in game
 - [x] Corrected research/undecided-lots.md (Off-the-Grid isn’t allowed on a Vacation Rental) and research/lot-types-reference.md (Maintenance Troubles isn’t allowed on rentals) (17 Oct)

@@ -15,7 +15,7 @@ Everything on the to-do list that needs the game open, grouped so you can go wor
 - ~~Ophelia Villa and Grand Balls~~ settled 21 Oct: the Goths stay a dynasty only; Ophelia Villa stays haunted.
 
 **Oasis Springs / Del Sol Valley**
-- Studio PBP: does it have the Hottest Spot in Town trait (Starlight Accolades only go to a lounge with it)?
+- ~~Studio PBP~~ not built yet: give it Hottest Spot in Town when you build it (21 Oct).
 
 **Newcrest**
 - Someone on the Gallery found Newcrest Community Space's court bugged: worth a look.
