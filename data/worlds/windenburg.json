@@ -20,7 +20,8 @@
     {"lot": "Quad Manor", "myName": null, "type": "Library", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "The Narwhal Arms", "myName": "The Narwhal Arms", "type": "Bar", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["LAC77Vm5EeeAK22AqHCI6g=="], "traits": ["Convivial", "Party Place"], "challenges": ["Spooky"]},
     {"lot": "South Square Coffee", "myName": "Pixel Café", "type": "Café", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["lU27jsitEeeLcr+KYzr9wA=="], "traits": ["Fast Internet", "Party Place", "Gnomes"]},
-    {"lot": "Old Quarter Inn", "myName": "Museum of the Arts", "type": "Museum", "size": "20x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["TEsvlFq8EeeK+MnL0U6IYw=="], "traits": ["Natural Light", "Sunny Aspect", "Home Studio"]}
+    {"lot": "Old Quarter Inn", "myName": "Museum of the Arts", "type": "Museum", "size": "20x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["TEsvlFq8EeeK+MnL0U6IYw=="], "traits": ["Natural Light", "Sunny Aspect", "Home Studio"]},
+    {"lot": "Ancient Ruins", "myName": "Ancient Ruins", "type": "Ancient Ruins", "size": "20x15", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ]
   },
   {
@@ -50,7 +51,8 @@
     {"lot": "Rustic Residence", "myName": "Rustic Residence", "type": "Tiny Home Residential", "size": "30x20", "residents": "1 Bed", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["XCNL0nuzEeyN+AW7hdRP0w=="], "traits": ["Great Soil", "Homey"], "challenges": ["Simple Living"]},
     {"lot": "The Shrieking Llama", "myName": "The Shrieking Llama", "type": "Bar", "size": "20x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["hQY3dKXnEeuB2+cawTB/JA=="], "traits": ["Sunny Aspect", "Dog Friendly", "Dog Hangout"]},
     {"lot": "Dresden House", "myName": "Dresden House", "type": "Residential", "size": "64x64", "residents": "Fyres", "built": false, "shared": false, "screenshots": false, "simsMade": false},
-    {"lot": "The Summer Home", "myName": null, "type": "Vet Clinic", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
+    {"lot": "The Summer Home", "myName": null, "type": "Vet Clinic", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "Von-Haunt Estate", "myName": "Von-Haunt Estate", "type": "Chalet Gardens", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ]
   },
   {
@@ -63,15 +65,7 @@
     {"lot": "Mid-NoWhere", "myName": "Mid-NoWhere", "type": "Generic", "size": "20x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["KjklhciHEeuF3a3kS5H9ag=="]},
     {"lot": "Pier Palace", "myName": "Pier Palace", "type": "Residential", "size": "30x20", "residents": "Tiquelle", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Dock Den", "myName": "Dock Den", "type": "Residential", "size": "30x20", "residents": "Tiquelle", "built": false, "shared": false, "screenshots": false, "simsMade": false},
-    {"lot": "Von-Windenburg Estate", "myName": "Von-Windenburg Castle", "type": "Residential", "size": "64x64", "residents": "Tiquelle", "built": true, "shared": true, "screenshots": true, "simsMade": false, "gallery": ["5Ogf+wA8EeuOvtW1mM26QQ=="], "traits": ["Private Dwelling", "Sunny Aspect"], "challenges": ["Spooky"]}
-   ]
-  },
-  {
-   "name": "Special Lots",
-   "desc": "",
-   "lots": [
-    {"lot": "Von-Haunt Estate", "myName": "Von-Haunt Estate", "type": "Chalet Gardens", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
-    {"lot": "Ancient Ruins", "myName": "Ancient Ruins", "type": "Ancient Ruins", "size": "20x15", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "Von-Windenburg Estate", "myName": "Von-Windenburg Castle", "type": "Residential", "size": "64x64", "residents": "Tiquelle", "built": true, "shared": true, "screenshots": true, "simsMade": false, "gallery": ["5Ogf+wA8EeuOvtW1mM26QQ=="], "traits": ["Private Dwelling", "Sunny Aspect"], "challenges": ["Spooky"]},
     {"lot": "The Bluffs", "myName": "The Bluffs", "type": "Island Bluff", "size": "30x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ]
   }
