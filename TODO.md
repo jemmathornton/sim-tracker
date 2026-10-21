@@ -6,6 +6,8 @@ Every open item carried over from the claude.ai project on 13 Oct 2026: the note
 
 ## 0. Moving to the app
 
+- [ ] [Claude] Copy into World Plans (her spreadsheet, 21 Oct changes): Windenburg’s three special lots into their neighbourhoods; Foxbury Court → Backroom; Pinecrest #402 → Empty, #404 → Eco Roomies; Prescott and Lakeview Boarding Houses → Residential Rental. Make an updated copy in for-jemma for her to swap in, as on 19 Oct
+
 - [x] [Jemma] What "an app" means (13 Oct): on her PC for now, easy to put online later
 - [ ] [Jemma] Where she edits: undecided, kept flexible. Today Claude edits the app's data; her spreadsheet can still be imported at any time (edits on both sides are kept). Decide later
 - [x] [Claude] Rebuild the site in the new setup, matching the live page page for page (all 614 pages checked, 13 Oct)
@@ -262,7 +264,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [ ] [Jemma] Kopf: the Rotational copy (Emilee and Kristian, Leon and Savannah née Fyres; Anja grown up with Omar in San Myshuno) seems off to you; come back to it (19 Oct).
 - [ ] [Jemma] Davidsons: Evelyn, Ray and George stay at Streamlet Single (you’ll make them older later); Garden Essence’s Davidsons not made yet (19 Oct; the 100 Baby Challenge Davidsons aren’t related).
 - [ ] [Jemma] The Cadberrys: you’ll sort them yourself later (19 Oct). Options found: research/own-households-recommendations.md (Ella-Mint as Spectra or with Madalyn, Leah-Moon’s “+” = Sterling?, Sylvia & Kenny’s sons, Isda Riverfront).
-- [ ] [Jemma] In game: Eco Roomies’ flat, #402 (your plan) or #404 (your saves)? Cheer/Football Teens skipped for now (maybe Sporty Girls and Sporty Boys from Season Events).
+- [x] 21 Oct, her answer: the Eco Roomies live in Pinecrest #404 (moved on the site; #402 now Empty). Was: In game: Eco Roomies’ flat, #402 (your plan) or #404 (your saves)? Cheer/Football Teens skipped for now (maybe Sporty Girls and Sporty Boys from Season Events).
 - [ ] [Jemma] The Kirklands on the site start from your 4-Sim Library copy, with Kennedy and Kayleigh taken down from elders to adults and Kamila and Kendrick as teens; age them as you want them. Kennedy and Kayleigh are married (her answer, 19 Oct).
 - [ ] [Jemma] Your own households (18 Oct): 22 filled from the newest copy in your saves or Library (no marker on the pages: no admin notes, her call 19 Oct). Every other copy is listed in research/own-households-review.md (many households are in several saves, with different Sims); say which copy to use where it’s wrong.
 - [x] Horse Elder Couple (Chestnut Ridge): not made yet (19 Oct); left empty.
@@ -315,7 +317,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [ ] [Jemma] Add a Waltzing Dance Floor when rebuilding La Vivace, the palaces and Giardino (balls can’t be held at Sankofa, Fisherman’s Hut, Ye Olde Voyager, Hardcover, Zanbira or Casa Do Corsário)? Did she unlock Regal Residence in the Feb–Mar event?
 
 ### Universities and high school (research/students-and-schools.md)
-- [ ] [Jemma] The Copperdale boarding houses won’t work as University Housing: only enrolled uni students can live there, so high-school teens would be moved out. Make them Residential (a teens-only household is allowed), or a rental with a unit per team?
+- [x] 21 Oct, her call: both boarding houses are Residential Rentals (unit counts to add). Was: The Copperdale boarding houses won’t work as University Housing: only enrolled uni students can live there, so high-school teens would be moved out. Make them Residential (a teens-only household is allowed), or a rental with a unit per team?
 - [x] 21 Oct, her call: Mossy Lane stays open (no university, gender or organisation set on the site); she’ll pick in game as needed. Was: Mossy Lane: a UoB or a Foxbury hall, with a gender or organisation limit? (It needs a university picked; a stove or grill blocks it.) And which university does each Windenburg and StrangerVille hall belong to?
 - [ ] [Jemma] Is Robert Piggott School (64×64, saved as Generic, which is how a high school saves to the Gallery) the build for Copperdale High, or still a bonus build? When Rohan Elderberry enrols, does he stay at Spring Steppes or move into a hall?
 - [x] (21 Oct: her Gallery upload is a Library, so it’s fine; only the old Building save had Generic) In game: Laurel Library was Generic in her Building save on 14 Oct; it must be a Library for the study sessions. The prom after-party is on Plumbite Cove’s street, which makes LaSuli Point as a Park more useful

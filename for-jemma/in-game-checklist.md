@@ -37,14 +37,14 @@ Everything on the to-do list that needs the game open, grouped so you can go wor
 **Evergreen Harbor**
 - The Old Dockyard: checked 21 Oct in your save: a Maker Space with Landfill Lot and Reduce and Recycle, no Off-the-Grid (that was a home build on The Waterfront lot).
 - The Old Mill: make its 3 daytime objects ordinary gym kit, climbing walls on top.
-- Eco Roomies' flat: #402 (your plan) or #404 (your saves)?
+- ~~Eco Roomies' flat~~ #404 (21 Oct).
 
 **Mt. Komorebi**
 - Base Camp and The Croft Icefall: what lot type does the game give them? (Your Building saves don't store one.)
 
 **Copperdale**
-- BridgeCreek Drive (Backroom): gym kit for the daytime side.
-- The boarding houses won't work as University Housing (only uni students can live there): Residential, or a rental with a unit per team?
+- BridgeCreek Drive (Backroom, not built yet): gym kit for the daytime side when you build it.
+- ~~Boarding houses~~ now Residential Rentals (21 Oct).
 
 **Sulani**
 - Admiral's Wreckage was Residential in your save: set it back to Community Space (and which version?).

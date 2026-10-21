@@ -118,6 +118,10 @@ def gallery_for(lot):
             # versions Jemma keeps on purpose (a rental and a regular version, a B&B as café and as home): the one matching
             # the lot type in her plan leads, then the rental, and the others are listed under "Other versions"
             plan = [t.strip() for t in re.sub(r'\s*\([^)]*\)', '', lot.get('type') or '').split('/')]
+            # the Gallery has no English name for some newer lot types (Backroom, Community Space): "Missing sims translation".
+            # Such an upload is taken to be the plan's type, so her Backroom re-uploads lead (21 Oct)
+            for e in ups:
+                if e['lotType'] == 'Missing sims translation': e['lotType'] = next((t for t in plan if t not in {x['lotType'] for x in ups}), plan[0])
             pick = [e for e in ups if e['lotType'] in plan] or [e for e in ups if e['lotType'] == 'Residential Rental'] or ups
             main = max(pick, key=lambda e: e['likes'] + e['downloads'])
             if lot.get('galleryLead') in lot['gallery']: main = ups[lot['gallery'].index(lot['galleryLead'])]   # her choice wins
