@@ -300,7 +300,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [ ] [Jemma] In game: change those clubs' hangouts in the Club panel (may need a played member). Make sure Magnolia Mall has coffee, a wardrobe or racks, and things to sabotage; Skye Fitness has no pool (Powerhouse swims).
 - [ ] [Jemma] Powerhouse: add some San Myshuno Sims as members?
 - [x] Clubs on household pages: not wanted (her call, 19 Oct: often only one Sim of a household is in a club); they stay on Sim pages
-- [ ] [Jemma] Fame stars and quirks on Sim pages? A club hub in the relationship web?
+- [x] Fame stars and quirks on Sim pages: done 19 Oct (stars from the game, under Skills; quirks with Traits). Still open if wanted: a club hub in the relationship web
 
 ### Getaways (research/getaways-check.md)
 - [ ] [Jemma] Love Highland: as a Custom Venue it can’t be the Addams’ business in the game (a Custom Venue can’t be owned, and only a played household earns, at its own home). Keep it a Custom Venue run by them as story only, or make it their home again (as in the game, 8 beds)?
