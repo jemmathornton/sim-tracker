@@ -32,7 +32,7 @@ Everything on the to-do list that needs the game open, grouped so you can go wor
 **Britechester**
 - ~~The Old Clocktower~~ done 21 Oct: re-uploaded as a Backroom, and Foxbury Court too.
 - ~~Laurel Library~~ checked 21 Oct: a Library on the Gallery, fine.
-- Mossy Lane: a UoB or Foxbury hall, with a gender or organisation limit?
+- ~~Mossy Lane~~ left open (21 Oct): pick the university in game as needed.
 
 **Evergreen Harbor**
 - The Old Dockyard: which Community Space version should it be? It has Off-the-Grid, which a Community Space can't use: take it off?
