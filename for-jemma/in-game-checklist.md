@@ -57,7 +57,7 @@ Everything on the to-do list that needs the game open, grouped so you can go wor
 - ~~Horse stop~~ settled 21 Oct: Appaloosa Stables (stables out the back).
 
 **Ondarion**
-- Wedding planner: does it offer Sankofa Residence (Museum) as a venue? Add a Waltzing Dance Floor when rebuilding La Vivace, the palaces and Giardino?
+- ~~Wedding planner and Sankofa Residence~~ checked 21 Oct: it's offered. Add a Waltzing Dance Floor when rebuilding La Vivace, the palaces and Giardino?
 
 **Wedding venues everywhere**
 - Venues placed from the Gallery could stay Residential underneath until the 22 Sep patch: check Celebration Center, La Coppia Serena, Caminito del Deseo and the others.
