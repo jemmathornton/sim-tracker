@@ -31,7 +31,7 @@ Everything on the to-do list that needs the game open, grouped so you can go wor
 
 **Britechester**
 - ~~The Old Clocktower~~ done 21 Oct: re-uploaded as a Backroom, and Foxbury Court too.
-- Laurel Library was Generic in your Building save: set it to Library (needed for study sessions).
+- ~~Laurel Library~~ checked 21 Oct: a Library on the Gallery, fine.
 - Mossy Lane: a UoB or Foxbury hall, with a gender or organisation limit?
 
 **Evergreen Harbor**
