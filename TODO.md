@@ -293,7 +293,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 
 ### Eco Lifestyle and community spaces (research/eco-and-community-spaces.md)
 - [ ] [Jemma] In her play save: turn off “Enable NPC Voting”? With it on, neighbours vote by themselves each week and random action plans pass (e.g. fines for using too much power)
-- [ ] [Jemma] In game: Admiral’s Wreckage was Residential in her save on 14 Oct; set it back to Community Space. Which version should each Community Space be (it only changes when a resident of that neighbourhood votes)? Admiral’s Wreckage and The Old Dockyard each have just one household that can vote
+- [ ] [Jemma] (21 Oct: Admiral’s Wreckage is fine: all four Gallery uploads are Community Space versions; only the old Building save had it Residential) In game: Admiral’s Wreckage was Residential in her save on 14 Oct; set it back to Community Space. Which version should each Community Space be (it only changes when a resident of that neighbourhood votes)? Admiral’s Wreckage and The Old Dockyard each have just one household that can vote
 - [ ] [Jemma] Port Promise starts fully industrial (the game’s clean-up story) but neither Knox nor the Greenburgs live there to vote for it: another reason to give Mary and Blossom The Portsmouth Promenade as a home (open above)? Which Evergreen Harbor development plans in each neighbourhood? The Old Dockyard: Eco Lot in place of Off-the-Grid? Bess Sterling keeps her Civil Designer job alongside the business? (Its tasks need a Community Space: only The Old Dockyard is left in Evergreen Harbor)
 
 ### Fame and clubs (research/fame-and-clubs-check.md)

@@ -47,7 +47,7 @@ Everything on the to-do list that needs the game open, grouped so you can go wor
 - ~~Boarding houses~~ now Residential Rentals (21 Oct).
 
 **Sulani**
-- Admiral's Wreckage was Residential in your save: set it back to Community Space (and which version?).
+- ~~Admiral's Wreckage~~ checked 21 Oct: all four Gallery uploads are Community Space versions, fine.
 - Caldera Camp: add Geothermal and Natural Well?
 
 **Tomarang**
