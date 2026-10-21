@@ -63,7 +63,7 @@ Everything on the to-do list that needs the game open, grouped so you can go wor
 - ~~Wedding venues~~ checked 21 Oct: Newcrest Wedding Hall is a Wedding Venue on the Gallery; the others aren't uploaded yet (check each when you share it).
 
 ## 3. Every rental
-- Look round each one and swap who lives in which unit where another fits better.
+- Look round each one and swap who lives in which unit where another fits better. Done 21 Oct: Fern Park Flats, Midtown Meadows, Tail's End Apartments, The Inner Circle (Rio Verde left for now). Next: Upland Trailer Park, then Spring Steppes, Rockridge Springs, 3 Cobblebottom Street, Sequoia Cottage, Taka Soi 15, Isda Riverfront, Sungai Point, Casa Do Corsário.
 - Give units 2+ their own traits and bedroom/bathroom counts (most only have them on unit 1; e.g. Midtown Meadows, 21 Oct). Then re-upload, and Claude reads them from your Building save.
 
 ## 4. Lot traits
