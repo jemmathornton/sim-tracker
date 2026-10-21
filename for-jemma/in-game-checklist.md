@@ -12,7 +12,7 @@ Everything on the to-do list that needs the game open, grouped so you can go wor
 
 ## 2. World by world
 **Willow Creek**
-- Ophelia Villa as a Haunted House: can the Goths still hold a Grand Ball or court there? (Both need a plain Residential home; one test.)
+- ~~Ophelia Villa and Grand Balls~~ settled 21 Oct: the Goths stay a dynasty only; Ophelia Villa stays haunted.
 
 **Oasis Springs / Del Sol Valley**
 - Studio PBP: does it have the Hottest Spot in Town trait (Starlight Accolades only go to a lounge with it)?
