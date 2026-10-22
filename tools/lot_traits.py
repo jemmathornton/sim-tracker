@@ -75,6 +75,7 @@ SAVE_NAMES = {
     "Henford-on-Bagley|5 Cobblebottom Street": "Finchwick Library",   # her Finchwick Village Hall
     "San Sequoia|Anchorpoint Abode": "On Point",                     # her Anchorpoint Works
     "Brindleton Bay|Bedlington Boathouse": "Barn Conversion",         # her Bedlington Barn (confirmed 14 Oct)
+    "San Sequoia|Sequoia Cottage": "Sequoia Cottages",               # plural in game: two units (confirmed 22 Oct)
 }
 
 

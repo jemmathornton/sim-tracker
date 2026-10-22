@@ -43,7 +43,7 @@
     {"lot": "7 Eucalyptus Lane", "myName": "7 Eucalyptus Lane", "type": "Residential", "size": "50x40", "residents": "Michaelson", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "23 Eucalyptus Lane", "myName": "23 Eucalyptus Lane", "type": "Residential", "size": "30x20", "residents": "Lovejoy", "built": true, "shared": true, "screenshots": false, "simsMade": true, "gallery": ["1WpsEz1aTLyFuTNaFCmhLA=="], "traits": ["Bracing Breezes", "Child's Play"]},
     {"lot": "36 Bayani Place", "myName": "36 Bayani Place", "type": "Vet Clinic", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
-    {"lot": "Sequoia Cottage", "myName": "Sequoia Cottage", "type": "Residential Rental (2)", "size": "30x20", "residents": "Lovejoy", "built": false, "shared": false, "screenshots": false, "simsMade": false, "tenants": [{"name": "Luna-Sullivan"}]}
+    {"lot": "Sequoia Cottage", "myName": "Sequoia Cottage", "type": "Residential Rental (2)", "size": "30x20", "residents": "Lovejoy", "built": false, "shared": false, "screenshots": false, "simsMade": false, "tenants": [{"name": "Luna-Sullivan"}], "units": [{"name": "1", "traits": ["Bracing Breezes", "Fast Internet"]}, {"name": "2"}]}
    ],
    "ecoStart": "Green"
   }
