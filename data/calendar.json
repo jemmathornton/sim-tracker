@@ -7,7 +7,15 @@
   "Autumn",
   "Winter"
  ],
- "holidays": [],
+ "holidays": [
+  {"name": "Flower Festival", "season": "Spring", "week": 1, "day": "Sat", "off": true},
+  {"name": "Love Day", "season": "Spring", "week": 2, "day": "Tue", "off": false, "replaces": "Love Day"},
+  {"name": "Summer Celebration", "season": "Summer", "week": 1, "day": "Sat", "off": true},
+  {"name": "Dia De Los Muertos", "season": "Autumn", "week": 1, "day": "Sun", "off": false},
+  {"name": "Bonfire Night", "season": "Autumn", "week": 1, "day": "Fri", "off": false},
+  {"name": "HarvestFest", "season": "Autumn", "week": 2, "day": "Sun", "off": true, "replaces": "Harvestfest"},
+  {"name": "Yuletide", "season": "Winter", "week": 2, "day": "Sun", "off": true, "replaces": "Winterfest"}
+ ],
  "events": [
   {
    "w": "San Myshuno",
