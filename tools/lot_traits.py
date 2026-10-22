@@ -65,6 +65,7 @@ def building_saves():
 
 # Lots whose name in the game differs from every name the plan knows (world|in-game lot name -> name in her save).
 # Only add a line once Jemma has confirmed it.
+STALE_COUNTS = {"Rio Verde", "Sequoia Cottage", "Spring Steppes"}   # unit 1's bedrooms/bathrooms are the whole building's (22 Oct)
 SAVE_NAMES = {
     "Oasis Springs|Cacti Casa": "Palm Spring Public Pool",            # her Palm Springs Public Pool
     "Willow Creek|Magnolia Blossom Park": "Magnolia Blossom",
@@ -129,6 +130,9 @@ def main():
         for z in sorted({id(z): z for zs in src.values() for z in zs if z.get('lot_id') == hit.get('lot_id')}.values(), key=lambda z: z.get('active_plex') or 0):
             if z.get('active_plex') in (None, 0, 300): continue   # 300 is the building's own record, the units are 301, 302…
             u = {"name": unit_name(z.get('name', ''), [l['lot'], hit.get('name', '')])}
+            # bedrooms and bathrooms where the game has recorded them for the unit (her ask, 22 Oct); 0 means not recorded.
+            # Not where unit 1 still holds the whole building's count from before the split (STALE_COUNTS)
+            if z.get('bedroom_count') and l['lot'] not in STALE_COUNTS: u.update(beds=z['bedroom_count'], baths=z.get('bathroom_count') or None)
             for t in z.get('lot_traits', []):
                 if str(t) in traits: u.setdefault("challenges" if traits[str(t)]['kind'] == 'challenge' else "traits", []).append(traits[str(t)]['name'])
                 elif t not in HIDDEN: unknown.add(t)
