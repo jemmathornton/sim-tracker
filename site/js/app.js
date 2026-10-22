@@ -900,8 +900,10 @@ function hoodExtras(x, all){
   return (f.length ? `<p class="home-to">${ic("party")}<span>Festivals and events: ${shown.map(n => `<b>${esc(n)}</b>`).join(", ")}${more ? ` and ${more} more` : ""}</span></p>` : "")
     + (x.ecoStart ? `<p class="home-to">${ic(x.ecoStart === "Industrial" ? "factory" : "leaf")}<span>Eco footprint starts <b>${esc(x.ecoStart)}</b></span></p>` : "");
 }
+// the households living in a neighbourhood: tenants in its rentals count, owners of a business there who live elsewhere don't (22 Oct)
+const hoodHouseholds = x => [...new Set(x.lots.flatMap(l => unitCount(l) ? rentalUnits(l).filter(Boolean).map(u => u.hh) : l.hh && !l.owned ? [l.hh] : []))];
 function hoodCard(x){
-  const hhSet = [...new Set(x.lots.filter(l => l.hh).map(l => l.hh))], hh = hhSet.length, built = x.lots.filter(l => l.built === true).length, made = hhSet.filter(simsMade).length;
+  const hhSet = hoodHouseholds(x), hh = hhSet.length, built = x.lots.filter(l => l.built === true).length, made = hhSet.filter(simsMade).length;
   return `<a class="listing" href="#n-${x.id}" style="--h:${x.color}">${hoodArt(x)}
     <h3>${esc(((NB_BANNER[x.world.id] || {})[x.name] || {}).title || x.name)}</h3>${x.desc ? `<p class="desc">${esc(x.desc)}</p>` : ""}
     ${hh ? `<p class="home-to">${ic("users")}<span>Home to ${hhSet.map(f => `<b>${esc(f.name)}</b>`).join(", ")}</span></p>` : `<p class="home-to">${ic("pin")}<span>Community lots only</span></p>`}
@@ -930,7 +932,7 @@ function worldAbout(w){
     ${w.highlights ? `<div class="wx-highlights">${w.highlights.map(x => `<div>${ic("landmark")}<b>${esc(x.name)}:</b><span>${esc(x.text)}</span></div>`).join("")}</div>` : ""}</section>`;
 }
 function hoodPage(x){
-  const w = x.world, hhSet = [...new Set(x.lots.filter(l => l.hh).map(l => l.hh))], built = x.lots.filter(l => l.built === true).length;
+  const w = x.world, hhSet = hoodHouseholds(x), built = x.lots.filter(l => l.built === true).length;
   const figs = [[x.lots.length, x.lots.length===1?"lot":"lots"]];
   if (hhSet.length) figs.push([hhSet.length, hhSet.length===1?"household":"households"],[simCount(hhSet), simCount(hhSet)===1?"Sim":"Sims"]);
   // a two-part name ("Lykke Center / University of Windenburg") keeps its first part as the title, the rest on a smaller line
