@@ -857,6 +857,9 @@ function nbView(pt, zoom = ZOOM, ratio = CARD_RATIO){
 const nbTile = l => l.photos[0] ? `<i style="background-image:url('${l.photos[0].thumb}')" title="${esc(l.name)}"></i>` : `<i class="nb-none" title="${esc(l.name)} (no picture yet)">${isApt(l) ? ic("home") : plot(l.size, 60, false)}</i>`;
 // a lot circle on a neighbourhood card opens that lot (the rest of the card still opens the neighbourhood)
 document.addEventListener("click", e => { const c = e.target.closest("[data-lot-link]"); if (!c) return; e.preventDefault(); e.stopPropagation(); location.hash = c.dataset.lotLink; }, true);
+// keyboard: lot circles, unit circles and household names inside cards can be reached with Tab and opened with Enter (22 Oct)
+function keyLinks(root){ root.querySelectorAll("[data-lot-link]").forEach(el => { el.tabIndex = 0; el.setAttribute("role", "link"); if (!el.hasAttribute("aria-label")) el.setAttribute("aria-label", el.title || el.textContent); }); }
+document.addEventListener("keydown", e => { if (e.key !== "Enter" && e.key !== " ") return; const c = e.target.closest && e.target.closest("[data-lot-link]"); if (!c || c !== e.target) return; e.preventDefault(); e.stopPropagation(); location.hash = c.dataset.lotLink; }, true);
 // the banner on a neighbourhood page shows the same part of the map as its card (16 Oct, her idea), zoomed less:
 // (the banner's real shape is used, as it runs the full width of the page; it zooms only as far as the map picture stays sharp:
 // most maps are about 3075px wide, San Myshuno's 1800px, as its night map didn't come out right at full size)
@@ -1247,7 +1250,9 @@ document.addEventListener("change", e => { if (!e.target.closest("#lot-sheet")) 
   if (e.target.id === "f-world") { statsState.world = e.target.value; statsState.hood = ""; refreshStats(true); }
   if (e.target.id === "f-hood") { statsState.hood = e.target.value; refreshStats(); }
   if (e.target.id === "f-status") { statsState.status = e.target.value; refreshStats(); } });
-document.addEventListener("input", e => { if (e.target.id === "f-q") { statsState.q = e.target.value; refreshStats(); } });
+// the Stats table redraws once typing pauses, not on every key (it takes up to 0.3 s; 22 Oct)
+let statsTyping;
+document.addEventListener("input", e => { if (e.target.id === "f-q") { statsState.q = e.target.value; clearTimeout(statsTyping); statsTyping = setTimeout(refreshStats, 150); } });
 document.addEventListener("click", e => { const so = e.target.closest("[data-sort]"); if (so) { statsState.dir = statsState.sort === so.dataset.sort ? -statsState.dir : 1; statsState.sort = so.dataset.sort; refreshStats(); }
   const sw = e.target.closest("[data-sw]"); if (sw) { statsState.world = sw.dataset.sw; statsState.hood = ""; refreshStats(true); document.getElementById("lot-sheet").scrollIntoView({behavior: SMOOTH()}); } });
 
@@ -1303,6 +1308,7 @@ function route(){
   notOwnedLinks(view);
   initialsContrast(view);
   lazyPics(view);
+  keyLinks(view);
   clearSearch();
   renderNav(active, key, ctx);
   // keyboard users: the sidebar is redrawn, so put focus back on the link they chose

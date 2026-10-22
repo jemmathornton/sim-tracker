@@ -411,7 +411,8 @@ i.nb-none svg.i{width:30%;height:auto;color:rgba(255,255,255,.6)}
 .nb-bubbles>i:hover{width:calc(var(--s) * 1.2);transform:translateY(-2px);z-index:5;box-shadow:0 8px 20px rgba(0,0,0,.5)}
 .nb-bubbles>i:hover + i,.nb-bubbles>i:has(+ i:hover){width:calc(var(--s) * 1.06);z-index:4}
 .nb-bubbles>i::after{content:attr(data-name);position:absolute;bottom:calc(100% + 8px);left:50%;transform:translate(-50%,4px);white-space:nowrap;font:700 11.5px/1 var(--body);color:#1A1F1C;background:rgba(255,255,255,.95);padding:5px 9px;border-radius:99px;box-shadow:0 2px 8px rgba(0,0,0,.25);opacity:0;pointer-events:none;transition:opacity .18s,transform .18s}
-.nb-bubbles>i:hover::after{opacity:1;transform:translate(-50%,0)}
+.nb-bubbles>i:hover::after,.nb-bubbles>i:focus-visible::after{opacity:1;transform:translate(-50%,0)}
+.nb-bubbles>i:focus-visible{z-index:5;outline:2px solid var(--brass);outline-offset:2px}
 .nb-bubbles>i.nb-none .plot-svg{width:70%!important}
 @media (prefers-reduced-motion:reduce){.nb-bubbles>i,.nb-bubbles>i::after{transition:none}}
 
