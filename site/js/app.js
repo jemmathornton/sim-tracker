@@ -774,11 +774,15 @@ const unitLabel = (l, i) => { const n = l.units?.[i]?.name; return !n ? `Unit ${
 // a unit's bedrooms and bathrooms, where her Building save records them (22 Oct)
 const unitRooms = (l, i) => { const u = l.units?.[i]; return u && u.beds ? `${u.beds} bed${u.baths ? ` · ${u.baths} bath` : ""}` : ""; };
 const unitTraits = (l, i) => [...(l.units?.[i]?.traits || []), ...(l.units?.[i]?.challenges || [])];
+// how a rental's units are used, the same words on its card and its page (her wording, 22 Oct): "Landlord’s home · 1 let · 1 empty"
+function unitWords(l){ const units = rentalUnits(l), who = units.filter(Boolean), own = who.some(u => u.role === "owners"), let_ = who.filter(u => u.role !== "owners").length, free = units.length - who.length;
+  if (!own && !free) return "All let";
+  return [own ? "Landlord’s home" : "", let_ ? `${let_} let` : "", free ? `${free} empty` : ""].filter(Boolean).join(" · "); }
 const rentalMeta = l => { const units = rentalUnits(l), who = units.filter(Boolean), owned = who.filter(u => u.role === "owners").length, lived = who.length - owned, free = units.length - who.length;   // the landlord's own unit isn't "let"
   const rows = units.map((u, i) => `<li${u ? "" : ' class="free"'}>${ic("home")}${u ? hhLink(u.hh) + (u.role === "owners" ? " (landlord)" : "") : "Empty"}<em>${esc(unitLabel(l, i))}</em></li>`).join("");
   // no household named, only her note ("Current uni sims" at Rippling Flats): show the note, as the lot page does
   if (!who.length && l.whoNote) return `<span>${ic("grid")}${esc(l.whoNote)}</span>`;
-  return `${rows ? `<ul class="unit-list">${rows}</ul>` : ""}<span>${ic("grid")}${free ? `${lived} let, ${free} empty` : "All let"}</span>`; };
+  return `${rows ? `<ul class="unit-list">${rows}</ul>` : ""}<span>${ic("grid")}${unitWords(l)}</span>`; };
 
 // the units as a table on the lot page: picture, unit, who (only the landlord is marked)
 function unitsTable(l){
@@ -977,7 +981,7 @@ function lot(l){
     <div class="detail" style="--h:${hc}">${carousel(l)}
     <div><dl class="facts">${l.ea ? `<div><dt>In-game name</dt><dd>${esc(l.ea)}</dd></div>` : ""}<div><dt>Lot type</dt><dd>${esc(unitCount(l) ? (l.typeFull || l.type).replace(/\s*\((\d+)\)/, " · $1 units") : l.typeFull || l.type || "Not set")}</dd></div>${isApt(l) ? "" : `<div><dt>Lot size</dt><dd>${esc(sizeTxt(l.size) || "Not checked yet")}</dd></div>`}${l.traits ? `<div><dt>Lot traits</dt><dd>${l.traits.map(esc).join(", ")}</dd></div>` : ""}${l.challenges ? `<div><dt>${l.challenges.length > 1 ? "Lot challenges" : "Lot challenge"}</dt><dd>${l.challenges.map(esc).join(", ")}</dd></div>` : ""}
       <div><dt>Neighbourhood</dt><dd><a href="#n-${l.hood.id}">${esc(l.hood.name)}</a></dd></div>${progressRow(l)}${l.building ? `<div><dt>Building</dt><dd>${esc(l.building.name)} · ${l.building.units.length} Apartments</dd></div>` : ""}
-      ${l.hh || l.whoNote ? `<div><dt>${l.owned ? "Owned by" : "Household"}</dt><dd>${l.hh ? `<a href="#${l.hh.id}">${esc(l.hh.name)}</a>${l.hh.unsure?" (unsure)":""}${l.tenants && !l.owned && !NO_LANDLORD.has(l.world.name + "|" + l.lot) ? " (landlord)" : ""}` : esc(emptyNote(l.whoNote))}</dd></div>` : ""}${unitCount(l) ? (u => `<div><dt>Units</dt><dd>${u.length}: ${u.some(x => !x) ? `${u.filter(Boolean).length} lived in, ${u.filter(x => !x).length} empty` : "all let"}</dd></div>`)(rentalUnits(l)) : ""}${l.hh && !l.owned && l.hh.sims.some(isAnimal) ? `<div><dt>Animals</dt><dd>${esc(whoCount(l.hh.sims.filter(isAnimal)).replace(/^0 Sims · /, ""))}</dd></div>` : ""}${l.tenants ? `<div><dt>${l.tenants.length > 1 ? "Tenants" : "Tenant"}</dt><dd>${l.tenants.map(t => `<a href="#${t.id}">${esc(t.name)}</a>${t.note ? ` <small>“${esc(t.note)}”</small>` : ""}`).join(", ")}</dd></div>` : ""}</dl>${l.versions ? versionTabs(l) : ""}
+      ${l.hh || l.whoNote ? `<div><dt>${l.owned ? "Owned by" : "Household"}</dt><dd>${l.hh ? `<a href="#${l.hh.id}">${esc(l.hh.name)}</a>${l.hh.unsure?" (unsure)":""}${unitCount(l) && rentalUnits(l).some(u => u && u.hh === l.hh && u.role === "owners") ? " (landlord)" : ""}` : esc(emptyNote(l.whoNote))}</dd></div>` : ""}${unitCount(l) ? `<div><dt>Units</dt><dd>${rentalUnits(l).length}: ${unitWords(l)}</dd></div>` : ""}${l.hh && !l.owned && l.hh.sims.some(isAnimal) ? `<div><dt>Animals</dt><dd>${esc(whoCount(l.hh.sims.filter(isAnimal)).replace(/^0 Sims · /, ""))}</dd></div>` : ""}${l.tenants ? `<div><dt>${l.tenants.length > 1 ? "Tenants" : "Tenant"}</dt><dd>${l.tenants.map(t => `<a href="#${t.id}">${esc(t.name)}</a>${t.note ? ` <small>“${esc(t.note)}”</small>` : ""}`).join(", ")}</dd></div>` : ""}</dl>${l.versions ? versionTabs(l) : ""}
 </div></div>
     ${l.hh ? `<section class="block" style="--h:${hc}"><div class="block-head"><h2>${l.owned ? "Who <em>owns it</em>" : "Who <em>lives here</em>"}</h2></div>
       <div class="lives"><div class="lives-card">${hhListing(l.hh)}</div>
