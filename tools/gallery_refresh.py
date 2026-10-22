@@ -169,6 +169,8 @@ def main():
     for rec in others.values(): say(f"  skipped “{rec['title']}” by {rec['creator'] or 'an unknown creator'}: it mentions her name but isn't her upload")
     new_ids = [i for i in new_ids if i not in others]
     save_safe(up_file, U); save_safe(c_file, C)
+    # how this run went, for the app's notice on the home page (22 Oct)
+    save_safe(os.path.join(GALLERY, 'last-refresh.json'), {"date": TODAY, "couldNotFetch": len(failed)})
 
     # this week's numbers into the history (a second run on the same day replaces that day's rows)
     h_file = os.path.join(GALLERY, 'history.csv')

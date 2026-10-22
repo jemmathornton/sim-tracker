@@ -261,13 +261,15 @@ def build():
         if W.get('familyLinks'): family_links[n] = W['familyLinks']
         out.append(w)
     checked = max((u['checked'] for u in uploads.values()), default=None)
+    lr_file = os.path.join(DATA, 'gallery', 'last-refresh.json')   # how the last weekly refresh went (22 Oct)
+    last_refresh = load(lr_file) if os.path.exists(lr_file) else None
     return {"worlds": out, "households": households, "stats": stats,
             "people": {k: v for k, v in load(os.path.join(DATA, 'people.json')).items() if not k.startswith('_')} if os.path.exists(os.path.join(DATA, 'people.json')) else {},   # relatives with no household on the site (17 Oct)
             "groups": {k: v for k, v in load(os.path.join(DATA, 'groups.json')).items() if not k.startswith('_')} if os.path.exists(os.path.join(DATA, 'groups.json')) else {},   # dynasties, clubs, university organisations (17 Oct)
             "calendar": {k: v for k, v in load(os.path.join(DATA, 'calendar.json')).items() if not k.startswith('_')} if os.path.exists(os.path.join(DATA, 'calendar.json')) else {},   # festivals, events and her holidays (19 Oct)
             "familyLinks": family_links, "tenants": tenants, "noLandlord": no_landlord, "residentsUnit": residents_unit, "nameFix": name_fix, "nbPt": nb_pt, "nbBox": nb_box, "nbCentred": nb_centred, "nbZoom": nb_zoom, "nbBanner": nb_banner, "csVersions": cs_versions,
             "galleryHistory": gallery_history(lot_of),
-            "meta": {"built": date.today().isoformat(), "galleryChecked": checked, "game": game_version()}}
+            "meta": {"built": date.today().isoformat(), "galleryChecked": checked, "lastRefresh": last_refresh, "game": game_version()}}
 
 
 def game_version():
