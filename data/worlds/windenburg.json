@@ -13,7 +13,7 @@
    "mapSpot": [0.69, 0.46],
    "mapBox": [0.54, 0.38, 0.84, 0.55],
    "lots": [
-    {"lot": "Proprietor's Square", "myName": "Proprietor's Square", "type": "Residential", "size": "30x20", "residents": "2 Bed", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["fCk9D0WAEeeOAaP4YfS2mA=="], "traits": ["Party Place", "Great Acoustics", "Gnomes"]},
+    {"lot": "Proprietor's Square", "myName": "Proprietor's Square", "type": "Residential", "size": "30x20", "residents": "Pleasant", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["fCk9D0WAEeeOAaP4YfS2mA=="], "traits": ["Party Place", "Great Acoustics", "Gnomes"]},
     {"lot": "Havisham House", "myName": "Havisham House", "type": "Residential", "size": "20x20", "residents": "Specter *WithUpdates*", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["GsrjSQceEeqGNEu/SNc3OA=="], "traits": ["Homey", "Gnomes", "Home Studio"]},
     {"lot": "Factory One", "myName": "Factory One", "type": "Residential", "size": "30x20", "residents": "Partihaus", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["zdQ3QSN9EeeFiWUH0XaZxA=="], "traits": ["Party Place", "Great Acoustics"]},
     {"lot": "Waterlock Redoubt", "myName": "Olde Platz Inn", "type": "Restaurant/Vacation Rental", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": true, "simsMade": "N/A", "gallery": ["UrN6y7srEeuAzvwg9JDtjA=="], "traits": ["Homey", "Romantic Aura"]},
@@ -550,6 +550,40 @@
     }
    ],
    "bio": "The Specter family has an air of mystery to them; rumor has it that Olive's prior husbands all met unfortunate ends, which makes things rather awkward now that she's engaged to Layne Coffin, the founding and sole member of the band Withering Widdershins. Does Layne know his soon-to-be Specter spouse has skeletons in her closet? He's definitely not going to be asking too many questions about her son Nyon's mysterious parentage. Let's just say that maybe Grim's not keeping tabs on their household solely because of Olive's past loves.",
+   "bioFrom": "EA"
+  },
+  "Pleasant": {
+   "sims": [
+    {
+     "id": "mary-sue-pleasant",
+     "name": "Mary-Sue Pleasant",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Leader of the Pack",
+     "traits": ["Perfectionist", "Good", "Romantic"],
+     "bonus": "Gregarious",
+     "career": "",
+     "partners": [
+      ["daniel-pleasant", "Spouse"]
+     ]
+    },
+    {
+     "id": "daniel-pleasant",
+     "name": "Daniel Pleasant",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Adult",
+     "aspiration": "Serial Romantic",
+     "traits": ["Romantic", "Noncommittal", "Outgoing"],
+     "bonus": "Alluring",
+     "career": "",
+     "partners": [
+      ["mary-sue-pleasant", "Spouse"]
+     ]
+    }
+   ],
+   "bio": "On the surface, Daniel and Mary-Sue Pleasant seem to have the perfect life, but is their love a flimsy façade?",
    "bioFrom": "EA"
   }
  },

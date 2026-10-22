@@ -276,23 +276,5 @@
   "where": "Del Sol Valley, a celebrity with no home",
   "noHome": true,
   "fame": 3
- },
- "daniel-pleasant": {
-  "name": "Daniel Pleasant",
-  "sex": "m",
-  "origin": "Premade",
-  "galleryOnly": true,
-  "partners": [
-   ["mary-sue-pleasant", "Spouse"]
-  ]
- },
- "mary-sue-pleasant": {
-  "name": "Mary-Sue Pleasant",
-  "sex": "f",
-  "origin": "Premade",
-  "galleryOnly": true,
-  "partners": [
-   ["daniel-pleasant", "Spouse"]
-  ]
  }
 }
