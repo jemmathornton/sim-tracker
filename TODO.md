@@ -456,8 +456,8 @@ Site ideas, bigger (13 Oct: she chose the five marked; no preference on the othe
 - [x] **Chosen 13 Oct:** Family tree, Goths first. Done: a tree on every household with family (and an animal tree for pets)
 - [ ] Challenge builds grouping (her Simsie shell builds)
 From the research but not on the list until 13 Oct (suggestions only):
-- [ ] Beds by age group / capacity for homes and rental units (e.g. "3 beds: 1 double, 2 single; fits 4"), to see where a family fits (research/rentals-and-apartments.md)
-- [ ] Lot value as a Stats column (it's already on each lot's Gallery card)
+- [ ] [Jemma] Rental units only (her call, 22 Oct): beds and how many Sims each unit fits, once units have their own bedroom counts in game. Was: Beds by age group / capacity for homes and rental units (e.g. "3 beds: 1 double, 2 single; fits 4"), to see where a family fits (research/rentals-and-apartments.md)
+- [x] Lot value: already on each lot's Gallery card, that's enough (her call, 22 Oct)
 - [ ] Original vs new lot size for lots she resized ("40×30, was 30×20"). Note (15 Oct audit): probably nothing to show yet: her plan sizes match her uploads (research/data-check-up.md) and the game's own sizes (research/plan-vs-game.md, apart from two plan typos since fixed)
 - [x] Filters on world and Stats pages: not wanted (her call, 19 Oct)
 - [x] "New since you looked" markers (15 Oct): a "New" pill on lot cards and a note on the lot page when a build has new favourites or comments, or is a new upload, since its page was last opened in this browser
