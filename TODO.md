@@ -410,7 +410,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 
 ### Tidy-up check (research/site-audit-16-oct.md, 35 items)
 - [x] [Claude] Fix the “obvious bug” items when she’s back (no coding overnight), e.g. Manzanita Terrace’s type has no “(3)” so it shows no units; Rippling Flats’ card and page disagree; “Jemma’s Sim World” has a straight apostrophe in the title, sidebar and top bar; Calle del Ensueño’s Sims made is false not N/A; leftover rental-trial code; out-of-date counts and notes in TODO.md, HANDOVER.md and CLAUDE.md; research notes that predate the 16 Oct choices — done 19 Oct: Manzanita Terrace, Rippling Flats, the app name, Calle del Ensueño; docs and old research notes still to tidy
-- [ ] [Jemma] The “needs her decision” items in that file, e.g. Glimmer & Books is ticked shared but marked not built; Taka Soi 15’s units come out 09 before 08 (the game’s order)
+- [ ] [Jemma] The “needs her decision” items in that file. 22 Oct, her calls: Taka Soi 15 shows 08 before 09; Glimmer & Books unticked as shared until the Backroom version is uploaded (its save traits come back then); Gibbi Point and Ravenwood have no restaurant (Jellyfish Jubilee and The Final Draught became bars): look again when planning builds. Still open: rental wording (let / lived in)
 
 ## 7. Parked until she asks
 

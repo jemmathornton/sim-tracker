@@ -17,7 +17,7 @@
     {"lot": "Creek Side Corner", "myName": "Creek Side Corner", "type": "Residential", "size": "30x20", "residents": "3 Bed", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["xr995/SGEeqJ1e5FdmbmdA=="], "traits": ["Peace and Quiet", "Gnomes", "Sunny Aspect"]},
     {"lot": "Glimmerbrook Watch", "myName": "Glimmerbrook Watch", "type": "Residential", "size": "30x20", "residents": "1 Bed", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["odr5dwNmEeuHqnCrzml8yA=="], "traits": ["Peace and Quiet", "Gnomes", "Sunny Aspect"]},
     {"lot": "Brooks Bridge Borough", "myName": "Brooks Bridge", "type": "Haunted House Residential", "size": "30x20", "residents": "Amicable Acolytes", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["H04iZgvxRb6FF++S6ssRlg=="]},
-    {"lot": "Elixirs and Brews", "myName": "Glimmer & Books", "type": "Backroom", "size": "30x20", "residents": "N/A", "built": false, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["+aNzE+BWEeyIaxrwo9vsUA=="], "traits": ["Cat Hangout", "Study Spot"]}
+    {"lot": "Elixirs and Brews", "myName": "Glimmer & Books", "type": "Backroom", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A", "gallery": ["+aNzE+BWEeyIaxrwo9vsUA=="]}
    ]
   },
   {

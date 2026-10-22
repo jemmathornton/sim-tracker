@@ -14,7 +14,7 @@
    "mapBox": [0.2, 0.15, 0.57, 0.41],
    "lots": [
     {"lot": "Ro Kaya Rockside", "myName": "Ro Kaya Rockside", "type": "Community Market", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
-    {"lot": "Taka Soi 15", "myName": "Taka Soi 15", "type": "Residential Rental (2)", "size": "20x20", "residents": "Cahyaputri (own)", "built": false, "shared": false, "screenshots": false, "simsMade": false, "units": [{"name": "09", "beds": 2, "baths": 1, "traits": ["Sunny Aspect", "Natural Light"]}, {"name": "08", "beds": 1, "baths": 1, "traits": ["Great Soil", "Bracing Breezes"]}]},
+    {"lot": "Taka Soi 15", "myName": "Taka Soi 15", "type": "Residential Rental (2)", "size": "20x20", "residents": "Cahyaputri (own)", "residentsUnit": 2, "built": false, "shared": false, "screenshots": false, "simsMade": false, "units": [{"name": "08", "beds": 1, "baths": 1, "traits": ["Great Soil", "Bracing Breezes"]}, {"name": "09", "beds": 2, "baths": 1, "traits": ["Sunny Aspect", "Natural Light"]}]},
     {"lot": "Chee-wit Chee-waa Kanto", "myName": "Chee-wit Chee-waa Kanto", "type": "Thrift and Boba Store", "size": "20x15", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["JnppkuUEQPS6bRavGX505Q=="], "traits": ["Teen Neighborhood", "Great Acoustics"]},
     {"lot": "ZoSul Taman Botani", "myName": "ZoSul Taman Botani", "type": "Wedding Venue", "size": "30x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ]

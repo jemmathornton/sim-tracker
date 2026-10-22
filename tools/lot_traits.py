@@ -137,6 +137,8 @@ def main():
                 if str(t) in traits: u.setdefault("challenges" if traits[str(t)]['kind'] == 'challenge' else "traits", []).append(traits[str(t)]['name'])
                 elif t not in HIDDEN: unknown.add(t)
             units.append(u)
+        # all-number names (Taka Soi 15's 09 and 08) in number order, not the game's (her call, 22 Oct)
+        if all(u['name'].isdigit() for u in units): units.sort(key=lambda u: int(u['name']))
         return units if len(units) > 1 else []
 
     def note_units(label, l, units):
