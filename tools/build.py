@@ -244,7 +244,7 @@ def build():
                                    "packs": e['packs'], "description": e['description'], "tags": e['tags'], "shared": e['shared'], "photos": version_photos(ws, slug(l['lot']), v['label'])})
                     cs_versions[key] = vs
                 lots.append({"lot": l['lot'], "mine": l['myName'], "type": l['type'], "size": l['size'],
-                             "who": (name + ("?" if unsure else "")) if name else None, "whoNote": note,
+                             "who": (name + ("?" if unsure else "")) if name else None, "whoNote": note, **({"npc": True} if re.search(r"\*NPC", str(l.get("residents") or ""), re.I) else {}),
                              "built": l['built'], "shared": l['shared'], "sims": l['simsMade'],
                              "gallery": g, "photos": photos_for(ws, slug(l['lot']), bool(g)),
                              **{k: l[k] for k in ("traits", "challenges", "units") if l.get(k)}})   # from her Building save (tools/lot_traits.py); units: a rental's own unit names and traits

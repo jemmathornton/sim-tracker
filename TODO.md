@@ -126,7 +126,7 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
 - [x] Brindleton Boathouse (Sporting Space) and 2-4-3 Wakabamori: empty for now (14 Oct)
 - [ ] [Jemma] **Parked (22 Oct)** Paradise Stables (Gibbi Point): residents "To be decided" (15 Oct: still deciding)
 - [ ] [Jemma] **Parked (22 Oct)** LaSuli Point (Copperdale, Plumbite Cove, 20×15): park or cemetery? Tagged "Park/Cemetery" for now (15 Oct; no longer the restaurant, so Copperdale has no restaurant)
-- [x] Household counts fixed 22 Oct: neighbourhood headers and cards now count (and list under “Home to”) the households living there, rental tenants included and business owners who live elsewhere left out, so the neighbourhoods add up to the world’s count (Henford is one short on purpose: the Scotts own The Gnome’s Arms and have no home). Was: Household count consistency (lots vs households in page headers): revisit later
+- [x] Household counts fixed 22 Oct: neighbourhood headers and cards now count (and list under “Home to”) the households living there, rental tenants included and business owners who live elsewhere left out, so the neighbourhoods add up to the world’s count (the Scotts, marked *NPC at The Gnome’s Arms, now count like other NPCs, her call: their page stays, linked from the pub, but they’re not in Henford’s households). Was: Household count consistency (lots vs households in page headers): revisit later
 - [ ] [Jemma] **Parked (22 Oct)** Bonus builds section: Robert Piggott School, Bubble World (15 Oct: not now; Von-Windenburg Castle is the Estate lot's build)
 
 ## 6. From the 13 Oct lot check (research/missing-lots-check.md)

@@ -29,6 +29,8 @@ const SMOOTH = () => matchMedia("(prefers-reduced-motion: reduce)").matches ? "a
 const worlds = DATA.worlds, lotIndex = {}, hhIndex = {}, hoodIndex = {};
 // a household's own extras from the data: its picture (a screenshot in shots/), origin (Premade or Mine), played, Neighbourhood Stories
 const hhMore = x => ({portrait: x.portrait, libraryPic: x.libraryPic, origin: x.origin, played: x.played, stories: x.stories, single: x.single, bio: x.bio, story: x.story});
+// the households a world counts and lists: everyone but the NPC households her plan names (22 Oct)
+const homeHhs = w => Object.values(w.households).filter(x => !x.npc);
 worlds.forEach(w => {
   w.id = slug(w.name); w.households = {};
   // a surname on more than one home = related but separate households: "Davidson 1", "Davidson 2"
@@ -78,14 +80,16 @@ worlds.forEach(w => {
   const hhs = Object.values(w.households);
   hhs.forEach(a => hhs.forEach(b => { if (a !== b && a.family === b.family && !a.links.some(x => x.to === b.name)) a.links.push({to: b.name, type: "Family", note: "Same family, separate homes"}); }));
   hhs.forEach(a => a.links.forEach(x => x.hh = hhs.find(b => b.name === x.to)));
+  // NPC households her plan names ("The Scotts (*NPC)" at The Gnome's Arms) keep their page but count like other NPCs: not as the world's households (her call, 22 Oct)
+  Object.values(w.households).forEach(x => { x.npc = x.lots.some(l => l.npc); });
   const all = w.hoods.flatMap(h => h.lots);
   const known = k => all.filter(l => l[k] === true || l[k] === false);
   const cnt = k => all.filter(l => l[k] === true).length;
   const pct = k => known(k).length ? Math.round(100 * cnt(k) / known(k).length) : 0;
   w.stats = {lots: all.length, built: cnt("built"), shared: cnt("shared"), shots: cnt("shots"), sims: cnt("sims"), simsOf: known("sims").length,
-    pBuilt: pct("built"), pShared: pct("shared"), pShots: pct("shots"), hh: Object.keys(w.households).length};
+    pBuilt: pct("built"), pShared: pct("shared"), pShots: pct("shots"), hh: homeHhs(w).length};
   // Sims made is counted per household (from the spreadsheet's Sims Made column on their home)
-  w.stats.hhMade = Object.values(w.households).filter(x => x.lots.some(l => l.sims === true)).length;
+  w.stats.hhMade = homeHhs(w).filter(x => x.lots.some(l => l.sims === true)).length;
   w.stats.pHH = w.stats.hh ? Math.round(100 * w.stats.hhMade / w.stats.hh) : 0;
 });
 // owners of a residential rental with no home anywhere else live in one of its units, as the landlord (the Cahyaputris at Taka Soi 15,
@@ -98,7 +102,7 @@ Object.values(hhIndex).filter(h => !h.sims.length && h.lots.every(l => l.owned))
   const homes = Object.values(hhIndex).filter(o => o !== h && o.family === h.family && o.sims.length && o.world !== h.world);
   if (homes.length !== 1) return; const to = homes[0];
   h.lots.forEach(l => { l.hh = to; to.lots.push(l); });
-  delete hhIndex[h.id]; delete h.world.households[slug(h.name)]; const st = h.world.stats, left = Object.values(h.world.households);
+  delete hhIndex[h.id]; delete h.world.households[slug(h.name)]; const st = h.world.stats, left = homeHhs(h.world);
   st.hh = left.length; st.hhMade = left.filter(x => x.lots.some(l => l.sims === true)).length; st.pHH = st.hh ? Math.round(100 * st.hhMade / st.hh) : 0;
 });
 // every Sim, by full name, so relationships can link across households
@@ -642,7 +646,7 @@ function renderNav(active, key, ctx){
               return v; }).join("")}</div>`; }
           let u = pre + `<a href="#${l.id}" class="${ctx.lot===l ? "cur" : ""}">${esc(l.name)}</a>`;
           return u; }).join("")}</div>`;
-        return t; }).join("")}<a class="hh-link ${key==="f-"+w.id ? "cur" : ctx.hh ? "path" : ""}" href="#f-${w.id}">${ic("users")}Households</a>${key === "f-" + w.id || (ctx.hh && ctx.hh.world === w) ? `<div class="lotnav">${Object.values(w.households).sort(byHh).map(hx =>
+        return t; }).join("")}<a class="hh-link ${key==="f-"+w.id ? "cur" : ctx.hh ? "path" : ""}" href="#f-${w.id}">${ic("users")}Households</a>${key === "f-" + w.id || (ctx.hh && ctx.hh.world === w) ? `<div class="lotnav">${homeHhs(w).sort(byHh).map(hx =>
           `<a href="#${hx.id}" class="${ctx.hh === hx ? (ctx.sim || ctx.group ? "path" : "cur") : ""}">${esc(hhListName(hx))}</a>${ctx.hh === hx && hx.sims.length ? `<div class="lotnav">${hx.sims.map(sm => sm.sid ? `<a href="#s-${sm.sid}" class="${ctx.sim === sm ? "cur" : ""}">${esc(sm.name)}</a>` : `<a href="#${hx.id}" data-sim="${sm.id}">${esc(sm.name)}</a>`).join("")}</div>` : ""}`).join("")}</div>` : ""}</div>`;
     }
     return h; };
@@ -727,7 +731,7 @@ function home(){
   return `<section class="hero" style="--c:#8E62CF"><div class="kicker"><i></i><span class="label">A Sims 4 save, rebuilt by hand</span></div>
     <h1>Jemma’s <em>Sim World</em></h1>
     <p>Every world in the game, rebuilt one lot at a time. Wander the neighbourhoods, look around the homes and venues, and meet the households who live in them.</p>
-    <div class="hero-foot"><div class="figures">${[[ready.length, ready.length===1?"world":"worlds"],[ready.reduce((n,w)=>n+w.hoods.length,0),"neighbourhoods"],[ready.reduce((n,w)=>n+w.stats.lots,0),"lots"],[ready.reduce((n,w)=>n+w.stats.hh,0),"households"],[simCount(ready.flatMap(w => Object.values(w.households))),"Sims"]].map(([n,t]) => `<div><b>${n}</b><span>${t}</span></div>`).join("")}</div></div></section>
+    <div class="hero-foot"><div class="figures">${[[ready.length, ready.length===1?"world":"worlds"],[ready.reduce((n,w)=>n+w.hoods.length,0),"neighbourhoods"],[ready.reduce((n,w)=>n+w.stats.lots,0),"lots"],[ready.reduce((n,w)=>n+w.stats.hh,0),"households"],[simCount(ready.flatMap(homeHhs)),"Sims"]].map(([n,t]) => `<div><b>${n}</b><span>${t}</span></div>`).join("")}</div></div></section>
     <div class="section-head"><h2>The <em>worlds</em></h2><span class="count">in the order they arrived</span></div><div class="worlds">${owned.map(worldTile).join("")}</div>
     <div class="section-head"><h2>Not owned</h2><span class="count">${notOwned.length} worlds</span></div><div class="worlds">${notOwned.map(worldTile).join("")}</div>
     <footer><span>Lot names are my own; each lot page also shows its in-game name. Types and sizes follow the game.</span><span>World maps by 20th Century Plumbob · Icons by Lucide</span>
@@ -912,7 +916,7 @@ function hoodCard(x){
 }
 function world(w){
   const s = w.stats;
-  let h = mapHero(w, esc(w.pack) + (w.owned ? "" : " · not owned yet"), titleWord(w.name), w.blurb ? esc(w.blurb) : "", [[w.hoods.length,"neighbourhoods"],[s.lots,"lots"],[s.hh,"households"],[simCount(Object.values(w.households)),"Sims"]],
+  let h = mapHero(w, esc(w.pack) + (w.owned ? "" : " · not owned yet"), titleWord(w.name), w.blurb ? esc(w.blurb) : "", [[w.hoods.length,"neighbourhoods"],[s.lots,"lots"],[s.hh,"households"],[simCount(homeHhs(w)),"Sims"]],
     w.hoods.map(x => `<a href="#n-${x.id}">${esc(hoodTitle(x))}</a>`).join(""));
   h += worldAbout(w);   // weather and highlights first, small (her call, 19 Oct)
   h += `<section class="hood" style="--h:${w.color}"><div class="hood-head"><span class="label">Explore</span><div><h2>Neighbourhoods</h2><p>Open a neighbourhood to see its lots, then a home to meet the household living there.</p></div><a class="count" href="#f-${w.id}">All ${s.hh} households</a></div>
@@ -1073,7 +1077,7 @@ function hhListing(x, listed){   // listed: on the households page, one-Sim hous
     <div class="meta"><span class="${made?"made":""}">${ic("sim")}<b>${made ? "Sims made" : "Sims not made yet"}</b></span>${n ? `<span>${ic("users")}${n} Sim ${n===1?"profile":"profiles"}</span>` : ""}${x.links.length ? `<span>${ic("share")}${x.links.length} connected</span>` : ""}</div></a>`;
 }
 function families(w){
-  const hhs = Object.values(w.households).sort(byHh), s = w.stats;
+  const hhs = homeHhs(w).sort(byHh), s = w.stats;
   let h = mapHero(w, esc(w.name), "The <em>households</em>", `Every family living in ${esc(w.name)}.`, [[hhs.length,"households"],[simCount(hhs),"Sims"]], "", true);
   h += `<section class="hood" style="--h:${w.color}"><div class="hood-head"><span class="label">${esc(w.name)}</span><div><h2>All <em>households</em></h2><p>Open a household to meet its Sims.</p></div><span class="count">${s.hhMade} of ${s.hh} with Sims made</span></div>
     <div class="listings">${hhs.map(x => hhListing(x, true)).join("")}</div></section>`;
