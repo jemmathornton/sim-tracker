@@ -366,7 +366,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 
 ### Lot traits (research/lot-trait-ideas.md: what each trait does, a check of hers, ideas)
 - [x] Checked 21 Oct in her Building saves: the Community Space (The Shipping Views lot, “The Old Dockyard Market” in the save) is a Maker Space with Landfill Lot and Reduce and Recycle, no Off-the-Grid. The Off-the-Grid copy was a Residential build called “The Old Dockyard” sitting on The Waterfront lot (Abandoned Views’ spot) in that save. Was: In game: The Old Dockyard has Off-the-Grid, which a Community Space can’t use: take it off?
-- [ ] [Jemma] Gnomes does nothing on venues (Burners & Builders, Pixel Café, Llama Picturehouse): swap for something that works?
+- [ ] [Jemma] Gnomes does nothing on venues (Burners & Builders, Pixel Café, Llama Picturehouse): swap for something that works? (22 Oct: she may change them when she moves the lots into her new save; ideas: gym Homey or Party Place, Pixel Café Convivial, Picturehouse Romantic Aura)
 - [x] 21 Oct, her call: Studio PBP (not built yet) gets Hottest Spot in Town when she builds it; Calico keeps its too. Was: Starlight Accolades: Hottest Spot in Town on Studio PBP (the game’s venue) once built; keep Calico’s too?
 - [ ] [Jemma] Caldera Camp: add Geothermal and Natural Well? (21 Oct: not yet, her call. The game ships it with only Volcanic Activity; her build adds Off-the-Grid and Eco Lot, so two trait slots are free) Key Point: Off-the-Grid only works if it’s a home, Tiny Home or Generic (not a Vacation Rental)
 - [ ] [Jemma] 88 shared lots have fewer than 3 traits: the note has ideas for each free slot, for when she’s in game

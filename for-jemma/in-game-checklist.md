@@ -68,7 +68,7 @@ Everything on the to-do list that needs the game open, grouped so you can go wor
 
 ## 4. Lot traits
 - 88 shared lots have fewer than 3 traits (ideas for each in research/lot-trait-ideas.md).
-- Gnomes does nothing on venues (Burners & Builders, Pixel Café, Llama Picturehouse): swap it?
+- Gnomes does nothing on venues (Burners & Builders, Pixel Café, Llama Picturehouse): swap it? Maybe when you move them into the new save (ideas: gym Homey or Party Place, Pixel Café Convivial, Picturehouse Romantic Aura).
 
 ## 5. Clubs
 - Change the clubs' hangouts in the Club panel (Powerhouse → Skye Fitness, Garden Gnomes → Magnolia Blossom Park, League of Adventurers → Courtyard Lane Playground, Upper Crusts → any Restaurant, Paragons and Renegades → Magnolia Mall, Spin Masters → Stargazer, Partihaus → La Discotheque).
