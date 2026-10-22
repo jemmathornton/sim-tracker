@@ -14,10 +14,10 @@
    "mapBox": [0.26, 0.37, 0.63, 0.75],
    "lots": [
     {"lot": "Campground", "myName": "Campground", "type": "Vacation Rental", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["CteLgi2OSyWWdZNQihdhuQ=="]},
-    {"lot": "Forest Hideaway", "myName": null, "type": "Restaurant", "size": "40x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["TsBq/oKyEeiG+faJ0UabCw=="], "traits": ["Sunny Aspect", "Party Place", "Chef's Kitchen"]},
+    {"lot": "Forest Hideaway", "myName": null, "type": "Restaurant", "size": "40x30", "residents": "N/A", "built": true, "shared": true, "screenshots": true, "simsMade": "N/A", "gallery": ["TsBq/oKyEeiG+faJ0UabCw=="], "traits": ["Sunny Aspect", "Party Place", "Chef's Kitchen"]},
     {"lot": "Green Getaway", "myName": "Green Getaway", "type": "Vacation Rental", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["rMPNtHy3EeiDtMw4VFS7Iw=="], "traits": ["Romantic Aura", "On Ley Line"]},
     {"lot": "Lakeside Retreat", "myName": "Lakeside Retreat", "type": "Vacation Rental", "size": "40x30", "residents": "N/A", "built": true, "shared": true, "screenshots": true, "simsMade": "N/A", "gallery": ["3tN9AgwwEeeHSemJWRDrbA=="], "traits": ["Child's Play", "Homey", "Sunny Aspect"]},
-    {"lot": "Riverside Retreat", "myName": "Granite Falls Spa", "type": "Spa", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["XprP6n4vEeiCsAvXwy7zKw=="], "traits": ["Romantic Aura", "Sunny Aspect"]}
+    {"lot": "Riverside Retreat", "myName": "Granite Falls Spa", "type": "Spa", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": true, "simsMade": "N/A", "gallery": ["XprP6n4vEeiCsAvXwy7zKw=="], "traits": ["Romantic Aura", "Sunny Aspect"]}
    ]
   },
   {
