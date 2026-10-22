@@ -896,7 +896,7 @@ function hoodCard(x){
   return `<a class="listing" href="#n-${x.id}" style="--h:${x.color}">${hoodArt(x)}
     <h3>${esc(((NB_BANNER[x.world.id] || {})[x.name] || {}).title || x.name)}</h3>${x.desc ? `<p class="desc">${esc(x.desc)}</p>` : ""}
     ${hh ? `<p class="home-to">${ic("users")}<span>Home to ${hhSet.map(f => `<b>${esc(f.name)}</b>`).join(", ")}</span></p>` : `<p class="home-to">${ic("pin")}<span>Community lots only</span></p>`}
-    ${hoodExtras(x)}
+    ${hoodHighlights(x)}${hoodExtras(x)}
     <div class="meta"><span>${ic("hammer")}<b>${built} of ${x.lots.length}</b> lots built</span>${hh ? `<span>${ic("sim")}<b>${made} of ${hh}</b> with Sims made</span>` : ""}</div></a>`;
 }
 function world(w){
@@ -912,13 +912,67 @@ function world(w){
 const SEASON_ICON = {Spring: "flower", Summer: "sun", Autumn: "leaf", Winter: "snowflake"}, CAL_SEASONS = ["Spring", "Summer", "Autumn", "Winter"];
 // each season with its icon and the game's three likeliest kinds of weather (her layout, 19 Oct)
 // the world's weather and the three highlights the game shows when you pick it (14 Oct, read from the game's own files)
+// ---------- weather and highlights trial (22 Oct): a small switch on world pages and the Calendar lets her compare layouts ----------
+const WX_KEY = "jsw-wx-trial";
+let WX = (() => { try { return localStorage.getItem(WX_KEY) || "now"; } catch (e) { return "now"; } })();
+const WX_OPTS = [["now", "As now"], ["1", "1 · highlight titles only"], ["2", "2 · highlights on neighbourhood cards"], ["3", "3 · weather on the Calendar"], ["4", "4 · one climate line"], ["21", "2 + 1 (suggested)"]];
+// the neighbourhood each highlight is about: her answers (19 and 21 Oct, research/decisions/highlights.md); the rest name theirs
+const HL_HOOD = {
+  "Newcrest": {"Peace and Quiet": ["Llama Lagoon"], "Lots of Space!": ["Bridgeview"], "Plenty Room to Jog": ["Ridgeline Drive"]},
+  "Willow Creek": {"Ferryboat": ["Crawdad Quarter"]}, "Oasis Springs": {"Brontosaurus Bend": ["Bedrock Strait"]},
+  "Sulani": {"Active Volcano!": ["Mua Pel'am"], "Local Culture": ["Ohan'ali Town"]}, "Tomarang": {"Night Market": ["Morensong"]},
+  "Copperdale": {"Pier Attractions": ["Plumbite Cove"], "Academia": ["Rockridge Heights"]},
+  "Mt. Komorebi": {"Onsen Venue": ["Yukimatsu"], "Mountain Climbing Excursion": ["Yukimatsu"]},
+  "Granite Falls": {"Camping and Cabins": ["Campground"], "Insect Collecting": ["Campground"]}, "Henford-on-Bagley": {"Weekly Fair": ["Finchwick"]},
+  "Selvadorada": {"Explore the Jungle": ["Belomisia Jungle"], "Hidden Temple": ["Belomisia Jungle"], "Ancient Artifacts": ["Puerto Llamante Marketplace"]},
+  "San Sequoia": {"Family Friendly": ["Anchorpoint Wharf"]},
+  "Magnolia Promenade": {"Scout Out Your Shop Location": ["Magnolia Promenade"], "Outdoor Park Activities": ["Magnolia Promenade"], "Watch the Ducks": ["Magnolia Promenade"]},
+  "Gibbi Point": {"Natural Wonders": ["Jellyfish Junction"], "Outdoor Activities": ["Wanderwood Wilds"], "Fluttery and Feathery": ["Wanderwood Wilds"]},
+  "Nordhaven": {"Practice Your Hobby": ["Gammelvik", "Iverstad"]}, "Del Sol Valley": {"Celebrities!": ["Starlight Boulevard"]},
+  "Chestnut Ridge": {"Rare Fishing Spots": ["Riders' Glen"]}, "Windenburg": {"Von Haunt Estate": ["Windslar"], "The Bluffs": ["The Crumbling Isle"]},
+};
+function hlHoods(w, x){
+  const her = (HL_HOOD[w.name] || {})[x.name];
+  if (her) return w.hoods.filter(h => her.includes(h.name));
+  const named = w.hoods.filter(h => (x.name + " " + x.text).toLowerCase().includes(h.name.toLowerCase()));
+  return named.length === 1 ? named : [];
+}
+const hlOnCards = () => WX === "2" || WX === "21";
+function hoodHighlights(x){
+  if (!hlOnCards()) return "";
+  const hs = (x.world.highlights || []).filter(h => hlHoods(x.world, h).includes(x));
+  return hs.map(h => `<p class="home-to hl-line" title="${esc(h.text)}">${ic("landmark")}<span><b>${esc(h.name)}</b></span></p>`).join("");
+}
+// option 4: one sentence from each season's likeliest kind of weather (the game lists it first)
+const WX_WORD = [["heat wave", "scorching"], ["monsoons", "monsoon"], ["thunderstorms", "stormy"], ["snow", "snowy"], ["freezing", "freezing"], ["rain", "rainy"], ["windy", "windy"], ["sunny", "sunny"], ["mysterious", "misty"], ["partly cloudy", "mild"], ["cloudy", "grey"]];
+function climateLine(w){
+  const ws = w.weatherSeasons, word = t => (WX_WORD.find(([k]) => t.toLowerCase().includes(k)) || [, "mild"])[1];
+  const pick = n => word(ws[n].split(", ")[0]);
+  const seasons = CAL_SEASONS.filter(n => ws[n]), adj = seasons.map(pick);
+  const plural = {Spring: "springs", Summer: "summers", Autumn: "autumns", Winter: "winters"};
+  const s = new Set(adj).size === 1 ? `${adj[0].charAt(0).toUpperCase() + adj[0].slice(1)} all year` : seasons.map((n, i) => `${adj[i]} ${plural[n]}`).join(", ").replace(/, ([^,]+)$/, " and $1");
+  const full = seasons.map(n => `${n}: ${ws[n]}`).join(" · ");
+  return `<p class="wx-climate" title="${esc(full)}">${ic("weather")}<span>${esc(s.charAt(0).toUpperCase() + s.slice(1))}</span></p>`;
+}
+function wxSwitch(show){
+  document.getElementById("wx-switch")?.remove(); if (!show) return;
+  const d = document.createElement("div"); d.id = "wx-switch"; d.className = "wx-switch";
+  d.innerHTML = `<b>Weather and highlights (trial)</b><div>${WX_OPTS.map(([k, t]) => `<button type="button" data-wx="${k}" class="${WX === k ? "on" : ""}">${t}</button>`).join("")}</div>`;
+  document.body.appendChild(d);
+}
+document.addEventListener("click", e => { const b = e.target.closest("[data-wx]"); if (!b) return; WX = b.dataset.wx; try { localStorage.setItem(WX_KEY, WX); } catch (err) {} const y = scrollY; route(); scrollTo(0, y); });
 function worldAbout(w){
   if (!w.weather && !w.highlights) return "";
   // a slim strip under the banner with no heading of its own, so Neighbourhoods stays the page's first heading (her feedback, 19 Oct)
-  return `<section class="world-strip" style="--h:${w.color}">
-    ${w.weatherSeasons ? `<div class="wx-seasons">${CAL_SEASONS.filter(n => w.weatherSeasons[n]).map(n => `<div class="s-${n.toLowerCase()}">${ic(SEASON_ICON[n])}<b>${n}:</b><span>${esc(w.weatherSeasons[n].replace(/, ([^,]+)$/, " and $1"))}</span></div>`).join("")}</div>`
-      : w.weather ? `<p class="home-to world-weather">${ic("weather")}<span>${esc(w.weather)}</span></p>` : ""}
-    ${w.highlights ? `<div class="wx-highlights">${w.highlights.map(x => `<div>${ic("landmark")}<b>${esc(x.name)}:</b><span>${esc(x.text)}</span></div>`).join("")}</div>` : ""}</section>`;
+  const weather = WX === "3" ? `<p class="home-to world-weather">${ic("weather")}<span>Weather by season: <a href="#calendar">see the Calendar</a></span></p>`
+    : WX === "4" && w.weatherSeasons ? climateLine(w)
+    : w.weatherSeasons ? `<div class="wx-seasons">${CAL_SEASONS.filter(n => w.weatherSeasons[n]).map(n => `<div class="s-${n.toLowerCase()}">${ic(SEASON_ICON[n])}<b>${n}:</b><span>${esc(w.weatherSeasons[n].replace(/, ([^,]+)$/, " and $1"))}</span></div>`).join("")}</div>`
+    : w.weather ? `<p class="home-to world-weather">${ic("weather")}<span>${esc(w.weather)}</span></p>` : "";
+  const hl = (w.highlights || []).filter(x => !hlOnCards() || !hlHoods(w, x).length);
+  const chips = WX === "1" || WX === "21";
+  const highlights = !hl.length ? "" : chips ? `<div class="wx-chips">${hl.map(x => `<span title="${esc(x.text)}">${ic("landmark")}${esc(x.name)}</span>`).join("")}</div>`
+    : `<div class="wx-highlights">${hl.map(x => `<div>${ic("landmark")}<b>${esc(x.name)}:</b><span>${esc(x.text)}</span></div>`).join("")}</div>`;
+  return `<section class="world-strip" style="--h:${w.color}">${weather}${highlights}</section>`;
 }
 function hoodPage(x){
   const w = x.world, hhSet = [...new Set(x.lots.filter(l => l.hh).map(l => l.hh))], built = x.lots.filter(l => l.built === true).length;
@@ -1303,6 +1357,7 @@ function route(){
   lazyPics(view);
   clearSearch();
   renderNav(active, key, ctx);
+  wxSwitch(!!wd || key === "calendar");   // weather and highlights trial (22 Oct)
   // keyboard users: the sidebar is redrawn, so put focus back on the link they chose
   if (navChosen) { document.querySelector("#nav a.cur, #nav a.path")?.focus({preventScroll: true}); navChosen = false; }
   window.scrollTo(0, 0);
@@ -1464,6 +1519,8 @@ function calendarPage(){
     ${withEv.length ? chipRow("Worlds", "world", "All worlds", withEv.map(w => [w.name, calHues(w.name)])) : ""}
     ${calState.kinds.has("school") ? chipRow("Educational", "school", "Both", subs("school").map(v => [v])) : ""}
 `;
+  if (WX === "3") { const ww = calState.world && worlds.find(w => w.name === calState.world);   // weather trial (22 Oct), option 3
+    h += `<div class="band"><span class="band-l">${ic("weather")}Weather</span><div class="band-evs"><span class="wx-cal">${ww && ww.weatherSeasons && ww.weatherSeasons[sn] ? `<b>${esc(ww.name)}</b> in ${sn.toLowerCase()}: ${esc(ww.weatherSeasons[sn].replace(/, ([^,]+)$/, " and $1"))}` : "Pick a world above to see its weather this season."}</span></div></div>`; }
   if (daily.length) h += `<div class="band"><span class="band-l">${ic("repeat")}Every day</span><div class="band-evs">${daily.map(calPill).join("")}</div></div>`;
   // the month: four weeks, Monday first
   h += `<div class="month s-${sn.toLowerCase()}"><div class="m-head"><span></span>${CAL_DAYS.map(d => `<b>${CAL_DAY_NAMES[d]}</b>`).join("")}</div>

@@ -484,6 +484,21 @@ footer .as-of{flex-basis:100%}
 .wx-highlights svg{color:var(--h);font-size:14px;vertical-align:-2px;margin-right:5px}
 .wx-highlights b{font-weight:600;margin-right:4px}
 .wx-highlights span{color:var(--muted)}
+/* weather and highlights trial (22 Oct) */
+.wx-switch{position:fixed;right:18px;bottom:18px;z-index:60;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:16px;padding:12px 14px;box-shadow:0 10px 30px rgba(0,0,0,.18);display:grid;gap:8px;font-size:13px;max-width:430px}
+.wx-switch div{display:flex;flex-wrap:wrap;gap:6px}
+.wx-switch button{border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:5px 11px;cursor:pointer;font-weight:600;font-size:12.5px;color:var(--ink)}
+.wx-switch button.on{background:var(--brass);border-color:var(--brass);color:#fff}
+.wx-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;padding:14px 0 16px;border-top:1px solid var(--line)}
+.wx-seasons + .wx-chips, .wx-climate + .wx-chips{margin-top:14px}
+.wx-chips span{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:999px;padding:4px 11px;font-size:12.5px;font-weight:600;background:var(--surface);cursor:help}
+.wx-chips svg{color:var(--h);font-size:13px}
+.wx-climate{display:flex;align-items:center;gap:8px;margin:0;font-size:14px;cursor:help}
+.wx-climate svg{color:var(--h);font-size:15px}
+.world-strip > :only-child{padding-bottom:14px}
+.world-strip > .wx-chips:first-child, .world-strip > .wx-highlights:first-child{margin-top:0;padding-top:0;border-top:0}
+.hl-line svg{color:var(--h)}
+.wx-cal{font-size:13px}
 .hood-extras{display:grid;gap:4px;margin:8px 0 6px}
 /* Stats → On the Gallery: most downloaded next to most loved, and the newest comments (15 Oct) */
 .gal-best{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:28px}
