@@ -414,8 +414,8 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 
 ## 7. Parked until she asks
 
-- [ ] Phone layout: Stats lot names pushed off-screen by the World/Neighbourhood columns
-- [ ] Phone layout: lot pages show the same photo twice before the facts
+- [x] Fixed 22 Oct (phone widths only, laptop untouched): Stats lot names pushed off-screen by the World/Neighbourhood columns
+- [x] Fixed 22 Oct (phone widths only, laptop untouched): lot pages show the same photo twice before the facts
 
 ## 8. Ideas from the research (suggestions only; tick to do; most site ideas are from research/site-ideas-from-other-trackers.md)
 
