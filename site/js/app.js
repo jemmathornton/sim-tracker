@@ -728,18 +728,10 @@ function home(){
     <h1>Jemma’s <em>Sim World</em></h1>
     <p>Every world in the game, rebuilt one lot at a time. Wander the neighbourhoods, look around the homes and venues, and meet the households who live in them.</p>
     <div class="hero-foot"><div class="figures">${[[ready.length, ready.length===1?"world":"worlds"],[ready.reduce((n,w)=>n+w.hoods.length,0),"neighbourhoods"],[ready.reduce((n,w)=>n+w.stats.lots,0),"lots"],[ready.reduce((n,w)=>n+w.stats.hh,0),"households"],[simCount(ready.flatMap(w => Object.values(w.households))),"Sims"]].map(([n,t]) => `<div><b>${n}</b><span>${t}</span></div>`).join("")}</div></div></section>
-    ${refreshNotice()}<div class="section-head"><h2>The <em>worlds</em></h2><span class="count">in the order they arrived</span></div><div class="worlds">${owned.map(worldTile).join("")}</div>
+    <div class="section-head"><h2>The <em>worlds</em></h2><span class="count">in the order they arrived</span></div><div class="worlds">${owned.map(worldTile).join("")}</div>
     <div class="section-head"><h2>Not owned</h2><span class="count">${notOwned.length} worlds</span></div><div class="worlds">${notOwned.map(worldTile).join("")}</div>
     <footer><span>Lot names are my own; each lot page also shows its in-game name. Types and sizes follow the game.</span><span>World maps by 20th Century Plumbob · Icons by Lucide</span>
       <span class="as-of">Lots and households as of ${asOf(DATA.meta.built)} · Gallery numbers as of ${asOf(DATA.meta.galleryChecked)}${DATA.meta.game ? ` · Game version ${esc(DATA.meta.game)}` : ""}</span></footer>`;
-}
-// a note when the Sunday Gallery refresh didn't run or couldn't fetch everything (her ask, 22 Oct); details in logs\gallery-refresh.log
-function refreshNotice(){
-  const last = DATA.meta.galleryChecked, lr = DATA.meta.lastRefresh;
-  const days = last ? Math.floor((Date.now() - new Date(last + "T12:00")) / 864e5) : null;
-  const msg = days !== null && days > 8 ? `The weekly Gallery check last worked on <b>${asOf(last)}</b>, ${days} days ago, so the Sunday refresh may have failed. Favourites and downloads are from then.`
-    : lr && lr.couldNotFetch ? `The last Gallery check (${asOf(lr.date)}) couldn’t fetch <b>${lr.couldNotFetch} upload${lr.couldNotFetch === 1 ? "" : "s"}</b>; they keep the week before’s numbers.` : "";
-  return msg ? `<p class="refresh-note">${ic("info")}<span>${msg} Details are in the refresh log (logs\\gallery-refresh.log).</span></p>` : "";
 }
 const asOf = iso => iso ? new Date(iso + "T12:00").toLocaleDateString("en-GB", {day: "numeric", month: "short", year: "numeric"}) : "not yet";
 
