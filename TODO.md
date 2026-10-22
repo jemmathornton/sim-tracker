@@ -9,7 +9,7 @@ Every open item carried over from the claude.ai project on 13 Oct 2026: the note
 - [x] [Jemma] Swapped in 22 Oct (her OK): Downloads copy matches the site; her old one kept as “World Plans (fixed) - backup 22 Oct.xlsx”. Copy ready (22 Oct, overnight): `for-jemma/World Plans (fixed) - updated 22 Oct.xlsx` has every 21 Oct change below and matches the site (the import check finds no differences); swap it into Downloads when you’re happy. The boarding houses’ cells name the residents only (Nerdy Girls, Sporty Girls), as Kirkland’s do; the boys are tenants on the site. Midtown Meadows’ traits now list every unit’s. Also in it (22 Oct): Proprietor’s Square → Pleasant; Base Camp and The Croft Icefall → Mount Komorebi Summit. Was: [Claude] Copy into World Plans (her spreadsheet, 21 Oct changes): Windenburg’s three special lots into their neighbourhoods; Foxbury Court → Backroom; Pinecrest #402 → Empty, #404 → Eco Roomies; Prescott and Lakeview Boarding Houses → Residential Rental (2); Lakeview residents Sporty Girls + Sporty Boys; Prescott residents Nerdy Girls + Nerdy Boys (was Chess/Comp Teens). The Screaming Gecko → Shared (her Karaoke Bar upload, traits Party Place and Convivial). Make an updated copy in for-jemma for her to swap in, as on 19 Oct
 
 - [x] [Jemma] What "an app" means (13 Oct): on her PC for now, easy to put online later
-- [ ] [Jemma] Where she edits: undecided, kept flexible. Today Claude edits the app's data; her spreadsheet can still be imported at any time (edits on both sides are kept). Decide later
+- [x] [Jemma] 22 Oct, her call: she edits here (chat); the app's data is the main copy, the spreadsheet a copy kept in step. Was: Where she edits: undecided, kept flexible. Today Claude edits the app's data; her spreadsheet can still be imported at any time (edits on both sides are kept). Decide later
 - [x] [Claude] Rebuild the site in the new setup, matching the live page page for page (all 614 pages checked, 13 Oct)
 - [x] [Claude] Gallery pictures are normal files named by lot
 - [x] [Claude] Weekly Gallery refresh rebuilt (Windows task, Sundays 08:54) and run once (13 Oct)
@@ -73,7 +73,7 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
 - [x] Rio Verde with six households: she looked with the “Pretend Rio Verde is full” tick box; box removed (16 Oct)
 - [ ] [Jemma] Photo tabs per unit (layout 4): for every rental once it has screenshots of each unit (16 Oct, her view; Rio Verde is the only one so far)
 - [x] [Jemma] Decide each rental's households unit by unit, and landlords: walked through 21–22 Oct (table above); left for later: Upland Trailer Park, Sequoia Cottage (when built), Isda Riverfront, Rio Verde
-- [ ] [Jemma] A "Rental units" tab in World Plans (World · Rental · Unit · Beds · Baths · Household · Landlord)? She was "not sure yet, discuss more"
+- [x] [Jemma] 22 Oct, her call: no. Was: A "Rental units" tab in World Plans (World · Rental · Unit · Beds · Baths · Household · Landlord)? She was "not sure yet, discuss more"
 - [x] Unit counts show as "Residential Rental · 4 units" on cards and lot pages (her choice, 16 Oct; the Stats sheet keeps her "(4)")
 - [x] Unit counts confirmed 14 Oct: Taka Soi 15 = 2, Sequoia Cottage = 2, Manzanita Terrace = 3; the save matches the plan for Rio Verde 6, Fern Park Flats 5, Tail's End 4, Inner Circle 4, Upland Trailer Park 4, Old Torget House 3
 - [ ] [Jemma] Abandoned Views and Specter Row: unit counts once they're finished
