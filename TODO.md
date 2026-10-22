@@ -34,32 +34,32 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
 
 ## 2. Rentals
 
-20 residential rentals (Mossy Lane is University Housing since 14 Oct). Residents are mostly a group label or "Empty"; 4 are owned by a family.
+22 residential rentals on the site (Mossy Lane is University Housing since 14 Oct; the Copperdale boarding houses became rentals 21 Oct). Table brought up to date 22 Oct, after the unit-by-unit walk-through (21–22 Oct; notes in research/rentals-next.md).
 
-| World | Rental | Units | Residents in the plan |
+| World | Rental | Units | Who lives where |
 | --- | --- | --- | --- |
-| Oasis Springs | Rio Verde Retirement Home | 6 | Elders |
-| Newcrest | Fern Park Flats | 5 | Kirkland own; tenant BFF (19 Oct) |
-| Newcrest | Midtown Meadows | 5 | Kirkland own; tenants Washburn and Bridges (19 Oct) |
-| Newcrest | Rippling Flats | 2 | Current uni sims |
-| Brindleton Bay | Tail's End Apartments | 4 | Empty |
-| Del Sol Valley | Inner Circle | 4 | Roomies |
-| Del Sol Valley | Upland Trailer Park | 4 | Eclectic Arts |
+| Oasis Springs | Rio Verde Retirement Home | 6 | “Elders” (no households yet; left for later) |
+| Newcrest | Fern Park Flats | 5 | Kirklands own (live elsewhere); Holiday 1, Lee 2, Scott 3 |
+| Newcrest | Midtown Meadows | 5 | Kirklands own (live elsewhere); Washburn 2, Bridges 5 |
+| Newcrest | Rippling Flats | 2 | Current uni Sims (still one home in the save) |
+| Brindleton Bay | Tail’s End Apartments | 4 | Lynxes in 1 |
+| Del Sol Valley | The Inner Circle | 4 | Kalani 1, Huntington 2, Patel 3, Richards 4 (no landlord) |
+| Del Sol Valley | Upland Trailer Park | 4 | Eggleston 1, Martin 2, Holland 3, Johnny Zest 4 (no landlord; she’ll look again later) |
 | StrangerVille | Slip 42 | 2 | Empty |
-| Britechester | Spring Steppes | 3 | Elderberry own it, Pleasant live there too (14 Oct) |
-| Evergreen Harbor | Rockridge Springs | 3 | Empty |
-| Evergreen Harbor | Abandoned Views | ? (not finished, 14 Oct) | Henley |
-| Henford-on-Bagley | 3 Cobblebottom Street | 2 | Moody & McMillan (own, live there) + tenant Cecilia Kang "A New Start" |
-| San Sequoia | Manzanita Terrace | ? (3 per her Gallery text) | Robles own |
-| San Sequoia | Sequoia Cottage | 2 (14 Oct) | Lovejoy; tenants Luna-Sullivan |
-| Tomarang | Taka Soi 15 | 2 (14 Oct) | Cahyaputri (own) |
-| Tomarang | Isda Riverfront | 2 | Cadberry own; tenant Rochana |
-| Tomarang | Sungai Point | 3 | Linh-Sadya (11A) and Linh (11B), both renting (19 Oct) |
-| Ravenwood | Specter Row (Moppy Manor) | ? (not finished, 14 Oct) | Specters' home + tenants |
+| Britechester | Spring Steppes | 3 | Elderberrys 1 (landlords), unit 2 empty, Pleasant twins 3 (22 Oct) |
+| Evergreen Harbor | Rockridge Springs | 3 | Greenburgs 1 (landlords), 2 and 3 empty |
+| Evergreen Harbor | Abandoned Views | ? (not finished) | Henley |
+| Henford-on-Bagley | 3 Cobblebottom Street | 2 | Cecilia Kang 3A, Moody & McMillan 3B (landlords) |
+| Copperdale | Prescott Boarding House | 2 | Nerdy Girls 1, Nerdy Boys 2 (no landlord) |
+| Copperdale | Lakeview Boarding House | 2 | Sporty Girls 1, Sporty Boys 2 (no landlord) |
+| San Sequoia | Manzanita Terrace | 3 | Robles own (live at Robles Point); all 3 empty |
+| San Sequoia | Sequoia Cottage | 2 | Lovejoys 1 (landlords), Luna-Sullivans 2 (until she builds it) |
+| Tomarang | Taka Soi 15 | 2 | Cahyaputris 09 (landlords), 08 empty |
+| Tomarang | Isda Riverfront | 2 | Cadberrys 1 (landlords; which Cadberrys is hers, later), Rochanas 2 |
+| Tomarang | Sungai Point | 3 | Linh-Sadyas 11A, Thi Linh 11B, 11C empty (no landlord) |
+| Ravenwood | Specter Row | ? (not finished) | Specters’ home + tenants |
 | Nordhaven | Old Torget House | 3 | Empty |
-| Del Sol Valley | Upland Trailer Park | 4 | Eclectic Arts (StrangerVille's 3 friends, a trailer each; she may split them into 3 households) + Johnny Zest in the 4th (16 Oct) |
-| Ondarion | Casa Do Corsário | 2 (her call, 19 Oct) | Aloisio Romualdo own |
-| Nordhaven | ~~Lighthouse Lookout~~ | no longer a rental: the Library since 15 Oct | – |
+| Ondarion | Casa Do Corsário | 2 | Aloisio Romualdo 1 (landlord), 2 empty (still one home in the save) |
 
 - [x] Rental layout picked (16 Oct): **4**, the front photo with a circle per unit, “Residential Rental · N units” badge, and under the card each household with a house icon and its unit (landlord marked), then “N let, N free” (the landlord’s own unit isn’t counted as let). Lot pages have a units table. Only the landlord is marked, “(landlord)”, on the card list, the circles and the table; tenants aren’t marked. Apartment buildings are one card with their front photo and a circle per apartment (an inside shot until there are outside screenshots). The other trial layouts and the switch are gone.
 - [x] Household names on cards open the household (houses, rentals, apartments); apartment buildings show the same household list as rentals, with each flat’s number, and the card itself doesn’t open (her choice): the circles and household names do (16 Oct)
@@ -72,7 +72,7 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
 - [x] [Jemma] Neighbourhood page banners now zoom to the neighbourhood’s part of the world map (16 Oct, her idea; maps re-extracted at full size so it stays sharp). Some may look worse than the whole map: name any to put back (17 Oct review in §6d)
 - [x] Rio Verde with six households: she looked with the “Pretend Rio Verde is full” tick box; box removed (16 Oct)
 - [ ] [Jemma] Photo tabs per unit (layout 4): for every rental once it has screenshots of each unit (16 Oct, her view; Rio Verde is the only one so far)
-- [ ] [Jemma] Decide each rental's households unit by unit, and landlords for the 17 rentals without one
+- [x] [Jemma] Decide each rental's households unit by unit, and landlords: walked through 21–22 Oct (table above); left for later: Upland Trailer Park, Sequoia Cottage (when built), Isda Riverfront, Rio Verde
 - [ ] [Jemma] A "Rental units" tab in World Plans (World · Rental · Unit · Beds · Baths · Household · Landlord)? She was "not sure yet, discuss more"
 - [x] Unit counts show as "Residential Rental · 4 units" on cards and lot pages (her choice, 16 Oct; the Stats sheet keeps her "(4)")
 - [x] Unit counts confirmed 14 Oct: Taka Soi 15 = 2, Sequoia Cottage = 2, Manzanita Terrace = 3; the save matches the plan for Rio Verde 6, Fern Park Flats 5, Tail's End 4, Inner Circle 4, Upland Trailer Park 4, Old Torget House 3
@@ -122,7 +122,7 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
   - Larry's Lagoon "Foxbury Commons" is already official. Also already official: Sixam, Police Station, Hospital, Ancient Ruins, Island Bluff, High School, Auditorium, Custom Venue, Netherworld Department, Community Market, Backroom
 - [ ] [Jemma] Later: check the small business lot types (15 Oct). It must stay obvious a business is run from the lot, not just a home. "Small Business Residential" (6 lots: The Quarry Building, Koffieboon, Fisherman's Wharf, Canalside Daycare, Terra-Potta, Spilled Neon) is her own label (the game has Residential with a business registered); "Small Business" (3), "Small Business/Bar" and "Small Business (Museum & Acting Classes)" are "Small Business Venue" in the game
 - [x] 21 Oct, her call: Windenburg's Special Lots group is gone; each lot joins the neighbourhood it sits in (Von-Haunt Estate → Windslar, Ancient Ruins → Olde Platz, The Bluffs → The Crumbling Isle). Copy into World Plans: move the three rows into those neighbourhoods. The other worlds' Secret Lots groups: to look at separately.
-- [ ] [Jemma] Later: Magnolia Promenade's "Secret Lots" group (Police Station, FutureSim Labs, Willow Creek Hospital and Sixam): keep for now (15 Oct); maybe regroup later. Some special groups have no description
+- [ ] [Jemma] (22 Oct overnight: keep it, as the other worlds' special groups; these lots are separate places in the game, not part of a neighbourhood; Sixam could get its own group; research/special-lot-groups.md) Later: Magnolia Promenade's "Secret Lots" group (Police Station, FutureSim Labs, Willow Creek Hospital and Sixam): keep for now (15 Oct); maybe regroup later. Some special groups have no description
 - [x] Brindleton Boathouse (Sporting Space) and 2-4-3 Wakabamori: empty for now (14 Oct)
 - [ ] [Jemma] Paradise Stables (Gibbi Point): residents "To be decided" (15 Oct: still deciding)
 - [ ] [Jemma] LaSuli Point (Copperdale, Plumbite Cove, 20×15): park or cemetery? Tagged "Park/Cemetery" for now (15 Oct; no longer the restaurant, so Copperdale has no restaurant)
@@ -224,7 +224,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [ ] [Jemma] Romeo has no relatives in the Sims 4. Should her recreated Montys follow the Sims 2 tree (Patrizio and Isabella as grandparents, Mercutio his brother, Antonio and Bianca uncle and aunt, Beatrice and Benedick cousins)?
 - [ ] [Jemma] Dynasties: keep the game’s heads (Juliette heads the Montys in the game), or do the Renaissance Road Montys hold the Monty dynasty, with Romeo and Juliette outcasts of both? Was her save started after Royalty & Legacy (the Goth and Landgraab dynasties need a newer save)?
 - [ ] [Jemma] Who’s who in her plan: are the Specters (Havisham House), Curious (Granada Place) and Smiths (Sultry Springside) Maxis’s Sims 2 families from the Gallery (then she has two Olive Specters)? What does “*WithUpdates*” mean? The Broke household at Crick Cabana: hers, or Dustin Broke? Is Santiago Ojo related to Miko Ojo? Who is the Kennedy in “Bro & Kennedy”? Does “My Celebs” include any of the game’s celebrities? Is BFF the Willow Creek trio? Is “Rochana/Caberry” meant to be Cadberry?
-- [ ] [Jemma] Relatives that only exist on the Gallery: Iggy done 19 Oct (her call: the Pancakes are EA’s version with toddler Iggy and his bio). Daniel and Mary-Sue Pleasant added to the twins’ tree 19 Oct (shown as “On EA’s Gallery”, no household). Still open: others (Sebastian Michaelson, Merrilyn Ralston…)
+- [ ] [Jemma] Relatives that only exist on the Gallery: Iggy done 19 Oct (her call: the Pancakes are EA’s version with toddler Iggy and his bio). Daniel and Mary-Sue Pleasant: own Proprietor’s Square, Windenburg (22 Oct). Still open: others (Sebastian Michaelson, Merrilyn Ralston…)
 - [x] [Jemma] 22 Oct, her call: Daniel and Mary-Sue Pleasant own Proprietor’s Square (Windenburg, Olde Platz), from Maxis’s Gallery upload (traits, aspirations, bio); in the updated World Plans copy. Was: Daniel and Mary-Sue Pleasant: give them a household somewhere? (Download Maxis’s Gallery upload; her call, 19 Oct)
 - Cross-world links worth showing (from the game): Agnes Crumplebottom is Mortimer Goth’s aunt; Lily Zhu is the Vatores’ cousin; Skip Broke is Dustin Broke’s father; Enzo Alto is Holly Alto’s cousin; Arnessa Thebe is Consort Capp’s cousin; the Gomes family shares an ancestor with the Goths. Her moves add more (Juliette Monty, now in Tartosa, is Tybalt Capp’s sister)
 
@@ -248,7 +248,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 ### Occults (research/occults.md; 19 Oct decision note: research/decisions/occults.md)
 - [ ] [Jemma] Nothing in her plan breaks the game. Care points: Specter Row can’t be both a rental and a Haunted House (already open above); Henford’s fairy area probably needs “Limit Fairies to Innisgreen” off, and Cordelia’s Secret Cottage has no free trait slot for Fairy Passage; the Ravenwood Wedding Hall may still have the old manor’s On Hallowed Grounds (keep or remove?)
 - [ ] [Jemma] Her hints, to confirm: are the Tiquelles spellcasters, with Mid-NoWhere as their portal to the Magic Realm? Hallow Slough a Haunted House, or On Hallowed Grounds? 18 Culpepper House Spooky? If the Sultry Springside Smiths are Maxis’s Gallery family, Pollination Tech 9 is her save’s only alien
-- [ ] [Jemma] Heart Consort Capp and the four Sulani mermaids so the game never deletes them? Later, if she buys Vampires or Werewolves: keep the Grimtooth bunker, leave the garlic out of Garliclauter, keep Widowshild a home
+- [ ] [Jemma] (22 Oct: the heart is real, “Move into My Households”; hearted households are never culled; research/game-options.md) Heart Consort Capp and the four Sulani mermaids so the game never deletes them? Later, if she buys Vampires or Werewolves: keep the Grimtooth bunker, leave the garlic out of Garliclauter, keep Widowshild a home
 - [x] 19 Oct, her picks: each life state its own icon (spellcaster cauldron, vampire bat, werewolf moon, ghost, alien, fairy butterfly, Plant Sim plant, Servo robot head); ghosts show their cause of death; secret society an old book. Mermaid: trident (Tabler), her pick 19 Oct (no line-icon set has a real mermaid). Was: Showing occults: a life-state pill plus a born or turned line, ghosts shown in their household and generation, faded for late Sims (suggested); or a pill only; or a save-wide Occults page later? Trailer lore (Vlad turned Lilith…) shown with an “In the game: not linked” note, or only what her save says? Icons OK (droplet for vampires, moon, wand, sparkles, shell, orbit, ghost)?
 
 ### Festivals and events (19 Oct decision note: research/decisions/whats-on.md; research/festivals-calendar.md; prototype: for-jemma/prototypes/calendar/index.html)
@@ -287,12 +287,12 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 ### Townies and NPC roles (research/townies-and-roles.md)
 - [ ] [Jemma] Moonwood Mill Library: settle it as a Library, not a Backroom? As a Backroom it would get no librarian by day and no bartender by night (the game has no Moonwood version of either), and Wolfgang Wilder loses his job
 - [x] [Jemma] 1 Cobblebottom Street tea room: the Crumplebottoms can’t run it cleanly (their household is hidden, and Agnes loses her village role once in a household). Her own Sim or a Henford household with no village job instead? — 19 Oct: settled as a Small Business Residential, someone living there runs it (household and business to pick)
-- [ ] [Jemma] In-game settings: Neighbourhood Stories off, or on with “Move In” and “Move Out” unticked for Other Households (so the game doesn’t fill her empty homes)? Raise Maximum Sim Count and heart her planned households (homeless premades are culled first)? Turn off ageing for unplayed Sims (so young role Sims like Eloise Hiddlestix don’t age out)?
-- [ ] [Jemma] Owners who live away from their rental (the Robles at Manzanita Terrace, the Lovejoys at Sequoia Cottage, Rochana/Caberry at Isda Riverfront) lose it if merged into another household elsewhere: merge the other household into theirs instead
+- [ ] [Jemma] (22 Oct: researched for her new save, with exact menu names and a table of what to set: research/game-options.md; on her in-game checklist) In-game settings: Neighbourhood Stories off, or on with “Move In” and “Move Out” unticked for Other Households (so the game doesn’t fill her empty homes)? Raise Maximum Sim Count and heart her planned households (homeless premades are culled first)? Turn off ageing for unplayed Sims (so young role Sims like Eloise Hiddlestix don’t age out)?
+- [ ] [Jemma] Owners who live away from their rental (the Robles at Manzanita Terrace, the Kirklands at Fern Park Flats and Midtown Meadows; 22 Oct: the Lovejoys and the Cadberrys now live in their own rentals) lose it if merged into another household elsewhere: merge the other household into theirs instead
 - [x] Corrected research/worlds/gibbi-point.md: Laxmi and Raheel Kunal are homeless premade townies (17 Oct)
 
 ### Eco Lifestyle and community spaces (research/eco-and-community-spaces.md)
-- [ ] [Jemma] In her play save: turn off “Enable NPC Voting”? With it on, neighbours vote by themselves each week and random action plans pass (e.g. fines for using too much power)
+- [ ] [Jemma] (in research/game-options.md and the checklist, 22 Oct) In her play save: turn off “Enable NPC Voting”? With it on, neighbours vote by themselves each week and random action plans pass (e.g. fines for using too much power)
 - [ ] [Jemma] (21 Oct: Admiral’s Wreckage is fine: all four Gallery uploads are Community Space versions; only the old Building save had it Residential) In game: Admiral’s Wreckage was Residential in her save on 14 Oct; set it back to Community Space. Which version should each Community Space be (it only changes when a resident of that neighbourhood votes)? Admiral’s Wreckage and The Old Dockyard each have just one household that can vote
 - [ ] [Jemma] Port Promise starts fully industrial (the game’s clean-up story) but neither Knox nor the Greenburgs live there to vote for it: another reason to give Mary and Blossom The Portsmouth Promenade as a home (open above)? Which Evergreen Harbor development plans in each neighbourhood? The Old Dockyard: Eco Lot in place of Off-the-Grid? Bess Sterling keeps her Civil Designer job alongside the business? (Its tasks need a Community Space: only The Old Dockyard is left in Evergreen Harbor)
 
@@ -333,7 +333,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [x] [Jemma] 19 Oct, “fine for now, I’ll look into more later”: the Lynxes in Tail’s End 3, the Pleasants in Spring Steppes 2, Cecilia Kang in 3A and Moody & McMillan in 3B (new lot field residentsUnit); Upland stays Eclectic Arts in trailer 1 (one household can’t fill three) and Johnny Zest in 4. Was: Suggested fits: Upland units 1–3 the Eclectic Arts, 4 Johnny Zest; Tail’s End 3 (Cat Hangout) Catarina Lynx; Spring Steppes 1 Elderberry, 2 the Pleasant twins; 3 Cobblebottom 3A Cecilia Kang (Cat Hangout), 3B Moody & McMillan (Chef’s Kitchen). OK?
 - [x] [Jemma] 19 Oct, her call: split, one household per Sim and a flat each (BFF: Scott, Lee, Holiday at Fern Park 1–3; Roomies: Huntington, Kalani, Richards, Patel at Inner Circle 1–4; Eclectic Arts: Eggleston, Martin, Holland at Upland 1–3, Johnny Zest 4). Each keeps the group’s EA bio for now. Was: BFF, the Roomies and the Eclectic Arts don’t fit one flat each (the flats are one-bed): split them into separate households, or keep each together?
 - [ ] [Jemma] Empty units at Rockridge Springs, Old Torget House, Manzanita Terrace and Slip 42: to be filled (19 Oct), with Sims who need homes or new ones she makes; decide later
-- [ ] [Jemma] In game: look round every rental and swap who lives in which unit where another fits better (19 Oct; the site’s unit picks are “fine for now”).
+- [x] [Jemma] In game: look round every rental and swap who lives in which unit where another fits better (19 Oct). Done 21–22 Oct except Upland, Sequoia Cottage, Isda Riverfront and Rio Verde (see the checklist).
 - [ ] [Jemma] In game (optional): most rentals keep traits, and bedroom/bathroom counts, only on unit 1; give units 2+ their own. Rippling Flats, Specter Row and Casa do Corsário are still one home in the save
 
 ### Undecided lots (research/undecided-lots.md; options and pros/cons for each)
@@ -342,13 +342,13 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [ ] [Jemma] Specter Row: a 2-unit Residential Rental with On Hallowed Ground on both (suggested), or a Haunted House?
 - [x] [Jemma] 1 Cobblebottom Street: a Small Business Residential tea room (owner idea: the Crumplebottom cousins, to check in game), or a Vacation Rental? — 19 Oct: Small Business Residential, owner to pick
 - [ ] [Jemma] Paradise Stables: a new horse family of hers running Riding Stables (Small Business Residential)?
-- [ ] [Jemma] Owners: the Izadi-Gomes ghosts for Mystic Crossroads, the Landgraabs for Magnolia Mall, Judith Ward for Plumbob Pictures Museum?
+- [ ] [Jemma] Owners: the Izadi-Gomes ghosts for Mystic Crossroads, Judith Ward for Plumbob Pictures Museum? (Magnolia Mall: the Kirklands own it since 19 Oct)
 - [x] [Jemma] 19 Oct: Casa do Corsário 2 units; The Old Clocktower a Backroom (convert it in game); Hay Hill Landing “Residential (Farm)”.
 
 ### Small business lots (research/small-business-check.md)
 - [x] [Jemma] 19 Oct, her call: lots use the game’s two names, “Small Business Residential” (owners live there) and “Small Business Venue” (nobody lives there; 8 renamed, her bracket notes kept). Was: “Small Business Residential” is the game’s own name after all. Rename plain “Small Business” to the game’s “Small Business Venue”? Add a bracket note of what each sells?
 - [x] [Jemma] 19 Oct, her call: Mary and Blossom Greenburg own Rockridge Springs and live in unit 1, letting the other two (to be filled); the Promenade stays their Small Business Venue. Was: The Portsmouth Promenade is a venue lot, so Mary and Blossom Greenburg have no home
-- [ ] [Jemma] Later (19 Oct): no owner named yet: The Llama Picturehouse (or make it a Bar), Plumbob Pictures Museum, Canalside Daycare. Greenwood Hamlet Residence has a venue type but residents listed
+- [ ] [Jemma] Later (19 Oct): no owner named yet: The Llama Picturehouse (or make it a Bar), Plumbob Pictures Museum, Canalside Daycare. 22 Oct overnight ideas (research/owners-and-pleasants.md): the LeBlancs for the Picturehouse (it can also stay a Bar with no owner), Judith Ward for the museum, the Koopmans’ grown-up daughter or the Munches for the daycare. Greenwood Hamlet Residence has a venue type but residents listed
 - [x] [Jemma] Venue lots: no “Run by” (her call, 19 Oct): they say “Owned by”, the same as vet clinics and every other owned lot.
 
 ### What to build next (research/build-priorities.md)
