@@ -195,7 +195,7 @@ window.ADMIN = {
 {
 "section": "New save fixes (from Claude's checks, 23 Oct)",
 "world": "",
-"text": "**Do:** Check Neighbourhood Stories is on with your rules: a population switch in the save reads off, which may be it."
+"text": "**Do:** Allow Automatic Breakups and Enable Dynasty Prestige Decay are still on in the new save; your picks are off."
 },
 {
 "section": "New save fixes (from Claude's checks, 23 Oct)",
@@ -1267,9 +1267,10 @@ window.ADMIN = {
 }
 ],
 "options": [
-"Season Length: still the game's 7 days; your pick is 28 days",
+"Season Length: still the game's 7 days; your pick is 28 days (set it before the holidays)",
 "Maximum Sim Count: 150; your pick is Unlimited (or the most your PC copes with)",
-"a population switch reads off (may be Neighbourhood Stories: check it's on, with your rules)",
+"Allow Automatic Breakups is on; your pick is off",
+"Enable Dynasty Prestige Decay is on; your pick is off",
 "holidays: still the game's own calendar (checklist step 3)"
 ],
 "worlds": [

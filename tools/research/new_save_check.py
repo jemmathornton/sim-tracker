@@ -305,13 +305,16 @@ def main():
                     e = {"world": wn, "lot": r['name'], "household": h.get('name') or '?', "goes": goes}
                     if e not in out['ahead']: out['ahead'].append(e)
     # game options against her picks (for-jemma/new-save-checklist.md step 2; research/game-options.md)
+    # a setting left at the game's default isn't written in the save (research/save-game-options.md): missing = default
     o = OPTIONS; opt = []
-    if str(o.get('season_length', '')).upper() not in ('SEASON_LENGTH_28', '3', 'FOUR_WEEKS') and 'season_length' not in o: opt.append("Season Length: still the game's 7 days; your pick is 28 days")
-    elif 'season_length' in o: opt.append(f"Season Length reads {o['season_length']} (check it's 28 days)")
-    if (o.get('max_player_population') or 0) and o.get('max_player_population') < 200: opt.append(f"Maximum Sim Count: {o['max_player_population']}; your pick is Unlimited (or the most your PC copes with)")
-    if o.get('npc_civic_voting_enabled'): opt.append("Enable NPC Voting is on; your pick is off")
-    if o.get('unplayed_aging_enabled'): opt.append("Ageing for unplayed Sims is on; your pick is off")
-    if o.get('npc_population_enabled') is False: opt.append("a population switch reads off (may be Neighbourhood Stories: check it's on, with your rules)")
+    if 'season_length' not in o: opt.append("Season Length: still the game's 7 days; your pick is 28 days (set it before the holidays)")
+    elif not re.search(r'28|FOUR|4', str(o['season_length'])): opt.append(f"Season Length reads {o['season_length']}; your pick is 28 days")
+    if (o.get('max_player_population') or 50) < 200: opt.append(f"Maximum Sim Count: {o.get('max_player_population') or 50}; your pick is Unlimited (or the most your PC copes with)")
+    if o.get('npc_civic_voting_enabled', True): opt.append("Enable NPC Voting is on; your pick is off")
+    if o.get('unplayed_aging_enabled', True): opt.append("Auto Age (Unplayed Households) is on; your pick is off")
+    if o.get('npc_autonomy_breakups_enabled', True): opt.append("Allow Automatic Breakups is on; your pick is off")
+    if o.get('dynasty_prestige_decay_enabled', True): opt.append("Enable Dynasty Prestige Decay is on; your pick is off")
+    if o.get('story_progression_effects_enabled') is False: opt.append("Enable Neighbourhood Stories is off; your pick is on, with your rules")
     if not o.get('_own_holidays'): opt.append("holidays: still the game's own calendar (checklist step 3)")
     out['options'] = opt; out['optionsRaw'] = {k: v for k, v in o.items() if not isinstance(v, (bytes, dict))}
     save(os.path.join(ROOT, 'research', 'data', 'new-save-status.json'), out)

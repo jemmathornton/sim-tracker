@@ -6,9 +6,10 @@ Made by tools/research/new_save_check.py from a copy of the save. Lots: placed /
 
 ## Game options
 
-- Season Length: still the game's 7 days; your pick is 28 days
+- Season Length: still the game's 7 days; your pick is 28 days (set it before the holidays)
 - Maximum Sim Count: 150; your pick is Unlimited (or the most your PC copes with)
-- A population switch reads off (may be Neighbourhood Stories: check it's on, with your rules)
+- Allow Automatic Breakups is on; your pick is off
+- Enable Dynasty Prestige Decay is on; your pick is off
 - Holidays: still the game's own calendar (checklist step 3)
 
 ## Willow Creek
