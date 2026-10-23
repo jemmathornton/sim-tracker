@@ -1,0 +1,1465 @@
+{
+ "_note": "The game's own lots, from the untouched save 'My Saved Game 4,376' (Slot_00001119.save, 2026-10-23): name and object count by world|lot id|plex.",
+ "lots": {
+  "Willow Creek|4267281792|0": {
+   "name": "Oakenstead",
+   "objs": 575
+  },
+  "Willow Creek|7505088|0": {
+   "name": "Cypress Terrace",
+   "objs": 657
+  },
+  "Willow Creek|571964304|0": {
+   "name": "Potters Splay",
+   "objs": 1
+  },
+  "Willow Creek|1087874032|0": {
+   "name": "Brook Bungalow",
+   "objs": 264
+  },
+  "Willow Creek|572688432|0": {
+   "name": "Rindle Rose",
+   "objs": 124
+  },
+  "Willow Creek|573143552|0": {
+   "name": "Pique Hearth",
+   "objs": 422
+  },
+  "Willow Creek|573229280|0": {
+   "name": "Riverside Roost",
+   "objs": 128
+  },
+  "Willow Creek|1989072208|0": {
+   "name": "Ophelia Villa",
+   "objs": 307
+  },
+  "Willow Creek|1073501008|0": {
+   "name": "Parkshore",
+   "objs": 324
+  },
+  "Willow Creek|1544807168|0": {
+   "name": "Hallow Slough",
+   "objs": 1
+  },
+  "Willow Creek|2085060112|0": {
+   "name": "Umbrage Manor",
+   "objs": 356
+  },
+  "Willow Creek|994677120|0": {
+   "name": "Bargain Bend",
+   "objs": 1
+  },
+  "Willow Creek|994751168|0": {
+   "name": "Streamlet Single",
+   "objs": 67
+  },
+  "Willow Creek|1064509568|0": {
+   "name": "Crick Cabana",
+   "objs": 60
+  },
+  "Willow Creek|961654864|0": {
+   "name": "Daisy Hovel",
+   "objs": 73
+  },
+  "Willow Creek|961473792|0": {
+   "name": "Garden Essence",
+   "objs": 417
+  },
+  "Willow Creek|90243216|0": {
+   "name": "Willow Creek Archive",
+   "objs": 201
+  },
+  "Willow Creek|90336000|0": {
+   "name": "Movers & Shakers",
+   "objs": 174
+  },
+  "Willow Creek|90369424|0": {
+   "name": "The Blue Velvet",
+   "objs": 182
+  },
+  "Willow Creek|90404736|0": {
+   "name": "Municipal Muses",
+   "objs": 253
+  },
+  "Willow Creek|64101728|0": {
+   "name": "Magnolia Blossom",
+   "objs": 281
+  },
+  "Oasis Springs|2880306736|0": {
+   "name": "Slipshod Mesquite",
+   "objs": 194
+  },
+  "Oasis Springs|2891968416|0": {
+   "name": "Sandtrap Flat",
+   "objs": 73
+  },
+  "Oasis Springs|1662145536|0": {
+   "name": "Agave Abode",
+   "objs": 73
+  },
+  "Oasis Springs|1662175776|0": {
+   "name": "Nookstone",
+   "objs": 46
+  },
+  "Oasis Springs|2896445168|0": {
+   "name": "Pebble Burrow",
+   "objs": 1
+  },
+  "Oasis Springs|2484376288|0": {
+   "name": "Affluista Mansion",
+   "objs": 843
+  },
+  "Oasis Springs|687165520|0": {
+   "name": "Yuma Heights",
+   "objs": 588
+  },
+  "Oasis Springs|1802450800|0": {
+   "name": "Vista Quarry",
+   "objs": 159
+  },
+  "Oasis Springs|1802486336|0": {
+   "name": "Springscape",
+   "objs": 151
+  },
+  "Oasis Springs|2984780224|0": {
+   "name": "Cacti Casa",
+   "objs": 461
+  },
+  "Oasis Springs|1802561584|0": {
+   "name": "Dusty Turf",
+   "objs": 1
+  },
+  "Oasis Springs|1802576896|0": {
+   "name": "Raffia Quinta",
+   "objs": 127
+  },
+  "Oasis Springs|1804000064|0": {
+   "name": "Rio Verde",
+   "objs": 475
+  },
+  "Oasis Springs|2860935856|0": {
+   "name": "Arid Ridge",
+   "objs": 1
+  },
+  "Oasis Springs|1804109472|0": {
+   "name": "Sultry Springside",
+   "objs": 397
+  },
+  "Oasis Springs|1804118928|0": {
+   "name": "Granada Place",
+   "objs": 305
+  },
+  "Oasis Springs|254075440|0": {
+   "name": "Rattlesnake Juice",
+   "objs": 242
+  },
+  "Oasis Springs|254110336|0": {
+   "name": "The Futures Past",
+   "objs": 236
+  },
+  "Oasis Springs|254175856|0": {
+   "name": "Burners & Builders",
+   "objs": 209
+  },
+  "Oasis Springs|254126448|0": {
+   "name": "The Solar Flare",
+   "objs": 235
+  },
+  "Oasis Springs|89245504|0": {
+   "name": "Desert Bloom",
+   "objs": 248
+  },
+  "Sylvan Glade|1001644480|0": {
+   "name": "Sylvan Glade",
+   "objs": 1
+  },
+  "Forgotten Grotto|1733679520|0": {
+   "name": "Forgotten Grotto",
+   "objs": 0
+  },
+  "Granite Falls|3073376260|0": {
+   "name": "Lakeside Retreat",
+   "objs": 399
+  },
+  "Granite Falls|3075014661|0": {
+   "name": "Forest Hideaway",
+   "objs": 302
+  },
+  "Granite Falls|1942880262|0": {
+   "name": "Riverside Retreat",
+   "objs": 146
+  },
+  "Granite Falls|1885929476|0": {
+   "name": "Green Getaway",
+   "objs": 207
+  },
+  "Granite Falls|2359099399|0": {
+   "name": "Campground",
+   "objs": 83
+  },
+  "Granite Falls|1554644996|0": {
+   "name": "Granite Falls Forest",
+   "objs": 413
+  },
+  "Granite Falls|1958215685|0": {
+   "name": "Hermit's House",
+   "objs": 236
+  },
+  "Office Site|163840004|0": {
+   "name": "Police Station",
+   "objs": 334
+  },
+  "Office Site|257228804|0": {
+   "name": "FutureSim Labs",
+   "objs": 488
+  },
+  "Magnolia Promenade|1592328195|0": {
+   "name": "Paddywack's Emporium",
+   "objs": 230
+  },
+  "Magnolia Promenade|1593901060|0": {
+   "name": "JF&S Clothiers",
+   "objs": 272
+  },
+  "Magnolia Promenade|1597833223|0": {
+   "name": "The Roadstead",
+   "objs": 270
+  },
+  "Magnolia Promenade|1603600392|0": {
+   "name": "Preeminent Domain",
+   "objs": 0
+  },
+  "|720306180|0": {
+   "name": "Sixam",
+   "objs": 28
+  },
+  "Office Site|162791427|0": {
+   "name": "Willow Creek Hospital",
+   "objs": 368
+  },
+  "Newcrest|3073835011|0": {
+   "name": "Optimist's Outlook",
+   "objs": 0
+  },
+  "Newcrest|3461873668|0": {
+   "name": "Hillside Highlands",
+   "objs": 0
+  },
+  "Newcrest|3469606917|0": {
+   "name": "Civic Cliffs",
+   "objs": 0
+  },
+  "Newcrest|3477340166|0": {
+   "name": "Cookout Lookout",
+   "objs": 0
+  },
+  "Newcrest|3482058759|0": {
+   "name": "Sandy Run",
+   "objs": 0
+  },
+  "Newcrest|1636761611|0": {
+   "name": "Rippling Flats",
+   "objs": 0
+  },
+  "Newcrest|1648099341|0": {
+   "name": "Twin Oracle Point",
+   "objs": 0
+  },
+  "Newcrest|1568800773|0": {
+   "name": "Tranquil Crescent",
+   "objs": 0
+  },
+  "Newcrest|1564934148|0": {
+   "name": "Avarice Acres",
+   "objs": 0
+  },
+  "Newcrest|2903179269|0": {
+   "name": "Asphalt Abodes",
+   "objs": 0
+  },
+  "Newcrest|3154640904|0": {
+   "name": "Comfy Cubby",
+   "objs": 0
+  },
+  "Newcrest|3137142788|0": {
+   "name": "Fern Park",
+   "objs": 0
+  },
+  "Newcrest|3149332487|0": {
+   "name": "Oak Alcove",
+   "objs": 0
+  },
+  "Newcrest|3142582277|0": {
+   "name": "Beech Byway",
+   "objs": 0
+  },
+  "Newcrest|3146711046|0": {
+   "name": "Midtown Meadows",
+   "objs": 0
+  },
+  "Windenburg|1871314947|0": {
+   "name": "Cottage Am See",
+   "objs": 126
+  },
+  "Windenburg|2057895943|0": {
+   "name": "Dresden House",
+   "objs": 298
+  },
+  "Windenburg|2061565955|0": {
+   "name": "The Shrieking Llama",
+   "objs": 189
+  },
+  "Windenburg|2062221320|0": {
+   "name": "The Summer Home",
+   "objs": 0
+  },
+  "Windenburg|2046492677|0": {
+   "name": "Rustic Residence",
+   "objs": 56
+  },
+  "Windenburg|1975058435|0": {
+   "name": "Coorinberg Cottage",
+   "objs": 209
+  },
+  "Windenburg|1993998339|0": {
+   "name": "Harbor Quarter Gym",
+   "objs": 355
+  },
+  "Windenburg|1995309060|0": {
+   "name": "Hare and Hedgehog",
+   "objs": 237
+  },
+  "Windenburg|4125622276|0": {
+   "name": "Hare Square",
+   "objs": 134
+  },
+  "Windenburg|504889347|0": {
+   "name": "Bathe de Rill",
+   "objs": 360
+  },
+  "Windenburg|4137877509|0": {
+   "name": "Discotheque Pan Europa",
+   "objs": 277
+  },
+  "Windenburg|2463563779|0": {
+   "name": "Von-Windenburg Estate",
+   "objs": 402
+  },
+  "Windenburg|2478374916|0": {
+   "name": "The Lighthouse",
+   "objs": 392
+  },
+  "Windenburg|2506358787|0": {
+   "name": "Mid-Nowhere",
+   "objs": 1
+  },
+  "Windenburg|2514681861|0": {
+   "name": "Pier Palace",
+   "objs": 288
+  },
+  "Windenburg|3377201155|0": {
+   "name": "Dock Den",
+   "objs": 273
+  },
+  "Windenburg|3304849411|0": {
+   "name": "South Square Coffee",
+   "objs": 193
+  },
+  "Windenburg|3329884165|0": {
+   "name": "Quad Manor",
+   "objs": 146
+  },
+  "Windenburg|3407880|0": {
+   "name": "Proprietor’s Square",
+   "objs": 42
+  },
+  "Windenburg|3318415364|0": {
+   "name": "The Narwhal Arms",
+   "objs": 149
+  },
+  "Windenburg|4282253317|0": {
+   "name": "Waterlock Redoubt",
+   "objs": 162
+  },
+  "Windenburg|162529387|0": {
+   "name": "Factory One",
+   "objs": 247
+  },
+  "Windenburg|64094310|0": {
+   "name": "Havisham House",
+   "objs": 62
+  },
+  "Windenburg|3771138057|0": {
+   "name": "Old Quarter Inn",
+   "objs": 195
+  },
+  "Windenburg|1391722499|0": {
+   "name": "Ancient Ruins",
+   "objs": 20
+  },
+  "Windenburg|674955270|0": {
+   "name": "The Bluffs",
+   "objs": 285
+  },
+  "Windenburg|996802565|0": {
+   "name": "Von Haunt Estate",
+   "objs": 407
+  },
+  "San Myshuno|1564016770|0": {
+   "name": "The Old Salt House",
+   "objs": 180
+  },
+  "San Myshuno|195756036|1": {
+   "name": "20 Culpepper House",
+   "objs": 335
+  },
+  "San Myshuno|195756036|2": {
+   "name": "19 Culpepper House",
+   "objs": 0
+  },
+  "San Myshuno|195756036|3": {
+   "name": "17 Culpepper House",
+   "objs": 0
+  },
+  "San Myshuno|195756036|4": {
+   "name": "18 Culpepper House",
+   "objs": 0
+  },
+  "San Myshuno|1506541571|2": {
+   "name": "2A Jasmine Suites",
+   "objs": 0
+  },
+  "San Myshuno|1506541571|1": {
+   "name": "2B Jasmine Suites",
+   "objs": 142
+  },
+  "San Myshuno|727449603|0": {
+   "name": "Waterside Warble",
+   "objs": 278
+  },
+  "San Myshuno|2521038852|100": {
+   "name": "888 Spire Apartments",
+   "objs": 319
+  },
+  "San Myshuno|2522808325|200": {
+   "name": "IX Landgraab",
+   "objs": 0
+  },
+  "San Myshuno|2522808325|100": {
+   "name": "VIII Landgraab",
+   "objs": 491
+  },
+  "San Myshuno|2517434371|200": {
+   "name": "1010 Alto Apartments",
+   "objs": 0
+  },
+  "San Myshuno|2517434371|100": {
+   "name": "1020 Alto Apartments",
+   "objs": 453
+  },
+  "San Myshuno|3708747783|1": {
+   "name": "Stargazer Lounge",
+   "objs": 290
+  },
+  "San Myshuno|1521615080|0": {
+   "name": "Skye Fitness",
+   "objs": 215
+  },
+  "San Myshuno|1464926213|0": {
+   "name": "Planet Honey Pop!",
+   "objs": 292
+  },
+  "San Myshuno|1463943171|1": {
+   "name": "1310 21 Chic Street",
+   "objs": 241
+  },
+  "San Myshuno|1463943171|2": {
+   "name": "1312 21 Chic Street",
+   "objs": 0
+  },
+  "San Myshuno|1463943171|3": {
+   "name": "1313 21 Chic Street",
+   "objs": 0
+  },
+  "San Myshuno|1464401924|2": {
+   "name": "702 ZenView",
+   "objs": 0
+  },
+  "San Myshuno|1464401924|1": {
+   "name": "701 ZenView",
+   "objs": 309
+  },
+  "San Myshuno|2671312906|1": {
+   "name": "1 Torendi Tower Penthouse",
+   "objs": 442
+  },
+  "San Myshuno|1706622979|0": {
+   "name": "Casbah Gallery",
+   "objs": 372
+  },
+  "San Myshuno|1712586756|122": {
+   "name": "122 Hakim House",
+   "objs": 367
+  },
+  "San Myshuno|1712586756|121": {
+   "name": "121 Hakim House",
+   "objs": 0
+  },
+  "San Myshuno|985726979|10": {
+   "name": "910 Medina Studios",
+   "objs": 0
+  },
+  "San Myshuno|985726979|30": {
+   "name": "930 Medina Studios",
+   "objs": 294
+  },
+  "San Myshuno|985726979|20": {
+   "name": "920 Medina Studios",
+   "objs": 0
+  },
+  "San Myshuno|1729429511|1": {
+   "name": "Fountainview Penthouse",
+   "objs": 184
+  },
+  "San Myshuno|653328387|0": {
+   "name": "Myshuno Meadows",
+   "objs": 571
+  },
+  "Brindleton Bay|422707207|0": {
+   "name": "Ragdoll Refurb",
+   "objs": 182
+  },
+  "Brindleton Bay|390791172|0": {
+   "name": "Salty Paws Saloon",
+   "objs": 169
+  },
+  "Brindleton Bay|1430847506|0": {
+   "name": "Club Calico",
+   "objs": 315
+  },
+  "Brindleton Bay|397672454|0": {
+   "name": "Catscratch Cottage",
+   "objs": 190
+  },
+  "Brindleton Bay|1435500562|0": {
+   "name": "Tail's End",
+   "objs": 1
+  },
+  "Brindleton Bay|1187053577|0": {
+   "name": "Bedlington Boathouse",
+   "objs": 63
+  },
+  "Brindleton Bay|2064580676|0": {
+   "name": "Hound's Head",
+   "objs": 494
+  },
+  "Brindleton Bay|1162739717|0": {
+   "name": "Hindquarter Hideaway",
+   "objs": 1
+  },
+  "Brindleton Bay|3421044741|0": {
+   "name": "Chateau Frise",
+   "objs": 453
+  },
+  "Brindleton Bay|1192493066|0": {
+   "name": "Dachshund's Creek",
+   "objs": 1
+  },
+  "Brindleton Bay|1287389190|0": {
+   "name": "Deadgrass Discoveries",
+   "objs": 235
+  },
+  "Brindleton Bay|2473787395|0": {
+   "name": "It's A Good House",
+   "objs": 238
+  },
+  "Brindleton Bay|2886467601|0": {
+   "name": "Domus Familiaris",
+   "objs": 138
+  },
+  "Brindleton Bay|3041853450|0": {
+   "name": "Sporting Space",
+   "objs": 4
+  },
+  "Brindleton Bay|587399173|0": {
+   "name": "Brindleton Pawspital",
+   "objs": 389
+  },
+  "Brindleton Bay|3081175056|0": {
+   "name": "Pupperstone Park",
+   "objs": 63
+  },
+  "Selvadorada|415105027|0": {
+   "name": "Cantina “El Árbol del Jaguar”",
+   "objs": 266
+  },
+  "Selvadorada|420085766|0": {
+   "name": "Hillview Hideaway",
+   "objs": 85
+  },
+  "Selvadorada|419233797|0": {
+   "name": "Selvadorada Villa",
+   "objs": 173
+  },
+  "Selvadorada|630390811|0": {
+   "name": "Alam Museum of Archaeology",
+   "objs": 274
+  },
+  "Selvadorada|3237085187|0": {
+   "name": "Belomisia Field Station",
+   "objs": 181
+  },
+  "Selvadorada|554500140|0": {
+   "name": "Jungle Bungalow",
+   "objs": 167
+  },
+  "Selvadorada|3238723589|0": {
+   "name": "Omiscan Royal Baths",
+   "objs": 274
+  },
+  "Selvadorada|1439301663|4294967295": {
+   "name": "Omiscan Temple",
+   "objs": 537
+  },
+  "Selvadorada|615252035|0": {
+   "name": "Belomisia Trailhead",
+   "objs": 102
+  },
+  "Del Sol Valley|284033049|0": {
+   "name": "Studio",
+   "objs": 223
+  },
+  "Del Sol Valley|2099838979|0": {
+   "name": "Upland Place",
+   "objs": 67
+  },
+  "Del Sol Valley|3031564292|0": {
+   "name": "Inner Circle",
+   "objs": 62
+  },
+  "Del Sol Valley|3067215877|0": {
+   "name": "Vacuous Green",
+   "objs": 33
+  },
+  "Del Sol Valley|1300824067|0": {
+   "name": "Chateau Peak",
+   "objs": 407
+  },
+  "Del Sol Valley|1556217859|0": {
+   "name": "The Ward Den",
+   "objs": 430
+  },
+  "Del Sol Valley|1642594307|0": {
+   "name": "Bailey-Moon Manor",
+   "objs": 383
+  },
+  "Del Sol Valley|562561093|0": {
+   "name": "Ward Park",
+   "objs": 59
+  },
+  "Del Sol Valley|579403848|0": {
+   "name": "Studio PBP",
+   "objs": 317
+  },
+  "Del Sol Valley|3058499610|0": {
+   "name": "Plumbob Pictures Museum",
+   "objs": 345
+  },
+  "Del Sol Valley|2311979033|0": {
+   "name": "Orchid A Go Go",
+   "objs": 422
+  },
+  "Del Sol Valley|2841378864|0": {
+   "name": "Pectoral Fitness ",
+   "objs": 652
+  },
+  "StrangerVille|2307784707|4294967295": {
+   "name": "The <font color='#000000'>██████</font> Lab",
+   "objs": 622
+  },
+  "StrangerVille|3473080362|0": {
+   "name": "Riverside Grove",
+   "objs": 114
+  },
+  "StrangerVille|523042887|0": {
+   "name": "Old Penelope",
+   "objs": 114
+  },
+  "StrangerVille|1997406236|0": {
+   "name": "Carpophagous Corner",
+   "objs": 66
+  },
+  "StrangerVille|2023096350|0": {
+   "name": "8 Bells",
+   "objs": 80
+  },
+  "StrangerVille|138674231|0": {
+   "name": "StrangerVille Information Center",
+   "objs": 84
+  },
+  "StrangerVille|3149529122|0": {
+   "name": "Slip 42",
+   "objs": 82
+  },
+  "StrangerVille|2956984352|0": {
+   "name": "Creek Corner Cove",
+   "objs": 0
+  },
+  "StrangerVille|2970615842|0": {
+   "name": "Dream Weavers Way",
+   "objs": 192
+  },
+  "StrangerVille|2962489377|0": {
+   "name": "Plateau Place",
+   "objs": 233
+  },
+  "StrangerVille|3150250019|0": {
+   "name": "Cliff Side Crest",
+   "objs": 0
+  },
+  "StrangerVille|3158048804|0": {
+   "name": "StrangerVille Overlook",
+   "objs": 291
+  },
+  "Sulani|3814129749|0": {
+   "name": "Reef Finery",
+   "objs": 142
+  },
+  "Sulani|2521301018|0": {
+   "name": "Journey's End",
+   "objs": 220
+  },
+  "Sulani|2334195731|0": {
+   "name": "Sapphire Shores",
+   "objs": 11
+  },
+  "Sulani|2165506097|0": {
+   "name": "Pier Perfection",
+   "objs": 51
+  },
+  "Sulani|3970695593|0": {
+   "name": "Sand Simoleon Beach",
+   "objs": 49
+  },
+  "Sulani|1289814031|0": {
+   "name": "Chieftain's Villa",
+   "objs": 265
+  },
+  "Sulani|316866564|0": {
+   "name": "The Sand Bar",
+   "objs": 102
+  },
+  "Sulani|2050424860|0": {
+   "name": "Lagoon Look",
+   "objs": 53
+  },
+  "Sulani|2840395894|0": {
+   "name": "Ohan’ali Beach",
+   "objs": 25
+  },
+  "Sulani|1567621127|0": {
+   "name": "Tangled Flat",
+   "objs": 45
+  },
+  "Sulani|651362343|0": {
+   "name": "Kin-Ship",
+   "objs": 117
+  },
+  "Sulani|2462318643|0": {
+   "name": "Key Point",
+   "objs": 0
+  },
+  "Sulani|80740372|0": {
+   "name": "Admiral’s Wreckage",
+   "objs": 112
+  },
+  "Sulani|4100980749|0": {
+   "name": "Caldera Camp",
+   "objs": 65
+  },
+  "Britechester|705167367|0": {
+   "name": "Darkwing House",
+   "objs": 208
+  },
+  "Britechester|3073900618|101": {
+   "name": "Wyvern Hall",
+   "objs": 216
+  },
+  "Britechester|3101884519|101": {
+   "name": "Drake Hall",
+   "objs": 218
+  },
+  "Britechester|901251075|0": {
+   "name": "Darby's Den",
+   "objs": 170
+  },
+  "Britechester|3870359634|0": {
+   "name": "Spring Steppes",
+   "objs": 217
+  },
+  "Britechester|3871342675|0": {
+   "name": "Mossy Lane",
+   "objs": 220
+  },
+  "Britechester|3872456788|0": {
+   "name": "Honeydew Fields",
+   "objs": 76
+  },
+  "Britechester|3883073621|0": {
+   "name": "Pepper's Pub",
+   "objs": 144
+  },
+  "Britechester|3868590195|0": {
+   "name": "Laurel Library",
+   "objs": 299
+  },
+  "Britechester|1849425924|0": {
+   "name": "Larry's Lagoon",
+   "objs": 235
+  },
+  "Britechester|4082434051|0": {
+   "name": "Maritime Manor",
+   "objs": 203
+  },
+  "Britechester|4231921698|101": {
+   "name": "Briny Tower",
+   "objs": 157
+  },
+  "Britechester|4276158474|101": {
+   "name": "Tidal Tower",
+   "objs": 155
+  },
+  "Glimmerbrook|1035272224|0": {
+   "name": "Brooks Bridge Borough",
+   "objs": 53
+  },
+  "Glimmerbrook|3374055458|0": {
+   "name": "Elixirs and Brews",
+   "objs": 130
+  },
+  "Glimmerbrook|3811442693|0": {
+   "name": "Rock Ridge Canyon",
+   "objs": 233
+  },
+  "Glimmerbrook|1024655366|0": {
+   "name": "Creek Side Corner",
+   "objs": 181
+  },
+  "Glimmerbrook|1040318472|0": {
+   "name": "Glimmerbrook Watch",
+   "objs": 13
+  },
+  "The Magic Realm|3019112452|0": {
+   "name": "The Magic Realm",
+   "objs": 403
+  },
+  "Evergreen Harbor|2354249731|0": {
+   "name": "The Quarry Building",
+   "objs": 585
+  },
+  "Evergreen Harbor|290455566|0": {
+   "name": "Rockridge Springs",
+   "objs": 57
+  },
+  "Evergreen Harbor|1609760816|0": {
+   "name": "Miner Mansion",
+   "objs": 216
+  },
+  "Evergreen Harbor|1651572785|102": {
+   "name": "Stonestreet Apartments #4",
+   "objs": 0
+  },
+  "Evergreen Harbor|1651572785|101": {
+   "name": "Stonestreet Apartments #3",
+   "objs": 131
+  },
+  "Evergreen Harbor|402457396|102": {
+   "name": "Pinecrest Apartments #402",
+   "objs": 0
+  },
+  "Evergreen Harbor|402457396|101": {
+   "name": "Pinecrest Apartments #404",
+   "objs": 159
+  },
+  "Evergreen Harbor|410910736|0": {
+   "name": "Sprucewood Square",
+   "objs": 497
+  },
+  "Evergreen Harbor|427491372|0": {
+   "name": "Canal Corner",
+   "objs": 65
+  },
+  "Evergreen Harbor|1302986785|0": {
+   "name": "Pigulock Manor",
+   "objs": 230
+  },
+  "Evergreen Harbor|3361079299|0": {
+   "name": "The Waterfront",
+   "objs": 536
+  },
+  "Evergreen Harbor|3845324809|0": {
+   "name": "The Shipping Views",
+   "objs": 42
+  },
+  "Evergreen Harbor|3908108304|0": {
+   "name": "The Old Mill",
+   "objs": 215
+  },
+  "Evergreen Harbor|3940614167|0": {
+   "name": "The Caboose",
+   "objs": 133
+  },
+  "Evergreen Harbor|256573450|0": {
+   "name": "The Portsmouth Promenade",
+   "objs": 175
+  },
+  "Mt. Komorebi|1831469061|0": {
+   "name": "Mt. Komorebi Peak",
+   "objs": 8
+  },
+  "Mt. Komorebi|2366832680|0": {
+   "name": "Mt. Komorebi Base Camp",
+   "objs": 5
+  },
+  "Mt. Komorebi|3718447143|0": {
+   "name": "The Croft Icefall",
+   "objs": 3
+  },
+  "Mt. Komorebi|1851654149|0": {
+   "name": "Sutefani Onsen Bathhouse",
+   "objs": 262
+  },
+  "Mt. Komorebi|3428188211|0": {
+   "name": "5-1-2 Kiyomatsu",
+   "objs": 301
+  },
+  "Mt. Komorebi|3429957684|0": {
+   "name": "5-1-1 Kiyomatsu",
+   "objs": 245
+  },
+  "Mt. Komorebi|558628916|0": {
+   "name": "Kiyomatsu Point",
+   "objs": 17
+  },
+  "Mt. Komorebi|2191917059|0": {
+   "name": "2-4-1 Wakabamori",
+   "objs": 0
+  },
+  "Mt. Komorebi|2197487620|0": {
+   "name": "2-4-3 Wakabamori",
+   "objs": 67
+  },
+  "Mt. Komorebi|2754674701|0": {
+   "name": "2-5-1 Wakabamori",
+   "objs": 418
+  },
+  "Mt. Komorebi|2226126854|0": {
+   "name": "2-4-2 Wakabamori",
+   "objs": 300
+  },
+  "Mt. Komorebi|2230845447|0": {
+   "name": "Hazakura Lounge",
+   "objs": 340
+  },
+  "Mt. Komorebi|4054450179|0": {
+   "name": "6-4-1 Hanamigawa",
+   "objs": 81
+  },
+  "Mt. Komorebi|4055105540|0": {
+   "name": "5-6-1 Shinrinyoku",
+   "objs": 192
+  },
+  "Mt. Komorebi|4055433221|0": {
+   "name": "Hanamigawa Koen",
+   "objs": 232
+  },
+  "Mt. Komorebi|4055957510|0": {
+   "name": "Izakaya Ippai",
+   "objs": 210
+  },
+  "Mt. Komorebi|4056219655|0": {
+   "name": "5-3-1 Shinrinyoku",
+   "objs": 289
+  },
+  "Henford-on-Bagley|1177419780|0": {
+   "name": "Isle of Volpe Park",
+   "objs": 203
+  },
+  "Henford-on-Bagley|1180958725|0": {
+   "name": "13 Nettle Lane",
+   "objs": 311
+  },
+  "Henford-on-Bagley|1182334983|0": {
+   "name": "14 Nettle Lane",
+   "objs": 385
+  },
+  "Henford-on-Bagley|1199570952|0": {
+   "name": "Cordelia's Secret Cottage",
+   "objs": 99
+  },
+  "Henford-on-Bagley|3885563909|0": {
+   "name": "Olde Mill Hill",
+   "objs": 799
+  },
+  "Henford-on-Bagley|3886481414|0": {
+   "name": "2 Olde Mill Lane",
+   "objs": 22
+  },
+  "Henford-on-Bagley|3886743559|0": {
+   "name": "3 Olde Mill Lane",
+   "objs": 650
+  },
+  "Henford-on-Bagley|3887071240|0": {
+   "name": "4 Olde Mill Lane",
+   "objs": 233
+  },
+  "Henford-on-Bagley|3455909904|0": {
+   "name": "The Gnome's Arms",
+   "objs": 293
+  },
+  "Henford-on-Bagley|2794127375|0": {
+   "name": "3 Cobblebottom Street",
+   "objs": 310
+  },
+  "Henford-on-Bagley|3887857669|0": {
+   "name": "5 Cobblebottom Street",
+   "objs": 92
+  },
+  "Henford-on-Bagley|3891462150|0": {
+   "name": "1 Cobblebottom Street",
+   "objs": 176
+  },
+  "Copperdale|2753298437|0": {
+   "name": "Copperdale High School",
+   "objs": 509
+  },
+  "Copperdale|225640452|0": {
+   "name": "Auditorium",
+   "objs": 574
+  },
+  "Copperdale|801898557|0": {
+   "name": "Hillside Haven",
+   "objs": 317
+  },
+  "Copperdale|3806068807|0": {
+   "name": "BridgeCreek Drive",
+   "objs": 359
+  },
+  "Copperdale|924123198|0": {
+   "name": "LaSuli Point",
+   "objs": 108
+  },
+  "Copperdale|203948095|0": {
+   "name": "Little Falls Nook",
+   "objs": 0
+  },
+  "Copperdale|4200595518|0": {
+   "name": "Totter Park",
+   "objs": 113
+  },
+  "Copperdale|635242008|0": {
+   "name": "ThrifTea",
+   "objs": 203
+  },
+  "Copperdale|2719678527|0": {
+   "name": "Lakeview Library",
+   "objs": 163
+  },
+  "Copperdale|327221333|0": {
+   "name": "Golden Peak",
+   "objs": 444
+  },
+  "Copperdale|1782185987|0": {
+   "name": "Water Tower Way",
+   "objs": 256
+  },
+  "Copperdale|2716139581|0": {
+   "name": "Town Square Terrace",
+   "objs": 78
+  },
+  "San Sequoia|2690383881|0": {
+   "name": "Celebration Center",
+   "objs": 384
+  },
+  "San Sequoia|2703097870|0": {
+   "name": "13 Acacia Avenue",
+   "objs": 315
+  },
+  "San Sequoia|2205351941|0": {
+   "name": "Parkside Place",
+   "objs": 96
+  },
+  "San Sequoia|2711814161|0": {
+   "name": "18 Celebration Way",
+   "objs": 1
+  },
+  "San Sequoia|3860398087|0": {
+   "name": "Manzanita Terrace",
+   "objs": 1
+  },
+  "San Sequoia|1359609861|0": {
+   "name": "Robles Point",
+   "objs": 377
+  },
+  "San Sequoia|3857973253|0": {
+   "name": "Anchorpoint Abode",
+   "objs": 260
+  },
+  "San Sequoia|3860004870|0": {
+   "name": "Anchorpoint Library",
+   "objs": 453
+  },
+  "San Sequoia|149028869|0": {
+   "name": "23 Eucalyptus Lane",
+   "objs": 1
+  },
+  "San Sequoia|4137287685|0": {
+   "name": "7 Eucalyptus Lane",
+   "objs": 391
+  },
+  "San Sequoia|157614088|0": {
+   "name": "Sequoia Cottage",
+   "objs": 96
+  },
+  "San Sequoia|154140678|0": {
+   "name": "36 Bayani Place",
+   "objs": 286
+  },
+  "Chestnut Ridge|4150722571|0": {
+   "name": "Palomino Junction",
+   "objs": 143
+  },
+  "Chestnut Ridge|1192034309|0": {
+   "name": "Canyon Crossing",
+   "objs": 130
+  },
+  "Chestnut Ridge|3433037927|0": {
+   "name": "Big Sky Reach",
+   "objs": 210
+  },
+  "Chestnut Ridge|2564423972|0": {
+   "name": "Red Roan Field",
+   "objs": 80
+  },
+  "Chestnut Ridge|3019636744|0": {
+   "name": "Sweet Nectar Glade",
+   "objs": 376
+  },
+  "Chestnut Ridge|3024289801|0": {
+   "name": "Biscuit's Bastion",
+   "objs": 415
+  },
+  "Chestnut Ridge|3027042314|0": {
+   "name": "Grapevine Terrace",
+   "objs": 457
+  },
+  "Chestnut Ridge|3031302155|0": {
+   "name": "Canter Cottage",
+   "objs": 135
+  },
+  "Chestnut Ridge|2316500997|0": {
+   "name": "The Cozy Corner House",
+   "objs": 100
+  },
+  "Chestnut Ridge|2324299782|0": {
+   "name": "Champion's Grove",
+   "objs": 371
+  },
+  "Chestnut Ridge|2327117831|0": {
+   "name": "The Rusty Horseshoe",
+   "objs": 231
+  },
+  "Chestnut Ridge|2330198024|0": {
+   "name": "The Oak Barrel",
+   "objs": 338
+  },
+  "Chestnut Ridge|2498166986|0": {
+   "name": "Duke's Hall",
+   "objs": 299
+  },
+  "Tomarang|645529613|0": {
+   "name": "Ro Kaya Rockside",
+   "objs": 2
+  },
+  "Tomarang|2271215623|0": {
+   "name": "ZoSul Taman Botani",
+   "objs": 233
+  },
+  "Tomarang|2238382087|0": {
+   "name": "Chee-wít Chee-waa Kanto",
+   "objs": 81
+  },
+  "Tomarang|2221211661|300": {
+   "name": "Taka Soi 15",
+   "objs": 0
+  },
+  "Tomarang|2221211661|301": {
+   "name": "09 Taka Soi 15",
+   "objs": 192
+  },
+  "Tomarang|2221211661|302": {
+   "name": "08 Taka Soi 15",
+   "objs": 0
+  },
+  "Tomarang|464846853|0": {
+   "name": "Tam Nang Sands",
+   "objs": 2
+  },
+  "Tomarang|3503751180|300": {
+   "name": "Sungai Point",
+   "objs": 0
+  },
+  "Tomarang|3503751180|301": {
+   "name": "11A Sungai Point",
+   "objs": 498
+  },
+  "Tomarang|3503751180|302": {
+   "name": "11B Sungai Point",
+   "objs": 0
+  },
+  "Tomarang|3503751180|303": {
+   "name": "11C Sungai Point",
+   "objs": 0
+  },
+  "Tomarang|3549822993|0": {
+   "name": "Hothotok Shore",
+   "objs": 184
+  },
+  "Tomarang|3481665547|0": {
+   "name": "The Screaming Gecko",
+   "objs": 162
+  },
+  "Tomarang|3577348115|0": {
+   "name": "Isda Riverfront",
+   "objs": 2
+  },
+  "Ravenwood|2050359393|0": {
+   "name": "Mystic Crossroads",
+   "objs": 0
+  },
+  "Ravenwood|1792802856|0": {
+   "name": "The Cozy Casket House",
+   "objs": 92
+  },
+  "Ravenwood|2366570552|0": {
+   "name": "Club Eternity",
+   "objs": 458
+  },
+  "Ravenwood|2178482227|0": {
+   "name": "Mourning Mist Manor",
+   "objs": 237
+  },
+  "Ravenwood|3207856134|0": {
+   "name": "HeadlessQuarters",
+   "objs": 310
+  },
+  "Ravenwood|2142634071|0": {
+   "name": "Hay Hill Landing",
+   "objs": 0
+  },
+  "Ravenwood|2463432763|0": {
+   "name": "The Final Draught",
+   "objs": 379
+  },
+  "Ravenwood|2523725892|0": {
+   "name": "Teardrop Cottage",
+   "objs": 520
+  },
+  "Ravenwood|2512977983|0": {
+   "name": "The Marigold Chateau",
+   "objs": 748
+  },
+  "Ravenwood|2219311191|0": {
+   "name": "Moppy Manor",
+   "objs": 77
+  },
+  "Ravenwood|3407872018|0": {
+   "name": "Old Ravenwood Estate",
+   "objs": 795
+  },
+  "Ravenwood|3175284742|0": {
+   "name": "Crow's Perch",
+   "objs": 88
+  },
+  "Ravenwood|3165585413|0": {
+   "name": "Specter Family Manor",
+   "objs": 369
+  },
+  "Ravenwood|3630170219|0": {
+   "name": "Eternal Hollow",
+   "objs": 550
+  },
+  "Nordhaven|430702690|0": {
+   "name": "Koffieboon",
+   "objs": 444
+  },
+  "Nordhaven|431620195|0": {
+   "name": "Old Torget House",
+   "objs": 100
+  },
+  "Nordhaven|434045029|0": {
+   "name": "Konst Modern",
+   "objs": 462
+  },
+  "Nordhaven|434896998|0": {
+   "name": "The Rouge Note",
+   "objs": 295
+  },
+  "Nordhaven|437583976|0": {
+   "name": "Fisher's Horizon",
+   "objs": 0
+  },
+  "Nordhaven|438632553|0": {
+   "name": "Comfortably Canalside",
+   "objs": 0
+  },
+  "Nordhaven|581238932|0": {
+   "name": "Spilled Neon",
+   "objs": 426
+  },
+  "Nordhaven|3993632859|0": {
+   "name": "New Harbor Park",
+   "objs": 427
+  },
+  "Nordhaven|3995074652|0": {
+   "name": "The Old Foundry",
+   "objs": 294
+  },
+  "Nordhaven|3996254301|0": {
+   "name": "Inked Inlet",
+   "objs": 0
+  },
+  "Nordhaven|3998875742|0": {
+   "name": "Lighthouse Lookout",
+   "objs": 0
+  },
+  "Nordhaven|3987996761|0": {
+   "name": "Terra-Potta",
+   "objs": 308
+  },
+  "Gibbi Point|2234187891|0": {
+   "name": "Wanderwood Wonder",
+   "objs": 275
+  },
+  "Gibbi Point|3912105993|0": {
+   "name": "Plumbird Park",
+   "objs": 200
+  },
+  "Gibbi Point|3980722193|0": {
+   "name": "Hothead Rock Hideaway",
+   "objs": 223
+  },
+  "Gibbi Point|1950482460|0": {
+   "name": "Camp Gibbi Gibbi",
+   "objs": 434
+  },
+  "Gibbi Point|2212429938|0": {
+   "name": "Miner's Manse",
+   "objs": 111
+  },
+  "Gibbi Point|1889796325|0": {
+   "name": "Fearful Fish Lounge",
+   "objs": 166
+  },
+  "Gibbi Point|2090008698|0": {
+   "name": "Love Highland",
+   "objs": 462
+  },
+  "Gibbi Point|4164288581|0": {
+   "name": "Prospector's Paradise",
+   "objs": 0
+  },
+  "Gibbi Point|1874133136|0": {
+   "name": "Crystal Cottage",
+   "objs": 347
+  },
+  "Gibbi Point|2193227887|0": {
+   "name": "Fletcher's Cottage",
+   "objs": 100
+  },
+  "Gibbi Point|2892824584|0": {
+   "name": "Revive and Thrive Retreat",
+   "objs": 417
+  },
+  "Gibbi Point|1804861450|0": {
+   "name": "Seabreeze Scenic",
+   "objs": 269
+  },
+  "Gibbi Point|1799815177|0": {
+   "name": "Jellyfish Jubilee",
+   "objs": 227
+  },
+  "Ondarion|92995691|0": {
+   "name": "La Vivace",
+   "objs": 564
+  },
+  "Ondarion|105513068|0": {
+   "name": "Giardino Del Grandioso",
+   "objs": 122
+  },
+  "Ondarion|1380384886|0": {
+   "name": "Renaissance Road",
+   "objs": 272
+  },
+  "Ondarion|2361852049|102": {
+   "name": "13 Lakeview Apartments",
+   "objs": 0
+  },
+  "Ondarion|2361852049|101": {
+   "name": "12 Lakeview Apartments",
+   "objs": 620
+  },
+  "Ondarion|4147249284|0": {
+   "name": "Bellacorde Palace",
+   "objs": 844
+  },
+  "Ondarion|3077963882|0": {
+   "name": "Dambele Palace",
+   "objs": 849
+  },
+  "Ondarion|4127850633|102": {
+   "name": "18 Bright Cliff",
+   "objs": 0
+  },
+  "Ondarion|4127850633|101": {
+   "name": "17 Bright Cliff",
+   "objs": 303
+  },
+  "Ondarion|3264217194|0": {
+   "name": "Sankofa Residence",
+   "objs": 408
+  },
+  "Ondarion|3292594283|0": {
+   "name": "Zanbira Market",
+   "objs": 327
+  },
+  "Ondarion|3176005864|0": {
+   "name": "Hardcover",
+   "objs": 272
+  },
+  "Ondarion|4110549098|0": {
+   "name": "Verdemar Palace",
+   "objs": 794
+  },
+  "Ondarion|4136960106|0": {
+   "name": "Abrantes Estate",
+   "objs": 485
+  },
+  "Ondarion|4138270827|0": {
+   "name": "Casa do Corsário",
+   "objs": 261
+  },
+  "Ondarion|4139778156|0": {
+   "name": "The Lair in the Open-Air",
+   "objs": 0
+  },
+  "Ondarion|4140892269|0": {
+   "name": "Fisherman's Hut",
+   "objs": 94
+  },
+  "Ondarion|4142006382|0": {
+   "name": "Ye Olde Voyager",
+   "objs": 356
+  }
+ }
+}
