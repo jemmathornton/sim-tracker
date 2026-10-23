@@ -21,6 +21,7 @@ Everything on the to-do list that needs the game open, grouped so you can go wor
 - ~~Newcrest Community Space's court~~ checked 21 Oct: works fine.
 
 **Magnolia Promenade**
+- Magnolia Mall: a work in progress in your Library (saved as The Roadstead, 9 Jun 2025).
 - Magnolia Mall isn't built yet: when you build it, include coffee, a wardrobe or clothes racks, and things to sabotage (for the Paragons and Renegades clubs).
 
 **Windenburg**
@@ -40,6 +41,7 @@ Everything on the to-do list that needs the game open, grouped so you can go wor
 - ~~Eco Roomies' flat~~ #404 (21 Oct).
 
 **Mt. Komorebi**
+- Kiyomatsu Point: your Library copy (19 Feb 2026, Custom Venue) may just need testing; then it can be marked built (23 Oct).
 - Base Camp and The Croft Icefall: what lot type does the game give them? (Your Building saves don't store one.)
 
 **Copperdale**
