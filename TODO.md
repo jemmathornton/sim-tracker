@@ -71,12 +71,12 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
 - [x] [Jemma] 19 Oct: she went through every banner and card (outside San Myshuno) and is happy; a nudged neighbourhood’s card now shows what its banner shows (same middle, same amount of map), with `cardShift` and `bannerOnlyZoom` for one side only.
 - [x] [Jemma] Neighbourhood page banners now zoom to the neighbourhood’s part of the world map (16 Oct, her idea; maps re-extracted at full size so it stays sharp). Some may look worse than the whole map: name any to put back (17 Oct review in §6d)
 - [x] Rio Verde with six households: she looked with the “Pretend Rio Verde is full” tick box; box removed (16 Oct)
-- [ ] [Jemma] Photo tabs per unit (layout 4): for every rental once it has screenshots of each unit (16 Oct, her view; Rio Verde is the only one so far)
+- [ ] [Jemma] **Parked (23 Oct)** Photo tabs per unit (layout 4): for every rental once it has screenshots of each unit (16 Oct, her view; Rio Verde is the only one so far)
 - [x] [Jemma] Decide each rental's households unit by unit, and landlords: walked through 21–22 Oct (table above); left for later: Upland Trailer Park, Sequoia Cottage (when built), Isda Riverfront, Rio Verde
 - [x] [Jemma] 22 Oct, her call: no. Was: A "Rental units" tab in World Plans (World · Rental · Unit · Beds · Baths · Household · Landlord)? She was "not sure yet, discuss more"
 - [x] Unit counts show as "Residential Rental · 4 units" on cards and lot pages (her choice, 16 Oct; the Stats sheet keeps her "(4)")
 - [x] Unit counts confirmed 14 Oct: Taka Soi 15 = 2, Sequoia Cottage = 2, Manzanita Terrace = 3; the save matches the plan for Rio Verde 6, Fern Park Flats 5, Tail's End 4, Inner Circle 4, Upland Trailer Park 4, Old Torget House 3
-- [ ] [Jemma] Abandoned Views and Specter Row: unit counts once they're finished
+- [ ] [Jemma] **Parked (23 Oct)** Abandoned Views and Specter Row: unit counts once they're finished
 - [x] Settled 14 Oct: Mossy Lane is University Housing (one home); Spring Steppes has 3 units; Rockridge Springs and Slip 42 keep their units and now have rental uploads too (Rockridge Springs' new upload wasn't on the Gallery listing yet on 14 Oct; the Sunday refresh links it)
 - [x] [Claude] Done (layout 4, 16 Oct): each rental's units on its page (household or "Nobody yet", unit traits) and its households under the card. Only bedrooms and bathrooms per unit are missing: nothing records them for rental units yet (the Gallery has them for Rooms uploads only)
 
@@ -295,7 +295,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [ ] [Jemma] **Parked (22 Oct)** Moonwood Mill Library: settle it as a Library, not a Backroom? As a Backroom it would get no librarian by day and no bartender by night (the game has no Moonwood version of either), and Wolfgang Wilder loses his job
 - [x] [Jemma] 1 Cobblebottom Street tea room: the Crumplebottoms can’t run it cleanly (their household is hidden, and Agnes loses her village role once in a household). Her own Sim or a Henford household with no village job instead? — 19 Oct: settled as a Small Business Residential, someone living there runs it (household and business to pick)
 - [ ] [Jemma] (22 Oct: researched for her new save, with exact menu names and a table of what to set: research/game-options.md; on her in-game checklist) In-game settings: Neighbourhood Stories off, or on with “Move In” and “Move Out” unticked for Other Households (so the game doesn’t fill her empty homes)? Raise Maximum Sim Count and heart her planned households (homeless premades are culled first)? Turn off ageing for unplayed Sims (so young role Sims like Eloise Hiddlestix don’t age out)?
-- [ ] [Jemma] Owners who live away from their rental (the Robles at Manzanita Terrace, the Kirklands at Fern Park Flats and Midtown Meadows; 22 Oct: the Lovejoys and the Cadberrys now live in their own rentals) lose it if merged into another household elsewhere: merge the other household into theirs instead
+- [ ] [Jemma] **Parked (23 Oct)** Owners who live away from their rental (the Robles at Manzanita Terrace, the Kirklands at Fern Park Flats and Midtown Meadows; 22 Oct: the Lovejoys and the Cadberrys now live in their own rentals) lose it if merged into another household elsewhere: merge the other household into theirs instead
 - [x] Corrected research/worlds/gibbi-point.md: Laxmi and Raheel Kunal are homeless premade townies (17 Oct)
 
 ### Eco Lifestyle and community spaces (research/eco-and-community-spaces.md)
@@ -340,7 +340,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 ### Rentals unit by unit (research/rental-units.md)
 - [x] [Jemma] 19 Oct, “fine for now, I’ll look into more later”: the Lynxes in Tail’s End 3, the Pleasants in Spring Steppes 2, Cecilia Kang in 3A and Moody & McMillan in 3B (new lot field residentsUnit); Upland stays Eclectic Arts in trailer 1 (one household can’t fill three) and Johnny Zest in 4. Was: Suggested fits: Upland units 1–3 the Eclectic Arts, 4 Johnny Zest; Tail’s End 3 (Cat Hangout) Catarina Lynx; Spring Steppes 1 Elderberry, 2 the Pleasant twins; 3 Cobblebottom 3A Cecilia Kang (Cat Hangout), 3B Moody & McMillan (Chef’s Kitchen). OK?
 - [x] [Jemma] 19 Oct, her call: split, one household per Sim and a flat each (BFF: Scott, Lee, Holiday at Fern Park 1–3; Roomies: Huntington, Kalani, Richards, Patel at Inner Circle 1–4; Eclectic Arts: Eggleston, Martin, Holland at Upland 1–3, Johnny Zest 4). Each keeps the group’s EA bio for now. Was: BFF, the Roomies and the Eclectic Arts don’t fit one flat each (the flats are one-bed): split them into separate households, or keep each together?
-- [ ] [Jemma] Empty units at Rockridge Springs, Old Torget House, Manzanita Terrace and Slip 42: to be filled (19 Oct), with Sims who need homes or new ones she makes; decide later
+- [ ] [Jemma] **Parked (23 Oct)** Empty units at Rockridge Springs, Old Torget House, Manzanita Terrace and Slip 42: to be filled (19 Oct), with Sims who need homes or new ones she makes; decide later
 - [x] [Jemma] In game: look round every rental and swap who lives in which unit where another fits better (19 Oct). Done 21–22 Oct except Upland, Sequoia Cottage, Isda Riverfront and Rio Verde (see the checklist).
 - [ ] [Jemma] In game (optional): most rentals keep traits, and bedroom/bathroom counts, only on unit 1; give units 2+ their own. Rippling Flats, Specter Row and Casa do Corsário are still one home in the save
 
