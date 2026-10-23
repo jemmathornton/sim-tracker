@@ -158,139 +158,309 @@ window.ADMIN = {
 ],
 "checklist": [
 {
-"section": "Game options (once, in your play save)",
+"section": "Game options",
 "world": "",
-"text": "Neighbourhood Stories: off, or on with \"Move In\" and \"Move Out\" unticked for Other Households (so the game doesn't fill your empty homes)?"
+"text": "**Decide:** Neighbourhood Stories off, or on with Move In and Move Out unticked for Other Households?"
 },
 {
-"section": "Game options (once, in your play save)",
+"section": "Game options",
 "world": "",
-"text": "Raise Maximum Sim Count, and heart your planned households (homeless premades are deleted first). Heart Consort Capp and the four Sulani mermaids?"
+"text": "**Decide:** Pets: turn off Adopt Cats & Dogs and Rescue Horses in Neighbourhood Stories?"
 },
 {
-"section": "Game options (once, in your play save)",
+"section": "Game options",
 "world": "",
-"text": "Ageing off for unplayed Sims (so young role Sims like Eloise Hiddlestix don't age out)?"
+"text": "**Decide:** Ageing off for unplayed Sims (so role Sims like Eloise Hiddlestix don't age out)?"
 },
 {
-"section": "Game options (once, in your play save)",
+"section": "Game options",
 "world": "",
-"text": "Eco Lifestyle: turn off \"Enable NPC Voting\" (random action plans pass by themselves otherwise)?"
+"text": "**Decide:** Eco Lifestyle: turn off Enable NPC Voting (random action plans pass otherwise)?"
 },
 {
-"section": "Game options (once, in your play save)",
+"section": "Game options",
 "world": "",
-"text": "Pets: turn off \"Adopt Cats & Dogs\" and \"Rescue Horses\" in Neighbourhood Stories?"
+"text": "**Do:** Raise Maximum Sim Count; heart your planned households, Consort Capp and the four Sulani mermaids."
 },
 {
-"section": "Game options (once, in your play save)",
+"section": "Game options",
 "world": "",
-"text": "Your save's holidays: name, season, week (1–4) and day for each, for the Calendar page."
+"text": "**Do:** Note your save's holidays (name, season, week 1–4, day) for the Calendar."
+},
+{
+"section": "World by world",
+"world": "Willow Creek",
+"text": "**Decide:** Hallow Slough (Ella-Mint's home): Haunted House, On Hallowed Ground, or neither?"
+},
+{
+"section": "World by world",
+"world": "Willow Creek",
+"text": "**Decide:** Crick Cabana: Dustin Broke alone, or with the Sigworths (as in Season Events)?"
+},
+{
+"section": "World by world",
+"world": "Oasis Springs",
+"text": "**Decide:** Sultry Springside Smiths: Maxis's Gallery family? (Then Pollination Tech 9 is your only alien.)"
 },
 {
 "section": "World by world",
 "world": "Magnolia Promenade",
-"text": "Magnolia Mall isn't built yet: when you build it, include coffee, a wardrobe or clothes racks, and things to sabotage (for the Paragons and Renegades clubs)."
+"text": "**Do:** Magnolia Mall, when you build it: coffee, a wardrobe or racks, things to sabotage (Paragons, Renegades)."
+},
+{
+"section": "World by world",
+"world": "Magnolia Promenade",
+"text": "**Decide:** Secret Lots (Police Station, FutureSim Labs, hospital, Sixam): keep the group, or give Sixam its own?"
+},
+{
+"section": "World by world",
+"world": "Windenburg",
+"text": "**Decide:** Tiquelles: spellcasters, with Mid-NoWhere as their portal to the Magic Realm?"
+},
+{
+"section": "World by world",
+"world": "San Myshuno",
+"text": "**Do:** 18 Culpepper House: add the Spooky lot trait."
+},
+{
+"section": "World by world",
+"world": "San Myshuno",
+"text": "**Decide:** Bro & Kennedy (701 ZenView): which Kennedy? Tristan Kennedy, or Kennedy Thomason, Duggan or Rouse?"
+},
+{
+"section": "World by world",
+"world": "Del Sol Valley",
+"text": "**Do:** Studio PBP, when you build it: give it Hottest Spot in Town."
+},
+{
+"section": "World by world",
+"world": "Britechester",
+"text": "**Do:** Re-upload Mossy Lane to the Gallery as University Housing (its upload says Residential)."
 },
 {
 "section": "World by world",
 "world": "Evergreen Harbor",
-"text": "The Old Dockyard: checked 21 Oct in your save: a Maker Space with Landfill Lot and Reduce and Recycle, no Off-the-Grid (that was a home build on The Waterfront lot)."
-},
-{
-"section": "World by world",
-"world": "Evergreen Harbor",
-"text": "The Old Mill: make its 3 daytime objects ordinary gym kit, climbing walls on top."
+"text": "**Do:** The Old Mill: make its 3 daytime objects ordinary gym kit, climbing walls on top."
 },
 {
 "section": "World by world",
 "world": "Mt. Komorebi",
-"text": "Base Camp and The Croft Icefall: what lot type does the game give them? (Your Building saves don't store one.)"
+"text": "**Do:** Base Camp and The Croft Icefall: check what lot type the game gives them."
 },
 {
 "section": "World by world",
 "world": "Copperdale",
-"text": "BridgeCreek Drive (Backroom, not built yet): gym kit for the daytime side when you build it."
+"text": "**Do:** BridgeCreek Drive, when you build it: gym kit for the daytime side."
+},
+{
+"section": "World by world",
+"world": "Copperdale",
+"text": "**Decide:** LaSuli Point: Park (needs one piece of playground kit) or Cemetery?"
 },
 {
 "section": "World by world",
 "world": "Sulani",
-"text": "Caldera Camp: Geothermal and Natural Well, not yet (21 Oct); two trait slots are free if you want them later."
+"text": "**Decide:** Key Point: a castaway hut as a Vacation Rental, or Generic (can be Off-the-Grid)?"
 },
 {
-"section": "Every rental",
-"world": "",
-"text": "Look round each one and swap who lives in which unit where another fits better. Done 21 Oct: Fern Park Flats, Midtown Meadows, Tail's End Apartments, The Inner Circle (Rio Verde left for now). Done 22 Oct: Spring Steppes (the twins moved to unit 3, unit 2 empty), Rockridge Springs, 3 Cobblebottom Street, Taka Soi 15 (08 empty), Sungai Point (11C empty) and Casa Do Corsário kept as they are. Left for later: Upland Trailer Park, Sequoia Cottage (when you build it), Isda Riverfront (which Cadberrys), Rio Verde. Notes per rental: research/rentals-next.md."
+"section": "World by world",
+"world": "Sulani",
+"text": "**Decide:** Caldera Camp: add Geothermal and Natural Well (two trait slots free)?"
 },
 {
-"section": "Every rental",
-"world": "",
-"text": "Give units 2+ their own traits and bedroom/bathroom counts (most only have them on unit 1; e.g. Midtown Meadows, 21 Oct). Then re-upload, and Claude reads them from your Building save."
+"section": "World by world",
+"world": "Sulani",
+"text": "**Decide:** Moonwood Mill Library: Library or Backroom? (A Backroom has no librarian; Wolfgang loses his job.)"
 },
 {
-"section": "Lot traits",
-"world": "",
-"text": "88 shared lots have fewer than 3 traits (ideas for each in research/lot-trait-ideas.md)."
+"section": "World by world",
+"world": "Ravenwood",
+"text": "**Decide:** Specter Row: a 2-unit rental with On Hallowed Ground, or a Haunted House?"
 },
 {
-"section": "Lot traits",
+"section": "World by world",
+"world": "Ravenwood",
+"text": "**Decide:** Mystic Crossroads: owned by the Izadi-Gomes ghosts?"
+},
+{
+"section": "World by world",
+"world": "Gibbi Point",
+"text": "**Decide:** Paradise Stables: who lives there? A horse family of yours running Riding Stables?"
+},
+{
+"section": "World by world",
+"world": "Gibbi Point",
+"text": "**Decide:** Love Highland: a Custom Venue run by the Addams as story only, or their home again?"
+},
+{
+"section": "World by world",
+"world": "Gibbi Point",
+"text": "**Decide:** Revive and Thrive has no beds, so day Getaways only: add beds for overnight stays?"
+},
+{
+"section": "World by world",
+"world": "Ondarion",
+"text": "**Do:** Add a Waltzing Dance Floor when you rebuild La Vivace, the palaces and Giardino."
+},
+{
+"section": "Every world",
 "world": "",
-"text": "Gnomes does nothing on venues (Burners & Builders, Pixel Café, Llama Picturehouse): swap it? Maybe when you move them into the new save (ideas: gym Homey or Party Place, Pixel Café Convivial, Picturehouse Romantic Aura)."
+"text": "**Decide:** Owners: Plumbob Pictures Museum (Judith Ward?), Llama Picturehouse (LeBlancs, or a Bar), Canalside Daycare."
+},
+{
+"section": "Every world",
+"world": "",
+"text": "**Decide:** Small business lots: keep your labels (Small Business Residential), or the game's names?"
+},
+{
+"section": "Every world",
+"world": "",
+"text": "**Decide:** Gnomes does nothing on venues (Burners & Builders, Pixel Café, Llama Picturehouse): swap it?"
+},
+{
+"section": "Every world",
+"world": "",
+"text": "**Do:** 88 shared lots have fewer than 3 traits (ideas for each in research/lot-trait-ideas.md)."
+},
+{
+"section": "Every world",
+"world": "",
+"text": "**Do:** 137 shared lots have no pictures: take screenshots; retake Midtown Meadows and Rio Verde."
+},
+{
+"section": "Every world",
+"world": "",
+"text": "**Decide:** Community Spaces: which version each should be (only a resident of the neighbourhood can vote)."
+},
+{
+"section": "Every world",
+"world": "",
+"text": "**Do:** Wedding venues: check each one's lot type when you share it."
+},
+{
+"section": "Rentals",
+"world": "",
+"text": "**Do:** Look round Upland Trailer Park, Sequoia Cottage, Isda Riverfront and Rio Verde; swap units where another fits."
+},
+{
+"section": "Rentals",
+"world": "",
+"text": "**Do:** Give units 2+ their own traits and bed/bath counts, then re-upload (Claude reads them from your save)."
+},
+{
+"section": "Rentals",
+"world": "",
+"text": "**Do:** Make Rippling Flats, Specter Row and Casa do Corsário into units in your save."
+},
+{
+"section": "Rentals",
+"world": "",
+"text": "**Decide:** Empty units at Rockridge Springs, Old Torget House, Manzanita Terrace, Slip 42: who? (For Rent pets?)"
+},
+{
+"section": "Rentals",
+"world": "",
+"text": "**Do:** Owners living away (Robles, Kirklands): merge other households into theirs, never theirs into another."
+},
+{
+"section": "Rentals",
+"world": "",
+"text": "**Do:** Abandoned Views and Specter Row: tell Claude the unit counts once they're built."
+},
+{
+"section": "Rentals",
+"world": "",
+"text": "**Do:** Screenshot each unit of a rental to get photo tabs per unit (only Rio Verde so far)."
 },
 {
 "section": "Clubs",
 "world": "",
-"text": "Change the clubs' hangouts in the Club panel (Powerhouse → Skye Fitness, Garden Gnomes → Magnolia Blossom Park, League of Adventurers → Courtyard Lane Playground, Upper Crusts → any Restaurant, Paragons and Renegades → Magnolia Mall, Spin Masters → Stargazer, Partihaus → La Discotheque)."
+"text": "**Do:** Hangouts: Powerhouse → Skye Fitness, Garden Gnomes → Magnolia Blossom Park, League of Adventurers → Courtyard Lane Playground."
 },
 {
-"section": "Households (moved from the to-do list, 23 Oct)",
+"section": "Clubs",
 "world": "",
-"text": "Kopf: the Rotational copy (Emilee and Kristian, Leon and Savannah née Fyres; Anja grown up with Omar in San Myshuno) seems off; check which version you want."
+"text": "**Do:** Hangouts: Upper Crusts → any Restaurant, Paragons and Renegades → Magnolia Mall, Spin Masters → Stargazer, Partihaus → La Discotheque."
 },
 {
-"section": "Households (moved from the to-do list, 23 Oct)",
+"section": "Clubs",
 "world": "",
-"text": "Davidsons: make Evelyn, Ray and George (Streamlet Single) older; make Garden Essence's Davidsons (the 100 Baby Challenge Davidsons aren't related)."
+"text": "**Do:** Add Sergio Romeo to Powerhouse (he stays in the Paragons too)."
 },
 {
-"section": "Households (moved from the to-do list, 23 Oct)",
+"section": "Households",
 "world": "",
-"text": "Kirklands: the site has Kennedy and Kayleigh (married) as adults and Kamila and Kendrick as teens, from your Library copy; age them as you want them."
+"text": "**Decide:** Kopf: the Rotational copy seems off; which version do you want?"
 },
 {
-"section": "Households (moved from the to-do list, 23 Oct)",
+"section": "Households",
 "world": "",
-"text": "The 22 households filled from your saves or Library: say which copy to use where one is wrong (every copy is in research/own-households-review.md)."
+"text": "**Do:** Davidsons: make Evelyn, Ray and George older; make Garden Essence's Davidsons."
 },
 {
-"section": "Households (moved from the to-do list, 23 Oct)",
+"section": "Households",
 "world": "",
-"text": "To make yourself (in no save or the Library): Mine (Chestnut Ridge and Sulani), Dynamic Daters, Sporty Girls and Sporty Boys, Nerdy Girls and Nerdy Boys (your Library \"Teens!\" may be them?), My Celebs, Elders, Single Mum Friends, Ella-Mint Cadberry, Rory & Friend, Werewolves in Training, and Innisgreen's five (Enchanted Lovers, Ladipo, Mystical Besties, Nhoam, Summerdream)."
+"text": "**Do:** Kirklands: age Kennedy, Kayleigh, Kamila and Kendrick as you want them."
 },
 {
-"section": "Households (moved from the to-do list, 23 Oct)",
+"section": "Households",
 "world": "",
-"text": "Also yours: the Lovejoys (to upload), the four Tiquelle households, the vineyard Altos (to create), Specter Row's owners (Ravenwood)."
+"text": "**Do:** Check the 22 households filled from your saves (every copy: research/own-households-review.md)."
 },
 {
-"section": "Households (moved from the to-do list, 23 Oct)",
+"section": "Households",
 "world": "",
-"text": "Download Sebastian Michaelson and Merrilyn Ralston from Maxis's Gallery and pick their lots."
+"text": "**Do:** Make the ones in no save: Mine ×2, Dynamic Daters, Sporty and Nerdy Girls and Boys, My Celebs, Elders…"
 },
 {
-"section": "Households (moved from the to-do list, 23 Oct)",
+"section": "Households",
 "world": "",
-"text": "Bro & Kennedy (701 ZenView): which Kennedy? (Tristan Kennedy, Kennedy Thomason, Kennedy Duggan or Kennedy Rouse.) Crick Cabana: Dustin Broke alone, or with the Sigworths? My Celebs: which save?"
+"text": "**Do:** …Single Mum Friends, Ella-Mint Cadberry, Rory & Friend, Werewolves in Training, Innisgreen's five."
 },
 {
-"section": "Households (moved from the to-do list, 23 Oct)",
+"section": "Households",
 "world": "",
-"text": "Add Sergio Romeo to Powerhouse (23 Oct; he stays in the Paragons too)."
+"text": "**Do:** Also yours: upload the Lovejoys; the four Tiquelle households, the vineyard Altos, Specter Row's owners."
 },
 {
-"section": "Households (moved from the to-do list, 23 Oct)",
+"section": "Households",
 "world": "",
-"text": "18 Culpepper House (San Myshuno): add the Spooky lot trait (it has Historical; her call 23 Oct)."
+"text": "**Do:** Download Sebastian Michaelson and Merrilyn Ralston from Maxis's Gallery and pick their lots."
+},
+{
+"section": "Households",
+"world": "",
+"text": "**Decide:** My Celebs: which save are they in?"
+},
+{
+"section": "Households",
+"world": "",
+"text": "**Do:** The Cadberrys: sort them when you're ready (options in research/own-households-recommendations.md)."
+},
+{
+"section": "Households",
+"world": "",
+"text": "**Decide:** Typing Sims in: chat only, or a Sims tab in World Plans (prototype in for-jemma/prototypes)?"
+},
+{
+"section": "Not in game",
+"world": "",
+"text": "**Do:** San Myshuno: make your own map adjustments, then recheck its banners and boxes."
+},
+{
+"section": "Not in game",
+"world": "",
+"text": "**Do:** Whispering Glen (Ravenwood): recheck its card."
+},
+{
+"section": "Not in game",
+"world": "",
+"text": "**Do:** Browse the story hooks when in the mood (research/story-ideas.md)."
+},
+{
+"section": "Not in game",
+"world": "",
+"text": "**Decide:** Going online: only if you ever want it on other devices (free and private with Cloudflare)."
 }
 ],
 "toSort": []

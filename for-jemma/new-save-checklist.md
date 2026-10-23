@@ -1,6 +1,6 @@
 # New save checklist (23 Oct)
 
-Tick as you go. Why each step is there: `research/new-save-plan.md`. Build notes for single lots are still in `in-game-checklist.md`.
+Tick as you go. Why each step is there: `research/new-save-plan.md`. Build notes for single lots are on `your-list.md` (everything waiting on her, 23 Oct).
 
 **Key:** EA = the game’s premade household (already in the save: move it, don’t bring it from the Library). Yours = from your Library. Sims to come = no Sims picked yet.
 

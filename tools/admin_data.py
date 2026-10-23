@@ -2,7 +2,7 @@
 
     python tools/admin_data.py      (tools/build.py runs it too)
 
-Reads only: logs/gallery-refresh.log, data/gallery/unlinked.json, for-jemma/in-game-checklist.md, TODO.md,
+Reads only: logs/gallery-refresh.log, data/gallery/unlinked.json, for-jemma/your-list.md, TODO.md,
 research/gallery-findability.md and research/build-priorities.md. Ported from for-jemma/prototypes/calendar-admin/make_admin_data.py.
 
 site/js/admin-data.js is for Jemma's PC only: it holds her to-dos and admin notes. It must NOT be uploaded if the site
@@ -26,7 +26,7 @@ def gather():
         if ts.exists(): out["toSort"] = [{"id": k, **v} for k, v in json.loads(ts.read_text(encoding="utf-8")).items()]
     except Exception as e: print("admin data: uploads to sort not read:", e)
     try: out["checklist"] = checklist()
-    except Exception as e: print("admin data: in-game checklist not read:", e)
+    except Exception as e: print("admin data: her list not read:", e)
     return out
 
 # weekly Gallery refresh: one entry per run in logs/gallery-refresh.log
@@ -52,12 +52,12 @@ def refresh_runs():
         runs.append(r)
     return runs
 
-# her in-game checklist: items not struck through
+# her list (for-jemma/your-list.md, 23 Oct: one list for everything waiting on her): items not struck through
 def checklist():
     items, section, world = [], "", ""
-    for line in read("for-jemma/in-game-checklist.md").splitlines():
+    for line in read("for-jemma/your-list.md").splitlines():
         if line.startswith("## "):
-            section, world = re.sub(r"^## \d+\.\s*", "", line).strip(), ""
+            section, world = re.sub(r"^##\s*(\d+\.\s*)?", "", line).strip(), ""
         elif re.match(r"\*\*(.+)\*\*\s*$", line.strip()):
             world = line.strip().strip("*")
         elif line.startswith("- ") and not line.startswith("- ~~"):

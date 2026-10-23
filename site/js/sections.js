@@ -167,7 +167,7 @@ function admGlance(){
     ${card("sparkle", "New since you looked", fresh.length, fresh.length ? fresh.slice(0, 8).map(l => `${lotA(l)} <small>${esc(newTxt(newSince(l)))}</small>`).join("<br>") : "No new favourites, comments or uploads since you last opened each lot.", "")}
     ${card("hammer", "Built", `${built}<small style="font-size:18px"> of ${L.length}</small>`, `${shared} shared.`, "progress")}
     ${card("camera", "Shared, no screenshots", L.filter(l => l.shared === true && !hasShots(l)).length, "Showing only their Gallery pictures.", "")}
-    ${card("note", "Notes", ADM.checklist.length + n.checks + ADM.toSort.length, n.checks ? `${plural(n.checks, "thing")} out of step in the plan, and your in-game notes.` : "Things to check or change next time you’re in the game.", "game", n.checks ? "warn" : "")}</div>`;
+    ${card("note", "Notes", ADM.checklist.length + n.checks + ADM.toSort.length, n.checks ? `${plural(n.checks, "thing")} out of step in the plan, and your list.` : "Your list: everything waiting on you, to do or decide.", "game", n.checks ? "warn" : "")}</div>`;
 }
 function admProgress(){
   const t = document.createElement("template"); t.innerHTML = statsPage();
@@ -181,9 +181,9 @@ function admChecksSec(){
   return `<ul class="adm-list">${cs.map(c => `<li><span><b>${esc(c.name)}</b></span><span class="w"><span class="adm-pill bad">${c.items.length}</span></span>
       <small>${c.items.map(l => (l.id ? lotA(l) : esc(l.name)) + (l.world ? ` (${esc(l.world.name)})` : "")).join(" · ")}</small></li>`).join("")}</ul>`;
 }
-function admGame(){   // her notes for in game, with the data checks on top when something is out of step (merged, her idea, 23 Oct)
+function admGame(){   // her list (for-jemma/your-list.md: one list, Do or Decide, 23 Oct), with the data checks on top when something is out of step (merged, her idea, 23 Oct)
   const checks = admChecks().filter(c => c.items.length), by = {}; ADM.checklist.forEach(c => (by[c.world || c.section] ||= []).push(c));
-  const md = t => esc(t.length > 120 ? t.slice(0, 117) + "…" : t).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
+  const md = t => esc(t).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
   const sort = ADM.toSort.length ? `<h3 class="adm-sub">Gallery uploads to <em>sort</em><small>${ADM.toSort.length}</small></h3><ul class="adm-list">${ADM.toSort.map(u => `<li><span><b>${esc(u.title)}</b>${u.lot ? ` <span class="w">· ${esc(u.lot)}</span>` : ""}</span><small>${esc(u.why)}</small></li>`).join("")}</ul>` : "";
   return sort + (checks.length ? `<h3 class="adm-sub">Out of <em>step</em><small>in the plan</small></h3>${admChecksSec()}` : "") + Object.entries(by).map(([k, cs]) => `<h3 class="adm-sub">${esc(k)}<small>${cs.length}</small></h3><ul class="adm-list">${cs.map(c => `<li><span>${md(c.text)}</span></li>`).join("")}</ul>`).join("");
 }
@@ -229,7 +229,7 @@ const ADM_BODY = {glance: admGlance, progress: admProgress, game: admGame};
 function adminPage(sec){
   const L = admOwned(), n = admCounts();
   return `<section class="hero small adm-hero" style="--c:#8E62CF"><div class="kicker"><i></i><span class="label">Admin</span><span class="adm-lock">${ic("lock")}Only you</span></div>
-    <h1 style="margin-top:14px">${sec.title}</h1><p>Progress, Gallery numbers, checks and what’s waiting in game. Not part of the site anyone else would see.</p>
+    <h1 style="margin-top:14px">${sec.title}</h1><p>Progress, Gallery numbers, checks and your list. Not part of the site anyone else would see.</p>
     <div class="hero-foot"><div class="figures">${[[L.filter(l => l.built === true).length, "lots built"], [L.filter(l => l.shared === true).length, "shared"], [L.filter(l => l.gallery).length, "on the Gallery"], [n.checks, n.checks === 1 ? "check to look at" : "checks to look at"]].map(([a, b]) => `<div><b>${a}</b><span>${b}</span></div>`).join("")}</div></div></section>
     <section class="block adm-body">${ADM_BODY[sec.k]()}</section>`;
 }
