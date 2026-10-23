@@ -42,7 +42,7 @@ def new_save():
         worlds.append({"world": wn, "placed": sum(1 for r in rows if r.get("status") == "placed"),
                        "toPlace": [r["name"] for r in rows if r.get("status") == "to place"],
                        "fixes": [{"lot": r["name"], "what": r["issues"]} for r in rows if r.get("issues")],
-                       "move": [{"household": h["household"], "to": h["lot"] + (f" unit {h['unit']}" if h["unit"] else ""), "now": h.get("now"), "how": h.get("how")} for h in hh]})
+                       "move": [{"household": h["household"], "to": h["lot"] + (f" unit {h['unit']}" if h["unit"] else ""), "now": h.get("now"), "how": h.get("how"), "occupied": h.get("occupied")} for h in hh]})
     return {"saved": d["saved"], "worlds": worlds, "notStarted": [wn for wn, rows in d["worlds"].items() if not any(r.get("status") == "placed" for r in rows)]}
 
 # weekly Gallery refresh: one entry per run in logs/gallery-refresh.log

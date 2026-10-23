@@ -5429,7 +5429,8 @@
    "sims": 2,
    "state": "move",
    "now": "Dock Den",
-   "save_household": "Bro"
+   "save_household": "Bro",
+   "occupied": "Karaoke Legends"
   },
   {
    "world": "San Myshuno",
@@ -5726,7 +5727,8 @@
    "sims": 2,
    "state": "move",
    "now": "Mossy Lane",
-   "save_household": "Pleasant"
+   "save_household": "Pleasant",
+   "occupied": "Elderberry"
   },
   {
    "world": "Evergreen Harbor",
@@ -5816,7 +5818,8 @@
    "sims": 2,
    "state": "move",
    "now": "14 Nettle Lane",
-   "save_household": "Moody & McMillan"
+   "save_household": "Moody & McMillan",
+   "occupied": "Scott"
   },
   {
    "world": "Henford-on-Bagley",
@@ -5826,7 +5829,8 @@
    "sims": 1,
    "state": "move",
    "now": "4 Olde Mill Lane",
-   "save_household": "New Start"
+   "save_household": "New Start",
+   "occupied": "Scott"
   },
   {
    "world": "Henford-on-Bagley",
@@ -6131,5 +6135,6 @@
    "sims": 1,
    "state": "home"
   }
- ]
+ ],
+ "squatters": []
 }

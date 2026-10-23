@@ -168,6 +168,9 @@ def main():
             return "from your Library" + (" (your Library copy differs from the site: check ages and Sims)" if k and k[0] == 'b' and not re.search(r'^(matches|same)', k[1], re.I) and k[1] not in ('–', '') else "")
         return "not found by its Sims’ names (EA’s, maybe renamed)"
     zone_of_sim = {}
+    living = {}   # zone -> names of the save households living there
+    for h in hhs:
+        if h.get('home_zone'): living.setdefault(h['home_zone'], []).append(h.get('name') or '?')
     for h in hhs:
         ids = (h.get('sims') or {}).get('ids', []) if isinstance(h.get('sims'), dict) else []
         for i in ids: zone_of_sim[sims.get(i)] = (h.get('home_zone'), h.get('name'))
@@ -207,8 +210,31 @@ def main():
                 else:
                     now = [zones.get(z, {}).get('name') or 'no home' for z in homes if z]
                     row['state'] = 'move'; row['now'] = ", ".join(sorted(set(now))) or 'no home'; row['save_household'] = ", ".join(sorted(save_hh))
+                    there = [n for n in living.get(target, []) if n not in save_hh]
+                    if there: row['occupied'] = ", ".join(sorted(set(there)))
                     if len(homes) > 1: row['note'] = 'its Sims are in more than one household'
             out['households'].append(row)
+    # households living on one of her placed lots that the plan doesn't put there (to move out, or elsewhere)
+    planned_sims = {}   # zone -> Sim names the plan puts there
+    for w in D['worlds']:
+        if not (w.get('owned') and w.get('ready')): continue
+        for r in out['worlds'].get(w['name'], []):
+            if r.get('status') != 'placed': continue
+            for unit, zid in lot_zone.get((w['name'], r['lot']), {}).items():
+                if zid: planned_sims.setdefault(zid, set())
+    for hn_row in out['households']:
+        zs = lot_zone.get((hn_row['world'], next((r['lot'] for r in out['worlds'][hn_row['world']] if r['name'] == hn_row['lot']), '')), {})
+        zid = zs.get(hn_row['unit']) or zs.get('')
+        H = D['households'].get(hn_row['world'], {}).get(hn_row['household'], {})
+        if zid in planned_sims: planned_sims[zid] |= {sm['name'] for sm in H.get('sims', [])}
+    out['squatters'] = []
+    for h in hhs:
+        z = h.get('home_zone')
+        if z not in planned_sims: continue
+        ids = (h.get('sims') or {}).get('ids', []) if isinstance(h.get('sims'), dict) else []
+        names = {sims.get(i) for i in ids}
+        if names and not names & planned_sims[z]:
+            out['squatters'].append({"world": zones[z]['world'], "lot": zones[z]['name'], "household": h.get('name') or '?', "sims": sorted(n for n in names if n)})
     save(os.path.join(ROOT, 'research', 'data', 'new-save-status.json'), out)
     # the report
     L = [f"# New save check: “{SAVE_NAME}” ({out['saved']})", "",
@@ -233,9 +259,12 @@ def main():
         mv = [h for h in out['households'] if h['world'] == wn and h['state'] != 'home']
         for h in mv:
             to = h['lot'] + (f" unit {h['unit']}" if h['unit'] else '')
-            if h['state'] == 'move': L.append(f"- **Move {h['household']}** to {to} (now: {h['now']}{'; ' + h['note'] if h.get('note') else ''})")
+            if h['state'] == 'move': L.append(f"- **Move {h['household']}** to {to} (now: {h['now']}{'; ' + h['note'] if h.get('note') else ''}{'; move out ' + h['occupied'] + ' first' if h.get('occupied') else ''})")
             else: L.append(f"- **{h['household']}** for {to}: {h['how']}")
         L.append("")
+    if out['squatters']:
+        L += ["## Living where the plan doesn’t put them", "", "On one of your placed lots, but planned elsewhere (or nowhere): move them out.", ""]
+        L += [f"- {q['world']} / {q['lot']}: {q['household']} ({', '.join(q['sims'])})" for q in out['squatters']] + [""]
     nt = [(wn, r) for wn, rows in out['worlds'].items() for r in rows if r.get('newTraits')]
     if nt:
         L += ["## Traits the site doesn’t show yet", "", "In the new save but not on the site (read in once the save is set up):", ""]

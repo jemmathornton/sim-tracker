@@ -63,7 +63,7 @@ Made by tools/research/new_save_check.py from a copy of the save. Lots: placed /
 - **Move Bheeda** to 920 Medina Studios (now: 2A Jasmine Suites)
 - **Livin' In The City** for 930 Medina Studios: only in your “Rotational” save: save it to your Library from there first
 - **Move Santiago Ojo** to FountainView Penthouse (now: 701 ZenView)
-- **Move Bro & Kennedy** to 701 ZenView (now: Dock Den)
+- **Move Bro & Kennedy** to 701 ZenView (now: Dock Den; move out Karaoke Legends first)
 - **Move Behr** to 702 ZenView (now: no home)
 - **Move Jeong** to 1310 21 Chic Street (now: no home)
 

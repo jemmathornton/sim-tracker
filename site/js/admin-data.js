@@ -547,55 +547,64 @@ window.ADMIN = {
 "household": "Davidson 1",
 "to": "Streamlet Single",
 "now": null,
-"how": "from your Library (your Library copy differs from the site: check ages and Sims)"
+"how": "from your Library (your Library copy differs from the site: check ages and Sims)",
+"occupied": null
 },
 {
 "household": "Broke",
 "to": "Crick Cabana",
 "now": "no home",
-"how": null
+"how": null,
+"occupied": null
 },
 {
 "household": "Winters",
 "to": "Daisy Hovel",
 "now": null,
-"how": "from your Library (your Library copy differs from the site: check ages and Sims)"
+"how": "from your Library (your Library copy differs from the site: check ages and Sims)",
+"occupied": null
 },
 {
 "household": "Reynolds",
 "to": "Potters Splay",
 "now": null,
-"how": "from your Library (your Library copy differs from the site: check ages and Sims)"
+"how": "from your Library (your Library copy differs from the site: check ages and Sims)",
+"occupied": null
 },
 {
 "household": "Bjergsen",
 "to": "Brook Bungalow",
 "now": "The Lighthouse",
-"how": null
+"how": null,
+"occupied": null
 },
 {
 "household": "Kopf",
 "to": "Riverside Roost",
 "now": null,
-"how": "only in your “Rotational” save: save it to your Library from there first"
+"how": "only in your “Rotational” save: save it to your Library from there first",
+"occupied": null
 },
 {
 "household": "Pancakes",
 "to": "Rindle Rose",
 "now": "no home",
-"how": null
+"how": null,
+"occupied": null
 },
 {
 "household": "Villareal",
 "to": "Umbrage Manor",
 "now": "no home",
-"how": null
+"how": null,
+"occupied": null
 },
 {
 "household": "Barraza",
 "to": "Oakenstead",
 "now": null,
-"how": "from your Library (your Library copy differs from the site: check ages and Sims)"
+"how": "from your Library (your Library copy differs from the site: check ages and Sims)",
+"occupied": null
 }
 ]
 },
@@ -611,49 +620,57 @@ window.ADMIN = {
 "household": "Leah-Moon Cadberry",
 "to": "Nookstone",
 "now": null,
-"how": "from your Library (your Library copy differs from the site: check ages and Sims)"
+"how": "from your Library (your Library copy differs from the site: check ages and Sims)",
+"occupied": null
 },
 {
 "household": "Lothario",
 "to": "Agave Abode",
 "now": "no home",
-"how": null
+"how": null,
+"occupied": null
 },
 {
 "household": "Rivera",
 "to": "Raffia Quinta",
 "now": null,
-"how": "from your Library"
+"how": "from your Library",
+"occupied": null
 },
 {
 "household": "De Costa",
 "to": "Dusty Turf",
 "now": null,
-"how": "from your Library"
+"how": "from your Library",
+"occupied": null
 },
 {
 "household": "Curious 1",
 "to": "Springscape",
 "now": null,
-"how": "Maxis’s Gallery copy: from your Library or the Gallery"
+"how": "Maxis’s Gallery copy: from your Library or the Gallery",
+"occupied": null
 },
 {
 "household": "Curious 2",
 "to": "Granada Place",
 "now": null,
-"how": "Maxis’s Gallery copy: from your Library or the Gallery"
+"how": "Maxis’s Gallery copy: from your Library or the Gallery",
+"occupied": null
 },
 {
 "household": "Smith",
 "to": "Sultry Springside",
 "now": "no home",
-"how": null
+"how": null,
+"occupied": null
 },
 {
 "household": "Caliente",
 "to": "Yuma Heights",
 "now": "no home",
-"how": null
+"how": null,
+"occupied": null
 }
 ]
 },
@@ -687,55 +704,64 @@ window.ADMIN = {
 "household": "Holiday",
 "to": "Fern Park Flats unit 1",
 "now": "no home",
-"how": null
+"how": null,
+"occupied": null
 },
 {
 "household": "Lee",
 "to": "Fern Park Flats unit 2",
 "now": "no home",
-"how": null
+"how": null,
+"occupied": null
 },
 {
 "household": "Scott",
 "to": "Fern Park Flats unit 3",
 "now": "no home",
-"how": null
+"how": null,
+"occupied": null
 },
 {
 "household": "Washburn",
 "to": "Midtown Meadows unit 2",
 "now": null,
-"how": "only in your “Season Events” save: save it to your Library from there first"
+"how": "only in your “Season Events” save: save it to your Library from there first",
+"occupied": null
 },
 {
 "household": "Bridges",
 "to": "Midtown Meadows unit 5",
 "now": null,
-"how": "only in your “Season Events” save: save it to your Library from there first"
+"how": "only in your “Season Events” save: save it to your Library from there first",
+"occupied": null
 },
 {
 "household": "Versaree",
 "to": "Oak Alcove",
 "now": null,
-"how": "from your Library"
+"how": "from your Library",
+"occupied": null
 },
 {
 "household": "Kirkland",
 "to": "Twin Oracle Point",
 "now": null,
-"how": "from your Library (your Library copy differs from the site: check ages and Sims)"
+"how": "from your Library (your Library copy differs from the site: check ages and Sims)",
+"occupied": null
 },
 {
 "household": "LeBlanc",
 "to": "Avarice Acres",
 "now": null,
-"how": "only in your “Rotational” save: save it to your Library from there first"
+"how": "only in your “Rotational” save: save it to your Library from there first",
+"occupied": null
 },
 {
 "household": "Sylvia & Kenny Cadberry",
 "to": "Asphalt Abodes",
 "now": null,
-"how": "from your Library (your Library copy differs from the site: check ages and Sims)"
+"how": "from your Library (your Library copy differs from the site: check ages and Sims)",
+"occupied": null
 }
 ]
 },
@@ -763,31 +789,36 @@ window.ADMIN = {
 "household": "Pleasant",
 "to": "Proprietor’s Square",
 "now": null,
-"how": "not found by its Sims’ names (EA’s, maybe renamed)"
+"how": "not found by its Sims’ names (EA’s, maybe renamed)",
+"occupied": null
 },
 {
 "household": "Specter",
 "to": "Havisham House",
 "now": "Specter Family Manor",
-"how": null
+"how": null,
+"occupied": null
 },
 {
 "household": "Partihaus",
 "to": "Factory One",
 "now": "no home",
-"how": null
+"how": null,
+"occupied": null
 },
 {
 "household": "Munch",
 "to": "Coorinberg Cottage",
 "now": "no home",
-"how": null
+"how": null,
+"occupied": null
 },
 {
 "household": "Free Spirits",
 "to": "Cottage Am See",
 "now": "no home",
-"how": null
+"how": null,
+"occupied": null
 }
 ]
 },
@@ -815,37 +846,43 @@ window.ADMIN = {
 "household": "Bheeda",
 "to": "920 Medina Studios",
 "now": "2A Jasmine Suites",
-"how": null
+"how": null,
+"occupied": null
 },
 {
 "household": "Livin' In The City",
 "to": "930 Medina Studios",
 "now": null,
-"how": "only in your “Rotational” save: save it to your Library from there first"
+"how": "only in your “Rotational” save: save it to your Library from there first",
+"occupied": null
 },
 {
 "household": "Santiago Ojo",
 "to": "FountainView Penthouse",
 "now": "701 ZenView",
-"how": null
+"how": null,
+"occupied": null
 },
 {
 "household": "Bro & Kennedy",
 "to": "701 ZenView",
 "now": "Dock Den",
-"how": null
+"how": null,
+"occupied": "Karaoke Legends"
 },
 {
 "household": "Behr",
 "to": "702 ZenView",
 "now": "no home",
-"how": null
+"how": null,
+"occupied": null
 },
 {
 "household": "Jeong",
 "to": "1310 21 Chic Street",
 "now": "no home",
-"how": null
+"how": null,
+"occupied": null
 }
 ]
 },
@@ -861,19 +898,22 @@ window.ADMIN = {
 "household": "Delgato",
 "to": "Domus Familiaris",
 "now": "Chateau Frise",
-"how": null
+"how": null,
+"occupied": null
 },
 {
 "household": "Lynx",
 "to": "Tail's End Apartments unit 1",
 "now": "no home",
-"how": null
+"how": null,
+"occupied": null
 },
 {
 "household": "Ventura",
 "to": "Hindquarter Hideaway",
 "now": null,
-"how": "from your Library"
+"how": "from your Library",
+"occupied": null
 }
 ]
 },
@@ -887,61 +927,71 @@ window.ADMIN = {
 "household": "Huntington",
 "to": "The Inner Circle unit 2",
 "now": "no home",
-"how": null
+"how": null,
+"occupied": null
 },
 {
 "household": "Kalani",
 "to": "The Inner Circle unit 1",
 "now": "no home",
-"how": null
+"how": null,
+"occupied": null
 },
 {
 "household": "Patel",
 "to": "The Inner Circle unit 3",
 "now": "no home",
-"how": null
+"how": null,
+"occupied": null
 },
 {
 "household": "Richards",
 "to": "The Inner Circle unit 4",
 "now": "no home",
-"how": null
+"how": null,
+"occupied": null
 },
 {
 "household": "Eggleston",
 "to": "Upland Trailer Park unit 1",
 "now": "Dream Weavers Way",
-"how": null
+"how": null,
+"occupied": null
 },
 {
 "household": "Martin",
 "to": "Upland Trailer Park unit 2",
 "now": "Dream Weavers Way",
-"how": null
+"how": null,
+"occupied": null
 },
 {
 "household": "Holland",
 "to": "Upland Trailer Park unit 3",
 "now": "Dream Weavers Way",
-"how": null
+"how": null,
+"occupied": null
 },
 {
 "household": "Johnny Zest",
 "to": "Upland Trailer Park unit 4",
 "now": "no home",
-"how": null
+"how": null,
+"occupied": null
 },
 {
 "household": "Ward",
 "to": "The Ward Den",
 "now": "no home",
-"how": null
+"how": null,
+"occupied": null
 },
 {
 "household": "Bailey-Moon",
 "to": "Bailey-Moon Manor",
 "now": "no home",
-"how": null
+"how": null,
+"occupied": null
 }
 ]
 },
@@ -955,7 +1005,8 @@ window.ADMIN = {
 "household": "Roswell",
 "to": "Creek Corner Cove",
 "now": "StrangerVille Overlook",
-"how": null
+"how": null,
+"occupied": null
 }
 ]
 },
@@ -978,19 +1029,22 @@ window.ADMIN = {
 "household": "Kealoha",
 "to": "Kin-Ship",
 "now": "no home",
-"how": null
+"how": null,
+"occupied": null
 },
 {
 "household": "Hoapili",
 "to": "Chieftain's Villa",
 "now": "no home",
-"how": null
+"how": null,
+"occupied": null
 },
 {
 "household": "Kahananui",
 "to": "Journey's End",
 "now": "no home",
-"how": null
+"how": null,
+"occupied": null
 }
 ]
 },
@@ -1011,7 +1065,8 @@ window.ADMIN = {
 "household": "Amicable Acolytes",
 "to": "Brooks Bridge",
 "now": "no home",
-"how": null
+"how": null,
+"occupied": null
 }
 ]
 }

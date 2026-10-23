@@ -198,7 +198,7 @@ function admNewSave(){
     if (w.toPlace.length) bits.push(`<b>To place:</b> ${esc(w.toPlace.join(", "))}`);
     w.fixes.forEach(f => bits.push(`<b>${esc(f.lot)}:</b> ${esc(f.what.join("; "))}`));
     const mv = w.move.filter(m => m.now !== undefined && m.now !== null), lib = w.move.filter(m => m.how);
-    if (mv.length) bits.push(`<b>Move in:</b> ` + mv.map(m => `${esc(m.household)} → ${esc(m.to)}`).join(", "));
+    if (mv.length) bits.push(`<b>Move in:</b> ` + mv.map(m => `${esc(m.household)} → ${esc(m.to)}${m.occupied ? ` (move out ${esc(m.occupied)} first)` : ""}`).join(", "));
     const short = h => /only in your “([^”]+)”/.test(h) ? ` (only in “${RegExp.$1}”)` : /make it/.test(h) ? " (to make)" : /differs/.test(h) ? " (Library copy differs)" : /Maxis/.test(h) ? " (Maxis’s Gallery copy)" : /not found/.test(h) ? " (not found)" : "";
     if (lib.length) bits.push(`<b>Bring in:</b> ` + lib.map(m => `${esc(m.household)} → ${esc(m.to)}${esc(short(m.how))}`).join(", "));
     return `<li><span><b>${esc(w.world)}</b></span><span class="w">${w.placed} placed</span>${bits.length ? bits.map(b => `<small>${b}</small>`).join("") : `<small>All placed as planned, everyone home.</small>`}</li>`; };
