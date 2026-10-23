@@ -40,6 +40,9 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 **Del Sol Valley**
 - **Do:** Studio PBP, when you build it: give it Hottest Spot in Town.
 
+**Glimmerbrook**
+- **Do:** Glimmer & Books: add the bar, then upload it as a Backroom (until then it shows as not built or shared).
+
 **Britechester**
 - **Do:** Re-upload Mossy Lane to the Gallery as University Housing (its upload says Residential).
 
@@ -63,9 +66,6 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 **Ravenwood**
 - **Decide:** Specter Row: a 2-unit rental with On Hallowed Ground, or a Haunted House?
 - **Decide:** Mystic Crossroads: owned by the Izadi-Gomes ghosts?
-
-**Glimmerbrook**
-- **Do:** Glimmer & Books: add the bar, then upload it as a Backroom (until then it shows as not built or shared).
 
 **Gibbi Point**
 - **Decide:** Paradise Stables: who lives there? A horse family of yours running Riding Stables?

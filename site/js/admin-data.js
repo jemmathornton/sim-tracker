@@ -264,6 +264,11 @@ window.ADMIN = {
 },
 {
 "section": "World by world",
+"world": "Glimmerbrook",
+"text": "**Do:** Glimmer & Books: add the bar, then upload it as a Backroom (until then it shows as not built or shared)."
+},
+{
+"section": "World by world",
 "world": "Britechester",
 "text": "**Do:** Re-upload Mossy Lane to the Gallery as University Housing (its upload says Residential)."
 },
@@ -311,11 +316,6 @@ window.ADMIN = {
 "section": "World by world",
 "world": "Ravenwood",
 "text": "**Decide:** Mystic Crossroads: owned by the Izadi-Gomes ghosts?"
-},
-{
-"section": "World by world",
-"world": "Glimmerbrook",
-"text": "**Do:** Glimmer & Books: add the bar, then upload it as a Backroom (until then it shows as not built or shared)."
 },
 {
 "section": "World by world",
