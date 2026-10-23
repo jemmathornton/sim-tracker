@@ -201,11 +201,17 @@ function admGame(){   // her notes for in game, with the data checks on top when
   const md = t => esc(t.length > 120 ? t.slice(0, 117) + "…" : t).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
   return (checks.length ? `<h3 class="adm-sub">Out of <em>step</em><small>in the plan</small></h3>${admChecksSec()}` : "") + Object.entries(by).map(([k, cs]) => `<h3 class="adm-sub">${esc(k)}<small>${cs.length}</small></h3><ul class="adm-list">${cs.map(c => `<li><span>${md(c.text)}</span></li>`).join("")}</ul>`).join("");
 }
+// every household, like Progress's every lot (her ask, 23 Oct): one row each, in world order; a household with no Sims shows 0
 function admSims(){
-  const ws = worlds.filter(w => w.owned && w.ready), hs = ws.flatMap(homeHhs), made = hs.filter(simsMade).length, none = ws.map(w => [w, homeHhs(w).filter(h => !h.sims.length)]).filter(([, x]) => x.length);
-  return `<p class="adm-plain"><b>${made}</b> of ${hs.length} households have their Sims made in game.</p>
-    <h3 class="adm-sub">Households with no <em>Sims</em> yet<small>${none.reduce((n, [, x]) => n + x.length, 0)}</small></h3>
-    <ul class="adm-list">${none.map(([w, x]) => `<li><span>${wDot(w)}<b>${esc(w.name)}</b></span><small>${x.map(h => `<a href="#${h.id}">${esc(h.name)}</a>`).join(" · ")}</small></li>`).join("")}</ul>`;
+  const ws = worlds.filter(w => w.owned && w.ready), hs = ws.flatMap(w => homeHhs(w).sort(byHh)), made = hs.filter(simsMade).length, none = hs.filter(h => !h.sims.length).length;
+  const home = h => h.lots.find(l => !l.owned) || h.lots[0], yes = `<span class="adm-pill ok">yes</span>`;
+  const origin = h => h.origin || (h.sims.length && h.sims.every(sm => /^mine$/i.test(sm.origin || "")) ? "Mine" : h.sims.length ? "Premade" : "");
+  return `<p class="adm-plain"><b>${made}</b> of ${hs.length} households have their Sims made in game; <b>${none}</b> have no Sims on the site yet.</p>
+    <div class="sheet-wrap tall"><table class="sheet hh-sheet"><thead><tr><th scope="col">World</th><th scope="col">Household</th><th scope="col">Home</th><th scope="col">Sims</th><th scope="col">EA or yours</th><th scope="col">Sims made</th><th scope="col">Picture</th></tr></thead>
+    <tbody>${hs.map(h => { const l = home(h), o = origin(h);
+      return `<tr><td>${wDot(h.world)}${esc(h.world.name)}</td><th scope="row"><a href="#${h.id}">${esc(h.name)}</a></th><td>${l ? `<a href="#${l.id}">${esc(l.name)}</a>` : ""}</td>
+        <td class="num">${h.sims.length}</td><td>${o ? (originTag(o) === "Mine" ? "Yours" : "EA") : ""}</td><td class="c">${simsMade(h) ? yes : ""}</td>
+        <td>${h.portrait ? "Screenshot" : h.libraryPic ? "Library" : ""}</td></tr>`; }).join("")}</tbody></table></div>`;
 }
 const ADM_BODY = {glance: admGlance, progress: admProgress, gallery: admGallery, game: admGame, sims: admSims};
 function adminPage(sec){
