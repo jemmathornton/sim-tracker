@@ -200,12 +200,12 @@ window.ADMIN = {
 {
 "section": "World by world",
 "world": "Oasis Springs",
-"text": "**Do:** Build next: rebuild Springscape with three adult bedrooms (Vidcund, Lazlo and his daughter Nova), then re-upload."
+"text": "**Do:** Build next: rebuild Springscape with two adult bedrooms (Vidcund, Lazlo) and a teen’s room (his daughter Nova), then re-upload."
 },
 {
 "section": "World by world",
 "world": "Oasis Springs",
-"text": "**Do:** Granada Place: Pascal Curious and his baby (Tycho, when born); put Maxis's Curious brothers and Nova in game."
+"text": "**Do:** Granada Place: Pascal Curious and his baby (Tycho, when born); in game, age the three brothers to Adult and Nova down to Teen."
 },
 {
 "section": "World by world",

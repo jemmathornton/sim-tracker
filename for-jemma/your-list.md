@@ -16,8 +16,8 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 - **Decide:** Crick Cabana: Dustin Broke alone, or with the Sigworths (as in Season Events)?
 
 **Oasis Springs**
-- **Do:** Build next: rebuild Springscape with three adult bedrooms (Vidcund, Lazlo and his daughter Nova), then re-upload.
-- **Do:** Granada Place: Pascal Curious and his baby (Tycho, when born); put Maxis's Curious brothers and Nova in game.
+- **Do:** Build next: rebuild Springscape with two adult bedrooms (Vidcund, Lazlo) and a teen’s room (his daughter Nova), then re-upload.
+- **Do:** Granada Place: Pascal Curious and his baby (Tycho, when born); in game, age the three brothers to Adult and Nova down to Teen.
 
 **Magnolia Promenade**
 - **Do:** Magnolia Mall, when you build it: coffee, a wardrobe or racks, things to sabotage (Paragons, Renegades).
