@@ -167,7 +167,7 @@ def main():
                 key = f"{wn}|{l['lot']}"
                 name = D['nameFix'].get(key) or (l.get('gallery') or {}).get('title') or (l['mine'] if l.get('mine') and l['mine'].strip('? ') else None) or l['lot']
                 g = l.get('gallery')
-                head = f"**{name}**" + (f" (game’s {l['lot']})" if l['lot'] != name else "") + (f", {l['size']}" if l.get('size') and l['size'] != 'N/A' else "") + ": "
+                head = f"**{name}**" + (f" (game’s {l['lot']})" if l['lot'].replace("'", "’") != name.replace("'", "’") else "") + (f", {l['size']}" if l.get('size') and l['size'] != 'N/A' else "") + ": "
                 bits = []
                 if l.get('rebuild'): bits.append(f"Rebuild first ({l['rebuild']}), then place the new upload.")
                 elif key in D['csVersions']:

@@ -204,7 +204,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 **Olde Platz**
 
-- [ ] **Proprietor’s Square** (game’s Proprietor’s Square), 30x20: place “Proprietor’s Square”. Type: Residential. Household: Pleasant (Maxis Gallery). Traits: Party Place, Great Acoustics, Gnomes.
+- [ ] **Proprietor’s Square**, 30x20: place “Proprietor’s Square”. Type: Residential. Household: Pleasant (Maxis Gallery). Traits: Party Place, Great Acoustics, Gnomes.
 - [ ] **Havisham House**, 20x20: place “Havisham House”. Type: Residential. Household: Specter (EA). Traits: Homey, Gnomes, Home Studio.
 - [ ] **Factory One**, 30x20: place “Factory One”. Type: Residential. Household: Partihaus (EA). Traits: Party Place, Great Acoustics. Trait ideas (free slots): + Convivial.
 - [ ] **Olde Platz Inn** (game’s Waterlock Redoubt), 30x20: place “Olde Platz Inn”. Type: Restaurant/Vacation Rental. Traits: Homey, Romantic Aura. Trait ideas (free slots): + Chef’s Kitchen.
@@ -399,7 +399,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 **Mua Pel'am**
 
-- [ ] **Admiral’s Wreckage** (game’s Admiral’s Wreckage), 50x50: place your Garden version “Admiral’s Wreckage Garden”. Type: Community Space. Traits: Eco Lot, Great Soil. Challenge: Reduce and Recycle. Trait ideas (free slots): + Island Spirits.
+- [ ] **Admiral’s Wreckage**, 50x50: place your Garden version “Admiral’s Wreckage Garden”. Type: Community Space. Traits: Eco Lot, Great Soil. Challenge: Reduce and Recycle. Trait ideas (free slots): + Island Spirits.
 - [ ] **Caldera Camp**, 30x20: place “Caldera Camp”. Type: Residential. Household: Mine (Sims to come). Traits: Eco Lot. Challenges: Volcanic Activity, Off-the-Grid. Trait ideas (free slots): **Geothermal** and **Natural Well**: the volcano’s heat and spring water; they may also count as power and water made on an off-grid lot (check in game).
 - [ ] **Key Point**, 40x30: not built yet: leave the game’s lot for now. Type: To be decided.
 
@@ -410,7 +410,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 - [ ] **Lagoon of Love** (game’s Lagoon Look), 30x20: place “Lagoon of Love”. Type: Vacation Rental. Traits: Sunny Aspect, Bracing Breezes, Eco Lot.
 - [ ] **Ohan’ali Community Center** (game’s Tangled Flat), 20x20: place “Ohan’ali Community Center”. Type: Library. Traits: Study Spot, Child’s Play, Home Studio.
 - [ ] **The Sand Bar**, 30x20: place “The Sand Bar”. Type: Bar. Traits: Convivial, Party Place, Sunny Aspect.
-- [ ] **Ohan’ali Beach** (game’s Ohan’ali Beach), 30x30: place “Ohan’ali Beach”. Type: Beach. Traits: Sunny Aspect, Dog Hangout. Trait ideas (free slots): + Bracing Breezes.
+- [ ] **Ohan’ali Beach**, 30x30: place “Ohan’ali Beach”. Type: Beach. Traits: Sunny Aspect, Dog Hangout. Trait ideas (free slots): + Bracing Breezes.
 
 **Lani St. Taz**
 
