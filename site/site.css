@@ -1021,7 +1021,7 @@ details.adm-more summary{cursor:pointer;font-weight:700;font-size:14px;color:var
 .tr-line svg{flex:none;width:15px;height:15px;align-self:center;color:var(--ink)}
 .tr-line a{font-weight:700;color:var(--ink);text-decoration-color:var(--line);text-underline-offset:3px}
 /* season colours trial (23 Oct): three sets to compare with today's; the switch puts sc-<set> on <html> */
-html.sc-blossom .s-spring{--s:#C96F93!important}html.sc-blossom .s-summer{--s:#D4A017!important}html.sc-blossom .s-autumn{--s:#B5532E!important}html.sc-blossom .s-winter{--s:#5E8FB8!important}
+html.sc-blossom .s-spring{--s:#C96F93!important}html.sc-blossom .s-summer{--s:#D4A017!important}html.sc-blossom .s-autumn{--s:#D2752A!important}html.sc-blossom .s-winter{--s:#5E8FB8!important}
 html.sc-muted .s-spring{--s:#8FA382!important}html.sc-muted .s-summer{--s:#BFA071!important}html.sc-muted .s-autumn{--s:#B86F52!important}html.sc-muted .s-winter{--s:#6B7C8F!important}
 html.sc-jewel .s-spring{--s:#2E8B57!important}html.sc-jewel .s-summer{--s:#C9A227!important}html.sc-jewel .s-autumn{--s:#8E2C48!important}html.sc-jewel .s-winter{--s:#2C4A7A!important}
 /* phone layout (22 Oct, her ask; phone widths only, the laptop layout is untouched) */
