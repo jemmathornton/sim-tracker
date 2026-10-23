@@ -10,6 +10,10 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 - **Do:** Upload your own households to the Gallery ({yours}: {yoursOnSite} with Sims on the site, the rest not made yet); they become the site's source.
 
 ## New save fixes (from Claude's checks, 23 Oct)
+- **Do:** Season Length is still the game's 7 days in the new save: set 28 days (Game Options > Seasons) before the holidays, as checklist step 2 says.
+- **Do:** Maximum Sim Count is 150 in the new save; your pick was Unlimited (or the most your PC copes with).
+- **Do:** Check Neighbourhood Stories is on with your rules: a population switch in the save reads off, which may be it.
+- **Do:** Holidays (checklist step 3) aren't done yet: the save still has the game's own calendar.
 - **Do:** Midtown Meadows unit 4: Homey → Home Studio (with Gnomes), or keep Homey and tell Claude.
 - **Do:** Factory One: add Party Place and Great Acoustics.
 - **Do:** Place Brindleton Boathouse and Hindquarter Hideaway (Brindleton Bay).

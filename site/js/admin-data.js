@@ -185,6 +185,26 @@ window.ADMIN = {
 {
 "section": "New save fixes (from Claude's checks, 23 Oct)",
 "world": "",
+"text": "**Do:** Season Length is still the game's 7 days in the new save: set 28 days (Game Options > Seasons) before the holidays, as checklist step 2 says."
+},
+{
+"section": "New save fixes (from Claude's checks, 23 Oct)",
+"world": "",
+"text": "**Do:** Maximum Sim Count is 150 in the new save; your pick was Unlimited (or the most your PC copes with)."
+},
+{
+"section": "New save fixes (from Claude's checks, 23 Oct)",
+"world": "",
+"text": "**Do:** Check Neighbourhood Stories is on with your rules: a population switch in the save reads off, which may be it."
+},
+{
+"section": "New save fixes (from Claude's checks, 23 Oct)",
+"world": "",
+"text": "**Do:** Holidays (checklist step 3) aren't done yet: the save still has the game's own calendar."
+},
+{
+"section": "New save fixes (from Claude's checks, 23 Oct)",
+"world": "",
 "text": "**Do:** Midtown Meadows unit 4: Homey → Home Studio (with Gnomes), or keep Homey and tell Claude."
 },
 {
