@@ -69,7 +69,7 @@
   },
   {
    "name": "Desert Bloom Park",
-   "desc": "",
+   "desc": "This park in the middle of Oasis Springs is a great place for family days out.",
    "mapSpot": [0.49, 0.51],
    "mapBox": [0.4, 0.45, 0.57, 0.58],
    "lots": [
