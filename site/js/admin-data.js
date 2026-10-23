@@ -225,7 +225,7 @@ window.ADMIN = {
 {
 "section": "New save fixes (from Claude's checks, 23 Oct)",
 "world": "",
-"text": "**Do:** The game crashed placing the first Britechester lot (23 Oct). Next try: save first, then place it from inside the lot in Build mode; if it crashes again, close the game and delete localthumbcache.package (Documents\\Electronic Arts\\The Sims 4; the game remakes it). Tell Claude which lot it was."
+"text": "**Do:** The game crashed placing the first Britechester lot (23 Oct). Next try: save first, then place it from inside the lot in Build mode; if it crashes again, close the game and delete localthumbcache.package (Documents\\Electronic Arts\\The Sims 4; the game remakes it). Tell Claude which lot it was. (If it was Darby’s Den, the first on the checklist: players have reported crashes replacing that one before. Try another Britechester lot first.)"
 },
 {
 "section": "New save fixes (from Claude's checks, 23 Oct)",
