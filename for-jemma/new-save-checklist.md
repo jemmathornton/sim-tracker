@@ -750,8 +750,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 
 ## 7. At the end
-- [ ] Club hangouts: Avant Gardes → Pixel Café; Garden Gnomes → Magnolia Blossom Park; Knights of the Hedge → Von-Haunt Estate (when built); League of Adventurers → Courtyard Lane Playground.
-- [ ] Club hangouts: Paragons and Renegades → Magnolia Mall; Powerhouse → Skye Fitness; The Good Timers → The Shrieking Llama; Upper Crusts → any Restaurant; Spin Masters → Stargazer; Partihaus → La Discotheque.
+- [ ] Club hangouts (set in the Club panel; from the site's clubs): Avant Gardes → Pixel Café; Garden Gnomes → Magnolia Blossom Park; Knights of the Hedge → Von-Haunt Estate (when built); League of Adventurers → Courtyard Lane Playground; Paragons → Magnolia Mall (when built); Powerhouse → Skye Fitness; Renegades → Magnolia Mall (when built); The Good Timers → The Shrieking Llama; Upper Crusts → any Restaurant; Spin Masters → Stargazer; Partihaus → La Discotheque.
 - [ ] Clubs: add Sergio Romeo to Powerhouse (he stays in the Paragons too).
 - [ ] Dynasties: check Goth, Landgraab, Darong, Thebe, Abrantes, Alto and Capp against the site.
 - [ ] Check every neighbourhood’s voting board and repeal plans you don’t want.

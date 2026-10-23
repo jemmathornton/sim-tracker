@@ -8,7 +8,7 @@ Her ticks: an existing checklist's ticked lines ("- [x]") stay ticked when it is
 """
 import json, os, re, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import ROOT
+from common import ROOT, slug
 
 OUT = os.path.join(ROOT, 'for-jemma', 'new-save-checklist.md')
 IDEAS = os.path.join(ROOT, 'research', 'data', 'new-save-trait-ideas.json')
@@ -55,8 +55,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 TAIL = """
 ## 7. At the end
-- [ ] Club hangouts: Avant Gardes → Pixel Café; Garden Gnomes → Magnolia Blossom Park; Knights of the Hedge → Von-Haunt Estate (when built); League of Adventurers → Courtyard Lane Playground.
-- [ ] Club hangouts: Paragons and Renegades → Magnolia Mall; Powerhouse → Skye Fitness; The Good Timers → The Shrieking Llama; Upper Crusts → any Restaurant; Spin Masters → Stargazer; Partihaus → La Discotheque.
+{CLUBS}
 - [ ] Clubs: add Sergio Romeo to Powerhouse (he stays in the Paragons too).
 - [ ] Dynasties: check Goth, Landgraab, Darong, Thebe, Abrantes, Alto and Capp against the site.
 - [ ] Check every neighbourhood’s voting board and repeal plans you don’t want.
@@ -189,7 +188,15 @@ def main():
                 line = (head + " ".join(bits)).replace("'", "’")   # curly apostrophes, as on the site
                 out.append(f"- [{'x' if line in ticked else ' '}] {line}")
             out.append("")
-    out.append(TAIL)
+    names = {}
+    for w in D['worlds']:
+        for h in w['hoods']:
+            for l in h['lots']:
+                nm = D['nameFix'].get(f"{w['name']}|{l['lot']}") or (l.get('gallery') or {}).get('title') or (l['mine'] if l.get('mine') and l['mine'].strip('? ') else None) or l['lot']
+                names[f"l-{slug(w['name'])}--{slug(l['lot'])}"] = nm + ("" if l['built'] is True else " (when built)")
+    clubs = json.load(open(os.path.join(ROOT, 'data', 'groups.json'), encoding='utf-8')).get('clubs', {})
+    hang = [f"{c} → {names.get(v['place'], v['place'])}" if v.get('place') else f"{c} → any {v['anyType']}" for c, v in clubs.items() if v.get('place') or v.get('anyType')]
+    out.append(TAIL.replace("{CLUBS}", "- [ ] Club hangouts (set in the Club panel; from the site's clubs): " + "; ".join(hang) + "."))
     open(OUT, 'w', encoding='utf-8', newline='\n').write("\n".join(out))
     print(f"wrote {os.path.relpath(OUT, ROOT)}: {sum(1 for x in out if x.startswith('- ['))} lines to tick")
 
