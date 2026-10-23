@@ -1632,7 +1632,7 @@ window.ADMIN = {
 "household": "Pleasant",
 "to": "Proprietor’s Square",
 "now": null,
-"how": "not found by its Sims’ names (EA’s, maybe renamed)",
+"how": "Maxis’s Gallery copy: from your Library or the Gallery",
 "occupied": null,
 "note": null
 },

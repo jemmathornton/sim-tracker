@@ -61,7 +61,7 @@ Made by tools/research/new_save_check.py from a copy of the save. Lots: placed /
 ## Windenburg
 
 - **Factory One:** missing traits: Great Acoustics, Party Place
-- **Pleasant** for Proprietor’s Square: not found by its Sims’ names (EA’s, maybe renamed)
+- **Pleasant** for Proprietor’s Square: Maxis’s Gallery copy: from your Library or the Gallery
 - **Move Specter** to Havisham House (now: Specter Family Manor)
 - **Move Partihaus** to Factory One (now: no home)
 - **Move Munch** to Coorinberg Cottage (now: no home)

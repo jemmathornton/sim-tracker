@@ -115,10 +115,10 @@ def who_label(hh):
     kinds = set()
     for s in sims:
         if (s.get('origin') or '').lower() == 'mine': kinds.add('yours')
-        elif 'Library' in (s.get('from') or ''): kinds.add('Maxis Gallery')
+        elif re.search('Library|Gallery', s.get('from') or ''): kinds.add('Maxis Gallery')
         else: kinds.add('EA')
     if len(kinds) == 1: return kinds.pop()
-    return "; ".join(f"{k}: {join([s['name'].split()[0] for s in sims if ('yours' if (s.get('origin') or '').lower() == 'mine' else 'Maxis Gallery' if 'Library' in (s.get('from') or '') else 'EA') == k])}" for k in sorted(kinds))
+    return "; ".join(f"{k}: {join([s['name'].split()[0] for s in sims if ('yours' if (s.get('origin') or '').lower() == 'mine' else 'Maxis Gallery' if re.search('Library|Gallery', s.get('from') or '') else 'EA') == k])}" for k in sorted(kinds))
 
 
 def main():

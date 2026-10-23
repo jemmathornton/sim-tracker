@@ -204,7 +204,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 **Olde Platz**
 
-- [ ] **Proprietor’s Square** (game’s Proprietor’s Square), 30x20: place “Proprietor’s Square”. Type: Residential. Household: Pleasant (EA). Traits: Party Place, Great Acoustics, Gnomes.
+- [ ] **Proprietor’s Square** (game’s Proprietor’s Square), 30x20: place “Proprietor’s Square”. Type: Residential. Household: Pleasant (Maxis Gallery). Traits: Party Place, Great Acoustics, Gnomes.
 - [ ] **Havisham House**, 20x20: place “Havisham House”. Type: Residential. Household: Specter (EA). Traits: Homey, Gnomes, Home Studio.
 - [ ] **Factory One**, 30x20: place “Factory One”. Type: Residential. Household: Partihaus (EA). Traits: Party Place, Great Acoustics. Trait ideas (free slots): + Convivial.
 - [ ] **Olde Platz Inn** (game’s Waterlock Redoubt), 30x20: place “Olde Platz Inn”. Type: Restaurant/Vacation Rental. Traits: Homey, Romantic Aura. Trait ideas (free slots): + Chef’s Kitchen.
