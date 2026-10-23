@@ -72,3 +72,13 @@ Everything on the to-do list that needs the game open, grouped so you can go wor
 
 ## 5. Clubs
 - Change the clubs' hangouts in the Club panel (Powerhouse → Skye Fitness, Garden Gnomes → Magnolia Blossom Park, League of Adventurers → Courtyard Lane Playground, Upper Crusts → any Restaurant, Paragons and Renegades → Magnolia Mall, Spin Masters → Stargazer, Partihaus → La Discotheque).
+
+## 6. Households (moved from the to-do list, 23 Oct)
+- Kopf: the Rotational copy (Emilee and Kristian, Leon and Savannah née Fyres; Anja grown up with Omar in San Myshuno) seems off; check which version you want.
+- Davidsons: make Evelyn, Ray and George (Streamlet Single) older; make Garden Essence's Davidsons (the 100 Baby Challenge Davidsons aren't related).
+- Kirklands: the site has Kennedy and Kayleigh (married) as adults and Kamila and Kendrick as teens, from your Library copy; age them as you want them.
+- The 22 households filled from your saves or Library: say which copy to use where one is wrong (every copy is in research/own-households-review.md).
+- To make yourself (in no save or the Library): Mine (Chestnut Ridge and Sulani), Dynamic Daters, Sporty Girls and Sporty Boys, Nerdy Girls and Nerdy Boys (your Library "Teens!" may be them?), My Celebs, Elders, Single Mum Friends, Ella-Mint Cadberry, Rory & Friend, Werewolves in Training, and Innisgreen's five (Enchanted Lovers, Ladipo, Mystical Besties, Nhoam, Summerdream).
+- Also yours: the Lovejoys (to upload), the four Tiquelle households, the vineyard Altos (to create), Specter Row's owners (Ravenwood).
+- Download Sebastian Michaelson and Merrilyn Ralston from Maxis's Gallery and pick their lots.
+- Bro & Kennedy (701 ZenView): which Kennedy? (Tristan Kennedy, Kennedy Thomason, Kennedy Duggan or Kennedy Rouse.) Crick Cabana: Dustin Broke alone, or with the Sigworths? My Celebs: which save?
