@@ -1297,7 +1297,9 @@ function route(){
   const view = document.getElementById("view");
   let html, active = "home"; const ctx = {};
   const wd = key.startsWith("w-") && worlds.find(w => open(w) && w.id === key.slice(2));
-  if (wd) { html = world(wd); active = wd.id; document.title = wd.name + " · Jemma’s Sim World"; }
+  const tp = typeof trialPage === "function" ? trialPage(key) : null;   // sidebar trial (23 Oct, js/trial.js): the new layout's own pages
+  if (tp) { html = tp.html; active = tp.active; document.title = tp.title; }
+  else if (wd) { html = world(wd); active = wd.id; document.title = wd.name + " · Jemma’s Sim World"; }
   else if (lotIndex[key]) { const l = lotIndex[key]; ctx.hood = l.hood; ctx.lot = l; html = lot(l); markSeen(l); active = l.world.id; document.title = l.name + " · Jemma’s Sim World"; }
   else if (key.startsWith("n-") && hoodIndex[key.slice(2)]) { const x = hoodIndex[key.slice(2)]; ctx.hood = x; html = hoodPage(x); active = x.world.id; document.title = x.name + " · " + x.world.name + " · Jemma’s Sim World"; }
   else if (key.startsWith("f-") && worlds.find(w => open(w) && w.id === key.slice(2))) { const w = worlds.find(w => w.id === key.slice(2)); html = families(w); active = w.id; document.title = "Households · " + w.name + " · Jemma’s Sim World"; }
@@ -1310,11 +1312,12 @@ function route(){
   else { html = `<section class="hero small" style="--c:#8E62CF"><div class="kicker"><i></i><span class="label">Page not found</span></div><h1 style="margin-top:14px">Nothing <em>here</em></h1><p>This link doesn't match any world, neighbourhood, lot or household. It may be an old link from before something was renamed.</p></section>
     <section class="block"><p class="notfound"><a href="#home">${ic("home")}Go to the home page</a><a href="#stats">Search every lot on the Stats page</a></p></section>`; document.title = "Page not found · Jemma’s Sim World"; active = ""; }
   document.title = curly(document.title);   // curly apostrophes in the tab title too (Crow’s Crossing, 19 Oct check)
-  const cw = worlds.find(w => w.id === active);
+  const cw = tp && tp.deep ? tp : worlds.find(w => w.id === active);
   const root = document.documentElement.style;
   if (cw && cw.deep) { root.setProperty("--deep", cw.deep[0]); root.setProperty("--deep-2", cw.deep[1]); }
   else { root.removeProperty("--deep"); root.removeProperty("--deep-2"); }
   view.innerHTML = html;
+  if (typeof trialAfter === "function") trialAfter(key, view);   // sidebar trial (23 Oct)
   notOwnedLinks(view);
   initialsContrast(view);
   lazyPics(view);

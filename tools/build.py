@@ -321,6 +321,9 @@ if __name__ == '__main__':
     gone = missing_pictures(d)
     if gone: sys.exit("Pictures missing from site/: " + ", ".join(gone[:10]) + (" …" if len(gone) > 10 else ""))
     p = write(d)
+    try:   # the Admin pages' extra data (sidebar trial, 23 Oct); a problem there never stops the build
+        import admin_data; admin_data.write()
+    except Exception as e: print('Admin data not written:', e)
     stamp_page()
     lots = sum(len(h['lots']) for w in d['worlds'] for h in w['hoods'])
     print(f"Wrote {os.path.relpath(p)}: {len(d['worlds'])} worlds, {lots} lots on the site, {len(d['stats'])} in the plan, "

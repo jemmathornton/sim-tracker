@@ -965,8 +965,94 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 .hero.mapped>p{text-shadow:0 1px 2px rgba(0,0,0,.55),0 0 12px rgba(0,0,0,.4)}
 .hero.mapped .figures span{text-shadow:0 1px 2px rgba(0,0,0,.45)}
 .u-name small{display:block;font-weight:400;font-size:12px;margin-top:2px}
+/* ---------- sidebar trial (23 Oct; js/trial.js): the switch, and the new layout's Calendar, Admin and Across the worlds pages.
+   Ported from for-jemma/prototypes/calendar-admin/proto.css. Everything but the switch only shows in the new layout. ---------- */
+.trial-switch{position:fixed;right:18px;bottom:18px;z-index:60;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:16px;padding:12px 14px;box-shadow:0 10px 30px rgba(0,0,0,.18);display:grid;gap:8px;font-size:13px;max-width:430px}
+.trial-switch div{display:flex;flex-wrap:wrap;gap:6px}
+.trial-switch button{border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:5px 11px;cursor:pointer;font-weight:600;font-size:12.5px;color:var(--ink)}
+.trial-switch button.on{background:var(--brass);border-color:var(--brass);color:#fff}
+.trial-switch button:focus-visible{outline:2px solid var(--brass)}
+.nav-group.across-nav,.nav-group.admin-nav{margin-top:6px}
+.nav-group.admin-nav{border-top:1px solid rgba(255,255,255,.1);padding-top:10px}
+.nav-group.across-nav a svg,.nav-group.admin-nav a svg{opacity:.8}
+/* seasons in the calendar banner, like a world's neighbourhoods */
+.hero .chapters button.on{background:rgba(255,255,255,.92);color:#1A1F1C;border-color:transparent}
+.hero .chapters button svg{width:15px;height:15px}
+/* the whole-save banner: a strip of the worlds with something on */
+.cal-hero{background:linear-gradient(160deg,var(--deep-2),var(--deep) 70%)}
+.cal-hero .patch{position:absolute!important;inset:0;display:flex}
+.cal-hero .patch a{flex:1 1 0;min-width:0;position:relative;background-position:center 40%;background-size:cover;border-right:1px solid rgba(0,0,0,.25);transition:flex-grow .25s ease}
+.cal-hero .patch a::after{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--h)}
+.cal-hero .patch a span{position:absolute;left:50%;top:14px;transform:translateX(-50%);white-space:nowrap;font-size:11.5px;font-weight:700;color:#fff;background:rgba(0,0,0,.45);padding:3px 9px;border-radius:99px;opacity:0;transition:opacity .2s}
+.cal-hero .patch a:hover{flex-grow:2.2}
+.cal-hero .patch a:hover span,.cal-hero .patch a:focus-visible span{opacity:1}
+.cal-hero .patch-fade{position:absolute!important;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,color-mix(in srgb,var(--deep) 10%,transparent) 0%,color-mix(in srgb,var(--deep) 35%,transparent) 38%,color-mix(in srgb,var(--deep) 88%,transparent) 72%,var(--deep) 100%)}
+.cal-hero .credit{top:auto;bottom:auto;top:28px}
+.cal-hero .kicker,.cal-hero h1,.cal-hero .hero-foot{pointer-events:none}
+.cal-hero .hero-foot .chapters{pointer-events:auto}
+.cal-hero h1 small.h1-sub,.cal-w-hero h1 small.h1-sub{display:block;font:400 italic clamp(22px,2.4vw,30px)/1.1 var(--display);color:var(--on-deep-mute);letter-spacing:0;margin-top:10px}
+.cal-back{display:inline-flex;align-items:center;gap:6px;align-self:flex-start;margin-bottom:12px;font-size:12.5px;font-weight:700;color:#fff;text-decoration:none;background:rgba(0,0,0,.35);padding:4px 11px;border-radius:99px}
+.cal-back svg{transform:rotate(180deg)}
+/* the month: events are links */
+.cal a.m-ev{text-decoration:none;color:inherit;display:flex}
+.cal a.m-ev:hover span{text-decoration:underline}
+.cal a.wchip{color:inherit}
+.cal a.wchip.on{color:var(--on,#fff)}
+/* world pages: a "What's on" line in the strip under the banner */
+.wx-whatson{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 8px;font-size:13.5px;margin-top:6px;padding-top:10px;border-top:1px dashed var(--line)}
+.wx-whatson svg{color:var(--h);width:14px;height:14px;vertical-align:-2px;align-self:center}
+.wx-whatson span{color:var(--muted)}.wx-whatson span b{color:var(--ink);font-weight:600}
+.wx-whatson a{margin-left:auto;font-weight:700;color:var(--ink);text-decoration:none;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.wx-whatson a:hover{text-decoration:underline}
+a.fest-link{color:inherit;text-decoration-color:var(--line);text-underline-offset:3px}
+/* admin */
+.adm-hero{--c:#7A8A80}
+.adm-lock{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:700;color:var(--on-deep);background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);padding:4px 11px;border-radius:99px;margin-left:8px}
+.adm-lock svg{width:14px;height:14px}
+.adm-body{margin-top:28px}
+.adm-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin-top:18px}
+.adm-card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:grid;gap:6px;align-content:start}
+.adm-card .label{display:flex;align-items:center;gap:7px}
+.adm-card .label svg{width:14px;height:14px}
+.adm-card b.big{font:400 40px/1 var(--display)}
+.adm-card p{margin:0;font-size:13.5px;color:var(--muted)}
+.adm-card p b{color:var(--ink)}
+.adm-card.ok{border-left:4px solid var(--done)}
+.adm-card.warn{border-left:4px solid #C2703D}
+.adm-card .linkish,.adm-card a{font-size:13px;font-weight:700}
+.adm-card a.linkish{display:inline-flex;align-items:center;gap:6px;justify-self:start;color:var(--ink)}
+.adm-list{margin:14px 0 0;padding:0;list-style:none;display:grid;gap:0;border:1px solid var(--line);border-radius:14px;background:var(--surface);overflow:hidden}
+.adm-list li{padding:10px 14px;border-bottom:1px solid var(--line);font-size:14px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 14px;align-items:baseline}
+.adm-list li:last-child{border-bottom:0}
+.adm-list li small{color:var(--muted);font-size:12.5px;grid-column:1/-1}
+.adm-list li .w{color:var(--muted);font-size:12.5px;white-space:nowrap}
+.adm-list li a{font-weight:700;text-decoration-color:var(--line);text-underline-offset:3px}
+.adm-list li .dot,.adm-body .sheet .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--h,#888);margin-right:8px;vertical-align:1px}
+.adm-sub{font:400 26px/1.1 var(--display);margin:34px 0 0;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.adm-sub em{color:var(--brass)}
+.adm-sub small{font:600 13px var(--body);color:var(--muted)}
+.adm-intro{margin:10px 0 0;color:var(--muted);font-size:14.5px;max-width:70ch}
+details.adm-more{margin-top:12px}
+details.adm-more summary{cursor:pointer;font-weight:700;font-size:14px;color:var(--muted)}
+.adm-two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px}
+.adm-pill{display:inline-block;font-size:11.5px;font-weight:800;padding:2px 8px;border-radius:99px;background:var(--soft);color:var(--muted);margin-left:6px;vertical-align:1px}
+.adm-pill.ok{background:color-mix(in srgb,var(--done) 18%,var(--surface));color:var(--done)}
+.adm-pill.bad{background:color-mix(in srgb,#C2703D 18%,var(--surface));color:#A55A2C}
+.adm-plain{margin:14px 0 0;color:var(--muted);font-size:14px}
+/* across the worlds: group cards carry their kind's icon; a plain line under a family's households */
+.tr-groups .fam .mono svg{width:22px;height:22px}
+.tr-line{display:flex;gap:8px;align-items:baseline;margin:14px 0 0;font-size:14px;color:var(--muted)}
+.tr-line svg{flex:none;width:15px;height:15px;align-self:center;color:var(--ink)}
+.tr-line a{font-weight:700;color:var(--ink);text-decoration-color:var(--line);text-underline-offset:3px}
 /* phone layout (22 Oct, her ask; phone widths only, the laptop layout is untouched) */
 @media (max-width:700px){
+  /* sidebar trial (23 Oct) */
+  .trial-switch{left:8px;right:8px;bottom:8px;max-width:none;padding:8px 10px;grid-auto-flow:column;align-items:center;justify-content:space-between}
+  .adm-two{grid-template-columns:1fr}
+  .cal-hero .patch a span{display:none}
+  .adm-list li{grid-template-columns:minmax(0,1fr)}
+  .adm-list li .w{white-space:normal}
   .gal-best{grid-template-columns:minmax(0,1fr)}
   .wx-seasons{grid-template-columns:repeat(2,minmax(0,1fr))}
   .wx-highlights{grid-template-columns:minmax(0,1fr)}
