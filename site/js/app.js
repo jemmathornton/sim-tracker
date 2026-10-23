@@ -901,10 +901,13 @@ function hoodArt(x){
 function hoodExtras(x, all){
   const f = x.festivals || [], shown = all ? f : f.slice(0, 3), more = f.length - shown.length;
   return (f.length ? `<p class="home-to">${ic("party")}<span>Festivals and events: ${shown.map(n => `<b>${esc(n)}</b>`).join(", ")}${more ? ` and ${more} more` : ""}</span></p>` : "")
-    + (x.ecoStart ? `<p class="home-to">${ic(x.ecoStart === "Industrial" ? "factory" : "leaf")}<span>Eco footprint starts <b>${esc(x.ecoStart)}</b></span></p>` : "");
+    + (ecoOf(x) ? `<p class="home-to">${ic(ecoOf(x) === "Industrial" ? "factory" : "leaf")}<span>Eco footprint starts <b>${esc(ecoOf(x))}</b></span></p>` : "");
 }
 // the households living in a neighbourhood: tenants in its rentals count, owners of a business there who live elsewhere don't (22 Oct)
 const hoodHouseholds = x => [...new Set(x.lots.flatMap(l => unitCount(l) ? rentalUnits(l).filter(Boolean).map(u => u.hh) : l.hh && !l.owned ? [l.hh] : []))];
+// every neighbourhood's starting eco footprint, Neutral where the game sets none (her ask, 23 Oct); not StrangerVille (no eco footprint
+// there) or the Secret Lots groups
+const ecoOf = x => x.ecoStart || (x.world.id === "strangerville" || /secret lots/i.test(x.name) ? "" : "Neutral");
 function hoodCard(x){
   const hhSet = hoodHouseholds(x), hh = hhSet.length, built = x.lots.filter(l => l.built === true).length, made = hhSet.filter(simsMade).length;
   return `<a class="listing" href="#n-${x.id}" style="--h:${x.color}">${hoodArt(x)}
