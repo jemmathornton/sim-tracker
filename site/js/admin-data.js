@@ -183,82 +183,27 @@ window.ADMIN = {
 "text": "**Do:** Upload your own households to the Gallery ({yours}: {yoursOnSite} with Sims on the site, the rest not made yet); they become the site's source."
 },
 {
-"section": "New save fixes (from Claude's checks, 23 Oct)",
+"section": "New save fixes",
 "world": "",
-"text": "**Do (soon):** Only 1 household in the new save is in My Households (hearted). Heart the planned ones, especially the families moved out while you placed builds: the game culls Sims outside My Households, homeless ones first."
+"text": "**Do:** Everything the save itself shows (game options, Neighbourhood Stories, hearting, lots to place or fix, households to move or bring in) is in the **New save** block at the top of this page; Claude refreshes it after each session. First: untick the Neighbourhood Stories rules and heart your planned households."
 },
 {
-"section": "New save fixes (from Claude's checks, 23 Oct)",
-"world": "",
-"text": "**Do (first!):** Neighbourhood Stories in the new save still has every rule ticked for Other Households, so the game can move the families you've moved out into your empty homes. Untick Move In, Move Out, Have a Baby, Adopt a Child, Adopt Cats & Dogs, Rescue Horses, Join a Career, Leave a Career and Romance Changes (Manage Worlds > Manage Households > Other Households, top right)."
-},
-{
-"section": "New save fixes (from Claude's checks, 23 Oct)",
-"world": "",
-"text": "**Do:** Season Length is still the game's 7 days in the new save: set 28 days (Game Options > Seasons) before the holidays, as checklist step 2 says."
-},
-{
-"section": "New save fixes (from Claude's checks, 23 Oct)",
-"world": "",
-"text": "**Do:** Maximum Sim Count is 150 in the new save; your pick was Unlimited (or the most your PC copes with)."
-},
-{
-"section": "New save fixes (from Claude's checks, 23 Oct)",
-"world": "",
-"text": "**Do:** Allow Automatic Breakups and Enable Dynasty Prestige Decay are still on in the new save; your picks are off."
-},
-{
-"section": "New save fixes (from Claude's checks, 23 Oct)",
-"world": "",
-"text": "**Do:** Holidays (checklist step 3) aren't done yet: the save still has the game's own calendar."
-},
-{
-"section": "New save fixes (from Claude's checks, 23 Oct)",
-"world": "",
-"text": "**Do:** Midtown Meadows unit 4: Homey → Home Studio (with Gnomes), or keep Homey and tell Claude."
-},
-{
-"section": "New save fixes (from Claude's checks, 23 Oct)",
-"world": "",
-"text": "**Do:** Factory One: add Party Place and Great Acoustics."
-},
-{
-"section": "New save fixes (from Claude's checks, 23 Oct)",
-"world": "",
-"text": "**Do:** Carpophagous Corner (StrangerVille) came in as Residential: set it to Vacation Rental."
-},
-{
-"section": "New save fixes (from Claude's checks, 23 Oct)",
-"world": "",
-"text": "**Do:** Rio Verde, Fern Park Flats, Upland Trailer Park and Slip 42: every unit now has unit 1’s traits (placing seems to copy them). Check each unit in game and keep what you want; tell Claude and the site follows."
-},
-{
-"section": "New save fixes (from Claude's checks, 23 Oct)",
-"world": "",
-"text": "**Do:** Place Hindquarter Hideaway (Brindleton Bay)."
-},
-{
-"section": "New save fixes (from Claude's checks, 23 Oct)",
-"world": "",
-"text": "**Do:** Households moved out while placing builds: once the builds are in, Claude lists who goes back where (from the save against the plan), and you move them in."
-},
-{
-"section": "New save fixes (from Claude's checks, 23 Oct)",
+"section": "New save fixes",
 "world": "",
 "text": "**Do:** The game crashed placing the first Britechester lot (23 Oct). Next try: save first, then place it from inside the lot in Build mode; if it crashes again, close the game and delete localthumbcache.package (Documents\\Electronic Arts\\The Sims 4; the game remakes it). Tell Claude which lot it was. (If it was Darby’s Den, the first on the checklist: players have reported crashes replacing that one before. Try another Britechester lot first.)"
 },
 {
-"section": "New save fixes (from Claude's checks, 23 Oct)",
+"section": "New save fixes",
 "world": "",
 "text": "**Decide:** Lagoon of Love: Wedding Venue (Claude’s pick: your Gallery text calls it a beach wedding spot, Sulani has none, and it needs no pack), Park, or Vacation Rental (the upload has no beds)?"
 },
 {
-"section": "New save fixes (from Claude's checks, 23 Oct)",
+"section": "New save fixes",
 "world": "",
 "text": "**Do:** Palomino Junction (Chestnut Ridge): place it from the Gallery, not your Library: both Library copies are marked as containing mods or custom content."
 },
 {
-"section": "New save fixes (from Claude's checks, 23 Oct)",
+"section": "New save fixes",
 "world": "",
 "text": "**Decide:** Spooky on The Narwhal Arms and Von-Windenburg Castle, Simple Living on Coorinberg Cottage and Rustic Residence: keep (Claude adds them to the plan) or take off?"
 },
