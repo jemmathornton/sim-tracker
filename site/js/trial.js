@@ -15,8 +15,16 @@ function trialSwitch(){
   let d = document.getElementById("trial-switch");
   if (!d) { d = document.createElement("div"); d.id = "trial-switch"; d.className = "trial-switch"; d.setAttribute("role", "group"); d.setAttribute("aria-label", "Sidebar (trial)"); document.body.appendChild(d); }
   d.innerHTML = `<b>Sidebar (trial)</b><div>${[["now", "As now"], ["new", "New layout"]].map(([k, t]) => `<button type="button" data-trial="${k}" class="${TRIAL === k ? "on" : ""}" aria-pressed="${TRIAL === k}">${t}</button>`).join("")}</div>`
-    + `<b>Gallery pictures (trial)</b><div>${[["cover", "As now"], ["all", "All four"]].map(([k, t]) => `<button type="button" data-gp="${k}" class="${GP === k ? "on" : ""}" aria-pressed="${GP === k}">${t}</button>`).join("")}</div>`;
+    + `<b>Gallery pictures (trial)</b><div>${[["cover", "As now"], ["all", "All four"]].map(([k, t]) => `<button type="button" data-gp="${k}" class="${GP === k ? "on" : ""}" aria-pressed="${GP === k}">${t}</button>`).join("")}</div>`
+    + `<b>Season colours (trial)</b><div>${[["now", "As now"], ["blossom", "Blossom"], ["muted", "Muted"], ["jewel", "Jewel"]].map(([k, t]) => `<button type="button" data-sc="${k}" class="${SC === k ? "on" : ""}" aria-pressed="${SC === k}">${t}</button>`).join("")}</div>`;
 }
+// ---------- season colours trial (23 Oct, her ask: new colours for the seasons on the calendar and world pages) ----------
+const SC_KEY = "jsw-season-colours-trial";
+let SC = (() => { try { const v = localStorage.getItem(SC_KEY); return ["blossom", "muted", "jewel"].includes(v) ? v : "now"; } catch (e) { return "now"; } })();
+const scApply = () => { document.documentElement.classList.remove("sc-blossom", "sc-muted", "sc-jewel"); if (SC !== "now") document.documentElement.classList.add("sc-" + SC); };
+scApply();
+document.addEventListener("click", e => { const b = e.target.closest("[data-sc]"); if (!b || b.dataset.sc === SC) return;
+  SC = b.dataset.sc; try { localStorage.setItem(SC_KEY, SC); } catch (err) {} scApply(); trialSwitch(); });
 // ---------- Gallery pictures trial (23 Oct): lots with no screenshots of hers show all four of their Gallery upload's pictures,
 // not just the cover (the other three come from tools/gallery_more.py, marked "more" in data.js) ----------
 const GP_KEY = "jsw-gallery-pictures-trial";
