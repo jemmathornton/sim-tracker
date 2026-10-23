@@ -327,6 +327,10 @@ if __name__ == '__main__':
     try:   # the Admin pages' extra data (js/sections.js, 23 Oct); a problem there never stops the build
         import admin_data; admin_data.write()
     except Exception as e: print('Admin data not written:', e)
+    try:   # her new-save checklist, kept in step with the plan (23 Oct); never stops the build either
+        import io, contextlib, new_save_checklist
+        with contextlib.redirect_stdout(io.StringIO()): new_save_checklist.main()
+    except Exception as e: print('New-save checklist not written:', e)
     stamp_page()
     lots = sum(len(h['lots']) for w in d['worlds'] for h in w['hoods'])
     print(f"Wrote {os.path.relpath(p)}: {len(d['worlds'])} worlds, {lots} lots on the site, {len(d['stats'])} in the plan, "

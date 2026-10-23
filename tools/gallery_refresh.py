@@ -199,7 +199,7 @@ def commit_refresh():
     """Save the refresh in the project's history (her OK, 23 Oct), so a bad week can always be undone. Only the files a
     refresh writes are committed; anything else being worked on is left alone. Never pushes anywhere."""
     import subprocess
-    paths = ['data/gallery', 'data/worlds', 'site/js/data.js', 'site/js/admin-data.js', 'site/index.html', 'site/gallery', 'site/gallery-more']
+    paths = ['data/gallery', 'data/worlds', 'site/js/data.js', 'site/js/admin-data.js', 'site/index.html', 'site/gallery', 'site/gallery-more', 'for-jemma/new-save-checklist.md']
     paths = [p for p in paths if os.path.exists(os.path.join(ROOT, p))]
     run = lambda *a: subprocess.run(['git', *a], cwd=ROOT, stdin=subprocess.DEVNULL, capture_output=True, text=True, encoding='utf-8',
                                      creationflags=getattr(subprocess, 'CREATE_NO_WINDOW', 0))
