@@ -39,7 +39,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 - [ ] Heart every planned household (“Move into My Households”).
 - [ ] Split or merge households first (Newcrest BFF, Del Sol Roomies and Eclectic Arts, Calientes/Don Lothario, Greenburgs/Knox, Linhs, Enzo Alto, the Curious brothers).
 - [ ] Move or evict households off lots you’re replacing.
-- [ ] For each lot: set the lot type first, save, place the upload (furnished), then check its type, traits, challenge and units.
+- [ ] For each lot: save, place the upload (furnished), then check its lot type, traits, challenge and units, and fix what came in wrong. A placed lot brings the type it was uploaded with, so Vacation Rentals come in as Residential (the Gallery keeps them that way) and need setting again.
 - [ ] Rentals: unit names and unit traits often don’t come over (24 Oct research, research/rentals-and-apartments-placing.md). After placing, check the unit outlines, then set each unit’s name and traits in Build mode (Venue Info > Unit Configuration), then the rent, then move households in. The landlord never comes with the lot.
 - [ ] Apartments (San Myshuno, Evergreen Harbor, Ondarion…): a whole lot can’t go in, only Rooms into each unit: clear the unit, turn on bb.moveobjects, place the Room, then put back the walls you took out to upload it. EA’s 27 Oct 2026 patch fixes some Gallery and rental loading problems, so apartments may be easier after it.
 - [ ] Move households in (tenants into their units), then small businesses.
