@@ -1,35 +1,12 @@
-// Sidebar trial (23 Oct, her decisions in research/calendar-and-admin.md and TODO.md "Calendar, admin page and a sidebar section").
-// A switch at the bottom right of every page: "As now" is the site exactly as it was; "New layout" has the sidebar sections
-// Worlds, Across the worlds (Calendar, Clubs, Dynasties, University organisations, Families, Businesses) and Admin (in place of Stats).
+// The sidebar sections Across the worlds (Calendar, Clubs, Dynasties, University organisations, Families, Businesses) and Admin
+// (in place of the old Stats page), their pages, and the calendar links on world, neighbourhood and lot pages. Kept after a trial
+// (her call, 23 Oct; her decisions in research/calendar-and-admin.md and TODO.md "Calendar, admin page and a sidebar section").
 // The Calendar and Admin pages are ported from the prototype she reviewed (for-jemma/prototypes/calendar-admin/: proto-calendar.js,
-// option A; proto-admin.js, as pages instead of tabs). Loaded after app.js; app.js's route() asks trialPage() for the new pages and
-// lets trialAfter() add the new links. Remove this file (and those two lines in route) once she picks.
-const TRIAL_KEY = "jsw-sidebar-trial";
-let TRIAL = "new";   // her call, 23 Oct: the new sidebar stays (the switch is gone; "now" code paths are kept only until this file is folded into app.js)
-const trNew = () => TRIAL === "new";
-let trRedrawing = false;
-const trRedraw = () => { const y = scrollY; trRedrawing = true; try { route(); } finally { trRedrawing = false; } scrollTo(0, y); };
-
-// ---------- the switch ----------
-function trialSwitch(){ document.getElementById("trial-switch")?.remove(); }   // no trials running (23 Oct)
-// ---------- Gallery pictures trial (23 Oct): lots with no screenshots of hers show all four of their Gallery upload's pictures,
-// not just the cover (the other three come from tools/gallery_more.py, marked "more" in data.js) ----------
-const GP_KEY = "jsw-gallery-pictures-trial";
-let GP = "all";   // her call, 23 Oct: all four Gallery pictures stay (switch removed)
-function gpApply(){ Object.values(lotIndex).forEach(l => { l._allPhotos ||= l.photos; l.photos = GP === "all" ? l._allPhotos : l._allPhotos.filter(p => !p.more); }); }
-gpApply();
-document.addEventListener("click", e => { const b = e.target.closest("[data-gp]"); if (!b || b.dataset.gp === GP) return;
-  GP = b.dataset.gp; try { localStorage.setItem(GP_KEY, GP); } catch (err) {} gpApply(); trialSwitch(); trRedraw(); });
-const TR_ACROSS = ["clubs", "dynasties", "organisations", "families", "businesses"];
-document.addEventListener("click", e => { const b = e.target.closest("[data-trial]"); if (!b || b.dataset.trial === TRIAL) return;
-  TRIAL = b.dataset.trial; try { localStorage.setItem(TRIAL_KEY, TRIAL); } catch (err) {}
-  trialSwitch(); searchList = null;
-  const k = location.hash.slice(1);
-  // pages that only the new layout has: back to their nearest page as it is now
-  if (TRIAL === "now" && /^calendar-/.test(k)) location.hash = "#calendar";
-  else if (TRIAL === "now" && /^admin/.test(k)) location.hash = "#stats";
-  else if (TRIAL === "now" && TR_ACROSS.includes(k)) location.hash = "#home";
-  else trRedraw(); });
+// option A; proto-admin.js, as pages instead of tabs). Loaded after app.js and js/admin-data.js; app.js's route() asks sectionPage()
+// for these pages and lets afterRoute() add the calendar links.
+let redrawing = false;
+const redraw = () => { const y = scrollY; redrawing = true; try { route(); } finally { redrawing = false; } scrollTo(0, y); };
+const ACROSS_KEYS = ["clubs", "dynasties", "organisations", "families", "businesses"];
 
 // ---------- the sidebar ----------
 const ADM_SECTIONS = [
@@ -42,22 +19,18 @@ const ADM_SECTIONS = [
   {k: "sims", key: "admin-sims", name: "Sims", icon: "users", title: "The <em>Sims</em>"},
 ];
 const grpOf = kind => Object.values(GROUP_PAGES).filter(g => g.kind === kind);
-const TR_ACROSS_NAV = () => [["calendar", "calendar", "Calendar", null], ["clubs", "flag", "Clubs", grpOf("club").length], ["dynasties", "crown", "Dynasties", grpOf("dynasty").length],
-  ["organisations", "graduation-cap", "University organisations", Object.keys((DATA.groups || {}).organisations || {}).length], ["families", "network", "Families", crossFamilies().length], ["businesses", "briefcase", "Businesses", trBusinesses().length]];
-function trialNav(active, key, ctx){
-  const nav = document.getElementById("nav"), bottom = nav.querySelector(".stats-nav"), notOwned = nav.querySelector(".nav-group.dim");
-  if (bottom) bottom.remove();
+const ACROSS_NAV = () => [["calendar", "calendar", "Calendar", null], ["clubs", "flag", "Clubs", grpOf("club").length], ["dynasties", "crown", "Dynasties", grpOf("dynasty").length],
+  ["organisations", "graduation-cap", "University organisations", Object.keys((DATA.groups || {}).organisations || {}).length], ["families", "network", "Families", crossFamilies().length], ["businesses", "briefcase", "Businesses", ownedBusinesses().length]];
+function sectionsNav(active){
+  const nav = document.getElementById("nav"), notOwned = nav.querySelector(".nav-group.dim");
   const n = admCounts(), badge = k => ({checks: n.checks, next: n.next, game: n.game, gallery: n.gallery, sims: n.sims})[k];
-  const across = `<div class="nav-group across-nav"><div class="label">Across the worlds</div>${TR_ACROSS_NAV().map(([k, i, t, c]) => `<a href="#${k}" class="${active === k ? "on" : ""}">${ic(i)}${esc(t)}${c ? `<span class="pct">${c}</span>` : ""}</a>`).join("")}</div>`;
+  const across = `<div class="nav-group across-nav"><div class="label">Across the worlds</div>${ACROSS_NAV().map(([k, i, t, c]) => `<a href="#${k}" class="${active === k ? "on" : ""}">${ic(i)}${esc(t)}${c ? `<span class="pct">${c}</span>` : ""}</a>`).join("")}</div>`;
   const admin = `<div class="nav-group admin-nav"><div class="label">Admin</div>${ADM_SECTIONS.map(s => `<a href="#${s.key}" class="${active === s.key ? "on" : ""}">${ic(s.icon)}${esc(s.name)}${badge(s.k) ? `<span class="pct">${badge(s.k)}</span>` : ""}</a>`).join("")}</div>`;
   if (notOwned) notOwned.insertAdjacentHTML("beforebegin", across); else nav.insertAdjacentHTML("beforeend", across);
   nav.insertAdjacentHTML("beforeend", admin);
 }
-const renderNavTrialBase = renderNav;
-renderNav = function (active, key, ctx) { renderNavTrialBase(active, key, ctx); if (trNew()) trialNav(active, key, ctx || {}); };
-// the search's fallback link points at Admin's Progress page in the new layout
-const showSearchTrialBase = showSearch;
-showSearch = function () { showSearchTrialBase(); if (!trNew()) return; const a = document.querySelector('#nav a.hit[href="#stats"]'); if (a) { a.setAttribute("href", "#admin-progress"); a.innerHTML = `${ic("grid")}Search every lot in Admin, Progress`; } };
+const renderNavBase = renderNav;
+renderNav = function (active, key, ctx) { renderNavBase(active, key, ctx); sectionsNav(active); };
 
 /* ---------- the Calendar (prototype option A, her pick): one calendar, a map banner of the worlds with something on; pick a world and
    the banner becomes its map and colours (#calendar-<world>). Every event in the month opens its lot or neighbourhood. ---------- */
@@ -117,14 +90,14 @@ function protoCal(w){
     <p class="yr-note">${ic("leaf")}<span><b>Neighbourhood action plan voting</b> every week from Friday 8 am to Monday 6 pm, in every neighbourhood with residents.</span></p></section>`;
   return h;
 }
-// seasons, kinds and the school filter redraw the new calendar, not the old one (caught before the app's own listeners)
-const onTrialCal = () => trNew() && /^#calendar/.test(location.hash);
-document.addEventListener("click", e => { if (!onTrialCal()) return;
+// seasons, kinds and the school filter redraw the calendar
+const onCalendar = () => /^#calendar/.test(location.hash);
+document.addEventListener("click", e => { if (!onCalendar()) return;
   const s = e.target.closest("[data-cal-season]"), sc = e.target.closest("[data-cal-school]");
-  if (s) { e.stopPropagation(); calState.season = s.dataset.calSeason; trRedraw(); }
-  else if (sc) { e.stopPropagation(); calState.school = sc.getAttribute("data-cal-school") || null; trRedraw(); } }, true);
-document.addEventListener("change", e => { if (!onTrialCal()) return; const k = e.target.dataset && e.target.dataset.calKind; if (!k) return;
-  e.stopPropagation(); const set = /^#calendar-/.test(location.hash) ? worldKinds : calState.kinds; e.target.checked ? set.add(k) : set.delete(k); if (set === calState.kinds) calKeep(); trRedraw(); }, true);
+  if (s) { calState.season = s.dataset.calSeason; redraw(); }
+  else if (sc) { calState.school = sc.getAttribute("data-cal-school") || null; redraw(); } });
+document.addEventListener("change", e => { if (!onCalendar()) return; const k = e.target.dataset && e.target.dataset.calKind; if (!k) return;
+  const set = /^#calendar-/.test(location.hash) ? worldKinds : calState.kinds; e.target.checked ? set.add(k) : set.delete(k); if (set === calState.kinds) calKeep(); redraw(); });
 
 // links to the Calendar from world, neighbourhood and lot pages
 const whatsOnLine = w => { const evs = calEvents().filter(e => e.w === w.name), names = [...new Set(evs.filter(e => e.kind === "festival").map(e => e.name))];
@@ -132,18 +105,15 @@ const whatsOnLine = w => { const evs = calEvents().filter(e => e.w === w.name), 
   const txt = names.length ? names.map(n => `<b>${esc(n)}</b>`).join(", ") + (others ? ` and ${others} regular ${others === 1 ? "event" : "events"}` : "")
     : others ? `${others} regular ${others === 1 ? "event" : "events"} (no festivals)` : "the save’s holidays (no festivals or regular events here)";
   return `<div class="wx-whatson">${ic("party")}<b>What’s on:</b><span>${txt}.</span><a href="${calLink(w)}">${esc(w.name)}’s calendar ${ic("arrow")}</a></div>`; };
-function trialAfter(key, view){
-  if (!trNew()) return;
+function afterRoute(key, view){
   const wm = /^w-(.+)$/.exec(key), w = wm && wById(wm[1]);
-  if (w) { const strip = view.querySelector(".world-strip"); if (strip) strip.insertAdjacentHTML("beforeend", whatsOnLine(w));
-    const sl = view.querySelector(".stats-link"); if (sl) sl.remove(); }   // "Progress, lot by lot" goes with Stats
+  if (w) { const strip = view.querySelector(".world-strip"); if (strip) strip.insertAdjacentHTML("beforeend", whatsOnLine(w)); }
   const hm = /^n-(.+)$/.exec(key), x = hm && hoodIndex[hm[1]];
   if (x && wById(x.world.id)) view.querySelectorAll(".hood-extras .home-to").forEach(p => { if (!/Festivals and events/.test(p.textContent)) return;
     p.querySelectorAll("b").forEach(b => b.outerHTML = `<a class="fest-link" href="${calLink(x.world)}">${b.outerHTML}</a>`); });
   const l = lotIndex[key];
   if (l && wById(l.world.id)) { const nights = calEvents().filter(e => e.kind === "lot" && e.link === "#" + l.id), dl = view.querySelector("dl.facts");
     if (nights.length && dl) dl.insertAdjacentHTML("beforeend", `<div><dt>Lot nights</dt><dd>${nights.map(e => `${esc(e.name)}, ${e.days.map(d => CAL_DAY_NAMES[d]).join(" and ")} ${esc(e.time)}`).join("; ")} · <a href="${calLink(l.world)}">calendar</a></dd></div>`); }
-  const nf = view.querySelector('.notfound a[href="#stats"]'); if (nf) { nf.setAttribute("href", "#admin-progress"); nf.textContent = "Search every lot in Admin, Progress"; }
 }
 
 /* ---------- Admin (in place of Stats; for her only, on her PC). Ported from proto-admin.js; her call: pages under an Admin header in
@@ -287,26 +257,26 @@ function adminPage(sec){
     <section class="block adm-body">${ADM_BODY[sec.k]()}</section>`;
 }
 // the Progress filters redraw the Admin page, not the old Stats page
-const refreshStatsTrialBase = refreshStats;
+const refreshStatsBase = refreshStats;
 refreshStats = function (full) {
-  if (!trNew() || !/^#(admin-progress|stats)/.test(location.hash)) return refreshStatsTrialBase(full);
-  if (full) trRedraw(); else { const el = document.getElementById("lot-rows"); if (el) el.innerHTML = lotRows(); } };
+  if (!/^#(admin-progress|stats)/.test(location.hash)) return refreshStatsBase(full);
+  if (full) redraw(); else { const el = document.getElementById("lot-rows"); if (el) el.innerHTML = lotRows(); } };
 
 /* ---------- Across the worlds: clubs, dynasties, university organisations, families, businesses ---------- */
 const grpColour = g => { const l = g.place ? lotIndex[g.place] : g.homeHh ? g.homeHh.lots[0] : null; return g.colour || (l ? (l.hood.glow || l.hood.color) : wColour(g.world)); };
 const grpCard = (g, icon, rel, sub) => `<a class="fam" href="#${g.id}" style="--h:${grpColour(g)}"><span class="mono">${ic(icon)}</span><span>${rel ? `<span class="rel">${esc(rel)}</span>` : ""}<b>${esc(groupTitle(g))}</b><small>${sub}</small></span></a>`;
 const worldLabel = w => w ? w.name + (w.owned ? "" : " (not owned)") : "Across the save";
-const trHero = (c, kicker, title, text, figs) => `<section class="hero small" style="--c:${c}"><div class="kicker"><i></i><span class="label">${kicker}</span></div><h1 style="margin-top:14px">${title}</h1><p>${text}</p>
+const acrossHero = (c, kicker, title, text, figs) => `<section class="hero small" style="--c:${c}"><div class="kicker"><i></i><span class="label">${kicker}</span></div><h1 style="margin-top:14px">${title}</h1><p>${text}</p>
   ${figs ? `<div class="hero-foot"><div class="figures">${figs.map(([n, t]) => `<div><b>${n}</b><span>${t}</span></div>`).join("")}</div></div>` : ""}</section>`;
 const byWorldOrder = (a, b) => (a ? worlds.indexOf(a) : 999) - (b ? worlds.indexOf(b) : 999);
 function groupsBy(list, keyOf){ const m = new Map(); list.forEach(g => { const k = keyOf(g); if (!m.has(k)) m.set(k, []); m.get(k).push(g); }); return m; }
 const whoRole = (g, role) => g.members.filter(([, r]) => r === role).map(([id]) => SIMS[id].name).join(", ");
-const trEmpty = txt => `<section class="block"><div class="empty">${ic("note")}${txt}</div></section>`;
+const acrossEmpty = txt => `<section class="block"><div class="empty">${ic("note")}${txt}</div></section>`;
 
 function clubsPage(){
   const cs = grpOf("club").sort((a, b) => byWorldOrder(a.world, b.world) || a.name.localeCompare(b.name)), by = groupsBy(cs, g => g.world || null);
-  let h = trHero("#5E8F7A", "Across the worlds", "The <em>clubs</em>", "Every club on the site, by the world where it meets: who leads it, where it gets together, how many are in it.", [[cs.length, cs.length === 1 ? "club" : "clubs"], [by.size, by.size === 1 ? "world" : "worlds"], [new Set(cs.flatMap(g => g.members.map(([m]) => m))).size, "members"]]);
-  if (!cs.length) return h + trEmpty("No clubs yet.");
+  let h = acrossHero("#5E8F7A", "Across the worlds", "The <em>clubs</em>", "Every club on the site, by the world where it meets: who leads it, where it gets together, how many are in it.", [[cs.length, cs.length === 1 ? "club" : "clubs"], [by.size, by.size === 1 ? "world" : "worlds"], [new Set(cs.flatMap(g => g.members.map(([m]) => m))).size, "members"]]);
+  if (!cs.length) return h + acrossEmpty("No clubs yet.");
   by.forEach((gs, w) => { h += `<section class="block"><div class="block-head"><h2>${esc(worldLabel(w))}</h2><span class="count">${plural(gs.length, "club")}</span></div><div class="families tr-groups">${gs.map(g => {
     const lead = whoRole(g, "leader"), at = g.place && lotIndex[g.place] ? lotIndex[g.place].name : g.anyType ? "any " + g.anyType : "";
     return grpCard(g, "flag", "", [lead && "Led by " + esc(lead), at && "meets at " + esc(at), plural(g.members.length, "member")].filter(Boolean).join(" · ")); }).join("")}</div></section>`; });
@@ -314,8 +284,8 @@ function clubsPage(){
 }
 function dynastiesPage(){
   const ds = grpOf("dynasty").sort((a, b) => byWorldOrder(a.world, b.world) || a.name.localeCompare(b.name)), by = groupsBy(ds, g => g.world || null);
-  let h = trHero("#9A7B3A", "Across the worlds", "The <em>dynasties</em>", "Every dynasty on the site, by the world its head lives in: the head, the heir, and how far the family has spread.", [[ds.length, ds.length === 1 ? "dynasty" : "dynasties"], [by.size, by.size === 1 ? "world" : "worlds"], [ds.reduce((n, g) => n + g.members.length, 0), "members"]]);
-  if (!ds.length) return h + trEmpty("No dynasties yet.");
+  let h = acrossHero("#9A7B3A", "Across the worlds", "The <em>dynasties</em>", "Every dynasty on the site, by the world its head lives in: the head, the heir, and how far the family has spread.", [[ds.length, ds.length === 1 ? "dynasty" : "dynasties"], [by.size, by.size === 1 ? "world" : "worlds"], [ds.reduce((n, g) => n + g.members.length, 0), "members"]]);
+  if (!ds.length) return h + acrossEmpty("No dynasties yet.");
   by.forEach((gs, w) => { h += `<section class="block"><div class="block-head"><h2>${esc(worldLabel(w))}</h2><span class="count">${plural(gs.length, "dynasty", "dynasties")}</span></div><div class="families tr-groups">${gs.map(g => {
     const head = whoRole(g, "head"), heir = whoRole(g, "heir"), hhs = new Set(g.members.map(([id]) => SIMS[id].hh).filter(Boolean)).size;
     return grpCard(g, "crown", g.prestige != null ? `${g.prestige} ${g.prestige === 1 ? "star" : "stars"}` : "", [head && "Head: " + esc(head), heir && "heir: " + esc(heir), plural(g.members.length, "member") + (hhs > 1 ? ` in ${hhs} households` : "")].filter(Boolean).join(" · ")); }).join("")}</div></section>`; });
@@ -325,8 +295,8 @@ function orgsPage(){
   // every organisation the game has, the ones nobody on the site is in yet as plain cards with no page (her ask, 23 Oct: Foxbury Spirit Squad)
   const joined = grpOf("org"), empty = Object.entries((DATA.groups || {}).organisations || {}).filter(([n]) => !joined.some(g => g.name === n)).map(([n, o]) => ({...o, name: n, kind: "org", empty: true, members: []}));
   const os = [...joined, ...empty].sort((a, b) => Object.keys(UNIS).indexOf(a.uni) - Object.keys(UNIS).indexOf(b.uni) || a.name.localeCompare(b.name)), by = groupsBy(os, g => g.uni);
-  let h = trHero("#4E8B66", "Across the worlds · Britechester", "University <em>organisations</em>", "Every organisation, by university: the University of Britechester, Foxbury Institute, and the secret one open to both.", [[os.length, os.length === 1 ? "organisation" : "organisations"], [new Set(os.flatMap(g => g.members.map(([m]) => m))).size, "members"]]);
-  if (!os.length) return h + trEmpty("No university organisations yet.");
+  let h = acrossHero("#4E8B66", "Across the worlds · Britechester", "University <em>organisations</em>", "Every organisation, by university: the University of Britechester, Foxbury Institute, and the secret one open to both.", [[os.length, os.length === 1 ? "organisation" : "organisations"], [new Set(os.flatMap(g => g.members.map(([m]) => m))).size, "members"]]);
+  if (!os.length) return h + acrossEmpty("No university organisations yet.");
   by.forEach((gs, u) => { h += `<section class="block"><div class="block-head"><h2>${esc((UNIS[u] || {}).name || "Other")}</h2><span class="count">${plural(gs.length, "organisation")}</span></div><div class="families tr-groups">${gs.map(g =>
     g.empty ? `<div class="fam" style="--h:${(UNIS[g.uni] || {}).colour || "#888"}"><span class="mono">${ic(g.uni === "secret" ? "book-open-text" : "graduation-cap")}</span><span>${g.uni === "secret" ? `<span class="rel">Secret society</span>` : ""}<b>${esc(g.name)}</b><small>No members yet</small></span></div>`
     : grpCard(g, g.uni === "secret" ? "book-open-text" : "graduation-cap", kindName(g) === "Secret society" ? "Secret society" : "", [plural(g.members.length, "member"), g.join ? esc(g.join) : ""].filter(Boolean).join(" · "))).join("")}</div></section>`; });
@@ -334,9 +304,9 @@ function orgsPage(){
 }
 // families spread over several worlds: Sims joined by real family links (parents and partners), never by a shared surname alone;
 // a family counts when its Sims live in two or more worlds. NPC households (the Scotts at The Gnome's Arms) are left out.
-let TR_FAMILIES = null;
+let FAMILIES_ACROSS = null;
 function crossFamilies(){
-  if (TR_FAMILIES) return TR_FAMILIES;
+  if (FAMILIES_ACROSS) return FAMILIES_ACROSS;
   const ok = id => SIMS[id] && !SIMS[id].ph && !SIMS[id].stub && !(SIMS[id].hh && SIMS[id].hh.npc) && simWorldOf(id);
   const ids = Object.keys(SIMS).filter(ok), up = {}, find = x => up[x] === x ? x : (up[x] = find(up[x]));
   ids.forEach(id => up[id] = id);
@@ -344,7 +314,7 @@ function crossFamilies(){
   ids.forEach(id => { (SIMS[id].parents || []).filter(ok).forEach(p => edges.push([id, p])); (SIMS[id].partners || []).filter(([p]) => ok(p)).forEach(([p]) => edges.push([id, p])); });
   edges.forEach(([a, b]) => { up[find(a)] = find(b); });
   const comps = {}; ids.forEach(id => (comps[find(id)] ||= []).push(id));
-  return TR_FAMILIES = Object.values(comps).map(m => {
+  return FAMILIES_ACROSS = Object.values(comps).map(m => {
     const ws = [...new Set(m.map(simWorldOf))].sort(byWorldOrder);
     if (ws.length < 2) return null;
     const hhs = [...new Set(m.map(id => SIMS[id].hh).filter(Boolean))].sort((a, b) => byWorldOrder(a.world, b.world) || byHh(a, b));
@@ -379,8 +349,8 @@ function acrossLines(across, fam){
 const simA = id => { const href = simLinkTo(id); return href ? `<a href="${href}">${esc(SIMS[id].name)}</a>` : esc(SIMS[id].name); };
 function familiesAcrossPage(){
   const fs = crossFamilies();
-  let h = trHero("#AE5578", "Across the worlds", "Families across the <em>worlds</em>", "Families whose Sims live in more than one world, joined by the family tree (parents, children and partners), not by surname alone.", [[fs.length, fs.length === 1 ? "family" : "families"], [new Set(fs.flatMap(f => f.ws)).size, "worlds"], [fs.reduce((n, f) => n + f.hhs.length, 0), "households"]]);
-  if (!fs.length) return h + trEmpty("No family on the site lives in more than one world yet.");
+  let h = acrossHero("#AE5578", "Across the worlds", "Families across the <em>worlds</em>", "Families whose Sims live in more than one world, joined by the family tree (parents, children and partners), not by surname alone.", [[fs.length, fs.length === 1 ? "family" : "families"], [new Set(fs.flatMap(f => f.ws)).size, "worlds"], [fs.reduce((n, f) => n + f.hhs.length, 0), "households"]]);
+  if (!fs.length) return h + acrossEmpty("No family on the site lives in more than one world yet.");
   fs.forEach(f => {
     const shown = f.across.slice(0, 6), more = f.across.length - shown.length;
     h += `<section class="block"><div class="block-head"><h2>The <em>${esc(f.name)}</em> family</h2><span class="count">${plural(f.hhs.length, "household")} in ${f.ws.length} worlds</span></div>
@@ -391,19 +361,18 @@ function familiesAcrossPage(){
   return h;
 }
 // businesses: venues and shops with an owner household (residential rentals left out), by world
-let TR_BIZ = null;
-const trBusinesses = () => TR_BIZ ||= admOwned().filter(l => l.owned && l.hh && !isRental(l));
+let BUSINESSES = null;
+const ownedBusinesses = () => BUSINESSES ||= admOwned().filter(l => l.owned && l.hh && !isRental(l));
 function businessesPage(){
-  const bs = trBusinesses(), by = groupsBy([...bs].sort((a, b) => byWorldOrder(a.world, b.world)), l => l.world);
-  let h = trHero("#B4573E", "Across the worlds", "The <em>businesses</em>", "Shops, restaurants and venues that a household owns and runs, world by world. The name under each one is who runs it.", [[bs.length, bs.length === 1 ? "business" : "businesses"], [by.size, by.size === 1 ? "world" : "worlds"], [new Set(bs.map(l => l.hh)).size, "households"]]);
-  if (!bs.length) return h + trEmpty("No businesses with owners yet.");
+  const bs = ownedBusinesses(), by = groupsBy([...bs].sort((a, b) => byWorldOrder(a.world, b.world)), l => l.world);
+  let h = acrossHero("#B4573E", "Across the worlds", "The <em>businesses</em>", "Shops, restaurants and venues that a household owns and runs, world by world. The name under each one is who runs it.", [[bs.length, bs.length === 1 ? "business" : "businesses"], [by.size, by.size === 1 ? "world" : "worlds"], [new Set(bs.map(l => l.hh)).size, "households"]]);
+  if (!bs.length) return h + acrossEmpty("No businesses with owners yet.");
   by.forEach((ls, w) => { h += `<section class="hood" style="--h:${w.color}"><div class="hood-head"><span class="label">${esc(w.name)}</span><div><h2>${esc(w.name)}</h2></div><span class="count">${plural(ls.length, "business", "businesses")}</span></div><div class="listings">${ls.map(listing).join("")}</div></section>`; });
   return h;
 }
 
-// ---------- the pages the new layout draws (asked by route() in app.js) ----------
-function trialPage(key){
-  if (!trNew()) return null;
+// ---------- the pages these sections draw (asked by route() in app.js) ----------
+function sectionPage(key){
   const T = t => t + " · Jemma’s Sim World";
   const m = /^calendar(?:-(.+))?$/.exec(key);
   if (m) { const w = m[1] ? wById(m[1]) : null; if (m[1] && !w) return null;
@@ -412,14 +381,13 @@ function trialPage(key){
   const pages = {clubs: [clubsPage, "Clubs"], dynasties: [dynastiesPage, "Dynasties"], organisations: [orgsPage, "University organisations"], families: [familiesAcrossPage, "Families"], businesses: [businessesPage, "Businesses"]};
   if (pages[key]) return {html: pages[key][0](), active: key, title: T(pages[key][1])};
   const st = /^stats(?:-(.+))?$/.exec(key);   // old Stats links open Admin's Progress page
-  if (st) { const w = worlds.find(x => x.id === st[1]); if (!trRedrawing) statsPage(w ? w.name : null); const s = ADM_SECTIONS[1];
+  if (st) { const w = worlds.find(x => x.id === st[1]); if (!redrawing) statsPage(w ? w.name : null); const s = ADM_SECTIONS[1];
     return {html: adminPage(s), active: s.key, title: T("Progress · Admin")}; }
   const s = ADM_SECTIONS.find(x => x.key === key);
   if (s) return {html: adminPage(s), active: s.key, title: T(s.name + " · Admin")};
   return null;
 }
-// for tools/check_pages.js: the new layout's own pages
-const TRIAL_KEYS = () => trNew() ? ["calendar", ...calWorlds().map(w => "calendar-" + w.id), ...TR_ACROSS, ...ADM_SECTIONS.map(s => s.key)] : [];
+// for tools/check_pages.js: these sections' own pages
+const SECTION_KEYS = () => ["calendar", ...calWorlds().map(w => "calendar-" + w.id), ...ACROSS_KEYS, ...ADM_SECTIONS.map(s => s.key)];
 
-trialSwitch();
-route();   // again, so the Gallery pictures trial applies to the first page too
+route();   // again: app.js drew the first page before this file was loaded

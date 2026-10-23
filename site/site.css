@@ -431,12 +431,6 @@ a.count{text-decoration:none}a.count:hover{color:var(--ink)}
 @media (max-width:800px){.notes-wrap{grid-template-columns:1fr}}
 
 /* stats */
-.stats-nav{border-top:1px solid rgba(255,255,255,.1);padding-top:10px}
-.stats-nav svg{opacity:.8}
-.stats-link{margin-top:72px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:20px 24px;border-radius:16px;background:var(--surface);border:1px solid var(--line);text-decoration:none;color:var(--muted)}
-.stats-link b{color:var(--ink)} .stats-link span{display:inline-flex;align-items:center;gap:8px;flex-wrap:wrap}
-.stats-link .go{color:var(--accent,var(--ink));font-weight:700;color:var(--ink)}
-.stats-link:hover{border-color:var(--ink)}
 .sheet-wrap{overflow-x:auto;margin-top:16px;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
 .sheet-wrap.tall{max-height:75vh;overflow:auto}
 .sheet{border-collapse:collapse;width:100%;font-size:14px;font-variant-numeric:tabular-nums}
@@ -902,7 +896,6 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 .cal .mini .dh{font-size:10.5px;font-weight:800;color:var(--muted);text-align:center;text-transform:uppercase;letter-spacing:.04em}
 .cal .mini .wk{font-size:10.5px;font-weight:800;color:var(--muted);display:grid;place-items:center}
 .cal .wchips{margin-bottom:6px}
-.nav-group.stats-nav a+a{margin-top:2px}
 /* the Calendar as a month: four weeks, Monday first (her ask, 19 Oct) */
 .cal .cal-top{display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px;margin-bottom:12px}
 .cal .seg{display:inline-flex;flex-wrap:wrap;border:1px solid var(--line);border-radius:99px;background:var(--surface);padding:3px}
@@ -941,13 +934,8 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 .hero.mapped>p{text-shadow:0 1px 2px rgba(0,0,0,.55),0 0 12px rgba(0,0,0,.4)}
 .hero.mapped .figures span{text-shadow:0 1px 2px rgba(0,0,0,.45)}
 .u-name small{display:block;font-weight:400;font-size:12px;margin-top:2px}
-/* ---------- sidebar trial (23 Oct; js/trial.js): the switch, and the new layout's Calendar, Admin and Across the worlds pages.
-   Ported from for-jemma/prototypes/calendar-admin/proto.css. Everything but the switch only shows in the new layout. ---------- */
-.trial-switch{position:fixed;right:18px;bottom:18px;z-index:60;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:16px;padding:12px 14px;box-shadow:0 10px 30px rgba(0,0,0,.18);display:grid;gap:8px;font-size:13px;max-width:430px}
-.trial-switch div{display:flex;flex-wrap:wrap;gap:6px}
-.trial-switch button{border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:5px 11px;cursor:pointer;font-weight:600;font-size:12.5px;color:var(--ink)}
-.trial-switch button.on{background:var(--brass);border-color:var(--brass);color:#fff}
-.trial-switch button:focus-visible{outline:2px solid var(--brass)}
+/* ---------- sidebar sections (23 Oct; js/sections.js): the Calendar, Admin and Across the worlds pages.
+   Ported from for-jemma/prototypes/calendar-admin/proto.css. ---------- */
 .nav-group.across-nav,.nav-group.admin-nav{margin-top:6px}
 .nav-group.admin-nav{border-top:1px solid rgba(255,255,255,.1);padding-top:10px}
 .nav-group.across-nav a svg,.nav-group.admin-nav a svg{opacity:.8}
@@ -1023,8 +1011,6 @@ details.adm-more summary{cursor:pointer;font-weight:700;font-size:14px;color:var
 .tr-line a{font-weight:700;color:var(--ink);text-decoration-color:var(--line);text-underline-offset:3px}
 /* phone layout (22 Oct, her ask; phone widths only, the laptop layout is untouched) */
 @media (max-width:700px){
-  /* sidebar trial (23 Oct) */
-  .trial-switch{left:8px;right:8px;bottom:8px;max-width:none;padding:8px 10px;grid-auto-flow:column;align-items:center;justify-content:space-between}
   .adm-two{grid-template-columns:1fr}
   .cal-hero .patch a span{display:none}
   .adm-list li{grid-template-columns:minmax(0,1fr)}

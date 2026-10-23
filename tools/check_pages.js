@@ -4,14 +4,13 @@
 //   badLinks   - links to pages that don't exist
 //   junk       - "undefined", "NaN", "null" or "[object Object]" showing as text
 //   overflow   - pages wider than the window (at the current window width)
-// Expect: {"pages": 600+, "problems": []}. Takes a few seconds.
-// Sidebar trial (23 Oct): run it in both modes; set TRIAL = "new" (or "now") in the page first.
+// Expect: {"pages": 1,100+, "problems": []}. Takes a few seconds.
 (() => {
   // draw a page directly (changing the address hundreds of times in a row gets throttled by the browser)
   const render = (0, eval)('(' + route.toString().replace(/^function route\(\)\{/, 'function(key0){').replace('location.hash.slice(1) || "home"', 'key0') + ')');
   const keys = ['home', 'stats', 'calendar', ...worlds.filter(w => w.ready).flatMap(w => ['stats-' + w.id, 'w-' + w.id, 'f-' + w.id, ...w.hoods.map(h => 'n-' + h.id)]),
     ...Object.keys(lotIndex), ...Object.keys(hhIndex), ...Object.keys(typeof SIM_PAGES === 'object' ? SIM_PAGES : {}), ...Object.keys(typeof GROUP_PAGES === 'object' ? GROUP_PAGES : {}),
-    ...(typeof TRIAL_KEYS === 'function' ? TRIAL_KEYS() : [])];   // the sidebar trial's new pages, when the switch is on New layout (23 Oct)
+    ...(typeof SECTION_KEYS === 'function' ? SECTION_KEYS() : [])];   // js/sections.js: Calendar, Across the worlds and Admin pages
   const valid = new Set(keys), problems = [], view = document.getElementById('view');
   for (const k of keys) {
     const p = {k};

@@ -1,4 +1,4 @@
-"""The Admin pages' extra data (sidebar trial, 23 Oct): things that aren't in site/js/data.js, gathered into site/js/admin-data.js.
+"""The Admin pages' extra data (js/sections.js, 23 Oct): things that aren't in site/js/data.js, gathered into site/js/admin-data.js.
 
     python tools/admin_data.py      (tools/build.py runs it too)
 
@@ -101,7 +101,7 @@ def build_next():
 def write():
     out = gather()
     with open(OUT, "w", encoding="utf-8", newline="\n") as f:
-        f.write("// Built by tools/admin_data.py for the Admin pages (sidebar trial, 23 Oct). Don't edit this file.\n"
+        f.write("// Built by tools/admin_data.py for the Admin pages (js/sections.js, 23 Oct). Don't edit this file.\n"
                 "// For Jemma's PC only: never upload this file if the site goes online (it holds her to-dos and admin notes).\n")
         f.write("window.ADMIN = " + json.dumps(out, ensure_ascii=False, indent=0) + ";\n")
     return out

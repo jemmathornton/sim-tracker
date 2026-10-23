@@ -651,8 +651,7 @@ function renderNav(active, key, ctx){
     }
     return h; };
   owned.forEach(w => h += navWorld(w));
-  h += `</div><div class="nav-group dim"><div class="label">Not owned</div>${notOwned.map(w => navWorld(w, true)).join("")}</div>
-    <div class="nav-group stats-nav"><a href="#calendar" class="${active==="calendar"?"on":""}">${ic("calendar")}Calendar</a><a href="#stats" class="${active==="stats"?"on":""}">${ic("grid")}Stats</a></div>`;
+  h += `</div><div class="nav-group dim"><div class="label">Not owned</div>${notOwned.map(w => navWorld(w, true)).join("")}</div>`;   // Across the worlds and Admin are added by js/sections.js
   nav.innerHTML = h;
 }
 // clicking the page you're already on goes back to its top
@@ -699,7 +698,7 @@ function showSearch(){
   hits = search(q); hit = Math.min(hit, Math.max(0, hits.length - 1));
   nav.innerHTML = `<div class="nav-group results"><div class="label">${hits.length ? hits.length + (hits.length === 40 ? "+" : "") + " found" : "Nothing found"}</div>${hits.map((r, i) =>
     `<a href="${r.href}" class="hit ${i === hit ? "on" : ""}" ${r.sim ? `data-sim="${r.sim}"` : ""}><span><b>${esc(r.name)}</b><small>${esc(r.kind)} · ${esc(r.where)}${r.also ? ` · “${esc(r.also)}”` : ""}</small></span></a>`).join("")}
-    ${hits.length ? "" : `<a href="#stats" class="hit">${ic("grid")}Search every lot on the Stats page</a>`}</div>`;
+    ${hits.length ? "" : `<a href="#admin-progress" class="hit">${ic("grid")}Search every lot in Admin, Progress</a>`}</div>`;
 }
 const clearSearch = () => { const q = document.getElementById("q"); if (q.value) { q.value = ""; hits = []; } };
 document.getElementById("q").addEventListener("input", () => { hit = 0; showSearch(); });
@@ -921,7 +920,6 @@ function world(w){
   h += worldAbout(w);   // weather and highlights first, small (her call, 19 Oct)
   h += `<section class="hood" style="--h:${w.color}"><div class="hood-head"><span class="label">Explore</span><div><h2>Neighbourhoods</h2><p>Open a neighbourhood to see its lots, then a home to meet the household living there.</p></div><a class="count" href="#f-${w.id}">All ${s.hh} households</a></div>
     <div class="listings">${w.hoods.map(hoodCard).join("")}</div></section>`;
-  h += `<a class="stats-link" href="#stats-${w.id}"><span>${ic("grid")}Progress, lot by lot</span><span class="go">See the stats for ${esc(w.name)} ${ic("arrow")}</span></a>`;
   return h;
 }
 const SEASON_ICON = {Spring: "flower", Summer: "sun", Autumn: "leaf", Winter: "snowflake"}, CAL_SEASONS = ["Spring", "Summer", "Autumn", "Winter"];
@@ -1297,7 +1295,7 @@ function route(){
   const view = document.getElementById("view");
   let html, active = "home"; const ctx = {};
   const wd = key.startsWith("w-") && worlds.find(w => open(w) && w.id === key.slice(2));
-  const tp = typeof trialPage === "function" ? trialPage(key) : null;   // sidebar trial (23 Oct, js/trial.js): the new layout's own pages
+  const tp = typeof sectionPage === "function" ? sectionPage(key) : null;   // js/sections.js: Calendar, Across the worlds and Admin pages (old Stats links open Admin, Progress)
   if (tp) { html = tp.html; active = tp.active; document.title = tp.title; }
   else if (wd) { html = world(wd); active = wd.id; document.title = wd.name + " · Jemma’s Sim World"; }
   else if (lotIndex[key]) { const l = lotIndex[key]; ctx.hood = l.hood; ctx.lot = l; html = lot(l); markSeen(l); active = l.world.id; document.title = l.name + " · Jemma’s Sim World"; }
@@ -1306,18 +1304,16 @@ function route(){
   else if (SIM_PAGES[key]) { const s = SIM_PAGES[key], base = s.hh || ANCHOR[s.id]; ctx.sim = s.src; ctx.hh = base; ctx.lot = base.lots[0]; ctx.hood = ctx.lot.hood; html = simPage(s); active = base.world.id; document.title = s.name + " · Jemma’s Sim World"; }
   else if (GROUP_PAGES[key]) { const g = GROUP_PAGES[key], base = g.homeHh; ctx.group = g; if (base) { ctx.hh = base; ctx.lot = base.lots[0]; ctx.hood = ctx.lot.hood; } html = groupPage(g); active = g.world && g.world.ready && g.world.owned ? g.world.id : ""; document.title = groupTitle(g) + " · Jemma’s Sim World"; }
   else if (hhIndex[key]) { const x = hhIndex[key]; ctx.hh = x; ctx.lot = x.lots[0]; ctx.hood = x.lots[0].hood; html = household(x); active = x.world.id; document.title = hhWord(x.name) + " · " + x.world.name + " · Jemma’s Sim World"; }
-  else if (key === "stats" || key.startsWith("stats-")) { const w = worlds.find(x => "stats-" + x.id === key); html = statsPage(w ? w.name : (key === "stats" ? null : "")); active = "stats"; document.title = (w ? "Stats · " + w.name : "Stats") + " · Jemma’s Sim World"; }
-  else if (key === "calendar") { html = calendarPage(); active = "calendar"; document.title = "Calendar · Jemma’s Sim World"; }
   else if (key === "home") { html = home(); document.title = "Jemma’s Sim World"; }
   else { html = `<section class="hero small" style="--c:#8E62CF"><div class="kicker"><i></i><span class="label">Page not found</span></div><h1 style="margin-top:14px">Nothing <em>here</em></h1><p>This link doesn't match any world, neighbourhood, lot or household. It may be an old link from before something was renamed.</p></section>
-    <section class="block"><p class="notfound"><a href="#home">${ic("home")}Go to the home page</a><a href="#stats">Search every lot on the Stats page</a></p></section>`; document.title = "Page not found · Jemma’s Sim World"; active = ""; }
+    <section class="block"><p class="notfound"><a href="#home">${ic("home")}Go to the home page</a><a href="#admin-progress">Search every lot in Admin, Progress</a></p></section>`; document.title = "Page not found · Jemma’s Sim World"; active = ""; }
   document.title = curly(document.title);   // curly apostrophes in the tab title too (Crow’s Crossing, 19 Oct check)
   const cw = tp && tp.deep ? tp : worlds.find(w => w.id === active);
   const root = document.documentElement.style;
   if (cw && cw.deep) { root.setProperty("--deep", cw.deep[0]); root.setProperty("--deep-2", cw.deep[1]); }
   else { root.removeProperty("--deep"); root.removeProperty("--deep-2"); }
   view.innerHTML = html;
-  if (typeof trialAfter === "function") trialAfter(key, view);   // sidebar trial (23 Oct)
+  if (typeof afterRoute === "function") afterRoute(key, view);   // js/sections.js: calendar links on world, neighbourhood and lot pages
   notOwnedLinks(view);
   initialsContrast(view);
   lazyPics(view);
@@ -1427,8 +1423,8 @@ searchIndex = function () {
   return out;
 };
 
-/* ---------- the save's calendar (19 Oct, her choices: a Calendar page next to Stats, weeks start on Monday, four-week seasons,
-   holidays of her own). Ported from for-jemma/prototypes/calendar (option A, the week calendar). Festivals and regular events come
+/* ---------- the save's calendar (19 Oct, her choices: weeks start on Monday, four-week seasons,
+   holidays of her own; the page itself is drawn by js/sections.js). Ported from for-jemma/prototypes/calendar (option A, the week calendar). Festivals and regular events come
    from data/calendar.json (the game's own files, checked against the Sims Wiki); lot nights are made from her lots' types and traits. */
 const CAL = Object.assign({events: [], lotEvents: [], holidays: [], seasons: ["Spring", "Summer", "Autumn", "Winter"], seasonWeeks: 4, surprise: []}, DATA.calendar || {});
 const CAL_DAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
@@ -1454,7 +1450,7 @@ function calEvents(){
       link: "#" + l.id, often: /^Lounge/.test(l.type) ? "lounge" : "week", built: l.built === true}); }))));
   return CAL_ALL = all.filter(e => calW(e.w) && calW(e.w).owned).map(e => ({...e, order: worlds.indexOf(calW(e.w))}));
 }
-const calState = {kinds: new Set(["holiday", "festival", "community"]), world: null, school: null, lots: null};
+const calState = {kinds: new Set(["holiday", "festival", "community"]), world: null, school: null};
 try { const s = JSON.parse(localStorage.getItem("calendar-4") || "{}"); if (s.kinds) calState.kinds = new Set(s.kinds.filter(k => CAL_KINDS[k])); } catch (e) {}
 const calKeep = () => { try { localStorage.setItem("calendar-4", JSON.stringify({kinds: [...calState.kinds]})); } catch (e) {} };
 const calPlace = e => { const w = calW(e.w), hid = w && e.hood ? w.id + "-" + slug(e.hood) : null;
@@ -1468,43 +1464,6 @@ const calPill = e => `<div class="ev k-${e.kind} o-${slug(e.often || "")}${e.bui
 const calWeeks = e => e.often === "fortnight" ? (e.pair && e.name.toLowerCase() > e.pair.toLowerCase().replace(/^the /, "") ? [2, 4] : e.name === "Flea Market" ? [2, 4] : [1, 3]) : e.often === "third" ? [1, 4] : [1, 2, 3, 4];
 const calHolidays = sn => [...(CAL.gameHolidays || []).filter(x => !CAL.holidays.some(y => y.replaces === x.name)), ...CAL.holidays].filter(x => x.season === sn);
 calState.season ||= "Spring";
-function calendarPage(){
-  // lot nights are listed lot by lot, named by their lot, after the other events of the day (her ask, 19 Oct)
-  const on = e => calState.kinds.has(calKind(e)), byWorld = e => e.kind === "festival" || e.kind === "community" || e.kind === "lot";   // lot nights by world too (her call, 19 Oct: only two lot types have them)
-  const shown = calEvents().filter(e => on(e) && (byWorld(e) ? !calState.world || e.w === calState.world : e.kind === "lot" ? !calState.lots || calSub(e) === calState.lots : !calState.school || calSub(e) === calState.school))
-    .map(e => e.kind === "lot" ? {...e, label: e.where + ": " + e.name} : e);
-  const withEv = worlds.filter(w => w.owned && calEvents().some(e => e.w === w.name && on(e) && byWorld(e)));
-  const subs = k => [...new Set(calEvents().filter(e => calKind(e) === k).map(calSub))];
-  const chipRow = (label, key, all, list) => `<div class="wchips"><span class="chip-l">${label}</span><button type="button" class="wchip ${calState[key] ? "" : "on"}" data-cal-${key}="">${all}</button>${list.map(([v, style]) => `<button type="button" class="wchip ${calState[key] === v ? "on" : ""}" data-cal-${key}="${esc(v)}" style="${style || ""}"><i></i>${esc(v)}</button>`).join("")}</div>`;
-  const byStart = (a, b) => (a.kind === "lot") - (b.kind === "lot") || (a.kind === "lot" ? a.where.localeCompare(b.where) || a.start - b.start : a.start - b.start || a.order - b.order);
-  const daily = shown.filter(e => e.special === "daily").sort(byStart), loose = shown.filter(e => e.special && e.special !== "daily").sort(byStart);
-  const weeks = CAL.seasonWeeks || 4, sn = calState.season, hols = calState.kinds.has("holiday") ? calHolidays(sn) : [];
-  let h = `<section class="hero small" style="--c:#C9A04A"><div class="kicker"><i></i><span class="label">Across the save</span></div><h1 style="margin-top:14px">The <em>calendar</em></h1><p>Each season is four weeks, Monday to Sunday: its holidays, and every festival and regular event in your worlds.</p></section>`;
-  h += `<section class="block cal"><div class="cal-top"><div class="seg" role="group" aria-label="Season">${CAL.seasons.map(s => `<button type="button" class="${s === sn ? "on" : ""} s-${s.toLowerCase()}" data-cal-season="${s}">${ic(SEASON_ICON[s] || "calendar")}${esc(s)}</button>`).join("")}</div>
-    <div class="kinds">${Object.entries(CAL_KINDS).map(([k, t]) => `<label><input type="checkbox" data-cal-kind="${k}" ${calState.kinds.has(k) ? "checked" : ""}> ${esc(t)}</label>`).join("")}</div></div>
-    ${withEv.length ? chipRow("Worlds", "world", "All worlds", withEv.map(w => [w.name, calHues(w.name)])) : ""}
-    ${calState.kinds.has("school") ? chipRow("Educational", "school", "Both", subs("school").map(v => [v])) : ""}
-`;
-  if (daily.length) h += `<div class="band"><span class="band-l">${ic("repeat")}Every day</span><div class="band-evs">${daily.map(calPill).join("")}</div></div>`;
-  // the month: four weeks, Monday first
-  h += `<div class="month s-${sn.toLowerCase()}"><div class="m-head"><span></span>${CAL_DAYS.map(d => `<b>${CAL_DAY_NAMES[d]}</b>`).join("")}</div>
-    ${Array.from({length: weeks}, (_, i) => { const wk = i + 1;
-      return `<div class="m-week"><span class="m-wk">Week ${wk}</span>${CAL_DAYS.map((d, j) => { const ho = hols.filter(x => x.week === wk && x.day === d);
-        const evs = shown.filter(e => e.days && e.days.includes(d) && calWeeks(e).includes(wk)).sort(byStart);
-        return `<div class="m-day${ho.length ? " hol" : ""}"><span class="m-n">${i * 7 + j + 1}</span>${ho.map(x => `<div class="m-hol">${ic(SEASON_ICON[sn] || "sparkle")}<b>${esc(x.name)}</b>${x.off ? "<small>day off</small>" : ""}</div>`).join("")}
-          ${evs.map(e => `<div class="m-ev k-${calKind(e)}${e.built === false ? " unbuilt" : ""}" style="${calHues(e.w)}" title="${esc((e.label || e.name) + " · " + e.time + " · " + e.w + (e.kind !== "lot" && (e.where || e.hood) ? ", " + (e.where || e.hood) : "") + (e.built === false ? " (not built yet)" : ""))}"><i></i><span>${esc(e.label || e.name)}${calStar(e)}</span></div>`).join("")}</div>`; }).join("")}</div>`; }).join("")}</div>`;
-  if (loose.length) h += `<div class="band"><span class="band-l">${ic("moon")}No fixed day</span><div class="band-evs">${loose.map(e => calPill(e).replace('<span class="t">', `<span class="t">${esc(CAL_OFTEN[e.often] || e.often || "")} · `)).join("")}</div></div>`;
-  h += `<div class="key"><span><i class="k-hol"></i>holiday</span><span>Every-other-week festivals are shown on weeks 1 and 3 (or 2 and 4 for the one they take turns with); which week depends on your save.</span><span><sup>*</sup> the game never shows this name</span><span>Hover an event for its place and time.</span></div>`;
-  h += `<p class="yr-note">${ic("sparkle")}<span>${CAL.holidays.length ? "" : "These are the game’s own holidays; you’ll make your own for this save. "}<b>Surprise holidays</b>, a few days’ notice, at random: ${CAL.surprise.map(([d, n]) => `${esc(n)} (${d})`).join(", ")}.</span></p>
-    <p class="yr-note">${ic("leaf")}<span><b>Neighbourhood action plan voting</b> every week from Friday 8 am to Monday 6 pm, in every neighbourhood with residents.</span></p></section>`;
-  return h;
-}
-document.addEventListener("click", e => { const b = e.target.closest("[data-cal-season]"); if (!b) return;
-  calState.season = b.dataset.calSeason; const y = scrollY; document.getElementById("view").innerHTML = calendarPage(); window.scrollTo(0, y); });
-document.addEventListener("change", e => { const k = e.target.dataset && e.target.dataset.calKind; if (!k) return;
-  e.target.checked ? calState.kinds.add(k) : calState.kinds.delete(k); calKeep(); const y = scrollY; document.getElementById("view").innerHTML = calendarPage(); window.scrollTo(0, y); });
-document.addEventListener("click", e => { const b = e.target.closest("[data-cal-world],[data-cal-school],[data-cal-lots]"); if (!b) return;
-  for (const k of ["world", "school", "lots"]) if (b.hasAttribute("data-cal-" + k)) calState[k] = b.getAttribute("data-cal-" + k) || null; const y = scrollY; document.getElementById("view").innerHTML = calendarPage(); window.scrollTo(0, y); });
 
 document.getElementById("menuIco").innerHTML = ic("menu");
 document.getElementById("searchIco").innerHTML = ic("search");

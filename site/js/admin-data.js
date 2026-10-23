@@ -1,4 +1,4 @@
-// Built by tools/admin_data.py for the Admin pages (sidebar trial, 23 Oct). Don't edit this file.
+// Built by tools/admin_data.py for the Admin pages (js/sections.js, 23 Oct). Don't edit this file.
 // For Jemma's PC only: never upload this file if the site goes online (it holds her to-dos and admin notes).
 window.ADMIN = {
 "made": "2026-10-23",
@@ -765,23 +765,8 @@ window.ADMIN = {
 "inGame": true
 },
 {
-"head": "Tidy-up check (research/site-audit-16-oct.md, 35 items)",
-"text": "Updated World Plans copy ready (23 Oct): `for-jemma/World Plans (fixed) - updated 23 Oct.xlsx` matches the site (9 changes since 22 Oct: screenshots ticked on the 7 new picture lots, Glimmer & Books unshared, Rockridge Springs “Greenburg (own)”). Swap it into Downloads only with her OK",
-"inGame": false
-},
-{
 "head": "Calendar, admin page and a sidebar section (23 Oct; research/calendar-and-admin.md, prototypes in for-jemma/prototypes/calendar-admin/)",
 "text": "Stats becomes an admin area for her only. Her answers (23 Oct): an **Admin** header in the sidebar like Worlds and Across the worlds, with pages under it (not tabs, not one long page); “lots built” / “with Sims made” on neighbourhood cards and the lot Progress row stay public for now (nice to see a world’s size; she may swap the exact stats later); PC only for now, no sign-in work until it ever goes online",
-"inGame": false
-},
-{
-"head": "Calendar, admin page and a sidebar section (23 Oct; research/calendar-and-admin.md, prototypes in for-jemma/prototypes/calendar-admin/)",
-"text": "**Trial on the site (23 Oct):** the switch at the bottom right, “Sidebar (trial)”, flips between “As now” and “New layout” (Across the worlds below the worlds, before Not owned: Calendar option A, Clubs, Dynasties, University organisations, Families, Businesses; Admin last, in place of Stats). Have a look and pick; the switch (site/js/trial.js) is removed once she does",
-"inGame": false
-},
-{
-"head": "Calendar, admin page and a sidebar section (23 Oct; research/calendar-and-admin.md, prototypes in for-jemma/prototypes/calendar-admin/)",
-"text": "Second trial on the site (23 Oct): **Gallery pictures**, “All four”: 144 lots with no screenshots of hers show all four pictures of their Gallery upload, not just the cover (tools/gallery_more.py fetched them into site/gallery-more/). Keep or not?",
 "inGame": false
 },
 {

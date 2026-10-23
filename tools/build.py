@@ -148,7 +148,7 @@ def photos_for(ws, ls, has_upload):
     if not os.path.isdir(dd):
         cover = f"gallery/{ws}/{ls}.jpg"
         if not (has_upload and os.path.exists(os.path.join(SITE, cover))): return []
-        # the upload's other three pictures (tools/gallery_more.py), marked "more": the Gallery pictures trial shows them (23 Oct)
+        # the upload's other three pictures (tools/gallery_more.py), marked "more"; lots show all four (her call, 23 Oct)
         more = [f"gallery-more/{ws}/{ls}-{n}.jpg" for n in (2, 3, 4) if os.path.exists(os.path.join(SITE, 'gallery-more', ws, f'{ls}-{n}.jpg'))]
         return [{"src": cover, "thumb": cover, "caption": "From the Gallery", "gallery": True}] + [{"src": m, "thumb": m, "caption": "From the Gallery", "gallery": True, "more": True} for m in more]
     fs = [f for f in os.listdir(dd) if f.endswith('.jpg') and not f.endswith('.thumb.jpg')]
@@ -324,7 +324,7 @@ if __name__ == '__main__':
     gone = missing_pictures(d)
     if gone: sys.exit("Pictures missing from site/: " + ", ".join(gone[:10]) + (" …" if len(gone) > 10 else ""))
     p = write(d)
-    try:   # the Admin pages' extra data (sidebar trial, 23 Oct); a problem there never stops the build
+    try:   # the Admin pages' extra data (js/sections.js, 23 Oct); a problem there never stops the build
         import admin_data; admin_data.write()
     except Exception as e: print('Admin data not written:', e)
     stamp_page()
