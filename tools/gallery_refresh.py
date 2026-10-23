@@ -195,6 +195,22 @@ def main():
     return not failed
 
 
+def commit_refresh():
+    """Save the refresh in the project's history (her OK, 23 Oct), so a bad week can always be undone. Only the files a
+    refresh writes are committed; anything else being worked on is left alone. Never pushes anywhere."""
+    import subprocess
+    paths = ['data/gallery', 'data/worlds', 'site/js/data.js', 'site/js/admin-data.js', 'site/index.html', 'site/gallery', 'site/gallery-more']
+    paths = [p for p in paths if os.path.exists(os.path.join(ROOT, p))]
+    run = lambda *a: subprocess.run(['git', *a], cwd=ROOT, stdin=subprocess.DEVNULL, capture_output=True, text=True, encoding='utf-8',
+                                     creationflags=getattr(subprocess, 'CREATE_NO_WINDOW', 0))
+    try:
+        run('add', '--', *paths)
+        if not run('diff', '--cached', '--quiet', '--', *paths).returncode: return say("Nothing new to save in the project history")
+        r = run('commit', '-m', f"Weekly Gallery refresh, {datetime.now():%d %b %Y} (automatic)", '--', *paths)
+        say("Saved in the project history" if r.returncode == 0 else "Couldn't save in the project history: " + (r.stderr or r.stdout).strip()[:300])
+    except Exception as e: say(f"Couldn't save in the project history: {e}")
+
+
 if __name__ == '__main__':
     ok = False
     try:
@@ -206,6 +222,7 @@ if __name__ == '__main__':
                                stdin=subprocess.DEVNULL, capture_output=True, text=True, encoding='utf-8')
             say((r.stdout or r.stderr).strip())
             ok = ok and r.returncode == 0
+            if r.returncode == 0: commit_refresh()
     except Exception:
         import traceback
         say("Stopped with an error:\n" + traceback.format_exc())
