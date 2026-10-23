@@ -40,7 +40,8 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 - [ ] Split or merge households first (Newcrest BFF, Del Sol Roomies and Eclectic Arts, Calientes/Don Lothario, Greenburgs/Knox, Linhs, Enzo Alto, the Curious brothers).
 - [ ] Move or evict households off lots you’re replacing.
 - [ ] For each lot: set the lot type first, save, place the upload (furnished), then check its type, traits, challenge and units.
-- [ ] Rentals: set Residential Rental before placing, then retype unit names and traits if they’re gone.
+- [ ] Rentals: unit names and unit traits often don’t come over (24 Oct research, research/rentals-and-apartments-placing.md). After placing, check the unit outlines, then set each unit’s name and traits in Build mode (Venue Info > Unit Configuration), then the rent, then move households in. The landlord never comes with the lot.
+- [ ] Apartments (San Myshuno, Evergreen Harbor, Ondarion…): a whole lot can’t go in, only Rooms into each unit: clear the unit, turn on bb.moveobjects, place the Room, then put back the walls you took out to upload it. EA’s 27 Oct 2026 patch fixes some Gallery and rental loading problems, so apartments may be easier after it.
 - [ ] Move households in (tenants into their units), then small businesses.
 - [ ] Save As “Sim World 02 Willow Creek” (and so on).
 
@@ -115,7 +116,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 - [ ] **Granada Place**, 30x20: place “Granada Place”. Type: Residential. Household: Curious (Maxis Gallery). Traits: Good Schools, Sunny Aspect. Trait ideas (free slots): + Science Lair (if the Curious household are the Strangetown scientists).
 - [ ] **Lotus Ridge Spa** (game’s Arid Ridge), 40x30: place “Lotus Ridge Spa”. Type: Spa. Traits: Romantic Aura, On Ley Line. Challenge: Quake Zone.
 - [ ] **Sultry Springside**, 30x20: place “Sultry Springside”. Type: Residential. Household: Smith (Maxis Gallery). Traits: Good Schools, Sunny Aspect. Trait ideas (free slots): + Homey.
-- [ ] **Rio Verde Retirement Home** (game’s Rio Verde), 40x30: place “Rio Verde Retirement Home”. Not the other copy: “Rio Verde Retirement Home” (Residential). Type: Residential Rental (6). Elders (Sims to come, landlord, unit 1). Traits: Sunny Aspect, Homey. Challenge: Quake Zone. Units: 1 (Sunny Aspect, Homey); 2; 3; 4; 5; 6.
+- [ ] **Rio Verde Retirement Home** (game’s Rio Verde), 40x30: place “Rio Verde Retirement Home”. Not the other copy: “Rio Verde Retirement Home” (Residential). Type: Residential Rental (6). Elders (Sims to come, landlord, unit 1). Traits: Sunny Aspect, Homey. Challenge: Quake Zone. Units (set after placing): 1 (Sunny Aspect, Homey); 2; 3; 4; 5; 6.
 
 **Acquisition Butte**
 
@@ -140,9 +141,9 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 **Bridgeview**
 
-- [ ] **Fern Park Flats** (game’s Fern Park), 30x20: place “Fern Park Flats”. Not the other copy: “Fern Park Flats” (Residential). Type: Residential Rental (5). Landlord (lives elsewhere): Kirkland (yours). Tenants: Holiday unit 1, Lee unit 2, Scott unit 3. Traits: Fast Internet, Sunny Aspect. Units: 1 (Fast Internet, Sunny Aspect); 2; 3; 4; 5.
+- [ ] **Fern Park Flats** (game’s Fern Park), 30x20: place “Fern Park Flats”. Not the other copy: “Fern Park Flats” (Residential). Type: Residential Rental (5). Landlord (lives elsewhere): Kirkland (yours). Tenants: Holiday unit 1, Lee unit 2, Scott unit 3. Traits: Fast Internet, Sunny Aspect. Units (set after placing): 1 (Fast Internet, Sunny Aspect); 2; 3; 4; 5.
 - [ ] **Newcrest Community Space** (game’s Beech Byway), 30x20: place your Makers version “Newcrest Community Makers”. Type: Community Space. Traits: Eco Lot, Teen Neighborhood. Challenge: Reduce and Recycle. Trait ideas (free slots): + Child’s Play.
-- [ ] **Midtown Meadows**, 40x30: place “Midtown Meadows”. Type: Residential Rental (5). Landlord (lives elsewhere): Kirkland (yours). Tenants: Washburn unit 2, Bridges unit 5. Traits: Bracing Breezes, Gnomes, Child’s Play, Good Schools, Sunny Aspect, Home Studio. Units: 1 (Bracing Breezes, Gnomes); 2 (Child’s Play, Good Schools, Gnomes); 3 (Sunny Aspect, Gnomes); 4 (Home Studio, Gnomes); 5 (Child’s Play, Good Schools, Gnomes).
+- [ ] **Midtown Meadows**, 40x30: place “Midtown Meadows”. Type: Residential Rental (5). Landlord (lives elsewhere): Kirkland (yours). Tenants: Washburn unit 2, Bridges unit 5. Traits: Bracing Breezes, Gnomes, Child’s Play, Good Schools, Sunny Aspect, Home Studio. Units (set after placing): 1 (Bracing Breezes, Gnomes); 2 (Child’s Play, Good Schools, Gnomes); 3 (Sunny Aspect, Gnomes); 4 (Home Studio, Gnomes); 5 (Child’s Play, Good Schools, Gnomes).
 - [ ] **Oak Alcove**, 20x15: place “Oak Alcove”. Type: Residential. Household: Versaree (yours). Traits: Natural Light, Fast Internet, Great Acoustics.
 - [ ] **Comfy Cubby**, 20x15: place “Comfy Cubby”. Type: Residential. Traits: Fast Internet, Good Schools, Sunny Aspect.
 
@@ -246,22 +247,22 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 **Spice Market**
 
-- [ ] **17 Culpepper House**: place “17 Culpepper House”. Type: Apartment. Trait ideas (free slots): Chef’s Kitchen, Homey.
-- [ ] **18 Culpepper House**: place “18 Culpepper House”. Type: Apartment. Traits: Historical. Trait ideas (free slots): Homey, Chef’s Kitchen.
-- [ ] **19 Culpepper House**: place “19 Culpepper House”. Type: Apartment. Traits: Needs TLC. Trait ideas (free slots): Gnomes (mends what TLC breaks), Homey.
+- [ ] **17 Culpepper House**: place “17 Culpepper House”. Type: Apartment. Place it as a Room into the unit. Trait ideas (free slots): Chef’s Kitchen, Homey.
+- [ ] **18 Culpepper House**: place “18 Culpepper House”. Type: Apartment. Place it as a Room into the unit. Traits: Historical. Trait ideas (free slots): Homey, Chef’s Kitchen.
+- [ ] **19 Culpepper House**: place “19 Culpepper House”. Type: Apartment. Place it as a Room into the unit. Traits: Needs TLC. Trait ideas (free slots): Gnomes (mends what TLC breaks), Homey.
 - [ ] **20 Culpepper House**: not built yet: leave the game’s lot for now. Type: Apartment. Household: Rasoya (EA).
-- [ ] **Fraternity Apartment** (game’s 2A Jasmine Suites): place “Fraternity Apartment”. Type: Apartment. Trait ideas (free slots): Party Place, Study Spot, Fast Internet.
-- [ ] **Sorority Apartment** (game’s 2B Jasmine Suites): place “Sorority Apartment”. Type: Apartment.
+- [ ] **Fraternity Apartment** (game’s 2A Jasmine Suites): place “Fraternity Apartment”. Type: Apartment. Place it as a Room into the unit. Trait ideas (free slots): Party Place, Study Spot, Fast Internet.
+- [ ] **Sorority Apartment** (game’s 2B Jasmine Suites): place “Sorority Apartment”. Type: Apartment. Place it as a Room into the unit.
 - [ ] **The Old Salt House**, 30x30: place “The Old Salt House”. Type: Restaurant. Traits: Chef’s Kitchen, Romantic Aura, Party Place.
 - [ ] **Waterside Warble**, 30x30: place “Waterside Warble”. Type: Karaoke Bar. Traits: Party Place, Convivial, Great Acoustics.
 
 **Arts Quarter**
 
 - [ ] **910 Medina Studios**: not built yet: leave the game’s lot for now. Type: Apartment. Household: Benali (EA).
-- [ ] **920 Medina Studios**: place “920 Medina Studios”. Type: Apartment. Household: Bheeda (EA). Traits: Quiet. Trait ideas (free slots): Natural Light, Homey.
-- [ ] **930 Medina Studios**: place “930 Medina Studios”. Type: Apartment. Household: Livin’ In The City (yours). Trait ideas (free slots): Natural Light, Home Studio.
+- [ ] **920 Medina Studios**: place “920 Medina Studios”. Type: Apartment. Place it as a Room into the unit. Household: Bheeda (EA). Traits: Quiet. Trait ideas (free slots): Natural Light, Homey.
+- [ ] **930 Medina Studios**: place “930 Medina Studios”. Type: Apartment. Place it as a Room into the unit. Household: Livin’ In The City (yours). Trait ideas (free slots): Natural Light, Home Studio.
 - [ ] **121 Hakim House**: not built yet: leave the game’s lot for now. Type: Apartment. Household: Jang (EA).
-- [ ] **122 Hakim House**: place “122 Hakim House”. Type: Apartment. Traits: Historical. Trait ideas (free slots): Natural Light, Home Studio.
+- [ ] **122 Hakim House**: place “122 Hakim House”. Type: Apartment. Place it as a Room into the unit. Traits: Historical. Trait ideas (free slots): Natural Light, Home Studio.
 - [ ] **FountainView Penthouse**: built but not on the Gallery: bring it over through your Library. Type: Penthouse. Household: Santiago Ojo (EA: Miko; yours: Alicia).
 - [ ] **Casbah Gallery**, 40x30: not built yet: leave the game’s lot for now. Type: Arts Center.
 
@@ -269,7 +270,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 - [ ] **701 ZenView**: not built yet: leave the game’s lot for now. Type: Apartment. Household: Bro & Kennedy (EA).
 - [ ] **702 ZenView**: not built yet: leave the game’s lot for now. Type: Apartment. Household: Behr (EA).
-- [ ] **1310 21 Chic Street**: place “1310 21 Chic Street”. Type: Apartment. Household: Jeong (EA). Traits: Lively Neighbors. Trait ideas (free slots): Convivial; Celebrity Home once she’s famous.
+- [ ] **1310 21 Chic Street**: place “1310 21 Chic Street”. Type: Apartment. Place it as a Room into the unit. Household: Jeong (EA). Traits: Lively Neighbors. Trait ideas (free slots): Convivial; Celebrity Home once she’s famous.
 - [ ] **1312 21 Chic Street**: not built yet: leave the game’s lot for now. Type: Apartment. Household: Pizzazz (EA).
 - [ ] **1313 21 Chic Street**: built but not on the Gallery: bring it over through your Library. Type: Apartment.
 - [ ] **Torendi Tunes** (game’s Torendi Tower Penthouse), 40x30: not built yet: leave the game’s lot for now. Type: Karaoke Bar.
@@ -277,7 +278,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 **Uptown**
 
-- [ ] **1010 Alto Apartments**: place “1010 Alto Apartments”. Type: Apartment. Traits: Chef’s Kitchen, Party Place. Trait ideas (free slots): + Convivial.
+- [ ] **1010 Alto Apartments**: place “1010 Alto Apartments”. Type: Apartment. Place it as a Room into the unit. Traits: Chef’s Kitchen, Party Place. Trait ideas (free slots): + Convivial.
 - [ ] **1020 Alto Apartments**: not built yet: leave the game’s lot for now. Type: Apartment. Household: Lobo (EA).
 - [ ] **VIII Landgraab Apartments**: not built yet: leave the game’s lot for now. Type: Apartment.
 - [ ] **IX Landgraab Apartments**: not built yet: leave the game’s lot for now. Type: Apartment. Household: Feng (EA).
@@ -325,7 +326,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 - [ ] **The Bay Café** (game’s Salty Paws Saloon), 20x15: place “The Bay Café”. Type: Café. Traits: Cat Friendly, Cat Hangout. Trait ideas (free slots): + Peace and Quiet (reading in a cat café).
 - [ ] **Catscratch Cottage**, 20x15: not built yet: leave the game’s lot for now. Type: Restaurant (Seafood).
 - [ ] **Brindleton Library** (game’s Ragdoll Refurb), 20x20: place “Brindleton Library”. Type: Library. Traits: Fast Internet, Sunny Aspect, Science Lair.
-- [ ] **Tail’s End Apartments** (game’s Tail’s End), 40x30: place “Tail’s End Apartments”. Type: Residential Rental (4). Lynx (EA, landlord, unit 1). Traits: Cat Hangout, Fast Internet, Good Schools, Homey, Natural Light. Units: 1 (Cat Hangout, Fast Internet); 2 (Good Schools, Fast Internet); 3 (Cat Hangout, Homey); 4 (Fast Internet, Natural Light).
+- [ ] **Tail’s End Apartments** (game’s Tail’s End), 40x30: place “Tail’s End Apartments”. Type: Residential Rental (4). Lynx (EA, landlord, unit 1). Traits: Cat Hangout, Fast Internet, Good Schools, Homey, Natural Light. Units (set after placing): 1 (Cat Hangout, Fast Internet); 2 (Good Schools, Fast Internet); 3 (Cat Hangout, Homey); 4 (Fast Internet, Natural Light).
 
 **Cavalier Cove**
 
@@ -346,8 +347,8 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 **Mirage Park**
 
 - [ ] **Strike Out!** (game’s Vacuous Green), 50x40: place “Strike Out!”. Type: Nightclub. Traits: Up-and-Coming Hotspot, Party Place. Trait ideas (free slots): + Convivial.
-- [ ] **The Inner Circle** (game’s Inner Circle), 40x30: place “The Inner Circle”. Not the other copy: “The Inner Circle” (Residential). Type: Residential Rental (4). Huntington (EA, tenant, unit 2). Tenants: Kalani unit 1, Patel unit 3, Richards unit 4. Traits: Party Place. Challenges: Quake Zone, Filthy. Units: 1 (Party Place); 2 (Party Place); 3 (Party Place); 4 (Party Place).
-- [ ] **Upland Trailer Park** (game’s Upland Place), 40x30: place “Upland Trailer Park”. Not the other copy: “Upland Trailer Park” (Residential). Type: Residential Rental (4). Eggleston (EA, tenant, unit 1). Tenants: Martin unit 2, Holland unit 3, Johnny Zest unit 4. Traits: Sunny Aspect. Challenges: Filthy, Quake Zone. Units: 1 (Sunny Aspect); 2; 3; 4.
+- [ ] **The Inner Circle** (game’s Inner Circle), 40x30: place “The Inner Circle”. Not the other copy: “The Inner Circle” (Residential). Type: Residential Rental (4). Huntington (EA, tenant, unit 2). Tenants: Kalani unit 1, Patel unit 3, Richards unit 4. Traits: Party Place. Challenges: Quake Zone, Filthy. Units (set after placing): 1 (Party Place); 2 (Party Place); 3 (Party Place); 4 (Party Place).
+- [ ] **Upland Trailer Park** (game’s Upland Place), 40x30: place “Upland Trailer Park”. Not the other copy: “Upland Trailer Park” (Residential). Type: Residential Rental (4). Eggleston (EA, tenant, unit 1). Tenants: Martin unit 2, Holland unit 3, Johnny Zest unit 4. Traits: Sunny Aspect. Challenges: Filthy, Quake Zone. Units (set after placing): 1 (Sunny Aspect); 2; 3; 4.
 
 **The Pinnacles**
 
@@ -376,7 +377,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 - [ ] **8 Bells**, 20x20: not built yet: leave the game’s lot for now. Type: Bar.
 - [ ] **StrangerVille Information Center**, 20x20: not built yet: leave the game’s lot for now. Type: Backroom.
 - [ ] **Carpophagous Corner**, 30x20: place “Carpophagous Corner”. Type: Vacation Rental. Traits: Science Lair, Bracing Breezes. Challenge: Quake Zone. Trait ideas (free slots): + Peace and Quiet.
-- [ ] **Slip 42**, 20x15: place “Slip 42”. Not the other copy: “Slip 42” (Residential). Type: Residential Rental (2). Challenges: Creepy Crawlies, Quake Zone, Filthy. Units: 1; 2.
+- [ ] **Slip 42**, 20x15: place “Slip 42”. Not the other copy: “Slip 42” (Residential). Type: Residential Rental (2). Challenges: Creepy Crawlies, Quake Zone, Filthy. Units (set after placing): 1; 2.
 - [ ] **Old Penelope**, 50x40: not built yet: leave the game’s lot for now. Type: Residential. Household: Cahill (EA).
 - [ ] **Riverside Grove**, 30x20: built but not on the Gallery: bring it over through your Library. Type: Residential. Household: Sigworth (EA).
 
@@ -459,7 +460,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 - [ ] **Laurel Library**, 50x40: place “Laurel Library”. Type: Library. Traits: Study Spot, University Student Hang Out, Peace and Quiet.
 - [ ] **The Royal Crown** (game’s Pepper’s Pub), 20x20: place “The Royal Crown”. Type: Bar. Traits: University Student Hang Out, Convivial. Trait ideas (free slots): + Great Acoustics.
 - [ ] **Mossy Lane**, 20x15: place “Mossy Lane”. Type: University Housing. University: pick in game. Traits: Homey, Cat Hangout. Trait ideas (free slots): + Study Spot.
-- [ ] **Spring Steppes**, 20x15: place “Spring Steppes”. Not the other copy: “Spring Steppes” (University Housing). Type: Residential Rental (3). Elderberry (EA, landlord, unit 1). Tenants: Pleasant unit 3. Traits: Homey, Cat Hangout. Units: 1 (Homey, Cat Hangout); 2; 3.
+- [ ] **Spring Steppes**, 20x15: place “Spring Steppes”. Not the other copy: “Spring Steppes” (University Housing). Type: Residential Rental (3). Elderberry (EA, landlord, unit 1). Tenants: Pleasant unit 3. Traits: Homey, Cat Hangout. Units (set after placing): 1 (Homey, Cat Hangout); 2; 3.
 
 ### Evergreen Harbor
 
@@ -468,9 +469,9 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 **Grims Quarry**
 
 - [ ] **Miner Mansion**, 30x20: not built yet: leave the game’s lot for now. Type: Residential. Household: Harris (EA).
-- [ ] **Rockridge Springs**, 30x20: place “Rockridge Springs”. Type: Residential Rental (3). Greenburg (EA, landlord, unit 1). Traits: Good Schools, Sunny Aspect. Units: 1 (Good Schools, Sunny Aspect); 2 (Good Schools, Sunny Aspect); 3 (Good Schools, Sunny Aspect).
-- [ ] **Stonestreet Apartments 3** (game’s Stonestreet Apartments #3): place “Stonestreet Apartments 3”. Type: Apartment. Household: Knox Greenburg (EA). Traits: Eco Lot, Good Schools. Challenge: Reduce and Recycle. Trait ideas (free slots): + Convivial (Knox the campaigner).
-- [ ] **Stonestreet Apartments 4** (game’s Stonestreet Apartments #4): place “Stonestreet Apartments 4”. Type: Apartment. Traits: Eco Lot, Fast Internet. Challenge: Reduce and Recycle. Trait ideas (free slots): + Natural Well.
+- [ ] **Rockridge Springs**, 30x20: place “Rockridge Springs”. Type: Residential Rental (3). Greenburg (EA, landlord, unit 1). Traits: Good Schools, Sunny Aspect. Units (set after placing): 1 (Good Schools, Sunny Aspect); 2 (Good Schools, Sunny Aspect); 3 (Good Schools, Sunny Aspect).
+- [ ] **Stonestreet Apartments 3** (game’s Stonestreet Apartments #3): place “Stonestreet Apartments 3”. Type: Apartment. Place it as a Room into the unit. Household: Knox Greenburg (EA). Traits: Eco Lot, Good Schools. Challenge: Reduce and Recycle. Trait ideas (free slots): + Convivial (Knox the campaigner).
+- [ ] **Stonestreet Apartments 4** (game’s Stonestreet Apartments #4): place “Stonestreet Apartments 4”. Type: Apartment. Place it as a Room into the unit. Traits: Eco Lot, Fast Internet. Challenge: Reduce and Recycle. Trait ideas (free slots): + Natural Well.
 - [ ] **The Quarry Building**, 40x30: not built yet: leave the game’s lot for now. Type: Small Business Residential. Household: Sterling Rico (EA).
 
 **Conifer Station**
@@ -479,7 +480,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 - [ ] **Canal Corner**, 20x15: not built yet: leave the game’s lot for now. Type: Small Business Venue. Register the business and set its lot after placing. Owner (lives elsewhere): Tinker (EA).
 - [ ] **Sprucewood Square**, 40x30: not built yet: leave the game’s lot for now. Type: Community Market.
 - [ ] **Pinecrest Apartments #402**: built but not on the Gallery: bring it over through your Library. Type: Apartment.
-- [ ] **Pinecrest Apartments #404**: place “Pinecrest Apartments 404”. Type: Apartment. Household: Eco Roomies (yours). Trait ideas (free slots): Eco Lot (+ Reduce and Recycle), like Stonestreet.
+- [ ] **Pinecrest Apartments #404**: place “Pinecrest Apartments 404”. Type: Apartment. Place it as a Room into the unit. Household: Eco Roomies (yours). Trait ideas (free slots): Eco Lot (+ Reduce and Recycle), like Stonestreet.
 
 **Port Promise**
 
@@ -527,7 +528,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 - [ ] **The Gnome’s Arms**, 30x20: not built yet: leave the game’s lot for now. Type: Bar (Pub). Owner (lives elsewhere): The Scotts (EA).
 - [ ] **1 Cobblebottom Street**, 20x15: built but not on the Gallery: bring it over through your Library. Type: Small Business Residential.
-- [ ] **3 Cobblebottom Street**, 20x20: built but not on the Gallery: bring it over through your Library. Type: Residential Rental (2). Moody & McMillan (EA, landlord, unit 3B). Tenants: Cecilia Kang unit 3A. Units: 3A (Gnomes, Homey, Cat Hangout); 3B (Gnomes, Homey, Chef’s Kitchen).
+- [ ] **3 Cobblebottom Street**, 20x20: built but not on the Gallery: bring it over through your Library. Type: Residential Rental (2). Moody & McMillan (EA, landlord, unit 3B). Tenants: Cecilia Kang unit 3A. Units (set after placing): 3A (Gnomes, Homey, Cat Hangout); 3B (Gnomes, Homey, Chef’s Kitchen).
 - [ ] **Finchwick Village Hall** (game’s 5 Cobblebottom Street), 30x20: place “Finchwick Village Hall”. Type: Library(/Wedding Venue / Bar). Traits: Romantic Aura, Cat Hangout. Challenges: Wild Foxes, Spooky. Trait ideas (free slots): + Peace and Quiet (the library upstairs).
 
 **Old New Henford**
@@ -576,7 +577,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 **Anchorpoint Wharf**
 
 - [ ] **Robles Point**, 50x40: not built yet: leave the game’s lot for now. Type: Residential. Household: Robles (EA).
-- [ ] **Manzanita Terrace**, 30x20: place “Manzanita Terrace”. Not the other copy: “Manzanita Terrace” (Residential). Type: Residential Rental (3). Landlord (lives elsewhere): Robles (EA). Traits: Natural Light, Bracing Breezes, Child’s Play. Units: 1 (Natural Light, Bracing Breezes, Child’s Play); 2 (Natural Light, Bracing Breezes, Child’s Play); 3 (Natural Light, Bracing Breezes, Child’s Play).
+- [ ] **Manzanita Terrace**, 30x20: place “Manzanita Terrace”. Not the other copy: “Manzanita Terrace” (Residential). Type: Residential Rental (3). Landlord (lives elsewhere): Robles (EA). Traits: Natural Light, Bracing Breezes, Child’s Play. Units (set after placing): 1 (Natural Light, Bracing Breezes, Child’s Play); 2 (Natural Light, Bracing Breezes, Child’s Play); 3 (Natural Light, Bracing Breezes, Child’s Play).
 - [ ] **Anchorpoint Recreation Center** (game’s Anchorpoint Library), 30x20: place “Anchorpoint Rec Center”. Type: Recreation Center. Traits: Child’s Play, Fast Internet. Trait ideas (free slots): + Bracing Breezes.
 - [ ] **Anchorpoint Works** (game’s Anchorpoint Abode), 30x20: place “Anchorpoint Works”. Type: Restaurant/Bar. Traits: Great Acoustics, Party Place, Sunny Aspect.
 
@@ -592,7 +593,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 - [ ] **7 Eucalyptus Lane**, 50x40: not built yet: leave the game’s lot for now. Type: Residential. Household: Michaelson (EA).
 - [ ] **23 Eucalyptus Lane**, 30x20: place “23 Eucalyptus Lane”. Type: Residential. Household: Lovejoy (Sims to come). Traits: Bracing Breezes, Child’s Play. Trait ideas (free slots): + Good Schools.
 - [ ] **36 Bayani Place**, 30x20: not built yet: leave the game’s lot for now. Type: Vet Clinic.
-- [ ] **Sequoia Cottage**, 30x20: not built yet: leave the game’s lot for now. Type: Residential Rental (2). Lovejoy (Sims to come, landlord, unit 1). Tenants: Luna-Sullivan. Units: 1 (Bracing Breezes, Fast Internet); 2.
+- [ ] **Sequoia Cottage**, 30x20: not built yet: leave the game’s lot for now. Type: Residential Rental (2). Lovejoy (Sims to come, landlord, unit 1). Tenants: Luna-Sullivan. Units (set after placing): 1 (Bracing Breezes, Fast Internet); 2.
 
 ### Chestnut Ridge
 
@@ -627,14 +628,14 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 **Morensong**
 
 - [ ] **Ro Kaya Rockside**, 40x30: not built yet: leave the game’s lot for now. Type: Community Market.
-- [ ] **Taka Soi 15**, 20x20: not built yet: leave the game’s lot for now. Type: Residential Rental (2). Cahyaputri (EA, landlord, unit 09). Units: 08 (Great Soil, Bracing Breezes); 09 (Sunny Aspect, Natural Light).
+- [ ] **Taka Soi 15**, 20x20: not built yet: leave the game’s lot for now. Type: Residential Rental (2). Cahyaputri (EA, landlord, unit 09). Units (set after placing): 08 (Great Soil, Bracing Breezes); 09 (Sunny Aspect, Natural Light).
 - [ ] **Chee-wít Chee-waa** (game’s Chee-wit Chee-waa Kanto), 20x15: place “Chee-wít Chee-waa”. Type: Thrift and Boba Store. Traits: Teen Neighborhood, Great Acoustics. Trait ideas (free slots): + Convivial.
 - [ ] **ZoSul Taman Botani**, 30x30: not built yet: leave the game’s lot for now. Type: Wedding Venue.
 
 **Koh Sahpa**
 
-- [ ] **Isda Riverfront**, 20x20: built but not on the Gallery: bring it over through your Library. Type: Residential Rental (2). Cadberry (Sims to come, landlord, unit 1). Tenants: Rochana. Units: 1; 2.
-- [ ] **Sungai Point**, 30x20: not built yet: leave the game’s lot for now. Type: Residential Rental (3). Linh-Sadya (EA, tenant, unit 11A). Tenants: Linh. Units: 11A (Homey); 11B (Great Acoustics, Gnomes); 11C.
+- [ ] **Isda Riverfront**, 20x20: built but not on the Gallery: bring it over through your Library. Type: Residential Rental (2). Cadberry (Sims to come, landlord, unit 1). Tenants: Rochana. Units (set after placing): 1; 2.
+- [ ] **Sungai Point**, 30x20: not built yet: leave the game’s lot for now. Type: Residential Rental (3). Linh-Sadya (EA, tenant, unit 11A). Tenants: Linh. Units (set after placing): 11A (Homey); 11B (Great Acoustics, Gnomes); 11C.
 - [ ] **The Screaming Gecko**, 20x20: place “The Screaming Gecko”. Type: Karaoke Bar. Traits: Party Place, Convivial.
 - [ ] **Tam Nang Sands**, 30x20: not built yet: leave the game’s lot for now. Type: Spa.
 - [ ] **Hothotok Shore**, 20x15: not built yet: leave the game’s lot for now. Type: Residential. Household: Bun Ma (EA).
@@ -678,7 +679,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 - [ ] **Konst Modern**, 50x40: not built yet: leave the game’s lot for now. Type: Museum.
 - [ ] **The Rouge Note**, 20x20: place “The Rouge Note”. Type: Lounge/Bar/Nightclub. Traits: Romantic Aura, Convivial, Great Acoustics.
 - [ ] **Koffieboon**, 20x20: not built yet: leave the game’s lot for now. Type: Small Business Residential. Household: Loden (EA).
-- [ ] **Old Torget Houses** (game’s Old Torget House), 20x15: place “Old Torget Houses”. Not the other copy: “Old Torget House” (Residential). Type: Residential Rental (3). Units: 1; 2; 3.
+- [ ] **Old Torget Houses** (game’s Old Torget House), 20x15: place “Old Torget Houses”. Not the other copy: “Old Torget House” (Residential). Type: Residential Rental (3). Units (set after placing): 1; 2; 3.
 - [ ] **Fisherman’s Wharf** (game’s Fisher’s Horizon), 30x20: place “Fisherman’s Wharf”. Type: Small Business Residential. Household: Johansson (yours). Traits: Home Studio.
 - [ ] **Canalside Daycare** (game’s Comfortably Canalside), 20x20: place “Canalside Daycare”. Type: Small Business Residential. Traits: Child’s Play, Good Schools. Trait ideas (free slots): + Homey.
 

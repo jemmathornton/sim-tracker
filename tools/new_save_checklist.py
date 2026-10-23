@@ -46,7 +46,8 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 - [ ] Split or merge households first (Newcrest BFF, Del Sol Roomies and Eclectic Arts, Calientes/Don Lothario, Greenburgs/Knox, Linhs, Enzo Alto, the Curious brothers).
 - [ ] Move or evict households off lots you’re replacing.
 - [ ] For each lot: set the lot type first, save, place the upload (furnished), then check its type, traits, challenge and units.
-- [ ] Rentals: set Residential Rental before placing, then retype unit names and traits if they’re gone.
+- [ ] Rentals: unit names and unit traits often don’t come over (24 Oct research, research/rentals-and-apartments-placing.md). After placing, check the unit outlines, then set each unit’s name and traits in Build mode (Venue Info > Unit Configuration), then the rent, then move households in. The landlord never comes with the lot.
+- [ ] Apartments (San Myshuno, Evergreen Harbor, Ondarion…): a whole lot can’t go in, only Rooms into each unit: clear the unit, turn on bb.moveobjects, place the Room, then put back the walls you took out to upload it. EA’s 27 Oct 2026 patch fixes some Gallery and rental loading problems, so apartments may be easier after it.
 - [ ] Move households in (tenants into their units), then small businesses.
 - [ ] Save As “Sim World 02 Willow Creek” (and so on).
 
@@ -156,6 +157,7 @@ def main():
                 elif l['built'] is True: bits.append("built but not on the Gallery: bring it over through your Library.")
                 else: bits.append("not built yet: leave the game’s lot for now.")
                 if l.get('type'): bits.append(f"Type: {l['type']}.")
+                if (l.get('type') or '') == 'Apartment' and l.get('gallery'): bits.append("Place it as a Room into the unit.")
                 if 'University Housing' in (l.get('type') or ''):   # the game asks which university the housing is for
                     uni = {'University of Britechester': 'University of Britechester', 'Foxbury Institute': 'Foxbury Institute'}.get(h['name'])
                     bits.append(f"University: {uni}." if uni else "University: pick in game.")
@@ -182,7 +184,7 @@ def main():
                 if l.get('traits'): bits.append(f"Traits: {', '.join(l['traits'])}.")
                 if l.get('challenges'): bits.append(f"Challenge{'s' if len(l['challenges']) > 1 else ''}: {', '.join(l['challenges'])}.")
                 if l.get('units'):
-                    bits.append("Units: " + "; ".join(u['name'] + (f" ({', '.join(u['traits'])})" if u.get('traits') else "") for u in l['units']) + ".")
+                    bits.append("Units (set after placing): " + "; ".join(u['name'] + (f" ({', '.join(u['traits'])})" if u.get('traits') else "") for u in l['units']) + ".")
                 idea = ideas.get(f"{wn}|{name}")
                 if idea: bits.append(f"Trait ideas (free slots): {idea}.")
                 line = (head + " ".join(bits)).replace("'", "’")   # curly apostrophes, as on the site
