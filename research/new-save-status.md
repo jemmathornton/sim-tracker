@@ -120,6 +120,16 @@ Made by tools/research/new_save_check.py from a copy of the save. Lots: placed /
 
 Every neighbourhood with your builds placed has the footprint the site says it starts with.
 
+## Dynasties
+
+The save against the site (some are your story, e.g. the Montys):
+
+- Monty: Juliette Monty is head in the save, not in it on the site
+- Monty: Romeo Monty is member in the save, not in it on the site
+- Monty: Dante Monty is heir in the save, not in it on the site
+- Monty: Romeo Monticapp is outcast on the site, not in it in the save
+- Capp: Juliette Monticapp is outcast on the site, not in it in the save
+
 ## Club hangouts
 
 Change in the Club panel (may need a played member):

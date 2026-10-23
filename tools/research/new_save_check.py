@@ -33,6 +33,7 @@ SAME_TYPE = {"thrift and boba store": "thrift and bubble tea store", "uob common
 ECO = {}   # street (world id) -> eco footprint state in the save
 NAPS = []   # neighbourhood action plans in force (Eco Lifestyle)
 CLUBS = []   # the save's clubs: leader Sim id, hangout zone
+DYNASTIES = []   # the save's dynasties: head, heir, members (outcasts marked)
 # the game's street action plans (streetCivicPolicy_* tuning ids, read 24 Oct), named from their tuning names
 NAP_NAMES = {237847: "Aggression", 231970: "Home Cooking", 237915: "Communal Ownership", 233560: "Green Gardening", 233559: "Utility Production",
              226333: "Upcycling Initiative", 231971: "Technological Progress", 231969: "Juiced Community", 231973: "Fun Community",
@@ -91,6 +92,9 @@ def read(fname):
             OPTIONS.update((acct.get('gameplay_account_data') or {}).get('gameplay_options') or {})
             hs = (slot.get('gameplay_data') or {}).get('holiday_service') or {}
             OPTIONS['_own_holidays'] = [h.get('name') for h in hs.get('holidays', []) if h.get('name')]
+            for d in ((slot.get('gameplay_data') or {}).get('dynasty_service') or {}).get('dynasty_data', []):   # dynasties
+                DYNASTIES.append({"name": d.get('name'), "head": d.get('head_sim_id'), "heir": d.get('heir_sim_id'),
+                                  "members": [(m.get('member_id'), bool(m.get('is_black_sheep'))) for m in d.get('members') or []]})
             for c in ((slot.get('gameplay_data') or {}).get('club_service') or {}).get('clubs', []):   # clubs: leader and hangout
                 CLUBS.append({"leader": c.get('leader'), "zone": c.get('hangout_zone_id'), "setting": c.get('hangout_setting')})
             streets = json.load(open(os.path.join(ROOT, 'research', 'data', 'world-extras.json'), encoding='utf-8'))['streets']
@@ -425,6 +429,26 @@ def main():
             if zz != c['zone']: hang.append(f"{club}: meets at {now}; plan: {D['nameFix'].get(wn_ + '|' + l_['lot']) or (l_.get('gallery') or {}).get('title') or l_.get('mine') or l_['lot']}")
         elif g.get('anyType') and c['zone']: hang.append(f"{club}: meets at {now}; plan: any {g['anyType']}")
     out['clubs'] = hang
+    # dynasties: the save against the site's roles (data/worlds households and people.json)
+    roles = {}
+    for HH in D['households'].values():
+        for hh_ in HH.values():
+            for sm in hh_.get('sims', []):
+                if sm.get('dynasty'): roles.setdefault(sm['dynasty']['name'], {})[sm['name']] = sm['dynasty'].get('role')
+    for pid, pp in (D.get('people') or {}).items():
+        if isinstance(pp, dict) and pp.get('dynasty'): roles.setdefault(pp['dynasty']['name'], {})[pp['name']] = pp['dynasty'].get('role')
+    dyn = []
+    for d in DYNASTIES:
+        site = roles.get(d['name'])
+        game = {sims.get(m): ('outcast' if bs else 'member') for m, bs in d['members']}
+        if d['head'] in sims: game[sims[d['head']]] = 'head'
+        if d['heir'] in sims: game[sims[d['heir']]] = 'heir'
+        if site is None: dyn.append(f"{d['name']}: in the save (head {sims.get(d['head'])}), not on the site"); continue
+        for n_, r_ in game.items():
+            if site.get(n_) != r_: dyn.append(f"{d['name']}: {n_} is {r_} in the save, {site.get(n_) or 'not in it'} on the site")
+        for n_, r_ in site.items():
+            if n_ not in game: dyn.append(f"{d['name']}: {n_} is {r_} on the site, not in it in the save")
+    out['dynasties'] = dyn
     if NAPS: opt.append("action plans in force: " + "; ".join(f"{x['plan']} ({x['hood']}, {x['world']})" for x in NAPS) + " (repeal the ones you don't want)")
     if not o.get('_own_holidays'): opt.append("holidays: still the game's own calendar (checklist step 3)")
     out['options'] = opt; out['optionsRaw'] = {k: v for k, v in o.items() if not isinstance(v, (bytes, dict)) and not k.startswith('_ns')}
@@ -461,6 +485,7 @@ def main():
         L += ["## Living where the plan doesn’t put them", "", "On one of your placed lots, but planned elsewhere (or nowhere): move them out.", ""]
         L += [f"- {q['world']} / {q['lot']}: {q['household']} ({', '.join(q['sims'])})" for q in out['squatters']] + [""]
     if not out.get('eco'): L += ["## Eco footprint", "", "Every neighbourhood with your builds placed has the footprint the site says it starts with.", ""]
+    if out['dynasties']: L += ["## Dynasties", "", "The save against the site (some are your story, e.g. the Montys):", ""] + [f"- {x}" for x in out['dynasties']] + [""]
     if out['clubs']: L += ["## Club hangouts", "", "Change in the Club panel (may need a played member):", ""] + [f"- {x}" for x in out['clubs']] + [""]
     if out.get('eco'):
         L += ["## Eco footprint", "", "Neighbourhoods with your builds placed whose footprint in the save isn’t what the site says it starts as:", ""]
