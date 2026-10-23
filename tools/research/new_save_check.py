@@ -240,7 +240,12 @@ def main():
                 save_hh = {g[1] for g in got if g}
                 names_ok = {norm(l['lot']), norm(lot_name)}
                 ok = set(zs.values()) | {z for z, v in zones.items() if v['world'] == wn and (norm(v['name']) in names_ok or any(len(norm(v['name'])) > 6 and (norm(v['name']) in n or n in norm(v['name'])) for n in names_ok))}
-                if homes and homes <= ({target} if unit else ok): row['state'] = 'home'
+                if homes and homes <= ({target} if unit else ok):
+                    row['state'] = 'home'
+                    extra = sorted({n for g in save_hh for n in members.get(g, set())} - set(names) - PETS)
+                    missing = [n for n, g in zip(names, got) if not g or g[0] not in homes]
+                    if extra: row['note'] = "also living with them: " + ", ".join(extra)
+                    if missing: row['note'] = (row.get('note', '') + "; " if row.get('note') else '') + "not with them: " + ", ".join(missing)
                 else:
                     now = [zones.get(z, {}).get('name') or 'no home' for z in homes if z]
                     row['state'] = 'move'; row['now'] = ", ".join(sorted(set(now))) or 'no home'; row['save_household'] = ", ".join(sorted(save_hh))
@@ -370,10 +375,11 @@ def main():
         if tp: L.append("- **To place:** " + ", ".join(tp))
         for r in iss: L.append(f"- **{r['name']}:** " + "; ".join(r['issues']))
         if not tp and not iss: L.append("- All shared lots placed, all as planned.")
-        mv = [h for h in out['households'] if h['world'] == wn and h['state'] != 'home']
+        mv = [h for h in out['households'] if h['world'] == wn and (h['state'] != 'home' or h.get('note'))]
         for h in mv:
             to = h['lot'] + (f" unit {h['unit']}" if h['unit'] else '')
             if h['state'] == 'move': L.append(f"- **Move {h['household']}** to {to} (now: {h['now']}{'; ' + h['note'] if h.get('note') else ''}{'; move out ' + h['occupied'] + ' first' if h.get('occupied') else ''})")
+            elif h['state'] == 'home': L.append(f"- **{h['household']}** at {to}: {h['note']}")
             else: L.append(f"- **{h['household']}** for {to}: {h['how']}")
         L.append("")
     if out['squatters']:

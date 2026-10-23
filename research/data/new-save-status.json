@@ -6168,7 +6168,8 @@
    "lot": "Bellacorde Palace",
    "unit": "",
    "sims": 4,
-   "state": "home"
+   "state": "home",
+   "note": "also living with them: Consort Capp"
   },
   {
    "world": "Ondarion",
@@ -6176,7 +6177,8 @@
    "lot": "12 Lakeview Apartments",
    "unit": "",
    "sims": 1,
-   "state": "home"
+   "state": "home",
+   "note": "also living with them: Holly Alto"
   }
  ],
  "squatters": [],
