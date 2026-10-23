@@ -72,3 +72,9 @@ Everything on the to-do list that needs the game open, grouped so you can go wor
 
 ## 5. Clubs
 - Change the clubs' hangouts in the Club panel (Powerhouse → Skye Fitness, Garden Gnomes → Magnolia Blossom Park, League of Adventurers → Courtyard Lane Playground, Upper Crusts → any Restaurant, Paragons and Renegades → Magnolia Mall, Spin Masters → Stargazer, Partihaus → La Discotheque).
+
+## 6. Notes for when you build (23 Oct)
+- Starlight Accolades only happen at a lounge with Hottest Spot in Town: only Calico (Brindleton Bay) has it now; Studio PBP gets it when you build it.
+- Henford’s fairy area (The Bramblewood) probably needs “Limit Fairies to Innisgreen” turned off; Cordelia’s Secret Cottage has no free trait slot for Fairy Passage.
+- Ravenwood Wedding Hall may still have the old manor’s On Hallowed Grounds trait: keep or remove?
+- Backrooms need 3 bookcases, art or gym kit in any mix (they set what the day crowd is), plus a bar, stereo, 4 barstools, sink, toilet and bin. Library, museum or gym by day, nightclub 9 pm–6 am.
