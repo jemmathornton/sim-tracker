@@ -215,11 +215,6 @@ window.ADMIN = {
 {
 "section": "World by world",
 "world": "Willow Creek",
-"text": "**Do:** Courtyard Lane Playground gave a “content not owned” warning in the new save, even from your Library (23 Oct): look for missing items and replace them."
-},
-{
-"section": "World by world",
-"world": "Willow Creek",
 "text": "**Decide:** Hallow Slough (Ella-Mint's home): Haunted House, On Hallowed Ground, or neither?"
 },
 {
@@ -230,22 +225,12 @@ window.ADMIN = {
 {
 "section": "World by world",
 "world": "Oasis Springs",
-"text": "**Do:** Nookstone gave a “content not owned” warning in the new save (23 Oct): look for missing items and replace them."
-},
-{
-"section": "World by world",
-"world": "Oasis Springs",
 "text": "**Do:** Build next: rebuild Springscape with two adult bedrooms (Vidcund, Lazlo) and a teen’s room (his daughter Nova), then re-upload."
 },
 {
 "section": "World by world",
 "world": "Oasis Springs",
 "text": "**Do:** Granada Place: Pascal Curious and his baby (Tycho, when born); in game, age the three brothers to Adult and Nova down to Teen."
-},
-{
-"section": "World by world",
-"world": "Newcrest",
-"text": "**Do:** Asphalt Abodes gave a “content not owned” warning in the new save (23 Oct): look for missing items and replace them."
 },
 {
 "section": "World by world",

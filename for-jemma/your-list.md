@@ -19,18 +19,12 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 
 ## World by world
 **Willow Creek**
-- **Do:** Courtyard Lane Playground gave a “content not owned” warning in the new save, even from your Library (23 Oct): look for missing items and replace them.
 - **Decide:** Hallow Slough (Ella-Mint's home): Haunted House, On Hallowed Ground, or neither?
 - **Decide:** Crick Cabana: Dustin Broke alone, or with the Sigworths (as in Season Events)?
 
 **Oasis Springs**
-- **Do:** Nookstone gave a “content not owned” warning in the new save (23 Oct): look for missing items and replace them.
 - **Do:** Build next: rebuild Springscape with two adult bedrooms (Vidcund, Lazlo) and a teen’s room (his daughter Nova), then re-upload.
 - **Do:** Granada Place: Pascal Curious and his baby (Tycho, when born); in game, age the three brothers to Adult and Nova down to Teen.
-
-**Newcrest**
-- **Do:** Asphalt Abodes gave a “content not owned” warning in the new save (23 Oct): look for missing items and replace them.
-- **Do:** Optimist’s Outlook gave the same warning (23 Oct): look for missing items and replace them.
 
 **Magnolia Promenade**
 - **Do:** Magnolia Mall, when you build it: coffee, a wardrobe or racks, things to sabotage (Paragons, Renegades).
