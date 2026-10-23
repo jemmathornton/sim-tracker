@@ -276,5 +276,10 @@
   "where": "Del Sol Valley, a celebrity with no home",
   "noHome": true,
   "fame": 3
+ },
+ "unknown-curious": {
+  "name": "Unknown",
+  "sex": "x",
+  "placeholder": true
  }
 }

@@ -3,12 +3,12 @@
 Everything waiting on you, in one place (it replaced the in-game checklist and the parked to-dos, her call 23 Oct). It shows on the site under Admin > Notes. **Do** = decided, just do it; **Decide** = your call. Tell Claude when one's done or decided and it comes off.
 
 ## Game options
-- **Decide:** Neighbourhood Stories off, or on with Move In and Move Out unticked for Other Households?
-- **Decide:** Pets: turn off Adopt Cats & Dogs and Rescue Horses in Neighbourhood Stories?
-- **Decide:** Ageing off for unplayed Sims (so role Sims like Eloise Hiddlestix don't age out)?
-- **Decide:** Eco Lifestyle: turn off Enable NPC Voting (random action plans pass otherwise)?
+- **Do:** Neighbourhood Stories on. Other Households: Move In, Move Out, Have a Baby, Adopt a Child, Join and Leave a Career, Romance Changes off.
+- **Do:** Other Households: Adopt Cats & Dogs and Rescue Horses off; Retire from Career, Die in Accidents, Friendship Changes on.
+- **Do:** Allow Automatic Breakups off; Dynasty Prestige Decay off; Enable NPC Voting off; ageing off for unplayed Sims.
 - **Do:** Raise Maximum Sim Count; heart your planned households, Consort Capp and the four Sulani mermaids.
 - **Do:** Note your save's holidays (name, season, week 1–4, day) for the Calendar.
+- **Do:** Look into a mod to cap family size (babies stay off until then).
 
 ## World by world
 **Willow Creek**
@@ -16,7 +16,8 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 - **Decide:** Crick Cabana: Dustin Broke alone, or with the Sigworths (as in Season Events)?
 
 **Oasis Springs**
-- **Decide:** Sultry Springside Smiths: Maxis's Gallery family? (Then Pollination Tech 9 is your only alien.)
+- **Do:** Build next: rebuild Springscape with three adult bedrooms (Vidcund, Lazlo and his daughter Nova), then re-upload.
+- **Do:** Granada Place: Pascal Curious and his baby (Tycho, when born); put Maxis's Curious brothers and Nova in game.
 
 **Magnolia Promenade**
 - **Do:** Magnolia Mall, when you build it: coffee, a wardrobe or racks, things to sabotage (Paragons, Renegades).

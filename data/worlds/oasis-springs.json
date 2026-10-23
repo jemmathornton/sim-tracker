@@ -29,7 +29,7 @@
     {"lot": "Vista Quarry", "myName": "Vista Quarry Villa", "type": "Residential", "size": "30x20", "residents": "2 Bed Family", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["D3pjU723EeuN9fwg9JDtjA=="], "traits": ["Natural Light"], "challenges": ["Quake Zone"]},
     {"lot": "Raffia Quinta", "myName": "Raffia Quinta", "type": "Tiny Home Residential", "size": "20x15", "residents": "Rivera", "built": true, "shared": true, "screenshots": true, "simsMade": false, "gallery": ["Vstuj6QyEe2MBonwBMy2Ww=="], "traits": ["Homey", "Eco Lot"]},
     {"lot": "Dusty Turf", "myName": "Dusty Turf", "type": "Residential", "size": "30x20", "residents": "De Costa", "built": true, "shared": false, "screenshots": false, "simsMade": false},
-    {"lot": "Springscape", "myName": "Springscape", "type": "Residential", "size": "30x20", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["hYfhA752EeuOnL8NB92BJw=="], "challenges": ["Quake Zone"]},
+    {"lot": "Springscape", "myName": "Springscape", "type": "Residential", "size": "30x20", "residents": "Vidcund & Lazlo Curious (and Nova)", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["hYfhA752EeuOnL8NB92BJw=="], "challenges": ["Quake Zone"]},
     {"lot": "Cacti Casa", "myName": "Palm Springs Public Pool", "type": "Pool", "size": "40x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["T4xX5K02EeuEt01o44QF8A=="], "traits": ["Bracing Breezes"], "challenges": ["Quake Zone"]}
    ]
   },
@@ -39,7 +39,7 @@
    "mapSpot": [0.29, 0.44],
    "mapBox": [0.14, 0.35, 0.43, 0.53],
    "lots": [
-    {"lot": "Granada Place", "myName": "Granada Place", "type": "Residential", "size": "30x20", "residents": "Curious *WithUpdates*", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["91JnkAJZEeuMZ399sA1LjA=="], "traits": ["Good Schools", "Sunny Aspect"]},
+    {"lot": "Granada Place", "myName": "Granada Place", "type": "Residential", "size": "30x20", "residents": "Curious (Pascal, expecting Tycho)", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["91JnkAJZEeuMZ399sA1LjA=="], "traits": ["Good Schools", "Sunny Aspect"]},
     {"lot": "Arid Ridge", "myName": "Lotus Ridge Spa", "type": "Spa", "size": "40x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["k9wU7gLyEe2GTnUsHjDJmA=="], "traits": ["Romantic Aura", "On Ley Line"], "challenges": ["Quake Zone"]},
     {"lot": "Sultry Springside", "myName": "Sultry Springside", "type": "Residential", "size": "30x20", "residents": "Smith", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["wPMUJgKdEeuGMnCrzml8yA=="], "traits": ["Good Schools", "Sunny Aspect"]},
     {"lot": "Rio Verde", "myName": "Rio Verde Retirement Home", "type": "Residential Rental (6)", "size": "40x30", "residents": "Elders", "built": true, "shared": true, "screenshots": true, "simsMade": false, "gallery": ["MEKP5ok7QxmPVa2JI2GTNg==", "vt1B67ztEeuJDE1o44QF8A=="], "traits": ["Sunny Aspect", "Homey"], "challenges": ["Quake Zone"], "units": [{"name": "1", "traits": ["Sunny Aspect", "Homey"], "challenges": ["Quake Zone"]}, {"name": "2"}, {"name": "3"}, {"name": "4"}, {"name": "5"}, {"name": "6"}]}
@@ -316,24 +316,22 @@
   "Curious": {
    "sims": [
     {
-     "id": "nova-curious",
-     "name": "Nova Curious",
-     "sex": "f",
+     "id": "pascal-curious",
+     "name": "Pascal Curious",
+     "sex": "m",
      "origin": "Premade",
+     "from": "Library (2024-05-25)",
      "age": "Young Adult",
-     "aspiration": "Computer Whiz",
-     "traits": ["Geek", "Genius", "Ambitious"],
+     "aspiration": "Nerd Brain",
+     "traits": ["Unflirty", "Neat", "Creative"],
      "bonus": "Quick Learner",
-     "career": "",
+     "career": "Scientist · Lab Technician (level 1)",
      "skills": [
-      ["Charisma", 4, 10],
-      ["Logic", 6, 10],
-      ["Programming", 3, 10],
-      ["Video Gaming", 5, 10],
-      ["Mischief", 3, 10],
-      ["Cooking", 4, 10],
-      ["Fitness", 5, 10]
-     ]
+      ["Charisma", 1, 10],
+      ["Comedy", 1, 10],
+      ["Video Gaming", 1, 10]
+     ],
+     "parents": ["unknown-curious"]
     }
    ]
   },
@@ -380,7 +378,8 @@
      ],
      "partners": [
       ["jenny-smith", "Spouse"]
-     ]
+     ],
+     "state": "Alien"
     },
     {
      "id": "johnny-smith",
@@ -623,6 +622,68 @@
      "partners": [
       ["carlos-rivera", "Spouse"]
      ]
+    }
+   ]
+  },
+  "Vidcund & Lazlo Curious": {
+   "sims": [
+    {
+     "id": "vidcund-curious",
+     "name": "Vidcund Curious",
+     "sex": "m",
+     "origin": "Premade",
+     "from": "Library (2024-05-25)",
+     "age": "Young Adult",
+     "aspiration": "Nerd Brain",
+     "traits": ["Loner", "Neat", "Geek"],
+     "bonus": "Quick Learner",
+     "career": "Scientist · Lab Technician (level 1)",
+     "skills": [
+      ["Charisma", 2, 10],
+      ["Comedy", 2, 10],
+      ["Video Gaming", 1, 10],
+      ["Mischief", 1, 10]
+     ],
+     "parents": ["unknown-curious"]
+    },
+    {
+     "id": "lazlo-curious",
+     "name": "Lazlo Curious",
+     "sex": "m",
+     "origin": "Premade",
+     "from": "Library (2024-05-25)",
+     "age": "Young Adult",
+     "aspiration": "Nerd Brain",
+     "traits": ["Outgoing", "Goofball", "Ambitious"],
+     "bonus": "Quick Learner",
+     "career": "Scientist · Junior Tinkerer (level 3)",
+     "skills": [
+      ["Charisma", 1, 10],
+      ["Comedy", 3, 10],
+      ["Mischief", 1, 10]
+     ],
+     "parents": ["unknown-curious"]
+    },
+    {
+     "id": "nova-curious",
+     "name": "Nova Curious",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "Computer Whiz",
+     "traits": ["Geek", "Genius", "Ambitious"],
+     "bonus": "Quick Learner",
+     "career": "",
+     "skills": [
+      ["Charisma", 4, 10],
+      ["Logic", 6, 10],
+      ["Programming", 3, 10],
+      ["Video Gaming", 5, 10],
+      ["Mischief", 3, 10],
+      ["Cooking", 4, 10],
+      ["Fitness", 5, 10]
+     ],
+     "parents": ["lazlo-curious"]
     }
    ]
   }

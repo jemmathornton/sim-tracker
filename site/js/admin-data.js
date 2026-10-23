@@ -160,22 +160,17 @@ window.ADMIN = {
 {
 "section": "Game options",
 "world": "",
-"text": "**Decide:** Neighbourhood Stories off, or on with Move In and Move Out unticked for Other Households?"
+"text": "**Do:** Neighbourhood Stories on. Other Households: Move In, Move Out, Have a Baby, Adopt a Child, Join and Leave a Career, Romance Changes off."
 },
 {
 "section": "Game options",
 "world": "",
-"text": "**Decide:** Pets: turn off Adopt Cats & Dogs and Rescue Horses in Neighbourhood Stories?"
+"text": "**Do:** Other Households: Adopt Cats & Dogs and Rescue Horses off; Retire from Career, Die in Accidents, Friendship Changes on."
 },
 {
 "section": "Game options",
 "world": "",
-"text": "**Decide:** Ageing off for unplayed Sims (so role Sims like Eloise Hiddlestix don't age out)?"
-},
-{
-"section": "Game options",
-"world": "",
-"text": "**Decide:** Eco Lifestyle: turn off Enable NPC Voting (random action plans pass otherwise)?"
+"text": "**Do:** Allow Automatic Breakups off; Dynasty Prestige Decay off; Enable NPC Voting off; ageing off for unplayed Sims."
 },
 {
 "section": "Game options",
@@ -186,6 +181,11 @@ window.ADMIN = {
 "section": "Game options",
 "world": "",
 "text": "**Do:** Note your save's holidays (name, season, week 1–4, day) for the Calendar."
+},
+{
+"section": "Game options",
+"world": "",
+"text": "**Do:** Look into a mod to cap family size (babies stay off until then)."
 },
 {
 "section": "World by world",
@@ -200,7 +200,12 @@ window.ADMIN = {
 {
 "section": "World by world",
 "world": "Oasis Springs",
-"text": "**Decide:** Sultry Springside Smiths: Maxis's Gallery family? (Then Pollination Tech 9 is your only alien.)"
+"text": "**Do:** Build next: rebuild Springscape with three adult bedrooms (Vidcund, Lazlo and his daughter Nova), then re-upload."
+},
+{
+"section": "World by world",
+"world": "Oasis Springs",
+"text": "**Do:** Granada Place: Pascal Curious and his baby (Tycho, when born); put Maxis's Curious brothers and Nova in game."
 },
 {
 "section": "World by world",
