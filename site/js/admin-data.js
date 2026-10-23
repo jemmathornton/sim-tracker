@@ -215,7 +215,7 @@ window.ADMIN = {
 {
 "section": "New save fixes (from Claude's checks, 23 Oct)",
 "world": "",
-"text": "**Do:** Place Brindleton Boathouse and Hindquarter Hideaway (Brindleton Bay)."
+"text": "**Do:** Place Hindquarter Hideaway (Brindleton Bay)."
 },
 {
 "section": "New save fixes (from Claude's checks, 23 Oct)",

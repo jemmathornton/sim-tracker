@@ -16,7 +16,7 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 - **Do:** Holidays (checklist step 3) aren't done yet: the save still has the game's own calendar.
 - **Do:** Midtown Meadows unit 4: Homey → Home Studio (with Gnomes), or keep Homey and tell Claude.
 - **Do:** Factory One: add Party Place and Great Acoustics.
-- **Do:** Place Brindleton Boathouse and Hindquarter Hideaway (Brindleton Bay).
+- **Do:** Place Hindquarter Hideaway (Brindleton Bay).
 - **Do:** Households moved out while placing builds: once the builds are in, Claude lists who goes back where (from the save against the plan), and you move them in.
 - **Do:** The game crashed placing the first Britechester lot (23 Oct). Next try: save first, then place it from inside the lot in Build mode; if it crashes again, close the game and delete localthumbcache.package (Documents\Electronic Arts\The Sims 4; the game remakes it). Tell Claude which lot it was.
 - **Decide:** Lagoon of Love: Wedding Venue (Claude’s pick: your Gallery text calls it a beach wedding spot, Sulani has none, and it needs no pack), Park, or Vacation Rental (the upload has no beds)?
