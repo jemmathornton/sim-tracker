@@ -85,7 +85,6 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 - **Do:** Wedding venues: check each one's lot type when you share it.
 
 ## Rentals
-- **Do:** Look round Upland Trailer Park, Sequoia Cottage, Isda Riverfront and Rio Verde; swap units where another fits.
 - **Do:** Give units 2+ their own traits and bed/bath counts, then re-upload (Claude reads them from your save).
 - **Do:** Make Rippling Flats, Specter Row and Casa do Corsário into units in your save.
 - **Decide:** Empty units at Rockridge Springs, Old Torget House, Manzanita Terrace, Slip 42: who? (For Rent pets?)

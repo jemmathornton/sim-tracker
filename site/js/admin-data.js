@@ -375,11 +375,6 @@ window.ADMIN = {
 {
 "section": "Rentals",
 "world": "",
-"text": "**Do:** Look round Upland Trailer Park, Sequoia Cottage, Isda Riverfront and Rio Verde; swap units where another fits."
-},
-{
-"section": "Rentals",
-"world": "",
 "text": "**Do:** Give units 2+ their own traits and bed/bath counts, then re-upload (Claude reads them from your save)."
 },
 {
