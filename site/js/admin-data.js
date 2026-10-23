@@ -375,7 +375,7 @@ window.ADMIN = {
 {
 "section": "Every world",
 "world": "",
-"text": "**Do:** Community Spaces in the new save: Newcrest Community Space Makers, Admiral’s Wreckage Garden, The Old Dockyard Makers, New Harbor Park Makers (when built)."
+"text": "**Do:** Community Spaces: all four versions are placed; later, switch the active one on each voting board (shift-click, Instant Enact): Newcrest Community Space → Makers, Admiral’s Wreckage → Garden, The Old Dockyard → Makers, New Harbor Park → Makers (when built)."
 },
 {
 "section": "Every world",
