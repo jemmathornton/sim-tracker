@@ -240,7 +240,7 @@ window.ADMIN = {
 {
 "section": "Game options",
 "world": "",
-"text": "**Do:** Look into a mod to cap family size (babies stay off until then)."
+"text": "**Do:** Look into a mod to cap family size (babies stay off until then). Claude’s research: MC Command Center’s Maximum Household Size (a full household can’t get pregnant; it applies to yours too)."
 },
 {
 "section": "World by world",

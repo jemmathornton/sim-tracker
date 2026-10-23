@@ -25,7 +25,7 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 - **Do:** Allow Automatic Breakups off; Dynasty Prestige Decay off; Enable NPC Voting off; ageing off for unplayed Sims.
 - **Do:** Raise Maximum Sim Count; heart your planned households, Consort Capp and the four Sulani mermaids.
 - **Do:** Note your save's holidays (name, season, week 1–4, day) for the Calendar.
-- **Do:** Look into a mod to cap family size (babies stay off until then).
+- **Do:** Look into a mod to cap family size (babies stay off until then). Claude’s research: MC Command Center’s Maximum Household Size (a full household can’t get pregnant; it applies to yours too).
 
 ## World by world
 **Willow Creek**
