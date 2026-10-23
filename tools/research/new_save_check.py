@@ -20,6 +20,7 @@ SUBVENUES = {223944: "Community space", 223946: "Garden", 223945: "Market", 2314
 TN = {int(k): v['name'] for k, v in load(os.path.join(DATA, 'game', 'lot-traits.json'))['traits'].items()}
 MOD_TRAITS = {14633906698125574705: "Dress Code (LittleMsSam mod)"}   # traits from her Mods folder (found 23 Oct); not counted as differences
 TN.update(MOD_TRAITS)
+PETS = set()   # pets' names in the save (never counted as a household's extra Sims)
 norm = lambda s: re.sub(r'\s+', ' ', (s or '').replace('’', "'")).strip().lower()
 
 
@@ -53,6 +54,7 @@ def read(fname):
             elif fn == 5: hhs.append(s4.decode(v, P + 'HouseholdData', S, depth=2))
             elif fn == 6:
                 sm = s4.decode(v, P + 'SimData', S, depth=0); sims[sm.get('sim_id')] = f"{sm.get('first_name', '')} {sm.get('last_name', '')}".strip()
+                if sm.get('extended_species') not in (None, 0, 1): PETS.add(sims[sm.get('sim_id')])   # cats, dogs, horses, foxes
         name = s4.save_name(data, S)
         return name, zones, hhs, sims
     finally:
@@ -173,13 +175,14 @@ def main():
         if any((s.get('origin') or '').lower() == 'mine' or re.search('Library', s.get('from') or '') for s in hh['sims']):
             return "from your Library" + (" (your Library copy differs from the site: check ages and Sims)" if k and k[0] == 'b' and not re.search(r'^(matches|same)', k[1], re.I) and k[1] not in ('–', '') else "")
         return "not found by its Sims’ names (EA’s, maybe renamed)"
-    zone_of_sim = {}
+    zone_of_sim, members = {}, {}
     living = {}   # zone -> names of the save households living there
     for h in hhs:
         if h.get('home_zone'): living.setdefault(h['home_zone'], []).append(h.get('name') or '?')
     for h in hhs:
         ids = (h.get('sims') or {}).get('ids', []) if isinstance(h.get('sims'), dict) else []
         for i in ids: zone_of_sim[sims.get(i)] = (h.get('home_zone'), h.get('name'))
+        members[h.get('name')] = members.get(h.get('name'), set()) | {sims.get(i) for i in ids if sims.get(i)}
     base_ = lambda n: re.sub(r'\s+own\??$', '', re.sub(r'\?$', '', n).strip(), flags=re.I).strip()
     for w in D['worlds']:
         if not (w.get('owned') and w.get('ready')): continue
@@ -222,6 +225,9 @@ def main():
                     there = [n for n in living.get(target, []) if n not in save_hh]
                     if there: row['occupied'] = ", ".join(sorted(set(there)))
                     if len(homes) > 1: row['note'] = 'its Sims are in more than one household'
+                    others = sorted({n for g in save_hh for n in members.get(g, set())} - set(names) - PETS)
+                    if others and len(save_hh) == 1: row['note'] = f"split them out of {next(iter(save_hh))} first (it also has {', '.join(o.split()[0] for o in others[:4])}{'…' if len(others) > 4 else ''})"
+                    elif len(save_hh) > 1: row['note'] = f"merge {' and '.join(sorted(save_hh))} first"
             out['households'].append(row)
     # households living on one of her placed lots that the plan doesn't put there (to move out, or elsewhere)
     planned_sims = {}   # zone -> Sim names the plan puts there

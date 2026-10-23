@@ -5161,7 +5161,8 @@
    "sims": 1,
    "state": "move",
    "now": "no home",
-   "save_household": "Caliente"
+   "save_household": "Caliente",
+   "note": "split them out of Caliente first (it also has Dina, Katrina, Nina)"
   },
   {
    "world": "Oasis Springs",
@@ -5225,7 +5226,8 @@
    "sims": 3,
    "state": "move",
    "now": "no home",
-   "save_household": "Caliente"
+   "save_household": "Caliente",
+   "note": "split them out of Caliente first (it also has Don)"
   },
   {
    "world": "Newcrest",
@@ -5235,7 +5237,8 @@
    "sims": 1,
    "state": "move",
    "now": "no home",
-   "save_household": "BFF"
+   "save_household": "BFF",
+   "note": "split them out of BFF first (it also has Liberty, Travis)"
   },
   {
    "world": "Newcrest",
@@ -5245,7 +5248,8 @@
    "sims": 1,
    "state": "move",
    "now": "no home",
-   "save_household": "BFF"
+   "save_household": "BFF",
+   "note": "split them out of BFF first (it also has Summer, Travis)"
   },
   {
    "world": "Newcrest",
@@ -5255,7 +5259,8 @@
    "sims": 1,
    "state": "move",
    "now": "no home",
-   "save_household": "BFF"
+   "save_household": "BFF",
+   "note": "split them out of BFF first (it also has Liberty, Summer)"
   },
   {
    "world": "Newcrest",
@@ -5419,7 +5424,8 @@
    "sims": 2,
    "state": "move",
    "now": "701 ZenView",
-   "save_household": "Karaoke Legends"
+   "save_household": "Karaoke Legends",
+   "note": "split them out of Karaoke Legends first (it also has Akira, Darling)"
   },
   {
    "world": "San Myshuno",
@@ -5521,7 +5527,8 @@
    "sims": 1,
    "state": "move",
    "now": "no home",
-   "save_household": "Roomies"
+   "save_household": "Roomies",
+   "note": "split them out of Roomies first (it also has Gavin, Mitchell, Zoe)"
   },
   {
    "world": "Del Sol Valley",
@@ -5531,7 +5538,8 @@
    "sims": 1,
    "state": "move",
    "now": "no home",
-   "save_household": "Roomies"
+   "save_household": "Roomies",
+   "note": "split them out of Roomies first (it also has Gavin, J, Zoe)"
   },
   {
    "world": "Del Sol Valley",
@@ -5541,7 +5549,8 @@
    "sims": 1,
    "state": "move",
    "now": "no home",
-   "save_household": "Roomies"
+   "save_household": "Roomies",
+   "note": "split them out of Roomies first (it also has Gavin, J, Mitchell)"
   },
   {
    "world": "Del Sol Valley",
@@ -5551,7 +5560,8 @@
    "sims": 1,
    "state": "move",
    "now": "no home",
-   "save_household": "Roomies"
+   "save_household": "Roomies",
+   "note": "split them out of Roomies first (it also has J, Mitchell, Zoe)"
   },
   {
    "world": "Del Sol Valley",
@@ -5561,7 +5571,8 @@
    "sims": 1,
    "state": "move",
    "now": "Dream Weavers Way",
-   "save_household": "Eclectic Arts Household"
+   "save_household": "Eclectic Arts Household",
+   "note": "split them out of Eclectic Arts Household first (it also has Alice, Leslie)"
   },
   {
    "world": "Del Sol Valley",
@@ -5571,7 +5582,8 @@
    "sims": 1,
    "state": "move",
    "now": "Dream Weavers Way",
-   "save_household": "Eclectic Arts Household"
+   "save_household": "Eclectic Arts Household",
+   "note": "split them out of Eclectic Arts Household first (it also has Leslie, Mark)"
   },
   {
    "world": "Del Sol Valley",
@@ -5581,7 +5593,8 @@
    "sims": 1,
    "state": "move",
    "now": "Dream Weavers Way",
-   "save_household": "Eclectic Arts Household"
+   "save_household": "Eclectic Arts Household",
+   "note": "split them out of Eclectic Arts Household first (it also has Alice, Mark)"
   },
   {
    "world": "Del Sol Valley",
@@ -5746,7 +5759,8 @@
    "sims": 2,
    "state": "move",
    "now": "The Portsmouth Promenade",
-   "save_household": "Greenburg"
+   "save_household": "Greenburg",
+   "note": "split them out of Greenburg first (it also has Knox)"
   },
   {
    "world": "Evergreen Harbor",
@@ -5756,7 +5770,8 @@
    "sims": 1,
    "state": "move",
    "now": "The Portsmouth Promenade",
-   "save_household": "Greenburg"
+   "save_household": "Greenburg",
+   "note": "split them out of Greenburg first (it also has Blossom, Mary)"
   },
   {
    "world": "Evergreen Harbor",

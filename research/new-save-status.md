@@ -21,22 +21,22 @@ Made by tools/research/new_save_check.py from a copy of the save. Lots: placed /
 
 - **To place:** Springscape
 - **Leah-Moon Cadberry** for Nookstone: from your Library (your Library copy differs from the site: check ages and Sims)
-- **Move Lothario** to Agave Abode (now: no home)
+- **Move Lothario** to Agave Abode (now: no home; split them out of Caliente first (it also has Dina, Katrina, Nina))
 - **Rivera** for Raffia Quinta: from your Library
 - **De Costa** for Dusty Turf: from your Library
 - **Curious 1** for Springscape: Maxis’s Gallery copy: from your Library or the Gallery
 - **Curious 2** for Granada Place: Maxis’s Gallery copy: from your Library or the Gallery
 - **Move Smith** to Sultry Springside (now: no home)
-- **Move Caliente** to Yuma Heights (now: no home)
+- **Move Caliente** to Yuma Heights (now: no home; split them out of Caliente first (it also has Don))
 
 ## Newcrest
 
 - **Newcrest Community Space:** named “Newcrest Community Makers” in the save; active version Community space; your pick Makers (switch on the voting board)
 - **Midtown Meadows:** unit 4: wants Gnomes, Home Studio, has Gnomes, Homey
 - **The Ice Pavilion:** named “The Ice Pavillion” in the save
-- **Move Holiday** to Fern Park Flats unit 1 (now: no home)
-- **Move Lee** to Fern Park Flats unit 2 (now: no home)
-- **Move Scott** to Fern Park Flats unit 3 (now: no home)
+- **Move Holiday** to Fern Park Flats unit 1 (now: no home; split them out of BFF first (it also has Liberty, Travis))
+- **Move Lee** to Fern Park Flats unit 2 (now: no home; split them out of BFF first (it also has Summer, Travis))
+- **Move Scott** to Fern Park Flats unit 3 (now: no home; split them out of BFF first (it also has Liberty, Summer))
 - **Washburn** for Midtown Meadows unit 2: only in your “Season Events” save: save it to your Library from there first
 - **Bridges** for Midtown Meadows unit 5: only in your “Season Events” save: save it to your Library from there first
 - **Versaree** for Oak Alcove: from your Library
@@ -62,7 +62,7 @@ Made by tools/research/new_save_check.py from a copy of the save. Lots: placed /
 - **To place:** 17 Culpepper House, 18 Culpepper House, 19 Culpepper House, Fraternity Apartment, Sorority Apartment, Waterside Warble, 920 Medina Studios, 930 Medina Studios, 122 Hakim House, 1310 21 Chic Street, 1010 Alto Apartments, Skye Fitness, Stargazer
 - **Move Bheeda** to 920 Medina Studios (now: 2A Jasmine Suites)
 - **Livin' In The City** for 930 Medina Studios: only in your “Rotational” save: save it to your Library from there first
-- **Move Santiago Ojo** to FountainView Penthouse (now: 701 ZenView)
+- **Move Santiago Ojo** to FountainView Penthouse (now: 701 ZenView; split them out of Karaoke Legends first (it also has Akira, Darling))
 - **Move Bro & Kennedy** to 701 ZenView (now: Dock Den; move out Karaoke Legends first)
 - **Move Behr** to 702 ZenView (now: no home)
 - **Move Jeong** to 1310 21 Chic Street (now: no home)
@@ -77,13 +77,13 @@ Made by tools/research/new_save_check.py from a copy of the save. Lots: placed /
 ## Del Sol Valley
 
 - All shared lots placed, all as planned.
-- **Move Huntington** to The Inner Circle unit 2 (now: no home)
-- **Move Kalani** to The Inner Circle unit 1 (now: no home)
-- **Move Patel** to The Inner Circle unit 3 (now: no home)
-- **Move Richards** to The Inner Circle unit 4 (now: no home)
-- **Move Eggleston** to Upland Trailer Park unit 1 (now: Dream Weavers Way)
-- **Move Martin** to Upland Trailer Park unit 2 (now: Dream Weavers Way)
-- **Move Holland** to Upland Trailer Park unit 3 (now: Dream Weavers Way)
+- **Move Huntington** to The Inner Circle unit 2 (now: no home; split them out of Roomies first (it also has Gavin, Mitchell, Zoe))
+- **Move Kalani** to The Inner Circle unit 1 (now: no home; split them out of Roomies first (it also has Gavin, J, Zoe))
+- **Move Patel** to The Inner Circle unit 3 (now: no home; split them out of Roomies first (it also has Gavin, J, Mitchell))
+- **Move Richards** to The Inner Circle unit 4 (now: no home; split them out of Roomies first (it also has J, Mitchell, Zoe))
+- **Move Eggleston** to Upland Trailer Park unit 1 (now: Dream Weavers Way; split them out of Eclectic Arts Household first (it also has Alice, Leslie))
+- **Move Martin** to Upland Trailer Park unit 2 (now: Dream Weavers Way; split them out of Eclectic Arts Household first (it also has Leslie, Mark))
+- **Move Holland** to Upland Trailer Park unit 3 (now: Dream Weavers Way; split them out of Eclectic Arts Household first (it also has Alice, Mark))
 - **Move Johnny Zest** to Upland Trailer Park unit 4 (now: no home)
 - **Move Ward** to The Ward Den (now: no home)
 - **Move Bailey-Moon** to Bailey-Moon Manor (now: no home)

@@ -42,7 +42,7 @@ def new_save():
         worlds.append({"world": wn, "placed": sum(1 for r in rows if r.get("status") == "placed"),
                        "toPlace": [r["name"] for r in rows if r.get("status") == "to place"],
                        "fixes": [{"lot": r["name"], "what": r["issues"]} for r in rows if r.get("issues")],
-                       "move": [{"household": h["household"], "to": h["lot"] + (f" unit {h['unit']}" if h["unit"] else ""), "now": h.get("now"), "how": h.get("how"), "occupied": h.get("occupied")} for h in hh],
+                       "move": [{"household": h["household"], "to": h["lot"] + (f" unit {h['unit']}" if h["unit"] else ""), "now": h.get("now"), "how": h.get("how"), "occupied": h.get("occupied"), "note": h.get("note")} for h in hh],
                        "ahead": [{"lot": q["lot"], "household": q["household"], "goes": q["goes"]} for q in d.get("ahead", []) if q["world"] == wn]})
     for wn in {q["world"] for q in d.get("ahead", [])} - {w["world"] for w in worlds}:   # not started yet, but someone lives on a lot to place
         worlds.append({"world": wn, "placed": 0, "toPlace": [], "fixes": [], "move": [], "ahead": [{"lot": q["lot"], "household": q["household"], "goes": q["goes"]} for q in d["ahead"] if q["world"] == wn]})
