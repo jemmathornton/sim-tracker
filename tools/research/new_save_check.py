@@ -11,7 +11,7 @@ units), so the ones moved out while she placed builds can go back. Saves are rea
 import json, os, re, shutil, sys, tempfile, time, unicodedata
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 import sims4files as s4
-from common import ROOT, DATA, load, save
+from common import ROOT, DATA, load, save, slug as slugify
 
 S = s4.save_schema(); P = '.EA.Sims4.Persistence.'
 SAVE_NAME = "Jemma's Sim World"
@@ -32,6 +32,7 @@ SAME_TYPE = {"thrift and boba store": "thrift and bubble tea store", "uob common
              "haunted house": "haunted house residential", "university housing": "university housing"}   # her British names and labels -> the game's
 ECO = {}   # street (world id) -> eco footprint state in the save
 NAPS = []   # neighbourhood action plans in force (Eco Lifestyle)
+CLUBS = []   # the save's clubs: leader Sim id, hangout zone
 # the game's street action plans (streetCivicPolicy_* tuning ids, read 24 Oct), named from their tuning names
 NAP_NAMES = {237847: "Aggression", 231970: "Home Cooking", 237915: "Communal Ownership", 233560: "Green Gardening", 233559: "Utility Production",
              226333: "Upcycling Initiative", 231971: "Technological Progress", 231969: "Juiced Community", 231973: "Fun Community",
@@ -90,6 +91,8 @@ def read(fname):
             OPTIONS.update((acct.get('gameplay_account_data') or {}).get('gameplay_options') or {})
             hs = (slot.get('gameplay_data') or {}).get('holiday_service') or {}
             OPTIONS['_own_holidays'] = [h.get('name') for h in hs.get('holidays', []) if h.get('name')]
+            for c in ((slot.get('gameplay_data') or {}).get('club_service') or {}).get('clubs', []):   # clubs: leader and hangout
+                CLUBS.append({"leader": c.get('leader'), "zone": c.get('hangout_zone_id'), "setting": c.get('hangout_setting')})
             streets = json.load(open(os.path.join(ROOT, 'research', 'data', 'world-extras.json'), encoding='utf-8'))['streets']
             for st in ((slot.get('gameplay_data') or {}).get('street_service') or {}).get('street_data', []):   # action plans in force
                 for pd in ((st.get('civic_provider_data') or {}).get('policy_data') or []):
@@ -400,6 +403,28 @@ def main():
     not_h = sorted(planned - hearted_names)
     out['notHearted'] = not_h
     if not_h: opt.append(f"{len(planned) - len(not_h)} of {len(planned)} planned households in the save are in My Households (hearted): heart the rest, homeless families first (the game culls Sims outside My Households)")
+    # clubs: find each by its leader, compare its hangout with the plan's (data/groups.json)
+    groups = load(os.path.join(DATA, 'groups.json')).get('clubs', {})
+    leader_of = {}
+    for HH in D['households'].values():
+        for hh_ in HH.values():
+            for sm in hh_.get('sims', []):
+                for cl in sm.get('clubs') or []:
+                    if cl.get('role') == 'leader': leader_of[sm['name']] = cl['name']
+    lot_name_of = {f"l-{slugify(w['name'])}--{slugify(l['lot'])}": (w['name'], l) for w in D['worlds'] for h in w['hoods'] for l in h['lots']}
+    hang = []
+    for c in CLUBS:
+        club = leader_of.get(sims.get(c['leader']))
+        g = groups.get(club) if club else None
+        if not g: continue
+        now = zones.get(c['zone'], {}).get('name') if c['zone'] else ('any ' + str(c['setting']).lower())
+        if g.get('place'):
+            wn_, l_ = lot_name_of.get(g['place'], (None, None))
+            if not l_: continue
+            zz = lot_zone.get((wn_, l_['lot']), {}).get('')
+            if zz != c['zone']: hang.append(f"{club}: meets at {now}; plan: {D['nameFix'].get(wn_ + '|' + l_['lot']) or (l_.get('gallery') or {}).get('title') or l_.get('mine') or l_['lot']}")
+        elif g.get('anyType') and c['zone']: hang.append(f"{club}: meets at {now}; plan: any {g['anyType']}")
+    out['clubs'] = hang
     if NAPS: opt.append("action plans in force: " + "; ".join(f"{x['plan']} ({x['hood']}, {x['world']})" for x in NAPS) + " (repeal the ones you don't want)")
     if not o.get('_own_holidays'): opt.append("holidays: still the game's own calendar (checklist step 3)")
     out['options'] = opt; out['optionsRaw'] = {k: v for k, v in o.items() if not isinstance(v, (bytes, dict)) and not k.startswith('_ns')}
@@ -436,6 +461,7 @@ def main():
         L += ["## Living where the plan doesn’t put them", "", "On one of your placed lots, but planned elsewhere (or nowhere): move them out.", ""]
         L += [f"- {q['world']} / {q['lot']}: {q['household']} ({', '.join(q['sims'])})" for q in out['squatters']] + [""]
     if not out.get('eco'): L += ["## Eco footprint", "", "Every neighbourhood with your builds placed has the footprint the site says it starts with.", ""]
+    if out['clubs']: L += ["## Club hangouts", "", "Change in the Club panel (may need a played member):", ""] + [f"- {x}" for x in out['clubs']] + [""]
     if out.get('eco'):
         L += ["## Eco footprint", "", "Neighbourhoods with your builds placed whose footprint in the save isn’t what the site says it starts as:", ""]
         L += [f"- {e['world']} / {e['hood']}: {e['now']} now (the site: starts {e['start']})" for e in out['eco']] + [""]

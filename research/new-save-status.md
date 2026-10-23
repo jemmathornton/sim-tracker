@@ -120,6 +120,19 @@ Made by tools/research/new_save_check.py from a copy of the save. Lots: placed /
 
 Every neighbourhood with your builds placed has the footprint the site says it starts with.
 
+## Club hangouts
+
+Change in the Club panel (may need a played member):
+
+- Renegades: meets at Bathe de Rill; plan: Magnolia Mall
+- Powerhouse: meets at Harbor Quarter Gym; plan: Skye Fitness
+- Spin Masters: meets at Discotheque Pan Europa; plan: Stargazer
+- Garden Gnomes: meets at Hare Square; plan: Magnolia Blossom Park
+- Partihaus: meets at The Narwhal Arms; plan: La Discotheque
+- Upper Crusts: meets at The Lighthouse; plan: any Restaurant
+- Paragons: meets at Bathe de Rill; plan: Magnolia Mall
+- League of Adventurers: meets at Hare Square; plan: Courtyard Lane Playground
+
 ## Old saves to open
 
 Open each once, save these households to your Library, then add them in the new save:

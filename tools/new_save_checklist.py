@@ -225,7 +225,7 @@ def main():
                 names[f"l-{slug(w['name'])}--{slug(l['lot'])}"] = nm + ("" if l['built'] is True else " (when built)")
     clubs = json.load(open(os.path.join(ROOT, 'data', 'groups.json'), encoding='utf-8')).get('clubs', {})
     hang = [f"{c} → {names.get(v['place'], v['place'])}" if v.get('place') else f"{c} → any {v['anyType']}" for c, v in clubs.items() if v.get('place') or v.get('anyType')]
-    out.append(TAIL.replace("{CLUBS}", "- [ ] Club hangouts (set in the Club panel; from the site's clubs): " + "; ".join(hang) + "."))
+    out.append(TAIL.replace("{CLUBS}", "- [ ] Club hangouts (set in the Club panel; Claude's new-save check lists the ones still to change): " + "; ".join(hang) + "."))
     open(OUT, 'w', encoding='utf-8', newline='\n').write("\n".join(out))
     print(f"wrote {os.path.relpath(OUT, ROOT)}: {sum(1 for x in out if x.startswith('- ['))} lines to tick")
 
