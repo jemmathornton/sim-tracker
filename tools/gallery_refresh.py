@@ -227,7 +227,7 @@ if __name__ == '__main__':
                     n = subprocess.run([sys.executable, '-X', 'utf8', os.path.join(ROOT, 'tools', 'research', 'new_save_check.py')],
                                        stdin=subprocess.DEVNULL, capture_output=True, text=True, encoding='utf-8', timeout=900)
                     if n.returncode == 0:
-                        subprocess.run([sys.executable, '-X', 'utf8', os.path.join(ROOT, 'tools', 'admin_data.py')], stdin=subprocess.DEVNULL, capture_output=True, text=True, encoding='utf-8')
+                        subprocess.run([sys.executable, '-X', 'utf8', os.path.join(ROOT, 'tools', 'build.py')], stdin=subprocess.DEVNULL, capture_output=True, text=True, encoding='utf-8')   # build again: admin-data.js and its fingerprint in index.html
                         say("New-save check refreshed")
                     else: say("New-save check not refreshed: " + (n.stderr or n.stdout).strip()[-200:])
                 except Exception as e: say(f"New-save check not refreshed: {e}")
