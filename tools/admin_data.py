@@ -49,7 +49,8 @@ def new_save():
     order = list(d["worlds"]); worlds.sort(key=lambda w: order.index(w["world"]))
     import sys; sys.path.insert(0, str(ROOT / "tools")); from common import slug
     lots = {f"l-{slug(wn)}--{slug(r['lot'])}": {"s": r.get("status"), "fix": r.get("issues") or []} for wn, rows in d["worlds"].items() for r in rows if r.get("status") in ("placed", "to place")}
-    return {"saved": d["saved"], "lots": lots, "together": d.get("saveTogether", []), "options": d.get("options", []), "fromSaves": d.get("fromSaves", []), "eco": d.get("eco", []), "clubs": d.get("clubs", []), "worlds": worlds, "notStarted": [wn for wn, rows in d["worlds"].items() if not any(r.get("status") == "placed" for r in rows)]}
+    return {"saved": d["saved"], "lots": lots, "together": d.get("saveTogether", []), "options": d.get("options", []), "fromSaves": d.get("fromSaves", []), "eco": d.get("eco", []), "clubs": d.get("clubs", []),
+            "newTraits": [r["name"] for rows in d["worlds"].values() for r in rows if r.get("newTraits") or r.get("newUnitTraits")], "worlds": worlds, "notStarted": [wn for wn, rows in d["worlds"].items() if not any(r.get("status") == "placed" for r in rows)]}
 
 # weekly Gallery refresh: one entry per run in logs/gallery-refresh.log
 def refresh_runs():

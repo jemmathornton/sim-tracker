@@ -1294,6 +1294,15 @@ window.ADMIN = {
 "Paragons: meets at Bathe de Rill; plan: Magnolia Mall",
 "League of Adventurers: meets at Hare Square; plan: Courtyard Lane Playground"
 ],
+"newTraits": [
+"Rio Verde Retirement Home",
+"Desert Bloom",
+"Fern Park Flats",
+"Asphalt Abodes",
+"Upland Trailer Park",
+"Slip 42",
+"Brooks Bridge"
+],
 "worlds": [
 {
 "world": "Willow Creek",
