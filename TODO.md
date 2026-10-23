@@ -433,7 +433,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 
 Not carried over until the 15 Oct audit (her call):
 - [x] [Jemma] Dropped 23 Oct: only 3 of her 50 Gallery comments say a build fits (Strike Out! twice, Oasis Springs Library), and they already show on those lot pages. Was: Lot pages: highlight a comment when it says the build fits the world (research/gallery-deep-dive.md, the third of its three site ideas; the other two are done)
-- [ ] [Jemma] Evergreen Harbor's development state (Undeveloped / Modernised) on its neighbourhood cards; would have to be read from her game (site-ideas Data 5; only the eco footprint part was done)
+- [x] [Jemma] Settled 23 Oct (her call): no development planned in any of the three neighbourhoods (no Modern Development, no Green Initiatives), so nothing to show. Was: Evergreen Harbor's development state (Undeveloped / Modernised) on its neighbourhood cards; would have to be read from her game (site-ideas Data 5; only the eco footprint part was done)
 - [x] Dropped 23 Oct (her call). Was: [Jemma] From the other trackers' tables (site-ideas §1): a "Sims updated" tick apart from "Sims made"; "last played" per household; single Sims by life stage (for matchmaking); story text per lot; "EA original vs mine" for households; a count of empty lots and some trivia in world headers. Most need Sims data (see the household Sims question below)
 
 Newer lot types and where they could go (research/lot-types-reference.md):
