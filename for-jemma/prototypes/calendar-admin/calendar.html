@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Calendar Options</title>
+<!-- Prototype, 23 Oct: two ways to make the Calendar part of the rebuild. Opens straight from the folder.
+     It runs the app's own files in site/ (read only) and changes nothing. Write-up: research/calendar-and-admin.md -->
+<base href="../../../site/">
+<link rel="icon" href="icon-32.png" sizes="32x32" type="image/png">
+<link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="../for-jemma/prototypes/calendar-admin/proto.css">
+</head>
+<body>
+<div class="topbar"><button id="menuBtn" aria-label="Open worlds menu" type="button"><span id="menuIco"></span>Worlds</button><b>Jemma’s Sim World</b></div>
+<div class="scrim" id="scrim"></div>
+<aside class="side" id="side" aria-label="Worlds">
+  <a class="brand" href="#home"><b>Jemma’s <em>Sim World</em></b><small>Every world, rebuilt</small></a>
+  <div class="search"><span class="search-ico" id="searchIco"></span><input id="q" type="search" placeholder="Search…" aria-label="Search the site" autocomplete="off" spellcheck="false"></div>
+  <nav class="nav" id="nav"></nav>
+</aside>
+<main id="main"><div class="wrap" id="view"></div></main>
+<div class="pswitch" id="pswitch" role="group" aria-label="Prototype options"></div>
+
+<script src="js/icons.js"></script>
+<script src="../for-jemma/prototypes/calendar-admin/proto-icons.js"></script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script src="../for-jemma/prototypes/calendar-admin/proto-shell.js"></script>
+<script src="../for-jemma/prototypes/calendar-admin/proto-calendar.js"></script>
+</body>
+</html>
