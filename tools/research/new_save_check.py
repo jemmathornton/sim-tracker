@@ -20,6 +20,7 @@ SUBVENUES = {223944: "Community space", 223946: "Garden", 223945: "Market", 2314
 TN = {int(k): v['name'] for k, v in load(os.path.join(DATA, 'game', 'lot-traits.json'))['traits'].items()}
 MOD_TRAITS = {14633906698125574705: "Dress Code (LittleMsSam mod)"}   # traits from her Mods folder (found 23 Oct); not counted as differences
 TN.update(MOD_TRAITS)
+OPTIONS = {}   # the save's game options, read with the save (23 Oct)
 PETS = set()   # pets' names in the save (never counted as a household's extra Sims)
 norm = lambda s: re.sub(r'\s+', ' ', (s or '').replace('’', "'")).strip().lower()
 
@@ -56,6 +57,13 @@ def read(fname):
                 sm = s4.decode(v, P + 'SimData', S, depth=0); sims[sm.get('sim_id')] = f"{sm.get('first_name', '')} {sm.get('last_name', '')}".strip()
                 if sm.get('extended_species') not in (None, 0, 1): PETS.add(sims[sm.get('sim_id')])   # cats, dogs, horses, foxes
         name = s4.save_name(data, S)
+        tops = {f: v for f, wt, v in top if f in (2, 3)}
+        try:
+            acct = s4.decode(tops[3], P + 'AccountData', S, depth=6); slot = s4.decode(tops[2], P + 'SaveSlotData', S, depth=6)
+            OPTIONS.update((acct.get('gameplay_account_data') or {}).get('gameplay_options') or {})
+            hs = (slot.get('gameplay_data') or {}).get('holiday_service') or {}
+            OPTIONS['_own_holidays'] = [h.get('name') for h in hs.get('holidays', []) if h.get('name')]
+        except Exception as e: OPTIONS['_error'] = str(e)
         return name, zones, hhs, sims
     finally:
         shutil.rmtree(tmp, ignore_errors=True)
@@ -297,6 +305,16 @@ def main():
                     goes = "; ".join(("" if d[1] == h.get('name') else f"{d[1]}: ") + home_of.get(d, 'no home lot in the plan') + (f" ({d[0]})" if d[0] != wn else '') for d in sorted(dest)) or 'not in the plan'
                     e = {"world": wn, "lot": r['name'], "household": h.get('name') or '?', "goes": goes}
                     if e not in out['ahead']: out['ahead'].append(e)
+    # game options against her picks (for-jemma/new-save-checklist.md step 2; research/game-options.md)
+    o = OPTIONS; opt = []
+    if str(o.get('season_length', '')).upper() not in ('SEASON_LENGTH_28', '3', 'FOUR_WEEKS') and 'season_length' not in o: opt.append("Season Length: still the game's 7 days; your pick is 28 days")
+    elif 'season_length' in o: opt.append(f"Season Length reads {o['season_length']} (check it's 28 days)")
+    if (o.get('max_player_population') or 0) and o.get('max_player_population') < 200: opt.append(f"Maximum Sim Count: {o['max_player_population']}; your pick is Unlimited (or the most your PC copes with)")
+    if o.get('npc_civic_voting_enabled'): opt.append("Enable NPC Voting is on; your pick is off")
+    if o.get('unplayed_aging_enabled'): opt.append("Ageing for unplayed Sims is on; your pick is off")
+    if o.get('npc_population_enabled') is False: opt.append("a population switch reads off (may be Neighbourhood Stories: check it's on, with your rules)")
+    if not o.get('_own_holidays'): opt.append("holidays: still the game's own calendar (checklist step 3)")
+    out['options'] = opt; out['optionsRaw'] = {k: v for k, v in o.items() if not isinstance(v, (bytes, dict))}
     save(os.path.join(ROOT, 'research', 'data', 'new-save-status.json'), out)
     # the report
     L = [f"# New save check: “{SAVE_NAME}” ({out['saved']})", "",
@@ -310,6 +328,7 @@ def main():
     L += [f"**At a glance:** {tot['placed']} lots placed in {len(worlds_done)} worlds; {tot['to place']} shared lots still to place. "
           f"{sum(1 for h in out['households'] if h['state'] == 'home')} households at home, {sum(1 for h in out['households'] if h['state'] == 'move')} to move, "
           f"{sum(1 for h in out['households'] if h['state'] == 'not in the save')} not in the save yet.", ""]
+    if out['options']: L += ["## Game options", ""] + [f"- {x[0].upper() + x[1:]}" for x in out['options']] + [""]
     for wn, rows in out['worlds'].items():
         if not any(r.get('status') == 'placed' for r in rows): continue
         L += [f"## {wn}", ""]

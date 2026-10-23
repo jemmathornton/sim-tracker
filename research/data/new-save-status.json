@@ -6246,5 +6246,18 @@
    "household": "Harjo",
    "goes": "Little Falls Nook"
   }
- ]
+ ],
+ "options": ["Season Length: still the game's 7 days; your pick is 28 days", "Maximum Sim Count: 150; your pick is Unlimited (or the most your PC copes with)", "a population switch reads off (may be Neighbourhood Stories: check it's on, with your rules)", "holidays: still the game's own calendar (checklist step 3)"],
+ "optionsRaw": {
+  "autonomy_level": "FULL",
+  "sim_life_span": "NORMAL",
+  "allow_aging": "DISABLED",
+  "unplayed_aging_enabled": false,
+  "npc_population_enabled": false,
+  "max_player_population": 150,
+  "initial_season": "SPRING",
+  "npc_civic_voting_enabled": false,
+  "pivotal_moments_enabled": false,
+  "_own_holidays": []
+ }
 }

@@ -4,6 +4,13 @@ Made by tools/research/new_save_check.py from a copy of the save. Lots: placed /
 
 **At a glance:** 91 lots placed in 11 worlds; 76 shared lots still to place. 49 households at home, 49 to move, 26 not in the save yet.
 
+## Game options
+
+- Season Length: still the game's 7 days; your pick is 28 days
+- Maximum Sim Count: 150; your pick is Unlimited (or the most your PC copes with)
+- A population switch reads off (may be Neighbourhood Stories: check it's on, with your rules)
+- Holidays: still the game's own calendar (checklist step 3)
+
 ## Willow Creek
 
 - All shared lots placed, all as planned.

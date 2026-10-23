@@ -1266,6 +1266,12 @@ window.ADMIN = {
 ]
 }
 ],
+"options": [
+"Season Length: still the game's 7 days; your pick is 28 days",
+"Maximum Sim Count: 150; your pick is Unlimited (or the most your PC copes with)",
+"a population switch reads off (may be Neighbourhood Stories: check it's on, with your rules)",
+"holidays: still the game's own calendar (checklist step 3)"
+],
 "worlds": [
 {
 "world": "Willow Creek",
