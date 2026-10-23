@@ -74,7 +74,7 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 - **Decide:** Gnomes does nothing on venues (Burners & Builders, Pixel Café, Llama Picturehouse): swap it?
 - **Do:** 88 shared lots have fewer than 3 traits (ideas for each in research/lot-trait-ideas.md).
 - **Do:** 137 shared lots have no pictures: take screenshots; retake Midtown Meadows and Rio Verde.
-- **Decide:** Community Spaces: which version each should be (only a resident of the neighbourhood can vote).
+- **Do:** Community Spaces in the new save: Newcrest Community Space Makers, Admiral’s Wreckage Garden, The Old Dockyard Makers, New Harbor Park Makers (when built).
 - **Do:** Wedding venues: check each one's lot type when you share it.
 
 ## Rentals

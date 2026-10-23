@@ -340,7 +340,7 @@ window.ADMIN = {
 {
 "section": "Every world",
 "world": "",
-"text": "**Decide:** Community Spaces: which version each should be (only a resident of the neighbourhood can vote)."
+"text": "**Do:** Community Spaces in the new save: Newcrest Community Space Makers, Admiral’s Wreckage Garden, The Old Dockyard Makers, New Harbor Park Makers (when built)."
 },
 {
 "section": "Every world",
