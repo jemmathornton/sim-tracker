@@ -115,7 +115,7 @@ function afterRoute(key, view){
 
 /* ---------- Admin (in place of Stats; for her only, on her PC). Ported from proto-admin.js; her call: pages under an Admin header in
    the sidebar, not tabs. Extra bits not in data.js come from js/admin-data.js (tools/admin_data.py, run by the build). ---------- */
-const ADM = window.ADMIN || {refresh: [], unlinked: [], checklist: []};
+const ADM = window.ADMIN || {refresh: [], checklist: []};
 const admOwned = () => Object.values(lotIndex).filter(l => l.world.owned && l.world.ready);
 const lotA = l => `<a href="#${l.id}">${esc(l.name)}</a>`;
 const wDot = w => `<span class="dot" style="--h:${w.glow || w.color}"></span>`;
@@ -172,7 +172,6 @@ function admGlance(){
   return `<div class="adm-grid">${refreshCard()}
     ${card("hammer", "Built", `${built}<small style="font-size:18px"> of ${L.length}</small>`, `${shared} shared.`, "progress")}
     ${card("camera", "Shared, no screenshots", L.filter(l => l.shared === true && !hasShots(l)).length, "Showing only their Gallery pictures.", "")}
-    ${card("share", "Uploads not on a lot", ADM.unlinked.length, "Left off on purpose, each with its reason.", "gallery")}
     ${card("note", "Notes", ADM.checklist.length + n.checks, n.checks ? `${plural(n.checks, "thing")} out of step in the plan, and your in-game notes.` : "Things to check or change next time you’re in the game.", "game", n.checks ? "warn" : "")}</div>`;
 }
 function admProgress(){
@@ -185,9 +184,7 @@ function admGallery(){
   const fresh = admOwned().filter(l => newSince(l));
   return `<div class="adm-grid">${refreshCard()}</div>
     <h3 class="adm-sub">New since you <em>looked</em></h3>
-    ${fresh.length ? `<ul class="adm-list">${fresh.map(l => `<li><span>${wDot(l.world)}${lotA(l)}</span><span class="w">${esc(newTxt(newSince(l)))}</span></li>`).join("")}</ul>` : `<p class="adm-plain">Nothing new since you last opened each lot.</p>`}
-    <h3 class="adm-sub">Uploads not on a <em>lot</em><small>${ADM.unlinked.length}</small></h3>
-    <ul class="adm-list">${ADM.unlinked.map(u => `<li><span><b>${esc(u.title)}</b></span><small>${esc(u.why)}</small></li>`).join("")}</ul>`;
+    ${fresh.length ? `<ul class="adm-list">${fresh.map(l => `<li><span>${wDot(l.world)}${lotA(l)}</span><span class="w">${esc(newTxt(newSince(l)))}</span></li>`).join("")}</ul>` : `<p class="adm-plain">Nothing new since you last opened each lot.</p>`}`;
 }
 function admChecksSec(){
   const cs = admChecks().filter(c => c.items.length);

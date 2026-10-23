@@ -18,13 +18,9 @@ def read(p):
     return (ROOT / p).read_text(encoding="utf-8")
 
 def gather():
-    out = {"made": datetime.date.today().isoformat(), "refresh": [], "unlinked": [], "checklist": []}
+    out = {"made": datetime.date.today().isoformat(), "refresh": [], "checklist": []}
     try: out["refresh"] = refresh_runs()
     except Exception as e: print("admin data: refresh log not read:", e)
-    try:
-        unl = json.loads(read("data/gallery/unlinked.json"))["uploads"]
-        out["unlinked"] = [{"id": k, "title": v.get("title"), "lot": v.get("lot"), "why": v.get("why")} for k, v in unl.items()]
-    except Exception as e: print("admin data: unlinked uploads not read:", e)
     try: out["checklist"] = checklist()
     except Exception as e: print("admin data: in-game checklist not read:", e)
     return out
@@ -75,4 +71,4 @@ def write():
 
 if __name__ == "__main__":
     o = write()
-    print(f"{len(o['refresh'])} refresh runs, {len(o['unlinked'])} unlinked, {len(o['checklist'])} checklist items")
+    print(f"{len(o['refresh'])} refresh runs, {len(o['checklist'])} checklist items")
