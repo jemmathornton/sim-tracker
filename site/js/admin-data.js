@@ -1282,7 +1282,7 @@ window.ADMIN = {
 "Allow Automatic Breakups is on; your pick is off",
 "Enable Dynasty Prestige Decay is on; your pick is off",
 "Neighbourhood Stories, Other Households: still ticked: Move In, Move Out, Have a Baby, Adopt a Child, Adopt Cats & Dogs, Rescue Horses, Join a Career, Leave a Career, Romance Changes (your picks: unticked)",
-"only 1 household in My Households (hearted): heart your planned ones, homeless families first (the game culls Sims outside My Households)",
+"1 of 89 planned households in the save are in My Households (hearted): heart the rest, homeless families first (the game culls Sims outside My Households)",
 "holidays: still the game's own calendar (checklist step 3)"
 ],
 "fromSaves": [

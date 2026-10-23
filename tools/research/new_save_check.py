@@ -351,8 +351,12 @@ def main():
         if wrong_off: opt.append("Neighbourhood Stories, Other Households: unticked: " + ", ".join(wrong_off) + " (your picks: ticked)")
     mine = o.get('_ns_mine')
     if mine and mine['on'] and any(mine['rules'].values()): opt.append("Neighbourhood Stories, My Households: some rules are on; your pick is all off")
-    hearted = sum(1 for h in hhs if h.get('is_player'))
-    if hearted < 20: opt.append(f"only {hearted} household{'s' if hearted != 1 else ''} in My Households (hearted): heart your planned ones, homeless families first (the game culls Sims outside My Households)")
+    hearted_names = {h.get('name') for h in hhs if h.get('is_player')}
+    planned = {g for r in out['households'] if r['state'] in ('home', 'move') for g in (r.get('save_household') or '').split(', ') if g}         | {zone_of_sim.get(n, (None, None))[1] for r in out['households'] if r['state'] == 'home' for n in [next((sm['name'] for sm in D['households'][r['world']][r['household']].get('sims', [])), None)] if n}
+    planned.discard(None)
+    not_h = sorted(planned - hearted_names)
+    out['notHearted'] = not_h
+    if not_h: opt.append(f"{len(planned) - len(not_h)} of {len(planned)} planned households in the save are in My Households (hearted): heart the rest, homeless families first (the game culls Sims outside My Households)")
     if not o.get('_own_holidays'): opt.append("holidays: still the game's own calendar (checklist step 3)")
     out['options'] = opt; out['optionsRaw'] = {k: v for k, v in o.items() if not isinstance(v, (bytes, dict)) and not k.startswith('_ns')}
     save(os.path.join(ROOT, 'research', 'data', 'new-save-status.json'), out)
