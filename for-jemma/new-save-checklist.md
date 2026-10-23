@@ -772,6 +772,7 @@ Tick as you go. Why each step is there: `research/new-save-plan.md`. Build notes
 - [ ] Club hangouts: Paragons and Renegades → Magnolia Mall; Powerhouse → Skye Fitness; The Good Timers → The Shrieking Llama; Upper Crusts → any Restaurant; Spin Masters → Stargazer; Partihaus → La Discotheque.
 - [ ] Dynasties: check Goth, Landgraab, Darong, Thebe, Abrantes, Alto and Capp against the site.
 - [ ] Check every neighbourhood’s voting board and repeal plans you don’t want.
+- [ ] With all your lots in, check each neighbourhood’s eco footprint (Map view, hover the neighbourhood) and tell Claude any that differ from the site’s “Eco footprint starts …” (your builds can change it).
 - [ ] Move out the throwaway household.
 - [ ] Check the Neighbourhood Stories rules are still set.
 - [ ] Save As “Sim World” and tell Claude, who will read holidays, traits, units and households from it.
