@@ -286,6 +286,11 @@ window.ADMIN = {
 "section": "Households (moved from the to-do list, 23 Oct)",
 "world": "",
 "text": "Add Sergio Romeo to Powerhouse (23 Oct; he stays in the Paragons too)."
+},
+{
+"section": "Households (moved from the to-do list, 23 Oct)",
+"world": "",
+"text": "18 Culpepper House (San Myshuno): add the Spooky lot trait (it has Historical; her call 23 Oct)."
 }
 ],
 "toSort": []
