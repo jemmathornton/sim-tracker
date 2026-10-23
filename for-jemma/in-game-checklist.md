@@ -82,3 +82,4 @@ Everything on the to-do list that needs the game open, grouped so you can go wor
 - Also yours: the Lovejoys (to upload), the four Tiquelle households, the vineyard Altos (to create), Specter Row's owners (Ravenwood).
 - Download Sebastian Michaelson and Merrilyn Ralston from Maxis's Gallery and pick their lots.
 - Bro & Kennedy (701 ZenView): which Kennedy? (Tristan Kennedy, Kennedy Thomason, Kennedy Duggan or Kennedy Rouse.) Crick Cabana: Dustin Broke alone, or with the Sigworths? My Celebs: which save?
+- Add Sergio Romeo to Powerhouse (23 Oct; he stays in the Paragons too).

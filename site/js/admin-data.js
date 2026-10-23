@@ -281,6 +281,11 @@ window.ADMIN = {
 "section": "Households (moved from the to-do list, 23 Oct)",
 "world": "",
 "text": "Bro & Kennedy (701 ZenView): which Kennedy? (Tristan Kennedy, Kennedy Thomason, Kennedy Duggan or Kennedy Rouse.) Crick Cabana: Dustin Broke alone, or with the Sigworths? My Celebs: which save?"
+},
+{
+"section": "Households (moved from the to-do list, 23 Oct)",
+"world": "",
+"text": "Add Sergio Romeo to Powerhouse (23 Oct; he stays in the Paragons too)."
 }
 ],
 "toSort": []
