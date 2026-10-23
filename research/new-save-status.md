@@ -116,6 +116,10 @@ Made by tools/research/new_save_check.py from a copy of the save. Lots: placed /
 - **Brooks Bridge:** named “Brooks Bridge [Puzzle]” in the save
 - **Move Amicable Acolytes** to Brooks Bridge (now: no home)
 
+## Eco footprint
+
+Every neighbourhood with your builds placed has the footprint the site says it starts with.
+
 ## Old saves to open
 
 Open each once, save these households to your Library, then add them in the new save:

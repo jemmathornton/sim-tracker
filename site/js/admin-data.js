@@ -1338,6 +1338,7 @@ window.ADMIN = {
 ]
 }
 ],
+"eco": [],
 "worlds": [
 {
 "world": "Willow Creek",

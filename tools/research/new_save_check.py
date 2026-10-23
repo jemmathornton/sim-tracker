@@ -30,6 +30,7 @@ NS_PICKS = {273735: False, 273878: False, 273734: False, 273882: False, 273888: 
 VENUES = {int(k): v['name'] for k, v in load(os.path.join(ROOT, 'research', 'data', 'game-venues.json'))['venues'].items()}
 SAME_TYPE = {"thrift and boba store": "thrift and bubble tea store", "uob commons": "ubrite commons", "small business residential": "residential",
              "haunted house": "haunted house residential", "university housing": "university housing"}   # her British names and labels -> the game's
+ECO = {}   # street (world id) -> eco footprint state in the save
 PETS = set()   # pets' names in the save (never counted as a household's extra Sims)
 norm = lambda s: re.sub(r'\s+', ' ', (s or '').replace('’', "'")).strip().lower()
 
@@ -50,6 +51,9 @@ def read(fname):
         for fn, wt, v in top:
             if fn == 4:
                 n = s4.decode(v, P + 'NeighborhoodData', S, depth=2); hoods[n.get('neighborhood_id')] = n.get('name', '')
+                sd = n.get('street_data') or []
+                for st in (sd if isinstance(sd, list) else [sd]):   # each street's (neighbourhood's) eco footprint now
+                    if isinstance(st, dict) and st.get('world_id'): ECO[st['world_id']] = st.get('eco_footprint_state', 'GREEN')
                 for lo in n.get('lots') or []:   # each lot's current venue type (the zone's own record is only updated when it's loaded)
                     if isinstance(lo, dict) and lo.get('zone_instance_id'): venue_of[lo['zone_instance_id']] = VENUES.get(lo.get('venue_key'))
         objs = {}
@@ -61,7 +65,7 @@ def read(fname):
         for fn, wt, v in top:
             if fn == 7:
                 z = s4.decode(v, P + 'ZoneData', S, depth=0); o = objs.get(z['zone_id'], {})
-                zones[z['zone_id']] = {"world": hoods.get(z.get('neighborhood_id'), ''), "lot_id": z.get('lot_id'), "name": z.get('name', ''),
+                zones[z['zone_id']] = {"world": hoods.get(z.get('neighborhood_id'), ''), "lot_id": z.get('lot_id'), "name": z.get('name', ''), "street": z.get('world_id'),
                                        "plex": z.get('active_plex') or 0, "traits": [TN.get(t, str(t)) for t in z.get('lot_traits', [])],
                                        "objs": o.get('n', 0), "active": o.get('active'), "subs": o.get('subs'),
                                        "venue": venue_of.get(z['zone_id'])}
@@ -189,6 +193,17 @@ def main():
                         if norm(act) != norm(cv[0]['label']): r['issues'].append(f"active version {act}; your pick {cv[0]['label']} (switch on the voting board)")
                 rows.append(r)
         out['worlds'][wn] = rows
+        streets = {}
+        for h in w['hoods']:
+            for l in h['lots']:
+                zz = lot_zone.get((wn, l['lot']), {}).get('')
+                if zz and zones[zz].get('street'): streets.setdefault(h['name'], set()).add(zones[zz]['street'])
+        for h in w['hoods']:
+            st = streets.get(h['name'])
+            if not st or len(st) != 1 or not any(r.get('status') == 'placed' and r['hood'] == h['name'] for r in rows): continue
+            now = {'GREEN': 'Green', 'NEUTRAL': 'Neutral', 'INDUSTRIAL': 'Industrial'}.get(ECO.get(next(iter(st))), None)
+            start = h.get('ecoStart') or 'Neutral'
+            if now and now != start: out.setdefault('eco', []).append({"world": wn, "hood": h['name'], "now": now, "start": start})
     # households: where each household with Sims on the site lives in the save, against the plan
     # where each of her own households is now (research/library-ready.md, 23 Oct): her Library, only an old save, or nowhere yet
     lib = {}
@@ -405,6 +420,10 @@ def main():
     if out['squatters']:
         L += ["## Living where the plan doesn’t put them", "", "On one of your placed lots, but planned elsewhere (or nowhere): move them out.", ""]
         L += [f"- {q['world']} / {q['lot']}: {q['household']} ({', '.join(q['sims'])})" for q in out['squatters']] + [""]
+    if not out.get('eco'): L += ["## Eco footprint", "", "Every neighbourhood with your builds placed has the footprint the site says it starts with.", ""]
+    if out.get('eco'):
+        L += ["## Eco footprint", "", "Neighbourhoods with your builds placed whose footprint in the save isn’t what the site says it starts as:", ""]
+        L += [f"- {e['world']} / {e['hood']}: {e['now']} now (the site: starts {e['start']})" for e in out['eco']] + [""]
     if out['fromSaves']:
         L += ["## Old saves to open", "", "Open each once, save these households to your Library, then add them in the new save:", ""]
         L += [f"- “{g['save']}”: {', '.join(g['households'])}" for g in out['fromSaves']] + [""]
