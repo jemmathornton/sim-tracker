@@ -28,7 +28,6 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 
 **Magnolia Promenade**
 - **Do:** Magnolia Mall, when you build it: coffee, a wardrobe or racks, things to sabotage (Paragons, Renegades).
-- **Decide:** Secret Lots (Police Station, FutureSim Labs, hospital, Sixam): keep the group, or give Sixam its own?
 
 **Windenburg**
 - **Decide:** Tiquelles: spellcasters, with Mid-NoWhere as their portal to the Magic Realm?
@@ -76,14 +75,14 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 - **Decide:** Owners: Plumbob Pictures Museum (Judith Ward?), Llama Picturehouse (LeBlancs, or a Bar), Canalside Daycare.
 - **Decide:** Small business lots: keep your labels (Small Business Residential), or the game's names?
 - **Decide:** Gnomes does nothing on venues (Burners & Builders, Pixel Café, Llama Picturehouse): swap it when you add them to the new save?
-- **Do:** 88 shared lots have fewer than 3 traits (ideas for each in research/lot-trait-ideas.md).
+- **Do:** 89 shared lots have fewer than 3 traits (ideas for each in research/lot-trait-ideas.md).
 - **Do:** Retake Midtown Meadows' and Rio Verde's screenshots (older than their uploads).
 - **Do:** Community Spaces in the new save: Newcrest Community Space Makers, Admiral’s Wreckage Garden, The Old Dockyard Makers, New Harbor Park Makers (when built).
 - **Do:** Wedding venues: check each one's lot type when you share it.
 
 ## Rentals
 - **Do:** Give units 2+ their own traits and bed/bath counts, then re-upload (Claude reads them from your save).
-- **Do:** Make Rippling Flats, Specter Row and Casa do Corsário into units in your save.
+- **Do:** Rippling Flats, Specter Row and Casa do Corsário (not built yet): set them up as units when you build them.
 - **Decide:** Empty units at Rockridge Springs, Old Torget House, Manzanita Terrace, Slip 42: who? (For Rent pets?)
 - **Do:** Owners living away (Robles, Kirklands): merge other households into theirs, never theirs into another.
 - **Do:** Abandoned Views and Specter Row: tell Claude the unit counts once they're built.

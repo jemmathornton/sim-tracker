@@ -239,11 +239,6 @@ window.ADMIN = {
 },
 {
 "section": "World by world",
-"world": "Magnolia Promenade",
-"text": "**Decide:** Secret Lots (Police Station, FutureSim Labs, hospital, Sixam): keep the group, or give Sixam its own?"
-},
-{
-"section": "World by world",
 "world": "Windenburg",
 "text": "**Decide:** Tiquelles: spellcasters, with Mid-NoWhere as their portal to the Magic Realm?"
 },
@@ -350,7 +345,7 @@ window.ADMIN = {
 {
 "section": "Every world",
 "world": "",
-"text": "**Do:** 88 shared lots have fewer than 3 traits (ideas for each in research/lot-trait-ideas.md)."
+"text": "**Do:** 89 shared lots have fewer than 3 traits (ideas for each in research/lot-trait-ideas.md)."
 },
 {
 "section": "Every world",
@@ -375,7 +370,7 @@ window.ADMIN = {
 {
 "section": "Rentals",
 "world": "",
-"text": "**Do:** Make Rippling Flats, Specter Row and Casa do Corsário into units in your save."
+"text": "**Do:** Rippling Flats, Specter Row and Casa do Corsário (not built yet): set them up as units when you build them."
 },
 {
 "section": "Rentals",
