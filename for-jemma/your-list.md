@@ -2,6 +2,13 @@
 
 Everything waiting on you, in one place (it replaced the in-game checklist and the parked to-dos, her call 23 Oct). It shows on the site under Admin > Notes. **Do** = decided, just do it; **Decide** = your call. Tell Claude when one's done or decided and it comes off.
 
+## Big jobs
+- **Do:** Start the new save, step by step (for-jemma/new-save-checklist.md).
+- **Do:** Build the 162 lots not built yet (Admin > Progress lists them).
+- **Do:** Share the 27 built lots that aren't on the Gallery yet.
+- **Do:** Take screenshots of the 146 shared lots with none (biggest gaps: Oasis Springs, Britechester, Willow Creek, San Myshuno).
+- **Do:** Upload your own households to the Gallery (about 44: the 23 on the site plus the ones not made yet); they become the site's source.
+
 ## Game options
 - **Do:** Neighbourhood Stories on. Other Households: Move In, Move Out, Have a Baby, Adopt a Child, Join and Leave a Career, Romance Changes off.
 - **Do:** Other Households: Adopt Cats & Dogs and Rescue Horses off; Retire from Career, Die in Accidents, Friendship Changes on.
@@ -73,7 +80,7 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 - **Decide:** Small business lots: keep your labels (Small Business Residential), or the game's names?
 - **Decide:** Gnomes does nothing on venues (Burners & Builders, Pixel Café, Llama Picturehouse): swap it when you add them to the new save?
 - **Do:** 88 shared lots have fewer than 3 traits (ideas for each in research/lot-trait-ideas.md).
-- **Do:** 137 shared lots have no pictures: take screenshots; retake Midtown Meadows and Rio Verde.
+- **Do:** Retake Midtown Meadows' and Rio Verde's screenshots (older than their uploads).
 - **Do:** Community Spaces in the new save: Newcrest Community Space Makers, Admiral’s Wreckage Garden, The Old Dockyard Makers, New Harbor Park Makers (when built).
 - **Do:** Wedding venues: check each one's lot type when you share it.
 

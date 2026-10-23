@@ -158,6 +158,31 @@ window.ADMIN = {
 ],
 "checklist": [
 {
+"section": "Big jobs",
+"world": "",
+"text": "**Do:** Start the new save, step by step (for-jemma/new-save-checklist.md)."
+},
+{
+"section": "Big jobs",
+"world": "",
+"text": "**Do:** Build the 162 lots not built yet (Admin > Progress lists them)."
+},
+{
+"section": "Big jobs",
+"world": "",
+"text": "**Do:** Share the 27 built lots that aren't on the Gallery yet."
+},
+{
+"section": "Big jobs",
+"world": "",
+"text": "**Do:** Take screenshots of the 146 shared lots with none (biggest gaps: Oasis Springs, Britechester, Willow Creek, San Myshuno)."
+},
+{
+"section": "Big jobs",
+"world": "",
+"text": "**Do:** Upload your own households to the Gallery (about 44: the 23 on the site plus the ones not made yet); they become the site's source."
+},
+{
 "section": "Game options",
 "world": "",
 "text": "**Do:** Neighbourhood Stories on. Other Households: Move In, Move Out, Have a Baby, Adopt a Child, Join and Leave a Career, Romance Changes off."
@@ -335,7 +360,7 @@ window.ADMIN = {
 {
 "section": "Every world",
 "world": "",
-"text": "**Do:** 137 shared lots have no pictures: take screenshots; retake Midtown Meadows and Rio Verde."
+"text": "**Do:** Retake Midtown Meadows' and Rio Verde's screenshots (older than their uploads)."
 },
 {
 "section": "Every world",
