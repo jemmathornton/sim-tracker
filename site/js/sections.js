@@ -200,18 +200,44 @@ function admGame(){   // her notes for in game, with the data checks on top when
   const md = t => esc(t.length > 120 ? t.slice(0, 117) + "…" : t).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
   return (checks.length ? `<h3 class="adm-sub">Out of <em>step</em><small>in the plan</small></h3>${admChecksSec()}` : "") + Object.entries(by).map(([k, cs]) => `<h3 class="adm-sub">${esc(k)}<small>${cs.length}</small></h3><ul class="adm-list">${cs.map(c => `<li><span>${md(c.text)}</span></li>`).join("")}</ul>`).join("");
 }
-// every household, on Progress after every lot (her ask, 23 Oct): one row each, in world order; a household with no Sims shows 0
-function everyHousehold(){
-  const ws = worlds.filter(w => w.owned && w.ready), hs = ws.flatMap(w => homeHhs(w).sort(byHh)), made = hs.filter(simsMade).length, none = hs.filter(h => !h.sims.length).length;
-  const home = h => h.lots.find(l => !l.owned) || h.lots[0], yes = `<span class="adm-pill ok">yes</span>`;
-  const origin = h => h.origin || (h.sims.length && h.sims.every(sm => /^mine$/i.test(sm.origin || "")) ? "Mine" : h.sims.length ? "Premade" : "");
-  return `<section class="block"><div class="block-head"><h2>Every <em>household</em></h2><span class="count">${made} of ${hs.length} with Sims made · ${none} with no Sims yet</span></div>
-    <div class="sheet-wrap tall"><table class="sheet hh-sheet"><thead><tr><th scope="col">World</th><th scope="col">Household</th><th scope="col">Home</th><th scope="col">Sims</th><th scope="col">EA or yours</th><th scope="col">Sims made</th><th scope="col">Picture</th></tr></thead>
-    <tbody>${hs.map(h => { const l = home(h), o = origin(h);
-      return `<tr><td>${wDot(h.world)}${esc(h.world.name)}</td><th scope="row"><a href="#${h.id}">${esc(h.name)}</a></th><td>${l ? `<a href="#${l.id}">${esc(l.name)}</a>` : ""}</td>
-        <td class="num">${h.sims.length}</td><td>${o ? (originTag(o) === "Mine" ? "Yours" : "EA") : ""}</td><td class="c">${simsMade(h) ? yes : ""}</td>
-        <td>${h.portrait ? "Screenshot" : h.libraryPic ? "Library" : ""}</td></tr>`; }).join("")}</tbody></table></div></section>`;
+// every household, on Progress after every lot (her ask, 23 Oct), with the same filters and sorting as every lot
+let hhState = {world: "", hood: "", status: "", q: "", sort: "order", dir: 1};
+const hhHome = h => h.lots.find(l => !l.owned) || h.lots[0];
+const hhOrigin = h => h.origin || (h.sims.length && h.sims.every(sm => /^mine$/i.test(sm.origin || "")) ? "Mine" : h.sims.length ? "Premade" : "");
+const hhList = () => worlds.filter(w => w.owned && w.ready).flatMap(w => homeHhs(w).sort(byHh));
+function hhRows(){
+  const st = hhState, q = st.q.trim().toLowerCase(), all = hhList();
+  const row = h => { const l = hhHome(h), o = hhOrigin(h); return {h, l, w: h.world.name, n: l ? l.hood.name : "", who: o ? (originTag(o) === "Mine" ? "Yours" : "EA") : "", made: simsMade(h), pic: h.portrait ? "Screenshot" : h.libraryPic ? "Library" : ""}; };
+  let rs = all.map(row).filter(r => (!st.world || r.w === st.world) && (!st.hood || r.n === st.hood)
+    && (!st.status || (st.status === "made" && r.made) || (st.status === "notmade" && !r.made) || (st.status === "nosims" && !r.h.sims.length) || (st.status === "ea" && r.who === "EA") || (st.status === "yours" && r.who === "Yours") || (st.status === "nopic" && !r.pic))
+    && (!q || [r.h.name, r.l ? r.l.name : "", r.n, r.w, ...r.h.sims.map(sm => sm.name)].join(" ").toLowerCase().includes(q)));
+  const idx = new Map(all.map((h, k) => [h, k]));
+  const val = r => st.sort === "order" ? idx.get(r.h) : st.sort === "name" ? r.h.name.toLowerCase() : st.sort === "home" ? (r.l ? r.l.name.toLowerCase() : "") : st.sort === "sims" ? r.h.sims.length : st.sort === "made" ? (r.made ? 1 : 0) : (r[st.sort] || "").toLowerCase();
+  rs.sort((a, b) => { const x = val(a), y = val(b); return (x > y ? 1 : x < y ? -1 : idx.get(a.h) - idx.get(b.h)) * st.dir; });
+  const H = (k, t) => `<th scope="col"><button type="button" data-hsort="${k}" class="${st.sort === k ? "on" : ""}">${t}${st.sort === k ? (st.dir > 0 ? " ↑" : " ↓") : ""}</button></th>`;
+  return `<p class="showing">Showing <b>${rs.length}</b> of ${all.length} households</p><div class="sheet-wrap tall"><table class="sheet lots-sheet hh-sheet"><thead><tr>${H("order", "Where")}${H("name", "Household")}${H("home", "Home")}${H("sims", "Sims")}${H("who", "EA or yours")}${H("made", "Sims made")}${H("pic", "Picture")}</tr></thead>
+    <tbody>${rs.map(r => `<tr><td class="where">${esc(r.n)}<small>${esc(r.w)}</small></td><th scope="row"><a href="#${r.h.id}">${esc(r.h.name)}</a></th><td>${r.l ? `<a href="#${r.l.id}">${esc(r.l.name)}</a>` : ""}</td>
+      <td class="num">${r.h.sims.length}</td><td>${r.who}</td><td class="c">${r.made ? `<span class="t yes" title="Yes">✓</span>` : `<span class="t no" title="Not yet">–</span>`}</td><td>${r.pic}</td></tr>`).join("")}</tbody></table></div>`;
 }
+function everyHousehold(){
+  const hs = hhList(), st = hhState, made = hs.filter(simsMade).length, none = hs.filter(h => !h.sims.length).length;
+  const hoods = [...new Set(hs.filter(h => !st.world || h.world.name === st.world).map(h => hhHome(h)?.hood.name).filter(Boolean))];
+  const opt = (v, t) => `<option value="${v}" ${st.status === v ? "selected" : ""}>${t}</option>`;
+  return `<section class="block" id="hh-sheet"><div class="block-head"><h2>Every <em>household</em></h2><span class="count">${made} of ${hs.length} with Sims made · ${none} with no Sims yet</span></div>
+    <div class="filters"><label>World<select id="h-world"><option value="">All worlds</option>${worlds.filter(w => w.owned && w.ready).map(w => `<option ${st.world === w.name ? "selected" : ""}>${esc(w.name)}</option>`).join("")}</select></label>
+      <label>Neighbourhood<select id="h-hood"><option value="">All</option>${hoods.map(n => `<option ${st.hood === n ? "selected" : ""}>${esc(n)}</option>`).join("")}</select></label>
+      <label>Show<select id="h-status"><option value="">Everything</option>${opt("made", "Sims made")}${opt("notmade", "Sims not made")}${opt("nosims", "No Sims on the site yet")}${opt("ea", "EA’s")}${opt("yours", "Yours")}${opt("nopic", "No picture")}</select></label>
+      <label class="grow">Search<input id="h-q" type="search" placeholder="Household, Sim, home…" value="${esc(st.q)}"></label></div>
+    <div id="hh-rows">${hhRows()}</div></section>`;
+}
+const hhRefresh = full => { if (full) { const el = document.getElementById("hh-sheet"); if (el) el.outerHTML = everyHousehold(); } else { const el = document.getElementById("hh-rows"); if (el) el.innerHTML = hhRows(); } };
+document.addEventListener("change", e => { if (!e.target.closest("#hh-sheet")) return;
+  if (e.target.id === "h-world") { hhState.world = e.target.value; hhState.hood = ""; hhRefresh(true); }
+  if (e.target.id === "h-hood") { hhState.hood = e.target.value; hhRefresh(); }
+  if (e.target.id === "h-status") { hhState.status = e.target.value; hhRefresh(); } });
+let hhTyping;
+document.addEventListener("input", e => { if (e.target.id === "h-q") { hhState.q = e.target.value; clearTimeout(hhTyping); hhTyping = setTimeout(hhRefresh, 150); } });
+document.addEventListener("click", e => { const so = e.target.closest("[data-hsort]"); if (so) { hhState.dir = hhState.sort === so.dataset.hsort ? -hhState.dir : 1; hhState.sort = so.dataset.hsort; hhRefresh(); } });
 const ADM_BODY = {glance: admGlance, progress: admProgress, gallery: admGallery, game: admGame};
 function adminPage(sec){
   const L = admOwned(), n = admCounts();
