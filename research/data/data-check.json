@@ -13,7 +13,6 @@
   "Oasis Springs / Desert Bloom Park",
   "Granite Falls / Campground",
   "Magnolia Promenade / Secret Lots",
-  "Windenburg / Special Lots",
   "Del Sol Valley / Secret Lots",
   "StrangerVille / Secret Lots",
   "Ravenwood / Secret Lots"
@@ -29,7 +28,8 @@
   "Sulani / Ohan'ali Town / Lagoon of Love: plan Vacation Rental, upload Park",
   "Glimmerbrook / Glimmerbrook / Glimmer & Books: plan Backroom, upload Library",
   "Glimmerbrook / The Magic Realm / The Magic Realm: plan The Magic Realm, upload Generic",
-  "Britechester / University of Britechester / The Old Clocktower: plan Backroom, upload Nightclub",
+  "Britechester / University of Britechester / The Old Clocktower: plan Backroom, upload Nightclub (one of its kept versions)",
+  "Britechester / Foxbury Institute / Foxbury Court: plan Backroom, upload Nightclub (one of its kept versions)",
   "Britechester / Gibbs Hill / Mossy Lane: plan University Housing, upload Residential",
   "Britechester / Gibbs Hill / Spring Steppes: plan Residential Rental (3), upload University Housing (one of its kept versions)",
   "Mt. Komorebi / Yukimatsu / 5-1-1 Kiyomatsu: plan Vacation Rental, upload Residential",
@@ -38,15 +38,7 @@
   "Chestnut Ridge / Galloping Gulch / Big Sky Reach: plan Vacation Rental, upload Residential",
   "Tomarang / Morensong / Chee-wit Chee-waa Kanto: plan Thrift and Boba Store, upload Thrift and Bubble Tea Store"
  ],
- "screenshots_ticked_none_in_app": [
-  "Del Sol Valley / The Pinnacles / Bailey-Moon Manor",
-  "Mt. Komorebi / Senbamachi / Izakaya Hanamigawa Koen"
- ],
- "shared_not_built": [
-  "Glimmerbrook / Glimmerbrook / Glimmer & Books"
- ],
- "no_lot_type": [
-  "Mt. Komorebi / Yukimatsu / Mt. Komorebi Base Camp",
-  "Mt. Komorebi / Yukimatsu / The Croft Icefall"
+ "upload_not_shared": [
+  "Glimmerbrook / Glimmerbrook / Glimmer & Books (shared: False)"
  ]
 }
