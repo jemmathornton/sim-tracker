@@ -23,6 +23,9 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 - **Do:** Palomino Junction (Chestnut Ridge): place it from the Gallery, not your Library: both Library copies are marked as containing mods or custom content.
 - **Decide:** Spooky on The Narwhal Arms and Von-Windenburg Castle, Simple Living on Coorinberg Cottage and Rustic Residence: keep (Claude adds them to the plan) or take off?
 
+## Trials on the site
+- **Decide:** Progress page, switch at the bottom right: keep the New save column (✓ placed, ! something to fix, – to place) or drop it?
+
 ## Game options
 - **Do:** Neighbourhood Stories on. Other Households: Move In, Move Out, Have a Baby, Adopt a Child, Join and Leave a Career, Romance Changes off.
 - **Do:** Other Households: Adopt Cats & Dogs and Rescue Horses off; Retire from Career, Die in Accidents, Friendship Changes on.

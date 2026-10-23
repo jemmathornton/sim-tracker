@@ -243,6 +243,11 @@ window.ADMIN = {
 "text": "**Decide:** Spooky on The Narwhal Arms and Von-Windenburg Castle, Simple Living on Coorinberg Cottage and Rustic Residence: keep (Claude adds them to the plan) or take off?"
 },
 {
+"section": "Trials on the site",
+"world": "",
+"text": "**Decide:** Progress page, switch at the bottom right: keep the New save column (✓ placed, ! something to fix, – to place) or drop it?"
+},
+{
 "section": "Game options",
 "world": "",
 "text": "**Do:** Neighbourhood Stories on. Other Households: Move In, Move Out, Have a Baby, Adopt a Child, Join and Leave a Career, Romance Changes off."
@@ -541,6 +546,689 @@ window.ADMIN = {
 "toSort": [],
 "newSave": {
 "saved": "2026-10-23 22:48",
+"lots": {
+"l-willow-creek--bargain-bend": {
+"s": "placed",
+"fix": []
+},
+"l-willow-creek--streamlet-single": {
+"s": "placed",
+"fix": []
+},
+"l-willow-creek--crick-cabana": {
+"s": "placed",
+"fix": []
+},
+"l-willow-creek--daisy-hovel": {
+"s": "placed",
+"fix": []
+},
+"l-willow-creek--garden-essence": {
+"s": "placed",
+"fix": []
+},
+"l-willow-creek--potters-splay": {
+"s": "placed",
+"fix": []
+},
+"l-willow-creek--riverside-roost": {
+"s": "placed",
+"fix": []
+},
+"l-willow-creek--pique-hearth": {
+"s": "placed",
+"fix": []
+},
+"l-willow-creek--rindle-rose": {
+"s": "placed",
+"fix": []
+},
+"l-willow-creek--oakenstead": {
+"s": "placed",
+"fix": []
+},
+"l-willow-creek--municipal-muses": {
+"s": "placed",
+"fix": []
+},
+"l-willow-creek--the-blue-velvet": {
+"s": "placed",
+"fix": []
+},
+"l-willow-creek--magnolia-blossom-park": {
+"s": "placed",
+"fix": []
+},
+"l-oasis-springs--sandtrap-flat": {
+"s": "placed",
+"fix": []
+},
+"l-oasis-springs--nookstone": {
+"s": "placed",
+"fix": []
+},
+"l-oasis-springs--pebble-burrow": {
+"s": "placed",
+"fix": []
+},
+"l-oasis-springs--slipshod-mesquite": {
+"s": "placed",
+"fix": []
+},
+"l-oasis-springs--agave-abode": {
+"s": "placed",
+"fix": []
+},
+"l-oasis-springs--vista-quarry": {
+"s": "placed",
+"fix": []
+},
+"l-oasis-springs--raffia-quinta": {
+"s": "placed",
+"fix": []
+},
+"l-oasis-springs--springscape": {
+"s": "to place",
+"fix": []
+},
+"l-oasis-springs--cacti-casa": {
+"s": "placed",
+"fix": []
+},
+"l-oasis-springs--granada-place": {
+"s": "placed",
+"fix": []
+},
+"l-oasis-springs--arid-ridge": {
+"s": "placed",
+"fix": []
+},
+"l-oasis-springs--sultry-springside": {
+"s": "placed",
+"fix": []
+},
+"l-oasis-springs--rio-verde": {
+"s": "placed",
+"fix": []
+},
+"l-oasis-springs--the-futures-past": {
+"s": "placed",
+"fix": []
+},
+"l-oasis-springs--the-solar-flare": {
+"s": "placed",
+"fix": []
+},
+"l-oasis-springs--burners-and-builders": {
+"s": "placed",
+"fix": []
+},
+"l-oasis-springs--rattlesnake-juice": {
+"s": "placed",
+"fix": []
+},
+"l-oasis-springs--desert-bloom-park": {
+"s": "placed",
+"fix": []
+},
+"l-newcrest--fern-park": {
+"s": "placed",
+"fix": []
+},
+"l-newcrest--beech-byway": {
+"s": "placed",
+"fix": [
+"named “Newcrest Community Makers” in the save",
+"active version Community space; your pick Makers (switch on the voting board)"
+]
+},
+"l-newcrest--midtown-meadows": {
+"s": "placed",
+"fix": [
+"unit 4: wants Gnomes, Home Studio, has Gnomes, Homey"
+]
+},
+"l-newcrest--oak-alcove": {
+"s": "placed",
+"fix": []
+},
+"l-newcrest--comfy-cubby": {
+"s": "placed",
+"fix": []
+},
+"l-newcrest--twin-oracle-point": {
+"s": "placed",
+"fix": []
+},
+"l-newcrest--avarice-acres": {
+"s": "placed",
+"fix": []
+},
+"l-newcrest--tranquil-crescent": {
+"s": "placed",
+"fix": [
+"named “The Ice Pavillion” in the save"
+]
+},
+"l-newcrest--asphalt-abodes": {
+"s": "placed",
+"fix": []
+},
+"l-newcrest--sandy-run": {
+"s": "placed",
+"fix": []
+},
+"l-newcrest--cookout-lookout": {
+"s": "placed",
+"fix": []
+},
+"l-newcrest--civic-cliffs": {
+"s": "placed",
+"fix": []
+},
+"l-newcrest--hillside-highlands": {
+"s": "placed",
+"fix": []
+},
+"l-newcrest--optimist-s-outlook": {
+"s": "placed",
+"fix": []
+},
+"l-granite-falls--campground": {
+"s": "to place",
+"fix": []
+},
+"l-granite-falls--forest-hideaway": {
+"s": "to place",
+"fix": []
+},
+"l-granite-falls--green-getaway": {
+"s": "to place",
+"fix": []
+},
+"l-granite-falls--lakeside-retreat": {
+"s": "to place",
+"fix": []
+},
+"l-granite-falls--riverside-retreat": {
+"s": "to place",
+"fix": []
+},
+"l-magnolia-promenade--jfands-clothiers": {
+"s": "placed",
+"fix": []
+},
+"l-magnolia-promenade--preeminent-domain": {
+"s": "placed",
+"fix": []
+},
+"l-windenburg--proprietor-s-square": {
+"s": "placed",
+"fix": []
+},
+"l-windenburg--havisham-house": {
+"s": "placed",
+"fix": []
+},
+"l-windenburg--factory-one": {
+"s": "placed",
+"fix": [
+"missing traits: Great Acoustics, Party Place"
+]
+},
+"l-windenburg--waterlock-redoubt": {
+"s": "placed",
+"fix": []
+},
+"l-windenburg--the-narwhal-arms": {
+"s": "placed",
+"fix": []
+},
+"l-windenburg--south-square-coffee": {
+"s": "placed",
+"fix": []
+},
+"l-windenburg--old-quarter-inn": {
+"s": "placed",
+"fix": []
+},
+"l-windenburg--coorinberg-cottage": {
+"s": "placed",
+"fix": []
+},
+"l-windenburg--cottage-am-see": {
+"s": "placed",
+"fix": []
+},
+"l-windenburg--rustic-residence": {
+"s": "placed",
+"fix": []
+},
+"l-windenburg--the-shrieking-llama": {
+"s": "placed",
+"fix": []
+},
+"l-windenburg--mid-nowhere": {
+"s": "placed",
+"fix": []
+},
+"l-windenburg--von-windenburg-estate": {
+"s": "placed",
+"fix": []
+},
+"l-san-myshuno--17-culpepper-house": {
+"s": "to place",
+"fix": []
+},
+"l-san-myshuno--18-culpepper-house": {
+"s": "to place",
+"fix": []
+},
+"l-san-myshuno--19-culpepper-house": {
+"s": "to place",
+"fix": []
+},
+"l-san-myshuno--2a-jasmine-suites": {
+"s": "to place",
+"fix": []
+},
+"l-san-myshuno--2b-jasmine-suites": {
+"s": "to place",
+"fix": []
+},
+"l-san-myshuno--the-old-salt-house": {
+"s": "placed",
+"fix": []
+},
+"l-san-myshuno--waterside-warble": {
+"s": "to place",
+"fix": []
+},
+"l-san-myshuno--920-medina-studios": {
+"s": "to place",
+"fix": []
+},
+"l-san-myshuno--930-medina-studios": {
+"s": "to place",
+"fix": []
+},
+"l-san-myshuno--122-hakim-house": {
+"s": "to place",
+"fix": []
+},
+"l-san-myshuno--1310-21-chic-street": {
+"s": "to place",
+"fix": []
+},
+"l-san-myshuno--1010-alto-apartments": {
+"s": "to place",
+"fix": []
+},
+"l-san-myshuno--skye-fitness": {
+"s": "to place",
+"fix": []
+},
+"l-san-myshuno--stargazer-lounge": {
+"s": "to place",
+"fix": []
+},
+"l-selvadorada--hillview-hideaway": {
+"s": "to place",
+"fix": []
+},
+"l-selvadorada--selvadorada-villa": {
+"s": "to place",
+"fix": []
+},
+"l-selvadorada--cantina-el-arbol-del-jaguar": {
+"s": "to place",
+"fix": []
+},
+"l-selvadorada--jungle-bungalow": {
+"s": "to place",
+"fix": []
+},
+"l-selvadorada--belomisia-field-station": {
+"s": "to place",
+"fix": []
+},
+"l-brindleton-bay--pupperstone-park": {
+"s": "placed",
+"fix": []
+},
+"l-brindleton-bay--domus-familiaris": {
+"s": "placed",
+"fix": []
+},
+"l-brindleton-bay--sporting-space": {
+"s": "placed",
+"fix": []
+},
+"l-brindleton-bay--club-calico": {
+"s": "placed",
+"fix": []
+},
+"l-brindleton-bay--salty-paws-saloon": {
+"s": "placed",
+"fix": []
+},
+"l-brindleton-bay--ragdoll-refurb": {
+"s": "placed",
+"fix": []
+},
+"l-brindleton-bay--tail-s-end": {
+"s": "placed",
+"fix": []
+},
+"l-brindleton-bay--bedlington-boathouse": {
+"s": "placed",
+"fix": []
+},
+"l-brindleton-bay--dachshund-s-creek": {
+"s": "placed",
+"fix": []
+},
+"l-brindleton-bay--hindquarter-hideaway": {
+"s": "to place",
+"fix": []
+},
+"l-del-sol-valley--vacuous-green": {
+"s": "placed",
+"fix": []
+},
+"l-del-sol-valley--inner-circle": {
+"s": "placed",
+"fix": []
+},
+"l-del-sol-valley--upland-place": {
+"s": "placed",
+"fix": []
+},
+"l-del-sol-valley--the-ward-den": {
+"s": "placed",
+"fix": []
+},
+"l-del-sol-valley--bailey-moon-manor": {
+"s": "placed",
+"fix": []
+},
+"l-del-sol-valley--orchid-a-go-go": {
+"s": "placed",
+"fix": []
+},
+"l-del-sol-valley--ward-park": {
+"s": "placed",
+"fix": []
+},
+"l-del-sol-valley--pectoral-fitness": {
+"s": "placed",
+"fix": []
+},
+"l-strangerville--carpophagous-corner": {
+"s": "placed",
+"fix": []
+},
+"l-strangerville--slip-42": {
+"s": "placed",
+"fix": []
+},
+"l-sulani--admiral-s-wreckage": {
+"s": "placed",
+"fix": [
+"active version Community space; your pick Garden (switch on the voting board)"
+]
+},
+"l-sulani--caldera-camp": {
+"s": "placed",
+"fix": []
+},
+"l-sulani--kin-ship": {
+"s": "placed",
+"fix": []
+},
+"l-sulani--lagoon-look": {
+"s": "to place",
+"fix": []
+},
+"l-sulani--tangled-flat": {
+"s": "placed",
+"fix": []
+},
+"l-sulani--the-sand-bar": {
+"s": "placed",
+"fix": []
+},
+"l-sulani--ohan-ali-beach": {
+"s": "placed",
+"fix": []
+},
+"l-sulani--journey-s-end": {
+"s": "placed",
+"fix": []
+},
+"l-sulani--sand-simoleon-beach": {
+"s": "placed",
+"fix": []
+},
+"l-sulani--sapphire-shores": {
+"s": "placed",
+"fix": []
+},
+"l-glimmerbrook--creek-side-corner": {
+"s": "placed",
+"fix": []
+},
+"l-glimmerbrook--glimmerbrook-watch": {
+"s": "placed",
+"fix": []
+},
+"l-glimmerbrook--brooks-bridge-borough": {
+"s": "placed",
+"fix": [
+"named “Brooks Bridge [Puzzle]” in the save"
+]
+},
+"l-britechester--darby-s-den": {
+"s": "to place",
+"fix": []
+},
+"l-britechester--darkwing-house": {
+"s": "to place",
+"fix": []
+},
+"l-britechester--drake-hall": {
+"s": "to place",
+"fix": []
+},
+"l-britechester--wyvern-hall": {
+"s": "to place",
+"fix": []
+},
+"l-britechester--larry-s-lagoon": {
+"s": "to place",
+"fix": []
+},
+"l-britechester--maritime-manor": {
+"s": "to place",
+"fix": []
+},
+"l-britechester--tidal-tower": {
+"s": "to place",
+"fix": []
+},
+"l-britechester--briny-tower": {
+"s": "to place",
+"fix": []
+},
+"l-britechester--honeydew-fields": {
+"s": "to place",
+"fix": []
+},
+"l-britechester--laurel-library": {
+"s": "to place",
+"fix": []
+},
+"l-britechester--pepper-s-pub": {
+"s": "to place",
+"fix": []
+},
+"l-britechester--mossy-lane": {
+"s": "to place",
+"fix": []
+},
+"l-britechester--spring-steppes": {
+"s": "to place",
+"fix": []
+},
+"l-evergreen-harbor--rockridge-springs": {
+"s": "to place",
+"fix": []
+},
+"l-evergreen-harbor--stonestreet-apartments-3": {
+"s": "to place",
+"fix": []
+},
+"l-evergreen-harbor--stonestreet-apartments-4": {
+"s": "to place",
+"fix": []
+},
+"l-evergreen-harbor--pinecrest-apartments-404": {
+"s": "to place",
+"fix": []
+},
+"l-evergreen-harbor--the-shipping-views": {
+"s": "to place",
+"fix": []
+},
+"l-evergreen-harbor--the-portsmouth-promenade": {
+"s": "to place",
+"fix": []
+},
+"l-mt-komorebi--2-4-2-wakabamori": {
+"s": "to place",
+"fix": []
+},
+"l-mt-komorebi--2-4-3-wakabamori": {
+"s": "to place",
+"fix": []
+},
+"l-mt-komorebi--5-3-1-shinrinyoku": {
+"s": "to place",
+"fix": []
+},
+"l-mt-komorebi--hanamigawa-koen": {
+"s": "to place",
+"fix": []
+},
+"l-mt-komorebi--5-1-1-kiyomatsu": {
+"s": "to place",
+"fix": []
+},
+"l-mt-komorebi--5-1-2-kiyomatsu": {
+"s": "to place",
+"fix": []
+},
+"l-henford-on-bagley--5-cobblebottom-street": {
+"s": "to place",
+"fix": []
+},
+"l-henford-on-bagley--3-olde-mill-lane": {
+"s": "to place",
+"fix": []
+},
+"l-henford-on-bagley--cordelia-s-secret-cottage": {
+"s": "to place",
+"fix": []
+},
+"l-copperdale--water-tower-way": {
+"s": "to place",
+"fix": []
+},
+"l-copperdale--town-square-terrace": {
+"s": "to place",
+"fix": []
+},
+"l-san-sequoia--manzanita-terrace": {
+"s": "to place",
+"fix": []
+},
+"l-san-sequoia--anchorpoint-library": {
+"s": "to place",
+"fix": []
+},
+"l-san-sequoia--anchorpoint-abode": {
+"s": "to place",
+"fix": []
+},
+"l-san-sequoia--parkside-place": {
+"s": "to place",
+"fix": []
+},
+"l-san-sequoia--23-eucalyptus-lane": {
+"s": "to place",
+"fix": []
+},
+"l-chestnut-ridge--the-oak-barrel": {
+"s": "to place",
+"fix": []
+},
+"l-chestnut-ridge--duke-s-hall": {
+"s": "to place",
+"fix": []
+},
+"l-chestnut-ridge--red-roan-field": {
+"s": "to place",
+"fix": []
+},
+"l-chestnut-ridge--palomino-junction": {
+"s": "to place",
+"fix": []
+},
+"l-chestnut-ridge--big-sky-reach": {
+"s": "to place",
+"fix": []
+},
+"l-tomarang--chee-wit-chee-waa-kanto": {
+"s": "to place",
+"fix": []
+},
+"l-tomarang--the-screaming-gecko": {
+"s": "to place",
+"fix": []
+},
+"l-ravenwood--crow-s-perch": {
+"s": "to place",
+"fix": []
+},
+"l-nordhaven--the-rouge-note": {
+"s": "to place",
+"fix": []
+},
+"l-nordhaven--old-torget-house": {
+"s": "to place",
+"fix": []
+},
+"l-nordhaven--fisher-s-horizon": {
+"s": "to place",
+"fix": []
+},
+"l-nordhaven--comfortably-canalside": {
+"s": "to place",
+"fix": []
+},
+"l-gibbi-point--hothead-rock-hideaway": {
+"s": "to place",
+"fix": []
+},
+"l-gibbi-point--fletcher-s-cottage": {
+"s": "to place",
+"fix": []
+},
+"l-gibbi-point--revive-and-thrive-retreat": {
+"s": "to place",
+"fix": []
+}
+},
 "worlds": [
 {
 "world": "Willow Creek",

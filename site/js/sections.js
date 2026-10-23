@@ -393,3 +393,37 @@ function sectionPage(key){
 const SECTION_KEYS = () => ["calendar", ...calWorlds().map(w => "calendar-" + w.id), ...ACROSS_KEYS, ...ADM_SECTIONS.map(s => s.key)];
 
 route();   // again: app.js drew the first page before this file was loaded
+
+// ---------- trial (24 Oct, overnight): a New save column on Progress's every-lot table ----------
+// A switch at the bottom right: "As now" is the table exactly as it was; "With new save" adds a column from the new-save
+// check (tools/research/new_save_check.py, via admin-data.js): placed, placed with something to fix, or still to place.
+// Remove this block (and its CSS) once she picks.
+const NS_KEY = "jsw-newsave-trial";
+let NS_TRIAL = (() => { try { return localStorage.getItem(NS_KEY) === "on" ? "on" : "now"; } catch (e) { return "now"; } })();
+function nsSwitch(){
+  if (!(ADM.newSave && ADM.newSave.lots)) return;
+  let d = document.getElementById("trial-switch");
+  if (!d) { d = document.createElement("div"); d.id = "trial-switch"; d.className = "trial-switch"; d.setAttribute("role", "group"); d.setAttribute("aria-label", "New save column (trial)"); document.body.appendChild(d); }
+  d.hidden = location.hash.slice(1) !== "admin-progress";
+  d.innerHTML = `<b>New save column (trial)</b><div>${[["now", "As now"], ["on", "With new save"]].map(([k, t]) => `<button type="button" data-nstrial="${k}" class="${NS_TRIAL === k ? "on" : ""}" aria-pressed="${NS_TRIAL === k}">${t}</button>`).join("")}</div>`;
+}
+const nsCell = id => { const x = ((ADM.newSave || {}).lots || {})[id];
+  if (!x) return `<td></td>`;
+  if (x.s === "to place") return `<td class="c"><span class="t no" title="Not placed in the new save yet">–</span></td>`;
+  return x.fix.length ? `<td class="c"><span class="t ns-fix" title="Placed; to fix: ${esc(x.fix.join("; "))}">!</span></td>` : `<td class="c"><span class="t yes" title="Placed in the new save">✓</span></td>`; };
+const _lotRowsAsNow = lotRows;
+lotRows = function(){
+  const html = _lotRowsAsNow();
+  if (NS_TRIAL !== "on" || !(ADM.newSave && ADM.newSave.lots)) return html;
+  const t = document.createElement("template"); t.innerHTML = html;
+  t.content.querySelector("table")?.classList.add("ns-on");   // a little less padding, so the extra column fits at 1280px
+  const head = t.content.querySelector("thead tr"); if (head) head.insertAdjacentHTML("beforeend", `<th scope="col" class="ns-th" title="From your new save, ${esc(ADM.newSave.saved)}: ✓ placed, ! placed with something to fix (hover), – to place">New<br>save</th>`);
+  t.content.querySelectorAll("tbody tr").forEach(tr => { const a = tr.querySelector("td.lotcell a"); tr.insertAdjacentHTML("beforeend", a ? nsCell(a.getAttribute("href").slice(1)) : "<td></td>"); });
+  return t.innerHTML;
+};
+document.addEventListener("click", e => { const b = e.target.closest("[data-nstrial]"); if (!b || b.dataset.nstrial === NS_TRIAL) return;
+  NS_TRIAL = b.dataset.nstrial; try { localStorage.setItem(NS_KEY, NS_TRIAL); } catch (err) {}
+  nsSwitch(); const y = scrollY; route(); scrollTo(0, y); });
+addEventListener("hashchange", nsSwitch);
+nsSwitch();
+if (NS_TRIAL === "on" && location.hash === "#admin-progress") route();   // the page was drawn before this file loaded

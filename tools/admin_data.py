@@ -47,7 +47,9 @@ def new_save():
     for wn in {q["world"] for q in d.get("ahead", [])} - {w["world"] for w in worlds}:   # not started yet, but someone lives on a lot to place
         worlds.append({"world": wn, "placed": 0, "toPlace": [], "fixes": [], "move": [], "ahead": [{"lot": q["lot"], "household": q["household"], "goes": q["goes"]} for q in d["ahead"] if q["world"] == wn]})
     order = list(d["worlds"]); worlds.sort(key=lambda w: order.index(w["world"]))
-    return {"saved": d["saved"], "worlds": worlds, "notStarted": [wn for wn, rows in d["worlds"].items() if not any(r.get("status") == "placed" for r in rows)]}
+    import sys; sys.path.insert(0, str(ROOT / "tools")); from common import slug
+    lots = {f"l-{slug(wn)}--{slug(r['lot'])}": {"s": r.get("status"), "fix": r.get("issues") or []} for wn, rows in d["worlds"].items() for r in rows if r.get("status") in ("placed", "to place")}
+    return {"saved": d["saved"], "lots": lots, "worlds": worlds, "notStarted": [wn for wn, rows in d["worlds"].items() if not any(r.get("status") == "placed" for r in rows)]}
 
 # weekly Gallery refresh: one entry per run in logs/gallery-refresh.log
 def refresh_runs():
