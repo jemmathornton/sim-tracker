@@ -244,6 +244,11 @@ window.ADMIN = {
 },
 {
 "section": "World by world",
+"world": "Newcrest",
+"text": "**Do:** Asphalt Abodes gave a “content not owned” warning in the new save (23 Oct): look for missing items and replace them."
+},
+{
+"section": "World by world",
 "world": "Magnolia Promenade",
 "text": "**Do:** Magnolia Mall, when you build it: coffee, a wardrobe or racks, things to sabotage (Paragons, Renegades)."
 },

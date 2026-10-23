@@ -28,6 +28,9 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 - **Do:** Build next: rebuild Springscape with two adult bedrooms (Vidcund, Lazlo) and a teen’s room (his daughter Nova), then re-upload.
 - **Do:** Granada Place: Pascal Curious and his baby (Tycho, when born); in game, age the three brothers to Adult and Nova down to Teen.
 
+**Newcrest**
+- **Do:** Asphalt Abodes gave a “content not owned” warning in the new save (23 Oct): look for missing items and replace them.
+
 **Magnolia Promenade**
 - **Do:** Magnolia Mall, when you build it: coffee, a wardrobe or racks, things to sabotage (Paragons, Renegades).
 
