@@ -181,9 +181,18 @@ function admChecksSec(){
   return `<ul class="adm-list">${cs.map(c => `<li><span><b>${esc(c.name)}</b></span><span class="w"><span class="adm-pill bad">${c.items.length}</span></span>
       <small>${c.items.map(l => (l.id ? lotA(l) : esc(l.name)) + (l.world ? ` (${esc(l.world.name)})` : "")).join(" · ")}</small></li>`).join("")}</ul>`;
 }
+// live counts for her list's Big jobs ({toBuild} etc. in for-jemma/your-list.md), so they never go stale (23 Oct)
+function admLive(){
+  const L = admOwned(), noShots = L.filter(l => l.shared === true && !hasShots(l)), by = {};
+  noShots.forEach(l => by[l.world.name] = (by[l.world.name] || 0) + 1);
+  const hs = worlds.filter(w => w.owned && w.ready).flatMap(w => homeHhs(w)), mine = hs.filter(h => hhOrigin(h) !== "Premade");
+  return {toBuild: L.filter(l => l.built === false).length, toShare: L.filter(l => l.built === true && l.shared !== true).length, noShots: noShots.length,
+    noShotsWorlds: Object.entries(by).sort((x, y) => y[1] - x[1]).slice(0, 4).map(([w, n]) => `${w} ${n}`).join(", "),
+    fewTraits: L.filter(l => l.shared === true && (l.traits || []).length < 3).length, yours: mine.length, yoursOnSite: mine.filter(h => h.sims.length).length};
+}
 function admGame(){   // her list (for-jemma/your-list.md: one list, Do or Decide, 23 Oct), with the data checks on top when something is out of step (merged, her idea, 23 Oct)
   const checks = admChecks().filter(c => c.items.length), by = {}; ADM.checklist.forEach(c => (by[c.world || c.section] ||= []).push(c));
-  const md = t => esc(t).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
+  const live = admLive(), md = t => esc(t.replace(/\{(\w+)\}/g, (m, k) => k in live ? live[k] : m)).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
   const sort = ADM.toSort.length ? `<h3 class="adm-sub">Gallery uploads to <em>sort</em><small>${ADM.toSort.length}</small></h3><ul class="adm-list">${ADM.toSort.map(u => `<li><span><b>${esc(u.title)}</b>${u.lot ? ` <span class="w">· ${esc(u.lot)}</span>` : ""}</span><small>${esc(u.why)}</small></li>`).join("")}</ul>` : "";
   return sort + (checks.length ? `<h3 class="adm-sub">Out of <em>step</em><small>in the plan</small></h3>${admChecksSec()}` : "") + Object.entries(by).map(([k, cs]) => `<h3 class="adm-sub">${esc(k)}<small>${cs.length}</small></h3><ul class="adm-list">${cs.map(c => `<li><span>${md(c.text)}</span></li>`).join("")}</ul>`).join("");
 }

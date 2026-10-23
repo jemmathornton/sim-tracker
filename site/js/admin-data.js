@@ -165,22 +165,22 @@ window.ADMIN = {
 {
 "section": "Big jobs",
 "world": "",
-"text": "**Do:** Build the 162 lots not built yet (Admin > Progress lists them)."
+"text": "**Do:** Build the {toBuild} lots not built yet (Admin > Progress lists them)."
 },
 {
 "section": "Big jobs",
 "world": "",
-"text": "**Do:** Share the 27 built lots that aren't on the Gallery yet."
+"text": "**Do:** Share the {toShare} built lots that aren't on the Gallery yet."
 },
 {
 "section": "Big jobs",
 "world": "",
-"text": "**Do:** Take screenshots of the 146 shared lots with none (biggest gaps: Oasis Springs, Britechester, Willow Creek, San Myshuno)."
+"text": "**Do:** Take screenshots of the {noShots} shared lots with none (most: {noShotsWorlds})."
 },
 {
 "section": "Big jobs",
 "world": "",
-"text": "**Do:** Upload your own households to the Gallery (about 44: the 23 on the site plus the ones not made yet); they become the site's source."
+"text": "**Do:** Upload your own households to the Gallery ({yours}: {yoursOnSite} with Sims on the site, the rest not made yet); they become the site's source."
 },
 {
 "section": "Game options",
@@ -345,7 +345,7 @@ window.ADMIN = {
 {
 "section": "Every world",
 "world": "",
-"text": "**Do:** 89 shared lots have fewer than 3 traits (ideas for each in research/lot-trait-ideas.md)."
+"text": "**Do:** {fewTraits} shared lots have fewer than 3 traits (ideas for each in research/lot-trait-ideas.md)."
 },
 {
 "section": "Every world",
@@ -466,11 +466,6 @@ window.ADMIN = {
 "section": "Not in game",
 "world": "",
 "text": "**Do:** San Myshuno: make your own map adjustments, then recheck its banners and boxes."
-},
-{
-"section": "Not in game",
-"world": "",
-"text": "**Do:** Whispering Glen (Ravenwood): recheck its card."
 },
 {
 "section": "Not in game",

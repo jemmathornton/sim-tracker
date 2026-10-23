@@ -1,13 +1,13 @@
 # Your list (23 Oct)
 
-Everything waiting on you, in one place (it replaced the in-game checklist and the parked to-dos, her call 23 Oct). It shows on the site under Admin > Notes. **Do** = decided, just do it; **Decide** = your call. Tell Claude when one's done or decided and it comes off.
+Everything waiting on you, in one place (it replaced the in-game checklist and the parked to-dos, her call 23 Oct). It shows on the site under Admin > Notes. **Do** = decided, just do it; **Decide** = your call. Words in {curly brackets} are counted live on the site. Tell Claude when one's done or decided and it comes off.
 
 ## Big jobs
 - **Do:** Start the new save, step by step (for-jemma/new-save-checklist.md).
-- **Do:** Build the 162 lots not built yet (Admin > Progress lists them).
-- **Do:** Share the 27 built lots that aren't on the Gallery yet.
-- **Do:** Take screenshots of the 146 shared lots with none (biggest gaps: Oasis Springs, Britechester, Willow Creek, San Myshuno).
-- **Do:** Upload your own households to the Gallery (about 44: the 23 on the site plus the ones not made yet); they become the site's source.
+- **Do:** Build the {toBuild} lots not built yet (Admin > Progress lists them).
+- **Do:** Share the {toShare} built lots that aren't on the Gallery yet.
+- **Do:** Take screenshots of the {noShots} shared lots with none (most: {noShotsWorlds}).
+- **Do:** Upload your own households to the Gallery ({yours}: {yoursOnSite} with Sims on the site, the rest not made yet); they become the site's source.
 
 ## Game options
 - **Do:** Neighbourhood Stories on. Other Households: Move In, Move Out, Have a Baby, Adopt a Child, Join and Leave a Career, Romance Changes off.
@@ -75,7 +75,7 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 - **Decide:** Owners: Plumbob Pictures Museum (Judith Ward?), Llama Picturehouse (LeBlancs, or a Bar), Canalside Daycare.
 - **Decide:** Small business lots: keep your labels (Small Business Residential), or the game's names?
 - **Decide:** Gnomes does nothing on venues (Burners & Builders, Pixel Café, Llama Picturehouse): swap it when you add them to the new save?
-- **Do:** 89 shared lots have fewer than 3 traits (ideas for each in research/lot-trait-ideas.md).
+- **Do:** {fewTraits} shared lots have fewer than 3 traits (ideas for each in research/lot-trait-ideas.md).
 - **Do:** Retake Midtown Meadows' and Rio Verde's screenshots (older than their uploads).
 - **Do:** Community Spaces in the new save: Newcrest Community Space Makers, Admiral’s Wreckage Garden, The Old Dockyard Makers, New Harbor Park Makers (when built).
 - **Do:** Wedding venues: check each one's lot type when you share it.
@@ -108,6 +108,5 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 
 ## Not in game
 - **Do:** San Myshuno: make your own map adjustments, then recheck its banners and boxes.
-- **Do:** Whispering Glen (Ravenwood): recheck its card.
 - **Do:** Browse the story hooks when in the mood (research/story-ideas.md).
 - **Decide:** Going online: only if you ever want it on other devices (free and private with Cloudflare).
