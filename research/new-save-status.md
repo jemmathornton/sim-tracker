@@ -155,6 +155,15 @@ In the new save but not on the site (read in once the save is set up):
 - Newcrest / Asphalt Abodes: Good Schools, Homey, Sunny Aspect
 - Glimmerbrook / Brooks Bridge: Spooky, Homey
 
+## Unit traits the site doesn’t show yet
+
+Rental units with more traits in the new save than on the site. Often these are unit 1’s traits, copied to every unit when the rental was placed: check each unit in game (Build mode > Venue Info > Unit Configuration) and keep what you want.
+
+- Oasis Springs / Rio Verde Retirement Home: unit 2: Homey, Sunny Aspect; unit 3: Homey, Sunny Aspect; unit 4: Homey, Sunny Aspect; unit 5: Homey, Sunny Aspect; unit 6: Homey, Sunny Aspect
+- Newcrest / Fern Park Flats: unit 2: Fast Internet, Sunny Aspect; unit 3: Fast Internet, Sunny Aspect; unit 4: Fast Internet, Sunny Aspect; unit 5: Fast Internet, Sunny Aspect
+- Del Sol Valley / Upland Trailer Park: unit 2: Sunny Aspect; unit 3: Sunny Aspect; unit 4: Sunny Aspect
+- StrangerVille / Slip 42: unit 2: Creepy Crawlies
+
 ## Not started
 
 Granite Falls, Selvadorada, Britechester, Evergreen Harbor, Mt. Komorebi, Henford-on-Bagley, Copperdale, San Sequoia, Chestnut Ridge, Tomarang, Ravenwood, Nordhaven, Gibbi Point, Ondarion

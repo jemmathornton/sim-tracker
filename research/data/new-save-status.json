@@ -503,7 +503,8 @@
     "placed": true,
     "objs": 1098,
     "game_objs": 475,
-    "status": "placed"
+    "status": "placed",
+    "newUnitTraits": ["unit 2: Homey, Sunny Aspect", "unit 3: Homey, Sunny Aspect", "unit 4: Homey, Sunny Aspect", "unit 5: Homey, Sunny Aspect", "unit 6: Homey, Sunny Aspect"]
    },
    {
     "lot": "Affluista Mansion",
@@ -628,7 +629,8 @@
     "placed": true,
     "objs": 914,
     "game_objs": 0,
-    "status": "placed"
+    "status": "placed",
+    "newUnitTraits": ["unit 2: Fast Internet, Sunny Aspect", "unit 3: Fast Internet, Sunny Aspect", "unit 4: Fast Internet, Sunny Aspect", "unit 5: Fast Internet, Sunny Aspect"]
    },
    {
     "lot": "Beech Byway",
@@ -2205,7 +2207,8 @@
     "placed": true,
     "objs": 430,
     "game_objs": 67,
-    "status": "placed"
+    "status": "placed",
+    "newUnitTraits": ["unit 2: Sunny Aspect", "unit 3: Sunny Aspect", "unit 4: Sunny Aspect"]
    },
    {
     "lot": "Chateau Peak",
@@ -2389,7 +2392,8 @@
     "placed": true,
     "objs": 122,
     "game_objs": 82,
-    "status": "placed"
+    "status": "placed",
+    "newUnitTraits": ["unit 2: Creepy Crawlies"]
    },
    {
     "lot": "Old Penelope",

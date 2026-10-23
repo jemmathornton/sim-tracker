@@ -167,6 +167,8 @@ def main():
                         if not zid: continue
                         got = set(zones[zid]['traits']); need = set(u.get('traits') or [])
                         if need - got: r['issues'].append(f"unit {u['name']}: wants {', '.join(sorted(need))}, has {', '.join(sorted(got)) or 'none'}")
+                        elif got - need - {'Quake Zone', 'Filthy'} - set(u.get('challenges') or []):   # more than the plan has: maybe hers, to read in later
+                            r.setdefault('newUnitTraits', []).append(f"unit {u['name']}: {', '.join(sorted(got - need - {'Quake Zone', 'Filthy'} - set(u.get('challenges') or [])))}")
                     if not (l.get('traits') or l.get('challenges')) and not units and main['traits']:
                         r['newTraits'] = [t for t in main['traits'] if t not in MOD_TRAITS.values()]   # the site has none yet: ready to read in
                     cv = D['csVersions'].get(key)
@@ -407,6 +409,10 @@ def main():
     if nt:
         L += ["## Traits the site doesn’t show yet", "", "In the new save but not on the site (read in once the save is set up):", ""]
         L += [f"- {wn} / {r['name']}: {', '.join(r['newTraits'])}" for wn, r in nt] + [""]
+    nu = [(wn, r) for wn, rows in out['worlds'].items() for r in rows if r.get('newUnitTraits')]
+    if nu:
+        L += ["## Unit traits the site doesn’t show yet", "", "Rental units with more traits in the new save than on the site. Often these are unit 1’s traits, copied to every unit when the rental was placed: check each unit in game (Build mode > Venue Info > Unit Configuration) and keep what you want.", ""]
+        L += [f"- {wn} / {r['name']}: " + "; ".join(r['newUnitTraits']) for wn, r in nu] + [""]
     rest = [wn for wn in out['worlds'] if wn not in worlds_done]
     if rest: L += ["## Not started", "", ", ".join(rest), ""]
     open(os.path.join(ROOT, 'research', 'new-save-status.md'), 'w', encoding='utf-8').write("\n".join(L))
