@@ -243,7 +243,7 @@ def main():
                 if homes and homes <= ({target} if unit else ok):
                     row['state'] = 'home'
                     extra = sorted({n for g in save_hh for n in members.get(g, set())} - set(names) - PETS)
-                    missing = [n for n, g in zip(names, got) if not g or g[0] not in homes]
+                    missing = [n for n, g in zip(names, got) if g and g[0] not in homes]
                     if extra: row['note'] = "also living with them: " + ", ".join(extra)
                     if missing: row['note'] = (row.get('note', '') + "; " if row.get('note') else '') + "not with them: " + ", ".join(missing)
                 else:
@@ -255,6 +255,8 @@ def main():
                     others = sorted({n for g in save_hh for n in members.get(g, set())} - set(names) - PETS)
                     if others and len(save_hh) == 1: row['note'] = f"split them out of {next(iter(save_hh))} first (it also has {', '.join(o.split()[0] for o in others[:4])}{'…' if len(others) > 4 else ''})"
                     elif len(save_hh) > 1: row['note'] = f"merge {' and '.join(sorted(save_hh))} first"
+                absent = [n for n, g in zip(names, got) if not g]   # Sims of the plan's household the save doesn't have at all
+                if absent: row['note'] = (row.get('note', '') + "; " if row.get('note') else '') + "not in the save: " + ", ".join(absent) + " (from the Gallery or your Library)"
             out['households'].append(row)
     # households living on one of her placed lots that the plan doesn't put there (to move out, or elsewhere)
     planned_sims = {}   # zone -> Sim names the plan puts there

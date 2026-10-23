@@ -1387,7 +1387,7 @@ window.ADMIN = {
 "now": "no home",
 "how": null,
 "occupied": null,
-"note": null
+"note": "not in the save: Iggy Pancakes (from the Gallery or your Library)"
 },
 {
 "household": "Villareal",
@@ -1690,7 +1690,7 @@ window.ADMIN = {
 "now": "701 ZenView",
 "how": null,
 "occupied": null,
-"note": "split them out of Karaoke Legends first (it also has Akira, Darling)"
+"note": "split them out of Karaoke Legends first (it also has Akira, Darling); not in the save: Alicia Santiago (from the Gallery or your Library)"
 },
 {
 "household": "Bro & Kennedy",

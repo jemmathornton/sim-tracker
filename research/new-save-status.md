@@ -23,7 +23,7 @@ Made by tools/research/new_save_check.py from a copy of the save. Lots: placed /
 - **Reynolds** for Potters Splay: the site’s version is in your “Rotational” save: save it to your Library from there (your Library copy differs: not in Library copy: Lucie Reynolds, Melanie Reynolds, Rosie Reynolds; age differs: Britney Reynolds (Young Adult in Library, Elder on site), Joe Reynolds (Young Adult in Library, Elder on site). The site’s Sims are from “Rotational” (2023-12-21))
 - **Move Bjergsen** to Brook Bungalow (now: The Lighthouse)
 - **Kopf** for Riverside Roost: only in your “Rotational” save: save it to your Library from there first
-- **Move Pancakes** to Rindle Rose (now: no home)
+- **Move Pancakes** to Rindle Rose (now: no home; not in the save: Iggy Pancakes (from the Gallery or your Library))
 - **Move Villareal** to Umbrage Manor (now: no home)
 - **Barraza** for Oakenstead: the site’s version is in your “Rotational” save: save it to your Library from there (your Library copy differs: not in Library copy: Daniel Barraza, David Barraza, Vivienne Barraza; age differs: Alexa Barraza (Young Adult in Library, Adult on site), Simon Barraza (Young Adult in Library, Adult on site). The site’s Sims are from “Rotational” (2023-12-21))
 
@@ -72,7 +72,7 @@ Made by tools/research/new_save_check.py from a copy of the save. Lots: placed /
 - **To place:** 17 Culpepper House, 18 Culpepper House, 19 Culpepper House, Fraternity Apartment, Sorority Apartment, Waterside Warble, 920 Medina Studios, 930 Medina Studios, 122 Hakim House, 1310 21 Chic Street, 1010 Alto Apartments, Skye Fitness, Stargazer
 - **Move Bheeda** to 920 Medina Studios (now: 2A Jasmine Suites)
 - **Livin' In The City** for 930 Medina Studios: only in your “Rotational” save: save it to your Library from there first
-- **Move Santiago Ojo** to FountainView Penthouse (now: 701 ZenView; split them out of Karaoke Legends first (it also has Akira, Darling))
+- **Move Santiago Ojo** to FountainView Penthouse (now: 701 ZenView; split them out of Karaoke Legends first (it also has Akira, Darling); not in the save: Alicia Santiago (from the Gallery or your Library))
 - **Move Bro & Kennedy** to 701 ZenView (now: Dock Den; move out Karaoke Legends first)
 - **Move Behr** to 702 ZenView (now: no home)
 - **Move Jeong** to 1310 21 Chic Street (now: no home)

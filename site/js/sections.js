@@ -198,7 +198,7 @@ function admNewSave(){
     if (w.toPlace.length) bits.push(`<b>To place:</b> ${esc(w.toPlace.join(", "))}`);
     w.fixes.forEach(f => bits.push(`<b>${esc(f.lot)}:</b> ${esc(f.what.join("; "))}`));
     const mv = w.move.filter(m => m.now !== undefined && m.now !== null), lib = w.move.filter(m => m.how);
-    if (mv.length) bits.push(`<b>Move in:</b> ` + mv.map(m => `${esc(m.household)} → ${esc(m.to)}${m.occupied ? ` (move out ${esc(m.occupied)} first)` : ""}${m.note && /^(split|merge)/.test(m.note) ? ` (${esc(m.note.replace(/ \(it also has[^)]*\)/, ""))})` : ""}`).join(", "));
+    if (mv.length) bits.push(`<b>Move in:</b> ` + mv.map(m => `${esc(m.household)} → ${esc(m.to)}${m.occupied ? ` (move out ${esc(m.occupied)} first)` : ""}${m.note && /^(split|merge)|not in the save/.test(m.note) ? ` (${esc(m.note.replace(/ \(it also has[^)]*\)/, ""))})` : ""}`).join(", "));
     const short = h => /only in your “([^”]+)”/.test(h) ? ` (only in “${RegExp.$1}”)` : /version is in your “([^”]+)”/.test(h) ? ` (from “${RegExp.$1}”, not your Library)` : /make it/.test(h) ? " (to make)" : /differs/.test(h) ? " (Library copy differs)" : /Maxis/.test(h) ? " (Maxis’s Gallery copy)" : /not found/.test(h) ? " (not found)" : "";
     if ((w.ahead || []).length) bits.push(`<b>Moved out when you place:</b> ` + w.ahead.map(a => `${esc(a.household)} from ${esc(a.lot)} (→ ${esc(a.goes)})`).join(", "));
     if (lib.length) bits.push(`<b>Bring in:</b> ` + lib.map(m => `${esc(m.household)} → ${esc(m.to)}${/differs/.test(m.how) && !/version is in your/.test(m.how) ? ` <span class="ns-why" title="${esc(m.how.replace(/^.*differs from the site: /, "").replace(/\)$/, ""))}">(Library copy differs)</span>` : esc(short(m.how))}`).join(", "));

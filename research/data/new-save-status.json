@@ -5107,7 +5107,8 @@
    "sims": 3,
    "state": "move",
    "now": "no home",
-   "save_household": "Pancakes"
+   "save_household": "Pancakes",
+   "note": "not in the save: Iggy Pancakes (from the Gallery or your Library)"
   },
   {
    "world": "Willow Creek",
@@ -5425,7 +5426,7 @@
    "state": "move",
    "now": "701 ZenView",
    "save_household": "Karaoke Legends",
-   "note": "split them out of Karaoke Legends first (it also has Akira, Darling)"
+   "note": "split them out of Karaoke Legends first (it also has Akira, Darling); not in the save: Alicia Santiago (from the Gallery or your Library)"
   },
   {
    "world": "San Myshuno",
