@@ -785,6 +785,16 @@ window.ADMIN = {
 "inGame": false
 },
 {
+"head": "Calendar, admin page and a sidebar section (23 Oct; research/calendar-and-admin.md, prototypes in for-jemma/prototypes/calendar-admin/)",
+"text": "Extra in the trial (23 Oct, a “some day” idea): a **Shell challenges** page in Across the worlds (6 builds: Coorinberg Cottage, Skye Fitness, Hillside Hideaway, Kin-Ship, Brooks Bridge, Rockridge Springs; Hallow Slough would join once shared). Keep it or drop it?",
+"inGame": false
+},
+{
+"head": "Calendar, admin page and a sidebar section (23 Oct; research/calendar-and-admin.md, prototypes in for-jemma/prototypes/calendar-admin/)",
+"text": "Second trial on the site (23 Oct): **Gallery pictures**, “All four”: 144 lots with no screenshots of hers show all four pictures of their Gallery upload, not just the cover (tools/gallery_more.py fetched them into site/gallery-more/). Keep or not?",
+"inGame": false
+},
+{
 "head": "8. Ideas from the research (suggestions only; tick to do; most site ideas are from research/site-ideas-from-other-trackers.md)",
 "text": "Lot pages: highlight a comment when it says the build fits the world (research/gallery-deep-dive.md, the third of its three site ideas; the other two are done)",
 "inGame": false
