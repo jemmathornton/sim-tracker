@@ -215,12 +215,22 @@ window.ADMIN = {
 {
 "section": "World by world",
 "world": "Willow Creek",
+"text": "**Do:** Courtyard Lane Playground gave a “content not owned” warning in the new save, even from your Library (23 Oct): look for missing items and replace them."
+},
+{
+"section": "World by world",
+"world": "Willow Creek",
 "text": "**Decide:** Hallow Slough (Ella-Mint's home): Haunted House, On Hallowed Ground, or neither?"
 },
 {
 "section": "World by world",
 "world": "Willow Creek",
 "text": "**Decide:** Crick Cabana: Dustin Broke alone, or with the Sigworths (as in Season Events)?"
+},
+{
+"section": "World by world",
+"world": "Oasis Springs",
+"text": "**Do:** Nookstone gave a “content not owned” warning in the new save (23 Oct): look for missing items and replace them."
 },
 {
 "section": "World by world",
