@@ -235,6 +235,11 @@ window.ADMIN = {
 {
 "section": "New save fixes (from Claude's checks, 23 Oct)",
 "world": "",
+"text": "**Do:** Palomino Junction (Chestnut Ridge): place it from the Gallery, not your Library: both Library copies are marked as containing mods or custom content."
+},
+{
+"section": "New save fixes (from Claude's checks, 23 Oct)",
+"world": "",
 "text": "**Decide:** Spooky on The Narwhal Arms and Von-Windenburg Castle, Simple Living on Coorinberg Cottage and Rustic Residence: keep (Claude adds them to the plan) or take off?"
 },
 {
