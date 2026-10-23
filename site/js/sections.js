@@ -14,14 +14,13 @@ const ADM_SECTIONS = [
   {k: "progress", key: "admin-progress", name: "Progress", icon: "grid", title: "The <em>progress</em>"},
   {k: "gallery", key: "admin-gallery", name: "Gallery", icon: "share", title: "On the <em>Gallery</em>"},
   {k: "game", key: "admin-game", name: "Notes", icon: "note", title: "The <em>notes</em>"},
-  {k: "sims", key: "admin-sims", name: "Sims", icon: "users", title: "The <em>Sims</em>"},
 ];
 const grpOf = kind => Object.values(GROUP_PAGES).filter(g => g.kind === kind);
 const ACROSS_NAV = () => [["calendar", "calendar", "Calendar", null], ["clubs", "flag", "Clubs", grpOf("club").length], ["dynasties", "crown", "Dynasties", grpOf("dynasty").length],
   ["organisations", "graduation-cap", "University organisations", Object.keys((DATA.groups || {}).organisations || {}).length], ["families", "network", "Families", crossFamilies().length], ["businesses", "briefcase", "Businesses", ownedBusinesses().length]];
 function sectionsNav(active){
   const nav = document.getElementById("nav"), notOwned = nav.querySelector(".nav-group.dim");
-  const n = admCounts(), badge = k => ({game: n.game + n.checks, gallery: n.gallery, sims: n.sims})[k];
+  const n = admCounts(), badge = k => ({game: n.game + n.checks, gallery: n.gallery})[k];
   const across = `<div class="nav-group across-nav"><div class="label">Across the worlds</div>${ACROSS_NAV().map(([k, i, t, c]) => `<a href="#${k}" class="${active === k ? "on" : ""}">${ic(i)}${esc(t)}${c ? `<span class="pct">${c}</span>` : ""}</a>`).join("")}</div>`;
   const admin = `<div class="nav-group admin-nav"><div class="label">Admin</div>${ADM_SECTIONS.map(s => `<a href="#${s.key}" class="${active === s.key ? "on" : ""}">${ic(s.icon)}${esc(s.name)}${badge(s.k) ? `<span class="pct">${badge(s.k)}</span>` : ""}</a>`).join("")}</div>`;
   if (notOwned) notOwned.insertAdjacentHTML("beforebegin", across); else nav.insertAdjacentHTML("beforeend", across);
@@ -180,7 +179,7 @@ function admProgress(){
   const t = document.createElement("template"); t.innerHTML = statsPage();
   t.content.querySelector("section.hero")?.remove();
   [...t.content.querySelectorAll("section.block")].filter(s => /On the/.test(s.querySelector("h2")?.textContent || "")).forEach(s => s.remove());
-  return `<p class="adm-intro">The old Stats page, as it was: every world and every lot of the plan, to sort and filter.</p>` + t.innerHTML;
+  return `<p class="adm-intro">The old Stats page: every world, every lot and every household of the plan.</p>` + t.innerHTML + everyHousehold();
 }
 function admGallery(){
   const fresh = admOwned().filter(l => newSince(l));
@@ -201,19 +200,19 @@ function admGame(){   // her notes for in game, with the data checks on top when
   const md = t => esc(t.length > 120 ? t.slice(0, 117) + "…" : t).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
   return (checks.length ? `<h3 class="adm-sub">Out of <em>step</em><small>in the plan</small></h3>${admChecksSec()}` : "") + Object.entries(by).map(([k, cs]) => `<h3 class="adm-sub">${esc(k)}<small>${cs.length}</small></h3><ul class="adm-list">${cs.map(c => `<li><span>${md(c.text)}</span></li>`).join("")}</ul>`).join("");
 }
-// every household, like Progress's every lot (her ask, 23 Oct): one row each, in world order; a household with no Sims shows 0
-function admSims(){
+// every household, on Progress after every lot (her ask, 23 Oct): one row each, in world order; a household with no Sims shows 0
+function everyHousehold(){
   const ws = worlds.filter(w => w.owned && w.ready), hs = ws.flatMap(w => homeHhs(w).sort(byHh)), made = hs.filter(simsMade).length, none = hs.filter(h => !h.sims.length).length;
   const home = h => h.lots.find(l => !l.owned) || h.lots[0], yes = `<span class="adm-pill ok">yes</span>`;
   const origin = h => h.origin || (h.sims.length && h.sims.every(sm => /^mine$/i.test(sm.origin || "")) ? "Mine" : h.sims.length ? "Premade" : "");
-  return `<p class="adm-plain"><b>${made}</b> of ${hs.length} households have their Sims made in game; <b>${none}</b> have no Sims on the site yet.</p>
+  return `<section class="block"><div class="block-head"><h2>Every <em>household</em></h2><span class="count">${made} of ${hs.length} with Sims made · ${none} with no Sims yet</span></div>
     <div class="sheet-wrap tall"><table class="sheet hh-sheet"><thead><tr><th scope="col">World</th><th scope="col">Household</th><th scope="col">Home</th><th scope="col">Sims</th><th scope="col">EA or yours</th><th scope="col">Sims made</th><th scope="col">Picture</th></tr></thead>
     <tbody>${hs.map(h => { const l = home(h), o = origin(h);
       return `<tr><td>${wDot(h.world)}${esc(h.world.name)}</td><th scope="row"><a href="#${h.id}">${esc(h.name)}</a></th><td>${l ? `<a href="#${l.id}">${esc(l.name)}</a>` : ""}</td>
         <td class="num">${h.sims.length}</td><td>${o ? (originTag(o) === "Mine" ? "Yours" : "EA") : ""}</td><td class="c">${simsMade(h) ? yes : ""}</td>
-        <td>${h.portrait ? "Screenshot" : h.libraryPic ? "Library" : ""}</td></tr>`; }).join("")}</tbody></table></div>`;
+        <td>${h.portrait ? "Screenshot" : h.libraryPic ? "Library" : ""}</td></tr>`; }).join("")}</tbody></table></div></section>`;
 }
-const ADM_BODY = {glance: admGlance, progress: admProgress, gallery: admGallery, game: admGame, sims: admSims};
+const ADM_BODY = {glance: admGlance, progress: admProgress, gallery: admGallery, game: admGame};
 function adminPage(sec){
   const L = admOwned(), n = admCounts();
   return `<section class="hero small adm-hero" style="--c:#8E62CF"><div class="kicker"><i></i><span class="label">Admin</span><span class="adm-lock">${ic("lock")}Only you</span></div>
