@@ -10,6 +10,7 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 - **Do:** Upload your own households to the Gallery ({yours}: {yoursOnSite} with Sims on the site, the rest not made yet); they become the site's source.
 
 ## New save fixes (from Claude's checks, 23 Oct)
+- **Do (first!):** Neighbourhood Stories in the new save still has every rule ticked for Other Households, so the game can move the families you've moved out into your empty homes. Untick Move In, Move Out, Have a Baby, Adopt a Child, Adopt Cats & Dogs, Rescue Horses, Join a Career, Leave a Career and Romance Changes (Manage Worlds > Manage Households > Other Households, top right).
 - **Do:** Season Length is still the game's 7 days in the new save: set 28 days (Game Options > Seasons) before the holidays, as checklist step 2 says.
 - **Do:** Maximum Sim Count is 150 in the new save; your pick was Unlimited (or the most your PC copes with).
 - **Do:** Allow Automatic Breakups and Enable Dynasty Prestige Decay are still on in the new save; your picks are off.

@@ -21,6 +21,12 @@ TN = {int(k): v['name'] for k, v in load(os.path.join(DATA, 'game', 'lot-traits.
 MOD_TRAITS = {14633906698125574705: "Dress Code (LittleMsSam mod)"}   # traits from her Mods folder (found 23 Oct); not counted as differences
 TN.update(MOD_TRAITS)
 OPTIONS = {}   # the save's game options, read with the save (23 Oct)
+# Neighbourhood Stories rules (the game's StoryProgressionRuleDisplayInfo tuning ids) and her picks for Other Households (23 Oct)
+NS_RULES = {273735: "Move In", 273878: "Move Out", 273734: "Have a Baby", 273882: "Adopt a Child", 273888: "Adopt Cats & Dogs",
+            337807: "Rescue Horses", 273879: "Join a Career", 282068: "Leave a Career", 282070: "Retire from Career",
+            273881: "Die in Accidents", 380608: "Friendship Changes", 380610: "Romance Changes"}
+NS_PICKS = {273735: False, 273878: False, 273734: False, 273882: False, 273888: False, 337807: False, 273879: False, 282068: False,
+            282070: True, 273881: True, 380608: True, 380610: False}
 PETS = set()   # pets' names in the save (never counted as a household's extra Sims)
 norm = lambda s: re.sub(r'\s+', ' ', (s or '').replace('’', "'")).strip().lower()
 
@@ -57,7 +63,11 @@ def read(fname):
                 sm = s4.decode(v, P + 'SimData', S, depth=0); sims[sm.get('sim_id')] = f"{sm.get('first_name', '')} {sm.get('last_name', '')}".strip()
                 if sm.get('extended_species') not in (None, 0, 1): PETS.add(sims[sm.get('sim_id')])   # cats, dogs, horses, foxes
         name = s4.save_name(data, S)
-        tops = {f: v for f, wt, v in top if f in (2, 3)}
+        tops = {f: v for f, wt, v in top if f in (2, 3, 23, 24)}
+        for f_, key_ in ((23, '_ns_mine'), (24, '_ns_other')):   # Neighbourhood Stories rules: My Households, Other Households
+            if f_ in tops:
+                rs = s4.decode(tops[f_], P + 'StoryProgressionRuleSet', S, depth=3)
+                OPTIONS[key_] = {"on": rs.get('enabled', True), "rules": {r.get('rule_id'): r.get('enabled', True) for r in rs.get('rules', [])}}
         try:
             acct = s4.decode(tops[3], P + 'AccountData', S, depth=6); slot = s4.decode(tops[2], P + 'SaveSlotData', S, depth=6)
             OPTIONS.update((acct.get('gameplay_account_data') or {}).get('gameplay_options') or {})
@@ -315,8 +325,16 @@ def main():
     if o.get('npc_autonomy_breakups_enabled', True): opt.append("Allow Automatic Breakups is on; your pick is off")
     if o.get('dynasty_prestige_decay_enabled', True): opt.append("Enable Dynasty Prestige Decay is on; your pick is off")
     if o.get('story_progression_effects_enabled') is False: opt.append("Enable Neighbourhood Stories is off; your pick is on, with your rules")
+    other = o.get('_ns_other')
+    if other:
+        wrong_on = [NS_RULES[k] for k, v in NS_PICKS.items() if v is False and other['rules'].get(k, True)]
+        wrong_off = [NS_RULES[k] for k, v in NS_PICKS.items() if v is True and not other['rules'].get(k, True)]
+        if wrong_on: opt.append("Neighbourhood Stories, Other Households: still ticked: " + ", ".join(wrong_on) + " (your picks: unticked)")
+        if wrong_off: opt.append("Neighbourhood Stories, Other Households: unticked: " + ", ".join(wrong_off) + " (your picks: ticked)")
+    mine = o.get('_ns_mine')
+    if mine and mine['on'] and any(mine['rules'].values()): opt.append("Neighbourhood Stories, My Households: some rules are on; your pick is all off")
     if not o.get('_own_holidays'): opt.append("holidays: still the game's own calendar (checklist step 3)")
-    out['options'] = opt; out['optionsRaw'] = {k: v for k, v in o.items() if not isinstance(v, (bytes, dict))}
+    out['options'] = opt; out['optionsRaw'] = {k: v for k, v in o.items() if not isinstance(v, (bytes, dict)) and not k.startswith('_ns')}
     save(os.path.join(ROOT, 'research', 'data', 'new-save-status.json'), out)
     # the report
     L = [f"# New save check: “{SAVE_NAME}” ({out['saved']})", "",

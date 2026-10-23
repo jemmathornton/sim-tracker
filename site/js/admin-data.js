@@ -185,6 +185,11 @@ window.ADMIN = {
 {
 "section": "New save fixes (from Claude's checks, 23 Oct)",
 "world": "",
+"text": "**Do (first!):** Neighbourhood Stories in the new save still has every rule ticked for Other Households, so the game can move the families you've moved out into your empty homes. Untick Move In, Move Out, Have a Baby, Adopt a Child, Adopt Cats & Dogs, Rescue Horses, Join a Career, Leave a Career and Romance Changes (Manage Worlds > Manage Households > Other Households, top right)."
+},
+{
+"section": "New save fixes (from Claude's checks, 23 Oct)",
+"world": "",
 "text": "**Do:** Season Length is still the game's 7 days in the new save: set 28 days (Game Options > Seasons) before the holidays, as checklist step 2 says."
 },
 {
@@ -1271,6 +1276,7 @@ window.ADMIN = {
 "Maximum Sim Count: 150; your pick is Unlimited (or the most your PC copes with)",
 "Allow Automatic Breakups is on; your pick is off",
 "Enable Dynasty Prestige Decay is on; your pick is off",
+"Neighbourhood Stories, Other Households: still ticked: Move In, Move Out, Have a Baby, Adopt a Child, Adopt Cats & Dogs, Rescue Horses, Join a Career, Leave a Career, Romance Changes (your picks: unticked)",
 "holidays: still the game's own calendar (checklist step 3)"
 ],
 "worlds": [
