@@ -2,7 +2,7 @@
 
 Made by tools/research/new_save_check.py from a copy of the save. Lots: placed / to place / the game’s lot; anything that differs from the plan is listed. Households: who isn’t home yet.
 
-**At a glance:** 91 lots placed in 11 worlds; 76 shared lots still to place. 48 households at home, 47 to move, 26 not in the save yet.
+**At a glance:** 91 lots placed in 11 worlds; 76 shared lots still to place. 49 households at home, 49 to move, 26 not in the save yet.
 
 ## Willow Creek
 
@@ -105,6 +105,19 @@ Made by tools/research/new_save_check.py from a copy of the save. Lots: placed /
 
 - **Brooks Bridge:** named “Brooks Bridge [Puzzle]” in the save
 - **Move Amicable Acolytes** to Brooks Bridge (now: no home)
+
+## Living on lots still to place
+
+The game moves them out when you place your build. Where the plan wants them:
+
+- San Myshuno / Fraternity Apartment: Bheeda → 920 Medina Studios
+- Britechester / Wyvern Hall: Best of Friends → Wyvern Hall
+- Britechester / Briny Tower: Fletcher → Briny Tower
+- Britechester / Mossy Lane: Pleasant → Spring Steppes unit 3
+- Britechester / Spring Steppes: Elderberry → Spring Steppes unit 1
+- Evergreen Harbor / The Portsmouth Promenade: Greenburg → Rockridge Springs unit 1; Knox Greenburg: Stonestreet Apartments 3
+- Mt. Komorebi / Sento Senbamachi: Akiyama → 2-4-2 Wakabamori
+- Copperdale / Copperdale Library: Harjo → Little Falls Nook
 
 ## Traits the site doesn’t show yet
 

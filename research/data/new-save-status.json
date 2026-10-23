@@ -5740,6 +5740,16 @@
   },
   {
    "world": "Evergreen Harbor",
+   "household": "Greenburg",
+   "lot": "Rockridge Springs",
+   "unit": "1",
+   "sims": 2,
+   "state": "move",
+   "now": "The Portsmouth Promenade",
+   "save_household": "Greenburg"
+  },
+  {
+   "world": "Evergreen Harbor",
    "household": "Knox Greenburg",
    "lot": "Stonestreet Apartments 3",
    "unit": "",
@@ -5965,6 +5975,16 @@
   },
   {
    "world": "Tomarang",
+   "household": "Cahyaputri",
+   "lot": "Taka Soi 15",
+   "unit": "2",
+   "sims": 2,
+   "state": "move",
+   "now": "09 Taka Soi 15",
+   "save_household": "Cahyaputri"
+  },
+  {
+   "world": "Tomarang",
    "household": "Rochana",
    "lot": "Isda Riverfront",
    "unit": "",
@@ -6113,6 +6133,14 @@
   },
   {
    "world": "Ondarion",
+   "household": "Aloisio Romualdo",
+   "lot": "Casa Do Corsário",
+   "unit": "",
+   "sims": 1,
+   "state": "home"
+  },
+  {
+   "world": "Ondarion",
    "household": "Abrantes",
    "lot": "Abrantes Estate",
    "unit": "",
@@ -6136,5 +6164,55 @@
    "state": "home"
   }
  ],
- "squatters": []
+ "squatters": [],
+ "ahead": [
+  {
+   "world": "San Myshuno",
+   "lot": "Fraternity Apartment",
+   "household": "Bheeda",
+   "goes": "920 Medina Studios"
+  },
+  {
+   "world": "Britechester",
+   "lot": "Wyvern Hall",
+   "household": "Best of Friends",
+   "goes": "Wyvern Hall"
+  },
+  {
+   "world": "Britechester",
+   "lot": "Briny Tower",
+   "household": "Fletcher",
+   "goes": "Briny Tower"
+  },
+  {
+   "world": "Britechester",
+   "lot": "Mossy Lane",
+   "household": "Pleasant",
+   "goes": "Spring Steppes unit 3"
+  },
+  {
+   "world": "Britechester",
+   "lot": "Spring Steppes",
+   "household": "Elderberry",
+   "goes": "Spring Steppes unit 1"
+  },
+  {
+   "world": "Evergreen Harbor",
+   "lot": "The Portsmouth Promenade",
+   "household": "Greenburg",
+   "goes": "Rockridge Springs unit 1; Knox Greenburg: Stonestreet Apartments 3"
+  },
+  {
+   "world": "Mt. Komorebi",
+   "lot": "Sento Senbamachi",
+   "household": "Akiyama",
+   "goes": "2-4-2 Wakabamori"
+  },
+  {
+   "world": "Copperdale",
+   "lot": "Copperdale Library",
+   "household": "Harjo",
+   "goes": "Little Falls Nook"
+  }
+ ]
 }

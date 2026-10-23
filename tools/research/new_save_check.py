@@ -174,12 +174,15 @@ def main():
     for h in hhs:
         ids = (h.get('sims') or {}).get('ids', []) if isinstance(h.get('sims'), dict) else []
         for i in ids: zone_of_sim[sims.get(i)] = (h.get('home_zone'), h.get('name'))
-    base_ = lambda n: re.sub(r'\?$', '', n).strip()
+    base_ = lambda n: re.sub(r'\s+own\??$', '', re.sub(r'\?$', '', n).strip(), flags=re.I).strip()
     for w in D['worlds']:
         if not (w.get('owned') and w.get('ready')): continue
         wn = w['name']; H = D['households'].get(wn, {})
         lots = [l for h in w['hoods'] for l in h['lots']]
-        is_home = lambda l: l['sims'] != 'N/A' and not re.search(r'\sown\??$', l.get('who') or '', re.I)
+        own_ = lambda l: re.search(r'\sown\??$', l.get('who') or '', re.I)
+        # "Greenburg own" on a rental is the landlord's home when the family has no other home in the world (as the site reads it)
+        homes_ = {re.sub(r'\?$', '', x['who']).strip() for x in lots if x.get('who') and x['sims'] != 'N/A' and not own_(x)}
+        is_home = lambda l: l['sims'] != 'N/A' and (not own_(l) or ('Rental' in (l.get('type') or '') and re.sub(r'\s+own\??$', '', l['who'], flags=re.I).strip() not in homes_))
         total, seen, where = {}, {}, {}
         for l in lots:
             if l.get('who') and is_home(l): total[base_(l['who'])] = total.get(base_(l['who']), 0) + 1
@@ -235,6 +238,25 @@ def main():
         names = {sims.get(i) for i in ids}
         if names and not names & planned_sims[z]:
             out['squatters'].append({"world": zones[z]['world'], "lot": zones[z]['name'], "household": h.get('name') or '?', "sims": sorted(n for n in names if n)})
+    # lots still to place: who the game will move out when she places over them, and where the plan wants them
+    plan_of_sim = {}
+    home_of = {(r['world'], r['household']): r['lot'] + (f" unit {r['unit']}" if r['unit'] else '') for r in out['households']}
+    for wn2, HH in D['households'].items():
+        for hn2, hh2 in HH.items():
+            for sm in hh2.get('sims', []): plan_of_sim.setdefault(sm['name'], (wn2, hn2))
+    out['ahead'] = []
+    for wn, rows in out['worlds'].items():
+        for r in rows:
+            if r.get('status') != 'to place': continue
+            for unit, zid in lot_zone.get((wn, r['lot']), {}).items():
+                for h in hhs:
+                    if not zid or h.get('home_zone') != zid: continue
+                    ids = (h.get('sims') or {}).get('ids', []) if isinstance(h.get('sims'), dict) else []
+                    names = [sims.get(i) for i in ids if sims.get(i)]
+                    dest = {plan_of_sim[n] for n in names if n in plan_of_sim}
+                    goes = "; ".join(("" if d[1] == h.get('name') else f"{d[1]}: ") + home_of.get(d, 'no home lot in the plan') + (f" ({d[0]})" if d[0] != wn else '') for d in sorted(dest)) or 'not in the plan'
+                    e = {"world": wn, "lot": r['name'], "household": h.get('name') or '?', "goes": goes}
+                    if e not in out['ahead']: out['ahead'].append(e)
     save(os.path.join(ROOT, 'research', 'data', 'new-save-status.json'), out)
     # the report
     L = [f"# New save check: “{SAVE_NAME}” ({out['saved']})", "",
@@ -265,6 +287,9 @@ def main():
     if out['squatters']:
         L += ["## Living where the plan doesn’t put them", "", "On one of your placed lots, but planned elsewhere (or nowhere): move them out.", ""]
         L += [f"- {q['world']} / {q['lot']}: {q['household']} ({', '.join(q['sims'])})" for q in out['squatters']] + [""]
+    if out['ahead']:
+        L += ["## Living on lots still to place", "", "The game moves them out when you place your build. Where the plan wants them:", ""]
+        L += [f"- {q['world']} / {q['lot']}: {q['household']} → {q['goes']}" for q in out['ahead']] + [""]
     nt = [(wn, r) for wn, rows in out['worlds'].items() for r in rows if r.get('newTraits')]
     if nt:
         L += ["## Traits the site doesn’t show yet", "", "In the new save but not on the site (read in once the save is set up):", ""]

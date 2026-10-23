@@ -126,8 +126,11 @@ def main():
         hhs = D['households'].get(wn, {})
         on = sum(1 for l in lots if l.get('gallery')); bns = sum(1 for l in lots if l['built'] is True and not l.get('gallery')); nb = sum(1 for l in lots if l['built'] is not True)
         out.append(f"### {wn}\n\n{len(lots)} lots: {on} on the Gallery, {bns} built but not shared, {nb} not built.\n")
-        base = lambda n: re.sub(r'\?$', '', n).strip()
-        is_home = lambda l: l['sims'] != 'N/A' and not re.search(r'\sown\??$', l.get('who') or '', re.I)
+        base = lambda n: re.sub(r'\s+own\??$', '', re.sub(r'\?$', '', n).strip(), flags=re.I).strip()
+        own_ = lambda l: re.search(r'\sown\??$', l.get('who') or '', re.I)
+        # "Greenburg own" on a rental is the landlord's home when the family has no other home in the world (as the site reads it)
+        homes_ = {re.sub(r'\?$', '', x['who']).strip() for x in lots if x.get('who') and x['sims'] != 'N/A' and not own_(x)}
+        is_home = lambda l: l['sims'] != 'N/A' and (not own_(l) or ('Rental' in (l.get('type') or '') and re.sub(r'\s+own\??$', '', l['who'], flags=re.I).strip() not in homes_))
         total, seen = {}, {}
         for l in lots:
             if l.get('who') and is_home(l): total[base(l['who'])] = total.get(base(l['who']), 0) + 1

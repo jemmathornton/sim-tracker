@@ -468,7 +468,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 **Grims Quarry**
 
 - [ ] **Miner Mansion**, 30x20: not built yet: leave the game’s lot for now. Type: Residential. Household: Harris (EA).
-- [ ] **Rockridge Springs**, 30x20: place “Rockridge Springs”. Type: Residential Rental (3). Landlord (lives elsewhere): Greenburg (EA). Traits: Good Schools, Sunny Aspect. Units: 1 (Good Schools, Sunny Aspect); 2 (Good Schools, Sunny Aspect); 3 (Good Schools, Sunny Aspect).
+- [ ] **Rockridge Springs**, 30x20: place “Rockridge Springs”. Type: Residential Rental (3). Greenburg (EA, landlord, unit 1). Traits: Good Schools, Sunny Aspect. Units: 1 (Good Schools, Sunny Aspect); 2 (Good Schools, Sunny Aspect); 3 (Good Schools, Sunny Aspect).
 - [ ] **Stonestreet Apartments 3** (game’s Stonestreet Apartments #3): place “Stonestreet Apartments 3”. Type: Apartment. Household: Knox Greenburg (EA). Traits: Eco Lot, Good Schools. Challenge: Reduce and Recycle. Trait ideas (free slots): + Convivial (Knox the campaigner).
 - [ ] **Stonestreet Apartments 4** (game’s Stonestreet Apartments #4): place “Stonestreet Apartments 4”. Type: Apartment. Traits: Eco Lot, Fast Internet. Challenge: Reduce and Recycle. Trait ideas (free slots): + Natural Well.
 - [ ] **The Quarry Building**, 40x30: not built yet: leave the game’s lot for now. Type: Small Business Residential. Household: Sterling Rico (EA).
@@ -627,7 +627,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 **Morensong**
 
 - [ ] **Ro Kaya Rockside**, 40x30: not built yet: leave the game’s lot for now. Type: Community Market.
-- [ ] **Taka Soi 15**, 20x20: not built yet: leave the game’s lot for now. Type: Residential Rental (2). Landlord (lives elsewhere): Cahyaputri (EA). Units: 08 (Great Soil, Bracing Breezes); 09 (Sunny Aspect, Natural Light).
+- [ ] **Taka Soi 15**, 20x20: not built yet: leave the game’s lot for now. Type: Residential Rental (2). Cahyaputri (EA, landlord, unit 2). Units: 08 (Great Soil, Bracing Breezes); 09 (Sunny Aspect, Natural Light).
 - [ ] **Chee-wít Chee-waa** (game’s Chee-wit Chee-waa Kanto), 20x15: place “Chee-wít Chee-waa”. Type: Thrift and Boba Store. Traits: Teen Neighborhood, Great Acoustics. Trait ideas (free slots): + Convivial.
 - [ ] **ZoSul Taman Botani**, 30x30: not built yet: leave the game’s lot for now. Type: Wedding Venue.
 
@@ -733,7 +733,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 **Verdemar**
 
 - [ ] **Verdemar Palace**, 50x50: not built yet: leave the game’s lot for now. Type: Residential. Household: Thebe (EA).
-- [ ] **Casa Do Corsário**, 20x15: not built yet: leave the game’s lot for now. Type: Residential Rental (2). Owner (lives elsewhere): Aloisio Romualdo (EA).
+- [ ] **Casa Do Corsário**, 20x15: not built yet: leave the game’s lot for now. Type: Residential Rental (2). Household: Aloisio Romualdo (EA).
 - [ ] **Abrantes Estate**, 30x30: not built yet: leave the game’s lot for now. Type: Residential. Household: Abrantes (EA).
 - [ ] **Fisherman’s Hut**, 20x20: not built yet: leave the game’s lot for now. Type: Restaurant (Seafood).
 - [ ] **Ye Olde Voyager**, 30x20: not built yet: leave the game’s lot for now. Type: Bar.

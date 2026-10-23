@@ -200,8 +200,9 @@ function admNewSave(){
     const mv = w.move.filter(m => m.now !== undefined && m.now !== null), lib = w.move.filter(m => m.how);
     if (mv.length) bits.push(`<b>Move in:</b> ` + mv.map(m => `${esc(m.household)} → ${esc(m.to)}${m.occupied ? ` (move out ${esc(m.occupied)} first)` : ""}`).join(", "));
     const short = h => /only in your “([^”]+)”/.test(h) ? ` (only in “${RegExp.$1}”)` : /make it/.test(h) ? " (to make)" : /differs/.test(h) ? " (Library copy differs)" : /Maxis/.test(h) ? " (Maxis’s Gallery copy)" : /not found/.test(h) ? " (not found)" : "";
+    if ((w.ahead || []).length) bits.push(`<b>Moved out when you place:</b> ` + w.ahead.map(a => `${esc(a.household)} from ${esc(a.lot)} (→ ${esc(a.goes)})`).join(", "));
     if (lib.length) bits.push(`<b>Bring in:</b> ` + lib.map(m => `${esc(m.household)} → ${esc(m.to)}${esc(short(m.how))}`).join(", "));
-    return `<li><span><b>${esc(w.world)}</b></span><span class="w">${w.placed} placed</span>${bits.length ? bits.map(b => `<small>${b}</small>`).join("") : `<small>All placed as planned, everyone home.</small>`}</li>`; };
+    return `<li><span><b>${esc(w.world)}</b></span><span class="w">${w.placed ? w.placed + " placed" : "not started"}</span>${bits.length ? bits.map(b => `<small>${b}</small>`).join("") : `<small>All placed as planned, everyone home.</small>`}</li>`; };
   return `<h3 class="adm-sub">New <em>save</em><small>saved ${esc(when)}</small></h3><ul class="adm-list">${N.worlds.map(li).join("")}</ul>`
     + (N.notStarted.length ? `<p class="adm-plain">Not started: ${esc(N.notStarted.join(", "))}.</p>` : "");
 }

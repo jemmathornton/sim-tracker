@@ -611,7 +611,8 @@ window.ADMIN = {
 "how": "from your Library (your Library copy differs from the site: check ages and Sims)",
 "occupied": null
 }
-]
+],
+"ahead": []
 },
 {
 "world": "Oasis Springs",
@@ -677,7 +678,8 @@ window.ADMIN = {
 "how": null,
 "occupied": null
 }
-]
+],
+"ahead": []
 },
 {
 "world": "Newcrest",
@@ -768,14 +770,16 @@ window.ADMIN = {
 "how": "from your Library (your Library copy differs from the site: check ages and Sims)",
 "occupied": null
 }
-]
+],
+"ahead": []
 },
 {
 "world": "Magnolia Promenade",
 "placed": 2,
 "toPlace": [],
 "fixes": [],
-"move": []
+"move": [],
+"ahead": []
 },
 {
 "world": "Windenburg",
@@ -825,7 +829,8 @@ window.ADMIN = {
 "how": null,
 "occupied": null
 }
-]
+],
+"ahead": []
 },
 {
 "world": "San Myshuno",
@@ -889,6 +894,13 @@ window.ADMIN = {
 "how": null,
 "occupied": null
 }
+],
+"ahead": [
+{
+"lot": "Fraternity Apartment",
+"household": "Bheeda",
+"goes": "920 Medina Studios"
+}
 ]
 },
 {
@@ -920,7 +932,8 @@ window.ADMIN = {
 "how": "from your Library",
 "occupied": null
 }
-]
+],
+"ahead": []
 },
 {
 "world": "Del Sol Valley",
@@ -998,7 +1011,8 @@ window.ADMIN = {
 "how": null,
 "occupied": null
 }
-]
+],
+"ahead": []
 },
 {
 "world": "StrangerVille",
@@ -1013,7 +1027,8 @@ window.ADMIN = {
 "how": null,
 "occupied": null
 }
-]
+],
+"ahead": []
 },
 {
 "world": "Sulani",
@@ -1051,7 +1066,8 @@ window.ADMIN = {
 "how": null,
 "occupied": null
 }
-]
+],
+"ahead": []
 },
 {
 "world": "Glimmerbrook",
@@ -1072,6 +1088,78 @@ window.ADMIN = {
 "now": "no home",
 "how": null,
 "occupied": null
+}
+],
+"ahead": []
+},
+{
+"world": "Britechester",
+"placed": 0,
+"toPlace": [],
+"fixes": [],
+"move": [],
+"ahead": [
+{
+"lot": "Wyvern Hall",
+"household": "Best of Friends",
+"goes": "Wyvern Hall"
+},
+{
+"lot": "Briny Tower",
+"household": "Fletcher",
+"goes": "Briny Tower"
+},
+{
+"lot": "Mossy Lane",
+"household": "Pleasant",
+"goes": "Spring Steppes unit 3"
+},
+{
+"lot": "Spring Steppes",
+"household": "Elderberry",
+"goes": "Spring Steppes unit 1"
+}
+]
+},
+{
+"world": "Evergreen Harbor",
+"placed": 0,
+"toPlace": [],
+"fixes": [],
+"move": [],
+"ahead": [
+{
+"lot": "The Portsmouth Promenade",
+"household": "Greenburg",
+"goes": "Rockridge Springs unit 1; Knox Greenburg: Stonestreet Apartments 3"
+}
+]
+},
+{
+"world": "Mt. Komorebi",
+"placed": 0,
+"toPlace": [],
+"fixes": [],
+"move": [],
+"ahead": [
+{
+"lot": "Sento Senbamachi",
+"household": "Akiyama",
+"goes": "2-4-2 Wakabamori"
+}
+]
+},
+{
+"world": "Copperdale",
+"placed": 0,
+"toPlace": [],
+"fixes": [],
+"move": [],
+"ahead": [
+{
+"lot": "Copperdale Library",
+"household": "Harjo",
+"goes": "Little Falls Nook"
 }
 ]
 }
