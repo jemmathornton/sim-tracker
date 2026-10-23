@@ -71,6 +71,7 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 ## Every world
 - **Decide:** Owners: Plumbob Pictures Museum (Judith Ward?), Llama Picturehouse (LeBlancs, or a Bar), Canalside Daycare.
 - **Decide:** Small business lots: keep your labels (Small Business Residential), or the game's names?
+- **Decide:** Gnomes does nothing on venues (Burners & Builders, Pixel Café, Llama Picturehouse): swap it when you add them to the new save?
 - **Do:** 88 shared lots have fewer than 3 traits (ideas for each in research/lot-trait-ideas.md).
 - **Do:** 137 shared lots have no pictures: take screenshots; retake Midtown Meadows and Rio Verde.
 - **Do:** Community Spaces in the new save: Newcrest Community Space Makers, Admiral’s Wreckage Garden, The Old Dockyard Makers, New Harbor Park Makers (when built).
