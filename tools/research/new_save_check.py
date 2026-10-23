@@ -538,6 +538,7 @@ def main():
             to = h['lot'] + (f" unit {h['unit']}" if h['unit'] else '')
             if h['state'] == 'move': L.append(f"- **Move {h['household']}** to {to} (now: {h['now']}{'; ' + h['note'] if h.get('note') else ''}{'; move out ' + h['occupied'] + ' first' if h.get('occupied') else ''})")
             elif h['state'] == 'home': L.append(f"- **{h['household']}** at {to}: {h['note']}")
+            elif h['state'] == 'waiting': L.append(f"- **{h['household']}** for {to}: waiting ({h['note']})")
             else: L.append(f"- **{h['household']}** for {to}: {h['how']}")
         L.append("")
     if out['squatters']:
