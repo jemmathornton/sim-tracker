@@ -582,8 +582,8 @@ footer .as-of{flex-basis:100%}
 .world-strip{padding:18px 0 4px;margin-bottom:6px;border-bottom:1px solid var(--line)}
 .world-strip .wx-highlights{padding-bottom:16px}
 .wx-seasons{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px 22px;margin-top:0;font-size:13px;line-height:1.45}
-.wx-seasons div{--s:#7FA36B}
-.wx-seasons .s-summer{--s:#D9A23B}.wx-seasons .s-autumn{--s:#C2703D}.wx-seasons .s-winter{--s:#6F95B8}
+.wx-seasons div{--s:#5FA34E}   /* her seasons, 23 Oct: spring leaf green, summer sunny yellow, autumn amber, winter icy blue */
+.wx-seasons .s-summer{--s:#E3BC1E}.wx-seasons .s-autumn{--s:#C27416}.wx-seasons .s-winter{--s:#5E8FB8}
 .wx-seasons svg{color:var(--s);font-size:14px;vertical-align:-2px;margin-right:5px}
 .wx-seasons b{font-weight:600;margin-right:4px}
 .wx-seasons span{color:var(--muted)}
@@ -885,8 +885,8 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 .cal .year h3 em{color:var(--brass)}
 .cal .year h3 small{font:600 13px var(--body);color:var(--muted)}
 .cal .seasons{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:14px}
-.cal .season{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;--s:#7FA36B}
-.cal .season.s-summer{--s:#D9A23B}.season.s-autumn{--s:#C2703D}.season.s-winter{--s:#6F95B8}
+.cal .season{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;--s:#5FA34E}
+.cal .season.s-summer{--s:#E3BC1E}.season.s-autumn{--s:#C27416}.season.s-winter{--s:#5E8FB8}
 .cal .s-h{display:flex;align-items:center;gap:8px;font-size:15px}
 .cal .s-h svg{color:var(--s)}
 .cal .mini{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;margin:10px 0 8px}
@@ -909,8 +909,8 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 .cal .seg button{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:6px;padding:7px 15px;border-radius:99px;font-weight:700;font-size:14px;color:var(--muted)}
 .cal .seg button.on{background:var(--ink);color:var(--paper)}
 .cal .seg button:focus-visible{outline:2px solid var(--brass)}
-.cal .month{--s:#7FA36B;margin-top:14px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--surface)}
-.cal .month.s-summer{--s:#D9A23B}.cal .month.s-autumn{--s:#C2703D}.cal .month.s-winter{--s:#6F95B8}
+.cal .month{--s:#5FA34E;margin-top:14px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--surface)}
+.cal .month.s-summer{--s:#E3BC1E}.cal .month.s-autumn{--s:#C27416}.cal .month.s-winter{--s:#5E8FB8}
 .cal .m-head,.cal .m-week{display:grid;grid-template-columns:34px repeat(7,minmax(0,1fr))}
 .cal .m-head{background:color-mix(in srgb,var(--s) 14%,var(--surface));border-bottom:1px solid var(--line)}
 .cal .m-head b{font:400 18px/1 var(--display);padding:10px 8px}
@@ -921,13 +921,14 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 .cal .m-n{font-weight:800;font-size:12px;color:var(--muted)}
 .cal .m-hol{min-width:0;display:flex;flex-wrap:wrap;align-items:center;gap:4px 6px;padding:5px 7px;border-radius:8px;background:var(--s);color:#fff;font-size:12.5px;line-height:1.2}
 .cal .m-hol svg{width:13px;height:13px}
+.cal .month.s-summer .m-hol{color:#3D3000}   /* dark text on the sunny yellow, white wouldn't read */
 .cal .m-hol small{font-size:10.5px;font-weight:700;opacity:.85}
 .cal .m-ev{display:grid;grid-template-columns:7px minmax(0,1fr);gap:5px;align-items:start;font-size:11.5px;line-height:1.3;padding:2px 4px;border-radius:5px;cursor:default}
 .cal .m-ev i{width:7px;height:7px;border-radius:50%;background:var(--h);margin-top:4px}
 .cal .m-ev .t{color:var(--muted);font-weight:700;white-space:nowrap;font-size:10.5px}
 .cal .m-ev:hover{background:color-mix(in srgb,var(--h) 12%,transparent)}
 .cal .m-ev.unbuilt{opacity:.6}
-.cal .key i.k-hol{width:14px;height:14px;border:0;background:#7FA36B}
+.cal .key i.k-hol{width:14px;height:14px;border:0;background:var(--s,#5FA34E)}
 .cal .m-ev.k-lot{font-style:italic}   /* lot nights: named by their lot */
 .cal .chip-l{align-self:center;font-size:11.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);min-width:84px}
 .cal .wchip:not([style]) i{display:none}
@@ -1020,10 +1021,6 @@ details.adm-more summary{cursor:pointer;font-weight:700;font-size:14px;color:var
 .tr-line{display:flex;gap:8px;align-items:baseline;margin:14px 0 0;font-size:14px;color:var(--muted)}
 .tr-line svg{flex:none;width:15px;height:15px;align-self:center;color:var(--ink)}
 .tr-line a{font-weight:700;color:var(--ink);text-decoration-color:var(--line);text-underline-offset:3px}
-/* season colours trial (23 Oct): three sets to compare with today's; the switch puts sc-<set> on <html> */
-html.sc-blossom .s-spring{--s:#C96F93!important}html.sc-blossom .s-summer{--s:#D4A017!important}html.sc-blossom .s-autumn{--s:#C27416!important}html.sc-blossom .s-winter{--s:#5E8FB8!important}
-html.sc-muted .s-spring{--s:#8FA382!important}html.sc-muted .s-summer{--s:#BFA071!important}html.sc-muted .s-autumn{--s:#B86F52!important}html.sc-muted .s-winter{--s:#6B7C8F!important}
-html.sc-jewel .s-spring{--s:#2E8B57!important}html.sc-jewel .s-summer{--s:#C9A227!important}html.sc-jewel .s-autumn{--s:#8E2C48!important}html.sc-jewel .s-winter{--s:#2C4A7A!important}
 /* phone layout (22 Oct, her ask; phone widths only, the laptop layout is untouched) */
 @media (max-width:700px){
   /* sidebar trial (23 Oct) */
