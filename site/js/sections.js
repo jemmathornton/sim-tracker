@@ -162,31 +162,22 @@ function refreshCard(){
     <p>${bad ? `<b>The last run stopped with an error</b> (${esc(last.when)}). ` : ""}${missed ? `<b>Sunday’s run hasn’t happened yet</b>; it catches up next time you’re signed in. ` : "Last good run. "}
       ${lastOk.listed} uploads listed, ${plural(lastOk.new, "new one")}.</p><p>Runs every Sunday at 08:54 while you’re signed in.</p></div>`;
 }
-function refreshTable(){
-  const rows = [...ADM.refresh].reverse().slice(0, 8);
-  return `<div class="sheet-wrap"><table class="sheet"><thead><tr><th scope="col">Run</th><th scope="col">Result</th><th scope="col">Uploads</th><th scope="col">New</th><th scope="col">Favourites</th><th scope="col">Downloads</th><th scope="col">What happened</th></tr></thead>
-    <tbody>${rows.map(r => `<tr><th scope="row">${esc(r.when)}</th><td>${r.ok ? `<span class="adm-pill ok">done</span>` : `<span class="adm-pill bad">stopped</span>`}</td><td class="num">${r.listed ?? ""}</td><td class="num">${r.new ?? ""}</td><td class="num">${r.favourites ?? ""}</td><td class="num">${r.downloads ?? ""}</td>
-      <td class="wrap">${[...r.linked.map(x => esc(x.replace(/^linked new upload /, "Linked "))), ...r.notes.map(esc)].join("<br>") || `<small>nothing new</small>`}</td></tr>`).join("")}</tbody></table></div>
-    <p class="showing">From logs/gallery-refresh.log. Hand-run refreshes show too.</p>`;
-}
 
 const admCounts = () => { const c = admChecks().reduce((n, x) => n + x.items.length, 0), L = admOwned();
   return {checks: c, next: L.filter(l => l.built === true && l.shared === false).length, game: ADM.checklist.length + ADM.todo.filter(t => t.inGame).length,
     gallery: L.filter(l => newSince(l)).length, sims: Object.values(SIMS).filter(s => s.from).length}; };
 
+// Admin pages kept short (her feedback, 23 Oct: "too much info isn't helpful"): only what she'd act on
 function admGlance(){
   const L = admOwned(), built = L.filter(l => l.built === true).length, shared = L.filter(l => l.shared === true).length, n = admCounts();
-  const fresh = L.filter(l => newSince(l)), ch = admChecks().filter(x => x.items.length);
-  const card = (icon, label, big, text, sec, cls = "") => { const s = ADM_SECTIONS.find(x => x.k === sec);
-    return `<div class="adm-card ${cls}"><span class="label">${ic(icon)}${label}</span><b class="big">${big}</b><p>${text}</p>${s ? `<a class="linkish" href="#${s.key}">Open ${esc(s.name)} ${ic("arrow")}</a>` : ""}</div>`; };
+  const card = (icon, label, big, text, sec, cls = "") => { const x = ADM_SECTIONS.find(y => y.k === sec);
+    return `<div class="adm-card ${cls}"><span class="label">${ic(icon)}${label}</span><b class="big">${big}</b><p>${text}</p>${x ? `<a class="linkish" href="#${x.key}">Open ${esc(x.name)} ${ic("arrow")}</a>` : ""}</div>`; };
   return `<div class="adm-grid">${refreshCard()}
-    ${card("sparkle", "New since you looked", fresh.length, fresh.length ? fresh.slice(0, 6).map(l => `${lotA(l)} <small>${esc(newTxt(newSince(l)))}</small>`).join("<br>") : "No new favourites, comments or uploads since you last opened each lot.", fresh.length ? "gallery" : "")}
-    ${card("hammer", "Built", `${built}<small style="font-size:18px"> of ${L.length}</small>`, `${Math.round(100 * built / L.length)}% of the owned worlds’ lots. <b>${shared}</b> shared, <b>${n.next}</b> built but not shared yet.`, "progress")}
-    ${card("list-checks", "Checks", ch.length ? n.checks : "All clear", ch.length ? ch.map(x => `${esc(x.name)}: <b>${x.items.length}</b>`).join("<br>") : "Plan, Gallery and site agree.", "checks", ch.length ? "warn" : "ok")}
-    ${card("flag", "Waiting in game", n.game, `${plural(ADM.checklist.length, "item")} on your in-game checklist, ${plural(ADM.todo.filter(t => t.inGame).length, "to-do")} that need the game open.`, "game")}
-    ${card("share", "Gallery uploads not on a lot", ADM.unlinked.length, "Left off on purpose (older copies, room uploads, other builds), each with its reason.", "gallery")}
-    ${card("camera", "Shared, no screenshots", L.filter(l => l.shared === true && !hasShots(l)).length, "Shared lots showing only their Gallery pictures.", "next")}
-    ${card("users", "Sims to double-check", n.sims, "Sims filled from one of your saves or your Library; the pages show them without a marker.", "sims")}</div>`;
+    ${card("hammer", "Built", `${built}<small style="font-size:18px"> of ${L.length}</small>`, `${shared} shared.`, "progress")}
+    ${card("camera", "Shared, no screenshots", L.filter(l => l.shared === true && !hasShots(l)).length, "Showing only their Gallery pictures.", "")}
+    ${card("share", "Uploads not on a lot", ADM.unlinked.length, "Left off on purpose, each with its reason.", "gallery")}
+    ${card("list-checks", "Checks", n.checks || "All clear", n.checks ? "Things out of step in the plan." : "Plan, Gallery and site agree.", "checks", n.checks ? "warn" : "ok")}
+    ${card("flag", "Waiting in game", ADM.checklist.length, "On your in-game checklist.", "game")}</div>`;
 }
 function admProgress(){
   const t = document.createElement("template"); t.innerHTML = statsPage();
@@ -196,57 +187,33 @@ function admProgress(){
 }
 function admGallery(){
   const fresh = admOwned().filter(l => newSince(l));
-  return `<h3 class="adm-sub">The weekly <em>refresh</em><small>latest runs first</small></h3>${refreshTable()}
-    <h3 class="adm-sub">New since you <em>looked</em><small>in this browser</small></h3>
-    ${fresh.length ? `<ul class="adm-list">${fresh.map(l => `<li><span>${wDot(l.world)}${lotA(l)}</span><span class="w">${esc(newTxt(newSince(l)))}</span></li>`).join("")}</ul>` : `<p class="adm-plain">Nothing new since you last opened each lot. (The “New” pills on lot cards stay as they are.)</p>`}
-    ${galleryOverTime()}
-    <h3 class="adm-sub">Uploads not on a <em>lot</em><small>${ADM.unlinked.length}, from data/gallery/unlinked.json</small></h3>
-    <ul class="adm-list">${ADM.unlinked.map(u => `<li><span><b>${esc(u.title)}</b>${u.lot ? ` <span class="w">· ${esc(u.lot)}</span>` : ""}</span><small>${esc(u.why)}</small></li>`).join("")}</ul>
-    <details class="adm-more"><summary>Hashtag slips, for when you re-upload (${ADM.tagSlips.length})</summary>
-      <p class="adm-plain">You said you’d check these yourself when re-uploading; here so they’re in one place. Old uploads can’t be edited.</p>
-      <ul class="adm-list">${ADM.tagSlips.map(s => `<li><span><b>${esc(s.upload)}</b></span><span class="w">${esc(s.tag)} → ${esc(s.meant)}</span></li>`).join("")}</ul>
-      ${ADM.noWorldTag ? `<p class="adm-plain"><b>No world tag:</b> ${esc(ADM.noWorldTag)}.</p>` : ""}</details>`;
+  return `<div class="adm-grid">${refreshCard()}</div>
+    <h3 class="adm-sub">New since you <em>looked</em></h3>
+    ${fresh.length ? `<ul class="adm-list">${fresh.map(l => `<li><span>${wDot(l.world)}${lotA(l)}</span><span class="w">${esc(newTxt(newSince(l)))}</span></li>`).join("")}</ul>` : `<p class="adm-plain">Nothing new since you last opened each lot.</p>`}
+    <h3 class="adm-sub">Uploads not on a <em>lot</em><small>${ADM.unlinked.length}</small></h3>
+    <ul class="adm-list">${ADM.unlinked.map(u => `<li><span><b>${esc(u.title)}</b></span><small>${esc(u.why)}</small></li>`).join("")}</ul>`;
 }
 function admChecksSec(){
-  return `<p class="adm-intro">Worked out at every build from your plan, the Gallery and the site. Nothing here is fixed by itself: you decide.</p>
-    <ul class="adm-list">${admChecks().map(c => `<li><span><b>${esc(c.name)}</b></span><span class="w">${c.items.length ? `<span class="adm-pill bad">${c.items.length}</span>` : `<span class="adm-pill ok">all clear</span>`}</span>
-      ${c.items.length ? `<small>${c.items.map(l => (l.id ? lotA(l) : esc(l.name)) + (l.world ? ` (${esc(l.world.name)})` : "") + (c.note ? ": " + c.note(l) : "")).join(" · ")}</small>` : ""}</li>`).join("")}</ul>`;
+  const cs = admChecks().filter(c => c.items.length);
+  if (!cs.length) return `<p class="adm-plain">All clear: plan, Gallery and site agree.</p>`;
+  return `<ul class="adm-list">${cs.map(c => `<li><span><b>${esc(c.name)}</b></span><span class="w"><span class="adm-pill bad">${c.items.length}</span></span>
+      <small>${c.items.map(l => (l.id ? lotA(l) : esc(l.name)) + (l.world ? ` (${esc(l.world.name)})` : "")).join(" · ")}</small></li>`).join("")}</ul>`;
 }
 function admNext(){
-  const L = admOwned(), bns = L.filter(l => l.built === true && l.shared === false), byW = {};
-  L.filter(l => l.shared === true && !hasShots(l)).forEach(l => (byW[l.world.id] ||= []).push(l));
-  const empty = L.filter(l => !l.hh && !unitCount(l) && /residential|apartment|penthouse/i.test(l.type || "") && !l.owned);
-  const free = L.filter(l => unitCount(l)).map(l => [l, rentalUnits(l).map((u, i) => u ? null : unitLabel(l, i)).filter(Boolean)]).filter(([, f]) => f.length);
-  const find = n => L.find(l => fold(l.name) === fold(n));
-  return `<h3 class="adm-sub">Built, not <em>shared</em><small>${bns.length}</small></h3>
-    <ul class="adm-list">${bns.map(l => `<li><span>${wDot(l.world)}${lotA(l)} <span class="w">· ${esc(l.type || "")}</span></span><span class="w">${esc(l.world.name)}</span></li>`).join("")}</ul>
-    <h3 class="adm-sub">A suggested <em>order</em><small>from research/build-priorities.md (16–17 Oct); your call</small></h3>
-    <ul class="adm-list">${ADM.buildNext.map((b, i) => { const l = find(b.name); return `<li><span>${i + 1}. ${l ? lotA(l) : `<b>${esc(b.name)}</b>`} ${l && l.shared === true ? `<span class="adm-pill ok">shared</span>` : l && l.built === true ? `<span class="adm-pill">built</span>` : ""}</span><span class="w">${esc(b.world)}</span><small>${esc(b.why)}</small></li>`; }).join("")}</ul>
-    <h3 class="adm-sub">Shared, no <em>screenshots</em><small>${Object.values(byW).flat().length}; they show only their Gallery pictures</small></h3>
-    <ul class="adm-list">${Object.entries(byW).sort((a, b) => b[1].length - a[1].length).map(([wid, ls]) => `<li><span>${wDot(ls[0].world)}<b>${esc(ls[0].world.name)}</b></span><span class="w">${ls.length}</span><small>${ls.map(lotA).join(" · ")}</small></li>`).join("")}</ul>
-    <div class="adm-two"><div><h3 class="adm-sub">Empty <em>homes</em><small>${empty.length}</small></h3><ul class="adm-list">${empty.map(l => `<li><span>${lotA(l)}</span><span class="w">${esc(l.world.name)}</span>${l.whoNote ? `<small>${esc(l.whoNote)}</small>` : ""}</li>`).join("")}</ul></div>
-      <div><h3 class="adm-sub">Free rental <em>units</em><small>${free.reduce((n, [, f]) => n + f.length, 0)}</small></h3><ul class="adm-list">${free.map(([l, f]) => `<li><span>${lotA(l)}</span><span class="w">${esc(l.world.name)}</span><small>${f.map(esc).join(", ")}</small></li>`).join("")}</ul></div></div>`;
+  const L = admOwned(), find = n => L.find(l => fold(l.name) === fold(n));
+  return `<ul class="adm-list">${ADM.buildNext.slice(0, 10).map((b, i) => { const l = find(b.name);
+    return `<li><span>${i + 1}. ${l ? lotA(l) : `<b>${esc(b.name)}</b>`}</span><span class="w">${esc(l ? l.world.name : b.world || "")}</span></li>`; }).join("")}</ul>`;
 }
 function admGame(){
-  const groups = {}; ADM.checklist.forEach(c => (groups[c.section] ||= []).push(c));
-  const heads = {}; ADM.todo.forEach(t => (heads[t.head] ||= []).push(t));
-  const md = s => esc(s).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
-  return `<p class="adm-intro">From your in-game checklist (for-jemma/in-game-checklist.md) and TODO.md; ticked items left out. Read only here: tell Claude what you find, as now.</p>
-    ${Object.entries(groups).map(([s, cs]) => `<h3 class="adm-sub">${esc(s)}<small>${cs.length}</small></h3><ul class="adm-list">${cs.map(c => `<li><span>${md(c.text)}</span>${c.world ? `<span class="w">${esc(c.world)}</span>` : ""}</li>`).join("")}</ul>`).join("")}
-    <h3 class="adm-sub">To-dos that need the <em>game</em><small>${ADM.todo.filter(t => t.inGame).length}, from TODO.md</small></h3>
-    <ul class="adm-list">${ADM.todo.filter(t => t.inGame).map(t => `<li><span>${md(t.text.length > 260 ? t.text.slice(0, 257) + "…" : t.text)}</span><small>${esc(t.head)}</small></li>`).join("")}</ul>
-    <details class="adm-more"><summary>Everything on TODO.md waiting for you (${ADM.todo.length})</summary>
-      ${Object.entries(heads).map(([h, ts]) => `<h3 class="adm-sub" style="font-size:20px">${esc(h)}<small>${ts.length}</small></h3><ul class="adm-list">${ts.map(t => `<li><span>${md(t.text.length > 260 ? t.text.slice(0, 257) + "…" : t.text)}</span></li>`).join("")}</ul>`).join("")}</details>`;
+  const by = {}; ADM.checklist.forEach(c => (by[c.world || c.section] ||= []).push(c));
+  const md = t => esc(t.length > 120 ? t.slice(0, 117) + "…" : t).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
+  return Object.entries(by).map(([k, cs]) => `<h3 class="adm-sub">${esc(k)}<small>${cs.length}</small></h3><ul class="adm-list">${cs.map(c => `<li><span>${md(c.text)}</span></li>`).join("")}</ul>`).join("");
 }
 function admSims(){
-  const ws = worlds.filter(w => w.owned && w.ready), from = {};
-  Object.values(SIMS).filter(s => s.from && s.hh).forEach(s => { const k = s.hh.id; (from[k] ||= {hh: s.hh, src: new Set(), n: 0}); from[k].n++; from[k].src.add(s.from); });
-  const rows = ws.map(w => { const hs = homeHhs(w); return {w, hs, made: hs.filter(simsMade).length, none: hs.filter(h => !h.sims.length).length, pic: hs.filter(h => h.portrait).length, lib: hs.filter(h => !h.portrait && h.libraryPic).length}; }).filter(r => r.hs.length);
-  return `<p class="adm-intro">The progress and source notes that were taken off household and Sim pages (19 Oct, no admin notes), kept here instead.</p>
-    <div class="sheet-wrap"><table class="sheet summary"><thead><tr><th scope="col">World</th><th scope="col">Households</th><th scope="col">Sims made in game</th><th scope="col">% made</th><th scope="col">No Sims on the site</th><th scope="col">Your screenshot</th><th scope="col">Library picture</th></tr></thead>
-    <tbody>${rows.map(r => `<tr><th scope="row">${wDot(r.w)}${esc(r.w.name)}</th><td class="num">${r.hs.length}</td><td class="num">${r.made}</td><td><div class="mini-bar simbar"><i style="width:${Math.round(100 * r.made / r.hs.length)}%"></i></div>${Math.round(100 * r.made / r.hs.length)}%</td><td class="num">${r.none || ""}</td><td class="num">${r.pic || ""}</td><td class="num">${r.lib || ""}</td></tr>`).join("")}</tbody></table></div>
-    <h3 class="adm-sub">Filled from your <em>saves</em><small>${Object.values(from).reduce((n, x) => n + x.n, 0)} Sims in ${Object.keys(from).length} households, to double-check (research/own-households-review.md)</small></h3>
-    <ul class="adm-list">${Object.values(from).sort((a, b) => byHh(a.hh, b.hh)).map(x => `<li><span>${wDot(x.hh.world)}<a href="#${x.hh.id}">${esc(x.hh.name)}</a> <span class="w">· ${plural(x.n, "Sim")}</span></span><span class="w">${esc(x.hh.world.name)}</span><small>${[...x.src].map(esc).join("; ")}</small></li>`).join("")}</ul>`;
+  const ws = worlds.filter(w => w.owned && w.ready), hs = ws.flatMap(homeHhs), made = hs.filter(simsMade).length, none = ws.map(w => [w, homeHhs(w).filter(h => !h.sims.length)]).filter(([, x]) => x.length);
+  return `<p class="adm-plain"><b>${made}</b> of ${hs.length} households have their Sims made in game.</p>
+    <h3 class="adm-sub">Households with no <em>Sims</em> yet<small>${none.reduce((n, [, x]) => n + x.length, 0)}</small></h3>
+    <ul class="adm-list">${none.map(([w, x]) => `<li><span>${wDot(w)}<b>${esc(w.name)}</b></span><small>${x.map(h => `<a href="#${h.id}">${esc(h.name)}</a>`).join(" · ")}</small></li>`).join("")}</ul>`;
 }
 const ADM_BODY = {glance: admGlance, progress: admProgress, gallery: admGallery, checks: admChecksSec, next: admNext, game: admGame, sims: admSims};
 function adminPage(sec){
