@@ -9,7 +9,7 @@
  "neighbourhoods": [
   {
    "name": "Foundry Cove",
-   "desc": "Modest homes with a canal for fishing and a charming active railroad.",
+   "desc": "Located in southern Willow Creek, Foundry Cove has lots of character (and its share of characters). Residents enjoy modest homes with a canal nearby for fishing, and a charming, active railroad.",
    "mapSpot": [0.67, 0.64],
    "mapBox": [0.53, 0.55, 0.82, 0.73],
    "lots": [
@@ -23,7 +23,7 @@
   },
   {
    "name": "Courtyard Lane",
-   "desc": "Affordable homes for the upwardly mobile, with classic styling and larger shotgun houses.",
+   "desc": "Courtyard Lane offers affordable homes for the upwardly mobile set. Classic styling mingles with larger shotguns and more expansive homes.",
    "mapSpot": [0.72, 0.47],
    "mapBox": [0.62, 0.39, 0.83, 0.55],
    "lots": [
@@ -36,7 +36,7 @@
   },
   {
    "name": "Pendula View",
-   "desc": "The historical garden community, home to large mansions.",
+   "desc": "This historical section of Willow Creek, the Garden Community boasts large mansions and the cache that comes with living in them.",
    "mapSpot": [0.5, 0.41],
    "mapBox": [0.38, 0.33, 0.61, 0.49],
    "lots": [
@@ -48,7 +48,7 @@
   },
   {
    "name": "Sage Estates",
-   "desc": "Willow Creek's most desirable area, with sprawling estates and lush landscaping.",
+   "desc": "Willow Creek's most desirable area, Sage Estates features large, sprawling estates, lush landscaping, and the best high society has to offer.",
    "mapSpot": [0.27, 0.43],
    "mapBox": [0.17, 0.36, 0.37, 0.5],
    "lots": [
@@ -58,7 +58,7 @@
   },
   {
    "name": "Crawdad Quarter",
-   "desc": "The heart of Willow Creek, from parks to nightlife.",
+   "desc": "Crawdad Quarter is the heart of Willow Creek. All of the towns liveliness, from parks to nightlife, can be found in this neighbourhood.",
    "mapSpot": [0.32, 0.66],
    "mapBox": [0.15, 0.55, 0.49, 0.77],
    "lots": [
