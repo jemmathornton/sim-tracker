@@ -279,11 +279,6 @@ window.ADMIN = {
 },
 {
 "section": "World by world",
-"world": "Mt. Komorebi",
-"text": "**Do:** Base Camp and The Croft Icefall: check what lot type the game gives them."
-},
-{
-"section": "World by world",
 "world": "Copperdale",
 "text": "**Do:** BridgeCreek Drive, when you build it: gym kit for the daytime side."
 },

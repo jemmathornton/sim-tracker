@@ -49,9 +49,6 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 **Evergreen Harbor**
 - **Do:** The Old Mill: make its 3 daytime objects ordinary gym kit, climbing walls on top.
 
-**Mt. Komorebi**
-- **Do:** Base Camp and The Croft Icefall: check what lot type the game gives them.
-
 **Copperdale**
 - **Do:** BridgeCreek Drive, when you build it: gym kit for the daytime side.
 - **Decide:** LaSuli Point: Park (needs one piece of playground kit) or Cemetery?
