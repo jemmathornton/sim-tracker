@@ -61,7 +61,7 @@ class NewSaveChecklist(unittest.TestCase):
         for p in world_files():
             W = load(p)
             if W.get('owned'): self.assertIn("### " + W['name'], text)
-        self.assertNotRegex(text, r"bNoneb|()")
+        self.assertNotRegex(text, r"\bNone\b|\(\)")
 
 
 class BritishSpelling(unittest.TestCase):
