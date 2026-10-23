@@ -14,8 +14,17 @@ const trRedraw = () => { const y = scrollY; trRedrawing = true; try { route(); }
 function trialSwitch(){
   let d = document.getElementById("trial-switch");
   if (!d) { d = document.createElement("div"); d.id = "trial-switch"; d.className = "trial-switch"; d.setAttribute("role", "group"); d.setAttribute("aria-label", "Sidebar (trial)"); document.body.appendChild(d); }
-  d.innerHTML = `<b>Sidebar (trial)</b><div>${[["now", "As now"], ["new", "New layout"]].map(([k, t]) => `<button type="button" data-trial="${k}" class="${TRIAL === k ? "on" : ""}" aria-pressed="${TRIAL === k}">${t}</button>`).join("")}</div>`;
+  d.innerHTML = `<b>Sidebar (trial)</b><div>${[["now", "As now"], ["new", "New layout"]].map(([k, t]) => `<button type="button" data-trial="${k}" class="${TRIAL === k ? "on" : ""}" aria-pressed="${TRIAL === k}">${t}</button>`).join("")}</div>`
+    + `<b>Gallery pictures (trial)</b><div>${[["cover", "As now"], ["all", "All four"]].map(([k, t]) => `<button type="button" data-gp="${k}" class="${GP === k ? "on" : ""}" aria-pressed="${GP === k}">${t}</button>`).join("")}</div>`;
 }
+// ---------- Gallery pictures trial (23 Oct): lots with no screenshots of hers show all four of their Gallery upload's pictures,
+// not just the cover (the other three come from tools/gallery_more.py, marked "more" in data.js) ----------
+const GP_KEY = "jsw-gallery-pictures-trial";
+let GP = (() => { try { return localStorage.getItem(GP_KEY) === "all" ? "all" : "cover"; } catch (e) { return "cover"; } })();
+function gpApply(){ Object.values(lotIndex).forEach(l => { l._allPhotos ||= l.photos; l.photos = GP === "all" ? l._allPhotos : l._allPhotos.filter(p => !p.more); }); }
+gpApply();
+document.addEventListener("click", e => { const b = e.target.closest("[data-gp]"); if (!b || b.dataset.gp === GP) return;
+  GP = b.dataset.gp; try { localStorage.setItem(GP_KEY, GP); } catch (err) {} gpApply(); trialSwitch(); trRedraw(); });
 const TR_ACROSS = ["clubs", "dynasties", "organisations", "families", "businesses"];
 document.addEventListener("click", e => { const b = e.target.closest("[data-trial]"); if (!b || b.dataset.trial === TRIAL) return;
   TRIAL = b.dataset.trial; try { localStorage.setItem(TRIAL_KEY, TRIAL); } catch (err) {}
@@ -393,4 +402,4 @@ function trialPage(key){
 const TRIAL_KEYS = () => trNew() ? ["calendar", ...calWorlds().map(w => "calendar-" + w.id), ...TR_ACROSS, ...ADM_SECTIONS.map(s => s.key)] : [];
 
 trialSwitch();
-if (trNew()) route();
+route();   // again, so the Gallery pictures trial applies to the first page too

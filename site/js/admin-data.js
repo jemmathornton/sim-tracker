@@ -780,6 +780,11 @@ window.ADMIN = {
 "inGame": false
 },
 {
+"head": "Calendar, admin page and a sidebar section (23 Oct; research/calendar-and-admin.md, prototypes in for-jemma/prototypes/calendar-admin/)",
+"text": "**Trial on the site (23 Oct):** the switch at the bottom right, “Sidebar (trial)”, flips between “As now” and “New layout” (Across the worlds below the worlds, before Not owned: Calendar option A, Clubs, Dynasties, University organisations, Families, Businesses; Admin last, in place of Stats). Have a look and pick; the switch (site/js/trial.js) is removed once she does",
+"inGame": false
+},
+{
 "head": "8. Ideas from the research (suggestions only; tick to do; most site ideas are from research/site-ideas-from-other-trackers.md)",
 "text": "Lot pages: highlight a comment when it says the build fits the world (research/gallery-deep-dive.md, the third of its three site ideas; the other two are done)",
 "inGame": false

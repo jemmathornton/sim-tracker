@@ -147,7 +147,10 @@ def photos_for(ws, ls, has_upload):
     dd = os.path.join(SITE, 'shots', ws, ls)
     if not os.path.isdir(dd):
         cover = f"gallery/{ws}/{ls}.jpg"
-        return [{"src": cover, "thumb": cover, "caption": "From the Gallery", "gallery": True}] if has_upload and os.path.exists(os.path.join(SITE, cover)) else []
+        if not (has_upload and os.path.exists(os.path.join(SITE, cover))): return []
+        # the upload's other three pictures (tools/gallery_more.py), marked "more": the Gallery pictures trial shows them (23 Oct)
+        more = [f"gallery-more/{ws}/{ls}-{n}.jpg" for n in (2, 3, 4) if os.path.exists(os.path.join(SITE, 'gallery-more', ws, f'{ls}-{n}.jpg'))]
+        return [{"src": cover, "thumb": cover, "caption": "From the Gallery", "gallery": True}] + [{"src": m, "thumb": m, "caption": "From the Gallery", "gallery": True, "more": True} for m in more]
     fs = [f for f in os.listdir(dd) if f.endswith('.jpg') and not f.endswith('.thumb.jpg')]
     def key(f):
         n = f[:-4]; i = next((k for k, w in enumerate(EXTERIOR) if w in n), 99)
