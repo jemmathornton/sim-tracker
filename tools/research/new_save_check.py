@@ -250,6 +250,34 @@ def main():
         names = {sims.get(i) for i in ids}
         if names and not names & planned_sims[z]:
             out['squatters'].append({"world": zones[z]['world'], "lot": zones[z]['name'], "household": h.get('name') or '?', "sims": sorted(n for n in names if n)})
+    # her own households joined by family (parents, partners) to Sims in another household: the Library keeps links only
+    # inside one household, so save the family as one household, place it, then split it in the new save (research/moving-households.md)
+    hh_of, links, name_of = {}, [], {}
+    for wn2, HH in D['households'].items():
+        for hn2, hh2 in HH.items():
+            for sm in hh2.get('sims', []):
+                if sm.get('id'): hh_of[sm['id']] = (wn2, hn2); name_of[sm['id']] = sm['name']
+    for wn2, HH in D['households'].items():
+        for hn2, hh2 in HH.items():
+            for sm in hh2.get('sims', []):
+                for par in sm.get('parents') or []: links.append((sm.get('id'), par, 'parent'))
+                for pa in sm.get('partners') or []:
+                    if pa[1] in ('Spouse', 'Partner', 'Engaged'): links.append((sm.get('id'), pa[0], pa[1].lower()))
+    away = {(r['world'], r['household']) for r in out['households'] if r['state'] == 'not in the save'}
+    groups = {}
+    def find_(x):
+        while groups.get(x, x) != x: x = groups[x]
+        return x
+    joined = []
+    for a_, b_, kind in links:
+        ha, hb = hh_of.get(a_), hh_of.get(b_)
+        if not ha or not hb or ha == hb or not (ha in away or hb in away): continue
+        groups.setdefault(ha, ha); groups.setdefault(hb, hb); groups[find_(ha)] = find_(hb); joined.append((ha, hb, a_, b_, kind))
+    comp = {}
+    for h_ in groups: comp.setdefault(find_(h_), set()).add(h_)
+    size = lambda h_: len([x for x in D['households'][h_[0]][h_[1]].get('sims', []) if x.get('state') not in ('Cat', 'Dog', 'Horse', 'Fox')])
+    out['saveTogether'] = [{"households": sorted(f"{h_[1]} ({h_[0]})" for h_ in c), "sims": sum(size(h_) for h_ in c),
+                            "pairs": sorted({(f"{hb_[1]} with {name_of.get(a2, a2)}" if kind == 'parent' else f"{ha_[1]} with {name_of.get(b2, b2)}") for ha_, hb_, a2, b2, kind in joined if find_(ha_) == k})} for k, c in comp.items() if len(c) > 1]
     # lots still to place: who the game will move out when she places over them, and where the plan wants them
     plan_of_sim = {}
     home_of = {(r['world'], r['household']): r['lot'] + (f" unit {r['unit']}" if r['unit'] else '') for r in out['households']}
@@ -299,6 +327,12 @@ def main():
     if out['squatters']:
         L += ["## Living where the plan doesn’t put them", "", "On one of your placed lots, but planned elsewhere (or nowhere): move them out.", ""]
         L += [f"- {q['world']} / {q['lot']}: {q['household']} ({', '.join(q['sims'])})" for q in out['squatters']] + [""]
+    if out['saveTogether']:
+        L += ["## Save these together", "", "Family links to Sims in another household are lost when a household comes from the Library. Save each group as one household (8 Sims at most), place it, then split it:", ""]
+        for g in out['saveTogether']:
+            if g['sims'] <= 8: L.append(f"- {' + '.join(g['households'])} ({g['sims']} Sims)")
+            else: L.append(f"- {' + '.join(g['households'])}: {g['sims']} Sims, too many for one household. Bring each family over with its relative from the other household instead ({'; '.join(g['pairs'])}), then split them off and merge them back into their own household in the new save, which keeps the links.")
+        L.append("")
     if out['ahead']:
         L += ["## Living on lots still to place", "", "The game moves them out when you place your build. Where the plan wants them:", ""]
         L += [f"- {q['world']} / {q['lot']}: {q['household']} → {q['goes']}" for q in out['ahead']] + [""]

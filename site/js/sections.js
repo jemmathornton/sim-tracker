@@ -204,6 +204,7 @@ function admNewSave(){
     if (lib.length) bits.push(`<b>Bring in:</b> ` + lib.map(m => `${esc(m.household)} → ${esc(m.to)}${esc(short(m.how))}`).join(", "));
     return `<li><span><b>${esc(w.world)}</b></span><span class="w">${w.placed ? w.placed + " placed" : "not started"}</span>${bits.length ? bits.map(b => `<small>${b}</small>`).join("") : `<small>All placed as planned, everyone home.</small>`}</li>`; };
   return `<h3 class="adm-sub">New <em>save</em><small>saved ${esc(when)}</small></h3><ul class="adm-list">${N.worlds.map(li).join("")}</ul>`
+    + ((N.together || []).length ? `<ul class="adm-list">${N.together.map(g => `<li><span><b>Save together:</b> ${esc(g.households.join(" + "))}</span><span class="w">${g.sims} Sims</span><small>${g.sims <= 8 ? "Family links to another household are lost through the Library: save them as one household, place it, then split it." : `Too many for one household: bring each family with its relative (${esc(g.pairs.join("; "))}), then split and merge in the new save.`}</small></li>`).join("")}</ul>` : "")
     + (N.notStarted.length ? `<p class="adm-plain">Not started: ${esc(N.notStarted.join(", "))}.</p>` : "");
 }
 function admGame(){   // her list (for-jemma/your-list.md: one list, Do or Decide, 23 Oct), with the data checks on top when something is out of step (merged, her idea, 23 Oct)

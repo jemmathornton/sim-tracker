@@ -1229,6 +1229,43 @@ window.ADMIN = {
 "fix": []
 }
 },
+"together": [
+{
+"households": [
+"Leah-Moon Cadberry (Oasis Springs)",
+"Sylvia & Kenny Cadberry (Newcrest)"
+],
+"sims": 3,
+"pairs": [
+"Leah-Moon Cadberry with Sylvia Cadberry"
+]
+},
+{
+"households": [
+"Davidson 1 (Willow Creek)",
+"Kopf (Willow Creek)",
+"Livin' In The City (San Myshuno)",
+"Reynolds (Willow Creek)"
+],
+"sims": 15,
+"pairs": [
+"Davidson 1 with Lisa Davidson",
+"Kopf with Lucy Kopf",
+"Reynolds with Alfie Reynolds"
+]
+},
+{
+"households": [
+"Pleasant (Britechester)",
+"Pleasant (Windenburg)"
+],
+"sims": 4,
+"pairs": [
+"Pleasant with Angela Pleasant",
+"Pleasant with Lilith Pleasant"
+]
+}
+],
 "worlds": [
 {
 "world": "Willow Creek",
