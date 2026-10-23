@@ -1,5 +1,7 @@
 # New save: how to build it (22–23 Oct)
 
+> **Corrections from the first night in the new save (24 Oct; research/rentals-and-apartments-placing.md, research/new-save-glitches.md, tools/research/new_save_check.py):** a placed lot brings its own uploaded type, so setting the empty lot's type first doesn't help: check the type after placing (Carpophagous Corner came in as Residential). Unit traits often don't survive placing (copied from unit 1, or shifted): set them after. The "content not owned" warning was false on every lot checked. Households from the Library keep family links only with Sims in the same household.
+
 **At a glance**
 1. Set the options first (Neighbourhood Stories Move In/Out off, ageing, 28-day seasons), then heart and evict premades, then place lots, then move households in.
 2. Before placing a lot, set the empty lot’s type to your plan’s type. Rentals need this most: the game won’t turn a lot into a Residential Rental for you.
