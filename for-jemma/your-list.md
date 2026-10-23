@@ -30,6 +30,7 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 
 **Newcrest**
 - **Do:** Asphalt Abodes gave a “content not owned” warning in the new save (23 Oct): look for missing items and replace them.
+- **Do:** Optimist’s Outlook gave the same warning (23 Oct): look for missing items and replace them.
 
 **Magnolia Promenade**
 - **Do:** Magnolia Mall, when you build it: coffee, a wardrobe or racks, things to sabotage (Paragons, Renegades).
