@@ -2,7 +2,7 @@
 
 Made by tools/research/new_save_check.py from a copy of the save. Lots: placed / to place / the game’s lot; anything that differs from the plan is listed. Households: who isn’t home yet.
 
-**At a glance:** 89 lots placed in 11 worlds; 56 shared lots still to place. 48 households at home, 47 to move, 26 not in the save yet.
+**At a glance:** 91 lots placed in 11 worlds; 76 shared lots still to place. 48 households at home, 47 to move, 26 not in the save yet.
 
 ## Willow Creek
 
@@ -59,7 +59,7 @@ Made by tools/research/new_save_check.py from a copy of the save. Lots: placed /
 
 ## San Myshuno
 
-- **To place:** Waterside Warble, Skye Fitness
+- **To place:** 17 Culpepper House, 18 Culpepper House, 19 Culpepper House, Fraternity Apartment, Sorority Apartment, Waterside Warble, 920 Medina Studios, 930 Medina Studios, 122 Hakim House, 1310 21 Chic Street, 1010 Alto Apartments, Skye Fitness, Stargazer
 - **Move Bheeda** to 920 Medina Studios (now: 2A Jasmine Suites)
 - **Livin' In The City** for 930 Medina Studios: bring from your Library
 - **Move Santiago Ojo** to FountainView Penthouse (now: 701 ZenView)
@@ -105,6 +105,14 @@ Made by tools/research/new_save_check.py from a copy of the save. Lots: placed /
 
 - **Brooks Bridge:** named “Brooks Bridge [Puzzle]” in the save
 - **Move Amicable Acolytes** to Brooks Bridge (now: no home)
+
+## Traits the site doesn’t show yet
+
+In the new save but not on the site (read in once the save is set up):
+
+- Oasis Springs / Desert Bloom: Great Soil, Reduce and Recycle, Quake Zone
+- Newcrest / Asphalt Abodes: Good Schools, Homey, Sunny Aspect
+- Glimmerbrook / Brooks Bridge: Spooky, Homey
 
 ## Not started
 

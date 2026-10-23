@@ -14,7 +14,8 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 - **Do:** Factory One: add Party Place and Great Acoustics.
 - **Do:** Place Brindleton Boathouse and Hindquarter Hideaway (Brindleton Bay).
 - **Do:** Households moved out while placing builds: once the builds are in, Claude lists who goes back where (from the save against the plan), and you move them in.
-- **Do:** The game crashed placing the first Britechester lot (23 Oct): try that lot again, or tell Claude which one it was.
+- **Do:** The game crashed placing the first Britechester lot (23 Oct). Next try: save first, then place it from inside the lot in Build mode; if it crashes again, close the game and delete localthumbcache.package (Documents\Electronic Arts\The Sims 4; the game remakes it). Tell Claude which lot it was.
+- **Decide:** Lagoon of Love: Wedding Venue (Claude’s pick: your Gallery text calls it a beach wedding spot, Sulani has none, and it needs no pack), Park, or Vacation Rental (the upload has no beds)?
 - **Decide:** Spooky on The Narwhal Arms and Von-Windenburg Castle, Simple Living on Coorinberg Cottage and Rustic Residence: keep (Claude adds them to the plan) or take off?
 
 ## Game options

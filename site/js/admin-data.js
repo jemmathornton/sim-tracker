@@ -205,7 +205,12 @@ window.ADMIN = {
 {
 "section": "New save fixes (from Claude's checks, 23 Oct)",
 "world": "",
-"text": "**Do:** The game crashed placing the first Britechester lot (23 Oct): try that lot again, or tell Claude which one it was."
+"text": "**Do:** The game crashed placing the first Britechester lot (23 Oct). Next try: save first, then place it from inside the lot in Build mode; if it crashes again, close the game and delete localthumbcache.package (Documents\\Electronic Arts\\The Sims 4; the game remakes it). Tell Claude which lot it was."
+},
+{
+"section": "New save fixes (from Claude's checks, 23 Oct)",
+"world": "",
+"text": "**Decide:** Lagoon of Love: Wedding Venue (Claude’s pick: your Gallery text calls it a beach wedding spot, Sulani has none, and it needs no pack), Park, or Vacation Rental (the upload has no beds)?"
 },
 {
 "section": "New save fixes (from Claude's checks, 23 Oct)",
@@ -514,7 +519,7 @@ window.ADMIN = {
 "worlds": [
 {
 "world": "Willow Creek",
-"placed": 12,
+"placed": 13,
 "toPlace": [],
 "fixes": [],
 "move": [
@@ -576,7 +581,7 @@ window.ADMIN = {
 },
 {
 "world": "Oasis Springs",
-"placed": 16,
+"placed": 17,
 "toPlace": [
 "Springscape"
 ],
@@ -770,8 +775,19 @@ window.ADMIN = {
 "world": "San Myshuno",
 "placed": 1,
 "toPlace": [
+"17 Culpepper House",
+"18 Culpepper House",
+"19 Culpepper House",
+"Fraternity Apartment",
+"Sorority Apartment",
 "Waterside Warble",
-"Skye Fitness"
+"920 Medina Studios",
+"930 Medina Studios",
+"122 Hakim House",
+"1310 21 Chic Street",
+"1010 Alto Apartments",
+"Skye Fitness",
+"Stargazer"
 ],
 "fixes": [],
 "move": [

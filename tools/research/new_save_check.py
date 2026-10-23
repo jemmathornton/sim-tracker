@@ -8,7 +8,7 @@ lot traits and challenges against the plan, rental units and their traits, the C
 Then every household on the site with Sims: where it lives in the save, and where the plan puts it (tenants into their
 units), so the ones moved out while she placed builds can go back. Saves are read from temporary copies. Report only.
 """
-import json, os, re, shutil, sys, tempfile, time
+import json, os, re, shutil, sys, tempfile, time, unicodedata
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 import sims4files as s4
 from common import ROOT, DATA, load, save
@@ -85,10 +85,18 @@ def main():
     D = plan()
     by_lot = {}
     for zid, z in zones.items(): by_lot.setdefault((z['world'], z['lot_id']), []).append((zid, z))
-    game_name = {}   # (world, game lot name) -> lot id, from the baseline (the game's own names)
+    loose = lambda s: re.sub(r'[^a-z0-9]', '', unicodedata.normalize('NFKD', norm(s)).encode('ascii', 'ignore').decode())
+    by_name = {}   # (world, game name, loosely) -> [(lot id, plex)], from the baseline (the game's own names; apartments are plex units)
     for k, v in base.items():
-        w, lid, plex = k.split('|')
-        if plex in ('0', '300'): game_name[(w, norm(v['name']))] = int(lid)
+        w, lid, plex = k.split('|'); by_name.setdefault((w, loose(v['name'])), []).append((int(lid), int(plex)))
+    def locate(wn, names):
+        for n in names:
+            hit = by_name.get((wn, loose(n)))
+            if hit: return min(hit, key=lambda x: x[1] not in (0, 300))
+        for n in names:   # "Desert Bloom Park" is "Desert Bloom" in the game
+            near = [v for (w, k), v in by_name.items() if w == wn and len(loose(n)) > 6 and (k.startswith(loose(n)) or loose(n).startswith(k)) and len(k) > 6]
+            if len(near) == 1: return min(near[0], key=lambda x: x[1] not in (0, 300))
+        return None
     out = {"save": fname, "saved": time.strftime('%Y-%m-%d %H:%M', time.localtime(mtime)), "worlds": {}, "households": []}
     lot_zone = {}   # (world, game lot) -> {unit name or '': zone id}
     for w in D['worlds']:
@@ -98,15 +106,17 @@ def main():
             for l in h['lots']:
                 key = f"{wn}|{l['lot']}"
                 shown = D['nameFix'].get(key) or (l.get('gallery') or {}).get('title') or (l['mine'] if l.get('mine') and l['mine'].strip('? ') else None) or l['lot']
-                lid = game_name.get((wn, norm(l['lot'])))
+                hit = locate(wn, [l['lot'], shown, l.get('mine') or ''])
                 r = {"lot": l['lot'], "name": shown, "hood": h['name'], "built": l['built'], "shared": l['shared'], "type": l.get('type'), "issues": []}
-                if lid is None: r['status'] = 'not found'; rows.append(r); continue
+                if hit is None: r['status'] = 'not found'; rows.append(r); continue
+                lid, plex = hit
                 zs = sorted(by_lot.get((wn, lid), []), key=lambda x: x[1]['plex'])
+                if plex not in (0, 300): zs = [x for x in zs if x[1]['plex'] == plex]   # an apartment: its own unit only
                 main = next((z for zid, z in zs if z['plex'] in (0, 300)), zs[0][1] if zs else None)
                 units = [(zid, z) for zid, z in zs if z['plex'] > 300]
                 b = base.get(f"{wn}|{lid}|{main['plex']}", {}) if main else {}
                 n_objs = sum(z['objs'] for _, z in zs)
-                b_objs = sum(v['objs'] for k, v in base.items() if k.startswith(f"{wn}|{lid}|"))
+                b_objs = sum(v['objs'] for k, v in base.items() if k.startswith(f"{wn}|{lid}|") and (plex in (0, 300) or k == f"{wn}|{lid}|{plex}"))
                 placed = bool(main) and (n_objs != b_objs or norm(main['name']) != norm(b.get('name')))
                 r.update(save_name=main['name'] if main else None, placed=placed, objs=n_objs, game_objs=b_objs)
                 lot_zone[(wn, l['lot'])] = {'': zs[0][0] if zs else None, **{str(z['plex'] - 300): zid for zid, z in units}}
@@ -132,6 +142,8 @@ def main():
                         if not zid: continue
                         got = set(zones[zid]['traits']); need = set(u.get('traits') or [])
                         if need - got: r['issues'].append(f"unit {u['name']}: wants {', '.join(sorted(need))}, has {', '.join(sorted(got)) or 'none'}")
+                    if not (l.get('traits') or l.get('challenges')) and not units and main['traits']:
+                        r['newTraits'] = [t for t in main['traits'] if t not in MOD_TRAITS.values()]   # the site has none yet: ready to read in
                     cv = D['csVersions'].get(key)
                     if cv and main.get('subs'):
                         act = SUBVENUES.get(main['subs'][main.get('active') or 0], '?')
@@ -208,6 +220,10 @@ def main():
             if h['state'] == 'move': L.append(f"- **Move {h['household']}** to {to} (now: {h['now']}{'; ' + h['note'] if h.get('note') else ''})")
             else: L.append(f"- **{h['household']}** for {to}: {h['how']}")
         L.append("")
+    nt = [(wn, r) for wn, rows in out['worlds'].items() for r in rows if r.get('newTraits')]
+    if nt:
+        L += ["## Traits the site doesn’t show yet", "", "In the new save but not on the site (read in once the save is set up):", ""]
+        L += [f"- {wn} / {r['name']}: {', '.join(r['newTraits'])}" for wn, r in nt] + [""]
     rest = [wn for wn in out['worlds'] if wn not in worlds_done]
     if rest: L += ["## Not started", "", ", ".join(rest), ""]
     open(os.path.join(ROOT, 'research', 'new-save-status.md'), 'w', encoding='utf-8').write("\n".join(L))

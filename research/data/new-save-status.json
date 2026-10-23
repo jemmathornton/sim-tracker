@@ -301,7 +301,11 @@
     "shared": true,
     "type": "Park",
     "issues": [],
-    "status": "not found"
+    "save_name": "Magnolia Blossom Park",
+    "placed": true,
+    "objs": 595,
+    "game_objs": 281,
+    "status": "placed"
    }
   ],
   "Oasis Springs": [
@@ -593,7 +597,12 @@
     "shared": true,
     "type": "Park",
     "issues": [],
-    "status": "not found"
+    "save_name": "Desert Bloom",
+    "placed": true,
+    "objs": 312,
+    "game_objs": 248,
+    "status": "placed",
+    "newTraits": ["Great Soil", "Reduce and Recycle", "Quake Zone"]
    },
    {
     "lot": "Forgotten Grotto",
@@ -745,7 +754,8 @@
     "placed": true,
     "objs": 520,
     "game_objs": 0,
-    "status": "placed"
+    "status": "placed",
+    "newTraits": ["Good Schools", "Homey", "Sunny Aspect"]
    },
    {
     "lot": "Sandy Run",
@@ -1305,7 +1315,11 @@
     "shared": false,
     "type": "Chalet Gardens",
     "issues": [],
-    "status": "not found"
+    "save_name": "Von Haunt Estate",
+    "placed": false,
+    "objs": 407,
+    "game_objs": 407,
+    "status": "game lot"
    },
    {
     "lot": "The Lighthouse",
@@ -1401,7 +1415,11 @@
     "shared": true,
     "type": "Apartment",
     "issues": [],
-    "status": "not found"
+    "save_name": "17 Culpepper House",
+    "placed": false,
+    "objs": 0,
+    "game_objs": 0,
+    "status": "to place"
    },
    {
     "lot": "18 Culpepper House",
@@ -1411,7 +1429,11 @@
     "shared": true,
     "type": "Apartment",
     "issues": [],
-    "status": "not found"
+    "save_name": "18 Culpepper House",
+    "placed": false,
+    "objs": 0,
+    "game_objs": 0,
+    "status": "to place"
    },
    {
     "lot": "19 Culpepper House",
@@ -1421,7 +1443,11 @@
     "shared": true,
     "type": "Apartment",
     "issues": [],
-    "status": "not found"
+    "save_name": "19 Culpepper House",
+    "placed": false,
+    "objs": 0,
+    "game_objs": 0,
+    "status": "to place"
    },
    {
     "lot": "20 Culpepper House",
@@ -1431,7 +1457,11 @@
     "shared": false,
     "type": "Apartment",
     "issues": [],
-    "status": "not found"
+    "save_name": "20 Culpepper House",
+    "placed": false,
+    "objs": 335,
+    "game_objs": 335,
+    "status": "game lot"
    },
    {
     "lot": "2A Jasmine Suites",
@@ -1441,7 +1471,11 @@
     "shared": true,
     "type": "Apartment",
     "issues": [],
-    "status": "not found"
+    "save_name": "2A Jasmine Suites",
+    "placed": false,
+    "objs": 0,
+    "game_objs": 0,
+    "status": "to place"
    },
    {
     "lot": "2B Jasmine Suites",
@@ -1451,7 +1485,11 @@
     "shared": true,
     "type": "Apartment",
     "issues": [],
-    "status": "not found"
+    "save_name": "2B Jasmine Suites",
+    "placed": false,
+    "objs": 142,
+    "game_objs": 142,
+    "status": "to place"
    },
    {
     "lot": "The Old Salt House",
@@ -1489,7 +1527,11 @@
     "shared": false,
     "type": "Apartment",
     "issues": [],
-    "status": "not found"
+    "save_name": "910 Medina Studios",
+    "placed": false,
+    "objs": 0,
+    "game_objs": 0,
+    "status": "game lot"
    },
    {
     "lot": "920 Medina Studios",
@@ -1499,7 +1541,11 @@
     "shared": true,
     "type": "Apartment",
     "issues": [],
-    "status": "not found"
+    "save_name": "920 Medina Studios",
+    "placed": false,
+    "objs": 0,
+    "game_objs": 0,
+    "status": "to place"
    },
    {
     "lot": "930 Medina Studios",
@@ -1509,7 +1555,11 @@
     "shared": true,
     "type": "Apartment",
     "issues": [],
-    "status": "not found"
+    "save_name": "930 Medina Studios",
+    "placed": false,
+    "objs": 294,
+    "game_objs": 294,
+    "status": "to place"
    },
    {
     "lot": "121 Hakim House",
@@ -1519,7 +1569,11 @@
     "shared": false,
     "type": "Apartment",
     "issues": [],
-    "status": "not found"
+    "save_name": "121 Hakim House",
+    "placed": false,
+    "objs": 0,
+    "game_objs": 0,
+    "status": "game lot"
    },
    {
     "lot": "122 Hakim House",
@@ -1529,7 +1583,11 @@
     "shared": true,
     "type": "Apartment",
     "issues": [],
-    "status": "not found"
+    "save_name": "122 Hakim House",
+    "placed": false,
+    "objs": 367,
+    "game_objs": 367,
+    "status": "to place"
    },
    {
     "lot": "FountainView Penthouse",
@@ -1539,7 +1597,11 @@
     "shared": false,
     "type": "Penthouse",
     "issues": [],
-    "status": "not found"
+    "save_name": "Fountainview Penthouse",
+    "placed": false,
+    "objs": 184,
+    "game_objs": 184,
+    "status": "game lot"
    },
    {
     "lot": "Casbah Gallery",
@@ -1563,7 +1625,11 @@
     "shared": false,
     "type": "Apartment",
     "issues": [],
-    "status": "not found"
+    "save_name": "701 ZenView",
+    "placed": false,
+    "objs": 309,
+    "game_objs": 309,
+    "status": "game lot"
    },
    {
     "lot": "702 ZenView",
@@ -1573,7 +1639,11 @@
     "shared": false,
     "type": "Apartment",
     "issues": [],
-    "status": "not found"
+    "save_name": "702 ZenView",
+    "placed": false,
+    "objs": 0,
+    "game_objs": 0,
+    "status": "game lot"
    },
    {
     "lot": "1310 21 Chic Street",
@@ -1583,7 +1653,11 @@
     "shared": true,
     "type": "Apartment",
     "issues": [],
-    "status": "not found"
+    "save_name": "1310 21 Chic Street",
+    "placed": false,
+    "objs": 241,
+    "game_objs": 241,
+    "status": "to place"
    },
    {
     "lot": "1312 21 Chic Street",
@@ -1593,7 +1667,11 @@
     "shared": false,
     "type": "Apartment",
     "issues": [],
-    "status": "not found"
+    "save_name": "1312 21 Chic Street",
+    "placed": false,
+    "objs": 0,
+    "game_objs": 0,
+    "status": "game lot"
    },
    {
     "lot": "1313 21 Chic Street",
@@ -1603,7 +1681,11 @@
     "shared": false,
     "type": "Apartment",
     "issues": [],
-    "status": "not found"
+    "save_name": "1313 21 Chic Street",
+    "placed": false,
+    "objs": 0,
+    "game_objs": 0,
+    "status": "game lot"
    },
    {
     "lot": "Torendi Tower Penthouse",
@@ -1637,7 +1719,11 @@
     "shared": true,
     "type": "Apartment",
     "issues": [],
-    "status": "not found"
+    "save_name": "1010 Alto Apartments",
+    "placed": false,
+    "objs": 0,
+    "game_objs": 0,
+    "status": "to place"
    },
    {
     "lot": "1020 Alto Apartments",
@@ -1647,7 +1733,11 @@
     "shared": false,
     "type": "Apartment",
     "issues": [],
-    "status": "not found"
+    "save_name": "1020 Alto Apartments",
+    "placed": false,
+    "objs": 453,
+    "game_objs": 453,
+    "status": "game lot"
    },
    {
     "lot": "VIII Landgraab Apartments",
@@ -1657,7 +1747,11 @@
     "shared": false,
     "type": "Apartment",
     "issues": [],
-    "status": "not found"
+    "save_name": "VIII Landgraab",
+    "placed": false,
+    "objs": 491,
+    "game_objs": 491,
+    "status": "game lot"
    },
    {
     "lot": "IX Landgraab Apartments",
@@ -1667,7 +1761,11 @@
     "shared": false,
     "type": "Apartment",
     "issues": [],
-    "status": "not found"
+    "save_name": "IX Landgraab",
+    "placed": false,
+    "objs": 0,
+    "game_objs": 0,
+    "status": "game lot"
    },
    {
     "lot": "888 Spire Apartments",
@@ -1677,7 +1775,11 @@
     "shared": false,
     "type": "Apartment",
     "issues": [],
-    "status": "not found"
+    "save_name": "888 Spire Apartments",
+    "placed": false,
+    "objs": 319,
+    "game_objs": 319,
+    "status": "game lot"
    },
    {
     "lot": "Skye Fitness",
@@ -1701,7 +1803,11 @@
     "shared": true,
     "type": "Nightclub",
     "issues": [],
-    "status": "not found"
+    "save_name": "Stargazer Lounge",
+    "placed": false,
+    "objs": 290,
+    "game_objs": 290,
+    "status": "to place"
    },
    {
     "lot": "Myshuno Meadows",
@@ -1769,7 +1875,11 @@
     "shared": true,
     "type": "Bar",
     "issues": [],
-    "status": "not found"
+    "save_name": "Cantina “El Árbol del Jaguar”",
+    "placed": false,
+    "objs": 266,
+    "game_objs": 266,
+    "status": "to place"
    },
    {
     "lot": "Belomisia Trailhead",
@@ -2217,7 +2327,11 @@
     "shared": "N/A",
     "type": "Acting Studio",
     "issues": [],
-    "status": "not found"
+    "save_name": "Plumbob Pictures Museum",
+    "placed": false,
+    "objs": 345,
+    "game_objs": 345,
+    "status": "game lot"
    }
   ],
   "StrangerVille": [
@@ -2639,7 +2753,8 @@
     "placed": true,
     "objs": 473,
     "game_objs": 53,
-    "status": "placed"
+    "status": "placed",
+    "newTraits": ["Spooky", "Homey"]
    },
    {
     "lot": "Elixirs and Brews",
@@ -2703,7 +2818,11 @@
     "shared": true,
     "type": "University Housing",
     "issues": [],
-    "status": "not found"
+    "save_name": "Drake Hall",
+    "placed": false,
+    "objs": 218,
+    "game_objs": 218,
+    "status": "to place"
    },
    {
     "lot": "Wyvern Hall",
@@ -2713,7 +2832,11 @@
     "shared": true,
     "type": "University Housing",
     "issues": [],
-    "status": "not found"
+    "save_name": "Wyvern Hall",
+    "placed": false,
+    "objs": 216,
+    "game_objs": 216,
+    "status": "to place"
    },
    {
     "lot": "Larry's Lagoon",
@@ -2751,7 +2874,11 @@
     "shared": true,
     "type": "University Housing",
     "issues": [],
-    "status": "not found"
+    "save_name": "Tidal Tower",
+    "placed": false,
+    "objs": 155,
+    "game_objs": 155,
+    "status": "to place"
    },
    {
     "lot": "Briny Tower",
@@ -2761,7 +2888,11 @@
     "shared": true,
     "type": "University Housing",
     "issues": [],
-    "status": "not found"
+    "save_name": "Briny Tower",
+    "placed": false,
+    "objs": 157,
+    "game_objs": 157,
+    "status": "to place"
    },
    {
     "lot": "Honeydew Fields",
@@ -2871,7 +3002,11 @@
     "shared": true,
     "type": "Apartment",
     "issues": [],
-    "status": "not found"
+    "save_name": "Stonestreet Apartments #3",
+    "placed": false,
+    "objs": 131,
+    "game_objs": 131,
+    "status": "to place"
    },
    {
     "lot": "Stonestreet Apartments #4",
@@ -2881,7 +3016,11 @@
     "shared": true,
     "type": "Apartment",
     "issues": [],
-    "status": "not found"
+    "save_name": "Stonestreet Apartments #4",
+    "placed": false,
+    "objs": 0,
+    "game_objs": 0,
+    "status": "to place"
    },
    {
     "lot": "The Quarry Building",
@@ -2947,7 +3086,11 @@
     "shared": false,
     "type": "Apartment",
     "issues": [],
-    "status": "not found"
+    "save_name": "Pinecrest Apartments #402",
+    "placed": false,
+    "objs": 0,
+    "game_objs": 0,
+    "status": "game lot"
    },
    {
     "lot": "Pinecrest Apartments #404",
@@ -2957,7 +3100,11 @@
     "shared": true,
     "type": "Apartment",
     "issues": [],
-    "status": "not found"
+    "save_name": "Pinecrest Apartments #404",
+    "placed": false,
+    "objs": 159,
+    "game_objs": 159,
+    "status": "to place"
    },
    {
     "lot": "The Old Mill",
@@ -3433,7 +3580,11 @@
     "shared": false,
     "type": "National Park",
     "issues": [],
-    "status": "not found"
+    "save_name": "Isle of Volpe Park",
+    "placed": false,
+    "objs": 203,
+    "game_objs": 203,
+    "status": "game lot"
    }
   ],
   "Copperdale": [
@@ -3997,7 +4148,11 @@
     "shared": true,
     "type": "Thrift and Boba Store",
     "issues": [],
-    "status": "not found"
+    "save_name": "Chee-wít Chee-waa Kanto",
+    "placed": false,
+    "objs": 81,
+    "game_objs": 81,
+    "status": "to place"
    },
    {
     "lot": "ZoSul Taman Botani",
@@ -4669,7 +4824,11 @@
     "shared": false,
     "type": "Apartment",
     "issues": [],
-    "status": "not found"
+    "save_name": "17 Bright Cliff",
+    "placed": false,
+    "objs": 303,
+    "game_objs": 303,
+    "status": "game lot"
    },
    {
     "lot": "18 Bright Cliff",
@@ -4679,7 +4838,11 @@
     "shared": false,
     "type": "Apartment",
     "issues": [],
-    "status": "not found"
+    "save_name": "18 Bright Cliff",
+    "placed": false,
+    "objs": 0,
+    "game_objs": 0,
+    "status": "game lot"
    },
    {
     "lot": "Hardcover",
@@ -4829,7 +4992,11 @@
     "shared": false,
     "type": "Apartment",
     "issues": [],
-    "status": "not found"
+    "save_name": "12 Lakeview Apartments",
+    "placed": false,
+    "objs": 620,
+    "game_objs": 620,
+    "status": "game lot"
    },
    {
     "lot": "13 Lakeview Apartments",
@@ -4839,7 +5006,11 @@
     "shared": false,
     "type": "Apartment",
     "issues": [],
-    "status": "not found"
+    "save_name": "13 Lakeview Apartments",
+    "placed": false,
+    "objs": 0,
+    "game_objs": 0,
+    "status": "game lot"
    },
    {
     "lot": "La Vivace",
