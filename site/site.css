@@ -1009,6 +1009,7 @@ details.adm-more summary{cursor:pointer;font-weight:700;font-size:14px;color:var
 /* trial switch (24 Oct, overnight; js/sections.js, the New save column): remove with the trial */
 .trial-switch{position:fixed;right:18px;bottom:18px;z-index:60;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:16px;padding:12px 14px;box-shadow:0 10px 30px rgba(0,0,0,.18);display:grid;gap:8px;font-size:13px;max-width:430px}
 .trial-switch[hidden]{display:none}
+.adm-list .ns-why{text-decoration:underline dotted;cursor:help}
 .trial-switch div{display:flex;flex-wrap:wrap;gap:6px}
 .trial-switch button{border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:5px 11px;cursor:pointer;font-weight:600;font-size:12.5px;color:var(--ink)}
 .trial-switch button.on{background:var(--brass);border-color:var(--brass);color:#fff}

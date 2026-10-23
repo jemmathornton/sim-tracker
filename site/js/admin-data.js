@@ -1285,6 +1285,47 @@ window.ADMIN = {
 "only 1 household in My Households (hearted): heart your planned ones, homeless families first (the game culls Sims outside My Households)",
 "holidays: still the game's own calendar (checklist step 3)"
 ],
+"fromSaves": [
+{
+"save": "Rotational",
+"households": [
+"Barraza",
+"Davidson 1",
+"Kopf",
+"LeBlanc",
+"Livin' In The City",
+"Reynolds"
+]
+},
+{
+"save": "Season Events",
+"households": [
+"Bridges",
+"Donovan",
+"Washburn",
+"Winters"
+]
+},
+{
+"save": "Not So Berry",
+"households": [
+"Rochana",
+"Sylvia & Kenny Cadberry"
+]
+},
+{
+"save": "Will the port be Promising?",
+"households": [
+"Henley"
+]
+},
+{
+"save": "Horses!",
+"households": [
+"Palumbo"
+]
+}
+],
 "worlds": [
 {
 "world": "Willow Creek",
@@ -1296,7 +1337,7 @@ window.ADMIN = {
 "household": "Davidson 1",
 "to": "Streamlet Single",
 "now": null,
-"how": "from your Library (your Library copy differs from the site: check ages and Sims)",
+"how": "the site’s version is in your “Rotational” save: save it to your Library from there (your Library copy differs: not in Library copy: George Davidson, Ray Davidson; age differs: Evelyn Davidson (Young Adult in Library, Elder on site). The site’s Sims are from “Rotational” (2023-12-21))",
 "occupied": null,
 "note": null
 },
@@ -1312,7 +1353,7 @@ window.ADMIN = {
 "household": "Winters",
 "to": "Daisy Hovel",
 "now": null,
-"how": "from your Library (your Library copy differs from the site: check ages and Sims)",
+"how": "the site’s version is in your “Season Events” save: save it to your Library from there (your Library copy differs: not in Library copy: Noel Winters, Savanna Winters; extra in Library copy: Anna Winters; age differs: Teddy Winters (Toddler in Library, Child on site). The site’s Sims are from “Season Events” (2026-03-15))",
 "occupied": null,
 "note": null
 },
@@ -1320,7 +1361,7 @@ window.ADMIN = {
 "household": "Reynolds",
 "to": "Potters Splay",
 "now": null,
-"how": "from your Library (your Library copy differs from the site: check ages and Sims)",
+"how": "the site’s version is in your “Rotational” save: save it to your Library from there (your Library copy differs: not in Library copy: Lucie Reynolds, Melanie Reynolds, Rosie Reynolds; age differs: Britney Reynolds (Young Adult in Library, Elder on site), Joe Reynolds (Young Adult in Library, Elder on site). The site’s Sims are from “Rotational” (2023-12-21))",
 "occupied": null,
 "note": null
 },
@@ -1360,7 +1401,7 @@ window.ADMIN = {
 "household": "Barraza",
 "to": "Oakenstead",
 "now": null,
-"how": "from your Library (your Library copy differs from the site: check ages and Sims)",
+"how": "the site’s version is in your “Rotational” save: save it to your Library from there (your Library copy differs: not in Library copy: Daniel Barraza, David Barraza, Vivienne Barraza; age differs: Alexa Barraza (Young Adult in Library, Adult on site), Simon Barraza (Young Adult in Library, Adult on site). The site’s Sims are from “Rotational” (2023-12-21))",
 "occupied": null,
 "note": null
 }
@@ -1379,7 +1420,7 @@ window.ADMIN = {
 "household": "Leah-Moon Cadberry",
 "to": "Nookstone",
 "now": null,
-"how": "from your Library (your Library copy differs from the site: check ages and Sims)",
+"how": "from your Library (your Library copy differs from the site: extra in Library copy: Sterling Cadberry, Sylvia Cadberry. The site’s Sims are from Library (2025-06-22))",
 "occupied": null,
 "note": null
 },
@@ -1520,7 +1561,7 @@ window.ADMIN = {
 "household": "Kirkland",
 "to": "Twin Oracle Point",
 "now": null,
-"how": "from your Library (your Library copy differs from the site: check ages and Sims)",
+"how": "from your Library (your Library copy differs from the site: site has no Sims yet. Same Kirklands as Newcrest’s Fern Park Flats?)",
 "occupied": null,
 "note": null
 },
@@ -1536,7 +1577,7 @@ window.ADMIN = {
 "household": "Sylvia & Kenny Cadberry",
 "to": "Asphalt Abodes",
 "now": null,
-"how": "from your Library (your Library copy differs from the site: check ages and Sims)",
+"how": "the site’s version is in your “Not So Berry” save: save it to your Library from there (your Library copy differs: extra in Library copy: Hyacinth Cadberry, Plum-Bob Cadberry; age differs: Kenny Cadberry (Adult in Library, Elder on site). The site’s Sims are from “Not So Berry” (2025-10-11))",
 "occupied": null,
 "note": null
 }

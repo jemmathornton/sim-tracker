@@ -190,7 +190,12 @@ def main():
         if k and k[0] == 'd': return "not in any save or your Library yet: make it"
         if any(re.search('Library|Gallery', s.get('from') or '') and (s.get('origin') or '') != 'Mine' for s in hh['sims']): return "Maxis’s Gallery copy: from your Library or the Gallery"
         if any((s.get('origin') or '').lower() == 'mine' or re.search('Library', s.get('from') or '') for s in hh['sims']):
-            return "from your Library" + (" (your Library copy differs from the site: check ages and Sims)" if k and k[0] == 'b' and not re.search(r'^(matches|same)', k[1], re.I) and k[1] not in ('–', '') else "")
+            differs = k and k[0] == 'b' and not re.search(r'^(matches|same)', k[1], re.I) and k[1] not in ('–', '')
+            src = next((x.get('from') for x in hh['sims'] if re.search(r'save “', x.get('from') or '')), None)
+            if differs and src:   # the site's Sims came from a save: that copy is the one to bring (save it to the Library from there)
+                sv = re.search(r'save “([^”]+)”', src).group(1)
+                return f"the site’s version is in your “{sv}” save: save it to your Library from there (your Library copy differs: {re.sub(r'[*`]', '', k[1])})"
+            return "from your Library" + (f" (your Library copy differs from the site: {re.sub(r'[*`]', '', k[1])})" if differs else "")
         return "not found by its Sims’ names (EA’s, maybe renamed)"
     zone_of_sim, members = {}, {}
     living = {}   # zone -> names of the save households living there
@@ -267,6 +272,12 @@ def main():
         names = {sims.get(i) for i in ids}
         if names and not names & planned_sims[z]:
             out['squatters'].append({"world": zones[z]['world'], "lot": zones[z]['name'], "household": h.get('name') or '?', "sims": sorted(n for n in names if n)})
+    # old saves to open once, and the households to save to the Library from each
+    by_save = {}
+    for r in out['households']:
+        m = re.search(r'(?:only in your|version is in your) “([^”]+)”', r.get('how') or '')
+        if m: by_save.setdefault(m.group(1), []).append(r['household'])
+    out['fromSaves'] = [{"save": k, "households": sorted(v)} for k, v in sorted(by_save.items(), key=lambda x: -len(x[1]))]
     # her own households joined by family (parents, partners) to Sims in another household: the Library keeps links only
     # inside one household, so save the family as one household, place it, then split it in the new save (research/moving-households.md)
     hh_of, links, name_of = {}, [], {}
@@ -368,6 +379,9 @@ def main():
     if out['squatters']:
         L += ["## Living where the plan doesn’t put them", "", "On one of your placed lots, but planned elsewhere (or nowhere): move them out.", ""]
         L += [f"- {q['world']} / {q['lot']}: {q['household']} ({', '.join(q['sims'])})" for q in out['squatters']] + [""]
+    if out['fromSaves']:
+        L += ["## Old saves to open", "", "Open each once, save these households to your Library, then add them in the new save:", ""]
+        L += [f"- “{g['save']}”: {', '.join(g['households'])}" for g in out['fromSaves']] + [""]
     if out['saveTogether']:
         L += ["## Save these together", "", "Family links to Sims in another household are lost when a household comes from the Library. Save each group as one household (8 Sims at most), place it, then split it:", ""]
         for g in out['saveTogether']:

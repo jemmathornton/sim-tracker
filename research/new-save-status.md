@@ -17,20 +17,20 @@ Made by tools/research/new_save_check.py from a copy of the save. Lots: placed /
 ## Willow Creek
 
 - All shared lots placed, all as planned.
-- **Davidson 1** for Streamlet Single: from your Library (your Library copy differs from the site: check ages and Sims)
+- **Davidson 1** for Streamlet Single: the site’s version is in your “Rotational” save: save it to your Library from there (your Library copy differs: not in Library copy: George Davidson, Ray Davidson; age differs: Evelyn Davidson (Young Adult in Library, Elder on site). The site’s Sims are from “Rotational” (2023-12-21))
 - **Move Broke** to Crick Cabana (now: no home)
-- **Winters** for Daisy Hovel: from your Library (your Library copy differs from the site: check ages and Sims)
-- **Reynolds** for Potters Splay: from your Library (your Library copy differs from the site: check ages and Sims)
+- **Winters** for Daisy Hovel: the site’s version is in your “Season Events” save: save it to your Library from there (your Library copy differs: not in Library copy: Noel Winters, Savanna Winters; extra in Library copy: Anna Winters; age differs: Teddy Winters (Toddler in Library, Child on site). The site’s Sims are from “Season Events” (2026-03-15))
+- **Reynolds** for Potters Splay: the site’s version is in your “Rotational” save: save it to your Library from there (your Library copy differs: not in Library copy: Lucie Reynolds, Melanie Reynolds, Rosie Reynolds; age differs: Britney Reynolds (Young Adult in Library, Elder on site), Joe Reynolds (Young Adult in Library, Elder on site). The site’s Sims are from “Rotational” (2023-12-21))
 - **Move Bjergsen** to Brook Bungalow (now: The Lighthouse)
 - **Kopf** for Riverside Roost: only in your “Rotational” save: save it to your Library from there first
 - **Move Pancakes** to Rindle Rose (now: no home)
 - **Move Villareal** to Umbrage Manor (now: no home)
-- **Barraza** for Oakenstead: from your Library (your Library copy differs from the site: check ages and Sims)
+- **Barraza** for Oakenstead: the site’s version is in your “Rotational” save: save it to your Library from there (your Library copy differs: not in Library copy: Daniel Barraza, David Barraza, Vivienne Barraza; age differs: Alexa Barraza (Young Adult in Library, Adult on site), Simon Barraza (Young Adult in Library, Adult on site). The site’s Sims are from “Rotational” (2023-12-21))
 
 ## Oasis Springs
 
 - **To place:** Springscape
-- **Leah-Moon Cadberry** for Nookstone: from your Library (your Library copy differs from the site: check ages and Sims)
+- **Leah-Moon Cadberry** for Nookstone: from your Library (your Library copy differs from the site: extra in Library copy: Sterling Cadberry, Sylvia Cadberry. The site’s Sims are from Library (2025-06-22))
 - **Move Lothario** to Agave Abode (now: no home; split them out of Caliente first (it also has Dina, Katrina, Nina))
 - **Rivera** for Raffia Quinta: from your Library
 - **De Costa** for Dusty Turf: from your Library
@@ -50,9 +50,9 @@ Made by tools/research/new_save_check.py from a copy of the save. Lots: placed /
 - **Washburn** for Midtown Meadows unit 2: only in your “Season Events” save: save it to your Library from there first
 - **Bridges** for Midtown Meadows unit 5: only in your “Season Events” save: save it to your Library from there first
 - **Versaree** for Oak Alcove: from your Library
-- **Kirkland** for Twin Oracle Point: from your Library (your Library copy differs from the site: check ages and Sims)
+- **Kirkland** for Twin Oracle Point: from your Library (your Library copy differs from the site: site has no Sims yet. Same Kirklands as Newcrest’s Fern Park Flats?)
 - **LeBlanc** for Avarice Acres: only in your “Rotational” save: save it to your Library from there first
-- **Sylvia & Kenny Cadberry** for Asphalt Abodes: from your Library (your Library copy differs from the site: check ages and Sims)
+- **Sylvia & Kenny Cadberry** for Asphalt Abodes: the site’s version is in your “Not So Berry” save: save it to your Library from there (your Library copy differs: extra in Library copy: Hyacinth Cadberry, Plum-Bob Cadberry; age differs: Kenny Cadberry (Adult in Library, Elder on site). The site’s Sims are from “Not So Berry” (2025-10-11))
 
 ## Magnolia Promenade
 
@@ -115,6 +115,16 @@ Made by tools/research/new_save_check.py from a copy of the save. Lots: placed /
 
 - **Brooks Bridge:** named “Brooks Bridge [Puzzle]” in the save
 - **Move Amicable Acolytes** to Brooks Bridge (now: no home)
+
+## Old saves to open
+
+Open each once, save these households to your Library, then add them in the new save:
+
+- “Rotational”: Barraza, Davidson 1, Kopf, LeBlanc, Livin' In The City, Reynolds
+- “Season Events”: Bridges, Donovan, Washburn, Winters
+- “Not So Berry”: Rochana, Sylvia & Kenny Cadberry
+- “Will the port be Promising?”: Henley
+- “Horses!”: Palumbo
 
 ## Save these together
 

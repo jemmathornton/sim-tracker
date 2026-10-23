@@ -5050,7 +5050,7 @@
    "unit": "",
    "sims": 3,
    "state": "not in the save",
-   "how": "from your Library (your Library copy differs from the site: check ages and Sims)"
+   "how": "the site’s version is in your “Rotational” save: save it to your Library from there (your Library copy differs: not in Library copy: George Davidson, Ray Davidson; age differs: Evelyn Davidson (Young Adult in Library, Elder on site). The site’s Sims are from “Rotational” (2023-12-21))"
   },
   {
    "world": "Willow Creek",
@@ -5069,7 +5069,7 @@
    "unit": "",
    "sims": 4,
    "state": "not in the save",
-   "how": "from your Library (your Library copy differs from the site: check ages and Sims)"
+   "how": "the site’s version is in your “Season Events” save: save it to your Library from there (your Library copy differs: not in Library copy: Noel Winters, Savanna Winters; extra in Library copy: Anna Winters; age differs: Teddy Winters (Toddler in Library, Child on site). The site’s Sims are from “Season Events” (2026-03-15))"
   },
   {
    "world": "Willow Creek",
@@ -5078,7 +5078,7 @@
    "unit": "",
    "sims": 5,
    "state": "not in the save",
-   "how": "from your Library (your Library copy differs from the site: check ages and Sims)"
+   "how": "the site’s version is in your “Rotational” save: save it to your Library from there (your Library copy differs: not in Library copy: Lucie Reynolds, Melanie Reynolds, Rosie Reynolds; age differs: Britney Reynolds (Young Adult in Library, Elder on site), Joe Reynolds (Young Adult in Library, Elder on site). The site’s Sims are from “Rotational” (2023-12-21))"
   },
   {
    "world": "Willow Creek",
@@ -5134,7 +5134,7 @@
    "unit": "",
    "sims": 5,
    "state": "not in the save",
-   "how": "from your Library (your Library copy differs from the site: check ages and Sims)"
+   "how": "the site’s version is in your “Rotational” save: save it to your Library from there (your Library copy differs: not in Library copy: Daniel Barraza, David Barraza, Vivienne Barraza; age differs: Alexa Barraza (Young Adult in Library, Adult on site), Simon Barraza (Young Adult in Library, Adult on site). The site’s Sims are from “Rotational” (2023-12-21))"
   },
   {
    "world": "Willow Creek",
@@ -5151,7 +5151,7 @@
    "unit": "",
    "sims": 1,
    "state": "not in the save",
-   "how": "from your Library (your Library copy differs from the site: check ages and Sims)"
+   "how": "from your Library (your Library copy differs from the site: extra in Library copy: Sterling Cadberry, Sylvia Cadberry. The site’s Sims are from Library (2025-06-22))"
   },
   {
    "world": "Oasis Springs",
@@ -5296,7 +5296,7 @@
    "unit": "",
    "sims": 4,
    "state": "not in the save",
-   "how": "from your Library (your Library copy differs from the site: check ages and Sims)"
+   "how": "from your Library (your Library copy differs from the site: site has no Sims yet. Same Kirklands as Newcrest’s Fern Park Flats?)"
   },
   {
    "world": "Newcrest",
@@ -5314,7 +5314,7 @@
    "unit": "",
    "sims": 2,
    "state": "not in the save",
-   "how": "from your Library (your Library copy differs from the site: check ages and Sims)"
+   "how": "the site’s version is in your “Not So Berry” save: save it to your Library from there (your Library copy differs: extra in Library copy: Hyacinth Cadberry, Plum-Bob Cadberry; age differs: Kenny Cadberry (Adult in Library, Elder on site). The site’s Sims are from “Not So Berry” (2025-10-11))"
   },
   {
    "world": "Windenburg",
@@ -5807,7 +5807,7 @@
    "unit": "",
    "sims": 2,
    "state": "not in the save",
-   "how": "from your Library (your Library copy differs from the site: check ages and Sims)"
+   "how": "the site’s version is in your “Will the port be Promising?” save: save it to your Library from there (your Library copy differs: not in Library copy: April Carr; age differs: Kaleb Henley (Teen in Library, Young Adult on site). The site’s Sims are from “Will the port be Promising?” (2023-12-21))"
   },
   {
    "world": "Mt. Komorebi",
@@ -5909,7 +5909,7 @@
    "unit": "",
    "sims": 5,
    "state": "not in the save",
-   "how": "from your Library (your Library copy differs from the site: check ages and Sims)"
+   "how": "the site’s version is in your “Season Events” save: save it to your Library from there (your Library copy differs: not in Library copy: Bonnie Donovan, Davin Haynes, Madelyn Haynes, Misty Haynes; extra in Library copy: Clay Donovan, Isabella Donovan. The site’s Sims are from “Season Events” (2026-03-15))"
   },
   {
    "world": "San Sequoia",
@@ -5986,7 +5986,7 @@
    "unit": "",
    "sims": 2,
    "state": "not in the save",
-   "how": "from your Library (your Library copy differs from the site: check ages and Sims)"
+   "how": "the site’s version is in your “Horses!” save: save it to your Library from there (your Library copy differs: not in Library copy: Bluebell, Buttercup, Lacy Tompkins, Longface, Pie, Puzzles, Queen. The site’s Sims are from “Horses!” (2024-01-12))"
   },
   {
    "world": "Tomarang",
@@ -6005,7 +6005,7 @@
    "unit": "",
    "sims": 2,
    "state": "not in the save",
-   "how": "from your Library (your Library copy differs from the site: check ages and Sims)"
+   "how": "the site’s version is in your “Not So Berry” save: save it to your Library from there (your Library copy differs: not in Library copy: Colette Rochana; extra in Library copy: Pradit Rochana, Ratsami Rochana; age differs: Ratana Rochana (Young Adult in Library, Adult on site). The site’s Sims are from “Not So Berry” (2025-10-11))"
   },
   {
    "world": "Tomarang",
@@ -6180,6 +6180,28 @@
   }
  ],
  "squatters": [],
+ "fromSaves": [
+  {
+   "save": "Rotational",
+   "households": ["Barraza", "Davidson 1", "Kopf", "LeBlanc", "Livin' In The City", "Reynolds"]
+  },
+  {
+   "save": "Season Events",
+   "households": ["Bridges", "Donovan", "Washburn", "Winters"]
+  },
+  {
+   "save": "Not So Berry",
+   "households": ["Rochana", "Sylvia & Kenny Cadberry"]
+  },
+  {
+   "save": "Will the port be Promising?",
+   "households": ["Henley"]
+  },
+  {
+   "save": "Horses!",
+   "households": ["Palumbo"]
+  }
+ ],
  "saveTogether": [
   {
    "households": ["Leah-Moon Cadberry (Oasis Springs)", "Sylvia & Kenny Cadberry (Newcrest)"],
