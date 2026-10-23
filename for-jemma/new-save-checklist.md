@@ -20,7 +20,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 - [ ] Autosave and Save Reminder on (Save Settings).
 - [ ] Save As “Sim World 01 options”.
 
-## 3. Holidays (Calendar, live mode)
+## 3. Holidays (Calendar, live mode; from the site's Calendar, data/calendar.json)
 - [ ] Flower Festival: spring, week 1, Saturday, day off.
 - [ ] Love Day: move to spring, week 2, Tuesday.
 - [ ] Summer Celebration: summer, week 1, Saturday, day off.

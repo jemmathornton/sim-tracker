@@ -35,16 +35,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 - [ ] Autosave and Save Reminder on (Save Settings).
 - [ ] Save As “Sim World 01 options”.
 
-## 3. Holidays (Calendar, live mode)
-- [ ] Flower Festival: spring, week 1, Saturday, day off.
-- [ ] Love Day: move to spring, week 2, Tuesday.
-- [ ] Summer Celebration: summer, week 1, Saturday, day off.
-- [ ] Dia De Los Muertos: autumn, week 1, Sunday.
-- [ ] Bonfire Night: autumn, week 1, Friday.
-- [ ] Harvestfest → HarvestFest: autumn, week 2, Sunday, day off.
-- [ ] Winterfest → Yuletide: winter, week 2, Sunday, day off.
-- [ ] Keep New Year’s Eve. Save As.
-
+{HOLIDAYS}
 ## 4. Test first
 - [ ] Place one rental (Fern Park Flats) and one venue with traits (Willow’s). Note what came with them: type, traits, challenges, unit names, unit traits.
 - [ ] Move in one of your households from the Library. Check skills, careers and relationships.
@@ -122,7 +113,15 @@ def main():
     ticked = set()
     if os.path.exists(OUT):
         ticked = {l.strip()[6:] for l in open(OUT, encoding='utf-8') if l.startswith('- [x] ')}
-    out = [HEAD]
+    days = dict(Mon="Monday", Tue="Tuesday", Wed="Wednesday", Thu="Thursday", Fri="Friday", Sat="Saturday", Sun="Sunday")
+    hol = ["## 3. Holidays (Calendar, live mode; from the site's Calendar, data/calendar.json)"]
+    for x in json.load(open(os.path.join(ROOT, 'data', 'calendar.json'), encoding='utf-8'))['holidays']:
+        when = f"{x['season'].lower()}, week {x['week']}, {days.get(x['day'], x['day'])}" + (", day off" if x.get('off') else "")
+        if x.get('replaces') and x['replaces'] != x['name']: hol.append(f"- [ ] {x['replaces']} → {x['name']}: {when}.")
+        elif x.get('replaces'): hol.append(f"- [ ] {x['name']}: move to {when}.")
+        else: hol.append(f"- [ ] {x['name']}: {when}.")
+    hol.append("- [ ] Keep New Year’s Eve. Save As.")
+    out = [HEAD.replace("{HOLIDAYS}", "\n".join(hol) + "\n")]
     for w in D['worlds']:
         if not w.get('ready'): continue
         wn = w['name']; lots = [l for h in w['hoods'] for l in h['lots']]
