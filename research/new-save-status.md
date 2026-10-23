@@ -11,6 +11,7 @@ Made by tools/research/new_save_check.py from a copy of the save. Lots: placed /
 - Allow Automatic Breakups is on; your pick is off
 - Enable Dynasty Prestige Decay is on; your pick is off
 - Neighbourhood Stories, Other Households: still ticked: Move In, Move Out, Have a Baby, Adopt a Child, Adopt Cats & Dogs, Rescue Horses, Join a Career, Leave a Career, Romance Changes (your picks: unticked)
+- Only 1 household in My Households (hearted): heart your planned ones, homeless families first (the game culls Sims outside My Households)
 - Holidays: still the game's own calendar (checklist step 3)
 
 ## Willow Creek

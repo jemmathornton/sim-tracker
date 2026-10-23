@@ -185,6 +185,11 @@ window.ADMIN = {
 {
 "section": "New save fixes (from Claude's checks, 23 Oct)",
 "world": "",
+"text": "**Do (soon):** Only 1 household in the new save is in My Households (hearted). Heart the planned ones, especially the families moved out while you placed builds: the game culls Sims outside My Households, homeless ones first."
+},
+{
+"section": "New save fixes (from Claude's checks, 23 Oct)",
+"world": "",
 "text": "**Do (first!):** Neighbourhood Stories in the new save still has every rule ticked for Other Households, so the game can move the families you've moved out into your empty homes. Untick Move In, Move Out, Have a Baby, Adopt a Child, Adopt Cats & Dogs, Rescue Horses, Join a Career, Leave a Career and Romance Changes (Manage Worlds > Manage Households > Other Households, top right)."
 },
 {
@@ -1277,6 +1282,7 @@ window.ADMIN = {
 "Allow Automatic Breakups is on; your pick is off",
 "Enable Dynasty Prestige Decay is on; your pick is off",
 "Neighbourhood Stories, Other Households: still ticked: Move In, Move Out, Have a Baby, Adopt a Child, Adopt Cats & Dogs, Rescue Horses, Join a Career, Leave a Career, Romance Changes (your picks: unticked)",
+"only 1 household in My Households (hearted): heart your planned ones, homeless families first (the game culls Sims outside My Households)",
 "holidays: still the game's own calendar (checklist step 3)"
 ],
 "worlds": [

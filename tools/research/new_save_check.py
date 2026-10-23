@@ -333,6 +333,9 @@ def main():
         if wrong_off: opt.append("Neighbourhood Stories, Other Households: unticked: " + ", ".join(wrong_off) + " (your picks: ticked)")
     mine = o.get('_ns_mine')
     if mine and mine['on'] and any(mine['rules'].values()): opt.append("Neighbourhood Stories, My Households: some rules are on; your pick is all off")
+    hearted = sum(1 for h in hhs if h.get('is_player'))
+    homeless = [h.get('name') for h in hhs if not h.get('home_zone') and not h.get('is_player') and not h.get('premade_household_template_id') is None]
+    if hearted < 20: opt.append(f"only {hearted} household{'s' if hearted != 1 else ''} in My Households (hearted): heart your planned ones, homeless families first (the game culls Sims outside My Households)")
     if not o.get('_own_holidays'): opt.append("holidays: still the game's own calendar (checklist step 3)")
     out['options'] = opt; out['optionsRaw'] = {k: v for k, v in o.items() if not isinstance(v, (bytes, dict)) and not k.startswith('_ns')}
     save(os.path.join(ROOT, 'research', 'data', 'new-save-status.json'), out)
