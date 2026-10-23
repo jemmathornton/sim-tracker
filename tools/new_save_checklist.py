@@ -89,6 +89,8 @@ def library_lots():
 LIB = library_lots()
 
 
+SAME_T = {"thrift and bubble tea store": "thrift and boba store", "ubrite commons": "uob commons", "small business residential": "residential",
+          "haunted house residential": "haunted house residential", "apartment": "residential", "penthouse": "residential"}   # the game's names -> hers
 def load_data():
     t = open(os.path.join(ROOT, 'site', 'js', 'data.js'), encoding='utf-8').read()
     return json.loads(t[t.index('{'):t.rindex('}') + 1])
@@ -188,6 +190,12 @@ def main():
                     else: bits.append("built but not on the Gallery: bring it over through your Library" + (f" ({lib[0]} cop{'y' if lib[0] == '1' else 'ies'}, {lib[1]}{'; ' + lib[2] if lib[2] else ''})" if lib else "") + " (if you changed it in your Building save since, save it to your Library again from there first).")
                 else: bits.append("not built yet: leave the game’s lot for now.")
                 if l.get('type'): bits.append(f"Type: {l['type']}.")
+                if g and g.get('lotType') and l.get('type') and key not in D['csVersions']:   # the upload's own type comes with it (24 Oct research)
+                    gt = SAME_T.get(g['lotType'].lower(), g['lotType'].lower())
+                    tclean = re.sub(r'\s*\([^)]*\)', '', l['type'])   # brackets first: 'Restaurant (Sushi/Izakaya)'
+                    want = [SAME_T.get(t, t) for t in (x.strip().lower() for x in tclean.split('/'))]
+                    if gt not in want and gt != 'missing sims translation' and not ('rental' in gt and any('rental' in t for t in want)):
+                        bits.append(f"It comes in as {g['lotType']} (its upload's type): set it to {tclean.split('/')[0].strip()} after placing.")
                 if (l.get('type') or '') == 'Apartment' and l.get('gallery'): bits.append("Place it as a Room into the unit.")
                 if 'University Housing' in (l.get('type') or ''):   # the game asks which university the housing is for
                     uni = {'University of Britechester': 'University of Britechester', 'Foxbury Institute': 'Foxbury Institute'}.get(h['name'])

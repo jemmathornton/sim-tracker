@@ -169,10 +169,10 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 **Campground**
 
-- [ ] **Campground**, 30x20: place “Campground”. Type: Vacation Rental. Trait ideas (free slots): Bracing Breezes, Peace and Quiet, Sunny Aspect.
+- [ ] **Campground**, 30x20: place “Campground”. Type: Vacation Rental. It comes in as Residential (its upload’s type): set it to Vacation Rental after placing. Trait ideas (free slots): Bracing Breezes, Peace and Quiet, Sunny Aspect.
 - [ ] **The Forest Tavern** (game’s Forest Hideaway), 40x30: place “The Forest Tavern”. Type: Restaurant. Traits: Sunny Aspect, Party Place, Chef’s Kitchen.
-- [ ] **Green Getaway**, 30x20: place “Green Getaway”. Type: Vacation Rental. Traits: Romantic Aura, On Ley Line. Trait ideas (free slots): + Bracing Breezes (On Ley Line suits a honeymoon cabin).
-- [ ] **Lakeside Retreat**, 40x30: place “Lakeside Retreat”. Type: Vacation Rental. Traits: Child’s Play, Homey, Sunny Aspect.
+- [ ] **Green Getaway**, 30x20: place “Green Getaway”. Type: Vacation Rental. It comes in as Residential (its upload’s type): set it to Vacation Rental after placing. Traits: Romantic Aura, On Ley Line. Trait ideas (free slots): + Bracing Breezes (On Ley Line suits a honeymoon cabin).
+- [ ] **Lakeside Retreat**, 40x30: place “Lakeside Retreat”. Type: Vacation Rental. It comes in as Residential (its upload’s type): set it to Vacation Rental after placing. Traits: Child’s Play, Homey, Sunny Aspect.
 - [ ] **Granite Falls Spa** (game’s Riverside Retreat), 30x20: place “Granite Falls Spa”. Type: Spa. Traits: Romantic Aura, Sunny Aspect. Trait ideas (free slots): + Peace and Quiet.
 
 **Granite Falls Forest**
@@ -297,14 +297,14 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 **Puerto Llamante Marketplace**
 
 - [ ] **Alam Museum of Archaeology**, 64x64: not built yet: leave the game’s lot for now. Type: Museum.
-- [ ] **Hillside Hideaway** (game’s Hillview Hideaway), 20x15: place “Hillside Hideaway”. Type: Vacation Rental. Traits: Sunny Aspect. Challenge: Creepy Crawlies. Trait ideas (free slots): Peace and Quiet, Bracing Breezes.
-- [ ] **Selvadorada Villa**, 30x20: place “Selvadorada Villa”. Type: Vacation Rental. Traits: Convivial, Sunny Aspect. Trait ideas (free slots): + Peace and Quiet.
+- [ ] **Hillside Hideaway** (game’s Hillview Hideaway), 20x15: place “Hillside Hideaway”. Type: Vacation Rental. It comes in as Residential (its upload’s type): set it to Vacation Rental after placing. Traits: Sunny Aspect. Challenge: Creepy Crawlies. Trait ideas (free slots): Peace and Quiet, Bracing Breezes.
+- [ ] **Selvadorada Villa**, 30x20: place “Selvadorada Villa”. Type: Vacation Rental. It comes in as Residential (its upload’s type): set it to Vacation Rental after placing. Traits: Convivial, Sunny Aspect. Trait ideas (free slots): + Peace and Quiet.
 - [ ] **Cantina “El Árbol del Jaguar”** (game’s Cantina "El Árbol del Jaguar"), 40x30: place “Cantina “El Árbol del Jaguar””. Type: Bar. Traits: Sunny Aspect, Convivial. Trait ideas (free slots): + Great Acoustics.
 
 **Belomisia Jungle**
 
 - [ ] **Belomisia Trailhead**, 40x20: not built yet: leave the game’s lot for now. Type: National Park.
-- [ ] **Jungle Bungalow**, 30x30: place “Jungle Bungalow”. Type: Vacation Rental. Traits: Romantic Aura, Peace and Quiet. Trait ideas (free slots): + Sunny Aspect.
+- [ ] **Jungle Bungalow**, 30x30: place “Jungle Bungalow”. Type: Vacation Rental. It comes in as Residential (its upload’s type): set it to Vacation Rental after placing. Traits: Romantic Aura, Peace and Quiet. Trait ideas (free slots): + Sunny Aspect.
 - [ ] **Belomisia Field Station**, 30x20: place “Belomisia Field Station”. Type: Custom Venue. Traits: Peace and Quiet, Sunny Aspect. Trait ideas (free slots): + Science Lair (a research station).
 - [ ] **Omiscan Royal Baths**, 40x30: not built yet: leave the game’s lot for now. Type: Omiscan Royal Baths.
 
@@ -376,7 +376,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 - [ ] **8 Bells**, 20x20: not built yet: leave the game’s lot for now. Type: Bar.
 - [ ] **StrangerVille Information Center**, 20x20: not built yet: leave the game’s lot for now. Type: Backroom.
-- [ ] **Carpophagous Corner**, 30x20: place “Carpophagous Corner”. Type: Vacation Rental. Traits: Science Lair, Bracing Breezes. Challenge: Quake Zone. Trait ideas (free slots): + Peace and Quiet.
+- [ ] **Carpophagous Corner**, 30x20: place “Carpophagous Corner”. Type: Vacation Rental. It comes in as Residential (its upload’s type): set it to Vacation Rental after placing. Traits: Science Lair, Bracing Breezes. Challenge: Quake Zone. Trait ideas (free slots): + Peace and Quiet.
 - [ ] **Slip 42**, 20x15: place “Slip 42”. Not the other copy: “Slip 42” (Residential). Type: Residential Rental (2). Challenges: Creepy Crawlies, Quake Zone, Filthy. Units (set after placing): 1; 2.
 - [ ] **Old Penelope**, 50x40: not built yet: leave the game’s lot for now. Type: Residential. Household: Cahill (EA).
 - [ ] **Riverside Grove**, 30x20: built but not on the Gallery: bring it over through your Library (1 copy, 21 Dec 23) (if you changed it in your Building save since, save it to your Library again from there first). Type: Residential. Household: Sigworth (EA).
@@ -407,7 +407,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 - [ ] **Kin-Ship**, 30x30: place “Kin-Ship”. Type: Residential. Household: Kealoha (EA). Traits: Geothermal, Home Studio, Sunny Aspect. Challenge: Volcanic Activity.
 - [ ] **Chieftain’s Villa**, 40x30: not built yet: leave the game’s lot for now. Type: Residential. Household: Hoapili (EA).
-- [ ] **Lagoon of Love** (game’s Lagoon Look), 30x20: place “Lagoon of Love”. Type: Vacation Rental. Traits: Sunny Aspect, Bracing Breezes, Eco Lot.
+- [ ] **Lagoon of Love** (game’s Lagoon Look), 30x20: place “Lagoon of Love”. Type: Vacation Rental. It comes in as Park (its upload’s type): set it to Vacation Rental after placing. Traits: Sunny Aspect, Bracing Breezes, Eco Lot.
 - [ ] **Ohan’ali Community Center** (game’s Tangled Flat), 20x20: place “Ohan’ali Community Center”. Type: Library. Traits: Study Spot, Child’s Play, Home Studio.
 - [ ] **The Sand Bar**, 30x20: place “The Sand Bar”. Type: Bar. Traits: Convivial, Party Place, Sunny Aspect.
 - [ ] **Ohan’ali Beach**, 30x30: place “Ohan’ali Beach”. Type: Beach. Traits: Sunny Aspect, Dog Hangout. Trait ideas (free slots): + Bracing Breezes.
@@ -430,11 +430,11 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 - [ ] **Creek Side Corner**, 30x20: place “Creek Side Corner”. Type: Residential. Traits: Peace and Quiet, Gnomes, Sunny Aspect.
 - [ ] **Glimmerbrook Watch**, 30x20: place “Glimmerbrook Watch”. Type: Residential. Traits: Peace and Quiet, Gnomes, Sunny Aspect.
 - [ ] **Brooks Bridge** (game’s Brooks Bridge Borough), 30x20: place “Brooks Bridge”. Type: Haunted House Residential. Household: Amicable Acolytes (EA). Trait ideas (free slots): On Hallowed Grounds, Peace and Quiet.
-- [ ] **Glimmer & Books** (game’s Elixirs and Brews), 30x20: Rebuild first (add the bar, then upload it as a Backroom), then place the new upload. Type: Backroom. Trait ideas (free slots): + Clandestine (a hidden bar after dark).
+- [ ] **Glimmer & Books** (game’s Elixirs and Brews), 30x20: Rebuild first (add the bar, then upload it as a Backroom), then place the new upload. Type: Backroom. It comes in as Library (its upload’s type): set it to Backroom after placing. Trait ideas (free slots): + Clandestine (a hidden bar after dark).
 
 **The Magic Realm**
 
-- [ ] **The Magic Realm**, 50x40: place “The Magic Realm”. Search it by name (its upload has no #glimmerbrook tag). Type: The Magic Realm.
+- [ ] **The Magic Realm**, 50x40: place “The Magic Realm”. Search it by name (its upload has no #glimmerbrook tag). Type: The Magic Realm. It comes in as Generic (its upload’s type): set it to The Magic Realm after placing.
 
 ### Britechester
 
@@ -459,7 +459,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 - [ ] **Britechester B&B** (game’s Honeydew Fields), 20x15: place “Britechester B&B”. Not the other copy: “Britechester B&B” (Residential). Type: Café/Vacation Rental. Traits: Romantic Aura, University Student Hang Out. Trait ideas (free slots): + Homey.
 - [ ] **Laurel Library**, 50x40: place “Laurel Library”. Type: Library. Traits: Study Spot, University Student Hang Out, Peace and Quiet.
 - [ ] **The Royal Crown** (game’s Pepper’s Pub), 20x20: place “The Royal Crown”. Type: Bar. Traits: University Student Hang Out, Convivial. Trait ideas (free slots): + Great Acoustics.
-- [ ] **Mossy Lane**, 20x15: place “Mossy Lane”. Search it by name (its upload has no #britechester tag). Type: University Housing. University: pick in game. Traits: Homey, Cat Hangout. Trait ideas (free slots): + Study Spot.
+- [ ] **Mossy Lane**, 20x15: place “Mossy Lane”. Search it by name (its upload has no #britechester tag). Type: University Housing. It comes in as Residential (its upload’s type): set it to University Housing after placing. University: pick in game. Traits: Homey, Cat Hangout. Trait ideas (free slots): + Study Spot.
 - [ ] **Spring Steppes**, 20x15: place “Spring Steppes”. Search it by name (its upload has no #britechester tag). Not the other copy: “Spring Steppes” (University Housing). Type: Residential Rental (3). Elderberry (EA, landlord, unit 1). Tenants: Pleasant unit 3. Traits: Homey, Cat Hangout. Units (set after placing): 1 (Homey, Cat Hangout); 2; 3.
 
 ### Evergreen Harbor
@@ -469,7 +469,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 **Grims Quarry**
 
 - [ ] **Miner Mansion**, 30x20: not built yet: leave the game’s lot for now. Type: Residential. Household: Harris (EA).
-- [ ] **Rockridge Springs**, 30x20: place “Rockridge Springs”. Type: Residential Rental (3). Greenburg (EA, landlord, unit 1). Traits: Good Schools, Sunny Aspect. Units (set after placing): 1 (Good Schools, Sunny Aspect); 2 (Good Schools, Sunny Aspect); 3 (Good Schools, Sunny Aspect).
+- [ ] **Rockridge Springs**, 30x20: place “Rockridge Springs”. Type: Residential Rental (3). It comes in as Residential (its upload’s type): set it to Residential Rental after placing. Greenburg (EA, landlord, unit 1). Traits: Good Schools, Sunny Aspect. Units (set after placing): 1 (Good Schools, Sunny Aspect); 2 (Good Schools, Sunny Aspect); 3 (Good Schools, Sunny Aspect).
 - [ ] **Stonestreet Apartments 3** (game’s Stonestreet Apartments #3): place “Stonestreet Apartments 3”. Type: Apartment. Place it as a Room into the unit. Household: Knox Greenburg (EA). Traits: Eco Lot, Good Schools. Challenge: Reduce and Recycle. Trait ideas (free slots): + Convivial (Knox the campaigner).
 - [ ] **Stonestreet Apartments 4** (game’s Stonestreet Apartments #4): place “Stonestreet Apartments 4”. Type: Apartment. Place it as a Room into the unit. Traits: Eco Lot, Fast Internet. Challenge: Reduce and Recycle. Trait ideas (free slots): + Natural Well.
 - [ ] **The Quarry Building**, 40x30: not built yet: leave the game’s lot for now. Type: Small Business Residential. Household: Sterling Rico (EA).
@@ -512,8 +512,8 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 **Yukimatsu**
 
-- [ ] **5-1-1 Kiyomatsu**, 30x20: place “5-1-1 Kiyomatsu”. Type: Vacation Rental. Traits: Convivial, Bracing Breezes, Natural Well.
-- [ ] **5-1-2 Kiyomatsu**, 30x20: place “5-1-2 Kiyomatsu”. Type: Vacation Rental. Trait ideas (free slots): Bracing Breezes, Natural Well, Convivial (as 5-1-1).
+- [ ] **5-1-1 Kiyomatsu**, 30x20: place “5-1-1 Kiyomatsu”. Type: Vacation Rental. It comes in as Residential (its upload’s type): set it to Vacation Rental after placing. Traits: Convivial, Bracing Breezes, Natural Well.
+- [ ] **5-1-2 Kiyomatsu**, 30x20: place “5-1-2 Kiyomatsu”. Type: Vacation Rental. It comes in as Residential (its upload’s type): set it to Vacation Rental after placing. Trait ideas (free slots): Bracing Breezes, Natural Well, Convivial (as 5-1-1).
 - [ ] **Sutefani Onsen Bathhouse**, 30x20: not built yet: leave the game’s lot for now. Type: Onsen Bathhouse.
 - [ ] **Kiyomatsu Point**, 50x50: not built yet: leave the game’s lot for now. Type: Custom Venue.
 - [ ] **Mt. Komorebi Base Camp**, 20x15: not built yet: leave the game’s lot for now. Type: Mount Komorebi Summit.
@@ -619,7 +619,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 - [ ] **Canyon Crossing**, 20x20: not built yet: leave the game’s lot for now. Type: Residential. Household: Gooseman (EA).
 - [ ] **Palomino Junction**, 50x50: place “Palomino Junction”. Type: Residential (Ranch). Household: Palumbo (yours). Traits: Bracing Breezes, Great Acoustics, Homey. Challenge: Wild Prairie Grass.
-- [ ] **Big Sky Reach**, 20x15: place “Big Sky Reach”. Type: Vacation Rental. Traits: Peace and Quiet, Sunny Aspect. Trait ideas (free slots): + Bracing Breezes.
+- [ ] **Big Sky Reach**, 20x15: place “Big Sky Reach”. Type: Vacation Rental. It comes in as Residential (its upload’s type): set it to Vacation Rental after placing. Traits: Peace and Quiet, Sunny Aspect. Trait ideas (free slots): + Bracing Breezes.
 
 ### Tomarang
 

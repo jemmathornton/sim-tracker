@@ -251,7 +251,7 @@ def main():
                     if not (l.get('traits') or l.get('challenges')) and not units and main['traits']:
                         r['newTraits'] = [t for t in main['traits'] if t not in MOD_TRAITS.values() and t != 'Quake Zone']   # the site has none yet: ready to read in
                     if main.get('venue') and l.get('type'):
-                        want_t = [SAME_TYPE.get(t, t) for t in (re.sub(r'\s*\([^)]*\)', '', x).strip().lower() for x in l['type'].split('/'))]
+                        want_t = [SAME_TYPE.get(t, t) for t in (x.strip().lower() for x in re.sub(r'\s*\([^)]*\)', '', l['type']).split('/'))]
                         got_t = main['venue'].lower().replace('vacation rental - granite falls', 'vacation rental').replace('vacation rental - selvadorada', 'vacation rental')
                         if got_t not in want_t and not (got_t == 'residential rental' and any('rental' in t for t in want_t)):
                             r['issues'].append(f"lot type in the save: {main['venue']} (plan: {l['type']})")
