@@ -113,13 +113,22 @@ def main():
     ticked = set()
     if os.path.exists(OUT):
         ticked = {l.strip()[6:] for l in open(OUT, encoding='utf-8') if l.startswith('- [x] ')}
+    # each holiday's traditions, as in her Rotational save (research/holidays-in-saves.md, 22 Oct)
+    TRADITIONS = {"Flower Festival": "Egg Hunt, Flower Bunny, Party Spirit, Baking, Gardening",
+                  "Love Day": "Go on a Date, Give Flowers, Give Gifts, Romantic Spirit",
+                  "Summer Celebration": "Baking, Drinking, Bar-B-Que, Go on a Vacation or Travel, Water Fun",
+                  "Dia De Los Muertos": "Decorate, Festive Lighting, Trick or Treat, Wear Costumes, Remembrance",
+                  "Bonfire Night": "Fireworks, Fire, Party Spirit, Bar-B-Que",
+                  "HarvestFest": "Decorate, Grand Meal, Holiday Gnomes, Thankful Spirit",
+                  "Yuletide": "Decorate, Grand Meal, Give Gifts, Father Winter, Open Presents"}
     days = dict(Mon="Monday", Tue="Tuesday", Wed="Wednesday", Thu="Thursday", Fri="Friday", Sat="Saturday", Sun="Sunday")
     hol = ["## 3. Holidays (Calendar, live mode; from the site's Calendar, data/calendar.json)"]
     for x in json.load(open(os.path.join(ROOT, 'data', 'calendar.json'), encoding='utf-8'))['holidays']:
         when = f"{x['season'].lower()}, week {x['week']}, {days.get(x['day'], x['day'])}" + (", day off" if x.get('off') else "")
-        if x.get('replaces') and x['replaces'] != x['name']: hol.append(f"- [ ] {x['replaces']} → {x['name']}: {when}.")
-        elif x.get('replaces'): hol.append(f"- [ ] {x['name']}: move to {when}.")
-        else: hol.append(f"- [ ] {x['name']}: {when}.")
+        tr = f" Traditions: {TRADITIONS[x['name']]}." if x['name'] in TRADITIONS else ""
+        if x.get('replaces') and x['replaces'] != x['name']: hol.append(f"- [ ] {x['replaces']} → {x['name']}: {when}.{tr}")
+        elif x.get('replaces'): hol.append(f"- [ ] {x['name']}: move to {when}.{tr}")
+        else: hol.append(f"- [ ] {x['name']}: new holiday, {when}.{tr}")
     hol.append("- [ ] Keep New Year’s Eve. Save As.")
     out = [HEAD.replace("{HOLIDAYS}", "\n".join(hol) + "\n")]
     for w in D['worlds']:

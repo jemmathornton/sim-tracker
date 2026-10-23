@@ -21,13 +21,13 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 - [ ] Save As “Sim World 01 options”.
 
 ## 3. Holidays (Calendar, live mode; from the site's Calendar, data/calendar.json)
-- [ ] Flower Festival: spring, week 1, Saturday, day off.
-- [ ] Love Day: move to spring, week 2, Tuesday.
-- [ ] Summer Celebration: summer, week 1, Saturday, day off.
-- [ ] Dia De Los Muertos: autumn, week 1, Sunday.
-- [ ] Bonfire Night: autumn, week 1, Friday.
-- [ ] Harvestfest → HarvestFest: autumn, week 2, Sunday, day off.
-- [ ] Winterfest → Yuletide: winter, week 2, Sunday, day off.
+- [ ] Flower Festival: new holiday, spring, week 1, Saturday, day off. Traditions: Egg Hunt, Flower Bunny, Party Spirit, Baking, Gardening.
+- [ ] Love Day: move to spring, week 2, Tuesday. Traditions: Go on a Date, Give Flowers, Give Gifts, Romantic Spirit.
+- [ ] Summer Celebration: new holiday, summer, week 1, Saturday, day off. Traditions: Baking, Drinking, Bar-B-Que, Go on a Vacation or Travel, Water Fun.
+- [ ] Dia De Los Muertos: new holiday, autumn, week 1, Sunday. Traditions: Decorate, Festive Lighting, Trick or Treat, Wear Costumes, Remembrance.
+- [ ] Bonfire Night: new holiday, autumn, week 1, Friday. Traditions: Fireworks, Fire, Party Spirit, Bar-B-Que.
+- [ ] Harvestfest → HarvestFest: autumn, week 2, Sunday, day off. Traditions: Decorate, Grand Meal, Holiday Gnomes, Thankful Spirit.
+- [ ] Winterfest → Yuletide: winter, week 2, Sunday, day off. Traditions: Decorate, Grand Meal, Give Gifts, Father Winter, Open Presents.
 - [ ] Keep New Year’s Eve. Save As.
 
 ## 4. Test first
