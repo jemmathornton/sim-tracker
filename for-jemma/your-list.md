@@ -9,6 +9,12 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 - **Do:** Take screenshots of the {noShots} shared lots with none (most: {noShotsWorlds}).
 - **Do:** Upload your own households to the Gallery ({yours}: {yoursOnSite} with Sims on the site, the rest not made yet); they become the site's source.
 
+## New save fixes (from Claude's checks, 23 Oct)
+- **Do:** Midtown Meadows unit 4: Homey → Home Studio (with Gnomes), or keep Homey and tell Claude.
+- **Do:** Factory One: add Party Place and Great Acoustics.
+- **Do:** Place Brindleton Boathouse and Hindquarter Hideaway (Brindleton Bay).
+- **Decide:** Spooky on The Narwhal Arms and Von-Windenburg Castle, Simple Living on Coorinberg Cottage and Rustic Residence: keep (Claude adds them to the plan) or take off?
+
 ## Game options
 - **Do:** Neighbourhood Stories on. Other Households: Move In, Move Out, Have a Baby, Adopt a Child, Join and Leave a Career, Romance Changes off.
 - **Do:** Other Households: Adopt Cats & Dogs and Rescue Horses off; Retire from Career, Die in Accidents, Friendship Changes on.

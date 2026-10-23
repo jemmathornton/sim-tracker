@@ -183,6 +183,26 @@ window.ADMIN = {
 "text": "**Do:** Upload your own households to the Gallery ({yours}: {yoursOnSite} with Sims on the site, the rest not made yet); they become the site's source."
 },
 {
+"section": "New save fixes (from Claude's checks, 23 Oct)",
+"world": "",
+"text": "**Do:** Midtown Meadows unit 4: Homey → Home Studio (with Gnomes), or keep Homey and tell Claude."
+},
+{
+"section": "New save fixes (from Claude's checks, 23 Oct)",
+"world": "",
+"text": "**Do:** Factory One: add Party Place and Great Acoustics."
+},
+{
+"section": "New save fixes (from Claude's checks, 23 Oct)",
+"world": "",
+"text": "**Do:** Place Brindleton Boathouse and Hindquarter Hideaway (Brindleton Bay)."
+},
+{
+"section": "New save fixes (from Claude's checks, 23 Oct)",
+"world": "",
+"text": "**Decide:** Spooky on The Narwhal Arms and Von-Windenburg Castle, Simple Living on Coorinberg Cottage and Rustic Residence: keep (Claude adds them to the plan) or take off?"
+},
+{
 "section": "Game options",
 "world": "",
 "text": "**Do:** Neighbourhood Stories on. Other Households: Move In, Move Out, Have a Baby, Adopt a Child, Join and Leave a Career, Romance Changes off."
