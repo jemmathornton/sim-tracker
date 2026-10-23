@@ -434,7 +434,7 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 Not carried over until the 15 Oct audit (her call):
 - [x] [Jemma] Dropped 23 Oct: only 3 of her 50 Gallery comments say a build fits (Strike Out! twice, Oasis Springs Library), and they already show on those lot pages. Was: Lot pages: highlight a comment when it says the build fits the world (research/gallery-deep-dive.md, the third of its three site ideas; the other two are done)
 - [ ] [Jemma] Evergreen Harbor's development state (Undeveloped / Modernised) on its neighbourhood cards; would have to be read from her game (site-ideas Data 5; only the eco footprint part was done)
-- [ ] [Jemma] From the other trackers' tables (site-ideas §1): a "Sims updated" tick apart from "Sims made"; "last played" per household; single Sims by life stage (for matchmaking); story text per lot; "EA original vs mine" for households; a count of empty lots and some trivia in world headers. Most need Sims data (see the household Sims question below)
+- [x] Dropped 23 Oct (her call). Was: [Jemma] From the other trackers' tables (site-ideas §1): a "Sims updated" tick apart from "Sims made"; "last played" per household; single Sims by life stage (for matchmaking); story text per lot; "EA original vs mine" for households; a count of empty lots and some trivia in world headers. Most need Sims data (see the household Sims question below)
 
 Newer lot types and where they could go (research/lot-types-reference.md):
 - [ ] [Jemma] Backrooms (library/museum/gym by day, nightclub 9pm–6am; allowed in every world; by day it brings readers, art lovers or gym-goers for whichever of bookcases, art and gym equipment are on the lot, mixed if mixed; needs 3 of them in any combination, plus bar, stereo, 4 barstools, sink, toilet, bin). 15 Oct: Movers & Shakers (Willow Creek), StrangerVille Information Center and BridgeCreek Drive (Copperdale; the Price family moved to Totter Park, which is now Residential instead of a cemetery) tagged as Backrooms, not built. Other idea: Finchwick Village Hall. Keep them fairly rare (16 Oct: range raised to 5–8, "where it makes sense" rather than one per world); not Ravenwood (openly creepy already, nothing to hide). (23 Oct count: 7 in owned worlds: The Old Clocktower, Foxbury Court, BridgeCreek Drive, The Old Mill, Glimmer & Books, Hardcover, StrangerVille Information Center; plus Garliclauter Place and maybe the Moonwood Mill Library in worlds she doesn’t own) 15 Oct later: Movers & Shakers became a Recreation Center instead; The Old Mill (Evergreen Harbor) became one. Backrooms now 4: StrangerVille Information Center, BridgeCreek Drive, The Old Mill, Hardcover
@@ -446,7 +446,7 @@ Newer lot types and where they could go (research/lot-types-reference.md):
 
 Site ideas, quick wins (no input needed):
 - [x] Packs needed per world (13 Oct: a "Packs used" block on each world page; removed 14 Oct, her choice: lot pages still show each build's packs)
-- [ ] (15 Oct: not now) One-word world status on home tiles: Not started / Started / Almost / Complete (she agrees the cut-offs)
+- [x] Dropped 23 Oct (her call). Was: (15 Oct: not now) One-word world status on home tiles: Not started / Started / Almost / Complete (she agrees the cut-offs)
 - [x] "Shared on the Gallery: <month year>" from the date hidden in 169 upload ids (13 Oct: "Shared" on each lot's Gallery card, e.g. Jan 2017; 124 of the 168 lots with uploads. Ids from 2023 on are random, so newer uploads show no date)
 - [x] "Data as of" footer line: spreadsheet date, last Gallery refresh, game patch (13 Oct: home page footer shows the build date and the Gallery check date)
 - [x] Game version added to the home footer (13 Oct), read from the installed game at each build
@@ -456,11 +456,11 @@ Site ideas, quick wins (no input needed):
 - [x] 13 Oct additions kept as they are: "Shared" on Gallery cards, the footer dates (home), the search box (sidebar; its text shortened to "Search…") (16 Oct)
 
 Site ideas, bigger (13 Oct: she chose the five marked; no preference on the others yet):
-- [ ] What's new page (dated changelog) (13 Oct: no preference yet)
+- [x] Dropped 23 Oct (her call). Was: What's new page (dated changelog) (13 Oct: no preference yet)
 - [x] Gallery numbers over time (keep each weekly refresh), top builds and biggest gains (13 Oct: Stats → On the Gallery)
 - [x] Done 23 Oct: the checks are on Admin, Notes. Was: Automatic Checks panel (spreadsheet vs Gallery mismatches, missing sizes or types, duplicate names) (13 Oct: no preference yet)
 - [x] Empty homes and units page: not wanted (her call, 19 Oct)
-- [ ] Before and after pictures on rebuilt EA lots (needs her screenshots of the originals)
+- [x] Dropped 23 Oct (her call). Was: Before and after pictures on rebuilt EA lots (needs her screenshots of the originals)
 - [x] **Chosen 13 Oct:** Household basics for all households (Sims and pets, life stages, family type, played, Neighbourhood Stories). Done 17–19 Oct (household and Sim pages)
 - [x] **Chosen 13 Oct:** Relationships between households beyond family. Done: relationships are on Sim pages (17 Oct decision), EA’s starting friendships included
 - [x] **Chosen 13 Oct:** Family tree, Goths first. Done: a tree on every household with family (and an animal tree for pets)
@@ -468,10 +468,10 @@ Site ideas, bigger (13 Oct: she chose the five marked; no preference on the othe
 From the research but not on the list until 13 Oct (suggestions only):
 - [ ] [Jemma] Rental units only (her call, 22 Oct): bedroom and bathroom counts now show in each rental’s units table where her Building save has them (3 Cobblebottom Street, Old Torget House, Manzanita Terrace, Taka Soi 15, Sungai Point all units; unit 1 only at Upland, Slip 42, Inner Circle, Rockridge Springs). Still to do in game: the other units, and Fern Park Flats, Midtown Meadows, Tail’s End (none); Rio Verde, Spring Steppes and Sequoia Cottage unit 1 hold the whole building’s count. Exact beds per unit aren’t in the save. Was: Beds by age group / capacity for homes and rental units (e.g. "3 beds: 1 double, 2 single; fits 4"), to see where a family fits (research/rentals-and-apartments.md)
 - [x] Lot value: already on each lot's Gallery card, that's enough (her call, 22 Oct)
-- [ ] Original vs new lot size for lots she resized ("40×30, was 30×20"). Note (15 Oct audit): probably nothing to show yet: her plan sizes match her uploads (research/data-check-up.md) and the game's own sizes (research/plan-vs-game.md, apart from two plan typos since fixed)
+- [x] Dropped 23 Oct (her call). Was: Original vs new lot size for lots she resized ("40×30, was 30×20"). Note (15 Oct audit): probably nothing to show yet: her plan sizes match her uploads (research/data-check-up.md) and the game's own sizes (research/plan-vs-game.md, apart from two plan typos since fixed)
 - [x] Filters on world and Stats pages: not wanted (her call, 19 Oct)
 - [x] "New since you looked" markers (15 Oct): a "New" pill on lot cards and a note on the lot page when a build has new favourites or comments, or is a new upload, since its page was last opened in this browser
-- [ ] Timeline of builds by the month they were shared, on the home page (13 Oct: no preference yet)
+- [x] Dropped 23 Oct (her call). Was: Timeline of builds by the month they were shared, on the home page (13 Oct: no preference yet)
 - [x] Newest Gallery comments on the Stats page (15 Oct)
 - [x] "Most loved" next to "Most downloaded" on Stats; "Base game" marker on lot cards and lot pages (15 Oct)
 - [x] World extras beyond festivals: weather line and the game's three highlights on each world page (14 Oct)
