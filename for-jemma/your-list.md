@@ -18,6 +18,7 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 - **Do:** Holidays (checklist step 3) aren't done yet: the save still has the game's own calendar.
 - **Do:** Midtown Meadows unit 4: Homey → Home Studio (with Gnomes), or keep Homey and tell Claude.
 - **Do:** Factory One: add Party Place and Great Acoustics.
+- **Do:** Carpophagous Corner (StrangerVille) came in as Residential: set it to Vacation Rental.
 - **Do:** Rio Verde, Fern Park Flats, Upland Trailer Park and Slip 42: every unit now has unit 1’s traits (placing seems to copy them). Check each unit in game and keep what you want; tell Claude and the site follows.
 - **Do:** Place Hindquarter Hideaway (Brindleton Bay).
 - **Do:** Households moved out while placing builds: once the builds are in, Claude lists who goes back where (from the save against the plan), and you move them in.

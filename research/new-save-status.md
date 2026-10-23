@@ -100,7 +100,7 @@ Made by tools/research/new_save_check.py from a copy of the save. Lots: placed /
 
 ## StrangerVille
 
-- All shared lots placed, all as planned.
+- **Carpophagous Corner:** lot type in the save: Residential (plan: Vacation Rental)
 - **Move Roswell** to Creek Corner Cove (now: StrangerVille Overlook)
 
 ## Sulani

@@ -27,6 +27,9 @@ NS_RULES = {273735: "Move In", 273878: "Move Out", 273734: "Have a Baby", 273882
             273881: "Die in Accidents", 380608: "Friendship Changes", 380610: "Romance Changes"}
 NS_PICKS = {273735: False, 273878: False, 273734: False, 273882: False, 273888: False, 337807: False, 273879: False, 282068: False,
             282070: True, 273881: True, 380608: True, 380610: False}
+VENUES = {int(k): v['name'] for k, v in load(os.path.join(ROOT, 'research', 'data', 'game-venues.json'))['venues'].items()}
+SAME_TYPE = {"thrift and boba store": "thrift and bubble tea store", "uob commons": "ubrite commons", "small business residential": "residential",
+             "haunted house": "haunted house residential", "university housing": "university housing"}   # her British names and labels -> the game's
 PETS = set()   # pets' names in the save (never counted as a household's extra Sims)
 norm = lambda s: re.sub(r'\s+', ' ', (s or '').replace('’', "'")).strip().lower()
 
@@ -42,10 +45,13 @@ def read(fname):
     tmp = tempfile.mkdtemp(); c = os.path.join(tmp, 's'); shutil.copy(os.path.join(s4.SAVES, fname), c)
     try:
         ix = s4.index(c); data = s4.read(c, next(e for e in ix if e[0] == s4.SAVEGAME))
-        hoods, zones, hhs, sims = {}, {}, [], {}
+        hoods, zones, hhs, sims, venue_of = {}, {}, [], {}, {}
         top = s4.fields(data)
         for fn, wt, v in top:
-            if fn == 4: n = s4.decode(v, P + 'NeighborhoodData', S, depth=0); hoods[n.get('neighborhood_id')] = n.get('name', '')
+            if fn == 4:
+                n = s4.decode(v, P + 'NeighborhoodData', S, depth=2); hoods[n.get('neighborhood_id')] = n.get('name', '')
+                for lo in n.get('lots') or []:   # each lot's current venue type (the zone's own record is only updated when it's loaded)
+                    if isinstance(lo, dict) and lo.get('zone_instance_id'): venue_of[lo['zone_instance_id']] = VENUES.get(lo.get('venue_key'))
         objs = {}
         for e in ix:
             if e[0] != 0x6: continue
@@ -57,7 +63,8 @@ def read(fname):
                 z = s4.decode(v, P + 'ZoneData', S, depth=0); o = objs.get(z['zone_id'], {})
                 zones[z['zone_id']] = {"world": hoods.get(z.get('neighborhood_id'), ''), "lot_id": z.get('lot_id'), "name": z.get('name', ''),
                                        "plex": z.get('active_plex') or 0, "traits": [TN.get(t, str(t)) for t in z.get('lot_traits', [])],
-                                       "objs": o.get('n', 0), "active": o.get('active'), "subs": o.get('subs')}
+                                       "objs": o.get('n', 0), "active": o.get('active'), "subs": o.get('subs'),
+                                       "venue": venue_of.get(z['zone_id'])}
             elif fn == 5: hhs.append(s4.decode(v, P + 'HouseholdData', S, depth=2))
             elif fn == 6:
                 sm = s4.decode(v, P + 'SimData', S, depth=0); sims[sm.get('sim_id')] = f"{sm.get('first_name', '')} {sm.get('last_name', '')}".strip()
@@ -171,6 +178,11 @@ def main():
                             r.setdefault('newUnitTraits', []).append(f"unit {u['name']}: {', '.join(sorted(got - need - {'Quake Zone', 'Filthy'} - set(u.get('challenges') or [])))}")
                     if not (l.get('traits') or l.get('challenges')) and not units and main['traits']:
                         r['newTraits'] = [t for t in main['traits'] if t not in MOD_TRAITS.values()]   # the site has none yet: ready to read in
+                    if main.get('venue') and l.get('type'):
+                        want_t = [SAME_TYPE.get(t, t) for t in (re.sub(r'\s*\([^)]*\)', '', x).strip().lower() for x in l['type'].split('/'))]
+                        got_t = main['venue'].lower().replace('vacation rental - granite falls', 'vacation rental').replace('vacation rental - selvadorada', 'vacation rental')
+                        if got_t not in want_t and not (got_t == 'residential rental' and any('rental' in t for t in want_t)):
+                            r['issues'].append(f"lot type in the save: {main['venue']} (plan: {l['type']})")
                     cv = D['csVersions'].get(key)
                     if cv and main.get('subs'):
                         act = SUBVENUES.get(main['subs'][main.get('active') or 0], '?')

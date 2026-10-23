@@ -225,6 +225,11 @@ window.ADMIN = {
 {
 "section": "New save fixes (from Claude's checks, 23 Oct)",
 "world": "",
+"text": "**Do:** Carpophagous Corner (StrangerVille) came in as Residential: set it to Vacation Rental."
+},
+{
+"section": "New save fixes (from Claude's checks, 23 Oct)",
+"world": "",
 "text": "**Do:** Rio Verde, Fern Park Flats, Upland Trailer Park and Slip 42: every unit now has unit 1’s traits (placing seems to copy them). Check each unit in game and keep what you want; tell Claude and the site follows."
 },
 {
@@ -981,7 +986,9 @@ window.ADMIN = {
 },
 "l-strangerville--carpophagous-corner": {
 "s": "placed",
-"fix": []
+"fix": [
+"lot type in the save: Residential (plan: Vacation Rental)"
+]
 },
 "l-strangerville--slip-42": {
 "s": "placed",
@@ -1858,7 +1865,14 @@ window.ADMIN = {
 "world": "StrangerVille",
 "placed": 2,
 "toPlace": [],
-"fixes": [],
+"fixes": [
+{
+"lot": "Carpophagous Corner",
+"what": [
+"lot type in the save: Residential (plan: Vacation Rental)"
+]
+}
+],
 "move": [
 {
 "household": "Roswell",
