@@ -52,3 +52,17 @@ They're not in GameplayOptions. SaveGameData field 23 `protected_households_stor
 Her new save (22:48, 23 Oct): My Households off; Other Households on with all 12 ticked (the game's default). `tools/research/new_save_check.py` now compares these with her picks.
 
 **Defaults:** a setting left at the game's default isn't written into the save, so a missing field means the default (Season Length 7 days, Automatic Breakups on, Prestige Decay on, Neighbourhood Stories on).
+
+## Where else things live in a save (24 Oct, night; all read by tools/research/new_save_check.py)
+
+| What | Where in the save |
+|---|---|
+| A lot's current lot type | `NeighborhoodData.lots[]` (LotOwnerInfo) `venue_key`, matched by `zone_instance_id`; names in research/data/game-venues.json. The zone's own `gameplay_zone_data.venue_type_id_on_save` is only updated when that lot is loaded, so it can be the game's old type. |
+| Who owns a lot (rentals, businesses) | the same LotOwnerInfo, `lot_owner.household_id` |
+| A neighbourhood's eco footprint now | `NeighborhoodData.street_data[]` (StreetInfoData) `eco_footprint_state`, matched to lots by `ZoneData.world_id` |
+| Action plans (N.A.P.s) | `SaveSlotData.gameplay_data.street_service.street_data[]`: `civic_provider_data.policy_data[]` (`custom_data` decodes as PersistableCivicPolicyStreetPolicyData, `enacted`); `balloted_policy_ids` are up for the vote. Street ids are the keys of research/data/world-extras.json `streets`. |
+| Clubs | `gameplay_data.club_service.clubs[]`: `leader` (Sim id), `hangout_setting`, `hangout_zone_id`; names aren't stored as text |
+| Dynasties | `gameplay_data.dynasty_service.dynasty_data[]`: `name`, `head_sim_id`, `heir_sim_id`, `members[]` (`member_id`, `dynasty_rank`, `is_black_sheep` = outcast), `alliances`, `rivalries` |
+| Holidays | `gameplay_data.holiday_service`: `holidays[]` (her own and edited ones: name, traditions), `calendars[]` per season length (2 = 4 weeks): holiday id, season (0 summer, 1 autumn, 2 winter, 3 spring), day of the season |
+| My Households (hearted) | `HouseholdData.is_player` |
+| Community Space versions | the zone's ZoneObjectData: `sub_venue_keys` (one object set each) and `active_data_index` |
