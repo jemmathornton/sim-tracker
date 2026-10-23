@@ -325,11 +325,6 @@ window.ADMIN = {
 {
 "section": "Every world",
 "world": "",
-"text": "**Decide:** Gnomes does nothing on venues (Burners & Builders, Pixel Café, Llama Picturehouse): swap it?"
-},
-{
-"section": "Every world",
-"world": "",
 "text": "**Do:** 88 shared lots have fewer than 3 traits (ideas for each in research/lot-trait-ideas.md)."
 },
 {
