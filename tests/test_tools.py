@@ -64,6 +64,22 @@ class NewSaveChecklist(unittest.TestCase):
         self.assertNotRegex(text, r"\bNone\b|\(\)")
 
 
+class NewSaveCheck(unittest.TestCase):
+    """The new-save tools (23–24 Oct): unit numbers in the plan are positions; the Library check reads library-ready.md."""
+    def test_unit_names(self):
+        import new_save_checklist
+        l = {"units": [{"name": "08"}, {"name": "09"}]}
+        self.assertEqual(new_save_checklist.unit_name(l, 2), "09")
+        self.assertEqual(new_save_checklist.unit_name(l, 1), "08")
+        self.assertEqual(new_save_checklist.unit_name({"units": []}, 3), "3")
+    def test_own_rental_is_landlords_home(self):
+        # "Greenburg own" on a rental, with no other Greenburg home in the world: they live there (as the site reads it)
+        import new_save_checklist
+        new_save_checklist.main()
+        text = open(new_save_checklist.OUT, encoding='utf-8').read()
+        self.assertRegex(text, r"Rockridge Springs\*\*.*Greenburg \([^)]*landlord")
+
+
 class BritishSpelling(unittest.TestCase):
     """build.british(): her Gallery text in British spelling on the site; game names keep theirs (CLAUDE.md)."""
     def test_words(self):
