@@ -72,6 +72,12 @@ class NewSaveCheck(unittest.TestCase):
         self.assertEqual(new_save_checklist.unit_name(l, 2), "09")
         self.assertEqual(new_save_checklist.unit_name(l, 1), "08")
         self.assertEqual(new_save_checklist.unit_name({"units": []}, 3), "3")
+    def test_story_rules(self):
+        # every Neighbourhood Stories rule has her pick (24 Oct), and the venue names load
+        sys.path.insert(0, os.path.join(ROOT, 'tools', 'research'))
+        import new_save_check as n
+        self.assertEqual(set(n.NS_RULES), set(n.NS_PICKS))
+        self.assertIn("Vacation Rental", n.VENUES.values())
     def test_own_rental_is_landlords_home(self):
         # "Greenburg own" on a rental, with no other Greenburg home in the world: they live there (as the site reads it)
         import new_save_checklist
