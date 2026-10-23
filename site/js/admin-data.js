@@ -771,22 +771,12 @@ window.ADMIN = {
 },
 {
 "head": "Calendar, admin page and a sidebar section (23 Oct; research/calendar-and-admin.md, prototypes in for-jemma/prototypes/calendar-admin/)",
-"text": "A sidebar section of its own for things across the worlds (her idea, 23 Oct). In it, her picks: Calendar, Clubs, Dynasties, University organisations, Families (families spread over several worlds, e.g. the Cadberrys), Businesses (small businesses and venues with owners, and who runs them). Not wanted: Pets and horses, Gallery favourites. Below the worlds (her call). One Calendar only, no calendar per world; picking a world filters it (option A)",
-"inGame": false
-},
-{
-"head": "Calendar, admin page and a sidebar section (23 Oct; research/calendar-and-admin.md, prototypes in for-jemma/prototypes/calendar-admin/)",
 "text": "Stats becomes an admin area for her only. Her answers (23 Oct): an **Admin** header in the sidebar like Worlds and Across the worlds, with pages under it (not tabs, not one long page); “lots built” / “with Sims made” on neighbourhood cards and the lot Progress row stay public for now (nice to see a world’s size; she may swap the exact stats later); PC only for now, no sign-in work until it ever goes online",
 "inGame": false
 },
 {
 "head": "Calendar, admin page and a sidebar section (23 Oct; research/calendar-and-admin.md, prototypes in for-jemma/prototypes/calendar-admin/)",
 "text": "**Trial on the site (23 Oct):** the switch at the bottom right, “Sidebar (trial)”, flips between “As now” and “New layout” (Across the worlds below the worlds, before Not owned: Calendar option A, Clubs, Dynasties, University organisations, Families, Businesses; Admin last, in place of Stats). Have a look and pick; the switch (site/js/trial.js) is removed once she does",
-"inGame": false
-},
-{
-"head": "Calendar, admin page and a sidebar section (23 Oct; research/calendar-and-admin.md, prototypes in for-jemma/prototypes/calendar-admin/)",
-"text": "Third trial on the site (23 Oct, her ask: the season colours look odd): **Season colours**, As now / Blossom (pink, sunny yellow, rust, icy blue) / Muted (sage, sand, terracotta, slate) / Jewel (emerald, gold, burgundy, navy). Used on the calendar and the world pages’ weather row",
 "inGame": false
 },
 {

@@ -181,6 +181,9 @@ def main():
     for p, W in zip(paths, worlds):
         if any(W is c for c in changed): save_safe(p, W)
     add_covers(worlds, uploads)
+    try:   # the other three Gallery pictures of lots with no screenshots of hers (23 Oct)
+        import gallery_more; gallery_more.main(True, rebuild=False)
+    except Exception as e: say(f"  more Gallery pictures not fetched: {e}")
     fav, dl = sum(u['favourites'] for u in uploads.values()), sum(u['downloads'] for u in uploads.values())
     say(f"Done: {fav} favourites, {dl} downloads, {sum(len(v) for v in comments.values())} comments across {len(uploads)} uploads")
     return not failed

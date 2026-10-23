@@ -1,7 +1,7 @@
-"""More Gallery pictures for lots with no screenshots of hers (trial, 23 Oct): each Gallery upload has 4 pictures and the site
-shows only the first (site/gallery/<world>/<lot>.jpg). This saves the other 3 of the lead upload as
-site/gallery-more/<world>/<lot>-<n>.jpg; tools/build.py lists them after the cover, marked "more" (the site's Gallery
-pictures trial switch decides whether they show).
+"""More Gallery pictures for lots with no screenshots of hers (23 Oct): each Gallery upload has 4 pictures and the site
+shows the first as its cover (site/gallery/<world>/<lot>.jpg). This saves the other 3 of the lead upload as
+site/gallery-more/<world>/<lot>-<n>.jpg; tools/build.py lists them after the cover (kept, her call 23 Oct). The weekly
+refresh runs it for new uploads.
     python tools/gallery_more.py          report
     python tools/gallery_more.py --apply  fetch the missing pictures (her own public Gallery pictures), then rebuild
 """
@@ -20,7 +20,7 @@ def lead(lot):
     return max(ids, key=lambda i: uploads[i]['favourites'] + uploads[i]['downloads'])
 
 
-def main(apply):
+def main(apply, rebuild=True):
     todo, have = [], 0
     for p in world_files():
         W = load(p); ws = os.path.basename(p)[:-5]
@@ -46,6 +46,7 @@ def main(apply):
         except Exception as e: print('failed:', url, e)
         time.sleep(0.3)   # polite to EA's picture server
         if k % 50 == 0: print(k, 'of', len(todo), flush=True)
+    if not rebuild: return
     r = subprocess.run([sys.executable, '-X', 'utf8', os.path.join(ROOT, 'tools', 'build.py')], stdin=subprocess.DEVNULL, capture_output=True, text=True, encoding='utf-8')
     print((r.stdout or r.stderr).strip())
 

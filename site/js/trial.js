@@ -11,15 +11,11 @@ let trRedrawing = false;
 const trRedraw = () => { const y = scrollY; trRedrawing = true; try { route(); } finally { trRedrawing = false; } scrollTo(0, y); };
 
 // ---------- the switch ----------
-function trialSwitch(){
-  let d = document.getElementById("trial-switch");
-  if (!d) { d = document.createElement("div"); d.id = "trial-switch"; d.className = "trial-switch"; d.setAttribute("role", "group"); d.setAttribute("aria-label", "Sidebar (trial)"); document.body.appendChild(d); }
-  d.innerHTML = `<b>Gallery pictures (trial)</b><div>${[["cover", "As now"], ["all", "All four"]].map(([k, t]) => `<button type="button" data-gp="${k}" class="${GP === k ? "on" : ""}" aria-pressed="${GP === k}">${t}</button>`).join("")}</div>`;
-}
+function trialSwitch(){ document.getElementById("trial-switch")?.remove(); }   // no trials running (23 Oct)
 // ---------- Gallery pictures trial (23 Oct): lots with no screenshots of hers show all four of their Gallery upload's pictures,
 // not just the cover (the other three come from tools/gallery_more.py, marked "more" in data.js) ----------
 const GP_KEY = "jsw-gallery-pictures-trial";
-let GP = (() => { try { return localStorage.getItem(GP_KEY) === "all" ? "all" : "cover"; } catch (e) { return "cover"; } })();
+let GP = "all";   // her call, 23 Oct: all four Gallery pictures stay (switch removed)
 function gpApply(){ Object.values(lotIndex).forEach(l => { l._allPhotos ||= l.photos; l.photos = GP === "all" ? l._allPhotos : l._allPhotos.filter(p => !p.more); }); }
 gpApply();
 document.addEventListener("click", e => { const b = e.target.closest("[data-gp]"); if (!b || b.dataset.gp === GP) return;
