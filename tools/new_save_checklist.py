@@ -151,7 +151,7 @@ def main():
                 if l.get('type'): bits.append(f"Type: {l['type']}.")
                 if 'University Housing' in (l.get('type') or ''):   # the game asks which university the housing is for
                     uni = {'University of Britechester': 'University of Britechester', 'Foxbury Institute': 'Foxbury Institute'}.get(h['name'])
-                    bits.append(f"University: {uni}." if uni else "University: pick in game as needed (her call, 21 Oct).")
+                    bits.append(f"University: {uni}." if uni else "University: pick in game.")
                 who = l.get('who')
                 if who and who not in ('N/A',):
                     b = base(who)

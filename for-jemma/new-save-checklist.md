@@ -216,8 +216,8 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 **Lykke Center / University of Windenburg**
 
 - [ ] **La Discotheque** (game’s Bathe de Rill), 40x30: built but not on the Gallery: bring it over through your Library. Type: Nightclub.
-- [ ] **UoW Hare Halls** (game’s Hare Square), 30x20: built but not on the Gallery: bring it over through your Library. Type: University Housing. University: pick in game as needed (her call, 21 Oct).
-- [ ] **UoW Hedgehog Halls** (game’s Hare and Hedgehog), 30x20: built but not on the Gallery: bring it over through your Library. Type: University Housing. University: pick in game as needed (her call, 21 Oct).
+- [ ] **UoW Hare Halls** (game’s Hare Square), 30x20: built but not on the Gallery: bring it over through your Library. Type: University Housing. University: pick in game.
+- [ ] **UoW Hedgehog Halls** (game’s Hare and Hedgehog), 30x20: built but not on the Gallery: bring it over through your Library. Type: University Housing. University: pick in game.
 - [ ] **UoW Students Union** (game’s Harbor Quarter Gym), 30x30: built but not on the Gallery: bring it over through your Library. Type: Library.
 - [ ] **UoW Sports Center** (game’s Discotheque Pan Europa), 30x20: built but not on the Gallery: bring it over through your Library. Type: Gym/Pool.
 
@@ -384,9 +384,9 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 - [ ] **StrangerVille Gym&Pool** (game’s Cliff Side Crest), 30x20: built but not on the Gallery: bring it over through your Library. Type: Gym.
 - [ ] **Creek Corner Cove**, 30x20: not built yet: leave the game’s lot for now. Type: Residential. Household: Roswell (EA).
-- [ ] **SU Plateau Residence** (game’s Plateau Place), 40x30: built but not on the Gallery: bring it over through your Library. Type: University Housing. University: pick in game as needed (her call, 21 Oct).
+- [ ] **SU Plateau Residence** (game’s Plateau Place), 40x30: built but not on the Gallery: bring it over through your Library. Type: University Housing. University: pick in game.
 - [ ] **StrangerVille Library** (game’s Dream Weavers Way), 30x20: built but not on the Gallery: bring it over through your Library. Type: Library.
-- [ ] **SU Overlook Residence** (game’s StrangerVille Overlook), 40x30: built but not on the Gallery: bring it over through your Library. Type: University Housing. University: pick in game as needed (her call, 21 Oct).
+- [ ] **SU Overlook Residence** (game’s StrangerVille Overlook), 40x30: built but not on the Gallery: bring it over through your Library. Type: University Housing. University: pick in game.
 
 **Secret Lots**
 
@@ -458,7 +458,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 - [ ] **Britechester B&B** (game’s Honeydew Fields), 20x15: place “Britechester B&B”. Not the other copy: “Britechester B&B” (Residential). Type: Café/Vacation Rental. Traits: Romantic Aura, University Student Hang Out. Trait ideas (free slots): + Homey.
 - [ ] **Laurel Library**, 50x40: place “Laurel Library”. Type: Library. Traits: Study Spot, University Student Hang Out, Peace and Quiet.
 - [ ] **The Royal Crown** (game’s Pepper’s Pub), 20x20: place “The Royal Crown”. Type: Bar. Traits: University Student Hang Out, Convivial. Trait ideas (free slots): + Great Acoustics.
-- [ ] **Mossy Lane**, 20x15: place “Mossy Lane”. Type: University Housing. University: pick in game as needed (her call, 21 Oct). Traits: Homey, Cat Hangout. Trait ideas (free slots): + Study Spot.
+- [ ] **Mossy Lane**, 20x15: place “Mossy Lane”. Type: University Housing. University: pick in game. Traits: Homey, Cat Hangout. Trait ideas (free slots): + Study Spot.
 - [ ] **Spring Steppes**, 20x15: place “Spring Steppes”. Not the other copy: “Spring Steppes” (University Housing). Type: Residential Rental (3). Elderberry (EA, landlord, unit 1). Tenants: Pleasant unit 3. Traits: Homey, Cat Hangout. Units: 1 (Homey, Cat Hangout); 2; 3.
 
 ### Evergreen Harbor
