@@ -51,6 +51,19 @@ class PackNames(unittest.TestCase):
         self.assertEqual(build.short_pack("The Sims™ 4 Dine Out"), "Dine Out")
 
 
+class NewSaveChecklist(unittest.TestCase):
+    """Her new-save checklist is made from the plan (23 Oct): every owned world has a section, nothing reads None."""
+    def test_made_from_plan(self):
+        import new_save_checklist
+        new_save_checklist.main()
+        text = open(new_save_checklist.OUT, encoding='utf-8').read()
+        self.assertIn("## 6. World by world", text)
+        for p in world_files():
+            W = load(p)
+            if W.get('owned'): self.assertIn("### " + W['name'], text)
+        self.assertNotRegex(text, r"None|\(\)")
+
+
 class BritishSpelling(unittest.TestCase):
     """build.british(): her Gallery text in British spelling on the site; game names keep theirs (CLAUDE.md)."""
     def test_words(self):
