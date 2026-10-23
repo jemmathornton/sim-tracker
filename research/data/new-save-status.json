@@ -630,7 +630,8 @@
     "objs": 914,
     "game_objs": 0,
     "status": "placed",
-    "newUnitTraits": ["unit 2: Fast Internet, Sunny Aspect", "unit 3: Fast Internet, Sunny Aspect", "unit 4: Fast Internet, Sunny Aspect", "unit 5: Fast Internet, Sunny Aspect"]
+    "newUnitTraits": ["unit 2: Fast Internet, Sunny Aspect", "unit 3: Fast Internet, Sunny Aspect", "unit 4: Fast Internet, Sunny Aspect", "unit 5: Fast Internet, Sunny Aspect"],
+    "owner": "Kirkland"
    },
    {
     "lot": "Beech Byway",
@@ -658,7 +659,8 @@
     "placed": true,
     "objs": 1415,
     "game_objs": 0,
-    "status": "placed"
+    "status": "placed",
+    "owner": "Kirkland"
    },
    {
     "lot": "Oak Alcove",
@@ -827,7 +829,8 @@
     "placed": true,
     "objs": 502,
     "game_objs": 0,
-    "status": "placed"
+    "status": "placed",
+    "owner": "Kirkland"
    }
   ],
   "Granite Falls": [

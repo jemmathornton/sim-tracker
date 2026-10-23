@@ -31,6 +31,8 @@ VENUES = {int(k): v['name'] for k, v in load(os.path.join(ROOT, 'research', 'dat
 SAME_TYPE = {"thrift and boba store": "thrift and bubble tea store", "uob commons": "ubrite commons", "small business residential": "residential",
              "haunted house": "haunted house residential", "university housing": "university housing"}   # her British names and labels -> the game's
 ECO = {}   # street (world id) -> eco footprint state in the save
+OWNERS = {}   # zone -> the household that owns the lot (rentals, businesses)
+HH_NAME = {}   # household id -> name
 NAPS = []   # neighbourhood action plans in force (Eco Lifestyle)
 CLUBS = []   # the save's clubs: leader Sim id, hangout zone
 HOLIDAYS = []   # the save's 4-week calendar: name, season, week, day
@@ -60,12 +62,15 @@ def read(fname):
         top = s4.fields(data)
         for fn, wt, v in top:
             if fn == 4:
-                n = s4.decode(v, P + 'NeighborhoodData', S, depth=2); hoods[n.get('neighborhood_id')] = n.get('name', '')
+                n = s4.decode(v, P + 'NeighborhoodData', S, depth=3); hoods[n.get('neighborhood_id')] = n.get('name', '')
                 sd = n.get('street_data') or []
                 for st in (sd if isinstance(sd, list) else [sd]):   # each street's (neighbourhood's) eco footprint now
                     if isinstance(st, dict) and st.get('world_id'): ECO[st['world_id']] = st.get('eco_footprint_state', 'GREEN')
                 for lo in n.get('lots') or []:   # each lot's current venue type (the zone's own record is only updated when it's loaded)
-                    if isinstance(lo, dict) and lo.get('zone_instance_id'): venue_of[lo['zone_instance_id']] = VENUES.get(lo.get('venue_key'))
+                    if isinstance(lo, dict) and lo.get('zone_instance_id'):
+                        venue_of[lo['zone_instance_id']] = VENUES.get(lo.get('venue_key'))
+                        ow = lo.get('lot_owner'); ow = ow[0] if isinstance(ow, list) and ow else ow
+                        if isinstance(ow, dict) and (ow.get('household_name') or ow.get('household_id')): OWNERS[lo['zone_instance_id']] = ow.get('household_name') or ow.get('household_id')
         objs = {}
         for e in ix:
             if e[0] != 0x6: continue
@@ -79,7 +84,8 @@ def read(fname):
                                        "plex": z.get('active_plex') or 0, "traits": [TN.get(t, str(t)) for t in z.get('lot_traits', [])],
                                        "objs": o.get('n', 0), "active": o.get('active'), "subs": o.get('subs'),
                                        "venue": venue_of.get(z['zone_id'])}
-            elif fn == 5: hhs.append(s4.decode(v, P + 'HouseholdData', S, depth=2))
+            elif fn == 5:
+                hhs.append(s4.decode(v, P + 'HouseholdData', S, depth=2)); HH_NAME[hhs[-1].get('household_id')] = hhs[-1].get('name')
             elif fn == 6:
                 sm = s4.decode(v, P + 'SimData', S, depth=0); sims[sm.get('sim_id')] = f"{sm.get('first_name', '')} {sm.get('last_name', '')}".strip()
                 if sm.get('extended_species') not in (None, 0, 1): PETS.add(sims[sm.get('sim_id')])   # cats, dogs, horses, foxes
@@ -217,6 +223,12 @@ def main():
                         got_t = main['venue'].lower().replace('vacation rental - granite falls', 'vacation rental').replace('vacation rental - selvadorada', 'vacation rental')
                         if got_t not in want_t and not (got_t == 'residential rental' and any('rental' in t for t in want_t)):
                             r['issues'].append(f"lot type in the save: {main['venue']} (plan: {l['type']})")
+                    if l.get('who') and re.search(r'\sown\??$', l['who'], re.I) or ('Small Business' in (l.get('type') or '') and l.get('who') and l.get('sims') == 'N/A'):
+                        want_o = re.sub(r'\s+own\??$', '', l['who'], flags=re.I).strip()
+                        has_o = OWNERS.get(zs[0][0]) if zs else None
+                        has_o = HH_NAME.get(has_o, has_o) if not isinstance(has_o, str) else has_o
+                        if has_o and norm(want_o) not in norm(has_o) and norm(has_o) not in norm(want_o): r['issues'].append(f"owned by {has_o} in the save; plan: {want_o}")
+                        elif not has_o: r.setdefault('owner', want_o)
                     cv = D['csVersions'].get(key)
                     if cv and main.get('subs'):
                         act = SUBVENUES.get(main['subs'][main.get('active') or 0], '?')
