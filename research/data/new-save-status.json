@@ -81,7 +81,11 @@
     "shared": false,
     "type": "Sylvan Glade",
     "issues": [],
-    "status": "not found"
+    "save_name": "Sylvan Glade",
+    "placed": false,
+    "objs": 1,
+    "game_objs": 1,
+    "status": "game lot"
    },
    {
     "lot": "Potters Splay",
@@ -603,7 +607,7 @@
     "objs": 312,
     "game_objs": 248,
     "status": "placed",
-    "newTraits": ["Great Soil", "Reduce and Recycle", "Quake Zone"]
+    "newTraits": ["Great Soil", "Reduce and Recycle"]
    },
    {
     "lot": "Forgotten Grotto",
@@ -613,7 +617,11 @@
     "shared": false,
     "type": "Forgotten Grotto",
     "issues": [],
-    "status": "not found"
+    "save_name": "Forgotten Grotto",
+    "placed": false,
+    "objs": 0,
+    "game_objs": 0,
+    "status": "game lot"
    }
   ],
   "Newcrest": [
@@ -1700,7 +1708,11 @@
     "shared": false,
     "type": "Karaoke Bar",
     "issues": [],
-    "status": "not found"
+    "save_name": "1 Torendi Tower Penthouse",
+    "placed": false,
+    "objs": 442,
+    "game_objs": 442,
+    "status": "game lot"
    },
    {
     "lot": "Planet Honey Pop!",
@@ -2785,7 +2797,11 @@
     "shared": true,
     "type": "The Magic Realm",
     "issues": [],
-    "status": "not found"
+    "save_name": "The Magic Realm",
+    "placed": false,
+    "objs": 403,
+    "game_objs": 403,
+    "status": "to place"
    }
   ],
   "Britechester": [
@@ -5067,7 +5083,8 @@
    "sims": 1,
    "state": "move",
    "now": "no home",
-   "save_household": "Broke"
+   "save_household": "Broke",
+   "save_ids": [612515242714766014]
   },
   {
    "world": "Willow Creek",
@@ -5095,7 +5112,8 @@
    "sims": 4,
    "state": "move",
    "now": "The Lighthouse",
-   "save_household": "Bjergsen"
+   "save_household": "Bjergsen",
+   "save_ids": [612515242714551323]
   },
   {
    "world": "Willow Creek",
@@ -5115,6 +5133,7 @@
    "state": "move",
    "now": "no home",
    "save_household": "Pancakes",
+   "save_ids": [612515242714470634],
    "note": "not in the save: Iggy Pancakes (from the Gallery or your Library)"
   },
   {
@@ -5125,7 +5144,8 @@
    "sims": 4,
    "state": "move",
    "now": "no home",
-   "save_household": "Villareal"
+   "save_household": "Villareal",
+   "save_ids": [612515242714550879]
   },
   {
    "world": "Willow Creek",
@@ -5133,7 +5153,8 @@
    "lot": "Ophelia Villa",
    "unit": "",
    "sims": 4,
-   "state": "home"
+   "state": "home",
+   "save_ids": [612515242714471085]
   },
   {
    "world": "Willow Creek",
@@ -5150,7 +5171,8 @@
    "lot": "Cypress Terrace",
    "unit": "",
    "sims": 5,
-   "state": "home"
+   "state": "home",
+   "save_ids": [612515242714469804]
   },
   {
    "world": "Oasis Springs",
@@ -5170,7 +5192,8 @@
    "state": "move",
    "now": "no home",
    "save_household": "Caliente",
-   "note": "split them out of Caliente first (it also has Dina, Katrina, Nina)"
+   "note": "split them out of Caliente first (it also has Dina, Katrina, Nina)",
+   "save_ids": [612515242714477224]
   },
   {
    "world": "Oasis Springs",
@@ -5216,7 +5239,8 @@
    "sims": 4,
    "state": "move",
    "now": "no home",
-   "save_household": "The Smith Family"
+   "save_household": "The Smith Family",
+   "save_ids": [36054490410062027]
   },
   {
    "world": "Oasis Springs",
@@ -5224,7 +5248,8 @@
    "lot": "Affluista Mansion",
    "unit": "",
    "sims": 3,
-   "state": "home"
+   "state": "home",
+   "save_ids": [612515242714474794]
   },
   {
    "world": "Oasis Springs",
@@ -5235,7 +5260,8 @@
    "state": "move",
    "now": "no home",
    "save_household": "Caliente",
-   "note": "split them out of Caliente first (it also has Don)"
+   "note": "split them out of Caliente first (it also has Don)",
+   "save_ids": [612515242714477224]
   },
   {
    "world": "Newcrest",
@@ -5246,7 +5272,8 @@
    "state": "move",
    "now": "no home",
    "save_household": "BFF",
-   "note": "split them out of BFF first (it also has Liberty, Travis)"
+   "note": "split them out of BFF first (it also has Liberty, Travis)",
+   "save_ids": [612515242714472412]
   },
   {
    "world": "Newcrest",
@@ -5257,7 +5284,8 @@
    "state": "move",
    "now": "no home",
    "save_household": "BFF",
-   "note": "split them out of BFF first (it also has Summer, Travis)"
+   "note": "split them out of BFF first (it also has Summer, Travis)",
+   "save_ids": [612515242714472412]
   },
   {
    "world": "Newcrest",
@@ -5268,7 +5296,8 @@
    "state": "move",
    "now": "no home",
    "save_household": "BFF",
-   "note": "split them out of BFF first (it also has Liberty, Summer)"
+   "note": "split them out of BFF first (it also has Liberty, Summer)",
+   "save_ids": [612515242714472412]
   },
   {
    "world": "Newcrest",
@@ -5341,7 +5370,8 @@
    "sims": 3,
    "state": "move",
    "now": "Specter Family Manor",
-   "save_household": "Specter"
+   "save_household": "Specter",
+   "save_ids": [612515242715198297]
   },
   {
    "world": "Windenburg",
@@ -5351,7 +5381,8 @@
    "sims": 4,
    "state": "move",
    "now": "no home",
-   "save_household": "Partihaus"
+   "save_household": "Partihaus",
+   "save_ids": [612515242714618538]
   },
   {
    "world": "Windenburg",
@@ -5361,7 +5392,8 @@
    "sims": 4,
    "state": "move",
    "now": "no home",
-   "save_household": "Munch"
+   "save_household": "Munch",
+   "save_ids": [612515242714549061]
   },
   {
    "world": "Windenburg",
@@ -5371,7 +5403,8 @@
    "sims": 2,
    "state": "move",
    "now": "no home",
-   "save_household": "Free Spirits"
+   "save_household": "Free Spirits",
+   "save_ids": [612515242714548224]
   },
   {
    "world": "Windenburg",
@@ -5379,7 +5412,8 @@
    "lot": "Dresden House",
    "unit": "",
    "sims": 4,
-   "state": "home"
+   "state": "home",
+   "save_ids": [612515242714548560]
   },
   {
    "world": "San Myshuno",
@@ -5387,7 +5421,8 @@
    "lot": "20 Culpepper House",
    "unit": "",
    "sims": 2,
-   "state": "home"
+   "state": "home",
+   "save_ids": [612515242714620097]
   },
   {
    "world": "San Myshuno",
@@ -5395,7 +5430,8 @@
    "lot": "910 Medina Studios",
    "unit": "",
    "sims": 1,
-   "state": "home"
+   "state": "home",
+   "save_ids": [612515242714690647]
   },
   {
    "world": "San Myshuno",
@@ -5405,7 +5441,8 @@
    "sims": 2,
    "state": "move",
    "now": "2A Jasmine Suites",
-   "save_household": "Bheeda"
+   "save_household": "Bheeda",
+   "save_ids": [612515242714620305]
   },
   {
    "world": "San Myshuno",
@@ -5422,7 +5459,8 @@
    "lot": "121 Hakim House",
    "unit": "",
    "sims": 3,
-   "state": "home"
+   "state": "home",
+   "save_ids": [612515242714624737]
   },
   {
    "world": "San Myshuno",
@@ -5433,7 +5471,8 @@
    "state": "move",
    "now": "701 ZenView",
    "save_household": "Karaoke Legends",
-   "note": "split them out of Karaoke Legends first (it also has Akira, Darling); not in the save: Alicia Santiago (from the Gallery or your Library)"
+   "note": "split them out of Karaoke Legends first (it also has Akira, Darling); not in the save: Alicia Santiago (from the Gallery or your Library)",
+   "save_ids": [612515242714623478]
   },
   {
    "world": "San Myshuno",
@@ -5444,7 +5483,8 @@
    "state": "move",
    "now": "Dock Den",
    "save_household": "Bro",
-   "occupied": "Karaoke Legends"
+   "occupied": "Karaoke Legends",
+   "save_ids": [612515242714617479]
   },
   {
    "world": "San Myshuno",
@@ -5454,7 +5494,8 @@
    "sims": 2,
    "state": "move",
    "now": "no home",
-   "save_household": "Behr"
+   "save_household": "Behr",
+   "save_ids": [612515242714618231]
   },
   {
    "world": "San Myshuno",
@@ -5464,7 +5505,8 @@
    "sims": 1,
    "state": "move",
    "now": "no home",
-   "save_household": "Jeong"
+   "save_household": "Jeong",
+   "save_ids": [612515242714697068]
   },
   {
    "world": "San Myshuno",
@@ -5472,7 +5514,8 @@
    "lot": "1312 21 Chic Street",
    "unit": "",
    "sims": 1,
-   "state": "home"
+   "state": "home",
+   "save_ids": [612515242714623098]
   },
   {
    "world": "San Myshuno",
@@ -5480,7 +5523,8 @@
    "lot": "1020 Alto Apartments",
    "unit": "",
    "sims": 1,
-   "state": "home"
+   "state": "home",
+   "save_ids": [612515242714621986]
   },
   {
    "world": "San Myshuno",
@@ -5488,7 +5532,8 @@
    "lot": "IX Landgraab Apartments",
    "unit": "",
    "sims": 2,
-   "state": "home"
+   "state": "home",
+   "save_ids": [612515242714621463]
   },
   {
    "world": "Brindleton Bay",
@@ -5496,7 +5541,8 @@
    "lot": "It's A Good House",
    "unit": "",
    "sims": 2,
-   "state": "home"
+   "state": "home",
+   "save_ids": [612515242714694012]
   },
   {
    "world": "Brindleton Bay",
@@ -5506,7 +5552,8 @@
    "sims": 4,
    "state": "move",
    "now": "Chateau Frise",
-   "save_household": "Delgato"
+   "save_household": "Delgato",
+   "save_ids": [612515242714693443]
   },
   {
    "world": "Brindleton Bay",
@@ -5516,7 +5563,8 @@
    "sims": 1,
    "state": "move",
    "now": "no home",
-   "save_household": "Lynx"
+   "save_household": "Lynx",
+   "save_ids": [612515242714692341]
   },
   {
    "world": "Brindleton Bay",
@@ -5536,7 +5584,8 @@
    "state": "move",
    "now": "no home",
    "save_household": "Roomies",
-   "note": "split them out of Roomies first (it also has Gavin, Mitchell, Zoe)"
+   "note": "split them out of Roomies first (it also has Gavin, Mitchell, Zoe)",
+   "save_ids": [612515242714476185]
   },
   {
    "world": "Del Sol Valley",
@@ -5547,7 +5596,8 @@
    "state": "move",
    "now": "no home",
    "save_household": "Roomies",
-   "note": "split them out of Roomies first (it also has Gavin, J, Zoe)"
+   "note": "split them out of Roomies first (it also has Gavin, J, Zoe)",
+   "save_ids": [612515242714476185]
   },
   {
    "world": "Del Sol Valley",
@@ -5558,7 +5608,8 @@
    "state": "move",
    "now": "no home",
    "save_household": "Roomies",
-   "note": "split them out of Roomies first (it also has Gavin, J, Mitchell)"
+   "note": "split them out of Roomies first (it also has Gavin, J, Mitchell)",
+   "save_ids": [612515242714476185]
   },
   {
    "world": "Del Sol Valley",
@@ -5569,7 +5620,8 @@
    "state": "move",
    "now": "no home",
    "save_household": "Roomies",
-   "note": "split them out of Roomies first (it also has J, Mitchell, Zoe)"
+   "note": "split them out of Roomies first (it also has J, Mitchell, Zoe)",
+   "save_ids": [612515242714476185]
   },
   {
    "world": "Del Sol Valley",
@@ -5580,7 +5632,8 @@
    "state": "move",
    "now": "Dream Weavers Way",
    "save_household": "Eclectic Arts Household",
-   "note": "split them out of Eclectic Arts Household first (it also has Alice, Leslie)"
+   "note": "split them out of Eclectic Arts Household first (it also has Alice, Leslie)",
+   "save_ids": [612515242714767610]
   },
   {
    "world": "Del Sol Valley",
@@ -5591,7 +5644,8 @@
    "state": "move",
    "now": "Dream Weavers Way",
    "save_household": "Eclectic Arts Household",
-   "note": "split them out of Eclectic Arts Household first (it also has Leslie, Mark)"
+   "note": "split them out of Eclectic Arts Household first (it also has Leslie, Mark)",
+   "save_ids": [612515242714767610]
   },
   {
    "world": "Del Sol Valley",
@@ -5602,7 +5656,8 @@
    "state": "move",
    "now": "Dream Weavers Way",
    "save_household": "Eclectic Arts Household",
-   "note": "split them out of Eclectic Arts Household first (it also has Alice, Mark)"
+   "note": "split them out of Eclectic Arts Household first (it also has Alice, Mark)",
+   "save_ids": [612515242714767610]
   },
   {
    "world": "Del Sol Valley",
@@ -5612,7 +5667,8 @@
    "sims": 1,
    "state": "move",
    "now": "no home",
-   "save_household": "Zest"
+   "save_household": "Zest",
+   "save_ids": [612515242714473730]
   },
   {
    "world": "Del Sol Valley",
@@ -5622,7 +5678,8 @@
    "sims": 1,
    "state": "move",
    "now": "no home",
-   "save_household": "Ward"
+   "save_household": "Ward",
+   "save_ids": [612515242714698097]
   },
   {
    "world": "Del Sol Valley",
@@ -5632,7 +5689,8 @@
    "sims": 3,
    "state": "move",
    "now": "no home",
-   "save_household": "Bailey-Moon"
+   "save_household": "Bailey-Moon",
+   "save_ids": [612515242714764111]
   },
   {
    "world": "StrangerVille",
@@ -5640,7 +5698,8 @@
    "lot": "Old Penelope",
    "unit": "",
    "sims": 1,
-   "state": "home"
+   "state": "home",
+   "save_ids": [612515242714766991]
   },
   {
    "world": "StrangerVille",
@@ -5648,7 +5707,8 @@
    "lot": "Riverside Grove",
    "unit": "",
    "sims": 3,
-   "state": "home"
+   "state": "home",
+   "save_ids": [612515242714766766]
   },
   {
    "world": "StrangerVille",
@@ -5658,7 +5718,8 @@
    "sims": 2,
    "state": "move",
    "now": "StrangerVille Overlook",
-   "save_household": "Roswell"
+   "save_household": "Roswell",
+   "save_ids": [612515242714833787]
   },
   {
    "world": "Sulani",
@@ -5668,7 +5729,8 @@
    "sims": 4,
    "state": "move",
    "now": "no home",
-   "save_household": "Kealoha"
+   "save_household": "Kealoha",
+   "save_ids": [612515242714835362]
   },
   {
    "world": "Sulani",
@@ -5678,7 +5740,8 @@
    "sims": 2,
    "state": "move",
    "now": "no home",
-   "save_household": "Hoapili"
+   "save_household": "Hoapili",
+   "save_ids": [612515242714834890]
   },
   {
    "world": "Sulani",
@@ -5686,7 +5749,8 @@
    "lot": "Reef Finery",
    "unit": "",
    "sims": 3,
-   "state": "home"
+   "state": "home",
+   "save_ids": [612515242714834048]
   },
   {
    "world": "Sulani",
@@ -5696,7 +5760,8 @@
    "sims": 2,
    "state": "move",
    "now": "no home",
-   "save_household": "Kahananui"
+   "save_household": "Kahananui",
+   "save_ids": [612515242714834389]
   },
   {
    "world": "Glimmerbrook",
@@ -5704,7 +5769,8 @@
    "lot": "Rock Ridge Canyon",
    "unit": "",
    "sims": 4,
-   "state": "home"
+   "state": "home",
+   "save_ids": [612515242714904739]
   },
   {
    "world": "Glimmerbrook",
@@ -5714,7 +5780,8 @@
    "sims": 2,
    "state": "move",
    "now": "no home",
-   "save_household": "Amicable Acolytes"
+   "save_household": "Amicable Acolytes",
+   "save_ids": [612515242714905075]
   },
   {
    "world": "Britechester",
@@ -5722,7 +5789,8 @@
    "lot": "Wyvern Hall",
    "unit": "",
    "sims": 2,
-   "state": "home"
+   "state": "home",
+   "save_ids": [612515242714836108]
   },
   {
    "world": "Britechester",
@@ -5730,7 +5798,8 @@
    "lot": "Briny Tower",
    "unit": "",
    "sims": 1,
-   "state": "home"
+   "state": "home",
+   "save_ids": [612515242714904011]
   },
   {
    "world": "Britechester",
@@ -5738,7 +5807,8 @@
    "lot": "Spring Steppes",
    "unit": "1",
    "sims": 3,
-   "state": "home"
+   "state": "waiting",
+   "note": "the rental isn't placed yet"
   },
   {
    "world": "Britechester",
@@ -5746,10 +5816,8 @@
    "lot": "Spring Steppes",
    "unit": "3",
    "sims": 2,
-   "state": "move",
-   "now": "Mossy Lane",
-   "save_household": "Pleasant",
-   "occupied": "Elderberry"
+   "state": "waiting",
+   "note": "the rental isn't placed yet"
   },
   {
    "world": "Evergreen Harbor",
@@ -5757,7 +5825,8 @@
    "lot": "Miner Mansion",
    "unit": "",
    "sims": 5,
-   "state": "home"
+   "state": "home",
+   "save_ids": [612515242714972052]
   },
   {
    "world": "Evergreen Harbor",
@@ -5765,10 +5834,8 @@
    "lot": "Rockridge Springs",
    "unit": "1",
    "sims": 2,
-   "state": "move",
-   "now": "The Portsmouth Promenade",
-   "save_household": "Greenburg",
-   "note": "split them out of Greenburg first (it also has Knox)"
+   "state": "waiting",
+   "note": "the rental isn't placed yet"
   },
   {
    "world": "Evergreen Harbor",
@@ -5779,7 +5846,8 @@
    "state": "move",
    "now": "The Portsmouth Promenade",
    "save_household": "Greenburg",
-   "note": "split them out of Greenburg first (it also has Blossom, Mary)"
+   "note": "split them out of Greenburg first (it also has Blossom, Mary)",
+   "save_ids": [612515242714974745]
   },
   {
    "world": "Evergreen Harbor",
@@ -5789,7 +5857,8 @@
    "sims": 2,
    "state": "move",
    "now": "The Old Mill",
-   "save_household": "Sterling Rico"
+   "save_household": "Sterling Rico",
+   "save_ids": [612515242714974268]
   },
   {
    "world": "Evergreen Harbor",
@@ -5797,7 +5866,8 @@
    "lot": "Pigulock Manor",
    "unit": "",
    "sims": 3,
-   "state": "home"
+   "state": "home",
+   "save_ids": [612515242714973306]
   },
   {
    "world": "Evergreen Harbor",
@@ -5825,7 +5895,8 @@
    "sims": 4,
    "state": "move",
    "now": "5-3-1 Shinrinyoku",
-   "save_household": "Akiyama"
+   "save_household": "Akiyama",
+   "save_ids": [612515242714978260]
   },
   {
    "world": "Mt. Komorebi",
@@ -5833,7 +5904,8 @@
    "lot": "2-5-1 Wakabamori",
    "unit": "",
    "sims": 4,
-   "state": "home"
+   "state": "home",
+   "save_ids": [612515242714976253]
   },
   {
    "world": "Mt. Komorebi",
@@ -5841,7 +5913,8 @@
    "lot": "5-6-1 Shinrinyoku",
    "unit": "",
    "sims": 3,
-   "state": "home"
+   "state": "home",
+   "save_ids": [612515242714977346]
   },
   {
    "world": "Henford-on-Bagley",
@@ -5849,10 +5922,8 @@
    "lot": "3 Cobblebottom Street",
    "unit": "3B",
    "sims": 2,
-   "state": "move",
-   "now": "14 Nettle Lane",
-   "save_household": "Moody & McMillan",
-   "occupied": "Scott"
+   "state": "waiting",
+   "note": "the rental isn't placed yet"
   },
   {
    "world": "Henford-on-Bagley",
@@ -5860,10 +5931,8 @@
    "lot": "3 Cobblebottom Street",
    "unit": "3A",
    "sims": 1,
-   "state": "move",
-   "now": "4 Olde Mill Lane",
-   "save_household": "New Start",
-   "occupied": "Scott"
+   "state": "waiting",
+   "note": "the rental isn't placed yet"
   },
   {
    "world": "Henford-on-Bagley",
@@ -5880,7 +5949,8 @@
    "lot": "Olde Mill Hill",
    "unit": "",
    "sims": 5,
-   "state": "home"
+   "state": "home",
+   "save_ids": [612515242714980433]
   },
   {
    "world": "Copperdale",
@@ -5888,7 +5958,8 @@
    "lot": "Golden Peak",
    "unit": "",
    "sims": 4,
-   "state": "home"
+   "state": "home",
+   "save_ids": [612515242715051348]
   },
   {
    "world": "Copperdale",
@@ -5898,7 +5969,8 @@
    "sims": 6,
    "state": "move",
    "now": "BridgeCreek Drive",
-   "save_household": "Price"
+   "save_household": "Price",
+   "save_ids": [612515242715050102]
   },
   {
    "world": "Copperdale",
@@ -5908,7 +5980,8 @@
    "sims": 4,
    "state": "move",
    "now": "Water Tower Way",
-   "save_household": "Harjo"
+   "save_household": "Harjo",
+   "save_ids": [612515242715051816]
   },
   {
    "world": "Copperdale",
@@ -5925,7 +5998,8 @@
    "lot": "Robles Point",
    "unit": "",
    "sims": 4,
-   "state": "home"
+   "state": "home",
+   "save_ids": [612515242715119053]
   },
   {
    "world": "San Sequoia",
@@ -5933,7 +6007,8 @@
    "lot": "13 Acacia Avenue",
    "unit": "",
    "sims": 3,
-   "state": "home"
+   "state": "home",
+   "save_ids": [612515242715118354]
   },
   {
    "world": "San Sequoia",
@@ -5941,7 +6016,8 @@
    "lot": "7 Eucalyptus Lane",
    "unit": "",
    "sims": 4,
-   "state": "home"
+   "state": "home",
+   "save_ids": [612515242715120387]
   },
   {
    "world": "San Sequoia",
@@ -5951,7 +6027,8 @@
    "sims": 3,
    "state": "move",
    "now": "36 Bayani Place",
-   "save_household": "Luna-Sullivan"
+   "save_household": "Luna-Sullivan",
+   "save_ids": [612515242715121000]
   },
   {
    "world": "Chestnut Ridge",
@@ -5959,7 +6036,8 @@
    "lot": "Champion's Grove",
    "unit": "",
    "sims": 1,
-   "state": "home"
+   "state": "home",
+   "save_ids": [612515242715124380]
   },
   {
    "world": "Chestnut Ridge",
@@ -5967,7 +6045,8 @@
    "lot": "Biscuit's Bastion",
    "unit": "",
    "sims": 3,
-   "state": "home"
+   "state": "home",
+   "save_ids": [612515242715123068]
   },
   {
    "world": "Chestnut Ridge",
@@ -5977,7 +6056,8 @@
    "sims": 2,
    "state": "move",
    "now": "Sweet Nectar Glade",
-   "save_household": "The Nectar Making Duo"
+   "save_household": "The Nectar Making Duo",
+   "save_ids": [612515242715122415]
   },
   {
    "world": "Chestnut Ridge",
@@ -5985,7 +6065,8 @@
    "lot": "Canyon Crossing",
    "unit": "",
    "sims": 1,
-   "state": "home"
+   "state": "home",
+   "save_ids": [612515242715121511]
   },
   {
    "world": "Chestnut Ridge",
@@ -6004,7 +6085,8 @@
    "sims": 2,
    "state": "move",
    "now": "09 Taka Soi 15",
-   "save_household": "Cahyaputri"
+   "save_household": "Cahyaputri",
+   "save_ids": [612515242715126012]
   },
   {
    "world": "Tomarang",
@@ -6021,7 +6103,8 @@
    "lot": "Sungai Point",
    "unit": "11A",
    "sims": 5,
-   "state": "home"
+   "state": "home",
+   "save_ids": [612515242715126764]
   },
   {
    "world": "Tomarang",
@@ -6029,7 +6112,8 @@
    "lot": "Sungai Point",
    "unit": "",
    "sims": 1,
-   "state": "home"
+   "state": "home",
+   "save_ids": [612515242715127019]
   },
   {
    "world": "Tomarang",
@@ -6037,7 +6121,8 @@
    "lot": "Hothotok Shore",
    "unit": "",
    "sims": 4,
-   "state": "home"
+   "state": "home",
+   "save_ids": [612515242715192992]
   },
   {
    "world": "Ravenwood",
@@ -6045,7 +6130,8 @@
    "lot": "Teardrop Cottage",
    "unit": "",
    "sims": 3,
-   "state": "home"
+   "state": "home",
+   "save_ids": [612515242715195684]
   },
   {
    "world": "Ravenwood",
@@ -6053,7 +6139,8 @@
    "lot": "The Marigold Chateau",
    "unit": "",
    "sims": 3,
-   "state": "home"
+   "state": "home",
+   "save_ids": [612515242715196697]
   },
   {
    "world": "Ravenwood",
@@ -6061,7 +6148,8 @@
    "lot": "Mourning Mist Manor",
    "unit": "",
    "sims": 2,
-   "state": "home"
+   "state": "home",
+   "save_ids": [612515242715194211]
   },
   {
    "world": "Nordhaven",
@@ -6069,7 +6157,8 @@
    "lot": "Koffieboon",
    "unit": "",
    "sims": 5,
-   "state": "home"
+   "state": "home",
+   "save_ids": [612515242715199572]
   },
   {
    "world": "Nordhaven",
@@ -6086,7 +6175,8 @@
    "lot": "Terra-Potta",
    "unit": "",
    "sims": 2,
-   "state": "home"
+   "state": "home",
+   "save_ids": [612515242715268276]
   },
   {
    "world": "Nordhaven",
@@ -6094,7 +6184,8 @@
    "lot": "The Old Foundry",
    "unit": "",
    "sims": 3,
-   "state": "home"
+   "state": "home",
+   "save_ids": [612515242715267681]
   },
   {
    "world": "Nordhaven",
@@ -6102,7 +6193,8 @@
    "lot": "Spilled Neon",
    "unit": "",
    "sims": 2,
-   "state": "home"
+   "state": "home",
+   "save_ids": [612515242715266678]
   },
   {
    "world": "Gibbi Point",
@@ -6110,7 +6202,8 @@
    "lot": "Wanderwood Wonder",
    "unit": "",
    "sims": 4,
-   "state": "home"
+   "state": "home",
+   "save_ids": [612515242715268845]
   },
   {
    "world": "Gibbi Point",
@@ -6118,7 +6211,8 @@
    "lot": "Seabreeze Scenic",
    "unit": "",
    "sims": 2,
-   "state": "home"
+   "state": "home",
+   "save_ids": [612515242715272183]
   },
   {
    "world": "Gibbi Point",
@@ -6128,7 +6222,8 @@
    "sims": 4,
    "state": "move",
    "now": "Love Highland",
-   "save_household": "Addam Commune"
+   "save_household": "Addam Commune",
+   "save_ids": [612515242715270744]
   },
   {
    "world": "Ondarion",
@@ -6136,7 +6231,8 @@
    "lot": "Dambele Palace",
    "unit": "",
    "sims": 4,
-   "state": "home"
+   "state": "home",
+   "save_ids": [612515242715276944]
   },
   {
    "world": "Ondarion",
@@ -6144,7 +6240,8 @@
    "lot": "18 Bright Cliff",
    "unit": "",
    "sims": 2,
-   "state": "home"
+   "state": "home",
+   "save_ids": [612515242715277571]
   },
   {
    "world": "Ondarion",
@@ -6152,7 +6249,8 @@
    "lot": "Verdemar Palace",
    "unit": "",
    "sims": 2,
-   "state": "home"
+   "state": "home",
+   "save_ids": [612515242715279698]
   },
   {
    "world": "Ondarion",
@@ -6160,7 +6258,8 @@
    "lot": "Casa Do Corsário",
    "unit": "",
    "sims": 1,
-   "state": "home"
+   "state": "home",
+   "save_ids": [612515242715281096]
   },
   {
    "world": "Ondarion",
@@ -6168,7 +6267,8 @@
    "lot": "Abrantes Estate",
    "unit": "",
    "sims": 2,
-   "state": "home"
+   "state": "home",
+   "save_ids": [612515242715280508]
   },
   {
    "world": "Ondarion",
@@ -6177,7 +6277,7 @@
    "unit": "",
    "sims": 4,
    "state": "home",
-   "note": "also living with them: Consort Capp"
+   "save_ids": [612515242715275776]
   },
   {
    "world": "Ondarion",
@@ -6186,7 +6286,7 @@
    "unit": "",
    "sims": 1,
    "state": "home",
-   "note": "also living with them: Holly Alto"
+   "save_ids": [612515242715274620]
   }
  ],
  "squatters": [],
@@ -6222,11 +6322,6 @@
    "households": ["Davidson 1 (Willow Creek)", "Kopf (Willow Creek)", "Livin' In The City (San Myshuno)", "Reynolds (Willow Creek)"],
    "sims": 15,
    "pairs": ["Davidson 1 with Lisa Davidson", "Kopf with Lucy Kopf", "Reynolds with Alfie Reynolds"]
-  },
-  {
-   "households": ["Pleasant (Britechester)", "Pleasant (Windenburg)"],
-   "sims": 4,
-   "pairs": ["Pleasant with Angela Pleasant", "Pleasant with Lilith Pleasant"]
   }
  ],
  "ahead": [
@@ -6279,10 +6374,10 @@
    "goes": "Little Falls Nook"
   }
  ],
- "notHearted": ["Abrantes", "Addam Commune", "Aether", "Akiyama", "Alto", "Amicable Acolytes", "Ananou", "BFF", "Bailey-Moon", "Behr", "Benali", "Best of Friends", "Bheeda", "Bjergsen", "Bro", "Broke", "Bun Ma", "Cahill", "Cahyaputri", "Caliente", "Capp", "Charm Family", "Chavez-Ralston", "Darong", "Delgato", "Eclectic Arts Household", "Elderberry", "Feng", "Fletcher", "Free Spirits", "Fyres", "Gomes", "Gooseman", "Goth", "Greenburg", "Harjo", "Harris", "Hecking", "Hoapili", "Ito", "Izadi-Gomes", "Jang", "Jeong", "Kahananui", "Karaoke Legends", "Kealoha", "Koopman", "Landgraab", "Linh", "Linh-Sadya", "Lobo", "Loden", "Luna-Sullivan", "Lynx", "Michaelson", "Moody & McMillan", "Munch", "New Start", "Ngata", "Nishidake", "Pancakes", "Partihaus", "Perry", "Pizzazz", "Pleasant", "Prescott", "Price", "Rasoya", "Robles", "Robles-Ruano", "Romualdo", "Roomies", "Roswell", "Sarpong", "Sienna & Flapjack", "Sigworth", "Specter", "Spencer-Kim-Lewis", "Sterling Rico", "The Grove Family", "The Nectar Making Duo", "Thebe", "Tinker", "Urbane Housesharers", "Villareal", "Ward", "Watson Family", "Zest"],
+ "notHearted": ["Abrantes", "Addam Commune", "Aether", "Akiyama", "Alto", "Amicable Acolytes", "Ananou", "BFF", "Bailey-Moon", "Behr", "Benali", "Best of Friends", "Bheeda", "Bjergsen", "Bro", "Broke", "Bun Ma", "Cahill", "Cahyaputri", "Caliente", "Capp", "Charm Family", "Chavez-Ralston", "Darong", "Delgato", "Eclectic Arts Household", "Feng", "Fletcher", "Free Spirits", "Fyres", "Gomes", "Gooseman", "Goth", "Greenburg", "Harjo", "Harris", "Hecking", "Hoapili", "Ito", "Izadi-Gomes", "Jang", "Jeong", "Kahananui", "Karaoke Legends", "Kealoha", "Koopman", "Landgraab", "Linh", "Linh-Sadya", "Lobo", "Loden", "Luna-Sullivan", "Lynx", "Michaelson", "Munch", "Ngata", "Nishidake", "Pancakes", "Partihaus", "Perry", "Pizzazz", "Prescott", "Price", "Rasoya", "Robles", "Robles-Ruano", "Romualdo", "Roomies", "Roswell", "Sarpong", "Sienna & Flapjack", "Sigworth", "Specter", "Spencer-Kim-Lewis", "Sterling Rico", "The Grove Family", "The Nectar Making Duo", "Thebe", "Tinker", "Urbane Housesharers", "Villareal", "Ward", "Watson Family", "Zest"],
  "clubs": ["Renegades: meets at Bathe de Rill; plan: Magnolia Mall", "Powerhouse: meets at Harbor Quarter Gym; plan: Skye Fitness", "Spin Masters: meets at Discotheque Pan Europa; plan: Stargazer", "Garden Gnomes: meets at Hare Square; plan: Magnolia Blossom Park", "Partihaus: meets at The Narwhal Arms; plan: La Discotheque", "Upper Crusts: meets at The Lighthouse; plan: any Restaurant", "Paragons: meets at Bathe de Rill; plan: Magnolia Mall", "League of Adventurers: meets at Hare Square; plan: Courtyard Lane Playground"],
  "dynasties": ["Monty: Juliette Monty is head in the save, not in it on the site", "Monty: Romeo Monty is member in the save, not in it on the site", "Monty: Dante Monty is heir in the save, not in it on the site", "Monty: Romeo Monticapp is outcast on the site, not in it in the save", "Capp: Juliette Monticapp is outcast on the site, not in it in the save"],
- "options": ["Season Length: still the game's 7 days; your pick is 28 days (set it before the holidays)", "Maximum Sim Count: 150; your pick is Unlimited (or the most your PC copes with)", "Allow Automatic Breakups is on; your pick is off", "Enable Dynasty Prestige Decay is on; your pick is off", "Neighbourhood Stories, Other Households: still ticked: Move In, Move Out, Have a Baby, Adopt a Child, Adopt Cats & Dogs, Rescue Horses, Join a Career, Leave a Career, Romance Changes (your picks: unticked)", "1 of 89 planned households in the save are in My Households (hearted): heart the rest, homeless families first (the game culls Sims outside My Households)", "holidays: still the game's own calendar (checklist step 3)"],
+ "options": ["Season Length: still the game's 7 days; your pick is 28 days (set it before the holidays)", "Maximum Sim Count: 150; your pick is Unlimited (or the most your PC copes with)", "Allow Automatic Breakups is on; your pick is off", "Enable Dynasty Prestige Decay is on; your pick is off", "Neighbourhood Stories, Other Households: still ticked: Move In, Move Out, Have a Baby, Adopt a Child, Adopt Cats & Dogs, Rescue Horses, Join a Career, Leave a Career, Romance Changes (your picks: unticked)", "1 of 85 planned households in the save are in My Households (hearted): heart the rest, homeless families first (the game culls Sims outside My Households)", "holidays: still the game's own calendar (checklist step 3)"],
  "optionsRaw": {
   "autonomy_level": "FULL",
   "sim_life_span": "NORMAL",

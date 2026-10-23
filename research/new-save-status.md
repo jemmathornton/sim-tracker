@@ -2,7 +2,7 @@
 
 Made by tools/research/new_save_check.py from a copy of the save. Lots: placed / to place / the game’s lot; anything that differs from the plan is listed. Households: who isn’t home yet.
 
-**At a glance:** 91 lots placed in 11 worlds; 76 shared lots still to place. 49 households at home, 49 to move, 26 not in the save yet.
+**At a glance:** 91 lots placed in 11 worlds; 77 shared lots still to place. 48 households at home, 45 to move, 26 not in the save yet.
 
 ## Game options
 
@@ -11,7 +11,7 @@ Made by tools/research/new_save_check.py from a copy of the save. Lots: placed /
 - Allow Automatic Breakups is on; your pick is off
 - Enable Dynasty Prestige Decay is on; your pick is off
 - Neighbourhood Stories, Other Households: still ticked: Move In, Move Out, Have a Baby, Adopt a Child, Adopt Cats & Dogs, Rescue Horses, Join a Career, Leave a Career, Romance Changes (your picks: unticked)
-- 1 of 89 planned households in the save are in My Households (hearted): heart the rest, homeless families first (the game culls Sims outside My Households)
+- 1 of 85 planned households in the save are in My Households (hearted): heart the rest, homeless families first (the game culls Sims outside My Households)
 - Holidays: still the game's own calendar (checklist step 3)
 
 ## Willow Creek
@@ -113,6 +113,7 @@ Made by tools/research/new_save_check.py from a copy of the save. Lots: placed /
 
 ## Glimmerbrook
 
+- **To place:** The Magic Realm
 - **Brooks Bridge:** named “Brooks Bridge [Puzzle]” in the save
 - **Move Amicable Acolytes** to Brooks Bridge (now: no home)
 
@@ -159,7 +160,6 @@ Family links to Sims in another household are lost when a household comes from t
 
 - Leah-Moon Cadberry (Oasis Springs) + Sylvia & Kenny Cadberry (Newcrest) (3 Sims)
 - Davidson 1 (Willow Creek) + Kopf (Willow Creek) + Livin' In The City (San Myshuno) + Reynolds (Willow Creek): 15 Sims, too many for one household. Bring each family over with its relative from the other household instead (Davidson 1 with Lisa Davidson; Kopf with Lucy Kopf; Reynolds with Alfie Reynolds), then split them off and merge them back into their own household in the new save, which keeps the links.
-- Pleasant (Britechester) + Pleasant (Windenburg) (4 Sims)
 
 ## Living on lots still to place
 
@@ -178,7 +178,7 @@ The game moves them out when you place your build. Where the plan wants them:
 
 In the new save but not on the site (read in once the save is set up):
 
-- Oasis Springs / Desert Bloom: Great Soil, Reduce and Recycle, Quake Zone
+- Oasis Springs / Desert Bloom: Great Soil, Reduce and Recycle
 - Newcrest / Asphalt Abodes: Good Schools, Homey, Sunny Aspect
 - Glimmerbrook / Brooks Bridge: Spooky, Homey
 

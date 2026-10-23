@@ -1000,6 +1000,10 @@ window.ADMIN = {
 "named “Brooks Bridge [Puzzle]” in the save"
 ]
 },
+"l-glimmerbrook--the-magic-realm": {
+"s": "to place",
+"fix": []
+},
 "l-britechester--darby-s-den": {
 "s": "to place",
 "fix": []
@@ -1225,17 +1229,6 @@ window.ADMIN = {
 "Kopf with Lucy Kopf",
 "Reynolds with Alfie Reynolds"
 ]
-},
-{
-"households": [
-"Pleasant (Britechester)",
-"Pleasant (Windenburg)"
-],
-"sims": 4,
-"pairs": [
-"Pleasant with Angela Pleasant",
-"Pleasant with Lilith Pleasant"
-]
 }
 ],
 "options": [
@@ -1244,7 +1237,7 @@ window.ADMIN = {
 "Allow Automatic Breakups is on; your pick is off",
 "Enable Dynasty Prestige Decay is on; your pick is off",
 "Neighbourhood Stories, Other Households: still ticked: Move In, Move Out, Have a Baby, Adopt a Child, Adopt Cats & Dogs, Rescue Horses, Join a Career, Leave a Career, Romance Changes (your picks: unticked)",
-"1 of 89 planned households in the save are in My Households (hearted): heart the rest, homeless families first (the game culls Sims outside My Households)",
+"1 of 85 planned households in the save are in My Households (hearted): heart the rest, homeless families first (the game culls Sims outside My Households)",
 "holidays: still the game's own calendar (checklist step 3)"
 ],
 "fromSaves": [
@@ -1900,7 +1893,9 @@ window.ADMIN = {
 {
 "world": "Glimmerbrook",
 "placed": 3,
-"toPlace": [],
+"toPlace": [
+"The Magic Realm"
+],
 "fixes": [
 {
 "lot": "Brooks Bridge",

@@ -29,7 +29,7 @@ NS_PICKS = {273735: False, 273878: False, 273734: False, 273882: False, 273888: 
             282070: True, 273881: True, 380608: True, 380610: False}
 VENUES = {int(k): v['name'] for k, v in load(os.path.join(ROOT, 'research', 'data', 'game-venues.json'))['venues'].items()}
 SAME_TYPE = {"thrift and boba store": "thrift and bubble tea store", "uob commons": "ubrite commons", "small business residential": "residential",
-             "haunted house": "haunted house residential", "university housing": "university housing"}   # her British names and labels -> the game's
+             "haunted house": "haunted house residential", "university housing": "university housing", "apartment": "residential", "penthouse": "residential"}   # her British names and labels -> the game's
 ECO = {}   # street (world id) -> eco footprint state in the save
 OWNERS = {}   # zone -> the household that owns the lot (rentals, businesses)
 HH_NAME = {}   # household id -> name
@@ -95,10 +95,15 @@ def read(fname):
             if f_ in tops:
                 rs = s4.decode(tops[f_], P + 'StoryProgressionRuleSet', S, depth=3)
                 OPTIONS[key_] = {"on": rs.get('enabled', True), "rules": {r.get('rule_id'): r.get('enabled', True) for r in rs.get('rules', [])}}
-        try:
-            acct = s4.decode(tops[3], P + 'AccountData', S, depth=6); slot = s4.decode(tops[2], P + 'SaveSlotData', S, depth=6)
-            OPTIONS.update((acct.get('gameplay_account_data') or {}).get('gameplay_options') or {})
-            hs = (slot.get('gameplay_data') or {}).get('holiday_service') or {}
+        def part(label, fn):   # each part on its own, so one failure never hides the others (it's reported in Game options)
+            try: fn()
+            except Exception as e: OPTIONS.setdefault('_errors', []).append(f"{label}: {e}")
+        acct = s4.decode(tops[3], P + 'AccountData', S, depth=6) if 3 in tops else {}
+        slot = s4.decode(tops[2], P + 'SaveSlotData', S, depth=6) if 2 in tops else {}
+        gd = slot.get('gameplay_data') or {}
+        part("game options", lambda: OPTIONS.update((acct.get('gameplay_account_data') or {}).get('gameplay_options') or {}))
+        def holidays():
+            hs = gd.get('holiday_service') or {}
             OPTIONS['_own_holidays'] = [h.get('name') for h in hs.get('holidays', []) if h.get('name')]
             names_ = {h.get('holiday_type') or h.get('holiday_id') or h.get('id'): h.get('name') for h in hs.get('holidays', []) if h.get('name')}
             for cal in hs.get('calendars', []):   # the 4-week calendar (season_length 2): each holiday's season and day
@@ -107,20 +112,31 @@ def read(fname):
                         HOLIDAYS.append({"name": names_.get(x.get('holiday_id')) or GAME_HOLIDAYS.get(x.get('holiday_id'), str(x.get('holiday_id'))),
                                          "season": ["Summer", "Autumn", "Winter", "Spring"][x.get('season', 0)], "week": (x.get('day') or 0) // 7 + 1,
                                          "day": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"][(x.get('day') or 0) % 7]})
-            for d in ((slot.get('gameplay_data') or {}).get('dynasty_service') or {}).get('dynasty_data', []):   # dynasties
+        part("holidays", holidays)
+        def dynasties():
+            for d in (gd.get('dynasty_service') or {}).get('dynasty_data', []):
                 DYNASTIES.append({"name": d.get('name'), "head": d.get('head_sim_id'), "heir": d.get('heir_sim_id'),
                                   "members": [(m.get('member_id'), bool(m.get('is_black_sheep'))) for m in d.get('members') or []]})
-            for c in ((slot.get('gameplay_data') or {}).get('club_service') or {}).get('clubs', []):   # clubs: leader and hangout
-                CLUBS.append({"leader": c.get('leader'), "zone": c.get('hangout_zone_id'), "setting": c.get('hangout_setting')})
+        part("dynasties", dynasties)
+        def clubs():
+            for c in (gd.get('club_service') or {}).get('clubs', []):   # leader and hangout (a lot, or any lot of a type)
+                vt = c.get('venue_type')   # a ResourceKey (type, group, instance): the instance is the venue's tuning id
+                if isinstance(vt, (bytes, bytearray)):
+                    vals = [int.from_bytes(v, 'little') if isinstance(v, (bytes, bytearray)) else v for f_, w_, v in s4.fields(vt)]
+                    vt = next((v for v in vals if v in VENUES), None)
+                elif isinstance(vt, dict): vt = vt.get('instance')
+                CLUBS.append({"leader": c.get('leader'), "zone": c.get('hangout_zone_id'), "setting": c.get('hangout_setting'), "venue": VENUES.get(vt)})
+        part("clubs", clubs)
+        def naps():
             streets = json.load(open(os.path.join(ROOT, 'research', 'data', 'world-extras.json'), encoding='utf-8'))['streets']
-            for st in ((slot.get('gameplay_data') or {}).get('street_service') or {}).get('street_data', []):   # action plans in force
+            for st in (gd.get('street_service') or {}).get('street_data', []):   # action plans in force
                 for pd in ((st.get('civic_provider_data') or {}).get('policy_data') or []):
                     cd = pd.get('custom_data')
                     d = s4.decode(cd, P + 'PersistableCivicPolicyStreetPolicyData', S, depth=1) if isinstance(cd, (bytes, bytearray)) else {}
                     if d.get('enacted'):
                         info = streets.get(str(st.get('street_id')), {})
                         NAPS.append({"world": info.get('world'), "hood": info.get('neighbourhood'), "plan": NAP_NAMES.get(pd.get('policy_id'), str(pd.get('policy_id')))})
-        except Exception as e: OPTIONS['_error'] = str(e)
+        part("action plans", naps)
         return name, zones, hhs, sims
     finally:
         shutil.rmtree(tmp, ignore_errors=True)
@@ -163,11 +179,23 @@ def main():
     for k, v in base.items():
         w, lid, plex = k.split('|'); by_name.setdefault((w, loose(v['name'])), []).append((int(lid), int(plex)))
     def locate(wn, names):
+        hit = locate_in(wn, names)
+        if hit: return hit + (wn,)
+        for n in names:   # special lots (The Magic Realm, Sylvan Glade, Forgotten Grotto) are a little world of their own in the save
+            if n and loose(n) in {loose(w) for w, k in by_name}:
+                w_ = next(w for w, k in by_name if loose(w) == loose(n))
+                v = [x for (w, k), xs in by_name.items() if w == w_ for x in xs]
+                if v: return min(v, key=lambda x: x[1] not in (0, 300)) + (w_,)
+        return None
+    def locate_in(wn, names):
         for n in names:
             hit = by_name.get((wn, loose(n)))
             if hit: return min(hit, key=lambda x: x[1] not in (0, 300))
         for n in names:   # "Desert Bloom Park" is "Desert Bloom" in the game
             near = [v for (w, k), v in by_name.items() if w == wn and len(loose(n)) > 6 and (k.startswith(loose(n)) or loose(n).startswith(k)) and len(k) > 6]
+            if len(near) == 1: return min(near[0], key=lambda x: x[1] not in (0, 300))
+        for n in names:   # "Torendi Tower Penthouse" is "1 Torendi Tower Penthouse" in the game
+            near = [v for (w, k), v in by_name.items() if w == wn and len(loose(n)) > 8 and (loose(n) in k or k in loose(n)) and len(k) > 8]
             if len(near) == 1: return min(near[0], key=lambda x: x[1] not in (0, 300))
         return None
     out = {"save": fname, "saved": time.strftime('%Y-%m-%d %H:%M', time.localtime(mtime)), "worlds": {}, "households": []}
@@ -182,14 +210,14 @@ def main():
                 hit = locate(wn, [l['lot'], shown, l.get('mine') or ''])
                 r = {"lot": l['lot'], "name": shown, "hood": h['name'], "built": l['built'], "shared": l['shared'], "type": l.get('type'), "issues": []}
                 if hit is None: r['status'] = 'not found'; rows.append(r); continue
-                lid, plex = hit
-                zs = sorted(by_lot.get((wn, lid), []), key=lambda x: x[1]['plex'])
+                lid, plex, wz = hit
+                zs = sorted(by_lot.get((wz, lid), []), key=lambda x: x[1]['plex'])
                 if plex not in (0, 300): zs = [x for x in zs if x[1]['plex'] == plex]   # an apartment: its own unit only
                 main = next((z for zid, z in zs if z['plex'] in (0, 300)), zs[0][1] if zs else None)
                 units = [(zid, z) for zid, z in zs if z['plex'] > 300]
-                b = base.get(f"{wn}|{lid}|{main['plex']}", {}) if main else {}
+                b = base.get(f"{wz}|{lid}|{main['plex']}", {}) if main else {}
                 n_objs = sum(z['objs'] for _, z in zs)
-                b_objs = sum(v['objs'] for k, v in base.items() if k.startswith(f"{wn}|{lid}|") and (plex in (0, 300) or k == f"{wn}|{lid}|{plex}"))
+                b_objs = sum(v['objs'] for k, v in base.items() if k.startswith(f"{wz}|{lid}|") and (plex in (0, 300) or k == f"{wz}|{lid}|{plex}"))
                 placed = bool(main) and (n_objs != b_objs or norm(main['name']) != norm(b.get('name')))
                 r.update(save_name=main['name'] if main else None, placed=placed, objs=n_objs, game_objs=b_objs)
                 lot_zone[(wn, l['lot'])] = {'': zs[0][0] if zs else None, **{str(z['plex'] - 300): zid for zid, z in units}}
@@ -217,7 +245,7 @@ def main():
                         elif got - need - {'Quake Zone', 'Filthy'} - set(u.get('challenges') or []):   # more than the plan has: maybe hers, to read in later
                             r.setdefault('newUnitTraits', []).append(f"unit {u['name']}: {', '.join(sorted(got - need - {'Quake Zone', 'Filthy'} - set(u.get('challenges') or [])))}")
                     if not (l.get('traits') or l.get('challenges')) and not units and main['traits']:
-                        r['newTraits'] = [t for t in main['traits'] if t not in MOD_TRAITS.values()]   # the site has none yet: ready to read in
+                        r['newTraits'] = [t for t in main['traits'] if t not in MOD_TRAITS.values() and t != 'Quake Zone']   # the site has none yet: ready to read in
                     if main.get('venue') and l.get('type'):
                         want_t = [SAME_TYPE.get(t, t) for t in (re.sub(r'\s*\([^)]*\)', '', x).strip().lower() for x in l['type'].split('/'))]
                         got_t = main['venue'].lower().replace('vacation rental - granite falls', 'vacation rental').replace('vacation rental - selvadorada', 'vacation rental')
@@ -264,19 +292,22 @@ def main():
             differs = k and k[0] == 'b' and not re.search(r'^(matches|same)', k[1], re.I) and k[1] not in ('–', '')
             src = next((x.get('from') for x in hh['sims'] if re.search(r'save “', x.get('from') or '')), None)
             if differs and src:   # the site's Sims came from a save: that copy is the one to bring (save it to the Library from there)
-                sv = re.search(r'save “([^”]+)”', src).group(1)
+                m_ = re.search(r'save “([^”]+)”', src); sv = m_.group(1) if m_ else 'old'
                 return f"the site’s version is in your “{sv}” save: save it to your Library from there (your Library copy differs: {re.sub(r'[*`]', '', k[1])})"
             return "from your Library" + (f" (your Library copy differs from the site: {re.sub(r'[*`]', '', k[1])})" if differs else "")
         return "not found by its Sims’ names (EA’s, maybe renamed)"
-    zone_of_sim, members = {}, {}
-    living = {}   # zone -> names of the save households living there
+    # the save's households by id (two households can share a name: there are two Altos, Capps and Kunals)
+    zone_of_sim, members = {}, {}   # Sim name -> (home zone, household id); household id -> its Sims' names
+    living = {}   # zone -> ids of the save households living there
     for h in hhs:
-        if h.get('home_zone'): living.setdefault(h['home_zone'], []).append(h.get('name') or '?')
-    for h in hhs:
+        hid = h.get('household_id')
+        if h.get('home_zone'): living.setdefault(h['home_zone'], []).append(hid)
         ids = (h.get('sims') or {}).get('ids', []) if isinstance(h.get('sims'), dict) else []
-        for i in ids: zone_of_sim[sims.get(i)] = (h.get('home_zone'), h.get('name'))
-        members[h.get('name')] = members.get(h.get('name'), set()) | {sims.get(i) for i in ids if sims.get(i)}
+        for i in ids: zone_of_sim[sims.get(i)] = (h.get('home_zone'), hid)
+        members[hid] = {sims.get(i) for i in ids if sims.get(i)}
+    hname = lambda hid: HH_NAME.get(hid) or '?'
     base_ = lambda n: re.sub(r'\s+own\??$', '', re.sub(r'\?$', '', n).strip(), flags=re.I).strip()
+    planned_zone = {}   # zone -> (Sim names the plan puts there, household names with no Sims on the site yet)
     for w in D['worlds']:
         if not (w.get('owned') and w.get('ready')): continue
         wn = w['name']; H = D['households'].get(wn, {})
@@ -295,61 +326,61 @@ def main():
                 hn = f"{b} {seen[b]}" if total[b] > 1 else b
                 unit = unit_name(l, D['residentsUnit'].get(key) or 1) if l.get('units') else ''
                 where[hn] = (l, str(unit) if unit else '')
-            for t in D['tenants'].get(key, []): where[t['name']] = (l, unit_name(l, t['unit']) if t.get('unit') else '')
+            for t in D['tenants'].get(key, []): where[t['name']] = (l, unit_name(l, t['unit']) if t.get('unit') else '*')   # * = any unit
         for hn, (l, unit) in where.items():
-            hh = H.get(hn)
-            if not hh or not hh.get('sims'): continue
-            names = [s['name'] for s in hh['sims'] if not s.get('state') in ('Cat', 'Dog', 'Horse', 'Fox')]
-            got = [zone_of_sim.get(n) for n in names]
+            hh = H.get(hn) or {}
             zs = lot_zone.get((wn, l['lot']), {})
-            target = zs.get(unit) or zs.get('')
-            lot_name = D['nameFix'].get(f"{wn}|{l['lot']}") or (l.get('gallery') or {}).get('title') or l.get('mine') or l['lot']
-            row = {"world": wn, "household": hn, "lot": lot_name, "unit": unit, "sims": len(names)}
-            if not any(got): row['state'] = 'not in the save' ; row['how'] = how(hn, hh)
+            unit_zones = sorted({z for k, z in zs.items() if k and z})
+            targets = set(unit_zones) if unit == '*' else ({zs.get(unit)} if unit else {zs.get('')})
+            targets.discard(None)
+            names = [s_['name'] for s_ in hh.get('sims', []) if s_.get('state') not in ('Cat', 'Dog', 'Horse', 'Fox')]
+            for z in targets:
+                pz = planned_zone.setdefault(z, (set(), set()))
+                pz[0].update(names)
+                if not names: pz[1].add(norm(hn))
+            if not names: continue
+            got = [zone_of_sim.get(n) for n in names]
+            lot_name = D['nameFix'].get(f"{wn}|{l['lot']}") or (l.get('gallery') or {}).get('title') or (l['mine'] if l.get('mine') and l['mine'].strip('? ') else None) or l['lot']
+            row = {"world": wn, "household": hn, "lot": lot_name, "unit": '' if unit == '*' else unit, "sims": len(names)}
+            if not any(got): row['state'] = 'not in the save'; row['how'] = how(hn, hh)
+            elif unit and unit != '*' and not zs.get(unit):   # its unit doesn't exist in the save yet: the rental isn't placed
+                row['state'] = 'waiting'; row['note'] = "the rental isn't placed yet"
             else:
                 homes = {g[0] for g in got if g}
                 save_hh = {g[1] for g in got if g}
                 names_ok = {norm(l['lot']), norm(lot_name)}
                 ok = set(zs.values()) | {z for z, v in zones.items() if v['world'] == wn and (norm(v['name']) in names_ok or any(len(norm(v['name'])) > 6 and (norm(v['name']) in n or n in norm(v['name'])) for n in names_ok))}
-                if homes and homes <= ({target} if unit else ok):
+                allowed = targets if unit else ok
+                if homes and homes <= allowed:
                     row['state'] = 'home'
                     extra = sorted({n for g in save_hh for n in members.get(g, set())} - set(names) - PETS)
-                    missing = [n for n, g in zip(names, got) if g and g[0] not in homes]
                     if extra: row['note'] = "also living with them: " + ", ".join(extra)
-                    if missing: row['note'] = (row.get('note', '') + "; " if row.get('note') else '') + "not with them: " + ", ".join(missing)
                 else:
                     now = [zones.get(z, {}).get('name') or 'no home' for z in homes if z]
-                    row['state'] = 'move'; row['now'] = ", ".join(sorted(set(now))) or 'no home'; row['save_household'] = ", ".join(sorted(save_hh))
-                    there = [n for n in living.get(target, []) if n not in save_hh]
-                    if there: row['occupied'] = ", ".join(sorted(set(there)))
-                    if len(homes) > 1: row['note'] = 'its Sims are in more than one household'
+                    row['state'] = 'move'; row['now'] = ", ".join(sorted(set(now))) or 'no home'; row['save_household'] = ", ".join(sorted({hname(g) for g in save_hh}))
+                    there = sorted({hname(x) for z in targets for x in living.get(z, []) if x not in save_hh})
+                    if there: row['occupied'] = ", ".join(there)
                     others = sorted({n for g in save_hh for n in members.get(g, set())} - set(names) - PETS)
-                    if others and len(save_hh) == 1: row['note'] = f"split them out of {next(iter(save_hh))} first (it also has {', '.join(o.split()[0] for o in others[:4])}{'…' if len(others) > 4 else ''})"
-                    elif len(save_hh) > 1: row['note'] = f"merge {' and '.join(sorted(save_hh))} first"
+                    if others and len(save_hh) == 1: row['note'] = f"split them out of {hname(next(iter(save_hh)))} first (it also has {', '.join(o.split()[0] for o in others[:4])}{'…' if len(others) > 4 else ''})"
+                    elif len(save_hh) > 1: row['note'] = f"merge {' and '.join(sorted(hname(g) for g in save_hh))} first"
+                    elif len(homes) > 1: row['note'] = 'its Sims are in more than one household'
+                row['save_ids'] = sorted(save_hh)
                 absent = [n for n, g in zip(names, got) if not g]   # Sims of the plan's household the save doesn't have at all
                 if absent: row['note'] = (row.get('note', '') + "; " if row.get('note') else '') + "not in the save: " + ", ".join(absent) + " (from the Gallery or your Library)"
             out['households'].append(row)
     # households living on one of her placed lots that the plan doesn't put there (to move out, or elsewhere)
-    planned_sims = {}   # zone -> Sim names the plan puts there
-    for w in D['worlds']:
-        if not (w.get('owned') and w.get('ready')): continue
-        for r in out['worlds'].get(w['name'], []):
-            if r.get('status') != 'placed': continue
-            for unit, zid in lot_zone.get((w['name'], r['lot']), {}).items():
-                if zid: planned_sims.setdefault(zid, set())
-    for hn_row in out['households']:
-        zs = lot_zone.get((hn_row['world'], next((r['lot'] for r in out['worlds'][hn_row['world']] if r['name'] == hn_row['lot']), '')), {})
-        zid = zs.get(hn_row['unit']) or zs.get('')
-        H = D['households'].get(hn_row['world'], {}).get(hn_row['household'], {})
-        if zid in planned_sims: planned_sims[zid] |= {sm['name'] for sm in H.get('sims', [])}
+    placed_zones = set()
+    for wn_, rows_ in out['worlds'].items():
+        for r in rows_:
+            if r.get('status') == 'placed': placed_zones |= {z for z in lot_zone.get((wn_, r['lot']), {}).values() if z}
     out['squatters'] = []
     for h in hhs:
         z = h.get('home_zone')
-        if z not in planned_sims: continue
-        ids = (h.get('sims') or {}).get('ids', []) if isinstance(h.get('sims'), dict) else []
-        names = {sims.get(i) for i in ids}
-        if names and not names & planned_sims[z]:
-            out['squatters'].append({"world": zones[z]['world'], "lot": zones[z]['name'], "household": h.get('name') or '?', "sims": sorted(n for n in names if n)})
+        if z not in placed_zones: continue
+        names_, nohh = planned_zone.get(z, (set(), set()))
+        ms = members.get(h.get('household_id'), set()) - PETS
+        if ms and not ms & names_ and norm(h.get('name')) not in nohh:
+            out['squatters'].append({"world": zones[z]['world'], "lot": zones[z]['name'], "household": h.get('name') or '?', "sims": sorted(ms)})
     # old saves to open once, and the households to save to the Library from each
     by_save = {}
     for r in out['households']:
@@ -377,7 +408,7 @@ def main():
     joined = []
     for a_, b_, kind in links:
         ha, hb = hh_of.get(a_), hh_of.get(b_)
-        if not ha or not hb or ha == hb or not (ha in away or hb in away): continue
+        if not ha or not hb or ha == hb or not (ha in away and hb in away): continue   # both still to come in (a family already in the save can't be saved with them)
         groups.setdefault(ha, ha); groups.setdefault(hb, hb); groups[find_(ha)] = find_(hb); joined.append((ha, hb, a_, b_, kind))
     comp = {}
     for h_ in groups: comp.setdefault(find_(h_), set()).add(h_)
@@ -405,10 +436,11 @@ def main():
                     if e not in out['ahead']: out['ahead'].append(e)
     # game options against her picks (for-jemma/new-save-checklist.md step 2; research/game-options.md)
     # a setting left at the game's default isn't written in the save (research/save-game-options.md): missing = default
-    o = OPTIONS; opt = []
+    o = OPTIONS; opt = [f"couldn't read {x} from the save" for x in o.get('_errors', [])]
     if 'season_length' not in o: opt.append("Season Length: still the game's 7 days; your pick is 28 days (set it before the holidays)")
-    elif not re.search(r'28|FOUR|4', str(o['season_length'])): opt.append(f"Season Length reads {o['season_length']}; your pick is 28 days")
-    if (o.get('max_player_population') or 50) < 200: opt.append(f"Maximum Sim Count: {o.get('max_player_population') or 50}; your pick is Unlimited (or the most your PC copes with)")
+    elif o['season_length'] != 'VERY_LONG_SEASON': opt.append(f"Season Length is {dict(NORMAL_SEASON='7 days', LONG_SEASON='14 days').get(o['season_length'], o['season_length'])}; your pick is 28 days")
+    mp = o.get('max_player_population', 50)   # missing = the game's default 50; 0 is probably Unlimited (unconfirmed)
+    if mp and mp < 200: opt.append(f"Maximum Sim Count: {mp}; your pick is Unlimited (or the most your PC copes with)")
     if o.get('npc_civic_voting_enabled', True): opt.append("Enable NPC Voting is on; your pick is off")
     if o.get('unplayed_aging_enabled', True): opt.append("Auto Age (Unplayed Households) is on; your pick is off")
     if o.get('npc_autonomy_breakups_enabled', True): opt.append("Allow Automatic Breakups is on; your pick is off")
@@ -422,11 +454,10 @@ def main():
         if wrong_off: opt.append("Neighbourhood Stories, Other Households: unticked: " + ", ".join(wrong_off) + " (your picks: ticked)")
     mine = o.get('_ns_mine')
     if mine and mine['on'] and any(mine['rules'].values()): opt.append("Neighbourhood Stories, My Households: some rules are on; your pick is all off")
-    hearted_names = {h.get('name') for h in hhs if h.get('is_player')}
-    planned = {g for r in out['households'] if r['state'] in ('home', 'move') for g in (r.get('save_household') or '').split(', ') if g}         | {zone_of_sim.get(n, (None, None))[1] for r in out['households'] if r['state'] == 'home' for n in [next((sm['name'] for sm in D['households'][r['world']][r['household']].get('sims', [])), None)] if n}
-    planned.discard(None)
-    not_h = sorted(planned - hearted_names)
-    out['notHearted'] = not_h
+    hearted = {h.get('household_id') for h in hhs if h.get('is_player')}   # by id: two households can share a name
+    planned = {g for r in out['households'] if r['state'] in ('home', 'move') for g in r.get('save_ids', [])}
+    not_h = sorted(planned - hearted)
+    out['notHearted'] = sorted({HH_NAME.get(g, '?') for g in not_h})
     if not_h: opt.append(f"{len(planned) - len(not_h)} of {len(planned)} planned households in the save are in My Households (hearted): heart the rest, homeless families first (the game culls Sims outside My Households)")
     # clubs: find each by its leader, compare its hangout with the plan's (data/groups.json)
     groups = load(os.path.join(DATA, 'groups.json')).get('clubs', {})
@@ -442,13 +473,13 @@ def main():
         club = leader_of.get(sims.get(c['leader']))
         g = groups.get(club) if club else None
         if not g: continue
-        now = zones.get(c['zone'], {}).get('name') if c['zone'] else ('any ' + str(c['setting']).lower())
+        now = zones.get(c['zone'], {}).get('name') if c['zone'] else ('any ' + (c.get('venue') or str(c['setting']).lower()))
         if g.get('place'):
             wn_, l_ = lot_name_of.get(g['place'], (None, None))
             if not l_: continue
             zz = lot_zone.get((wn_, l_['lot']), {}).get('')
             if zz != c['zone']: hang.append(f"{club}: meets at {now}; plan: {D['nameFix'].get(wn_ + '|' + l_['lot']) or (l_.get('gallery') or {}).get('title') or l_.get('mine') or l_['lot']}")
-        elif g.get('anyType') and c['zone']: hang.append(f"{club}: meets at {now}; plan: any {g['anyType']}")
+        elif g.get('anyType') and (c['zone'] or norm(c.get('venue') or '') != norm(g['anyType'])): hang.append(f"{club}: meets at {now}; plan: any {g['anyType']}")
     out['clubs'] = hang
     # dynasties: the save against the site's roles (data/worlds households and people.json)
     roles = {}
@@ -538,6 +569,8 @@ def main():
     if nu:
         L += ["## Unit traits the site doesn’t show yet", "", "Rental units with more traits in the new save than on the site. Often these are unit 1’s traits, copied to every unit when the rental was placed: check each unit in game (Build mode > Venue Info > Unit Configuration) and keep what you want.", ""]
         L += [f"- {wn} / {r['name']}: " + "; ".join(r['newUnitTraits']) for wn, r in nu] + [""]
+    lost = [(wn, r['name']) for wn, rows in out['worlds'].items() for r in rows if r.get('status') == 'not found' and r.get('shared') is True]
+    if lost: L += ["## Shared lots not found in the save", "", "Their names don't match a lot in the save (tell Claude the game's name for them):", ""] + [f"- {wn} / {n}" for wn, n in lost] + [""]
     rest = [wn for wn in out['worlds'] if wn not in worlds_done]
     if rest: L += ["## Not started", "", ", ".join(rest), ""]
     open(os.path.join(ROOT, 'research', 'new-save-status.md'), 'w', encoding='utf-8').write("\n".join(L))
