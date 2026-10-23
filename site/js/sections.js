@@ -129,12 +129,12 @@ function admChecks(){
   const sameGal = (l, f) => l.gallery && l.gallery[f] && l[f] && l.gallery[f] !== l[f];
   return ADM_CHECKS = [
     {name: "Shared, but no Gallery upload linked", items: L.filter(l => l.shared === true && !l.gallery)},
-    {name: "On the Gallery, but not ticked Shared", items: L.filter(l => l.gallery && l.shared !== true), note: l => `uploaded as “${esc(l.gallery.title)}”`},
+    {name: "On the Gallery, but not ticked Shared", items: L.filter(l => l.gallery && l.shared !== true && !l.rebuild), note: l => `uploaded as “${esc(l.gallery.title)}”`},
     {name: "Shared, but not ticked Built", items: L.filter(l => l.shared === true && l.built === false)},
     {name: "No lot type", items: L.filter(l => !l.type || l.tbd)},
     {name: "No lot size", items: L.filter(l => !isApt(l) && !sizeTxt(l.size))},
     {name: "Plan size differs from the Gallery’s", items: L.filter(l => sameGal(l, "size")), note: l => `plan ${esc(sizeTxt(l.size))}, Gallery ${esc(sizeTxt(l.gallery.size))}`},
-    {name: "Plan lot type differs from the Gallery’s", items: L.filter(l => l.gallery && l.type && !l.versions && typeClash(l)), note: l => `plan ${esc(l.type)}, Gallery ${esc(l.gallery.lotType)}`},
+    {name: "Plan lot type differs from the Gallery’s", items: L.filter(l => l.gallery && l.type && !l.versions && !l.rebuild && typeClash(l)), note: l => `plan ${esc(l.type)}, Gallery ${esc(l.gallery.lotType)}`},
     {name: "Same name twice in one world", items: Object.values(names).filter(v => v.length > 1 && !v.every(l => l.building && l.building === v[0].building)).flat()},
     {name: "In the plan, but no page on the site", items: ROWS.filter(r => r.owned && !r.link).map(r => ({id: "", name: r.name, world: worlds.find(w => w.name === r.w)}))},
   ];

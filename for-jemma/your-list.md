@@ -57,6 +57,9 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 - **Decide:** Specter Row: a 2-unit rental with On Hallowed Ground, or a Haunted House?
 - **Decide:** Mystic Crossroads: owned by the Izadi-Gomes ghosts?
 
+**Glimmerbrook**
+- **Do:** Glimmer & Books: add the bar, then upload it as a Backroom (until then it shows as not built or shared).
+
 **Gibbi Point**
 - **Decide:** Paradise Stables: who lives there? A horse family of yours running Riding Stables?
 - **Decide:** Love Highland: a Custom Venue run by the Addams as story only, or their home again?

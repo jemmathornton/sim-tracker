@@ -289,6 +289,11 @@ window.ADMIN = {
 },
 {
 "section": "World by world",
+"world": "Glimmerbrook",
+"text": "**Do:** Glimmer & Books: add the bar, then upload it as a Backroom (until then it shows as not built or shared)."
+},
+{
+"section": "World by world",
 "world": "Gibbi Point",
 "text": "**Decide:** Paradise Stables: who lives there? A horse family of yours running Riding Stables?"
 },

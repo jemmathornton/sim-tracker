@@ -250,7 +250,7 @@ def build():
                              "who": (name + ("?" if unsure else "")) if name else None, "whoNote": note, **({"npc": True} if re.search(r"\*NPC", str(l.get("residents") or ""), re.I) else {}),
                              "built": l['built'], "shared": l['shared'], "sims": l['simsMade'],
                              "gallery": g, "photos": photos_for(ws, slug(l['lot']), bool(g)),
-                             **{k: l[k] for k in ("traits", "challenges", "units") if l.get(k)}})   # from her Building save (tools/lot_traits.py); units: a rental's own unit names and traits
+                             **{k: l[k] for k in ("traits", "challenges", "units", "rebuild") if l.get(k)}})   # from her Building save (tools/lot_traits.py); units: a rental's own unit names and traits; rebuild: being rebuilt (her Admin checks skip it)
             if owned: w["hoods"].append({"name": hood['name'], "desc": hood.get('desc', ''), "color": W['colour'], "lots": lots,
                                          **{k: hood[k] for k in ("festivals", "ecoStart") if hood.get(k)}})
         if W.get('households'):
