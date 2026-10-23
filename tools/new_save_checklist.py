@@ -165,7 +165,7 @@ def main():
                     wtag = re.sub(r'[^a-z]', '', wn.lower())   # in-game hashtag search needs the world's own tag (research/gallery-tags.md)
                     if wtag not in [t.lower() for t in g.get('tags') or []]: bits.append("Search it by name (its upload has no #" + wtag + " tag).")
                     if g.get('others'): bits.append("Not the other cop" + ("ies" if len(g['others']) > 1 else "y") + ": " + ", ".join(f"{q(o['title'])} ({o['label']})" for o in g['others']) + ".")
-                elif l['built'] is True: bits.append("built but not on the Gallery: bring it over through your Library.")
+                elif l['built'] is True: bits.append("built but not on the Gallery: bring it over through your Library (if you changed it in your Building save since, save it to your Library again from there first).")
                 else: bits.append("not built yet: leave the game’s lot for now.")
                 if l.get('type'): bits.append(f"Type: {l['type']}.")
                 if (l.get('type') or '') == 'Apartment' and l.get('gallery'): bits.append("Place it as a Room into the unit.")
