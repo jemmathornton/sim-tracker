@@ -23,6 +23,12 @@ TN.update(MOD_TRAITS)
 norm = lambda s: re.sub(r'\s+', ' ', (s or '').replace('’', "'")).strip().lower()
 
 
+def unit_name(l, pos):
+    """The plan's unit numbers are positions (1st, 2nd…); show the unit's own name (Taka Soi 15's 2nd unit is 09)."""
+    names = [u['name'] for u in (l.get('units') or [])]
+    return names[int(pos) - 1] if str(pos).isdigit() and 0 < int(pos) <= len(names) else str(pos)
+
+
 def read(fname):
     """{(world, lot_id): zone info}, households, Sims, from a copy of one save."""
     tmp = tempfile.mkdtemp(); c = os.path.join(tmp, 's'); shutil.copy(os.path.join(s4.SAVES, fname), c)
@@ -191,9 +197,9 @@ def main():
             if l.get('who') and is_home(l):
                 b = base_(l['who']); seen[b] = seen.get(b, 0) + 1
                 hn = f"{b} {seen[b]}" if total[b] > 1 else b
-                unit = D['residentsUnit'].get(key) or ((l.get('units') or [{}])[0].get('name') if l.get('units') else '')
+                unit = unit_name(l, D['residentsUnit'].get(key) or 1) if l.get('units') else ''
                 where[hn] = (l, str(unit) if unit else '')
-            for t in D['tenants'].get(key, []): where[t['name']] = (l, str(t.get('unit') or ''))
+            for t in D['tenants'].get(key, []): where[t['name']] = (l, unit_name(l, t['unit']) if t.get('unit') else '')
         for hn, (l, unit) in where.items():
             hh = H.get(hn)
             if not hh or not hh.get('sims'): continue

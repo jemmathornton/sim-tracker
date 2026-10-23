@@ -79,6 +79,12 @@ q = lambda s: f"“{s}”"
 join = lambda xs: ", ".join(xs[:-1]) + " and " + xs[-1] if len(xs) > 1 else (xs[0] if xs else "")
 
 
+def unit_name(l, pos):
+    """The plan's unit numbers are positions (1st, 2nd…); show the unit's own name (Taka Soi 15's 2nd unit is 09)."""
+    names = [u['name'] for u in (l.get('units') or [])]
+    return names[int(pos) - 1] if str(pos).isdigit() and 0 < int(pos) <= len(names) else str(pos)
+
+
 def load_data():
     t = open(os.path.join(ROOT, 'site', 'js', 'data.js'), encoding='utf-8').read()
     return json.loads(t[t.index('{'):t.rindex('}') + 1])
@@ -169,12 +175,12 @@ def main():
                         hn = f"{b} {seen[b]}" if total.get(b, 0) > 1 else b
                         lab = who_label(hhs.get(hn))
                         if key in D['tenants'] or l.get('units'):
-                            unit = D['residentsUnit'].get(key) or ((l.get('units') or [{}])[0].get('name') or 1)
+                            unit = unit_name(l, D['residentsUnit'].get(key) or 1)
                             bits.append(f"{b} ({lab}, {'tenant' if key in D['noLandlord'] else 'landlord'}, unit {unit}).")
                         else: bits.append(f"Household: {b} ({lab}).")
                 elif l['sims'] != 'N/A' and 'Residential' in (l.get('type') or '') and not (l.get('who') or l.get('whoNote')): bits.append("Empty.")
                 if key in D['tenants']:
-                    bits.append("Tenants: " + ", ".join(t['name'] + (f" unit {t['unit']}" if t.get('unit') else '') for t in D['tenants'][key]) + ".")
+                    bits.append("Tenants: " + ", ".join(t['name'] + (f" unit {unit_name(l, t['unit'])}" if t.get('unit') else '') for t in D['tenants'][key]) + ".")
                 if l.get('traits'): bits.append(f"Traits: {', '.join(l['traits'])}.")
                 if l.get('challenges'): bits.append(f"Challenge{'s' if len(l['challenges']) > 1 else ''}: {', '.join(l['challenges'])}.")
                 if l.get('units'):

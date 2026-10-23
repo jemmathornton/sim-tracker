@@ -527,7 +527,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 - [ ] **The Gnome’s Arms**, 30x20: not built yet: leave the game’s lot for now. Type: Bar (Pub). Owner (lives elsewhere): The Scotts (EA).
 - [ ] **1 Cobblebottom Street**, 20x15: built but not on the Gallery: bring it over through your Library. Type: Small Business Residential.
-- [ ] **3 Cobblebottom Street**, 20x20: built but not on the Gallery: bring it over through your Library. Type: Residential Rental (2). Moody & McMillan (EA, landlord, unit 2). Tenants: Cecilia Kang unit 1. Units: 3A (Gnomes, Homey, Cat Hangout); 3B (Gnomes, Homey, Chef’s Kitchen).
+- [ ] **3 Cobblebottom Street**, 20x20: built but not on the Gallery: bring it over through your Library. Type: Residential Rental (2). Moody & McMillan (EA, landlord, unit 3B). Tenants: Cecilia Kang unit 3A. Units: 3A (Gnomes, Homey, Cat Hangout); 3B (Gnomes, Homey, Chef’s Kitchen).
 - [ ] **Finchwick Village Hall** (game’s 5 Cobblebottom Street), 30x20: place “Finchwick Village Hall”. Type: Library(/Wedding Venue / Bar). Traits: Romantic Aura, Cat Hangout. Challenges: Wild Foxes, Spooky. Trait ideas (free slots): + Peace and Quiet (the library upstairs).
 
 **Old New Henford**
@@ -627,7 +627,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 **Morensong**
 
 - [ ] **Ro Kaya Rockside**, 40x30: not built yet: leave the game’s lot for now. Type: Community Market.
-- [ ] **Taka Soi 15**, 20x20: not built yet: leave the game’s lot for now. Type: Residential Rental (2). Cahyaputri (EA, landlord, unit 2). Units: 08 (Great Soil, Bracing Breezes); 09 (Sunny Aspect, Natural Light).
+- [ ] **Taka Soi 15**, 20x20: not built yet: leave the game’s lot for now. Type: Residential Rental (2). Cahyaputri (EA, landlord, unit 09). Units: 08 (Great Soil, Bracing Breezes); 09 (Sunny Aspect, Natural Light).
 - [ ] **Chee-wít Chee-waa** (game’s Chee-wit Chee-waa Kanto), 20x15: place “Chee-wít Chee-waa”. Type: Thrift and Boba Store. Traits: Teen Neighborhood, Great Acoustics. Trait ideas (free slots): + Convivial.
 - [ ] **ZoSul Taman Botani**, 30x30: not built yet: leave the game’s lot for now. Type: Wedding Venue.
 
