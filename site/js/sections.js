@@ -95,17 +95,10 @@ document.addEventListener("click", e => { if (!onCalendar()) return;
 document.addEventListener("change", e => { if (!onCalendar()) return; const k = e.target.dataset && e.target.dataset.calKind; if (!k) return;
   const set = /^#calendar-/.test(location.hash) ? worldKinds : calState.kinds; e.target.checked ? set.add(k) : set.delete(k); if (set === calState.kinds) calKeep(); redraw(); });
 
-// links to the Calendar from world, neighbourhood and lot pages
-// world pages: what's on there, every festival and regular event by name, and no line where there's nothing (her ask, 23 Oct)
-const whatsOnLine = w => { const evs = calEvents().filter(e => e.w === w.name && e.kind !== "lot");
-  const fest = [...new Set(evs.filter(e => e.kind === "festival").map(e => e.name))], other = [...new Set(evs.filter(e => e.kind !== "festival").map(e => e.name))];
-  if (!fest.length && !other.length) return "";
-  const list = xs => xs.map(n => `<b>${esc(n)}</b>`).join(", ");
-  return `<div class="wx-whatson">${ic("party")}<b>What’s on:</b><span>${[fest.length ? list(fest) : "", other.length ? (fest.length ? "and " : "") + list(other) : ""].filter(Boolean).join(" ")}.</span><a href="${calLink(w)}">${esc(w.name)}’s calendar ${ic("arrow")}</a></div>`; };
+// links to the Calendar from neighbourhood and lot pages (no What’s on line on world pages: tried twice, dropped, her call 23 Oct)
 function afterRoute(key, view){
   const wm = /^w-(.+)$/.exec(key), w = wm && wById(wm[1]);
   const hm = /^n-(.+)$/.exec(key), x = hm && hoodIndex[hm[1]];
-  if (w) { const strip = view.querySelector(".world-strip"); if (strip) strip.insertAdjacentHTML("beforeend", whatsOnLine(w)); }
   if (x && wById(x.world.id)) view.querySelectorAll(".hood-extras .home-to").forEach(p => { if (!/Festivals and events/.test(p.textContent)) return;
     p.querySelectorAll("b").forEach(b => b.outerHTML = `<a class="fest-link" href="${calLink(x.world)}">${b.outerHTML}</a>`); });
   const l = lotIndex[key];

@@ -1005,11 +1005,6 @@ details.adm-more summary{cursor:pointer;font-weight:700;font-size:14px;color:var
 .tr-line svg{flex:none;width:15px;height:15px;align-self:center;color:var(--ink)}
 .tr-line a{font-weight:700;color:var(--ink);text-decoration-color:var(--line);text-underline-offset:3px}
 .sheet.hh-sheet th,.sheet.hh-sheet td{white-space:normal}   /* Admin, Sims: every household fits at 1280 (23 Oct) */
-.wx-whatson{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 8px;font-size:13.5px;margin-top:6px;padding-top:10px;border-top:1px dashed var(--line)}
-.wx-whatson svg{color:var(--h);width:14px;height:14px;vertical-align:-2px;align-self:center}
-.wx-whatson span{color:var(--muted)}.wx-whatson span b{color:var(--ink);font-weight:600}
-.wx-whatson a{margin-left:auto;font-weight:700;color:var(--ink);text-decoration:none;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
-.wx-whatson a:hover{text-decoration:underline}
 /* phone layout (22 Oct, her ask; phone widths only, the laptop layout is untouched) */
 @media (max-width:700px){
   .adm-two{grid-template-columns:1fr}
