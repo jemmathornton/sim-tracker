@@ -259,7 +259,7 @@
       "name": "Capp",
       "role": "head"
      },
-     "parents": ["cordelia-capp", "caliban-capp"]
+     "parents": ["caliban-capp", "cordelia-capp"]
     },
     {
      "id": "beatrice-capp",

@@ -297,7 +297,7 @@
       "role": "outcast"
      },
      "born": "Capp",
-     "parents": ["cordelia-capp", "caliban-capp"]
+     "parents": ["caliban-capp", "cordelia-capp"]
     },
     {
      "id": "romeo-monty",

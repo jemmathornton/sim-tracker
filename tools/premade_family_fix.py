@@ -30,7 +30,7 @@ WIKI_NAMES = {
     ("afua-ananou",): [{"name": "Aghata Ananou", "sex": "f", "late": True}],
 }
 # the wiki's names for unnamed ancestors the game links by template (Tybalt and Juliette's parents and grandmother)
-WIKI_BY_TEMPLATE = {493286: {"name": "Caliban Capp", "sex": "m"}, 493290: {"name": "Cordelia Capp", "sex": "f"},
+WIKI_BY_TEMPLATE = {493286: {"name": "Cordelia Capp", "sex": "f"}, 493290: {"name": "Caliban Capp", "sex": "m"},   # ids as the game names them (premadeAncestor_EP21_CordeliaCapp is 493286; fixed 24 Oct)
                     493289: {"name": "Contessa Capp", "sex": "f", "late": True}}
 GRANDS = {"RELATIONSHIP_FATHERS_MOM": ("m", "f"), "RELATIONSHIP_FATHERS_FATHER": ("m", "m"),
           "RELATIONSHIP_MOTHERS_MOM": ("f", "f"), "RELATIONSHIP_MOTHERS_FATHER": ("f", "m")}
@@ -41,7 +41,7 @@ def main(apply):
     worlds = {p: load(p) for p in glob.glob(os.path.join(ROOT, 'data', 'worlds', '*.json'))}
     ppath = os.path.join(ROOT, 'data', 'people.json'); people = load(ppath)
     made = {k for k, v in people.items() if k.startswith('unknown-') or (isinstance(v, dict) and v.get('fromFix'))}
-    kept = {k: {f: people[k][f] for f in ('dynasty',) if f in people[k]} for k in made if isinstance(people[k], dict)}   # added by hand (Consort Capp's dynasty, 24 Oct)
+    kept = {k: {f: people[k][f] for f in ('dynasty', 'partners', 'late') if f in people[k]} for k in made if isinstance(people[k], dict)}   # added by hand (Consort Capp's dynasty, the spouses, 24 Oct)
     for k in made: del people[k]   # made by this script last time: worked out again below
     site = {}   # site id -> Sim dict (premade Sims only)
     for W in worlds.values():

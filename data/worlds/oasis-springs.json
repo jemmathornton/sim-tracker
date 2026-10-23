@@ -331,7 +331,7 @@
       ["Comedy", 1, 10],
       ["Video Gaming", 1, 10]
      ],
-     "parents": ["unknown-curious"]
+     "parents": ["curious-parent"]
     }
    ]
   },
@@ -644,7 +644,7 @@
       ["Video Gaming", 1, 10],
       ["Mischief", 1, 10]
      ],
-     "parents": ["unknown-curious"]
+     "parents": ["curious-parent"]
     },
     {
      "id": "lazlo-curious",
@@ -662,7 +662,7 @@
       ["Comedy", 3, 10],
       ["Mischief", 1, 10]
      ],
-     "parents": ["unknown-curious"]
+     "parents": ["curious-parent"]
     },
     {
      "id": "nova-curious",

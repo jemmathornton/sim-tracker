@@ -76,6 +76,60 @@
   "sex": "f",
   "placeholder": true
  },
+ "alto-parent-1": {
+  "name": "Unknown",
+  "sex": "x",
+  "placeholder": true
+ },
+ "bert-alto": {
+  "name": "Bert Alto",
+  "sex": "m",
+  "age": "Elder",
+  "late": true,
+  "origin": "Premade",
+  "parents": ["alto-parent-1"],
+  "world": "ondarion"
+ },
+ "alto-enzo-mother": {
+  "name": "Unknown",
+  "sex": "f",
+  "placeholder": true
+ },
+ "nick-alto": {
+  "name": "Nick Alto",
+  "sex": "m",
+  "late": true,
+  "origin": "Premade",
+  "parents": ["alto-parent-1"],
+  "partners": [
+   ["vita-alto", "Spouse"]
+  ]
+ },
+ "vita-alto": {
+  "name": "Vita Alto",
+  "sex": "f",
+  "late": true,
+  "origin": "Premade",
+  "partners": [
+   ["nick-alto", "Spouse"]
+  ]
+ },
+ "holly-alto": {
+  "name": "Holly Alto",
+  "sex": "f",
+  "age": "Young Adult",
+  "origin": "Premade",
+  "parents": ["nick-alto", "vita-alto"],
+  "world": "del-sol-valley",
+  "where": "Del Sol Valley, a celebrity with no home",
+  "noHome": true,
+  "fame": 3
+ },
+ "curious-parent": {
+  "name": "Unknown",
+  "sex": "x",
+  "placeholder": true
+ },
  "unknown-1": {
   "name": "Unknown",
   "sex": "f",
@@ -121,12 +175,15 @@
   "sex": "m",
   "origin": "Premade",
   "state": "Ghost",
-  "fromFix": true,
   "death": "Old Age",
+  "fromFix": true,
+  "dynasty": {
+   "name": "Capp",
+   "role": "member"
+  },
   "partners": [
    ["contessa-capp", "Late Spouse"]
-  ],
-  "dynasty": {"name": "Capp", "role": "member"}
+  ]
  },
  "aghata-ananou": {
   "name": "Aghata Ananou",
@@ -136,14 +193,14 @@
   "fromFix": true,
   "parents": ["ekene-ananou"]
  },
- "caliban-capp": {
-  "name": "Caliban Capp",
-  "sex": "m",
+ "cordelia-capp": {
+  "name": "Cordelia Capp",
+  "sex": "f",
   "notInGame": true,
   "fromFix": true,
   "parents": ["consort-capp", "contessa-capp"],
   "partners": [
-   ["cordelia-capp", "Spouse"]
+   ["caliban-capp", "Spouse"]
   ],
   "late": true
  },
@@ -157,13 +214,13 @@
    ["consort-capp", "Spouse"]
   ]
  },
- "cordelia-capp": {
-  "name": "Cordelia Capp",
-  "sex": "f",
+ "caliban-capp": {
+  "name": "Caliban Capp",
+  "sex": "m",
   "notInGame": true,
   "fromFix": true,
   "partners": [
-   ["caliban-capp", "Spouse"]
+   ["cordelia-capp", "Spouse"]
   ],
   "late": true
  },
@@ -228,59 +285,5 @@
   "late": true,
   "notInGame": true,
   "fromFix": true
- },
- "alto-parent-1": {
-  "name": "Unknown",
-  "sex": "x",
-  "placeholder": true
- },
- "bert-alto": {
-  "name": "Bert Alto",
-  "sex": "m",
-  "age": "Elder",
-  "late": true,
-  "origin": "Premade",
-  "parents": ["alto-parent-1"],
-  "world": "ondarion"
- },
- "alto-enzo-mother": {
-  "name": "Unknown",
-  "sex": "f",
-  "placeholder": true
- },
- "nick-alto": {
-  "name": "Nick Alto",
-  "sex": "m",
-  "late": true,
-  "origin": "Premade",
-  "parents": ["alto-parent-1"],
-  "partners": [
-   ["vita-alto", "Spouse"]
-  ]
- },
- "vita-alto": {
-  "name": "Vita Alto",
-  "sex": "f",
-  "late": true,
-  "origin": "Premade",
-  "partners": [
-   ["nick-alto", "Spouse"]
-  ]
- },
- "holly-alto": {
-  "name": "Holly Alto",
-  "sex": "f",
-  "age": "Young Adult",
-  "origin": "Premade",
-  "parents": ["nick-alto", "vita-alto"],
-  "world": "del-sol-valley",
-  "where": "Del Sol Valley, a celebrity with no home",
-  "noHome": true,
-  "fame": 3
- },
- "unknown-curious": {
-  "name": "Unknown",
-  "sex": "x",
-  "placeholder": true
  }
 }
