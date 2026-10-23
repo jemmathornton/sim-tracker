@@ -25,7 +25,7 @@ function gpApply(){ Object.values(lotIndex).forEach(l => { l._allPhotos ||= l.ph
 gpApply();
 document.addEventListener("click", e => { const b = e.target.closest("[data-gp]"); if (!b || b.dataset.gp === GP) return;
   GP = b.dataset.gp; try { localStorage.setItem(GP_KEY, GP); } catch (err) {} gpApply(); trialSwitch(); trRedraw(); });
-const TR_ACROSS = ["clubs", "dynasties", "organisations", "families", "businesses"];
+const TR_ACROSS = ["clubs", "dynasties", "organisations", "families", "businesses", "shells"];
 document.addEventListener("click", e => { const b = e.target.closest("[data-trial]"); if (!b || b.dataset.trial === TRIAL) return;
   TRIAL = b.dataset.trial; try { localStorage.setItem(TRIAL_KEY, TRIAL); } catch (err) {}
   trialSwitch(); searchList = null;
@@ -48,7 +48,7 @@ const ADM_SECTIONS = [
 ];
 const grpOf = kind => Object.values(GROUP_PAGES).filter(g => g.kind === kind);
 const TR_ACROSS_NAV = () => [["calendar", "calendar", "Calendar", null], ["clubs", "flag", "Clubs", grpOf("club").length], ["dynasties", "crown", "Dynasties", grpOf("dynasty").length],
-  ["organisations", "graduation-cap", "University organisations", grpOf("org").length], ["families", "network", "Families", crossFamilies().length], ["businesses", "briefcase", "Businesses", trBusinesses().length]];
+  ["organisations", "graduation-cap", "University organisations", grpOf("org").length], ["families", "network", "Families", crossFamilies().length], ["businesses", "briefcase", "Businesses", trBusinesses().length], ["shells", "sparkle", "Shell challenges", trShells().length]];
 function trialNav(active, key, ctx){
   const nav = document.getElementById("nav"), bottom = nav.querySelector(".stats-nav"), notOwned = nav.querySelector(".nav-group.dim");
   if (bottom) bottom.remove();
@@ -381,6 +381,18 @@ function businessesPage(){
   return h;
 }
 
+// shell challenges (an extra for her to judge, 23 Oct; a "some day" idea): her builds on lilsimsie's shell challenges, which the
+// Gallery credits to lilsimsie, or whose hashtags name a shell
+let TR_SHELLS = null;
+const trShells = () => TR_SHELLS ||= Object.values(lotIndex).filter(l => l.gallery && l.gallery.shell);
+function shellsPage(){
+  const ls = trShells(), by = groupsBy([...ls].sort((a, b) => byWorldOrder(a.world, b.world)), l => l.world);
+  let h = trHero("#2B8A86", "Across the worlds", "Shell <em>challenges</em>", "Builds made for lilsimsie’s shell challenges: the outside was set, the inside is mine.", [[ls.length, ls.length === 1 ? "build" : "builds"], [by.size, by.size === 1 ? "world" : "worlds"]]);
+  if (!ls.length) return h + trEmpty("No shell challenge builds yet.");
+  by.forEach((xs, w) => { h += `<section class="hood" style="--h:${w.color}"><div class="hood-head"><span class="label">${esc(w.name)}</span><div><h2>${esc(w.name)}</h2></div><span class="count">${plural(xs.length, "build")}</span></div><div class="listings">${xs.map(listing).join("")}</div></section>`; });
+  return h;
+}
+
 // ---------- the pages the new layout draws (asked by route() in app.js) ----------
 function trialPage(key){
   if (!trNew()) return null;
@@ -389,7 +401,7 @@ function trialPage(key){
   if (m) { const w = m[1] ? wById(m[1]) : null; if (m[1] && !w) return null;
     calState.world = w ? w.name : null;
     return {html: protoCal(w), active: "calendar", deep: w && w.deep, title: T(w ? "Calendar · " + w.name : "Calendar")}; }
-  const pages = {clubs: [clubsPage, "Clubs"], dynasties: [dynastiesPage, "Dynasties"], organisations: [orgsPage, "University organisations"], families: [familiesAcrossPage, "Families"], businesses: [businessesPage, "Businesses"]};
+  const pages = {clubs: [clubsPage, "Clubs"], dynasties: [dynastiesPage, "Dynasties"], organisations: [orgsPage, "University organisations"], families: [familiesAcrossPage, "Families"], businesses: [businessesPage, "Businesses"], shells: [shellsPage, "Shell challenges"]};
   if (pages[key]) return {html: pages[key][0](), active: key, title: T(pages[key][1])};
   const st = /^stats(?:-(.+))?$/.exec(key);   // old Stats links open Admin's Progress page
   if (st) { const w = worlds.find(x => x.id === st[1]); if (!trRedrawing) statsPage(w ? w.name : null); const s = ADM_SECTIONS[1];

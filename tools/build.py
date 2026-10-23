@@ -92,7 +92,7 @@ def upload_entry(i):
     return {"url": GALLERY_ITEM + urllib.parse.quote(i, safe=''), "title": clean_title(u['title']), "description": text,
             "tags": re.findall(r'#(\w+)', desc), "packs": [short_pack(p) for p in u['packs']], "value": f"§{u['price']:,}",
             "likes": u['favourites'], "downloads": u['downloads'], "comments": len(cl), "commentList": cl,
-            "beds": u['beds'], "baths": u['baths'], "lotType": u['lotType'], "checked": nice_date(u['checked']), "shared": shared_on(i)}
+            "beds": u['beds'], "baths": u['baths'], "lotType": u['lotType'], "checked": nice_date(u['checked']), "shared": shared_on(i), "creator": u.get('creator') or ""}
 
 VERSION_END = r'(Market|Gardens?|Makers|Space)$'
 def version_label(e):
@@ -135,6 +135,8 @@ def gallery_for(lot):
     allc = [c for e in ups for c in e['commentList']]
     g['commentList'] = sorted(allc, key=lambda c: -c['t']); g['comments'] = len(allc)
     if lot.get('galleryOld'): g['old'] = True
+    # a shell challenge build: any of its uploads credited to lilsimsie, or tagged with a shell (23 Oct)
+    if any((uploads[i].get('creator') or '').lower() == 'lilsimsie' or re.search(r'#\w*shell', uploads[i].get('description') or '', re.I) for i in lot.get('gallery', [])): g['shell'] = True
     return g
 
 
