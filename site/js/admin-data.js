@@ -547,7 +547,7 @@ window.ADMIN = {
 "household": "Davidson 1",
 "to": "Streamlet Single",
 "now": null,
-"how": "bring from your Library"
+"how": "from your Library (your Library copy differs from the site: check ages and Sims)"
 },
 {
 "household": "Broke",
@@ -559,13 +559,13 @@ window.ADMIN = {
 "household": "Winters",
 "to": "Daisy Hovel",
 "now": null,
-"how": "bring from your Library"
+"how": "from your Library (your Library copy differs from the site: check ages and Sims)"
 },
 {
 "household": "Reynolds",
 "to": "Potters Splay",
 "now": null,
-"how": "bring from your Library"
+"how": "from your Library (your Library copy differs from the site: check ages and Sims)"
 },
 {
 "household": "Bjergsen",
@@ -577,7 +577,7 @@ window.ADMIN = {
 "household": "Kopf",
 "to": "Riverside Roost",
 "now": null,
-"how": "bring from your Library"
+"how": "only in your “Rotational” save: save it to your Library from there first"
 },
 {
 "household": "Pancakes",
@@ -595,7 +595,7 @@ window.ADMIN = {
 "household": "Barraza",
 "to": "Oakenstead",
 "now": null,
-"how": "bring from your Library"
+"how": "from your Library (your Library copy differs from the site: check ages and Sims)"
 }
 ]
 },
@@ -611,7 +611,7 @@ window.ADMIN = {
 "household": "Leah-Moon Cadberry",
 "to": "Nookstone",
 "now": null,
-"how": "bring from your Library"
+"how": "from your Library (your Library copy differs from the site: check ages and Sims)"
 },
 {
 "household": "Lothario",
@@ -623,25 +623,25 @@ window.ADMIN = {
 "household": "Rivera",
 "to": "Raffia Quinta",
 "now": null,
-"how": "bring from your Library"
+"how": "from your Library"
 },
 {
 "household": "De Costa",
 "to": "Dusty Turf",
 "now": null,
-"how": "bring from your Library"
+"how": "from your Library"
 },
 {
 "household": "Curious 1",
 "to": "Springscape",
 "now": null,
-"how": "bring from your Library"
+"how": "Maxis’s Gallery copy: from your Library or the Gallery"
 },
 {
 "household": "Curious 2",
 "to": "Granada Place",
 "now": null,
-"how": "bring from your Library"
+"how": "Maxis’s Gallery copy: from your Library or the Gallery"
 },
 {
 "household": "Smith",
@@ -705,37 +705,37 @@ window.ADMIN = {
 "household": "Washburn",
 "to": "Midtown Meadows unit 2",
 "now": null,
-"how": "bring from your Library"
+"how": "only in your “Season Events” save: save it to your Library from there first"
 },
 {
 "household": "Bridges",
 "to": "Midtown Meadows unit 5",
 "now": null,
-"how": "bring from your Library"
+"how": "only in your “Season Events” save: save it to your Library from there first"
 },
 {
 "household": "Versaree",
 "to": "Oak Alcove",
 "now": null,
-"how": "bring from your Library"
+"how": "from your Library"
 },
 {
 "household": "Kirkland",
 "to": "Twin Oracle Point",
 "now": null,
-"how": "bring from your Library"
+"how": "from your Library (your Library copy differs from the site: check ages and Sims)"
 },
 {
 "household": "LeBlanc",
 "to": "Avarice Acres",
 "now": null,
-"how": "bring from your Library"
+"how": "only in your “Rotational” save: save it to your Library from there first"
 },
 {
 "household": "Sylvia & Kenny Cadberry",
 "to": "Asphalt Abodes",
 "now": null,
-"how": "bring from your Library"
+"how": "from your Library (your Library copy differs from the site: check ages and Sims)"
 }
 ]
 },
@@ -763,7 +763,7 @@ window.ADMIN = {
 "household": "Pleasant",
 "to": "Proprietor’s Square",
 "now": null,
-"how": "not found by its Sims’ names (EA’s, maybe renamed or a Gallery copy)"
+"how": "not found by its Sims’ names (EA’s, maybe renamed)"
 },
 {
 "household": "Specter",
@@ -821,7 +821,7 @@ window.ADMIN = {
 "household": "Livin' In The City",
 "to": "930 Medina Studios",
 "now": null,
-"how": "bring from your Library"
+"how": "only in your “Rotational” save: save it to your Library from there first"
 },
 {
 "household": "Santiago Ojo",
@@ -873,7 +873,7 @@ window.ADMIN = {
 "household": "Ventura",
 "to": "Hindquarter Hideaway",
 "now": null,
-"how": "bring from your Library"
+"how": "from your Library"
 }
 ]
 },

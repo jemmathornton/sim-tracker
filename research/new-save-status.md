@@ -7,25 +7,25 @@ Made by tools/research/new_save_check.py from a copy of the save. Lots: placed /
 ## Willow Creek
 
 - All shared lots placed, all as planned.
-- **Davidson 1** for Streamlet Single: bring from your Library
+- **Davidson 1** for Streamlet Single: from your Library (your Library copy differs from the site: check ages and Sims)
 - **Move Broke** to Crick Cabana (now: no home)
-- **Winters** for Daisy Hovel: bring from your Library
-- **Reynolds** for Potters Splay: bring from your Library
+- **Winters** for Daisy Hovel: from your Library (your Library copy differs from the site: check ages and Sims)
+- **Reynolds** for Potters Splay: from your Library (your Library copy differs from the site: check ages and Sims)
 - **Move Bjergsen** to Brook Bungalow (now: The Lighthouse)
-- **Kopf** for Riverside Roost: bring from your Library
+- **Kopf** for Riverside Roost: only in your “Rotational” save: save it to your Library from there first
 - **Move Pancakes** to Rindle Rose (now: no home)
 - **Move Villareal** to Umbrage Manor (now: no home)
-- **Barraza** for Oakenstead: bring from your Library
+- **Barraza** for Oakenstead: from your Library (your Library copy differs from the site: check ages and Sims)
 
 ## Oasis Springs
 
 - **To place:** Springscape
-- **Leah-Moon Cadberry** for Nookstone: bring from your Library
+- **Leah-Moon Cadberry** for Nookstone: from your Library (your Library copy differs from the site: check ages and Sims)
 - **Move Lothario** to Agave Abode (now: no home)
-- **Rivera** for Raffia Quinta: bring from your Library
-- **De Costa** for Dusty Turf: bring from your Library
-- **Curious 1** for Springscape: bring from your Library
-- **Curious 2** for Granada Place: bring from your Library
+- **Rivera** for Raffia Quinta: from your Library
+- **De Costa** for Dusty Turf: from your Library
+- **Curious 1** for Springscape: Maxis’s Gallery copy: from your Library or the Gallery
+- **Curious 2** for Granada Place: Maxis’s Gallery copy: from your Library or the Gallery
 - **Move Smith** to Sultry Springside (now: no home)
 - **Move Caliente** to Yuma Heights (now: no home)
 
@@ -37,12 +37,12 @@ Made by tools/research/new_save_check.py from a copy of the save. Lots: placed /
 - **Move Holiday** to Fern Park Flats unit 1 (now: no home)
 - **Move Lee** to Fern Park Flats unit 2 (now: no home)
 - **Move Scott** to Fern Park Flats unit 3 (now: no home)
-- **Washburn** for Midtown Meadows unit 2: bring from your Library
-- **Bridges** for Midtown Meadows unit 5: bring from your Library
-- **Versaree** for Oak Alcove: bring from your Library
-- **Kirkland** for Twin Oracle Point: bring from your Library
-- **LeBlanc** for Avarice Acres: bring from your Library
-- **Sylvia & Kenny Cadberry** for Asphalt Abodes: bring from your Library
+- **Washburn** for Midtown Meadows unit 2: only in your “Season Events” save: save it to your Library from there first
+- **Bridges** for Midtown Meadows unit 5: only in your “Season Events” save: save it to your Library from there first
+- **Versaree** for Oak Alcove: from your Library
+- **Kirkland** for Twin Oracle Point: from your Library (your Library copy differs from the site: check ages and Sims)
+- **LeBlanc** for Avarice Acres: only in your “Rotational” save: save it to your Library from there first
+- **Sylvia & Kenny Cadberry** for Asphalt Abodes: from your Library (your Library copy differs from the site: check ages and Sims)
 
 ## Magnolia Promenade
 
@@ -51,7 +51,7 @@ Made by tools/research/new_save_check.py from a copy of the save. Lots: placed /
 ## Windenburg
 
 - **Factory One:** missing traits: Great Acoustics, Party Place
-- **Pleasant** for Proprietor’s Square: not found by its Sims’ names (EA’s, maybe renamed or a Gallery copy)
+- **Pleasant** for Proprietor’s Square: not found by its Sims’ names (EA’s, maybe renamed)
 - **Move Specter** to Havisham House (now: Specter Family Manor)
 - **Move Partihaus** to Factory One (now: no home)
 - **Move Munch** to Coorinberg Cottage (now: no home)
@@ -61,7 +61,7 @@ Made by tools/research/new_save_check.py from a copy of the save. Lots: placed /
 
 - **To place:** 17 Culpepper House, 18 Culpepper House, 19 Culpepper House, Fraternity Apartment, Sorority Apartment, Waterside Warble, 920 Medina Studios, 930 Medina Studios, 122 Hakim House, 1310 21 Chic Street, 1010 Alto Apartments, Skye Fitness, Stargazer
 - **Move Bheeda** to 920 Medina Studios (now: 2A Jasmine Suites)
-- **Livin' In The City** for 930 Medina Studios: bring from your Library
+- **Livin' In The City** for 930 Medina Studios: only in your “Rotational” save: save it to your Library from there first
 - **Move Santiago Ojo** to FountainView Penthouse (now: 701 ZenView)
 - **Move Bro & Kennedy** to 701 ZenView (now: Dock Den)
 - **Move Behr** to 702 ZenView (now: no home)
@@ -72,7 +72,7 @@ Made by tools/research/new_save_check.py from a copy of the save. Lots: placed /
 - **To place:** Hindquarter Hideaway
 - **Move Delgato** to Domus Familiaris (now: Chateau Frise)
 - **Move Lynx** to Tail's End Apartments unit 1 (now: no home)
-- **Ventura** for Hindquarter Hideaway: bring from your Library
+- **Ventura** for Hindquarter Hideaway: from your Library
 
 ## Del Sol Valley
 

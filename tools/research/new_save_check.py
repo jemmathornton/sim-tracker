@@ -151,6 +151,22 @@ def main():
                 rows.append(r)
         out['worlds'][wn] = rows
     # households: where each household with Sims on the site lives in the save, against the plan
+    # where each of her own households is now (research/library-ready.md, 23 Oct): her Library, only an old save, or nowhere yet
+    lib = {}
+    lr = os.path.join(ROOT, 'research', 'library-ready.md')
+    if os.path.exists(lr):
+        for line in open(lr, encoding='utf-8'):
+            c = [x.strip() for x in line.strip().strip('|').split('|')]
+            if len(c) >= 5 and re.match(r'[bcd]\. ', c[2]): lib[norm(c[0])] = (c[2][0], c[4])
+    def how(hn, hh):
+        k = lib.get(norm(hn)) or lib.get(norm(re.sub(r' \d$', '', hn)))
+        if k and k[0] == 'c':
+            m = re.search(r'“([^”]+)”', k[1]); return f"only in your “{m.group(1) if m else 'old'}” save: save it to your Library from there first"
+        if k and k[0] == 'd': return "not in any save or your Library yet: make it"
+        if any(re.search('Library|Gallery', s.get('from') or '') and (s.get('origin') or '') != 'Mine' for s in hh['sims']): return "Maxis’s Gallery copy: from your Library or the Gallery"
+        if any((s.get('origin') or '').lower() == 'mine' or re.search('Library', s.get('from') or '') for s in hh['sims']):
+            return "from your Library" + (" (your Library copy differs from the site: check ages and Sims)" if k and k[0] == 'b' and not re.search(r'^(matches|same)', k[1], re.I) and k[1] not in ('–', '') else "")
+        return "not found by its Sims’ names (EA’s, maybe renamed)"
     zone_of_sim = {}
     for h in hhs:
         ids = (h.get('sims') or {}).get('ids', []) if isinstance(h.get('sims'), dict) else []
@@ -181,7 +197,7 @@ def main():
             target = zs.get(unit) or zs.get('')
             lot_name = D['nameFix'].get(f"{wn}|{l['lot']}") or (l.get('gallery') or {}).get('title') or l.get('mine') or l['lot']
             row = {"world": wn, "household": hn, "lot": lot_name, "unit": unit, "sims": len(names)}
-            if not any(got): row['state'] = 'not in the save' ; row['how'] = 'bring from your Library' if any((s.get('origin') or '').lower() == 'mine' or re.search('Library|Gallery', s.get('from') or '') for s in hh['sims']) else 'not found by its Sims’ names (EA’s, maybe renamed or a Gallery copy)'
+            if not any(got): row['state'] = 'not in the save' ; row['how'] = how(hn, hh)
             else:
                 homes = {g[0] for g in got if g}
                 save_hh = {g[1] for g in got if g}
