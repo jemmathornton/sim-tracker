@@ -455,6 +455,11 @@ window.ADMIN = {
 {
 "section": "Not in game",
 "world": "",
+"text": "**Decide:** Swap in the updated World Plans (for-jemma, “updated 23 Oct pm”: the Curious homes)? Claude does it on your OK."
+},
+{
+"section": "Not in game",
+"world": "",
 "text": "**Do:** San Myshuno: make your own map adjustments, then recheck its banners and boxes."
 },
 {
