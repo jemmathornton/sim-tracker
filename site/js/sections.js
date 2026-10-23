@@ -190,11 +190,25 @@ function admLive(){
     noShotsWorlds: Object.entries(by).sort((x, y) => y[1] - x[1]).slice(0, 4).map(([w, n]) => `${w} ${n}`).join(", "),
     fewTraits: L.filter(l => l.shared === true && (l.traits || []).length < 3).length, yours: mine.length, yoursOnSite: mine.filter(h => h.sims.length).length};
 }
+// her new save against the plan, per world started (tools/research/new_save_check.py; Claude reruns it after a session, 23 Oct)
+function admNewSave(){
+  const N = ADM.newSave; if (!N || !N.worlds.length) return "";
+  const when = N.saved.replace(/^(\d{4})-(\d\d)-(\d\d) (\d\d:\d\d)$/, (m, y, mo, d, t) => `${+d} ${["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][mo - 1]} ${t}`);
+  const li = w => { const bits = [];
+    if (w.toPlace.length) bits.push(`<b>To place:</b> ${esc(w.toPlace.join(", "))}`);
+    w.fixes.forEach(f => bits.push(`<b>${esc(f.lot)}:</b> ${esc(f.what.join("; "))}`));
+    const mv = w.move.filter(m => m.now !== undefined && m.now !== null), lib = w.move.filter(m => m.how);
+    if (mv.length) bits.push(`<b>Move in:</b> ` + mv.map(m => `${esc(m.household)} → ${esc(m.to)}`).join(", "));
+    if (lib.length) bits.push(`<b>From your Library:</b> ` + lib.map(m => `${esc(m.household)} → ${esc(m.to)}`).join(", "));
+    return `<li><span><b>${esc(w.world)}</b></span><span class="w">${w.placed} placed</span>${bits.length ? bits.map(b => `<small>${b}</small>`).join("") : `<small>All placed as planned, everyone home.</small>`}</li>`; };
+  return `<h3 class="adm-sub">New <em>save</em><small>saved ${esc(when)}</small></h3><ul class="adm-list">${N.worlds.map(li).join("")}</ul>`
+    + (N.notStarted.length ? `<p class="adm-plain">Not started: ${esc(N.notStarted.join(", "))}.</p>` : "");
+}
 function admGame(){   // her list (for-jemma/your-list.md: one list, Do or Decide, 23 Oct), with the data checks on top when something is out of step (merged, her idea, 23 Oct)
   const checks = admChecks().filter(c => c.items.length), by = {}; ADM.checklist.forEach(c => (by[c.world || c.section] ||= []).push(c));
   const live = admLive(), md = t => esc(t.replace(/\{(\w+)\}/g, (m, k) => k in live ? live[k] : m)).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
   const sort = ADM.toSort.length ? `<h3 class="adm-sub">Gallery uploads to <em>sort</em><small>${ADM.toSort.length}</small></h3><ul class="adm-list">${ADM.toSort.map(u => `<li><span><b>${esc(u.title)}</b>${u.lot ? ` <span class="w">· ${esc(u.lot)}</span>` : ""}</span><small>${esc(u.why)}</small></li>`).join("")}</ul>` : "";
-  return sort + (checks.length ? `<h3 class="adm-sub">Out of <em>step</em><small>in the plan</small></h3>${admChecksSec()}` : "") + Object.entries(by).map(([k, cs]) => `<h3 class="adm-sub">${esc(k)}<small>${cs.length}</small></h3><ul class="adm-list">${cs.map(c => `<li><span>${md(c.text)}</span></li>`).join("")}</ul>`).join("");
+  return sort + (checks.length ? `<h3 class="adm-sub">Out of <em>step</em><small>in the plan</small></h3>${admChecksSec()}` : "") + admNewSave() + Object.entries(by).map(([k, cs]) => `<h3 class="adm-sub">${esc(k)}<small>${cs.length}</small></h3><ul class="adm-list">${cs.map(c => `<li><span>${md(c.text)}</span></li>`).join("")}</ul>`).join("");
 }
 // every household, on Progress after every lot (her ask, 23 Oct), with the same filters and sorting as every lot
 let hhState = {world: "", hood: "", status: "", q: "", sort: "order", dir: 1};

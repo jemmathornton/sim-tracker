@@ -2,7 +2,7 @@
 
     python tools/admin_data.py      (tools/build.py runs it too)
 
-Reads only: logs/gallery-refresh.log, data/gallery/unlinked.json, for-jemma/your-list.md, TODO.md,
+Reads only: logs/gallery-refresh.log, data/gallery/unlinked.json, for-jemma/your-list.md, TODO.md, research/data/new-save-status.json,
 research/gallery-findability.md and research/build-priorities.md. Ported from for-jemma/prototypes/calendar-admin/make_admin_data.py.
 
 site/js/admin-data.js is for Jemma's PC only: it holds her to-dos and admin notes. It must NOT be uploaded if the site
@@ -27,7 +27,23 @@ def gather():
     except Exception as e: print("admin data: uploads to sort not read:", e)
     try: out["checklist"] = checklist()
     except Exception as e: print("admin data: her list not read:", e)
+    try: out["newSave"] = new_save()
+    except Exception as e: print("admin data: new-save check not read:", e)
     return out
+
+# her new save against the plan (tools/research/new_save_check.py, 23 Oct): per world, what's left to place, fix or move
+def new_save():
+    p = ROOT / "research" / "data" / "new-save-status.json"
+    if not p.exists(): return None
+    d = json.loads(p.read_text(encoding="utf-8")); worlds = []
+    for wn, rows in d["worlds"].items():
+        if not any(r.get("status") == "placed" for r in rows): continue
+        hh = [h for h in d["households"] if h["world"] == wn and h["state"] != "home"]
+        worlds.append({"world": wn, "placed": sum(1 for r in rows if r.get("status") == "placed"),
+                       "toPlace": [r["name"] for r in rows if r.get("status") == "to place"],
+                       "fixes": [{"lot": r["name"], "what": r["issues"]} for r in rows if r.get("issues")],
+                       "move": [{"household": h["household"], "to": h["lot"] + (f" unit {h['unit']}" if h["unit"] else ""), "now": h.get("now"), "how": h.get("how")} for h in hh]})
+    return {"saved": d["saved"], "worlds": worlds, "notStarted": [wn for wn, rows in d["worlds"].items() if not any(r.get("status") == "placed" for r in rows)]}
 
 # weekly Gallery refresh: one entry per run in logs/gallery-refresh.log
 def refresh_runs():

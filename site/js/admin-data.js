@@ -508,5 +508,494 @@ window.ADMIN = {
 "text": "**Decide:** Going online: only if you ever want it on other devices (free and private with Cloudflare)."
 }
 ],
-"toSort": []
+"toSort": [],
+"newSave": {
+"saved": "2026-10-23 22:48",
+"worlds": [
+{
+"world": "Willow Creek",
+"placed": 12,
+"toPlace": [],
+"fixes": [],
+"move": [
+{
+"household": "Davidson 1",
+"to": "Streamlet Single",
+"now": null,
+"how": "bring from your Library"
+},
+{
+"household": "Broke",
+"to": "Crick Cabana",
+"now": "no home",
+"how": null
+},
+{
+"household": "Winters",
+"to": "Daisy Hovel",
+"now": null,
+"how": "bring from your Library"
+},
+{
+"household": "Reynolds",
+"to": "Potters Splay",
+"now": null,
+"how": "bring from your Library"
+},
+{
+"household": "Bjergsen",
+"to": "Brook Bungalow",
+"now": "The Lighthouse",
+"how": null
+},
+{
+"household": "Kopf",
+"to": "Riverside Roost",
+"now": null,
+"how": "bring from your Library"
+},
+{
+"household": "Pancakes",
+"to": "Rindle Rose",
+"now": "no home",
+"how": null
+},
+{
+"household": "Villareal",
+"to": "Umbrage Manor",
+"now": "no home",
+"how": null
+},
+{
+"household": "Barraza",
+"to": "Oakenstead",
+"now": null,
+"how": "bring from your Library"
+}
+]
+},
+{
+"world": "Oasis Springs",
+"placed": 16,
+"toPlace": [
+"Springscape"
+],
+"fixes": [],
+"move": [
+{
+"household": "Leah-Moon Cadberry",
+"to": "Nookstone",
+"now": null,
+"how": "bring from your Library"
+},
+{
+"household": "Lothario",
+"to": "Agave Abode",
+"now": "no home",
+"how": null
+},
+{
+"household": "Rivera",
+"to": "Raffia Quinta",
+"now": null,
+"how": "bring from your Library"
+},
+{
+"household": "De Costa",
+"to": "Dusty Turf",
+"now": null,
+"how": "bring from your Library"
+},
+{
+"household": "Curious 1",
+"to": "Springscape",
+"now": null,
+"how": "bring from your Library"
+},
+{
+"household": "Curious 2",
+"to": "Granada Place",
+"now": null,
+"how": "bring from your Library"
+},
+{
+"household": "Smith",
+"to": "Sultry Springside",
+"now": "no home",
+"how": null
+},
+{
+"household": "Caliente",
+"to": "Yuma Heights",
+"now": "no home",
+"how": null
+}
+]
+},
+{
+"world": "Newcrest",
+"placed": 14,
+"toPlace": [],
+"fixes": [
+{
+"lot": "Newcrest Community Space",
+"what": [
+"named “Newcrest Community Makers” in the save",
+"active version Community space; your pick Makers (switch on the voting board)"
+]
+},
+{
+"lot": "Midtown Meadows",
+"what": [
+"missing trait: Home Studio",
+"unit 4: wants Gnomes, Home Studio, has Gnomes, Homey"
+]
+},
+{
+"lot": "The Ice Pavilion",
+"what": [
+"named “The Ice Pavillion” in the save"
+]
+}
+],
+"move": [
+{
+"household": "Holiday",
+"to": "Fern Park Flats unit 1",
+"now": "no home",
+"how": null
+},
+{
+"household": "Lee",
+"to": "Fern Park Flats unit 2",
+"now": "no home",
+"how": null
+},
+{
+"household": "Scott",
+"to": "Fern Park Flats unit 3",
+"now": "no home",
+"how": null
+},
+{
+"household": "Washburn",
+"to": "Midtown Meadows unit 2",
+"now": null,
+"how": "bring from your Library"
+},
+{
+"household": "Bridges",
+"to": "Midtown Meadows unit 5",
+"now": null,
+"how": "bring from your Library"
+},
+{
+"household": "Versaree",
+"to": "Oak Alcove",
+"now": null,
+"how": "bring from your Library"
+},
+{
+"household": "Kirkland",
+"to": "Twin Oracle Point",
+"now": null,
+"how": "bring from your Library"
+},
+{
+"household": "LeBlanc",
+"to": "Avarice Acres",
+"now": null,
+"how": "bring from your Library"
+},
+{
+"household": "Sylvia & Kenny Cadberry",
+"to": "Asphalt Abodes",
+"now": null,
+"how": "bring from your Library"
+}
+]
+},
+{
+"world": "Magnolia Promenade",
+"placed": 2,
+"toPlace": [],
+"fixes": [],
+"move": []
+},
+{
+"world": "Windenburg",
+"placed": 13,
+"toPlace": [],
+"fixes": [
+{
+"lot": "Factory One",
+"what": [
+"missing traits: Great Acoustics, Party Place"
+]
+}
+],
+"move": [
+{
+"household": "Pleasant",
+"to": "Proprietor’s Square",
+"now": null,
+"how": "not found by its Sims’ names (EA’s, maybe renamed or a Gallery copy)"
+},
+{
+"household": "Specter",
+"to": "Havisham House",
+"now": "Specter Family Manor",
+"how": null
+},
+{
+"household": "Partihaus",
+"to": "Factory One",
+"now": "no home",
+"how": null
+},
+{
+"household": "Munch",
+"to": "Coorinberg Cottage",
+"now": "no home",
+"how": null
+},
+{
+"household": "Free Spirits",
+"to": "Cottage Am See",
+"now": "no home",
+"how": null
+}
+]
+},
+{
+"world": "San Myshuno",
+"placed": 1,
+"toPlace": [
+"Waterside Warble",
+"Skye Fitness"
+],
+"fixes": [],
+"move": [
+{
+"household": "Bheeda",
+"to": "920 Medina Studios",
+"now": "2A Jasmine Suites",
+"how": null
+},
+{
+"household": "Livin' In The City",
+"to": "930 Medina Studios",
+"now": null,
+"how": "bring from your Library"
+},
+{
+"household": "Santiago Ojo",
+"to": "FountainView Penthouse",
+"now": "701 ZenView",
+"how": null
+},
+{
+"household": "Bro & Kennedy",
+"to": "701 ZenView",
+"now": "Dock Den",
+"how": null
+},
+{
+"household": "Behr",
+"to": "702 ZenView",
+"now": "no home",
+"how": null
+},
+{
+"household": "Jeong",
+"to": "1310 21 Chic Street",
+"now": "no home",
+"how": null
+}
+]
+},
+{
+"world": "Brindleton Bay",
+"placed": 9,
+"toPlace": [
+"Hindquarter Hideaway"
+],
+"fixes": [],
+"move": [
+{
+"household": "Delgato",
+"to": "Domus Familiaris",
+"now": "Chateau Frise",
+"how": null
+},
+{
+"household": "Lynx",
+"to": "Tail's End Apartments unit 1",
+"now": "no home",
+"how": null
+},
+{
+"household": "Ventura",
+"to": "Hindquarter Hideaway",
+"now": null,
+"how": "bring from your Library"
+}
+]
+},
+{
+"world": "Del Sol Valley",
+"placed": 8,
+"toPlace": [],
+"fixes": [],
+"move": [
+{
+"household": "Huntington",
+"to": "The Inner Circle unit 2",
+"now": "no home",
+"how": null
+},
+{
+"household": "Kalani",
+"to": "The Inner Circle unit 1",
+"now": "no home",
+"how": null
+},
+{
+"household": "Patel",
+"to": "The Inner Circle unit 3",
+"now": "no home",
+"how": null
+},
+{
+"household": "Richards",
+"to": "The Inner Circle unit 4",
+"now": "no home",
+"how": null
+},
+{
+"household": "Eggleston",
+"to": "Upland Trailer Park unit 1",
+"now": "Dream Weavers Way",
+"how": null
+},
+{
+"household": "Martin",
+"to": "Upland Trailer Park unit 2",
+"now": "Dream Weavers Way",
+"how": null
+},
+{
+"household": "Holland",
+"to": "Upland Trailer Park unit 3",
+"now": "Dream Weavers Way",
+"how": null
+},
+{
+"household": "Johnny Zest",
+"to": "Upland Trailer Park unit 4",
+"now": "no home",
+"how": null
+},
+{
+"household": "Ward",
+"to": "The Ward Den",
+"now": "no home",
+"how": null
+},
+{
+"household": "Bailey-Moon",
+"to": "Bailey-Moon Manor",
+"now": "no home",
+"how": null
+}
+]
+},
+{
+"world": "StrangerVille",
+"placed": 2,
+"toPlace": [],
+"fixes": [],
+"move": [
+{
+"household": "Roswell",
+"to": "Creek Corner Cove",
+"now": "StrangerVille Overlook",
+"how": null
+}
+]
+},
+{
+"world": "Sulani",
+"placed": 9,
+"toPlace": [
+"Lagoon of Love"
+],
+"fixes": [
+{
+"lot": "Admiral’s Wreckage",
+"what": [
+"active version Community space; your pick Garden (switch on the voting board)"
+]
+}
+],
+"move": [
+{
+"household": "Kealoha",
+"to": "Kin-Ship",
+"now": "no home",
+"how": null
+},
+{
+"household": "Hoapili",
+"to": "Chieftain's Villa",
+"now": "no home",
+"how": null
+},
+{
+"household": "Kahananui",
+"to": "Journey's End",
+"now": "no home",
+"how": null
+}
+]
+},
+{
+"world": "Glimmerbrook",
+"placed": 3,
+"toPlace": [],
+"fixes": [
+{
+"lot": "Brooks Bridge",
+"what": [
+"named “Brooks Bridge [Puzzle]” in the save"
+]
+}
+],
+"move": [
+{
+"household": "Amicable Acolytes",
+"to": "Brooks Bridge",
+"now": "no home",
+"how": null
+}
+]
+}
+],
+"notStarted": [
+"Granite Falls",
+"Selvadorada",
+"Britechester",
+"Evergreen Harbor",
+"Mt. Komorebi",
+"Henford-on-Bagley",
+"Copperdale",
+"San Sequoia",
+"Chestnut Ridge",
+"Tomarang",
+"Ravenwood",
+"Nordhaven",
+"Gibbi Point",
+"Ondarion"
+]
+}
 };
