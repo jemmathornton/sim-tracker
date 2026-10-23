@@ -31,6 +31,8 @@ VENUES = {int(k): v['name'] for k, v in load(os.path.join(ROOT, 'research', 'dat
 SAME_TYPE = {"thrift and boba store": "thrift and bubble tea store", "uob commons": "ubrite commons", "small business residential": "residential",
              "haunted house": "haunted house residential", "university housing": "university housing", "apartment": "residential", "penthouse": "residential"}   # her British names and labels -> the game's
 ECO = {}   # street (world id) -> eco footprint state in the save
+UNIS = {'University of Britechester': (219732, 'University of Britechester'), 'Foxbury Institute': (219731, 'Foxbury Institute')}   # neighbourhood -> (university id in the save, name)
+UNI_NAMES = {v[0]: v[1] for v in UNIS.values()}
 OWNERS = {}   # zone -> the household that owns the lot (rentals, businesses)
 HH_NAME = {}   # household id -> name
 NAPS = []   # neighbourhood action plans in force (Eco Lifestyle)
@@ -83,7 +85,9 @@ def read(fname):
                 zones[z['zone_id']] = {"world": hoods.get(z.get('neighborhood_id'), ''), "lot_id": z.get('lot_id'), "name": z.get('name', ''), "street": z.get('world_id'),
                                        "plex": z.get('active_plex') or 0, "traits": [TN.get(t, str(t)) for t in z.get('lot_traits', [])],
                                        "objs": o.get('n', 0), "active": o.get('active'), "subs": o.get('subs'),
-                                       "venue": venue_of.get(z['zone_id'])}
+                                       "venue": venue_of.get(z['zone_id']),
+                                       "uni": (s4.decode(z['university_housing_configuration'], '.EA.Sims4.Network.UniversityHousingConfiguration', S, depth=0)
+                                               if isinstance(z.get('university_housing_configuration'), (bytes, bytearray)) else (z.get('university_housing_configuration') or {})).get('university_id')}
             elif fn == 5:
                 hhs.append(s4.decode(v, P + 'HouseholdData', S, depth=2)); HH_NAME[hhs[-1].get('household_id')] = hhs[-1].get('name')
             elif fn == 6:
@@ -257,6 +261,8 @@ def main():
                         has_o = HH_NAME.get(has_o, has_o) if not isinstance(has_o, str) else has_o
                         if has_o and norm(want_o) not in norm(has_o) and norm(has_o) not in norm(want_o): r['issues'].append(f"owned by {has_o} in the save; plan: {want_o}")
                         elif not has_o: r.setdefault('owner', want_o)
+                    if 'University Housing' in (l.get('type') or '') and h['name'] in UNIS:   # the right university for the housing
+                        if main.get('uni') != UNIS[h['name']][0]: r['issues'].append(f"University Housing for {UNI_NAMES.get(main.get('uni'), 'no university')}; plan: {UNIS[h['name']][1]}")
                     cv = D['csVersions'].get(key)
                     if cv and main.get('subs'):
                         act = SUBVENUES.get(main['subs'][main.get('active') or 0], '?')
