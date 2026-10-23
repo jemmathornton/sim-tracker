@@ -33,6 +33,8 @@ SAME_TYPE = {"thrift and boba store": "thrift and bubble tea store", "uob common
 ECO = {}   # street (world id) -> eco footprint state in the save
 NAPS = []   # neighbourhood action plans in force (Eco Lifestyle)
 CLUBS = []   # the save's clubs: leader Sim id, hangout zone
+HOLIDAYS = []   # the save's 4-week calendar: name, season, week, day
+GAME_HOLIDAYS = {182140: "Love Day", 182142: "Harvestfest", 182139: "Winterfest", 182141: "New Year's Eve"}   # the game's own (research/holidays-in-saves.md)
 DYNASTIES = []   # the save's dynasties: head, heir, members (outcasts marked)
 # the game's street action plans (streetCivicPolicy_* tuning ids, read 24 Oct), named from their tuning names
 NAP_NAMES = {237847: "Aggression", 231970: "Home Cooking", 237915: "Communal Ownership", 233560: "Green Gardening", 233559: "Utility Production",
@@ -92,6 +94,13 @@ def read(fname):
             OPTIONS.update((acct.get('gameplay_account_data') or {}).get('gameplay_options') or {})
             hs = (slot.get('gameplay_data') or {}).get('holiday_service') or {}
             OPTIONS['_own_holidays'] = [h.get('name') for h in hs.get('holidays', []) if h.get('name')]
+            names_ = {h.get('holiday_type') or h.get('holiday_id') or h.get('id'): h.get('name') for h in hs.get('holidays', []) if h.get('name')}
+            for cal in hs.get('calendars', []):   # the 4-week calendar (season_length 2): each holiday's season and day
+                if cal.get('season_length') == 2:
+                    for x in cal.get('holidays', []):
+                        HOLIDAYS.append({"name": names_.get(x.get('holiday_id')) or GAME_HOLIDAYS.get(x.get('holiday_id'), str(x.get('holiday_id'))),
+                                         "season": ["Summer", "Autumn", "Winter", "Spring"][x.get('season', 0)], "week": (x.get('day') or 0) // 7 + 1,
+                                         "day": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"][(x.get('day') or 0) % 7]})
             for d in ((slot.get('gameplay_data') or {}).get('dynasty_service') or {}).get('dynasty_data', []):   # dynasties
                 DYNASTIES.append({"name": d.get('name'), "head": d.get('head_sim_id'), "heir": d.get('heir_sim_id'),
                                   "members": [(m.get('member_id'), bool(m.get('is_black_sheep'))) for m in d.get('members') or []]})
@@ -451,6 +460,13 @@ def main():
     out['dynasties'] = dyn
     if NAPS: opt.append("action plans in force: " + "; ".join(f"{x['plan']} ({x['hood']}, {x['world']})" for x in NAPS) + " (repeal the ones you don't want)")
     if not o.get('_own_holidays'): opt.append("holidays: still the game's own calendar (checklist step 3)")
+    else:   # her holidays (data/calendar.json) against the save's 4-week calendar
+        cal = load(os.path.join(DATA, 'calendar.json'))['holidays']
+        for x in cal:
+            got = next((h for h in HOLIDAYS if norm(h['name']) == norm(x['name'])), None)
+            if not got: opt.append(f"holiday {x['name']}: not in the save's calendar yet")
+            elif (got['season'], got['week'], got['day']) != (x['season'], x['week'], x['day']):
+                opt.append(f"holiday {x['name']}: {got['season']} week {got['week']} {got['day']} in the save; the Calendar has {x['season']} week {x['week']} {x['day']}")
     out['options'] = opt; out['optionsRaw'] = {k: v for k, v in o.items() if not isinstance(v, (bytes, dict)) and not k.startswith('_ns')}
     save(os.path.join(ROOT, 'research', 'data', 'new-save-status.json'), out)
     # the report
