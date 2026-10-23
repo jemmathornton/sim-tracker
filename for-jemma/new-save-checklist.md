@@ -70,7 +70,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 **Pendula View**
 
-- [ ] **Hallow Slough**, 30x20: built but not on the Gallery: bring it over through your Library (if you changed it in your Building save since, save it to your Library again from there first). Type: Residential. Household: Ella-Mint Cadberry (Sims to come).
+- [ ] **Hallow Slough**, 30x20: built but not on the Gallery: bring it over through your Library (1 copy, 21 Dec 23; named as the game’s lot; check it’s your build) (if you changed it in your Building save since, save it to your Library again from there first). Type: Residential. Household: Ella-Mint Cadberry (Sims to come).
 - [ ] **Umbrage Manor**, 40x30: not built yet: leave the game’s lot for now. Type: Residential. Household: Villareal (EA).
 - [ ] **Cordelia Church** (game’s Parkshore), 40x30: not built yet: leave the game’s lot for now. Type: Cemetery.
 - [ ] **Ophelia Villa**, 30x20: not built yet: leave the game’s lot for now. Type: Haunted House Residential. Household: Goth (EA).
@@ -107,7 +107,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 - [ ] **Vista Quarry Villa** (game’s Vista Quarry), 30x20: place “Vista Quarry Villa”. Type: Residential. Traits: Natural Light. Challenge: Quake Zone. Trait ideas (free slots): Good Schools, Homey.
 - [ ] **Raffia Quinta**, 20x15: place “Raffia Quinta”. Type: Tiny Home Residential. Household: Rivera (yours). Traits: Homey, Eco Lot. Trait ideas (free slots): + Great Soil.
-- [ ] **Dusty Turf**, 30x20: built but not on the Gallery: bring it over through your Library (if you changed it in your Building save since, save it to your Library again from there first). Type: Residential. Household: De Costa (yours).
+- [ ] **Dusty Turf**, 30x20: built but not on the Gallery: bring it over through your Library (3 copies, 21 Dec 23) (if you changed it in your Building save since, save it to your Library again from there first). Type: Residential. Household: De Costa (yours).
 - [ ] **Springscape**, 30x20: Rebuild first (two adult bedrooms and a teen’s room for the Curiouses), then place the new upload. Type: Residential. Household: Curious (EA: Nova; Maxis Gallery: Vidcund and Lazlo). Challenge: Quake Zone. Trait ideas (free slots): Sunny Aspect, Homey (like its neighbours).
 - [ ] **Palm Springs Public Pool** (game’s Cacti Casa), 40x30: place “Palm Springs Public Pool”. Type: Pool. Traits: Bracing Breezes. Challenge: Quake Zone. Trait ideas (free slots): Geothermal (warm pools), Party Place.
 
@@ -186,7 +186,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 **Magnolia Promenade**
 
-- [ ] **Paddy’s Place** (game’s Paddywack’s Emporium), 20x20: built but not on the Gallery: bring it over through your Library (if you changed it in your Building save since, save it to your Library again from there first). Type: Restaurant.
+- [ ] **Paddy’s Place** (game’s Paddywack’s Emporium), 20x20: built but not on the Gallery: bring it over through your Library (3 copies, 21 Dec 23; copies named “Paddy’s Place” and “Paddywack’s Emporium”) (if you changed it in your Building save since, save it to your Library again from there first). Type: Restaurant.
 - [ ] **The Llama Picturehouse** (game’s JF&S Clothiers), 20x20: place “The Llama Picturehouse”. Not the other copy: “The Llama Picturehouse” (Bar). Type: Small Business Venue/Bar. Traits: Party Place, Convivial, Gnomes.
 - [ ] **Magnolia Mall** (game’s The Roadstead), 40x30: not built yet: leave the game’s lot for now. Type: Small Business Venue. Register the business and set its lot after placing. Owner (lives elsewhere): Kirkland (Sims to come).
 - [ ] **Magnolia Bowling Alley** (game’s Preeminent Domain), 30x20: place “Magnolia Bowling Alley”. Type: Bar. Traits: Teen Neighborhood, Party Place, Convivial.
@@ -216,11 +216,11 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 **Lykke Center / University of Windenburg**
 
-- [ ] **La Discotheque** (game’s Bathe de Rill), 40x30: built but not on the Gallery: bring it over through your Library (if you changed it in your Building save since, save it to your Library again from there first). Type: Nightclub.
-- [ ] **UoW Hare Halls** (game’s Hare Square), 30x20: built but not on the Gallery: bring it over through your Library (if you changed it in your Building save since, save it to your Library again from there first). Type: University Housing. University: pick in game.
-- [ ] **UoW Hedgehog Halls** (game’s Hare and Hedgehog), 30x20: built but not on the Gallery: bring it over through your Library (if you changed it in your Building save since, save it to your Library again from there first). Type: University Housing. University: pick in game.
-- [ ] **UoW Students Union** (game’s Harbor Quarter Gym), 30x30: built but not on the Gallery: bring it over through your Library (if you changed it in your Building save since, save it to your Library again from there first). Type: Library.
-- [ ] **UoW Sports Center** (game’s Discotheque Pan Europa), 30x20: built but not on the Gallery: bring it over through your Library (if you changed it in your Building save since, save it to your Library again from there first). Type: Gym/Pool.
+- [ ] **La Discotheque** (game’s Bathe de Rill), 40x30: built but not on the Gallery: bring it over through your Library (1 copy, 21 Dec 23) (if you changed it in your Building save since, save it to your Library again from there first). Type: Nightclub.
+- [ ] **UoW Hare Halls** (game’s Hare Square), 30x20: built but not on the Gallery: bring it over through your Library (2 copies, 21 Dec 23) (if you changed it in your Building save since, save it to your Library again from there first). Type: University Housing. University: pick in game.
+- [ ] **UoW Hedgehog Halls** (game’s Hare and Hedgehog), 30x20: built but not on the Gallery: bring it over through your Library (1 copy, 21 Dec 23) (if you changed it in your Building save since, save it to your Library again from there first). Type: University Housing. University: pick in game.
+- [ ] **UoW Students Union** (game’s Harbor Quarter Gym), 30x30: built but not on the Gallery: bring it over through your Library (1 copy, 21 Dec 23) (if you changed it in your Building save since, save it to your Library again from there first). Type: Library.
+- [ ] **UoW Sports Center** (game’s Discotheque Pan Europa), 30x20: built but not on the Gallery: bring it over through your Library (1 copy, 21 Dec 23) (if you changed it in your Building save since, save it to your Library again from there first). Type: Gym/Pool.
 
 **Windslar**
 
@@ -263,7 +263,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 - [ ] **930 Medina Studios**: place “930 Medina Studios”. Type: Apartment. Place it as a Room into the unit. Household: Livin’ In The City (yours). Trait ideas (free slots): Natural Light, Home Studio.
 - [ ] **121 Hakim House**: not built yet: leave the game’s lot for now. Type: Apartment. Household: Jang (EA).
 - [ ] **122 Hakim House**: place “122 Hakim House”. Search it by name (its upload has no #sanmyshuno tag). Type: Apartment. Place it as a Room into the unit. Traits: Historical. Trait ideas (free slots): Natural Light, Home Studio.
-- [ ] **FountainView Penthouse**: built but not on the Gallery: bring it over through your Library (if you changed it in your Building save since, save it to your Library again from there first). Type: Penthouse. Household: Santiago Ojo (EA: Miko; yours: Alicia).
+- [ ] **FountainView Penthouse**: built but not on the Gallery, and not in your Library, not even as a room (penthouses go in as rooms). Type: Penthouse. Household: Santiago Ojo (EA: Miko; yours: Alicia).
 - [ ] **Casbah Gallery**, 40x30: not built yet: leave the game’s lot for now. Type: Arts Center.
 
 **Fashion District**
@@ -272,7 +272,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 - [ ] **702 ZenView**: not built yet: leave the game’s lot for now. Type: Apartment. Household: Behr (EA).
 - [ ] **1310 21 Chic Street**: place “1310 21 Chic Street”. Type: Apartment. Place it as a Room into the unit. Household: Jeong (EA). Traits: Lively Neighbors. Trait ideas (free slots): Convivial; Celebrity Home once she’s famous.
 - [ ] **1312 21 Chic Street**: not built yet: leave the game’s lot for now. Type: Apartment. Household: Pizzazz (EA).
-- [ ] **1313 21 Chic Street**: built but not on the Gallery: bring it over through your Library (if you changed it in your Building save since, save it to your Library again from there first). Type: Apartment.
+- [ ] **1313 21 Chic Street**: built but not on the Gallery, and as a room only (3 copies, 21 Dec 23); apartments go in as rooms. Type: Apartment.
 - [ ] **Torendi Tunes** (game’s Torendi Tower Penthouse), 40x30: not built yet: leave the game’s lot for now. Type: Karaoke Bar.
 - [ ] **Planet Honey Pop!**, 30x20: not built yet: leave the game’s lot for now. Type: Thrift and Boba Store.
 
@@ -379,15 +379,15 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 - [ ] **Carpophagous Corner**, 30x20: place “Carpophagous Corner”. Type: Vacation Rental. Traits: Science Lair, Bracing Breezes. Challenge: Quake Zone. Trait ideas (free slots): + Peace and Quiet.
 - [ ] **Slip 42**, 20x15: place “Slip 42”. Not the other copy: “Slip 42” (Residential). Type: Residential Rental (2). Challenges: Creepy Crawlies, Quake Zone, Filthy. Units (set after placing): 1; 2.
 - [ ] **Old Penelope**, 50x40: not built yet: leave the game’s lot for now. Type: Residential. Household: Cahill (EA).
-- [ ] **Riverside Grove**, 30x20: built but not on the Gallery: bring it over through your Library (if you changed it in your Building save since, save it to your Library again from there first). Type: Residential. Household: Sigworth (EA).
+- [ ] **Riverside Grove**, 30x20: built but not on the Gallery: bring it over through your Library (1 copy, 21 Dec 23) (if you changed it in your Building save since, save it to your Library again from there first). Type: Residential. Household: Sigworth (EA).
 
 **Shady Acres**
 
-- [ ] **StrangerVille Gym&Pool** (game’s Cliff Side Crest), 30x20: built but not on the Gallery: bring it over through your Library (if you changed it in your Building save since, save it to your Library again from there first). Type: Gym.
+- [ ] **StrangerVille Gym&Pool** (game’s Cliff Side Crest), 30x20: built but not on the Gallery: bring it over through your Library (1 copy, 21 Dec 23) (if you changed it in your Building save since, save it to your Library again from there first). Type: Gym.
 - [ ] **Creek Corner Cove**, 30x20: not built yet: leave the game’s lot for now. Type: Residential. Household: Roswell (EA).
-- [ ] **SU Plateau Residence** (game’s Plateau Place), 40x30: built but not on the Gallery: bring it over through your Library (if you changed it in your Building save since, save it to your Library again from there first). Type: University Housing. University: pick in game.
-- [ ] **StrangerVille Library** (game’s Dream Weavers Way), 30x20: built but not on the Gallery: bring it over through your Library (if you changed it in your Building save since, save it to your Library again from there first). Type: Library.
-- [ ] **SU Overlook Residence** (game’s StrangerVille Overlook), 40x30: built but not on the Gallery: bring it over through your Library (if you changed it in your Building save since, save it to your Library again from there first). Type: University Housing. University: pick in game.
+- [ ] **SU Plateau Residence** (game’s Plateau Place), 40x30: built but not on the Gallery: bring it over through your Library (1 copy, 21 Dec 23) (if you changed it in your Building save since, save it to your Library again from there first). Type: University Housing. University: pick in game.
+- [ ] **StrangerVille Library** (game’s Dream Weavers Way), 30x20: built but not on the Gallery: bring it over through your Library (1 copy, 21 Dec 23) (if you changed it in your Building save since, save it to your Library again from there first). Type: Library.
+- [ ] **SU Overlook Residence** (game’s StrangerVille Overlook), 40x30: built but not on the Gallery, and not in your Library: save it from your Building save. Type: University Housing. University: pick in game.
 
 **Secret Lots**
 
@@ -416,7 +416,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 - [ ] **Reef Finery**, 40x30: not built yet: leave the game’s lot for now. Type: Residential. Household: Ngata (EA).
 - [ ] **Journey’s End**, 40x30: place “Journey’s End”. Type: Residential. Household: Kahananui (EA). Traits: Sunny Aspect, Great Acoustics.
-- [ ] **Pier Perfection**, 30x20: built but not on the Gallery: bring it over through your Library (if you changed it in your Building save since, save it to your Library again from there first). Type: Residential.
+- [ ] **Pier Perfection**, 30x20: built but not on the Gallery: bring it over through your Library (2 copies, 21 Dec 23) (if you changed it in your Building save since, save it to your Library again from there first). Type: Residential.
 - [ ] **Sand Simoleon Beach**, 40x30: place “Sand Simoleon Beach”. Type: Beach. Traits: Oceanic Paradise, Sunny Aspect. Trait ideas (free slots): + Bracing Breezes.
 - [ ] **Sapphire Shores**, 50x50: place “Sapphire Shores”. Type: Residential. Traits: Oceanic Paradise, Child’s Play, Sunny Aspect.
 
@@ -479,13 +479,13 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 - [ ] **Pigulock Manor**, 30x20: not built yet: leave the game’s lot for now. Type: Residential. Household: Tinker (EA).
 - [ ] **Canal Corner**, 20x15: not built yet: leave the game’s lot for now. Type: Small Business Venue. Register the business and set its lot after placing. Owner (lives elsewhere): Tinker (EA).
 - [ ] **Sprucewood Square**, 40x30: not built yet: leave the game’s lot for now. Type: Community Market.
-- [ ] **Pinecrest Apartments #402**: built but not on the Gallery: bring it over through your Library (if you changed it in your Building save since, save it to your Library again from there first). Type: Apartment.
+- [ ] **Pinecrest Apartments #402**: built but not on the Gallery, and as a room only (“Pinecrest Apartments 402”, 19 Jun 25); apartments go in as rooms. Type: Apartment.
 - [ ] **Pinecrest Apartments #404**: place “Pinecrest Apartments 404”. Type: Apartment. Place it as a Room into the unit. Household: Eco Roomies (yours). Trait ideas (free slots): Eco Lot (+ Reduce and Recycle), like Stonestreet.
 
 **Port Promise**
 
 - [ ] **The Old Mill**, 30x20: not built yet: leave the game’s lot for now. Type: Backroom.
-- [ ] **The Caboose**, 30x20: built but not on the Gallery: bring it over through your Library (if you changed it in your Building save since, save it to your Library again from there first). Type: Bar.
+- [ ] **The Caboose**, 30x20: built but not on the Gallery: bring it over through your Library (2 copies, 21 Dec 23) (if you changed it in your Building save since, save it to your Library again from there first). Type: Bar.
 - [ ] **The Old Dockyard** (game’s The Shipping Views), 30x20: place your Makers version “The Old Dockyard Makers”. Type: Community Space. Traits: Sunny Aspect, Convivial. Challenges: Reduce and Recycle, Off-the-Grid. Trait ideas (free slots): + Eco Lot (like the other community spaces).
 - [ ] **Abandoned Views** (game’s The Waterfront), 40x30: not built yet: leave the game’s lot for now. Type: Residential Rental. Household: Henley (yours).
 - [ ] **The Portsmouth Promenade**, 30x20: place “The Portsmouth Promenade”. Type: Small Business Venue. Register the business and set its lot after placing. Owner (lives elsewhere): Greenburg (EA). Traits: Study Spot. Trait ideas (free slots): Eco Lot, Home Studio (Blossom paints).
@@ -508,7 +508,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 - [ ] **Sento Senbamachi** (game’s 5-3-1 Shinrinyoku), 30x20: place “Sento Senbamachi”. Type: Onsen Bathhouse. Traits: On Ley Line, Party Place. Trait ideas (free slots): + Peace and Quiet or Natural Well.
 - [ ] **6-4-1 Hanamigawa**, 20x15: not built yet: leave the game’s lot for now. Type: Vacation Rental.
 - [ ] **Izakaya Hanamigawa Koen** (game’s Hanamigawa Koen), 30x20: place “Izakaya Hanamigawa Koen”. Search it by name (its upload has no #mtkomorebi tag). Type: Restaurant (/Park). Traits: Convivial. Trait ideas (free slots): Chef’s Kitchen, Sunny Aspect.
-- [ ] **Boba Ippai** (game’s Izakaya Ippai), 30x20: built but not on the Gallery: bring it over through your Library (if you changed it in your Building save since, save it to your Library again from there first). Type: Thrift and Boba Store.
+- [ ] **Boba Ippai** (game’s Izakaya Ippai), 30x20: built but not on the Gallery, and not in your Library: save it from your Building save. Type: Thrift and Boba Store.
 
 **Yukimatsu**
 
@@ -527,15 +527,15 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 **Finchwick**
 
 - [ ] **The Gnome’s Arms**, 30x20: not built yet: leave the game’s lot for now. Type: Bar (Pub). Owner (lives elsewhere): The Scotts (EA).
-- [ ] **1 Cobblebottom Street**, 20x15: built but not on the Gallery: bring it over through your Library (if you changed it in your Building save since, save it to your Library again from there first). Type: Small Business Residential.
-- [ ] **3 Cobblebottom Street**, 20x20: built but not on the Gallery: bring it over through your Library (if you changed it in your Building save since, save it to your Library again from there first). Type: Residential Rental (2). Moody & McMillan (EA, landlord, unit 3B). Tenants: Cecilia Kang unit 3A. Units (set after placing): 3A (Gnomes, Homey, Cat Hangout); 3B (Gnomes, Homey, Chef’s Kitchen).
+- [ ] **1 Cobblebottom Street**, 20x15: built but not on the Gallery: bring it over through your Library (2 copies, 29 May 25) (if you changed it in your Building save since, save it to your Library again from there first). Type: Small Business Residential.
+- [ ] **3 Cobblebottom Street**, 20x20: built but not on the Gallery: bring it over through your Library (4 copies, 10 Oct 25) (if you changed it in your Building save since, save it to your Library again from there first). Type: Residential Rental (2). Moody & McMillan (EA, landlord, unit 3B). Tenants: Cecilia Kang unit 3A. Units (set after placing): 3A (Gnomes, Homey, Cat Hangout); 3B (Gnomes, Homey, Chef’s Kitchen).
 - [ ] **Finchwick Village Hall** (game’s 5 Cobblebottom Street), 30x20: place “Finchwick Village Hall”. Type: Library(/Wedding Venue / Bar). Traits: Romantic Aura, Cat Hangout. Challenges: Wild Foxes, Spooky. Trait ideas (free slots): + Peace and Quiet (the library upstairs).
 
 **Old New Henford**
 
 - [ ] **2 Olde Mill Lane**, 50x40: not built yet: leave the game’s lot for now. Type: Vet Clinic. Owner (lives elsewhere): Watson-Holmes (yours).
 - [ ] **3 Olde Mill Lane**, 50x40: place “3 Olde Mill Lane”. Search it by name (its upload has no #henfordonbagley tag). Type: Residential. Household: Watson-Holmes (yours). Traits: Homey, Cat Hangout. Challenges: Wild Foxes, Simple Living. Trait ideas (free slots): + Great Soil.
-- [ ] **The Olde Mill** (game’s 4 Olde Mill Lane), 30x20: built but not on the Gallery: bring it over through your Library (if you changed it in your Building save since, save it to your Library again from there first). Type: Residential.
+- [ ] **The Olde Mill** (game’s 4 Olde Mill Lane), 30x20: built but not on the Gallery: bring it over through your Library (2 copies, 21 Dec 23; copies named “4 Olde Mill Lane” and “The Olde Mill”) (if you changed it in your Building save since, save it to your Library again from there first). Type: Residential.
 - [ ] **Olde Mill Hill**, 64x64: not built yet: leave the game’s lot for now. Type: Residential. Household: The Watsons (EA).
 
 **The Bramblewood**
@@ -558,8 +558,8 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 - [ ] **Copperdale Library** (game’s Water Tower Way), 20x15: place “Copperdale Library”. Type: Library. Traits: Teen Neighborhood, Study Spot, Child’s Play.
 - [ ] **Town Square Stores** (game’s Town Square Terrace), 20x15: place “Town Square Stores”. Search it by name (its upload has no #copperdale tag). Type: Thrift and Boba Store. Traits: Fast Internet, Teen Neighborhood. Trait ideas (free slots): + Convivial.
-- [ ] **Prescott Boarding House** (game’s ThrifTea), 20x15: built but not on the Gallery: bring it over through your Library (if you changed it in your Building save since, save it to your Library again from there first). Type: Residential Rental (2). Nerdy Girls (Sims to come, tenant, unit 1). Tenants: Nerdy Boys unit 2.
-- [ ] **Lakeview Boarding House** (game’s Lakeview Library), 20x20: built but not on the Gallery: bring it over through your Library (if you changed it in your Building save since, save it to your Library again from there first). Type: Residential Rental (2). Sporty Girls (Sims to come, tenant, unit 1). Tenants: Sporty Boys unit 2.
+- [ ] **Prescott Boarding House** (game’s ThrifTea), 20x15: built but not on the Gallery: bring it over through your Library (1 copy, 21 Dec 23; only a copy named “ThrifTea”, probably before it became the boarding house; check) (if you changed it in your Building save since, save it to your Library again from there first). Type: Residential Rental (2). Nerdy Girls (Sims to come, tenant, unit 1). Tenants: Nerdy Boys unit 2.
+- [ ] **Lakeview Boarding House** (game’s Lakeview Library), 20x20: built but not on the Gallery: bring it over through your Library (4 copies, 7 Feb 26; newest copy is “Lakeview Boarding House”, 7 Feb 26) (if you changed it in your Building save since, save it to your Library again from there first). Type: Residential Rental (2). Sporty Girls (Sims to come, tenant, unit 1). Tenants: Sporty Boys unit 2.
 - [ ] **Golden Peak**, 30x30: not built yet: leave the game’s lot for now. Type: Residential. Household: Prescott (EA).
 
 **Plumbite Cove**
@@ -634,7 +634,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 **Koh Sahpa**
 
-- [ ] **Isda Riverfront**, 20x20: built but not on the Gallery: bring it over through your Library (if you changed it in your Building save since, save it to your Library again from there first). Type: Residential Rental (2). Cadberry (Sims to come, landlord, unit 1). Tenants: Rochana. Units (set after placing): 1; 2.
+- [ ] **Isda Riverfront**, 20x20: built but not on the Gallery: bring it over through your Library (1 copy, 28 Jun 25) (if you changed it in your Building save since, save it to your Library again from there first). Type: Residential Rental (2). Cadberry (Sims to come, landlord, unit 1). Tenants: Rochana. Units (set after placing): 1; 2.
 - [ ] **Sungai Point**, 30x20: not built yet: leave the game’s lot for now. Type: Residential Rental (3). Linh-Sadya (EA, tenant, unit 11A). Tenants: Linh. Units (set after placing): 11A (Homey); 11B (Great Acoustics, Gnomes); 11C.
 - [ ] **The Screaming Gecko**, 20x20: place “The Screaming Gecko”. Type: Karaoke Bar. Traits: Party Place, Convivial.
 - [ ] **Tam Nang Sands**, 30x20: not built yet: leave the game’s lot for now. Type: Spa.
@@ -646,7 +646,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 **Crow's Crossing**
 
-- [ ] **Ravenwood Wedding Hall** (game’s Specter Family Manor), 30x20: built but not on the Gallery: bring it over through your Library (if you changed it in your Building save since, save it to your Library again from there first). Type: Wedding Venue.
+- [ ] **Ravenwood Wedding Hall** (game’s Specter Family Manor), 30x20: built but not on the Gallery: bring it over through your Library (1 copy, 10 Oct 26) (if you changed it in your Building save since, save it to your Library again from there first). Type: Wedding Venue.
 - [ ] **Crow’s Chronicles** (game’s Crow’s Perch), 30x30: place “Crow’s Chronicles”. Type: Library. Traits: On Hallowed Grounds, Study Spot.
 - [ ] **Specter Row** (game’s Moppy Manor), 30x20: not built yet: leave the game’s lot for now. Type: Residential Rental/Haunted House Residential. Household: Specter (Sims to come).
 - [ ] **Old Ravenwood Estate**, 50x50: not built yet: leave the game’s lot for now. Type: Haunted House Residential.
@@ -712,7 +712,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 **Crystal Valley**
 
-- [ ] **Paradise Stables** (game’s Prospector’s Paradise), 40x30: built but not on the Gallery: bring it over through your Library (if you changed it in your Building save since, save it to your Library again from there first). Type: Residential.
+- [ ] **Paradise Stables** (game’s Prospector’s Paradise), 40x30: built but not on the Gallery: bring it over through your Library (1 copy, 15 Feb 26) (if you changed it in your Building save since, save it to your Library again from there first). Type: Residential.
 - [ ] **Crystal Cottage**, 30x20: not built yet: leave the game’s lot for now. Type: Onsen Bathhouse.
 - [ ] **Love Highland**, 50x50: not built yet: leave the game’s lot for now. Type: Custom Venue. Owner (lives elsewhere): Addam Commune (EA).
 - [ ] **Thrift ’n’ Fish** (game’s Fearful Fish Lounge), 20x20: not built yet: leave the game’s lot for now. Type: Thrift and Boba Store.

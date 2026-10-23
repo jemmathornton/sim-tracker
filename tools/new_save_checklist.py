@@ -76,6 +76,19 @@ def unit_name(l, pos):
     return names[int(pos) - 1] if str(pos).isdigit() and 0 < int(pos) <= len(names) else str(pos)
 
 
+norm_ = lambda x: re.sub(r'[^a-z0-9]', '', (x or '').replace('’', "'").lower())
+def library_lots():
+    """(world, lot) -> (copies, date, note) for her built-but-unshared lots, from research/library-ready.md (23 Oct)."""
+    out = {}
+    p = os.path.join(ROOT, 'research', 'library-ready.md')
+    if not os.path.exists(p): return out
+    for line in open(p, encoding='utf-8'):
+        c = [x.strip() for x in line.strip().strip('|').split('|')]
+        if len(c) == 5 and (c[2].isdigit() or c[2] == 'none'): out[(c[0], norm_(c[1]))] = (c[2], c[3], c[4])
+    return out
+LIB = library_lots()
+
+
 def load_data():
     t = open(os.path.join(ROOT, 'site', 'js', 'data.js'), encoding='utf-8').read()
     return json.loads(t[t.index('{'):t.rindex('}') + 1])
@@ -165,7 +178,10 @@ def main():
                     wtag = re.sub(r'[^a-z]', '', wn.lower())   # in-game hashtag search needs the world's own tag (research/gallery-tags.md)
                     if wtag not in [t.lower() for t in g.get('tags') or []]: bits.append("Search it by name (its upload has no #" + wtag + " tag).")
                     if g.get('others'): bits.append("Not the other cop" + ("ies" if len(g['others']) > 1 else "y") + ": " + ", ".join(f"{q(o['title'])} ({o['label']})" for o in g['others']) + ".")
-                elif l['built'] is True: bits.append("built but not on the Gallery: bring it over through your Library (if you changed it in your Building save since, save it to your Library again from there first).")
+                elif l['built'] is True:
+                    lib = LIB.get((wn, norm_(name))) or LIB.get((wn, norm_(l['lot'])))
+                    if lib and lib[0] == 'none': bits.append(f"built but not on the Gallery, and {lib[2] or 'not in your Library'}.")
+                    else: bits.append("built but not on the Gallery: bring it over through your Library" + (f" ({lib[0]} cop{'y' if lib[0] == '1' else 'ies'}, {lib[1]}{'; ' + lib[2] if lib[2] else ''})" if lib else "") + " (if you changed it in your Building save since, save it to your Library again from there first).")
                 else: bits.append("not built yet: leave the game’s lot for now.")
                 if l.get('type'): bits.append(f"Type: {l['type']}.")
                 if (l.get('type') or '') == 'Apartment' and l.get('gallery'): bits.append("Place it as a Room into the unit.")
