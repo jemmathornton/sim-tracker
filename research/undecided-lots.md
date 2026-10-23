@@ -1,5 +1,7 @@
 # Undecided lots: options and a recommendation each (16–17 Oct)
 
+> Out of date since 19 Oct: 1 Cobblebottom Street (Small Business Residential), Casa do Corsário (2 units) and The Old Clocktower (Backroom) are settled; the rest are parked (22 Oct). See TODO.md “Undecided lots”.
+
 For the open **[Jemma]** lot decisions in TODO.md. Research only; nothing is changed.
 
 **Sources:**

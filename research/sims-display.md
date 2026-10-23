@@ -1,5 +1,7 @@
 # Showing Sims, family trees and relationships: options (overnight 16–17 Oct)
 
+> Out of date since 17–19 Oct: her choices are made and built (Sim pages, household-centred trees, group pages; TODO.md “Showing Sims”). Read it as background only.
+
 For the TODO items "Household basics", "Relationships between households beyond family" and "Family tree, Goths first". Research only: nothing on the site or in `data/` is changed. Sources: the Sims Wiki (fetched through its API), EA patch notes as quoted on the wiki, family-tree and Sims tracker sites (list at the end).
 
 Displayed text on the site would follow the usual rules (British English, curly apostrophes, counts not percentages outside Stats, no AI art).

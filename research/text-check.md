@@ -1,5 +1,7 @@
 # Text check: everything the site shows
 
+> Partly done since 19 Oct: the app name, “the The Scotts”, curly quotes on most pages, Gallery typos and British spelling are fixed; what is still open is listed in TODO.md “Text check”.
+
 Checked overnight, 17 October 2026: every label in `site/js/app.js` and `site/index.html`, every bit of world data the site displays (blurbs, neighbourhood cards, weather, highlights, festivals, lot names and types, residents, tenants, Sim cards, screenshot captions), `data/gallery/text-fixes.json`, and her Gallery descriptions as the site shows them. Nothing was changed.
 
 **Kind:** *obvious fix* = a slip or a broken rule, can be fixed straight away; *her call* = wording, names or choices. Items already in `research/site-audit-16-oct.md` (Rippling Flats, "let" vs "lived in", the straight apostrophe in "Jemma's Sim World") aren't repeated, except where this adds to them.

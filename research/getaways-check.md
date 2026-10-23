@@ -1,5 +1,7 @@
 # Getaways and Custom Venues: a check of her plan (overnight 17 Oct)
 
+> Since 22 Oct: the Love Highland finding is confirmed and taken further in research/love-highland-business.md (a Custom Venue can’t be owned or run as a business; a Small Business Venue can’t host Getaways). Love Highland is parked on TODO.md.
+
 Research only. Nothing in the app, data, tools or TODO.md was changed, and nothing was committed. No save was opened.
 
 **Sources:**

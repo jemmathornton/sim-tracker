@@ -1,5 +1,7 @@
 # Gallery findability
 
+> Since 22 Oct: tips and a hashtag checker are not wanted (her call); she fixes tag typos herself when she re-uploads.
+
 Written overnight 16–17 October 2026. Research only: nothing in the app, data, tools or TODO.md was changed, and nothing was posted or changed on the Gallery. Suggestions only; every choice is hers.
 
 Sources: her uploads as of the 14 Oct refresh (`data/gallery/`), EA’s help pages and patch notes, community guides and forum posts (listed at the end), the game’s own interface text, and a light, read-only look at EA’s public Gallery data on 17 Oct (the same data the web Gallery shows). Scripts ran from a scratch folder and weren’t kept. Many groups below are small, so read them as hints, not rules. “Typical” is the middle value, so one big hit doesn’t skew it.

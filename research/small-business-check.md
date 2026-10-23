@@ -1,5 +1,7 @@
 # Small business check (16–17 Oct)
 
+> Out of date since 19 Oct: lots now use the game’s two names, Small Business Residential and Small Business Venue; the Greenburgs live at Rockridge Springs. See TODO.md “Small business lots”.
+
 For TODO §5: “check the small business lot types… It must stay obvious a business is run from the lot, not just a home.” Recommendations only; nothing is changed.
 
 **Sources:**

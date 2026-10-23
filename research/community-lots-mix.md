@@ -1,5 +1,7 @@
 # Community lots: is the mix realistic? (15 Oct)
 
+> Counts are from 15 Oct; some lots changed later (e.g. Movers & Shakers is an Arts Center, Backrooms are now 7 in owned worlds). Current types are in data/.
+
 For deciding the open lots (Key Point, Mystic Crossroads, LaSuli Point). Counts are from her plan, owned worlds only (25), homes left out. Rerun with `tools/research/community_mix.py`.
 
 Caveats: types are matched by words in the plan's lot type, so it's approximate. A lot with two types ("Park/Cemetery", "Restaurant/Bar") counts once for each. Markets and Small Business count as shops. Open-world parks and playgrounds (not lots) aren't counted, so parks and playgrounds look lower than they feel in game. The "realistic" column is my judgement for 25 small towns, not a rule.

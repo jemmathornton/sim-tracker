@@ -1,5 +1,7 @@
 # Royalty & Legacy check: her plan against how the pack plays (overnight 17 Oct)
 
+> Partly out of date since 21 Oct: the Goths stay a dynasty only and Ophelia Villa stays haunted; Waltzing Dance Floors are on the build notes. The Monty questions are still open.
+
 Research only. Nothing in the app, data, tools or TODO.md was changed, and nothing was committed. No save was opened (one file date was looked at, §2e).
 
 **Sources:**

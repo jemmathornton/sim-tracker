@@ -1,5 +1,7 @@
 # Rentals, next in line (overnight 21–22 Oct)
 
+> Out of date since 22 Oct: the walk-through is done; the current units are in TODO.md §2 (left for later: Upland, Sequoia Cottage, Isda Riverfront, Rio Verde).
+
 For tomorrow’s walk round the rentals in game. Research only; nothing in the app was changed. Everything under “Suggested” is a suggestion: you decide.
 
 **At a glance**

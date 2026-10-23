@@ -1,5 +1,7 @@
 # World Plans review (17 Oct)
 
+> Out of date since 22 Oct: the Overview bugs are fixed, “Overall” stays as it is, and she now edits here in chat (World Plans is a copy).
+
 A look at her spreadsheet beyond the columns the app reads. Research only: her file was copied into a scratch folder and only the copy was read (openpyxl). Nothing in `site/`, `data/`, `tools/` or her folders was changed.
 
 - `World Plans (fixed).xlsx` SHA-256 before and after: `EEEBDFEB…F148BEA` (same; last saved 16 Oct 20:32).

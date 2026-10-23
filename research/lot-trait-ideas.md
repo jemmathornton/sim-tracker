@@ -1,5 +1,7 @@
 # Lot traits and challenges: what they do, a check, and ideas (17 Oct)
 
+> Partly out of date since 21 Oct: The Old Dockyard has no Off-the-Grid (that was another build in her save), and Studio PBP gets Hottest Spot in Town when built.
+
 Research only; nothing in the app, data or tools is changed. Every suggestion is just that: her call.
 
 **Sources:**

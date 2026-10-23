@@ -1,5 +1,7 @@
 # Build priorities
 
+> Counts are from 16–17 Oct (e.g. built but not shared is now 27, and Glimmer & Books is unshared until its Backroom upload).
+
 Written overnight 16–17 October 2026. Research only: nothing in the app, data, tools or TODO.md was changed. Suggestions only; every choice is hers.
 
 From her plan as it is in `data/worlds/` (16 Oct), the Gallery numbers of the last refresh (14 Oct) and `data/gallery/history.csv` (checks on 11, 13 and 14 Oct). Scripts were run from a scratch folder and not kept in the project.

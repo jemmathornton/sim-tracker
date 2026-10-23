@@ -1,5 +1,7 @@
 # Where Sims, households and relationships could come from (overnight 16–17 Oct)
 
+> Out of date since 19 Oct: her call is a mix for now and her Gallery households in the end; on 22 Oct she also planned a brand-new save. See TODO.md “Where Sims could come from”.
+
 Research only. Nothing on the site, in `data/`, `tools/` or `TODO.md` was changed, and nothing was committed. Saves were read from temporary copies through `tools/sims4files.py`. Her Library files were copied to a scratch folder and read there. The “Building…” saves were opened only to read their names, never for Sims. Personal Sim names are not copied here; household names appear only as examples.
 
 How to show Sims once we have them (cards, trees, webs) is covered in `research/sims-display.md`. This note is only about **where the data comes from**.

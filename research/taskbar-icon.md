@@ -1,5 +1,7 @@
 # Why the taskbar icon is blurry, and what fixes it (16 Oct, research only)
 
+> Out of date since 22 Oct: fixed (her check) without the local server: the shortcuts now carry the app’s own taskbar id (19 Oct).
+
 Nothing was changed: no shortcut, no file, no setting. Sources are at the end of each section. Web pages were read as reference only.
 
 ## Short answer

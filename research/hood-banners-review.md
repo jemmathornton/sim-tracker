@@ -1,5 +1,7 @@
 # Neighbourhood banners: do any look worse than the whole map?
 
+> Out of date since 19 Oct: the banner-height bug is fixed and she checked every banner and card with per-neighbourhood nudges (only San Myshuno left).
+
 Checked overnight, 16–17 October 2026, for the TODO “Some may look worse than the whole map: name any to put back”. Pictures of every banner: `for-jemma/hood-banners/` (five JPGs). Nothing in the app was changed.
 
 **Result: none looks clearly worse than the whole map.** 48 are good and 29 so-so. Showing the whole map instead would make each neighbourhood a small patch (about a twelfth of the banner, against about a quarter now), and for 16 of them it would sit under the dark fade at the bottom. Four barely zoom at all, so putting those back is purely her taste (see suggestion 2).

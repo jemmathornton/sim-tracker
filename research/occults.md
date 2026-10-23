@@ -1,5 +1,7 @@
 # Occults: life states, their places and traits, her plan, and showing them (overnight 17 Oct)
 
+> Partly out of date since 19 Oct: her icon picks are on the site (research/decisions/occults.md); the in-game points are still open on TODO.md.
+
 Research only. Nothing on the site, in `data/`, `tools/` or `TODO.md` is changed, and nothing is committed. No save was opened.
 
 **Sources:**

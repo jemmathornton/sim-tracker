@@ -1,5 +1,7 @@
 # Weekly Gallery refresh: health check (17 Oct, research only)
 
+> Out of date since 19 Oct: the crash is fixed, the creator filter and safe writing are in, and deleted uploads are now marked gone; only committing results to git is still open.
+
 Before its first run on its own (Sunday 18 Oct, 08:54). Nothing was changed: no app, data, tools or Windows settings, and the refresh wasn’t run. Read: `tools/gallery_refresh.py`, `tools/common.py`, `tools/build.py`, the Windows task (read only), `logs/gallery-refresh.log`, the Gallery data files and git history.
 
 ## Short answer

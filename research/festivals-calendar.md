@@ -1,5 +1,7 @@
 # Festivals and events calendar (overnight 17 Oct)
 
+> Out of date since 19 Oct: the Calendar page is built (holidays from her Rotational save since 22 Oct); the newer write-up is research/calendar-and-admin.md (23 Oct).
+
 Research only. Nothing in the app, data, tools or TODO.md was changed, and nothing was committed. No save was opened.
 
 **Sources:**

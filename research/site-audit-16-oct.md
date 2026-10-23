@@ -1,5 +1,7 @@
 # Site audit, 16 Oct (overnight, read only)
 
+> Out of date since 22 Oct: every item here was fixed or decided by her (TODO.md “Tidy-up check”).
+
 Problems only. Nothing was changed. Each item says where, what, a suggested fix, and whether it's an **obvious bug** (can be fixed straight away) or **needs her decision**.
 
 ## What checked out fine

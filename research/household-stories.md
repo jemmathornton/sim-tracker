@@ -1,5 +1,7 @@
 # Household stories: how players keep them, and options for "Their story" (overnight 16–17 Oct)
 
+> Out of date since 19 Oct: her call is her own bios for her Sims and EA’s own text word for word for EA’s (research/decisions/stories.md).
+
 For the empty **Their story** section on household pages. Research and a prototype only: nothing in `site/`, `data/` or `tools/` is changed.
 
 - **Prototype:** `for-jemma/prototypes/stories/index.html` (opens from the folder): Romeo, Juliette and Dante (Tartosa in her plan) and the Goths, each shown "On the household page" (my picks together) or "Each option" (alternatives side by side). Option letters below match the prototype.

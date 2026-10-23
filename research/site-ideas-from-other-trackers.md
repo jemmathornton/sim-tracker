@@ -1,5 +1,7 @@
 # Jemma's Sim World: ideas from how other Simmers track and showcase saves
 
+> Many of these are done or turned down since; where each stands: research/someday-ideas.md (23 Oct).
+
 Research date: 13 Oct 2026. Web research only; I also read `claude/project-notes.md` and `claude/handover.md` so the ideas skip things the site already does (Stats page, neighbourhood cards with lot circles, Community Space versions, Gallery favourites/downloads/comments, "Owned by"/"Landlord of", tenants, weekly Gallery refresh).
 
 A note on sources: several Notion templates and paid Gumroad/Ko-fi templates only load with JavaScript or hide their contents behind a purchase, so I could not see their fields. Reddit could not be read either (blocked to automated readers). Where a source's contents are taken from a description of it rather than the thing itself, I say so.

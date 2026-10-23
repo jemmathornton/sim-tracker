@@ -1,5 +1,7 @@
 # Rentals and apartments: what her save says
 
+> Out of date since 16–22 Oct: rental unit names, traits and (where recorded) bedroom and bathroom counts are now read for every rental; Mossy Lane is University Housing and the Copperdale boarding houses are rentals. See TODO.md §2.
+
 Read overnight on 13–14 October 2026 from a copy of her newest “Building” save (Building #2). Only lots marked shared are included (her rule); the 10 unshared rentals and the unshared apartment units were left out. Nothing on the site was changed. Bedroom and bathroom numbers from the Gallery are what her uploads say.
 
 ## Headlines

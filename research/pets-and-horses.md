@@ -1,5 +1,7 @@
 # Pets and horses: EA’s animals, her pet places, and showing them (overnight 17 Oct)
 
+> Out of date since 19 Oct: option A is built (animals table, animal tree, pet pages); see research/decisions/pets.md.
+
 Research only. Nothing on the site, in `data/`, `tools/` or `TODO.md` is changed, and nothing is committed.
 
 **Sources:**

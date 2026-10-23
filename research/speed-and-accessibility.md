@@ -1,5 +1,7 @@
 # Speed and accessibility (17 Oct, overnight, research only)
 
+> Out of date since 22 Oct: all done or decided (banner text option D, colours kept, keyboard access, Stats search, fonts in site/fonts/). See TODO.md.
+
 Nothing in the app, data or tools was changed. Findings and suggestions only.
 
 **How it was checked:** the code (`site/js/app.js`, `site/site.css`, `site/index.html`), every picture in `site/` measured with Pillow, and the running `app` preview at 1280×800 in a tab of my own (closed afterwards, window size reset). Her laptop runs at 200%, so one pixel on the page is two on her screen; picture sizes below are judged for that. The browser pane was hidden overnight, so it only drew the page when a screenshot was taken: script and layout times are real measurements, but paint timings weren’t possible, so “pictures per page” comes from the code and was spot-checked in the preview. Opening every page in the preview reset the preview’s own “New since you looked” marks; her app on the shortcut keeps its own and isn’t affected.

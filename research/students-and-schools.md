@@ -1,5 +1,7 @@
 # Students and schools: how the game runs uni and high school, and her plan (overnight 17 Oct)
 
+> Out of date since 21 Oct: the Copperdale boarding houses are Residential Rentals with 2 units each, and Mossy Lane stays open.
+
 Research only. Nothing in the app, data, tools or TODO.md was changed, and nothing was committed. No save was opened.
 
 **Sources:**

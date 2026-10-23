@@ -1,5 +1,7 @@
 # Rental units: what her save says, and who could go where (16–17 Oct)
 
+> Out of date since 19–22 Oct: who lives in which unit was decided with her (some differ from the suggestions here, e.g. the Lynxes in unit 1, the Pleasant twins in unit 3); the current table is TODO.md §2.
+
 For TODO §2 (“Decide each rental’s households unit by unit”). Research only; nothing in the app is changed.
 
 **Sources:** her newest “Building” save (Building #2), read from a temporary copy the way `tools/lot_traits.py` does; household sizes from the Sims Wiki; the Gallery’s bedroom and bathroom totals.

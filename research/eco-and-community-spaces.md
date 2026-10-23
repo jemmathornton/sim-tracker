@@ -1,5 +1,7 @@
 # Eco Lifestyle and Community Spaces: how they play, and her plan (17 Oct)
 
+> Partly out of date since 22 Oct: Port Promise is settled (the Henleys vote; Bess Sterling keeps her job and runs The Quarry Building); Admiral’s Wreckage and The Old Dockyard checked fine (21 Oct).
+
 Research only. Nothing in the app, data, tools or TODO.md was changed, and nothing was committed. No save was opened.
 
 **Sources:**

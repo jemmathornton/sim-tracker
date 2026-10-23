@@ -1,5 +1,7 @@
 # Fame and clubs: a check of her plan (overnight 17 Oct)
 
+> Out of date since 21 Oct: club places, fame on Sim pages and Studio PBP’s Hottest Spot in Town are decided (TODO.md “Fame and clubs”).
+
 Research only. Nothing in the app, data, tools or TODO.md was changed, and nothing was committed. No save was opened.
 
 **Sources:**

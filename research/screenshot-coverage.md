@@ -1,5 +1,7 @@
 # Screenshot coverage (17 Oct)
 
+> Partly done since 22 Oct: 8 of these lots now have her pictures on the site, and she found the other sets were wrong ones (TODO.md “Screenshots”). The 137 count is from 16 Oct.
+
 Why only 16 of the 168 shared lots have her own screenshots, and where more could come from. Research only: nothing in the app, data, tools or her folders was changed. Her folders were only listed (file names, file sizes, dates, and each PNG’s picture size read from its first bytes). No picture was opened, copied or looked at.
 
 ## Headlines
