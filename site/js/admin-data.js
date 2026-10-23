@@ -160,7 +160,7 @@ window.ADMIN = {
 {
 "section": "Big jobs",
 "world": "",
-"text": "**Do:** Start the new save, step by step (for-jemma/new-save-checklist.md)."
+"text": "**Do:** Set up the new save “Jemma’s Sim World” (started 23 Oct), step by step (for-jemma/new-save-checklist.md)."
 },
 {
 "section": "Big jobs",

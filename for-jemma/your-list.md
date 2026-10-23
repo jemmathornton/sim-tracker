@@ -3,7 +3,7 @@
 Everything waiting on you, in one place (it replaced the in-game checklist and the parked to-dos, her call 23 Oct). It shows on the site under Admin > Notes. **Do** = decided, just do it; **Decide** = your call. Words in {curly brackets} are counted live on the site. Tell Claude when one's done or decided and it comes off.
 
 ## Big jobs
-- **Do:** Start the new save, step by step (for-jemma/new-save-checklist.md).
+- **Do:** Set up the new save “Jemma’s Sim World” (started 23 Oct), step by step (for-jemma/new-save-checklist.md).
 - **Do:** Build the {toBuild} lots not built yet (Admin > Progress lists them).
 - **Do:** Share the {toShare} built lots that aren't on the Gallery yet.
 - **Do:** Take screenshots of the {noShots} shared lots with none (most: {noShotsWorlds}).
