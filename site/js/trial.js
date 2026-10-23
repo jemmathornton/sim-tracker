@@ -25,7 +25,7 @@ function gpApply(){ Object.values(lotIndex).forEach(l => { l._allPhotos ||= l.ph
 gpApply();
 document.addEventListener("click", e => { const b = e.target.closest("[data-gp]"); if (!b || b.dataset.gp === GP) return;
   GP = b.dataset.gp; try { localStorage.setItem(GP_KEY, GP); } catch (err) {} gpApply(); trialSwitch(); trRedraw(); });
-const TR_ACROSS = ["clubs", "dynasties", "organisations", "families", "businesses", "shells"];
+const TR_ACROSS = ["clubs", "dynasties", "organisations", "families", "businesses"];
 document.addEventListener("click", e => { const b = e.target.closest("[data-trial]"); if (!b || b.dataset.trial === TRIAL) return;
   TRIAL = b.dataset.trial; try { localStorage.setItem(TRIAL_KEY, TRIAL); } catch (err) {}
   trialSwitch(); searchList = null;
@@ -48,7 +48,7 @@ const ADM_SECTIONS = [
 ];
 const grpOf = kind => Object.values(GROUP_PAGES).filter(g => g.kind === kind);
 const TR_ACROSS_NAV = () => [["calendar", "calendar", "Calendar", null], ["clubs", "flag", "Clubs", grpOf("club").length], ["dynasties", "crown", "Dynasties", grpOf("dynasty").length],
-  ["organisations", "graduation-cap", "University organisations", grpOf("org").length], ["families", "network", "Families", crossFamilies().length], ["businesses", "briefcase", "Businesses", trBusinesses().length], ["shells", "sparkle", "Shell challenges", trShells().length]];
+  ["organisations", "graduation-cap", "University organisations", Object.keys((DATA.groups || {}).organisations || {}).length], ["families", "network", "Families", crossFamilies().length], ["businesses", "briefcase", "Businesses", trBusinesses().length]];
 function trialNav(active, key, ctx){
   const nav = document.getElementById("nav"), bottom = nav.querySelector(".stats-nav"), notOwned = nav.querySelector(".nav-group.dim");
   if (bottom) bottom.remove();
@@ -327,11 +327,14 @@ function dynastiesPage(){
   return h;
 }
 function orgsPage(){
-  const os = grpOf("org").sort((a, b) => Object.keys(UNIS).indexOf(a.uni) - Object.keys(UNIS).indexOf(b.uni) || a.name.localeCompare(b.name)), by = groupsBy(os, g => g.uni);
-  let h = trHero("#4E8B66", "Across the worlds · Britechester", "University <em>organisations</em>", "The organisations someone on the site is in, by university: the University of Britechester, Foxbury Institute, and the secret one open to both.", [[os.length, os.length === 1 ? "organisation" : "organisations"], [new Set(os.flatMap(g => g.members.map(([m]) => m))).size, "members"]]);
+  // every organisation the game has, the ones nobody on the site is in yet as plain cards with no page (her ask, 23 Oct: Foxbury Spirit Squad)
+  const joined = grpOf("org"), empty = Object.entries((DATA.groups || {}).organisations || {}).filter(([n]) => !joined.some(g => g.name === n)).map(([n, o]) => ({...o, name: n, kind: "org", empty: true, members: []}));
+  const os = [...joined, ...empty].sort((a, b) => Object.keys(UNIS).indexOf(a.uni) - Object.keys(UNIS).indexOf(b.uni) || a.name.localeCompare(b.name)), by = groupsBy(os, g => g.uni);
+  let h = trHero("#4E8B66", "Across the worlds · Britechester", "University <em>organisations</em>", "Every organisation, by university: the University of Britechester, Foxbury Institute, and the secret one open to both.", [[os.length, os.length === 1 ? "organisation" : "organisations"], [new Set(os.flatMap(g => g.members.map(([m]) => m))).size, "members"]]);
   if (!os.length) return h + trEmpty("No university organisations yet.");
   by.forEach((gs, u) => { h += `<section class="block"><div class="block-head"><h2>${esc((UNIS[u] || {}).name || "Other")}</h2><span class="count">${plural(gs.length, "organisation")}</span></div><div class="families tr-groups">${gs.map(g =>
-    grpCard(g, g.uni === "secret" ? "book-open-text" : "graduation-cap", kindName(g) === "Secret society" ? "Secret society" : "", [plural(g.members.length, "member"), g.join ? esc(g.join) : ""].filter(Boolean).join(" · "))).join("")}</div></section>`; });
+    g.empty ? `<div class="fam" style="--h:${(UNIS[g.uni] || {}).colour || "#888"}"><span class="mono">${ic(g.uni === "secret" ? "book-open-text" : "graduation-cap")}</span><span>${g.uni === "secret" ? `<span class="rel">Secret society</span>` : ""}<b>${esc(g.name)}</b><small>No members yet</small></span></div>`
+    : grpCard(g, g.uni === "secret" ? "book-open-text" : "graduation-cap", kindName(g) === "Secret society" ? "Secret society" : "", [plural(g.members.length, "member"), g.join ? esc(g.join) : ""].filter(Boolean).join(" · "))).join("")}</div></section>`; });
   return h;
 }
 // families spread over several worlds: Sims joined by real family links (parents and partners), never by a shared surname alone;
@@ -356,6 +359,28 @@ function crossFamilies(){
     return {name, ws, hhs, sims: m, loose: m.filter(id => !SIMS[id].hh), across};
   }).filter(Boolean).sort((a, b) => b.ws.length - a.ws.length || b.sims.length - a.sims.length || a.name.localeCompare(b.name));
 }
+// the links between worlds in a few lines, parents grouped with all their children (her feedback, 23 Oct: "so much duplication"):
+// "Daniel and Mary-Sue Pleasant (Windenburg) are the parents of Angela and Lilith Pleasant (Britechester)"
+function namesOf(ids, fam){
+  const sur = ids.map(id => surname(SIMS[id].name)), same = sur.every(x => x && x === sur[0]) && (ids.length > 1 || sur[0] === fam);
+  const parts = ids.map(id => same ? (() => { const href = simLinkTo(id), n = SIMS[id].name.slice(0, -sur[0].length).trim(); return href ? `<a href="${href}">${esc(n)}</a>` : esc(n); })() : simA(id));
+  return (parts.length > 1 ? parts.slice(0, -1).join(", ") + " and " + parts[parts.length - 1] : parts[0]) + (same && sur[0] !== fam ? " " + esc(sur[0]) : "");   // the heading already says "The Pleasant family"
+}
+function acrossLines(across, fam){
+  const isParent = (a, b) => (SIMS[a].parents || []).includes(b), out = [], kids = {};
+  across.filter(([a, b]) => isParent(a, b)).forEach(([a, b]) => (kids[a] ||= []).push(b));
+  const groups = {};
+  Object.entries(kids).forEach(([child, ps]) => { ps.sort(); const k = ps.join("|") + ">" + simWorldOf(child).name; (groups[k] ||= {ps, kids: []}).kids.push(child); });
+  Object.values(groups).forEach(g => {
+    const pw = [...new Set(g.ps.map(id => simWorldOf(id).name))].join(", "), kw = simWorldOf(g.kids[0]).name;
+    const one = g.ps.length === 1 ? (relWord(g.kids[0], g.ps[0]) || "parent").toLowerCase() : "";
+    out.push(`${namesOf(g.ps, fam)} (${esc(pw)}) ${g.ps.length > 1 ? "are the parents" : "is the " + esc(one)} of ${namesOf(g.kids, fam)} (${esc(kw)})`);
+  });
+  const couple = r => /^ex/.test(r) ? "are ex-spouses" : /late/.test(r) ? "were married" : /husband|wife|spouse/.test(r) ? "are married" : /partner|girlfriend|boyfriend/.test(r) ? "are partners" : /fianc|engaged/.test(r) ? "are engaged" : "";
+  across.filter(([a, b]) => !isParent(a, b) && !isParent(b, a)).forEach(([a, b]) => { const r = (relWord(a, b) || "").toLowerCase(), w = id => esc(simWorldOf(id).name);
+    out.push(couple(r) ? `${namesOf([a], fam)} (${w(a)}) and ${namesOf([b], fam)} (${w(b)}) ${couple(r)}` : `${namesOf([b], fam)} (${w(b)}) is the ${esc(r || "relative")} of ${namesOf([a], fam)} (${w(a)})`); });
+  return out;
+}
 const simA = id => { const href = simLinkTo(id); return href ? `<a href="${href}">${esc(SIMS[id].name)}</a>` : esc(SIMS[id].name); };
 function familiesAcrossPage(){
   const fs = crossFamilies();
@@ -364,9 +389,9 @@ function familiesAcrossPage(){
   fs.forEach(f => {
     const shown = f.across.slice(0, 6), more = f.across.length - shown.length;
     h += `<section class="block"><div class="block-head"><h2>The <em>${esc(f.name)}</em> family</h2><span class="count">${plural(f.hhs.length, "household")} in ${f.ws.length} worlds</span></div>
-      <div class="families">${f.hhs.map(x => `<a class="fam" href="#${x.id}" style="--h:${x.lots[0].hood.color}"><span class="mono">${initial(x.name)}</span><span><span class="rel">${esc(worldLabel(x.world))}</span><b>${esc(x.name)}</b><small>${esc(whoCount(membersOf(x)))}</small></span></a>`).join("")}</div>
-      ${f.loose.length ? `<p class="tr-line">${ic("users")}<span>Also on the family tree: ${f.loose.map(id => `${simA(id)} (${esc(worldLabel(simWorldOf(id)))})`).join(", ")}</span></p>` : ""}
-      <p class="tr-line">${ic("network")}<span>${shown.map(([a, b]) => `${simA(b)} (${esc(simWorldOf(b).name)}), ${esc((relWord(a, b) || "family").toLowerCase())} of ${simA(a)} (${esc(simWorldOf(a).name)})`).join("; ")}${more ? `; and ${more} more` : ""}.</span></p></section>`;
+      <div class="families">${f.hhs.map(x => `<a class="fam" href="#${x.id}" style="--h:${x.lots[0].hood.color}"><span class="mono">${initial(x.name)}</span><span><span class="rel">${esc(worldLabel(x.world))}</span><b>${esc(x.name)}</b><small>${esc(membersOf(x).length && membersOf(x).length <= 4 ? membersOf(x).map(id => SIMS[id].name.split(" ")[0]).join(", ") : whoCount(membersOf(x)))}</small></span></a>`).join("")}</div>
+      ${f.loose.some(id => !f.across.some(([a, b]) => a === id || b === id)) ? `<p class="tr-line">${ic("users")}<span>Also on the family tree: ${f.loose.map(id => `${simA(id)} (${esc(worldLabel(simWorldOf(id)))})`).join(", ")}</span></p>` : ""}
+      <p class="tr-line">${ic("network")}<span>${acrossLines(f.across, f.name).join("; ")}.</span></p></section>`;
   });
   return h;
 }
@@ -381,18 +406,6 @@ function businessesPage(){
   return h;
 }
 
-// shell challenges (an extra for her to judge, 23 Oct; a "some day" idea): her builds on lilsimsie's shell challenges, which the
-// Gallery credits to lilsimsie, or whose hashtags name a shell
-let TR_SHELLS = null;
-const trShells = () => TR_SHELLS ||= Object.values(lotIndex).filter(l => l.gallery && l.gallery.shell);
-function shellsPage(){
-  const ls = trShells(), by = groupsBy([...ls].sort((a, b) => byWorldOrder(a.world, b.world)), l => l.world);
-  let h = trHero("#2B8A86", "Across the worlds", "Shell <em>challenges</em>", "Builds made for lilsimsie’s shell challenges: the outside was set, the inside is mine.", [[ls.length, ls.length === 1 ? "build" : "builds"], [by.size, by.size === 1 ? "world" : "worlds"]]);
-  if (!ls.length) return h + trEmpty("No shell challenge builds yet.");
-  by.forEach((xs, w) => { h += `<section class="hood" style="--h:${w.color}"><div class="hood-head"><span class="label">${esc(w.name)}</span><div><h2>${esc(w.name)}</h2></div><span class="count">${plural(xs.length, "build")}</span></div><div class="listings">${xs.map(listing).join("")}</div></section>`; });
-  return h;
-}
-
 // ---------- the pages the new layout draws (asked by route() in app.js) ----------
 function trialPage(key){
   if (!trNew()) return null;
@@ -401,7 +414,7 @@ function trialPage(key){
   if (m) { const w = m[1] ? wById(m[1]) : null; if (m[1] && !w) return null;
     calState.world = w ? w.name : null;
     return {html: protoCal(w), active: "calendar", deep: w && w.deep, title: T(w ? "Calendar · " + w.name : "Calendar")}; }
-  const pages = {clubs: [clubsPage, "Clubs"], dynasties: [dynastiesPage, "Dynasties"], organisations: [orgsPage, "University organisations"], families: [familiesAcrossPage, "Families"], businesses: [businessesPage, "Businesses"], shells: [shellsPage, "Shell challenges"]};
+  const pages = {clubs: [clubsPage, "Clubs"], dynasties: [dynastiesPage, "Dynasties"], organisations: [orgsPage, "University organisations"], families: [familiesAcrossPage, "Families"], businesses: [businessesPage, "Businesses"]};
   if (pages[key]) return {html: pages[key][0](), active: key, title: T(pages[key][1])};
   const st = /^stats(?:-(.+))?$/.exec(key);   // old Stats links open Admin's Progress page
   if (st) { const w = worlds.find(x => x.id === st[1]); if (!trRedrawing) statsPage(w ? w.name : null); const s = ADM_SECTIONS[1];

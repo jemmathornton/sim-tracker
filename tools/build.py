@@ -135,8 +135,6 @@ def gallery_for(lot):
     allc = [c for e in ups for c in e['commentList']]
     g['commentList'] = sorted(allc, key=lambda c: -c['t']); g['comments'] = len(allc)
     if lot.get('galleryOld'): g['old'] = True
-    # a shell challenge build: any of its uploads credited to lilsimsie, or tagged with a shell (23 Oct)
-    if any((uploads[i].get('creator') or '').lower() == 'lilsimsie' or re.search(r'#\w*shell', uploads[i].get('description') or '', re.I) for i in lot.get('gallery', [])): g['shell'] = True
     return g
 
 
