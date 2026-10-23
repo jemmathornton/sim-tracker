@@ -302,6 +302,10 @@ def main():
                 return f"the site’s version is in your “{sv}” save: save it to your Library from there (your Library copy differs: {re.sub(r'[*`]', '', k[1])})"
             return "from your Library" + (f" (your Library copy differs from the site: {re.sub(r'[*`]', '', k[1])})" if differs else "")
         return "not found by its Sims’ names (EA’s, maybe renamed)"
+    # Sims are matched by name: two Sims sharing one (not in the save yet) would be mixed up, so list any
+    seen_ = {}
+    for n_ in sims.values(): seen_[n_] = seen_.get(n_, 0) + 1
+    out['sameName'] = sorted(n_ for n_, c_ in seen_.items() if c_ > 1 and n_ not in PETS)
     # the save's households by id (two households can share a name: there are two Altos, Capps and Kunals)
     zone_of_sim, members = {}, {}   # Sim name -> (home zone, household id); household id -> its Sims' names
     living = {}   # zone -> ids of the save households living there
@@ -547,6 +551,8 @@ def main():
             elif h['state'] == 'waiting': L.append(f"- **{h['household']}** for {to}: waiting ({h['note']})")
             else: L.append(f"- **{h['household']}** for {to}: {h['how']}")
         L.append("")
+    if out['sameName']:
+        L += ["## Sims sharing a name", "", "The check matches Sims by name, so these may be mixed up (tell Claude to key them by the game's Sim id):", "", "- " + ", ".join(out['sameName']), ""]
     if out['squatters']:
         L += ["## Living where the plan doesn’t put them", "", "On one of your placed lots, but planned elsewhere (or nowhere): move them out.", ""]
         L += [f"- {q['world']} / {q['lot']}: {q['household']} ({', '.join(q['sims'])})" for q in out['squatters']] + [""]
