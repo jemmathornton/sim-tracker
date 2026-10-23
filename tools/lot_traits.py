@@ -5,6 +5,7 @@
                                           rentals also get `units`: each unit's own name and traits, in the game's unit order
     python tools/lot_traits.py --game     also re-read the trait names from the game (after a game update or a new pack)
     python tools/lot_traits.py --save "Jemma's Sim World"   read her new save instead of the Building ones (23 Oct; only once she says it's set up)
+                              add --placed-only for just the lots she has placed there so far (run tools/research/new_save_check.py first)
 
 The save is read from a temporary copy; her saves and the game are never changed. Only lots marked shared in the plan
 get traits (unshared lots may not be finished, her rule of 13 Oct). One exception, hers (16 Oct): rentals get their
@@ -111,6 +112,11 @@ def main():
     unknown = set()
     worlds = [(wf, load(wf)) for wf in world_files()]
     shared = [(W, l) for wf, W in worlds if W['owned'] for h in W['neighbourhoods'] for l in h['lots'] if l.get('shared') is True]
+    if '--placed-only' in sys.argv:   # with --save: only lots she has placed in the new save (research/data/new-save-status.json, from tools/research/new_save_check.py)
+        st = load(os.path.join(ROOT, 'research', 'data', 'new-save-status.json'))
+        placed = {(wn, r['lot']) for wn, rows in st['worlds'].items() for r in rows if r.get('status') == 'placed'}
+        shared = [(W, l) for W, l in shared if (W['name'], l['lot']) in placed]
+        print(f"Only the {len(shared)} shared lots placed in the new save (checked {st['saved']})")
 
     def find(W, l, by_world, skip=()):
         alias = SAVE_NAMES.get(W['name'] + '|' + l['lot'])
@@ -159,6 +165,7 @@ def main():
         if not W['owned']: continue
         for h in W['neighbourhoods']:
             for l in h['lots']:
+                if '--placed-only' in sys.argv and id(l) not in first: continue   # not placed in the new save yet: left as it is
                 if l.get('shared') is not True:   # her rule: nothing from a save on unshared lots, so traits go if a lot stops being shared
                     if l.get('traits') or l.get('challenges'):
                         changed.append(f"{W['name']} / {l.get('myName') or l['lot']}: not shared any more, traits removed")
