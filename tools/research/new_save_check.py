@@ -31,6 +31,12 @@ VENUES = {int(k): v['name'] for k, v in load(os.path.join(ROOT, 'research', 'dat
 SAME_TYPE = {"thrift and boba store": "thrift and bubble tea store", "uob commons": "ubrite commons", "small business residential": "residential",
              "haunted house": "haunted house residential", "university housing": "university housing"}   # her British names and labels -> the game's
 ECO = {}   # street (world id) -> eco footprint state in the save
+NAPS = []   # neighbourhood action plans in force (Eco Lifestyle)
+# the game's street action plans (streetCivicPolicy_* tuning ids, read 24 Oct), named from their tuning names
+NAP_NAMES = {237847: "Aggression", 231970: "Home Cooking", 237915: "Communal Ownership", 233560: "Green Gardening", 233559: "Utility Production",
+             226333: "Upcycling Initiative", 231971: "Technological Progress", 231969: "Juiced Community", 231973: "Fun Community",
+             237916: "Bag Neighbourhood", 232589: "Eco-Friendly Appliances", 237848: "Old Days", 231974: "Music Arts", 231972: "Creative Arts",
+             231975: "Self-Sufficient", 231968: "Self Care", 233563: "Water Shut-Off Day", 233562: "Power Shut-Off Day", 237846: "Free Love"}
 PETS = set()   # pets' names in the save (never counted as a household's extra Sims)
 norm = lambda s: re.sub(r'\s+', ' ', (s or '').replace('’', "'")).strip().lower()
 
@@ -84,6 +90,14 @@ def read(fname):
             OPTIONS.update((acct.get('gameplay_account_data') or {}).get('gameplay_options') or {})
             hs = (slot.get('gameplay_data') or {}).get('holiday_service') or {}
             OPTIONS['_own_holidays'] = [h.get('name') for h in hs.get('holidays', []) if h.get('name')]
+            streets = json.load(open(os.path.join(ROOT, 'research', 'data', 'world-extras.json'), encoding='utf-8'))['streets']
+            for st in ((slot.get('gameplay_data') or {}).get('street_service') or {}).get('street_data', []):   # action plans in force
+                for pd in ((st.get('civic_provider_data') or {}).get('policy_data') or []):
+                    cd = pd.get('custom_data')
+                    d = s4.decode(cd, P + 'PersistableCivicPolicyStreetPolicyData', S, depth=1) if isinstance(cd, (bytes, bytearray)) else {}
+                    if d.get('enacted'):
+                        info = streets.get(str(st.get('street_id')), {})
+                        NAPS.append({"world": info.get('world'), "hood": info.get('neighbourhood'), "plan": NAP_NAMES.get(pd.get('policy_id'), str(pd.get('policy_id')))})
         except Exception as e: OPTIONS['_error'] = str(e)
         return name, zones, hhs, sims
     finally:
@@ -386,6 +400,7 @@ def main():
     not_h = sorted(planned - hearted_names)
     out['notHearted'] = not_h
     if not_h: opt.append(f"{len(planned) - len(not_h)} of {len(planned)} planned households in the save are in My Households (hearted): heart the rest, homeless families first (the game culls Sims outside My Households)")
+    if NAPS: opt.append("action plans in force: " + "; ".join(f"{x['plan']} ({x['hood']}, {x['world']})" for x in NAPS) + " (repeal the ones you don't want)")
     if not o.get('_own_holidays'): opt.append("holidays: still the game's own calendar (checklist step 3)")
     out['options'] = opt; out['optionsRaw'] = {k: v for k, v in o.items() if not isinstance(v, (bytes, dict)) and not k.startswith('_ns')}
     save(os.path.join(ROOT, 'research', 'data', 'new-save-status.json'), out)
