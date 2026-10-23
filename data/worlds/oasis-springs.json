@@ -29,7 +29,7 @@
     {"lot": "Vista Quarry", "myName": "Vista Quarry Villa", "type": "Residential", "size": "30x20", "residents": "2 Bed Family", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["D3pjU723EeuN9fwg9JDtjA=="], "traits": ["Natural Light"], "challenges": ["Quake Zone"]},
     {"lot": "Raffia Quinta", "myName": "Raffia Quinta", "type": "Tiny Home Residential", "size": "20x15", "residents": "Rivera", "built": true, "shared": true, "screenshots": true, "simsMade": false, "gallery": ["Vstuj6QyEe2MBonwBMy2Ww=="], "traits": ["Homey", "Eco Lot"]},
     {"lot": "Dusty Turf", "myName": "Dusty Turf", "type": "Residential", "size": "30x20", "residents": "De Costa", "built": true, "shared": false, "screenshots": false, "simsMade": false},
-    {"lot": "Springscape", "myName": "Springscape", "type": "Residential", "size": "30x20", "rebuild": "two adult bedrooms and a teen’s room for the Curiouses", "residents": "Vidcund & Lazlo Curious (and Nova)", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["hYfhA752EeuOnL8NB92BJw=="], "challenges": ["Quake Zone"]},
+    {"lot": "Springscape", "myName": "Springscape", "type": "Residential", "size": "30x20", "rebuild": "two adult bedrooms and a teen’s room for the Curiouses", "residents": "Curious (Vidcund, Lazlo and Nova)", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["hYfhA752EeuOnL8NB92BJw=="], "challenges": ["Quake Zone"]},
     {"lot": "Cacti Casa", "myName": "Palm Springs Public Pool", "type": "Pool", "size": "40x30", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["T4xX5K02EeuEt01o44QF8A=="], "traits": ["Bracing Breezes"], "challenges": ["Quake Zone"]}
    ]
   },
@@ -313,7 +313,7 @@
    "bio": "Don Lothario has the perfect bachelor pad here. Near the gym to work out at during the day, and plenty of space at night to charm up whoever catches his eye.",
    "bioFrom": "Jemma"
   },
-  "Curious": {
+  "Curious 2": {
    "sims": [
     {
      "id": "pascal-curious",
@@ -625,7 +625,7 @@
     }
    ]
   },
-  "Vidcund & Lazlo Curious": {
+  "Curious 1": {
    "sims": [
     {
      "id": "vidcund-curious",
