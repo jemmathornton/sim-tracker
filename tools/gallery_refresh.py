@@ -199,7 +199,7 @@ def commit_refresh():
     """Save the refresh in the project's history (her OK, 23 Oct), so a bad week can always be undone. Only the files a
     refresh writes are committed; anything else being worked on is left alone. Never pushes anywhere."""
     import subprocess
-    paths = ['data/gallery', 'data/worlds', 'site/js/data.js', 'site/js/admin-data.js', 'site/index.html', 'site/gallery', 'site/gallery-more', 'for-jemma/new-save-checklist.md']
+    paths = ['data/gallery', 'data/worlds', 'site/js/data.js', 'site/js/admin-data.js', 'site/index.html', 'site/gallery', 'site/gallery-more', 'for-jemma/new-save-checklist.md', 'research/new-save-status.md', 'research/data/new-save-status.json']
     paths = [p for p in paths if os.path.exists(os.path.join(ROOT, p))]
     run = lambda *a: subprocess.run(['git', *a], cwd=ROOT, stdin=subprocess.DEVNULL, capture_output=True, text=True, encoding='utf-8',
                                      creationflags=getattr(subprocess, 'CREATE_NO_WINDOW', 0))
@@ -222,7 +222,16 @@ if __name__ == '__main__':
                                stdin=subprocess.DEVNULL, capture_output=True, text=True, encoding='utf-8')
             say((r.stdout or r.stderr).strip())
             ok = ok and r.returncode == 0
-            if r.returncode == 0: commit_refresh()
+            if r.returncode == 0:
+                try:   # her new save against the plan, for Admin > Notes (24 Oct); a problem here never stops the refresh
+                    n = subprocess.run([sys.executable, '-X', 'utf8', os.path.join(ROOT, 'tools', 'research', 'new_save_check.py')],
+                                       stdin=subprocess.DEVNULL, capture_output=True, text=True, encoding='utf-8', timeout=900)
+                    if n.returncode == 0:
+                        subprocess.run([sys.executable, '-X', 'utf8', os.path.join(ROOT, 'tools', 'admin_data.py')], stdin=subprocess.DEVNULL, capture_output=True, text=True, encoding='utf-8')
+                        say("New-save check refreshed")
+                    else: say("New-save check not refreshed: " + (n.stderr or n.stdout).strip()[-200:])
+                except Exception as e: say(f"New-save check not refreshed: {e}")
+                commit_refresh()
     except Exception:
         import traceback
         say("Stopped with an error:\n" + traceback.format_exc())
