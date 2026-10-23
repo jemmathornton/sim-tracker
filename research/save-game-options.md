@@ -29,3 +29,26 @@ How this was worked out: (1) the field list and defaults straight from the proto
 What this means for her save: `allow_aging` DISABLED and `unplayed_aging_enabled` False together = nobody in the world ages. `npc_population_enabled` False can be ignored. Neighborhood Stories on/off is `story_progression_effects_enabled`, not `npc_population_enabled`.
 
 Sources: game files read in place (copies in a temp folder): `Game\Bin\Python\generated.zip` (GameplaySaveData_pb2), `Data\Simulation\Gameplay\simulation.zip` (aging_service, culling_service, story_progression_service, tutorial_service, pivotal_moment), `Game\Bin\TS4_x64.exe` (menu-to-command table), `Strings_ENG_US.package` files (labels, via tools/sims4files.py `english()`). A web search for `npc_population_enabled` found nothing.
+
+## Neighbourhood Stories rules (found 24 Oct, night)
+
+They're not in GameplayOptions. SaveGameData field 23 `protected_households_story_progression_rule_set` is **My Households** and field 24 `unprotected_households_story_progression_rule_set` is **Other Households**: each has `enabled` (the tab's switch) and `rules` (rule id, ticked or not). The rule ids are the game's `StoryProgressionRuleDisplayInfo` tuning:
+
+| Rule id | Rule |
+|---|---|
+| 273735 | Move In |
+| 273878 | Move Out |
+| 273734 | Have a Baby |
+| 273882 | Adopt a Child |
+| 273888 | Adopt Cats & Dogs |
+| 337807 | Rescue Horses |
+| 273879 | Join a Career |
+| 282068 | Leave a Career |
+| 282070 | Retire from Career |
+| 273881 | Die in Accidents |
+| 380608 | Friendship Changes |
+| 380610 | Romance Changes |
+
+Her new save (22:48, 23 Oct): My Households off; Other Households on with all 12 ticked (the game's default). `tools/research/new_save_check.py` now compares these with her picks.
+
+**Defaults:** a setting left at the game's default isn't written into the save, so a missing field means the default (Season Length 7 days, Automatic Breakups on, Prestige Decay on, Neighbourhood Stories on).
