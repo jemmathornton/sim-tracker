@@ -4,6 +4,7 @@
     python tools/lot_traits.py --apply    write the traits (and lot challenges) into data/worlds/*.json and rebuild the site;
                                           rentals also get `units`: each unit's own name and traits, in the game's unit order
     python tools/lot_traits.py --game     also re-read the trait names from the game (after a game update or a new pack)
+    python tools/lot_traits.py --save "Jemma's Sim World"   read her new save instead of the Building ones (23 Oct; only once she says it's set up)
 
 The save is read from a temporary copy; her saves and the game are never changed. Only lots marked shared in the plan
 get traits (unshared lots may not be finished, her rule of 13 Oct). One exception, hers (16 Oct): rentals get their
@@ -42,14 +43,14 @@ def trait_names(refresh=False):
     return out
 
 
-def building_saves():
-    """The newest copy of each of her "Building…" saves, newest first: [(file, label, {world name: [lot records]})].
+def building_saves(prefix='Building'):
+    """The newest copy of each of her "Building…" saves (or, with --save, the saves whose name starts with that), newest first: [(file, label, {world name: [lot records]})].
     An autosave counts as the save it was made from."""
     out, seen = [], set()
     for p in sorted(glob.glob(os.path.join(s4.SAVES, '*.save')), key=os.path.getmtime, reverse=True):
         data = s4.read_save(p)
         name, base = s4.save_name(data, SCHEMA); own = base or name
-        if not own.startswith('Building') or own in seen: continue
+        if not own.startswith(prefix) or own in seen: continue
         seen.add(own)
         top = s4.fields(data); worlds, by_world = {}, {}
         for f, wt, v in top:
@@ -59,7 +60,7 @@ def building_saves():
             if f == 7:
                 z = s4.decode(v, P + 'ZoneData', SCHEMA, depth=0); by_world.setdefault(worlds.get(z.get('neighborhood_id'), ''), []).append(z)
         out.append((p, own + (' (autosave)' if name == 'Autosave' else ''), by_world))
-    if not out: sys.exit('No save called "Building…" found.')
+    if not out: sys.exit(f'No save called "{prefix}…" found.')
     return out
 
 
@@ -103,7 +104,7 @@ def candidates(l, uploads):
 def main():
     apply, refresh = '--apply' in sys.argv, '--game' in sys.argv
     traits = trait_names(refresh)
-    saves = building_saves()
+    saves = building_saves(sys.argv[sys.argv.index('--save') + 1] if '--save' in sys.argv else 'Building')   # --save "Jemma's Sim World": her new save (23 Oct), once she says it's set up
     uploads = load(os.path.join(GALLERY, 'uploads.json'))['uploads']
     print("Saves: " + "; ".join(f"{label} ({os.path.basename(p)})" for p, label, _ in saves), end="\n\n")
     changed, unmatched, ambiguous, older, n_shared, n_found = [], [], [], [], 0, 0
