@@ -242,5 +242,6 @@ window.ADMIN = {
 "world": "",
 "text": "Change the clubs' hangouts in the Club panel (Powerhouse → Skye Fitness, Garden Gnomes → Magnolia Blossom Park, League of Adventurers → Courtyard Lane Playground, Upper Crusts → any Restaurant, Paragons and Renegades → Magnolia Mall, Spin Masters → Stargazer, Partihaus → La Discotheque)."
 }
-]
+],
+"toSort": []
 };

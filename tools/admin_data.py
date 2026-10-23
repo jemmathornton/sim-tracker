@@ -18,9 +18,13 @@ def read(p):
     return (ROOT / p).read_text(encoding="utf-8")
 
 def gather():
-    out = {"made": datetime.date.today().isoformat(), "refresh": [], "checklist": []}
+    out = {"made": datetime.date.today().isoformat(), "refresh": [], "checklist": [], "toSort": []}
     try: out["refresh"] = refresh_runs()
     except Exception as e: print("admin data: refresh log not read:", e)
+    try:
+        ts = ROOT / "data" / "gallery" / "to-sort.json"
+        if ts.exists(): out["toSort"] = [{"id": k, **v} for k, v in json.loads(ts.read_text(encoding="utf-8")).items()]
+    except Exception as e: print("admin data: uploads to sort not read:", e)
     try: out["checklist"] = checklist()
     except Exception as e: print("admin data: in-game checklist not read:", e)
     return out

@@ -94,6 +94,8 @@ def auto_link(new_ids, uploads, worlds):
     lots = [(W, l) for W in worlds if W['owned'] for h in W['neighbourhoods'] for l in h['lots']]
     nt = lambda x: re.sub(r'^the', '', norm(x))
     linked, unl = [], load(os.path.join(GALLERY, 'unlinked.json'))
+    # uploads for her to sort, shown on Admin's Notes until she decides (23 Oct): new ones with no lot, and new copies of a build
+    ts_file = os.path.join(GALLERY, 'to-sort.json'); ts = load(ts_file) if os.path.exists(ts_file) else {}
     for i in new_ids:
         u = uploads.get(i)
         if not u: say(f"  new upload {i} couldn't be read this time; it'll be tried again next week"); continue
@@ -105,14 +107,18 @@ def auto_link(new_ids, uploads, worlds):
         wt = [h for h in hits if norm(h[0]['name']) in tags]
         if len(hits) > 1 and wt: hits = wt
         if len(hits) == 1:
-            W, l = hits[0]; l.setdefault('gallery', []).append(i); linked.append(W)
+            W, l = hits[0]
+            if l.get('gallery'): ts[i] = {"title": u['title'], "lot": f"{W['name']} / {l['lot']}", "why": f"New on {TODAY}: another copy of this build. Which should lead (normally the latest)?"}
+            l.setdefault('gallery', []).append(i); linked.append(W)
             say(f"  linked new upload “{u['title']}” to {W['name']} / {l['lot']}")
             continue
         maybe = hits or [(W, l) for W, l in lots if norm(l['lot']) in tags or (l['myName'] and norm(l['myName']) in tags)]
         unl['uploads'][i] = {"title": u['title'], "lot": None, "why": f"New on {TODAY}; " + (
             "no lot in the plan has this name." if not maybe else "not linked automatically, could be " + ", ".join(f"{h[0]['name']} / {h[1]['lot']}" for h in maybe) + ".")}
+        ts[i] = {"title": u['title'], "lot": None, "why": unl['uploads'][i]['why']}
         say(f"  new upload “{u['title']}” not linked to a lot; listed in data/gallery/unlinked.json")
     save_safe(os.path.join(GALLERY, 'unlinked.json'), unl)
+    if ts: save_safe(ts_file, ts)
     return linked
 
 

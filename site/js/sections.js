@@ -12,7 +12,6 @@ const ACROSS_KEYS = ["clubs", "dynasties", "organisations", "families", "busines
 const ADM_SECTIONS = [
   {k: "glance", key: "admin", name: "At a glance", icon: "sparkle", title: "At a <em>glance</em>"},
   {k: "progress", key: "admin-progress", name: "Progress", icon: "grid", title: "The <em>progress</em>"},
-  {k: "gallery", key: "admin-gallery", name: "Gallery", icon: "share", title: "On the <em>Gallery</em>"},
   {k: "game", key: "admin-game", name: "Notes", icon: "note", title: "The <em>notes</em>"},
 ];
 const grpOf = kind => Object.values(GROUP_PAGES).filter(g => g.kind === kind);
@@ -20,7 +19,7 @@ const ACROSS_NAV = () => [["calendar", "calendar", "Calendar", null], ["clubs", 
   ["organisations", "graduation-cap", "University organisations", Object.keys((DATA.groups || {}).organisations || {}).length], ["families", "network", "Families", crossFamilies().length], ["businesses", "briefcase", "Businesses", ownedBusinesses().length]];
 function sectionsNav(active){
   const nav = document.getElementById("nav"), notOwned = nav.querySelector(".nav-group.dim");
-  const n = admCounts(), badge = k => ({game: n.game + n.checks, gallery: n.gallery})[k];
+  const n = admCounts(), badge = k => ({game: n.game + n.checks + ADM.toSort.length})[k];
   const across = `<div class="nav-group across-nav"><div class="label">Across the worlds</div>${ACROSS_NAV().map(([k, i, t, c]) => `<a href="#${k}" class="${active === k ? "on" : ""}">${ic(i)}${esc(t)}${c ? `<span class="pct">${c}</span>` : ""}</a>`).join("")}</div>`;
   const admin = `<div class="nav-group admin-nav"><div class="label">Admin</div>${ADM_SECTIONS.map(s => `<a href="#${s.key}" class="${active === s.key ? "on" : ""}">${ic(s.icon)}${esc(s.name)}${badge(s.k) ? `<span class="pct">${badge(s.k)}</span>` : ""}</a>`).join("")}</div>`;
   if (notOwned) notOwned.insertAdjacentHTML("beforebegin", across); else nav.insertAdjacentHTML("beforeend", across);
@@ -115,7 +114,7 @@ function afterRoute(key, view){
 
 /* ---------- Admin (in place of Stats; for her only, on her PC). Ported from proto-admin.js; her call: pages under an Admin header in
    the sidebar, not tabs. Extra bits not in data.js come from js/admin-data.js (tools/admin_data.py, run by the build). ---------- */
-const ADM = window.ADMIN || {refresh: [], checklist: []};
+const ADM = window.ADMIN || {refresh: [], checklist: [], toSort: []};
 const admOwned = () => Object.values(lotIndex).filter(l => l.world.owned && l.world.ready);
 const lotA = l => `<a href="#${l.id}">${esc(l.name)}</a>`;
 const wDot = w => `<span class="dot" style="--h:${w.glow || w.color}"></span>`;
@@ -169,22 +168,18 @@ function admGlance(){
   const L = admOwned(), built = L.filter(l => l.built === true).length, shared = L.filter(l => l.shared === true).length, n = admCounts();
   const card = (icon, label, big, text, sec, cls = "") => { const x = ADM_SECTIONS.find(y => y.k === sec);
     return `<div class="adm-card ${cls}"><span class="label">${ic(icon)}${label}</span><b class="big">${big}</b><p>${text}</p>${x ? `<a class="linkish" href="#${x.key}">Open ${esc(x.name)} ${ic("arrow")}</a>` : ""}</div>`; };
+  const fresh = L.filter(l => newSince(l));
   return `<div class="adm-grid">${refreshCard()}
+    ${card("sparkle", "New since you looked", fresh.length, fresh.length ? fresh.slice(0, 8).map(l => `${lotA(l)} <small>${esc(newTxt(newSince(l)))}</small>`).join("<br>") : "No new favourites, comments or uploads since you last opened each lot.", "")}
     ${card("hammer", "Built", `${built}<small style="font-size:18px"> of ${L.length}</small>`, `${shared} shared.`, "progress")}
     ${card("camera", "Shared, no screenshots", L.filter(l => l.shared === true && !hasShots(l)).length, "Showing only their Gallery pictures.", "")}
-    ${card("note", "Notes", ADM.checklist.length + n.checks, n.checks ? `${plural(n.checks, "thing")} out of step in the plan, and your in-game notes.` : "Things to check or change next time you’re in the game.", "game", n.checks ? "warn" : "")}</div>`;
+    ${card("note", "Notes", ADM.checklist.length + n.checks + ADM.toSort.length, n.checks ? `${plural(n.checks, "thing")} out of step in the plan, and your in-game notes.` : "Things to check or change next time you’re in the game.", "game", n.checks ? "warn" : "")}</div>`;
 }
 function admProgress(){
   const t = document.createElement("template"); t.innerHTML = statsPage();
   t.content.querySelector("section.hero")?.remove();
   [...t.content.querySelectorAll("section.block")].filter(s => /On the/.test(s.querySelector("h2")?.textContent || "")).forEach(s => s.remove());
   return `<p class="adm-intro">The old Stats page: every world, every lot and every household of the plan.</p>` + t.innerHTML + everyHousehold();
-}
-function admGallery(){
-  const fresh = admOwned().filter(l => newSince(l));
-  return `<div class="adm-grid">${refreshCard()}</div>
-    <h3 class="adm-sub">New since you <em>looked</em></h3>
-    ${fresh.length ? `<ul class="adm-list">${fresh.map(l => `<li><span>${wDot(l.world)}${lotA(l)}</span><span class="w">${esc(newTxt(newSince(l)))}</span></li>`).join("")}</ul>` : `<p class="adm-plain">Nothing new since you last opened each lot.</p>`}`;
 }
 function admChecksSec(){
   const cs = admChecks().filter(c => c.items.length);
@@ -195,7 +190,8 @@ function admChecksSec(){
 function admGame(){   // her notes for in game, with the data checks on top when something is out of step (merged, her idea, 23 Oct)
   const checks = admChecks().filter(c => c.items.length), by = {}; ADM.checklist.forEach(c => (by[c.world || c.section] ||= []).push(c));
   const md = t => esc(t.length > 120 ? t.slice(0, 117) + "…" : t).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
-  return (checks.length ? `<h3 class="adm-sub">Out of <em>step</em><small>in the plan</small></h3>${admChecksSec()}` : "") + Object.entries(by).map(([k, cs]) => `<h3 class="adm-sub">${esc(k)}<small>${cs.length}</small></h3><ul class="adm-list">${cs.map(c => `<li><span>${md(c.text)}</span></li>`).join("")}</ul>`).join("");
+  const sort = ADM.toSort.length ? `<h3 class="adm-sub">Gallery uploads to <em>sort</em><small>${ADM.toSort.length}</small></h3><ul class="adm-list">${ADM.toSort.map(u => `<li><span><b>${esc(u.title)}</b>${u.lot ? ` <span class="w">· ${esc(u.lot)}</span>` : ""}</span><small>${esc(u.why)}</small></li>`).join("")}</ul>` : "";
+  return sort + (checks.length ? `<h3 class="adm-sub">Out of <em>step</em><small>in the plan</small></h3>${admChecksSec()}` : "") + Object.entries(by).map(([k, cs]) => `<h3 class="adm-sub">${esc(k)}<small>${cs.length}</small></h3><ul class="adm-list">${cs.map(c => `<li><span>${md(c.text)}</span></li>`).join("")}</ul>`).join("");
 }
 // every household, on Progress after every lot (her ask, 23 Oct), with the same filters and sorting as every lot
 let hhState = {world: "", hood: "", status: "", q: "", sort: "order", dir: 1};
@@ -235,7 +231,7 @@ document.addEventListener("change", e => { if (!e.target.closest("#hh-sheet")) r
 let hhTyping;
 document.addEventListener("input", e => { if (e.target.id === "h-q") { hhState.q = e.target.value; clearTimeout(hhTyping); hhTyping = setTimeout(hhRefresh, 150); } });
 document.addEventListener("click", e => { const so = e.target.closest("[data-hsort]"); if (so) { hhState.dir = hhState.sort === so.dataset.hsort ? -hhState.dir : 1; hhState.sort = so.dataset.hsort; hhRefresh(); } });
-const ADM_BODY = {glance: admGlance, progress: admProgress, gallery: admGallery, game: admGame};
+const ADM_BODY = {glance: admGlance, progress: admProgress, game: admGame};
 function adminPage(sec){
   const L = admOwned(), n = admCounts();
   return `<section class="hero small adm-hero" style="--c:#8E62CF"><div class="kicker"><i></i><span class="label">Admin</span><span class="adm-lock">${ic("lock")}Only you</span></div>
