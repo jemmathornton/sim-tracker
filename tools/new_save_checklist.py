@@ -153,6 +153,8 @@ def main():
                     bits.append(f"place your {vs[0]['label']} version {q(vs[0]['title'])}.")
                 elif g and g.get('title'):
                     bits.append(f"place {q(g['title'])}.")
+                    wtag = re.sub(r'[^a-z]', '', wn.lower())   # in-game hashtag search needs the world's own tag (research/gallery-tags.md)
+                    if wtag not in [t.lower() for t in g.get('tags') or []]: bits.append("Search it by name (its upload has no #" + wtag + " tag).")
                     if g.get('others'): bits.append("Not the other cop" + ("ies" if len(g['others']) > 1 else "y") + ": " + ", ".join(f"{q(o['title'])} ({o['label']})" for o in g['others']) + ".")
                 elif l['built'] is True: bits.append("built but not on the Gallery: bring it over through your Library.")
                 else: bits.append("not built yet: leave the game’s lot for now.")

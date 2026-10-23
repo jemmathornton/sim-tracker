@@ -224,8 +224,8 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 **Windslar**
 
-- [ ] **Coorinberg Cottage**, 40x30: place “Coorinberg Cottage”. Type: Residential. Household: Munch (EA). Traits: Peace and Quiet, Great Soil, Homey. Challenge: Simple Living.
-- [ ] **Cottage Am See**, 20x20: place “Cottage Am See”. Type: Tiny Home Residential. Household: Free Spirits (EA). Traits: Great Soil, Sunny Aspect, Peace and Quiet.
+- [ ] **Coorinberg Cottage**, 40x30: place “Coorinberg Cottage”. Search it by name (its upload has no #windenburg tag). Type: Residential. Household: Munch (EA). Traits: Peace and Quiet, Great Soil, Homey. Challenge: Simple Living.
+- [ ] **Cottage Am See**, 20x20: place “Cottage Am See”. Search it by name (its upload has no #windenburg tag). Type: Tiny Home Residential. Household: Free Spirits (EA). Traits: Great Soil, Sunny Aspect, Peace and Quiet.
 - [ ] **Rustic Residence**, 30x20: place “Rustic Residence”. Type: Tiny Home Residential. Traits: Great Soil, Homey. Challenge: Simple Living. Trait ideas (free slots): + Peace and Quiet.
 - [ ] **The Shrieking Llama**, 20x20: place “The Shrieking Llama”. Type: Bar. Traits: Sunny Aspect, Dog Friendly, Dog Hangout.
 - [ ] **Dresden House**, 64x64: not built yet: leave the game’s lot for now. Type: Residential. Household: Fyres (EA).
@@ -247,22 +247,22 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 **Spice Market**
 
-- [ ] **17 Culpepper House**: place “17 Culpepper House”. Type: Apartment. Place it as a Room into the unit. Trait ideas (free slots): Chef’s Kitchen, Homey.
+- [ ] **17 Culpepper House**: place “17 Culpepper House”. Search it by name (its upload has no #sanmyshuno tag). Type: Apartment. Place it as a Room into the unit. Trait ideas (free slots): Chef’s Kitchen, Homey.
 - [ ] **18 Culpepper House**: place “18 Culpepper House”. Type: Apartment. Place it as a Room into the unit. Traits: Historical. Trait ideas (free slots): Homey, Chef’s Kitchen.
 - [ ] **19 Culpepper House**: place “19 Culpepper House”. Type: Apartment. Place it as a Room into the unit. Traits: Needs TLC. Trait ideas (free slots): Gnomes (mends what TLC breaks), Homey.
 - [ ] **20 Culpepper House**: not built yet: leave the game’s lot for now. Type: Apartment. Household: Rasoya (EA).
 - [ ] **Fraternity Apartment** (game’s 2A Jasmine Suites): place “Fraternity Apartment”. Type: Apartment. Place it as a Room into the unit. Trait ideas (free slots): Party Place, Study Spot, Fast Internet.
 - [ ] **Sorority Apartment** (game’s 2B Jasmine Suites): place “Sorority Apartment”. Type: Apartment. Place it as a Room into the unit.
 - [ ] **The Old Salt House**, 30x30: place “The Old Salt House”. Type: Restaurant. Traits: Chef’s Kitchen, Romantic Aura, Party Place.
-- [ ] **Waterside Warble**, 30x30: place “Waterside Warble”. Type: Karaoke Bar. Traits: Party Place, Convivial, Great Acoustics.
+- [ ] **Waterside Warble**, 30x30: place “Waterside Warble”. Search it by name (its upload has no #sanmyshuno tag). Type: Karaoke Bar. Traits: Party Place, Convivial, Great Acoustics.
 
 **Arts Quarter**
 
 - [ ] **910 Medina Studios**: not built yet: leave the game’s lot for now. Type: Apartment. Household: Benali (EA).
-- [ ] **920 Medina Studios**: place “920 Medina Studios”. Type: Apartment. Place it as a Room into the unit. Household: Bheeda (EA). Traits: Quiet. Trait ideas (free slots): Natural Light, Homey.
+- [ ] **920 Medina Studios**: place “920 Medina Studios”. Search it by name (its upload has no #sanmyshuno tag). Type: Apartment. Place it as a Room into the unit. Household: Bheeda (EA). Traits: Quiet. Trait ideas (free slots): Natural Light, Homey.
 - [ ] **930 Medina Studios**: place “930 Medina Studios”. Type: Apartment. Place it as a Room into the unit. Household: Livin’ In The City (yours). Trait ideas (free slots): Natural Light, Home Studio.
 - [ ] **121 Hakim House**: not built yet: leave the game’s lot for now. Type: Apartment. Household: Jang (EA).
-- [ ] **122 Hakim House**: place “122 Hakim House”. Type: Apartment. Place it as a Room into the unit. Traits: Historical. Trait ideas (free slots): Natural Light, Home Studio.
+- [ ] **122 Hakim House**: place “122 Hakim House”. Search it by name (its upload has no #sanmyshuno tag). Type: Apartment. Place it as a Room into the unit. Traits: Historical. Trait ideas (free slots): Natural Light, Home Studio.
 - [ ] **FountainView Penthouse**: built but not on the Gallery: bring it over through your Library. Type: Penthouse. Household: Santiago Ojo (EA: Miko; yours: Alicia).
 - [ ] **Casbah Gallery**, 40x30: not built yet: leave the game’s lot for now. Type: Arts Center.
 
@@ -283,7 +283,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 - [ ] **VIII Landgraab Apartments**: not built yet: leave the game’s lot for now. Type: Apartment.
 - [ ] **IX Landgraab Apartments**: not built yet: leave the game’s lot for now. Type: Apartment. Household: Feng (EA).
 - [ ] **888 Spire Apartments**: not built yet: leave the game’s lot for now. Type: Apartment.
-- [ ] **Skye Fitness**, 30x20: place “Skye Fitness”. Type: Gym. Traits: Sunny Aspect, Bracing Breezes. Trait ideas (free slots): + Party Place.
+- [ ] **Skye Fitness**, 30x20: place “Skye Fitness”. Search it by name (its upload has no #sanmyshuno tag). Type: Gym. Traits: Sunny Aspect, Bracing Breezes. Trait ideas (free slots): + Party Place.
 - [ ] **Stargazer** (game’s Stargazer Lounge), 40x30: place “Stargazer”. Type: Nightclub. Traits: Romantic Aura, Party Place, Great Acoustics.
 
 **Myshuno Meadows**
@@ -334,7 +334,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 - [ ] **Bedlington Barn** (game’s Bedlington Boathouse), 20x20: place “Bedlington Barn”. Type: Residential. Traits: Dog Hangout, Training Ground, Homey.
 - [ ] **Hound’s Head**, 64x64: not built yet: leave the game’s lot for now. Type: Residential (Farm).
 - [ ] **Creek Clinic** (game’s Dachshund’s Creek), 30x20: place “Creek Clinic”. Type: Vet Clinic. Owner (lives elsewhere): Ventura (yours). Traits: Science Lair, Training Ground, Breeding Ground.
-- [ ] **Hindquarter Hideaway**, 30x20: place “Hindquarter Hideaway”. Type: Residential. Household: Ventura (yours). Traits: Dog Hangout, Great Soil, Homey.
+- [ ] **Hindquarter Hideaway**, 30x20: place “Hindquarter Hideaway”. Search it by name (its upload has no #brindletonbay tag). Type: Residential. Household: Ventura (yours). Traits: Dog Hangout, Great Soil, Homey.
 
 **Deadgrass Isle**
 
@@ -434,7 +434,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 **The Magic Realm**
 
-- [ ] **The Magic Realm**, 50x40: place “The Magic Realm”. Type: The Magic Realm.
+- [ ] **The Magic Realm**, 50x40: place “The Magic Realm”. Search it by name (its upload has no #glimmerbrook tag). Type: The Magic Realm.
 
 ### Britechester
 
@@ -444,13 +444,13 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 - [ ] **Darby’s Den**, 30x20: place “Darby’s Den”. Type: UoB Commons. Traits: Study Spot, Convivial, Great Acoustics.
 - [ ] **The Old Clocktower** (game’s Darkwing House), 30x20: place “The Old Clocktower”. Not the other copy: “The Old Clocktower” (Nightclub). Type: Backroom. Traits: University Student Hang Out, Convivial, Romantic Aura.
-- [ ] **Drake Hall**, 30x20: place “Drake Hall”. Type: University Housing. University: University of Britechester. Traits: Study Spot, Natural Light, Sunny Aspect.
-- [ ] **Wyvern Hall**, 30x20: place “Wyvern Hall”. Type: University Housing. University: University of Britechester. Household: Best of Friends (EA). Traits: Party Place, Study Spot, Sunny Aspect.
+- [ ] **Drake Hall**, 30x20: place “Drake Hall”. Search it by name (its upload has no #britechester tag). Type: University Housing. University: University of Britechester. Traits: Study Spot, Natural Light, Sunny Aspect.
+- [ ] **Wyvern Hall**, 30x20: place “Wyvern Hall”. Search it by name (its upload has no #britechester tag). Type: University Housing. University: University of Britechester. Household: Best of Friends (EA). Traits: Party Place, Study Spot, Sunny Aspect.
 
 **Foxbury Institute**
 
 - [ ] **Larry’s Lagoon**, 40x30: place “Larry’s Lagoon”. Type: Foxbury Commons. Traits: Study Spot, Convivial, Fast Internet.
-- [ ] **Foxbury Court** (game’s Maritime Manor), 30x20: place “Foxbury Court”. Not the other copy: “Foxbury Court” (Nightclub). Type: Backroom. Traits: University Student Hang Out, Party Place, Romantic Aura.
+- [ ] **Foxbury Court** (game’s Maritime Manor), 30x20: place “Foxbury Court”. Search it by name (its upload has no #britechester tag). Not the other copy: “Foxbury Court” (Nightclub). Type: Backroom. Traits: University Student Hang Out, Party Place, Romantic Aura.
 - [ ] **Tidal Tower**, 30x20: place “Tidal Tower”. Type: University Housing. University: Foxbury Institute. Traits: Fast Internet, Study Spot, Sunny Aspect.
 - [ ] **Briny Tower**, 30x20: place “Briny Tower”. Type: University Housing. University: Foxbury Institute. Household: Fletcher (EA). Traits: Study Spot, Party Place, Sunny Aspect.
 
@@ -459,8 +459,8 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 - [ ] **Britechester B&B** (game’s Honeydew Fields), 20x15: place “Britechester B&B”. Not the other copy: “Britechester B&B” (Residential). Type: Café/Vacation Rental. Traits: Romantic Aura, University Student Hang Out. Trait ideas (free slots): + Homey.
 - [ ] **Laurel Library**, 50x40: place “Laurel Library”. Type: Library. Traits: Study Spot, University Student Hang Out, Peace and Quiet.
 - [ ] **The Royal Crown** (game’s Pepper’s Pub), 20x20: place “The Royal Crown”. Type: Bar. Traits: University Student Hang Out, Convivial. Trait ideas (free slots): + Great Acoustics.
-- [ ] **Mossy Lane**, 20x15: place “Mossy Lane”. Type: University Housing. University: pick in game. Traits: Homey, Cat Hangout. Trait ideas (free slots): + Study Spot.
-- [ ] **Spring Steppes**, 20x15: place “Spring Steppes”. Not the other copy: “Spring Steppes” (University Housing). Type: Residential Rental (3). Elderberry (EA, landlord, unit 1). Tenants: Pleasant unit 3. Traits: Homey, Cat Hangout. Units (set after placing): 1 (Homey, Cat Hangout); 2; 3.
+- [ ] **Mossy Lane**, 20x15: place “Mossy Lane”. Search it by name (its upload has no #britechester tag). Type: University Housing. University: pick in game. Traits: Homey, Cat Hangout. Trait ideas (free slots): + Study Spot.
+- [ ] **Spring Steppes**, 20x15: place “Spring Steppes”. Search it by name (its upload has no #britechester tag). Not the other copy: “Spring Steppes” (University Housing). Type: Residential Rental (3). Elderberry (EA, landlord, unit 1). Tenants: Pleasant unit 3. Traits: Homey, Cat Hangout. Units (set after placing): 1 (Homey, Cat Hangout); 2; 3.
 
 ### Evergreen Harbor
 
@@ -507,7 +507,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 - [ ] **5-6-1 Shinrinyoku**, 20x15: not built yet: leave the game’s lot for now. Type: Residential. Household: Nishidake (EA).
 - [ ] **Sento Senbamachi** (game’s 5-3-1 Shinrinyoku), 30x20: place “Sento Senbamachi”. Type: Onsen Bathhouse. Traits: On Ley Line, Party Place. Trait ideas (free slots): + Peace and Quiet or Natural Well.
 - [ ] **6-4-1 Hanamigawa**, 20x15: not built yet: leave the game’s lot for now. Type: Vacation Rental.
-- [ ] **Izakaya Hanamigawa Koen** (game’s Hanamigawa Koen), 30x20: place “Izakaya Hanamigawa Koen”. Type: Restaurant (/Park). Traits: Convivial. Trait ideas (free slots): Chef’s Kitchen, Sunny Aspect.
+- [ ] **Izakaya Hanamigawa Koen** (game’s Hanamigawa Koen), 30x20: place “Izakaya Hanamigawa Koen”. Search it by name (its upload has no #mtkomorebi tag). Type: Restaurant (/Park). Traits: Convivial. Trait ideas (free slots): Chef’s Kitchen, Sunny Aspect.
 - [ ] **Boba Ippai** (game’s Izakaya Ippai), 30x20: built but not on the Gallery: bring it over through your Library. Type: Thrift and Boba Store.
 
 **Yukimatsu**
@@ -534,7 +534,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 **Old New Henford**
 
 - [ ] **2 Olde Mill Lane**, 50x40: not built yet: leave the game’s lot for now. Type: Vet Clinic. Owner (lives elsewhere): Watson-Holmes (yours).
-- [ ] **3 Olde Mill Lane**, 50x40: place “3 Olde Mill Lane”. Type: Residential. Household: Watson-Holmes (yours). Traits: Homey, Cat Hangout. Challenges: Wild Foxes, Simple Living. Trait ideas (free slots): + Great Soil.
+- [ ] **3 Olde Mill Lane**, 50x40: place “3 Olde Mill Lane”. Search it by name (its upload has no #henfordonbagley tag). Type: Residential. Household: Watson-Holmes (yours). Traits: Homey, Cat Hangout. Challenges: Wild Foxes, Simple Living. Trait ideas (free slots): + Great Soil.
 - [ ] **The Olde Mill** (game’s 4 Olde Mill Lane), 30x20: built but not on the Gallery: bring it over through your Library. Type: Residential.
 - [ ] **Olde Mill Hill**, 64x64: not built yet: leave the game’s lot for now. Type: Residential. Household: The Watsons (EA).
 
@@ -557,7 +557,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 **Prescott Square**
 
 - [ ] **Copperdale Library** (game’s Water Tower Way), 20x15: place “Copperdale Library”. Type: Library. Traits: Teen Neighborhood, Study Spot, Child’s Play.
-- [ ] **Town Square Stores** (game’s Town Square Terrace), 20x15: place “Town Square Stores”. Type: Thrift and Boba Store. Traits: Fast Internet, Teen Neighborhood. Trait ideas (free slots): + Convivial.
+- [ ] **Town Square Stores** (game’s Town Square Terrace), 20x15: place “Town Square Stores”. Search it by name (its upload has no #copperdale tag). Type: Thrift and Boba Store. Traits: Fast Internet, Teen Neighborhood. Trait ideas (free slots): + Convivial.
 - [ ] **Prescott Boarding House** (game’s ThrifTea), 20x15: built but not on the Gallery: bring it over through your Library. Type: Residential Rental (2). Nerdy Girls (Sims to come, tenant, unit 1). Tenants: Nerdy Boys unit 2.
 - [ ] **Lakeview Boarding House** (game’s Lakeview Library), 20x20: built but not on the Gallery: bring it over through your Library. Type: Residential Rental (2). Sporty Girls (Sims to come, tenant, unit 1). Tenants: Sporty Boys unit 2.
 - [ ] **Golden Peak**, 30x30: not built yet: leave the game’s lot for now. Type: Residential. Household: Prescott (EA).
