@@ -59,7 +59,7 @@ TAIL = """
 {CLUBS}
 - [ ] Clubs: add Sergio Romeo to Powerhouse (he stays in the Paragons too).
 - [ ] Dynasties: check Goth, Landgraab, Darong, Thebe, Abrantes, Alto and Capp against the site.
-- [ ] Check every neighbourhood’s voting board and repeal plans you don’t want.
+- [ ] Action plans: Claude’s new-save check lists any in force (none on 23 Oct); repeal the ones you don’t want on that neighbourhood’s voting board.
 - [ ] Eco footprint: Claude’s new-save check now compares each neighbourhood’s footprint in the save with the site (Admin > Notes); just say which changes are on purpose.
 - [ ] Move out the throwaway household.
 - [ ] Check the Neighbourhood Stories rules are still set.
