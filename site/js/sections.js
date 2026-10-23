@@ -13,9 +13,7 @@ const ADM_SECTIONS = [
   {k: "glance", key: "admin", name: "At a glance", icon: "sparkle", title: "At a <em>glance</em>"},
   {k: "progress", key: "admin-progress", name: "Progress", icon: "grid", title: "The <em>progress</em>"},
   {k: "gallery", key: "admin-gallery", name: "Gallery", icon: "share", title: "On the <em>Gallery</em>"},
-  {k: "checks", key: "admin-checks", name: "Checks", icon: "list-checks", title: "The <em>checks</em>"},
-  {k: "next", key: "admin-next", name: "Build next", icon: "hammer", title: "Build <em>next</em>"},
-  {k: "game", key: "admin-game", name: "In game", icon: "flag", title: "In <em>game</em>"},
+  {k: "game", key: "admin-game", name: "Notes", icon: "note", title: "The <em>notes</em>"},
   {k: "sims", key: "admin-sims", name: "Sims", icon: "users", title: "The <em>Sims</em>"},
 ];
 const grpOf = kind => Object.values(GROUP_PAGES).filter(g => g.kind === kind);
@@ -23,7 +21,7 @@ const ACROSS_NAV = () => [["calendar", "calendar", "Calendar", null], ["clubs", 
   ["organisations", "graduation-cap", "University organisations", Object.keys((DATA.groups || {}).organisations || {}).length], ["families", "network", "Families", crossFamilies().length], ["businesses", "briefcase", "Businesses", ownedBusinesses().length]];
 function sectionsNav(active){
   const nav = document.getElementById("nav"), notOwned = nav.querySelector(".nav-group.dim");
-  const n = admCounts(), badge = k => ({checks: n.checks, next: n.next, game: n.game, gallery: n.gallery, sims: n.sims})[k];
+  const n = admCounts(), badge = k => ({game: n.game + n.checks, gallery: n.gallery, sims: n.sims})[k];
   const across = `<div class="nav-group across-nav"><div class="label">Across the worlds</div>${ACROSS_NAV().map(([k, i, t, c]) => `<a href="#${k}" class="${active === k ? "on" : ""}">${ic(i)}${esc(t)}${c ? `<span class="pct">${c}</span>` : ""}</a>`).join("")}</div>`;
   const admin = `<div class="nav-group admin-nav"><div class="label">Admin</div>${ADM_SECTIONS.map(s => `<a href="#${s.key}" class="${active === s.key ? "on" : ""}">${ic(s.icon)}${esc(s.name)}${badge(s.k) ? `<span class="pct">${badge(s.k)}</span>` : ""}</a>`).join("")}</div>`;
   if (notOwned) notOwned.insertAdjacentHTML("beforebegin", across); else nav.insertAdjacentHTML("beforeend", across);
@@ -118,7 +116,7 @@ function afterRoute(key, view){
 
 /* ---------- Admin (in place of Stats; for her only, on her PC). Ported from proto-admin.js; her call: pages under an Admin header in
    the sidebar, not tabs. Extra bits not in data.js come from js/admin-data.js (tools/admin_data.py, run by the build). ---------- */
-const ADM = window.ADMIN || {refresh: [], unlinked: [], checklist: [], todo: [], tagSlips: [], buildNext: []};
+const ADM = window.ADMIN || {refresh: [], unlinked: [], checklist: []};
 const admOwned = () => Object.values(lotIndex).filter(l => l.world.owned && l.world.ready);
 const lotA = l => `<a href="#${l.id}">${esc(l.name)}</a>`;
 const wDot = w => `<span class="dot" style="--h:${w.glow || w.color}"></span>`;
@@ -164,8 +162,8 @@ function refreshCard(){
 }
 
 const admCounts = () => { const c = admChecks().reduce((n, x) => n + x.items.length, 0), L = admOwned();
-  return {checks: c, next: L.filter(l => l.built === true && l.shared === false).length, game: ADM.checklist.length + ADM.todo.filter(t => t.inGame).length,
-    gallery: L.filter(l => newSince(l)).length, sims: Object.values(SIMS).filter(s => s.from).length}; };
+  return {checks: c, next: L.filter(l => l.built === true && l.shared === false).length, game: ADM.checklist.length,
+    gallery: L.filter(l => newSince(l)).length, sims: worlds.filter(w => w.owned && w.ready).flatMap(homeHhs).filter(h => !h.sims.length).length}; };   // households with no Sims yet
 
 // Admin pages kept short (her feedback, 23 Oct: "too much info isn't helpful"): only what she'd act on
 function admGlance(){
@@ -176,8 +174,7 @@ function admGlance(){
     ${card("hammer", "Built", `${built}<small style="font-size:18px"> of ${L.length}</small>`, `${shared} shared.`, "progress")}
     ${card("camera", "Shared, no screenshots", L.filter(l => l.shared === true && !hasShots(l)).length, "Showing only their Gallery pictures.", "")}
     ${card("share", "Uploads not on a lot", ADM.unlinked.length, "Left off on purpose, each with its reason.", "gallery")}
-    ${card("list-checks", "Checks", n.checks || "All clear", n.checks ? "Things out of step in the plan." : "Plan, Gallery and site agree.", "checks", n.checks ? "warn" : "ok")}
-    ${card("flag", "Waiting in game", ADM.checklist.length, "On your in-game checklist.", "game")}</div>`;
+    ${card("note", "Notes", ADM.checklist.length + n.checks, n.checks ? `${plural(n.checks, "thing")} out of step in the plan, and your in-game notes.` : "Things to check or change next time you’re in the game.", "game", n.checks ? "warn" : "")}</div>`;
 }
 function admProgress(){
   const t = document.createElement("template"); t.innerHTML = statsPage();
@@ -199,15 +196,10 @@ function admChecksSec(){
   return `<ul class="adm-list">${cs.map(c => `<li><span><b>${esc(c.name)}</b></span><span class="w"><span class="adm-pill bad">${c.items.length}</span></span>
       <small>${c.items.map(l => (l.id ? lotA(l) : esc(l.name)) + (l.world ? ` (${esc(l.world.name)})` : "")).join(" · ")}</small></li>`).join("")}</ul>`;
 }
-function admNext(){
-  const L = admOwned(), find = n => L.find(l => fold(l.name) === fold(n));
-  return `<ul class="adm-list">${ADM.buildNext.slice(0, 10).map((b, i) => { const l = find(b.name);
-    return `<li><span>${i + 1}. ${l ? lotA(l) : `<b>${esc(b.name)}</b>`}</span><span class="w">${esc(l ? l.world.name : b.world || "")}</span></li>`; }).join("")}</ul>`;
-}
-function admGame(){
-  const by = {}; ADM.checklist.forEach(c => (by[c.world || c.section] ||= []).push(c));
+function admGame(){   // her notes for in game, with the data checks on top when something is out of step (merged, her idea, 23 Oct)
+  const checks = admChecks().filter(c => c.items.length), by = {}; ADM.checklist.forEach(c => (by[c.world || c.section] ||= []).push(c));
   const md = t => esc(t.length > 120 ? t.slice(0, 117) + "…" : t).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
-  return Object.entries(by).map(([k, cs]) => `<h3 class="adm-sub">${esc(k)}<small>${cs.length}</small></h3><ul class="adm-list">${cs.map(c => `<li><span>${md(c.text)}</span></li>`).join("")}</ul>`).join("");
+  return (checks.length ? `<h3 class="adm-sub">Out of <em>step</em><small>in the plan</small></h3>${admChecksSec()}` : "") + Object.entries(by).map(([k, cs]) => `<h3 class="adm-sub">${esc(k)}<small>${cs.length}</small></h3><ul class="adm-list">${cs.map(c => `<li><span>${md(c.text)}</span></li>`).join("")}</ul>`).join("");
 }
 function admSims(){
   const ws = worlds.filter(w => w.owned && w.ready), hs = ws.flatMap(homeHhs), made = hs.filter(simsMade).length, none = ws.map(w => [w, homeHhs(w).filter(h => !h.sims.length)]).filter(([, x]) => x.length);
@@ -215,7 +207,7 @@ function admSims(){
     <h3 class="adm-sub">Households with no <em>Sims</em> yet<small>${none.reduce((n, [, x]) => n + x.length, 0)}</small></h3>
     <ul class="adm-list">${none.map(([w, x]) => `<li><span>${wDot(w)}<b>${esc(w.name)}</b></span><small>${x.map(h => `<a href="#${h.id}">${esc(h.name)}</a>`).join(" · ")}</small></li>`).join("")}</ul>`;
 }
-const ADM_BODY = {glance: admGlance, progress: admProgress, gallery: admGallery, checks: admChecksSec, next: admNext, game: admGame, sims: admSims};
+const ADM_BODY = {glance: admGlance, progress: admProgress, gallery: admGallery, game: admGame, sims: admSims};
 function adminPage(sec){
   const L = admOwned(), n = admCounts();
   return `<section class="hero small adm-hero" style="--c:#8E62CF"><div class="kicker"><i></i><span class="label">Admin</span><span class="adm-lock">${ic("lock")}Only you</span></div>

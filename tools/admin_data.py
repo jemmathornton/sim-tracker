@@ -18,7 +18,7 @@ def read(p):
     return (ROOT / p).read_text(encoding="utf-8")
 
 def gather():
-    out = {"made": datetime.date.today().isoformat(), "refresh": [], "unlinked": [], "checklist": [], "todo": [], "tagSlips": [], "noWorldTag": "", "buildNext": []}
+    out = {"made": datetime.date.today().isoformat(), "refresh": [], "unlinked": [], "checklist": []}
     try: out["refresh"] = refresh_runs()
     except Exception as e: print("admin data: refresh log not read:", e)
     try:
@@ -27,12 +27,6 @@ def gather():
     except Exception as e: print("admin data: unlinked uploads not read:", e)
     try: out["checklist"] = checklist()
     except Exception as e: print("admin data: in-game checklist not read:", e)
-    try: out["todo"] = todo()
-    except Exception as e: print("admin data: TODO.md not read:", e)
-    try: out["tagSlips"], out["noWorldTag"] = tag_slips()
-    except Exception as e: print("admin data: hashtag slips not read:", e)
-    try: out["buildNext"] = build_next()
-    except Exception as e: print("admin data: build priorities not read:", e)
     return out
 
 # weekly Gallery refresh: one entry per run in logs/gallery-refresh.log
@@ -71,33 +65,6 @@ def checklist():
     return items
 
 # open TODO.md items for her, under their heading
-def todo():
-    items, head = [], ""
-    for line in read("TODO.md").splitlines():
-        if line.startswith("#"):
-            head = line.lstrip("#").strip()
-        elif line.startswith("- [ ] [Jemma]"):
-            t = line[len("- [ ] [Jemma]"):].strip()
-            items.append({"head": head, "text": t, "inGame": bool(re.search(r"\bin game\b|in-game|when she’s in game", t, re.I))})
-    return items
-
-# hashtag slips (research/gallery-findability.md, 22 Oct); she checks them herself when re-uploading
-def tag_slips():
-    fy = read("research/gallery-findability.md")
-    slips = []
-    part = fy.split("Misspelt tags", 1)[1].split("\n\n", 2)[1]
-    for line in part.splitlines():
-        cells = [c.strip() for c in line.strip().strip("|").split("|")]
-        if len(cells) == 3 and cells[0] not in ("Upload", "---") and not cells[0].startswith("-"):
-            slips.append({"upload": cells[0], "tag": cells[1], "meant": cells[2]})
-    nw = re.search(r"\*\*No world tag at all\*\* on \d+ linked uploads: (.+)", fy)
-    return slips, (nw.group(1).rstrip(".") if nw else "")
-
-# build priorities (research/build-priorities.md §4)
-def build_next():
-    bp = read("research/build-priorities.md").split("## 4.", 1)[1]
-    return [{"name": m.group(1), "world": m.group(2), "why": m.group(3).strip()} for m in re.finditer(r"^\d+\. \*\*(.+?)\*\* \((.+?)\)[^:]*: (.+)$", bp, re.M)]
-
 def write():
     out = gather()
     with open(OUT, "w", encoding="utf-8", newline="\n") as f:
@@ -108,5 +75,4 @@ def write():
 
 if __name__ == "__main__":
     o = write()
-    print(f"{len(o['refresh'])} refresh runs, {len(o['unlinked'])} unlinked, {len(o['checklist'])} checklist items, {len(o['todo'])} to-dos "
-          f"({sum(t['inGame'] for t in o['todo'])} in game), {len(o['tagSlips'])} tag slips, {len(o['buildNext'])} build ideas")
+    print(f"{len(o['refresh'])} refresh runs, {len(o['unlinked'])} unlinked, {len(o['checklist'])} checklist items")
