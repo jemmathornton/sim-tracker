@@ -642,7 +642,7 @@
     "built": true,
     "shared": true,
     "type": "Residential Rental (5)",
-    "issues": ["missing trait: Home Studio", "unit 4: wants Gnomes, Home Studio, has Gnomes, Homey"],
+    "issues": ["unit 4: wants Gnomes, Home Studio, has Gnomes, Homey"],
     "save_name": "Midtown Meadows",
     "placed": true,
     "objs": 1415,

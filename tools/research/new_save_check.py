@@ -122,7 +122,7 @@ def main():
                     want = set((l.get('traits') or []) + (l.get('challenges') or []))
                     have = set(main['traits']) | ({t for _, z in units for t in z['traits']} if not main['traits'] else set())
                     if units and not l.get('units'): pass
-                    if l.get('traits') and not l.get('units') and set(l['traits']) - have:   # rentals: checked unit by unit below r['issues'].append("missing trait" + ("s" if len(set(l['traits']) - have) > 1 else "") + ": " + ", ".join(sorted(set(l['traits']) - have)))
+                    if l.get('traits') and not l.get('units') and set(l['traits']) - have: r['issues'].append("missing trait" + ("s" if len(set(l['traits']) - have) > 1 else "") + ": " + ", ".join(sorted(set(l['traits']) - have)))
                     extra = have - want - {'Quake Zone'} - set(MOD_TRAITS.values()) if (l.get('traits') or l.get('challenges')) else set()
                     if extra and not units: r['issues'].append("not in the plan: " + ", ".join(sorted(extra)))
                     if norm(main['name']) != norm(shown) and not (units and norm(main['name']) == norm(l['lot'])): r['issues'].append(f"named “{main['name']}” in the save")

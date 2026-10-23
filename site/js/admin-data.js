@@ -647,7 +647,6 @@ window.ADMIN = {
 {
 "lot": "Midtown Meadows",
 "what": [
-"missing trait: Home Studio",
 "unit 4: wants Gnomes, Home Studio, has Gnomes, Homey"
 ]
 },

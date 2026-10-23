@@ -32,7 +32,7 @@ Made by tools/research/new_save_check.py from a copy of the save. Lots: placed /
 ## Newcrest
 
 - **Newcrest Community Space:** named “Newcrest Community Makers” in the save; active version Community space; your pick Makers (switch on the voting board)
-- **Midtown Meadows:** missing trait: Home Studio; unit 4: wants Gnomes, Home Studio, has Gnomes, Homey
+- **Midtown Meadows:** unit 4: wants Gnomes, Home Studio, has Gnomes, Homey
 - **The Ice Pavilion:** named “The Ice Pavillion” in the save
 - **Move Holiday** to Fern Park Flats unit 1 (now: no home)
 - **Move Lee** to Fern Park Flats unit 2 (now: no home)
