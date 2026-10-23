@@ -41,6 +41,7 @@ def main(apply):
     worlds = {p: load(p) for p in glob.glob(os.path.join(ROOT, 'data', 'worlds', '*.json'))}
     ppath = os.path.join(ROOT, 'data', 'people.json'); people = load(ppath)
     made = {k for k, v in people.items() if k.startswith('unknown-') or (isinstance(v, dict) and v.get('fromFix'))}
+    kept = {k: {f: people[k][f] for f in ('dynasty',) if f in people[k]} for k in made if isinstance(people[k], dict)}   # added by hand (Consort Capp's dynasty, 24 Oct)
     for k in made: del people[k]   # made by this script last time: worked out again below
     site = {}   # site id -> Sim dict (premade Sims only)
     for W in worlds.values():
@@ -143,7 +144,7 @@ def main(apply):
         ps = [ph_id[p] if p in ph_id else p for p in up.get(n, ()) if p in ph_id or isinstance(p, str)]
         if n in named:
             rec = {k: v for k, v in named[n].items() if k != 'inGame'}
-            people[pid] = {**rec, **({} if named[n].get('inGame') else {"notInGame": True}), "fromFix": True, **({"parents": ps[:2]} if ps else {})}
+            people[pid] = {**rec, **({} if named[n].get('inGame') else {"notInGame": True}), "fromFix": True, **({"parents": ps[:2]} if ps else {}), **kept.get(pid, {})}
         else: people[pid] = {"name": "Unknown", "sex": sex.get(n, "x"), "placeholder": True, **({"parents": ps[:2]} if ps else {})}
     report['unknown parents added'] = len(ph_id); report['parent links added'] = added
     for k, v in report.items(): print(f"{k}: {v}")

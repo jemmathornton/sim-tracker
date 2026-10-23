@@ -125,7 +125,8 @@
   "death": "Old Age",
   "partners": [
    ["contessa-capp", "Late Spouse"]
-  ]
+  ],
+  "dynasty": {"name": "Capp", "role": "member"}
  },
  "aghata-ananou": {
   "name": "Aghata Ananou",
