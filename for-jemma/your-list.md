@@ -105,7 +105,6 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 - **Decide:** Typing Sims in: chat only, or a Sims tab in World Plans (prototype in for-jemma/prototypes)?
 
 ## Not in game
-- **Decide:** Swap in the updated World Plans (for-jemma, “updated 23 Oct pm”: the Curious homes)? Claude does it on your OK.
 - **Do:** San Myshuno: make your own map adjustments, then recheck its banners and boxes.
 - **Do:** Whispering Glen (Ravenwood): recheck its card.
 - **Do:** Browse the story hooks when in the mood (research/story-ideas.md).
