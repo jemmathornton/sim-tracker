@@ -123,9 +123,13 @@ def who_label(hh):
 
 def main():
     D = load_data(); ideas = ideas_from_old()
+    # her ticks are kept by the lot's bold name (so rewording a line never loses one), or by the whole text for the other steps
+    def tick_key(text):
+        m = re.match(r'\*\*(.+?)\*\*', text)
+        return (m.group(1) if m else text).strip()
     ticked = set()
     if os.path.exists(OUT):
-        ticked = {l.strip()[6:] for l in open(OUT, encoding='utf-8') if l.startswith('- [x] ')}
+        ticked = {tick_key(l.strip()[6:]) for l in open(OUT, encoding='utf-8') if l.startswith('- [x] ')}
     # each holiday's traditions, as in her Rotational save (research/holidays-in-saves.md, 22 Oct)
     TRADITIONS = {"Flower Festival": "Egg Hunt, Flower Bunny, Party Spirit, Baking, Gardening",
                   "Love Day": "Go on a Date, Give Flowers, Give Gifts, Romantic Spirit",
@@ -215,7 +219,7 @@ def main():
                 idea = ideas.get(f"{wn}|{name}")
                 if idea: bits.append(f"Trait ideas (free slots): {idea}.")
                 line = (head + " ".join(bits)).replace("'", "’")   # curly apostrophes, as on the site
-                out.append(f"- [{'x' if line in ticked else ' '}] {line}")
+                out.append(f"- [ ] {line}")
             out.append("")
     names = {}
     for w in D['worlds']:
@@ -226,7 +230,9 @@ def main():
     clubs = json.load(open(os.path.join(ROOT, 'data', 'groups.json'), encoding='utf-8')).get('clubs', {})
     hang = [f"{c} → {names.get(v['place'], v['place'])}" if v.get('place') else f"{c} → any {v['anyType']}" for c, v in clubs.items() if v.get('place') or v.get('anyType')]
     out.append(TAIL.replace("{CLUBS}", "- [ ] Club hangouts (set in the Club panel; Claude's new-save check lists the ones still to change): " + "; ".join(hang) + "."))
-    open(OUT, 'w', encoding='utf-8', newline='\n').write("\n".join(out))
+    lines = "\n".join(out).split("\n")
+    lines = [("- [x] " + x[6:]) if x.startswith("- [ ] ") and tick_key(x[6:]) in ticked else x for x in lines]
+    open(OUT, 'w', encoding='utf-8', newline='\n').write("\n".join(lines))
     print(f"wrote {os.path.relpath(OUT, ROOT)}: {sum(1 for x in out if x.startswith('- ['))} lines to tick")
 
 
