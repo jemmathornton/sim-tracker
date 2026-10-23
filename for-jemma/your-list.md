@@ -13,6 +13,8 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 - **Do:** Midtown Meadows unit 4: Homey → Home Studio (with Gnomes), or keep Homey and tell Claude.
 - **Do:** Factory One: add Party Place and Great Acoustics.
 - **Do:** Place Brindleton Boathouse and Hindquarter Hideaway (Brindleton Bay).
+- **Do:** Households moved out while placing builds: once the builds are in, Claude lists who goes back where (from the save against the plan), and you move them in.
+- **Do:** The game crashed placing the first Britechester lot (23 Oct): try that lot again, or tell Claude which one it was.
 - **Decide:** Spooky on The Narwhal Arms and Von-Windenburg Castle, Simple Living on Coorinberg Cottage and Rustic Residence: keep (Claude adds them to the plan) or take off?
 
 ## Game options

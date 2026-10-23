@@ -200,6 +200,16 @@ window.ADMIN = {
 {
 "section": "New save fixes (from Claude's checks, 23 Oct)",
 "world": "",
+"text": "**Do:** Households moved out while placing builds: once the builds are in, Claude lists who goes back where (from the save against the plan), and you move them in."
+},
+{
+"section": "New save fixes (from Claude's checks, 23 Oct)",
+"world": "",
+"text": "**Do:** The game crashed placing the first Britechester lot (23 Oct): try that lot again, or tell Claude which one it was."
+},
+{
+"section": "New save fixes (from Claude's checks, 23 Oct)",
+"world": "",
 "text": "**Decide:** Spooky on The Narwhal Arms and Von-Windenburg Castle, Simple Living on Coorinberg Cottage and Rustic Residence: keep (Claude adds them to the plan) or take off?"
 },
 {
