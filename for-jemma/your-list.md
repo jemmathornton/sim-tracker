@@ -104,6 +104,7 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 - **Do:** Add Sergio Romeo to Powerhouse (he stays in the Paragons too).
 
 ## Households
+- **Decide:** Your new save has EA’s new family-tree ancestors (Feb 2026 update; only new saves get them). 25 aren’t on the site’s trees yet: the Thebe line back to Queen Thebe, the Darongs and Dreamers, Rodrigo De Pablo, Cahya and Wulan, Pranav Kunal. Add them?
 - **Decide:** Kopf: the Rotational copy seems off; which version do you want?
 - **Do:** Davidsons: make Evelyn, Ray and George older; make Garden Essence's Davidsons.
 - **Do:** Kirklands: age Kennedy, Kayleigh, Kamila and Kendrick as you want them.

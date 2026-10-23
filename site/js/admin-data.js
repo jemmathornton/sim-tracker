@@ -440,6 +440,11 @@ window.ADMIN = {
 {
 "section": "Households",
 "world": "",
+"text": "**Decide:** Your new save has EA’s new family-tree ancestors (Feb 2026 update; only new saves get them). 25 aren’t on the site’s trees yet: the Thebe line back to Queen Thebe, the Darongs and Dreamers, Rodrigo De Pablo, Cahya and Wulan, Pranav Kunal. Add them?"
+},
+{
+"section": "Households",
+"world": "",
 "text": "**Decide:** Kopf: the Rotational copy seems off; which version do you want?"
 },
 {
