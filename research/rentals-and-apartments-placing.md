@@ -98,3 +98,11 @@ This applies to Culpepper House, Medina Studios, Hakim House, ZenView, 21 Chic S
 - Mod The Sims, replacing apartments from the Gallery, 21 Nov to 1 Dec 2016: https://modthesims.info/showthread.php?t=585981
 - SimsCommunity, City Living: how to save apartments to the Gallery intact, 6 Nov 2016: https://simscommunity.info/2016/11/06/city-living-how-to-save-apartments-to-the-gallery-intact/
 - SimsCommunity, City Living Q&A with SimGurus (Gallery lots on penthouses), 24 Sep 2016: https://simscommunity.info/2016/09/24/the-sims-4-city-living-qa-with-simgurus-about-apartments-traits-and-more-part-2/
+
+## Seen in her new save (24 Oct, night)
+
+Read from a copy of “Jemma's Sim World” (22:48, 23 Oct), against her Building #2 save and the plan:
+- **Rio Verde, Fern Park Flats, Upland Trailer Park, Slip 42:** after placing, every unit carries the lot's (unit 1's) traits. In the plan only unit 1 has them.
+- **Midtown Meadows:** unit 1 got unit 2's traits and the others had none, until she set them by hand (unit 4 then got Homey rather than Home Studio).
+- **Tail's End, Inner Circle:** came in with each unit's traits as planned.
+So placing doesn't reliably keep unit traits: check each unit after placing. The new-save checker (tools/research/new_save_check.py) lists the differences.
