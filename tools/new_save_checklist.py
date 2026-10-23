@@ -60,7 +60,7 @@ TAIL = """
 - [ ] Clubs: add Sergio Romeo to Powerhouse (he stays in the Paragons too).
 - [ ] Dynasties: check Goth, Landgraab, Darong, Thebe, Abrantes, Alto and Capp against the site.
 - [ ] Check every neighbourhood’s voting board and repeal plans you don’t want.
-- [ ] With all your lots in, check each neighbourhood’s eco footprint (Map view, hover the neighbourhood) and tell Claude any that differ from the site’s “Eco footprint starts …” (your builds can change it).
+- [ ] Eco footprint: Claude’s new-save check now compares each neighbourhood’s footprint in the save with the site (Admin > Notes); just say which changes are on purpose.
 - [ ] Move out the throwaway household.
 - [ ] Check the Neighbourhood Stories rules are still set.
 - [ ] Save As “Sim World” and tell Claude, who will read holidays, traits, units and households from it.
