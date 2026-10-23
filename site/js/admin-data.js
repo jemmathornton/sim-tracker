@@ -786,6 +786,11 @@ window.ADMIN = {
 },
 {
 "head": "Calendar, admin page and a sidebar section (23 Oct; research/calendar-and-admin.md, prototypes in for-jemma/prototypes/calendar-admin/)",
+"text": "Third trial on the site (23 Oct, her ask: the season colours look odd): **Season colours**, As now / Blossom (pink, sunny yellow, rust, icy blue) / Muted (sage, sand, terracotta, slate) / Jewel (emerald, gold, burgundy, navy). Used on the calendar and the world pages’ weather row",
+"inGame": false
+},
+{
+"head": "Calendar, admin page and a sidebar section (23 Oct; research/calendar-and-admin.md, prototypes in for-jemma/prototypes/calendar-admin/)",
 "text": "Second trial on the site (23 Oct): **Gallery pictures**, “All four”: 144 lots with no screenshots of hers show all four pictures of their Gallery upload, not just the cover (tools/gallery_more.py fetched them into site/gallery-more/). Keep or not?",
 "inGame": false
 },

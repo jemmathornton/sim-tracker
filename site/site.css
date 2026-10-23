@@ -915,7 +915,7 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 .cal .m-head{background:color-mix(in srgb,var(--s) 14%,var(--surface));border-bottom:1px solid var(--line)}
 .cal .m-head b{font:400 18px/1 var(--display);padding:10px 8px}
 .cal .m-week+.m-week{border-top:1px solid var(--line)}
-.cal .m-wk{writing-mode:vertical-rl;transform:rotate(180deg);display:grid;place-items:center;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:var(--soft)}
+.cal .m-wk{writing-mode:vertical-rl;transform:rotate(180deg);display:grid;place-items:center;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:color-mix(in srgb,#8E62CF 70%,var(--ink));background:color-mix(in srgb,#8E62CF 13%,var(--surface))}   /* the site's neutral purple, so no season clashes with it (her ask, 23 Oct) */
 .cal .m-day{min-width:0;min-height:130px;padding:6px 6px 8px;border-left:1px solid var(--line);display:grid;align-content:start;gap:2px}
 .cal .m-day.hol{background:color-mix(in srgb,var(--s) 9%,var(--surface))}
 .cal .m-n{font-weight:800;font-size:12px;color:var(--muted)}
