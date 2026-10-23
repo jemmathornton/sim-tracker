@@ -43,6 +43,14 @@ class ResidentsColumn(unittest.TestCase):
         self.assertEqual(build.residents('Kirkland own'), ('Kirkland own', False, ''))
 
 
+class PackNames(unittest.TestCase):
+    """The Gallery calls two Stuff Packs by old slogans; the site shows their real names (23 Oct)."""
+    def test_slogans(self):
+        self.assertEqual(build.short_pack("Build Lush Gardens"), "Romantic Garden Stuff")
+        self.assertEqual(build.short_pack("Watch Movies with Friends!"), "Movie Hangout Stuff")
+        self.assertEqual(build.short_pack("The Sims™ 4 Dine Out"), "Dine Out")
+
+
 class BritishSpelling(unittest.TestCase):
     """build.british(): her Gallery text in British spelling on the site; game names keep theirs (CLAUDE.md)."""
     def test_words(self):

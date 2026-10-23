@@ -48,7 +48,9 @@ uploads = load(os.path.join(GALLERY, 'uploads.json'))['uploads']
 comments = load(os.path.join(GALLERY, 'comments.json'))['comments']
 fixes = load(os.path.join(GALLERY, 'text-fixes.json'))['fixes']
 
-def short_pack(p): return re.sub(r'\s+(Expansion Pack|Game Pack|Stuff Pack|Kit)$', '', p.replace('The Sims™ 4 ', '')).strip()
+# the Gallery labels two Stuff Packs by their old slogans (checked 23 Oct against its pack codes SP06 and SP05)
+PACK_NAMES = {"Build Lush Gardens": "Romantic Garden Stuff", "Watch Movies with Friends!": "Movie Hangout Stuff"}
+def short_pack(p): p = PACK_NAMES.get(p, p); return re.sub(r'\s+(Expansion Pack|Game Pack|Stuff Pack|Kit)$', '', p.replace('The Sims™ 4 ', '')).strip()
 def clean_title(t): return re.sub(r'\s*\[[^\]]*\]\s*$', '', t).strip()     # "Kin-Ship [Simsie Shell]" -> "Kin-Ship"
 
 MONTHS = "Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split()   # short, as dates are shown elsewhere on the site
