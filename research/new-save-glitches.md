@@ -106,3 +106,9 @@ Note: EA's forums block automatic reading, so dates for single forum posts are w
 **Sources**
 - SimsCommunity, Eco Lifestyle cheats (21 Jan 2023): https://simscommunity.info/2023/01/21/sims-4-eco-lifestyle-cheats/
 - Twinfinite, Eco Lifestyle cheats and Neighbourhood Action Plans (2020): https://twinfinite.net/guides/sims-4-eco-lifestyle-cheats/
+
+## Checked on her PC (23 Oct, night)
+
+- **Every pack her uploads need is installed.** All 190 Gallery uploads on her owned worlds' lots were looked up on the Gallery (their pack codes, e.g. SP06 for Romantic Garden Stuff) and compared with the pack folders in her game: none needs a pack she doesn't have.
+- **The lots that warned placed in full.** Courtyard Lane Playground, Nookstone, Optimist’s Outlook and Asphalt Abodes have every object of her Building #2 copies (Asphalt Abodes has 78 more, a newer upload); Tail’s End matched object for object. So the warning she saw was the false one described above.
+- **Mods:** her Mods folder has LittleMsSam's Dress Code Lot Trait, which shows up as an unknown lot trait on Strike Out!. Two Library copies of Palomino Junction and one of Nookstone are marked as containing mods or custom content; the Gallery copies aren't.
