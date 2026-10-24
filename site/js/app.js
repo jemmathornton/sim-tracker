@@ -28,7 +28,7 @@ DATA.worlds.filter(w => !w.owned && DATA.households[w.name]).forEach(w => {
 const SMOOTH = () => matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
 const worlds = DATA.worlds, lotIndex = {}, hhIndex = {}, hoodIndex = {};
 // a household's own extras from the data: its picture (a screenshot in shots/), origin (Premade or Mine), played, Neighbourhood Stories
-const hhMore = x => ({portrait: x.portrait, libraryPic: x.libraryPic, origin: x.origin, played: x.played, stories: x.stories, single: x.single, bio: x.bio, story: x.story});
+const hhMore = x => ({gallery: x.galleryCard, portrait: x.portrait, libraryPic: x.libraryPic, origin: x.origin, played: x.played, stories: x.stories, single: x.single, bio: x.bio, story: x.story});
 // the households a world counts and lists: everyone but the NPC households her plan names (22 Oct)
 const homeHhs = w => Object.values(w.households).filter(x => !x.npc);
 worlds.forEach(w => {
@@ -1103,6 +1103,7 @@ function household(hh){
     <section class="block" style="--h:${hc}"><div class="block-head"><h2>The <em>Sims</em></h2>${hh.sims.length ? `<span class="count">${whoCount(hh.sims)}</span>` : ""}</div>
       ${hh.sims.length ? `<div class="sims">${hh.sims.map(simCard).join("")}</div>` : `<div class="empty">${ic("sim")}No Sims added yet. Each Sim in the household will get a card here with their traits, career, skills and relationships.</div>`}
       ${hh.source ? `<p class="source">In-game starting details from The Sims Wiki: ${hh.source.map(([n,u]) => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(n)}</a>`).join(", ")}.</p>` : ""}</section>
+    ${hhGallery(hh, hc)}
     ${hh.links.length ? `<section class="block" style="--h:${hc}"><div class="block-head"><h2>Connected <em>households</em></h2></div><div class="families">${hh.links.map(x => x.hh ? famCard(x.hh, x) : "").join("")}</div></section>` : ""}
     <section class="block" style="--h:${hc}"><div class="block-head"><h2>Their <em>story</em></h2></div><div class="empty">${ic("note")}No story yet.</div></section>
     ${neighbours.length ? `<section class="block"><div class="block-head"><h2>Neighbours</h2></div><div class="families">${neighbours.map(famCard).join("")}</div></section>` : ""}`;
@@ -1171,6 +1172,7 @@ function householdNew(hh){
     <section class="block" style="--h:${hc}"><div class="block-head"><h2>The <em>Sims</em></h2><span class="count">${whoCount(ids)}</span></div>
       ${simRoster(ids)}
       </section>
+    ${hhGallery(hh, hc)}
     ${pets.length ? `<section class="block" style="--h:${hc}"><div class="block-head"><h2>The <em>animals</em></h2><span class="count">${whoCount(pets).replace(/^0 Sims · /, "")}</span></div>
       ${animalRoster(pets)}</section>` : ""}
     ${tree.length ? `<section class="block" style="--h:${hc}"><div class="block-head"><h2>Family <em>tree</em></h2></div>
@@ -1178,6 +1180,21 @@ function householdNew(hh){
     ${(t => t.length ? `<section class="block" style="--h:${hc}"><div class="block-head"><h2>Animal <em>family</em></h2></div><div class="tree-box">${fitTree(t, {compact: true, ch: 96, labels: false, here: hh})}</div></section>` : "")(animalTreeOf(hh))}
     ${hh.bio || hh.story ? `<section class="block" style="--h:${hc}"><div class="block-head"><h2>Their <em>story</em></h2></div>${hh.bio ? `<p class="lede">${esc(hh.bio)}</p>` : ""}${hh.story ? `<p class="lede">${esc(hh.story)}</p>` : ""}</section>` : ""}
     ${neighbours.length ? `<section class="block"><div class="block-head"><h2>Neighbours</h2></div><div class="families">${neighbours.map(x => famCard(x)).join("")}</div></section>` : ""}`;
+}
+
+// her household upload on the Gallery (24 Oct), laid out like a lot's Build notes: her description and comments, the card on the right
+function hhGallery(hh, hc){
+  const g = hh.gallery; if (!g) return "";
+  const cs = (g.commentList || []).filter(c => (c.u || "").toLowerCase() !== "jemmathesimmer");
+  return `<section class="block" style="--h:${hc}"><div class="block-head"><h2>On the <em>Gallery</em></h2></div>
+    <div class="notes-wrap"><div class="notes-text">${g.title !== hh.name ? `<span class="label">Uploaded as “${esc(g.title)}”</span>` : ""}${g.description ? `<p class="lede">${esc(g.description)}</p>` : ""}
+      ${g.tags?.length ? `<div class="tags">${g.tags.map(t => `<span>#${esc(t)}</span>`).join("")}</div>` : ""}
+      ${cs.length ? `<div class="g-comments"><span class="label">Comments on the Gallery</span><ul>${cs.map(c => `<li><div class="c-head"><b>${esc(c.u || "A simmer")}</b>${c.t ? `<small>${new Date(c.t).toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric"})}</small>` : ""}</div><p>${esc(c.m)}</p></li>`).join("")}</ul></div>` : ""}</div>
+    <aside class="gallery-card"><span class="label">On the Sims 4 Gallery</span>
+      <dl><div><dt>Favourites</dt><dd>${g.likes}</dd></div><div><dt>Downloads</dt><dd>${g.downloads}</dd></div><div><dt>Comments</dt><dd>${g.comments || 0}</dd></div>${g.shared ? `<div><dt>Shared</dt><dd>${esc(g.shared)}</dd></div>` : ""}</dl>
+      ${g.packs?.length ? `<span class="label">Packs used</span><div class="packs">${g.packs.map(p => `<span>${esc(p)}</span>`).join("")}</div>` : `<span class="label">Packs used</span><div class="packs"><span>Base game only</span></div>`}
+      <a class="gal-link" style="color:${textOn(hc)}" href="${esc(g.url)}" target="_blank" rel="noopener">View on the Gallery ${ic("arrow")}</a>
+      <small>Favourites, downloads and comments as of ${esc(g.checked)}</small></aside></div></section>`;
 }
 
 // ---------- Stats: the spreadsheet view ----------

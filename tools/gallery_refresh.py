@@ -99,6 +99,18 @@ def auto_link(new_ids, uploads, worlds):
     for i in new_ids:
         u = uploads.get(i)
         if not u: say(f"  new upload {i} couldn't be read this time; it'll be tried again next week"); continue
+        if u['kind'] == 'household':   # her household uploads (24 Oct): linked when the title names exactly one household ("Davidson" is "Davidson 1")
+            hh = [(W, n, h) for W in worlds if W['owned'] for n, h in (W.get('households') or {}).items() if re.sub(r'\d+$', '', norm(n)) == norm(u['title'])]
+            if len(hh) == 1:
+                W, n, h = hh[0]
+                if h.get('gallery'): ts[i] = {"title": u['title'], "lot": f"{W['name']} / {n} (household)", "why": f"New on {TODAY}: another copy of this household. Which should lead (normally the latest)?"}
+                h.setdefault('gallery', []).append(i); linked.append(W)
+                say(f"  linked new household upload “{u['title']}” to {W['name']} / {n}")
+            else:
+                unl['uploads'][i] = {"title": u['title'], "lot": None, "why": f"Household, new on {TODAY}; " + ("no household in the plan has this name." if not hh else "several households have this name: " + ", ".join(f"{x[0]['name']} / {x[1]}" for x in hh) + ".")}
+                ts[i] = {"title": u['title'], "lot": None, "why": unl['uploads'][i]['why']}
+                say(f"  new household upload “{u['title']}” not linked; listed in data/gallery/unlinked.json")
+            continue
         if u['kind'] not in ('lot', 'room'): continue
         t = re.sub(r'\s*[\[(][^\])]*[\])]\s*$', '', u['title'])          # "Hallow Slough (SoupShell)" -> "Hallow Slough"
         tags = [x.lower() for x in re.findall(r'#(\w+)', u['description'])]

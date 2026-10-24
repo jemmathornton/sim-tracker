@@ -258,6 +258,8 @@ def build():
         if W.get('households'):
             for h in W['households'].values():   # EA's bios in British spelling too, proper names kept (her call, 19 Oct)
                 if h.get('bio'): h['bio'] = british(h['bio'])
+            for h in W['households'].values():   # her household uploads, shown like a lot's Gallery card (24 Oct, her ask); one upload, the latest
+                if h.get('gallery'): h['galleryCard'] = gallery_for(h)
             for hn, h in W['households'].items():   # her Library pictures, stand-ins until her own screenshots (tools/library_pictures.py, 19 Oct)
                 if lib_pics['households'].get(ws + '|' + hn): h['libraryPic'] = stamped(lib_pics['households'][ws + '|' + hn])
                 for sm in h.get('sims', []):
