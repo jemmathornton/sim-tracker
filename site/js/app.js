@@ -288,6 +288,11 @@ function familyOf(id){
     .sort((x, y) => rank(x[1]) - rank(y[1]) || band(x[0]) - band(y[0]));
 }
 const membersOf = hh => Object.keys(SIMS).filter(id => SIMS[id].hh === hh);
+// the game's own label for a Sim with no job who has a child, teen or younger in their household (careers/career_unemployment):
+// "Stay-at-Home Mom/Dad" (24 Oct, her ask)
+const stayAtHome = s => { if (s.career || s.late || isAnimal(s) || !s.hh || !["Young Adult", "Adult", "Elder"].includes(s.age)) return "";
+  const kids = membersOf(s.hh).filter(id => ["Teen", "Child", "Toddler", "Infant", "Baby"].includes(SIMS[id].age) && (SIMS[id].parents || []).includes(s.id));
+  return kids.length ? `Stay-at-Home ${s.sex === "f" ? "Mom" : s.sex === "m" ? "Dad" : "Parent"}` : ""; };
 /* ---------- pets and horses (trial, 19 Oct: her choice A, "more info") ----------
    Stored with the Sims (their kind in `state`), but not Sims: left out of Sim counts and the Sims family tree, listed under the
    Sims as "The animals", with their own small family tree where one has a mother or father, and a pet page instead of a Sim page. */
@@ -541,7 +546,7 @@ function simPage(s){
     <div class="sim-chips">${stage ? `<span>${esc(stage.charAt(0).toUpperCase() + stage.slice(1))}</span>` : ""}${s.state ? lifeState(s, "") : "<span>Human</span>"}${isChampion(s) ? `<span class="champ">${ic("ph-trophy")}Champion</span>` : ""}${s.noHome ? `<span>No home</span>` : ""}${s.notInGame ? `<span title="Named on the Sims Wiki">Never in the game</span>` : ""}${s.galleryOnly ? `<span title="A Maxis upload on the Gallery, not placed in any world">On EA’s Gallery</span>` : ""}${s.notInGame ? "" : `<span>${originTag(s.origin)}</span>`}</div></section>`;
   // details
   // top right: where they live and what they do; who they are (aspiration, quirks, lifestyles, likes, fame) sits with traits and skills below (her ask, 19 Oct)
-  const facts = [["Breed", s.breed], ["Cause of death", s.state === "Ghost" ? s.death : null], ["Career", s.career], ["About the job", s.careerNote], ["School", s.school], ["Died", s.died]].filter(([, v]) => v);
+  const facts = [["Breed", s.breed], ["Cause of death", s.state === "Ghost" ? s.death : null], ["Career", s.career || stayAtHome(s)], ["About the job", s.careerNote], ["School", s.school], ["Died", s.died]].filter(([, v]) => v);
   const chipRow = (label, xs, cls) => xs && xs.length ? `<span class="label">${label}</span><div class="traits${cls ? " " + cls : ""}">${xs.map(t => `<span>${esc(t)}</span>`).join("")}</div>` : "";
   const aboutMore = chipRow("Aspiration", s.aspiration ? [s.aspiration] : []) + chipRow("Quirks", s.quirks) + chipRow("Lifestyles", s.lifestyles) + chipRow("Likes", s.likes);
   const fameRow = s.fame ? `<span class="label">Fame</span><div class="skill"><span>${esc(FAME_LEVELS[s.fame])}</span><div class="pips" style="--max:5">${[1, 2, 3, 4, 5].map(i => `<i class="${i <= s.fame ? "on" : ""}"></i>`).join("")}</div><b>${s.fame}</b></div>` : "";
@@ -1147,7 +1152,7 @@ function simRoster(ids){
   return `<div class="sheet-wrap"><table class="sheet roster"><thead><tr><th scope="col">Sim</th><th scope="col">Life stage</th><th scope="col">Life state</th><th scope="col">Aspiration</th><th scope="col">Career or school</th></tr></thead><tbody>
     ${ids.map(id => { const s = SIMS[id], uni = /^(University of Britechester|Foxbury Institute) · (.+?)( \(distinguished\))?$/.exec(s.school || ""),
         sch = uni ? `${uni[2]} (${uni[1].startsWith("Foxbury") ? "Foxbury" : "UoB"})` : (s.school || "").replace(" · ", ", "),
-        job = [(s.career || "").split(" · ")[0], sch].filter(Boolean).join(" · ");   // a job and a school both show, with the grade (her ask, 24 Oct)
+        job = [(s.career || stayAtHome(s)).split(" · ")[0], sch].filter(Boolean).join(" · ");   // a job and a school both show, with the grade (her ask, 24 Oct)
       return `<tr><td><span class="who"><span class="mono">${initial(s.name)}</span><a href="#s-${id}">${esc(s.name)}</a></span></td>
         <td>${esc(s.age)}</td><td>${s.state ? lifeState(s, "state") : `<span class="muted">Human</span>`}</td>
         <td>${s.aspiration ? esc(s.aspiration) : `<span class="muted">—</span>`}</td><td>${job ? esc(job) : `<span class="muted">—</span>`}</td></tr>`; }).join("")}</tbody></table></div>`;
