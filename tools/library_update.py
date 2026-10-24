@@ -52,7 +52,7 @@ def facts(s, sex):
     d = {"age": AGES.get(s.get('age'))}
     young = d["age"] in ("Baby", "Infant", "Toddler") or s.get('extended_species') not in (None, 0, 1)
     a = G['aspirations'].get(str(s.get('primary_aspiration')))
-    d["aspiration"] = gendered(a[0], sex) if a and not young else None
+    d["aspiration"] = gendered(a[0], sex).strip() if a and not young else None
     d["bonus"] = a[1] if a and a[1] and not young else None
     tr = [G['traits'][str(t)][0] for t in ((at.get('trait_tracker') or {}).get('trait_ids') or []) if str(t) in G['traits'] and G['traits'][str(t)][1] == 'PERSONALITY']
     d["traits"] = list(dict.fromkeys(tr)) or None

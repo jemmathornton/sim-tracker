@@ -2416,7 +2416,7 @@
    "friends": null,
    "enemies": "dislikes",
    "site": [],
-   "saves": ["Building #2", "Rotational"],
+   "saves": ["Building #2", "Rotational", "Season Events"],
    "in_new_save": ["dislikes"],
    "housemates": []
   },
@@ -2430,7 +2430,7 @@
    "friends": "friends with",
    "enemies": null,
    "site": [],
-   "saves": ["Building #2", "Rotational"],
+   "saves": ["Building #2", "Rotational", "Season Events"],
    "in_new_save": ["friends with"],
    "housemates": []
   },
@@ -2444,7 +2444,7 @@
    "friends": null,
    "enemies": "dislikes",
    "site": [],
-   "saves": ["Building #2", "Rotational"],
+   "saves": ["Building #2", "Rotational", "Season Events"],
    "in_new_save": ["dislikes"],
    "housemates": []
   },
@@ -2458,7 +2458,7 @@
    "friends": null,
    "enemies": null,
    "site": ["sibling of"],
-   "saves": ["Building #2", "Rotational"],
+   "saves": ["Building #2", "Rotational", "Season Events"],
    "in_new_save": ["sibling of"],
    "housemates": []
   },
@@ -2472,7 +2472,7 @@
    "friends": "good friends with",
    "enemies": null,
    "site": [],
-   "saves": ["Building #2", "Rotational"],
+   "saves": ["Building #2", "Rotational", "Season Events"],
    "in_new_save": ["aunt/uncle of", "good friends with"],
    "housemates": []
   },
@@ -2486,7 +2486,7 @@
    "friends": "friends with",
    "enemies": null,
    "site": [],
-   "saves": ["Building #2", "Rotational"],
+   "saves": ["Building #2", "Rotational", "Season Events"],
    "in_new_save": ["friends with"],
    "housemates": []
   },
@@ -2500,7 +2500,7 @@
    "friends": "good friends with",
    "enemies": null,
    "site": [],
-   "saves": ["Building #2", "Rotational"],
+   "saves": ["Building #2", "Rotational", "Season Events"],
    "in_new_save": ["good friends with"],
    "housemates": []
   },
@@ -2514,7 +2514,7 @@
    "friends": null,
    "enemies": "dislikes",
    "site": [],
-   "saves": ["Building #2", "Rotational"],
+   "saves": ["Building #2", "Rotational", "Season Events"],
    "in_new_save": ["dislikes"],
    "housemates": []
   },
@@ -2528,7 +2528,7 @@
    "friends": "good friends with",
    "enemies": null,
    "site": [],
-   "saves": ["Building #2", "Rotational"],
+   "saves": ["Building #2", "Rotational", "Season Events"],
    "in_new_save": ["ex of", "good friends with"],
    "housemates": []
   },
@@ -2542,7 +2542,7 @@
    "friends": "friends with",
    "enemies": null,
    "site": [],
-   "saves": ["Building #2", "Rotational"],
+   "saves": ["Building #2", "Rotational", "Season Events"],
    "in_new_save": ["friends with"],
    "housemates": []
   },
@@ -2556,7 +2556,7 @@
    "friends": "friends with",
    "enemies": null,
    "site": [],
-   "saves": ["Building #2", "Rotational"],
+   "saves": ["Building #2", "Rotational", "Season Events"],
    "in_new_save": ["friends with"],
    "housemates": []
   },
@@ -2570,7 +2570,7 @@
    "friends": "friends with",
    "enemies": null,
    "site": [],
-   "saves": ["Building #2", "Rotational"],
+   "saves": ["Building #2", "Rotational", "Season Events"],
    "in_new_save": ["friends with"],
    "housemates": []
   },
@@ -2584,7 +2584,7 @@
    "friends": null,
    "enemies": "dislikes",
    "site": [],
-   "saves": ["Building #2", "Rotational"],
+   "saves": ["Building #2", "Rotational", "Season Events"],
    "in_new_save": ["dislikes"],
    "housemates": []
   },
@@ -2598,7 +2598,7 @@
    "friends": "friends with",
    "enemies": null,
    "site": [],
-   "saves": ["Building #2", "Rotational"],
+   "saves": ["Building #2", "Rotational", "Season Events"],
    "in_new_save": ["friends with"],
    "housemates": []
   },
@@ -2612,7 +2612,7 @@
    "friends": "good friends with",
    "enemies": null,
    "site": [],
-   "saves": ["Building #2", "Rotational"],
+   "saves": ["Building #2", "Rotational", "Season Events"],
    "in_new_save": ["good friends with"],
    "housemates": []
   },
@@ -2626,7 +2626,7 @@
    "friends": "friends with",
    "enemies": null,
    "site": [],
-   "saves": ["Building #2", "Rotational"],
+   "saves": ["Building #2", "Rotational", "Season Events"],
    "in_new_save": ["friends with"],
    "housemates": []
   },
@@ -2640,7 +2640,7 @@
    "friends": "good friends with",
    "enemies": null,
    "site": [],
-   "saves": ["Building #2", "Rotational"],
+   "saves": ["Building #2", "Rotational", "Season Events"],
    "in_new_save": ["good friends with"],
    "housemates": []
   },
@@ -2654,7 +2654,7 @@
    "friends": "friends with",
    "enemies": null,
    "site": [],
-   "saves": ["Building #2", "Rotational"],
+   "saves": ["Building #2", "Rotational", "Season Events"],
    "in_new_save": ["friends with"],
    "housemates": []
   },
@@ -2871,7 +2871,7 @@
   {
    "a": "Josie Donovan",
    "b": "Liberty Lee",
-   "a_household": "Donovan (Copperdale)",
+   "a_household": "Donovan-Haynes (Copperdale)",
    "b_household": "Lee (Newcrest)",
    "family": [],
    "romance": null,
@@ -2997,7 +2997,7 @@
   {
    "a": "Davin Haynes",
    "b": "Katrina Caliente",
-   "a_household": "Donovan (Copperdale)",
+   "a_household": "Donovan-Haynes (Copperdale)",
    "b_household": "Caliente (Oasis Springs)",
    "family": [],
    "romance": null,
@@ -3039,7 +3039,7 @@
   {
    "a": "Davin Haynes",
    "b": "Olivia Kim-Lewis",
-   "a_household": "Donovan (Copperdale)",
+   "a_household": "Donovan-Haynes (Copperdale)",
    "b_household": "Spencer-Kim-Lewis (Willow Creek)",
    "family": [],
    "romance": null,
@@ -3068,7 +3068,7 @@
    "a": "Katrina Caliente",
    "b": "Misty Haynes",
    "a_household": "Caliente (Oasis Springs)",
-   "b_household": "Donovan (Copperdale)",
+   "b_household": "Donovan-Haynes (Copperdale)",
    "family": [],
    "romance": null,
    "friends": null,
@@ -3109,7 +3109,7 @@
   {
    "a": "Josie Donovan",
    "b": "Savanna Winters",
-   "a_household": "Donovan (Copperdale)",
+   "a_household": "Donovan-Haynes (Copperdale)",
    "b_household": "Winters (Willow Creek)",
    "family": [],
    "romance": null,
@@ -3137,7 +3137,7 @@
   {
    "a": "Davin Haynes",
    "b": "Summer Holiday",
-   "a_household": "Donovan (Copperdale)",
+   "a_household": "Donovan-Haynes (Copperdale)",
    "b_household": "Holiday (Newcrest)",
    "family": [],
    "romance": null,
@@ -3165,7 +3165,7 @@
   {
    "a": "Misty Haynes",
    "b": "Olivia Kim-Lewis",
-   "a_household": "Donovan (Copperdale)",
+   "a_household": "Donovan-Haynes (Copperdale)",
    "b_household": "Spencer-Kim-Lewis (Willow Creek)",
    "family": [],
    "romance": null,
@@ -3235,7 +3235,7 @@
   {
    "a": "Davin Haynes",
    "b": "Liberty Lee",
-   "a_household": "Donovan (Copperdale)",
+   "a_household": "Donovan-Haynes (Copperdale)",
    "b_household": "Lee (Newcrest)",
    "family": [],
    "romance": null,
@@ -3306,7 +3306,7 @@
    "a": "Bella Goth",
    "b": "Misty Haynes",
    "a_household": "Goth (Willow Creek)",
-   "b_household": "Donovan (Copperdale)",
+   "b_household": "Donovan-Haynes (Copperdale)",
    "family": [],
    "romance": null,
    "friends": null,

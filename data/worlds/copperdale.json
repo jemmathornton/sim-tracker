@@ -41,7 +41,7 @@
     {"lot": "Totter Park", "myName": "Totter Park", "type": "Residential", "size": "50x40", "residents": "Price", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "BridgeCreek Drive", "myName": "BridgeCreek Drive", "type": "Backroom", "size": "30x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Little Falls Nook", "myName": "Little Falls Nook", "type": "Residential", "size": "20x20", "residents": "Harjo", "built": false, "shared": false, "screenshots": false, "simsMade": false},
-    {"lot": "Hillside Haven", "myName": "Hillside Haven", "type": "Residential", "size": "30x20", "residents": "Donovan (move!)", "built": false, "shared": false, "screenshots": false, "simsMade": false}
+    {"lot": "Hillside Haven", "myName": "Hillside Haven", "type": "Residential", "size": "30x20", "residents": "Donovan-Haynes (move!)", "built": false, "shared": false, "screenshots": false, "simsMade": false}
    ],
    "bannerZoom": 1.3,
    "bannerShift": [0.03, 0],
@@ -340,7 +340,7 @@
    "bio": "High school sweethearts and Copperdale alumni Janae and Marcel Price have returned, moving back into their old neighborhood with their three children: Sidney, Savannah, and Jayden. They also welcomed Kevin, a foreign exchange student, into their lively home. It's a busy household, stirring with activity and thriving pursuits. While Marcel works on his latest novel, Janae works full-time as a successful Regional Manager. The twins, Savannah and Sidney, each enjoy their own interests while trying to keep up good grades. Jayden looks up to his siblings a lot, and can't wait to be just like them, his buddy Kevin included. Life can certainly get away from them, but they know they can always depend on one another.",
    "bioFrom": "EA"
   },
-  "Donovan": {
+  "Donovan-Haynes": {
    "sims": [
     {
      "id": "josie-donovan",
@@ -413,7 +413,7 @@
      "partners": [
       ["josie-donovan", "Spouse"]
      ],
-     "ageDays": 2.5
+     "ageDays": 2.6
     },
     {
      "id": "misty-haynes",
@@ -452,7 +452,7 @@
      "career": "Scout · Griffon Scout (level 2)",
      "school": "Grade school · grade B",
      "skills": [
-      ["Motor", 4, 10],
+      ["Motor", 5, 10],
       ["Mental", 3, 10],
       ["Social", 6, 10],
       ["Creativity", 3, 10],
@@ -473,7 +473,8 @@
      "parents": ["josie-donovan", "madelyn-haynes"],
      "ageDays": 0.1
     }
-   ]
+   ],
+   "gallery": ["lo+Nm/ZzStKENVX+hIiQLQ=="]
   }
  },
  "weatherSeasons": {

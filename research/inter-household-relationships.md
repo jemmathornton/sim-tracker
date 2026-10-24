@@ -18,7 +18,7 @@ From the site's family trees (parents, siblings, partners); the plan wins over a
 - **Evelyn Davidson** (Davidson (Willow Creek)) parent of **Lisa Davidson** (Livin' In The City (San Myshuno)) · saves: Rotational · **to add**
 - **George Davidson** (Davidson (Willow Creek)) sibling of **Lisa Davidson** (Livin' In The City (San Myshuno)) · saves: Rotational · **to add**
 - **Blossom Greenburg** (Greenburg (Evergreen Harbor)) parent of **Knox Greenburg** (Knox Greenburg (Evergreen Harbor)) · saves: 100 Baby Challenge!!, Building #2, Horses!, Not So Berry, Return to the HOB, Rotational, Season Events, Will the port be Promising? · **in the new save**
-- **Esther Gomes** (Izadi-Gomes (Ravenwood)) sibling of **Tziporah Gomes** (Gomes (Ravenwood)) · saves: Building #2, Rotational · **in the new save**
+- **Esther Gomes** (Izadi-Gomes (Ravenwood)) sibling of **Tziporah Gomes** (Gomes (Ravenwood)) · saves: Building #2, Rotational, Season Events · **in the new save**
 - **Johnny Zest** (Johnny Zest (Del Sol Valley)) child of **Nancy Landgraab** (Landgraab (Oasis Springs)) · on the site only · **in the new save**
 - **Johnny Zest** (Johnny Zest (Del Sol Valley)) sibling of **Malcolm Landgraab** (Landgraab (Oasis Springs)) · on the site only · **in the new save**
 - **Knox Greenburg** (Knox Greenburg (Evergreen Harbor)) child of **Mary Greenburg** (Greenburg (Evergreen Harbor)) · saves: Building #2, Rotational · **in the new save**
@@ -51,7 +51,7 @@ Links a save's own story made that the site's trees don't have. Your call: keep 
 
 - **Gideon Harris** (Harris (Evergreen Harbor)) step-child of **Nina Caliente** (Caliente (Oasis Springs)) · saves: Season Events · **to add**
 - **Jeb Harris** (Harris (Evergreen Harbor)) step-child of **Nina Caliente** (Caliente (Oasis Springs)) · saves: Season Events · **to add**
-- **Esther Gomes** (Izadi-Gomes (Ravenwood)) aunt/uncle of **Zelmira Gomes** (Gomes (Ravenwood)) · saves: Building #2, Rotational · **in the new save**
+- **Esther Gomes** (Izadi-Gomes (Ravenwood)) aunt/uncle of **Zelmira Gomes** (Gomes (Ravenwood)) · saves: Building #2, Rotational, Season Events · **in the new save**
 - **Knox Greenburg** (Knox Greenburg (Evergreen Harbor)) step-child of **Mary Greenburg** (Greenburg (Evergreen Harbor)) · saves: Building #2, Rotational · **to add (step-child of); new save has child of, friends with**
 - **Cam Sadya** (Linh-Sadya (Tomarang)) niece/nephew of **Thi Linh** (Linh (Tomarang)) · saves: 100 Baby Challenge!!, Building #2, Rotational, Season Events · **in the new save**
 - **Aurelio Robles** (Robles (San Sequoia)) niece/nephew of **Jay Robles** (Robles-Ruano (San Sequoia)) · saves: Building #2, Not So Berry, Rotational, Season Events · **in the new save**
@@ -83,13 +83,13 @@ Not on the site's trees.
 - **Marcus Flex** (Partihaus (Windenburg)) widow of **Mila Munch** (Munch (Windenburg)) · saves: Season Events · **to add**
 - **Penny Pizzazz** (Pizzazz (San Myshuno)) divorced from **Rohan Elderberry** (Elderberry (Britechester)) · saves: Not So Berry · **to add**
 - **Christie Sigworth** (Sigworth (StrangerVille)) going steady with **Gideon Harris** (Harris (Evergreen Harbor)) · saves: Season Events · **to add**
-- **Layne Coffin** (Specter (Windenburg)) ex of **Radwan Gomes** (Gomes (Ravenwood)) · saves: Building #2, Rotational · **in the new save**
+- **Layne Coffin** (Specter (Windenburg)) ex of **Radwan Gomes** (Gomes (Ravenwood)) · saves: Building #2, Rotational, Season Events · **in the new save**
 
 ## Close friends from your saves (73)
 
 Best friends, confidants and good friends.
 
-- **Kai Aether** (Aether (Ravenwood)) good friends with **Layne Coffin** (Specter (Windenburg)) · saves: Building #2, Rotational · **in the new save**
+- **Kai Aether** (Aether (Ravenwood)) good friends with **Layne Coffin** (Specter (Windenburg)) · saves: Building #2, Rotational, Season Events · **in the new save**
 - **Daniel Barraza** (Barraza (Willow Creek)) good friends with **Tane Ngata** (Ngata (Sulani)) · saves: Rotational · **to add**
 - **Daniel Barraza** (Barraza (Willow Creek)) good friends with **Tara LeBlanc** (LeBlanc (Newcrest)) · saves: Rotational · **to add**
 - **Bjorn Bjergsen** (Bjergsen (Willow Creek)) good friends with **Britney Reynolds** (Reynolds (Willow Creek)) · saves: Rotational · **to add**
@@ -98,8 +98,8 @@ Best friends, confidants and good friends.
 - **Alexa De Costa** (De Costa (Oasis Springs)) best friends with **Sonya Rivera** (Rivera (Oasis Springs)) · saves: Return to the HOB, Rotational · **to add**
 - **Alexa De Costa** (De Costa (Oasis Springs)) good friends with **Minerva Charm** (Charm (Glimmerbrook)) · saves: Rotational · **to add**
 - **Josie De Costa** (De Costa (Oasis Springs)) good friends with **Nani Kealoha** (Kealoha (Sulani)) · saves: Rotational · **to add**
-- **Josie Donovan** (Donovan (Copperdale)) best friends with **Liberty Lee** (Lee (Newcrest)) · saves: Season Events · **to add**
-- **Josie Donovan** (Donovan (Copperdale)) good friends with **Savanna Winters** (Winters (Willow Creek)) · saves: Season Events · **to add**
+- **Josie Donovan** (Donovan-Haynes (Copperdale)) best friends with **Liberty Lee** (Lee (Newcrest)) · saves: Season Events · **to add**
+- **Josie Donovan** (Donovan-Haynes (Copperdale)) good friends with **Savanna Winters** (Winters (Willow Creek)) · saves: Season Events · **to add**
 - **Mark Eggleston** (Eggleston (Del Sol Valley)) good friends with **Marvin LeBlanc** (LeBlanc (Newcrest)) · saves: Rotational · **to add**
 - **Mark Eggleston** (Eggleston (Del Sol Valley)) good friends with **Tara De Costa** (De Costa (Oasis Springs)) · saves: Rotational · **to add**
 - **Mark Eggleston** (Eggleston (Del Sol Valley)) good friends with **Olive Tinker** (Tinker (Evergreen Harbor)) · saves: Rotational · **to add**
@@ -149,8 +149,8 @@ Best friends, confidants and good friends.
 - **Lucie Reynolds** (Reynolds (Willow Creek)) good friends with **Lucy Kopf** (Livin' In The City (San Myshuno)) · saves: Rotational · **to add**
 - **Carlos Rivera** (Rivera (Oasis Springs)) good friends with **Josie De Costa** (De Costa (Oasis Springs)) · saves: Return to the HOB, Rotational · **to add**
 - **Bernice Robles** (Robles (San Sequoia)) good friends with **Xochitl Luna** (Luna-Sullivan (San Sequoia)) · saves: Building #2, Not So Berry, Rotational, Season Events · **in the new save**
-- **Nyon Specter** (Specter (Windenburg)) good friends with **Zelmira Gomes** (Gomes (Ravenwood)) · saves: Building #2, Rotational · **in the new save**
-- **Olive Specter** (Specter (Windenburg)) good friends with **Zuleika Izadi** (Izadi-Gomes (Ravenwood)) · saves: Building #2, Rotational · **in the new save**
+- **Nyon Specter** (Specter (Windenburg)) good friends with **Zelmira Gomes** (Gomes (Ravenwood)) · saves: Building #2, Rotational, Season Events · **in the new save**
+- **Olive Specter** (Specter (Windenburg)) good friends with **Zuleika Izadi** (Izadi-Gomes (Ravenwood)) · saves: Building #2, Rotational, Season Events · **in the new save**
 - **Alice Spencer-Kim** (Spencer-Kim-Lewis (Willow Creek)) good friends with **Minerva Charm** (Charm (Glimmerbrook)) · saves: Building #2, Horses!, Not So Berry · **to add**
 - **Alice Spencer-Kim** (Spencer-Kim-Lewis (Willow Creek)) good friends with **Moira Fyres** (Fyres (Windenburg)) · saves: Building #2, Horses!, Not So Berry · **to add**
 - **Jules Rico** (Sterling Rico (Evergreen Harbor)) good friends with **Tina Tinker** (Tinker (Evergreen Harbor)) · saves: Will the port be Promising? · **to add**
