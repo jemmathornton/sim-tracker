@@ -87,7 +87,7 @@ def main():
     U = json.load(open(os.path.join(ROOT, 'data', 'gallery', 'uploads.json'), encoding='utf-8'))['uploads']
     raw = {}
     for f in glob.glob(os.path.join(ROOT, 'data', 'worlds', '*.json')):
-        for l in json.load(open(f, encoding='utf-8')).get('lots', []):
+        for l in [l for h in json.load(open(f, encoding='utf-8')).get('neighbourhoods', []) for l in h['lots']]:   # the lot's own linked upload (was missed, 24 Oct)
             if l.get('lot', '').lower() == name.lower() and l.get('gallery'): raw = l
     gid = raw['gallery'][-1] if raw else None
     if not gid:   # the site's lot record: find its upload by title
