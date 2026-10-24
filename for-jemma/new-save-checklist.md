@@ -547,7 +547,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 ### Copperdale
 
-12 lots: 2 on the Gallery, 2 built but not shared, 8 not built.
+12 lots: 3 on the Gallery, 2 built but not shared, 7 not built.
 
 **Rockridge Heights**
 
@@ -568,7 +568,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 - [ ] **Totter Park**, 50x40: not built yet: leave the game’s lot for now. Type: Residential. Household: Price (EA).
 - [ ] **BridgeCreek Drive**, 30x30: not built yet: leave the game’s lot for now. Type: Backroom.
 - [ ] **Little Falls Nook**, 20x20: not built yet: leave the game’s lot for now. Type: Residential. Household: Harjo (EA).
-- [ ] **Hillside Haven**, 30x20: not built yet: leave the game’s lot for now. Type: Residential. Household: Donovan-Haynes (yours).
+- [ ] **Hillside Haven**, 30x20: place “Hillside Haven”. Type: Residential. It comes in as Haunted House Residential (its upload’s type): set it to Residential after placing. Household: Donovan-Haynes (yours).
 
 ### San Sequoia
 

@@ -169,9 +169,9 @@ def main():
         try:
             rec = fetch_item(i)
             if rec is None: gone.append(i); continue
-            # the search lists anything that mentions her name: only new uploads by her are added (the 8
-            # shell-challenge uploads credited to lilsimsie are already in the data and stay)
-            if i not in uploads and rec['creator'].lower() != CREATOR.lower(): others[i] = rec; continue
+            # the search lists anything that mentions her name: only new uploads by her are added, and her shell-challenge
+            # builds, which the Gallery credits to lilsimsie and lists under her name
+            if i not in uploads and rec['creator'].lower() not in (CREATOR.lower(), 'lilsimsie'): others[i] = rec; continue   # her shell-challenge builds are credited to lilsimsie (24 Oct: Hillside Haven)
             cl = fetch_comments(i)
         except Exception as e:
             failed.append(i); continue
