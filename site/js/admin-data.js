@@ -440,6 +440,21 @@ window.ADMIN = {
 {
 "section": "Households",
 "world": "",
+"text": "**Decide:** Start the new save again after EA's 27 Oct patch, with a premade-fix mod in first (Premade Sim and Relationship Overhaul, or Premade Sim Relationships Fix)? Both only work in a save made after they're installed."
+},
+{
+"section": "Households",
+"world": "",
+"text": "**Decide:** Links between households that only an old save has (21 family, 13 partners and exes, e.g. the Fyres as Savannah Kopf's parents, Dina Caliente married to Raj Rasoya): keep any? (research/inter-household-relationships.md)"
+},
+{
+"section": "Households",
+"world": "",
+"text": "**Do:** After bringing households in, put back the links between households with MC Command Center (research/inter-household-relationships.md lists each one, and which the new save already has)."
+},
+{
+"section": "Households",
+"world": "",
 "text": "**Decide:** Your new save has EA’s new family-tree ancestors (Feb 2026 update; only new saves get them). 25 aren’t on the site’s trees yet: the Thebe line back to Queen Thebe, the Darongs and Dreamers, Rodrigo De Pablo, Cahya and Wulan, Pranav Kunal. Add them?"
 },
 {
