@@ -21,9 +21,18 @@ PACKS = {"EP01": "Get to Work", "EP02": "Get Together", "EP03": "City Living", "
          "SP01": "Luxury Party Stuff", "SP02": "Perfect Patio Stuff", "SP03": "Cool Kitchen Stuff", "SP04": "Spooky Stuff", "SP05": "Movie Hangout Stuff",
          "SP06": "Romantic Garden Stuff", "SP07": "Kids Room Stuff", "SP08": "Backyard Stuff", "SP09": "Vintage Glamour Stuff", "SP10": "Bowling Night Stuff",
          "SP11": "Fitness Stuff", "SP12": "Toddler Stuff", "SP13": "Laundry Day Stuff", "SP14": "My First Pet Stuff", "SP15": "Moschino Stuff",
-         "SP16": "Tiny Living Stuff", "SP17": "Nifty Knitting", "SP18": "Paranormal Stuff"}
+         "SP16": "Tiny Living Stuff", "SP17": "Nifty Knitting", "SP18": "Paranormal Stuff",
+         "EP18": "Businesses & Hobbies", "SP29": "Blooming Rooms Kit", "SP35": "Desert Luxe Kit", "SP46": "Home Chef Hustle Stuff", "SP49": "Crystal Creations Stuff", "SP58": "Comfy Gamer Kit"}
 # the Gallery's own pack names that differ from the list above
 GALLERY_NAMES = {"Build Lush Gardens": "Romantic Garden Stuff", "Watch Movies with Friends!": "Movie Hangout Stuff", "Strangerville": "StrangerVille", "Tiny Living": "Tiny Living Stuff"}
+
+
+def gname(p):
+    """The Gallery's pack name in the words above ("The Sims™ 4  Paranormal Stuff Pack" -> "Paranormal Stuff")."""
+    p = re.sub(r'\s+', ' ', re.sub(r'^The Sims™ 4', '', p)).strip()
+    p = GALLERY_NAMES.get(p, p)
+    p = re.sub(r' (Expansion Pack|Game Pack)$', '', p); p = re.sub(r' Stuff Pack$', ' Stuff', p)
+    return {"Jungle Adventures": "Jungle Adventure"}.get(p, p)
 
 
 def object_packs():
@@ -94,7 +103,7 @@ def main():
         gid = next((k for k, v in U.items() if v['title'].lower() == name.lower() and v['kind'] in ('lot', 'room') and not v.get('gone')), None)
     gp = set()
     if gid:
-        u = U[gid]; gp = {GALLERY_NAMES.get(re.sub(r'^The Sims™ 4 ', '', p), re.sub(r'^The Sims™ 4 ', '', p)) for p in u['packs']}
+        u = U[gid]; gp = {gname(p) for p in u['packs']}
         print(f"Gallery: §{u['price']:,}, {len(gp)} packs: {', '.join(sorted(gp))}")
     lib = library(name, S)
     for iid, mt, price, n, pics in lib: print(f"Library copy {time.strftime('%d %b %Y', time.localtime(mt))}: §{price:,}, {n} packs")
