@@ -826,6 +826,7 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 .champ svg{width:14px;height:14px}
 .champ.small{margin-left:6px}
 .roster.animals td:nth-child(5){color:var(--muted);font-size:13px}
+.roster td.traits{color:var(--muted);font-size:13px}   /* traits in place of aspiration in the Sims table (her ask, 24 Oct), as in the animals table */
 .hh-pic-mono svg{width:54px;height:54px}   /* an animal's placeholder: its cat, dog or paw icon */
 /* horse competitions: medals for the best place at each level (19 Oct) */
 .comps th[scope=row]{font-weight:700;text-align:left}
