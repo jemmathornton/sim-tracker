@@ -143,11 +143,11 @@ def gallery_for(lot):
 # ---------- pictures ----------
 EXTERIOR = ['front', 'outside', 'side', 'angle', 'back', 'rear', 'aerial', 'exterior', 'garden', 'entrance']
 
-def photos_for(ws, ls, has_upload):
+def photos_for(ws, ls, has_upload, gallery_photos=False):
     """Jemma's screenshots (site/shots/<world>/<lot>/), exterior shots first and floor plans last; else the lot's Gallery
     picture, but only while the lot has a Gallery upload (a picture left behind after an upload moves never shows)."""
     dd = os.path.join(SITE, 'shots', ws, ls)
-    if not os.path.isdir(dd):
+    if gallery_photos or not os.path.isdir(dd):   # galleryPhotos: her screenshots are older than the build (24 Oct)
         cover = f"gallery/{ws}/{ls}.jpg"
         if not (has_upload and os.path.exists(os.path.join(SITE, cover))): return []
         # the upload's other three pictures (tools/gallery_more.py), marked "more"; lots show all four (her call, 23 Oct)
@@ -251,7 +251,7 @@ def build():
                 lots.append({"lot": l['lot'], "mine": l['myName'], "type": l['type'], "size": l['size'],
                              "who": (name + ("?" if unsure else "")) if name else None, "whoNote": note, **({"npc": True} if re.search(r"\*NPC", str(l.get("residents") or ""), re.I) else {}),
                              "built": l['built'], "shared": l['shared'], "sims": l['simsMade'],
-                             "gallery": g, "photos": photos_for(ws, slug(l['lot']), bool(g)),
+                             "gallery": g, "photos": photos_for(ws, slug(l['lot']), bool(g), l.get('galleryPhotos')),
                              **{k: l[k] for k in ("traits", "challenges", "units", "rebuild") if l.get(k)}})   # from her Building save (tools/lot_traits.py); units: a rental's own unit names and traits; rebuild: being rebuilt (her Admin checks skip it)
             if owned: w["hoods"].append({"name": hood['name'], "desc": hood.get('desc', ''), "color": W['colour'], "lots": lots,
                                          **{k: hood[k] for k in ("festivals", "ecoStart") if hood.get(k)}})

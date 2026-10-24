@@ -15,7 +15,7 @@
    "lots": [
     {"lot": "Fern Park", "myName": "Fern Park Flats", "type": "Residential Rental (5)", "size": "30x20", "residents": "Kirkland own", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["RiP+5wQ8RJK3hotf53yaQw==", "4J6IDbENEeuBuxaIFwKmRQ=="], "traits": ["Fast Internet", "Sunny Aspect"], "units": [{"name": "1", "traits": ["Fast Internet", "Sunny Aspect"]}, {"name": "2"}, {"name": "3"}, {"name": "4"}, {"name": "5"}], "tenants": [{"name": "Holiday", "unit": 1}, {"name": "Lee", "unit": 2}, {"name": "Scott", "unit": 3}]},
     {"lot": "Beech Byway", "myName": "Newcrest Community Space", "type": "Community Space", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["ngmQLbmXEeuN378NB92BJw==", "jFnAgrmXEeuNkr8NB92BJw==", "jucBIbmXEeuNor8NB92BJw==", "kZXBNLmXEeuNq78NB92BJw=="], "versions": [{"label": "Makers", "upload": "kZXBNLmXEeuNq78NB92BJw=="}, {"label": "Market", "upload": "ngmQLbmXEeuN378NB92BJw=="}, {"label": "Garden", "upload": "jucBIbmXEeuNor8NB92BJw=="}, {"label": "Community space", "upload": "jFnAgrmXEeuNkr8NB92BJw=="}], "traits": ["Eco Lot", "Teen Neighborhood"], "challenges": ["Reduce and Recycle"], "galleryLead": "kZXBNLmXEeuNq78NB92BJw=="},
-    {"lot": "Midtown Meadows", "myName": "Midtown Meadows", "type": "Residential Rental (5)", "size": "40x30", "residents": "Kirkland own", "built": true, "shared": true, "screenshots": true, "simsMade": false, "gallery": ["hUU2PF35R4KCXaGXOvgXJg=="], "traits": ["Bracing Breezes", "Gnomes", "Child's Play", "Good Schools", "Sunny Aspect", "Home Studio"], "units": [{"name": "1", "traits": ["Bracing Breezes", "Gnomes"]}, {"name": "2", "traits": ["Child's Play", "Good Schools", "Gnomes"]}, {"name": "3", "traits": ["Sunny Aspect", "Gnomes"]}, {"name": "4", "traits": ["Home Studio", "Gnomes"]}, {"name": "5", "traits": ["Child's Play", "Good Schools", "Gnomes"]}], "tenants": [{"name": "Bridges", "unit": 2}, {"name": "Washburn", "unit": 5}]},
+    {"lot": "Midtown Meadows", "myName": "Midtown Meadows", "type": "Residential Rental (5)", "size": "40x30", "residents": "Kirkland own", "built": true, "shared": true, "screenshots": true, "simsMade": false, "gallery": ["hUU2PF35R4KCXaGXOvgXJg=="], "galleryPhotos": true, "traits": ["Bracing Breezes", "Gnomes", "Child's Play", "Good Schools", "Sunny Aspect", "Home Studio"], "units": [{"name": "1", "traits": ["Bracing Breezes", "Gnomes"]}, {"name": "2", "traits": ["Child's Play", "Good Schools", "Gnomes"]}, {"name": "3", "traits": ["Sunny Aspect", "Gnomes"]}, {"name": "4", "traits": ["Home Studio", "Gnomes"]}, {"name": "5", "traits": ["Child's Play", "Good Schools", "Gnomes"]}], "tenants": [{"name": "Bridges", "unit": 2}, {"name": "Washburn", "unit": 5}]},
     {"lot": "Oak Alcove", "myName": "Oak Alcove", "type": "Residential", "size": "20x15", "residents": "Versaree", "built": true, "shared": true, "screenshots": false, "simsMade": true, "gallery": ["0p+N/YbaEeiMRh/IdAuKQQ=="], "traits": ["Natural Light", "Fast Internet", "Great Acoustics"]},
     {"lot": "Comfy Cubby", "myName": "Comfy Cubby", "type": "Residential", "size": "20x15", "residents": "Empty", "built": true, "shared": true, "screenshots": true, "simsMade": false, "gallery": ["fP8z05XKEeiCPH6gmyVpVw=="], "traits": ["Fast Internet", "Good Schools", "Sunny Aspect"]}
    ]
@@ -372,23 +372,13 @@
      "sex": "f",
      "origin": "Mine",
      "from": "save “Season Events” (2026-03-15)",
-     "age": "Teen",
-     "aspiration": "Country Caretaker",
-     "traits": ["Mean", "High Maintenance"],
-     "bonus": "Collector",
+     "age": "Child",
+     "aspiration": "Artistic Prodigy",
+     "traits": ["Mean"],
      "career": "",
-     "school": "High school · grade C",
      "skills": [
-      ["Gardening", 2, 10],
-      ["Fabrication", 10, 10],
-      ["Handiness", 10, 10],
-      ["Painting", 10, 10],
-      ["Juice Fizzing", 5, 5],
       ["Charisma", 1, 10],
-      ["Fitness", 4, 10],
-      ["Rocket Science", 2, 10],
-      ["Mischief", 1, 10],
-      ["Programming", 1, 10]
+      ["Mischief", 1, 10]
      ],
      "parents": ["gabrielle-washburn"],
      "ageDays": 11.3
@@ -399,21 +389,14 @@
      "sex": "m",
      "origin": "Mine",
      "from": "save “Season Events” (2026-03-15)",
-     "age": "Child",
-     "aspiration": "Whiz Kid",
-     "traits": ["Goofball"],
+     "age": "Toddler",
+     "traits": ["Fussy"],
      "career": "",
-     "school": "Grade school · grade C",
-     "skills": [
-      ["Mental", 2, 10],
-      ["Creativity", 2, 10],
-      ["Motor", 3, 10],
-      ["Skating", 1, 5]
-     ],
      "parents": ["gabrielle-washburn"],
      "ageDays": 11.3
     }
-   ]
+   ],
+   "gallery": ["Ivs2iTflTH2pnuY1ivY4hA=="]
   },
   "Bridges": {
    "sims": [
@@ -491,7 +474,8 @@
      "parents": ["louise-bridges"],
      "ageDays": 11.3
     }
-   ]
+   ],
+   "gallery": ["ZjjDcUO3QRGk3tMiPf19mA=="]
   },
   "Kirkland": {
    "sims": [

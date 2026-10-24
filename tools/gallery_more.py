@@ -27,7 +27,7 @@ def main(apply, rebuild=True):
         for h in W['neighbourhoods']:
             for l in h['lots']:
                 ls = slug(l['lot'])
-                if os.path.isdir(os.path.join(SITE, 'shots', ws, ls)) or l.get('versions'): continue   # her screenshots, or Community Space tabs
+                if (os.path.isdir(os.path.join(SITE, 'shots', ws, ls)) and not l.get('galleryPhotos')) or l.get('versions'): continue   # her screenshots, or Community Space tabs
                 i = lead(l)
                 if not i: continue
                 for n, url in enumerate((uploads[i].get('images') or [])[1:4], 2):

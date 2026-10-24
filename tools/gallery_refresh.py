@@ -143,7 +143,7 @@ def add_covers(worlds, uploads):
         for h in W['neighbourhoods']:
             for l in h['lots']:
                 ls = slug(l['lot']); dest = os.path.join(SITE, 'gallery', ws, ls + '.jpg')
-                if not l.get('gallery') or l.get('versions') or os.path.isdir(os.path.join(SITE, 'shots', ws, ls)) or os.path.exists(dest): continue
+                if not l.get('gallery') or l.get('versions') or (os.path.isdir(os.path.join(SITE, 'shots', ws, ls)) and not l.get('galleryPhotos')) or os.path.exists(dest): continue
                 u = next((uploads[i] for i in l['gallery'] if uploads.get(i, {}).get('images')), None)
                 if not u: continue
                 try:

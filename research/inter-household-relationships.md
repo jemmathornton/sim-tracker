@@ -163,7 +163,7 @@ Best friends, confidants and good friends.
 - **Max Villareal** (Villareal (Willow Creek)) good friends with **Tricia LeBlanc** (LeBlanc (Newcrest)) · saves: Rotational · **to add**
 - **Judith Ward** (Ward (Del Sol Valley)) good friends with **Moira Fyres** (Fyres (Windenburg)) · saves: Rotational · **to add**
 
-## Housemates you're splitting (13)
+## Housemates you're splitting (12)
 
 They share one household in a save but are two households on the site, so every link between them is listed, even plain friends.
 
@@ -179,7 +179,6 @@ They share one household in a save but are two households on the site, so every 
 - **Liberty Lee** (Lee (Newcrest)) friends with **Summer Holiday** (Holiday (Newcrest)) · saves: Building #2 · **to add**
 - **Diego Lobo** (Lobo (San Myshuno)) married to; good friends with **Maaike Haas** (Free Spirits (Windenburg)) · saves: Rotational · **to add**
 - **Imran Watson** (The Watsons (Henford-on-Bagley)) good friends with **Tane Ngata** (Ngata (Sulani)) · saves: Season Events · **to add**
-- **Gabrielle Washburn** (Washburn (Newcrest)) friends with **Louise Bridges** (Bridges (Newcrest)) · saves: Season Events · **to add**
 
 ## Enemies from your saves (2)
 
