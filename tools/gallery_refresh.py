@@ -57,8 +57,26 @@ def list_uploads():
     while True:
         _, d = api(f"/list-items?search={CREATOR}&limit=24&offset={off}")
         d = d['data']; ids += [i['slug'] for i in d['items']]
-        if not d.get('hasNext') or not d['items']: return ids
+        if not d.get('hasNext') or not d['items']: return list(dict.fromkeys(ids + library_ids()))
         off += 24; time.sleep(0.3)
+
+
+def library_ids():
+    """Gallery ids of her shared items, read from her Library (the Tray folder): the Gallery's search leaves out uploads
+    tagged as custom content (24 Oct: Palomino Junction, with her Sims' photos), but her Library copy keeps the id."""
+    import base64, glob
+    try:
+        import sims4files as s4
+        S = s4.save_schema(); out = []
+        for f in glob.glob(os.path.join(os.path.dirname(s4.SAVES), 'Tray', '*.trayitem')):
+            try: d = s4.decode(open(f, 'rb').read()[8:], '.EA.Sims4.Network.TrayMetadata', S, depth=0)
+            except Exception: continue
+            rid = d.get('remote_id')
+            if isinstance(rid, (bytes, bytearray)) and len(rid) == 16 and any(rid) and (d.get('creator_name') or '').lower() == CREATOR.lower():
+                out.append(base64.b64encode(bytes(rid)).decode())
+        return list(dict.fromkeys(out))
+    except Exception as e:
+        say(f"  her Library couldn't be read for shared items: {e}"); return []
 
 
 def fetch_item(i):
