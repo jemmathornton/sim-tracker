@@ -42,6 +42,8 @@ WANTED = {
     'friendship-disliked': ('enemies', 'dislikes'), 'friendship-despised': ('enemies', 'despises'), 'friendship-nemesis': ('enemies', 'nemesis of'),
     'SpecialBits_Enemy': ('enemies', 'enemy of'), 'SpecialBits_DeclaredArchEnemy': ('enemies', 'arch-enemy of'),
 }
+# her calls on links only an old save has: the Sim -> surname whose family links to them she doesn't want
+NO_FAMILY = {'Savannah Kopf': 'Fyres'}   # 24 Oct: a townie who married Leon, not Dominic and Moira's daughter
 RANK = {w: i for i, w in enumerate(['married to', 'engaged to', 'going steady with', 'secret lover of', 'fated mate of', 'widow of', 'widower of',
                                     'divorced from', 'broke off engagement with', 'broken up with', 'ex of',
                                     'best friends with', 'bromantic partner of', 'confidant of', 'good friends with', 'friends with',
@@ -171,6 +173,9 @@ def main():
             ha, hb = who.get(norm(na)), who.get(norm(nb))
             if not ha or not hb or set(ha) & set(hb): continue   # both in the plan, in different households
             if norm(na) > norm(nb): na, nb, words = nb, na, {(k, FLIP.get(w, w)) for k, w in words}
+            if any((x in NO_FAMILY and y.endswith(' ' + NO_FAMILY[x])) for x, y in ((na, nb), (nb, na))):
+                words = {(k, w) for k, w in words if k != 'family'}
+                if not words: continue
             key = (na, nb)
             if sv == NEW_SAVE: new_pairs.setdefault(key, set()).update(words)
             else: found.setdefault(key, {}).setdefault(sv, set()).update(words)

@@ -154,6 +154,19 @@ window.ADMIN = {
 "favourites": 2105,
 "downloads": 19956,
 "comments": 50
+},
+{
+"when": "24 Oct 2026 13:00",
+"ok": true,
+"linked": [
+"linked new upload “Streamlet Single” to Willow Creek / Streamlet Single"
+],
+"notes": [],
+"listed": 231,
+"new": 3,
+"favourites": 2108,
+"downloads": 20075,
+"comments": 50
 }
 ],
 "checklist": [
@@ -450,7 +463,7 @@ window.ADMIN = {
 {
 "section": "Households",
 "world": "",
-"text": "**Decide:** Links between households that only an old save has (21 family, 13 partners and exes, e.g. the Fyres as Savannah Kopf's parents, Dina Caliente married to Raj Rasoya): keep any? (research/inter-household-relationships.md)"
+"text": "**Decide:** Links between households that only an old save has (family and partners, e.g. Dina Caliente married to Raj Rasoya; Savannah Kopf is a townie, not a Fyres, her call 24 Oct): keep any? (research/inter-household-relationships.md)"
 },
 {
 "section": "Households",
@@ -533,14 +546,7 @@ window.ADMIN = {
 "text": "**Decide:** Going online: only if you ever want it on other devices (free and private with Cloudflare)."
 }
 ],
-"toSort": [
-{
-"id": "CSLbZoTMRWCn8KKc9D6ysA==",
-"title": "Streamlet Single",
-"lot": "Willow Creek / Streamlet Single",
-"why": "New on 2026-10-24: another copy of this build. Which should lead (normally the latest)?"
-}
-],
+"toSort": [],
 "newSave": {
 "saved": "2026-10-23 22:48",
 "lots": {
