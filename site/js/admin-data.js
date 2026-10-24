@@ -541,7 +541,14 @@ window.ADMIN = {
 "text": "**Decide:** Going online: only if you ever want it on other devices (free and private with Cloudflare)."
 }
 ],
-"toSort": [],
+"toSort": [
+{
+"id": "ffxPgJWnR/2fSqsfhF9b1A==",
+"title": "100 Babies Final House",
+"lot": null,
+"why": "New on 2026-10-24; not linked automatically, could be Willow Creek / Hallow Slough."
+}
+],
 "newSave": {
 "saved": "2026-10-23 22:48",
 "lots": {
@@ -1233,7 +1240,7 @@ window.ADMIN = {
 "fix": []
 }
 },
-"links": 96,
+"links": 95,
 "options": [
 "Season Length: still the game's 7 days; your pick is 28 days (set it before the holidays)",
 "Maximum Sim Count: 150; your pick is Unlimited (or the most your PC copes with)",

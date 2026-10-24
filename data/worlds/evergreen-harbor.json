@@ -367,12 +367,19 @@
      "aspiration": "Renaissance Sim",
      "traits": ["Geek", "Ambitious", "Green Fiend"],
      "bonus": "Quick Learner",
-     "career": "",
+     "career": "Civil Designer · Junior Draftsperson (level 1)",
      "skills": [
       ["Fabrication", 1, 10],
-      ["Fishing", 1, 10]
+      ["Fishing", 1, 10],
+      ["Charisma", 1, 10],
+      ["Fitness", 1, 10],
+      ["Comedy", 1, 10],
+      ["Mischief", 1, 10]
      ],
-     "ageDays": 80.6
+     "rels": [
+      ["Tatiana Estrada", "Best Friends"]
+     ],
+     "ageDays": 2.3
     },
     {
      "id": "tatiana-estrada",
@@ -384,15 +391,20 @@
      "aspiration": "Friend of the World",
      "traits": ["Outgoing", "Maker", "Green Fiend"],
      "bonus": "Gregarious",
-     "career": "",
+     "career": "Conservationist · Wildlife Enthusiast (level 1)",
      "skills": [
       ["Research & Debate", 1, 10],
       ["Cooking", 1, 10],
-      ["Fitness", 1, 10]
+      ["Fitness", 1, 10],
+      ["Charisma", 1, 10]
      ],
-     "ageDays": 73.4
+     "rels": [
+      ["Robyn Andersen", "Best Friends"]
+     ],
+     "ageDays": 0.5
     }
-   ]
+   ],
+   "gallery": ["JSiU4N9gTQytTKFeGnbd7A=="]
   },
   "Henley": {
    "sims": [

@@ -86,9 +86,9 @@ Not on the site's trees.
 - **Marcus Flex** (Partihaus (Windenburg)) widow of **Mila Munch** (Munch (Windenburg)) · saves: Season Events · **to add**
 - **Penny Pizzazz** (Pizzazz (San Myshuno)) divorced from **Rohan Elderberry** (Elderberry (Britechester)) · saves: Not So Berry · **to add**
 - **Christie Sigworth** (Sigworth (StrangerVille)) going steady with **Gideon Harris** (Harris (Evergreen Harbor)) · saves: Season Events · **to add**
-- **Layne Coffin** (Specter (Windenburg)) ex of **Radwan Gomes** (Gomes (Ravenwood)) · saves: Building #2, Horses!, Rotational, Season Events · **in the new save**
+- **Layne Coffin** (Specter (Windenburg)) ex of **Radwan Gomes** (Gomes (Ravenwood)) · saves: Horses!, Rotational, Season Events · **in the new save**
 
-## Close friends from your saves (73)
+## Close friends from your saves (72)
 
 Best friends, confidants and good friends.
 
@@ -120,7 +120,6 @@ Best friends, confidants and good friends.
 - **Ash Harjo** (Harjo (Copperdale)) good friends with **Molly Prescott** (Prescott (Copperdale)) · saves: Rotational · **in the new save**
 - **Cletus Harris** (Harris (Evergreen Harbor)) good friends with **Lia Hauata** (Hoapili (Sulani)) · saves: Not So Berry · **to add**
 - **Cletus Harris** (Harris (Evergreen Harbor)) good friends with **Tina Tinker** (Tinker (Evergreen Harbor)) · saves: Building #2 · **to add**
-- **Cletus Harris** (Harris (Evergreen Harbor)) good friends with **Mark Eggleston** (Eggleston (Del Sol Valley)) · saves: Building #2 · **to add**
 - **Francine Spencer** (Harris (Evergreen Harbor)) good friends with **Mary Greenburg** (Greenburg (Evergreen Harbor)) · saves: Building #2, Horses!, Not So Berry, Rotational, Will the port be Promising? · **to add (good friends with); new save has friends with**
 - **Brant Hecking** (Hecking (Brindleton Bay)) good friends with **Max Villareal** (Villareal (Willow Creek)) · saves: Rotational · **to add**
 - **Brant Hecking** (Hecking (Brindleton Bay)) good friends with **Mia LeBlanc** (LeBlanc (Newcrest)) · saves: Rotational · **to add**
@@ -142,9 +141,9 @@ Best friends, confidants and good friends.
 - **Alfie Reynolds** (Livin' In The City (San Myshuno)) good friends with **Lucas Munch** (Munch (Windenburg)) · saves: Rotational · **to add**
 - **Lisa Davidson** (Livin' In The City (San Myshuno)) good friends with **Marvin LeBlanc** (LeBlanc (Newcrest)) · saves: Rotational · **to add**
 - **Diego Lobo** (Lobo (San Myshuno)) good friends with **Supriya Delgato** (Delgato (Brindleton Bay)) · saves: Rotational · **to add**
-- **Dahlia Loden** (Loden (Nordhaven)) good friends with **Gert Koopman** (Koopman (Nordhaven)) · saves: 100 Baby Challenge!!, Building #2, Horses!, Not So Berry, Rotational, Season Events · **to add (good friends with); new save has friends with**
-- **Gramma Hattie Loden** (Loden (Nordhaven)) good friends with **Jolanda Koopman** (Koopman (Nordhaven)) · saves: 100 Baby Challenge!!, Building #2, Horses!, Not So Berry, Rotational, Season Events · **to add (good friends with); new save has friends with**
-- **Christopher Michaelson** (Michaelson (San Sequoia)) good friends with **Xochitl Luna** (Luna-Sullivan (San Sequoia)) · saves: Building #2, Horses!, Not So Berry, Rotational, Season Events · **in the new save**
+- **Dahlia Loden** (Loden (Nordhaven)) good friends with **Gert Koopman** (Koopman (Nordhaven)) · saves: 100 Baby Challenge!!, Horses!, Not So Berry, Rotational, Season Events · **to add (good friends with); new save has friends with**
+- **Gramma Hattie Loden** (Loden (Nordhaven)) good friends with **Jolanda Koopman** (Koopman (Nordhaven)) · saves: 100 Baby Challenge!!, Horses!, Not So Berry, Rotational, Season Events · **to add (good friends with); new save has friends with**
+- **Christopher Michaelson** (Michaelson (San Sequoia)) good friends with **Xochitl Luna** (Luna-Sullivan (San Sequoia)) · saves: Horses!, Not So Berry, Rotational, Season Events · **in the new save**
 - **Gunther Munch** (Munch (Windenburg)) good friends with **Siobhan Fyres** (Fyres (Windenburg)) · saves: Not So Berry · **to add**
 - **Lucas Munch** (Munch (Windenburg)) good friends with **Lucie Reynolds** (Reynolds (Willow Creek)) · saves: Rotational · **to add**
 - **Mila Munch** (Munch (Windenburg)) good friends with **Tara LeBlanc** (LeBlanc (Newcrest)) · saves: Rotational · **to add**
@@ -152,8 +151,8 @@ Best friends, confidants and good friends.
 - **Lucie Reynolds** (Reynolds (Willow Creek)) good friends with **Lucy Kopf** (Livin' In The City (San Myshuno)) · saves: Rotational · **to add**
 - **Carlos Rivera** (Rivera (Oasis Springs)) good friends with **Josie De Costa** (De Costa (Oasis Springs)) · saves: Return to the HOB, Rotational · **to add**
 - **Bernice Robles** (Robles (San Sequoia)) good friends with **Xochitl Luna** (Luna-Sullivan (San Sequoia)) · saves: Building #2, Horses!, Not So Berry, Rotational, Season Events · **in the new save**
-- **Nyon Specter** (Specter (Windenburg)) good friends with **Zelmira Gomes** (Gomes (Ravenwood)) · saves: Building #2, Horses!, Rotational, Season Events · **in the new save**
-- **Olive Specter** (Specter (Windenburg)) good friends with **Zuleika Izadi** (Izadi-Gomes (Ravenwood)) · saves: Building #2, Horses!, Rotational, Season Events · **in the new save**
+- **Nyon Specter** (Specter (Windenburg)) good friends with **Zelmira Gomes** (Gomes (Ravenwood)) · saves: Horses!, Rotational, Season Events · **in the new save**
+- **Olive Specter** (Specter (Windenburg)) good friends with **Zuleika Izadi** (Izadi-Gomes (Ravenwood)) · saves: Horses!, Rotational, Season Events · **in the new save**
 - **Alice Spencer-Kim** (Spencer-Kim-Lewis (Willow Creek)) good friends with **Minerva Charm** (Charm (Glimmerbrook)) · saves: Building #2, Horses!, Not So Berry · **to add**
 - **Alice Spencer-Kim** (Spencer-Kim-Lewis (Willow Creek)) good friends with **Moira Fyres** (Fyres (Windenburg)) · saves: Building #2, Horses!, Not So Berry · **to add**
 - **Jules Rico** (Sterling Rico (Evergreen Harbor)) good friends with **Tina Tinker** (Tinker (Evergreen Harbor)) · saves: Will the port be Promising? · **to add**
@@ -190,6 +189,6 @@ They share one household in a save but are two households on the site, so every 
 - **Alexa Barraza** (Barraza (Willow Creek)) despises **Marvin LeBlanc** (LeBlanc (Newcrest)) · saves: Rotational · **to add**
 - **Alicia Santiago** (Santiago Ojo (San Myshuno)) despises **Salim Benali** (Benali (San Myshuno)) · saves: Rotational · **to add**
 
-Not listed: lighter links (friends, acquaintances, dislikes); all 471 pairs are in research/data/relationships.json.
+Not listed: lighter links (friends, acquaintances, dislikes); all 458 pairs are in research/data/relationships.json.
 
 Saves read: Rotational (Slot_00000003.save), Building #2 (Slot_0000000d.save), Return to the HOB (Slot_00000011.save), Will the port be Promising? (Slot_00000012.save), 100 Baby Challenge!! (Slot_00000015.save), Horses! (Slot_00000016.save), Season Events (Slot_00000017.save), Not So Berry (Slot_00000018.save), Jemma's Sim World (Slot_00000019.save)
