@@ -111,7 +111,6 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 - **Decide:** Links between households that only an old save has (family and partners, e.g. Dina Caliente married to Raj Rasoya; Savannah Kopf is a townie, not a Fyres, her call 24 Oct): keep any? (research/inter-household-relationships.md)
 - **Do:** After bringing households in, put back the links between households with MC Command Center (research/inter-household-relationships.md lists each one, and which the new save already has).
 - **Decide:** Your new save has EA’s new family-tree ancestors (Feb 2026 update; only new saves get them). 25 aren’t on the site’s trees yet: the Thebe line back to Queen Thebe, the Darongs and Dreamers, Rodrigo De Pablo, Cahya and Wulan, Pranav Kunal. Add them?
-- **Decide:** Kopf: the Rotational copy seems off; which version do you want?
 - **Do:** Kirklands: age Kennedy, Kayleigh, Kamila and Kendrick as you want them.
 - **Do:** Check the 22 households filled from your saves (every copy: research/own-households-review.md).
 - **Do:** Make the ones in no save: Mine ×2, Dynamic Daters, Sporty and Nerdy Girls and Boys, My Celebs, Elders…

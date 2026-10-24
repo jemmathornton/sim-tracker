@@ -488,11 +488,6 @@ window.ADMIN = {
 {
 "section": "Households",
 "world": "",
-"text": "**Decide:** Kopf: the Rotational copy seems off; which version do you want?"
-},
-{
-"section": "Households",
-"world": "",
 "text": "**Do:** Kirklands: age Kennedy, Kayleigh, Kamila and Kendrick as you want them."
 },
 {
