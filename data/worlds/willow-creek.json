@@ -717,7 +717,7 @@
       ["Singing", 1, 10]
      ],
      "parents": ["chris-winters"],
-     "ageDays": 11.0
+     "ageDays": 11.1
     },
     {
      "id": "savanna-winters",
@@ -763,12 +763,14 @@
      "traits": ["Calm"],
      "career": "",
      "skills": [
-      ["Social", 3, 5]
+      ["Social", 3, 5],
+      ["Gross Motor", 1, 5]
      ],
      "parents": ["savanna-winters", "chris-winters"],
      "ageDays": 0.2
     }
-   ]
+   ],
+   "gallery": ["UdnhJwuTTLCwiLBLlNr/HA=="]
   },
   "Barraza": {
    "gallery": ["SDgwB8NoRySfzbAO8yr1eg=="],
