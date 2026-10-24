@@ -460,7 +460,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 - [ ] **Laurel Library**, 50x40: place “Laurel Library”. Type: Library. Traits: Study Spot, University Student Hang Out, Peace and Quiet.
 - [ ] **The Royal Crown** (game’s Pepper’s Pub), 20x20: place “The Royal Crown”. Type: Bar. Traits: University Student Hang Out, Convivial. Trait ideas (free slots): + Great Acoustics.
 - [ ] **Mossy Lane**, 20x15: place “Mossy Lane”. Search it by name (its upload has no #britechester tag). Type: University Housing. It comes in as Residential (its upload’s type): set it to University Housing after placing. University: pick in game. Traits: Homey, Cat Hangout. Trait ideas (free slots): + Study Spot.
-- [ ] **Spring Steppes**, 20x15: place “Spring Steppes”. Search it by name (its upload has no #britechester tag). Not the other copy: “Spring Steppes” (University Housing). Type: Residential Rental (3). Elderberry (EA, landlord, unit 1). Tenants: Pleasant unit 3. Traits: Homey, Cat Hangout. Units (set after placing): 1 (Homey, Cat Hangout); 2; 3.
+- [ ] **Spring Steppes**, 20x15: place “Spring Steppes”. Search it by name (its upload has no #britechester tag). Type: Residential Rental (3). Elderberry (EA, landlord, unit 1). Tenants: Pleasant unit 3. Traits: Homey, Cat Hangout. Units (set after placing): 1 (Homey, Cat Hangout); 2; 3.
 
 ### Evergreen Harbor
 
