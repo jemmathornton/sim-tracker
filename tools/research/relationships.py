@@ -237,7 +237,8 @@ def write_md(rows, saves):
         shown += len(rs)
     L += [f"Not listed: lighter links (friends, acquaintances, dislikes); all {len(rows)} pairs are in research/data/relationships.json.", ""]
     L += ["Saves read: " + ", ".join(f"{k} ({v[0]})" for k, v in saves.items()), ""]
-    open(OUT_MD, 'w', encoding='utf-8').write(chr(10).join(L))
+    open(OUT_MD, 'w', encoding='utf-8', newline='
+').write(chr(10).join(L))
     print('wrote', OUT_MD, len(rows))
 
 
