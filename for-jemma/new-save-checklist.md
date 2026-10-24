@@ -93,7 +93,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 ### Oasis Springs
 
-22 lots: 18 on the Gallery, 1 built but not shared, 3 not built.
+22 lots: 19 on the Gallery, 0 built but not shared, 3 not built.
 
 **Bedrock Strait**
 
@@ -107,7 +107,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 - [ ] **Vista Quarry Villa** (game’s Vista Quarry), 30x20: place “Vista Quarry Villa”. Type: Residential. Traits: Natural Light. Challenge: Quake Zone. Trait ideas (free slots): Good Schools, Homey.
 - [ ] **Raffia Quinta**, 20x15: place “Raffia Quinta”. Type: Tiny Home Residential. Household: Rivera (yours). Traits: Homey, Eco Lot. Trait ideas (free slots): + Great Soil.
-- [ ] **Dusty Turf**, 30x20: built but not on the Gallery: bring it over through your Library (3 copies, 21 Dec 23) (if you changed it in your Building save since, save it to your Library again from there first). Type: Residential. Household: De Costa (yours).
+- [ ] **Dusty Turf**, 30x20: place “Dusty Turf”. Type: Residential. Household: De Costa (yours).
 - [ ] **Springscape**, 30x20: Rebuild first (two adult bedrooms and a teen’s room for the Curiouses), then place the new upload. Type: Residential. Household: Curious (EA: Nova; Maxis Gallery: Vidcund and Lazlo). Challenge: Quake Zone. Trait ideas (free slots): Sunny Aspect, Homey (like its neighbours).
 - [ ] **Palm Springs Public Pool** (game’s Cacti Casa), 40x30: place “Palm Springs Public Pool”. Type: Pool. Traits: Bracing Breezes. Challenge: Quake Zone. Trait ideas (free slots): Geothermal (warm pools), Party Place.
 
