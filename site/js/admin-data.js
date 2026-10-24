@@ -1220,32 +1220,7 @@ window.ADMIN = {
 "fix": []
 }
 },
-"together": [
-{
-"households": [
-"Leah-Moon Cadberry (Oasis Springs)",
-"Sylvia & Kenny Cadberry (Newcrest)"
-],
-"sims": 3,
-"pairs": [
-"Leah-Moon Cadberry with Sylvia Cadberry"
-]
-},
-{
-"households": [
-"Davidson 1 (Willow Creek)",
-"Kopf (Willow Creek)",
-"Livin' In The City (San Myshuno)",
-"Reynolds (Willow Creek)"
-],
-"sims": 15,
-"pairs": [
-"Davidson 1 with Lisa Davidson",
-"Kopf with Lucy Kopf",
-"Reynolds with Alfie Reynolds"
-]
-}
-],
+"links": 96,
 "options": [
 "Season Length: still the game's 7 days; your pick is 28 days (set it before the holidays)",
 "Maximum Sim Count: 150; your pick is Unlimited (or the most your PC copes with)",

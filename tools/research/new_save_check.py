@@ -397,7 +397,8 @@ def main():
         m = re.search(r'(?:only in your|version is in your) “([^”]+)”', r.get('how') or '')
         if m: by_save.setdefault(m.group(1), []).append(r['household'])
     out['fromSaves'] = [{"save": k, "households": sorted(v)} for k, v in sorted(by_save.items(), key=lambda x: -len(x[1]))]
-    # her own households joined by family (parents, partners) to Sims in another household: the Library keeps links only
+    # (kept for the record; not shown since 24 Oct: each household comes over on its own, one Gallery upload each, and
+    # she puts the links back with MCCC: tools/research/relationships.py) her own households joined by family to another household: the Library keeps links only
     # inside one household, so save the family as one household, place it, then split it in the new save (research/moving-households.md)
     hh_of, links, name_of = {}, [], {}
     for wn2, HH in D['households'].items():
@@ -565,12 +566,6 @@ def main():
     if out['fromSaves']:
         L += ["## Old saves to open", "", "Open each once, save these households to your Library, then add them in the new save:", ""]
         L += [f"- “{g['save']}”: {', '.join(g['households'])}" for g in out['fromSaves']] + [""]
-    if out['saveTogether']:
-        L += ["## Save these together", "", "Family links to Sims in another household are lost when a household comes from the Library. Save each group as one household (8 Sims at most), place it, then split it:", ""]
-        for g in out['saveTogether']:
-            if g['sims'] <= 8: L.append(f"- {' + '.join(g['households'])} ({g['sims']} Sims)")
-            else: L.append(f"- {' + '.join(g['households'])}: {g['sims']} Sims, too many for one household. Bring each family over with its relative from the other household instead ({'; '.join(g['pairs'])}), then split them off and merge them back into their own household in the new save, which keeps the links.")
-        L.append("")
     if out['ahead']:
         L += ["## Living on lots still to place", "", "The game moves them out when you place your build. Where the plan wants them:", ""]
         L += [f"- {q['world']} / {q['lot']}: {q['household']} → {q['goes']}" for q in out['ahead']] + [""]

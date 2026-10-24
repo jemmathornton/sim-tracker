@@ -32,6 +32,19 @@ def gather():
     return out
 
 # her new save against the plan (tools/research/new_save_check.py, 23 Oct): per world, what's left to place, fix or move
+def links_to_add():
+    """How many links between households the new save doesn't have yet (research/data/relationships.json, tools/research/relationships.py)."""
+    p = os.path.join(ROOT, 'research', 'data', 'relationships.json')
+    if not os.path.exists(p): return 0
+    close = ('best friends with', 'bromantic partner of', 'confidant of', 'good friends with')
+    n = 0
+    for r in json.load(open(p, encoding='utf-8'))['pairs']:
+        want = list(r.get('site') or []) + ([r['friends']] if r.get('friends') in close else [])   # the site's family links and close friends (save-only family and partners are hers to decide)
+        have = set(r.get('in_new_save') or [])
+        if any(w not in have and not ('partner of' in have and w in ('married to', 'engaged to', 'going steady with')) for w in want): n += 1
+    return n
+
+
 def new_save():
     p = ROOT / "research" / "data" / "new-save-status.json"
     if not p.exists(): return None
@@ -49,7 +62,7 @@ def new_save():
     order = list(d["worlds"]); worlds.sort(key=lambda w: order.index(w["world"]))
     import sys; sys.path.insert(0, str(ROOT / "tools")); from common import slug
     lots = {f"l-{slug(wn)}--{slug(r['lot'])}": {"s": r.get("status"), "fix": r.get("issues") or []} for wn, rows in d["worlds"].items() for r in rows if r.get("status") in ("placed", "to place")}
-    return {"saved": d["saved"], "lots": lots, "together": d.get("saveTogether", []), "options": d.get("options", []), "fromSaves": d.get("fromSaves", []), "eco": d.get("eco", []), "clubs": d.get("clubs", []),
+    return {"saved": d["saved"], "lots": lots, "links": links_to_add(), "options": d.get("options", []), "fromSaves": d.get("fromSaves", []), "eco": d.get("eco", []), "clubs": d.get("clubs", []),
             "newTraits": [r["name"] for rows in d["worlds"].values() for r in rows if r.get("newTraits") or r.get("newUnitTraits")], "worlds": worlds, "notStarted": [wn for wn, rows in d["worlds"].items() if not any(r.get("status") == "placed" for r in rows)]}
 
 # weekly Gallery refresh: one entry per run in logs/gallery-refresh.log

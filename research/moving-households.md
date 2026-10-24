@@ -4,7 +4,7 @@
 
 1. **Moving inside one save is safe for relationships.** Every Sim in a save shares one pool, so moving a household to another lot or world keeps friends, family tree, jobs and clubs. Only the furniture choice (keep or sell) and money change.
 2. **The Library breaks links to anyone outside the household.** Relationships and family-tree links survive only between Sims saved together in one household. Skills, traits and looks travel; inventories don't.
-3. **To keep a family tree across saves, save the whole family as one household** (up to 8 Sims and pets), place it, then split it in Manage Households. Splitting inside a save keeps every link.
+3. *(24 Oct, her call: not used. Each household comes over on its own, one Gallery upload each, and she puts the links back with MC Command Center from research/inter-household-relationships.md.)* **To keep a family tree across saves, save the whole family as one household** (up to 8 Sims and pets), place it, then split it in Manage Households. Splitting inside a save keeps every link.
 4. **Heart every household you place or move** (My Households). Homeless and unhearted households can be culled, even premades.
 5. **The big 2026 risk is the family tree rework (3 Feb 2026).** Players still report wrong or missing relatives in long saves. Check each family's tree after moving, and keep a backup before each batch.
 

@@ -154,13 +154,6 @@ Open each once, save these households to your Library, then add them in the new 
 - “Will the port be Promising?”: Henley
 - “Horses!”: Palumbo
 
-## Save these together
-
-Family links to Sims in another household are lost when a household comes from the Library. Save each group as one household (8 Sims at most), place it, then split it:
-
-- Leah-Moon Cadberry (Oasis Springs) + Sylvia & Kenny Cadberry (Newcrest) (3 Sims)
-- Davidson 1 (Willow Creek) + Kopf (Willow Creek) + Livin' In The City (San Myshuno) + Reynolds (Willow Creek): 15 Sims, too many for one household. Bring each family over with its relative from the other household instead (Davidson 1 with Lisa Davidson; Kopf with Lucy Kopf; Reynolds with Alfie Reynolds), then split them off and merge them back into their own household in the new save, which keeps the links.
-
 ## Living on lots still to place
 
 The game moves them out when you place your build. Where the plan wants them:
