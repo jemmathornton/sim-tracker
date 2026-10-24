@@ -1155,19 +1155,19 @@ function hhLotLines(hh){
 const dynLine = ids => [...new Set(ids.map(id => (dynastyOf(id) || [])[0]).filter(Boolean))].map(gid => { const roles = ids.map(dynastyOf).filter(d => d && d[0] === gid).map(d => d[2]);
   return `<a href="#${gid}">${ic("crown")}${esc(GROUP_PAGES[gid].name)}</a>${roles.every(r => r === "outcast") ? " (outcast)" : ""}`; }).join(", ");
 function simRoster(ids){
-  return `<div class="sheet-wrap"><table class="sheet roster"><thead><tr><th scope="col">Sim</th><th scope="col">Life stage</th><th scope="col">Life state</th><th scope="col">Aspiration</th><th scope="col">Career or school</th></tr></thead><tbody>
+  return `<div class="sheet-wrap"><table class="sheet roster"><thead><tr><th scope="col">Sim</th><th scope="col">Life state</th><th scope="col">Life stage</th><th scope="col">Aspiration</th><th scope="col">Career or school</th></tr></thead><tbody>
     ${ids.map(id => { const s = SIMS[id], uni = /^(University of Britechester|Foxbury Institute) · (.+?)( \(distinguished\))?$/.exec(s.school || ""),
         sch = uni ? `${uni[2]} (${uni[1].startsWith("Foxbury") ? "Foxbury" : "UoB"})` : (s.school || "").replace(" · ", ", "),
         job = [(s.career || stayAtHome(s)).split(" · ")[0], sch].filter(Boolean).join(" · ");   // a job and a school both show, with the grade (her ask, 24 Oct)
       return `<tr><td><span class="who"><span class="mono">${initial(s.name)}</span><a href="#s-${id}">${esc(s.name)}</a></span></td>
-        <td>${esc(s.age)}</td><td>${s.state ? lifeState(s, "state") : `<span class="state">${ic("sim")}Human</span>`}</td>
+        <td>${s.state ? lifeState(s, "state") : `<span class="state">${ic("sim")}Human</span>`}</td><td>${esc(s.age)}</td>
         <td>${s.aspiration ? esc(s.aspiration) : `<span class="muted">—</span>`}</td><td>${job ? esc(job) : `<span class="muted">—</span>`}</td></tr>`; }).join("")}</tbody></table></div>`;
 }
 function animalRoster(ids){
-  return `<div class="sheet-wrap"><table class="sheet roster animals"><thead><tr><th scope="col">Name</th><th scope="col">Life stage</th><th scope="col">Animal</th><th scope="col">Breed</th><th scope="col">Traits</th></tr></thead><tbody>
+  return `<div class="sheet-wrap"><table class="sheet roster animals"><thead><tr><th scope="col">Name</th><th scope="col">Animal</th><th scope="col">Life stage</th><th scope="col">Breed</th><th scope="col">Traits</th></tr></thead><tbody>
     ${ids.map(id => { const s = SIMS[id], dash = `<span class="muted">—</span>`;
       return `<tr><td><span class="who"><span class="mono">${initial(s.name)}</span><a href="#s-${id}">${esc(s.name)}</a>${isChampion(s) ? `<span class="champ small" title="Champion">${ic("ph-trophy")}</span>` : ""}</span></td>
-        <td>${esc(stageOf(s) || "")}</td><td><span class="state animal">${animalIcon(s)}${esc(s.state)}</span></td><td>${s.breed ? esc(s.breed) : dash}</td>
+        <td><span class="state animal">${animalIcon(s)}${esc(s.state)}</span></td><td>${esc(stageOf(s) || "")}</td><td>${s.breed ? esc(s.breed) : dash}</td>
         <td>${s.traits && s.traits.length ? esc(s.traits.join(", ")) : dash}</td></tr>`; }).join("")}</tbody></table></div>`;
 }
 function householdNew(hh){
