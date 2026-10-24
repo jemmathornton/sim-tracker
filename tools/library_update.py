@@ -19,6 +19,8 @@ TRAY = os.path.join(os.path.dirname(s4.SAVES), 'Tray')
 AGES = {1: "Baby", 2: "Toddler", 4: "Child", 8: "Teen", 16: "Young Adult", 32: "Adult", 64: "Elder", 128: "Infant"}
 FIELDS = ("age", "aspiration", "bonus", "traits", "career", "careerNote", "school", "skills")
 G = load(os.path.join(ROOT, 'research', 'data', 'game-names.json'))
+# village errands are odd jobs around Henford, not a career: a Sim doing them is a stay-at-home parent (24 Oct, her call: Julian Watson-Holmes)
+NOT_JOBS = {"Village Errands"}
 norm = lambda x: re.sub(r'[^a-z]', '', (x or '').lower())
 
 
@@ -41,7 +43,7 @@ def skill(h, v):
 
 def career(c):
     t = G['tracks'].get(str(c.get('track_uid')))
-    if not t: return None
+    if not t or t['career'] in NOT_JOBS: return None
     i = c.get('track_level', 0); title = t['titles'][i] if i < len(t['titles']) else None
     return t['career'], title, c.get('user_display_level') or i + 1
 

@@ -14,6 +14,7 @@ import glob, json, os, re, shutil, struct, subprocess, sys, tempfile, time
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import sims4files as s4
 from common import ROOT, load, save
+from library_update import NOT_JOBS
 
 S = s4.save_schema(); P = '.EA.Sims4.Persistence.'; N = '.EA.Sims4.Network.'
 TRAY = os.path.join(os.path.dirname(s4.SAVES), 'Tray')
@@ -135,9 +136,9 @@ def main(apply):
             tot += st
             if v >= tot: lv += 1
         return [name, lv, len(G['skill_levels'].get(kind, G['skill_levels']['MAJOR']))]
-    def career(c):
+    def career(c):   # village errands aren't a career (24 Oct, her call)
         t = G['tracks'].get(str(c.get('track_uid')))
-        if not t: return None
+        if not t or t['career'] in NOT_JOBS: return None
         i = c.get('track_level', 0); title = t['titles'][i] if i < len(t['titles']) else None
         return t['career'], title, c.get('user_display_level') or i + 1
 

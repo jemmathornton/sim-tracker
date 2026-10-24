@@ -319,8 +319,9 @@
   "Watson-Holmes": {
    "sims": [
     {
-     "id": "natalie-watson",
-     "name": "Natalie Watson",
+     "id": "natalie-watson-holmes",
+     "name": "Natalie Watson-Holmes",
+     "born": "Watson",
      "sex": "f",
      "origin": "Mine",
      "from": "save “Return to the HOB” (2023-12-21)",
@@ -350,13 +351,14 @@
       ["Handiness", 1, 10]
      ],
      "partners": [
-      ["julian-holmes", "Spouse"]
+      ["julian-watson-holmes", "Spouse"]
      ],
      "ageDays": 5.3
     },
     {
-     "id": "julian-holmes",
-     "name": "Julian Holmes",
+     "id": "julian-watson-holmes",
+     "name": "Julian Watson-Holmes",
+     "born": "Holmes",
      "sex": "m",
      "origin": "Mine",
      "from": "save “Return to the HOB” (2023-12-21)",
@@ -364,7 +366,7 @@
      "aspiration": "Country Caretaker",
      "traits": ["Clumsy", "Animal Enthusiast", "Loves Outdoors"],
      "bonus": "Collector",
-     "career": "Village Errands · Village Errands (level 1)",
+     "career": "",
      "skills": [
       ["Charisma", 2, 10],
       ["Gardening", 9, 10],
@@ -382,7 +384,7 @@
       ["Parenting", 4, 10]
      ],
      "partners": [
-      ["natalie-watson", "Spouse"]
+      ["natalie-watson-holmes", "Spouse"]
      ],
      "ageDays": 5.8
     },
@@ -404,7 +406,7 @@
       ["Creativity", 2, 10],
       ["Cross-stitch", 1, 5]
      ],
-     "parents": ["natalie-watson", "julian-holmes"],
+     "parents": ["natalie-watson-holmes", "julian-watson-holmes"],
      "ageDays": 3.5
     },
     {
@@ -419,14 +421,15 @@
      "breed": "American Wirehair",
      "traits": ["Free Spirit", "Playful", "Lazy"],
      "rels": [
-      ["Julian Holmes", "Friend"],
+      ["Julian Watson-Holmes", "Friend"],
       ["Daisy Watson-Holmes", "Friend"],
-      ["Natalie Watson", "Acquaintance"],
+      ["Natalie Watson-Holmes", "Acquaintance"],
       ["Thomas Watson", "Acquaintance"]
      ],
-     "ageDays": 0.4
+     "ageDays": 1.2
     }
-   ]
+   ],
+   "gallery": ["E6mzYa2tROu9+TSfPtrqdw=="]
   }
  },
  "weatherSeasons": {
