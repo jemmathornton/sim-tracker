@@ -1,6 +1,7 @@
 {
  "households": {
   "brindleton-bay|Ventura": "library/brindleton-bay/ventura.webp",
+  "chestnut-ridge|Palumbo": "library/chestnut-ridge/palumbo.webp",
   "copperdale|Donovan-Haynes": "library/copperdale/donovan-haynes.webp",
   "evergreen-harbor|Eco Roomies": "library/evergreen-harbor/eco-roomies.webp",
   "evergreen-harbor|Henley": "library/evergreen-harbor/henley.webp",
@@ -25,7 +26,14 @@
  "sims": {
   "daisy-ventura": "library/sims/daisy-ventura.webp",
   "cocoa-ventura": "library/sims/cocoa-ventura.webp",
+  "puzzles": "library/sims/puzzles.webp",
   "beatrice-palumbo": "library/sims/beatrice-palumbo.webp",
+  "lacy-palumbo": "library/sims/lacy-palumbo.webp",
+  "longface": "library/sims/longface.webp",
+  "bluebell": "library/sims/bluebell.webp",
+  "queen": "library/sims/queen.webp",
+  "pie": "library/sims/pie.webp",
+  "buttercup": "library/sims/buttercup.webp",
   "josie-donovan": "library/sims/josie-donovan.webp",
   "madelyn-haynes": "library/sims/madelyn-haynes.webp",
   "misty-haynes": "library/sims/misty-haynes.webp",

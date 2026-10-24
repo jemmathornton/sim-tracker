@@ -324,7 +324,7 @@
      ],
      "rels": [
       ["Beatrice Palumbo", "Good Friend"],
-      ["Lacy Tompkins", "Good Friend"],
+      ["Lacy Palumbo", "Good Friend"],
       ["Pie", "Acquaintance"],
       ["Buttercup", "Acquaintance"],
       ["Queen", "Acquaintance"],
@@ -342,7 +342,7 @@
      "aspiration": "Master Chef",
      "traits": ["Horse Lover", "Loves Outdoors", "Ambitious"],
      "bonus": "Essence of Flavor",
-     "career": "",
+     "career": "Palomino Stable Owner",
      "skills": [
       ["Charisma", 9, 10],
       ["Video Gaming", 1, 10],
@@ -359,13 +359,15 @@
       ["Gourmet Cooking", 3, 10]
      ],
      "partners": [
-      ["lacy-tompkins", "Partner"]
+      ["lacy-palumbo", "Partner"]
      ],
-     "ageDays": 107.5
+     "ageDays": 76.9,
+     "careerNote": "Owns and runs Palomino Stables alongside her partner Lacy."
     },
     {
-     "id": "lacy-tompkins",
-     "name": "Lacy Tompkins",
+     "id": "lacy-palumbo",
+     "name": "Lacy Palumbo",
+     "born": "Tompkins",
      "sex": "f",
      "origin": "Mine",
      "from": "save “Horses!” (2024-01-12)",
@@ -373,7 +375,7 @@
      "aspiration": "Expert Nectar Maker",
      "traits": ["Dog Lover", "Loves Outdoors", "Child of the Ocean"],
      "bonus": "Essence of Flavor",
-     "career": "Diver · Snorkel Guide (level 1)",
+     "career": "Palomino Stable Owner",
      "skills": [
       ["Gardening", 7, 10],
       ["Horse Riding", 10, 10],
@@ -395,7 +397,8 @@
      "partners": [
       ["beatrice-palumbo", "Partner"]
      ],
-     "ageDays": 70.0
+     "ageDays": 33.4,
+     "careerNote": "Owns and runs Palomino Stables alongside her partner Beatrice."
     },
     {
      "id": "longface",
@@ -421,7 +424,7 @@
       ["Barrel Racing", "Master", "3rd"]
      ],
      "rels": [
-      ["Lacy Tompkins", "Good Friend"],
+      ["Lacy Palumbo", "Good Friend"],
       ["Beatrice Palumbo", "Acquaintance"],
       ["Pie", "Acquaintance"],
       ["Queen", "Acquaintance"]
@@ -454,12 +457,12 @@
      ],
      "rels": [
       ["Beatrice Palumbo", "Good Friend"],
-      ["Lacy Tompkins", "Friend"],
+      ["Lacy Palumbo", "Friend"],
       ["Pie", "Acquaintance"],
       ["Buttercup", "Acquaintance"],
       ["Queen", "Acquaintance"]
      ],
-     "ageDays": 69.4
+     "ageDays": 69.5
     },
     {
      "id": "queen",
@@ -478,7 +481,7 @@
      "rels": [
       ["Puzzles", "Acquaintance"],
       ["Beatrice Palumbo", "Friend"],
-      ["Lacy Tompkins", "Acquaintance"],
+      ["Lacy Palumbo", "Acquaintance"],
       ["Longface", "Acquaintance"],
       ["Bluebell", "Acquaintance"],
       ["Pie", "Acquaintance"],
@@ -503,7 +506,7 @@
      "rels": [
       ["Puzzles", "Acquaintance"],
       ["Beatrice Palumbo", "Good Friend"],
-      ["Lacy Tompkins", "Friend"],
+      ["Lacy Palumbo", "Friend"],
       ["Longface", "Acquaintance"],
       ["Bluebell", "Acquaintance"],
       ["Queen", "Acquaintance"]
@@ -528,13 +531,14 @@
      "rels": [
       ["Puzzles", "Acquaintance"],
       ["Beatrice Palumbo", "Friend"],
-      ["Lacy Tompkins", "Acquaintance"],
+      ["Lacy Palumbo", "Acquaintance"],
       ["Bluebell", "Acquaintance"],
       ["Queen", "Acquaintance"]
      ],
      "ageDays": 6.9
     }
-   ]
+   ],
+   "gallery": ["jnCKhlM/QJC2GcJm2vQEKQ=="]
   }
  },
  "weatherSeasons": {
