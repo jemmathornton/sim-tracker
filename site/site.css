@@ -825,8 +825,11 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 .sim-chips .champ{color:#F1D58A;border-color:rgba(241,213,138,.6)}
 .champ svg{width:14px;height:14px}
 .champ.small{margin-left:6px}
-.roster.animals td:nth-child(5){color:var(--muted);font-size:13px}
-.roster td.traits{color:var(--muted);font-size:13px}   /* traits in place of aspiration in the Sims table (her ask, 24 Oct), as in the animals table */
+/* the Sims and animals tables line up column for column (her ask, 24 Oct): name, life state, life stage, traits, then career or breed */
+.roster{table-layout:fixed}
+.roster th:nth-child(1){width:26%}.roster th:nth-child(2){width:12%}.roster th:nth-child(3){width:11%}.roster th:nth-child(4){width:27%}
+.roster td.tlist,.roster td:nth-child(5){white-space:normal}
+.roster td.tlist{color:var(--muted);font-size:13px}
 .hh-pic-mono svg{width:54px;height:54px}   /* an animal's placeholder: its cat, dog or paw icon */
 /* horse competitions: medals for the best place at each level (19 Oct) */
 .comps th[scope=row]{font-weight:700;text-align:left}
@@ -1023,6 +1026,7 @@ details.adm-more summary{cursor:pointer;font-weight:700;font-size:14px;color:var
 .sheet th.ns-th{white-space:normal;line-height:1.1;font-size:inherit}
 .sheet.ns-on th,.sheet.ns-on td{padding-left:4px;padding-right:4px}
 @media (max-width:700px){
+  .roster{min-width:720px}   /* the lined-up Sims and animals tables scroll sideways on a phone instead of squashing */
   .adm-two{grid-template-columns:1fr}
   .cal-hero .patch a span{display:none}
   .adm-list li{grid-template-columns:minmax(0,1fr)}

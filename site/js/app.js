@@ -1161,14 +1161,14 @@ function simRoster(ids){
         job = [(s.career || stayAtHome(s)).split(" · ")[0], sch].filter(Boolean).join(" · ");   // a job and a school both show, with the grade (her ask, 24 Oct)
       return `<tr><td><span class="who"><span class="mono">${initial(s.name)}</span><a href="#s-${id}">${esc(s.name)}</a></span></td>
         <td>${s.state ? lifeState(s, "state") : `<span class="state">${ic("sim")}Human</span>`}</td><td>${esc(s.age)}</td>
-        <td class="traits">${s.traits && s.traits.length ? esc(s.traits.join(", ")) : `<span class="muted">—</span>`}</td><td>${job ? esc(job) : `<span class="muted">—</span>`}</td></tr>`; }).join("")}</tbody></table></div>`;
+        <td class="tlist">${s.traits && s.traits.length ? esc(s.traits.join(", ")) : `<span class="muted">—</span>`}</td><td>${job ? esc(job) : `<span class="muted">—</span>`}</td></tr>`; }).join("")}</tbody></table></div>`;
 }
 function animalRoster(ids){
-  return `<div class="sheet-wrap"><table class="sheet roster animals"><thead><tr><th scope="col">Name</th><th scope="col">Animal</th><th scope="col">Life stage</th><th scope="col">Breed</th><th scope="col">Traits</th></tr></thead><tbody>
+  return `<div class="sheet-wrap"><table class="sheet roster animals"><thead><tr><th scope="col">Name</th><th scope="col">Animal</th><th scope="col">Life stage</th><th scope="col">Traits</th><th scope="col">Breed</th></tr></thead><tbody>
     ${ids.map(id => { const s = SIMS[id], dash = `<span class="muted">—</span>`;
       return `<tr><td><span class="who"><span class="mono">${initial(s.name)}</span><a href="#s-${id}">${esc(s.name)}</a>${isChampion(s) ? `<span class="champ small" title="Champion">${ic("ph-trophy")}</span>` : ""}</span></td>
-        <td><span class="state animal">${animalIcon(s)}${esc(s.state)}</span></td><td>${esc(stageOf(s) || "")}</td><td>${s.breed ? esc(s.breed) : dash}</td>
-        <td>${s.traits && s.traits.length ? esc(s.traits.join(", ")) : dash}</td></tr>`; }).join("")}</tbody></table></div>`;
+        <td><span class="state animal">${animalIcon(s)}${esc(s.state)}</span></td><td>${esc(stageOf(s) || "")}</td><td class="tlist">${s.traits && s.traits.length ? esc(s.traits.join(", ")) : dash}</td>
+        <td>${s.breed ? esc(s.breed) : dash}</td></tr>`; }).join("")}</tbody></table></div>`;
 }
 function householdNew(hh){
   const w = hh.world, home1 = hh.lots[0], hc = home1.hood.color, all = membersOf(hh), ids = byAge(all.filter(id => !isAnimal(SIMS[id]))), pets = all.filter(id => isAnimal(SIMS[id])), n = ids.length, hoods = [...new Set(hh.lots.map(l => l.hood))];
