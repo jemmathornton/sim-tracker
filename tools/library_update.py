@@ -56,12 +56,16 @@ def facts(s, sex):
     d["bonus"] = a[1] if a and a[1] and not young else None
     tr = [G['traits'][str(t)][0] for t in ((at.get('trait_tracker') or {}).get('trait_ids') or []) if str(t) in G['traits'] and G['traits'][str(t)][1] == 'PERSONALITY']
     d["traits"] = list(dict.fromkeys(tr)) or None
-    cs = [x for x in (career(c) for c in (at.get('sim_careers') or {}).get('careers', [])) if x]
+    raw = [c for c in (at.get('sim_careers') or {}).get('careers', []) if career(c)]
+    cs = [career(c) for c in raw]
+    # a Sim aged into school in CAS hasn't had a school day yet: the copy says grade F until the game sets their real
+    # starting grade, so no grade is shown for them (24 Oct: David, Daniel and Melanie)
+    fresh = {career(c) for c in raw if not c.get('track_level') and not c.get('has_attended_first_day')}
     sch = next((x for x in cs if 'Student' in (x[1] or '') or 'School' in (x[0] or '')), None)
     job = next((x for x in cs if x is not sch), None)
     m = re.match(r'(High|Grade) School (\w) Student', (sch or ('', ''))[1] or '')
     d["career"] = f"{job[0]} · {job[1]} (level {job[2]})" if job and job[1] else (job[0] if job else "")
-    d["school"] = f"{m.group(1)} school · grade {m.group(2)}" if m else (f"{sch[0]}" if sch else None)
+    d["school"] = (f"{m.group(1)} school" if sch in fresh else f"{m.group(1)} school · grade {m.group(2)}") if m else (f"{sch[0]}" if sch else None)
     sk = [x for x in (skill(k.get('name_hash'), k.get('value', 0)) for k in (at.get('skill_tracker') or {}).get('skills', [])) if x and x[1] > 0]
     d["skills"] = sk or None
     return d

@@ -779,7 +779,7 @@
      "aspiration": "Cool Kid on the Block",
      "traits": ["Loves Outdoors"],
      "career": "",
-     "school": "Grade school · grade F",
+     "school": "Grade school",
      "skills": [
       ["Charisma", 1, 10],
       ["Logic", 1, 10]
@@ -796,7 +796,7 @@
      "aspiration": "Creative Genius",
      "traits": ["Perfectionist"],
      "career": "Scout · Llama Scout (level 1)",
-     "school": "Grade school · grade F",
+     "school": "Grade school",
      "skills": [
       ["Charisma", 1, 10],
       ["Video Gaming", 1, 10]
@@ -1048,7 +1048,7 @@
       ["Comedy", 1, 10]
      ],
      "parents": ["britney-reynolds", "joe-reynolds"],
-     "school": "High school · grade F"
+     "school": "High school"
     },
     {
      "id": "rosie-reynolds",
