@@ -663,7 +663,8 @@ a.rel-card:hover{border-color:color-mix(in srgb,var(--g) 60%,var(--line));border
 /* the household picture, top left (her screenshot as "portrait"; a placeholder until then) */
 .hh-pic{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:16/10;min-width:0}
 .hh-pic.none{display:grid;place-content:center;justify-items:center;gap:16px;padding:20px;text-align:center;color:var(--muted);background:color-mix(in srgb,var(--h) 6%,var(--surface));border:1px dashed color-mix(in srgb,var(--h) 45%,var(--line))}
-.hh-pic.library{background:color-mix(in srgb,var(--h) 8%,var(--surface)) center bottom/contain no-repeat;border:1px solid color-mix(in srgb,var(--h) 18%,var(--line))}
+.hh-pic.library{display:flex;align-items:flex-end;justify-content:center;background:color-mix(in srgb,var(--h) 8%,var(--surface));border:1px solid color-mix(in srgb,var(--h) 18%,var(--line))}
+.hh-pic.library img{display:block;max-width:100%;max-height:100%;object-fit:contain}
 .hh-pic-mono{width:112px;height:112px;border-radius:50%;display:grid;place-items:center;font:italic 400 62px var(--display);color:#fff;background:var(--h);box-shadow:0 0 0 6px color-mix(in srgb,var(--h) 16%,transparent)}
 .hh-pic-txt{display:inline-flex;align-items:center;gap:8px;font-size:14.5px;font-weight:600}
 .hh-pic-txt svg{font-size:18px;color:var(--h)}

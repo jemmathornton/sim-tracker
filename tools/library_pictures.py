@@ -46,6 +46,14 @@ def library():
     return out
 
 
+def centred(im):
+    """Trimmed to the Sims (a faint shadow off to one side doesn't count, or big families sit off centre), keeping the
+    shadow at their feet (24 Oct)."""
+    a = im.split()[3]; faint = a.getbbox(); solid = a.point(lambda v: 255 if v > 100 else 0).getbbox()
+    if not faint or not solid: return im
+    return im.crop((solid[0], solid[1], solid[2], max(solid[3], faint[3])))
+
+
 def site_households():
     for wf in sorted(glob.glob(os.path.join(ROOT, 'data', 'worlds', '*.json'))):
         W = load(wf)
@@ -87,8 +95,7 @@ def main(apply):
     for kind, items in plan.items():
         for key, (src, rel) in items.items():
             dest = os.path.join(ROOT, 'site', rel); os.makedirs(os.path.dirname(dest), exist_ok=True)
-            im = tp.read(src); box = im.split()[3].point(lambda v: 255 if v > 100 else 0).getbbox()   # faint shadows don't count, or big households sit off centre (24 Oct)
-            if box: im = im.crop(box)
+            im = tp.read(src); im = centred(im)
             if kind == 'sims' and im.height > 520: im = im.resize((round(im.width * 520 / im.height), 520))
             im.save(dest, 'WEBP', quality=86, method=6)
             done[kind][key] = rel

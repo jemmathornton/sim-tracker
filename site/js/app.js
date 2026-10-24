@@ -376,6 +376,10 @@ function drawTree(ids, o = {}){
   // children belong to the unit holding their parents
   units.forEach(u => { const anchor = u.members.find(x => ps(x).length); if (!anchor) return;
     const pu = unitOf[ps(anchor)[0]]; if (pu && !pu.kids.includes(u)) pu.kids.push(u); u.parent = pu; });
+  // siblings oldest to youngest, left to right (her rule, 24 Oct); same life stage keeps the plan's order
+  const STAGE = ["Elder", "Adult", "Young Adult", "Teen", "Child", "Toddler", "Infant", "Baby"];
+  const stage = u => { const c = u.members.find(x => ps(x).length), i = STAGE.indexOf((S(c).age || "").replace(/^Late /, "")); return i < 0 ? -1 : i; };
+  units.forEach(u => u.kids.sort((a, b) => stage(a) - stage(b)));
   const roots = units.filter(u => !u.parent);
   const ownW = u => u.members.length * CW + (u.members.length - 1) * CG;
   const kidsW = u => u.kids.reduce((s, k, i) => s + subW(k) + (i ? SG : 0), 0);
@@ -1116,12 +1120,12 @@ function household(hh){
 // a Sim's or animal's own picture (her screenshot as `portrait`), or a placeholder like the household's
 // (her Library picture of them stands in until then, shown whole on a soft background: tools/library_pictures.py, 19 Oct)
 const simPicture = s => s.portrait ? `<div class="portrait hh-pic" style="background-image:url('${s.portrait}')" role="img" aria-label="${esc(s.name)}"></div>`
-  : s.libraryPic ? `<div class="hh-pic library" style="background-image:url('${s.libraryPic}')" role="img" aria-label="${esc(s.name)}"></div>`
+  : s.libraryPic ? `<div class="hh-pic library"><img src="${s.libraryPic}" alt="${esc(s.name)}"></div>`
   : `<div class="hh-pic none" aria-hidden="true"><span class="hh-pic-mono">${isAnimal(s) ? animalIcon(s) : initial(s.name)}</span><span class="hh-pic-txt">${ic("camera")}</span></div>`;
 function hhPicture(hh, ids){
   if (hh.portrait) return `<div class="portrait hh-pic" style="background-image:url('${hh.portrait}')" role="img" aria-label="${esc(hhWord(hh.name))}">
     <div class="names">${ids.map(id => `<div><a href="#s-${id}"><b>${esc(firstName(SIMS[id]))}</b></a><small>${esc(SIMS[id].age)}</small></div>`).join("")}</div></div>`;
-  if (hh.libraryPic) return `<div class="hh-pic library" style="background-image:url('${hh.libraryPic}')" role="img" aria-label="${esc(hhWord(hh.name))}"></div>`;
+  if (hh.libraryPic) return `<div class="hh-pic library"><img src="${hh.libraryPic}" alt="${esc(hhWord(hh.name))}"></div>`;   // never stretched past its own size (the game draws big families small; 24 Oct)
   return `<div class="hh-pic none" aria-hidden="true"><span class="hh-pic-mono">${initial(hh.name)}</span><span class="hh-pic-txt">${ic("camera")}</span></div>`;
 }
 // plain-link lines for where they live and what they own, run, rent and let
