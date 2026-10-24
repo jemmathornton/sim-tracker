@@ -57,7 +57,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 - [ ] **Streamlet Single**, 20x15: place “Streamlet Single”. Type: Residential. Household: Davidson (yours). Traits: Homey, Great Soil, Peace and Quiet.
 - [ ] **Crick Cabana**, 20x15: place “Crick Cabana”. Type: Residential. Household: Broke (EA). Traits: Peace and Quiet, Great Soil, Sunny Aspect.
 - [ ] **Daisy Hovel**, 30x20: place “Daisy Hovel”. Type: Residential. Household: Winters (yours). Traits: Great Soil, Peace and Quiet, Homey.
-- [ ] **Garden Essence**, 40x30: place “Garden Essence”. Type: Residential. Household: Davidson (Sims to come). Traits: Great Soil, Homey, Peace and Quiet.
+- [ ] **Garden Essence**, 40x30: place “Garden Essence”. Type: Residential. Traits: Great Soil, Homey, Peace and Quiet.
 - [ ] **Sylvan Glade**, 15x10: not built yet: leave the game’s lot for now. Type: Sylvan Glade.
 
 **Courtyard Lane**

@@ -17,7 +17,7 @@
     {"lot": "Streamlet Single", "myName": "Streamlet Single", "type": "Residential", "size": "20x15", "residents": "Davidson", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["CSLbZoTMRWCn8KKc9D6ysA=="], "traits": ["Homey", "Great Soil", "Peace and Quiet"]},
     {"lot": "Crick Cabana", "myName": "Crick Cabana", "type": "Residential", "size": "20x15", "residents": "Broke", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["2giAjpTyEemJ3lunJjefig=="], "traits": ["Peace and Quiet", "Great Soil", "Sunny Aspect"]},
     {"lot": "Daisy Hovel", "myName": "Daisy Hovel", "type": "Residential", "size": "30x20", "residents": "Winters", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["fUcTYJT3EemHwlunJjefig=="], "traits": ["Great Soil", "Peace and Quiet", "Homey"]},
-    {"lot": "Garden Essence", "myName": "Garden Essence", "type": "Residential", "size": "40x30", "residents": "Davidson", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["bbq1/qh3EeuCcfwg9JDtjA=="], "traits": ["Great Soil", "Homey", "Peace and Quiet"]},
+    {"lot": "Garden Essence", "myName": "Garden Essence", "type": "Residential", "size": "40x30", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["bbq1/qh3EeuCcfwg9JDtjA=="], "traits": ["Great Soil", "Homey", "Peace and Quiet"]},
     {"lot": "Sylvan Glade", "myName": null, "type": "Sylvan Glade", "size": "15x10", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ]
   },
@@ -776,15 +776,13 @@
      "origin": "Mine",
      "from": "save “Rotational” (2023-12-21)",
      "age": "Child",
-     "aspiration": "Master {F0.Actress}{M0.Actor}",
-     "traits": ["Loves Outdoors", "Outgoing"],
-     "bonus": "Muser",
-     "career": "Babysitter · Daycare Assistant (level 3)",
-     "school": "High school · grade C",
+     "aspiration": "Cool Kid on the Block",
+     "traits": ["Loves Outdoors"],
+     "career": "",
+     "school": "Grade school · grade F",
      "skills": [
-      ["Fitness", 2, 10],
       ["Charisma", 1, 10],
-      ["Cooking", 1, 10]
+      ["Logic", 1, 10]
      ],
      "parents": ["alexa-barraza", "simon-barraza"]
     },
@@ -795,18 +793,13 @@
      "origin": "Mine",
      "from": "save “Rotational” (2023-12-21)",
      "age": "Child",
-     "aspiration": "Fabulously Wealthy",
-     "traits": ["Perfectionist", "Bookworm"],
-     "bonus": "Business Savvy",
+     "aspiration": "Creative Genius",
+     "traits": ["Perfectionist"],
      "career": "Scout · Llama Scout (level 1)",
-     "school": "High school · grade C",
+     "school": "Grade school · grade F",
      "skills": [
-      ["Fitness", 2, 10],
-      ["Cooking", 1, 10],
-      ["Comedy", 2, 10],
       ["Charisma", 1, 10],
-      ["Video Gaming", 1, 10],
-      ["Guitar", 1, 10]
+      ["Video Gaming", 1, 10]
      ],
      "parents": ["alexa-barraza", "simon-barraza"]
     },
@@ -848,7 +841,7 @@
       ["Mixology", 9, 10],
       ["Research & Debate", 4, 10],
       ["Comedy", 1, 10],
-      ["Parenting", 1, 10],
+      ["Parenting", 2, 10],
       ["Gardening", 1, 10]
      ],
      "partners": [
@@ -1038,7 +1031,7 @@
      "from": "save “Rotational” (2023-12-21)",
      "age": "Teen",
      "aspiration": "Friend of the World",
-     "traits": ["Snob", "Cheerful", "Outgoing"],
+     "traits": ["Snob", "Cheerful"],
      "bonus": "Gregarious",
      "career": "",
      "skills": [
@@ -1054,7 +1047,8 @@
       ["Video Gaming", 1, 10],
       ["Comedy", 1, 10]
      ],
-     "parents": ["britney-reynolds", "joe-reynolds"]
+     "parents": ["britney-reynolds", "joe-reynolds"],
+     "school": "High school · grade F"
     },
     {
      "id": "rosie-reynolds",
@@ -1121,7 +1115,7 @@
     }
    ]
   },
-  "Davidson 1": {
+  "Davidson": {
    "gallery": ["3QYkx+onT3SRQMt3N220GA=="],
    "sims": [
     {
@@ -1206,9 +1200,9 @@
      "from": "save “Rotational” (2023-12-21)",
      "age": "Teen",
      "aspiration": "Computer Whiz",
-     "traits": ["Family-Oriented", "Perfectionist", "Genius"],
+     "traits": ["Perfectionist", "Genius"],
      "bonus": "Quick Learner",
-     "career": "Tech Guru · Code Monkey (level 3)",
+     "career": "",
      "skills": [
       ["Mischief", 1, 10],
       ["Comedy", 3, 10],
@@ -1222,7 +1216,8 @@
       ["Rocket Science", 3, 10],
       ["Cooking", 1, 10]
      ],
-     "parents": ["evelyn-davidson", "ray-davidson"]
+     "parents": ["evelyn-davidson", "ray-davidson"],
+     "school": "High school · grade B"
     }
    ]
   }

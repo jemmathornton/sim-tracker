@@ -483,11 +483,6 @@ window.ADMIN = {
 {
 "section": "Households",
 "world": "",
-"text": "**Do:** Davidsons: make Evelyn, Ray and George older; make Garden Essence's Davidsons."
-},
-{
-"section": "Households",
-"world": "",
 "text": "**Do:** Kirklands: age Kennedy, Kayleigh, Kamila and Kendrick as you want them."
 },
 {

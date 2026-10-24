@@ -227,7 +227,7 @@
      "origin": "Mine",
      "from": "save “Rotational” (2023-12-21)",
      "age": "Teen",
-     "aspiration": "Master {F0.Actress}{M0.Actor}",
+     "aspiration": "Master Actor",
      "traits": ["Creative", "Outgoing"],
      "bonus": "Muser",
      "career": "",
@@ -247,7 +247,7 @@
      "career": "",
      "school": "High school · grade B",
      "skills": [
-      ["Fitness", 1, 10]
+      ["Fitness", 2, 10]
      ],
      "parents": ["tricia-leblanc", "marvin-leblanc"]
     },

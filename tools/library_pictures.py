@@ -87,7 +87,7 @@ def main(apply):
     for kind, items in plan.items():
         for key, (src, rel) in items.items():
             dest = os.path.join(ROOT, 'site', rel); os.makedirs(os.path.dirname(dest), exist_ok=True)
-            im = tp.read(src); box = im.split()[3].getbbox()
+            im = tp.read(src); box = im.split()[3].point(lambda v: 255 if v > 100 else 0).getbbox()   # faint shadows don't count, or big households sit off centre (24 Oct)
             if box: im = im.crop(box)
             if kind == 'sims' and im.height > 520: im = im.resize((round(im.width * 520 / im.height), 520))
             im.save(dest, 'WEBP', quality=86, method=6)

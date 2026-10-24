@@ -44,7 +44,7 @@ PREMADE_COPY = {"Oasis Springs|Smith"}
 # plan key -> (save file, save name, household in that save, surname of the Sims to take)
 SPLIT = {"Newcrest|Washburn": ("Slot_00000017.save", "Season Events", "Washburn", "Washburn"),
          "Newcrest|Bridges": ("Slot_00000017.save", "Season Events", "Washburn", "Bridges")}
-TARGET = {"Willow Creek|Davidson": "Davidson 1"}   # the plan has two Davidson homes; Evelyn, Ray and George live at Streamlet Single (the first)   # EA's own household (the Pleasant twins): game files, not a save
+TARGET = {}   # (was Davidson 1, while the plan had two Davidson homes; Garden Essence is empty since 24 Oct)   # EA's own household (the Pleasant twins): game files, not a save
 norm = lambda x: re.sub(r'[^a-z]', '', (x or '').lower())
 
 

@@ -99,7 +99,7 @@ def auto_link(new_ids, uploads, worlds):
     for i in new_ids:
         u = uploads.get(i)
         if not u: say(f"  new upload {i} couldn't be read this time; it'll be tried again next week"); continue
-        if u['kind'] == 'household':   # her household uploads (24 Oct): linked when the title names exactly one household ("Davidson" is "Davidson 1")
+        if u['kind'] == 'household':   # her household uploads (24 Oct): linked when the title names exactly one household (a numbered household like "Davidson 1" counts as "Davidson")
             hh = [(W, n, h) for W in worlds if W['owned'] for n, h in (W.get('households') or {}).items() if re.sub(r'\d+$', '', norm(n)) == norm(u['title'])]
             if len(hh) == 1:
                 W, n, h = hh[0]
