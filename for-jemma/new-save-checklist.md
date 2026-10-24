@@ -243,7 +243,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 ### San Myshuno
 
-30 lots: 14 on the Gallery, 2 built but not shared, 14 not built.
+30 lots: 15 on the Gallery, 1 built but not shared, 14 not built.
 
 **Spice Market**
 
@@ -263,7 +263,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 - [ ] **930 Medina Studios**: place “930 Medina Studios”. Type: Apartment. Place it as a Room into the unit. Household: Livin’ In The City (yours). Trait ideas (free slots): Natural Light, Home Studio.
 - [ ] **121 Hakim House**: not built yet: leave the game’s lot for now. Type: Apartment. Household: Jang (EA).
 - [ ] **122 Hakim House**: place “122 Hakim House”. Search it by name (its upload has no #sanmyshuno tag). Type: Apartment. Place it as a Room into the unit. Traits: Historical. Trait ideas (free slots): Natural Light, Home Studio.
-- [ ] **FountainView Penthouse**: built but not on the Gallery, and not in your Library, not even as a room (penthouses go in as rooms). Type: Penthouse. Household: Santiago Ojo (EA: Miko; yours: Alicia).
+- [ ] **Fountainview Penthouse** (game’s FountainView Penthouse): place “Fountainview Penthouse”. Type: Penthouse. Household: Santiago Ojo (EA: Miko; yours: Alicia).
 - [ ] **Casbah Gallery**, 40x30: not built yet: leave the game’s lot for now. Type: Arts Center.
 
 **Fashion District**
