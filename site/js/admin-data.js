@@ -518,7 +518,7 @@ window.ADMIN = {
 {
 "section": "Households",
 "world": "",
-"text": "**Do:** The Cadberrys: sort them when you're ready (options in research/own-households-recommendations.md)."
+"text": "**Do:** The Cadberrys, as one job when you're ready (options in research/own-households-recommendations.md): uploading Leah-Moon (Library, take Sterling and Sylvia out first) and Sylvia & Kenny (“Not So Berry”), Ella-Mint, Isda Riverfront's family, and their links (Leah-Moon is Sylvia's mother; Kennedy Kirkland and Sylvia are good friends)."
 },
 {
 "section": "Households",

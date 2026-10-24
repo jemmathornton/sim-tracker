@@ -117,7 +117,7 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 - **Do:** Also yours: upload the Lovejoys; the four Tiquelle households, the vineyard Altos, Specter Row's owners.
 - **Do:** Download Sebastian Michaelson and Merrilyn Ralston from Maxis's Gallery and pick their lots.
 - **Decide:** My Celebs: which save are they in?
-- **Do:** The Cadberrys: sort them when you're ready (options in research/own-households-recommendations.md).
+- **Do:** The Cadberrys, as one job when you're ready (options in research/own-households-recommendations.md): uploading Leah-Moon (Library, take Sterling and Sylvia out first) and Sylvia & Kenny (“Not So Berry”), Ella-Mint, Isda Riverfront's family, and their links (Leah-Moon is Sylvia's mother; Kennedy Kirkland and Sylvia are good friends).
 - **Decide:** Typing Sims in: chat only, or a Sims tab in World Plans (prototype in for-jemma/prototypes)?
 
 ## Not in game
