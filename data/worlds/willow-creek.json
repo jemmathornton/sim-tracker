@@ -853,16 +853,6 @@
      "partners": [
       ["simon-barraza", "Spouse"]
      ]
-    },
-    {
-     "id": "vivienne-barraza",
-     "name": "Vivienne Barraza",
-     "sex": "f",
-     "origin": "Mine",
-     "from": "save “Rotational” (2023-12-21)",
-     "age": "Baby",
-     "career": "",
-     "parents": ["alexa-barraza", "simon-barraza"]
     }
    ]
   },
