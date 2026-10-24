@@ -288,6 +288,9 @@ function familyOf(id){
     .sort((x, y) => rank(x[1]) - rank(y[1]) || band(x[0]) - band(y[0]));
 }
 const membersOf = hh => Object.keys(SIMS).filter(id => SIMS[id].hh === hh);
+// a household's Sims oldest to youngest (her ask, 24 Oct); the same life stage keeps the plan's order
+const AGE_ORDER = ["Elder", "Adult", "Young Adult", "Teen", "Child", "Toddler", "Infant", "Baby"];
+const byAge = ids => ids.slice().sort((a, b) => (AGE_ORDER.indexOf(SIMS[a].age) + 1 || 99) - (AGE_ORDER.indexOf(SIMS[b].age) + 1 || 99));
 // the game's own label for a Sim with no job who has a child, teen or younger in their household (careers/career_unemployment):
 // "Stay-at-Home Mom/Dad" (24 Oct, her ask)
 const stayAtHome = s => { if (s.career || s.late || isAnimal(s) || !s.hh || !["Young Adult", "Adult", "Elder"].includes(s.age)) return "";
@@ -1110,7 +1113,7 @@ function household(hh){
         <div><dt>Sims made in game</dt><dd>${simsMade(hh) ? `<span class="ok">${ic("sim")} Yes</span>` : "Not yet"}</dd></div></dl></div>
     </div>
     <section class="block" style="--h:${hc}"><div class="block-head"><h2>The <em>Sims</em></h2>${hh.sims.length ? `<span class="count">${whoCount(hh.sims)}</span>` : ""}</div>
-      ${hh.sims.length ? `<div class="sims">${hh.sims.map(simCard).join("")}</div>` : `<div class="empty">${ic("sim")}No Sims added yet. Each Sim in the household will get a card here with their traits, career, skills and relationships.</div>`}
+      ${hh.sims.length ? `<div class="sims">${hh.sims.slice().sort((a, b) => (AGE_ORDER.indexOf(a.age) + 1 || 99) - (AGE_ORDER.indexOf(b.age) + 1 || 99)).map(simCard).join("")}</div>` : `<div class="empty">${ic("sim")}No Sims added yet. Each Sim in the household will get a card here with their traits, career, skills and relationships.</div>`}
       ${hh.source ? `<p class="source">In-game starting details from The Sims Wiki: ${hh.source.map(([n,u]) => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(n)}</a>`).join(", ")}.</p>` : ""}</section>
     ${hhGallery(hh, hc)}
     ${hh.links.length ? `<section class="block" style="--h:${hc}"><div class="block-head"><h2>Connected <em>households</em></h2></div><div class="families">${hh.links.map(x => x.hh ? famCard(x.hh, x) : "").join("")}</div></section>` : ""}
@@ -1165,7 +1168,7 @@ function animalRoster(ids){
         <td>${s.traits && s.traits.length ? esc(s.traits.join(", ")) : dash}</td></tr>`; }).join("")}</tbody></table></div>`;
 }
 function householdNew(hh){
-  const w = hh.world, home1 = hh.lots[0], hc = home1.hood.color, all = membersOf(hh), ids = all.filter(id => !isAnimal(SIMS[id])), pets = all.filter(id => isAnimal(SIMS[id])), n = ids.length, hoods = [...new Set(hh.lots.map(l => l.hood))];
+  const w = hh.world, home1 = hh.lots[0], hc = home1.hood.color, all = membersOf(hh), ids = byAge(all.filter(id => !isAnimal(SIMS[id]))), pets = all.filter(id => isAnimal(SIMS[id])), n = ids.length, hoods = [...new Set(hh.lots.map(l => l.hood))];
   const neighbours = Object.values(w.households).filter(x => x !== hh && !hh.links.some(k => k.hh === x) && x.lots.some(l => l.hood === home1.hood));
   const dyn = dynLine(ids), tree = treeOf(hh), origin = hh.origin || (ids.some(id => !/^mine$/i.test(SIMS[id].origin || "")) ? "Premade" : "Mine");
   return `<section class="hero small" style="--c:${home1.hood.glow || hc}"><div class="crumbs"><a href="#w-${w.id}">${ic("map")}${esc(w.name)}</a><a href="#n-${home1.hood.id}">${ic("pin")}${esc(home1.hood.name)}</a>${hh.lots.map(l => `<a href="#${l.id}">${ic(l.owned ? "pin" : "home")}${esc(l.name)}</a>`).join("")}</div>
