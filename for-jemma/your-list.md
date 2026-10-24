@@ -44,7 +44,7 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 
 **San Myshuno**
 - **Do:** 18 Culpepper House: add the Spooky lot trait.
-- **Decide:** Karaoke Legends (Akira and Darling, once Miko leaves): EA’s version or your “Rotational” one, and where do they live? The plan has no home for them, and 701 ZenView is Bro & Kennedy’s.
+- **Decide:** Karaoke Legends (Akira and Darling, once Miko leaves): EA’s version or your “Rotational” one? Home: check 1313 21 Chic Street (Fashion District, free) before confirming.
 - **Decide:** Bro & Kennedy (701 ZenView): which Kennedy? Tristan Kennedy, or Kennedy Thomason, Duggan or Rouse?
 
 **Del Sol Valley**

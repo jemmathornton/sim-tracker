@@ -280,7 +280,7 @@ window.ADMIN = {
 {
 "section": "World by world",
 "world": "San Myshuno",
-"text": "**Decide:** Karaoke Legends (Akira and Darling, once Miko leaves): EA’s version or your “Rotational” one, and where do they live? The plan has no home for them, and 701 ZenView is Bro & Kennedy’s."
+"text": "**Decide:** Karaoke Legends (Akira and Darling, once Miko leaves): EA’s version or your “Rotational” one? Home: check 1313 21 Chic Street (Fashion District, free) before confirming."
 },
 {
 "section": "World by world",
