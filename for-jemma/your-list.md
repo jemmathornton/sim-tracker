@@ -31,6 +31,7 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 **Willow Creek**
 - **Decide:** Hallow Slough (Ella-Mint's home): Haunted House, On Hallowed Ground, or neither?
 - **Decide:** Crick Cabana: Dustin Broke alone, or with the Sigworths (as in Season Events)?
+- **Do:** In the new save, set school grades for David and Daniel Barraza and Melanie Reynolds (aged in CAS, so they start without one).
 
 **Oasis Springs**
 - **Do:** Build next: rebuild Springscape with two adult bedrooms (Vidcund, Lazlo) and a teen’s room (his daughter Nova), then re-upload.

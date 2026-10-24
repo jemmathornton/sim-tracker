@@ -267,6 +267,11 @@ window.ADMIN = {
 },
 {
 "section": "World by world",
+"world": "Willow Creek",
+"text": "**Do:** In the new save, set school grades for David and Daniel Barraza and Melanie Reynolds (aged in CAS, so they start without one)."
+},
+{
+"section": "World by world",
 "world": "Oasis Springs",
 "text": "**Do:** Build next: rebuild Springscape with two adult bedrooms (Vidcund, Lazlo) and a teen’s room (his daughter Nova), then re-upload."
 },
