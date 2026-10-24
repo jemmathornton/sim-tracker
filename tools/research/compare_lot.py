@@ -23,7 +23,7 @@ PACKS = {"EP01": "Get to Work", "EP02": "Get Together", "EP03": "City Living", "
          "SP11": "Fitness Stuff", "SP12": "Toddler Stuff", "SP13": "Laundry Day Stuff", "SP14": "My First Pet Stuff", "SP15": "Moschino Stuff",
          "SP16": "Tiny Living Stuff", "SP17": "Nifty Knitting", "SP18": "Paranormal Stuff"}
 # the Gallery's own pack names that differ from the list above
-GALLERY_NAMES = {"Build Lush Gardens": "Romantic Garden Stuff", "Watch Movies with Friends!": "Movie Hangout Stuff", "Strangerville": "StrangerVille"}
+GALLERY_NAMES = {"Build Lush Gardens": "Romantic Garden Stuff", "Watch Movies with Friends!": "Movie Hangout Stuff", "Strangerville": "StrangerVille", "Tiny Living": "Tiny Living Stuff"}
 
 
 def object_packs():
