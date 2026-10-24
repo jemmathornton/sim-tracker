@@ -34,7 +34,6 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 - **Do:** In the new save, set school grades for David and Daniel Barraza and Melanie Reynolds (aged in CAS, so they start without one).
 
 **Oasis Springs**
-- **Do:** (when you like) De Costa's upload has the custom content tag: Alexa's hidden Situation outfit has the black Moschino hoodie your Simlish override mod changes. Remove it with MC Dresser (`dresser_bl alexa de costa top All` while she wears it, then `dresser_clean alexa de costa`) and re-upload.
 - **Do:** Build next: rebuild Springscape with two adult bedrooms (Vidcund, Lazlo) and a teen’s room (his daughter Nova), then re-upload.
 - **Do:** Granada Place: Pascal Curious and his baby (Tycho, when born); in game, age the three brothers to Adult and Nova down to Teen.
 

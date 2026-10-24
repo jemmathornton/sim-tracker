@@ -273,11 +273,6 @@ window.ADMIN = {
 {
 "section": "World by world",
 "world": "Oasis Springs",
-"text": "**Do:** (when you like) De Costa's upload has the custom content tag: Alexa's hidden Situation outfit has the black Moschino hoodie your Simlish override mod changes. Remove it with MC Dresser (`dresser_bl alexa de costa top All` while she wears it, then `dresser_clean alexa de costa`) and re-upload."
-},
-{
-"section": "World by world",
-"world": "Oasis Springs",
 "text": "**Do:** Build next: rebuild Springscape with two adult bedrooms (Vidcund, Lazlo) and a teen’s room (his daughter Nova), then re-upload."
 },
 {
