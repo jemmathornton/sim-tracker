@@ -32,7 +32,7 @@
    "lots": [
     {"lot": "910 Medina Studios", "myName": "910 Medina Studios", "type": "Apartment", "size": "N/A", "residents": "Benali", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "920 Medina Studios", "myName": "920 Medina Studios", "type": "Apartment", "size": "N/A", "residents": "Bheeda", "built": true, "shared": true, "screenshots": true, "simsMade": false, "gallery": ["lnguI4+KEeiPG13tOtUAYg=="], "beds": 2, "baths": 2, "traits": ["Quiet"]},
-    {"lot": "930 Medina Studios", "myName": "930 Medina Studios", "type": "Apartment", "size": "N/A", "residents": "Livin' In The City", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["oRFw156kEemGlHVYaA94HQ=="], "beds": 4, "baths": 2},
+    {"lot": "930 Medina Studios", "myName": "930 Medina Studios", "type": "Apartment", "size": "N/A", "residents": "Livin' In The City", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["HNdM9n08RxymsVKGOc2c1g=="], "beds": 4, "baths": 2},
     {"lot": "121 Hakim House", "myName": "121 Hakim House", "type": "Apartment", "size": "N/A", "residents": "Jang", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "122 Hakim House", "myName": "122 Hakim House", "type": "Apartment", "size": "N/A", "residents": "2/3 Bed", "built": true, "shared": true, "screenshots": true, "simsMade": false, "gallery": ["Uf3EQP8MEeyKGRdS1XRQaQ=="], "beds": 2, "traits": ["Historical"], "baths": 2},
     {"lot": "FountainView Penthouse", "myName": "FountainView Penthouse", "type": "Penthouse", "size": "N/A", "residents": "Santiago Ojo", "built": true, "shared": false, "screenshots": false, "simsMade": true},
