@@ -23,7 +23,7 @@ PACKS = {"EP01": "Get to Work", "EP02": "Get Together", "EP03": "City Living", "
          "SP11": "Fitness Stuff", "SP12": "Toddler Stuff", "SP13": "Laundry Day Stuff", "SP14": "My First Pet Stuff", "SP15": "Moschino Stuff",
          "SP16": "Tiny Living Stuff", "SP17": "Nifty Knitting", "SP18": "Paranormal Stuff"}
 # the Gallery's own pack names that differ from the list above
-GALLERY_NAMES = {"Build Lush Gardens": "Romantic Garden Stuff", "Watch Movies with Friends!": "Movie Hangout Stuff"}
+GALLERY_NAMES = {"Build Lush Gardens": "Romantic Garden Stuff", "Watch Movies with Friends!": "Movie Hangout Stuff", "Strangerville": "StrangerVille"}
 
 
 def object_packs():
@@ -80,12 +80,13 @@ def main():
     t = open(os.path.join(ROOT, 'site', 'js', 'data.js'), encoding='utf-8').read(); D = json.loads(t[t.index('{'):t.rindex('}') + 1])
     lot = next(((w, l) for w in D['worlds'] for h in w['hoods'] for l in h['lots'] if l['lot'].lower() == name.lower() or (l.get('mine') or '').lower() == name.lower()), None)
     U = json.load(open(os.path.join(ROOT, 'data', 'gallery', 'uploads.json'), encoding='utf-8'))['uploads']
-    gid = None
-    if lot:
-        g = lot[1].get('gallery') or {}
-        gid = g.get('id') if isinstance(g, dict) else None
+    raw = {}
+    for f in glob.glob(os.path.join(ROOT, 'data', 'worlds', '*.json')):
+        for l in json.load(open(f, encoding='utf-8')).get('lots', []):
+            if l.get('lot', '').lower() == name.lower() and l.get('gallery'): raw = l
+    gid = raw['gallery'][-1] if raw else None
     if not gid:   # the site's lot record: find its upload by title
-        gid = next((k for k, v in U.items() if v['title'].lower() == name.lower() and v['kind'] == 'lot'), None)
+        gid = next((k for k, v in U.items() if v['title'].lower() == name.lower() and v['kind'] in ('lot', 'room') and not v.get('gone')), None)
     gp = set()
     if gid:
         u = U[gid]; gp = {GALLERY_NAMES.get(re.sub(r'^The Sims™ 4 ', '', p), re.sub(r'^The Sims™ 4 ', '', p)) for p in u['packs']}
