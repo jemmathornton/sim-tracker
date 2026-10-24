@@ -42,18 +42,23 @@ def object_packs():
 
 
 def save_lot(fname, name, S):
+    """Every object on the lot: rentals and apartments are one zone per unit plus the common area (24 Oct), all counted."""
     tmp = tempfile.mkdtemp(); c = os.path.join(tmp, 's'); shutil.copy(os.path.join(s4.SAVES, fname), c)
     try:
-        ix = s4.index(c); data = s4.read(c, next(e for e in ix if e[0] == s4.SAVEGAME)); zone = None
-        for fn, wt, v in s4.fields(data):
-            if fn == 7:
-                z = s4.decode(v, P + 'ZoneData', S, depth=0)
-                if (z.get('name') or '').lower() == name.lower(): zone = z['zone_id']
+        ix = s4.index(c); data = s4.read(c, next(e for e in ix if e[0] == s4.SAVEGAME)); zones = []
+        allz = [s4.decode(v, P + 'ZoneData', S, depth=0) for fn, wt, v in s4.fields(data) if fn == 7]
+        hit = [z for z in allz if (z.get('name') or '').lower() == name.lower()]
+        if hit:
+            lot = (hit[0].get('neighborhood_id'), hit[0].get('lot_id'))
+            # an apartment building holds several homes: only its own unit, unless it's a rental (units named "1 <lot>")
+            zones = [z['zone_id'] for z in allz if (z.get('neighborhood_id'), z.get('lot_id')) == lot and ((z.get('name') or '').lower() == name.lower() or (z.get('name') or '').lower().endswith(' ' + name.lower()))]
+        objs = []
         for e in ix:
-            if e[0] == 0x6 and e[2] == zone:
+            if e[0] == 0x6 and e[2] in zones:
                 d = s4.decode(s4.read(c, e), P + 'ZoneObjectData', S, depth=3)
                 ol = d.get('objects'); ol = ol if isinstance(ol, list) else [ol]
-                return [ob for o in ol if isinstance(o, dict) for ob in o.get('objects', [])]
+                objs += [ob for o in ol if isinstance(o, dict) for ob in o.get('objects', [])]
+        return objs or None
     finally: shutil.rmtree(tmp, ignore_errors=True)
 
 
