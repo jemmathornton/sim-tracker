@@ -1188,9 +1188,9 @@ function householdNew(hh){
     <section class="block" style="--h:${hc}"><div class="block-head"><h2>The <em>Sims</em></h2><span class="count">${whoCount(ids)}</span></div>
       ${simRoster(ids)}
       </section>
-    ${hhGallery(hh, hc)}
     ${pets.length ? `<section class="block" style="--h:${hc}"><div class="block-head"><h2>The <em>animals</em></h2><span class="count">${whoCount(pets).replace(/^0 Sims · /, "")}</span></div>
       ${animalRoster(pets)}</section>` : ""}
+    ${hhGallery(hh, hc)}
     ${tree.length ? `<section class="block" style="--h:${hc}"><div class="block-head"><h2>Family <em>tree</em></h2></div>
       <div class="tree-box">${fitTree(tree, {line: slug(hh.family), compact: true, ch: 96, labels: false, here: hh})}</div>${treeKey(tree, true, wColour(w), tree.some(id => !SIMS[id].ph && SIMS[id].hh !== hh))}</section>` : ""}
     ${(t => t.length ? `<section class="block" style="--h:${hc}"><div class="block-head"><h2>Animal <em>family</em></h2></div><div class="tree-box">${fitTree(t, {compact: true, ch: 96, labels: false, here: hh})}</div></section>` : "")(animalTreeOf(hh))}
