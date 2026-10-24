@@ -367,7 +367,8 @@
      "aspiration": "Big Happy Family",
      "traits": ["Goofball", "Family-Oriented", "Neat"],
      "bonus": "Domestic",
-     "career": "",
+     "career": "Retired PT#9",
+     "careerNote": "A retired Polination Technician who settled on this planet to pursue a family of his own. Former duties included passing on Alien DNA into the Sim population through abduction and baby implantation.",
      "skills": [
       ["Fishing", 3, 10],
       ["Flower Arranging", 5, 10],
@@ -461,7 +462,8 @@
      "aspiration": "The Curator",
      "traits": ["Self-Assured", "Family-Oriented", "Genius"],
      "bonus": "Collector",
-     "career": "",
+     "career": "Restauranteur",
+     "careerNote": "Owner and manager of De Costadas, the best Italian cuisine in all of Oasis Springs!",
      "skills": [
       ["Writing", 1, 10],
       ["Video Gaming", 3, 10],

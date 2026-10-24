@@ -175,6 +175,10 @@ def main(apply):
             job = next((x for x in cs if x is not sch), None)
             m = re.match(r'(High|Grade) School (\w) Student', (sch or ('', ''))[1] or '')
             d["career"] = f"{job[0]} · {job[1]} (level {job[2]})" if job and job[1] else (job[0] if job else "")
+            sc = at.get('sim_careers') or {}   # a job she wrote in herself (24 Oct: Josie De Costa, Restauranteur)
+            if not d["career"] and sc.get('custom_career_name'):
+                d["career"] = sc['custom_career_name']
+                if sc.get('custom_career_description'): d["careerNote"] = sc['custom_career_description']
             if m: d["school"] = f"{m.group(1)} school · grade {m.group(2)}"
             sk = [x for x in (skill(k.get('name_hash'), k.get('value', 0)) for k in (at.get('skill_tracker') or {}).get('skills', [])) if x and x[1] > 0]
             if sk: d["skills"] = sk

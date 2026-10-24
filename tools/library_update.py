@@ -17,7 +17,7 @@ from common import ROOT, load, save
 S = s4.save_schema(); N = '.EA.Sims4.Network.'
 TRAY = os.path.join(os.path.dirname(s4.SAVES), 'Tray')
 AGES = {1: "Baby", 2: "Toddler", 4: "Child", 8: "Teen", 16: "Young Adult", 32: "Adult", 64: "Elder", 128: "Infant"}
-FIELDS = ("age", "aspiration", "bonus", "traits", "career", "school", "skills")
+FIELDS = ("age", "aspiration", "bonus", "traits", "career", "careerNote", "school", "skills")
 G = load(os.path.join(ROOT, 'research', 'data', 'game-names.json'))
 norm = lambda x: re.sub(r'[^a-z]', '', (x or '').lower())
 
@@ -65,6 +65,9 @@ def facts(s, sex):
     job = next((x for x in cs if x is not sch), None)
     m = re.match(r'(High|Grade) School (\w) Student', (sch or ('', ''))[1] or '')
     d["career"] = f"{job[0]} · {job[1]} (level {job[2]})" if job and job[1] else (job[0] if job else "")
+    sc = at.get('sim_careers') or {}   # a job she wrote in herself (24 Oct: Josie De Costa, Restauranteur)
+    if not d["career"] and sc.get('custom_career_name'): d["career"] = sc['custom_career_name']
+    d["careerNote"] = sc.get('custom_career_description') if sc.get('custom_career_name') and not job else None
     d["school"] = (f"{m.group(1)} school" if sch in fresh else f"{m.group(1)} school · grade {m.group(2)}") if m else (f"{sch[0]}" if sch else None)
     sk = [x for x in (skill(k.get('name_hash'), k.get('value', 0)) for k in (at.get('skill_tracker') or {}).get('skills', [])) if x and x[1] > 0]
     d["skills"] = sk or None
@@ -102,7 +105,7 @@ def main(apply):
                 if not s: print(f"{W['name']} / {hn}: {sm['name']} isn't in the Library copy"); continue
                 new = facts(s, sm.get('sex'))
                 for f in FIELDS:
-                    if sm.get('state') and f in ('aspiration', 'bonus', 'career', 'school'): continue   # animals
+                    if sm.get('state') and f in ('aspiration', 'bonus', 'career', 'careerNote', 'school'): continue   # animals
                     old = sm.get(f)
                     if (new[f] or None) == (old or None): continue
                     print(f"{W['name']} / {hn} / {sm['name']}: {f}: {old!r} -> {new[f]!r}"); changed += 1
