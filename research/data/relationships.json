@@ -23,7 +23,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Lucas Munch",
@@ -36,33 +37,36 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Lisa Davidson",
    "b": "Ray Davidson",
    "a_household": "Livin' In The City (San Myshuno)",
-   "b_household": "Davidson 1 (Willow Creek)",
+   "b_household": "Davidson (Willow Creek)",
    "family": ["child of"],
    "romance": null,
    "friends": "good friends with",
    "enemies": null,
    "site": ["child of"],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Bjorn Bjergsen",
    "b": "Evelyn Davidson",
    "a_household": "Bjergsen (Willow Creek)",
-   "b_household": "Davidson 1 (Willow Creek)",
+   "b_household": "Davidson (Willow Creek)",
    "family": [],
    "romance": null,
    "friends": "friends with",
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Bjorn Bjergsen",
@@ -75,7 +79,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Elsa Bjergsen",
@@ -88,7 +93,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Joaquin Le Chien",
@@ -101,7 +107,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Lucas Munch",
@@ -114,7 +121,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Brant Hecking",
@@ -127,7 +135,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Alfie Reynolds",
@@ -140,7 +149,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Daisy Ventura",
@@ -153,7 +163,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Miko Ojo",
@@ -166,7 +177,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Alicia Santiago",
@@ -179,7 +191,8 @@
    "enemies": "despises",
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Alicia Santiago",
@@ -192,12 +205,13 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Evelyn Davidson",
    "b": "Hugo Villareal",
-   "a_household": "Davidson 1 (Willow Creek)",
+   "a_household": "Davidson (Willow Creek)",
    "b_household": "Villareal (Willow Creek)",
    "family": [],
    "romance": null,
@@ -205,20 +219,22 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Jesminder Bheeda",
    "b": "Ray Davidson",
    "a_household": "Bheeda (San Myshuno)",
-   "b_household": "Davidson 1 (Willow Creek)",
+   "b_household": "Davidson (Willow Creek)",
    "family": [],
    "romance": null,
    "friends": "friends with",
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Britney Reynolds",
@@ -231,7 +247,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Alfie Reynolds",
@@ -244,7 +261,8 @@
    "enemies": null,
    "site": ["sibling of"],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Leon Kopf",
@@ -257,7 +275,8 @@
    "enemies": null,
    "site": ["sibling of"],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Alfie Reynolds",
@@ -270,7 +289,8 @@
    "enemies": null,
    "site": ["sibling of"],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Lucie Reynolds",
@@ -283,7 +303,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Leon Kopf",
@@ -296,12 +317,13 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "George Davidson",
    "b": "Leon Kopf",
-   "a_household": "Davidson 1 (Willow Creek)",
+   "a_household": "Davidson (Willow Creek)",
    "b_household": "Kopf (Willow Creek)",
    "family": [],
    "romance": null,
@@ -309,12 +331,13 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "George Davidson",
    "b": "Lucas Munch",
-   "a_household": "Davidson 1 (Willow Creek)",
+   "a_household": "Davidson (Willow Creek)",
    "b_household": "Munch (Windenburg)",
    "family": [],
    "romance": null,
@@ -322,12 +345,13 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Ray Davidson",
    "b": "Ulrike Faust",
-   "a_household": "Davidson 1 (Willow Creek)",
+   "a_household": "Davidson (Willow Creek)",
    "b_household": "Free Spirits (Windenburg)",
    "family": [],
    "romance": null,
@@ -335,12 +359,13 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "George Davidson",
    "b": "Lisa Davidson",
-   "a_household": "Davidson 1 (Willow Creek)",
+   "a_household": "Davidson (Willow Creek)",
    "b_household": "Livin' In The City (San Myshuno)",
    "family": ["sibling of"],
    "romance": null,
@@ -348,7 +373,8 @@
    "enemies": null,
    "site": ["sibling of"],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Dominic Fyres",
@@ -361,25 +387,27 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Anaya Jang",
    "b": "Ray Davidson",
    "a_household": "Jang (San Myshuno)",
-   "b_household": "Davidson 1 (Willow Creek)",
+   "b_household": "Davidson (Willow Creek)",
    "family": [],
    "romance": null,
    "friends": "friends with",
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "George Davidson",
    "b": "Marcus Flex",
-   "a_household": "Davidson 1 (Willow Creek)",
+   "a_household": "Davidson (Willow Creek)",
    "b_household": "Partihaus (Windenburg)",
    "family": [],
    "romance": null,
@@ -387,7 +415,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Lucy Kopf",
@@ -400,7 +429,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Britney Reynolds",
@@ -413,7 +443,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Alfie Reynolds",
@@ -426,12 +457,13 @@
    "enemies": null,
    "site": ["child of"],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Evelyn Davidson",
    "b": "Jesminder Bheeda",
-   "a_household": "Davidson 1 (Willow Creek)",
+   "a_household": "Davidson (Willow Creek)",
    "b_household": "Bheeda (San Myshuno)",
    "family": [],
    "romance": null,
@@ -439,25 +471,27 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Britney Reynolds",
    "b": "Evelyn Davidson",
    "a_household": "Reynolds (Willow Creek)",
-   "b_household": "Davidson 1 (Willow Creek)",
+   "b_household": "Davidson (Willow Creek)",
    "family": [],
    "romance": null,
    "friends": "friends with",
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Evelyn Davidson",
    "b": "Marcus Flex",
-   "a_household": "Davidson 1 (Willow Creek)",
+   "a_household": "Davidson (Willow Creek)",
    "b_household": "Partihaus (Windenburg)",
    "family": [],
    "romance": null,
@@ -465,7 +499,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Alfie Reynolds",
@@ -478,7 +513,8 @@
    "enemies": null,
    "site": ["child of"],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Morgan Fyres",
@@ -491,12 +527,13 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Evelyn Davidson",
    "b": "Lisa Davidson",
-   "a_household": "Davidson 1 (Willow Creek)",
+   "a_household": "Davidson (Willow Creek)",
    "b_household": "Livin' In The City (San Myshuno)",
    "family": ["parent of"],
    "romance": null,
@@ -504,7 +541,8 @@
    "enemies": null,
    "site": ["parent of"],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Moira Fyres",
@@ -517,7 +555,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Jacques Villareal",
@@ -530,12 +569,13 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "George Davidson",
    "b": "Lucy Kopf",
-   "a_household": "Davidson 1 (Willow Creek)",
+   "a_household": "Davidson (Willow Creek)",
    "b_household": "Livin' In The City (San Myshuno)",
    "family": [],
    "romance": null,
@@ -543,7 +583,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Alfie Reynolds",
@@ -556,12 +597,13 @@
    "enemies": null,
    "site": ["sibling of"],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "George Davidson",
    "b": "Lucie Reynolds",
-   "a_household": "Davidson 1 (Willow Creek)",
+   "a_household": "Davidson (Willow Creek)",
    "b_household": "Reynolds (Willow Creek)",
    "family": [],
    "romance": null,
@@ -569,7 +611,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Daisy Ventura",
@@ -582,7 +625,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Joaquin Le Chien",
@@ -595,7 +639,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": ["Rotational"]
   },
   {
    "a": "Diego Lobo",
@@ -608,7 +653,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": ["Rotational"]
   },
   {
    "a": "Leon Kopf",
@@ -621,7 +667,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Joe Reynolds",
@@ -634,7 +681,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Kristian Kopf",
@@ -647,7 +695,8 @@
    "enemies": null,
    "site": ["parent of"],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Emilee Kopf",
@@ -660,7 +709,8 @@
    "enemies": null,
    "site": ["parent of"],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Alika Kahananui",
@@ -673,7 +723,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Emilia Ernest",
@@ -686,7 +737,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational", "Will the port be Promising?"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Emilia Ernest",
@@ -699,7 +751,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational", "Will the port be Promising?"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Lia Hauata",
@@ -712,7 +765,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": ["Rotational"]
   },
   {
    "a": "Supriya Delgato",
@@ -725,7 +779,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Kristian Kopf",
@@ -738,20 +793,22 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Duane Talla",
    "b": "Ray Davidson",
    "a_household": "Kealoha (Sulani)",
-   "b_household": "Davidson 1 (Willow Creek)",
+   "b_household": "Davidson (Willow Creek)",
    "family": [],
    "romance": null,
    "friends": "friends with",
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Duane Talla",
@@ -764,7 +821,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Britney Reynolds",
@@ -777,20 +835,22 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Alexander Goth",
    "b": "Ray Davidson",
    "a_household": "Goth (Willow Creek)",
-   "b_household": "Davidson 1 (Willow Creek)",
+   "b_household": "Davidson (Willow Creek)",
    "family": [],
    "romance": null,
    "friends": "good friends with",
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Britney Reynolds",
@@ -803,7 +863,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Billie Jang",
@@ -816,7 +877,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Billie Jang",
@@ -829,7 +891,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Diego Lobo",
@@ -842,33 +905,36 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Alexander Goth",
    "b": "George Davidson",
    "a_household": "Goth (Willow Creek)",
-   "b_household": "Davidson 1 (Willow Creek)",
+   "b_household": "Davidson (Willow Creek)",
    "family": [],
    "romance": null,
    "friends": "friends with",
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Diego Lobo",
    "b": "Ray Davidson",
    "a_household": "Lobo (San Myshuno)",
-   "b_household": "Davidson 1 (Willow Creek)",
+   "b_household": "Davidson (Willow Creek)",
    "family": [],
    "romance": null,
    "friends": "friends with",
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Billie Jang",
@@ -881,7 +947,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Not So Berry", "Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Alfie Reynolds",
@@ -894,7 +961,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Alicia Santiago",
@@ -907,7 +975,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Duane Talla",
@@ -920,7 +989,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Lisa Davidson",
@@ -933,7 +1003,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Billie Jang",
@@ -946,7 +1017,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Luna Villareal",
@@ -959,7 +1031,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Billie Jang",
@@ -972,7 +1045,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Cameron Fletcher",
@@ -985,7 +1059,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Billie Jang",
@@ -998,7 +1073,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Miko Ojo",
@@ -1011,7 +1087,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Alicia Santiago",
@@ -1024,7 +1101,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Justin Delgato",
@@ -1037,7 +1115,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Luna Villareal",
@@ -1050,7 +1129,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Keala Hoapili",
@@ -1063,7 +1143,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Anaya Jang",
@@ -1076,7 +1157,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Morgan Fyres",
@@ -1089,7 +1171,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Mark Eggleston",
@@ -1102,7 +1185,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Max LeBlanc",
@@ -1115,7 +1199,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Alexa Barraza",
@@ -1128,7 +1213,8 @@
    "enemies": "despises",
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Anaya Jang",
@@ -1141,7 +1227,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Alexa De Costa",
@@ -1154,7 +1241,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Josie De Costa",
@@ -1167,7 +1255,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Nani Kealoha",
@@ -1180,7 +1269,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Leila Illes",
@@ -1193,7 +1283,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Knox Greenburg",
@@ -1206,7 +1297,8 @@
    "enemies": null,
    "site": ["child of"],
    "saves": ["Building #2", "Rotational"],
-   "in_new_save": ["child of", "friends with"]
+   "in_new_save": ["child of", "friends with"],
+   "housemates": ["Building #2", "Rotational"]
   },
   {
    "a": "Blossom Greenburg",
@@ -1219,7 +1311,8 @@
    "enemies": null,
    "site": ["parent of"],
    "saves": ["100 Baby Challenge!!", "Building #2", "Horses!", "Not So Berry", "Return to the HOB", "Rotational", "Season Events", "Will the port be Promising?"],
-   "in_new_save": ["friends with", "parent of"]
+   "in_new_save": ["friends with", "parent of"],
+   "housemates": ["100 Baby Challenge!!", "Building #2", "Rotational"]
   },
   {
    "a": "Francine Spencer",
@@ -1232,7 +1325,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Horses!", "Not So Berry", "Rotational", "Will the port be Promising?"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Blossom Greenburg",
@@ -1245,7 +1339,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Horses!", "Not So Berry", "Rotational", "Will the port be Promising?"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Nani Kealoha",
@@ -1258,7 +1353,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Elsa Bjergsen",
@@ -1271,7 +1367,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Duane Talla",
@@ -1284,7 +1381,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Daniel Barraza",
@@ -1297,7 +1395,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Daniel Barraza",
@@ -1310,7 +1409,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Diego Lobo",
@@ -1323,7 +1423,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Marissa Rivera",
@@ -1336,7 +1437,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Mark Eggleston",
@@ -1349,7 +1451,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Emilee Kopf",
@@ -1362,7 +1465,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Cameron Fletcher",
@@ -1375,7 +1479,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Brant Hecking",
@@ -1388,7 +1493,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Mark Eggleston",
@@ -1401,7 +1507,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Carlos Rivera",
@@ -1414,7 +1521,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Return to the HOB", "Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Bella Goth",
@@ -1427,7 +1535,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Mia LeBlanc",
@@ -1440,7 +1549,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Brant Hecking",
@@ -1453,7 +1563,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Billie Jang",
@@ -1466,7 +1577,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Nani Kealoha",
@@ -1479,7 +1591,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Alexa De Costa",
@@ -1492,7 +1605,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Return to the HOB", "Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Mark Eggleston",
@@ -1505,7 +1619,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Max Villareal",
@@ -1518,7 +1633,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Brant Hecking",
@@ -1531,7 +1647,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Mila Munch",
@@ -1544,12 +1661,13 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Evelyn Davidson",
    "b": "Sonya Rivera",
-   "a_household": "Davidson 1 (Willow Creek)",
+   "a_household": "Davidson (Willow Creek)",
    "b_household": "Rivera (Oasis Springs)",
    "family": [],
    "romance": null,
@@ -1557,7 +1675,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Judith Ward",
@@ -1570,7 +1689,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Nani Kealoha",
@@ -1583,7 +1703,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Lisa Davidson",
@@ -1596,7 +1717,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Bella Goth",
@@ -1609,7 +1731,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Brant Hecking",
@@ -1622,7 +1745,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Elsa Bjergsen",
@@ -1635,7 +1759,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Dominic Fyres",
@@ -1648,7 +1773,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Alexa De Costa",
@@ -1661,7 +1787,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Nani Kealoha",
@@ -1674,7 +1801,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Josie De Costa",
@@ -1687,7 +1815,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Mark Eggleston",
@@ -1700,7 +1829,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Brant Hecking",
@@ -1713,7 +1843,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Bella Goth",
@@ -1726,7 +1857,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Emilia Ernest",
@@ -1739,7 +1871,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Brent Hecking",
@@ -1752,7 +1885,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Alexa De Costa",
@@ -1765,7 +1899,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Return to the HOB", "Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Carlos Rivera",
@@ -1778,7 +1913,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Return to the HOB", "Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Naoki Ito",
@@ -1791,7 +1927,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Building #2", "Horses!", "Not So Berry", "Rotational", "Will the port be Promising?"],
-   "in_new_save": ["dislikes"]
+   "in_new_save": ["dislikes"],
+   "housemates": []
   },
   {
    "a": "Kaori Nishidake",
@@ -1804,7 +1941,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Horses!", "Not So Berry", "Rotational", "Will the port be Promising?"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Megumi Ito",
@@ -1817,20 +1955,22 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Horses!", "Not So Berry", "Rotational", "Will the port be Promising?"],
-   "in_new_save": ["good friends with"]
+   "in_new_save": ["good friends with"],
+   "housemates": []
   },
   {
    "a": "David Barraza",
    "b": "George Davidson",
    "a_household": "Barraza (Willow Creek)",
-   "b_household": "Davidson 1 (Willow Creek)",
+   "b_household": "Davidson (Willow Creek)",
    "family": [],
    "romance": null,
    "friends": "friends with",
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "David Barraza",
@@ -1843,7 +1983,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Evie Delgato",
@@ -1856,7 +1997,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Molly Prescott",
@@ -1869,7 +2011,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Ash Harjo",
@@ -1882,7 +2025,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Rotational"],
-   "in_new_save": ["good friends with"]
+   "in_new_save": ["good friends with"],
+   "housemates": []
   },
   {
    "a": "Ash Harjo",
@@ -1895,7 +2039,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Horses!", "Rotational"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Aurelio Robles",
@@ -1908,7 +2053,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Not So Berry", "Rotational", "Season Events"],
-   "in_new_save": ["good friends with", "niece/nephew of"]
+   "in_new_save": ["good friends with", "niece/nephew of"],
+   "housemates": []
   },
   {
    "a": "Ignacio Robles",
@@ -1921,7 +2067,8 @@
    "enemies": null,
    "site": ["parent of"],
    "saves": ["Building #2", "Not So Berry", "Rotational", "Season Events"],
-   "in_new_save": ["good friends with", "parent of"]
+   "in_new_save": ["good friends with", "parent of"],
+   "housemates": []
   },
   {
    "a": "Christopher Michaelson",
@@ -1934,7 +2081,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Not So Berry", "Rotational", "Season Events"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Ignacio Robles",
@@ -1947,7 +2095,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Not So Berry", "Rotational", "Season Events"],
-   "in_new_save": ["good friends with", "grandparent of"]
+   "in_new_save": ["good friends with", "grandparent of"],
+   "housemates": []
   },
   {
    "a": "Bernice Robles",
@@ -1960,7 +2109,8 @@
    "enemies": null,
    "site": ["sibling of"],
    "saves": ["Building #2", "Not So Berry", "Rotational", "Season Events"],
-   "in_new_save": ["sibling of"]
+   "in_new_save": ["sibling of"],
+   "housemates": []
   },
   {
    "a": "Bernice Robles",
@@ -1973,7 +2123,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Not So Berry", "Rotational", "Season Events"],
-   "in_new_save": ["aunt/uncle of", "friends with"]
+   "in_new_save": ["aunt/uncle of", "friends with"],
+   "housemates": []
   },
   {
    "a": "Bernice Robles",
@@ -1986,7 +2137,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Not So Berry", "Rotational", "Season Events"],
-   "in_new_save": ["good friends with"]
+   "in_new_save": ["good friends with"],
+   "housemates": []
   },
   {
    "a": "Ian Robles",
@@ -1999,7 +2151,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Not So Berry", "Rotational", "Season Events"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Ian Robles",
@@ -2012,7 +2165,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Building #2", "Not So Berry", "Rotational", "Season Events"],
-   "in_new_save": ["dislikes"]
+   "in_new_save": ["dislikes"],
+   "housemates": []
   },
   {
    "a": "Ian Robles",
@@ -2025,7 +2179,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Not So Berry", "Rotational", "Season Events"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Aurelio Robles",
@@ -2038,7 +2193,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Not So Berry", "Rotational", "Season Events"],
-   "in_new_save": ["cousin of", "friends with"]
+   "in_new_save": ["cousin of", "friends with"],
+   "housemates": []
   },
   {
    "a": "Celeste Michaelson",
@@ -2051,7 +2207,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Not So Berry", "Rotational"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Christopher Michaelson",
@@ -2064,7 +2221,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Not So Berry", "Rotational", "Season Events"],
-   "in_new_save": ["good friends with"]
+   "in_new_save": ["good friends with"],
+   "housemates": []
   },
   {
    "a": "Sienna Grove",
@@ -2077,7 +2235,8 @@
    "enemies": null,
    "site": ["sibling of"],
    "saves": ["100 Baby Challenge!!", "Building #2", "Horses!", "Not So Berry", "Rotational", "Season Events"],
-   "in_new_save": ["friends with", "sibling of"]
+   "in_new_save": ["friends with", "sibling of"],
+   "housemates": []
   },
   {
    "a": "Don Gooseman",
@@ -2090,7 +2249,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Horses!", "Not So Berry", "Rotational"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Sienna Grove",
@@ -2103,7 +2263,8 @@
    "enemies": null,
    "site": [],
    "saves": ["100 Baby Challenge!!", "Building #2", "Horses!", "Not So Berry", "Rotational", "Season Events"],
-   "in_new_save": ["aunt/uncle of", "friends with"]
+   "in_new_save": ["aunt/uncle of", "friends with"],
+   "housemates": []
   },
   {
    "a": "Marissa Tracey",
@@ -2116,7 +2277,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Horses!", "Rotational"],
-   "in_new_save": ["dislikes"]
+   "in_new_save": ["dislikes"],
+   "housemates": []
   },
   {
    "a": "Juniper Grove",
@@ -2129,7 +2291,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Horses!", "Rotational"],
-   "in_new_save": ["best friends with", "good friends with"]
+   "in_new_save": ["best friends with", "good friends with"],
+   "housemates": []
   },
   {
    "a": "Don Gooseman",
@@ -2142,7 +2305,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Horses!", "Not So Berry", "Rotational"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Alon Sadya",
@@ -2155,7 +2319,8 @@
    "enemies": null,
    "site": [],
    "saves": ["100 Baby Challenge!!", "Building #2", "Rotational", "Season Events"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Chánh Linh",
@@ -2168,7 +2333,8 @@
    "enemies": null,
    "site": ["parent of"],
    "saves": ["100 Baby Challenge!!", "Building #2", "Rotational", "Season Events"],
-   "in_new_save": ["friends with", "parent of"]
+   "in_new_save": ["friends with", "parent of"],
+   "housemates": []
   },
   {
    "a": "Arturo Linh",
@@ -2181,7 +2347,8 @@
    "enemies": null,
    "site": ["parent of"],
    "saves": ["100 Baby Challenge!!", "Building #2", "Rotational", "Season Events"],
-   "in_new_save": ["friends with", "parent of"]
+   "in_new_save": ["friends with", "parent of"],
+   "housemates": []
   },
   {
    "a": "Liên Sadya",
@@ -2194,7 +2361,8 @@
    "enemies": null,
    "site": ["sibling of"],
    "saves": ["100 Baby Challenge!!", "Building #2", "Rotational", "Season Events"],
-   "in_new_save": ["friends with", "sibling of"]
+   "in_new_save": ["friends with", "sibling of"],
+   "housemates": []
   },
   {
    "a": "Cam Sadya",
@@ -2207,7 +2375,8 @@
    "enemies": null,
    "site": [],
    "saves": ["100 Baby Challenge!!", "Building #2", "Rotational", "Season Events"],
-   "in_new_save": ["friends with", "niece/nephew of"]
+   "in_new_save": ["friends with", "niece/nephew of"],
+   "housemates": []
   },
   {
    "a": "Thi Linh",
@@ -2220,7 +2389,8 @@
    "enemies": null,
    "site": [],
    "saves": ["100 Baby Challenge!!", "Building #2", "Rotational", "Season Events"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Arturo Linh",
@@ -2233,7 +2403,8 @@
    "enemies": null,
    "site": [],
    "saves": ["100 Baby Challenge!!", "Building #2", "Not So Berry", "Rotational", "Season Events"],
-   "in_new_save": ["good friends with"]
+   "in_new_save": ["good friends with"],
+   "housemates": []
   },
   {
    "a": "Esther Gomes",
@@ -2246,7 +2417,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Building #2", "Rotational"],
-   "in_new_save": ["dislikes"]
+   "in_new_save": ["dislikes"],
+   "housemates": []
   },
   {
    "a": "Esther Gomes",
@@ -2259,7 +2431,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Rotational"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Esther Gomes",
@@ -2272,7 +2445,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Building #2", "Rotational"],
-   "in_new_save": ["dislikes"]
+   "in_new_save": ["dislikes"],
+   "housemates": []
   },
   {
    "a": "Esther Gomes",
@@ -2285,7 +2459,8 @@
    "enemies": null,
    "site": ["sibling of"],
    "saves": ["Building #2", "Rotational"],
-   "in_new_save": ["sibling of"]
+   "in_new_save": ["sibling of"],
+   "housemates": []
   },
   {
    "a": "Esther Gomes",
@@ -2298,7 +2473,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Rotational"],
-   "in_new_save": ["aunt/uncle of", "good friends with"]
+   "in_new_save": ["aunt/uncle of", "good friends with"],
+   "housemates": []
   },
   {
    "a": "Layne Coffin",
@@ -2311,7 +2487,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Rotational"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Olive Specter",
@@ -2324,7 +2501,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Rotational"],
-   "in_new_save": ["good friends with"]
+   "in_new_save": ["good friends with"],
+   "housemates": []
   },
   {
    "a": "Ekade Aether",
@@ -2337,7 +2515,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Building #2", "Rotational"],
-   "in_new_save": ["dislikes"]
+   "in_new_save": ["dislikes"],
+   "housemates": []
   },
   {
    "a": "Layne Coffin",
@@ -2350,7 +2529,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Rotational"],
-   "in_new_save": ["ex of", "good friends with"]
+   "in_new_save": ["ex of", "good friends with"],
+   "housemates": []
   },
   {
    "a": "Nyon Specter",
@@ -2363,7 +2543,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Rotational"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Layne Coffin",
@@ -2376,7 +2557,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Rotational"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Nyon Specter",
@@ -2389,7 +2571,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Rotational"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Olive Specter",
@@ -2402,7 +2585,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Building #2", "Rotational"],
-   "in_new_save": ["dislikes"]
+   "in_new_save": ["dislikes"],
+   "housemates": []
   },
   {
    "a": "Layne Coffin",
@@ -2415,7 +2599,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Rotational"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Nyon Specter",
@@ -2428,7 +2613,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Rotational"],
-   "in_new_save": ["good friends with"]
+   "in_new_save": ["good friends with"],
+   "housemates": []
   },
   {
    "a": "Ekade Aether",
@@ -2441,7 +2627,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Rotational"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Kai Aether",
@@ -2454,7 +2641,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Rotational"],
-   "in_new_save": ["good friends with"]
+   "in_new_save": ["good friends with"],
+   "housemates": []
   },
   {
    "a": "Nyon Specter",
@@ -2467,7 +2655,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Rotational"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Dahlia Loden",
@@ -2480,7 +2669,8 @@
    "enemies": null,
    "site": [],
    "saves": ["100 Baby Challenge!!", "Building #2", "Not So Berry", "Rotational", "Season Events"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Erik Loden",
@@ -2493,7 +2683,8 @@
    "enemies": null,
    "site": [],
    "saves": ["100 Baby Challenge!!", "Building #2", "Rotational", "Season Events"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Gert Koopman",
@@ -2506,7 +2697,8 @@
    "enemies": null,
    "site": [],
    "saves": ["100 Baby Challenge!!", "Building #2", "Not So Berry", "Rotational", "Season Events"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Cannonball Coleman",
@@ -2519,7 +2711,8 @@
    "enemies": null,
    "site": [],
    "saves": ["100 Baby Challenge!!", "Building #2", "Not So Berry", "Rotational", "Season Events"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Gramma Hattie Loden",
@@ -2532,7 +2725,8 @@
    "enemies": null,
    "site": [],
    "saves": ["100 Baby Challenge!!", "Building #2", "Not So Berry", "Rotational", "Season Events"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Jane Addam",
@@ -2545,7 +2739,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Building #2", "Rotational", "Season Events"],
-   "in_new_save": ["dislikes"]
+   "in_new_save": ["dislikes"],
+   "housemates": []
   },
   {
    "a": "Aeris Chavez-Ralston",
@@ -2558,7 +2753,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Rotational", "Season Events"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Dougie Perry",
@@ -2571,7 +2767,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Rotational", "Season Events"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Enzo Alto",
@@ -2584,7 +2781,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Rotational", "Season Events"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Adekoya Darong",
@@ -2597,7 +2795,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Building #2", "Rotational", "Season Events"],
-   "in_new_save": ["dislikes"]
+   "in_new_save": ["dislikes"],
+   "housemates": []
   },
   {
    "a": "Ermelinda Abrantes",
@@ -2610,7 +2809,8 @@
    "enemies": null,
    "site": ["parent of"],
    "saves": ["Building #2", "Rotational", "Season Events"],
-   "in_new_save": ["parent of"]
+   "in_new_save": ["parent of"],
+   "housemates": []
   },
   {
    "a": "Cordelia Thebe V",
@@ -2623,7 +2823,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Building #2", "Rotational", "Season Events"],
-   "in_new_save": ["dislikes"]
+   "in_new_save": ["dislikes"],
+   "housemates": []
   },
   {
    "a": "Sofia Abrantes",
@@ -2636,7 +2837,8 @@
    "enemies": null,
    "site": ["sibling of"],
    "saves": ["Building #2", "Rotational", "Season Events"],
-   "in_new_save": ["good friends with", "sibling of"]
+   "in_new_save": ["good friends with", "sibling of"],
+   "housemates": []
   },
   {
    "a": "Dina Caliente",
@@ -2649,7 +2851,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Return to the HOB", "Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": ["Return to the HOB"]
   },
   {
    "a": "Alice Martin",
@@ -2662,7 +2865,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Josie Donovan",
@@ -2675,7 +2879,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Marcus Flex",
@@ -2688,7 +2893,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Dina Caliente",
@@ -2701,7 +2907,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": ["Season Events"]
   },
   {
    "a": "Makoa Kealoha",
@@ -2714,7 +2921,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Makoa Kealoha",
@@ -2727,7 +2935,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Makoa Kealoha",
@@ -2740,7 +2949,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Cecilia Kang",
@@ -2753,7 +2963,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Eliza Pancakes",
@@ -2766,7 +2977,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Geoffrey Landgraab",
@@ -2779,7 +2991,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Davin Haynes",
@@ -2792,7 +3005,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Alexander Goth",
@@ -2805,7 +3019,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Katrina Caliente",
@@ -2818,7 +3033,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Not So Berry", "Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Davin Haynes",
@@ -2831,7 +3047,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Eliza Pancakes",
@@ -2844,7 +3061,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Katrina Caliente",
@@ -2857,7 +3075,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Alice Spencer-Kim",
@@ -2870,7 +3089,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Cassandra Goth",
@@ -2883,7 +3103,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Not So Berry", "Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Josie Donovan",
@@ -2896,7 +3117,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "J Huntington III",
@@ -2909,7 +3131,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Davin Haynes",
@@ -2922,7 +3145,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Kaori Nishidake",
@@ -2935,7 +3159,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Misty Haynes",
@@ -2948,7 +3173,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Eliza Pancakes",
@@ -2961,7 +3187,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Kaori Nishidake",
@@ -2974,7 +3201,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Liberty Lee",
@@ -2987,7 +3215,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Katrina Caliente",
@@ -3000,7 +3229,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Davin Haynes",
@@ -3013,7 +3243,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Gideon Harris",
@@ -3026,7 +3257,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": ["Season Events"]
   },
   {
    "a": "Jeb Harris",
@@ -3039,7 +3271,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": ["Season Events"]
   },
   {
    "a": "Imran Watson",
@@ -3052,7 +3285,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": ["Season Events"]
   },
   {
    "a": "Diego Lobo",
@@ -3065,7 +3299,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Bella Goth",
@@ -3078,7 +3313,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Annie Versaree",
@@ -3091,7 +3327,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Dina Caliente",
@@ -3104,7 +3341,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Annie Versaree",
@@ -3117,7 +3355,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Gabrielle Washburn",
@@ -3130,7 +3369,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": ["Season Events"]
   },
   {
    "a": "Annie Versaree",
@@ -3143,7 +3383,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Annie Versaree",
@@ -3156,7 +3397,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Annie Versaree",
@@ -3169,7 +3411,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Makoa Kealoha",
@@ -3182,7 +3425,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Julia Wright",
@@ -3195,7 +3439,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Noah Kane",
@@ -3208,7 +3453,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Christie Sigworth",
@@ -3221,7 +3467,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Duane Talla",
@@ -3234,7 +3481,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Dustin Broke",
@@ -3247,7 +3495,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": ["Season Events"]
   },
   {
    "a": "Mila Munch",
@@ -3260,7 +3509,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Aurelio Robles",
@@ -3273,7 +3523,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Christopher Michaelson",
@@ -3286,7 +3537,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Aurelio Robles",
@@ -3299,7 +3551,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Christopher Michaelson",
@@ -3312,7 +3565,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Bernice Robles",
@@ -3325,7 +3579,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Gemma Charm",
@@ -3338,7 +3593,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Ian Robles",
@@ -3351,7 +3607,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Morgan Fyres",
@@ -3364,7 +3621,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Mortimer Goth",
@@ -3377,7 +3635,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Billie Jang",
@@ -3390,7 +3649,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Ellen Bridges",
@@ -3403,7 +3663,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Christie Sigworth",
@@ -3416,7 +3677,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Season Events"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Geoffrey Landgraab",
@@ -3429,7 +3691,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Horses!", "Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Bjorn Bjergsen",
@@ -3442,7 +3705,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Horses!", "Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Marcus Flex",
@@ -3455,7 +3719,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Horses!", "Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Alice Spencer-Kim",
@@ -3468,7 +3733,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Horses!", "Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Alice Spencer-Kim",
@@ -3481,7 +3747,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Horses!", "Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Malcolm Landgraab",
@@ -3494,7 +3761,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Building #2", "Horses!", "Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Imran Watson",
@@ -3507,7 +3775,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Horses!"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Natalie Watson",
@@ -3520,7 +3789,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Horses!", "Not So Berry", "Return to the HOB"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Maira Watson",
@@ -3533,7 +3803,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Horses!", "Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Natalie Watson",
@@ -3546,7 +3817,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Horses!", "Not So Berry", "Return to the HOB"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Darrel Charm",
@@ -3559,7 +3831,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Building #2", "Horses!", "Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Kiyoshi Ito",
@@ -3572,7 +3845,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Horses!", "Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Hugo Villareal",
@@ -3585,7 +3859,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Building #2", "Horses!", "Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Alice Spencer-Kim",
@@ -3598,7 +3873,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Horses!", "Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Kado Akiyama",
@@ -3611,7 +3887,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Horses!", "Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Dina Caliente",
@@ -3624,7 +3901,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Horses!"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Dani Davila",
@@ -3637,7 +3915,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Horses!"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Jesminder Bheeda",
@@ -3650,7 +3929,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Horses!"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Dani Davila",
@@ -3663,7 +3943,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Horses!"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Candy Behr",
@@ -3676,7 +3957,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Return to the HOB", "Will the port be Promising?"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Dominic Fyres",
@@ -3689,7 +3971,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Return to the HOB", "Will the port be Promising?"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Gunther Munch",
@@ -3702,7 +3985,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Return to the HOB", "Will the port be Promising?"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Gunther Munch",
@@ -3715,7 +3999,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Return to the HOB", "Will the port be Promising?"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Gunther Munch",
@@ -3728,7 +4013,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Return to the HOB", "Will the port be Promising?"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Bjorn Bjergsen",
@@ -3741,7 +4027,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Return to the HOB", "Will the port be Promising?"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Bjorn Bjergsen",
@@ -3754,7 +4041,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Return to the HOB", "Will the port be Promising?"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Clara Bjergsen",
@@ -3767,7 +4055,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Return to the HOB", "Will the port be Promising?"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Siobhan Fyres",
@@ -3780,7 +4069,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Return to the HOB", "Will the port be Promising?"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Sergio Romeo",
@@ -3793,7 +4083,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Return to the HOB", "Will the port be Promising?"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Elsa Bjergsen",
@@ -3806,7 +4097,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Return to the HOB", "Will the port be Promising?"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Sergio Romeo",
@@ -3819,7 +4111,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Return to the HOB", "Will the port be Promising?"],
-   "in_new_save": ["friends with", "going steady with"]
+   "in_new_save": ["friends with", "going steady with"],
+   "housemates": []
   },
   {
    "a": "Dominic Fyres",
@@ -3832,7 +4125,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Return to the HOB", "Will the port be Promising?"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Jacques Villareal",
@@ -3845,7 +4139,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Return to the HOB", "Will the port be Promising?"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Luna Villareal",
@@ -3858,7 +4153,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Return to the HOB", "Will the port be Promising?"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Luna Villareal",
@@ -3871,7 +4167,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Return to the HOB", "Will the port be Promising?"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Luna Villareal",
@@ -3884,7 +4181,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Return to the HOB", "Will the port be Promising?"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Hugo Villareal",
@@ -3897,7 +4195,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Return to the HOB", "Will the port be Promising?"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Hugo Villareal",
@@ -3910,7 +4209,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Return to the HOB", "Will the port be Promising?"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Max Villareal",
@@ -3923,7 +4223,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Return to the HOB", "Will the port be Promising?"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Alexa De Costa",
@@ -3936,7 +4237,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Return to the HOB"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Josie De Costa",
@@ -3949,7 +4251,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Return to the HOB"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Josie De Costa",
@@ -3962,7 +4265,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Return to the HOB"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Sonya Rivera",
@@ -3975,7 +4279,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Return to the HOB"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Marissa Rivera",
@@ -3988,7 +4293,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Return to the HOB"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Carlos Rivera",
@@ -4001,7 +4307,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Return to the HOB"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Faye Harris",
@@ -4014,7 +4321,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Return to the HOB"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Marissa Rivera",
@@ -4027,7 +4335,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Return to the HOB"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Luna Villareal",
@@ -4040,7 +4349,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Return to the HOB"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Cecilia Kang",
@@ -4053,7 +4363,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Return to the HOB"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Bob Pancakes",
@@ -4066,7 +4377,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Return to the HOB"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Cecilia Kang",
@@ -4079,7 +4391,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Return to the HOB"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Imran Watson",
@@ -4092,7 +4405,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Return to the HOB"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Diego Lobo",
@@ -4105,7 +4419,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Return to the HOB"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Brant Hecking",
@@ -4118,7 +4433,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Return to the HOB"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Cecilia Kang",
@@ -4131,7 +4447,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Return to the HOB"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Jenna Akiyama",
@@ -4144,7 +4461,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Return to the HOB"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Anaya Jang",
@@ -4157,7 +4475,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Return to the HOB"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Brent Hecking",
@@ -4170,7 +4489,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Return to the HOB"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Derek McMillan",
@@ -4183,7 +4503,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Return to the HOB"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Derek McMillan",
@@ -4196,7 +4517,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Return to the HOB"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Cecilia Kang",
@@ -4209,7 +4531,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Return to the HOB"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Daisy Watson-Holmes",
@@ -4222,7 +4545,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Return to the HOB"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Gunther Munch",
@@ -4235,7 +4559,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Return to the HOB"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Rashidah Watson",
@@ -4248,7 +4573,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Return to the HOB"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Becca Clarke",
@@ -4261,7 +4587,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Return to the HOB"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Brant Hecking",
@@ -4274,7 +4601,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Return to the HOB"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Anaya Jang",
@@ -4287,7 +4615,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Return to the HOB"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Anaya Jang",
@@ -4300,7 +4629,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Return to the HOB"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Maira Watson",
@@ -4313,7 +4643,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Return to the HOB"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Rahmi Watson",
@@ -4326,7 +4657,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Return to the HOB"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Kado Akiyama",
@@ -4339,7 +4671,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Return to the HOB"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Cecilia Kang",
@@ -4352,7 +4685,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Return to the HOB"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Duane Talla",
@@ -4365,7 +4699,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Liberty Lee",
@@ -4378,7 +4713,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Bella Goth",
@@ -4391,7 +4727,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Geoffrey Landgraab",
@@ -4404,7 +4741,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Eliza Pancakes",
@@ -4417,7 +4755,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Mortimer Goth",
@@ -4430,7 +4769,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Siobhan Fyres",
@@ -4443,7 +4783,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Siobhan Fyres",
@@ -4456,7 +4797,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Eliza Pancakes",
@@ -4469,7 +4811,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Bob Pancakes",
@@ -4482,7 +4825,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Cassandra Goth",
@@ -4495,7 +4839,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Grace Anansi",
@@ -4508,7 +4853,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Liberty Lee",
@@ -4521,7 +4867,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Eliza Pancakes",
@@ -4534,7 +4881,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Makoa Kealoha",
@@ -4547,7 +4895,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Marcus Flex",
@@ -4560,7 +4909,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Bella Goth",
@@ -4573,7 +4923,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Darrel Charm",
@@ -4586,7 +4937,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Miki Akiyama",
@@ -4599,7 +4951,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Olivia Kim-Lewis",
@@ -4612,7 +4965,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Grace Anansi",
@@ -4625,7 +4979,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Gideon Harris",
@@ -4638,7 +4993,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Bob Pancakes",
@@ -4651,7 +5007,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Summer Holiday",
@@ -4664,7 +5021,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Rahmi Watson",
@@ -4677,7 +5035,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Luna Villareal",
@@ -4690,7 +5049,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Duane Talla",
@@ -4703,7 +5063,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Elsa Bjergsen",
@@ -4716,7 +5077,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Miko Ojo",
@@ -4729,7 +5091,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Gemma Charm",
@@ -4742,7 +5105,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Gemma Charm",
@@ -4755,7 +5119,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Gunther Munch",
@@ -4768,7 +5133,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Cletus Harris",
@@ -4781,7 +5147,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Mark Eggleston",
@@ -4794,7 +5161,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Jenna Akiyama",
@@ -4807,7 +5175,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Anaya Jang",
@@ -4820,7 +5189,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Penny Pizzazz",
@@ -4833,7 +5203,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Penny Pizzazz",
@@ -4846,7 +5217,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Maira Watson",
@@ -4859,7 +5231,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Leah-Moon Cadberry",
@@ -4872,7 +5245,8 @@
    "enemies": null,
    "site": ["parent of"],
    "saves": ["Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Kennedy Kirkland",
@@ -4885,7 +5259,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Kayleigh Kirkland",
@@ -4898,7 +5273,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Not So Berry"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Maira Watson",
@@ -4911,7 +5287,8 @@
    "enemies": null,
    "site": [],
    "saves": ["100 Baby Challenge!!"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Geoffrey Landgraab",
@@ -4924,7 +5301,8 @@
    "enemies": null,
    "site": [],
    "saves": ["100 Baby Challenge!!"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Maaike Haas",
@@ -4937,7 +5315,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Will the port be Promising?"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Morgan Fyres",
@@ -4950,7 +5329,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Will the port be Promising?"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Max Villareal",
@@ -4963,7 +5343,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Will the port be Promising?"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Candy Behr",
@@ -4976,7 +5357,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Will the port be Promising?"],
-   "in_new_save": ["friends with"]
+   "in_new_save": ["friends with"],
+   "housemates": []
   },
   {
    "a": "Jules Rico",
@@ -4989,7 +5371,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Will the port be Promising?"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Gideon Harris",
@@ -5002,7 +5385,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Will the port be Promising?"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Bess Sterling",
@@ -5015,7 +5399,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Will the port be Promising?"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Blossom Greenburg",
@@ -5028,7 +5413,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Will the port be Promising?"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Bess Sterling",
@@ -5041,7 +5427,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Will the port be Promising?"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Bess Sterling",
@@ -5054,7 +5441,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Will the port be Promising?"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Cletus Harris",
@@ -5067,7 +5455,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Will the port be Promising?"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Gideon Harris",
@@ -5080,7 +5469,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Will the port be Promising?"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Blossom Greenburg",
@@ -5093,7 +5483,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Will the port be Promising?"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Mary Greenburg",
@@ -5106,7 +5497,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Will the port be Promising?"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Knox Greenburg",
@@ -5119,7 +5511,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Will the port be Promising?"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Jeb Harris",
@@ -5132,7 +5525,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Will the port be Promising?"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Jeb Harris",
@@ -5145,7 +5539,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Will the port be Promising?"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Bess Sterling",
@@ -5158,7 +5553,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2", "Will the port be Promising?"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Knox Greenburg",
@@ -5171,7 +5567,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Will the port be Promising?"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Jules Rico",
@@ -5184,7 +5581,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Will the port be Promising?"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Bess Sterling",
@@ -5197,7 +5595,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Will the port be Promising?"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Gideon Harris",
@@ -5210,7 +5609,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Building #2", "Will the port be Promising?"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Jeb Harris",
@@ -5223,7 +5623,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Will the port be Promising?"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "April Carr",
@@ -5236,7 +5637,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Will the port be Promising?"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Blossom Greenburg",
@@ -5249,7 +5651,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Will the port be Promising?"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Gideon Harris",
@@ -5262,7 +5665,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Will the port be Promising?"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Faye Harris",
@@ -5275,7 +5679,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Will the port be Promising?"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Kaleb Henley",
@@ -5288,7 +5693,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Will the port be Promising?"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Dominic Fyres",
@@ -5301,7 +5707,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Will the port be Promising?"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Blossom Greenburg",
@@ -5314,7 +5721,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Will the port be Promising?"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Sergio Romeo",
@@ -5327,7 +5735,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Will the port be Promising?"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Don Lothario",
@@ -5340,7 +5749,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Will the port be Promising?"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Francine Spencer",
@@ -5353,7 +5763,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Will the port be Promising?"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "J Huntington III",
@@ -5366,7 +5777,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Will the port be Promising?"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Gunther Munch",
@@ -5379,7 +5791,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Will the port be Promising?"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Don Lothario",
@@ -5392,7 +5805,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Will the port be Promising?"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Jeb Harris",
@@ -5405,7 +5819,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Will the port be Promising?"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Faye Harris",
@@ -5418,7 +5833,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Will the port be Promising?"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Knox Greenburg",
@@ -5431,7 +5847,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Will the port be Promising?"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Gideon Harris",
@@ -5444,7 +5861,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Will the port be Promising?"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Liberty Lee",
@@ -5457,7 +5875,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": ["Building #2"]
   },
   {
    "a": "Bess Sterling",
@@ -5470,7 +5889,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Building #2"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Cannonball Coleman",
@@ -5483,7 +5903,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Max Villareal",
@@ -5496,7 +5917,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Freya Loden",
@@ -5509,7 +5931,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Max Villareal",
@@ -5522,7 +5945,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Cletus Harris",
@@ -5535,7 +5959,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Jolanda Koopman",
@@ -5548,7 +5973,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Blossom Greenburg",
@@ -5561,7 +5987,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Alice Spencer-Kim",
@@ -5574,7 +6001,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Cletus Harris",
@@ -5587,7 +6015,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Jolanda Koopman",
@@ -5600,7 +6029,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Building #2"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Alice Spencer-Kim",
@@ -5613,7 +6043,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Alice Spencer-Kim",
@@ -5626,7 +6057,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Jade Rosa",
@@ -5639,7 +6071,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Gunther Munch",
@@ -5652,7 +6085,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Building #2"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Alice Spencer-Kim",
@@ -5665,7 +6099,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Building #2"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Alice Spencer-Kim",
@@ -5678,7 +6113,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Erik Johansson",
@@ -5691,7 +6127,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Gert Koopman",
@@ -5704,7 +6141,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Celeste Michaelson",
@@ -5717,7 +6155,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Dahlia Loden",
@@ -5730,7 +6169,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Erik Loden",
@@ -5743,7 +6183,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Erik Loden",
@@ -5756,7 +6197,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Imran Watson",
@@ -5769,7 +6211,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Kasem Bun Ma",
@@ -5782,7 +6225,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Celeste Michaelson",
@@ -5795,7 +6239,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Erik Johansson",
@@ -5808,7 +6253,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Nigel Chavez-Ralston",
@@ -5821,7 +6267,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Jane Addam",
@@ -5834,7 +6281,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Dougie Perry",
@@ -5847,7 +6295,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Juniper Grove",
@@ -5860,7 +6309,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Bob Pancakes",
@@ -5873,7 +6323,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Building #2"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Eliza Pancakes",
@@ -5886,7 +6337,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Building #2"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Bob Pancakes",
@@ -5899,7 +6351,8 @@
    "enemies": "dislikes",
    "site": [],
    "saves": ["Building #2"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Alexander Goth",
@@ -5912,7 +6365,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Aeris Chavez-Ralston",
@@ -5925,7 +6379,8 @@
    "enemies": null,
    "site": [],
    "saves": ["Building #2"],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Dustin Broke",
@@ -5938,7 +6393,8 @@
    "enemies": null,
    "site": ["child of"],
    "saves": [],
-   "in_new_save": ["child of", "friends with"]
+   "in_new_save": ["child of", "friends with"],
+   "housemates": []
   },
   {
    "a": "Geoffrey Landgraab",
@@ -5951,7 +6407,8 @@
    "enemies": null,
    "site": ["parent of"],
    "saves": [],
-   "in_new_save": ["friends with", "parent of"]
+   "in_new_save": ["friends with", "parent of"],
+   "housemates": []
   },
   {
    "a": "Johnny Zest",
@@ -5964,7 +6421,8 @@
    "enemies": null,
    "site": ["child of"],
    "saves": [],
-   "in_new_save": ["child of", "friends with"]
+   "in_new_save": ["child of", "friends with"],
+   "housemates": []
   },
   {
    "a": "Angela Pleasant",
@@ -5977,7 +6435,8 @@
    "enemies": null,
    "site": ["child of"],
    "saves": [],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Angela Pleasant",
@@ -5990,7 +6449,8 @@
    "enemies": null,
    "site": ["child of"],
    "saves": [],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Daniel Pleasant",
@@ -6003,7 +6463,8 @@
    "enemies": null,
    "site": ["parent of"],
    "saves": [],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Lilith Pleasant",
@@ -6016,7 +6477,8 @@
    "enemies": null,
    "site": ["child of"],
    "saves": [],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Adekoya Darong",
@@ -6029,7 +6491,8 @@
    "enemies": null,
    "site": ["parent of"],
    "saves": [],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Johnny Zest",
@@ -6042,7 +6505,8 @@
    "enemies": null,
    "site": ["sibling of"],
    "saves": [],
-   "in_new_save": ["sibling of"]
+   "in_new_save": ["sibling of"],
+   "housemates": []
   },
   {
    "a": "Pascal Curious",
@@ -6055,7 +6519,8 @@
    "enemies": null,
    "site": ["sibling of"],
    "saves": [],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Lazlo Curious",
@@ -6068,7 +6533,8 @@
    "enemies": null,
    "site": ["sibling of"],
    "saves": [],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Juliette Monticapp",
@@ -6081,7 +6547,8 @@
    "enemies": null,
    "site": ["sibling of"],
    "saves": [],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   },
   {
    "a": "Afua Ananou",
@@ -6094,7 +6561,8 @@
    "enemies": null,
    "site": ["sibling of"],
    "saves": [],
-   "in_new_save": []
+   "in_new_save": [],
+   "housemates": []
   }
  ]
 }

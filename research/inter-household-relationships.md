@@ -15,8 +15,8 @@ From the site's family trees (parents, siblings, partners); the plan wins over a
 - **Lazlo Curious** (Curious 1 (Oasis Springs)) sibling of **Pascal Curious** (Curious 2 (Oasis Springs)) · on the site only · **to add**
 - **Pascal Curious** (Curious 2 (Oasis Springs)) sibling of **Vidcund Curious** (Curious 1 (Oasis Springs)) · on the site only · **to add**
 - **Adekoya Darong** (Darong (Ondarion)) parent of **Afua Ananou** (Ananou (Ondarion)) · on the site only · **to add**
-- **Evelyn Davidson** (Davidson 1 (Willow Creek)) parent of **Lisa Davidson** (Livin' In The City (San Myshuno)) · saves: Rotational · **to add**
-- **George Davidson** (Davidson 1 (Willow Creek)) sibling of **Lisa Davidson** (Livin' In The City (San Myshuno)) · saves: Rotational · **to add**
+- **Evelyn Davidson** (Davidson (Willow Creek)) parent of **Lisa Davidson** (Livin' In The City (San Myshuno)) · saves: Rotational · **to add**
+- **George Davidson** (Davidson (Willow Creek)) sibling of **Lisa Davidson** (Livin' In The City (San Myshuno)) · saves: Rotational · **to add**
 - **Blossom Greenburg** (Greenburg (Evergreen Harbor)) parent of **Knox Greenburg** (Knox Greenburg (Evergreen Harbor)) · saves: 100 Baby Challenge!!, Building #2, Horses!, Not So Berry, Return to the HOB, Rotational, Season Events, Will the port be Promising? · **in the new save**
 - **Esther Gomes** (Izadi-Gomes (Ravenwood)) sibling of **Tziporah Gomes** (Gomes (Ravenwood)) · saves: Building #2, Rotational · **in the new save**
 - **Johnny Zest** (Johnny Zest (Del Sol Valley)) child of **Nancy Landgraab** (Landgraab (Oasis Springs)) · on the site only · **in the new save**
@@ -35,7 +35,7 @@ From the site's family trees (parents, siblings, partners); the plan wins over a
 - **Alfie Reynolds** (Livin' In The City (San Myshuno)) child of **Britney Reynolds** (Reynolds (Willow Creek)) · saves: Rotational · **to add**
 - **Alfie Reynolds** (Livin' In The City (San Myshuno)) child of **Joe Reynolds** (Reynolds (Willow Creek)) · saves: Rotational · **to add**
 - **Alfie Reynolds** (Livin' In The City (San Myshuno)) sibling of **Rosie Reynolds** (Reynolds (Willow Creek)) · saves: Rotational · **to add**
-- **Lisa Davidson** (Livin' In The City (San Myshuno)) child of **Ray Davidson** (Davidson 1 (Willow Creek)) · saves: Rotational · **to add**
+- **Lisa Davidson** (Livin' In The City (San Myshuno)) child of **Ray Davidson** (Davidson (Willow Creek)) · saves: Rotational · **to add**
 - **Juliette Monticapp** (Monticapp (Tartosa)) sibling of **Tybalt Capp** (Capp (Ondarion)) · on the site only · **to add**
 - **Angela Pleasant** (Pleasant (Britechester)) child of **Daniel Pleasant** (Pleasant (Windenburg)) · on the site only · **to add**
 - **Angela Pleasant** (Pleasant (Britechester)) child of **Mary-Sue Pleasant** (Pleasant (Windenburg)) · on the site only · **to add**
@@ -94,7 +94,7 @@ Best friends, confidants and good friends.
 - **Daniel Barraza** (Barraza (Willow Creek)) good friends with **Tara LeBlanc** (LeBlanc (Newcrest)) · saves: Rotational · **to add**
 - **Bjorn Bjergsen** (Bjergsen (Willow Creek)) good friends with **Britney Reynolds** (Reynolds (Willow Creek)) · saves: Rotational · **to add**
 - **Elsa Bjergsen** (Bjergsen (Willow Creek)) good friends with **Tara LeBlanc** (LeBlanc (Newcrest)) · saves: Rotational · **to add**
-- **George Davidson** (Davidson 1 (Willow Creek)) good friends with **Lucas Munch** (Munch (Windenburg)) · saves: Rotational · **to add**
+- **George Davidson** (Davidson (Willow Creek)) good friends with **Lucas Munch** (Munch (Windenburg)) · saves: Rotational · **to add**
 - **Alexa De Costa** (De Costa (Oasis Springs)) best friends with **Sonya Rivera** (Rivera (Oasis Springs)) · saves: Return to the HOB, Rotational · **to add**
 - **Alexa De Costa** (De Costa (Oasis Springs)) good friends with **Minerva Charm** (Charm (Glimmerbrook)) · saves: Rotational · **to add**
 - **Josie De Costa** (De Costa (Oasis Springs)) good friends with **Nani Kealoha** (Kealoha (Sulani)) · saves: Rotational · **to add**
@@ -107,7 +107,7 @@ Best friends, confidants and good friends.
 - **Cameron Fletcher** (Fletcher (Britechester)) good friends with **Marvin LeBlanc** (LeBlanc (Newcrest)) · saves: Rotational · **to add**
 - **Dominic Fyres** (Fyres (Windenburg)) good friends with **Kristian Kopf** (Kopf (Willow Creek)) · saves: Rotational · **to add**
 - **Siobhan Fyres** (Fyres (Windenburg)) good friends with **Travis Scott** (Scott (Newcrest)) · saves: Not So Berry · **to add**
-- **Alexander Goth** (Goth (Willow Creek)) good friends with **Ray Davidson** (Davidson 1 (Willow Creek)) · saves: Rotational · **to add**
+- **Alexander Goth** (Goth (Willow Creek)) good friends with **Ray Davidson** (Davidson (Willow Creek)) · saves: Rotational · **to add**
 - **Bella Goth** (Goth (Willow Creek)) good friends with **Elsa Bjergsen** (Bjergsen (Willow Creek)) · saves: Rotational · **to add**
 - **Bella Goth** (Goth (Willow Creek)) good friends with **Sergio Romeo** (Bro & Kennedy (San Myshuno)) · saves: Rotational · **to add**
 - **Bella Goth** (Goth (Willow Creek)) good friends with **Daniel Barraza** (Barraza (Willow Creek)) · saves: Rotational · **to add**
@@ -162,6 +162,24 @@ Best friends, confidants and good friends.
 - **Annie Versaree** (Versaree (Newcrest)) good friends with **Ellen Bridges** (Bridges (Newcrest)) · saves: Season Events · **to add**
 - **Max Villareal** (Villareal (Willow Creek)) good friends with **Tricia LeBlanc** (LeBlanc (Newcrest)) · saves: Rotational · **to add**
 - **Judith Ward** (Ward (Del Sol Valley)) good friends with **Moira Fyres** (Fyres (Windenburg)) · saves: Rotational · **to add**
+
+## Housemates you're splitting (13)
+
+They share one household in a save but are two households on the site, so every link between them is listed, even plain friends.
+
+- **Joaquin Le Chien** (Bro & Kennedy (San Myshuno)) married to; good friends with **Leslie Holland** (Holland (Del Sol Valley)) · saves: Rotational · **to add**
+- **Dustin Broke** (Broke (Willow Creek)) married to; good friends with **Jess Sigworth** (Sigworth (StrangerVille)) · saves: Season Events · **to add**
+- **Dina Caliente** (Caliente (Oasis Springs)) friends with; dislikes **Don Lothario** (Lothario (Oasis Springs)) · saves: Return to the HOB, Season Events · **to add**
+- **Dina Caliente** (Caliente (Oasis Springs)) married to; good friends with **Raj Rasoya** (Rasoya (San Myshuno)) · saves: Season Events · **to add**
+- **Blossom Greenburg** (Greenburg (Evergreen Harbor)) parent of; good friends with **Knox Greenburg** (Knox Greenburg (Evergreen Harbor)) · saves: 100 Baby Challenge!!, Building #2, Horses!, Not So Berry, Return to the HOB, Rotational, Season Events, Will the port be Promising? · **to add (good friends with); new save has friends with, parent of**
+- **Gideon Harris** (Harris (Evergreen Harbor)) step-child of **Nina Caliente** (Caliente (Oasis Springs)) · saves: Season Events · **to add**
+- **Jeb Harris** (Harris (Evergreen Harbor)) step-child of; dislikes **Nina Caliente** (Caliente (Oasis Springs)) · saves: Season Events · **to add**
+- **Lia Hauata** (Hoapili (Sulani)) married to; good friends with **Tomax Collette** (Amicable Acolytes (Glimmerbrook)) · saves: Rotational · **to add**
+- **Knox Greenburg** (Knox Greenburg (Evergreen Harbor)) step-child of **Mary Greenburg** (Greenburg (Evergreen Harbor)) · saves: Building #2, Rotational · **to add (step-child of); new save has child of, friends with**
+- **Liberty Lee** (Lee (Newcrest)) friends with **Summer Holiday** (Holiday (Newcrest)) · saves: Building #2 · **to add**
+- **Diego Lobo** (Lobo (San Myshuno)) married to; good friends with **Maaike Haas** (Free Spirits (Windenburg)) · saves: Rotational · **to add**
+- **Imran Watson** (The Watsons (Henford-on-Bagley)) good friends with **Tane Ngata** (Ngata (Sulani)) · saves: Season Events · **to add**
+- **Gabrielle Washburn** (Washburn (Newcrest)) friends with **Louise Bridges** (Bridges (Newcrest)) · saves: Season Events · **to add**
 
 ## Enemies from your saves (2)
 

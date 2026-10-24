@@ -102,15 +102,19 @@ def plan():
 norm = lambda s: re.sub(r'\s+', ' ', (s or '').replace('’', "'")).strip().lower()
 
 
+HOME = {}   # Sim id -> household id in the save being read
+
+
 def read(path, S, bit):
     """{sim id: name}, relationships [(a, b, {words})] from one save (a temporary copy)."""
-    data = s4.read_save(path)
+    data = s4.read_save(path); HOME.clear()
     sims, pets = {}, set()
     slot = None
     for fn, wt, v in s4.fields(data):
         if fn == 6:
             sm = s4.decode(v, P + 'SimData', S, depth=0)
             sims[sm.get('sim_id')] = f"{sm.get('first_name', '')} {sm.get('last_name', '')}".strip()
+            HOME[sm.get('sim_id')] = sm.get('household_id')
             if sm.get('extended_species') not in (None, 0, 1): pets.add(sm.get('sim_id'))
         elif fn == 2: slot = v
     sd = s4.decode(slot, P + 'SaveSlotData', S, depth=0)
@@ -164,6 +168,7 @@ def main():
         t = os.path.getmtime(os.path.join(s4.SAVES, p))
         if n in OLD_SAVES + [NEW_SAVE] and (n not in saves or t > saves[n][1]): saves[n] = (p, t)
     found = {}   # (sim a, sim b) sorted by name -> {save: words}
+    mates = {}   # pairs who share a household in a save but are in two planned households (she splits them)
     new_pairs = {}
     for sv in OLD_SAVES + [NEW_SAVE]:
         if sv not in saves: print('not found:', sv); continue
@@ -177,6 +182,7 @@ def main():
                 words = {(k, w) for k, w in words if k != 'family'}
                 if not words: continue
             key = (na, nb)
+            if sv != NEW_SAVE and HOME.get(a) and HOME.get(a) == HOME.get(b): mates.setdefault(key, set()).add(sv)   # one household in that save, two on the site
             if sv == NEW_SAVE: new_pairs.setdefault(key, set()).update(words)
             else: found.setdefault(key, {}).setdefault(sv, set()).update(words)
         print(sv, len(rels))
@@ -193,7 +199,7 @@ def main():
         have = new_pairs.get((na, nb), set())
         rows.append({"a": na, "b": nb, "a_household": " / ".join(f"{h} ({w})" for w, h in who[norm(na)]), "b_household": " / ".join(f"{h} ({w})" for w, h in who[norm(nb)]),
                      "family": fam, "romance": kinds.get('romance'), "friends": kinds.get('friends'), "enemies": kinds.get('enemies'),
-                     "site": sorted(plan_links.get((na, nb), [])), "saves": sorted(by_save), "in_new_save": sorted(w for k, w in have)})
+                     "site": sorted(plan_links.get((na, nb), [])), "saves": sorted(by_save), "in_new_save": sorted(w for k, w in have), "housemates": sorted(mates.get((na, nb), []))})
     save(OUT_JSON, {"_note": "Relationships between Sims of different planned households, from her old saves (tools/research/relationships.py, " + time.strftime('%Y-%m-%d') + ").",
                     "saves": {k: v[0] for k, v in saves.items()}, "pairs": rows})
     write_md(rows, saves)
@@ -221,6 +227,8 @@ def write_md(rows, saves):
                [(r, [r['romance']]) for r in rows if r['romance'] and r['romance'] not in r['site'] and not r['family']]),
               ("Close friends from your saves", "Best friends, confidants and good friends.",
                [(r, [r['friends']]) for r in rows if r['friends'] in close and not r['family'] and not r['romance']]),
+              ("Housemates you're splitting", "They share one household in a save but are two households on the site, so every link between them is listed, even plain friends.",
+               [(r, r['family'] + [x for x in (r['romance'], r['friends'], r['enemies']) if x]) for r in rows if r.get('housemates') and (r['family'] or r['romance'] or r['friends'] or r['enemies'])]),
               ("Enemies from your saves", "",
                [(r, [r['enemies']]) for r in rows if r['enemies'] and r['enemies'] != 'dislikes' and not r['family'] and not r['romance']])]
     shown = 0
