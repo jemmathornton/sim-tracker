@@ -105,7 +105,7 @@ def main(apply):
                 if not s: print(f"{W['name']} / {hn}: {sm['name']} isn't in the Library copy"); continue
                 new = facts(s, sm.get('sex'))
                 for f in FIELDS:
-                    if sm.get('state') and f in ('aspiration', 'bonus', 'career', 'careerNote', 'school'): continue   # animals
+                    if sm.get('state') and f in ('aspiration', 'bonus', 'traits', 'career', 'careerNote', 'school', 'skills'): continue   # animals: their traits are pet traits   # animals
                     old = sm.get(f)
                     if (new[f] or None) == (old or None): continue
                     print(f"{W['name']} / {hn} / {sm['name']}: {f}: {old!r} -> {new[f]!r}"); changed += 1

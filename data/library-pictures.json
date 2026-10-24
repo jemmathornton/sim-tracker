@@ -1,5 +1,6 @@
 {
  "households": {
+  "brindleton-bay|Ventura": "library/brindleton-bay/ventura.webp",
   "evergreen-harbor|Eco Roomies": "library/evergreen-harbor/eco-roomies.webp",
   "evergreen-harbor|Henley": "library/evergreen-harbor/henley.webp",
   "henford-on-bagley|Watson-Holmes": "library/henford-on-bagley/watson-holmes.webp",
@@ -18,6 +19,8 @@
   "willow-creek|Davidson": "library/willow-creek/davidson.webp"
  },
  "sims": {
+  "daisy-ventura": "library/sims/daisy-ventura.webp",
+  "cocoa-ventura": "library/sims/cocoa-ventura.webp",
   "beatrice-palumbo": "library/sims/beatrice-palumbo.webp",
   "josie-donovan": "library/sims/josie-donovan.webp",
   "robyn-andersen": "library/sims/robyn-andersen.webp",
