@@ -166,7 +166,7 @@ def main(apply):
             if sp: d["state"] = sp
             young = sp or d["age"] in ("Baby", "Infant", "Toddler")
             a = G['aspirations'].get(str(s.get('primary_aspiration')))
-            if a and not young: d["aspiration"] = a[0]
+            if a and not young: d["aspiration"] = re.sub(r'\{F0\.([^}]*)\}\{M0\.([^}]*)\}', lambda m: m.group(1) if d["sex"] == 'f' else m.group(2), a[0])   # "Master {F0.Actress}{M0.Actor}" (24 Oct)
             tr = [G['traits'][str(t)][0] for t in ((at.get('trait_tracker') or {}).get('trait_ids') or []) if str(t) in G['traits'] and G['traits'][str(t)][1] == 'PERSONALITY']
             if tr: d["traits"] = list(dict.fromkeys(tr))
             if a and a[1] and not young: d["bonus"] = a[1]

@@ -1146,7 +1146,8 @@ const dynLine = ids => [...new Set(ids.map(id => (dynastyOf(id) || [])[0]).filte
 function simRoster(ids){
   return `<div class="sheet-wrap"><table class="sheet roster"><thead><tr><th scope="col">Sim</th><th scope="col">Life stage</th><th scope="col">Life state</th><th scope="col">Aspiration</th><th scope="col">Career or school</th></tr></thead><tbody>
     ${ids.map(id => { const s = SIMS[id], uni = /^(University of Britechester|Foxbury Institute) · (.+?)( \(distinguished\))?$/.exec(s.school || ""),
-        job = uni ? `${uni[2]} (${uni[1].startsWith("Foxbury") ? "Foxbury" : "UoB"})` : (s.career || s.school || "").split(" · ")[0];
+        sch = uni ? `${uni[2]} (${uni[1].startsWith("Foxbury") ? "Foxbury" : "UoB"})` : (s.school || "").replace(" · ", ", "),
+        job = [(s.career || "").split(" · ")[0], sch].filter(Boolean).join(" · ");   // a job and a school both show, with the grade (her ask, 24 Oct)
       return `<tr><td><span class="who"><span class="mono">${initial(s.name)}</span><a href="#s-${id}">${esc(s.name)}</a></span></td>
         <td>${esc(s.age)}</td><td>${s.state ? lifeState(s, "state") : `<span class="muted">Human</span>`}</td>
         <td>${s.aspiration ? esc(s.aspiration) : `<span class="muted">—</span>`}</td><td>${job ? esc(job) : `<span class="muted">—</span>`}</td></tr>`; }).join("")}</tbody></table></div>`;
