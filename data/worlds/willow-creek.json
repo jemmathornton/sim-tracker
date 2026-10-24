@@ -27,7 +27,7 @@
    "mapSpot": [0.72, 0.47],
    "mapBox": [0.62, 0.39, 0.83, 0.55],
    "lots": [
-    {"lot": "Potters Splay", "myName": "Potters Splay", "type": "Residential", "size": "30x20", "residents": "Reynolds", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["BPJCMI95EeiLGX32EHttrg=="], "galleryOld": true, "traits": ["Child's Play", "Good Schools", "Homey"]},
+    {"lot": "Potters Splay", "myName": "Potters Splay", "type": "Residential", "size": "30x20", "residents": "Reynolds", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["OBqTB/JNQoWaRjjn+Z01wA=="], "traits": ["Child's Play", "Good Schools", "Homey"]},
     {"lot": "Brook Bungalow", "myName": "Brook Bungalow", "type": "Residential", "size": "40x30", "residents": "Bjergsen", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Riverside Roost", "myName": "Riverside Roost", "type": "Residential", "size": "30x20", "residents": "Kopf", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["QRrjnco2EeuNga3kS5H9ag=="], "traits": ["Child's Play", "Good Schools"]},
     {"lot": "Pique Hearth", "myName": "Courtyard Lane Playground", "type": "Playground", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["vOvZf6/kT+qX4dUGnWHUqw=="], "traits": ["Child's Play", "Party Place", "Teen Neighborhood"]},
