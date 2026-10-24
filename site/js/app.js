@@ -288,6 +288,8 @@ function familyOf(id){
     .sort((x, y) => rank(x[1]) - rank(y[1]) || band(x[0]) - band(y[0]));
 }
 const membersOf = hh => Object.keys(SIMS).filter(id => SIMS[id].hh === hh);
+// where a household lives: not the rentals or businesses it only owns (neighbours are people who live nearby, her ask 24 Oct)
+const homesOf = hh => hh.lots.filter(l => !l.owned || hh.tenantOf === l);
 // a household's Sims oldest to youngest (her ask, 24 Oct); the same life stage keeps the plan's order
 const AGE_ORDER = ["Elder", "Adult", "Young Adult", "Teen", "Child", "Toddler", "Infant", "Baby"];
 const byAge = ids => ids.slice().sort((a, b) => (AGE_ORDER.indexOf(SIMS[a].age) + 1 || 99) - (AGE_ORDER.indexOf(SIMS[b].age) + 1 || 99) || (SIMS[b].ageDays ?? -1) - (SIMS[a].ageDays ?? -1));
@@ -1003,7 +1005,7 @@ function lot(l){
       <div><dt>Neighbourhood</dt><dd><a href="#n-${l.hood.id}">${esc(l.hood.name)}</a></dd></div>${progressRow(l)}${l.building ? `<div><dt>Building</dt><dd>${esc(l.building.name)} · ${l.building.units.length} Apartments</dd></div>` : ""}
       ${l.hh || l.whoNote ? `<div><dt>${l.owned ? "Owned by" : "Household"}</dt><dd>${l.hh ? `<a href="#${l.hh.id}">${esc(l.hh.name)}</a>${l.hh.unsure?" (unsure)":""}${unitCount(l) && rentalUnits(l).some(u => u && u.hh === l.hh && u.role === "owners") ? " (landlord)" : ""}` : esc(emptyNote(l.whoNote))}</dd></div>` : ""}${unitCount(l) ? `<div><dt>Units</dt><dd>${rentalUnits(l).length}: ${unitWords(l)}</dd></div>` : ""}${l.hh && !l.owned && l.hh.sims.some(isAnimal) ? `<div><dt>Animals</dt><dd>${esc(whoCount(l.hh.sims.filter(isAnimal)).replace(/^0 Sims · /, ""))}</dd></div>` : ""}${l.tenants ? `<div><dt>${l.tenants.length > 1 ? "Tenants" : "Tenant"}</dt><dd>${l.tenants.map(t => `<a href="#${t.id}">${esc(t.name)}</a>${t.note ? ` <small>“${esc(t.note)}”</small>` : ""}`).join(", ")}</dd></div>` : ""}</dl>${l.versions ? versionTabs(l) : ""}
 </div></div>
-    ${l.hh ? `<section class="block" style="--h:${hc}"><div class="block-head"><h2>${l.owned ? "Who <em>owns it</em>" : "Who <em>lives here</em>"}</h2></div>
+    ${l.hh && !unitCount(l) ? `<section class="block" style="--h:${hc}"><div class="block-head"><h2>${l.owned ? "Who <em>owns it</em>" : "Who <em>lives here</em>"}</h2></div>
       <div class="lives"><div class="lives-card">${hhListing(l.hh)}</div>
       <div>${l.hh.sims.length ? `<span class="label">The Sims</span><ul class="sim-list">${l.hh.sims.map(sm => `<li><a href="${sm.sid ? "#s-" + sm.sid : "#" + l.hh.id}" ${sm.sid ? "" : `data-sim="${sm.id}"`}><span class="mono">${initial(sm.name)}</span><span><b>${esc(sm.name)}</b><small>${esc([sm.age, sm.aspiration].filter(Boolean).join(" · "))}</small></span></a></li>`).join("")}</ul>` : `<div class="empty" style="margin-top:0">${ic("sim")}No Sims added for ${esc(theHh(l.hh.name))} yet.</div>`}
       <a class="more" href="#${l.hh.id}">Open ${esc(theHh(l.hh.name))} ${ic("arrow")}</a></div></div></section>` : ""}
@@ -1102,7 +1104,7 @@ function household(hh){
   if (hh.sims.some(sm => sm.sid)) return householdNew(hh);
   const w = hh.world, home1 = hh.lots[0], hc = home1.hood.color, homes = hh.lots.filter(l => !l.owned || hh.tenantOf === l), owns = hh.lots.filter(l => l.owned && hh.tenantOf !== l);
   const hoods = [...new Set(hh.lots.map(l => l.hood))];
-  const neighbours = Object.values(w.households).filter(x => x !== hh && !hh.links.some(k => k.hh === x) && x.lots.some(l => hoods.includes(l.hood)));
+  const neighbours = Object.values(w.households).filter(x => x !== hh && !hh.links.some(k => k.hh === x) && homesOf(x).some(l => homesOf(hh).map(m => m.hood).includes(l.hood)));
   return `<section class="hero small" style="--c:${home1.hood.glow||hc}"><div class="crumbs"><a href="#w-${w.id}">${ic("map")}${esc(w.name)}</a><a href="#n-${home1.hood.id}">${ic("pin")}${esc(home1.hood.name)}</a>${hh.lots.map(l => `<a href="#${l.id}">${ic(l.owned ? "pin" : "home")}${esc(l.name)}</a>`).join("")}</div>
     <div style="display:flex;gap:26px;align-items:center;flex-wrap:wrap;margin-top:22px"><div class="monogram">${initial(hh.name)}</div><div><span class="label" style="color:var(--on-deep-mute)">Household</span><h1 style="margin-top:6px">${esc(hh.name)}</h1></div></div></section>
     ${hh.unsure ? `<div class="note">Marked as unsure in the plan. Double-check which family lives here.</div>` : ""}
@@ -1170,7 +1172,7 @@ function animalRoster(ids){
 }
 function householdNew(hh){
   const w = hh.world, home1 = hh.lots[0], hc = home1.hood.color, all = membersOf(hh), ids = byAge(all.filter(id => !isAnimal(SIMS[id]))), pets = all.filter(id => isAnimal(SIMS[id])), n = ids.length, hoods = [...new Set(hh.lots.map(l => l.hood))];
-  const neighbours = Object.values(w.households).filter(x => x !== hh && !hh.links.some(k => k.hh === x) && x.lots.some(l => l.hood === home1.hood));
+  const neighbours = Object.values(w.households).filter(x => x !== hh && !hh.links.some(k => k.hh === x) && homesOf(x).some(l => homesOf(hh).map(m => m.hood).includes(l.hood)));
   const dyn = dynLine(ids), tree = treeOf(hh), origin = hh.origin || (ids.some(id => !/^mine$/i.test(SIMS[id].origin || "")) ? "Premade" : "Mine");
   return `<section class="hero small" style="--c:${home1.hood.glow || hc}"><div class="crumbs"><a href="#w-${w.id}">${ic("map")}${esc(w.name)}</a><a href="#n-${home1.hood.id}">${ic("pin")}${esc(home1.hood.name)}</a>${hh.lots.map(l => `<a href="#${l.id}">${ic(l.owned ? "pin" : "home")}${esc(l.name)}</a>`).join("")}</div>
     <div style="display:flex;gap:26px;align-items:center;flex-wrap:wrap;margin-top:22px"><div class="monogram">${initial(hh.name)}</div><div><span class="label" style="color:var(--on-deep-mute)">Household</span><h1 style="margin-top:6px">${esc(hh.name)}</h1></div></div></section>
