@@ -492,7 +492,8 @@
      "bonus": "Business Savvy",
      "career": "",
      "parents": ["kayleigh-kirkland", "kennedy-kirkland"],
-     "school": "High school"
+     "school": "High school · grade C",
+     "ageDays": 0.0
     },
     {
      "id": "kendrick-kirkland-newcrest",
@@ -506,7 +507,8 @@
      "bonus": "Muser",
      "career": "",
      "parents": ["kayleigh-kirkland", "kennedy-kirkland"],
-     "school": "High school"
+     "school": "High school · grade C",
+     "ageDays": 0.0
     },
     {
      "id": "kayleigh-kirkland",
@@ -532,7 +534,8 @@
      ],
      "partners": [
       ["kennedy-kirkland", "Spouse"]
-     ]
+     ],
+     "ageDays": 1.4
     },
     {
      "id": "kennedy-kirkland",
@@ -556,9 +559,11 @@
      ],
      "partners": [
       ["kayleigh-kirkland", "Spouse"]
-     ]
+     ],
+     "ageDays": 1.5
     }
-   ]
+   ],
+   "gallery": ["jK3SimnFQ3WW+IHwcq22Vg=="]
   },
   "Scott": {
    "bio": "Free spirit Liberty, cheerful Summer, and geeky Travis are unlikely friends, and nothing can come between these three. Except perhaps the growing feelings both Summer and Liberty have for Travis...",
