@@ -290,7 +290,7 @@ function familyOf(id){
 const membersOf = hh => Object.keys(SIMS).filter(id => SIMS[id].hh === hh);
 // a household's Sims oldest to youngest (her ask, 24 Oct); the same life stage keeps the plan's order
 const AGE_ORDER = ["Elder", "Adult", "Young Adult", "Teen", "Child", "Toddler", "Infant", "Baby"];
-const byAge = ids => ids.slice().sort((a, b) => (AGE_ORDER.indexOf(SIMS[a].age) + 1 || 99) - (AGE_ORDER.indexOf(SIMS[b].age) + 1 || 99));
+const byAge = ids => ids.slice().sort((a, b) => (AGE_ORDER.indexOf(SIMS[a].age) + 1 || 99) - (AGE_ORDER.indexOf(SIMS[b].age) + 1 || 99) || (SIMS[b].ageDays ?? -1) - (SIMS[a].ageDays ?? -1));
 // the game's own label for a Sim with no job who has a child, teen or younger in their household (careers/career_unemployment):
 // "Stay-at-Home Mom/Dad" (24 Oct, her ask)
 const stayAtHome = s => { if (s.career || s.late || isAnimal(s) || !s.hh || !["Young Adult", "Adult", "Elder"].includes(s.age)) return "";
@@ -387,7 +387,8 @@ function drawTree(ids, o = {}){
   // siblings oldest to youngest, left to right (her rule, 24 Oct); same life stage keeps the plan's order
   const STAGE = ["Elder", "Adult", "Young Adult", "Teen", "Child", "Toddler", "Infant", "Baby"];
   const stage = u => { const c = u.members.find(x => ps(x).length), i = STAGE.indexOf((S(c).age || "").replace(/^Late /, "")); return i < 0 ? -1 : i; };
-  units.forEach(u => u.kids.sort((a, b) => stage(a) - stage(b)));
+  const days = u => S(u.members.find(x => ps(x).length)).ageDays ?? -1;   // same stage: further into it is older (tools/age_days.py)
+  units.forEach(u => u.kids.sort((a, b) => stage(a) - stage(b) || days(b) - days(a)));
   const roots = units.filter(u => !u.parent);
   const ownW = u => u.members.length * CW + (u.members.length - 1) * CG;
   const kidsW = u => u.kids.reduce((s, k, i) => s + subW(k) + (i ? SG : 0), 0);

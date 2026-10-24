@@ -371,7 +371,8 @@
      "skills": [
       ["Fabrication", 1, 10],
       ["Fishing", 1, 10]
-     ]
+     ],
+     "ageDays": 112.7
     },
     {
      "id": "tatiana-estrada",
@@ -388,7 +389,8 @@
       ["Research & Debate", 1, 10],
       ["Cooking", 1, 10],
       ["Fitness", 1, 10]
-     ]
+     ],
+     "ageDays": 102.7
     }
    ]
   },
@@ -423,7 +425,8 @@
      ],
      "partners": [
       ["april-carr", "Partner"]
-     ]
+     ],
+     "ageDays": 4.6
     },
     {
      "id": "april-carr",
@@ -453,7 +456,8 @@
      ],
      "partners": [
       ["kaleb-henley", "Partner"]
-     ]
+     ],
+     "ageDays": 4.0
     }
    ]
   }

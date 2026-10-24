@@ -351,7 +351,8 @@
      ],
      "partners": [
       ["julian-holmes", "Spouse"]
-     ]
+     ],
+     "ageDays": 5.3
     },
     {
      "id": "julian-holmes",
@@ -382,7 +383,8 @@
      ],
      "partners": [
       ["natalie-watson", "Spouse"]
-     ]
+     ],
+     "ageDays": 5.8
     },
     {
      "id": "daisy-watson-holmes",
@@ -402,7 +404,8 @@
       ["Creativity", 2, 10],
       ["Cross-stitch", 1, 5]
      ],
-     "parents": ["natalie-watson", "julian-holmes"]
+     "parents": ["natalie-watson", "julian-holmes"],
+     "ageDays": 3.5
     },
     {
      "id": "peanut",
@@ -420,7 +423,8 @@
       ["Daisy Watson-Holmes", "Friend"],
       ["Natalie Watson", "Acquaintance"],
       ["Thomas Watson", "Acquaintance"]
-     ]
+     ],
+     "ageDays": 0.4
     }
    ]
   }

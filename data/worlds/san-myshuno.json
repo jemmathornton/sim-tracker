@@ -124,7 +124,8 @@
      ],
      "partners": [
       ["alicia-santiago", "Partner"]
-     ]
+     ],
+     "ageDays": 17.7
     },
     {
      "id": "alicia-santiago",
@@ -153,7 +154,8 @@
      ],
      "partners": [
       ["miko-ojo", "Partner"]
-     ]
+     ],
+     "ageDays": 18.2
     }
    ],
    "gallery": ["OpaCTainRh+E5bpnu+hP3w=="]
@@ -522,7 +524,8 @@
       ["Singing", 2, 10],
       ["Photography", 1, 5]
      ],
-     "parents": ["britney-reynolds", "joe-reynolds"]
+     "parents": ["britney-reynolds", "joe-reynolds"],
+     "ageDays": 7.0
     },
     {
      "id": "lucy-kopf",
@@ -550,7 +553,8 @@
       ["Handiness", 1, 10],
       ["Photography", 1, 5]
      ],
-     "parents": ["emilee-kopf", "kristian-kopf"]
+     "parents": ["emilee-kopf", "kristian-kopf"],
+     "ageDays": 7.7
     },
     {
      "id": "lisa-davidson",
@@ -585,7 +589,8 @@
       ["Baking", 2, 10],
       ["Photography", 1, 5]
      ],
-     "parents": ["evelyn-davidson", "ray-davidson"]
+     "parents": ["evelyn-davidson", "ray-davidson"],
+     "ageDays": 10.0
     }
    ]
   },

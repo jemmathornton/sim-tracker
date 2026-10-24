@@ -110,7 +110,8 @@
      "partners": [
       ["kenny-cadberry", "Spouse"]
      ],
-     "parents": ["leah-moon-cadberry"]
+     "parents": ["leah-moon-cadberry"],
+     "ageDays": 32.2
     },
     {
      "id": "kenny-cadberry",
@@ -143,7 +144,8 @@
      ],
      "partners": [
       ["sylvia-cadberry", "Spouse"]
-     ]
+     ],
+     "ageDays": 3.6
     }
    ]
   },
@@ -178,7 +180,8 @@
       ["Mischief", 1, 10],
       ["Programming", 1, 10],
       ["Pottery", 1, 10]
-     ]
+     ],
+     "ageDays": 15.0
     }
    ]
   },
@@ -218,7 +221,8 @@
      ],
      "partners": [
       ["tricia-leblanc", "Spouse"]
-     ]
+     ],
+     "ageDays": 0.0
     },
     {
      "id": "max-leblanc",
@@ -232,7 +236,8 @@
      "bonus": "Muser",
      "career": "",
      "school": "High school · grade B",
-     "parents": ["tricia-leblanc", "marvin-leblanc"]
+     "parents": ["tricia-leblanc", "marvin-leblanc"],
+     "ageDays": 1.0
     },
     {
      "id": "mia-leblanc",
@@ -249,7 +254,8 @@
      "skills": [
       ["Fitness", 2, 10]
      ],
-     "parents": ["tricia-leblanc", "marvin-leblanc"]
+     "parents": ["tricia-leblanc", "marvin-leblanc"],
+     "ageDays": 1.0
     },
     {
      "id": "tim-leblanc",
@@ -268,7 +274,8 @@
       ["Creativity", 3, 10],
       ["Mental", 3, 10]
      ],
-     "parents": ["tricia-leblanc", "marvin-leblanc"]
+     "parents": ["tricia-leblanc", "marvin-leblanc"],
+     "ageDays": 1.0
     },
     {
      "id": "tara-leblanc",
@@ -288,7 +295,8 @@
       ["Mental", 2, 10],
       ["Charisma", 1, 10]
      ],
-     "parents": ["tricia-leblanc", "marvin-leblanc"]
+     "parents": ["tricia-leblanc", "marvin-leblanc"],
+     "ageDays": 1.0
     },
     {
      "id": "tricia-leblanc",
@@ -325,7 +333,8 @@
      ],
      "partners": [
       ["marvin-leblanc", "Spouse"]
-     ]
+     ],
+     "ageDays": 4.2
     }
    ]
   },
@@ -354,7 +363,8 @@
       ["Parenting", 1, 10],
       ["Fabrication", 1, 10],
       ["Pottery", 1, 10]
-     ]
+     ],
+     "ageDays": 8.1
     },
     {
      "id": "stacey-washburn",
@@ -380,7 +390,8 @@
       ["Mischief", 1, 10],
       ["Programming", 1, 10]
      ],
-     "parents": ["gabrielle-washburn"]
+     "parents": ["gabrielle-washburn"],
+     "ageDays": 11.3
     },
     {
      "id": "duke-washburn",
@@ -399,7 +410,8 @@
       ["Motor", 3, 10],
       ["Skating", 1, 5]
      ],
-     "parents": ["gabrielle-washburn"]
+     "parents": ["gabrielle-washburn"],
+     "ageDays": 11.3
     }
    ]
   },
@@ -430,7 +442,8 @@
       ["Charisma", 1, 10],
       ["Programming", 1, 10],
       ["Fishing", 1, 10]
-     ]
+     ],
+     "ageDays": 8.1
     },
     {
      "id": "ellen-bridges",
@@ -453,7 +466,8 @@
       ["Fabrication", 2, 10],
       ["Logic", 5, 10]
      ],
-     "parents": ["louise-bridges"]
+     "parents": ["louise-bridges"],
+     "ageDays": 11.3
     },
     {
      "id": "kendrick-bridges",
@@ -474,7 +488,8 @@
       ["Creativity", 2, 10],
       ["Charisma", 1, 10]
      ],
-     "parents": ["louise-bridges"]
+     "parents": ["louise-bridges"],
+     "ageDays": 11.3
     }
    ]
   },

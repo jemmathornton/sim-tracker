@@ -450,7 +450,8 @@
       ["Handiness", 2, 10],
       ["Gardening", 1, 10]
      ],
-     "parents": ["josie-de-costa", "tara-de-costa"]
+     "parents": ["josie-de-costa", "tara-de-costa"],
+     "ageDays": 11.5
     },
     {
      "id": "josie-de-costa",
@@ -489,7 +490,8 @@
      ],
      "partners": [
       ["tara-de-costa", "Spouse"]
-     ]
+     ],
+     "ageDays": 15.9
     },
     {
      "id": "tara-de-costa",
@@ -524,7 +526,8 @@
      ],
      "partners": [
       ["josie-de-costa", "Spouse"]
-     ]
+     ],
+     "ageDays": 11.1
     }
    ]
   },
@@ -554,7 +557,8 @@
       ["Guitar", 4, 10],
       ["Gardening", 1, 10]
      ],
-     "parents": ["marissa-rivera", "carlos-rivera"]
+     "parents": ["marissa-rivera", "carlos-rivera"],
+     "ageDays": 4.9
     },
     {
      "id": "carlos-rivera",
@@ -586,7 +590,8 @@
      ],
      "partners": [
       ["marissa-rivera", "Spouse"]
-     ]
+     ],
+     "ageDays": 0.0
     },
     {
      "id": "marissa-rivera",
@@ -623,7 +628,8 @@
      ],
      "partners": [
       ["carlos-rivera", "Spouse"]
-     ]
+     ],
+     "ageDays": 0.0
     }
    ]
   },

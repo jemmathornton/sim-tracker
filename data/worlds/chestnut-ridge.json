@@ -329,7 +329,8 @@
       ["Buttercup", "Acquaintance"],
       ["Queen", "Acquaintance"],
       ["Dani Davila", "Acquaintance"]
-     ]
+     ],
+     "ageDays": 35.0
     },
     {
      "id": "beatrice-palumbo",
@@ -359,7 +360,8 @@
      ],
      "partners": [
       ["lacy-tompkins", "Partner"]
-     ]
+     ],
+     "ageDays": 107.5
     },
     {
      "id": "lacy-tompkins",
@@ -392,7 +394,8 @@
      ],
      "partners": [
       ["beatrice-palumbo", "Partner"]
-     ]
+     ],
+     "ageDays": 70.0
     },
     {
      "id": "longface",
@@ -422,7 +425,8 @@
       ["Beatrice Palumbo", "Acquaintance"],
       ["Pie", "Acquaintance"],
       ["Queen", "Acquaintance"]
-     ]
+     ],
+     "ageDays": 70.0
     },
     {
      "id": "bluebell",
@@ -454,7 +458,8 @@
       ["Pie", "Acquaintance"],
       ["Buttercup", "Acquaintance"],
       ["Queen", "Acquaintance"]
-     ]
+     ],
+     "ageDays": 69.4
     },
     {
      "id": "queen",
@@ -478,7 +483,8 @@
       ["Bluebell", "Acquaintance"],
       ["Pie", "Acquaintance"],
       ["Buttercup", "Acquaintance"]
-     ]
+     ],
+     "ageDays": 5.2
     },
     {
      "id": "pie",
@@ -501,7 +507,8 @@
       ["Longface", "Acquaintance"],
       ["Bluebell", "Acquaintance"],
       ["Queen", "Acquaintance"]
-     ]
+     ],
+     "ageDays": 8.0
     },
     {
      "id": "buttercup",
@@ -524,7 +531,8 @@
       ["Lacy Tompkins", "Acquaintance"],
       ["Bluebell", "Acquaintance"],
       ["Queen", "Acquaintance"]
-     ]
+     ],
+     "ageDays": 6.9
     }
    ]
   }

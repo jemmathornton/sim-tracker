@@ -378,7 +378,8 @@
      ],
      "partners": [
       ["madelyn-haynes", "Spouse"]
-     ]
+     ],
+     "ageDays": 4.5
     },
     {
      "id": "madelyn-haynes",
@@ -411,7 +412,8 @@
      ],
      "partners": [
       ["josie-donovan", "Spouse"]
-     ]
+     ],
+     "ageDays": 2.5
     },
     {
      "id": "misty-haynes",
@@ -435,7 +437,8 @@
       ["Handiness", 1, 10],
       ["Video Gaming", 1, 10]
      ],
-     "parents": ["madelyn-haynes"]
+     "parents": ["madelyn-haynes"],
+     "ageDays": 3.8
     },
     {
      "id": "davin-haynes",
@@ -456,7 +459,8 @@
       ["Logic", 1, 10],
       ["Mischief", 1, 10]
      ],
-     "parents": ["madelyn-haynes"]
+     "parents": ["madelyn-haynes"],
+     "ageDays": 3.8
     },
     {
      "id": "bonnie-donovan",
@@ -466,7 +470,8 @@
      "from": "save “Season Events” (2026-03-15)",
      "age": "Baby",
      "career": "",
-     "parents": ["josie-donovan", "madelyn-haynes"]
+     "parents": ["josie-donovan", "madelyn-haynes"],
+     "ageDays": 0.1
     }
    ]
   }

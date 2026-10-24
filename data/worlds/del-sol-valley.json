@@ -351,7 +351,8 @@
       ["Logic", 4, 10],
       ["Wellness", 1, 10],
       ["Dancing", 1, 5]
-     ]
+     ],
+     "ageDays": 75.5
     }
    ]
   },
@@ -379,7 +380,8 @@
       ["Cooking", 1, 10],
       ["Charisma", 1, 10],
       ["Dancing", 1, 5]
-     ]
+     ],
+     "ageDays": 0.0
     }
    ]
   },
@@ -407,7 +409,8 @@
       ["Mischief", 1, 10],
       ["Dancing", 1, 5],
       ["Video Gaming", 1, 10]
-     ]
+     ],
+     "ageDays": 72.8
     }
    ]
   }

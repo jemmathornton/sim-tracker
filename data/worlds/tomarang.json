@@ -171,7 +171,8 @@
      "career": "",
      "partners": [
       ["colette-rochana", "Spouse"]
-     ]
+     ],
+     "ageDays": 16.8
     },
     {
      "id": "colette-rochana",
@@ -189,7 +190,8 @@
      ],
      "partners": [
       ["ratana-rochana", "Spouse"]
-     ]
+     ],
+     "ageDays": 10.0
     }
    ]
   },

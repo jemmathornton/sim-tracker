@@ -691,7 +691,8 @@
       ["Photography", 1, 5],
       ["Mischief", 1, 10],
       ["Handiness", 1, 10]
-     ]
+     ],
+     "ageDays": 18.6
     },
     {
      "id": "teddy-winters",
@@ -715,7 +716,8 @@
       ["Logic", 4, 10],
       ["Singing", 1, 10]
      ],
-     "parents": ["chris-winters"]
+     "parents": ["chris-winters"],
+     "ageDays": 11.0
     },
     {
      "id": "savanna-winters",
@@ -748,7 +750,8 @@
      ],
      "partners": [
       ["chris-winters", "Engaged"]
-     ]
+     ],
+     "ageDays": 0.2
     },
     {
      "id": "noel-winters",
@@ -762,7 +765,8 @@
      "skills": [
       ["Social", 3, 5]
      ],
-     "parents": ["savanna-winters", "chris-winters"]
+     "parents": ["savanna-winters", "chris-winters"],
+     "ageDays": 0.2
     }
    ]
   },
@@ -784,7 +788,8 @@
       ["Charisma", 1, 10],
       ["Logic", 1, 10]
      ],
-     "parents": ["alexa-barraza", "simon-barraza"]
+     "parents": ["alexa-barraza", "simon-barraza"],
+     "ageDays": 1.0
     },
     {
      "id": "daniel-barraza",
@@ -801,7 +806,8 @@
       ["Charisma", 1, 10],
       ["Video Gaming", 1, 10]
      ],
-     "parents": ["alexa-barraza", "simon-barraza"]
+     "parents": ["alexa-barraza", "simon-barraza"],
+     "ageDays": 1.0
     },
     {
      "id": "simon-barraza",
@@ -823,7 +829,8 @@
      ],
      "partners": [
       ["alexa-barraza", "Spouse"]
-     ]
+     ],
+     "ageDays": 4.6
     },
     {
      "id": "alexa-barraza",
@@ -846,7 +853,8 @@
      ],
      "partners": [
       ["simon-barraza", "Spouse"]
-     ]
+     ],
+     "ageDays": 3.8
     }
    ]
   },
@@ -870,7 +878,8 @@
      ],
      "partners": [
       ["leon-kopf", "Spouse"]
-     ]
+     ],
+     "ageDays": 6.3
     },
     {
      "id": "emilee-kopf",
@@ -895,7 +904,8 @@
      ],
      "partners": [
       ["kristian-kopf", "Spouse"]
-     ]
+     ],
+     "ageDays": 1.0
     },
     {
      "id": "kristian-kopf",
@@ -916,7 +926,8 @@
      ],
      "partners": [
       ["emilee-kopf", "Spouse"]
-     ]
+     ],
+     "ageDays": 2.1
     },
     {
      "id": "leon-kopf",
@@ -936,7 +947,8 @@
      "parents": ["emilee-kopf", "kristian-kopf"],
      "partners": [
       ["savannah-kopf", "Spouse"]
-     ]
+     ],
+     "ageDays": 3.5
     }
    ]
   },
@@ -982,7 +994,8 @@
      ],
      "partners": [
       ["joe-reynolds", "Spouse"]
-     ]
+     ],
+     "ageDays": 0.6
     },
     {
      "id": "joe-reynolds",
@@ -1021,7 +1034,8 @@
      ],
      "partners": [
       ["britney-reynolds", "Spouse"]
-     ]
+     ],
+     "ageDays": 0.9
     },
     {
      "id": "melanie-reynolds",
@@ -1048,7 +1062,8 @@
       ["Comedy", 1, 10]
      ],
      "parents": ["britney-reynolds", "joe-reynolds"],
-     "school": "High school"
+     "school": "High school",
+     "ageDays": 5.0
     },
     {
      "id": "rosie-reynolds",
@@ -1084,7 +1099,8 @@
       ["Photography", 5, 5],
       ["Juice Pong", 1, 5]
      ],
-     "parents": ["britney-reynolds", "joe-reynolds"]
+     "parents": ["britney-reynolds", "joe-reynolds"],
+     "ageDays": 6.0
     },
     {
      "id": "lucie-reynolds",
@@ -1111,7 +1127,8 @@
       ["Singing", 2, 10],
       ["Writing", 1, 10]
      ],
-     "parents": ["britney-reynolds", "joe-reynolds"]
+     "parents": ["britney-reynolds", "joe-reynolds"],
+     "ageDays": 1.8
     }
    ]
   },
@@ -1154,7 +1171,8 @@
      ],
      "partners": [
       ["ray-davidson", "Spouse"]
-     ]
+     ],
+     "ageDays": 0.0
     },
     {
      "id": "ray-davidson",
@@ -1190,7 +1208,8 @@
      ],
      "partners": [
       ["evelyn-davidson", "Spouse"]
-     ]
+     ],
+     "ageDays": 1.0
     },
     {
      "id": "george-davidson",
@@ -1217,7 +1236,8 @@
       ["Cooking", 1, 10]
      ],
      "parents": ["evelyn-davidson", "ray-davidson"],
-     "school": "High school · grade B"
+     "school": "High school · grade B",
+     "ageDays": 5.0
     }
    ]
   }

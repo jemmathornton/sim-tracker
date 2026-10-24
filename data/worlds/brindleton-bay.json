@@ -318,7 +318,8 @@
       ["Video Gaming", 1, 10],
       ["Pet Training", 2, 5],
       ["Fishing", 2, 10]
-     ]
+     ],
+     "ageDays": 16.3
     },
     {
      "id": "cocoa-ventura",
@@ -334,7 +335,8 @@
      "rels": [
       ["Daisy Ventura", "Good Friend"],
       ["Lisa Davidson", "Acquaintance"]
-     ]
+     ],
+     "ageDays": 15.8
     }
    ]
   }
