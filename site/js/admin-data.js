@@ -533,7 +533,14 @@ window.ADMIN = {
 "text": "**Decide:** Going online: only if you ever want it on other devices (free and private with Cloudflare)."
 }
 ],
-"toSort": [],
+"toSort": [
+{
+"id": "CSLbZoTMRWCn8KKc9D6ysA==",
+"title": "Streamlet Single",
+"lot": "Willow Creek / Streamlet Single",
+"why": "New on 2026-10-24: another copy of this build. Which should lead (normally the latest)?"
+}
+],
 "newSave": {
 "saved": "2026-10-23 22:48",
 "lots": {
