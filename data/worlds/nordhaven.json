@@ -391,10 +391,22 @@
      "aspiration": "Esteemed Entrepreneur",
      "traits": ["Ambitious", "Practice Makes Perfect", "Maker"],
      "bonus": "Gregarious",
-     "career": "",
+     "career": "Small Business Owner",
      "partners": [
       ["erik-johansson", "Spouse"]
-     ]
+     ],
+     "careerNote": "Owner of Fisherman's Wharf, home to a tattoo parlour, pottery studio and coffee shop.",
+     "skills": [
+      ["Painting", 2, 10],
+      ["Pottery", 6, 10],
+      ["Video Gaming", 1, 10],
+      ["Fabrication", 1, 10],
+      ["Logic", 1, 10],
+      ["Writing", 1, 10],
+      ["Comedy", 1, 10],
+      ["Fitness", 1, 10]
+     ],
+     "ageDays": 0.3
     },
     {
      "id": "erik-johansson",
@@ -406,12 +418,24 @@
      "aspiration": "Master Mentor",
      "traits": ["Maker", "Idealist", "Cheerful"],
      "bonus": "Quick Learner",
-     "career": "",
+     "career": "Small Business Owner",
      "partners": [
       ["frida-johansson", "Spouse"]
-     ]
+     ],
+     "careerNote": "Owner of Fisherman's Wharf, home to a tattoo parlour, pottery studio and coffee shop.",
+     "skills": [
+      ["Writing", 1, 10],
+      ["Tattooing", 4, 10],
+      ["Charisma", 1, 10],
+      ["Cooking", 5, 10],
+      ["Video Gaming", 1, 10],
+      ["Fitness", 4, 10],
+      ["Comedy", 1, 10]
+     ],
+     "ageDays": 0.9
     }
-   ]
+   ],
+   "gallery": ["6d7C7dyzTT+GEF7A2XXYZQ=="]
   }
  },
  "weatherSeasons": {

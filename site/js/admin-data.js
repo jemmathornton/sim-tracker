@@ -546,7 +546,7 @@ window.ADMIN = {
 "id": "ffxPgJWnR/2fSqsfhF9b1A==",
 "title": "100 Babies Final House",
 "lot": null,
-"why": "New on 2026-10-24; not linked automatically, could be Willow Creek / Hallow Slough."
+"why": "New on 2026-10-24. Not Hallow Slough: it would be Ella-Mint Cadberry’s home, if she keeps it (undecided, 24 Oct)."
 }
 ],
 "newSave": {
