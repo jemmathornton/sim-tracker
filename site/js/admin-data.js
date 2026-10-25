@@ -493,7 +493,7 @@ window.ADMIN = {
 {
 "section": "Households",
 "world": "",
-"text": "**Do:** Make the ones in no save: Mine ×2, Dynamic Daters, Sporty and Nerdy Girls and Boys, My Celebs, Elders…"
+"text": "**Do:** Make the ones in no save: Mine ×2, Dynamic Daters, Nerdy Girls and Boys, Elders…"
 },
 {
 "section": "Households",
@@ -503,7 +503,7 @@ window.ADMIN = {
 {
 "section": "Households",
 "world": "",
-"text": "**Do:** Also yours: upload the Lovejoys; the four Tiquelle households, the vineyard Altos, Specter Row's owners."
+"text": "**Do:** Also yours: upload Sporty Girls and Sporty Boys from “Season Events” (Kiara Osborne, Juliette Childers, Hope Heredia; Timothy Brice, Jerry DeLong); upload the Lovejoys; the four Tiquelle households, the vineyard Altos, Specter Row's owners."
 },
 {
 "section": "Households",
@@ -538,7 +538,7 @@ window.ADMIN = {
 {
 "section": "Households",
 "world": "",
-"text": "**Decide:** My Celebs: which save are they in?"
+"text": "**Do:** Upload My Celebs (Chateau Peak) from “Rags to Riches”: the Dixon household at Inner Circle, Del Sol Valley (Anna Dixon, Aaradhya Raghavan, Reece Rains, Danial Pitte; only Anna is in your Library), then that save can go."
 },
 {
 "section": "Households",

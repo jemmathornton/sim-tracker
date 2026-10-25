@@ -112,16 +112,16 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 - **Decide:** Your new save has EA’s new family-tree ancestors (Feb 2026 update; only new saves get them). 25 aren’t on the site’s trees yet: the Thebe line back to Queen Thebe, the Darongs and Dreamers, Rodrigo De Pablo, Cahya and Wulan, Pranav Kunal. Add them?
 - **Do:** Kirklands: age Kennedy, Kayleigh, Kamila and Kendrick as you want them.
 - **Do:** Check the 22 households filled from your saves (every copy: research/own-households-review.md).
-- **Do:** Make the ones in no save: Mine ×2, Dynamic Daters, Sporty and Nerdy Girls and Boys, My Celebs, Elders…
+- **Do:** Make the ones in no save: Mine ×2, Dynamic Daters, Nerdy Girls and Boys, Elders…
 - **Do:** …Single Mum Friends, Ella-Mint Cadberry, Rory & Friend, Werewolves in Training, Innisgreen's five.
-- **Do:** Also yours: upload the Lovejoys; the four Tiquelle households, the vineyard Altos, Specter Row's owners.
+- **Do:** Also yours: upload Sporty Girls and Sporty Boys from “Season Events” (Kiara Osborne, Juliette Childers, Hope Heredia; Timothy Brice, Jerry DeLong); upload the Lovejoys; the four Tiquelle households, the vineyard Altos, Specter Row's owners.
 - **Do:** Rippling Flats’ “current uni Sims” are Kamilla Jackson and Chris Whitmore (“All Universities”, at UoW Hare Halls; Tony Whitmore in your Library): they finish their degrees, then move in next door to each other, one unit each, maybe each with a partner or family.
 - **Do:** Your Sulani Sims: check them all and decide how to split them up (Caldera Camp is “Mine”; Journey’s End and Reef Finery “may change”). In “Sulani Save” and your Library: Keoni Kalawai’a and Alana Hekekia (at Caldera Camp), Maleia, Maui, Kekoa, Leilani, Hirife, Harata, Heilani, Malia, Luana, Palani and Palila Kalawai’a/Kahananui, Heifara Opanui, Tamati Hekekia, Elisha Sotelo.
 - **Do:** Upload the Fantasias from “Wonder Child Challenge” (Frankie, Fliss and toddler Finlay, at Havisham House, Windenburg; Finlay is only in that save), then that save can go.
 - **Do:** Save the Rosebud household from “Rosebud Challenge” to your Library (Rachel and Robin O’Brian, Yin Spirit and Bridgette Adams, at Hound’s Head; Yin and Bridgette are only in that save), then that save can go.
 - **Do:** Faye Evergreen (Library, June 2025; in “Season Events” with River Evergreen, Izabella Crawley and Squee at Cordelia’s Secret Cottage): someone you’re going to turn into a fairy later.
 - **Do:** Download Sebastian Michaelson and Merrilyn Ralston from Maxis's Gallery and pick their lots.
-- **Decide:** My Celebs: which save are they in?
+- **Do:** Upload My Celebs (Chateau Peak) from “Rags to Riches”: the Dixon household at Inner Circle, Del Sol Valley (Anna Dixon, Aaradhya Raghavan, Reece Rains, Danial Pitte; only Anna is in your Library), then that save can go.
 - **Do:** The Cadberrys, as one job when you're ready (options in research/own-households-recommendations.md): uploading Leah-Moon (Library, take Sterling and Sylvia out first) and Sylvia & Kenny (“Not So Berry”), Ella-Mint, Isda Riverfront's family, the Rochanas (Isda Riverfront's tenants, also from “Not So Berry”: keep or drop?), the 100 Babies Final House upload (Ella-Mint's home, or not?), and their links (Leah-Moon is Sylvia's mother; Kennedy Kirkland and Sylvia are good friends).
 - **Decide:** Typing Sims in: chat only, or a Sims tab in World Plans (prototype in for-jemma/prototypes)?
 
