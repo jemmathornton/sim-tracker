@@ -508,6 +508,11 @@ window.ADMIN = {
 {
 "section": "Households",
 "world": "",
+"text": "**Do:** Rippling Flats’ “current uni Sims” are Kamilla Jackson and Chris Whitmore (“All Universities”, at UoW Hare Halls; Tony Whitmore in your Library): they finish their degrees, then move in next door to each other, one unit each, maybe each with a partner or family."
+},
+{
+"section": "Households",
+"world": "",
 "text": "**Do:** Your Sulani Sims: check them all and decide how to split them up (Caldera Camp is “Mine”; Journey’s End and Reef Finery “may change”). In “Sulani Save” and your Library: Keoni Kalawai’a and Alana Hekekia (at Caldera Camp), Maleia, Maui, Kekoa, Leilani, Hirife, Harata, Heilani, Malia, Luana, Palani and Palila Kalawai’a/Kahananui, Heifara Opanui, Tamati Hekekia, Elisha Sotelo."
 },
 {

@@ -43,7 +43,7 @@ Every upload not on a lot is in `data/gallery/unlinked.json` with the reason.
 | Oasis Springs | Rio Verde Retirement Home | 6 | “Elders” (no households yet; left for later) |
 | Newcrest | Fern Park Flats | 5 | Kirklands own (live elsewhere); Holiday 1, Lee 2, Scott 3 |
 | Newcrest | Midtown Meadows | 5 | Kirklands own (live elsewhere); Washburn 2, Bridges 5 |
-| Newcrest | Rippling Flats | 2 | Current uni Sims (still one home in the save) |
+| Newcrest | Rippling Flats | 2 | Current uni Sims: Kamilla Jackson and Chris Whitmore, one unit each after their degrees (her call, 25 Oct) |
 | Brindleton Bay | Tail’s End Apartments | 4 | Lynxes in 1 |
 | Del Sol Valley | The Inner Circle | 4 | Kalani 1, Huntington 2, Patel 3, Richards 4 (no landlord) |
 | Del Sol Valley | Upland Trailer Park | 4 | Eggleston 1, Martin 2, Holland 3, Johnny Zest 4 (no landlord; she’ll look again later) |
