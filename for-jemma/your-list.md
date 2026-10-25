@@ -115,6 +115,7 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 - **Do:** Make the ones in no save: Mine ×2, Dynamic Daters, Sporty and Nerdy Girls and Boys, My Celebs, Elders…
 - **Do:** …Single Mum Friends, Ella-Mint Cadberry, Rory & Friend, Werewolves in Training, Innisgreen's five.
 - **Do:** Also yours: upload the Lovejoys; the four Tiquelle households, the vineyard Altos, Specter Row's owners.
+- **Do:** Faye Evergreen (Library, June 2025; in “Season Events” with River Evergreen, Izabella Crawley and Squee at Cordelia’s Secret Cottage): someone you’re going to turn into a fairy later.
 - **Do:** Download Sebastian Michaelson and Merrilyn Ralston from Maxis's Gallery and pick their lots.
 - **Decide:** My Celebs: which save are they in?
 - **Do:** The Cadberrys, as one job when you're ready (options in research/own-households-recommendations.md): uploading Leah-Moon (Library, take Sterling and Sylvia out first) and Sylvia & Kenny (“Not So Berry”), Ella-Mint, Isda Riverfront's family, the Rochanas (Isda Riverfront's tenants, also from “Not So Berry”: keep or drop?), the 100 Babies Final House upload (Ella-Mint's home, or not?), and their links (Leah-Moon is Sylvia's mother; Kennedy Kirkland and Sylvia are good friends).
