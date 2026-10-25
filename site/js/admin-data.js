@@ -518,6 +518,11 @@ window.ADMIN = {
 {
 "section": "Households",
 "world": "",
+"text": "**Do:** Upload the Fantasias from “Wonder Child Challenge” (Frankie, Fliss and toddler Finlay, at Havisham House, Windenburg; Finlay is only in that save), then that save can go."
+},
+{
+"section": "Households",
+"world": "",
 "text": "**Do:** Faye Evergreen (Library, June 2025; in “Season Events” with River Evergreen, Izabella Crawley and Squee at Cordelia’s Secret Cottage): someone you’re going to turn into a fairy later."
 },
 {

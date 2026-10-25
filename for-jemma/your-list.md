@@ -117,6 +117,7 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 - **Do:** Also yours: upload the Lovejoys; the four Tiquelle households, the vineyard Altos, Specter Row's owners.
 - **Do:** Rippling Flats’ “current uni Sims” are Kamilla Jackson and Chris Whitmore (“All Universities”, at UoW Hare Halls; Tony Whitmore in your Library): they finish their degrees, then move in next door to each other, one unit each, maybe each with a partner or family.
 - **Do:** Your Sulani Sims: check them all and decide how to split them up (Caldera Camp is “Mine”; Journey’s End and Reef Finery “may change”). In “Sulani Save” and your Library: Keoni Kalawai’a and Alana Hekekia (at Caldera Camp), Maleia, Maui, Kekoa, Leilani, Hirife, Harata, Heilani, Malia, Luana, Palani and Palila Kalawai’a/Kahananui, Heifara Opanui, Tamati Hekekia, Elisha Sotelo.
+- **Do:** Upload the Fantasias from “Wonder Child Challenge” (Frankie, Fliss and toddler Finlay, at Havisham House, Windenburg; Finlay is only in that save), then that save can go.
 - **Do:** Faye Evergreen (Library, June 2025; in “Season Events” with River Evergreen, Izabella Crawley and Squee at Cordelia’s Secret Cottage): someone you’re going to turn into a fairy later.
 - **Do:** Download Sebastian Michaelson and Merrilyn Ralston from Maxis's Gallery and pick their lots.
 - **Decide:** My Celebs: which save are they in?
