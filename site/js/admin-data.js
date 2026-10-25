@@ -528,6 +528,11 @@ window.ADMIN = {
 {
 "section": "Households",
 "world": "",
+"text": "**Do:** Save Lena Garcia from “StrangerVille Playthrough” to your Library: there she has finished the mystery (Hero of StrangerVille, Logic 4); your Library copy is from before. Then that save can go."
+},
+{
+"section": "Households",
+"world": "",
 "text": "**Do:** Faye Evergreen (Library, June 2025; in “Season Events” with River Evergreen, Izabella Crawley and Squee at Cordelia’s Secret Cottage): someone you’re going to turn into a fairy later."
 },
 {
