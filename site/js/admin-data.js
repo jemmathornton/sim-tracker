@@ -1,7 +1,7 @@
 // Built by tools/admin_data.py for the Admin pages (js/sections.js, 23 Oct). Don't edit this file.
 // For Jemma's PC only: never upload this file if the site goes online (it holds her to-dos and admin notes).
 window.ADMIN = {
-"made": "2026-10-24",
+"made": "2026-10-25",
 "refresh": [
 {
 "when": "13 Oct 2026 18:27",
@@ -518,7 +518,7 @@ window.ADMIN = {
 {
 "section": "Households",
 "world": "",
-"text": "**Do:** The Cadberrys, as one job when you're ready (options in research/own-households-recommendations.md): uploading Leah-Moon (Library, take Sterling and Sylvia out first) and Sylvia & Kenny (“Not So Berry”), Ella-Mint, Isda Riverfront's family, and their links (Leah-Moon is Sylvia's mother; Kennedy Kirkland and Sylvia are good friends)."
+"text": "**Do:** The Cadberrys, as one job when you're ready (options in research/own-households-recommendations.md): uploading Leah-Moon (Library, take Sterling and Sylvia out first) and Sylvia & Kenny (“Not So Berry”), Ella-Mint, Isda Riverfront's family, the Rochanas (Isda Riverfront's tenants, also from “Not So Berry”: keep or drop?), the 100 Babies Final House upload (Ella-Mint's home, or not?), and their links (Leah-Moon is Sylvia's mother; Kennedy Kirkland and Sylvia are good friends)."
 },
 {
 "section": "Households",
