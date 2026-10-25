@@ -26,7 +26,8 @@ norm = lambda x: re.sub(r'[^a-z]', '', (x or '').lower())
 
 def gendered(text, sex):
     """The game's text keeps both words for some names ("Master {F0.Actress}{M0.Actor}"): keep the Sim's."""
-    return re.sub(r'\{F0\.([^}]*)\}\{M0\.([^}]*)\}', lambda m: m.group(1) if sex == 'f' else m.group(2), text or '')
+    # either order ({M0.Actor}{F0.Actress} too, 25 Oct): keep the word for the Sim's sex, drop the other
+    return re.sub(r'\{([FM])0\.([^}]*)\}', lambda m: m.group(2) if (m.group(1) == 'F') == (sex == 'f') else '', text or '')
 
 
 def skill(h, v):
@@ -66,7 +67,7 @@ def facts(s, sex):
     sch = next((x for x in cs if 'Student' in (x[1] or '') or 'School' in (x[0] or '')), None)
     job = next((x for x in cs if x is not sch), None)
     m = re.match(r'(High|Grade) School (\w) Student', (sch or ('', ''))[1] or '')
-    d["career"] = f"{job[0]} · {job[1]} (level {job[2]})" if job and job[1] else (job[0] if job else "")
+    d["career"] = gendered(f"{job[0]} · {job[1]} (level {job[2]})" if job and job[1] else (job[0] if job else ""), sex)
     sc = at.get('sim_careers') or {}   # a job she wrote in herself (24 Oct: Josie De Costa, Restauranteur)
     if not d["career"] and sc.get('custom_career_name'): d["career"] = sc['custom_career_name']
     d["careerNote"] = sc.get('custom_career_description') if sc.get('custom_career_name') and not job else None
