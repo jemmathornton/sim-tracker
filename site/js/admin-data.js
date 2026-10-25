@@ -533,6 +533,11 @@ window.ADMIN = {
 {
 "section": "Households",
 "world": "",
+"text": "**Do:** Your snowy Sims, for 2-4-3 Wakabamori (Mt. Komorebi): in “Snowy Escape”, move Kumiko Aoki (his friend, a homeless townie) into Kenji Mikami’s household with MCCC, then save it to your Library (that copy has his Snowboarding 4, Skiing 2 and Salaryperson job; your Library copy is from before). Then that save can go."
+},
+{
+"section": "Households",
+"world": "",
 "text": "**Do:** Faye Evergreen (Library, June 2025; in “Season Events” with River Evergreen, Izabella Crawley and Squee at Cordelia’s Secret Cottage): someone you’re going to turn into a fairy later."
 },
 {
