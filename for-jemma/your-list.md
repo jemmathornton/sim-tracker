@@ -115,6 +115,7 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 - **Do:** Make the ones in no save: Mine ×2, Dynamic Daters, Sporty and Nerdy Girls and Boys, My Celebs, Elders…
 - **Do:** …Single Mum Friends, Ella-Mint Cadberry, Rory & Friend, Werewolves in Training, Innisgreen's five.
 - **Do:** Also yours: upload the Lovejoys; the four Tiquelle households, the vineyard Altos, Specter Row's owners.
+- **Do:** Your Sulani Sims: check them all and decide how to split them up (Caldera Camp is “Mine”; Journey’s End and Reef Finery “may change”). In “Sulani Save” and your Library: Keoni Kalawai’a and Alana Hekekia (at Caldera Camp), Maleia, Maui, Kekoa, Leilani, Hirife, Harata, Heilani, Malia, Luana, Palani and Palila Kalawai’a/Kahananui, Heifara Opanui, Tamati Hekekia, Elisha Sotelo.
 - **Do:** Faye Evergreen (Library, June 2025; in “Season Events” with River Evergreen, Izabella Crawley and Squee at Cordelia’s Secret Cottage): someone you’re going to turn into a fairy later.
 - **Do:** Download Sebastian Michaelson and Merrilyn Ralston from Maxis's Gallery and pick their lots.
 - **Decide:** My Celebs: which save are they in?
