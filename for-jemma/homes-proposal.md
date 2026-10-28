@@ -37,7 +37,8 @@ Suggestions only. Nothing on the site has changed.
 - **“Mine”, Chestnut Ridge** (Red Roan Farm): only your test Sim Louisa lives there in any save. Still open.
 - **Elders** (Rio Verde): Everyday Sims 4 (decided).
 - **Nerdy Girls and Nerdy Boys** (Prescott Boarding House): nobody in your saves fits. A ready-made option is Maxis's **“Chill Out with Friends”** (Backyard Stuff, which you own): six teens (Mary Young, Crystal Rivers, Sasha Johnson, Beth Pepper, Josh Charmer, Jay Pretty) and a young adult. Split by girls and boys, they'd fill both units.
-- **Dynamic Daters, Rory & Friend, Werewolves in Training, Innisgreen's five:** in worlds you don't own yet; Maxis matches for later are listed further down.
+- **Dynamic Daters and Innisgreen's five:** these are **EA's own households** from Lovestruck and Enchanted by Nature, so nothing to make; they come with the packs. Dynamic Daters are Carmen Ortega, Elia Cruz, Manuel Aguilar and Yoltic Xicoténcatl, whom EA places at Avenida de la Eternidad, just as your plan does.
+- **Rory & Friend, Werewolves in Training:** in Moonwood Mill, which you don't own yet.
 - **Ella-Mint Cadberry:** part of the Cadberry job.
 
 ## Willow Creek
@@ -85,7 +86,7 @@ Suggestions only. Nothing on the site has changed.
 |---|---|---|---|
 | Cordelia's Secret Cottage | 2 | **Faye Evergreen's household** (Faye, Izabella, baby River, Squee), their home in “Season Events”, for your future fairy | – |
 | The Olde Mill (“1/2 Bed Big”) | – | **Ralph Osbourne** (Cottage Living trailer, obsessed with winning the oversized-crop competition) | – |
-| 1 Cobblebottom Street (small business) | – | **Lavina and Rahul Chopra**. Lavina is Henford's mayor and judges the Finchwick Fair; Rahul delivers groceries. EA gives them no house. Lore link: Lavina once had an affair with Rahmi Watson. | – |
+| 1 Cobblebottom Street (small business) | – | **Lavina and Rahul Chopra**. Lavina is Henford's mayor and judges the Finchwick Fair; Rahul delivers groceries. EA gives them no house; you left this open on 22–23 Oct. Unknown whether Henford would get a stand-in mayor and grocery deliverer if you play them. Lore link: Lavina and Rahmi Watson once had an affair. | – |
 | 13 Nettle Lane (not built) | – | **The Thorntons** (Trevon, Summer, two boys). Or keep it for the 100 Babies house. | Hawley family |
 | 14 Nettle Lane (not built, 40x30) | – | **The Grunts** (5) | the Wainscots |
 
@@ -141,8 +142,9 @@ Corey Nyhus and Zain Amri are Nordhaven townies with no house in EA's game; leav
 ## Ondarion
 | Home | Beds | Pick | Alternatives |
 |---|---|---|---|
-| 17 Bright Cliff (apartment, not built) | – | **Fia Acosta**: a commoner at the pirate bar, secretly Cordelia Thebe V's lover and Ondarion's Royal Robber | Connie Fidential (the info broker who trades the dynasties' secrets) |
-| 13 Lakeview Apartments (not built) | – | **Irina Rattus**, the Thebes' maid. In the trailer she blackmails Cordelia over her affair with Fia, so put them next door. | Akachi Onoja (a count) |
+| 17 Bright Cliff (apartment, not built) | – | **Akachi Onoja**, a count, who is dating Jawara Darong | Connie Fidential (the info broker who trades the dynasties' secrets) |
+| Casa Do Corsário, spare unit | – | **Fia Acosta**: a commoner at the pirate bar, secretly Cordelia Thebe V's lover and Ondarion's Royal Robber. The game files group her with Aloisio Romualdo (the crime lord who owns Casa Do Corsário in your plan) and Connie Fidential as “the criminal three”, so his spare unit suits her. EA hides her, so moving her in needs MCCC. | 17 Bright Cliff |
+| 13 Lakeview Apartments (not built) | – | **Irina Rattus**, the Thebes' maid. In the trailer she blackmails Cordelia over her affair with Fia. | Akachi Onoja |
 
 Princess Cordelia's household upload needs Vampires, and its Cordelia is a younger copy of yours. Skip it. Of the Gallery's 32 nobles, take any only if Ondarion's dynasties need courtiers.
 
@@ -166,8 +168,8 @@ No free homes besides those already decided. Tomarang's two free units are for F
 
 ## Worlds you don't own yet (for later)
 - **Moonwood Mill:** Werewolf Roll Call! for “Werewolves in Training”; Rory Oaklow with Aubrey Bloom for “Rory & Friend”.
-- **Innisgreen:** Flix and Fauna for “Enchanted Lovers”; Briar Pinesong and Hazel Elmrose for “Mystical Besties”.
-- **Ciudad Enamorada:** Luciana, Mateo and Diego for “Dynamic Daters”; Lovestruck Singles.
+- **Innisgreen:** your five planned households are EA's own and come with the pack. Maxis's fairies (Flix and Fauna, Briar Pinesong, Hazel Elmrose, the Fluttering Fairies) would be extras, for Crannamor Residential.
+- **Ciudad Enamorada:** Dynamic Daters are EA's own (see above). Maxis's Lovestruck trio (Luciana, Mateo, Diego) and Lovestruck Singles would be extras, for Mansión de la Pasión.
 - **Forgotten Hollow:** the Noble Vampires for Widowshild Townhome.
 
 These need those packs, so they're parked.
@@ -212,8 +214,10 @@ Also found: **Perfect Balance Spa**, the build in “Rotational” I'd called yo
 ## Lore links to add with MCCC (if you take these households)
 - **Grunts:** Buzz and Tank dislike the Curious brothers and the Smiths; Ripp is friendly with Johnny Smith, Buck with Jill Smith. Lyla is Buzz's ex-wife.
 - **Beakers:** Circe Beaker and Vidcund Curious are exes (the start of the Beaker–Curious rivalry).
-- **Chopras:** Lavina Chopra and Rahmi Watson had an affair (Lavina dislikes her for it); Rahul works with Kim Goldbloom.
-- **Fia Acosta** and **Cordelia Thebe V** are secret lovers; **Irina Rattus** knows and blackmails Cordelia.
+- **Chopras:** Lavina Chopra and Rahmi Watson had an affair that ended; they dislike each other (Rahmi bitter, Lavina guilty). **Rashidah Watson and Rahul Chopra** have a teen crush. Rahul works with Kim Goldbloom. Agnes Crumplebottom and Rahmi both mildly dislike Rahul.
+- **Fia Acosta** and **Cordelia Thebe V** are secret lovers; **Irina Rattus** knows and blackmails Cordelia. Aloisio Romualdo is good friends with Fia and Connie Fidential.
+- **Akachi Onoja** and **Jawara Darong** are dating.
+- **Gibbi Point:** Nigel Chavez-Ralston is good friends with Toshie Akamine and holds a grudge against Raheel Kunal; Buddy Scoop is Dougie Perry's good friend.
 - **Hoffmans** and **Lodens**: a family feud over the Jellybean Cookie.
 - **Clem Caldwell** and Dina Caliente, **Arielle Hubbard** and Nina Caliente: flings from the Adventure Awaits trailer.
 - **Liam Beckett** and **Sidney Price**: love interests (High School Years trailers).
