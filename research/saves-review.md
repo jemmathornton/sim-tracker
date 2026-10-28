@@ -9,7 +9,7 @@ Every save in her saves folder was read (copies only) and gone through with her.
 | Building #2 (0d) | Keep | lots; families not on the plan (Presley, Barnes, Faulk, Hassani, Thornton, Vivian Little, Battle, Whitlock, Ellsworth, Brody Conklin); builds only here: Prospector's Stables, On Point, Boba Ippai, Shark Shell, Pride Shell 24 |
 | Horses! (16) | Keep for now | same world as Building #2, later; Palumbo and Eco Roomies uploaded |
 | Season Events (17) | Keep | Lovejoys, Sporty Girls and Boys to upload; Faye Evergreen's household; Elissa Barragan |
-| Rotational (03) | Keep | holidays; Ferrara, Decker, Luis Huerta; builds only here: Love to Skate, Perfect Balance Spa |
+| Rotational (03) | Keep | holidays; Ferrara, Decker, Luis Huerta; builds only here: Love to Skate (Perfect Balance Spa is Maxis's Spa Day lot, still on the Gallery: found 29 Oct) |
 | Return to the HOB (11) | Keep for now | "I'll pull stuff later" |
 | Not So Berry (18) | Keep | Cadberrys and Rochanas (one job, parked) |
 | 100 Baby Challenge!! (15) | Keep for now | Vivian Schiatta and 101 children, only here |

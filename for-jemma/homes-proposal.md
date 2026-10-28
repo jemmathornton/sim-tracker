@@ -174,6 +174,19 @@ These need those packs, so they're parked.
 
 ---
 
+## Maxis's own builds that go with these families (Gallery, found overnight)
+These could go on lots your plan has as not built, if you'd rather not build them yourself:
+- **Our Cozy Home** (Residential 30x20): the Keye family's house from Parenthood.
+- **Nigel & Imaginary Friends** (Residential 40x30, 4 bedrooms): Nigel's Gibbi Point house from Adventure Awaits.
+- **Vintage Villa** (Residential 30x20, 4 bedrooms): the Goths' house from the Vintage Glamour livestream.
+- **The Grand Castle Estate** / **Maxis Castle Furnished** (50x50 / 64x64): Princess Cordelia's castle.
+- **Top of the Line Penthouse** (3 bedrooms), **Artsy Penthouse Loft**, **Grungy Warehouse**: City Living promo homes, a fit for VIII Landgraab or 888 Spire.
+- **San Sequoia Townhomes** (30x20, 7 bedrooms); **The Gibby** (an off-campus student rental, 9 bedrooms); **The Hype Homes** (a content-creators' rental, 6 bedrooms).
+- **Forest Manor**, **Lakeview Estate**, **Luxurious Getaway**, **Riverside Resort**: Outdoor Retreat cabin upgrades for Granite Falls.
+- Full list: research/data/overnight/maxis-gallery-lots.json.
+
+Also found: **Perfect Balance Spa**, the build in “Rotational” I'd called yours, is Maxis's Spa Day lot (still on the Gallery), so nothing is lost there.
+
 ## Lore links to add with MCCC (if you take these households)
 - **Grunts:** Buzz and Tank dislike the Curious brothers and the Smiths; Ripp is friendly with Johnny Smith, Buck with Jill Smith. Lyla is Buzz's ex-wife.
 - **Beakers:** Circe Beaker and Vidcund Curious are exes (the start of the Beaker–Curious rivalry).
