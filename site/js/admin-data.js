@@ -493,7 +493,7 @@ window.ADMIN = {
 {
 "section": "Households",
 "world": "",
-"text": "**Do:** Make the ones in no save: Mine ×2, Dynamic Daters, Nerdy Girls and Boys, Elders…"
+"text": "**Do:** Make the ones in no save: Mine ×2, Dynamic Daters, Nerdy Girls and Boys…"
 },
 {
 "section": "Households",
@@ -539,6 +539,11 @@ window.ADMIN = {
 "section": "Households",
 "world": "",
 "text": "**Do:** Save Ash Carrington from “It’s Magic!” to your Library (there he’s a Spellcaster, adult, Retail level 3; your Library copy is from before), then that save can go."
+},
+{
+"section": "Households",
+"world": "",
+"text": "**Do:** From Maxis’s Gallery: download the Grunts and the Beakers (Sims 2, Strangetown) and the Newbies (Sims 1 and 2); the Grunts and Newbies are also in your Library. Download “Everyday Sims 4” (four elders, 28 Oct) and split them up as the Elders at Rio Verde Retirement Home."
 },
 {
 "section": "Households",
