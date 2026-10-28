@@ -6010,7 +6010,8 @@
      "dynasty": null,
      "clubs": [],
      "degree": [],
-     "occult": null
+     "occult": null,
+     "fame": 3
     }
    ],
    "relationships": []
@@ -6063,7 +6064,8 @@
      "dynasty": null,
      "clubs": [],
      "degree": [],
-     "occult": null
+     "occult": null,
+     "fame": 4
     }
    ],
    "relationships": []
@@ -6137,7 +6139,8 @@
      "dynasty": null,
      "clubs": [],
      "degree": [],
-     "occult": null
+     "occult": null,
+     "fame": 4
     },
     {
      "sim_id": 730436624768775510,
@@ -6183,7 +6186,8 @@
      "dynasty": null,
      "clubs": [],
      "degree": [],
-     "occult": null
+     "occult": null,
+     "fame": 3
     },
     {
      "sim_id": 730436624768775519,
@@ -6246,7 +6250,8 @@
      "dynasty": null,
      "clubs": [],
      "degree": [],
-     "occult": null
+     "occult": null,
+     "fame": 2
     }
    ],
    "relationships": []
@@ -6318,7 +6323,8 @@
      "dynasty": null,
      "clubs": [],
      "degree": [],
-     "occult": null
+     "occult": null,
+     "fame": 3
     }
    ],
    "relationships": []
@@ -6756,7 +6762,8 @@
      "dynasty": null,
      "clubs": [],
      "degree": [],
-     "occult": null
+     "occult": null,
+     "fame": 4
     }
    ],
    "relationships": []
@@ -7171,7 +7178,8 @@
      "dynasty": null,
      "clubs": [],
      "degree": [],
-     "occult": null
+     "occult": null,
+     "fame": 4
     }
    ],
    "relationships": []
@@ -18066,7 +18074,8 @@
      "dynasty": null,
      "clubs": [],
      "degree": [],
-     "occult": null
+     "occult": null,
+     "fame": 1
     }
    ],
    "relationships": []
@@ -18215,7 +18224,8 @@
      "dynasty": null,
      "clubs": [],
      "degree": [],
-     "occult": null
+     "occult": null,
+     "fame": 2
     }
    ],
    "relationships": []
@@ -20738,7 +20748,8 @@
      "dynasty": null,
      "clubs": [],
      "degree": [],
-     "occult": null
+     "occult": null,
+     "fame": 1
     }
    ],
    "relationships": []
@@ -23795,7 +23806,8 @@
      "dynasty": null,
      "clubs": [],
      "degree": [],
-     "occult": null
+     "occult": null,
+     "fame": 5
     }
    ],
    "relationships": []
@@ -28707,84 +28719,84 @@
   "220519": "Gemma Charm",
   "220822": "Morgyn Ember",
   "220823": "Simeon Silversweater",
-  "294390": "Leonardo Martinez",
+  "469188": "Alexander Goth",
   "346255": "Ava Landry",
-  "200830": "Alex Moyer",
+  "468091": "Malcolm Landgraab",
+  "346256": "Eddie Landry",
+  "469191": "Mortimer Goth",
+  "294388": "Jennifer Martinez",
+  "469189": "Bella Goth",
+  "346257": "Lila Landry",
+  "294612": "Nova Curious",
+  "468090": "Nancy Landgraab",
+  "294614": "Lewis Sancho",
+  "346254": "Nyssa Landry",
+  "294390": "Leonardo Martinez",
   "426104": "Robin Banks",
   "294389": "Pablo Martinez",
-  "469189": "Bella Goth",
-  "469188": "Alexander Goth",
-  "468091": "Malcolm Landgraab",
-  "294612": "Nova Curious",
-  "465606": "Johnny Zest",
-  "346254": "Nyssa Landry",
-  "468092": "Geoffrey Landgraab",
-  "468090": "Nancy Landgraab",
-  "346256": "Eddie Landry",
-  "294388": "Jennifer Martinez",
-  "346257": "Lila Landry",
   "469190": "Cassandra Goth",
-  "469191": "Mortimer Goth",
-  "294818": "Farrah Nouvel",
-  "294614": "Lewis Sancho",
   "294391": "Sofia Martinez",
-  "357941": "Hanoi",
-  "357932": "Kitty Lu",
-  "357934": "Mrs. Love",
-  "357933": "MacGoober",
+  "468092": "Geoffrey Landgraab",
+  "294818": "Farrah Nouvel",
+  "200830": "Alex Moyer",
+  "465606": "Johnny Zest",
   "357940": "Dara Kham",
+  "357932": "Kitty Lu",
+  "357941": "Hanoi",
+  "357934": "Mrs. Love",
   "357935": "Bugella",
-  "370576": "Carlos López",
+  "357933": "MacGoober",
+  "370574": "Aziz Nadir",
+  "369704": "Sammy García",
+  "370578": "Carmen Ortega",
+  "370575": "Mónica López",
+  "370573": "Valentina Nadir",
+  "370581": "Manuel Aguilar",
   "370580": "Elia Cruz",
   "370579": "Yoltic Xicoténcatl",
-  "370574": "Aziz Nadir",
-  "370575": "Mónica López",
-  "369704": "Sammy García",
+  "370576": "Carlos López",
   "370577": "Luz López",
-  "370573": "Valentina Nadir",
-  "370578": "Carmen Ortega",
-  "370581": "Manuel Aguilar",
-  "431804": "Spruce Almighty",
+  "431818": "Mara Summerdream",
+  "431816": "Titania Summerdream",
+  "431817": "Oberon Summerdream",
   "431809": "Todd Attenberry",
   "431813": "Flora Ladipo",
-  "431818": "Mara Summerdream",
-  "431814": "Ayo Ladipo",
-  "431810": "Elric DeMuray",
-  "431806": "Zhaleh Amani",
-  "431807": "Joe Trader",
-  "431808": "Care Ren",
   "431805": "Mother Nature",
   "431815": "Glen Nhoam",
-  "431817": "Oberon Summerdream",
-  "431816": "Titania Summerdream",
+  "431806": "Zhaleh Amani",
   "431812": "Iris Ladipo",
   "431811": "Nadya Kishka",
+  "431804": "Spruce Almighty",
+  "431808": "Care Ren",
+  "431810": "Elric DeMuray",
+  "431814": "Ayo Ladipo",
+  "431807": "Joe Trader",
   "153543": "Vladislaus Straud",
-  "153542": "Caleb Vatore",
   "153541": "Lilith Vatore",
+  "153542": "Caleb Vatore",
+  "239023": "Rey",
+  "239024": "Vi Moradi",
+  "238712": "Hondo Ohnaka",
   "239022": "Kylo Ren",
   "239025": "Lt. Agnon",
-  "238712": "Hondo Ohnaka",
-  "239024": "Vi Moradi",
-  "239023": "Rey",
-  "278720": "Tomi Markovic",
-  "278722": "Camille Soto",
+  "278721": "Dominique Soto",
+  "278712": "Faiz Jaleel",
+  "278713": "Hector Laurent",
+  "278715": "Jace Laurent",
   "278717": "Arnessa Thebe",
-  "278719": "Lucia Markovic",
+  "278714": "Greta Laurent",
   "278716": "Hilary Laurent",
   "278718": "Mateo Markovic",
-  "278713": "Hector Laurent",
-  "278714": "Greta Laurent",
-  "278715": "Jace Laurent",
-  "278712": "Faiz Jaleel",
-  "278721": "Dominique Soto",
-  "289886": "Lily Zhu",
+  "278720": "Tomi Markovic",
+  "278722": "Camille Soto",
+  "278719": "Lucia Markovic",
   "289881": "Greg",
-  "289885": "Wolfgang Wilder",
   "289887": "Lou Howell",
-  "289882": "Kristopher Volkov",
   "289884": "Jacob Volkov",
+  "289882": "Kristopher Volkov",
+  "289886": "Lily Zhu",
   "289883": "Rory Oaklow",
-  "289888": "Celene López"
+  "289888": "Celene López",
+  "289885": "Wolfgang Wilder"
  }
 }
