@@ -543,7 +543,7 @@ window.ADMIN = {
 {
 "section": "Households",
 "world": "",
-"text": "**Decide:** A home for Ash Carrington: Glimmerbrook Watch (your plan has it as “1 Bed”, nobody named; he lives there in “It’s Magic!”)?"
+"text": "**Decide:** A home for Ash Carrington: Glimmerbrook Watch (your plan has it as “1 Bed”, nobody named; he lives there in “It’s Magic!”), or move him in with someone else?"
 },
 {
 "section": "Households",
