@@ -153,6 +153,21 @@ These need those packs, so they're parked.
 
 ---
 
+## Lore links to add with MCCC (if you take these households)
+- **Grunts:** Buzz and Tank dislike the Curious brothers and the Smiths; Ripp is friendly with Johnny Smith, Buck with Jill Smith. Lyla is Buzz's ex-wife.
+- **Beakers:** Circe Beaker and Vidcund Curious are exes (the start of the Beaker–Curious rivalry).
+- **Chopras:** Lavina Chopra and Rahmi Watson had an affair (Lavina dislikes her for it); Rahul works with Kim Goldbloom.
+- **Fia Acosta** and **Cordelia Thebe V** are secret lovers; **Irina Rattus** knows and blackmails Cordelia.
+- **Hoffmans** and **Lodens**: a family feud over the Jellybean Cookie.
+- **Clem Caldwell** and Dina Caliente, **Arielle Hubbard** and Nina Caliente: flings from the Adventure Awaits trailer.
+- **Liam Beckett** and **Sidney Price**: love interests (High School Years trailers).
+- **The Climates**: Arthur is Vladislaus Straud's cousin.
+- **The Landgraab upload**: Mimi and Dudley are Malcolm's children; Mom Landgraab is their former stepmother.
+- **Patina Wainscot** is the daughter of Nikia and Timothy Wainscot; **Felicia Byers** is her best friend.
+- **Hina Matsumoto** and **Niko Okada** (Snowy Escape trailer) are married.
+
+---
+
 ## Every Maxis Gallery household (239)
 
 - **Take (lore):**
