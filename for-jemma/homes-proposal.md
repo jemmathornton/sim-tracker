@@ -35,7 +35,7 @@ Suggestions only. Nothing on the site has changed.
 - **Single Mum Friends** (Midtown Meadows): this is now the **Washburns and Bridges**, uploaded on 24 Oct in units 5 and 2. The item on your list is out of date.
 - **“Mine”, Sulani** (Caldera Camp): **Keoni Kalawai'a and Alana Hekekia** live there in “Sulani Save” (part of your Sulani job).
 - **“Mine”, Chestnut Ridge** (Red Roan Farm): only your test Sim Louisa lives there in any save. Still open.
-- **Elders** (Rio Verde): Everyday Sims 4 (decided).
+- **Elders** (Rio Verde): Everyday Sims 4 (decided). Rio Verde has six units, so two are still free after the four elders: **Helen Sparrow** (Backyard Stuff's “Bird Lady”) and **Matteo Hamilton** (Get Together trailer) are Maxis's two other elders, if you want it full.
 - **Nerdy Girls and Nerdy Boys** (Prescott Boarding House): nobody in your saves fits. A ready-made option is Maxis's **“Chill Out with Friends”** (Backyard Stuff, which you own): six teens (Mary Young, Crystal Rivers, Sasha Johnson, Beth Pepper, Josh Charmer, Jay Pretty) and a young adult. Split by girls and boys, they'd fill both units.
 - **Dynamic Daters and Innisgreen's five:** these are **EA's own households** from Lovestruck and Enchanted by Nature, so nothing to make; they come with the packs. Dynamic Daters are Carmen Ortega, Elia Cruz, Manuel Aguilar and Yoltic Xicoténcatl, whom EA places at Avenida de la Eternidad, just as your plan does.
 - **Rory & Friend, Werewolves in Training:** in Moonwood Mill, which you don't own yet.
@@ -74,12 +74,12 @@ Suggestions only. Nothing on the site has changed.
 | 17 Culpepper House | 1 | **Clem Caldwell**, Dina Caliente's fling from the Adventure Awaits trailer | Talia Mattera |
 | 18 Culpepper House | 2 | **Arielle Hubbard**, Nina Caliente's hot-tub flirt from the same trailer | – |
 | 19 Culpepper House | 1 | **Talia Mattera** (in the same trailer she books a fitness getaway to escape her busy life) | – |
-| 122 Hakim House | 2 | **Jordan and Jared** (a City Living promo pair) | Patina Wainscot |
+| 122 Hakim House | 2 | **Giovanni and Edith Prego** (Get Together trailer: they meet at a bonfire at The Bluffs, Edith proposes and later expects a baby; Windenburg has no free home) | Patina Wainscot |
 | Fraternity Apartment | 3 | **Game-time!** (Danny Shino-Miller, Chad LeBouf, City Living) plus one | – |
 | Sorority Apartment | 3 | **Patina Wainscot** (Dream Home Decorator star) with **Felicia Byers**, her best friend | – |
 | 1010 Alto Apartments | 3 | **Get Famous Co-Stars** (Alexandrea Cole and Christian Harp, on-screen and off-screen lovebirds) | – |
-| VIII Landgraab Apartments (not built) | – | **The Landgraab Family upload's Mimi and Dudley** (console games' party-animal heirs, Malcolm's children) | Get Famous Trailer Cast |
-| 888 Spire Apartments (not built) | – | **Get Famous Trailer Cast** (Chaz Goldstein and co.) | Moschino X Sims |
+| VIII Landgraab Apartments (not built) | – | **Get Famous Trailer Cast** (Chaz Goldstein and co.) | Mimi and Dudley Landgraab (see below) |
+| 888 Spire Apartments (not built) | – | **Jordan and Jared**: Jordan Mayer is City Living's cover star, and Jared proposes at the Romance Festival | Moschino X Sims |
 
 ## Henford-on-Bagley
 | Home | Beds | Pick | Alternatives |
@@ -111,7 +111,7 @@ Kim Goldbloom (grocery stall) and Michael Bell (creature keeper with a forest co
 | Hound's Head (farm, not built) | – | **The Rosebud household** (Rachel, Robin, Yin, Bridgette), their home in their save | – |
 | Bedlington Barn | 1 | **Gianni Faulk and Yogi** | Miriam & Laika |
 | Brindleton Boathouse | – | **Life is Golden** (Jay Bhatia and Kyra Anello with Lulu the dog, Cats & Dogs trailer) | the Climates |
-| Tail's End, 3 free units | – | **Miriam & Laika**, **Sebastian Santos** (Cats & Dogs trailer) and one spare | Brody Conklin |
+| Tail's End, 3 free units | – | **Miriam & Laika** (guests at the Heckings' wedding in the Cats & Dogs trailer), **Sebastian Santos** and one spare | – |
 | Chateau Frise (not built, 40x40) | – | **The Climates** (Arthur, Janine, Summer, Nicolas; Seasons). Vladislaus Straud, already on your plan, is Arthur's cousin, and they don't know he's a vampire. | the Simmons |
 
 ## StrangerVille
@@ -125,9 +125,10 @@ The Strangetown families (Grunts, Beakers) have no free house here. To put them 
 ## Ravenwood
 | Home | Beds | Pick | Alternatives |
 |---|---|---|---|
-| Old Ravenwood Estate (haunted, 50x50, not built) | – | **The Beakers** (Loki, Circe, clones Atom and Ceres, Nervous Subject). In Sims 2 they lived in “a large mansion on a hill” with a cell in the basement for Nervous; a haunted estate suits them. | the Dragostes |
+| Old Ravenwood Estate (haunted, 50x50, not built) | – | **The Beakers** (Loki, Circe and their clones Atom and Ceres) **without Nervous Subject**. He is your **Nyon Specter**: in Life & Death he is Olive and the Grim Reaper's son, who in this timeline was never experimented on, so take the upload's Nervous out (or keep him as a separate Sim). In Sims 2 the Beakers lived in “a large mansion on a hill”; a haunted estate suits them. | the Dragostes |
 | Hay Hill Landing (farm, 64x64, not built) | – | **The Dragostes** (Papa and his children Angelika, Travis and Liv, Angelika's husband Paul, granddaughters Justine and Robin). In the Life & Death trailer Papa dies in his sleep, so a funeral is ready to play. | – |
-| The Cozy Casket House (haunted) | – | **The Grimterns** (Cortez Oates, Reece Boland, Tatum Sawyer, the Reaper's interns) | Edward Talon-Crow and Fulov Pepp |
+| The Cozy Casket House (haunted) | – | **The Grimterns** (Cortez Oates, Reece Boland, Tatum Sawyer, the Reaper's interns; Cortez is a ghost) | Edward Talon-Crow and Fulov Pepp |
+| Specter Row, a unit (your Specters rent it out) | – | **Ophelia Specter** (Maxis's Life & Death upload: Olive's estranged niece and Nyon's cousin, who fell out with Olive over the Grim Reaper's business). Not on your plan yet; I wrongly said she was. | Edward Talon-Crow and Fulov Pepp |
 
 Edward Talon-Crow (“Enemies to… Enemies?”) is a famous dead writer, and the ex of Pernilla Lunvik (Werewolves lore). He could haunt the Grimterns' house.
 
@@ -222,7 +223,13 @@ Also found: **Perfect Balance Spa**, the build in “Rotational” I'd called yo
 - **Clem Caldwell** and Dina Caliente, **Arielle Hubbard** and Nina Caliente: flings from the Adventure Awaits trailer.
 - **Liam Beckett** and **Sidney Price**: love interests (High School Years trailers).
 - **The Climates**: Arthur is Vladislaus Straud's cousin.
-- **The Landgraab upload**: Mimi and Dudley are Malcolm's children; Mom Landgraab is their former stepmother.
+- **The Landgraab upload**: in the console games Mimi and Dudley are Malcolm's children and Mom Landgraab their former stepmother. **Your Malcolm is a teen**, so for now they could only come as cousins; the upload also needs Vampires (probably just a clothing item; none is a vampire). Best left until your Malcolm is grown.
+- **Ophelia Specter** is Olive's niece and Nyon's cousin; **Nervous Subject** of the Beaker upload is Nyon himself.
+- **Sebastian Michaelson** is Celeste's father (San Sequoia); **Merrilyn Ralston** is Nigel Chavez-Ralston's mother (her upload is the young flashback version, so age her up).
+- **Joaquin** (Maxis upload) is the Heckings' own cat from the Cats & Dogs reveal trailer, so he could join your Heckings.
+- **Polliana DeMure** is Siobhan Fyres' friend from the Get Together trailer (an early Paragons club).
+- **Grunts and Beakers, more:** Buzz Grunt also dislikes Olive Specter and Loki Beaker; Loki Beaker and Pascal Curious are enemies.
+- **Shaun Gromit** (Dine Out's “Fine Dining”) dated Penny Pizzazz in a console trailer.
 - **Patina Wainscot** is the daughter of Nikia and Timothy Wainscot; **Felicia Byers** is her best friend.
 - **Hina Matsumoto** and **Niko Okada** (Snowy Escape trailer) are married.
 
@@ -230,13 +237,15 @@ Also found: **Perfect Balance Spa**, the build in “Rotational” I'd called yo
 
 ## Every Maxis Gallery household (239)
 
+Full dossiers (each household's Sims with traits and aspirations, story, lore, packs, fit, verdict): research/maxis-gallery-households.md (30 recommended, 52 maybe, 37 skip of the 119 in scope). One note from it: **“Malpractice” includes your Eric Lewis** as a doctor; leave him out of that upload (and the Doctor career suits him).
+
 - **Take (lore):**
   - The Grunt Family (Sims 2 Strangetown: General Buzz and his sons Tank, Ripp and Buck. In the old lore Lyla divorced Buzz and died mysteriously; the Gallery puts her back in. Buzz and Tank hate the Curious brothers and the Smiths, while Ripp and Buck get on with Johnny and Jill Smith.)
-  - The Beaker Family (Sims 2 Strangetown: Circe's first love was Vidcund Curious, hence their rivalry with the Curious brothers.)
+  - The Beaker Family (Sims 2 Strangetown: Circe's first love was Vidcund Curious, hence their rivalry with the Curious brothers.) Without Nervous Subject, who is your Nyon Specter.
   - The Newbie Family
   - Everyday Sims 4 (the Elders)
 - **Suggested above:**
-  - The Landgraab Family (Mimi and Dudley; Mom Landgraab too, if you want her)
+  - Joaquin (the Heckings' cat), Polliana DeMure, Giovanni and Edith Prego, Ophelia Specter (Life & Death upload)
   - Realm of Magic Sages, Dragoste, The Grimterns, Enemies to… Enemies?, Branche Family
   - Discover University Squad, Liam Beckett, Ralph Osbourne
   - Decorate with Patina, Felicia Byers, Irina Rattus
@@ -246,6 +255,7 @@ Also found: **Perfect Balance Spa**, the build in “Rotational” I'd called yo
   - Miriam & Laika, Sebastian Santos, Life is Golden, The Climates
   - Ink & Clay (alternative)
 - **Maybe, if homes are left:**
+  - The Landgraab Family (Mimi and Dudley, once your Malcolm is grown), Helen Sparrow and Matteo Hamilton (Rio Verde's two spare units)
   - The Wainscots (Patina's parents and twin siblings), Hawley
   - The Simmons Family, The Keye Family (EA also uploaded their house, “Our Cozy Home”), The Peterson Family, The Flynn Family
   - Happy Lunar New Year (the Zhaos, 8 across three generations), Celebrate Diwali (the Parikhs), The Giordano, St. Feu Household
