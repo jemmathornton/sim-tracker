@@ -15,6 +15,17 @@ Suggestions only. Nothing on the site has changed.
 - **Bedrooms:** from your own Gallery uploads (“beds”). Unbuilt homes can be built to fit.
 - **Lore:** from the Sims Wiki and Maxis's Gallery descriptions.
 
+**Beds (counted overnight):** sleeping places counted from the beds on each lot in your new save (the Gallery versions) and “Building #2”, one per single bed and two per double or bunk bed:
+- Garden Essence 7, Sapphire Shores 7
+- Vista Quarry Villa 5, Canalside Daycare 5
+- Sandtrap Flat 4, Creek Side Corner 4, Pier Perfection 4 (2 in the new save)
+- Pebble Burrow 3, Comfy Cubby 3, Caldera Camp 3
+- Cordelia's Secret Cottage, Bedlington Barn, Brindleton Boathouse, Glimmerbrook Watch, 1 Cobblebottom Street, The Old Mill (4 Olde Mill Lane), Rustic Residence: 2 each
+- 2-4-3 Wakabamori: 2 (one double bed in the Gallery version, two in “Building #2”), so Kenji and Kumiko would share unless you add a bed.
+- Rental and apartment buildings are counted as a whole, so they're not listed here.
+
+**Are the Battles, Ellsworths, Brody Conklin and Whitlocks yours? (checked overnight):** a household made or edited in Create-a-Sim keeps the date it was last changed there. Yours all have one (Presleys 2020, Faulks 2020, Hassanis 2021, Barnes 2022, Thorntons and Vivian Little 2023). **The Battles, Ellsworths and Brody Conklin have none**, so they're townies the game made, which you played; I've dropped them below unless you want them anyway. **The Whitlocks** were changed in Create-a-Sim on 4 Oct 2025, so they're yours, or townies you edited.
+
 **The squeeze:** about 45 empty homes in worlds you own, plus about 15 free rental units. That's enough for all your own Sims, the lore families and the best story Sims, but not for every trailer family. Each home has one pick, with alternatives after it.
 
 ---
