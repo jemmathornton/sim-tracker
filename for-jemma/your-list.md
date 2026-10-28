@@ -106,7 +106,7 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 - **Do:** Add Sergio Romeo to Powerhouse (he stays in the Paragons too).
 
 ## Households
-- **Decide:** Start the new save again after EA's 27 Oct patch, with a premade-fix mod in first (Premade Sim and Relationship Overhaul, or Premade Sim Relationships Fix)? Both only work in a save made after they're installed.
+- **Do:** Start the new save again once your mods (MCCC and a premade-fix mod: Premade Sim and Relationship Overhaul, or Premade Sim Relationships Fix) are updated for EA's 27 Oct patch (1.129); the fix mod only works in a save made after it's installed (your call, 28 Oct).
 - **Decide:** Links between households that only an old save has (family and partners, e.g. Dina Caliente married to Raj Rasoya; Savannah Kopf is a townie, not a Fyres, her call 24 Oct): keep any? (research/inter-household-relationships.md)
 - **Do:** After bringing households in, put back the links between households with MC Command Center (research/inter-household-relationships.md lists each one, and which the new save already has).
 - **Decide:** Your new save has EA’s new family-tree ancestors (Feb 2026 update; only new saves get them). 25 aren’t on the site’s trees yet: the Thebe line back to Queen Thebe, the Darongs and Dreamers, Rodrigo De Pablo, Cahya and Wulan, Pranav Kunal. Add them?

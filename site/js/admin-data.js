@@ -463,7 +463,7 @@ window.ADMIN = {
 {
 "section": "Households",
 "world": "",
-"text": "**Decide:** Start the new save again after EA's 27 Oct patch, with a premade-fix mod in first (Premade Sim and Relationship Overhaul, or Premade Sim Relationships Fix)? Both only work in a save made after they're installed."
+"text": "**Do:** Start the new save again once your mods (MCCC and a premade-fix mod: Premade Sim and Relationship Overhaul, or Premade Sim Relationships Fix) are updated for EA's 27 Oct patch (1.129); the fix mod only works in a save made after it's installed (your call, 28 Oct)."
 },
 {
 "section": "Households",
