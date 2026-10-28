@@ -121,6 +121,8 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 - **Do:** Save the Rosebud household from “Rosebud Challenge” to your Library (Rachel and Robin O’Brian, Yin Spirit and Bridgette Adams, at Hound’s Head; Yin and Bridgette are only in that save), then that save can go.
 - **Do:** Save Lena Garcia from “StrangerVille Playthrough” to your Library: there she has finished the mystery (Hero of StrangerVille, Logic 4); your Library copy is from before. Then that save can go.
 - **Do:** Your snowy Sims, for 2-4-3 Wakabamori (Mt. Komorebi): in “Snowy Escape”, move Kumiko Aoki (his friend, a homeless townie) into Kenji Mikami’s household with MCCC, then save it to your Library (that copy has his Snowboarding 4, Skiing 2 and Salaryperson job; your Library copy is from before). Then that save can go.
+- **Do:** Save Ash Carrington from “It’s Magic!” to your Library (there he’s a Spellcaster, adult, Retail level 3; your Library copy is from before), then that save can go.
+- **Decide:** A home for Ash Carrington: Glimmerbrook Watch (your plan has it as “1 Bed”, nobody named; he lives there in “It’s Magic!”)?
 - **Do:** Faye Evergreen (Library, June 2025; in “Season Events” with River Evergreen, Izabella Crawley and Squee at Cordelia’s Secret Cottage): someone you’re going to turn into a fairy later.
 - **Do:** Download Sebastian Michaelson and Merrilyn Ralston from Maxis's Gallery and pick their lots.
 - **Do:** Upload My Celebs (Chateau Peak) from “Rags to Riches”: the Dixon household at Inner Circle, Del Sol Valley (Anna Dixon, Aaradhya Raghavan, Reece Rains, Danial Pitte; only Anna is in your Library), then that save can go.

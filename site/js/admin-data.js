@@ -1,7 +1,7 @@
 // Built by tools/admin_data.py for the Admin pages (js/sections.js, 23 Oct). Don't edit this file.
 // For Jemma's PC only: never upload this file if the site goes online (it holds her to-dos and admin notes).
 window.ADMIN = {
-"made": "2026-10-25",
+"made": "2026-10-28",
 "refresh": [
 {
 "when": "13 Oct 2026 18:27",
@@ -534,6 +534,16 @@ window.ADMIN = {
 "section": "Households",
 "world": "",
 "text": "**Do:** Your snowy Sims, for 2-4-3 Wakabamori (Mt. Komorebi): in “Snowy Escape”, move Kumiko Aoki (his friend, a homeless townie) into Kenji Mikami’s household with MCCC, then save it to your Library (that copy has his Snowboarding 4, Skiing 2 and Salaryperson job; your Library copy is from before). Then that save can go."
+},
+{
+"section": "Households",
+"world": "",
+"text": "**Do:** Save Ash Carrington from “It’s Magic!” to your Library (there he’s a Spellcaster, adult, Retail level 3; your Library copy is from before), then that save can go."
+},
+{
+"section": "Households",
+"world": "",
+"text": "**Decide:** A home for Ash Carrington: Glimmerbrook Watch (your plan has it as “1 Bed”, nobody named; he lives there in “It’s Magic!”)?"
 },
 {
 "section": "Households",
