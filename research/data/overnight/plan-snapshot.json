@@ -1,0 +1,3677 @@
+{
+ "Brindleton Bay": {
+  "owned": true,
+  "households": {
+   "Delgato": [
+    "Supriya Delgato",
+    "Justin Delgato",
+    "Evie Delgato",
+    "Pierce Delgato",
+    "Blue",
+    "Bartholomew A. Bittlebun, Sr."
+   ],
+   "Hecking": [
+    "Brant Hecking",
+    "Brent Hecking",
+    "Rosie"
+   ],
+   "Lynx": [
+    "Catarina Lynx",
+    "Doc",
+    "Josie",
+    "Cleo",
+    "Bartholomew A. Bittlebun, Jr."
+   ],
+   "Ventura": [
+    "Daisy Ventura",
+    "Cocoa Ventura"
+   ]
+  },
+  "lots": [
+   {
+    "lot": "Pupperstone Park",
+    "myName": "Pupperstone Park",
+    "type": "Park",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Brindleton Pawspital",
+    "myName": "Brindleton Pawspital",
+    "type": "Vet Clinic",
+    "residents": "Delgato",
+    "built": false
+   },
+   {
+    "lot": "It's A Good House",
+    "myName": "It's A Good House",
+    "type": "Residential",
+    "residents": "Hecking",
+    "built": false
+   },
+   {
+    "lot": "Domus Familiaris",
+    "myName": "Domus Familiaris",
+    "type": "Residential",
+    "residents": "Delgato",
+    "built": true
+   },
+   {
+    "lot": "Sporting Space",
+    "myName": "Brindleton Boathouse",
+    "type": "Residential",
+    "residents": "Empty",
+    "built": true
+   },
+   {
+    "lot": "Club Calico",
+    "myName": "Calico",
+    "type": "Lounge",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Salty Paws Saloon",
+    "myName": "The Bay Café",
+    "type": "Café",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Catscratch Cottage",
+    "myName": null,
+    "type": "Restaurant (Seafood)",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Ragdoll Refurb",
+    "myName": "Brindleton Library",
+    "type": "Library",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Tail's End",
+    "myName": "Tail's End Apartments",
+    "type": "Residential Rental (4)",
+    "residents": "Lynx (renting a unit)",
+    "built": true
+   },
+   {
+    "lot": "Chateau Frise",
+    "myName": "Chateau Frise",
+    "type": "Residential",
+    "residents": "Empty",
+    "built": false
+   },
+   {
+    "lot": "Bedlington Boathouse",
+    "myName": "Bedlington Barn",
+    "type": "Residential",
+    "residents": "Empty",
+    "built": true
+   },
+   {
+    "lot": "Hound's Head",
+    "myName": "Hound's Head",
+    "type": "Residential (Farm)",
+    "residents": "Empty",
+    "built": false
+   },
+   {
+    "lot": "Dachshund's Creek",
+    "myName": "Creek Clinic",
+    "type": "Vet Clinic",
+    "residents": "Ventura",
+    "built": true
+   },
+   {
+    "lot": "Hindquarter Hideaway",
+    "myName": "Hindquarter Hideaway",
+    "type": "Residential",
+    "residents": "Ventura",
+    "built": true
+   },
+   {
+    "lot": "Deadgrass Discoveries",
+    "myName": "Deadgrass Discoveries",
+    "type": "Museum",
+    "residents": "N/A",
+    "built": false
+   }
+  ]
+ },
+ "Britechester": {
+  "owned": true,
+  "households": {
+   "Best of Friends": [
+    "Julia Wright",
+    "Becca Clarke"
+   ],
+   "Fletcher": [
+    "Cameron Fletcher"
+   ],
+   "Elderberry": [
+    "Eleanor Elderberry",
+    "Ekram Elderberry",
+    "Rohan Elderberry"
+   ],
+   "Pleasant": [
+    "Angela Pleasant",
+    "Lilith Pleasant"
+   ]
+  },
+  "lots": [
+   {
+    "lot": "Darby's Den",
+    "myName": "Darby's Den",
+    "type": "UoB Commons",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Darkwing House",
+    "myName": "The Old Clocktower",
+    "type": "Backroom",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Drake Hall",
+    "myName": "Drake Hall",
+    "type": "University Housing",
+    "residents": "Empty",
+    "built": true
+   },
+   {
+    "lot": "Wyvern Hall",
+    "myName": "Wyvern Hall",
+    "type": "University Housing",
+    "residents": "Best of Friends",
+    "built": true
+   },
+   {
+    "lot": "Larry's Lagoon",
+    "myName": "Larry's Lagoon",
+    "type": "Foxbury Commons",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Maritime Manor",
+    "myName": "Foxbury Court",
+    "type": "Backroom",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Tidal Tower",
+    "myName": "Tidal Tower",
+    "type": "University Housing",
+    "residents": "Empty",
+    "built": true
+   },
+   {
+    "lot": "Briny Tower",
+    "myName": "Briny Tower",
+    "type": "University Housing",
+    "residents": "Fletcher",
+    "built": true
+   },
+   {
+    "lot": "Honeydew Fields",
+    "myName": "Britechester BnB",
+    "type": "Café/Vacation Rental",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Laurel Library",
+    "myName": "Laurel Library",
+    "type": "Library",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Pepper's Pub",
+    "myName": "The Royal Crown",
+    "type": "Bar",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Mossy Lane",
+    "myName": "Mossy Lane",
+    "type": "University Housing",
+    "residents": "Empty",
+    "built": true
+   },
+   {
+    "lot": "Spring Steppes",
+    "myName": "Spring Steppes",
+    "type": "Residential Rental (3)",
+    "residents": "Elderberry",
+    "built": true
+   }
+  ]
+ },
+ "Chestnut Ridge": {
+  "owned": true,
+  "households": {
+   "Gooseman": [
+    "Duke Gooseman",
+    "Don Gooseman"
+   ],
+   "The Grove Family": [
+    "Luna",
+    "Umber Grove",
+    "Starbrite",
+    "Juniper Grove",
+    "Wren Grove"
+   ],
+   "Sienna & Flapjack": [
+    "Flapjack",
+    "Sienna Grove"
+   ],
+   "The Nectar Making Duo": [
+    "Marissa Tracey",
+    "Dani Davila"
+   ],
+   "Palumbo": [
+    "Puzzles",
+    "Beatrice Palumbo",
+    "Lacy Palumbo",
+    "Longface",
+    "Bluebell",
+    "Queen",
+    "Pie",
+    "Buttercup"
+   ]
+  },
+  "lots": [
+   {
+    "lot": "Champion's Grove",
+    "myName": "Champion's Grove",
+    "type": "Residential",
+    "residents": "Sienna & Flapjack",
+    "built": false
+   },
+   {
+    "lot": "The Cozy Corner House",
+    "myName": null,
+    "type": "Custom Venue (Community Farm)",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "The Oak Barrel",
+    "myName": "The Oak Barrel",
+    "type": "Restaurant",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "The Rusty Horseshoe",
+    "myName": "The Rusty Horseshoe",
+    "type": "Nightclub",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Duke's Hall",
+    "myName": "Appaloosa Stables",
+    "type": "Residential",
+    "residents": "Horse Elder Couple",
+    "built": true
+   },
+   {
+    "lot": "Biscuit's Bastion",
+    "myName": "Biscuit's Bastion",
+    "type": "Residential",
+    "residents": "The Grove Family",
+    "built": false
+   },
+   {
+    "lot": "Sweet Nectar Glade",
+    "myName": "Sweet Nectar Glade",
+    "type": "Bar",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Canter Cottage",
+    "myName": "Canter Clinic",
+    "type": "Vet Clinic",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Grapevine Terrace",
+    "myName": "Grapevine Terrace",
+    "type": "Residential",
+    "residents": "The Nectar Making Duo",
+    "built": false
+   },
+   {
+    "lot": "Red Roan Field",
+    "myName": "Red Roan Farm",
+    "type": "Residential (Farm)",
+    "residents": "Mine",
+    "built": true
+   },
+   {
+    "lot": "Canyon Crossing",
+    "myName": "Canyon Crossing",
+    "type": "Residential",
+    "residents": "Gooseman",
+    "built": false
+   },
+   {
+    "lot": "Palomino Junction",
+    "myName": "Palomino Junction",
+    "type": "Residential (Ranch)",
+    "residents": "Palumbo",
+    "built": true
+   },
+   {
+    "lot": "Big Sky Reach",
+    "myName": "Big Sky Reach",
+    "type": "Vacation Rental",
+    "residents": "N/A",
+    "built": true
+   }
+  ]
+ },
+ "Ciudad Enamorada": {
+  "owned": false,
+  "households": {
+   "Nadir": [
+    "Aziz Nadir",
+    "Valentina Nadir"
+   ],
+   "López": [
+    "Mónica López",
+    "Carlos López",
+    "Luz López"
+   ]
+  },
+  "lots": [
+   {
+    "lot": "La Suite del Flechazo",
+    "myName": null,
+    "type": "Residential",
+    "residents": "Nadir",
+    "built": false
+   },
+   {
+    "lot": "Torres Amanecer",
+    "myName": null,
+    "type": "Restaurant",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Mirador del Amor",
+    "myName": null,
+    "type": "Nightclub",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "SUDOR",
+    "myName": null,
+    "type": "Gym",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Avenida de la Eternidad",
+    "myName": null,
+    "type": "Residential",
+    "residents": "Dynamic Daters",
+    "built": false
+   },
+   {
+    "lot": "Calle del Ensueño",
+    "myName": null,
+    "type": "Community Market",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Villa Cálida",
+    "myName": null,
+    "type": "Vacation Rental",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Media Naranja",
+    "myName": null,
+    "type": "Park",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Calle de la Promesa",
+    "myName": null,
+    "type": "Residential",
+    "residents": "López",
+    "built": false
+   },
+   {
+    "lot": "Mansión de la Pasión",
+    "myName": null,
+    "type": "Residential",
+    "residents": "Empty",
+    "built": false
+   },
+   {
+    "lot": "Casita del Amor",
+    "myName": null,
+    "type": "Recreation Center",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Caminito del Deseo",
+    "myName": null,
+    "type": "Wedding Venue",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Laguna del Abrazo",
+    "myName": null,
+    "type": "Karaoke Bar",
+    "residents": "N/A",
+    "built": false
+   }
+  ]
+ },
+ "Copperdale": {
+  "owned": true,
+  "households": {
+   "Harjo": [
+    "Ash Harjo",
+    "Ava Harjo",
+    "Lucha Harjo",
+    "Noah Kane"
+   ],
+   "Prescott": [
+    "Amy Prescott",
+    "Mei Prescott",
+    "Molly Prescott",
+    "Tai Lum"
+   ],
+   "Price": [
+    "Janae Price",
+    "Marcel Price",
+    "Jayden Price",
+    "Savannah Price",
+    "Sidney Price",
+    "Kevin Puri"
+   ],
+   "Donovan-Haynes": [
+    "Josie Donovan",
+    "Madelyn Haynes",
+    "Misty Haynes",
+    "Davin Haynes",
+    "Bonnie Donovan"
+   ]
+  },
+  "lots": [
+   {
+    "lot": "Copperdale High School",
+    "myName": "Copperdale High School",
+    "type": "High School",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Auditorium",
+    "myName": "Auditorium",
+    "type": "Auditorium",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Water Tower Way",
+    "myName": "Copperdale Library",
+    "type": "Library",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Town Square Terrace",
+    "myName": "Town Square Stores",
+    "type": "Thrift and Boba Store",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "ThrifTea",
+    "myName": "Prescott Boarding House",
+    "type": "Residential Rental (2)",
+    "residents": "Nerdy Girls",
+    "built": true
+   },
+   {
+    "lot": "Lakeview Library",
+    "myName": "Lakeview Boarding House",
+    "type": "Residential Rental (2)",
+    "residents": "Sporty Girls",
+    "built": true
+   },
+   {
+    "lot": "Golden Peak",
+    "myName": "Golden Peak",
+    "type": "Residential",
+    "residents": "Prescott",
+    "built": false
+   },
+   {
+    "lot": "LaSuli Point",
+    "myName": "LaSuli Point",
+    "type": "Park/Cemetery",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Totter Park",
+    "myName": "Totter Park",
+    "type": "Residential",
+    "residents": "Price",
+    "built": false
+   },
+   {
+    "lot": "BridgeCreek Drive",
+    "myName": "BridgeCreek Drive",
+    "type": "Backroom",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Little Falls Nook",
+    "myName": "Little Falls Nook",
+    "type": "Residential",
+    "residents": "Harjo",
+    "built": false
+   },
+   {
+    "lot": "Hillside Haven",
+    "myName": "Hillside Haven",
+    "type": "Haunted House Residential",
+    "residents": "Donovan-Haynes",
+    "built": true
+   }
+  ]
+ },
+ "Del Sol Valley": {
+  "owned": true,
+  "households": {
+   "Johnny Zest": [
+    "Johnny Zest"
+   ],
+   "Bailey-Moon": [
+    "Thorne Bailey",
+    "Octavia Moon",
+    "Orange Bailey-Moon"
+   ],
+   "Ward": [
+    "Judith Ward"
+   ],
+   "Huntington": [
+    "J Huntington III"
+   ],
+   "Kalani": [
+    "Mitchell Kalani"
+   ],
+   "Richards": [
+    "Gavin Richards"
+   ],
+   "Patel": [
+    "Zoe Patel"
+   ],
+   "Eggleston": [
+    "Mark Eggleston"
+   ],
+   "Martin": [
+    "Alice Martin"
+   ],
+   "Holland": [
+    "Leslie Holland"
+   ]
+  },
+  "lots": [
+   {
+    "lot": "Vacuous Green",
+    "myName": "Strike Out!",
+    "type": "Nightclub",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Inner Circle",
+    "myName": "Inner Circle",
+    "type": "Residential Rental (4)",
+    "residents": "Huntington",
+    "built": true
+   },
+   {
+    "lot": "Upland Place",
+    "myName": "Upland Trailer Park",
+    "type": "Residential Rental (4)",
+    "residents": "Eggleston",
+    "built": true
+   },
+   {
+    "lot": "Chateau Peak",
+    "myName": "Chateau Peak",
+    "type": "Residential",
+    "residents": "My Celebs",
+    "built": false
+   },
+   {
+    "lot": "The Ward Den",
+    "myName": "The Ward Den",
+    "type": "Residential",
+    "residents": "Ward",
+    "built": true
+   },
+   {
+    "lot": "Bailey-Moon Manor",
+    "myName": "Bailey-Moon Manor",
+    "type": "Residential",
+    "residents": "Bailey-Moon",
+    "built": true
+   },
+   {
+    "lot": "Orchid A Go Go",
+    "myName": "Orchid A Go Go",
+    "type": "Lounge",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Ward Park",
+    "myName": "Starlight Fitness",
+    "type": "Gym",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Studio PBP",
+    "myName": "Studio PBP",
+    "type": "Lounge",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Plumbob Pictures Museum",
+    "myName": "Plumbob Pictures Museum",
+    "type": "Small Business Venue (Museum, Acting Classes & Café)",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Pectoral Fitness",
+    "myName": "Valley Views",
+    "type": "Restaurant",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Plumbob Pictures",
+    "myName": "Plumbob Pictures",
+    "type": "Acting Studio",
+    "residents": "N/A",
+    "built": "N/A"
+   }
+  ]
+ },
+ "Evergreen Harbor": {
+  "owned": true,
+  "households": {
+   "Knox Greenburg": [
+    "Knox Greenburg"
+   ],
+   "Harris": [
+    "Cletus Harris",
+    "Faye Harris",
+    "Jeb Harris",
+    "Gideon Harris",
+    "Francine Spencer"
+   ],
+   "Sterling Rico": [
+    "Bess Sterling",
+    "Jules Rico"
+   ],
+   "Tinker": [
+    "Tina Tinker",
+    "Yasemin Tinker",
+    "Olive Tinker"
+   ],
+   "Greenburg": [
+    "Mary Greenburg",
+    "Blossom Greenburg"
+   ],
+   "Eco Roomies": [
+    "Robyn Andersen",
+    "Tatiana Estrada"
+   ],
+   "Henley": [
+    "Kaleb Henley",
+    "April Carr"
+   ]
+  },
+  "lots": [
+   {
+    "lot": "Miner Mansion",
+    "myName": "Miner Mansion",
+    "type": "Residential",
+    "residents": "Harris",
+    "built": false
+   },
+   {
+    "lot": "Rockridge Springs",
+    "myName": "Rockridge Springs",
+    "type": "Residential Rental (3)",
+    "residents": "Greenburg (own)",
+    "built": true
+   },
+   {
+    "lot": "Stonestreet Apartments #3",
+    "myName": "Stonestreet Apartments #3",
+    "type": "Apartment",
+    "residents": "Knox Greenburg",
+    "built": true
+   },
+   {
+    "lot": "Stonestreet Apartments #4",
+    "myName": "Stonestreet Apartments #4",
+    "type": "Apartment",
+    "residents": "Empty",
+    "built": true
+   },
+   {
+    "lot": "The Quarry Building",
+    "myName": "The Quarry Building",
+    "type": "Small Business Residential",
+    "residents": "Sterling Rico",
+    "built": false
+   },
+   {
+    "lot": "Pigulock Manor",
+    "myName": "Pigulock Manor",
+    "type": "Residential",
+    "residents": "Tinker",
+    "built": false
+   },
+   {
+    "lot": "Canal Corner",
+    "myName": "Canal Corner",
+    "type": "Small Business Venue",
+    "residents": "Tinker",
+    "built": false
+   },
+   {
+    "lot": "Sprucewood Square",
+    "myName": "Sprucewood Square",
+    "type": "Community Market",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Pinecrest Apartments #402",
+    "myName": "Pinecrest Apartments #402",
+    "type": "Apartment",
+    "residents": "Empty",
+    "built": true
+   },
+   {
+    "lot": "Pinecrest Apartments #404",
+    "myName": "Pinecrest Apartments #404",
+    "type": "Apartment",
+    "residents": "Eco Roomies",
+    "built": true
+   },
+   {
+    "lot": "The Old Mill",
+    "myName": "The Old Mill",
+    "type": "Backroom",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "The Caboose",
+    "myName": "The Caboose",
+    "type": "Bar",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "The Shipping Views",
+    "myName": "The Old Dockyard",
+    "type": "Community Space",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "The Waterfront",
+    "myName": "Abandoned Views",
+    "type": "Residential Rental",
+    "residents": "Henley",
+    "built": false
+   },
+   {
+    "lot": "The Portsmouth Promenade",
+    "myName": "The Portsmouth Promenade",
+    "type": "Small Business Venue",
+    "residents": "Greenburg",
+    "built": true
+   }
+  ]
+ },
+ "Forgotten Hollow": {
+  "owned": false,
+  "households": {
+   "Straud": [
+    "Vladislaus Straud"
+   ],
+   "Vatore": [
+    "Lilith Vatore",
+    "Caleb Vatore"
+   ]
+  },
+  "lots": [
+   {
+    "lot": "Straud Mansion",
+    "myName": null,
+    "type": "Residential",
+    "residents": "Straud",
+    "built": false
+   },
+   {
+    "lot": "Wolfsbane Manor",
+    "myName": null,
+    "type": "Residential",
+    "residents": "Vatore",
+    "built": false
+   },
+   {
+    "lot": "Garliclauter Place",
+    "myName": null,
+    "type": "Backroom",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Widowshild Townhome",
+    "myName": null,
+    "type": "Residential",
+    "residents": "? (new vampires of her own, maybe)",
+    "built": false
+   },
+   {
+    "lot": "Fledermaus Bend",
+    "myName": null,
+    "type": "Cemetery",
+    "residents": "N/A",
+    "built": false
+   }
+  ]
+ },
+ "Gibbi Point": {
+  "owned": true,
+  "households": {
+   "Addam Commune": [
+    "Jane Addam",
+    "Star Addam",
+    "Skip Broke",
+    "Agora Tchotchke"
+   ],
+   "Chavez-Ralston": [
+    "Nigel Chavez-Ralston",
+    "Sara Chavez-Ralston",
+    "Aeris Chavez-Ralston",
+    "Erin Chavez-Ralston"
+   ],
+   "Perry": [
+    "Freeda Perry",
+    "Dougie Perry"
+   ]
+  },
+  "lots": [
+   {
+    "lot": "Hothead Rock Hideaway",
+    "myName": "Revive and Thrive",
+    "type": "Custom Venue",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Camp Gibbi Gibbi",
+    "myName": "Camp Gibbi Gibbi",
+    "type": "Custom Venue",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Wanderwood Wonder",
+    "myName": "Wanderwood Wonder",
+    "type": "Residential",
+    "residents": "Chavez-Ralston",
+    "built": false
+   },
+   {
+    "lot": "Plumbird Park",
+    "myName": "Plumbird Park",
+    "type": "Playground",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Jellyfish Jubilee",
+    "myName": "Jellyfish Jubilee",
+    "type": "Bar",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Seabreeze Scenic",
+    "myName": "Seabreeze Scenic",
+    "type": "Residential",
+    "residents": "Perry",
+    "built": false
+   },
+   {
+    "lot": "Fletcher's Cottage",
+    "myName": "Gibbi Point Library",
+    "type": "Library",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Revive and Thrive Retreat",
+    "myName": "Gibbi Rec Center",
+    "type": "Recreation Center",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Prospector's Paradise",
+    "myName": "Paradise Stables",
+    "type": "Residential",
+    "residents": "? (Horses!)",
+    "built": true
+   },
+   {
+    "lot": "Crystal Cottage",
+    "myName": "Crystal Cottage",
+    "type": "Onsen Bathhouse",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Love Highland",
+    "myName": "Love Highland",
+    "type": "Custom Venue",
+    "residents": "Addam Commune (their Getaway business; they live at Miner's Manse)",
+    "built": false
+   },
+   {
+    "lot": "Fearful Fish Lounge",
+    "myName": "Thrift 'n' Fish",
+    "type": "Thrift and Boba Store",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Miner's Manse",
+    "myName": "Miner's Manse",
+    "type": "Residential",
+    "residents": "Addam Commune",
+    "built": false
+   }
+  ]
+ },
+ "Glimmerbrook": {
+  "owned": true,
+  "households": {
+   "Charm": [
+    "Minerva Charm",
+    "Gemma Charm",
+    "Darrel Charm",
+    "Emilia Ernest"
+   ],
+   "Amicable Acolytes": [
+    "Grace Anansi",
+    "Tomax Collette"
+   ]
+  },
+  "lots": [
+   {
+    "lot": "Rock Ridge Canyon",
+    "myName": "Rock Ridge Canyon",
+    "type": "Residential",
+    "residents": "Charm",
+    "built": false
+   },
+   {
+    "lot": "Creek Side Corner",
+    "myName": "Creek Side Corner",
+    "type": "Residential",
+    "residents": "3 Bed",
+    "built": true
+   },
+   {
+    "lot": "Glimmerbrook Watch",
+    "myName": "Glimmerbrook Watch",
+    "type": "Residential",
+    "residents": "1 Bed",
+    "built": true
+   },
+   {
+    "lot": "Brooks Bridge Borough",
+    "myName": "Brooks Bridge",
+    "type": "Haunted House Residential",
+    "residents": "Amicable Acolytes",
+    "built": true
+   },
+   {
+    "lot": "Elixirs and Brews",
+    "myName": "Glimmer & Books",
+    "type": "Backroom",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "The Magic Realm",
+    "myName": "The Magic Realm",
+    "type": "The Magic Realm",
+    "residents": "N/A",
+    "built": true
+   }
+  ]
+ },
+ "Granite Falls": {
+  "owned": true,
+  "households": {},
+  "lots": [
+   {
+    "lot": "Campground",
+    "myName": "Campground",
+    "type": "Vacation Rental",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Forest Hideaway",
+    "myName": null,
+    "type": "Restaurant",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Green Getaway",
+    "myName": "Green Getaway",
+    "type": "Vacation Rental",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Lakeside Retreat",
+    "myName": "Lakeside Retreat",
+    "type": "Vacation Rental",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Riverside Retreat",
+    "myName": "Granite Falls Spa",
+    "type": "Spa",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Granite Falls Forest",
+    "myName": "Granite Falls Forest",
+    "type": "National Park",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Hermit's House",
+    "myName": null,
+    "type": "Hermit's Hut",
+    "residents": "N/A",
+    "built": false
+   }
+  ]
+ },
+ "Henford-on-Bagley": {
+  "owned": true,
+  "households": {
+   "Cecilia Kang": [
+    "Cecilia Kang"
+   ],
+   "Moody & McMillan": [
+    "Ian Moody",
+    "Derek McMillan"
+   ],
+   "The Scotts": [
+    "Sara Scott",
+    "Simon Scott"
+   ],
+   "The Watsons": [
+    "Imran Watson",
+    "Maira Watson",
+    "Rahmi Watson",
+    "Rashidah Watson",
+    "Thomas Watson"
+   ],
+   "Watson-Holmes": [
+    "Natalie Watson-Holmes",
+    "Julian Watson-Holmes",
+    "Daisy Watson-Holmes",
+    "Peanut"
+   ]
+  },
+  "lots": [
+   {
+    "lot": "The Gnome's Arms",
+    "myName": "The Gnome's Arms",
+    "type": "Bar (Pub)",
+    "residents": "The Scotts (*NPC)",
+    "built": false
+   },
+   {
+    "lot": "1 Cobblebottom Street",
+    "myName": "1 Cobblebottom Street",
+    "type": "Small Business Residential",
+    "residents": "?",
+    "built": true
+   },
+   {
+    "lot": "3 Cobblebottom Street",
+    "myName": "3 Cobblebottom Street",
+    "type": "Residential Rental (2)",
+    "residents": "Moody & McMillan",
+    "built": true
+   },
+   {
+    "lot": "5 Cobblebottom Street",
+    "myName": "Finchwick Village Hall",
+    "type": "Library(/Wedding Venue / Bar)",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "2 Olde Mill Lane",
+    "myName": "2 Olde Mill Lane",
+    "type": "Vet Clinic",
+    "residents": "Watson-Holmes",
+    "built": false
+   },
+   {
+    "lot": "3 Olde Mill Lane",
+    "myName": "3 Olde Mill Lane",
+    "type": "Residential",
+    "residents": "Watson-Holmes",
+    "built": true
+   },
+   {
+    "lot": "4 Olde Mill Lane",
+    "myName": "The Olde Mill",
+    "type": "Residential",
+    "residents": "1/2 Bed Big",
+    "built": true
+   },
+   {
+    "lot": "Olde Mill Hill",
+    "myName": "Olde Mill Hill",
+    "type": "Residential",
+    "residents": "The Watsons",
+    "built": false
+   },
+   {
+    "lot": "13 Nettle Lane",
+    "myName": "13 Nettle Lane",
+    "type": "Residential",
+    "residents": "Empty",
+    "built": false
+   },
+   {
+    "lot": "14 Nettle Lane",
+    "myName": "14 Nettle Lane",
+    "type": "Residential",
+    "residents": "Empty",
+    "built": false
+   },
+   {
+    "lot": "Cordelia's Secret Cottage",
+    "myName": "Cordelia's Secret Cottage",
+    "type": "Residential",
+    "residents": "Empty",
+    "built": true
+   },
+   {
+    "lot": "Isle of Volpe",
+    "myName": "Isle of Volpe",
+    "type": "National Park",
+    "residents": "N/A",
+    "built": false
+   }
+  ]
+ },
+ "Innisgreen": {
+  "owned": false,
+  "households": {},
+  "lots": [
+   {
+    "lot": "8 Gnome Coast Street",
+    "myName": null,
+    "type": "Residential",
+    "residents": "Nhoam",
+    "built": false
+   },
+   {
+    "lot": "1 Mari Shores Road",
+    "myName": null,
+    "type": "Café",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "42 Normfair Drive",
+    "myName": null,
+    "type": "Residential",
+    "residents": "Ladipo",
+    "built": false
+   },
+   {
+    "lot": "The GNOM Exhibit",
+    "myName": null,
+    "type": "Museum",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Fern & Frond Wading Pond",
+    "myName": null,
+    "type": "Community Market",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Whistling Thistle Gardens",
+    "myName": null,
+    "type": "Park",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Greenwood Hamlet Residence",
+    "myName": null,
+    "type": "Small Business Venue (Apothecary)",
+    "residents": "Enchanted Lovers (Todd Attenberry's apothecary, for now)",
+    "built": false
+   },
+   {
+    "lot": "Gringle's",
+    "myName": null,
+    "type": "Bar",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Gimmley Gardensbrook",
+    "myName": null,
+    "type": "Residential",
+    "residents": "Enchanted Lovers",
+    "built": false
+   },
+   {
+    "lot": "Crannamor Residential",
+    "myName": null,
+    "type": "Residential",
+    "residents": "Empty",
+    "built": false
+   },
+   {
+    "lot": "The Watering Hole",
+    "myName": null,
+    "type": "Custom Venue",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Starsong Lounge",
+    "myName": null,
+    "type": "Nightclub",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Puckitt Hall",
+    "myName": null,
+    "type": "Residential",
+    "residents": "Summerdream",
+    "built": false
+   },
+   {
+    "lot": "Bard Boulevard",
+    "myName": null,
+    "type": "Residential",
+    "residents": "Mystical Besties",
+    "built": false
+   }
+  ]
+ },
+ "Magnolia Promenade": {
+  "owned": true,
+  "households": {},
+  "lots": [
+   {
+    "lot": "Paddywack's Emporium",
+    "myName": "Paddy's Place",
+    "type": "Restaurant",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "JF&S Clothiers",
+    "myName": "Llama Picturehouse",
+    "type": "Small Business Venue/Bar",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "The Roadstead",
+    "myName": "Magnolia Mall",
+    "type": "Small Business Venue",
+    "residents": "Kirkland",
+    "built": false
+   },
+   {
+    "lot": "Preeminent Domain",
+    "myName": "Magnolia Bowling Alley",
+    "type": "Bar",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Police Station",
+    "myName": "Police Station",
+    "type": "Police Station",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "FutureSim Labs",
+    "myName": "FutureSim Labs",
+    "type": "FutureSim Labs",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Willow Creek Hospital",
+    "myName": "Willow Creek Hospital",
+    "type": "Hospital",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Sixam",
+    "myName": "Sixam",
+    "type": "Sixam",
+    "residents": "N/A",
+    "built": false
+   }
+  ]
+ },
+ "Moonwood Mill": {
+  "owned": false,
+  "households": {
+   "Volkov": [
+    "Kristopher Volkov",
+    "Jacob Volkov",
+    "Lily Zhu"
+   ]
+  },
+  "lots": [
+   {
+    "lot": "The Collective Cabin",
+    "myName": "The Collective Cabin",
+    "type": "Residential",
+    "residents": "Volkov",
+    "built": false
+   },
+   {
+    "lot": "New Moon Shack",
+    "myName": "Full Moon Shack",
+    "type": "Residential",
+    "residents": "Rory & Friend (a new Sim of her own)",
+    "built": false
+   },
+   {
+    "lot": "Prowler's Patch",
+    "myName": "New Moon Cabins",
+    "type": "Residential Rental",
+    "residents": "Werewolves in Training",
+    "built": false
+   },
+   {
+    "lot": "The Grimtooth Bar & Bunker",
+    "myName": "Grimtooth Bar",
+    "type": "Bar",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "The Moonwood Mill Library",
+    "myName": "Moonwood Mill Library",
+    "type": "Library/Backroom",
+    "residents": "N/A",
+    "built": false
+   }
+  ]
+ },
+ "Mt. Komorebi": {
+  "owned": true,
+  "households": {
+   "Akiyama": [
+    "Kado Akiyama",
+    "Jenna Akiyama",
+    "Taku Akiyama",
+    "Miki Akiyama"
+   ],
+   "Ito": [
+    "Naoki Ito",
+    "Megumi Ito",
+    "Kiyoshi Ito",
+    "Nanami Ito"
+   ],
+   "Nishidake": [
+    "Shigeru Nishidake",
+    "Sachiko Nishidake",
+    "Kaori Nishidake"
+   ]
+  },
+  "lots": [
+   {
+    "lot": "2-4-1 Wakabamori",
+    "myName": "?",
+    "type": "Cemetery",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "2-4-2 Wakabamori",
+    "myName": "2-4-2 Wakabamori",
+    "type": "Residential",
+    "residents": "Akiyama",
+    "built": true
+   },
+   {
+    "lot": "2-4-3 Wakabamori",
+    "myName": "2-4-3 Wakabamori",
+    "type": "Residential",
+    "residents": "Empty",
+    "built": true
+   },
+   {
+    "lot": "2-5-1 Wakabamori",
+    "myName": "2-5-1 Wakabamori",
+    "type": "Residential",
+    "residents": "Ito",
+    "built": false
+   },
+   {
+    "lot": "Hazakura Lounge",
+    "myName": "?",
+    "type": "Recreation Center",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "5-6-1 Shinrinyoku",
+    "myName": "5-6-1 Shinrinyoku",
+    "type": "Residential",
+    "residents": "Nishidake",
+    "built": false
+   },
+   {
+    "lot": "5-3-1 Shinrinyoku",
+    "myName": "Sento Senbamachi",
+    "type": "Onsen Bathhouse",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "6-4-1 Hanamigawa",
+    "myName": "6-4-1 Hanamigawa",
+    "type": "Vacation Rental",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Hanamigawa Koen",
+    "myName": "Izakaya Hanamigawa Koen",
+    "type": "Restaurant (/Park)",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Izakaya Ippai",
+    "myName": "Boba Ippai",
+    "type": "Thrift and Boba Store",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "5-1-1 Kiyomatsu",
+    "myName": "5-1-1 Kiyomatsu",
+    "type": "Vacation Rental",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "5-1-2 Kiyomatsu",
+    "myName": "5-1-2 Kiyomatsu",
+    "type": "Vacation Rental",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Sutefani Onsen Bathhouse",
+    "myName": "Sutefani Onsen Bathhouse",
+    "type": "Onsen Bathhouse",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Kiyomatsu Point",
+    "myName": "Kiyomatsu Point",
+    "type": "Custom Venue",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Mt. Komorebi Base Camp",
+    "myName": null,
+    "type": "Mount Komorebi Summit",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "The Croft Icefall",
+    "myName": null,
+    "type": "Mount Komorebi Summit",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Mt. Komorebi Peak",
+    "myName": null,
+    "type": "Mount Komorebi Summit",
+    "residents": "N/A",
+    "built": false
+   }
+  ]
+ },
+ "Newcrest": {
+  "owned": true,
+  "households": {
+   "Sylvia & Kenny Cadberry": [
+    "Sylvia Cadberry",
+    "Kenny Cadberry"
+   ],
+   "Versaree": [
+    "Annie Versaree"
+   ],
+   "LeBlanc": [
+    "Marvin LeBlanc",
+    "Max LeBlanc",
+    "Mia LeBlanc",
+    "Tim LeBlanc",
+    "Tara LeBlanc",
+    "Tricia LeBlanc"
+   ],
+   "Washburn": [
+    "Gabrielle Washburn",
+    "Stacey Washburn",
+    "Duke Washburn"
+   ],
+   "Bridges": [
+    "Louise Bridges",
+    "Ellen Bridges",
+    "Kendrick Bridges"
+   ],
+   "Kirkland": [
+    "Kamila Kirkland",
+    "Kendrick Kirkland",
+    "Kayleigh Kirkland",
+    "Kennedy Kirkland"
+   ],
+   "Scott": [
+    "Travis Scott"
+   ],
+   "Lee": [
+    "Liberty Lee"
+   ],
+   "Holiday": [
+    "Summer Holiday"
+   ]
+  },
+  "lots": [
+   {
+    "lot": "Fern Park",
+    "myName": "Fern Park Flats",
+    "type": "Residential Rental (5)",
+    "residents": "Kirkland own",
+    "built": true
+   },
+   {
+    "lot": "Beech Byway",
+    "myName": "Newcrest Community Space",
+    "type": "Community Space",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Midtown Meadows",
+    "myName": "Midtown Meadows",
+    "type": "Residential Rental (5)",
+    "residents": "Kirkland own",
+    "built": true
+   },
+   {
+    "lot": "Oak Alcove",
+    "myName": "Oak Alcove",
+    "type": "Residential",
+    "residents": "Versaree",
+    "built": true
+   },
+   {
+    "lot": "Comfy Cubby",
+    "myName": "Comfy Cubby",
+    "type": "Residential",
+    "residents": "Empty",
+    "built": true
+   },
+   {
+    "lot": "Twin Oracle Point",
+    "myName": "Twin Oracle Point",
+    "type": "Residential",
+    "residents": "Kirkland",
+    "built": true
+   },
+   {
+    "lot": "Avarice Acres",
+    "myName": "Avarice Acres",
+    "type": "Residential",
+    "residents": "LeBlanc",
+    "built": true
+   },
+   {
+    "lot": "Rippling Flats",
+    "myName": "Rippling Flats",
+    "type": "Residential Rental (2)",
+    "residents": "(Current uni sims)",
+    "built": false
+   },
+   {
+    "lot": "Tranquil Crescent",
+    "myName": "The Ice Pavilion",
+    "type": "Park",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Asphalt Abodes",
+    "myName": "Asphalt Abodes",
+    "type": "Residential",
+    "residents": "Sylvia & Kenny Cadberry",
+    "built": true
+   },
+   {
+    "lot": "Sandy Run",
+    "myName": "The Aqua Grill",
+    "type": "Restaurant (Seafood)",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Cookout Lookout",
+    "myName": "Newcrest Wedding Hall",
+    "type": "Wedding Venue",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Civic Cliffs",
+    "myName": "Newcrest Arts Center",
+    "type": "Arts Center",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Hillside Highlands",
+    "myName": "Cookies 'n' Cream",
+    "type": "Retail (Bakery & Ice Cream)",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Optimist's Outlook",
+    "myName": "Optimist's Outlook",
+    "type": "Small Business Venue",
+    "residents": "Kirkland",
+    "built": true
+   }
+  ]
+ },
+ "Nordhaven": {
+  "owned": true,
+  "households": {
+   "Koopman": [
+    "Gert Koopman",
+    "Jolanda Koopman"
+   ],
+   "Loden": [
+    "Dahlia Loden",
+    "Erik Loden",
+    "Freya Loden",
+    "Gramma Hattie Loden",
+    "Nora Loden"
+   ],
+   "Sarpong": [
+    "Lerato Sarpong",
+    "Nia Sarpong"
+   ],
+   "Urbane Housesharers household": [
+    "Cannonball Coleman",
+    "Crispin Black",
+    "Ollie Mark"
+   ],
+   "Johansson": [
+    "Frida Johansson",
+    "Erik Johansson"
+   ]
+  },
+  "lots": [
+   {
+    "lot": "Konst Modern",
+    "myName": null,
+    "type": "Museum",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "The Rouge Note",
+    "myName": "The Rouge Note",
+    "type": "Lounge/Bar/Nightclub",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Koffieboon",
+    "myName": null,
+    "type": "Small Business Residential",
+    "residents": "Loden",
+    "built": false
+   },
+   {
+    "lot": "Old Torget House",
+    "myName": null,
+    "type": "Residential Rental (3)",
+    "residents": "Empty",
+    "built": true
+   },
+   {
+    "lot": "Fisher's Horizon",
+    "myName": "Fisherman's Wharf",
+    "type": "Small Business Residential",
+    "residents": "Johansson",
+    "built": true
+   },
+   {
+    "lot": "Comfortably Canalside",
+    "myName": "Canalside Daycare",
+    "type": "Small Business Residential",
+    "residents": "?",
+    "built": true
+   },
+   {
+    "lot": "New Harbor Park",
+    "myName": null,
+    "type": "Community Space",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Terra-Potta",
+    "myName": null,
+    "type": "Small Business Residential",
+    "residents": "Koopman",
+    "built": false
+   },
+   {
+    "lot": "The Old Foundry",
+    "myName": null,
+    "type": "Residential",
+    "residents": "Urbane Housesharers household",
+    "built": false
+   },
+   {
+    "lot": "Spilled Neon",
+    "myName": null,
+    "type": "Small Business Residential",
+    "residents": "Sarpong",
+    "built": false
+   },
+   {
+    "lot": "Inked Inlet",
+    "myName": null,
+    "type": "Playground",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Lighthouse Lookout",
+    "myName": null,
+    "type": "Library",
+    "residents": "N/A",
+    "built": false
+   }
+  ]
+ },
+ "Oasis Springs": {
+  "owned": true,
+  "households": {
+   "Landgraab": [
+    "Geoffrey Landgraab",
+    "Nancy Landgraab",
+    "Malcolm Landgraab"
+   ],
+   "Leah-Moon Cadberry": [
+    "Leah-Moon Cadberry"
+   ],
+   "Caliente": [
+    "Katrina Caliente",
+    "Dina Caliente",
+    "Nina Caliente"
+   ],
+   "Lothario": [
+    "Don Lothario"
+   ],
+   "Curious 2": [
+    "Pascal Curious"
+   ],
+   "Smith": [
+    "Jenny Smith",
+    "Pol. Tech 9 Smith",
+    "Johnny Smith",
+    "Jill Smith"
+   ],
+   "De Costa": [
+    "Alexa De Costa",
+    "Josie De Costa",
+    "Tara De Costa"
+   ],
+   "Rivera": [
+    "Sonya Rivera",
+    "Carlos Rivera",
+    "Marissa Rivera"
+   ],
+   "Curious 1": [
+    "Vidcund Curious",
+    "Lazlo Curious",
+    "Nova Curious"
+   ]
+  },
+  "lots": [
+   {
+    "lot": "Sandtrap Flat",
+    "myName": "Sandtrap Flat",
+    "type": "Residential",
+    "residents": "2 Bedroom",
+    "built": true
+   },
+   {
+    "lot": "Nookstone",
+    "myName": "Nookstone",
+    "type": "Residential",
+    "residents": "Leah-Moon Cadberry+",
+    "built": true
+   },
+   {
+    "lot": "Pebble Burrow",
+    "myName": "Pebble Burrow",
+    "type": "Residential",
+    "residents": "2 Bedroom",
+    "built": true
+   },
+   {
+    "lot": "Slipshod Mesquite",
+    "myName": "De Costadas",
+    "type": "Restaurant",
+    "residents": "De Costa",
+    "built": true
+   },
+   {
+    "lot": "Agave Abode",
+    "myName": "Agave Abode",
+    "type": "Residential",
+    "residents": "Lothario *WithUpdates*",
+    "built": true
+   },
+   {
+    "lot": "Vista Quarry",
+    "myName": "Vista Quarry Villa",
+    "type": "Residential",
+    "residents": "2 Bed Family",
+    "built": true
+   },
+   {
+    "lot": "Raffia Quinta",
+    "myName": "Raffia Quinta",
+    "type": "Tiny Home Residential",
+    "residents": "Rivera",
+    "built": true
+   },
+   {
+    "lot": "Dusty Turf",
+    "myName": "Dusty Turf",
+    "type": "Residential",
+    "residents": "De Costa",
+    "built": true
+   },
+   {
+    "lot": "Springscape",
+    "myName": "Springscape",
+    "type": "Residential",
+    "residents": "Curious (Vidcund, Lazlo and Nova)",
+    "built": true
+   },
+   {
+    "lot": "Cacti Casa",
+    "myName": "Palm Springs Public Pool",
+    "type": "Pool",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Granada Place",
+    "myName": "Granada Place",
+    "type": "Residential",
+    "residents": "Curious (Pascal, expecting Tycho)",
+    "built": true
+   },
+   {
+    "lot": "Arid Ridge",
+    "myName": "Lotus Ridge Spa",
+    "type": "Spa",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Sultry Springside",
+    "myName": "Sultry Springside",
+    "type": "Residential",
+    "residents": "Smith",
+    "built": true
+   },
+   {
+    "lot": "Rio Verde",
+    "myName": "Rio Verde Retirement Home",
+    "type": "Residential Rental (6)",
+    "residents": "Elders",
+    "built": true
+   },
+   {
+    "lot": "Affluista Mansion",
+    "myName": "Affluista Mansion",
+    "type": "Residential",
+    "residents": "Landgraab",
+    "built": false
+   },
+   {
+    "lot": "Yuma Heights",
+    "myName": "Yuma Heights",
+    "type": "Residential",
+    "residents": "Caliente",
+    "built": false
+   },
+   {
+    "lot": "The Futures Past",
+    "myName": "The Futures Past",
+    "type": "Museum",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "The Solar Flare",
+    "myName": "Oasis Springs Library",
+    "type": "Library",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Burners & Builders",
+    "myName": "Burners & Builders",
+    "type": "Gym",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Rattlesnake Juice",
+    "myName": "Rattlesnake Juice Bar",
+    "type": "Bar",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Desert Bloom Park",
+    "myName": "Desert Bloom",
+    "type": "Park",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Forgotten Grotto",
+    "myName": null,
+    "type": "Forgotten Grotto",
+    "residents": "N/A",
+    "built": false
+   }
+  ]
+ },
+ "Ondarion": {
+  "owned": true,
+  "households": {
+   "Aloisio Romualdo": [
+    "Aloisio Romualdo"
+   ],
+   "Enzo Alto": [
+    "Enzo Alto"
+   ],
+   "Abrantes": [
+    "Ermelinda Abrantes",
+    "Sofia Abrantes"
+   ],
+   "Ananou": [
+    "Ekene Ananou",
+    "Afua Ananou"
+   ],
+   "Capp": [
+    "Tybalt Capp",
+    "Beatrice Capp",
+    "Celeste Capp",
+    "Virgilio Capp"
+   ],
+   "Darong": [
+    "Adekoya Darong",
+    "Jawara Darong",
+    "Amarachi Darong",
+    "Obi Darong"
+   ],
+   "Thebe": [
+    "Cordelia Thebe V",
+    "Thiago Abrantes"
+   ]
+  },
+  "lots": [
+   {
+    "lot": "Dambele Palace",
+    "myName": "Dambele Palace",
+    "type": "Residential",
+    "residents": "Darong",
+    "built": false
+   },
+   {
+    "lot": "Zanbira Market",
+    "myName": "Zanbira Market",
+    "type": "Community Market",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "17 Bright Cliff",
+    "myName": "17 Bright Cliff",
+    "type": "Apartment",
+    "residents": "Empty",
+    "built": false
+   },
+   {
+    "lot": "18 Bright Cliff",
+    "myName": "18 Bright Cliff",
+    "type": "Apartment",
+    "residents": "Ananou",
+    "built": false
+   },
+   {
+    "lot": "Hardcover",
+    "myName": "Hardcover",
+    "type": "Backroom",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Sankofa Residence",
+    "myName": "Sankofa Residence",
+    "type": "Museum",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Verdemar Palace",
+    "myName": "Verdemar Palace",
+    "type": "Residential",
+    "residents": "Thebe",
+    "built": false
+   },
+   {
+    "lot": "Casa Do Corsário",
+    "myName": "Casa Do Corsário",
+    "type": "Residential Rental (2)",
+    "residents": "Aloisio Romualdo (own)",
+    "built": false
+   },
+   {
+    "lot": "Abrantes Estate",
+    "myName": "Abrantes Estate",
+    "type": "Residential",
+    "residents": "Abrantes",
+    "built": false
+   },
+   {
+    "lot": "Fisherman's Hut",
+    "myName": null,
+    "type": "Restaurant (Seafood)",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Ye Olde Voyager",
+    "myName": null,
+    "type": "Bar",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "The Lair in the Open-Air",
+    "myName": null,
+    "type": "Park",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Bellacorde Palace",
+    "myName": "Bellacorde Palace",
+    "type": "Residential",
+    "residents": "Capp",
+    "built": false
+   },
+   {
+    "lot": "Renaissance Road",
+    "myName": "Renaissance Road",
+    "type": "Residential",
+    "residents": "Monty (the Sims 2 Montys, recreated)",
+    "built": false
+   },
+   {
+    "lot": "12 Lakeview Apartments",
+    "myName": "12 Lakeview Apartments",
+    "type": "Apartment",
+    "residents": "Enzo Alto",
+    "built": false
+   },
+   {
+    "lot": "13 Lakeview Apartments",
+    "myName": "13 Lakeview Apartments",
+    "type": "Apartment",
+    "residents": "Empty",
+    "built": false
+   },
+   {
+    "lot": "La Vivace",
+    "myName": "La Vivace",
+    "type": "Lounge",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Giardino Del Grandioso",
+    "myName": "Giardino Del Grandioso",
+    "type": "Small Business Residential",
+    "residents": "Alto (vineyard: Enzo's mother, sister and brother-in-law, to create)",
+    "built": false
+   }
+  ]
+ },
+ "Ravenwood": {
+  "owned": true,
+  "households": {
+   "Aether": [
+    "Ekade Aether",
+    "Kai Aether",
+    "Takama Aether"
+   ],
+   "Gomes": [
+    "Radwan Gomes",
+    "Tziporah Gomes",
+    "Zelmira Gomes"
+   ],
+   "Izadi-Gomes": [
+    "Esther Gomes",
+    "Zuleika Izadi"
+   ]
+  },
+  "lots": [
+   {
+    "lot": "Specter Family Manor",
+    "myName": "Ravenwood Wedding Hall",
+    "type": "Wedding Venue",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Crow's Perch",
+    "myName": "Crow's Chronicles",
+    "type": "Library",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Moppy Manor",
+    "myName": "Specter Row",
+    "type": "Residential Rental/Haunted House Residential",
+    "residents": "Specter (rent out)",
+    "built": false
+   },
+   {
+    "lot": "Old Ravenwood Estate",
+    "myName": null,
+    "type": "Haunted House Residential",
+    "residents": "Empty",
+    "built": false
+   },
+   {
+    "lot": "Eternal Hollow",
+    "myName": null,
+    "type": "Cemetery",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Teardrop Cottage",
+    "myName": null,
+    "type": "Residential",
+    "residents": "Gomes",
+    "built": false
+   },
+   {
+    "lot": "The Marigold Chateau",
+    "myName": null,
+    "type": "Residential",
+    "residents": "Aether",
+    "built": false
+   },
+   {
+    "lot": "Hay Hill Landing",
+    "myName": null,
+    "type": "Residential (Farm)",
+    "residents": "Empty",
+    "built": false
+   },
+   {
+    "lot": "The Final Draught",
+    "myName": null,
+    "type": "Bar",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "The Cozy Casket House",
+    "myName": null,
+    "type": "Haunted House Residential",
+    "residents": "Empty",
+    "built": false
+   },
+   {
+    "lot": "Mourning Mist Manor",
+    "myName": null,
+    "type": "Residential",
+    "residents": "Izadi-Gomes",
+    "built": false
+   },
+   {
+    "lot": "Club Eternity",
+    "myName": null,
+    "type": "Nightclub",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Mystic Crossroads",
+    "myName": null,
+    "type": "Small Business Venue (Tarot & Curiosities)",
+    "residents": "? (owner to pick)",
+    "built": false
+   },
+   {
+    "lot": "Netherworld Department",
+    "myName": "Netherworld Department",
+    "type": "Netherworld Department",
+    "residents": "N/A",
+    "built": false
+   }
+  ]
+ },
+ "San Myshuno": {
+  "owned": true,
+  "households": {
+   "Santiago Ojo": [
+    "Miko Ojo",
+    "Alicia Santiago"
+   ],
+   "Behr": [
+    "Yuki Behr",
+    "Candy Behr"
+   ],
+   "Benali": [
+    "Salim Benali"
+   ],
+   "Bheeda": [
+    "Arun Bheeda",
+    "Jesminder Bheeda"
+   ],
+   "Jang": [
+    "Anaya Jang",
+    "Baako Jang",
+    "Billie Jang"
+   ],
+   "Jeong": [
+    "Venessa Jeong"
+   ],
+   "Lobo": [
+    "Diego Lobo"
+   ],
+   "Pizzazz": [
+    "Penny Pizzazz"
+   ],
+   "Rasoya": [
+    "Raj Rasoya",
+    "Geeta Rasoya"
+   ],
+   "Feng": [
+    "Lily Feng",
+    "Victor Feng"
+   ],
+   "Livin' In The City": [
+    "Alfie Reynolds",
+    "Lucy Kopf",
+    "Lisa Davidson"
+   ],
+   "Bro & Kennedy": [
+    "Joaquin Le Chien",
+    "Sergio Romeo"
+   ]
+  },
+  "lots": [
+   {
+    "lot": "17 Culpepper House",
+    "myName": "17 Culpepper House",
+    "type": "Apartment",
+    "residents": "1 Bed Small",
+    "built": true
+   },
+   {
+    "lot": "18 Culpepper House",
+    "myName": "18 Culpepper House",
+    "type": "Apartment",
+    "residents": "1 Bed",
+    "built": true
+   },
+   {
+    "lot": "19 Culpepper House",
+    "myName": "19 Culpepper House",
+    "type": "Apartment",
+    "residents": "2 Bed",
+    "built": true
+   },
+   {
+    "lot": "20 Culpepper House",
+    "myName": "20 Culpepper House",
+    "type": "Apartment",
+    "residents": "Rasoya",
+    "built": false
+   },
+   {
+    "lot": "2A Jasmine Suites",
+    "myName": "Fraternity Apartment",
+    "type": "Apartment",
+    "residents": "Empty",
+    "built": true
+   },
+   {
+    "lot": "2B Jasmine Suites",
+    "myName": "Sorority Apartment",
+    "type": "Apartment",
+    "residents": "Empty",
+    "built": true
+   },
+   {
+    "lot": "The Old Salt House",
+    "myName": "The Old Salt House",
+    "type": "Restaurant",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Waterside Warble",
+    "myName": "Waterside Warble",
+    "type": "Karaoke Bar",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "910 Medina Studios",
+    "myName": "910 Medina Studios",
+    "type": "Apartment",
+    "residents": "Benali",
+    "built": false
+   },
+   {
+    "lot": "920 Medina Studios",
+    "myName": "920 Medina Studios",
+    "type": "Apartment",
+    "residents": "Bheeda",
+    "built": true
+   },
+   {
+    "lot": "930 Medina Studios",
+    "myName": "930 Medina Studios",
+    "type": "Apartment",
+    "residents": "Livin' In The City",
+    "built": true
+   },
+   {
+    "lot": "121 Hakim House",
+    "myName": "121 Hakim House",
+    "type": "Apartment",
+    "residents": "Jang",
+    "built": false
+   },
+   {
+    "lot": "122 Hakim House",
+    "myName": "122 Hakim House",
+    "type": "Apartment",
+    "residents": "2/3 Bed",
+    "built": true
+   },
+   {
+    "lot": "FountainView Penthouse",
+    "myName": "FountainView Penthouse",
+    "type": "Penthouse",
+    "residents": "Santiago Ojo",
+    "built": true
+   },
+   {
+    "lot": "Casbah Gallery",
+    "myName": "Casbah Gallery",
+    "type": "Arts Center",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "701 ZenView",
+    "myName": "701 ZenView",
+    "type": "Apartment",
+    "residents": "Bro & Kennedy",
+    "built": false
+   },
+   {
+    "lot": "702 ZenView",
+    "myName": "702 ZenView",
+    "type": "Apartment",
+    "residents": "Behr",
+    "built": false
+   },
+   {
+    "lot": "1310 21 Chic Street",
+    "myName": "1310 21 Chic Street",
+    "type": "Apartment",
+    "residents": "Jeong (Venessa, moved up from Del Sol Valley's Upland Place)",
+    "built": true
+   },
+   {
+    "lot": "1312 21 Chic Street",
+    "myName": "1312 21 Chic Street",
+    "type": "Apartment",
+    "residents": "Pizzazz",
+    "built": false
+   },
+   {
+    "lot": "1313 21 Chic Street",
+    "myName": "1313 21 Chic Street",
+    "type": "Apartment",
+    "residents": "Empty",
+    "built": true
+   },
+   {
+    "lot": "Torendi Tower Penthouse",
+    "myName": "Torendi Tunes",
+    "type": "Karaoke Bar",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Planet Honey Pop!",
+    "myName": "Planet Honey Pop!",
+    "type": "Thrift and Boba Store",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "1010 Alto Apartments",
+    "myName": "1010 Alto Apartments",
+    "type": "Apartment",
+    "residents": "Empty",
+    "built": true
+   },
+   {
+    "lot": "1020 Alto Apartments",
+    "myName": "1020 Alto Apartments",
+    "type": "Apartment",
+    "residents": "Lobo",
+    "built": false
+   },
+   {
+    "lot": "VIII Landgraab Apartments",
+    "myName": "VIII Landgraab Apartments",
+    "type": "Apartment",
+    "residents": "Empty",
+    "built": false
+   },
+   {
+    "lot": "IX Landgraab Apartments",
+    "myName": "IX Landgraab Apartments",
+    "type": "Apartment",
+    "residents": "Feng",
+    "built": false
+   },
+   {
+    "lot": "888 Spire Apartments",
+    "myName": "888 Spire Apartments",
+    "type": "Apartment",
+    "residents": "Empty",
+    "built": false
+   },
+   {
+    "lot": "Skye Fitness",
+    "myName": "Skye Fitness",
+    "type": "Gym",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Stargazer Lounge",
+    "myName": "Stargazer",
+    "type": "Nightclub",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Myshuno Meadows",
+    "myName": "Myshuno Meadows",
+    "type": "Center Park",
+    "residents": "N/A",
+    "built": false
+   }
+  ]
+ },
+ "San Sequoia": {
+  "owned": true,
+  "households": {
+   "Michaelson": [
+    "Celeste Michaelson",
+    "Christopher Michaelson",
+    "Atlas Michaelson",
+    "Orion Michaelson"
+   ],
+   "Robles": [
+    "Ignacio Robles",
+    "Bernice Robles",
+    "Ian Robles",
+    "Aurelio Robles"
+   ],
+   "Robles-Ruano": [
+    "Jay Robles",
+    "Doli Ruano",
+    "Tala Ruano"
+   ],
+   "Luna-Sullivan": [
+    "Xochitl Luna",
+    "Eleanor Sullivan",
+    "Karmine Luna"
+   ]
+  },
+  "lots": [
+   {
+    "lot": "Robles Point",
+    "myName": "Robles Point",
+    "type": "Residential",
+    "residents": "Robles",
+    "built": false
+   },
+   {
+    "lot": "Manzanita Terrace",
+    "myName": "Manzanita Terrace",
+    "type": "Residential Rental (3)",
+    "residents": "Robles own",
+    "built": true
+   },
+   {
+    "lot": "Anchorpoint Library",
+    "myName": "Anchorpoint Rec Center",
+    "type": "Recreation Center",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Anchorpoint Abode",
+    "myName": "Anchorpoint Works",
+    "type": "Restaurant/Bar",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "13 Acacia Avenue",
+    "myName": "13 Acacia Avenue",
+    "type": "Residential",
+    "residents": "Robles-Ruano",
+    "built": false
+   },
+   {
+    "lot": "Parkside Place",
+    "myName": "Parkside Playground",
+    "type": "Playground",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "18 Celebration Way",
+    "myName": "18 Celebration Way",
+    "type": "Community Market",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Celebration Center",
+    "myName": "Celebration Center",
+    "type": "Wedding Venue",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "7 Eucalyptus Lane",
+    "myName": "7 Eucalyptus Lane",
+    "type": "Residential",
+    "residents": "Michaelson",
+    "built": false
+   },
+   {
+    "lot": "23 Eucalyptus Lane",
+    "myName": "23 Eucalyptus Lane",
+    "type": "Residential",
+    "residents": "Lovejoy",
+    "built": true
+   },
+   {
+    "lot": "36 Bayani Place",
+    "myName": "36 Bayani Place",
+    "type": "Vet Clinic",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Sequoia Cottage",
+    "myName": "Sequoia Cottage",
+    "type": "Residential Rental (2)",
+    "residents": "Lovejoy",
+    "built": false
+   }
+  ]
+ },
+ "Selvadorada": {
+  "owned": true,
+  "households": {},
+  "lots": [
+   {
+    "lot": "Alam Museum of Archaeology",
+    "myName": "Alam Museum of Archaeology",
+    "type": "Museum",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Hillview Hideaway",
+    "myName": "Hillside Hideaway",
+    "type": "Vacation Rental",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Selvadorada Villa",
+    "myName": "Selvadorada Villa",
+    "type": "Vacation Rental",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Cantina \"El Árbol del Jaguar\"",
+    "myName": "Cantina \"El Árbol del Jaguar\"",
+    "type": "Bar",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Belomisia Trailhead",
+    "myName": "Belomisia Trailhead",
+    "type": "National Park",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Jungle Bungalow",
+    "myName": "Jungle Bungalow",
+    "type": "Vacation Rental",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Belomisia Field Station",
+    "myName": "Belomisia Field Station",
+    "type": "Custom Venue",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Omiscan Royal Baths",
+    "myName": null,
+    "type": "Omiscan Royal Baths",
+    "residents": "N/A",
+    "built": false
+   }
+  ]
+ },
+ "StrangerVille": {
+  "owned": true,
+  "households": {
+   "Cahill": [
+    "George Cahill"
+   ],
+   "Roswell": [
+    "Ted Roswell",
+    "Meredith Roswell"
+   ],
+   "Sigworth": [
+    "Jess Sigworth",
+    "Dylan Sigworth",
+    "Christie Sigworth"
+   ]
+  },
+  "lots": [
+   {
+    "lot": "8 Bells",
+    "myName": "8 Bells",
+    "type": "Bar",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "StrangerVille Information Center",
+    "myName": "StrangerVille Information Center",
+    "type": "Backroom",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Carpophagous Corner",
+    "myName": "Carpophagous Corner",
+    "type": "Vacation Rental",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Slip 42",
+    "myName": "Slip 42",
+    "type": "Residential Rental (2)",
+    "residents": "Empty",
+    "built": true
+   },
+   {
+    "lot": "Old Penelope",
+    "myName": "Old Penelope",
+    "type": "Residential",
+    "residents": "Cahill",
+    "built": false
+   },
+   {
+    "lot": "Riverside Grove",
+    "myName": "Riverside Grove",
+    "type": "Residential",
+    "residents": "Sigworth",
+    "built": true
+   },
+   {
+    "lot": "Cliff Side Crest",
+    "myName": "StrangerVille Gym&Pool",
+    "type": "Gym",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Creek Corner Cove",
+    "myName": "Creek Corner Cove",
+    "type": "Residential",
+    "residents": "Roswell",
+    "built": false
+   },
+   {
+    "lot": "Plateau Place",
+    "myName": "SU Plateau Residence",
+    "type": "University Housing",
+    "residents": "Empty",
+    "built": true
+   },
+   {
+    "lot": "Dream Weavers Way",
+    "myName": "StrangerVille Library",
+    "type": "Library",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "StrangerVille Overlook",
+    "myName": "SU Overlook Residence",
+    "type": "University Housing",
+    "residents": "Empty",
+    "built": true
+   },
+   {
+    "lot": "The ██████ Lab",
+    "myName": "The ██████ Lab",
+    "type": "Secret Lab",
+    "residents": "N/A",
+    "built": "N/A"
+   }
+  ]
+ },
+ "Sulani": {
+  "owned": true,
+  "households": {
+   "Hoapili": [
+    "Keala Hoapili",
+    "Lia Hauata"
+   ],
+   "Kahananui": [
+    "Alika Kahananui",
+    "Mele Kahananui"
+   ],
+   "Kealoha": [
+    "Makoa Kealoha",
+    "Lilliana Kealoha",
+    "Duane Talla",
+    "Nani Kealoha"
+   ],
+   "Ngata": [
+    "Oliana Ngata",
+    "Leila Illes",
+    "Tane Ngata"
+   ]
+  },
+  "lots": [
+   {
+    "lot": "Admiral's Wreckage",
+    "myName": "Admiral's Wreckage",
+    "type": "Community Space",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Caldera Camp",
+    "myName": "Caldera Camp",
+    "type": "Residential",
+    "residents": "Mine",
+    "built": true
+   },
+   {
+    "lot": "Key Point",
+    "myName": "Key Point",
+    "type": "To be decided",
+    "residents": null,
+    "built": false
+   },
+   {
+    "lot": "Kin-Ship",
+    "myName": "Kin-Ship",
+    "type": "Residential",
+    "residents": "Kealoha",
+    "built": true
+   },
+   {
+    "lot": "Chieftain's Villa",
+    "myName": "Chieftain's Villa",
+    "type": "Residential",
+    "residents": "Hoapili",
+    "built": false
+   },
+   {
+    "lot": "Lagoon Look",
+    "myName": "Lagoon of Love",
+    "type": "Vacation Rental",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Tangled Flat",
+    "myName": "Ohan'ali Community Center",
+    "type": "Library",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "The Sand Bar",
+    "myName": "The Sand Bar",
+    "type": "Bar",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Ohan'ali Beach",
+    "myName": "Ohan'ali Beach",
+    "type": "Beach",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Reef Finery",
+    "myName": "Reef Finery",
+    "type": "Residential",
+    "residents": "Ngata *may change*",
+    "built": false
+   },
+   {
+    "lot": "Journey's End",
+    "myName": "Journey's End",
+    "type": "Residential",
+    "residents": "Kahananui *may change*",
+    "built": true
+   },
+   {
+    "lot": "Pier Perfection",
+    "myName": "Pier Perfection",
+    "type": "Residential",
+    "residents": "Empty",
+    "built": true
+   },
+   {
+    "lot": "Sand Simoleon Beach",
+    "myName": "Sand Simoleon Beach",
+    "type": "Beach",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Sapphire Shores",
+    "myName": "Sapphire Shores",
+    "type": "Residential",
+    "residents": "Empty",
+    "built": true
+   }
+  ]
+ },
+ "Tartosa": {
+  "owned": false,
+  "households": {
+   "Laurent": [
+    "Greta Laurent",
+    "Hector Laurent",
+    "Hilary Laurent",
+    "Jace Laurent",
+    "Arnessa Thebe"
+   ],
+   "Markovic": [
+    "Mateo Markovic",
+    "Lucia Markovic",
+    "Tomi Markovic"
+   ],
+   "Soto": [
+    "Camille Soto",
+    "Dominique Soto"
+   ],
+   "Monticapp": [
+    "Juliette Monticapp",
+    "Romeo Monticapp",
+    "Dante Monticapp"
+   ]
+  },
+  "lots": [
+   {
+    "lot": "Thebe Estate",
+    "myName": "Thebe Estate",
+    "type": "Residential",
+    "residents": "Laurent",
+    "built": false
+   },
+   {
+    "lot": "Piccola Luce",
+    "myName": "Piccola Luce",
+    "type": "Vacation Rental",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Baia dell'Amore",
+    "myName": "Baia dell'Amore",
+    "type": "Beach",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Villa Vigna",
+    "myName": "?",
+    "type": "Restaurant",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Celebrazioni d'Amore",
+    "myName": "?",
+    "type": "Lounge",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "The Old Wood Nectary",
+    "myName": "The Old Wood Nectary",
+    "type": "Residential",
+    "residents": "Markovic",
+    "built": false
+   },
+   {
+    "lot": "Rifugio dei Pirati",
+    "myName": "Rifugio dei Pirati",
+    "type": "Residential",
+    "residents": "Monticapp (Romeo, Juliette and Dante, from Ondarion)",
+    "built": false
+   },
+   {
+    "lot": "Via Romanza",
+    "myName": "Via Romanza",
+    "type": "Residential",
+    "residents": "Soto",
+    "built": false
+   },
+   {
+    "lot": "La Coppia Serena",
+    "myName": "La Coppia Serena",
+    "type": "Wedding Venue",
+    "residents": "N/A",
+    "built": false
+   }
+  ]
+ },
+ "Tomarang": {
+  "owned": true,
+  "households": {
+   "Bun Ma": [
+    "Bua Bun Ma",
+    "Kasem Bun Ma",
+    "Nin Bun Ma",
+    "Sud Bun Ma"
+   ],
+   "Cahyaputri": [
+    "Vanesha Cahyaputri",
+    "Zhafira Cahyaputri"
+   ],
+   "Rochana": [
+    "Ratana Rochana",
+    "Colette Rochana"
+   ],
+   "Linh-Sadya": [
+    "Chánh Linh",
+    "Arturo Linh",
+    "Liên Sadya",
+    "Alon Sadya",
+    "Cam Sadya"
+   ],
+   "Linh": [
+    "Thi Linh"
+   ]
+  },
+  "lots": [
+   {
+    "lot": "Ro Kaya Rockside",
+    "myName": "Ro Kaya Rockside",
+    "type": "Community Market",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Taka Soi 15",
+    "myName": "Taka Soi 15",
+    "type": "Residential Rental (2)",
+    "residents": "Cahyaputri (own)",
+    "built": false
+   },
+   {
+    "lot": "Chee-wit Chee-waa Kanto",
+    "myName": "Chee-wit Chee-waa Kanto",
+    "type": "Thrift and Boba Store",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "ZoSul Taman Botani",
+    "myName": "ZoSul Taman Botani",
+    "type": "Wedding Venue",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Isda Riverfront",
+    "myName": "Isda Riverfront",
+    "type": "Residential Rental (2)",
+    "residents": "Cadberry",
+    "built": true
+   },
+   {
+    "lot": "Sungai Point",
+    "myName": "Sungai Point",
+    "type": "Residential Rental (3)",
+    "residents": "Linh-Sadya",
+    "built": false
+   },
+   {
+    "lot": "The Screaming Gecko",
+    "myName": "The Screaming Gecko",
+    "type": "Karaoke Bar",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Tam Nang Sands",
+    "myName": "Tam Nang Sands",
+    "type": "Spa",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Hothotok Shore",
+    "myName": "Hothotok Shore",
+    "type": "Residential",
+    "residents": "Bun Ma",
+    "built": false
+   }
+  ]
+ },
+ "Willow Creek": {
+  "owned": true,
+  "households": {
+   "Goth": [
+    "Mortimer Goth",
+    "Bella Goth",
+    "Cassandra Goth",
+    "Alexander Goth"
+   ],
+   "Ella-Mint Cadberry": [],
+   "Villareal": [
+    "Jacques Villareal",
+    "Hugo Villareal",
+    "Luna Villareal",
+    "Max Villareal"
+   ],
+   "Bjergsen": [
+    "Bjorn Bjergsen",
+    "Clara Bjergsen",
+    "Sofia Bjergsen",
+    "Elsa Bjergsen"
+   ],
+   "Broke": [
+    "Dustin Broke"
+   ],
+   "Pancakes": [
+    "Bob Pancakes",
+    "Eliza Pancakes",
+    "Iggy Pancakes"
+   ],
+   "Spencer-Kim-Lewis": [
+    "Eric Lewis",
+    "Vivian Lewis",
+    "Alice Spencer-Kim",
+    "Dennis Kim",
+    "Olivia Kim-Lewis"
+   ],
+   "Winters": [
+    "Chris Winters",
+    "Teddy Winters",
+    "Savanna Winters",
+    "Noel Winters"
+   ],
+   "Barraza": [
+    "David Barraza",
+    "Daniel Barraza",
+    "Simon Barraza",
+    "Alexa Barraza"
+   ],
+   "Kopf": [
+    "Savannah Kopf",
+    "Emilee Kopf",
+    "Kristian Kopf",
+    "Leon Kopf"
+   ],
+   "Reynolds": [
+    "Britney Reynolds",
+    "Joe Reynolds",
+    "Melanie Reynolds",
+    "Rosie Reynolds",
+    "Lucie Reynolds"
+   ],
+   "Davidson": [
+    "Evelyn Davidson",
+    "Ray Davidson",
+    "George Davidson"
+   ]
+  },
+  "lots": [
+   {
+    "lot": "Bargain Bend",
+    "myName": "Willow's",
+    "type": "Restaurant (Diner)",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Streamlet Single",
+    "myName": "Streamlet Single",
+    "type": "Residential",
+    "residents": "Davidson",
+    "built": true
+   },
+   {
+    "lot": "Crick Cabana",
+    "myName": "Crick Cabana",
+    "type": "Residential",
+    "residents": "Broke",
+    "built": true
+   },
+   {
+    "lot": "Daisy Hovel",
+    "myName": "Daisy Hovel",
+    "type": "Residential",
+    "residents": "Winters",
+    "built": true
+   },
+   {
+    "lot": "Garden Essence",
+    "myName": "Garden Essence",
+    "type": "Residential",
+    "residents": "Empty",
+    "built": true
+   },
+   {
+    "lot": "Sylvan Glade",
+    "myName": null,
+    "type": "Sylvan Glade",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Potters Splay",
+    "myName": "Potters Splay",
+    "type": "Residential",
+    "residents": "Reynolds",
+    "built": true
+   },
+   {
+    "lot": "Brook Bungalow",
+    "myName": "Brook Bungalow",
+    "type": "Residential",
+    "residents": "Bjergsen",
+    "built": false
+   },
+   {
+    "lot": "Riverside Roost",
+    "myName": "Riverside Roost",
+    "type": "Residential",
+    "residents": "Kopf",
+    "built": true
+   },
+   {
+    "lot": "Pique Hearth",
+    "myName": "Courtyard Lane Playground",
+    "type": "Playground",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Rindle Rose",
+    "myName": "Rindle Rose",
+    "type": "Residential",
+    "residents": "Pancakes",
+    "built": true
+   },
+   {
+    "lot": "Hallow Slough",
+    "myName": null,
+    "type": "Residential",
+    "residents": "Ella-Mint Cadberry",
+    "built": true
+   },
+   {
+    "lot": "Umbrage Manor",
+    "myName": null,
+    "type": "Residential",
+    "residents": "Villareal",
+    "built": false
+   },
+   {
+    "lot": "Parkshore",
+    "myName": "Cordelia Church",
+    "type": "Cemetery",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Ophelia Villa",
+    "myName": null,
+    "type": "Haunted House Residential",
+    "residents": "Goth",
+    "built": false
+   },
+   {
+    "lot": "Oakenstead",
+    "myName": "Oakenstead",
+    "type": "Residential",
+    "residents": "Barraza",
+    "built": true
+   },
+   {
+    "lot": "Cypress Terrace",
+    "myName": "Cypress Terrace",
+    "type": "Residential",
+    "residents": "Spencer-Kim-Lewis",
+    "built": false
+   },
+   {
+    "lot": "Municipal Muses",
+    "myName": "Municipal Muses",
+    "type": "Museum",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "The Blue Velvet",
+    "myName": "Café Llama",
+    "type": "Café",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Movers & Shakers",
+    "myName": null,
+    "type": "Arts Center",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Willow Creek Archive",
+    "myName": "Willow Creek Archive",
+    "type": "Library",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Magnolia Blossom Park",
+    "myName": "Magnolia Blossom Park",
+    "type": "Park",
+    "residents": "N/A",
+    "built": true
+   }
+  ]
+ },
+ "Windenburg": {
+  "owned": true,
+  "households": {
+   "Fyres": [
+    "Dominic Fyres",
+    "Moira Fyres",
+    "Siobhan Fyres",
+    "Morgan Fyres"
+   ],
+   "Munch": [
+    "Mila Munch",
+    "Gunther Munch",
+    "Wolfgang Munch",
+    "Lucas Munch"
+   ],
+   "Partihaus": [
+    "Eva Capricciosa",
+    "Jade Rosa",
+    "Marcus Flex",
+    "Paolo Rocca"
+   ],
+   "Free Spirits": [
+    "Maaike Haas",
+    "Ulrike Faust"
+   ],
+   "Specter": [
+    "Layne Coffin",
+    "Nyon Specter",
+    "Olive Specter"
+   ],
+   "Pleasant": [
+    "Mary-Sue Pleasant",
+    "Daniel Pleasant"
+   ]
+  },
+  "lots": [
+   {
+    "lot": "Proprietor's Square",
+    "myName": "Proprietor's Square",
+    "type": "Residential",
+    "residents": "Pleasant",
+    "built": true
+   },
+   {
+    "lot": "Havisham House",
+    "myName": "Havisham House",
+    "type": "Residential",
+    "residents": "Specter *WithUpdates*",
+    "built": true
+   },
+   {
+    "lot": "Factory One",
+    "myName": "Factory One",
+    "type": "Residential",
+    "residents": "Partihaus",
+    "built": true
+   },
+   {
+    "lot": "Waterlock Redoubt",
+    "myName": "Olde Platz Inn",
+    "type": "Restaurant/Vacation Rental",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Quad Manor",
+    "myName": null,
+    "type": "Library",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "The Narwhal Arms",
+    "myName": "The Narwhal Arms",
+    "type": "Bar",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "South Square Coffee",
+    "myName": "Pixel Café",
+    "type": "Café",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Old Quarter Inn",
+    "myName": "Museum of the Arts",
+    "type": "Museum",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Ancient Ruins",
+    "myName": "Ancient Ruins",
+    "type": "Ancient Ruins",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Bathe de Rill",
+    "myName": "La Discotheque",
+    "type": "Nightclub",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Hare Square",
+    "myName": "UoW Hare Halls",
+    "type": "University Housing",
+    "residents": "Empty",
+    "built": true
+   },
+   {
+    "lot": "Hare and Hedgehog",
+    "myName": "UoW Hedgehog Halls",
+    "type": "University Housing",
+    "residents": "Empty",
+    "built": true
+   },
+   {
+    "lot": "Harbor Quarter Gym",
+    "myName": "UoW Students Union",
+    "type": "Library",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Discotheque Pan Europa",
+    "myName": "UoW Sports Center",
+    "type": "Gym/Pool",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Coorinberg Cottage",
+    "myName": "Coorinberg Cottage",
+    "type": "Residential",
+    "residents": "Munch",
+    "built": true
+   },
+   {
+    "lot": "Cottage Am See",
+    "myName": "Cottage Am See",
+    "type": "Tiny Home Residential",
+    "residents": "Free Spirits",
+    "built": true
+   },
+   {
+    "lot": "Rustic Residence",
+    "myName": "Rustic Residence",
+    "type": "Tiny Home Residential",
+    "residents": "1 Bed",
+    "built": true
+   },
+   {
+    "lot": "The Shrieking Llama",
+    "myName": "The Shrieking Llama",
+    "type": "Bar",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Dresden House",
+    "myName": "Dresden House",
+    "type": "Residential",
+    "residents": "Fyres",
+    "built": false
+   },
+   {
+    "lot": "The Summer Home",
+    "myName": null,
+    "type": "Vet Clinic",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "Von-Haunt Estate",
+    "myName": "Von-Haunt Estate",
+    "type": "Chalet Gardens",
+    "residents": "N/A",
+    "built": false
+   },
+   {
+    "lot": "The Lighthouse",
+    "myName": "The Lighthouse",
+    "type": "Residential",
+    "residents": "Tiquelle",
+    "built": false
+   },
+   {
+    "lot": "Mid-NoWhere",
+    "myName": "Mid-NoWhere",
+    "type": "Generic",
+    "residents": "N/A",
+    "built": true
+   },
+   {
+    "lot": "Pier Palace",
+    "myName": "Pier Palace",
+    "type": "Residential",
+    "residents": "Tiquelle",
+    "built": false
+   },
+   {
+    "lot": "Dock Den",
+    "myName": "Dock Den",
+    "type": "Residential",
+    "residents": "Tiquelle",
+    "built": false
+   },
+   {
+    "lot": "Von-Windenburg Estate",
+    "myName": "Von-Windenburg Castle",
+    "type": "Residential",
+    "residents": "Tiquelle",
+    "built": true
+   },
+   {
+    "lot": "The Bluffs",
+    "myName": "The Bluffs",
+    "type": "Island Bluff",
+    "residents": "N/A",
+    "built": false
+   }
+  ]
+ }
+}
