@@ -30,6 +30,16 @@ Suggestions only. Nothing on the site has changed.
 
 ---
 
+## Households your list says to make yourself: some already exist
+- **Horse Elder Couple** (Appaloosa Stables): almost certainly **Yanaha and Sani Acothley**, a couple you made (Library, 11 Feb 2026). In “Building #2” they live at Appaloosa Stables, both Championship Riders (Rancher, Horse Lover; Yanaha has Cooking 8). They're adults there, so age them to elders.
+- **Single Mum Friends** (Midtown Meadows): this is now the **Washburns and Bridges**, uploaded on 24 Oct in units 5 and 2. The item on your list is out of date.
+- **“Mine”, Sulani** (Caldera Camp): **Keoni Kalawai'a and Alana Hekekia** live there in “Sulani Save” (part of your Sulani job).
+- **“Mine”, Chestnut Ridge** (Red Roan Farm): only your test Sim Louisa lives there in any save. Still open.
+- **Elders** (Rio Verde): Everyday Sims 4 (decided).
+- **Nerdy Girls and Nerdy Boys** (Prescott Boarding House): nobody in your saves fits. A ready-made option is Maxis's **“Chill Out with Friends”** (Backyard Stuff, which you own): six teens (Mary Young, Crystal Rivers, Sasha Johnson, Beth Pepper, Josh Charmer, Jay Pretty) and a young adult. Split by girls and boys, they'd fill both units.
+- **Dynamic Daters, Rory & Friend, Werewolves in Training, Innisgreen's five:** in worlds you don't own yet; Maxis matches for later are listed further down.
+- **Ella-Mint Cadberry:** part of the Cadberry job.
+
 ## Willow Creek
 | Home | Beds | Pick | Alternatives |
 |---|---|---|---|
