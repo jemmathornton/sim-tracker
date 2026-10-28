@@ -278,13 +278,13 @@ Full dossiers (each household's Sims with traits and aspirations, story, lore, p
 
 ---
 
-## Mods for patch 1.129 (checked 29 Oct, your Mods folder read only)
-- **MCCC:** you have **2026.5.0** (from September). The 1.129 version is **2026.6.0** (out 25 Oct, tested with 1.129). **Update it before you play.**
-- **MCCC's error log** (24 Oct, while loading “Rotational”) is an EA game error about a death-related object (like an urn) in a household's inventory, not a mod problem.
-- **Premade Sim and Relationship Overhaul** v2.10 (9 Oct) and **Premade Sim Relationships Fix** (Feb): no word on 1.129 yet, and neither is installed yet.
-- **Unknown, check before playing:** UI Cheats Extension (yours is from 28 Sep), Keep Sims in Home Region (28 Sep), XML Injector v4.2 (Sept 2025), LittleMsSam's script mods, Twisted Mexi's No Weather Build-Buy (Jan 2024, old).
-- **Lists:**
-  - [EA forums: broken and updated mods, patch 1.129](https://forums.ea.com/discussions/the-sims-4-mods-and-custom-content-en/broken-and-updated-sims-4-mods-and-cc-patch-1-129-oct-27-2026/13830311)
-  - [SimsVIP: patch 1.129 mods list](https://simsvip.com/2026/10/27/broken-updated-mods-patch-1-129-food-dining-drinks-patch/)
+## Mods for patch 1.129
+Full report, checked overnight against your patched game's own files: research/mods-1129.md.
+- **Update:** MCCC (yours 2026.5.0; 2026.6.0 is the 1.129 build) and LittleMsSam's Dress Code.
+- **Take out until updated:** CBX Life-Death-Seasons (old Ravenwood region file: no Small Business lot type there), Party Anywhere (broken), NateTheL0ser's Thrift Store Dress Normal.
+- **Leftover duplicates to remove:** LittleMsSam's old Updated Zooroo ATM, the SulSul Weather App script, the Dress Code Seasons add-on.
+- **Unknown for now:** UI Cheats Extension, Home Regions. XML Injector is current.
+- **Premade fix:** Premade Sim and Relationship Overhaul (“EA Remake” version, minus its Vampires file) once it's confirmed for 1.129, or none at all.
+- **MCCC's error file:** an EA error about an empty grave or urn in an old save; nothing to do.
 
 Sources: [MCCC 2026.6.0](https://www.patreon.com/mccc_deaderpool/posts/mc-command-2026-173368328), [MCCC downloads](https://deaderpool-mccc.com/downloads.html), [Premade Sim and Relationship Overhaul](https://onemorekayaker.itch.io/premade-sim-and-relationship-overhaul), [Premade Sim Relationships Fix](https://modthesims.info/d/672038/premade-sim-relationships-fix.html), [Keep Sims in Home Region](https://kuttoe.itch.io/keep-sims-in-home-region/devlog), the Sims Wiki (lore).

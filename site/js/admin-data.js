@@ -463,7 +463,17 @@ window.ADMIN = {
 {
 "section": "Households",
 "world": "",
-"text": "**Do:** Update MCCC before playing: yours is 2026.5.0, the version for patch 1.129 is 2026.6.0 (deaderpool-mccc.com). Check your other script mods too (UI Cheats Extension, Keep Sims in Home Region, XML Injector, LittleMsSam, Twisted Mexi) on the 1.129 broken-mods lists."
+"text": "**Do:** Mods for patch 1.129 (checked overnight, details in research/mods-1129.md): update **MCCC** to 2026.6.0 (deaderpool-mccc.com; keep mc_settings.cfg) and LittleMsSam's **Dress Code** (Aug 2025 version)."
+},
+{
+"section": "Households",
+"world": "",
+"text": "**Decide:** Mods to take out before the new save: **CBX Life-Death-Seasons** (it puts back a Dec 2024 copy of Ravenwood's region file, losing the Small Business lot type and more until it's updated), **Party Anywhere** (listed broken), NateTheL0ser's **Thrift Store Dress Normal** (out of date), and three leftover duplicates (LittleMsSam's old Updated Zooroo ATM, the SulSul Weather App script, the Dress Code Seasons add-on). Still unknown for 1.129: UI Cheats Extension, Home Regions."
+},
+{
+"section": "Households",
+"world": "",
+"text": "**Decide:** Premade fix for the new save: **Premade Sim and Relationship Overhaul** (the “EA Remake” version, without its Vampires file) once it's confirmed for 1.129, or none (links with MCCC as planned). It also changes many premades' looks, outfits, likes, skills and money; don't install Szemoka's fix as well."
 },
 {
 "section": "Households",
