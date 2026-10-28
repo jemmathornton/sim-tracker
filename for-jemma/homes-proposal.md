@@ -185,6 +185,28 @@ These could go on lots your plan has as not built, if you'd rather not build the
 - **Forest Manor**, **Lakeview Estate**, **Luxurious Getaway**, **Riverside Resort**: Outdoor Retreat cabin upgrades for Granite Falls.
 - Full list: research/data/overnight/maxis-gallery-lots.json.
 
+**Builds “only in your saves” checked against the Gallery (overnight):** most are on your Gallery under another name:
+- Barn Conversion = your **Bedlington Barn**
+- Palm Spring Public Pool = your **Palm Springs Public Pool**
+- Shark Shell Challenge = your **Coorinberg Cottage** shell
+- Simsie Townhouse Shell = your **Rockridge Springs** shell
+- Von Castle is probably your **Von-Windenburg Castle** (worth a look)
+
+Still found nowhere on the Gallery or in your Library:
+- **Love to Skate** (Rotational)
+- **Prospector's Stables**, **On Point**, **Boba Ippai**, **Pride Shell Challenge 24** (Building #2)
+- **Finchwick Library** (Building #2, Horses!, Not So Berry)
+- **Cobblebottom Cemetery** (Not So Berry)
+
+“The Breeze Restaurant” in your deleted 4,370 save shares its name with other people's uploads, so it was probably a download.
+
+**Your old household uploads (years ago) still on the Gallery:**
+- **Barnes** (Jeff and Maria as young adults)
+- two **Jameson** uploads (Eve, and Chris)
+- **Spectra** (Ella-Mint, your Not So Berry founder)
+
+With one upload per household, a fresh Barnes upload from “Building #2” (with baby Felicia) would replace the old one.
+
 Also found: **Perfect Balance Spa**, the build in “Rotational” I'd called yours, is Maxis's Spa Day lot (still on the Gallery), so nothing is lost there.
 
 ## Lore links to add with MCCC (if you take these households)
