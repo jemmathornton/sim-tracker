@@ -463,6 +463,11 @@ window.ADMIN = {
 {
 "section": "Households",
 "world": "",
+"text": "**Do:** Update MCCC before playing: yours is 2026.5.0, the version for patch 1.129 is 2026.6.0 (deaderpool-mccc.com). Check your other script mods too (UI Cheats Extension, Keep Sims in Home Region, XML Injector, LittleMsSam, Twisted Mexi) on the 1.129 broken-mods lists."
+},
+{
+"section": "Households",
+"world": "",
 "text": "**Do:** Start the new save again once your mods (MCCC and a premade-fix mod: Premade Sim and Relationship Overhaul, or Premade Sim Relationships Fix) are updated for EA's 27 Oct patch (1.129); the fix mod only works in a save made after it's installed (your call, 28 Oct)."
 },
 {
@@ -548,7 +553,7 @@ window.ADMIN = {
 {
 "section": "Households",
 "world": "",
-"text": "**Decide:** Who lives where: my overnight proposal, with options for every home, is in for-jemma/homes-proposal.md (28 Oct). As one job: about 50 homes in your plan have nobody named (Empty, “1 Bed”, “2 Bedroom”, “?”), plus empty rental units; and these Sims of yours have no home on the plan yet: Ash Carrington, Kenji Mikami and Kumiko Aoki (2-4-3 Wakabamori?), the Fantasias, Lena Garcia, the Rosebud household, Dayna and Alicia Ferrara, the Deckers, Luis Huerta, Henri Penkridge, the Waters, and from “Building #2” the Presleys, Barnes, Faulks, Hassanis, Thorntons and Vivian Little (and the Battles, Whitlocks, Ellsworths and Brody Conklin if they’re yours). Also EA’s own pack households that aren’t on the plan yet, to put in homes (her call 28 Oct; For Rent’s tenant applicants and the base game’s Create-a-Sim families stay out): Lavina and Rahul Chopra; Bruno and Felix Hoffman, Corey Nyhus and Zain Amri (Businesses & Hobbies); Wolf Town’s Greg, Lou Howell, Celene López, Rory Oaklow and Wolfgang Wilder (Werewolves); the merfolk Ukupanipo Hekekia, Kalamainu’u Iona, Nalani Mahi’ai and Paka’a Uha (Island Living)."
+"text": "**Decide:** Who lives where: my overnight proposal, with options for every home, is in for-jemma/homes-proposal.md (28 Oct). As one job: about 50 homes in your plan have nobody named (Empty, “1 Bed”, “2 Bedroom”, “?”), plus empty rental units; and these Sims of yours have no home on the plan yet: Ash Carrington, Kenji Mikami and Kumiko Aoki (2-4-3 Wakabamori?), the Fantasias, Lena Garcia, the Rosebud household, Dayna and Alicia Ferrara, the Deckers, Luis Huerta, Henri Penkridge, the Waters, and from “Building #2” the Presleys, Barnes, Faulks, Hassanis, Thorntons and Vivian Little (and the Battles, Whitlocks, Ellsworths and Brody Conklin if they’re yours). Also EA’s own pack households that aren’t on the plan yet (her call 28 Oct; For Rent’s tenant applicants and the base game’s Create-a-Sim families stay out): the Chopras, the Hoffmans, Fia Acosta, Connie Fidential, Irina Rattus and others; the proposal says which, and leaves EA’s houseless NPCs (Corey Nyhus, Zain Amri, the merfolk, Gibbi Point’s storytellers) as they are. Werewolves, Enchanted by Nature, Lovestruck and Vampires Sims wait until you own those packs."
 },
 {
 "section": "Households",
