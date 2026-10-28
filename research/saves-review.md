@@ -6,7 +6,7 @@ Every save in her saves folder was read (copies only) and gone through with her.
 |---|---|---|
 | Jemma's Sim World (19) | Keep | the new save |
 | My Saved Game 4,376 (1119) | Keep for now | untouched comparison copy; replace after EA's 27 Oct patch |
-| Building #2 (0d) | Keep | lots; families not on the plan (Presley, Barnes, Faulk, Hassani, Thornton, Vivian Little, Battle, Whitlock, Ellsworth, Brody Conklin); builds only here: Prospector's Stables, On Point, Boba Ippai, Shark Shell, Pride Shell 24 |
+| Building #2 (0d) | Keep | lots; families not on the plan (Presley, Barnes, Faulk, Hassani, Thornton, Vivian Little, Battle, Whitlock, Ellsworth, Brody Conklin); builds only here: Prospector's Stables, On Point, Boba Ippai, Pride Shell 24 (Shark Shell is her Coorinberg Cottage upload; Barn Conversion is Bedlington Barn; Palm Spring Public Pool is on the Gallery: found 29 Oct) |
 | Horses! (16) | Keep for now | same world as Building #2, later; Palumbo and Eco Roomies uploaded |
 | Season Events (17) | Keep | Lovejoys, Sporty Girls and Boys to upload; Faye Evergreen's household; Elissa Barragan |
 | Rotational (03) | Keep | holidays; Ferrara, Decker, Luis Huerta; builds only here: Love to Skate (Perfect Balance Spa is Maxis's Spa Day lot, still on the Gallery: found 29 Oct) |
