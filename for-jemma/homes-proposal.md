@@ -30,6 +30,24 @@ Suggestions only. Nothing on the site has changed.
 
 ---
 
+## Families from older games (overnight research)
+Full report: research/past-game-lore-families.md (683 households from The Sims 1, 2 and 3, Stories and the console games, each with its Sims 4 status and the best Gallery copy). The best of them, beyond the Grunts, Beakers and Newbies already taken:
+
+| Who | From | Lore tie to your plan | Fits | Home? |
+|---|---|---|---|---|
+| **Herb and Coral Oldie** | Sims 2 Pleasantview | **Mary-Sue Pleasant's adoptive parents**, so Angela and Lilith's grandparents; Herb has never met Daniel | Windenburg | no free house there: Rio Verde's spare units (they're elders), or an unbuilt home |
+| **The Burbs** (John, Jennifer, Lucy) | Sims 2 Pleasantview | **Jennifer is Daniel Pleasant's sister** | Windenburg | no free house: an unbuilt home, or San Myshuno's Sorority/Fraternity flat |
+| **Kaylynn Langerak** | Sims 2 Pleasantview | the Pleasants' maid, and **Daniel's affair** | Windenburg | a San Myshuno flat |
+| **Brandi and Beau Broke** | Sims 2 Pleasantview | **Dustin Broke's mother and brother** (Dustin is at Crick Cabana in your plan) | Willow Creek | with Dustin at Crick Cabana (your open question there: Dustin alone, or with the Sigworths?) |
+| **Lola and Chloe Curious** (Strangetown Singles) | Sims 2 Strangetown | **daughters of Pol. Tech 9 Smith and Glarn Curious**, so half-sisters of the Smiths and the Curious brothers | Oasis Springs | Sandtrap Flat (sleeps 4) if the Battles aren't yours |
+| **Hermia Capp**, **Kent Capp** | Sims 2 Veronaville | Capps, for your Ondarion Capps; Maxis's story paired Kent with Bianca Monty (your recreated Montys) | Ondarion | 13 Lakeview or 17 Bright Cliff (shared with Irina and Akachi's options) |
+| **Mimi and Dudley Landgraab** | console games | Malcolm's children | San Myshuno | wait until your Malcolm is grown |
+| Maybe: Jeff and Diane Pleasant (Daniel's parents), Michael Bachelor, the Moonlight Falls Goth ghosts, the Isla Paradiso Altos, the Greenmans (PlantSims, which the base game supports), the Appaloosa Plains horse families, the Hidden Springs royals | | | | see the report |
+
+**Can't come back:** Darren and Darleen Dreamer, Nick, Vita and Bert Alto, and Cornelia Goth are dead on the Sims 4's own family trees. Two Urbz characters are already in your plan: Crispin Black and Cannonball Coleman, in Nordhaven.
+
+**Homes are the real limit now.** Windenburg and StrangerVille have no free house, so taking the Pleasantview families means either building on unbuilt lots or moving someone.
+
 ## Households your list says to make yourself: some already exist
 - **Horse Elder Couple** (Appaloosa Stables): almost certainly **Yanaha and Sani Acothley**, a couple you made (Library, 11 Feb 2026). In “Building #2” they live at Appaloosa Stables, both Championship Riders (Rancher, Horse Lover; Yanaha has Cooking 8). They're adults there, so age them to elders.
 - **Single Mum Friends** (Midtown Meadows): this is now the **Washburns and Bridges**, uploaded on 24 Oct in units 5 and 2. The item on your list is out of date.
