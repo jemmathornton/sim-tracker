@@ -1,0 +1,3065 @@
+{
+ "_note": "Short lore notes per household. store/console/Stories notes written from the wiki by a helper; Sims 3 base and expansion notes and verdicts by hand.",
+ "by_key": {
+  "Burb family | The Sims 3 Store | Dragon Valley | John Burb": {
+   "note": "John Burb and his fiancée Jennifer Pleasant sailed off round the world before their wedding and somehow washed up here; can they get home in time?",
+   "link": "The Sims 2 Pleasantview Burbs before their wedding; Jennifer is Daniel Pleasant’s sister",
+   "occult": "",
+   "notable": true
+  },
+  "Newbie family | The Sims 3 Store | Riverview | Robert Newbie": {
+   "note": "Newcomers Robert and Mags with their son Bob: a small, stylish house with a pool and a smart car, but only §2,000 to their name.",
+   "link": "Bob is implied to be The Sims’ Bob Newbie, later Betty Simovitch’s husband and Brandi Broke’s father (Sims 2)",
+   "occult": "",
+   "notable": true
+  },
+  "Pleasant family | The Sims 3 Store | Sunlit Tides | Daniel Pleasant": {
+   "note": "Newlyweds Daniel and Mary-Sue Pleasant, honeymooning on the island after a whirlwind wedding; surely the bliss will last for ever?",
+   "link": "Young Daniel and Mary-Sue of Sims 2 Pleasantview, before their twins Angela and Lilith (a prequel)",
+   "occult": "",
+   "notable": true
+  },
+  "Landgraab family | The Sims 3 Store | Lunar Lakes | Christina Landgraab": {
+   "note": "Brilliant, self-centred elder scientist Christina cloned herself for a ‘perfect’ family: would-be politician Chris and teen twins Chrissie and Christa, who want lives of their own.",
+   "link": "",
+   "occult": "",
+   "notable": true
+  },
+  "Beaker family | The Sims 3 Store | Aurora Skies | Bjorn Beaker": {
+   "note": "Scientists Bjorn and Gundrun led the geo-technology that built the town; with young Loki and Erin they’re thinking of moving somewhere ‘a little stranger’.",
+   "link": "Loki grows up to be the Sims 2 Strangetown scientist Loki Beaker (Circe’s husband)",
+   "occult": "",
+   "notable": true
+  },
+  "Broke family | The Sims 3 Store | Riverview | Flat Broke": {
+   "note": "The town’s poorest, in a cheap caravan park: high-school sweethearts Flat and Flo, plus Flat’s brother Buck, who turned up with two kids; seven Brokes in all.",
+   "link": "Skip Broke is Brandi Broke’s future husband (Sims 2); Flat and Flo are named there too",
+   "occult": "",
+   "notable": true
+  },
+  "Broke family | The Sims 3 Store | Lunar Lakes | Octavia Broke": {
+   "note": "Octavia Broke, a homeless townie; the wiki guesses she descends from, or married into, the Brokes, but nothing confirms it.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Caliente family | The Sims 3 Store | Barnacle Bay | Dina Caliente": {
+   "note": "The Caliente sisters Dina and Nina now share a house with Luisa Libros, teaching her to misbehave; all three are tangled up with Juan Jr. Inkbeard.",
+   "link": "The Sims 2 Pleasantview sisters Dina and Nina, moved here after The Sims 2",
+   "occult": "",
+   "notable": true
+  },
+  "Capp family | The Sims 3 Store | Roaring Heights | Consort Capp": {
+   "note": "Consort and Contessa Capp loved their Roaring Heights holiday so much they moved in, with daughters Goneril and Regan and a baby on the way.",
+   "link": "Young Consort and Contessa of the Sims 2 Veronaville Capps; Consort’s parents are the Thebes",
+   "occult": "",
+   "notable": true
+  },
+  "Capp family | The Sims 3 Store | Monte Vista | Octavius Capp": {
+   "note": "Not a living household: Octavius Capp lies in the Monte Vista graveyard (electrocuted); some players read it as a hint that Monte Vista is Veronaville.",
+   "link": "",
+   "occult": "Grave only",
+   "notable": false
+  },
+  "Dreamer family | The Sims 3 Store | Lucky Palms | Darren Dreamer": {
+   "note": "Darren, an eccentric artist and minor celebrity who hates the outdoors yet paints landscapes; he swapped his pool for a cactus garden and longs for love.",
+   "link": "Young Darren Dreamer of Sims 2 Pleasantview; he’s dating his future wife, Darleen Matlapin",
+   "occult": "",
+   "notable": true
+  },
+  "GilsCarbo family | The Sims 3 Store | Barnacle Bay | Alice GilsCarbo": {
+   "note": "Hard-working single mother Alice and her young daughter Celeste, building a new life in an old town.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "GilsCarbo family | The Sims 3 Store | Monte Vista | Eduardo GilsCarbo": {
+   "note": "Music-loving Eduardo and devoted Carlotta live simply with toddler Goopy, already fond of cowboys and plaid; the wiki confirms no tie to Sims 2’s townie Goopy.",
+   "link": "",
+   "occult": "",
+   "notable": true
+  },
+  "Lothario family | The Sims 3 Store | Riverview | Don Lothario": {
+   "note": "Don woke up in Riverview after a teleporter mishap involving several laughing women, and wonders whether to keep up his old romancing ways.",
+   "link": "Sims 2 Pleasantview’s Don Lothario (Cassandra Goth’s fiancé, the Caliente twins’ lover), stranded here by a teleporter",
+   "occult": "",
+   "notable": true
+  },
+  "Matlapin family | The Sims 3 Store | Lucky Palms | Omar Matlapin": {
+   "note": "Newcomers Omar and charming Mariana, already popular with the neighbours, and their dreamy, arty daughter Darleen, who hopes to find romance in the desert.",
+   "link": "Darleen is Darren Dreamer’s future wife and Dirk’s mother; she has died by Sims 2 Pleasantview",
+   "occult": "",
+   "notable": true
+  },
+  "Monty family | The Sims 3 Store | Monte Vista | Valentine Monty": {
+   "note": "Widowed Silvia, whose son has left to raise his own family nearby; her late husband Valentine has lately started turning up again.",
+   "link": "The earliest Montys of Sims 2 Veronaville, long before the Capp feud",
+   "occult": "Valentine is a playable ghost (died of old age)",
+   "notable": true
+  },
+  "Monty family | The Sims 3 Store | Monte Vista | Patrizio Monty": {
+   "note": "Happy, rich, well-loved Patrizio and Isabella with Bianca, Antonio and a baby on the way; they have yet to meet their future rivals.",
+   "link": "Young Patrizio and Isabella, the Sims 2 Veronaville Monty elders, before the Capp feud",
+   "occult": "",
+   "notable": true
+  },
+  "Pantalone family | The Sims 3 Store | Monte Vista | Vincentio Pantalone": {
+   "note": "Vincentio and Francisca, whose only daughter married into the Montys and keeps giving them grandchildren to keep up with.",
+   "link": "Isabella Monty’s parents; already-dead ancestors on the Montys’ tree in Sims 2",
+   "occult": "",
+   "notable": true
+  },
+  "Simovitch family | The Sims 3 Store | Riverview | Vadim Simovitch": {
+   "note": "Fatima is grooming daughter Betty for the music career she never had, while easy-going Vadim stays out of it in front of the TV.",
+   "link": "Betty becomes Betty Newbie of The Sims, Brandi Broke’s mother; all three are dead by Sims 2",
+   "occult": "",
+   "notable": true
+  },
+  "Simovitch family | The Sims 3 Store | Roaring Heights | Henry Simovitch": {
+   "note": "Henry, a car-industry tycoon richer than he ever dreamed, still goes to work every day and keeps putting off his promised holiday.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Specter family | The Sims 3 Store | Lunar Lakes | Noela Spector": {
+   "note": "Young, independent Noela is set on a life of crime and has so far stayed a step ahead of the law.",
+   "link": "A descendant of the Specters (Olive Specter, Sims 2), the name now spelt Spector",
+   "occult": "",
+   "notable": true
+  },
+  "Specter family | The Sims 3 Store | Midnight Hollow | Olive Specter": {
+   "note": "Olive, whose every romance ended in sudden death, went to confront Death himself, briefly fell for him, and was left with a toddler son, Nervous Subject.",
+   "link": "Young Olive Specter of Sims 2 Strangetown, with Nervous before social workers take him",
+   "occult": "Graves of three late husbands on her lot; son fathered by Death (bio)",
+   "notable": true
+  },
+  "Thebe family | The Sims 3 Store | Roaring Heights | Hector Thebe": {
+   "note": "Hector and Andromache, thrilled to be reunited with their son Consort in Roaring Heights, have big plans for their grandchildren.",
+   "link": "Sims 2 Veronaville ancestors, all dead there; Consort Capp’s parents",
+   "occult": "",
+   "notable": true
+  },
+  "Alto family | The Sims 3 Store | Hidden Springs | Bert Alto": {
+   "note": "Bert, once accountant to the stars in Bridgeport, has arrived in the spa town with plenty of money from no clear source; he may be hiding.",
+   "link": "Nick Alto’s brother (the Sims 3 Sunset Valley Altos)",
+   "occult": "",
+   "notable": true
+  },
+  "Alto family | The Sims 3 Store | Lunar Lakes | Trenton Alto": {
+   "note": "Alto descendant Trenton is out of favour with the powerful, while wife Eleanor stays in the spotlight; with son Jareth. Can he make his own name?",
+   "link": "Descendants of the Sunset Valley Altos (Sims 3)",
+   "occult": "",
+   "notable": true
+  },
+  "Alto family | The Sims 3 Store | Sunlit Tides | Griffin Alto": {
+   "note": "Griffin came to the island to ‘find himself’ before joining the family business, fell for Tenika Wahine, and must win over her disapproving father, Leo.",
+   "link": "Of the Sunset Valley Alto family (Sims 3), due to take over the family business",
+   "occult": "",
+   "notable": true
+  },
+  "Russo family | The Sims 3 Store | Monte Vista | Sebastiana Russo": {
+   "note": "Sebastiana hates everything and everyone: no friends, no family, and that’s how she likes it.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Kahale family | The Sims 3 Store | Sunlit Tides | Kai Kahale": {
+   "note": "The island’s rulers: Alana, third generation to run the family crime business, and governor husband Kai, who shields her; they hope daughter Lealani takes over.",
+   "link": "Alana’s cousin Akoni Kahale lives in Isla Paradiso (Island Paradise)",
+   "occult": "",
+   "notable": true
+  },
+  "Mango family | The Sims 3 Store | Sunlit Tides | Maru Mango": {
+   "note": "Maru takes advice from ‘Mitch’, a voice in his head, and got the island’s military job because nobody else applied; cousin of Aurora Skies’ Magnus.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Mango family | The Sims 3 Store | Aurora Skies | Magnus Mango": {
+   "note": "Magnus leads Aurora Skies’ little-used military and is proud that his younger cousin Maru does the same in Sunlit Tides; madness runs in the family.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Loveland family | The Sims 3 Store | Lunar Lakes | Amelia Loveland": {
+   "note": "Amelia lives alone in an old volcano, hunting for Mr Right, but none of the town’s many bachelors notices her.",
+   "link": "Descendant of Gracie Loveland of Appaloosa Plains (Sims 3: Pets)",
+   "occult": "",
+   "notable": true
+  },
+  "Parrott family | The Sims 3 Store | Sunlit Tides | Clementine Parrott": {
+   "note": "Clementine reluctantly shares a home with her triplet sisters, party-loving Lucretia and restless Ramona; a fourth sister, Beverly, has died.",
+   "link": "Isla Paradiso townie Gregory Parrott mentions visiting cousins in Sunlit Tides (Island Paradise)",
+   "occult": "",
+   "notable": true
+  },
+  "Abbot family | The Sims 3 Store | Hidden Springs | Carl Abbot": {
+   "note": "Spy Carl Abbot resents being posted to this quiet town; his wife Maya thinks the move will do them good.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Abe family | The Sims 3 Store | Barnacle Bay | Patty Abe": {
+   "note": "Sisters Patty and Serena, total opposites who somehow balance each other out, if they can stay civil.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Adams family | The Sims 3 Store | Sunlit Tides | Iris Adams": {
+   "note": "Newly divorced Iris, with a big settlement, wants a fresh start for sons Alastair (music, a teen romance) and withdrawn, prickly Milton.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Adamsson household | The Sims 3 Store | Aurora Skies | Simon Adamsson": {
+   "note": "New mayor Ericka Berge and her partner Simon, a business mogul, are the town’s richest; a surprise baby is on the way. Her sister Iris lives opposite.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Almeria family | The Sims 3 Store | Monte Vista | Diego Almeria": {
+   "note": "Diego and his much younger wife Adora never fitted in back home; they’ve moved for a fresh start for baby daughter Marta.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Anderson family (Hidden Springs) | The Sims 3 Store | Hidden Springs | Ryan Anderson": {
+   "note": "Nature photographer Ryan hopes pictures of the mountains’ magic will make his name; he has a townie brother, Kyle.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Annan family | The Sims 3 Store | Barnacle Bay | Finn Annan": {
+   "note": "Finn and Flora with four children (Fern, Philip, Fawn and Daisy): a big, rich, famous family in Matey’s Manor; chaotic but loving.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Ansari family | The Sims 3 Store | Lunar Lakes | Kara Ansari": {
+   "note": "Grumpy Kara craves money and status but married farmer Raja, who is secretly plotting to become an evil mastermind.",
+   "link": "Raja descends from Ayesha Ansari of Sunset Valley (Sims 3)",
+   "occult": "",
+   "notable": true
+  },
+  "Astare household | The Sims 3 Store | Roaring Heights | Frank Astare": {
+   "note": "Dance partners and sweethearts Frank Astare and Judy Rogers; she was a star first, he has more talent than looks (a Fred and Ginger nod).",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Bagley family | The Sims 3 Store | Riverview | Ma Bagley": {
+   "note": "A family of thieves: retired master thief Ma and daughter Rhoda keep the trade going, but son Sherman wants another path; loot fills the barn.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Bayless-Willheim household | The Sims 3 Store | Lunar Lakes | Stefan Bayless": {
+   "note": "Stefan and Anais, a fun-loving couple who live for good food, good friends and wild parties.",
+   "link": "Stefan descends from the Bayless family of Twinbrook (Sims 3: Ambitions)",
+   "occult": "",
+   "notable": true
+  },
+  "Beach Bums household | The Sims 3 Store | Sunlit Tides | Suzuki Hinata": {
+   "note": "Roommates since leaving school: Len and Suzuki grew into good-looking adults, leaving Ricardo feeling left behind and short of confidence with women.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Benton family | The Sims 3 Store | Lunar Lakes | Benjamin Benton": {
+   "note": "Athlete Benjamin and police officer Dahlia push their children into sport; Carly secretly loves music and Jax is good at everything but sport.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Best Friends household (Lucky Palms) | The Sims 3 Store | Lucky Palms | Roy Phillips": {
+   "note": "Childhood friends Roy Phillips and Palmer Hayes drifted apart, then retired to the same desert town and picked up where they left off.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Best Friends household (Sunlit Tides) | The Sims 3 Store | Sunlit Tides | Theodora Jayne": {
+   "note": "Flirty Ursula Lemuel brought her shy, clever best friend Theodora Jayne to the island to unwind, and has her own eye on the men.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Bianchi family | The Sims 3 Store | Monte Vista | Franco Bianchi": {
+   "note": "Franco gave up his sports dreams for wife Kaela and son Beppe and is turning to crime for quick money; a second baby is coming.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Carnegie family | The Sims 3 Store | Sunlit Tides | Eugene Carnegie": {
+   "note": "Eugene’s island holiday is spoilt by his bossy wife Ethel, while son Edmund hides away and daughter Elosie runs wild.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Carpenter-Rhodes family | The Sims 3 Store | Riverview | Buzz Rhodes": {
+   "note": "Long-time unmarried partners Hope Carpenter and Buzz Rhodes, honest gardening folk; their grown daughter Meadow hardly ever visits.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Carpenter-Rhodes family | The Sims 3 Store | Riverview | Meadow Carpenter-Rhodes": {
+   "note": "Meadow, Hope and Buzz’s daughter, lives alone near the town centre, utterly devoted to her plants; will she ever make room for love?",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Chesterfield family | The Sims 3 Store | Hidden Springs | Bruce Chesterfield": {
+   "note": "Single father Bruce moved his sons Scott and Dennis from the city to the mountains to share his love of nature; Dennis isn’t happy about it.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Cho family (Hidden Springs) | The Sims 3 Store | Hidden Springs | Simon Cho": {
+   "note": "Film director Simon retired early to the spa town with wife Alisha, adopted son Davy and daughter Minzi; Davy may be Dany Shue’s lost twin.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Claremont family | The Sims 3 Store | Lucky Palms | Endora Kravitz": {
+   "note": "Morgan’s new job came with a surprise: mother-in-law Endora, who came for a short visit when baby Tabbi was born and never left (a Bewitched nod).",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Clark family | The Sims 3 Store | Aurora Skies | Evan Clark": {
+   "note": "Eco-loving, well-off Jessie and Wanda and their son Evan enjoy a happy, drama-free life; a second baby is on the way.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Coastal family | The Sims 3 Store | Barnacle Bay | Jake Coastal": {
+   "note": "Jake and Josephine love Barnacle Bay’s history and the island’s wildlife, and their home shows it.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Colby family | The Sims 3 Store | Hidden Springs | Christoff Colby": {
+   "note": "Newly rich Christoff and Genevieve are set on showing the old-money set a thing or two about class.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Costa family | The Sims 3 Store | Monte Vista | Dante Costa": {
+   "note": "Dante, the town’s feared king of crime, is devoted to his much younger wife Giovanna and daughters Cipriana and Victoria; a third child is coming.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Cromos family | The Sims 3 Store | Dragon Valley | Riley Cromos": {
+   "note": "Struggling baker Riley is raising daughter Zoe alone and finding it hard to pay the bills and connect with an almost-teenager.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Crosby family | The Sims 3 Store | Riverview | Odin Crosby": {
+   "note": "A poor, mismatched couple: ambitious chef Odin can’t stand children, Heather longs for a family. Will Riverview keep them together?",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Cross family | The Sims 3 Store | Lunar Lakes | Patricia Cross": {
+   "note": "Mayor Patricia, descendant of colony founder Anthony Cross, and mad scientist Alexander married for power, not love, and are drifting apart.",
+   "link": "",
+   "occult": "",
+   "notable": true
+  },
+  "Darwin family | The Sims 3 Store | Barnacle Bay | Lewis-Charlie Darwin": {
+   "note": "Scientific couple Lewis-Charlie and Preethi, passionate about fish and fishing, their garden and their pond; their home is kitted out for a toddler they don’t have.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Davidson household | The Sims 3 Store | Roaring Heights | Norma Davidson": {
+   "note": "Faded screen star Norma waits obsessively for her comeback and has taken in luckless Gil McGinnis (a Sunset Boulevard nod).",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Davis household (Roaring Heights) | The Sims 3 Store | Roaring Heights | Bonnie Davis": {
+   "note": "Bonnie Davis and daredevil Clyde Reeves fell for each other at first sight; aspiring writer Bonnie writes up their crimes (a Bonnie and Clyde nod).",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Davis-Welles family | The Sims 3 Store | Roaring Heights | Mark Davis-Welles": {
+   "note": "Mark and Rita look happily married, but both secretly love someone else (Mark, Michael Dandy; Rita, Virginia Supine); scandal looms.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Day household | The Sims 3 Store | Aurora Skies | Miriam Day": {
+   "note": "Four hard-up young travellers, Miriam Day, Angelica Diamond, Pedro Herrerra and Ciro Perry, at the Hostility-Free Hostel; will they stay?",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Dean family | The Sims 3 Store | Riverview | George Dean": {
+   "note": "Since his mother’s tragic death, George devotes himself to helping people and lives in an old fire station; his father Bennie lives with the Grandpas.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Debutante household | The Sims 3 Store | Hidden Springs | Blake Grayson": {
+   "note": "Childhood ‘frenemies’ Blake Grayson and Jenny Lho, living away from home for the first time on their parents’ money.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Delaney family | The Sims 3 Store | Dragon Valley | Dorren Delaney": {
+   "note": "Eco-minded single dad Dorren and his daughter Emma, who loves him but wants a little freedom: paper plates, a modern car.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "DeLuca family | The Sims 3 Store | Monte Vista | Dario DeLuca": {
+   "note": "A loving family: sweet, messy scientist Dario, sharp police squad leader Veronica and stylish, confident teen Teresa, who is dating Khang Seng.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Diwan family | The Sims 3 Store | Lucky Palms | Taj Diwan": {
+   "note": "Special Agent Taj is undercover, investigating crime around the dried-up lake, with supportive wife Zahra and son Sahan, who resents him.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Doe family | The Sims 3 Store | Midnight Hollow | John Doe": {
+   "note": "A picture-perfect 1950s-style family, John and Jane with Joseph, Jennifer and James and a fourth on the way; but where did their basement go?",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Dolan household | The Sims 3 Store | Dragon Valley | Wynn Byrne": {
+   "note": "Finn married Sarah, the red-hooded girl he once saved from a wolf; they live with her grandmother Wynn Byrne and expect their first baby.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Eames family | The Sims 3 Store | Dragon Valley | Martin Eames": {
+   "note": "Former ship-borne raiders Maeve and Martin, now married criminals, are struggling with parenthood: son Liam, and another on the way.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Elliot household | The Sims 3 Store | Aurora Skies | Jackie Elliot": {
+   "note": "Jackie Elliot and Felicia Lin seem ordinary, stylish neighbours, but are really jewel and art thieves on the run.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Entrepreneurs household | The Sims 3 Store | Midnight Hollow | Todd Landgraab": {
+   "note": "Jobless roommates with big plans: Seema Sielen has the charm, Karl Simon the brains and Todd Landgraab the money.",
+   "link": "Todd is said to be related to the Landgraabs and to have some of their fortune (the Landgraab page calls this uncertain)",
+   "occult": "",
+   "notable": true
+  },
+  "EP9 PWT Heroes | The Sims 3 Store |  | Haffeef Safari": {
+   "note": "Download-only: three roommates (Haffeef Safari, Jaqualine Beels, Chris Masters) made by SimGuruBritt for the University Life producer walkthrough; in no world.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Fitzpatrick family | The Sims 3 Store | Sunlit Tides | Isadora Fitzpatrick": {
+   "note": "Elderly, wealthy and childless by choice, Niles and Isadora have been together for most of their lives and enjoy elegant island living.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Flynn family (Midnight Hollow) | The Sims 3 Store | Midnight Hollow | Edmund Flynn": {
+   "note": "Rich orphans Maggie, Mitchell and Cora were sent to their uncle Edmund, but he’s really con man Jackson Bishop after their money; the real Edmund drowned.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Free Spirit household | The Sims 3 Store | Hidden Springs | Nicholas Riverhawk": {
+   "note": "Nature-loving friends Nicholas Riverhawk, Cassidy Earthsong and Jessica Willow live sustainably in the woods, for as long as they can bear it.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Gilbert family | The Sims 3 Store | Lucky Palms | Barry Gilbert": {
+   "note": "Widower Barry bought a ‘lake-front’ home online for twice its worth; now the lake is dry and the bills high for him and sons Hanson and Joshua.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Giordano family (Monte Vista) | The Sims 3 Store | Monte Vista | Georgia Giordano": {
+   "note": "Three very different sisters with no parents to guide them: rude Georgia (dating Pepe Moretti), shy Paloma and searching Alessandra.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Goldbeard family | The Sims 3 Store | Barnacle Bay | Eleanor Goldbeard": {
+   "note": "The island’s richest, best-connected family, and nobody asks how they got rich: Eleanor, Tobias, Anne and grandchildren Coral and Kidd; they feud with the Inkbeards.",
+   "link": "",
+   "occult": "",
+   "notable": true
+  },
+  "Golden Gals household | The Sims 3 Store | Lucky Palms | Gennie Gomez": {
+   "note": "Lifelong friends sharing their golden years: artist Gennie Gomez, angler Beulah Patterson and gardener-hacker Evangeline Finch (a Golden Girls nod).",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Grandpas household | The Sims 3 Store | Riverview | Bennie Dean": {
+   "note": "Widower Bennie Dean couldn’t face living alone, so old friends Henry McGlum and Melvin Taft moved in to share costs; can they get along?",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Grantham family | The Sims 3 Store | Sunlit Tides | Gavin Grantham": {
+   "note": "Gavin longed for a son but has two daughters, Sophie and Katherine; he’s on holiday to ask Alice to try again, not knowing she’s already pregnant.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Grisby family | The Sims 3 Store | Riverview | Walter Grisby": {
+   "note": "Plain-looking but warm-hearted, wealthy Walter and Yvette hope daughter Laurel finds someone who sees her inner beauty; neighbours of the Shallows.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Hale family | The Sims 3 Store | Sunlit Tides | Kimo Hale": {
+   "note": "Cold, controlling criminal Kimo; his frightened wife Talei shelters their son Kiwi and is drawn to Silas Allender, a spy courting her for his job.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Hallur family | The Sims 3 Store | Aurora Skies | Andrea Hallur": {
+   "note": "Newly divorced Lara has moved back in with her mother Andrea, missing her daughter Kristin, who stayed with ex-husband Lief Helgason.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Harbucks household | The Sims 3 Store | Roaring Heights | Olivier Harbucks": {
+   "note": "Wealthy Olivier had everything but a family until orphan Shirley Templeton turned up at his door; now he backs her dreams of stardom (an Annie nod).",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Helgason family | The Sims 3 Store | Aurora Skies | Lief Helgason": {
+   "note": "Lief is single dad to Karen, Karl and Kristin, each from a different ex-wife; he won custody every time and falls in love fast.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Hoffman family (Sunlit Tides) | The Sims 3 Store | Sunlit Tides | Hugh Hoffman": {
+   "note": "Worn-out super-wife Hazel leapt at husband Hugh’s island holiday with Helen and Hector; family life is so good they may never leave.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Hooley family | The Sims 3 Store | Dragon Valley | Robin Hooley": {
+   "note": "Robin helps the poor by any means, stealing included, and gives their own things away; wife Marian wants him to stop (a Robin Hood nod).",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Houveir family | The Sims 3 Store | Roaring Heights | Clark Houveir": {
+   "note": "Scheming politician Clark gets what he wants, including wife Louise, who fakes her smiles and craves the attention he never gives.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Hudson Hipsters household | The Sims 3 Store | Lucky Palms | Ariel Hudson": {
+   "note": "Unmarried by choice, Ariel and Kinslee share her surname and are expecting their first child in a conservative desert town.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Ingberg family | The Sims 3 Store | Aurora Skies | Iris Ingberg": {
+   "note": "Scientist Jakob and surgeon Iris find son Jonas disappointingly ordinary and are expecting a second child, hoping for better; Iris is Ericka Berge’s sister.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Inkbeard family | The Sims 3 Store | Barnacle Bay | Shorty-John Inkbeard": {
+   "note": "Suspicious pirate descendants: Shorty-John and Victoria, son Morgan, his wife Aeisha and children Pearl and Bart; rumoured lost treasure, a feud with the Goldbeards.",
+   "link": "",
+   "occult": "",
+   "notable": true
+  },
+  "Irwin family | The Sims 3 Store | Lucky Palms | Richard Irwin": {
+   "note": "Jobless, unfaithful Richard (father of Lola Lancaster’s coming baby) and troubled, law-breaking Emi; can daughter Cricket have a normal childhood?",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Ivanov family | The Sims 3 Store | Riverview | Rayna Kaminski": {
+   "note": "A long-wandering musical family: Grandma Rayna Kaminski, her daughter Nadine, son-in-law Yuri Ivanov and children Tatiana and Dimitri, trying to settle.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "James family | The Sims 3 Store | Lunar Lakes | Phillip James": {
+   "note": "Newlyweds Phillip and Mia have furnished their home and long for a baby, and Mia is already pregnant.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "James household | The Sims 3 Store | Monte Vista | Jayden James": {
+   "note": "Top male models Jayden James and David Haynes, in town for work, trying to live normally away from the cameras.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "January family | The Sims 3 Store | Lunar Lakes | Martin January": {
+   "note": "Martin moved to the edge of town for his scientist wife Lily’s work, but she neglects him and he misses the social scene.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Jones family (Riverview) | The Sims 3 Store | Riverview | Aiden Jones": {
+   "note": "Aiden and Hannah inherited the Remington estate from Hannah’s cousins and found it haunted by her family’s restless ghosts.",
+   "link": "",
+   "occult": "Haunted house: ghosts of Hannah’s late relatives",
+   "notable": true
+  },
+  "Jones family (Roaring Heights) | The Sims 3 Store | Roaring Heights | Beverly Jones": {
+   "note": "Widowed fashion queen Beverly can’t keep her children in style: Edward ignores fashion and Helen just wants her attention. Will she remarry?",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Joy family | The Sims 3 Store | Riverview | Norman Joy": {
+   "note": "Widower Norman raised daughter Elaine on homegrown produce and traditional values; will she stay or make her own life? (an American Gothic nod)",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Kelly family | The Sims 3 Store | Dragon Valley | Sean Kelly": {
+   "note": "Young, fierce Ava is out to make a name for herself, and husband Sean will do anything to help.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Kent household | The Sims 3 Store |  | Kim Kent": {
+   "note": "Download-only: roommates Kim Kent, Piper Hipp and Liam O’Dourke, made by producer Grant Rodiek for a promo video; Liam also lives in Hidden Springs.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "King family (Lucky Palms) | The Sims 3 Store | Lucky Palms | Brayden King": {
+   "note": "Respected, popular Brayden and Kadia and their gifted twin teens Abrianna and Abrielle; what next when the girls leave home?",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "LaFontaine family | The Sims 3 Store | Roaring Heights | Thomas LaFontaine": {
+   "note": "Single father Thomas is set on finding a husband for Elizabeth, who wants a simple life with no romance at all.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Lai family | The Sims 3 Store | Barnacle Bay | Gil Lai": {
+   "note": "A fishing family for generations: Gil and Laurel, son Jonah and a baby coming; their ancestors’ City Hall portraits oddly show cutlasses.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Lancaster family | The Sims 3 Store | Lucky Palms | Lola Lancaster": {
+   "note": "Former showgirl Lola, widowed by an ‘accidental’ death, has had many suitors and is now pregnant by married Richard Irwin; daughter Lina lives elsewhere.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Langerak-Goode household | The Sims 3 Store | Lunar Lakes | Arthur Langerak": {
+   "note": "Book and music lovers Arthur and Gloria got engaged six weeks after meeting; Arthur dreams of swapping his office job for music.",
+   "link": "Arthur descends from the Sunset Valley Langeraks; Gloria from Goodwin Goode of Twinbrook (Sims 3)",
+   "occult": "",
+   "notable": true
+  },
+  "Lau family | The Sims 3 Store | Midnight Hollow | Mai Lau": {
+   "note": "Triplet scientists Mai, Annie and Lucy were left super-fit by an experiment gone wrong and took up physical careers (a Powerpuff Girls nod).",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Lin family | The Sims 3 Store | Riverview | Roxie Lin": {
+   "note": "Wild Roxie, who dreams of music fame, and studious Shirley share only stubbornness; they split their parents’ old house between their tastes.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Lobos family | The Sims 3 Store | Riverview | Angel Lobos": {
+   "note": "After a troubled past, Angel wants to be a star athlete and a good father; with romantic Marisol and twins Carlotta and Anita, a fresh start.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Louie family | The Sims 3 Store | Lunar Lakes | Pax Louie": {
+   "note": "Once-prestigious Pax, Louisa and daughter Nadia moved to the outskirts after Pax fell out with his boss, Patricia Cross; can they adapt?",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Lovers? household | The Sims 3 Store | Lucky Palms | Eli Vokoban": {
+   "note": "Frugal, rich Eli Vokoban showers young Lina Lancaster with gifts, not knowing she’s pregnant; she is Lola Lancaster’s daughter.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Lucas family | The Sims 3 Store | Lunar Lakes | Doris Lucas": {
+   "note": "Widowed, hard-up Doris raises bookish Finn and rebellious Theresa and hopes her painting can pay for a better life.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "MacAnna family | The Sims 3 Store | Dragon Valley | Teagan MacAnna": {
+   "note": "Dark, selfish Teagan and her sweet, innocent sister Shannon: complete opposites.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Malifa family | The Sims 3 Store | Barnacle Bay | Buzz Malifa": {
+   "note": "Buzz, Petunia and son Marcus: clashing tastes, clashing personalities and lots of clutter, but they make it work.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Mancini family | The Sims 3 Store | Monte Vista | Camillo Mancini": {
+   "note": "Carlo, raised to run the family business, has his father’s sudden death, the business and younger brother Camillo’s happiness on his shoulders.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Marks family | The Sims 3 Store | Roaring Heights | Sneako Marks": {
+   "note": "Five brothers, Sneako, Sharpo, Grumpo, Glummo and Dyno, a comedy troupe who never stop clowning (a Marx Brothers nod).",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "McDermott family | The Sims 3 Store | Riverview | Luke McDermott": {
+   "note": "Farmers for generations, Luke and Ginny grow their own food; sons Maximus and Travis spend hours fishing in the river.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "McKellar family | The Sims 3 Store | Barnacle Bay | Willy McKellar": {
+   "note": "Reclusive, grumpy ex-lighthouse keeper Willy lives in the island’s remotest corner; his brother Val is buried in the Boneyard.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Meyers family | The Sims 3 Store | Roaring Heights | Ralph Meyers": {
+   "note": "Devoted Ralph can’t see that his resentful wife Irene has had affair after affair.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Mithrilen family | The Sims 3 Store | Dragon Valley | Fintan Mithrilen": {
+   "note": "Fintan resents the O’Connells for unseating his family as town leaders and distrusts their little dragons; wife Aine, son Riordan, a baby coming.",
+   "link": "",
+   "occult": "Blue skin and pointed ears (elf-like, but human in game)",
+   "notable": true
+  },
+  "Morgan family | The Sims 3 Store | Roaring Heights | David Morgan": {
+   "note": "David and Donna seem perfect, but David’s affair has left Samantha Cassat pregnant; Donna looks away and focuses on Joseph, Carolyn and Evelyn.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Mosqueda family | The Sims 3 Store | Lunar Lakes | Carlos Mosqueda": {
+   "note": "Not rich but happy: stay-at-home cook Carlos hosts dinner parties, and blogger Paige and son Erik share his love of family and food.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "O'Connell family | The Sims 3 Store | Dragon Valley | Seamus O'Connell": {
+   "note": "Town leaders since their ancestor Captain O’Connell landed and helped tame the dragons: Seamus, Shauna, Morida, Aiden and Brien; maybe democracy would be better.",
+   "link": "",
+   "occult": "",
+   "notable": true
+  },
+  "O'Reilly family | The Sims 3 Store | Dragon Valley | Conor O'Reilly": {
+   "note": "Conor is surrounded by women: worn-out, pregnant wife Chloe, eye-rolling teen Morrigan and attention-seeking little Fiona; overwhelmed but happy.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "O'Shea family | The Sims 3 Store | Dragon Valley | Breandan O'Shea": {
+   "note": "Competitive brothers Breandan (police) and Kearney (military), always trying to outdo each other.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Olivia household | The Sims 3 Store | Aurora Skies | Estella Olivia": {
+   "note": "Party girls Estella Olivia and Sophia Rios came for a wild weekend and never left; Estella’s surprise pregnancy (by Adam Birch) may end the fun.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Olsson household | The Sims 3 Store | Aurora Skies | Oskar Olsen": {
+   "note": "Lifelong best friends Oskar Olsen and Emil Olsson shared a home in old age after Oskar’s wife died, and carry on together as ghosts.",
+   "link": "",
+   "occult": "Both are ghosts",
+   "notable": false
+  },
+  "Oss family | The Sims 3 Store | Aurora Skies | Josefin Oss": {
+   "note": "Widowed early, Josefin fiercely protects her sons Arvid and Edvin; will her close care make them rebel?",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Parrrrrrrty household | The Sims 3 Store | Barnacle Bay | Juan Jr. Inkbeard": {
+   "note": "Rowdy singles Juan Jr. Inkbeard, Ahmed Barbarossa and Lee-Roy Johnkins, living alone for the first time and throwing parties.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Pepper family | The Sims 3 Store | Sunlit Tides | Martin Pepper": {
+   "note": "After his father’s death, young Martin tries to hold together his depressed mother Laurita and his selfish twin Penelope.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Perry family (Monte Vista) | The Sims 3 Store | Monte Vista | Noel Perry": {
+   "note": "Newly grown-up sisters Noel and Emma love to party, but Emma wants to be responsible too.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Pertridge family | The Sims 3 Store | Hidden Springs | Lonnie Pertridge": {
+   "note": "Lonnie hopes to marry Astrid or Eunice to the Vanderburg prince, while stepdaughter Ella Carlisle is treated as the maid (a Cinderella story).",
+   "link": "",
+   "occult": "",
+   "notable": true
+  },
+  "Picard family | The Sims 3 Store | Roaring Heights | Nancy Picard": {
+   "note": "Widowed Nancy pins her hopes on her children marrying well, but Gerald refuses dates and teen Frances trusts her brains instead.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Piece family | The Sims 3 Store | Barnacle Bay | Dave Piece": {
+   "note": "Widower Dave, whose wife Ophelia drowned (and was secretly seeing Lee-Roy Johnkins), has had two failed relationships since; will he find love?",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Prendergast household | The Sims 3 Store | Dragon Valley | Cassidy Predergast": {
+   "note": "Unable to have children, Cassidy Predergast has adopted six orphans whose parents died in fires, dragon fires included.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Prince family | The Sims 3 Store | Midnight Hollow | Monty Prince": {
+   "note": "Retired Monty and Clarice Prince have taken in twin grandchildren Cornell and Cecelia Evans, who ran away from their controlling mother.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Radan household | The Sims 3 Store | Barnacle Bay | Richie Radan": {
+   "note": "Bachelors Richie Radan and Rahul Patel, on holiday from stressful lives; might they stay for good?",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Rao family | The Sims 3 Store | Barnacle Bay | Roger Rao": {
+   "note": "Roger and Mia are starting a family in a modest house, with their first baby on the way.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Romano family | The Sims 3 Store | Monte Vista | Luigi Ricardo": {
+   "note": "Suddenly widowed and broke, Paola and her young son Orlando, who hasn’t smiled in months, live with her brother Luigi Ricardo.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Ross family | The Sims 3 Store | Lucky Palms | Phoenix Ross": {
+   "note": "Marissa thrives in business while Phoenix’s military career flops; he raises daughter Addison alone. Is a separation coming?",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Rossi family | The Sims 3 Store | Monte Vista | Costanzo Rossi": {
+   "note": "Town mayor Costanzo has love, respect and money, and now wife Adalina is expecting their first child.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Ruiz household | The Sims 3 Store | Hidden Springs | Carly Ruiz": {
+   "note": "Nanny Carly Ruiz is stuck caring for brothers Emmit and Jake Preston after their parents vanished on a family trip.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Sackholme family | The Sims 3 Store | Dragon Valley | Susie Sackholme": {
+   "note": "Well-meaning siblings Susie and Mason attract trouble and admirers alike; rumour says there’s fairy blood in the family (they start human).",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Salas family | The Sims 3 Store | Midnight Hollow | Jay Salas": {
+   "note": "Ghosts Jay and Tatiana met at a ghost mixer and now have daughters Sandra and Frieda, with a third baby coming.",
+   "link": "",
+   "occult": "Whole family are ghosts",
+   "notable": false
+  },
+  "Sekemoto family | The Sims 3 Store | Lunar Lakes | Len Sekemoto": {
+   "note": "A science family: geologist Gretel, astronomer Len and their gifted son Kristofer.",
+   "link": "Descendants of the Sekemotos of Sunset Valley (Sims 3)",
+   "occult": "",
+   "notable": true
+  },
+  "Seng family | The Sims 3 Store | Monte Vista | Chan Seng": {
+   "note": "Bookish chess champion Kannitha feels invisible among her fitness-mad parents Chan and Vanna and brother Khang.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Shallow family | The Sims 3 Store | Riverview | Kurt Shallow": {
+   "note": "Every Shallow is evil and none likes the others: grandfather Kurt, Tom and June, Dallas and MaryKay. So what keeps them together?",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Shawkti family | The Sims 3 Store | Hidden Springs | Pierce Shawkti": {
+   "note": "Former ski champion Pierce, now widowed, devotes himself to daughter Sidney, who thinks he should find a girlfriend.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Shear family | The Sims 3 Store | Roaring Heights | Dylan Shear": {
+   "note": "Dylan, who scandalously wears suits, and wife Audrey had son Charlie thanks to science; the only openly same-sex premade couple in The Sims 3.",
+   "link": "",
+   "occult": "",
+   "notable": true
+  },
+  "Shue family | The Sims 3 Store | Hidden Springs | Granny Shue": {
+   "note": "Granny Shue never had children of her own, so adopted four: Dany, Carlotta, Gary and Star; poor but happy in the woods.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Sombre household | The Sims 3 Store | Midnight Hollow | Hyun-Moon Jun": {
+   "note": "A goth band of roommates: Hyun-Moon Jun, Jin Sang Kim, Young Jae Sung and tiny lead singer Nadia Cho, who won the role with one metal growl.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Song family | The Sims 3 Store | Hidden Springs | Andrew Song": {
+   "note": "Newlywed Jewel, a jewel thief, hides her past from husband Andrew, whom she married within months of meeting.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Soto family (Barnacle Bay) | The Sims 3 Store | Barnacle Bay | Felix Soto": {
+   "note": "Sweet elderly Felix and Mary, on the island for decades with souvenirs to show for it.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Sparks family | The Sims 3 Store | Lucky Palms | Walker Sparks": {
+   "note": "Widowed workaholic Walker chased financial security and neglected his daughter Piper; can he mend things before he loses her?",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Spenster family | The Sims 3 Store | Riverview | Nellie Spenster": {
+   "note": "Independent elderly sisters Nellie and bookish, bad-tempered Lucille; will they welcome their new neighbours, the Grandpas?",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Stefani family | The Sims 3 Store | Monte Vista | Marcello Stefani": {
+   "note": "Ruthless, rich businesswoman Su Lin Chang always gets what she wants: husband Marcello, daughter Rosaria and a name everyone fears.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Strong family | The Sims 3 Store | Sunlit Tides | Julian Strong": {
+   "note": "Since his wife’s death, Julian struggles to connect with his teen daughter Maggie, who is now bringing home Edmund Carnegie.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Su family (Lunar Lakes) | The Sims 3 Store | Lunar Lakes | Damien Su": {
+   "note": "Outwardly perfect: workaholic, social-climbing Damien leaves anxious Bethany raising Timothy and Irene alone, and their marriage is cracking.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Svard family | The Sims 3 Store | Aurora Skies | Stefan Svard": {
+   "note": "Brothers Stefan and Stein dream of musical fame beyond the town; Stein practises while Stefan works in journalism. Stefan loves married Rajita Wong.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Synapse household | The Sims 3 Store | Midnight Hollow | Roderick Synapse": {
+   "note": "Evil scientist Roderick kidnapped sweet Sarah Holden to dissect her brain and understand love; her sweetheart Jack Limb is planning her escape.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Tanner family | The Sims 3 Store | Lucky Palms | Romon Tanner": {
+   "note": "Four generations of home-grown chefs: Romon, Aya, Ethan, Yuna and a baby coming; formally trained rival Lennon Sosa now challenges Ethan.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "The Unlikely Twosome household | The Sims 3 Store | Lucky Palms | Ezekiel Reid": {
+   "note": "Ezekiel inherited a house that lost its value when the lake dried up; too poor to leave, he took in military cadet Pansy Northrop as lodger.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Torrance household | The Sims 3 Store | Roaring Heights | Janet Torrance": {
+   "note": "Snobbish socialite Marilyn Downes doesn’t know her lifelong friend Janet Torrance comes from a poor family; Janet keeps up the pretence.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Valquist household | The Sims 3 Store | Aurora Skies | Jesper Sandstrom": {
+   "note": "Inseparable Viktor Valquist and Jesper Sandstrom share a home, now with Viktor’s adopted daughter Linn Valstrom; strongly implied to be a couple.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Vanderburg family | The Sims 3 Store | Hidden Springs | Renauld Vanderburg": {
+   "note": "Hidden Springs’ royals: Queen Catarina despairs, as her daughter Francisca has run off and son Sebastian won’t settle down; with husband Renauld.",
+   "link": "",
+   "occult": "",
+   "notable": true
+  },
+  "Vanderburg family | The Sims 3 Store | Lunar Lakes | Sofia Vanderburg": {
+   "note": "Anti-authority free spirit Sofia, a descendant of the Hidden Springs royals, finds herself drawn to military man Michael Tomyoy.",
+   "link": "",
+   "occult": "",
+   "notable": true
+  },
+  "Vasquez family (Midnight Hollow) | The Sims 3 Store | Midnight Hollow | Fausto Alvarado Vasquez": {
+   "note": "Ageing charmer Fausto, with no talent to fall back on, has married the much older Marina Rosa, most likely for her money.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Vinter family | The Sims 3 Store | Aurora Skies | Tinna Vinter": {
+   "note": "Cheerful Astrid, newly Miss Aurora Skies and dating Gunnar Hannes, tries not to turn bitter like her mother Tinna and sister Veronika.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Wahine family | The Sims 3 Store | Sunlit Tides | Leo Wahine": {
+   "note": "Island favourites Leo and Sera, married since school, with Tenika, Luna and Twikki; Leo refuses to accept Tenika’s fiancé, Griffin Alto.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "West household | The Sims 3 Store | Roaring Heights | MD Fields": {
+   "note": "Rising vaudeville stars May West and MD Fields, winning hearts and money; how long will the show run? (a Mae West and W.C. Fields nod)",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Winchester family | The Sims 3 Store | Midnight Hollow | Cedrick Winchester": {
+   "note": "Royal siblings Cedrick and Odessa lost their throne for being too mad to rule; in Midnight Hollow, Odessa is trying politics.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Winterly family | The Sims 3 Store | Hidden Springs | Peter Winterly": {
+   "note": "Old-money aristocrats Peter and Adele came for the luxury and the rumoured healing waters, hoping to cure her sickly son Charles.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Wong family | The Sims 3 Store | Aurora Skies | Ari Wong": {
+   "note": "Rajita despairs of her husband Ari’s wacky charm, which has rubbed off on daughter Jennika; in a new town she wants to fix her style.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Wrede family | The Sims 3 Store | Aurora Skies | Johan Wrede": {
+   "note": "Fishing and fitness are everything to Johan, Elin and their daughter Cassidy.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Yates family | The Sims 3 Store | Midnight Hollow | Viola Yates": {
+   "note": "Morgan adores his mother Viola and they keep to themselves in their big, quiet house; people hear her, but no one sees her face (a Psycho nod).",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Young Romance household | The Sims 3 Store | Sunlit Tides | Alonso Candelaria": {
+   "note": "Smitten Rosalind Cruzita is on a romantic getaway with Alonso Candelaria, who is spending a lot of time with other women on the beach.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Young Trio household | The Sims 3 Store | Lucky Palms | Oscar Arellano": {
+   "note": "Engaged Vivienne Vasquez and Oscar Arellano moved for her dream science job; Oscar’s jobless best friend Clark Bellamore is still on their sofa.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Ziggfield family | The Sims 3 Store | Midnight Hollow | David Ziggfield": {
+   "note": "David and Alia Ziggfield live for reinvention: she’s a model turned surgeon, he’s a flamboyant glam-rock star (a Bowie and Iman nod).",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Bachelor family | The Sims (console) | Willville | Michael Bachelor": {
+   "note": "Michael Bachelor on his own in the family bin, as in the PC original; no bio.",
+   "link": "Michael Bachelor, Bella Goth's brother (the Bachelors of The Sims 2 and 3)",
+   "occult": "",
+   "notable": true
+  },
+  "Goth family | The Sims 3: Pets (console) | Sugar Maple Coast | Rebecca Goth": {
+   "note": "Rebecca grew up on tales of her great-grandfather, who carved out the town, and has moved here with loyal cat Buttons to dig into her family's mysteries. Unplayable.",
+   "link": "A branch of the Goth family: great-granddaughter of town founder Timaeus Goth (implied); possibly also a Gilman descendant",
+   "occult": "Cat Buttons",
+   "notable": true
+  },
+  "Goth family | The Sims 3 (Wii) | Vista Beach | Trish Goth": {
+   "note": "Married couple Trish and Wulf Goth in Gothic Manor; no bio, and no tombstones, unlike most Goth homes.",
+   "link": "Possibly a branch of the legacy Goths, but any tie to Mortimer's family is unconfirmed",
+   "occult": "",
+   "notable": false
+  },
+  "Goth family | The Sims 3 (Nintendo DS) | Beacon Bay | Alexander Goth": {
+   "note": "Alexander and his wife Cecilia, a gloomy couple in black and top hats; the bio blames growing up with a dad called Mortimer.",
+   "link": "Alexander Goth grown up and married: Mortimer's son (Bella and Cassandra go unmentioned)",
+   "occult": "",
+   "notable": true
+  },
+  "Goth family | The Sims 2 (GBA) | Pleasantview | Mortimer Goth": {
+   "note": "The Goths don't play a big part: they appear at the start and end of each episode to rate it. Bella being home muddles the timeline.",
+   "link": "The legacy Goths: Mortimer, Bella, Cassandra and Alexander",
+   "occult": "",
+   "notable": true
+  },
+  "Goth family | The Sims Bustin' Out (console) | SimValley | Mortimer Goth": {
+   "note": "Mortimer (a virus breeder) and Bella (a horror film extra) live in Goth Manor, where ghosts Morty and Wailla Roth disturb them until your Sim exorcises them.",
+   "link": "The legacy Goths, Mortimer and Bella (Cassandra is absent)",
+   "occult": "Ghosts haunt their manor",
+   "notable": true
+  },
+  "Goth family | The Sims (console) | Willville | Mortimer Goth": {
+   "note": "Mortimer (a B-movie star here), Bella and Cassandra at 5 Sim Avenue, a one-storey take on their PC home; playable in Play the Sims mode.",
+   "link": "The legacy Goths: Mortimer, Bella and Cassandra",
+   "occult": "",
+   "notable": true
+  },
+  "Newbie family | The Sims (console) | Willville | Bob Newbie": {
+   "note": "Bob and Betty Newbie at 7 Sim Lane; no bio.",
+   "link": "The original Newbies, later Brandi Broke's parents in The Sims 2",
+   "occult": "",
+   "notable": true
+  },
+  "Newbie family | The Sims 2 (console) | Pleasantview, Strangetown, and Melbourne | Bob Newbie": {
+   "note": "Bob and Betty Newbie at 14 Arbor Grove, looking quite different (darker skin) from other games; no bio.",
+   "link": "The original Newbies, Brandi Broke's parents in The Sims 2",
+   "occult": "",
+   "notable": true
+  },
+  "Newbie family | The Sims 2 Pets (console) | Whiskerton | Bob Newbie": {
+   "note": "Tutorial family Bob and Betty with their dog Buddy at Cozy Acres.",
+   "link": "Bob and Betty Newbie; Maxis recreated this exact household on the Sims 4 Gallery (2019)",
+   "occult": "Dog Buddy",
+   "notable": true
+  },
+  "Newbie family | The Sims 3 (Wii) | Vista Beach | Nathan Newbie": {
+   "note": "Nathan and Tammy with their children Edna and Eddie in Habitable Pylon; no bio.",
+   "link": "Possibly related to the legacy Newbies, but no tie is ever stated",
+   "occult": "",
+   "notable": false
+  },
+  "Pleasant family | The Sims (console) | Willville | Jeff Pleasant": {
+   "note": "Jeff and Diane with their children Daniel and Jennifer in the family bin; no bio.",
+   "link": "The original Pleasants: Daniel later heads the Sims 2 Pleasants (Mary-Sue, Angela, Lilith); Jennifer marries into the Burbs",
+   "occult": "",
+   "notable": true
+  },
+  "Roomies household (The Sims) | The Sims (console) | Willville | Chris Roomies": {
+   "note": "Roommates Chris and Melissa at 3 Sim Avenue, an empty house with a big garden; no bio.",
+   "link": "The same Chris and Melissa Roomies as in The Sims (PC)",
+   "occult": "",
+   "notable": true
+  },
+  "Landgraab family | The Sims (console) | SimValley | Malcolm Landgrabb": {
+   "note": "Tycoon Malcolm, the richest man around, gives your Sim property deals and marries Mom; his children Dudley and Mimi are slacker party-animal heirs.",
+   "link": "The console Landgraabs: Malcolm is Nancy and Geoffrey's son from The Sims 3 and 4 (confirmed by Maxis's Gallery upload); Mom, your Sim's mother, becomes Dudley and Mimi's stepmother",
+   "occult": "",
+   "notable": true
+  },
+  "Landgraab family | The Sims Bustin' Out | SimValley | Malcolm Landgrabb": {
+   "note": "Malcolm and Mom divorce; he furiously repossesses the town's money and goods until your Sim stops him, and Mom finally chases him out of his mansion.",
+   "link": "The console Landgraabs: Malcolm is Nancy and Geoffrey's son from The Sims 3 and 4 (confirmed by Maxis's Gallery upload); Mom is Dudley and Mimi's stepmother",
+   "occult": "",
+   "notable": true
+  },
+  "Landgraab family | The Sims 3: Into the Future | Oasis Landing | Gregory Landgraab": {
+   "note": "Gregory and Cheryl, children Timothy and Lara and Plumbot Model U came for the property boom and mean to own the town. Unplayable.",
+   "link": "A future branch of the Landgraab dynasty; Gregory shares his name with the family's mysterious fortune-maker in a Sims 2 Seasons chance card",
+   "occult": "Plumbot Model U",
+   "notable": true
+  },
+  "Landgraab family | The Sims 3 (console) | Moonlight Bay | Malcolm Landgraab": {
+   "note": "Malcolm left Sunset Valley to spread the family empire; with wife Hannelore, he grooms son Adrien to run the business while eyeing the mayor's office.",
+   "link": "Malcolm Landgraab of Sunset Valley (Nancy and Geoffrey's son), grown up",
+   "occult": "",
+   "notable": true
+  },
+  "Landgraab family | The Sims 3 (Nintendo DS) | Beacon Bay | Malcolm Landgraab": {
+   "note": "Malcolm, whose family founded the town, and his wife Bambi, who went looking for gold to dig: true love or true greed?",
+   "link": "A Landgraab: the wiki puts this Malcolm on the family tree separately from Nancy and Geoffrey's son",
+   "occult": "",
+   "notable": true
+  },
+  "Beaker family | The Sims 3: Into the Future | Oasis Landing | Atom Beaker": {
+   "note": "Twins Atom and Ceres were sent from Strangetown to the future by a science experiment, and love its possibilities; Plumbot Cyclotron. Unplayable.",
+   "link": "Loki Beaker's genetically engineered twins, from the Sims 2 Beakers' Strangetown",
+   "occult": "Plumbot Cyclotron",
+   "notable": true
+  },
+  "Specter family | The Sims 3: Into the Future | Oasis Landing | Planchette Spector": {
+   "note": "Planchette, brought back from the afterlife and the last known Spector, came to town obsessed with opening the locked door of the crashed ship; Plumbot 5P1R17.",
+   "link": "A confirmed future descendant of the Specter family (spelt Spector in the future)",
+   "occult": "Returned from the afterlife; Plumbot 5P1R17",
+   "notable": true
+  },
+  "Edison household | The Sims 2 (console) | Pleasantview, Strangetown, and Melbourne | Edna Edison": {
+   "note": "Four single women (Edna, Courtney, Jenn, Daisy), all Romance Sims in the family bin, there for your Sim to romance; the girls' side of the Pinkertons.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Freebers family | The Sims 2 (console) | Pleasantview, Strangetown, and Melbourne | Winston Freebers": {
+   "note": "Winston, Clarice, Cindy and Horatio, all Romance Sims at 8 Rockpile Rd; probably parents and grown children, but the game treats them as roommates.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Pinkerton household | The Sims 2 (console) | Pleasantview, Strangetown, and Melbourne | Gunter Pinkerton": {
+   "note": "Four male roommates (Gunter, Lance, Bill, Jeffery), all Romance Sims in the family bin, there for your Sim to woo; the men's side of the Edisons.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Brady family | The Sims 3 (console) | Moonlight Bay | Kevin Brady": {
+   "note": "Brothers Kevin (athletic) and Lee (natural cook) have little in common but always back each other up.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Hanson family | The Sims 3 (console) | Moonlight Bay | Larry Hanson": {
+   "note": "Larry will do anything to keep his family happy, but can he satisfy snobbish wife Shauna? Son Alex completes the family.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Idaho family | The Sims 3 (console) | Moonlight Bay | Irwin Idaho": {
+   "note": "Irwin runs the town newspaper and longs to retire; technophobe wife Georgia, and daughter Marie, whose grades need work. Small house, poorer side of town.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Keegan family | The Sims 3 (console) | Moonlight Bay | Brennan Keegan": {
+   "note": "Brennan and Julie believe in healthy living and hard work; can they pass it on to their three children, Sydney, Aiden and Peter?",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Leary family | The Sims 3 (console) | Moonlight Bay | James Leary": {
+   "note": "Ageing 60s hippies James and Kara take a relaxed approach to parenting; grown daughters Cookie and Sunshine still live at home, youngest Rain lives with The Clique.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Monroe family | The Sims 3 (console) | Moonlight Bay | Marcella Monroe": {
+   "note": "Widow Marcella is still grieving husband Derek (buried in the Specter mausoleum), helped round the house by her dutiful sons Randy and Herger.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Nelson family | The Sims 3 (console) | Moonlight Bay | John Nelson": {
+   "note": "Soldier John dreams of becoming an astronaut; nervous housewife Roxy has her hands full with prankster Sofi, her goody-goody twin Rita, and Crichton.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Rannt family | The Sims 3 (console) | Moonlight Bay | Alice Rannt": {
+   "note": "Single mum Alice and her son Byron can't stand each other, and Byron goes out of his way to make her life a misery.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Single Dads household | The Sims 3 (console) | Moonlight Bay | Leonard Ryan": {
+   "note": "Widower Leonard Ryan took in fellow single dad William Conner so he could keep his home; their children Logan and River live with them.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "The Clique household | The Sims 3 (console) | Moonlight Bay | Cevin Faron": {
+   "note": "Goth friends Cevin, Willow and Morgan share a Gothic mansion to escape disapproving parents; Rain Leary has since moved in, and they're unsure about her.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Vasquez family (Moonlight Bay) | The Sims 3 (console) | Moonlight Bay | Tyler Vasquez": {
+   "note": "Newlyweds Tyler and Heather, with a baby on the way; Heather's wild daughter Elaine Austen resents her stepfather and could upset his political career.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Zhang family | The Sims 3 (console) | Moonlight Bay | Michael Zhang": {
+   "note": "Divorced dad Michael, left with the children when his wife gave up custody, keeps Alia and Atticus going with jokes and hugs. Unplayable.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Alto family | The Sims 3 (Nintendo DS) | Beacon Bay | Holly Alto": {
+   "note": "Holly and her husband Don, who took her surname, live by the motto rich, rich, rich; shady business has made them wealthy but not happy.",
+   "link": "Holly Alto of the Sims 3 Altos reappears, though the wiki thinks this Holly may be a descendant",
+   "occult": "",
+   "notable": true
+  },
+  "Farr-Bacon House household | The Sims 3 (Nintendo DS) | Beacon Bay | Ronald Bacon": {
+   "note": "Dating couple Ronald Bacon and Yvette Farr, brought together by a love of sport and brave enough to face the local football hooligans.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Love-Bolton Shack household | The Sims 3 (Nintendo DS) | Beacon Bay | Josh Love": {
+   "note": "Mismatched roommates Josh Love and Jamar Bolton; Jamar is a safecracker in the Criminal career.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Salazar-Pitt House household | The Sims 3 (Nintendo DS) | Beacon Bay | Garrick Pitt": {
+   "note": "Engaged couple Garrick Pitt and Diana Salazar, who both see work as a way to explore the world.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "The Beau Home household | The Sims 3 (Nintendo DS) | Beacon Bay | Thad Hare": {
+   "note": "Engaged couple Thad Hare and Rose Adler, whose idea of romance is a freshly caught fish and a home-cooked dinner for two.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "The Big Hair House household | The Sims 3 (Nintendo DS) | Beacon Bay | Veronica Ryder": {
+   "note": "Roommates Veronica Ryder and Heather McCray bond over 80s Brat Pack films and loathing Titus Lyons; a nod to the film Heathers.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "The Do-It Den household | The Sims 3 (Nintendo DS) | Beacon Bay | Toby Bassett": {
+   "note": "Competitive roommates Toby Bassett and Billy Morgan, both desperate to win; Toby hopes to become a superstar.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "The Odd Mod household | The Sims 3 (Nintendo DS) | Beacon Bay | Shannon Chandler": {
+   "note": "Excitable roommates Shannon Chandler and Kim McNamara, both blue-skinned, who love cooking and (says their bio) vegetables.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "The Roomie House household | The Sims 3 (Nintendo DS) | Beacon Bay | Jo Abel": {
+   "note": "Old friends Jo Abel and Tia Drake have just moved in together; Tia, used to living alone, wonders whether it was a mistake.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Anderson family (Vista Beach) | The Sims 3 (Wii) | Vista Beach | Barbara Anderson": {
+   "note": "Five-member household (Barbara, Joy, Ali, Hasan, Yasmina) in the family bin; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Aurelio family | The Sims 3 (Wii) | Vista Beach | Marco Aurelio": {
+   "note": "Married couple Marco and Octavia in Multi-frame Sanctuary; their traits hint they work in crime together. No bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Bishop household | The Sims 3 (Wii) | Vista Beach | Mick Bishop": {
+   "note": "Three roommates, Mick Bishop, Alex Watkins and Sandra Connelly, on Main Street; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Chen family | The Sims 3 (Wii) | Vista Beach | David Chen": {
+   "note": "Single father David raising sons Tommy and Marvin in House of the Rising Sun; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Davis family (Vista Beach) | The Sims 3 (Wii) | Vista Beach | Sean Davis": {
+   "note": "Married couple Sean and Bonnie with their roommate Walter Smith in Neo Habitat; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Garcia family | The Sims 3 (Wii) | Vista Beach | William Garcia": {
+   "note": "William and Helen Garcia, townies; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Green household (Vista Beach) | The Sims 3 (Wii) | Vista Beach | Sabrina Green": {
+   "note": "Roommates Sabrina Green and Ray Scott in Deco Elegance; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Harris family (Vista Beach) | The Sims 3 (Wii) | Vista Beach | Giaccomo Harris": {
+   "note": "Townie family: Giaccomo and Rosa with their children Giuseppe and Dorothy; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Jackson family | The Sims 3 (Wii) | Vista Beach | Juan Jackson": {
+   "note": "Family-bin trio Juan, Ben and Jennifer; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Johnson family | The Sims 3 (Wii) | Vista Beach | Ruben Johnson": {
+   "note": "Married couple Ruben and Doris on Clementine Boulevard; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Jones family (Vista Beach) | The Sims 3 (Wii) | Vista Beach | Mary Jones": {
+   "note": "Single mum Mary with her children Cody and Jessie in Rancho Living; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Mc Williams family | The Sims 3 (Wii) | Vista Beach | Tom Mc Williams": {
+   "note": "Married couple Tom and Gail with their daughter Suzie (surname Williams) on Oceanside Lane; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Miller family (Vista Beach) | The Sims 3 (Wii) | Vista Beach | Perry Miller": {
+   "note": "Family-bin pair Perry and Tiffany; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Moore family (Vista Beach) | The Sims 3 (Wii) | Vista Beach | Edmund Moore": {
+   "note": "Townie family: Edmund and Brenda with Lisa, Kyle and James; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Plata family | The Sims 3 (Wii) | Vista Beach | Angela Plata": {
+   "note": "Luis and Maria, daughter Christina and Maria's mother Angela in Oasis Homestead; Plata Lake hints they founded Vista Beach. The surname is Maria's.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Taylor family | The Sims 3 (Wii) | Vista Beach | Rolf Taylor": {
+   "note": "Townie trio Rolf, Gisela and Gunther; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Thomas family | The Sims 3 (Wii) | Vista Beach | Nancy Thomas": {
+   "note": "Five-member townie family (Nancy, Karen, Robert, Erik, Elizabet); no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Toscano family | The Sims 3 (Wii) | Vista Beach | Pete Toscano": {
+   "note": "Married couple Pete and Irene with their daughter Julietta on Fishermans Drive; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Wilson family (Vista Beach) | The Sims 3 (Wii) | Vista Beach | Albert Wilson": {
+   "note": "Family-bin foursome Albert, Patricia, Linda and Lyne; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Archibilt Estate household | The Sims 3: Into the Future | Oasis Landing | Edwin Archibilt": {
+   "note": "Retired Plumbot engineer Edwin made a fortune; he loves Cassandre Chandelace but worries she's after his money. Two Plumbots, JL-58 and Robota.",
+   "link": "",
+   "occult": "Plumbots JL-58 and Robota",
+   "notable": false
+  },
+  "Bannister family | The Sims 3: Into the Future | Oasis Landing | Tyson Bannister": {
+   "note": "Large, strictly traditional three-generation family in present-day clothes; granddaughters Jessi and Mychelle are testing patriarch Tyson's limits. A Lannister parody.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Castle family | The Sims 3: Into the Future | Oasis Landing | Susan Castle": {
+   "note": "Three generations under one roof: Susan, her quirky son Nathaniel and quirkier granddaughter Lexi, plus Plumbot Vroombo. A spoof of TV's Castle.",
+   "link": "",
+   "occult": "Plumbot Vroombo",
+   "notable": false
+  },
+  "Delafield family | The Sims 3: Into the Future | Oasis Landing | Colby Delafield": {
+   "note": "Townie siblings Colby and Vivian; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Dunes family | The Sims 3: Into the Future | Oasis Landing | Auden Dunes": {
+   "note": "Brothers Auden and Asher loved exploring the Wasteland until their parents went missing; can they solve the mystery? A nod to Dune.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Formerly the Plains Express household | The Sims 3: Into the Future | Oasis Landing | Fryderyk Rama": {
+   "note": "Former parcel couriers Fryderyk Rama, Lilah Turni and Plumbot Bend0 now explore whatever the universe offers; a Futurama spoof.",
+   "link": "",
+   "occult": "Plumbot Bend0",
+   "notable": false
+  },
+  "Gateway family | The Sims 3: Into the Future | Oasis Landing | Chelsea Gateway": {
+   "note": "Chelsea has pranked her Plumbot Gladys since she was a baby, and Gladys is fed up; a nod to Portal.",
+   "link": "",
+   "occult": "Plumbot Gladys",
+   "notable": false
+  },
+  "Griffin family | The Sims 3: Into the Future | Oasis Landing | Jasper Griffin": {
+   "note": "Townie siblings Jasper and Zara; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Jones family (Oasis Landing) | The Sims 3: Into the Future | Oasis Landing | Herbert Jones": {
+   "note": "Townie single father Herbert with his three children Joe, Kevin and Tandy; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Larson family (Oasis Landing) | The Sims 3: Into the Future | Oasis Landing | Ewan Larson": {
+   "note": "After a mysterious family tragedy Ewan and Batul took in orphaned nephew Loki, and struggle with his adventurous streak; a Star Wars nod.",
+   "link": "Possibly descended from the Sims 2 Larsons of Bluewater Village (wiki guess)",
+   "occult": "",
+   "notable": false
+  },
+  "Longing Gazes household | The Sims 3: Into the Future | Oasis Landing | Drake Chambers": {
+   "note": "Roommates Drake Chambers, Harkin Shire and Kel Gwyn share a lot of history but are trying to make living together work.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Lu family | The Sims 3: World Adventures | Shang Simla | Jiang Lu": {
+   "note": "Shang Simla locals: Jiang and Jiannan with their children Liu and Wang; no bio.",
+   "link": "The same family reappears in Into the Future's unused GPE8_Future world, with newborn Angeline",
+   "occult": "",
+   "notable": true
+  },
+  "Lu family | The Sims 3: Into the Future | GPE8_Future | Jiang Lu": {
+   "note": "The Shang Simla Lus again, in Into the Future's unused GPE8_Future world, now with newborn Angeline; no bio.",
+   "link": "The World Adventures Lu family of Shang Simla",
+   "occult": "",
+   "notable": true
+  },
+  "Mannin family | The Sims 3: Into the Future | Oasis Landing | Connell Mannin": {
+   "note": "Doomsday preppers Connell and Valerie moved to the Mining District to be nearer the wilds when the end comes; children Brigitte and Gilon. A Hunger Games nod.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Mere-Wilkins family | The Sims 3: Into the Future | Oasis Landing | Amanda Mere": {
+   "note": "Amanda Mere and Rowley Wilkins gave up adventuring to settle down with daughter Melany; can they bear sleepy Mining District? A Doctor Who spoof.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "O'Brian family | The Sims 3: Into the Future | Oasis Landing | Cassandra O'Brian": {
+   "note": "Townie siblings Cassandra and Franklin; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Orey family | The Sims 3: Into the Future | Oasis Landing | Bayerd Orey": {
+   "note": "Bayerd and Brenna longed for a daughter, and Leina arrived in mysterious circumstances; two Plumbots, Digi and ToB3. A Star Wars (Organa) spoof.",
+   "link": "",
+   "occult": "Plumbots Digi and ToB3",
+   "notable": false
+  },
+  "Party Playpen household | The Sims 3: Into the Future | Oasis Landing | Felix Finn": {
+   "note": "Former ugly ducklings Felix Finn, Fawn Lacey and Carmen Lavishe now love showing off and partying, with their Plumbot Cr1sto.",
+   "link": "",
+   "occult": "Plumbot Cr1sto",
+   "notable": false
+  },
+  "Planeson family | The Sims 3: Into the Future | Oasis Landing | Gregor Planeson": {
+   "note": "Gregor and Janet and their children Judith and Roy make the most of every modern convenience; Plumbot Daisy does most of the work. Jetsons-like.",
+   "link": "",
+   "occult": "Plumbot Daisy",
+   "notable": false
+  },
+  "Plumbot household | The Sims 3: Into the Future | Oasis Landing | Ziron": {
+   "note": "Three sentient Plumbots, Ziron and its siblings Drox and Lyra, set up as a household by curious scientists.",
+   "link": "",
+   "occult": "All three are Plumbots",
+   "notable": false
+  },
+  "Russo family | The Sims 3: Into the Future | Oasis Landing | Maria Russo": {
+   "note": "Worried about granddaughter Serena in the big city, Maria moved in to help; can she cope with new technology? Plumbot BitBot.",
+   "link": "Possibly distant kin of Sebastiana Russo of Monte Vista (wiki guess)",
+   "occult": "Plumbot BitBot",
+   "notable": false
+  },
+  "Singer family | The Sims 3: Into the Future | Oasis Landing | Ericka Singer": {
+   "note": "Townie sisters Ericka and Kylie; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "The Bot Cave household | The Sims 3: Into the Future | Oasis Landing | Neel Das": {
+   "note": "Neel Das spends day and night holed up in his Bot Workshop with his three Plumbots, Dot, ROB-E and Takk0.",
+   "link": "",
+   "occult": "Plumbots Dot, ROB-E and Takk0",
+   "notable": false
+  },
+  "Bailey family | The Sims 3: University Life | SWE7UniversityTest | Adelle Bailey": {
+   "note": "Developer test family in the unused SWE7UniversityTest world: Adelle, Miranda and Tucker, with no traits, skills or relationships.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Dormitory household (De Anda Hall) | The Sims 3: University Life | Sims University | Skip Taylor": {
+   "note": "NPC students of De Anda Hall dorm: seven residents including Skip Taylor and Nicole Lawry; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Dormitory household (Henry Hall) | The Sims 3: University Life | Sims University | Ann Conners": {
+   "note": "NPC students of Henry Hall dorm: seven residents including Ann Conners and Holly Gabrielsun; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Dormitory household (Malan Hall) | The Sims 3: University Life | Sims University | Tiberius Willard": {
+   "note": "NPC students of Malan Hall dorm: seven residents including Tiberius Willard and Anoki Moon; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Female Roomies household | The Sims 3: University Life | Sims University | Bettie Franklin": {
+   "note": "NPC students Bettie Franklin, Abigal Kaya and Gabby Ahmed sharing a house; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Fraternity House household | The Sims 3: University Life | Sims University | Harold Assange": {
+   "note": "Six NPC students in the Urele-Oresha-Cham fraternity house (a chapter name from Sims 2 University); counterpart to the Sorority House. No bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Fredericks family | The Sims 3: University Life | SWE7UniversityTest | Andrea Fredericks": {
+   "note": "Developer test pair Andrea and Greg in the unused SWE7UniversityTest world, with no traits, skills or relationships.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Grandma and Granddaughters household | The Sims 3: University Life | Sims University | Francis Parks": {
+   "note": "NPC grandmother Francis Parks living with her granddaughters Shasha and Ruby; no bio.",
+   "link": "Possibly ancestors of Gemma Parks, the pizza deliverer in Lunar Lakes (wiki guess)",
+   "occult": "",
+   "notable": false
+  },
+  "Lifelong Friends household | The Sims 3: University Life | Sims University | Mika Moore": {
+   "note": "Three NPC best friends, Mika Moore, Esther Atkins and Nicolas Albright, sharing a house; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Male Roomies household | The Sims 3: University Life | Sims University | Steve Texas": {
+   "note": "Four NPC students (Steve Texas, Mugsy Brotoaski, Ronnie Blackstone, Eddy Mullis) sharing a house; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Married Couple and Friends household | The Sims 3: University Life | Sims University | Justin Cronk": {
+   "note": "NPC married couple Justin and Connie Cronk sharing with their friends Troy Francis and Nina Simons; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Richards family | The Sims 3: University Life | Sims University | Robert Richards": {
+   "note": "NPC married couple Robert and Debbie; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Serious Students household | The Sims 3: University Life | Sims University | Alfred Jobb": {
+   "note": "Three NPC students, Alfred Jobb, Joanie Arc and Sophie Mander, sharing a house; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Shepherd family | The Sims 3: University Life | SWE7UniversityTest | Derek Shepherd": {
+   "note": "Developer test family (Derek, Rose, Gabe) in the unused SWE7UniversityTest world, with no traits, skills or relationships.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Sloan family | The Sims 3: University Life | SWE7UniversityTest | Mark Sloan": {
+   "note": "Developer test pair Mark and Cally in the unused SWE7UniversityTest world, with no traits, skills or relationships.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Sorority House household | The Sims 3: University Life | Sims University | Ashley DeSorrento": {
+   "note": "Six NPC students in the Tri-Fruhm sorority house (a chapter name from Sims 2 University); counterpart to the Fraternity House. No bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "The Back to School Buddies household | The Sims 3: University Life | Sims University | Brian Petersen": {
+   "note": "NPC roommates Brian Petersen and Amil Shaheed; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "The Brothers household | The Sims 3: University Life | Sims University | Scot Macklamoor": {
+   "note": "NPC brothers Scot and Hank Macklamoor; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "The Opposites household | The Sims 3: University Life | Sims University | Kyle Heilman": {
+   "note": "NPC roommates Kyle Heilman and Richard Randall; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "The Professors household | The Sims 3: University Life | Sims University | Wade Anthony": {
+   "note": "Two professors, Wade Anthony and Lewis Rodgers, sharing a house; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "The Roomies household | The Sims 3: University Life | Sims University | Waverly Chen": {
+   "note": "NPC students Waverly and Carol Chen sharing with professor Madeleine Noetal; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "The Townies household | The Sims 3: University Life | Sims University | Levi Williams": {
+   "note": "Four NPC students (Levi Williams, Sarah Mahoney, Denise Frink, Raj Urkel) sharing a house; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Two Couples household | The Sims 3: University Life | Sims University | Manisha Kapoor": {
+   "note": "Two dating couples sharing a house: good Manisha Kapoor with evil Paul Biden, and commitment-shy Che Justice with Patty Hong. Neither looks built to last.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Ameen family | The Sims 3: World Adventures | Al Simhara | Fikry Ameen": {
+   "note": "Al Simhara locals Fikry and Inji, a thrifty, close couple; the small tomb under their tree house was Queen Hatshepsut's secret hideaway. No bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Amin family | The Sims 3: World Adventures | Al Simhara | Samir Amin": {
+   "note": "Al Simhara locals Samir and Fatima with children Imsety and Satis; the big tomb beneath their house is a resistance base against MorcuCorp. No bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Badawi family | The Sims 3: World Adventures | Al Simhara | Hassan Badawi": {
+   "note": "Al Simhara married couple Hassan and Rainia; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Barakat family | The Sims 3: World Adventures | Al Simhara | Raffi Barakat": {
+   "note": "Al Simhara couple Raffi and Dalida with their daughter Dunya in The Daisy House; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Bonnet family | The Sims 3: World Adventures | Champs Les Sims | Colette Bonnet": {
+   "note": "Champs Les Sims sisters Colette and Beatrice; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Delven Montaque household | The Sims 3: World Adventures | Champs Les Sims | Gustave Delven": {
+   "note": "Best friends Gustave Delven and Jolene Montaque sharing a home in Champs Les Sims; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Diab family | The Sims 3: World Adventures | Al Simhara | Ahmed Diab": {
+   "note": "Al Simhara couple Ahmed and Zahra with their son Ayman; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Durand family | The Sims 3: World Adventures | Champs Les Sims | Laurant Durand": {
+   "note": "Champs Les Sims couple Laurant and Adele, with a crib ready for a baby; a barn-like tomb stands on their lot. No bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Dutiel family | The Sims 3: World Adventures | Champs Les Sims | Gaston Dutiel": {
+   "note": "Champs Les Sims couple Gaston and Lea with their son Remy; the Secret Garden adventure tomb is in their back garden. No bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Fouchier family | The Sims 3: World Adventures | Champs Les Sims | Albert Fouchier": {
+   "note": "Albert and Estelle with children Henri and Eveline, the largest local family in Champs Les Sims; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Fournier Bernard household | The Sims 3: World Adventures | Champs Les Sims | Jules Fournier": {
+   "note": "Single roommates Jules Fournier and Yves Bernard in Champs Les Sims; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Girard family (Champs Les Sims) | The Sims 3: World Adventures | Champs Les Sims | Claudine Girard": {
+   "note": "Single mother Claudine and daughter Berthe in The Clover House, Champs Les Sims; Berthe's father is never named. No bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Hawas family | The Sims 3: World Adventures | Al Simhara | Sekhmet Hawas": {
+   "note": "Al Simhara locals Sopdu and Nepthy, their children Geb and Meret, and Sopdu's father Sekhmet; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Hong family | The Sims 3: World Adventures | Shang Simla | Chen Hong": {
+   "note": "Shang Simla single father Chen and his son Shing, who often hand out adventure opportunities; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Hosni family | The Sims 3: World Adventures | Al Simhara | Amina Hosni": {
+   "note": "Al Simhara single mother Amina and her son Helmi; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Hua family | The Sims 3: World Adventures | Shang Simla | Zhang Hua": {
+   "note": "Shang Simla couple Zhang and Lin with their daughter Bebe; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Kamel family | The Sims 3: World Adventures | Al Simhara | Salah Kamel": {
+   "note": "Al Simhara single mother Salah and her sons Abdul and Farid; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Kim family (Shang Simla) | The Sims 3: World Adventures | Shang Simla | Ho Sung Kim": {
+   "note": "Adventurous Korean incomers in Shang Simla: Ho Sung and Hui Young with his sister Sun Young; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Lambert family | The Sims 3: World Adventures | Champs Les Sims | Francois Lambert": {
+   "note": "Champs Les Sims single father Francois and his daughter Jeannine, whose mother is never named; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Lefebvre family | The Sims 3: World Adventures | Champs Les Sims | Andre Lefebvre": {
+   "note": "Wealthy, all-blonde Champs Les Sims family: Andre, Aimee and their son Alain; no bio.",
+   "link": "Named in a Sims 4 Movie Hangout Stuff object description, which mentions Aimee",
+   "occult": "",
+   "notable": true
+  },
+  "Lufti family | The Sims 3: World Adventures | Al Simhara | Layla Lufti": {
+   "note": "Al Simhara sisters Mena, Aisha and Layla; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Madbouli family | The Sims 3: World Adventures | Al Simhara | Fahad Madbouli": {
+   "note": "Al Simhara married couple Fahad and Sanaa in The Cornflower House; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "MinShen household | The Sims 3: World Adventures | Shang Simla | Adaeze Min": {
+   "note": "Best friends Adaeze Min and Biyu Shen sharing a home in Shang Simla; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Morel family | The Sims 3: World Adventures | Champs Les Sims | Gerard Morel": {
+   "note": "Champs Les Sims couple Gerard and Edith with their son Pascal; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Moussa family | The Sims 3: World Adventures | Al Simhara | Aziz Moussa": {
+   "note": "Al Simhara single mother Uum, her daughter Nabila and Nabila's sons Ameen and Aziz; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Pei family | The Sims 3: World Adventures | Shang Simla | Ai Pei": {
+   "note": "Shang Simla couple Ai and Gao with their sons Liu and Wei, all fans of Chinese music; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Petit Godard household | The Sims 3: World Adventures | Champs Les Sims | Margot Petit": {
+   "note": "Good friends Margot Petit and Manon Godard sharing a home in Champs Les Sims; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Rashid family | The Sims 3: World Adventures | Al Simhara | Farouk Rashid": {
+   "note": "Al Simhara married couple Farouk and Shadia in The Papyrus House; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Saint James family | The Sims 3: World Adventures | Champs Les Sims | Elliot Saint James": {
+   "note": "Champs Les Sims married couple Elliot and Noelle; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Su family (Shang Simla) | The Sims 3: World Adventures | Shang Simla | Shen Su": {
+   "note": "Shang Simla brothers Shen and Zhan; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Taymur family | The Sims 3: World Adventures | Al Simhara | Mahmud Taymur": {
+   "note": "Al Simhara single father Mahmud and his sons Ali and Zaki; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Wang family | The Sims 3: World Adventures | Shang Simla | Deng Wang": {
+   "note": "Shang Simla married couple Deng and Maya; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "XioZhi household | The Sims 3: World Adventures | Shang Simla | Wu Xio": {
+   "note": "Sisters Sima and Lu Zhi sharing with their friend Wu Xio in Shang Simla (friendly, not close); no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Yat Sen family | The Sims 3: World Adventures | Shang Simla | Abi Yat Sen": {
+   "note": "Shang Simla single mother Abi and her son Liang, whose father is unknown; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Yuan family | The Sims 3: World Adventures | Shang Simla | Li Yuan": {
+   "note": "Shang Simla couple Li and Xi with their children Lu and Ziyi in The Maple Tree House; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Fortuna family | The Sims Life Stories | Four Corners | Fiona Fortuna": {
+   "note": "Go-getter widow Fiona can't fathom why her daughter Madison loathes money; in Free Play, Madison is in love with Jacob Margison.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Margison family | The Sims Life Stories | Four Corners | Keats Margison": {
+   "note": "Fact-loving scientist Keats wants his son Jacob to study, but Jacob is besotted with Madison Fortuna and neglecting school.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Rhome family | The Sims Life Stories | Four Corners | Adrien Rhome": {
+   "note": "Promising young couple Adrien and Sara, who may share dark secrets, or may just not get out much. Family bin.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Sinclair family | The Sims Life Stories | Four Corners | Waring Sinclair": {
+   "note": "Elderly tycoon Waring fears his much younger, luxury-loving wife Ashley is losing interest; she seems drawn to Dylan Kincaid. Guests at Riley's wedding.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Stardust family | The Sims Life Stories | Four Corners | Ethan Stardust": {
+   "note": "Would-be artist Ethan and neo-hippie Mission drifted into Four Corners a few months ago; will they stay?",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Beniz family | The Sims Pet Stories | Garden Heights | Henry Beniz": {
+   "note": "Henry has spent months training his lazy, timid dog Simon for the SimCity Dog Show, but Diana DeBore is stiff competition.",
+   "link": "",
+   "occult": "Dog Simon",
+   "notable": false
+  },
+  "Briggs family | The Sims Pet Stories | Mesa Flats | James Briggs": {
+   "note": "Best friends turned happily married: police officer James and easy-going Kadisha. James is Stephen Loyal's best friend in Midnight Masquerade.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Carter family | The Sims Pet Stories | Garden Heights | Melissa Carter": {
+   "note": "Melissa trains her Dobermann Bruno by astrology and meditation and snaps at anyone who interrupts; a Best in Show contestant.",
+   "link": "",
+   "occult": "Dog Bruno",
+   "notable": false
+  },
+  "Clayton family | The Sims Pet Stories | Arbor Falls | Mikeal Clayton": {
+   "note": "Workaholic young professional Mikeal spends what little free time he has with his dog Georgie, and hopes to settle down soon.",
+   "link": "",
+   "occult": "Dog Georgie",
+   "notable": false
+  },
+  "Davis family (Mesa Flats) | The Sims Pet Stories | Mesa Flats | Erin Davis": {
+   "note": "Kind, artistic Erin and her scruffy dog Buster are inseparable; she wants a spouse who suits Buster too. Stephen Loyal's love interest in Midnight Masquerade.",
+   "link": "",
+   "occult": "Dog Buster",
+   "notable": true
+  },
+  "DeBore family | The Sims Pet Stories | Garden Heights | Diana DeBore": {
+   "note": "Rich, ruthless landowner Diana, villain of Best in Show, wants all of Garden Heights and brings retired champion Precious back for one last dog show.",
+   "link": "",
+   "occult": "Dog Precious",
+   "notable": true
+  },
+  "DeLeon family | The Sims Pet Stories | Arbor Falls | Sean DeLeon": {
+   "note": "Newlyweds Sean (keen on children) and Paige (keen to climb Arbor Falls society), with their attention-hungry Chihuahua Murphy.",
+   "link": "",
+   "occult": "Chihuahua Murphy",
+   "notable": false
+  },
+  "Fielding family | The Sims Pet Stories | Garden Heights | Otis Fielding": {
+   "note": "Otis and his devoted old dog Jake, former show champions behind the Way of the Paw, see Alice Whitt and Sam as worthy successors.",
+   "link": "",
+   "occult": "Dog Jake",
+   "notable": false
+  },
+  "Flores family | The Sims Pet Stories | Garden Heights | Amaya Flores": {
+   "note": "Alice Whitt's best friend Amaya likes romance without strings; her dog Roscoe is friendly but very hyper.",
+   "link": "",
+   "occult": "Dog Roscoe",
+   "notable": false
+  },
+  "Girard family (Mesa Flats) | The Sims Pet Stories | Mesa Flats | Damien Girard": {
+   "note": "Celeste (Stephen Loyal's cousin and Diva's owner) and Damien marry at the start of Midnight Masquerade and never come back from honeymoon. Unplayable.",
+   "link": "Possibly lost on the Queen Solomon, the cruise ship wrecked in Castaway Stories (wiki guess)",
+   "occult": "",
+   "notable": false
+  },
+  "Grinder family | The Sims Pet Stories | Garden Heights | Coach Grinder": {
+   "note": "Loud ex-military Coach and his dog Meat seem to keep to themselves, but Coach is great fun at parties and Meat warms to people.",
+   "link": "",
+   "occult": "Dog Meat",
+   "notable": false
+  },
+  "Jones family (Garden Heights) | The Sims Pet Stories | Garden Heights | Thomas Jones": {
+   "note": "Shy Thomas has secretly loved Alice Whitt for years and helps her through Best in Show; his dog Lucy has puppies with her dog Sam.",
+   "link": "",
+   "occult": "Dog Lucy",
+   "notable": true
+  },
+  "Kennedy family | The Sims Pet Stories | Mesa Flats | Randall Kennedy": {
+   "note": "Show-off power couple Randall and gym-mad Mena, both with wandering eyes and drifting apart; their self-assured cat Claws.",
+   "link": "",
+   "occult": "Cat Claws",
+   "notable": false
+  },
+  "Lewis family | The Sims Pet Stories | Arbor Falls | Elliott Lewis": {
+   "note": "Single dad Elliott works for workaholic Mikeal Clayton; shy, costume-loving son Bradley and their dog Bronson.",
+   "link": "",
+   "occult": "Dog Bronson",
+   "notable": false
+  },
+  "Loyal family | The Sims Pet Stories | Mesa Flats | Stephen Loyal": {
+   "note": "Chef Stephen, hero of Midnight Masquerade, looks after his cousin Celeste's cat Diva while she's on honeymoon, and ends up keeping her.",
+   "link": "",
+   "occult": "Cat Diva (joins during the story)",
+   "notable": true
+  },
+  "Loyal family | The Sims Pet Stories | Mesa Flats | Diva Loyal": {
+   "note": "Cat Diva's own family-bin household before she joins Stephen Loyal: she loves being spoilt by Celeste and can't work out why Stephen is aloof.",
+   "link": "",
+   "occult": "Cat Diva",
+   "notable": true
+  },
+  "Martin family (Garden Heights) | The Sims Pet Stories | Garden Heights | Richard Martin": {
+   "note": "Retired dog show judge Richard settled in Garden Heights after twenty years on the circuit; his dog Maggie is his pride and joy.",
+   "link": "",
+   "occult": "Dog Maggie",
+   "notable": false
+  },
+  "Montez family | The Sims Pet Stories | Mesa Flats | Edmund Montez": {
+   "note": "Serious third-generation local Edmund bucked Mesa Flats' cat craze with a Shiba Inu, Bailey, who stops him becoming a recluse.",
+   "link": "",
+   "occult": "Shiba Inu Bailey",
+   "notable": false
+  },
+  "Mustella family | The Sims Pet Stories | Garden Heights | Reece Mustella": {
+   "note": "Street thugs Reece (the brains) and Brock (the muscle) are Diana DeBore's henchmen; soft-hearted Brock rescued his cat Indie and wants to go straight.",
+   "link": "",
+   "occult": "Cat Indie",
+   "notable": false
+  },
+  "Rambler family | The Sims Pet Stories | Mesa Flats | Shadow Rambler": {
+   "note": "Two travelling cats, old drifter Shadow and lively Pooka, come to Mesa Flats to see if it's the cat paradise they've heard of.",
+   "link": "",
+   "occult": "Only cats (Shadow and Pooka)",
+   "notable": false
+  },
+  "Rosenfeld family | The Sims Pet Stories | Arbor Falls | Zoey Rosenfeld": {
+   "note": "Shy, artistic Zoey hides behind her two jealous cats, Baldur (her self-styled muse) and possessive Tootsie.",
+   "link": "",
+   "occult": "Cats Baldur and Tootsie",
+   "notable": false
+  },
+  "Stanton family | The Sims Pet Stories | Arbor Falls | Bernard Stanton": {
+   "note": "Party-loving roommates Bernard (from a rich family) and Venu; their dog Brutus feels neglected and longs for a quieter life.",
+   "link": "",
+   "occult": "Dog Brutus",
+   "notable": false
+  },
+  "Thedorff family | The Sims Pet Stories | Arbor Falls | Bridget Thedorff": {
+   "note": "Newly single Bridget has just moved to town; her dog Gracie must approve any man before there's a second date.",
+   "link": "",
+   "occult": "Dog Gracie",
+   "notable": false
+  },
+  "Tomasino family | The Sims Pet Stories | Arbor Falls | Johnny Tomasino": {
+   "note": "Close-knit, modestly paid Johnny and Doris (who runs the home) dote on their spoilt dog Meatball as if she were their child.",
+   "link": "",
+   "occult": "Dog Meatball",
+   "notable": false
+  },
+  "Whitt family | The Sims Pet Stories | Garden Heights | Alice Whitt": {
+   "note": "Struggling artist Alice, heroine of Best in Show, inherited her grandparents' house but owes Diana DeBore; she enters her dog Sam in the dog show to save it.",
+   "link": "",
+   "occult": "Dog Sam",
+   "notable": true
+  },
+  "Williams family (Arbor Falls) | The Sims Pet Stories | Arbor Falls | Veronica Williams": {
+   "note": "Wealthy heiress sisters Veronica and Savannah compete at everything, even each other's love interests; the only Arbor Falls family without pets.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Zugovich family | The Sims Pet Stories | Mesa Flats | Sal Zugovich": {
+   "note": "Sal and Greta merged their dreams of a restaurant and a museum into Sal's Bratwurst and Culture; Sal advises Stephen Loyal in Midnight Masquerade.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Barrett family | The Sims Castaway Stories | Wanmami Island | Murray Barrett": {
+   "note": "Dressing-up enthusiasts Murray and Morag, marooned on Wanmami years ago when Murray muddled port and starboard; his rantings gave the island its name. They live in a wreck.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Folon family | The Sims Castaway Stories | Wanmami Island | Birisi Folon": {
+   "note": "Wandering native couple Birisi and Mifune roam the remote parts of Wanmami; villagers welcome them back to hear about their discoveries.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Heimata family | The Sims Castaway Stories | Felicity Island | Ahio Heimata": {
+   "note": "Native siblings Ahio and Rainui: she is the island's famous drama queen, he's famous for putting up with her. Both can marry the Shipwrecked and Single hero.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Herenui family | The Sims Castaway Stories | Felicity Island | Kiri Roimata": {
+   "note": "The tribe's unmarried women (Kiri Roimata, Orama Herenui, Tumata Tehea) share huts in a jungle clearing; all can marry the Shipwrecked and Single hero.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Lerner family | The Sims Castaway Stories | Wanmami Island | Walter Lerner": {
+   "note": "Holidaymakers Walter and Daniela and their children Nora and Danny, shipwrecked on Wanmami with nothing; the children struggle, the parents enjoy the peace.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Manave family | The Sims Castaway Stories | Felicity Island | Fangaloka Manave": {
+   "note": "Chief Fangaloka, his wife Huhana and daughter Nanihi: a close, easy-going family leading the tribe; Fangaloka is on good terms with every local predator.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Sim family (Castaway Stories) | The Sims Castaway Stories | Tutorial | Joe Sim": {
+   "note": "Tutorial couple Joe and Jane Sim; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Smith family (Felicity Island) | The Sims Castaway Stories | Felicity Island | Robby Smith": {
+   "note": "Teenage Queen Solomon survivors Robby Smith and Emma Langsford chose to stay on Felicity Island after the rescue; will they grow closer or drive each other mad?",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Tama family | The Sims Castaway Stories | Felicity Island | Amanaki Tama": {
+   "note": "Felicity Island's shaman Amanaki, his wife Urari and apprentices Afi Mohea and Patariki Hina; with no heir at home, Amanaki names the story's hero his successor.",
+   "link": "",
+   "occult": "",
+   "notable": true
+  },
+  "Tiani family | The Sims Castaway Stories | Wanmami Island | Tuula Tiani": {
+   "note": "Warm widow Tuula (husband Gatimu drowned saving a jaguar) raises studious teen Baakir and lively toddler Olabisi, and hopes Linje Talani will come calling.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Whetu family | The Sims Castaway Stories | Felicity Island | Akolo Mamanu": {
+   "note": "The tribe's unmarried men (Akolo Mamanu, Emobi Whetu, Timoti Fekitoa) share a hut, their friendship easing loneliness; all can marry the Shipwrecked and Single hero.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Tutti household | The Sims Bustin' Out | SimValley | Peter Tutti": {
+   "note": "Four male roommates (Peter, Rod, Woody, Ziggy) at 2 Free Street, next door to the Fruttis; a Tutti-Frutti pun.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Frutti household | The Sims Bustin' Out (console) | SimValley | Candi Frutti": {
+   "note": "Four female roommates (Candi, Debbie, Ginger, Pamela), neighbours of the Tuttis; a Tutti-Frutti pun.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Toane family | The Sims Bustin' Out (console) | SimValley | Max Toane": {
+   "note": "Siblings Max and Goldie, owners of Toane's Gym; no bio.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Cheeky family | The Sims (console) | SimValley | Charles Cheeky": {
+   "note": "Charles and Chantal; her bio calls her his better half, but the game treats them as roommates.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Foofaraw family | The Sims (console) | SimValley | Fran Foofaraw": {
+   "note": "Fran and Freddy, met at level 3 so your Sim has enough friends for promotions; siblings or sweethearts, it's unclear.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Party Girls household | The Sims (console) | SimValley | Ginger Party Girls": {
+   "note": "Five female roommates (Ginger, Debbie, Pamela, Candy, May); a male player Sim must marry one of them at the end of level 4.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Party Guys household | The Sims (console) | SimValley | Peter Party Guys": {
+   "note": "Five male roommates (Peter, Randy, Woody, Ziggy, Rod); a female player Sim must marry one of them at the end of level 4.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Peacock family | The Sims (console) | SimValley | Pierre Peacock": {
+   "note": "Pierre and Pauline, met at level 2 so your Sim has enough friends for promotions; married in their bios, not in play.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Roomies household (console) | The Sims (console) | SimValley | Bingo Roomies": {
+   "note": "Six roommates (Bingo, Carlos, Leon, Betty, Zara, Layla) met at the start of Party Animals; your Sim must move in with one at the end of level 3.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Thimblewit family | The Sims (console) | SimValley | Thomas Thimblewit": {
+   "note": "Thomas and Theresa, met at level 4 so your Sim has enough friends for promotions; also in The Museum multiplayer level.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Duff family | The Sims 2: Pets (console) | Whiskerton | Hilary Duff": {
+   "note": "Unlockable townies Hilary Duff and her dog Lola, earned with 1,000 aspiration points.",
+   "link": "",
+   "occult": "Dog Lola",
+   "notable": false
+  },
+  "Hardiman family | The Sims 2: Pets (console) | Whiskerton | Dan Hardiman": {
+   "note": "Well-off Dan and Kate with their dog Buster in Serenity Falls by the waterfall; their house has a library and trampoline but no TV.",
+   "link": "",
+   "occult": "Dog Buster",
+   "notable": false
+  },
+  "Howard family | The Sims 2: Pets (console) | Whiskerton | Eddie Howard": {
+   "note": "Unlockable couple Eddie and Joyce with cat Morty and dogs Mobius and Boogie, earned with 35,000 aspiration points.",
+   "link": "",
+   "occult": "Cat Morty; dogs Mobius and Boogie",
+   "notable": false
+  },
+  "Lester family | The Sims 2: Pets (console) | Whiskerton | Jim Lester": {
+   "note": "Unlockable Jim and his dog Yappy, earned with 10,000 aspiration points.",
+   "link": "",
+   "occult": "Dog Yappy",
+   "notable": false
+  },
+  "May household | The Sims 2 Pets (console) | Whiskerton | Mira May": {
+   "note": "Homeowner Mira May and her three tenants (Varian Parker, Penelope Arnold, Marsha Worthington), with cat Falafel and dog Presto.",
+   "link": "",
+   "occult": "Cat Falafel; dog Presto",
+   "notable": false
+  },
+  "Oakely family | The Sims 2 Pets (console) | Whiskerton | Buck Oakely": {
+   "note": "Buck and his three dogs, Lucky, Rufus and Hamhock, in Dogwood Forest; no bio.",
+   "link": "",
+   "occult": "Dogs Lucky, Rufus and Hamhock",
+   "notable": false
+  },
+  "Pickens family | The Sims 2: Pets (console) | Whiskerton | Timothy P. Pickens": {
+   "note": "Unlockable couple Timothy P. and Kiki with dog Honey Butter and cat Whistle, earned with 25,000 aspiration points.",
+   "link": "",
+   "occult": "Dog Honey Butter; cat Whistle",
+   "notable": false
+  },
+  "Prescott family (console) | The Sims 2: Pets (console) | Whiskerton | Charlie Prescott": {
+   "note": "Unlockable couple Charlie and Patty with their cat Paisley, earned with 100 aspiration points.",
+   "link": "",
+   "occult": "Cat Paisley",
+   "notable": false
+  },
+  "Simpson family | The Sims 2 Pets (console) | Whiskerton | Dottie Simpson": {
+   "note": "Dottie and her five cats (Oscar, Smokey, Daisy, Bella, Shnookems) at Feline Farms; no bio.",
+   "link": "",
+   "occult": "Five cats",
+   "notable": false
+  },
+  "Townsend family | The Sims 2 Pets (console) | Whiskerton | William Townsend": {
+   "note": "Married couple William and Linda with their dogs Henrietta and Fauntleroy on Paw Valley Road; no bio.",
+   "link": "",
+   "occult": "Dogs Henrietta and Fauntleroy",
+   "notable": false
+  },
+  "Angel family | The Sims 3: Pets (console) | Sugar Maple Coast | Eron Angel": {
+   "note": "Founding family: Eron and Adriana, her daughter Christina Hernandez and cat Apocalypse Meow; forebears started Mario's Market and kept the lighthouse. Unplayable.",
+   "link": "",
+   "occult": "Cat Apocalypse Meow",
+   "notable": false
+  },
+  "Branson family | The Sims 3: Pets (console) | Sugar Maple Coast | Brady Branson": {
+   "note": "Journalist Brady, sports star Brooke (born a Gilman), angler son Brock and cat Brimmy seem perfect, until Brooke's eccentric aunt Molly Dalton moves in for good.",
+   "link": "",
+   "occult": "Cat Brimmy",
+   "notable": false
+  },
+  "Chin family | The Sims 3: Pets (console) | Sugar Maple Coast | Mark Chin": {
+   "note": "Rude, snobbish Haley and easy-going Mark, tired of apologising for her; daughter Sally takes after him. Dog Hammy.",
+   "link": "",
+   "occult": "Dog Hammy",
+   "notable": false
+  },
+  "Dakota family | The Sims 3: Pets (console) | Sugar Maple Coast | Robert Dakota": {
+   "note": "Joker Robert (who wanted to name his twins North and South) and steady Carolina, with odd teenage twins Scout and Bean and cat Willy.",
+   "link": "",
+   "occult": "Cat Willy",
+   "notable": false
+  },
+  "Donlan family | The Sims 3: Pets (console) | Sugar Maple Coast | Holden Donlan": {
+   "note": "Young journalist Holden, from a line going back to the town's founding, and wife Gwen, who temps but dreams of painting; her elderly cat Tom.",
+   "link": "",
+   "occult": "Cat Tom",
+   "notable": false
+  },
+  "Dungworth family | The Sims 3: Pets (console) | Sugar Maple Coast | Zachariah Dungworth": {
+   "note": "Little-known, mysteriously wealthy Zachariah and his odd, excitable daughter Eleanor, who is trying to date; both work in the Criminal career.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Esker family | The Sims 3: Pets (console) | Sugar Maple Coast | Marley Esker": {
+   "note": "Newcomers: Marley gave up his career to paint, backed by wife Aimee, who wants another baby soon; daughter Sandy and dog Grit.",
+   "link": "",
+   "occult": "Dog Grit",
+   "notable": false
+  },
+  "Gattus family | The Sims 3: Pets (console) | Sugar Maple Coast | Marcel Gattus": {
+   "note": "Marcel, sent to Sugar Maple Coast by the military, and his dog Austin. Unplayable.",
+   "link": "",
+   "occult": "Dog Austin",
+   "notable": false
+  },
+  "Gilman family | The Sims 3: Pets (console) | Sugar Maple Coast | Johnstone Gilman": {
+   "note": "Richest, oldest family in town: elderly Johnstone has passed the firm to son Vincent and dotes on new granddaughter Eva; Vincent and Catherine juggle careers. Also K8.",
+   "link": "Possibly related to the Goths: Angela Gilman married a Goth and lies in the Goth Family Cemetery (wiki guess)",
+   "occult": "",
+   "notable": false
+  },
+  "Girl's Club family | The Sims 3: Pets (console) | Sugar Maple Coast | Geri Tolben": {
+   "note": "Merry Kendall and her daughter Kelly moved in with family friend Geri Tolben and are having a ball; their cats Ali and Zola mostly get on.",
+   "link": "",
+   "occult": "Cats Ali and Zola",
+   "notable": false
+  },
+  "Grayson family | The Sims 3: Pets (console) | Sugar Maple Coast | Dorin Fugue": {
+   "note": "Dorin Fugue wanted the coast and Jean a small town, so both are happy; sons Randolph and hot-headed Janis less so, but dog Sumo may win them round.",
+   "link": "",
+   "occult": "Dog Sumo",
+   "notable": false
+  },
+  "Hernandez family (Sugar Maple Coast) | The Sims 3: Pets (console) | Sugar Maple Coast | Pablo Hernandez": {
+   "note": "Outdoorsy couple Pablo and Jennifer, the friendliest people in town and its best party hosts, hike with their little dog Jewelsy.",
+   "link": "Possibly modelled on Pablo and Jennifer Martinez of The Sims 3 family bin (same names, similar traits)",
+   "occult": "Dog Jewelsy",
+   "notable": false
+  },
+  "Hunter family (Sugar Maple Coast) | The Sims 3: Pets (console) | Sugar Maple Coast | Deacon Hunter": {
+   "note": "Deacon and Daria were planning marriage two dates after meeting on a hike; now settled in town with her dog Ghost, they want a new adventure.",
+   "link": "",
+   "occult": "Dog Ghost",
+   "notable": false
+  },
+  "Justice family | The Sims 3: Pets (console) | Sugar Maple Coast | Alonzo Justice": {
+   "note": "Busy Athena (Stacie in game) juggles career and family while neurotic husband Alonzo frets and misses Riverview; sons Jimmy and Prince, cat Mia.",
+   "link": "",
+   "occult": "Cat Mia",
+   "notable": false
+  },
+  "Kingsley family | The Sims 3: Pets (console) | Sugar Maple Coast | Andrew Kingsley": {
+   "note": "Perfectionist businessman Andrew and high-flying police officer Jo; children Andy (a gamer) and Carla chafe at his standards. Dog Pennington; Jo's uncle is Jackson Rattlebag.",
+   "link": "",
+   "occult": "Dog Pennington",
+   "notable": false
+  },
+  "Ortiz & Soto family | The Sims 3: Pets (console) | Sugar Maple Coast | Paul Ortiz": {
+   "note": "Paul has taken in his unruly teenage granddaughter (Kelley in game, Sandra in the bio) after her mother left her; his firm fairness may win her round.",
+   "link": "",
+   "occult": "",
+   "notable": false
+  },
+  "Rattlebag family | The Sims 3: Pets (console) | Sugar Maple Coast | Jackson Rattlebag": {
+   "note": "Jackson, Jo Kingsley's uncle, and his dog Buttercup. Unplayable.",
+   "link": "",
+   "occult": "Dog Buttercup",
+   "notable": false
+  },
+  "Soon family | The Sims 3: Pets (console) | Sugar Maple Coast | Norio Soon": {
+   "note": "Serious, hard-working Norio is glued to his laptop, so fun-loving, sociable wife Akimi plays with the pets instead.",
+   "link": "",
+   "occult": "Cats Anzu and Susumu (bio says dogs)",
+   "notable": false
+  },
+  "The GDL family | The Sims 3: Pets (console) | Sugar Maple Coast | Blake Simmons": {
+   "note": "Childhood best friends and computer buffs Blake Simmons and Jeremy Stone; Blake resents Jeremy's girlfriend Gianna Rios moving in. Pets Muffin and Trinket.",
+   "link": "",
+   "occult": "Pets Muffin and Trinket",
+   "notable": false
+  },
+  "The Loon's Nest household | The Sims 3: Pets (console) | Sugar Maple Coast | Phillip Friar": {
+   "note": "Half-siblings Phillip and Friendly Friar, roommates Dirk Harrison and Lilith Plain, and poodle Fancy; NPCs who can be asked to move in.",
+   "link": "",
+   "occult": "Poodle Fancy",
+   "notable": false
+  },
+  "Wolff family (Sugar Maple Coast) | The Sims 3: Pets (console) | Sugar Maple Coast | Fryda Wolff": {
+   "note": "Fryda, Eron Angel's second cousin, with her three cats Clothos, Lachesis and Atropos. Unplayable.",
+   "link": "",
+   "occult": "Cats Clothos, Lachesis and Atropos",
+   "notable": false
+  },
+  "Xu family | The Sims 3: Pets (console) | Sugar Maple Coast | Peng Xu": {
+   "note": "Married couple Peng and Dai-Xai with their daughter Daisy and dog Xilla. Unplayable; no bio.",
+   "link": "",
+   "occult": "Dog Xilla",
+   "notable": false
+  }
+ },
+ "sims3_by_page_and_first_member": {
+  "Goth family | Gunther Goth": {
+   "story": "Old-money founders living by the cemetery; Mortimer is still a boy",
+   "verdict": "Skip: a younger timeline of Sims you have (Cornelia is late on your tree)"
+  },
+  "Landgraab family | Geoffrey Landgraab": {
+   "story": "Nancy's family more or less founded the town, so Geoffrey took her name; will Malcolm follow his doctor dad or his tycoon mum?",
+   "verdict": "Already in your plan: the Sims 4 Landgraabs are the same three"
+  },
+  "Bachelor family | Simis Bachelor": {
+   "story": "A close family kept in line by Simis; Michael and Bella are children",
+   "verdict": "Skip (Michael alone is a maybe, see The Sims)"
+  },
+  "Alto family | Nick Alto": {
+   "story": "New money with shady business habits that quietly own most of the shops; daughter Holly is a goody two-shoes",
+   "verdict": "Skip: Nick and Vita are late in the Sims 4 tree (on your plan); Holly is EA's"
+  },
+  "Crumplebottom family | Agnes Crumplebottom": {
+   "story": "Widowed on her honeymoon; her late husband's ghost scares off suitors",
+   "verdict": "Already in your plan: EA's Agnes (Henford-on-Bagley)"
+  },
+  "Langerak family | Dustin Langerak": {
+   "story": "Young Kaylynn tidies up after her brother and stay-at-home dad; Aunt Zelda arrives with dying plants",
+   "verdict": "Skip (take the Sims 2's grown-up Kaylynn instead)"
+  },
+  "Bunch family | Jack Bunch": {
+   "story": "Two working parents juggling chores, careers and four wild children",
+   "verdict": "Maybe → Willow Creek or San Sequoia"
+  },
+  "Keaton family | Marty Keaton": {
+   "story": "Outdoorsy couple with busy careers, expecting their first baby",
+   "verdict": "Maybe → San Sequoia"
+  },
+  "Hart family | Gus Hart": {
+   "story": "Bebe is the only sensible one in a family everyone thinks is mad",
+   "verdict": "Maybe"
+  },
+  "Frio family | Connor Frio": {
+   "story": "Two brothers who are cool in very different ways",
+   "verdict": "Maybe"
+  },
+  "Clavell family | Buster Clavell": {
+   "story": "Party-animal son still living at home; dad wants him out, mum is caught between them",
+   "verdict": "Maybe"
+  },
+  "Alvi family | Iqbal Alvi": {
+   "story": "Young Miraj wants his teenage brother and their dad to make peace",
+   "verdict": "Maybe"
+  },
+  "Sekemoto family | Yumi Sekemoto": {
+   "story": "A grandmother moves in to help her son raise his toddler",
+   "verdict": "Maybe"
+  },
+  "Andrews family | Beau Andrews": {
+   "story": "A TV-loving slob and an arty bookworm, somehow happy together",
+   "verdict": "Skip"
+  },
+  "Wolff family | Thornton Wolff": {
+   "story": "Newlyweds who discover they disagree about art and children",
+   "verdict": "Skip"
+  },
+  "Wan-Goddard family | Hank Goddard": {
+   "story": "A party-loving couple sure they'll last",
+   "verdict": "Skip"
+  },
+  "Wainwright family | Boyd Wainwright": {
+   "story": "Gadget-mad parents whose daughter Blair has moved out (to the Roomies)",
+   "verdict": "Skip"
+  },
+  "Koffi family | Gobias Koffi": {
+   "story": "A kind single man who hasn't found the right woman, perhaps because he prefers men",
+   "verdict": "Skip"
+  },
+  "Single Moms household | Fiona McIrish": {
+   "story": "Best friends Fiona and Molly share a house with their daughters",
+   "verdict": "Maybe"
+  },
+  "Roomies household (Sunset Valley) | Stiles McGraw": {
+   "story": "Five very different young adults under one roof",
+   "verdict": "Skip"
+  },
+  "Working Friends household | Tori Kimura": {
+   "story": "Four women sharing a house; two best friends, a wannabe and a tomboy",
+   "verdict": "Skip"
+  },
+  "McUnderAstro household | Big Steve Underwood": {
+   "story": "Unplayable",
+   "verdict": "Skip"
+  },
+  "Curious family | Marshall Curious": {
+   "story": "A struggling scientist family in the swamp; toddler Notzo grows up to be the Sims 2 Curious brothers' and Jenny Smith's grandfather",
+   "verdict": "Skip, or add as late ancestors of your Curious brothers"
+  },
+  "Whelohff family | Rich Whelohff": {
+   "story": "Rich, busy parents; little Zo is Notzo Curious's best friend",
+   "verdict": "Skip"
+  },
+  "Racket family | Max Racket": {
+   "story": "A family of crooks and fakers; the teenagers are neglected",
+   "verdict": "Maybe"
+  },
+  "Racket family | Dudley Racket": {
+   "story": "The one Racket who went straight and became a police officer",
+   "verdict": "Maybe, with the Rackets"
+  },
+  "Greenwood family | Oliver Greenwood": {
+   "story": "A carbon-neutral eco family raising two girls green",
+   "verdict": "Maybe → Evergreen Harbor"
+  },
+  "Baker family (Twinbrook) | Mary Baker": {
+   "story": "A gifted cook who built a good life for her sons; don't cross her",
+   "verdict": "Skip"
+  },
+  "Bayless family | Skeet Bayless": {
+   "story": "A family name with a murky past",
+   "verdict": "Skip"
+  },
+  "Castor family | Robert Castor": {
+   "story": "Met on a dating site and married fast; keeping up a 'perfect marriage'",
+   "verdict": "Skip"
+  },
+  "Drudge family | Shamus Drudge": {
+   "story": "A traditional couple overwhelmed by their new town",
+   "verdict": "Skip"
+  },
+  "Knack family | Nick Knack": {
+   "story": "An artist who owns a party barn and juggles fame and family",
+   "verdict": "Skip"
+  },
+  "Pidgin family | Milly Pidgin": {
+   "story": "An eccentric mother and her look-alike daughter",
+   "verdict": "Skip"
+  },
+  "Prudence family | Phoenix Prudence": {
+   "story": "Ex-cop single dad raising two children on a teacher's wage",
+   "verdict": "Skip"
+  },
+  "Riddle family | Anna-Liza Riddle": {
+   "story": "A murder-mystery writer with a taste for gloomy things",
+   "verdict": "Skip"
+  },
+  "Sargeant family | Bobby Sargeant": {
+   "story": "A crime-investigating pair from the military and police",
+   "verdict": "Skip"
+  },
+  "Art and Love household | Buddy Bailey": {
+   "story": "A struggling painter and his party-loving girlfriend",
+   "verdict": "Skip"
+  },
+  "Goode and Bad household | Goodwin Goode": {
+   "story": "Mismatched housemates; Goodwin is about to get into a pickle",
+   "verdict": "Skip"
+  },
+  "Hi-Tech Friends household | Justin Kayes": {
+   "story": "Three professional gamers",
+   "verdict": "Skip"
+  },
+  "Hunter household | Kat Hunter": {
+   "story": "A happy couple with a big age gap",
+   "verdict": "Skip"
+  },
+  "Jones-Brown family | Lenny Smith-Jones": {
+   "story": "Bickering parents; teenage Jenni is expecting",
+   "verdict": "Skip"
+  },
+  "Roommates household | Blaise Kindle": {
+   "story": "Old friends who've just moved in together",
+   "verdict": "Skip"
+  },
+  "Simoleon Savers household | Clark Peddler": {
+   "story": "A couple always chasing the next deal",
+   "verdict": "Skip"
+  },
+  "Angelista family | Tiara Angelista": {
+   "story": "Lala came for fame and love and was left alone with her daughter",
+   "verdict": "Maybe → Del Sol Valley"
+  },
+  "Belle household | Lola Belle": {
+   "story": "Rock star with an adopted son, a personal trainer and a much younger boyfriend",
+   "verdict": "Maybe → Del Sol Valley"
+  },
+  "Old and New Glam household | Alan Stanley": {
+   "story": "A star director and the actress he made famous",
+   "verdict": "Maybe → Del Sol Valley"
+  },
+  "Striker family | Richie Striker": {
+   "story": "A sports star and his fashion-icon family",
+   "verdict": "Maybe → Del Sol Valley"
+  },
+  "Littler family | Reuben Littler": {
+   "story": "News-anchor mum, B-list actor dad and their wayward children",
+   "verdict": "Maybe → San Myshuno"
+  },
+  "Atkins family | Violet Atkins": {
+   "story": "Elderly twin sisters and Violet's grandson",
+   "verdict": "Skip"
+  },
+  "Big Bling household | Tom Wordy": {
+   "story": "A music mogul and his crew, all once from Twinbrook",
+   "verdict": "Skip"
+  },
+  "Cook family | Jeffrey Cook": {
+   "story": "A loveless marriage and a neglected teenage daughter",
+   "verdict": "Skip"
+  },
+  "Drama on TV household | Matty Crewe": {
+   "story": "The cast of a reality TV show",
+   "verdict": "Skip"
+  },
+  "Hemlock family | Wogan Hemlock": {
+   "story": "A hippie vampire family",
+   "verdict": "Skip: needs Vampires"
+  },
+  "Jones family (Bridgeport) | Johnny Jones": {
+   "story": "A power couple at the top of their careers",
+   "verdict": "Skip"
+  },
+  "King family (Bridgeport) | Johanna King": {
+   "story": "A TV comedian who is also a devoted single mum",
+   "verdict": "Skip"
+  },
+  "Mixture of Good and Bad household | Beau Merrick": {
+   "story": "A vampire enjoying three feuding housemates",
+   "verdict": "Skip: needs Vampires"
+  },
+  "Pala family | Katrina Pala": {
+   "story": "A businesswoman teaching her niece the ropes",
+   "verdict": "Skip"
+  },
+  "Talon and Striker household | Rafael Striker": {
+   "story": "A feared vampire and her influential partner",
+   "verdict": "Skip: needs Vampires"
+  },
+  "Talon family | Erika Talon": {
+   "story": "Erika and Jessica Talon (vampires)",
+   "verdict": "Skip: needs Vampires"
+  },
+  "Art Central household | Alexy Fresco": {
+   "story": "Three friends in an artists' commune",
+   "verdict": "Skip"
+  },
+  "Tenderlove household | Barry Tenderlove": {
+   "story": "Club regulars with nightlife dreams",
+   "verdict": "Skip"
+  },
+  "Fox family | Shawnee Fox": {
+   "story": "Descendants of the area's indigenous people, private and close to the land, with a dog and two horses; a second baby is on the way",
+   "verdict": "Maybe → Chestnut Ridge"
+  },
+  "Curley family | Tate Curley": {
+   "story": "From one of the oldest settler families, with their cat; their land is not for sale",
+   "verdict": "Maybe → Chestnut Ridge"
+  },
+  "Martingale family | Sofia Martingale": {
+   "story": "Left a loveless marriage and the city for the country with her moody teenage son",
+   "verdict": "Maybe → Chestnut Ridge"
+  },
+  "Darnell family | Honey Darnell": {
+   "story": "A country singer looking for inspiration, with her horse",
+   "verdict": "Maybe → Chestnut Ridge"
+  },
+  "Country Cowpokes household | Chuck Hobble": {
+   "story": "A worn-out rodeo cowboy and his friend, with their horses; both fancy Honey Darnell",
+   "verdict": "Maybe → Chestnut Ridge"
+  },
+  "Riffin family | Calvin Riffin": {
+   "story": "Orphaned by a farming accident; what's left of the family",
+   "verdict": "Maybe → Chestnut Ridge"
+  },
+  "Blackburn family | Vera Blackburn": {
+   "story": "A strict dog trainer and her family",
+   "verdict": "Maybe → Brindleton Bay"
+  },
+  "Marshall family | Felipe Marshall": {
+   "story": "A loving couple who can't have a baby and pour it into their pets",
+   "verdict": "Maybe → Brindleton Bay"
+  },
+  "Miller family (Appaloosa Plains) | Quincy Miller": {
+   "story": "Well-liked, generous family",
+   "verdict": "Skip"
+  },
+  "Bird family | Alouette Bird": {
+   "story": "Aloof, doll-like sisters with many suitors",
+   "verdict": "Skip"
+  },
+  "Lionheart family | Hetty Lionheart": {
+   "story": "An eccentric lady and her cats",
+   "verdict": "Skip"
+  },
+  "Loveland family | Gracie Loveland": {
+   "story": "A free-spirited teacher with a secret",
+   "verdict": "Skip"
+  },
+  "Parrott family | Kanoa Parrott": {
+   "story": "Moved from Hawaii; troubles hidden behind their manners",
+   "verdict": "Skip"
+  },
+  "Pelly family | Imogen Pelly": {
+   "story": "A former child star",
+   "verdict": "Skip"
+  },
+  "Schmidt family | Benjamin Schmidt": {
+   "story": "A handyman bachelor and his pup",
+   "verdict": "Skip"
+  },
+  "Bedlington family | Bertram Bedlington": {
+   "story": "New money the locals look down on",
+   "verdict": "Skip"
+  },
+  "\"Millions in Singles\"-ton household | Rodney Singleton": {
+   "story": "Tech millionaire brothers who moved west",
+   "verdict": "Skip"
+  },
+  "Sports, Spice, and Everything Nice household | Barrington Diamond": {
+   "story": "A whirlwind romance with a TV cooking champion",
+   "verdict": "Skip"
+  },
+  "Unfettered with Feathers household | Benni Hennessey": {
+   "story": "A mixed group renting a home on the range",
+   "verdict": "Skip"
+  },
+  "Goth family | Samuel Goth": {
+   "story": "Gunther's sister Frida fled an arranged Landgraab marriage to her uncle Samuel's; all three Goths are now ghosts, sharing the house with fortune teller Helen Hall",
+   "verdict": "Maybe → Ravenwood"
+  },
+  "Crumplebottom family | Beatrice Crumplebottom": {
+   "story": "Three very different witch sisters; possibly kin of Cornelia Goth, née Crumplebottom",
+   "verdict": "Maybe → Glimmerbrook"
+  },
+  "Durwood family | Doreen Caliente": {
+   "story": "A comfortable family with a disapproving mother-in-law, Doreen Caliente",
+   "verdict": "Maybe (a Caliente branch)"
+  },
+  "MacDuff family | Flint MacDuff": {
+   "story": "A big blended family of witches and humans, with another baby due",
+   "verdict": "Maybe → Glimmerbrook"
+  },
+  "Van Gould family | Ayden Van Gould": {
+   "story": "Vampires who claim to have founded the town; rivals of the Wolffs",
+   "verdict": "Skip: needs Vampires"
+  },
+  "Wolff family | Dwayne Wolff": {
+   "story": "Werewolves who also claim to be the town's founders",
+   "verdict": "Skip: needs Werewolves"
+  },
+  "Wolff family | Pappy Wolff": {
+   "story": "The Wolff patriarch, living alone",
+   "verdict": "Skip: needs Werewolves"
+  },
+  "Goodfellow family | Flora Goodfellow": {
+   "story": "Mischievous fairies who love playing tricks on humans",
+   "verdict": "Skip until Enchanted by Nature"
+  },
+  "Singh family | Navita Singh": {
+   "story": "A newlywed doctor discovered his wife is a werewolf",
+   "verdict": "Skip: needs Werewolves"
+  },
+  "Summerdream family | Oberon Summerdream": {
+   "story": "Unplayable fairies",
+   "verdict": "Skip: EA's Enchanted by Nature has them"
+  },
+  "Hoppcraft family | James Hoppcraft": {
+   "story": "A traditional family uneasy about the supernatural",
+   "verdict": "Skip"
+  },
+  "Ivy family | Rainflower Ivy": {
+   "story": "Hippies living on an inherited fortune",
+   "verdict": "Skip"
+  },
+  "Nix family | Mike Nix": {
+   "story": "The most normal family in town",
+   "verdict": "Skip"
+  },
+  "Pok family | David Pok": {
+   "story": "He fell for the police officer who pinned him to her patrol car",
+   "verdict": "Skip"
+  },
+  "Rodgers family | Linda Rodgers": {
+   "story": "A loving single mum who adopted",
+   "verdict": "Skip"
+  },
+  "Swain family | Chester Swain": {
+   "story": "An overprotective single dad",
+   "verdict": "Skip"
+  },
+  "Roommates Supernatural household | Dante Morganthe": {
+   "story": "A vampire, a ghost and a werewolf who are best friends",
+   "verdict": "Skip"
+  },
+  "Roommates Vegan household | Dayvid Musgrave": {
+   "story": "A fairy and a vegan vampire",
+   "verdict": "Skip"
+  },
+  "Roommates Wanna Be household | Alice Fitzgerald": {
+   "story": "Humans who dress and act supernatural",
+   "verdict": "Skip"
+  },
+  "Anjali family | Jin Anjali": {
+   "story": "Townies",
+   "verdict": "Skip"
+  },
+  "Bertiger family | Martin Bertiger": {
+   "story": "Townies",
+   "verdict": "Skip"
+  },
+  "Blanestreet family | Michael Blanestreet": {
+   "story": "Townies",
+   "verdict": "Skip"
+  },
+  "Younan family | Dennis Younan": {
+   "story": "Townies",
+   "verdict": "Skip"
+  },
+  "Gooder family | Edward Gooder": {
+   "story": "Snobbish old money who despise the Bests next door",
+   "verdict": "Maybe → Del Sol Valley (with the Bests)"
+  },
+  "Best family | Paul Best": {
+   "story": "Hard-working new money, the Gooders' rivals",
+   "verdict": "Maybe → Del Sol Valley (with the Gooders)"
+  },
+  "Whitfield family | Jamar Whitfield": {
+   "story": "A showbiz family that lives for the spotlight",
+   "verdict": "Maybe → Del Sol Valley"
+  },
+  "Luck family | Chad Luck": {
+   "story": "Three very different brothers who inherited their great-aunt's estate",
+   "verdict": "Skip"
+  },
+  "Avilla family | Lanya Avilla": {
+   "story": "Identical twins with opposite personalities",
+   "verdict": "Skip"
+  },
+  "A Couple Couples household | Bryce Savage": {
+   "story": "Two couples who might not last",
+   "verdict": "Skip"
+  },
+  "Best Friends Forever household | Karen Kerman": {
+   "story": "Two inseparable friends",
+   "verdict": "Skip"
+  },
+  "Buckshot household | Madeline Buckshot": {
+   "story": "A celebrity marriage gone wrong",
+   "verdict": "Skip"
+  },
+  "Crash Pad household | Mimi Olivia": {
+   "story": "A mismatched house-share",
+   "verdict": "Skip"
+  },
+  "Dueling Singers household | Rich Richmond": {
+   "story": "A singer worried her friend is stealing her fame",
+   "verdict": "Skip"
+  },
+  "Elson family | Craig Elson": {
+   "story": "Newlywed high-school sweethearts",
+   "verdict": "Skip"
+  },
+  "Khan household | Mithun Khan": {
+   "story": "A couple with a permanent houseguest",
+   "verdict": "Skip"
+  },
+  "Lee family | Mitch Lee": {
+   "story": "A dreamer DJ and his realist wife",
+   "verdict": "Skip"
+  },
+  "Martin family (Starlight Shores) | Wayne Martin": {
+   "story": "A celebrity chef's picture-perfect family",
+   "verdict": "Skip"
+  },
+  "Platt family | Danielle Platt": {
+   "story": "A struggling single mum",
+   "verdict": "Skip"
+  },
+  "Sagar family | Rehman Sagar": {
+   "story": "A father pushing his son away from the stage",
+   "verdict": "Skip"
+  },
+  "Singh family | Matias Singh": {
+   "story": "A couple hoping a new town turns their luck",
+   "verdict": "Skip"
+  },
+  "Woods family | Brandon Woods": {
+   "story": "Anti-sprawl campaigners",
+   "verdict": "Skip"
+  },
+  "Worthington family | Melanie Worthington": {
+   "story": "A sociable grandmother and a gamer grandson",
+   "verdict": "Skip"
+  },
+  "Alto family | Alfonso Alto": {
+   "story": "A resort tycoon who cheated his partners; he's secretly fathering a child with Florita, Teodor Medina's lover. Likely kin of the Sunset Valley Altos (the wiki's guess)",
+   "verdict": "Maybe → Sulani, or Ondarion near Enzo"
+  },
+  "Ojeda family | Olin Ojeda": {
+   "story": "Traditional parents at odds with their daughter Lopita Alto",
+   "verdict": "Maybe, with the Altos"
+  },
+  "Medina family | Teodor Medina": {
+   "story": "Lost his resort plans and his lover Florita to Alfonso Alto; now a broke single dad",
+   "verdict": "Maybe, with the Altos"
+  },
+  "Ichtaca family | Guillermo Ichtaca": {
+   "story": "Descendants of the islands' ancient royalty",
+   "verdict": "Maybe → Sulani"
+  },
+  "Ichtaca family | Rubisel Ichtaca": {
+   "story": "A handsome royal descendant with a houseboat and a police career",
+   "verdict": "Maybe → Sulani"
+  },
+  "Kahale family | Akoni Kahale": {
+   "story": "A wealthy romantic who moved here because a fortune teller said he'd find love",
+   "verdict": "Skip"
+  },
+  "Dregg family | Edward Dregg": {
+   "story": "A ghost couple who have been newlyweds for a very long time; Edward dreams of far horizons",
+   "verdict": "Skip"
+  },
+  "Arias family | Ruben Arias": {
+   "story": "Retired to a houseboat; their daughter's short visit became months",
+   "verdict": "Skip"
+  },
+  "Collins family | Christopher Collins": {
+   "story": "Three children and another on the way",
+   "verdict": "Skip"
+  },
+  "Hamada family | Masao Hamada": {
+   "story": "Love at first sight and a beach wedding",
+   "verdict": "Skip"
+  },
+  "Han family | Devin Han": {
+   "story": "New arrivals whose spoiled sons miss home",
+   "verdict": "Skip"
+  },
+  "La Rosa family | Leandro La Rosa": {
+   "story": "Retirees finding paradise costs more than planned",
+   "verdict": "Skip"
+  },
+  "Mango family | Matthew Mango": {
+   "story": "A hermit on a desert isle who can't remember where his family went",
+   "verdict": "Skip"
+  },
+  "Scott family (Isla Paradiso) | Tariq Scott": {
+   "story": "He loves the sea, she wants dry land",
+   "verdict": "Skip"
+  },
+  "Vidal family | Valerie Vidal": {
+   "story": "A single mum with two teenage sons and a new romance",
+   "verdict": "Skip"
+  },
+  "Los Amigos household | Harley Greenwood": {
+   "story": "Two friends on an extended fishing and dating holiday",
+   "verdict": "Skip"
+  },
+  "Babes on the Beach household | ": {
+   "story": "Three young women on holiday",
+   "verdict": "Skip"
+  },
+  "Martinez family | Pablo Martinez": {
+   "story": "Outdoorsy lovebirds worried about suburban life",
+   "verdict": "Maybe: EA's Sims 4 Martínez household (Pablo, Jennifer and two children, from a scenario) is already in your game"
+  },
+  "Baker family (family bin) | Heathcliff Baker": {
+   "story": "Retirees who took in their daughter and her toddler",
+   "verdict": "Skip"
+  },
+  "Funke family | Rhett Funke": {
+   "story": "Flaky parents with three talented children",
+   "verdict": "Skip"
+  },
+  "Glover household | Gwen Glover": {
+   "story": "Arty Gwen and bookish Holden: friends, or more?",
+   "verdict": "Skip"
+  },
+  "Lum family | Theodore Lum": {
+   "story": "A bright teen with outgoing parents",
+   "verdict": "Skip"
+  },
+  "Williams family (family bin) | Marley Williams": {
+   "story": "A great cook and her dreamer husband",
+   "verdict": "Skip"
+  }
+ }
+}
