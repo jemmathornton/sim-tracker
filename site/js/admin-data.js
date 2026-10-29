@@ -1,7 +1,7 @@
 // Built by tools/admin_data.py for the Admin pages (js/sections.js, 23 Oct). Don't edit this file.
 // For Jemma's PC only: never upload this file if the site goes online (it holds her to-dos and admin notes).
 window.ADMIN = {
-"made": "2026-10-28",
+"made": "2026-10-29",
 "refresh": [
 {
 "when": "13 Oct 2026 18:27",
@@ -697,6 +697,10 @@ window.ADMIN = {
 "s": "placed",
 "fix": []
 },
+"l-oasis-springs--dusty-turf": {
+"s": "to place",
+"fix": []
+},
 "l-oasis-springs--springscape": {
 "s": "to place",
 "fix": []
@@ -923,6 +927,10 @@ window.ADMIN = {
 "fix": []
 },
 "l-san-myshuno--122-hakim-house": {
+"s": "to place",
+"fix": []
+},
+"l-san-myshuno--fountainview-penthouse": {
 "s": "to place",
 "fix": []
 },
@@ -1224,6 +1232,10 @@ window.ADMIN = {
 "s": "to place",
 "fix": []
 },
+"l-copperdale--hillside-haven": {
+"s": "to place",
+"fix": []
+},
 "l-san-sequoia--manzanita-terrace": {
 "s": "to place",
 "fix": []
@@ -1320,7 +1332,7 @@ window.ADMIN = {
 "save": "Rotational",
 "households": [
 "Barraza",
-"Davidson 1",
+"Davidson",
 "Kopf",
 "LeBlanc",
 "Livin' In The City",
@@ -1331,7 +1343,6 @@ window.ADMIN = {
 "save": "Season Events",
 "households": [
 "Bridges",
-"Donovan",
 "Washburn",
 "Winters"
 ]
@@ -1384,10 +1395,10 @@ window.ADMIN = {
 "fixes": [],
 "move": [
 {
-"household": "Davidson 1",
+"household": "Davidson",
 "to": "Streamlet Single",
 "now": null,
-"how": "the site’s version is in your “Rotational” save: save it to your Library from there (your Library copy differs: not in Library copy: George Davidson, Ray Davidson; age differs: Evelyn Davidson (Young Adult in Library, Elder on site). The site’s Sims are from “Rotational” (2023-12-21))",
+"how": "the site’s version is in your “Rotational” save: save it to your Library from there (your Library copy differs: site has no Sims yet. Probably the same family as “Davidson 1”; your call)",
 "occupied": null,
 "note": null
 },
@@ -1462,6 +1473,7 @@ window.ADMIN = {
 "world": "Oasis Springs",
 "placed": 17,
 "toPlace": [
+"Dusty Turf",
 "Springscape"
 ],
 "fixes": [],
@@ -1584,7 +1596,7 @@ window.ADMIN = {
 "note": "split them out of BFF first (it also has Liberty, Summer)"
 },
 {
-"household": "Washburn",
+"household": "Bridges",
 "to": "Midtown Meadows unit 2",
 "now": null,
 "how": "only in your “Season Events” save: save it to your Library from there first",
@@ -1592,7 +1604,7 @@ window.ADMIN = {
 "note": null
 },
 {
-"household": "Bridges",
+"household": "Washburn",
 "to": "Midtown Meadows unit 5",
 "now": null,
 "how": "only in your “Season Events” save: save it to your Library from there first",
@@ -1711,6 +1723,7 @@ window.ADMIN = {
 "920 Medina Studios",
 "930 Medina Studios",
 "122 Hakim House",
+"Fountainview Penthouse",
 "1310 21 Chic Street",
 "1010 Alto Apartments",
 "Skye Fitness",
@@ -1736,7 +1749,7 @@ window.ADMIN = {
 },
 {
 "household": "Santiago Ojo",
-"to": "FountainView Penthouse",
+"to": "Fountainview Penthouse",
 "now": "701 ZenView",
 "how": null,
 "occupied": null,

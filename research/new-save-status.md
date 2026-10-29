@@ -2,7 +2,7 @@
 
 Made by tools/research/new_save_check.py from a copy of the save. Lots: placed / to place / the game’s lot; anything that differs from the plan is listed. Households: who isn’t home yet.
 
-**At a glance:** 91 lots placed in 11 worlds; 77 shared lots still to place. 48 households at home, 45 to move, 26 not in the save yet.
+**At a glance:** 91 lots placed in 11 worlds; 80 shared lots still to place. 48 households at home, 45 to move, 26 not in the save yet.
 
 ## Game options
 
@@ -17,7 +17,7 @@ Made by tools/research/new_save_check.py from a copy of the save. Lots: placed /
 ## Willow Creek
 
 - All shared lots placed, all as planned.
-- **Davidson 1** for Streamlet Single: the site’s version is in your “Rotational” save: save it to your Library from there (your Library copy differs: not in Library copy: George Davidson, Ray Davidson; age differs: Evelyn Davidson (Young Adult in Library, Elder on site). The site’s Sims are from “Rotational” (2023-12-21))
+- **Davidson** for Streamlet Single: the site’s version is in your “Rotational” save: save it to your Library from there (your Library copy differs: site has no Sims yet. Probably the same family as “Davidson 1”; your call)
 - **Move Broke** to Crick Cabana (now: no home)
 - **Winters** for Daisy Hovel: the site’s version is in your “Season Events” save: save it to your Library from there (your Library copy differs: not in Library copy: Noel Winters, Savanna Winters; extra in Library copy: Anna Winters; age differs: Teddy Winters (Toddler in Library, Child on site). The site’s Sims are from “Season Events” (2026-03-15))
 - **Reynolds** for Potters Splay: the site’s version is in your “Rotational” save: save it to your Library from there (your Library copy differs: not in Library copy: Lucie Reynolds, Melanie Reynolds, Rosie Reynolds; age differs: Britney Reynolds (Young Adult in Library, Elder on site), Joe Reynolds (Young Adult in Library, Elder on site). The site’s Sims are from “Rotational” (2023-12-21))
@@ -29,7 +29,7 @@ Made by tools/research/new_save_check.py from a copy of the save. Lots: placed /
 
 ## Oasis Springs
 
-- **To place:** Springscape
+- **To place:** Dusty Turf, Springscape
 - **Leah-Moon Cadberry** for Nookstone: from your Library (your Library copy differs from the site: extra in Library copy: Sterling Cadberry, Sylvia Cadberry. The site’s Sims are from Library (2025-06-22))
 - **Move Lothario** to Agave Abode (now: no home; split them out of Caliente first (it also has Dina, Katrina, Nina))
 - **Rivera** for Raffia Quinta: from your Library
@@ -47,8 +47,8 @@ Made by tools/research/new_save_check.py from a copy of the save. Lots: placed /
 - **Move Holiday** to Fern Park Flats unit 1 (now: no home; split them out of BFF first (it also has Liberty, Travis))
 - **Move Lee** to Fern Park Flats unit 2 (now: no home; split them out of BFF first (it also has Summer, Travis))
 - **Move Scott** to Fern Park Flats unit 3 (now: no home; split them out of BFF first (it also has Liberty, Summer))
-- **Washburn** for Midtown Meadows unit 2: only in your “Season Events” save: save it to your Library from there first
-- **Bridges** for Midtown Meadows unit 5: only in your “Season Events” save: save it to your Library from there first
+- **Bridges** for Midtown Meadows unit 2: only in your “Season Events” save: save it to your Library from there first
+- **Washburn** for Midtown Meadows unit 5: only in your “Season Events” save: save it to your Library from there first
 - **Versaree** for Oak Alcove: from your Library
 - **Kirkland** for Twin Oracle Point: from your Library (your Library copy differs from the site: site has no Sims yet. Same Kirklands as Newcrest’s Fern Park Flats?)
 - **LeBlanc** for Avarice Acres: only in your “Rotational” save: save it to your Library from there first
@@ -69,10 +69,10 @@ Made by tools/research/new_save_check.py from a copy of the save. Lots: placed /
 
 ## San Myshuno
 
-- **To place:** 17 Culpepper House, 18 Culpepper House, 19 Culpepper House, Fraternity Apartment, Sorority Apartment, Waterside Warble, 920 Medina Studios, 930 Medina Studios, 122 Hakim House, 1310 21 Chic Street, 1010 Alto Apartments, Skye Fitness, Stargazer
+- **To place:** 17 Culpepper House, 18 Culpepper House, 19 Culpepper House, Fraternity Apartment, Sorority Apartment, Waterside Warble, 920 Medina Studios, 930 Medina Studios, 122 Hakim House, Fountainview Penthouse, 1310 21 Chic Street, 1010 Alto Apartments, Skye Fitness, Stargazer
 - **Move Bheeda** to 920 Medina Studios (now: 2A Jasmine Suites)
 - **Livin' In The City** for 930 Medina Studios: only in your “Rotational” save: save it to your Library from there first
-- **Move Santiago Ojo** to FountainView Penthouse (now: 701 ZenView; split them out of Karaoke Legends first (it also has Akira, Darling); not in the save: Alicia Santiago (from the Gallery or your Library))
+- **Move Santiago Ojo** to Fountainview Penthouse (now: 701 ZenView; split them out of Karaoke Legends first (it also has Akira, Darling); not in the save: Alicia Santiago (from the Gallery or your Library))
 - **Move Bro & Kennedy** to 701 ZenView (now: Dock Den; move out Karaoke Legends first)
 - **Move Behr** to 702 ZenView (now: no home)
 - **Move Jeong** to 1310 21 Chic Street (now: no home)
@@ -148,8 +148,8 @@ Change in the Club panel (may need a played member):
 
 Open each once, save these households to your Library, then add them in the new save:
 
-- “Rotational”: Barraza, Davidson 1, Kopf, LeBlanc, Livin' In The City, Reynolds
-- “Season Events”: Bridges, Donovan, Washburn, Winters
+- “Rotational”: Barraza, Davidson, Kopf, LeBlanc, Livin' In The City, Reynolds
+- “Season Events”: Bridges, Washburn, Winters
 - “Not So Berry”: Rochana, Sylvia & Kenny Cadberry
 - “Will the port be Promising?”: Henley
 - “Horses!”: Palumbo

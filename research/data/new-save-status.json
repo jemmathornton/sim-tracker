@@ -416,14 +416,14 @@
     "name": "Dusty Turf",
     "hood": "Parched Prospect",
     "built": true,
-    "shared": false,
+    "shared": true,
     "type": "Residential",
     "issues": [],
     "save_name": "Dusty Turf",
     "placed": false,
     "objs": 1,
     "game_objs": 1,
-    "status": "game lot"
+    "status": "to place"
    },
    {
     "lot": "Springscape",
@@ -1604,17 +1604,17 @@
    },
    {
     "lot": "FountainView Penthouse",
-    "name": "FountainView Penthouse",
+    "name": "Fountainview Penthouse",
     "hood": "Arts Quarter",
     "built": true,
-    "shared": false,
+    "shared": true,
     "type": "Penthouse",
     "issues": [],
     "save_name": "Fountainview Penthouse",
     "placed": false,
     "objs": 184,
     "game_objs": 184,
-    "status": "game lot"
+    "status": "to place"
    },
    {
     "lot": "Casbah Gallery",
@@ -3769,15 +3769,15 @@
     "lot": "Hillside Haven",
     "name": "Hillside Haven",
     "hood": "Plumbite Cove",
-    "built": false,
-    "shared": false,
-    "type": "Residential",
+    "built": true,
+    "shared": true,
+    "type": "Haunted House Residential",
     "issues": [],
     "save_name": "Hillside Haven",
     "placed": false,
     "objs": 317,
     "game_objs": 317,
-    "status": "game lot"
+    "status": "to place"
    }
   ],
   "San Sequoia": [
@@ -5068,12 +5068,12 @@
  "households": [
   {
    "world": "Willow Creek",
-   "household": "Davidson 1",
+   "household": "Davidson",
    "lot": "Streamlet Single",
    "unit": "",
    "sims": 3,
    "state": "not in the save",
-   "how": "the site’s version is in your “Rotational” save: save it to your Library from there (your Library copy differs: not in Library copy: George Davidson, Ray Davidson; age differs: Evelyn Davidson (Young Adult in Library, Elder on site). The site’s Sims are from “Rotational” (2023-12-21))"
+   "how": "the site’s version is in your “Rotational” save: save it to your Library from there (your Library copy differs: site has no Sims yet. Probably the same family as “Davidson 1”; your call)"
   },
   {
    "world": "Willow Creek",
@@ -5301,7 +5301,7 @@
   },
   {
    "world": "Newcrest",
-   "household": "Washburn",
+   "household": "Bridges",
    "lot": "Midtown Meadows",
    "unit": "2",
    "sims": 3,
@@ -5310,7 +5310,7 @@
   },
   {
    "world": "Newcrest",
-   "household": "Bridges",
+   "household": "Washburn",
    "lot": "Midtown Meadows",
    "unit": "5",
    "sims": 3,
@@ -5465,7 +5465,7 @@
   {
    "world": "San Myshuno",
    "household": "Santiago Ojo",
-   "lot": "FountainView Penthouse",
+   "lot": "Fountainview Penthouse",
    "unit": "",
    "sims": 2,
    "state": "move",
@@ -5985,12 +5985,12 @@
   },
   {
    "world": "Copperdale",
-   "household": "Donovan",
+   "household": "Donovan-Haynes",
    "lot": "Hillside Haven",
    "unit": "",
    "sims": 5,
    "state": "not in the save",
-   "how": "the site’s version is in your “Season Events” save: save it to your Library from there (your Library copy differs: not in Library copy: Bonnie Donovan, Davin Haynes, Madelyn Haynes, Misty Haynes; extra in Library copy: Clay Donovan, Isabella Donovan. The site’s Sims are from “Season Events” (2026-03-15))"
+   "how": "from your Library"
   },
   {
    "world": "San Sequoia",
@@ -6294,11 +6294,11 @@
  "fromSaves": [
   {
    "save": "Rotational",
-   "households": ["Barraza", "Davidson 1", "Kopf", "LeBlanc", "Livin' In The City", "Reynolds"]
+   "households": ["Barraza", "Davidson", "Kopf", "LeBlanc", "Livin' In The City", "Reynolds"]
   },
   {
    "save": "Season Events",
-   "households": ["Bridges", "Donovan", "Washburn", "Winters"]
+   "households": ["Bridges", "Washburn", "Winters"]
   },
   {
    "save": "Not So Berry",
@@ -6320,9 +6320,9 @@
    "pairs": ["Leah-Moon Cadberry with Sylvia Cadberry"]
   },
   {
-   "households": ["Davidson 1 (Willow Creek)", "Kopf (Willow Creek)", "Livin' In The City (San Myshuno)", "Reynolds (Willow Creek)"],
+   "households": ["Davidson (Willow Creek)", "Kopf (Willow Creek)", "Livin' In The City (San Myshuno)", "Reynolds (Willow Creek)"],
    "sims": 15,
-   "pairs": ["Davidson 1 with Lisa Davidson", "Kopf with Lucy Kopf", "Reynolds with Alfie Reynolds"]
+   "pairs": ["Davidson with Lisa Davidson", "Kopf with Lucy Kopf", "Reynolds with Alfie Reynolds"]
   }
  ],
  "ahead": [
