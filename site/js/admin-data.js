@@ -1,7 +1,7 @@
 // Built by tools/admin_data.py for the Admin pages (js/sections.js, 23 Oct). Don't edit this file.
 // For Jemma's PC only: never upload this file if the site goes online (it holds her to-dos and admin notes).
 window.ADMIN = {
-"made": "2026-10-29",
+"made": "2026-10-30",
 "refresh": [
 {
 "when": "13 Oct 2026 18:27",
@@ -166,6 +166,17 @@ window.ADMIN = {
 "new": 3,
 "favourites": 2108,
 "downloads": 20075,
+"comments": 50
+},
+{
+"when": "29 Oct 2026 03:36",
+"ok": true,
+"linked": [],
+"notes": [],
+"listed": 257,
+"new": 0,
+"favourites": 2113,
+"downloads": 20210,
 "comments": 50
 }
 ],
@@ -463,12 +474,12 @@ window.ADMIN = {
 {
 "section": "Households",
 "world": "",
-"text": "**Do:** Mods for patch 1.129 (checked overnight, details in research/mods-1129.md): update **MCCC** to 2026.6.0 (deaderpool-mccc.com; keep mc_settings.cfg) and LittleMsSam's **Dress Code** (Aug 2025 version)."
+"text": "**Do:** UI Cheats Extension: download v1.59.1 (or a 1.129 version once weerbesu posts one) from weerbesu's Patreon yourself; Patreon is blocked for me. Done 30 Oct: MCCC and MC Woohoo 2026.6.0, LittleMsSam's Dress Code (27 Aug 2025), Ravenwood's seasons mod swapped for the patched copy (keeps its lot types); the old files are in “Mods backup 2026-10-30” beside your Mods folder (delete it once all works)."
 },
 {
 "section": "Households",
 "world": "",
-"text": "**Decide:** Mods to take out before the new save: **CBX Life-Death-Seasons** (it puts back a Dec 2024 copy of Ravenwood's region file, losing the Small Business lot type and more until it's updated), **Party Anywhere** (listed broken), NateTheL0ser's **Thrift Store Dress Normal** (out of date), and three leftover duplicates (LittleMsSam's old Updated Zooroo ATM, the SulSul Weather App script, the Dress Code Seasons add-on). Still unknown for 1.129: UI Cheats Extension, Home Regions."
+"text": "**Decide:** Mods to take out before the new save: **Party Anywhere** (listed broken), NateTheL0ser's **Thrift Store Dress Normal** (out of date), and two leftovers: LittleMsSam's **SulSul Weather App script** (she says it's obsolete; the packages do everything) and the **Dress Code Seasons add-on** (its Hot and Cold dress codes are now inside the main Dress Code file, identical). Still unknown for 1.129: UI Cheats Extension, Home Regions."
 },
 {
 "section": "Households",
