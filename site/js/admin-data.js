@@ -474,17 +474,12 @@ window.ADMIN = {
 {
 "section": "Households",
 "world": "",
-"text": "**Do:** UI Cheats Extension: download v1.59.1 from weerbesu's Patreon (the post is https://www.patreon.com/weerbesu/posts/ui-cheats-v1-59-26240068; yours is v1.59, the day before, which can't pin wants or fears). It mostly works on EA's 27 Oct patch (weerbesu said so in the post's comments on 30 Oct), but until he makes a version for it: “Remove this workplace rival” won't work (EA renamed what it uses), Game Options won't show EA's new Allow Weight Changes and Allow Muscle Changes (take UI Cheats out of Mods while you set them in the new save, then put it back), and moving households in Manage Worlds uses the old way, without EA's 27 Oct fix. Done 30 Oct: MCCC and MC Woohoo 2026.6.0, LittleMsSam's Dress Code (27 Aug 2025) and Pet to Pet Greeting Fix (every other LittleMsSam mod checked: already current), Ravenwood's seasons mod swapped for the patched copy (keeps its lot types); the old files are in “Mods backup 2026-10-30” beside your Mods folder (delete it once all works)."
+"text": "**Do:** UI Cheats Extension: download v1.59.1 from weerbesu's Patreon (the post is https://www.patreon.com/weerbesu/posts/ui-cheats-v1-59-26240068; yours is v1.59, the day before, which can't pin wants or fears). It mostly works on EA's 27 Oct patch (weerbesu said so in the post's comments on 30 Oct), but until he makes a version for it: “Remove this workplace rival” won't work (EA renamed what it uses), Game Options won't show EA's new Allow Weight Changes and Allow Muscle Changes (take UI Cheats out of Mods while you set them in the new save, then put it back), and moving households in Manage Worlds uses the old way, without EA's 27 Oct fix. Done 30 Oct: MCCC and MC Woohoo 2026.6.0, LittleMsSam's Dress Code (27 Aug 2025) and Pet to Pet Greeting Fix (every other LittleMsSam mod checked: already current), Ravenwood's seasons mod swapped for the patched copy (keeps its lot types); SimMattically's Remove Purchase Button rebuilt on EA's current top-right bar; the old files are in “Mods backup 2026-10-30” beside your Mods folder (delete it once all works)."
 },
 {
 "section": "Households",
 "world": "",
 "text": "**Decide:** Mods slightly out of date, low risk (keep unless something odd happens): Zerbu's High School Spawn Fix, adeepindigo's More Discipline, MizoreYukii's Mermaids Can Use Dock Ladders. Done 30 Oct: Party Anywhere, the SulSul Weather App script and the Dress Code Seasons add-on removed; NateTheL0ser's thrift store mod swapped for alasEnkidu's ThrifTea one, patched for 1.129 (copies of everything old in the backup)."
-},
-{
-"section": "Households",
-"world": "",
-"text": "**Decide:** SimMattically's Remove Purchase Button (hides the Store button): it swaps in an old copy of the game's top-right Live/Buy/Build bar, older than EA's current one. It has worked so far. Keep, or remove to be safe?"
 },
 {
 "section": "Households",
