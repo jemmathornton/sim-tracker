@@ -479,7 +479,7 @@ window.ADMIN = {
 {
 "section": "Households",
 "world": "",
-"text": "**Decide:** Mods to take out before the new save: NateTheL0ser's **Thrift Store Dress Normal** (out of date). (Removed 30 Oct: Party Anywhere, the SulSul Weather App script and the Dress Code Seasons add-on; copies in the backup.) Still unknown for 1.129: UI Cheats Extension, Home Regions."
+"text": "**Decide:** Mods slightly out of date, low risk (keep unless something odd happens): Zerbu's High School Spawn Fix, adeepindigo's More Discipline, MizoreYukii's Mermaids Can Use Dock Ladders. Done 30 Oct: Party Anywhere, the SulSul Weather App script and the Dress Code Seasons add-on removed; NateTheL0ser's thrift store mod swapped for alasEnkidu's ThrifTea one, patched for 1.129 (copies of everything old in the backup). Still unknown for 1.129: UI Cheats Extension."
 },
 {
 "section": "Households",
