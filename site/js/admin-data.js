@@ -474,7 +474,7 @@ window.ADMIN = {
 {
 "section": "Households",
 "world": "",
-"text": "**Do:** UI Cheats Extension: download v1.59.1 (or a 1.129 version once weerbesu posts one) from weerbesu's Patreon yourself; Patreon is blocked for me. Done 30 Oct: MCCC and MC Woohoo 2026.6.0, LittleMsSam's Dress Code (27 Aug 2025), Ravenwood's seasons mod swapped for the patched copy (keeps its lot types); the old files are in “Mods backup 2026-10-30” beside your Mods folder (delete it once all works)."
+"text": "**Do:** UI Cheats Extension: download v1.59.1 (or a 1.129 version once weerbesu posts one) from weerbesu's Patreon yourself; Patreon is blocked for me. Done 30 Oct: MCCC and MC Woohoo 2026.6.0, LittleMsSam's Dress Code (27 Aug 2025) and Pet to Pet Greeting Fix (every other LittleMsSam mod checked: already current), Ravenwood's seasons mod swapped for the patched copy (keeps its lot types); the old files are in “Mods backup 2026-10-30” beside your Mods folder (delete it once all works)."
 },
 {
 "section": "Households",
