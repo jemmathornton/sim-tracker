@@ -479,7 +479,7 @@ window.ADMIN = {
 {
 "section": "Households",
 "world": "",
-"text": "**Decide:** Mods to take out before the new save: **Party Anywhere** (listed broken), NateTheL0ser's **Thrift Store Dress Normal** (out of date). (Removed 30 Oct: the SulSul Weather App script and the Dress Code Seasons add-on, both leftovers; copies in the backup.) Still unknown for 1.129: UI Cheats Extension, Home Regions."
+"text": "**Decide:** Mods to take out before the new save: NateTheL0ser's **Thrift Store Dress Normal** (out of date). (Removed 30 Oct: Party Anywhere, the SulSul Weather App script and the Dress Code Seasons add-on; copies in the backup.) Still unknown for 1.129: UI Cheats Extension, Home Regions."
 },
 {
 "section": "Households",
