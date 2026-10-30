@@ -479,7 +479,7 @@ window.ADMIN = {
 {
 "section": "Households",
 "world": "",
-"text": "**Decide:** Mods to take out before the new save: **Party Anywhere** (listed broken), NateTheL0ser's **Thrift Store Dress Normal** (out of date), and two leftovers: LittleMsSam's **SulSul Weather App script** (she says it's obsolete; the packages do everything) and the **Dress Code Seasons add-on** (its Hot and Cold dress codes are now inside the main Dress Code file, identical). Still unknown for 1.129: UI Cheats Extension, Home Regions."
+"text": "**Decide:** Mods to take out before the new save: **Party Anywhere** (listed broken), NateTheL0ser's **Thrift Store Dress Normal** (out of date). (Removed 30 Oct: the SulSul Weather App script and the Dress Code Seasons add-on, both leftovers; copies in the backup.) Still unknown for 1.129: UI Cheats Extension, Home Regions."
 },
 {
 "section": "Households",
