@@ -78,8 +78,9 @@
  },
  "alto-parent-1": {
   "name": "Unknown",
-  "sex": "x",
-  "placeholder": true
+  "sex": "f",
+  "late": true,
+  "origin": "Premade"
  },
  "bert-alto": {
   "name": "Bert Alto",
@@ -183,7 +184,8 @@
   },
   "partners": [
    ["contessa-capp", "Late Spouse"]
-  ]
+  ],
+  "parents": ["andromache-thebe", "hector-thebe"]
  },
  "aghata-ananou": {
   "name": "Aghata Ananou",
@@ -225,20 +227,18 @@
   "late": true
  },
  "cahya-cahyaputri": {
-  "name": "Cahya Cahyaputri",
+  "name": "Cahya Bapak",
   "sex": "m",
   "late": true,
-  "notInGame": true,
   "fromFix": true,
   "partners": [
    ["wulan-cahyaputri", "Spouse"]
   ]
  },
  "wulan-cahyaputri": {
-  "name": "Wulan Cahyaputri",
+  "name": "Wulan Ibu",
   "sex": "f",
   "late": true,
-  "notInGame": true,
   "fromFix": true,
   "partners": [
    ["cahya-cahyaputri", "Spouse"]
@@ -285,5 +285,177 @@
   "late": true,
   "notInGame": true,
   "fromFix": true
+ },
+ "queen-thebe": {
+  "name": "Queen Thebe",
+  "sex": "f",
+  "late": true,
+  "origin": "Premade",
+  "partners": [
+   ["eetion-thebe", "Spouse"]
+  ]
+ },
+ "eetion-thebe": {
+  "name": "Eetion Thebe",
+  "sex": "m",
+  "late": true,
+  "origin": "Premade",
+  "partners": [
+   ["queen-thebe", "Spouse"]
+  ]
+ },
+ "john-wilson-beard-beard": {
+  "name": "John Wilson Beard Beard",
+  "sex": "m",
+  "late": true,
+  "origin": "Premade"
+ },
+ "andromache-thebe": {
+  "name": "Andromache Thebe",
+  "sex": "f",
+  "late": true,
+  "origin": "Premade",
+  "parents": ["eetion-thebe", "queen-thebe"],
+  "partners": [
+   ["hector-thebe", "Spouse"]
+  ]
+ },
+ "hector-thebe": {
+  "name": "Hector Thebe",
+  "sex": "m",
+  "late": true,
+  "origin": "Premade",
+  "partners": [
+   ["andromache-thebe", "Spouse"]
+  ]
+ },
+ "cordelia-thebe-ii": {
+  "name": "Cordelia Thebe II",
+  "sex": "f",
+  "late": true,
+  "origin": "Premade",
+  "parents": ["queen-thebe", "john-wilson-beard-beard"]
+ },
+ "cordelia-thebe-iii": {
+  "name": "Cordelia Thebe III",
+  "sex": "f",
+  "late": true,
+  "origin": "Premade",
+  "parents": ["cordelia-thebe-ii"]
+ },
+ "cordelia-thebe-iv": {
+  "name": "Cordelia Thebe IV",
+  "sex": "f",
+  "late": true,
+  "origin": "Premade",
+  "parents": ["cordelia-thebe-iii"]
+ },
+ "rodrigo-de-pablo": {
+  "name": "Rodrigo De Pablo",
+  "sex": "m",
+  "late": true,
+  "origin": "Premade"
+ },
+ "rodrigo-thebe": {
+  "name": "Rodrigo Thebe",
+  "sex": "m",
+  "late": true,
+  "origin": "Premade",
+  "parents": ["rodrigo-de-pablo", "queen-thebe"]
+ },
+ "unknown-thebe": {
+  "name": "Unknown",
+  "sex": "m",
+  "late": true,
+  "origin": "Premade",
+  "parents": ["rodrigo-thebe"]
+ },
+ "unknown-darong": {
+  "name": "Unknown",
+  "sex": "f",
+  "late": true,
+  "origin": "Premade"
+ },
+ "ade-darong": {
+  "name": "Ade Darong",
+  "sex": "m",
+  "late": true,
+  "origin": "Premade",
+  "parents": ["unknown-darong"],
+  "partners": [
+   ["eniola-darong", "Spouse"]
+  ]
+ },
+ "eniola-darong": {
+  "name": "Eniola Darong",
+  "sex": "f",
+  "late": true,
+  "origin": "Premade",
+  "partners": [
+   ["ade-darong", "Spouse"]
+  ]
+ },
+ "imani-darong": {
+  "name": "Imani Darong",
+  "sex": "f",
+  "late": true,
+  "origin": "Premade"
+ },
+ "lina-darong": {
+  "name": "Lina Darong",
+  "sex": "f",
+  "late": true,
+  "origin": "Premade",
+  "parents": ["unknown-darong"],
+  "partners": [
+   ["sef-darong", "Spouse"]
+  ]
+ },
+ "sef-darong": {
+  "name": "Sef Darong",
+  "sex": "m",
+  "late": true,
+  "origin": "Premade",
+  "partners": [
+   ["lina-darong", "Spouse"]
+  ]
+ },
+ "delilah-dreamer": {
+  "name": "Delilah Dreamer",
+  "sex": "f",
+  "late": true,
+  "origin": "Premade",
+  "parents": ["lina-darong", "sef-darong"],
+  "partners": [
+   ["davis-dreamer", "Spouse"]
+  ]
+ },
+ "davis-dreamer": {
+  "name": "Davis Dreamer",
+  "sex": "m",
+  "late": true,
+  "origin": "Premade",
+  "partners": [
+   ["delilah-dreamer", "Spouse"]
+  ]
+ },
+ "darren-dreamer": {
+  "name": "Darren Dreamer",
+  "sex": "m",
+  "late": true,
+  "origin": "Premade",
+  "parents": ["delilah-dreamer", "davis-dreamer"],
+  "partners": [
+   ["darleen-dreamer", "Spouse"]
+  ]
+ },
+ "darleen-dreamer": {
+  "name": "Darleen Dreamer",
+  "sex": "f",
+  "late": true,
+  "origin": "Premade",
+  "partners": [
+   ["darren-dreamer", "Spouse"]
+  ]
  }
 }

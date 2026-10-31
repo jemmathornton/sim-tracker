@@ -68,7 +68,7 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 **Gibbi Point**
 - **Decide:** Paradise Stables: who lives there? A horse family of yours running Riding Stables?
 - **Decide:** Love Highland: a Custom Venue run by the Addams as story only, or their home again?
-- **Decide:** Revive and Thrive has no beds, so day Getaways only: add beds for overnight stays?
+- **Do:** Revive and Thrive: check in game whether it has beds (you think it does; its Gallery upload counts 0 bedrooms, but the Gallery only counts beds in a walled bedroom). Without beds, only day Getaways work.
 
 **Ondarion**
 - **Do:** Add a Waltzing Dance Floor when you rebuild La Vivace, the palaces and Giardino.
@@ -99,9 +99,7 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 - **Do:** UI Cheats Extension: download v1.59.1 from weerbesu's Patreon (the post is https://www.patreon.com/weerbesu/posts/ui-cheats-v1-59-26240068; yours is v1.59, the day before, which can't pin wants or fears). It mostly works on EA's 27 Oct patch (weerbesu said so in the post's comments on 30 Oct), but until he makes a version for it: “Remove this workplace rival” and setting a Sim's relationship with an object won't work (EA renamed what they use), Game Options won't show EA's new Allow Weight Changes and Allow Muscle Changes (take UI Cheats out of Mods while you set them in the new save, then put it back), and moving households in Manage Worlds uses the old way, without EA's 27 Oct fix. Done 30 Oct: MCCC and MC Woohoo 2026.6.0, LittleMsSam's Dress Code (27 Aug 2025) and Pet to Pet Greeting Fix (every other LittleMsSam mod checked: already current), Ravenwood's seasons mod swapped for the patched copy (keeps its lot types); SimMattically's Remove Purchase Button rebuilt on EA's current top-right bar; Party Anywhere, the SulSul Weather App script and the Dress Code Seasons add-on removed; NateTheL0ser's thrift store mod swapped for alasEnkidu's ThrifTea one, patched for 1.129. Done 31 Oct: six mods swapped for patched copies that add back what EA added since (Zerbu's High School Spawn Fix, More Discipline, Weather NPC Death Fix, Pet to Pet Greeting Fix, Choose Your Helmet, Mermaids Can Use Dock Ladders). The old files are in “Mods backup 2026-10-30” beside your Mods folder (delete it once all works).
 - **Decide:** Premade fix for the new save: **Premade Sim and Relationship Overhaul** (the “EA Remake” version, without its Vampires file; checked 31 Oct against EA's 27 Oct patch: its files and script look fine), or none (links with MCCC as planned). It also changes many premades' looks, outfits, likes, skills and money; don't install Szemoka's fix as well.
 - **Do:** Start the new save again once you've picked the premade fix (MCCC is updated; Premade Sim and Relationship Overhaul checked 31 Oct for EA's 27 Oct patch); the fix mod only works in a save made after it's installed (your call, 28 Oct).
-- **Decide:** Links between households that only an old save has (family and partners, e.g. Dina Caliente married to Raj Rasoya; Savannah Kopf is a townie, not a Fyres, her call 24 Oct): keep any? (research/inter-household-relationships.md)
-- **Do:** After bringing households in, put back the links between households with MC Command Center (research/inter-household-relationships.md lists each one, and which the new save already has).
-- **Decide:** Your new save has EA’s new family-tree ancestors (Feb 2026 update; only new saves get them). 25 aren’t on the site’s trees yet: the Thebe line back to Queen Thebe, the Darongs and Dreamers, Rodrigo De Pablo, Cahya and Wulan, Pranav Kunal. Add them?
+- **Do:** After bringing households in, put back the links between households with MC Command Center: only EA’s own and the Watson ones, not those Neighbourhood Stories made (your call, 31 Oct; research/inter-household-relationships.md lists each one, and which the new save already has).
 - **Do:** Kirklands: age Kennedy, Kayleigh, Kamila and Kendrick as you want them.
 - **Do:** Check the 22 households filled from your saves (every copy: research/own-households-review.md).
 - **Do:** Make the ones in no save: Mine ×2, Dynamic Daters, Nerdy Girls and Boys…
@@ -120,7 +118,6 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 - **Do:** Download Sebastian Michaelson and Merrilyn Ralston from Maxis's Gallery and pick their lots.
 - **Do:** Upload My Celebs (Chateau Peak) from “Rags to Riches”: the Dixon household at Inner Circle, Del Sol Valley (Anna Dixon, Aaradhya Raghavan, Reece Rains, Danial Pitte; only Anna is in your Library), then that save can go.
 - **Do:** The Cadberrys, as one job when you're ready (options in research/own-households-recommendations.md): uploading Leah-Moon (Library, take Sterling and Sylvia out first) and Sylvia & Kenny (“Not So Berry”), Ella-Mint, Isda Riverfront's family, the Rochanas (Isda Riverfront's tenants, also from “Not So Berry”: keep or drop?), the 100 Babies Final House upload (Ella-Mint's home, or not?), and their links (Leah-Moon is Sylvia's mother; Kennedy Kirkland and Sylvia are good friends).
-- **Decide:** Typing Sims in: chat only, or a Sims tab in World Plans (prototype in for-jemma/prototypes)?
 
 ## Not in game
 - **Do:** San Myshuno: make your own map adjustments, then recheck its banners and boxes.

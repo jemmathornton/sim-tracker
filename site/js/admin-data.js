@@ -354,7 +354,7 @@ window.ADMIN = {
 {
 "section": "World by world",
 "world": "Gibbi Point",
-"text": "**Decide:** Revive and Thrive has no beds, so day Getaways only: add beds for overnight stays?"
+"text": "**Do:** Revive and Thrive: check in game whether it has beds (you think it does; its Gallery upload counts 0 bedrooms, but the Gallery only counts beds in a walled bedroom). Without beds, only day Getaways work."
 },
 {
 "section": "World by world",
@@ -459,17 +459,7 @@ window.ADMIN = {
 {
 "section": "Households",
 "world": "",
-"text": "**Decide:** Links between households that only an old save has (family and partners, e.g. Dina Caliente married to Raj Rasoya; Savannah Kopf is a townie, not a Fyres, her call 24 Oct): keep any? (research/inter-household-relationships.md)"
-},
-{
-"section": "Households",
-"world": "",
-"text": "**Do:** After bringing households in, put back the links between households with MC Command Center (research/inter-household-relationships.md lists each one, and which the new save already has)."
-},
-{
-"section": "Households",
-"world": "",
-"text": "**Decide:** Your new save has EA’s new family-tree ancestors (Feb 2026 update; only new saves get them). 25 aren’t on the site’s trees yet: the Thebe line back to Queen Thebe, the Darongs and Dreamers, Rodrigo De Pablo, Cahya and Wulan, Pranav Kunal. Add them?"
+"text": "**Do:** After bringing households in, put back the links between households with MC Command Center: only EA’s own and the Watson ones, not those Neighbourhood Stories made (your call, 31 Oct; research/inter-household-relationships.md lists each one, and which the new save already has)."
 },
 {
 "section": "Households",
@@ -560,11 +550,6 @@ window.ADMIN = {
 "section": "Households",
 "world": "",
 "text": "**Do:** The Cadberrys, as one job when you're ready (options in research/own-households-recommendations.md): uploading Leah-Moon (Library, take Sterling and Sylvia out first) and Sylvia & Kenny (“Not So Berry”), Ella-Mint, Isda Riverfront's family, the Rochanas (Isda Riverfront's tenants, also from “Not So Berry”: keep or drop?), the 100 Babies Final House upload (Ella-Mint's home, or not?), and their links (Leah-Moon is Sylvia's mother; Kennedy Kirkland and Sylvia are good friends)."
-},
-{
-"section": "Households",
-"world": "",
-"text": "**Decide:** Typing Sims in: chat only, or a Sims tab in World Plans (prototype in for-jemma/prototypes)?"
 },
 {
 "section": "Not in game",

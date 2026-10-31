@@ -1,5 +1,7 @@
 # Relationships between households (24 Oct 2026)
 
+**Her call, 31 Oct:** keep only EA’s own links and the Watson ones (“Return to the HOB”, where she played both households); the ones Neighbourhood Stories made in other saves are not put back.
+
 Made by tools/research/relationships.py from copies of your saves. A household brought in from the Library loses every link to Sims outside it, so these are the ones to put back by hand (MC Command Center, which you have, can set family and relationships), or to keep by saving the households together. Only Sims on the site, in two different planned households.
 
 Each line ends with what the new save “Jemma's Sim World” already has between them (EA’s premades start with their own links).

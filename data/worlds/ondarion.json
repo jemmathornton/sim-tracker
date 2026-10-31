@@ -379,7 +379,11 @@
      "dynasty": {
       "name": "Darong",
       "role": "head"
-     }
+     },
+     "parents": ["ade-darong", "eniola-darong"],
+     "partners": [
+      ["imani-darong", "Late Spouse"]
+     ]
     },
     {
      "id": "jawara-darong",
@@ -401,7 +405,7 @@
       ["Adekoya Darong", "Acquaintances"],
       ["Amarachi Darong", "Good Friends"]
      ],
-     "parents": ["adekoya-darong"],
+     "parents": ["adekoya-darong", "imani-darong"],
      "dynasty": {
       "name": "Darong",
       "role": "heir"
@@ -495,7 +499,8 @@
      "dynasty": {
       "name": "Thebe",
       "role": "head"
-     }
+     },
+     "parents": ["cordelia-thebe-iv"]
     },
     {
      "id": "thiago-abrantes",

@@ -1,5 +1,7 @@
 # EA's ancestors in the new save (24 Oct)
 
+**31 Oct, her OK:** the 25 are on the site (data/people.json), all but Pranav Kunal, with the game's own names and sexes (PremadeAncestor tuning): “Eethion” is Eetion Thebe, JWBB is John Wilson Beard Beard; Cahya and Wulan renamed Cahya Bapak and Wulan Ibu; the Altos' unknown parent is the game's Unknown Alto.
+
 Read from a copy of “Jemma's Sim World” (fresh game, 23 Oct): the family tree the 3 Feb 2026 update added, which only new saves get (38 premade ancestors, all dead). Names are the game's own (from its PremadeAncestor tuning). Report only: nothing is on the site yet.
 
 **On the site already (13):** Aghata Ananou, Bert Alto, Caliban Capp, Contessa Capp, Cordelia Capp, Cornelia Goth, Manu Kealoha, Nick Alto, Orodueynna Gomes, Prudence Crumplebottom, Simon Crumplebottom, Tallulah Grove, Vita Alto. All 13 match the game's links (checked 24 Oct, after the Capp fix).
