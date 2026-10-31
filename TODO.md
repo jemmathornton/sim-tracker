@@ -4,6 +4,8 @@
 
 Every open item carried over from the claude.ai project on 13 Oct 2026: the notes doc, the overnight research report, and the chat handover. Ticked items were left out (they're done; see HANDOVER.md §6 for the decisions).
 
+**Decided 31 Oct (her calls, from her list):** Spooky and Simple Living stay on the four Windenburg lots (already in the plan); the New save column on Progress is kept (switch removed); Dustin Broke lives alone at Crick Cabana (the Sigworths stay in StrangerVille); the Tiquelles are spellcasters, Mid-NoWhere their portal; no Kennedy, the household is EA’s Bro; the Karaoke Legends (EA’s Akira and Darling, without Miko) live at 1313 21 Chic Street, so the Ferraras (hers, played in “Rotational”) still need a home. Left for later, her call: Lagoon of Love, Hallow Slough, LaSuli Point, Key Point, Caldera Camp (“not yet”), Moonwood Mill Library, Specter Row. Six patched mods installed (her OK). Lesson (her words): the homes proposal is suggestions only and must never be worded as settled; tools/premade_import.py now fills only households named with --only (a bare --apply refilled three households she had split on purpose).
+
 **[Jemma]** = needs her decision or input. **[Claude]** = can be done without her once the app is set up. Tick items here as they're done.
 
 ## 0. Moving to the app

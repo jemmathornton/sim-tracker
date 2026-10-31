@@ -28,8 +28,7 @@ SKIP = {"San Sequoia|Lovejoy": "she’ll upload the Lovejoys herself (two relate
         "Ondarion|Alto": "the vineyard Altos are still to be created",
         "Tomarang|Cadberry": "which Cadberrys live at Isda Riverfront is hers to say",
         "Magnolia Promenade|Kirkland": "only their mall; the Kirklands live in Newcrest (Twin Oracle Point)",
-        "Ravenwood|Specter": "waiting on her answer (who owns Specter Row)",
-        "San Myshuno|Bro & Kennedy": "waiting on her answer (who Kennedy is)"}
+        "Ravenwood|Specter": "waiting on her answer (who owns Specter Row)"}
 EA = {"Britechester|Pleasant"}
 # her choice (19 Oct): her "Rotational" save matches her plan best, so these use its copy (save, world it lives in), replacing what's there
 PREFER = {k: ("Rotational", w) for k, w in {"Brindleton Bay|Ventura": "Brindleton Bay", "Newcrest|LeBlanc": "Newcrest", "Oasis Springs|De Costa": "Oasis Springs",

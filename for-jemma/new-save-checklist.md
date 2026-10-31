@@ -268,11 +268,11 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 **Fashion District**
 
-- [ ] **701 ZenView**: not built yet: leave the game’s lot for now. Type: Apartment. Household: Bro & Kennedy (EA).
+- [ ] **701 ZenView**: not built yet: leave the game’s lot for now. Type: Apartment. Household: Bro (EA).
 - [ ] **702 ZenView**: not built yet: leave the game’s lot for now. Type: Apartment. Household: Behr (EA).
 - [ ] **1310 21 Chic Street**: place “1310 21 Chic Street”. Type: Apartment. Place it as a Room into the unit. Household: Jeong (EA). Traits: Lively Neighbors. Trait ideas (free slots): Convivial; Celebrity Home once she’s famous.
 - [ ] **1312 21 Chic Street**: not built yet: leave the game’s lot for now. Type: Apartment. Household: Pizzazz (EA).
-- [ ] **1313 21 Chic Street**: built but not on the Gallery, and as a room only (3 copies, 21 Dec 23); apartments go in as rooms. Type: Apartment.
+- [ ] **1313 21 Chic Street**: built but not on the Gallery, and as a room only (3 copies, 21 Dec 23); apartments go in as rooms. Type: Apartment. Household: Karaoke Legends (EA).
 - [ ] **Torendi Tunes** (game’s Torendi Tower Penthouse), 40x30: not built yet: leave the game’s lot for now. Type: Karaoke Bar.
 - [ ] **Planet Honey Pop!**, 30x20: not built yet: leave the game’s lot for now. Type: Thrift and Boba Store.
 

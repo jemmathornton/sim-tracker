@@ -2,7 +2,9 @@
 that match her spreadsheet; EA townies are checked against the Sims Wiki as well).
 
     python tools/premade_import.py           report: which plan households would be filled, and from which EA household
-    python tools/premade_import.py --apply   write the Sims into data/worlds/<world>.json (households[...].sims), then rebuild
+    python tools/premade_import.py --apply --only "<household>" [...]   write those households' Sims into data/worlds/<world>.json, then rebuild
+                                              (--all instead of --only fills every empty match: 31 Oct, it refilled households she had split
+                                              on purpose, BFF, Curious, Linh-Sadya & Linh, so name the ones she has decided)
 
 Reads research/data/premades.json (tools/research/premades.py). A household that already has Sims on the site is left
 alone. After a fresh import, run tools/premade_family_fix.py --apply for the unknown parents that join siblings and cousins. MATCHES below says which EA household fills which plan household, and which members go where when she has
@@ -21,7 +23,8 @@ MATCHES = {
                       "Curious": "Curious"},
     "windenburg": {"Fyres": "Fyres", "Munch": "Munch", "Partihaus": "Partihaus", "Free Spirits": "Bohemian", "Specter": "Specter"},
     "san-myshuno": {"Behr": "Behr", "Benali": "Benali", "Bheeda": "Bheeda", "Jang": "Jang", "Jeong": "Jeong", "Lobo": "Lobo",
-                    "Pizzazz": "Pizzazz", "Rasoya": "Rasoya", "Feng": "Hu", "Bro & Kennedy": "Bro"},   # Kennedy still to come (19 Oct)
+                    "Pizzazz": "Pizzazz", "Rasoya": "Rasoya", "Feng": "Hu", "Bro": "Bro",   # no Kennedy (her call, 31 Oct)
+                    "Karaoke Legends": ("Kibo", lambda s: s["name"] != "Miko Ojo")},   # Akira and Darling at 1313 21 Chic Street; Miko lives with Alicia (her call, 31 Oct)
     "forgotten-hollow": {"Straud": "NPC_VS_Nosferatu", "Vatore": "NPC_VS_Wilsons"},
     "brindleton-bay": {"Delgato": "Delgato", "Hecking": "Hecking", "Lynx": "Lynx"},
     "del-sol-valley": {"Bailey-Moon": "BaileyMoon", "Ward": "Ward"},
@@ -82,6 +85,9 @@ def school(s):
     return f"{m.group(1)} school · grade {m.group(2)}" if m else None
 
 
+ONLY = None
+
+
 def main(apply):
     P = load(os.path.join(ROOT, 'research', 'data', 'premades.json'))
     plan, report = {}, []
@@ -110,6 +116,7 @@ def main(apply):
                 cands = [h for h in P["households"] if h["short"] == short and (not keep or any(keep(s) for s in h["sims"]))]   # two EA households can share a name (the Altos)
                 h = cands[0] if cands else None
             if not h: report.append(f"{w} / {name}: EA household {short} not found"); continue
+            if ONLY is not None and name not in ONLY: continue
             have = (W.get('households') or {}).get(name, {}).get('sims')
             if have: report.append(f"{w} / {name}: already has Sims, left alone"); continue
             sims = [s for s in h["sims"] if not keep or keep(s)]
@@ -201,4 +208,6 @@ def main(apply):
 
 
 if __name__ == '__main__':
+    ONLY = sys.argv[sys.argv.index('--only') + 1:] if '--only' in sys.argv else None
+    if '--apply' in sys.argv and ONLY is None and '--all' not in sys.argv: sys.exit('name the households: --only "<household>" (or --all)')
     main('--apply' in sys.argv)

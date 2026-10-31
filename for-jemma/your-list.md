@@ -14,10 +14,6 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 - **Do:** The game crashed placing the first Britechester lot (23 Oct). Next try: save first, then place it from inside the lot in Build mode; if it crashes again, close the game and delete localthumbcache.package (Documents\Electronic Arts\The Sims 4; the game remakes it). Tell Claude which lot it was. (If it was Darby’s Den, the first on the checklist: players have reported crashes replacing that one before. Try another Britechester lot first.)
 - **Decide:** Lagoon of Love: Wedding Venue (Claude’s pick: your Gallery text calls it a beach wedding spot, Sulani has none, and it needs no pack), Park, or Vacation Rental (the upload has no beds)?
 - **Do:** Palomino Junction (Chestnut Ridge): place it from the Gallery, not your Library: both Library copies are marked as containing mods or custom content.
-- **Decide:** Spooky on The Narwhal Arms and Von-Windenburg Castle, Simple Living on Coorinberg Cottage and Rustic Residence: keep (Claude adds them to the plan) or take off?
-
-## Trials on the site
-- **Decide:** Progress page, switch at the bottom right: keep the New save column (✓ placed, ! something to fix, – to place) or drop it?
 
 ## Game options
 - **Do:** Neighbourhood Stories on. Other Households: Move In, Move Out, Have a Baby, Adopt a Child, Join and Leave a Career, Romance Changes off.
@@ -30,7 +26,6 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 ## World by world
 **Willow Creek**
 - **Decide:** Hallow Slough (Ella-Mint's home): Haunted House, On Hallowed Ground, or neither?
-- **Decide:** Crick Cabana: Dustin Broke alone, or with the Sigworths (as in Season Events)?
 - **Do:** In the new save, set school grades for David and Daniel Barraza and Melanie Reynolds (aged in CAS, so they start without one).
 
 **Oasis Springs**
@@ -40,13 +35,8 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 **Magnolia Promenade**
 - **Do:** Magnolia Mall, when you build it: coffee, a wardrobe or racks, things to sabotage (Paragons, Renegades).
 
-**Windenburg**
-- **Decide:** Tiquelles: spellcasters, with Mid-NoWhere as their portal to the Magic Realm?
-
 **San Myshuno**
 - **Do:** 18 Culpepper House: add the Spooky lot trait.
-- **Decide:** Karaoke Legends (Akira and Darling, once Miko leaves): EA’s version or your “Rotational” one? Home: check 1313 21 Chic Street (Fashion District, free) before confirming.
-- **Decide:** Bro & Kennedy (701 ZenView): which Kennedy? Tristan Kennedy, or Kennedy Thomason, Duggan or Rouse?
 
 **Del Sol Valley**
 - **Do:** Studio PBP, when you build it: give it Hottest Spot in Town.
@@ -116,7 +106,7 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 - **Do:** Check the 22 households filled from your saves (every copy: research/own-households-review.md).
 - **Do:** Make the ones in no save: Mine ×2, Dynamic Daters, Nerdy Girls and Boys…
 - **Do:** …Single Mum Friends, Ella-Mint Cadberry, Rory & Friend, Werewolves in Training, Innisgreen's five.
-- **Do:** Also yours: upload Sporty Girls and Sporty Boys from “Season Events” (Kiara Osborne, Juliette Childers, Hope Heredia; Timothy Brice, Jerry DeLong); upload the Lovejoys; the four Tiquelle households, the vineyard Altos, Specter Row's owners.
+- **Do:** Also yours: upload Sporty Girls and Sporty Boys from “Season Events” (Kiara Osborne, Juliette Childers, Hope Heredia; Timothy Brice, Jerry DeLong); upload the Lovejoys; the four Tiquelle households (spellcasters, with Mid-NoWhere as their portal: your call, 31 Oct), the vineyard Altos, Specter Row's owners.
 - **Do:** Rippling Flats’ “current uni Sims” are Kamilla Jackson and Chris Whitmore (“All Universities”, at UoW Hare Halls; Tony Whitmore in your Library): they finish their degrees, then move in next door to each other, one unit each, maybe each with a partner or family.
 - **Do:** Your Sulani Sims: check them all and decide how to split them up (Caldera Camp is “Mine”; Journey’s End and Reef Finery “may change”). In “Sulani Save” and your Library: Keoni Kalawai’a and Alana Hekekia (at Caldera Camp), Maleia, Maui, Kekoa, Leilani, Hirife, Harata, Heilani, Malia, Luana, Palani and Palila Kalawai’a/Kahananui, Heifara Opanui, Tamati Hekekia, Elisha Sotelo.
 - **Do:** Upload the Fantasias from “Wonder Child Challenge” (Frankie, Fliss and toddler Finlay, at Havisham House, Windenburg; Finlay is only in that save), then that save can go.

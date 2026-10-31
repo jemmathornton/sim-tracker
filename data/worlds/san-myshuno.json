@@ -46,11 +46,11 @@
    "mapSpot": [0.25, 0.55],
    "mapBox": [0.14, 0.42, 0.37, 0.67],
    "lots": [
-    {"lot": "701 ZenView", "myName": "701 ZenView", "type": "Apartment", "size": "N/A", "residents": "Bro & Kennedy", "built": false, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "701 ZenView", "myName": "701 ZenView", "type": "Apartment", "size": "N/A", "residents": "Bro", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "702 ZenView", "myName": "702 ZenView", "type": "Apartment", "size": "N/A", "residents": "Behr", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "1310 21 Chic Street", "myName": "1310 21 Chic Street", "type": "Apartment", "size": "N/A", "residents": "Jeong (Venessa, moved up from Del Sol Valley's Upland Place)", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["IJqDYJjGEeiBKjwldOHC9g=="], "beds": 1, "traits": ["Lively Neighbors"], "baths": 1},
     {"lot": "1312 21 Chic Street", "myName": "1312 21 Chic Street", "type": "Apartment", "size": "N/A", "residents": "Pizzazz", "built": false, "shared": false, "screenshots": false, "simsMade": false},
-    {"lot": "1313 21 Chic Street", "myName": "1313 21 Chic Street", "type": "Apartment", "size": "N/A", "residents": "Empty", "built": true, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "1313 21 Chic Street", "myName": "1313 21 Chic Street", "type": "Apartment", "size": "N/A", "residents": "Karaoke Legends", "built": true, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Torendi Tower Penthouse", "myName": "Torendi Tunes", "type": "Karaoke Bar", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Planet Honey Pop!", "myName": "Planet Honey Pop!", "type": "Thrift and Boba Store", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ],
@@ -594,7 +594,7 @@
     }
    ]
   },
-  "Bro & Kennedy": {
+  "Bro": {
    "sims": [
     {
      "id": "joaquin-le-chien",
@@ -653,6 +653,43 @@
    ],
    "bio": "Tech-savvy hunk Sergio and brash DJ Joaquin have little in common... except for the finer things in life. As they climb the ranks and rake in the bucks, just how awesome can they make their sweet pad?",
    "bioFrom": "EA"
+  },
+  "Karaoke Legends": {
+   "sims": [
+    {
+     "id": "akira-kibo",
+     "name": "Akira Kibo",
+     "sex": "m",
+     "origin": "Premade",
+     "age": "Young Adult",
+     "aspiration": "The Curator",
+     "traits": ["Self-Assured", "Jealous", "Romantic"],
+     "bonus": "Collector",
+     "career": "Tech Guru · Live Chat Support Agent (level 1)",
+     "skills": [
+      ["Singing", 7, 10],
+      ["Cooking", 2, 10],
+      ["Video Gaming", 6, 10]
+     ]
+    },
+    {
+     "id": "darling-walsh",
+     "name": "Darling Walsh",
+     "sex": "f",
+     "origin": "Premade",
+     "age": "Teen",
+     "aspiration": "Chief of Mischief",
+     "traits": ["Unflirty", "Active"],
+     "bonus": "Dastardly",
+     "career": "",
+     "school": "High school · grade B",
+     "skills": [
+      ["Singing", 9, 10],
+      ["Fitness", 8, 10],
+      ["Video Gaming", 8, 10]
+     ]
+    }
+   ]
   }
  },
  "weatherSeasons": {

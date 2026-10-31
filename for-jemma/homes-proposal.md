@@ -88,7 +88,7 @@ Full report: research/past-game-lore-families.md (683 households from The Sims 1
 ## San Myshuno (apartments)
 | Home | Beds | Pick | Alternatives |
 |---|---|---|---|
-| 1313 21 Chic Street | – | **Dayna and Alicia Ferrara**, their home in “Rotational” (still the Karaoke Legends question on your list) | – |
+| 1313 21 Chic Street | – | ~~Dayna and Alicia Ferrara~~ Your call, 31 Oct: the Karaoke Legends (Akira and Darling) live here. The Ferraras still need a home (this was only my suggestion). | – |
 | 17 Culpepper House | 1 | **Clem Caldwell**, Dina Caliente's fling from the Adventure Awaits trailer | Talia Mattera |
 | 18 Culpepper House | 2 | **Arielle Hubbard**, Nina Caliente's hot-tub flirt from the same trailer | – |
 | 19 Culpepper House | 1 | **Talia Mattera** (in the same trailer she books a fitness getaway to escape her busy life) | – |

@@ -227,16 +227,6 @@ window.ADMIN = {
 "text": "**Do:** Palomino Junction (Chestnut Ridge): place it from the Gallery, not your Library: both Library copies are marked as containing mods or custom content."
 },
 {
-"section": "New save fixes",
-"world": "",
-"text": "**Decide:** Spooky on The Narwhal Arms and Von-Windenburg Castle, Simple Living on Coorinberg Cottage and Rustic Residence: keep (Claude adds them to the plan) or take off?"
-},
-{
-"section": "Trials on the site",
-"world": "",
-"text": "**Decide:** Progress page, switch at the bottom right: keep the New save column (✓ placed, ! something to fix, – to place) or drop it?"
-},
-{
 "section": "Game options",
 "world": "",
 "text": "**Do:** Neighbourhood Stories on. Other Households: Move In, Move Out, Have a Baby, Adopt a Child, Join and Leave a Career, Romance Changes off."
@@ -274,11 +264,6 @@ window.ADMIN = {
 {
 "section": "World by world",
 "world": "Willow Creek",
-"text": "**Decide:** Crick Cabana: Dustin Broke alone, or with the Sigworths (as in Season Events)?"
-},
-{
-"section": "World by world",
-"world": "Willow Creek",
 "text": "**Do:** In the new save, set school grades for David and Daniel Barraza and Melanie Reynolds (aged in CAS, so they start without one)."
 },
 {
@@ -298,23 +283,8 @@ window.ADMIN = {
 },
 {
 "section": "World by world",
-"world": "Windenburg",
-"text": "**Decide:** Tiquelles: spellcasters, with Mid-NoWhere as their portal to the Magic Realm?"
-},
-{
-"section": "World by world",
 "world": "San Myshuno",
 "text": "**Do:** 18 Culpepper House: add the Spooky lot trait."
-},
-{
-"section": "World by world",
-"world": "San Myshuno",
-"text": "**Decide:** Karaoke Legends (Akira and Darling, once Miko leaves): EA’s version or your “Rotational” one? Home: check 1313 21 Chic Street (Fashion District, free) before confirming."
-},
-{
-"section": "World by world",
-"world": "San Myshuno",
-"text": "**Decide:** Bro & Kennedy (701 ZenView): which Kennedy? Tristan Kennedy, or Kennedy Thomason, Duggan or Rouse?"
 },
 {
 "section": "World by world",
@@ -524,7 +494,7 @@ window.ADMIN = {
 {
 "section": "Households",
 "world": "",
-"text": "**Do:** Also yours: upload Sporty Girls and Sporty Boys from “Season Events” (Kiara Osborne, Juliette Childers, Hope Heredia; Timothy Brice, Jerry DeLong); upload the Lovejoys; the four Tiquelle households, the vineyard Altos, Specter Row's owners."
+"text": "**Do:** Also yours: upload Sporty Girls and Sporty Boys from “Season Events” (Kiara Osborne, Juliette Childers, Hope Heredia; Timothy Brice, Jerry DeLong); upload the Lovejoys; the four Tiquelle households (spellcasters, with Mid-NoWhere as their portal: your call, 31 Oct), the vineyard Altos, Specter Row's owners."
 },
 {
 "section": "Households",
