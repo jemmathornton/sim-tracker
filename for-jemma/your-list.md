@@ -12,7 +12,7 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 ## New save fixes
 - **Do:** Everything the save itself shows (game options, Neighbourhood Stories, hearting, lots to place or fix, households to move or bring in) is in the **New save** block at the top of this page; Claude refreshes it after each session. First: untick the Neighbourhood Stories rules and heart your planned households.
 - **Do:** The game crashed placing the first Britechester lot (23 Oct). Next try: save first, then place it from inside the lot in Build mode; if it crashes again, close the game and delete localthumbcache.package (Documents\Electronic Arts\The Sims 4; the game remakes it). Tell Claude which lot it was. (If it was Darby’s Den, the first on the checklist: players have reported crashes replacing that one before. Try another Britechester lot first.)
-- **Decide:** Lagoon of Love: Wedding Venue (Claude’s pick: your Gallery text calls it a beach wedding spot, Sulani has none, and it needs no pack), Park, or Vacation Rental (the upload has no beds)?
+- **Decide:** Lagoon of Love: Wedding Venue (Claude’s pick: your Gallery text calls it a beach wedding spot, Sulani has none, and it needs no pack), Park, or Vacation Rental (its upload counts no bedrooms, but the Gallery only counts walled bedrooms, so check in game)?
 - **Do:** Palomino Junction (Chestnut Ridge): place it from the Gallery, not your Library: both Library copies are marked as containing mods or custom content.
 
 ## Game options
@@ -68,7 +68,6 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 **Gibbi Point**
 - **Decide:** Paradise Stables: who lives there? A horse family of yours running Riding Stables?
 - **Decide:** Love Highland: a Custom Venue run by the Addams as story only, or their home again?
-- **Do:** Revive and Thrive: check in game whether it has beds (you think it does; its Gallery upload counts 0 bedrooms, but the Gallery only counts beds in a walled bedroom). Without beds, only day Getaways work.
 
 **Ondarion**
 - **Do:** Add a Waltzing Dance Floor when you rebuild La Vivace, the palaces and Giardino.

@@ -1,5 +1,7 @@
 # Getaways and Custom Venues: a check of her plan (overnight 17 Oct)
 
+**Correction, 31 Oct:** Revive and Thrive does have beds (six double beds in glamping tents, read from “Building #2”). The Gallery's 0 only counts beds in walled bedrooms. Where this note says it has no beds, that is wrong: overnight Getaways work there.
+
 > Since 22 Oct: the Love Highland finding is confirmed and taken further in research/love-highland-business.md (a Custom Venue can’t be owned or run as a business; a Small Business Venue can’t host Getaways). Love Highland is parked on TODO.md.
 
 Research only. Nothing in the app, data, tools or TODO.md was changed, and nothing was committed. No save was opened.

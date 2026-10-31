@@ -358,6 +358,8 @@ Left out, as asked: Who lives where (homes proposal), the premade fix, the mods 
 
 ## 17. Revive and Thrive (Gibbi Point)
 
+**Correction (31 Oct, evening):** it does have beds: six double beds in glamping tents (“Building #2”). The upload's 0 bedrooms only means none are in walled bedrooms. The facts below are wrong on this point.
+
 **Question:** Should Revive and Thrive get beds for overnight stays?
 
 **Options:** add beds for overnight stays, or keep day Getaways only.
