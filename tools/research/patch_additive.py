@@ -100,6 +100,7 @@ def main():
             else: stack.extend(k for k in n[2] if k[2])
     for rel, rules in RULES.items():
         src = os.path.join(MODS, rel)
+        if not os.path.exists(src): src = src[:-8] + '_JemmaPatch-1.129.package'    # installed 31 Oct: rerun on the patched copy
         if not os.path.exists(src): print('not installed:', rel); continue
         tmp = os.path.join(tempfile.mkdtemp(), 'mod.package'); shutil.copy(src, tmp)
         entries, changed = [], 0
