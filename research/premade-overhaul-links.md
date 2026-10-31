@@ -1,0 +1,147 @@
+# Relationships the Premade Sim and Relationship Overhaul sets up (v2.10, EA Remake)
+
+Made by tools/research/premade_overhaul_links.py from the mod's relationship list: 143 pairs of premade Sims, each with what its setup applies (relationship bits; friendship and romance changes where given). Names are the mod's and the game's internal ones.
+
+- **AgathaCrumplebottom** and **SKL_DennisKim**: has_met; Friendship 25
+- **AgathaCrumplebottom** and **SKL_VivianLewis**: has_met; Friendship 60
+- **AgnesCrumplebottom** and **AlexanderGoth**: RelationshipTrack: LTR_Friendship 5
+- **AgnesCrumplebottom** and **CassandraGoth**: has_met; RelationshipTrack: LTR_Friendship 5
+- **AgnesCrumplebottom** and **MortimerGoth**: has_met; RelationshipTrack: LTR_Friendship 15
+- **ArturoLinh** and **SKL_DennisKim**: has_met; Friendship 40
+- **BFFs_LibertyLee** and **AlexMoyer_FTUERoommate**: see its loot
+- **BFFs_LibertyLee** and **BFFs_SummerHoliday**: RelationshipTrack: LTR_Friendship 50
+- **BFFs_LibertyLee** and **BFFs_SummerHoliday**: friendship-bff, has_met; Friendship 100
+- **BFFs_LibertyLee** and **Pancakes_BobPancakes**: see its loot
+- **BFFs_LibertyLee** and **Pancakes_ElizaPancakes**: has_met; Friendship 40
+- **BFFs_LibertyLee** and **Roomies_GavinRichards**: has_met; Friendship 25
+- **BFFs_LibertyLee** and **Roomies_JHuntingtonIII**: has_met; Friendship 25
+- **BFFs_LibertyLee** and **Roomies_MitchellKalani**: has_met; Friendship 25
+- **BFFs_LibertyLee** and **Roomies_ZoePatel**: has_met; Friendship 25
+- **BFFs_SummerHoliday** and **Pancakes_BobPancakes**: see its loot
+- **BFFs_SummerHoliday** and **Pancakes_ElizaPancakes**: see its loot
+- **BFFs_SummerHoliday** and **Roomies_GavinRichards**: has_met; Friendship 25
+- **BFFs_SummerHoliday** and **Roomies_JHuntingtonIII**: has_met; Friendship 25
+- **BFFs_SummerHoliday** and **Roomies_MitchellKalani**: has_met; Friendship 25
+- **BFFs_SummerHoliday** and **Roomies_ZoePatel**: has_met; Friendship 25
+- **BFFs_TravisScott** and **BFFs_LibertyLee**: friendship-bff, has_met; Friendship 100
+- **BFFs_TravisScott** and **BFFs_SummerHoliday**: friendship-bff, has_met; Friendship 100
+- **BFFs_TravisScott** and **Pancakes_BobPancakes**: has_met; Friendship 40
+- **BFFs_TravisScott** and **Pancakes_ElizaPancakes**: has_met; Friendship 25
+- **BFFs_TravisScott** and **Roomies_GavinRichards**: has_met; Friendship 25
+- **BFFs_TravisScott** and **Roomies_JHuntingtonIII**: has_met; Friendship 25
+- **BFFs_TravisScott** and **Roomies_MitchellKalani**: has_met; Friendship 25
+- **BFFs_TravisScott** and **Roomies_ZoePatel**: has_met; Friendship 25
+- **BellaGoth** and **AlexanderGoth**: see its loot
+- **BellaGoth** and **CassandraGoth**: see its loot
+- **BellaGoth** and **MortimerGoth**: see its loot
+- **BellaGoth** and **Pancakes_BobPancakes**: has_met; Friendship 40
+- **BellaGoth** and **Pancakes_ElizaPancakes**: has_met; Friendship -20
+- **CalienteDina** and **BFFs_LibertyLee**: has_met; Friendship 25
+- **CalienteDina** and **BFFs_SummerHoliday**: has_met; Friendship 40
+- **CalienteDina** and **BFFs_TravisScott**: has_met; Friendship 25
+- **CalienteDina** and **CalienteDonLothario**: see its loot
+- **CalienteDina** and **GeoffreyLandgraab**: see its loot
+- **CalienteDina** and **JohnnyZest**: see its loot
+- **CalienteDina** and **MalcomLandgraab**: see its loot
+- **CalienteDina** and **NancyLandgraab**: see its loot
+- **CalienteDina** and **Roomies_GavinRichards**: see its loot
+- **CalienteDina** and **Roomies_JHuntingtonIII**: has_met; Friendship 40
+- **CalienteDina** and **Roomies_MitchellKalani**: see its loot
+- **CalienteDina** and **Roomies_ZoePatel**: see its loot
+- **CalienteDonLothario** and **BellaGoth**: has_met; RelationshipTrack: LTR_Friendship 5
+- **CalienteDonLothario** and **GeoffreyLandgraab**: see its loot
+- **CalienteDonLothario** and **JohnnyZest**: has_met; Friendship 40
+- **CalienteDonLothario** and **MalcomLandgraab**: see its loot
+- **CalienteDonLothario** and **MortimerGoth**: see its loot
+- **CalienteDonLothario** and **NancyLandgraab**: see its loot
+- **CalienteDonLothario** and **Roomies_GavinRichards**: see its loot
+- **CalienteDonLothario** and **Roomies_JHuntingtonIII**: has_met; Friendship 50
+- **CalienteDonLothario** and **Roomies_MitchellKalani**: see its loot
+- **CalienteDonLothario** and **Roomies_ZoePatel**: see its loot
+- **CalienteKatrina** and **CalienteDina**: see its loot
+- **CalienteKatrina** and **CalienteDonLothario**: RelationshipTrack: LTR_Friendship 50, RelationshipTrack: LTR_Romance 50
+- **CalienteKatrina** and **CalienteNina**: see its loot
+- **CalienteKatrina** and **GeoffreyLandgraab**: see its loot
+- **CalienteKatrina** and **JohnnyZest**: has_met; Friendship 40
+- **CalienteKatrina** and **NancyLandgraab**: has_met; Friendship -20
+- **CalienteNina** and **BFFs_LibertyLee**: see its loot
+- **CalienteNina** and **BFFs_SummerHoliday**: has_met; Friendship 40
+- **CalienteNina** and **BFFs_TravisScott**: see its loot
+- **CalienteNina** and **CalienteDina**: see its loot
+- **CalienteNina** and **CalienteDonLothario**: see its loot
+- **CalienteNina** and **GeoffreyLandgraab**: has_met; Friendship -20
+- **CalienteNina** and **JohnnyZest**: RelationshipTrack: LTR_Friendship -25, RelationshipTrack: LTR_Romance -25
+- **CalienteNina** and **MalcomLandgraab**: see its loot
+- **CalienteNina** and **NancyLandgraab**: see its loot
+- **CalienteNina** and **Roomies_GavinRichards**: see its loot
+- **CalienteNina** and **Roomies_JHuntingtonIII**: has_met; Friendship 40
+- **CalienteNina** and **Roomies_MitchellKalani**: has_met; Friendship 25
+- **CalienteNina** and **Roomies_ZoePatel**: see its loot
+- **ChanhLinh** and **SKL_DennisKim**: has_met; Friendship 40
+- **GeetaRasoya** and **SKL_VivianLewis**: has_met; Friendship 40
+- **GeoffreyLandgraab** and **BellaGoth**: has_met; Friendship 50
+- **GeoffreyLandgraab** and **CassandraGoth**: see its loot
+- **GeoffreyLandgraab** and **JohnnyZest**: family_Target_IsParentOf_Actor, family_Target_IsSonOrDaughterOf_Actor, has_met; RelationshipTrack: LTR_Friendship -25
+- **GeoffreyLandgraab** and **MortimerGoth**: has_met; Friendship 40
+- **GeoffreyLandgraab** and **Pancakes_BobPancakes**: see its loot
+- **GeoffreyLandgraab** and **Pancakes_ElizaPancakes**: has_met; Friendship 25
+- **GeoffreyLandgraab** and **Roomies_GavinRichards**: see its loot
+- **GeoffreyLandgraab** and **Roomies_JHuntingtonIII**: see its loot
+- **GeoffreyLandgraab** and **Roomies_MitchellKalani**: see its loot
+- **GeoffreyLandgraab** and **Roomies_ZoePatel**: see its loot
+- **Goth_GuntherGoth** and **AlexanderGoth**: has_met; Friendship 25
+- **Goth_GuntherGoth** and **BellaGoth**: has_met; Friendship 25
+- **Goth_GuntherGoth** and **CassandraGoth**: has_met; Friendship 25
+- **Goth_GuntherGoth** and **MortimerGoth**: family_Target_IsParentOf_Actor, family_Target_IsSonOrDaughterOf_Actor, has_met; RelationshipTrack: LTR_Friendship 55
+- **GrimReaper** and **NyonSpecter**: family_Target_IsParentOf_Actor, family_Target_IsSonOrDaughterOf_Actor; RelationshipTrack: LTR_Friendship 5
+- **GrimReaper** and **OliveSpecter**: HaveBeenRomantic, has_met, romantic-HaveDoneWooHoo, romantic_FirstKiss; RelationshipTrack: LTR_Friendship 100, RelationshipTrack: LTR_Romance 100
+- **JohnnyZest** and **BellaGoth**: see its loot
+- **JohnnyZest** and **CassandraGoth**: see its loot
+- **JohnnyZest** and **MalcomLandgraab**: RelationshipTrack: LTR_Friendship 15
+- **JohnnyZest** and **MortimerGoth**: see its loot
+- **JohnnyZest** and **Roomies_GavinRichards**: has_met; Friendship 40
+- **JohnnyZest** and **Roomies_JHuntingtonIII**: has_met; Friendship 40
+- **JohnnyZest** and **Roomies_MitchellKalani**: has_met; Friendship 40
+- **JohnnyZest** and **Roomies_ZoePatel**: has_met; Friendship 40
+- **MalcomLandgraab** and **BellaGoth**: see its loot
+- **MalcomLandgraab** and **CassandraGoth**: has_met; Friendship 50
+- **MalcomLandgraab** and **MortimerGoth**: see its loot
+- **MichaelsonTrent_AdharaMichaelson** and **LunaSullivan_XochitilLuna**: has_met; Friendship 25
+- **MichaelsonTrent_AdharaMichaelson** and **RoblesRuano_DoliRuano**: friendship-bff, has_met; Friendship 100
+- **MichaelsonTrent_AdharaMichaelson** and **Robles_BerniceRobles**: has_met; Friendship 40
+- **MichaelsonTrent_AdharaMichaelson** and **Soto_Camille**: see its loot
+- **MichaelsonTrent_ChristopherMichaelson** and **LunaSullivan_XochitilLuna**: RelationshipTrack: LTR_Friendship 25
+- **MichaelsonTrent_ChristopherMichaelson** and **Robles_BerniceRobles**: see its loot
+- **MortimerGoth** and **AlexanderGoth**: see its loot
+- **MortimerGoth** and **CassandraGoth**: see its loot
+- **MortimerGoth** and **Pancakes_BobPancakes**: has_met; Friendship 40
+- **MortimerGoth** and **Pancakes_ElizaPancakes**: has_met; Friendship 25
+- **NancyLandgraab** and **AlexanderGoth**: see its loot
+- **NancyLandgraab** and **BellaGoth**: has_met; RelationshipTrack: LTR_Friendship 15
+- **NancyLandgraab** and **CassandraGoth**: see its loot
+- **NancyLandgraab** and **JohnnyZest**: family_Target_IsParentOf_Actor, family_Target_IsSonOrDaughterOf_Actor, has_met; RelationshipTrack: LTR_Friendship -50
+- **NancyLandgraab** and **MalcomLandgraab**: RelationshipTrack: LTR_Friendship 100
+- **NancyLandgraab** and **MortimerGoth**: has_met; Friendship 25
+- **NancyLandgraab** and **Pancakes_ElizaPancakes**: has_met; RelationshipTrack: LTR_Friendship 55
+- **NancyLandgraab** and **SKL_AliceKimLewis**: has_met; Friendship 40
+- **OliveSpecter** and **AlexMoyer_FTUERoommate**: see its loot
+- **Pancakes_BobPancakes** and **AlexMoyer_FTUERoommate**: has_met; Friendship -20
+- **Pancakes_BobPancakes** and **Pancakes_ElizaPancakes**: RelationshipTrack: LTR_Friendship 60, RelationshipTrack: LTR_Romance 45
+- **Pancakes_ElizaPancakes** and **AlexMoyer_FTUERoommate**: has_met; Friendship -20
+- **RadwanGomes** and **LayneCoffin**: HasBeenFriends, HaveBeenRomantic, has_met, romantic-Broken_Up, romantic-HaveDoneWooHoo, romantic-Significant_Other, romantic_FirstKiss
+- **SKL_AliceKimLewis** and **AlexMoyer_FTUERoommate**: has_met; Friendship 40
+- **SKL_AliceKimLewis** and **BellaGoth**: has_met; Friendship 40
+- **SKL_AliceKimLewis** and **MortimerGoth**: has_met; Friendship 25
+- **SKL_AliceKimLewis** and **Pancakes_BobPancakes**: see its loot
+- **SKL_AliceKimLewis** and **Pancakes_ElizaPancakes**: has_met; Friendship 50
+- **SKL_DennisKim** and **SKL_AliceKimLewis**: see its loot
+- **SKL_EricLewis** and **AlexMoyer_FTUERoommate**: has_met; Friendship 25
+- **SKL_EricLewis** and **BellaGoth**: has_met; Friendship 25
+- **SKL_EricLewis** and **MortimerGoth**: has_met; Friendship 40
+- **SKL_EricLewis** and **Pancakes_BobPancakes**: has_met; Friendship 60
+- **SKL_EricLewis** and **Pancakes_ElizaPancakes**: has_met; Friendship 25
+- **SKL_EricLewis** and **Roomies_GavinRichards**: family_Target_IsCousinOf_Actor, has_met; RelationshipTrack: LTR_Friendship 35
+- **SKL_OliviaKimLewis** and **AlexanderGoth**: see its loot
+- **SKL_OliviaKimLewis** and **Roomies_GavinRichards**: has_met; RelationshipTrack: LTR_Friendship 15
+- **SKL_VivianLewis** and **Roomies_GavinRichards**: has_met; RelationshipTrack: LTR_Friendship 50
+- **SKL_VivianLewis** and **SKL_EricLewis**: see its loot
