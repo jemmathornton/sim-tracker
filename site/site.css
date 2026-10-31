@@ -1019,6 +1019,15 @@ details.adm-more summary{cursor:pointer;font-weight:700;font-size:14px;color:var
 .sheet .t.ns-fix{color:#9A6A00;font-weight:800}
 .sheet th.ns-th{white-space:normal;line-height:1.1;font-size:inherit}
 .sheet.ns-on th,.sheet.ns-on td{padding-left:4px;padding-right:4px}
+/* trial switch (31 Oct, overnight; js/sections.js, EA's ancestors' pictures): remove with the trial */
+.trial-switch{position:fixed;right:18px;bottom:18px;z-index:60;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:16px;padding:12px 14px;box-shadow:0 10px 30px rgba(0,0,0,.18);display:grid;gap:8px;font-size:13px;max-width:430px}
+.trial-switch[hidden]{display:none}
+.trial-switch div{display:flex;flex-wrap:wrap;gap:6px}
+.trial-switch button{border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:5px 11px;cursor:pointer;font-weight:600;font-size:12.5px;color:var(--ink)}
+.trial-switch button.on{background:var(--brass);border-color:var(--brass);color:#fff}
+.trial-switch button:focus-visible{outline:2px solid var(--brass)}
+.tc .tm.anc-pic{padding:0;overflow:hidden}
+.tc .tm.anc-pic img{display:block;width:100%;height:100%;object-fit:cover}
 @media (max-width:700px){
   .roster{min-width:720px}   /* the lined-up Sims and animals tables scroll sideways on a phone instead of squashing */
   .adm-two{grid-template-columns:1fr}

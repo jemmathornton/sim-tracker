@@ -419,3 +419,36 @@ lotRows = function(){
   return t.innerHTML;
 };
 if (location.hash === "#admin-progress") route();   // the page was drawn before this file loaded
+
+// ---------- trial (31 Oct, overnight): EA's ancestors' own portraits and how they died ----------
+// A switch at the bottom right (Sim pages only): "As now" is the site exactly as it was; "With game pictures" shows each
+// ancestor's 48-pixel portrait from the game (tools/research/ancestors.py, never stretched) on their page and in family
+// trees, and how they died, in the game's words. Remove this block (and its CSS) once she picks.
+const ANC_KEY = "jsw-ancestors-trial";
+let ANC_TRIAL = (() => { try { return localStorage.getItem(ANC_KEY) === "on" ? "on" : "now"; } catch (e) { return "now"; } })();
+const ANC = DATA.ancestors || {}, ANC_WAS = {};
+function ancApply(){
+  Object.entries(ANC).forEach(([id, a]) => { const s = SIMS[id]; if (!s) return;
+    if (!(id in ANC_WAS)) ANC_WAS[id] = {libraryPic: s.libraryPic, died: s.died};
+    if (ANC_TRIAL === "on") { if (!s.portrait && !ANC_WAS[id].libraryPic && a.portrait) s.libraryPic = a.portrait; if (!ANC_WAS[id].died && a.died) s.died = a.died; }
+    else { s.libraryPic = ANC_WAS[id].libraryPic; s.died = ANC_WAS[id].died; if (s.libraryPic === undefined) delete s.libraryPic; if (s.died === undefined) delete s.died; } });
+}
+function ancTrees(){
+  if (ANC_TRIAL !== "on") return;
+  document.querySelectorAll("#view .tc[data-sim]").forEach(c => { const a = ANC[c.dataset.sim], m = c.querySelector(".tm");
+    if (a && a.portrait && m && !m.querySelector("img")) { m.classList.add("anc-pic"); m.innerHTML = `<img src="${a.portrait}" alt="">`; } });
+}
+function ancSwitch(){
+  if (!Object.keys(ANC).length) return;
+  let d = document.getElementById("anc-switch");
+  if (!d) { d = document.createElement("div"); d.id = "anc-switch"; d.className = "trial-switch"; d.setAttribute("role", "group"); d.setAttribute("aria-label", "Ancestors' pictures (trial)"); document.body.appendChild(d); }
+  d.hidden = !/^(s-|h-)/.test(location.hash.slice(1));
+  d.innerHTML = `<b>EA’s ancestors (trial)</b><div>${[["now", "As now"], ["on", "With game pictures"]].map(([k, t]) => `<button type="button" data-anctrial="${k}" class="${ANC_TRIAL === k ? "on" : ""}" aria-pressed="${ANC_TRIAL === k}">${t}</button>`).join("")}</div>`;
+}
+new MutationObserver(ancTrees).observe(document.getElementById("view"), {childList: true, subtree: true});
+document.addEventListener("click", e => { const b = e.target.closest("[data-anctrial]"); if (!b || b.dataset.anctrial === ANC_TRIAL) return;
+  ANC_TRIAL = b.dataset.anctrial; try { localStorage.setItem(ANC_KEY, ANC_TRIAL); } catch (err) {}
+  ancApply(); ancSwitch(); const y = scrollY; route(); scrollTo(0, y); });
+addEventListener("hashchange", ancSwitch);
+ancApply(); ancSwitch();
+if (ANC_TRIAL === "on" && /^#(s-|h-)/.test(location.hash)) route();   // the page was drawn before this file loaded

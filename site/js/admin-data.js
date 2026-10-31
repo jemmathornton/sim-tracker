@@ -219,7 +219,7 @@ window.ADMIN = {
 {
 "section": "New save fixes",
 "world": "",
-"text": "**Decide:** Lagoon of Love: Wedding Venue (Claude’s pick: your Gallery text calls it a beach wedding spot, Sulani has none, and it needs no pack), Park, or Vacation Rental (the upload has no beds)?"
+"text": "**Decide:** Lagoon of Love: Wedding Venue (Claude’s pick: your Gallery text calls it a beach wedding spot, Sulani has none, and it needs no pack), Park, or Vacation Rental (its upload counts no bedrooms, but the Gallery only counts walled bedrooms, so check in game)?"
 },
 {
 "section": "New save fixes",
@@ -350,11 +350,6 @@ window.ADMIN = {
 "section": "World by world",
 "world": "Gibbi Point",
 "text": "**Decide:** Love Highland: a Custom Venue run by the Addams as story only, or their home again?"
-},
-{
-"section": "World by world",
-"world": "Gibbi Point",
-"text": "**Do:** Revive and Thrive: check in game whether it has beds (you think it does; its Gallery upload counts 0 bedrooms, but the Gallery only counts beds in a walled bedroom). Without beds, only day Getaways work."
 },
 {
 "section": "World by world",

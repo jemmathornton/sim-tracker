@@ -1,0 +1,187 @@
+{
+ "ade-darong": {
+  "name": "Ade Darong",
+  "died": "Old Age",
+  "portrait": "ancestors/ade-darong.png"
+ },
+ "aghata-ananou": {
+  "name": "Aghata Ananou",
+  "died": "Fire",
+  "portrait": "ancestors/aghata-ananou.png"
+ },
+ "andromache-thebe": {
+  "name": "Andromache Thebe",
+  "died": "Electrocution",
+  "portrait": "ancestors/andromache-thebe.png"
+ },
+ "bert-alto": {
+  "name": "Bert Alto",
+  "died": "Old Age",
+  "portrait": "ancestors/bert-alto.png"
+ },
+ "cahya-cahyaputri": {
+  "name": "Cahya Bapak",
+  "died": "Electrocution",
+  "portrait": "ancestors/cahya-cahyaputri.png"
+ },
+ "caliban-capp": {
+  "name": "Caliban Capp",
+  "died": "Fire",
+  "portrait": "ancestors/caliban-capp.png"
+ },
+ "contessa-capp": {
+  "name": "Contessa Capp",
+  "died": "Old Age",
+  "portrait": "ancestors/contessa-capp.png"
+ },
+ "cordelia-capp": {
+  "name": "Cordelia Capp",
+  "died": "Fire",
+  "portrait": "ancestors/cordelia-capp.png"
+ },
+ "cordelia-thebe-ii": {
+  "name": "Cordelia Thebe II",
+  "died": "Drowning",
+  "portrait": "ancestors/cordelia-thebe-ii.png"
+ },
+ "cordelia-thebe-iii": {
+  "name": "Cordelia Thebe III",
+  "died": "Fire",
+  "portrait": "ancestors/cordelia-thebe-iii.png"
+ },
+ "cordelia-thebe-iv": {
+  "name": "Cordelia Thebe IV",
+  "died": "Drowning",
+  "portrait": "ancestors/cordelia-thebe-iv.png"
+ },
+ "cornelia-goth": {
+  "name": "Cornelia Goth",
+  "died": "Fire",
+  "portrait": "ancestors/cornelia-goth.png"
+ },
+ "darleen-dreamer": {
+  "name": "Darleen Dreamer",
+  "died": "Fire",
+  "portrait": "ancestors/darleen-dreamer.png"
+ },
+ "darren-dreamer": {
+  "name": "Darren Dreamer",
+  "died": "Broken Heart",
+  "portrait": "ancestors/darren-dreamer.png"
+ },
+ "davis-dreamer": {
+  "name": "Davis Dreamer",
+  "died": "Old Age",
+  "portrait": "ancestors/davis-dreamer.png"
+ },
+ "delilah-dreamer": {
+  "name": "Delilah Dreamer",
+  "died": "Electrocution",
+  "portrait": "ancestors/delilah-dreamer.png"
+ },
+ "eetion-thebe": {
+  "name": "Eetion Thebe",
+  "died": "Old Age",
+  "portrait": "ancestors/eetion-thebe.png"
+ },
+ "eniola-darong": {
+  "name": "Eniola Darong",
+  "died": "Old Age",
+  "portrait": "ancestors/eniola-darong.png"
+ },
+ "fiorenza-zhu": {
+  "name": "Fiorenza Zhu",
+  "died": "Old Age",
+  "portrait": "ancestors/fiorenza-zhu.png"
+ },
+ "gioia-vatore": {
+  "name": "Gioia Vatore",
+  "died": "Old Age",
+  "portrait": "ancestors/gioia-vatore.png"
+ },
+ "hector-thebe": {
+  "name": "Hector Thebe",
+  "died": "Cow Plant",
+  "portrait": "ancestors/hector-thebe.png"
+ },
+ "imani-darong": {
+  "name": "Imani Darong",
+  "died": "Cuckoo Malfunction",
+  "portrait": "ancestors/imani-darong.png"
+ },
+ "john-wilson-beard-beard": {
+  "name": "John Wilson Beard Beard",
+  "died": "Meteorite",
+  "portrait": "ancestors/john-wilson-beard-beard.png"
+ },
+ "lina-darong": {
+  "name": "Lina Darong",
+  "died": "Old Age",
+  "portrait": "ancestors/lina-darong.png"
+ },
+ "manu-kealoha": {
+  "name": "Manu Kealoha",
+  "died": "Old Age",
+  "portrait": "ancestors/manu-kealoha.png"
+ },
+ "nick-alto": {
+  "name": "Nick Alto",
+  "died": "Fire",
+  "portrait": "ancestors/nick-alto.png"
+ },
+ "orodueynna-gomes": {
+  "name": "Orodueynna Gomes",
+  "died": "Old Age",
+  "portrait": "ancestors/orodueynna-gomes.png"
+ },
+ "prudence-crumplebottom": {
+  "name": "Prudence Crumplebottom",
+  "died": "Old Age",
+  "portrait": "ancestors/prudence-crumplebottom.png"
+ },
+ "queen-thebe": {
+  "name": "Queen Thebe",
+  "died": "Drowning",
+  "portrait": "ancestors/queen-thebe.png"
+ },
+ "rodrigo-de-pablo": {
+  "name": "Rodrigo De Pablo",
+  "died": "Fire",
+  "portrait": "ancestors/rodrigo-de-pablo.png"
+ },
+ "rodrigo-thebe": {
+  "name": "Rodrigo Thebe",
+  "died": "Drowning",
+  "portrait": "ancestors/rodrigo-thebe.png"
+ },
+ "sef-darong": {
+  "name": "Sef Darong",
+  "died": "Old Age",
+  "portrait": "ancestors/sef-darong.png"
+ },
+ "simon-crumplebottom": {
+  "name": "Simon Crumplebottom",
+  "died": "Old Age",
+  "portrait": "ancestors/simon-crumplebottom.png"
+ },
+ "tallulah-grove": {
+  "name": "Tallulah Grove",
+  "died": "Old Age",
+  "portrait": "ancestors/tallulah-grove.png"
+ },
+ "vita-alto": {
+  "name": "Vita Alto",
+  "died": "Old Age",
+  "portrait": "ancestors/vita-alto.png"
+ },
+ "vittorio-pasquale": {
+  "name": "Vittorio Pasquale",
+  "died": "Old Age",
+  "portrait": "ancestors/vittorio-pasquale.png"
+ },
+ "wulan-cahyaputri": {
+  "name": "Wulan Ibu",
+  "died": "Electrocution",
+  "portrait": "ancestors/wulan-cahyaputri.png"
+ }
+}

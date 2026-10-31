@@ -272,6 +272,7 @@ def build():
             "people": {k: v for k, v in load(os.path.join(DATA, 'people.json')).items() if not k.startswith('_')} if os.path.exists(os.path.join(DATA, 'people.json')) else {},   # relatives with no household on the site (17 Oct)
             "groups": {k: v for k, v in load(os.path.join(DATA, 'groups.json')).items() if not k.startswith('_')} if os.path.exists(os.path.join(DATA, 'groups.json')) else {},   # dynasties, clubs, university organisations (17 Oct)
             "calendar": {k: v for k, v in load(os.path.join(DATA, 'calendar.json')).items() if not k.startswith('_')} if os.path.exists(os.path.join(DATA, 'calendar.json')) else {},   # festivals, events and her holidays (19 Oct)
+            "ancestors": {k: {**v, **({"portrait": stamped(v["portrait"])} if v.get("portrait") else {})} for k, v in load(os.path.join(DATA, 'game', 'ancestors.json')).items()} if os.path.exists(os.path.join(DATA, 'game', 'ancestors.json')) else {},   # EA's ancestors' portraits and causes of death (tools/research/ancestors.py; trial, 31 Oct)
             "familyLinks": family_links, "tenants": tenants, "noLandlord": no_landlord, "residentsUnit": residents_unit, "nameFix": name_fix, "nbPt": nb_pt, "nbBox": nb_box, "nbCentred": nb_centred, "nbZoom": nb_zoom, "nbBanner": nb_banner, "csVersions": cs_versions,
             "galleryHistory": gallery_history(lot_of),
             "meta": {"built": date.today().isoformat(), "galleryChecked": checked, "game": game_version()}}
