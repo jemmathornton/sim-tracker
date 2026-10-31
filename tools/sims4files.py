@@ -36,7 +36,7 @@ def read(path, entry):
     t, g, inst, off, size, mem, comp = entry
     with open(path, 'rb') as f:
         f.seek(off); raw = f.read(size)
-    if comp == 0x5A42: return zlib.decompress(raw)
+    if comp == 0x5A42: return zlib.decompressobj().decompress(raw)   # lenient: some mods' streams lack the end checksum
     if comp == 0xFFFF: return refpack(raw)
     return raw
 

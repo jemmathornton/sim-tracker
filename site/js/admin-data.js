@@ -1,7 +1,7 @@
 // Built by tools/admin_data.py for the Admin pages (js/sections.js, 23 Oct). Don't edit this file.
 // For Jemma's PC only: never upload this file if the site goes online (it holds her to-dos and admin notes).
 window.ADMIN = {
-"made": "2026-10-30",
+"made": "2026-10-31",
 "refresh": [
 {
 "when": "13 Oct 2026 18:27",
@@ -474,22 +474,22 @@ window.ADMIN = {
 {
 "section": "Households",
 "world": "",
-"text": "**Do:** UI Cheats Extension: download v1.59.1 from weerbesu's Patreon (the post is https://www.patreon.com/weerbesu/posts/ui-cheats-v1-59-26240068; yours is v1.59, the day before, which can't pin wants or fears). It mostly works on EA's 27 Oct patch (weerbesu said so in the post's comments on 30 Oct), but until he makes a version for it: “Remove this workplace rival” won't work (EA renamed what it uses), Game Options won't show EA's new Allow Weight Changes and Allow Muscle Changes (take UI Cheats out of Mods while you set them in the new save, then put it back), and moving households in Manage Worlds uses the old way, without EA's 27 Oct fix. Done 30 Oct: MCCC and MC Woohoo 2026.6.0, LittleMsSam's Dress Code (27 Aug 2025) and Pet to Pet Greeting Fix (every other LittleMsSam mod checked: already current), Ravenwood's seasons mod swapped for the patched copy (keeps its lot types); SimMattically's Remove Purchase Button rebuilt on EA's current top-right bar; the old files are in “Mods backup 2026-10-30” beside your Mods folder (delete it once all works)."
+"text": "**Do:** UI Cheats Extension: download v1.59.1 from weerbesu's Patreon (the post is https://www.patreon.com/weerbesu/posts/ui-cheats-v1-59-26240068; yours is v1.59, the day before, which can't pin wants or fears). It mostly works on EA's 27 Oct patch (weerbesu said so in the post's comments on 30 Oct), but until he makes a version for it: “Remove this workplace rival” and setting a Sim's relationship with an object won't work (EA renamed what they use), Game Options won't show EA's new Allow Weight Changes and Allow Muscle Changes (take UI Cheats out of Mods while you set them in the new save, then put it back), and moving households in Manage Worlds uses the old way, without EA's 27 Oct fix. Done 30 Oct: MCCC and MC Woohoo 2026.6.0, LittleMsSam's Dress Code (27 Aug 2025) and Pet to Pet Greeting Fix (every other LittleMsSam mod checked: already current), Ravenwood's seasons mod swapped for the patched copy (keeps its lot types); SimMattically's Remove Purchase Button rebuilt on EA's current top-right bar; the old files are in “Mods backup 2026-10-30” beside your Mods folder (delete it once all works)."
 },
 {
 "section": "Households",
 "world": "",
-"text": "**Decide:** Mods slightly out of date, low risk (keep unless something odd happens): Zerbu's High School Spawn Fix, adeepindigo's More Discipline, MizoreYukii's Mermaids Can Use Dock Ladders. Done 30 Oct: Party Anywhere, the SulSul Weather App script and the Dress Code Seasons add-on removed; NateTheL0ser's thrift store mod swapped for alasEnkidu's ThrifTea one, patched for 1.129 (copies of everything old in the backup)."
+"text": "**Decide:** Swap in six patched mods? Checked 31 Oct against the game's files: each carries old copies of EA's files and misses what EA added since. The patched copies in for-jemma/mods keep each mod's own change and only add EA's later bits back: Zerbu's High School Spawn Fix (22 special NPCs EA now keeps out of high school, e.g. Robin Hood, Edith Basu, the Mysterious Rancher), More Discipline (EA's newer drop-out chances), Weather NPC Death Fix, Pet to Pet Greeting Fix, Choose Your Helmet and Mermaids Can Use Dock Ladders (EA's infant-carrying rule). Done 30 Oct: Party Anywhere, the SulSul Weather App script and the Dress Code Seasons add-on removed; NateTheL0ser's thrift store mod swapped for alasEnkidu's ThrifTea one, patched for 1.129 (copies of everything old in the backup)."
 },
 {
 "section": "Households",
 "world": "",
-"text": "**Decide:** Premade fix for the new save: **Premade Sim and Relationship Overhaul** (the “EA Remake” version, without its Vampires file) once it's confirmed for 1.129, or none (links with MCCC as planned). It also changes many premades' looks, outfits, likes, skills and money; don't install Szemoka's fix as well."
+"text": "**Decide:** Premade fix for the new save: **Premade Sim and Relationship Overhaul** (the “EA Remake” version, without its Vampires file; checked 31 Oct against EA's 27 Oct patch: its files and script look fine), or none (links with MCCC as planned). It also changes many premades' looks, outfits, likes, skills and money; don't install Szemoka's fix as well."
 },
 {
 "section": "Households",
 "world": "",
-"text": "**Do:** Start the new save again once your mods (MCCC and a premade-fix mod: Premade Sim and Relationship Overhaul, or Premade Sim Relationships Fix) are updated for EA's 27 Oct patch (1.129); the fix mod only works in a save made after it's installed (your call, 28 Oct)."
+"text": "**Do:** Start the new save again once you've picked the premade fix (MCCC is updated; Premade Sim and Relationship Overhaul checked 31 Oct for EA's 27 Oct patch); the fix mod only works in a save made after it's installed (your call, 28 Oct)."
 },
 {
 "section": "Households",
@@ -574,7 +574,7 @@ window.ADMIN = {
 {
 "section": "Households",
 "world": "",
-"text": "**Decide:** Who lives where: my overnight proposal, with options for every home, is in for-jemma/homes-proposal.md (28 Oct). As one job: about 50 homes in your plan have nobody named (Empty, “1 Bed”, “2 Bedroom”, “?”), plus empty rental units; and these Sims of yours have no home on the plan yet: Ash Carrington, Kenji Mikami and Kumiko Aoki (2-4-3 Wakabamori?), the Fantasias, Lena Garcia, the Rosebud household, Dayna and Alicia Ferrara, the Deckers, Luis Huerta, Henri Penkridge, the Waters, and from “Building #2” the Presleys, Barnes, Faulks, Hassanis, Thorntons and Vivian Little (and the Battles, Whitlocks, Ellsworths and Brody Conklin if they’re yours). Also EA’s own pack households that aren’t on the plan yet (her call 28 Oct; For Rent’s tenant applicants and the base game’s Create-a-Sim families stay out): the Chopras, the Hoffmans, Fia Acosta, Connie Fidential, Irina Rattus and others; the proposal says which, and leaves EA’s houseless NPCs (Corey Nyhus, Zain Amri, the merfolk, Gibbi Point’s storytellers) as they are. Werewolves, Enchanted by Nature, Lovestruck and Vampires Sims wait until you own those packs."
+"text": "**Decide:** Who lives where: my overnight proposal, with options for every home, is in for-jemma/homes-proposal.md (28 Oct; checked 31 Oct, Claude has corrections, e.g. Rustic Residence in Windenburg is free after all, and Luis Huerta lives there in two saves). As one job: about 50 homes in your plan have nobody named (Empty, “1 Bed”, “2 Bedroom”, “?”), plus empty rental units; and these Sims of yours have no home on the plan yet: Ash Carrington, Kenji Mikami and Kumiko Aoki (2-4-3 Wakabamori?), the Fantasias, Lena Garcia, the Rosebud household, Dayna and Alicia Ferrara, the Deckers, Luis Huerta, Henri Penkridge, the Waters, and from “Building #2” the Presleys, Barnes, Faulks, Hassanis, Thorntons and Vivian Little (and the Battles, Whitlocks, Ellsworths and Brody Conklin if they’re yours). Also EA’s own pack households that aren’t on the plan yet (her call 28 Oct; For Rent’s tenant applicants and the base game’s Create-a-Sim families stay out): the Chopras, the Hoffmans, Fia Acosta, Connie Fidential, Irina Rattus and others; the proposal says which, and leaves EA’s houseless NPCs (Corey Nyhus, Zain Amri, the merfolk, Gibbi Point’s storytellers) as they are. Werewolves, Enchanted by Nature, Lovestruck and Vampires Sims wait until you own those packs."
 },
 {
 "section": "Households",
