@@ -149,6 +149,11 @@ def main():
         return units if len(units) > 1 else []
 
     def note_units(label, l, units):
+        # bedrooms and bathrooms she told us herself (Fern Park Flats, 1 Nov) stay when the save has none recorded for that unit
+        old = {u['name']: u for u in l.get('units', [])}
+        for u in units:
+            o = old.get(u['name'], {})
+            if 'beds' not in u and o.get('beds'): u.update({k: o[k] for k in ('beds', 'baths') if o.get(k)})
         if units == l.get('units', []): return False
         changed.append(f"{label}: units " + ("; ".join(u['name'] + (f" ({', '.join(u.get('traits', []) + u.get('challenges', []))})" if u.get('traits') or u.get('challenges') else "") for u in units) or "removed"))
         if apply:

@@ -107,7 +107,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 - [ ] **Vista Quarry Villa** (game’s Vista Quarry), 30x20: place “Vista Quarry Villa”. Type: Residential. Traits: Natural Light. Challenge: Quake Zone. Trait ideas (free slots): Good Schools, Homey.
 - [ ] **Raffia Quinta**, 20x15: place “Raffia Quinta”. Type: Tiny Home Residential. Household: Rivera (yours). Traits: Homey, Eco Lot. Trait ideas (free slots): + Great Soil.
-- [ ] **Dusty Turf**, 30x20: place “Dusty Turf”. Type: Residential. Household: De Costa (yours).
+- [ ] **Dusty Turf**, 30x20: place “Dusty Turf”. Type: Residential. Household: De Costa (yours). Traits: Great Soil, Science Lair. Challenge: Quake Zone.
 - [ ] **Springscape**, 30x20: Rebuild first (two adult bedrooms and a teen’s room for the Curiouses), then place the new upload. Type: Residential. Household: Curious (EA: Nova; Maxis Gallery: Vidcund and Lazlo). Challenge: Quake Zone. Trait ideas (free slots): Sunny Aspect, Homey (like its neighbours).
 - [ ] **Palm Springs Public Pool** (game’s Cacti Casa), 40x30: place “Palm Springs Public Pool”. Type: Pool. Traits: Bracing Breezes. Challenge: Quake Zone. Trait ideas (free slots): Geothermal (warm pools), Party Place.
 
@@ -263,7 +263,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 - [ ] **930 Medina Studios**: place “930 Medina Studios”. Type: Apartment. Place it as a Room into the unit. Household: Livin’ In The City (yours). Trait ideas (free slots): Natural Light, Home Studio.
 - [ ] **121 Hakim House**: not built yet: leave the game’s lot for now. Type: Apartment. Household: Jang (EA).
 - [ ] **122 Hakim House**: place “122 Hakim House”. Search it by name (its upload has no #sanmyshuno tag). Type: Apartment. Place it as a Room into the unit. Household: Bheeda (EA). Traits: Historical. Trait ideas (free slots): Natural Light, Home Studio.
-- [ ] **Fountainview Penthouse** (game’s FountainView Penthouse): place “Fountainview Penthouse”. Type: Penthouse. Household: Santiago Ojo (EA: Miko; yours: Alicia).
+- [ ] **Fountainview Penthouse** (game’s FountainView Penthouse): place “Fountainview Penthouse”. Type: Penthouse. Household: Santiago Ojo (EA: Miko; yours: Alicia). Traits: Great Soil, Natural Light.
 - [ ] **Casbah Gallery**, 40x30: not built yet: leave the game’s lot for now. Type: Arts Center.
 
 **Fashion District**
@@ -508,7 +508,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 - [ ] **Sento Senbamachi** (game’s 5-3-1 Shinrinyoku), 30x20: place “Sento Senbamachi”. Type: Onsen Bathhouse. Traits: On Ley Line, Party Place. Trait ideas (free slots): + Peace and Quiet or Natural Well.
 - [ ] **6-4-1 Hanamigawa**, 20x15: not built yet: leave the game’s lot for now. Type: Vacation Rental.
 - [ ] **Izakaya Hanamigawa Koen** (game’s Hanamigawa Koen), 30x20: place “Izakaya Hanamigawa Koen”. Search it by name (its upload has no #mtkomorebi tag). Type: Restaurant (/Park). Traits: Convivial. Trait ideas (free slots): Chef’s Kitchen, Sunny Aspect.
-- [ ] **Boba Ippai** (game’s Izakaya Ippai), 30x20: place “Boba Ippai”. Not the other copy: “Boba Ippai” (Karaoke Bar). Type: Thrift and Boba Store/Karaoke Bar.
+- [ ] **Boba Ippai** (game’s Izakaya Ippai), 30x20: place “Boba Ippai”. Not the other copy: “Boba Ippai” (Karaoke Bar). Type: Thrift and Boba Store/Karaoke Bar. Traits: Great Acoustics, Party Place.
 
 **Yukimatsu**
 
