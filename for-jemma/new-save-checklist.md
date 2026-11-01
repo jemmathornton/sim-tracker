@@ -226,7 +226,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 - [ ] **Coorinberg Cottage**, 40x30: place “Coorinberg Cottage”. Search it by name (its upload has no #windenburg tag). Type: Residential. Household: Munch (EA). Traits: Peace and Quiet, Great Soil, Homey. Challenge: Simple Living.
 - [ ] **Cottage Am See**, 20x20: place “Cottage Am See”. Search it by name (its upload has no #windenburg tag). Type: Tiny Home Residential. Household: Free Spirits (EA). Traits: Great Soil, Sunny Aspect, Peace and Quiet.
-- [ ] **Rustic Residence**, 30x20: place “Rustic Residence”. Type: Tiny Home Residential. Traits: Great Soil, Homey. Challenge: Simple Living. Trait ideas (free slots): + Peace and Quiet.
+- [ ] **Rustic Residence**, 30x20: place “Rustic Residence”. Type: Tiny Home Residential. Household: Huerta (yours). Traits: Great Soil, Homey. Challenge: Simple Living. Trait ideas (free slots): + Peace and Quiet.
 - [ ] **The Shrieking Llama**, 20x20: place “The Shrieking Llama”. Type: Bar. Traits: Sunny Aspect, Dog Friendly, Dog Hangout.
 - [ ] **Dresden House**, 64x64: not built yet: leave the game’s lot for now. Type: Residential. Household: Fyres (EA).
 - [ ] **The Summer Home**, 40x30: not built yet: leave the game’s lot for now. Type: Vet Clinic.

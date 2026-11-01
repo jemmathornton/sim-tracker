@@ -5408,6 +5408,15 @@
   },
   {
    "world": "Windenburg",
+   "household": "Huerta",
+   "lot": "Rustic Residence",
+   "unit": "",
+   "sims": 1,
+   "state": "not in the save",
+   "how": "from your Library"
+  },
+  {
+   "world": "Windenburg",
    "household": "Fyres",
    "lot": "Dresden House",
    "unit": "",
