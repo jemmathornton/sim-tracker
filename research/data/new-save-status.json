@@ -5476,7 +5476,7 @@
   },
   {
    "world": "San Myshuno",
-   "household": "Bro & Kennedy",
+   "household": "Bro",
    "lot": "701 ZenView",
    "unit": "",
    "sims": 2,
@@ -5516,6 +5516,18 @@
    "sims": 1,
    "state": "home",
    "save_ids": [612515242714623098]
+  },
+  {
+   "world": "San Myshuno",
+   "household": "Karaoke Legends",
+   "lot": "1313 21 Chic Street",
+   "unit": "",
+   "sims": 2,
+   "state": "move",
+   "now": "701 ZenView",
+   "save_household": "Karaoke Legends",
+   "note": "split them out of Karaoke Legends first (it also has Miko)",
+   "save_ids": [612515242714623478]
   },
   {
    "world": "San Myshuno",

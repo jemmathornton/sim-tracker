@@ -2,7 +2,7 @@
 
 Made by tools/research/new_save_check.py from a copy of the save. Lots: placed / to place / the game’s lot; anything that differs from the plan is listed. Households: who isn’t home yet.
 
-**At a glance:** 91 lots placed in 11 worlds; 80 shared lots still to place. 48 households at home, 45 to move, 26 not in the save yet.
+**At a glance:** 91 lots placed in 11 worlds; 80 shared lots still to place. 48 households at home, 46 to move, 26 not in the save yet.
 
 ## Game options
 
@@ -73,9 +73,10 @@ Made by tools/research/new_save_check.py from a copy of the save. Lots: placed /
 - **Move Bheeda** to 920 Medina Studios (now: 2A Jasmine Suites)
 - **Livin' In The City** for 930 Medina Studios: only in your “Rotational” save: save it to your Library from there first
 - **Move Santiago Ojo** to Fountainview Penthouse (now: 701 ZenView; split them out of Karaoke Legends first (it also has Akira, Darling); not in the save: Alicia Santiago (from the Gallery or your Library))
-- **Move Bro & Kennedy** to 701 ZenView (now: Dock Den; move out Karaoke Legends first)
+- **Move Bro** to 701 ZenView (now: Dock Den; move out Karaoke Legends first)
 - **Move Behr** to 702 ZenView (now: no home)
 - **Move Jeong** to 1310 21 Chic Street (now: no home)
+- **Move Karaoke Legends** to 1313 21 Chic Street (now: 701 ZenView; split them out of Karaoke Legends first (it also has Miko))
 
 ## Brindleton Bay
 

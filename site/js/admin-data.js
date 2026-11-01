@@ -1,7 +1,7 @@
 // Built by tools/admin_data.py for the Admin pages (js/sections.js, 23 Oct). Don't edit this file.
 // For Jemma's PC only: never upload this file if the site goes online (it holds her to-dos and admin notes).
 window.ADMIN = {
-"made": "2026-10-31",
+"made": "2026-11-01",
 "refresh": [
 {
 "when": "13 Oct 2026 18:27",
@@ -1712,7 +1712,7 @@ window.ADMIN = {
 "note": "split them out of Karaoke Legends first (it also has Akira, Darling); not in the save: Alicia Santiago (from the Gallery or your Library)"
 },
 {
-"household": "Bro & Kennedy",
+"household": "Bro",
 "to": "701 ZenView",
 "now": "Dock Den",
 "how": null,
@@ -1734,6 +1734,14 @@ window.ADMIN = {
 "how": null,
 "occupied": null,
 "note": null
+},
+{
+"household": "Karaoke Legends",
+"to": "1313 21 Chic Street",
+"now": "701 ZenView",
+"how": null,
+"occupied": null,
+"note": "split them out of Karaoke Legends first (it also has Miko)"
 }
 ],
 "ahead": [
