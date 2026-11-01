@@ -5328,6 +5328,15 @@
   },
   {
    "world": "Newcrest",
+   "household": "Hassani",
+   "lot": "Comfy Cubby",
+   "unit": "",
+   "sims": 3,
+   "state": "not in the save",
+   "how": "from your Library"
+  },
+  {
+   "world": "Newcrest",
    "household": "Kirkland",
    "lot": "Twin Oracle Point",
    "unit": "",
@@ -5927,6 +5936,15 @@
    "now": "5-3-1 Shinrinyoku",
    "save_household": "Akiyama",
    "save_ids": [612515242714978260]
+  },
+  {
+   "world": "Mt. Komorebi",
+   "household": "Mikami",
+   "lot": "2-4-3 Wakabamori",
+   "unit": "",
+   "sims": 2,
+   "state": "not in the save",
+   "how": "from your Library"
   },
   {
    "world": "Mt. Komorebi",

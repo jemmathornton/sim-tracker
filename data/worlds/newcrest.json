@@ -17,7 +17,7 @@
     {"lot": "Beech Byway", "myName": "Newcrest Community Space", "type": "Community Space", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["ngmQLbmXEeuN378NB92BJw==", "jFnAgrmXEeuNkr8NB92BJw==", "jucBIbmXEeuNor8NB92BJw==", "kZXBNLmXEeuNq78NB92BJw=="], "versions": [{"label": "Makers", "upload": "kZXBNLmXEeuNq78NB92BJw=="}, {"label": "Market", "upload": "ngmQLbmXEeuN378NB92BJw=="}, {"label": "Garden", "upload": "jucBIbmXEeuNor8NB92BJw=="}, {"label": "Community space", "upload": "jFnAgrmXEeuNkr8NB92BJw=="}], "traits": ["Eco Lot", "Teen Neighborhood"], "challenges": ["Reduce and Recycle"], "galleryLead": "kZXBNLmXEeuNq78NB92BJw=="},
     {"lot": "Midtown Meadows", "myName": "Midtown Meadows", "type": "Residential Rental (5)", "size": "40x30", "residents": "Kirkland own", "built": true, "shared": true, "screenshots": true, "simsMade": false, "gallery": ["hUU2PF35R4KCXaGXOvgXJg=="], "galleryPhotos": true, "traits": ["Bracing Breezes", "Gnomes", "Child's Play", "Good Schools", "Sunny Aspect", "Home Studio"], "units": [{"name": "1", "traits": ["Bracing Breezes", "Gnomes"]}, {"name": "2", "traits": ["Child's Play", "Good Schools", "Gnomes"]}, {"name": "3", "traits": ["Sunny Aspect", "Gnomes"]}, {"name": "4", "traits": ["Home Studio", "Gnomes"]}, {"name": "5", "traits": ["Child's Play", "Good Schools", "Gnomes"]}], "tenants": [{"name": "Bridges", "unit": 2}, {"name": "Washburn", "unit": 5}]},
     {"lot": "Oak Alcove", "myName": "Oak Alcove", "type": "Residential", "size": "20x15", "residents": "Versaree", "built": true, "shared": true, "screenshots": false, "simsMade": true, "gallery": ["cLsfSGyvSaGNLEzFcgePxQ=="], "traits": ["Natural Light", "Fast Internet", "Great Acoustics"]},
-    {"lot": "Comfy Cubby", "myName": "Comfy Cubby", "type": "Residential", "size": "20x15", "residents": "Empty", "built": true, "shared": true, "screenshots": true, "simsMade": false, "gallery": ["fP8z05XKEeiCPH6gmyVpVw=="], "traits": ["Fast Internet", "Good Schools", "Sunny Aspect"]}
+    {"lot": "Comfy Cubby", "myName": "Comfy Cubby", "type": "Residential", "size": "20x15", "residents": "Hassani", "built": true, "shared": true, "screenshots": true, "simsMade": false, "gallery": ["fP8z05XKEeiCPH6gmyVpVw=="], "traits": ["Fast Internet", "Good Schools", "Sunny Aspect"]}
    ]
   },
   {
@@ -631,6 +631,52 @@
       ["Cooking", 2, 10],
       ["Video Gaming", 1, 10]
      ]
+    }
+   ]
+  },
+  "Hassani": {
+   "sims": [
+    {
+     "id": "jamila-hassani",
+     "name": "Jamila Hassani",
+     "sex": "f",
+     "origin": "Mine",
+     "from": "save “Horses!” (2026-10-24)",
+     "age": "Young Adult",
+     "aspiration": "Big Happy Family",
+     "traits": ["Ambitious", "Jealous", "Family-Oriented"],
+     "bonus": "Domestic",
+     "career": "Critic · Paper Deliverer (level 1)",
+     "skills": [
+      ["Wellness", 2, 10]
+     ]
+    },
+    {
+     "id": "omar-hassani",
+     "name": "Omar Hassani",
+     "sex": "m",
+     "origin": "Mine",
+     "from": "save “Horses!” (2026-10-24)",
+     "age": "Young Adult",
+     "aspiration": "Friend of the World",
+     "traits": ["Outgoing", "Self-Assured", "Family-Oriented"],
+     "bonus": "Gregarious",
+     "career": "Massage Therapist · Massage Therapist (level 1)",
+     "skills": [
+      ["Fitness", 1, 10],
+      ["Wellness", 10, 10]
+     ]
+    },
+    {
+     "id": "ahmed-hassani",
+     "name": "Ahmed Hassani",
+     "sex": "m",
+     "origin": "Mine",
+     "from": "save “Horses!” (2026-10-24)",
+     "age": "Toddler",
+     "traits": ["Charmer"],
+     "career": "",
+     "parents": ["jamila-hassani", "omar-hassani"]
     }
    ]
   }

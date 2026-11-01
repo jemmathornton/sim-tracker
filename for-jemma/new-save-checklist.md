@@ -145,7 +145,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 - [ ] **Newcrest Community Space** (game’s Beech Byway), 30x20: place your Makers version “Newcrest Community Makers”. Type: Community Space. Traits: Eco Lot, Teen Neighborhood. Challenge: Reduce and Recycle. Trait ideas (free slots): + Child’s Play.
 - [ ] **Midtown Meadows**, 40x30: place “Midtown Meadows”. Type: Residential Rental (5). Landlord (lives elsewhere): Kirkland (yours). Tenants: Bridges unit 2, Washburn unit 5. Traits: Bracing Breezes, Gnomes, Child’s Play, Good Schools, Sunny Aspect, Home Studio. Units (set after placing): 1 (Bracing Breezes, Gnomes); 2 (Child’s Play, Good Schools, Gnomes); 3 (Sunny Aspect, Gnomes); 4 (Home Studio, Gnomes); 5 (Child’s Play, Good Schools, Gnomes).
 - [ ] **Oak Alcove**, 20x15: place “Oak Alcove”. Type: Residential. Household: Versaree (yours). Traits: Natural Light, Fast Internet, Great Acoustics.
-- [ ] **Comfy Cubby**, 20x15: place “Comfy Cubby”. Type: Residential. Traits: Fast Internet, Good Schools, Sunny Aspect.
+- [ ] **Comfy Cubby**, 20x15: place “Comfy Cubby”. Type: Residential. Household: Hassani (yours). Traits: Fast Internet, Good Schools, Sunny Aspect.
 
 **Llama Lagoon**
 

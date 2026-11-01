@@ -2,7 +2,7 @@
 
 Made by tools/research/new_save_check.py from a copy of the save. Lots: placed / to place / the game’s lot; anything that differs from the plan is listed. Households: who isn’t home yet.
 
-**At a glance:** 91 lots placed in 11 worlds; 80 shared lots still to place. 48 households at home, 46 to move, 28 not in the save yet.
+**At a glance:** 91 lots placed in 11 worlds; 80 shared lots still to place. 48 households at home, 46 to move, 30 not in the save yet.
 
 ## Game options
 
@@ -50,6 +50,7 @@ Made by tools/research/new_save_check.py from a copy of the save. Lots: placed /
 - **Bridges** for Midtown Meadows unit 2: only in your “Season Events” save: save it to your Library from there first
 - **Washburn** for Midtown Meadows unit 5: only in your “Season Events” save: save it to your Library from there first
 - **Versaree** for Oak Alcove: from your Library
+- **Hassani** for Comfy Cubby: from your Library
 - **Kirkland** for Twin Oracle Point: from your Library (your Library copy differs from the site: site has no Sims yet. Same Kirklands as Newcrest’s Fern Park Flats?)
 - **LeBlanc** for Avarice Acres: only in your “Rotational” save: save it to your Library from there first
 - **Sylvia & Kenny Cadberry** for Asphalt Abodes: the site’s version is in your “Not So Berry” save: save it to your Library from there (your Library copy differs: extra in Library copy: Hyacinth Cadberry, Plum-Bob Cadberry; age differs: Kenny Cadberry (Adult in Library, Elder on site). The site’s Sims are from “Not So Berry” (2025-10-11))
