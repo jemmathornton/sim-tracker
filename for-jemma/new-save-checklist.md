@@ -182,11 +182,11 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 ### Magnolia Promenade
 
-8 lots: 2 on the Gallery, 1 built but not shared, 5 not built.
+8 lots: 3 on the Gallery, 0 built but not shared, 5 not built.
 
 **Magnolia Promenade**
 
-- [ ] **Paddy’s Place** (game’s Paddywack’s Emporium), 20x20: built but not on the Gallery: bring it over through your Library (3 copies, 21 Dec 23; copies named “Paddy’s Place” and “Paddywack’s Emporium”) (if you changed it in your Building save since, save it to your Library again from there first). Type: Restaurant.
+- [ ] **Paddy’s Place** (game’s Paddywack’s Emporium), 20x20: place “Paddy’s Place”. Type: Restaurant.
 - [ ] **The Llama Picturehouse** (game’s JF&S Clothiers), 20x20: place “The Llama Picturehouse”. Not the other copy: “The Llama Picturehouse” (Bar). Type: Small Business Venue/Bar. Traits: Party Place, Convivial, Gnomes.
 - [ ] **Magnolia Mall** (game’s The Roadstead), 40x30: not built yet: leave the game’s lot for now. Type: Small Business Venue. Register the business and set its lot after placing. Owner (lives elsewhere): Kirkland (Sims to come).
 - [ ] **Magnolia Bowling Alley** (game’s Preeminent Domain), 30x20: place “Magnolia Bowling Alley”. Type: Bar. Traits: Teen Neighborhood, Party Place, Convivial.
@@ -464,7 +464,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 ### Evergreen Harbor
 
-15 lots: 6 on the Gallery, 2 built but not shared, 7 not built.
+15 lots: 7 on the Gallery, 1 built but not shared, 7 not built.
 
 **Grims Quarry**
 
@@ -485,7 +485,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 **Port Promise**
 
 - [ ] **The Old Mill**, 30x20: not built yet: leave the game’s lot for now. Type: Backroom.
-- [ ] **The Caboose**, 30x20: built but not on the Gallery: bring it over through your Library (2 copies, 21 Dec 23) (if you changed it in your Building save since, save it to your Library again from there first). Type: Bar.
+- [ ] **The Caboose**, 30x20: place “The Caboose”. Type: Bar.
 - [ ] **The Old Dockyard** (game’s The Shipping Views), 30x20: place your Makers version “The Old Dockyard Makers”. Type: Community Space. Traits: Sunny Aspect, Convivial. Challenges: Reduce and Recycle, Off-the-Grid. Trait ideas (free slots): + Eco Lot (like the other community spaces).
 - [ ] **Abandoned Views** (game’s The Waterfront), 40x30: not built yet: leave the game’s lot for now. Type: Residential Rental. Household: Henley (yours).
 - [ ] **The Portsmouth Promenade**, 30x20: place “The Portsmouth Promenade”. Type: Small Business Venue. Register the business and set its lot after placing. Owner (lives elsewhere): Greenburg (EA). Traits: Study Spot. Trait ideas (free slots): Eco Lot, Home Studio (Blossom paints).

@@ -954,7 +954,7 @@
     "placed": false,
     "objs": 230,
     "game_objs": 230,
-    "status": "game lot"
+    "status": "to place"
    },
    {
     "lot": "JF&S Clothiers",
@@ -3155,7 +3155,7 @@
     "placed": false,
     "objs": 133,
     "game_objs": 133,
-    "status": "game lot"
+    "status": "to place"
    },
    {
     "lot": "The Shipping Views",
@@ -3530,7 +3530,7 @@
     "name": "The Olde Mill",
     "hood": "Old New Henford",
     "built": true,
-    "shared": false,
+    "shared": true,
     "type": "Residential",
     "issues": [],
     "save_name": "4 Olde Mill Lane",

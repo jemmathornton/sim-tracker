@@ -826,6 +826,10 @@ window.ADMIN = {
 "s": "to place",
 "fix": []
 },
+"l-magnolia-promenade--paddywack-s-emporium": {
+"s": "to place",
+"fix": []
+},
 "l-magnolia-promenade--jfands-clothiers": {
 "s": "placed",
 "fix": []
@@ -1175,6 +1179,10 @@ window.ADMIN = {
 "fix": []
 },
 "l-evergreen-harbor--pinecrest-apartments-404": {
+"s": "to place",
+"fix": []
+},
+"l-evergreen-harbor--the-caboose": {
 "s": "to place",
 "fix": []
 },
@@ -1663,7 +1671,9 @@ window.ADMIN = {
 {
 "world": "Magnolia Promenade",
 "placed": 2,
-"toPlace": [],
+"toPlace": [
+"Paddy's Place"
+],
 "fixes": [],
 "move": [],
 "ahead": []
