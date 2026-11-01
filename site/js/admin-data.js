@@ -205,6 +205,21 @@ window.ADMIN = {
 "favourites": 2116,
 "downloads": 20265,
 "comments": 50
+},
+{
+"when": "01 Nov 2026 21:04",
+"ok": true,
+"linked": [
+"linked new upload “The Olde Mill” to Henford-on-Bagley / 4 Olde Mill Lane"
+],
+"notes": [
+"added a Gallery picture for Henford-on-Bagley / 4 Olde Mill Lane"
+],
+"listed": 260,
+"new": 1,
+"favourites": 2116,
+"downloads": 20268,
+"comments": 50
 }
 ],
 "checklist": [
