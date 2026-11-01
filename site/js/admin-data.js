@@ -299,7 +299,7 @@ window.ADMIN = {
 {
 "section": "Before the new save: decide first",
 "world": "",
-"text": "**Decide:** Who lives where: to go through world by world in chat; Claude's suggestions (each marked as one) are in research/who-lives-where-prep.md (31 Oct; replaces the 28 Oct proposal). As one job: about 50 homes in your plan have nobody named (Empty, “1 Bed”, “2 Bedroom”, “?”), plus empty rental units; and these Sims of yours have no home on the plan yet: Ash Carrington, the Fantasias, Lena Garcia, the Rosebud household, Henri Penkridge, and from “Building #2” Vivian Little (and the Battles, Ellsworths and Brody Conklin if they’re yours). EA’s own pack households not on the plan (the Chopras, Hoffmans, Fia Acosta, Kyle Kyleson, Akachi Onoja, Connie Fidential) stay homeless or hidden, as in the game (your call, 1 Nov). Werewolves, Enchanted by Nature, Lovestruck and Vampires Sims wait until you own those packs. Backup families, kept for filling homes later (your call, 1 Nov): the Waters, the Presleys, the Deckers, the Barnes, Gianni Faulk and Yogi, the Whitlocks; Maxis’s Irina Rattus; last of all, if ever, the Thorntons (made by MC Command Center, played in “Building #2”; save them to your Library before that save goes)."
+"text": "**Decide:** Who lives where: to go through world by world in chat; Claude's suggestions (each marked as one) are in research/who-lives-where-prep.md (31 Oct; replaces the 28 Oct proposal). As one job: about 50 homes in your plan have nobody named (Empty, “1 Bed”, “2 Bedroom”, “?”), plus empty rental units; and these Sims of yours have no home on the plan yet: Ash Carrington, the Fantasias, Lena Garcia, the Rosebud household, Henri Penkridge, and from “Building #2” Vivian Little (and the Battles, Ellsworths and Brody Conklin if they’re yours). EA’s own pack households not on the plan (the Chopras, Hoffmans, Fia Acosta, Kyle Kyleson, Akachi Onoja, Connie Fidential) stay homeless or hidden, as in the game (your call, 1 Nov). Werewolves, Enchanted by Nature, Lovestruck and Vampires Sims wait until you own those packs. Backup families, kept for filling homes later (your call, 1 Nov): the Waters, the Presleys, the Deckers, the Barnes, Gianni Faulk and Yogi, the Whitlocks (made by MC Command Center, in “Building #2”; save them to your Library before that save goes); Maxis’s Irina Rattus; last of all, if ever, the Thorntons."
 },
 {
 "section": "Before the new save: decide first",
@@ -345,6 +345,11 @@ window.ADMIN = {
 "section": "Before the new save: decide first",
 "world": "Gibbi Point",
 "text": "**Decide:** Love Highland: a Custom Venue run by the Addams as story only, or their home again?"
+},
+{
+"section": "Before the new save: build and share (any save, then the Gallery)",
+"world": "",
+"text": "**Do:** Pier Perfection (Sulani): check it's on your Gallery. You uploaded it on 1 Nov, but it never showed up in your uploads; upload it again if it isn't there."
 },
 {
 "section": "Before the new save: build and share (any save, then the Gallery)",
@@ -484,7 +489,7 @@ window.ADMIN = {
 {
 "section": "Before the new save: households (your Library and the Gallery)",
 "world": "",
-"text": "**Do:** Save Ash Carrington from “It’s Magic!” to your Library (there he’s a Spellcaster, adult, Retail level 3; your Library copy is from before), then that save can go."
+"text": "**Do:** Save Ash Carrington from “It’s Magic!” to your Library (there she’s a Spellcaster, adult, Retail level 3; your Library copy is from before), then that save can go."
 },
 {
 "section": "Before the new save: households (your Library and the Gallery)",

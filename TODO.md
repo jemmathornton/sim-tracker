@@ -10,6 +10,8 @@ Every open item carried over from the claude.ai project on 13 Oct 2026: the note
 
 **1 Nov, her OK:** World Plans swapped in: Downloads\World Plans (fixed).xlsx is now for-jemma's 1 Nov copy (matches the site, 0 differences); her previous one (the 23 Oct evening copy, unchanged since) kept as “World Plans (fixed) - backup 1 Nov.xlsx”.
 
+**1 Nov evening:** uploads linked and marked shared: Boba Ippai (two versions), The Olde Mill, Paddy's Place, The Caboose, Riverside Grove. Pier Perfection never appeared on the Gallery (on her list to check). Corrections from the family notes: Ash Carrington and Henri Penkridge are women in the game's files; the Whitlocks are marked unplayed in “Building #2”; her list had the Whitlocks' MCCC note after the Thorntons by mistake (fixed). Overnight research: research/family-notes.md, research/homes-that-fit.md (suggestions only), research/traits-for-no-trait-lots.md.
+
 **[Jemma]** = needs her decision or input. **[Claude]** = can be done without her once the app is set up. Tick items here as they're done.
 
 ## 0. Moving to the app
