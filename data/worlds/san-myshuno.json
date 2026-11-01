@@ -31,10 +31,10 @@
    "mapBox": [0.55, 0.15, 0.8, 0.42],
    "lots": [
     {"lot": "910 Medina Studios", "myName": "910 Medina Studios", "type": "Apartment", "size": "N/A", "residents": "Benali", "built": false, "shared": false, "screenshots": false, "simsMade": false},
-    {"lot": "920 Medina Studios", "myName": "920 Medina Studios", "type": "Apartment", "size": "N/A", "residents": "Bheeda", "built": true, "shared": true, "screenshots": true, "simsMade": false, "gallery": ["lnguI4+KEeiPG13tOtUAYg=="], "beds": 2, "baths": 2, "traits": ["Quiet"]},
+    {"lot": "920 Medina Studios", "myName": "920 Medina Studios", "type": "Apartment", "size": "N/A", "residents": "Ferrara", "built": true, "shared": true, "screenshots": true, "simsMade": false, "gallery": ["lnguI4+KEeiPG13tOtUAYg=="], "beds": 2, "baths": 2, "traits": ["Quiet"]},
     {"lot": "930 Medina Studios", "myName": "930 Medina Studios", "type": "Apartment", "size": "N/A", "residents": "Livin' In The City", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["HNdM9n08RxymsVKGOc2c1g=="], "beds": 4, "baths": 2},
     {"lot": "121 Hakim House", "myName": "121 Hakim House", "type": "Apartment", "size": "N/A", "residents": "Jang", "built": false, "shared": false, "screenshots": false, "simsMade": false},
-    {"lot": "122 Hakim House", "myName": "122 Hakim House", "type": "Apartment", "size": "N/A", "residents": "2/3 Bed", "built": true, "shared": true, "screenshots": true, "simsMade": false, "gallery": ["Uf3EQP8MEeyKGRdS1XRQaQ=="], "beds": 2, "traits": ["Historical"], "baths": 2},
+    {"lot": "122 Hakim House", "myName": "122 Hakim House", "type": "Apartment", "size": "N/A", "residents": "Bheeda", "built": true, "shared": true, "screenshots": true, "simsMade": false, "gallery": ["Uf3EQP8MEeyKGRdS1XRQaQ=="], "beds": 2, "traits": ["Historical"], "baths": 2},
     {"lot": "FountainView Penthouse", "myName": "FountainView Penthouse", "type": "Penthouse", "size": "N/A", "residents": "Santiago Ojo", "built": true, "shared": true, "screenshots": false, "simsMade": true, "gallery": ["DTtmi9F7Q12XvkCZwBEwNA=="]},
     {"lot": "Casbah Gallery", "myName": "Casbah Gallery", "type": "Arts Center", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ],
@@ -688,6 +688,73 @@
       ["Fitness", 8, 10],
       ["Video Gaming", 8, 10]
      ]
+    }
+   ]
+  },
+  "Ferrara": {
+   "sims": [
+    {
+     "id": "dayna-ferrara",
+     "name": "Dayna Ferrara",
+     "sex": "f",
+     "origin": "Mine",
+     "from": "save “Rotational” (2026-10-24)",
+     "age": "Adult",
+     "aspiration": "Super Parent",
+     "traits": ["Outgoing", "Music Lover", "Gloomy"],
+     "bonus": "Domestic",
+     "career": "Business · President (level 8)",
+     "skills": [
+      ["Charisma", 6, 10],
+      ["Mixology", 2, 10],
+      ["Fitness", 2, 10],
+      ["Dancing", 3, 5],
+      ["Comedy", 4, 10],
+      ["Singing", 5, 10],
+      ["Parenting", 6, 10],
+      ["Acting", 2, 10],
+      ["Photography", 3, 5],
+      ["Cooking", 6, 10],
+      ["Logic", 6, 10],
+      ["Video Gaming", 2, 10],
+      ["Handiness", 4, 10],
+      ["Mischief", 1, 10],
+      ["Gourmet Cooking", 1, 10]
+     ]
+    },
+    {
+     "id": "alicia-ferrara",
+     "name": "Alicia Ferrara",
+     "sex": "f",
+     "origin": "Mine",
+     "from": "save “Rotational” (2026-10-24)",
+     "age": "Young Adult",
+     "aspiration": "Renaissance Sim",
+     "traits": ["Ambitious", "Geek", "Gloomy"],
+     "bonus": "Quick Learner",
+     "career": "Engineer · Processors of Processors (level 8)",
+     "skills": [
+      ["Singing", 3, 10],
+      ["Logic", 5, 10],
+      ["Video Gaming", 6, 10],
+      ["Handiness", 5, 10],
+      ["Mixology", 1, 10],
+      ["Dancing", 2, 5],
+      ["Charisma", 5, 10],
+      ["Comedy", 2, 10],
+      ["Cooking", 4, 10],
+      ["Programming", 7, 10],
+      ["Photography", 3, 5],
+      ["Parenting", 1, 10],
+      ["Mischief", 6, 10],
+      ["Research & Debate", 5, 10],
+      ["Robotics", 8, 10],
+      ["Juice Pong", 1, 5],
+      ["Fitness", 3, 10],
+      ["Ping Pong", 1, 5],
+      ["Rocket Science", 1, 10]
+     ],
+     "parents": ["dayna-ferrara"]
     }
    ]
   }

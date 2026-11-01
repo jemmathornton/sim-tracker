@@ -259,10 +259,10 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 **Arts Quarter**
 
 - [ ] **910 Medina Studios**: not built yet: leave the game’s lot for now. Type: Apartment. Household: Benali (EA).
-- [ ] **920 Medina Studios**: place “920 Medina Studios”. Search it by name (its upload has no #sanmyshuno tag). Type: Apartment. Place it as a Room into the unit. Household: Bheeda (EA). Traits: Quiet. Trait ideas (free slots): Natural Light, Homey.
+- [ ] **920 Medina Studios**: place “920 Medina Studios”. Search it by name (its upload has no #sanmyshuno tag). Type: Apartment. Place it as a Room into the unit. Household: Ferrara (yours). Traits: Quiet. Trait ideas (free slots): Natural Light, Homey.
 - [ ] **930 Medina Studios**: place “930 Medina Studios”. Type: Apartment. Place it as a Room into the unit. Household: Livin’ In The City (yours). Trait ideas (free slots): Natural Light, Home Studio.
 - [ ] **121 Hakim House**: not built yet: leave the game’s lot for now. Type: Apartment. Household: Jang (EA).
-- [ ] **122 Hakim House**: place “122 Hakim House”. Search it by name (its upload has no #sanmyshuno tag). Type: Apartment. Place it as a Room into the unit. Traits: Historical. Trait ideas (free slots): Natural Light, Home Studio.
+- [ ] **122 Hakim House**: place “122 Hakim House”. Search it by name (its upload has no #sanmyshuno tag). Type: Apartment. Place it as a Room into the unit. Household: Bheeda (EA). Traits: Historical. Trait ideas (free slots): Natural Light, Home Studio.
 - [ ] **Fountainview Penthouse** (game’s FountainView Penthouse): place “Fountainview Penthouse”. Type: Penthouse. Household: Santiago Ojo (EA: Miko; yours: Alicia).
 - [ ] **Casbah Gallery**, 40x30: not built yet: leave the game’s lot for now. Type: Arts Center.
 

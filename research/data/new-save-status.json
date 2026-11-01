@@ -5435,14 +5435,12 @@
   },
   {
    "world": "San Myshuno",
-   "household": "Bheeda",
+   "household": "Ferrara",
    "lot": "920 Medina Studios",
    "unit": "",
    "sims": 2,
-   "state": "move",
-   "now": "2A Jasmine Suites",
-   "save_household": "Bheeda",
-   "save_ids": [612515242714620305]
+   "state": "not in the save",
+   "how": "from your Library"
   },
   {
    "world": "San Myshuno",
@@ -5461,6 +5459,17 @@
    "sims": 3,
    "state": "home",
    "save_ids": [612515242714624737]
+  },
+  {
+   "world": "San Myshuno",
+   "household": "Bheeda",
+   "lot": "122 Hakim House",
+   "unit": "",
+   "sims": 2,
+   "state": "move",
+   "now": "2A Jasmine Suites",
+   "save_household": "Bheeda",
+   "save_ids": [612515242714620305]
   },
   {
    "world": "San Myshuno",
@@ -6342,7 +6351,7 @@
    "world": "San Myshuno",
    "lot": "Fraternity Apartment",
    "household": "Bheeda",
-   "goes": "920 Medina Studios"
+   "goes": "122 Hakim House"
   },
   {
    "world": "Britechester",

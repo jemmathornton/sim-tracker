@@ -3,6 +3,9 @@
     python tools/own_import.py           report: which copy would fill each household, and every other copy found
     python tools/own_import.py --apply   write the Sims into data/worlds/<world>.json, write the review list
                                          (research/own-households-review.md), then rebuild
+    python tools/own_import.py --apply --only "<household>" [...]   only those households (1 Nov: a bare --apply
+                                         would refill households she has split or updated since, e.g. Curious, and
+                                         redo the PREFER ones over her Library updates; so --apply needs --only, or --all)
 
 Her spreadsheet says which households exist and where; this only fills in their Sims. Only exact name matches are used
 (research/data/own-households.json, from tools/research/own_households.py). The newest copy wins, her Building save
@@ -214,6 +217,7 @@ def main(apply):
         for w, hhs in out_by_world.items():
             p = worlds[w]; W = load(p)
             for hn, (rows, src) in hhs.items():
+                if ONLY is not None and hn not in ONLY: continue
                 h = W.setdefault('households', {}).setdefault(hn, {})
                 if h.get('sims') and f"{w}|{hn}" not in PREFER and f"{w}|{hn}" not in PREFER_LIBRARY and f"{w}|{hn}" not in SPLIT and hn not in TARGET.values(): continue
                 h['sims'] = rows
@@ -223,5 +227,9 @@ def main(apply):
         subprocess.run([sys.executable, '-X', 'utf8', os.path.join(ROOT, 'tools', 'build.py')], check=True)
 
 
+ONLY = None
+
 if __name__ == '__main__':
+    ONLY = sys.argv[sys.argv.index('--only') + 1:] if '--only' in sys.argv else None
+    if '--apply' in sys.argv and ONLY is None and '--all' not in sys.argv: sys.exit('name the households: --only "<household>" (or --all)')
     main('--apply' in sys.argv)

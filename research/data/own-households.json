@@ -5,10 +5,46 @@
   "Chestnut Ridge|Mine": [
    {
     "source": "save",
+    "file": "Slot_00000011.save",
+    "save": "My Saved Game 16",
+    "autosave": false,
+    "date": "2026-10-24",
+    "household": "Akamine",
+    "world": "",
+    "lot": "",
+    "premade": false,
+    "sims": [
+     {
+      "name": "Toshie Akamine",
+      "age": "Young Adult",
+      "sim_id": 1012209715791180516
+     }
+    ]
+   },
+   {
+    "source": "save",
+    "file": "Slot_ffffffff.save",
+    "save": "Return to the HOB",
+    "autosave": true,
+    "date": "2026-10-24",
+    "household": "Akamine",
+    "world": "",
+    "lot": "",
+    "premade": false,
+    "sims": [
+     {
+      "name": "Toshie Akamine",
+      "age": "Young Adult",
+      "sim_id": 1012209715791180516
+     }
+    ]
+   },
+   {
+    "source": "save",
     "file": "Slot_0000000d.save",
     "save": "Building #2",
     "autosave": false,
-    "date": "2026-10-16",
+    "date": "2026-10-24",
     "household": "Akamine",
     "world": "",
     "lot": "",
@@ -23,10 +59,10 @@
    },
    {
     "source": "save",
-    "file": "Slot_ffffffff.save",
-    "save": "Building #2",
-    "autosave": true,
-    "date": "2026-10-16",
+    "file": "Slot_00000016.save",
+    "save": "Horses!",
+    "autosave": false,
+    "date": "2026-10-24",
     "household": "Akamine",
     "world": "",
     "lot": "",
@@ -35,7 +71,7 @@
      {
       "name": "Toshie Akamine",
       "age": "Young Adult",
-      "sim_id": 1123672334440926568
+      "sim_id": 636159146147214973
      }
     ]
    },
@@ -44,7 +80,7 @@
     "file": "Slot_00000017.save",
     "save": "Season Events",
     "autosave": false,
-    "date": "2026-03-15",
+    "date": "2026-10-24",
     "household": "Miner",
     "world": "",
     "lot": "",
@@ -62,7 +98,7 @@
     "file": "Slot_00000017.save",
     "save": "Season Events",
     "autosave": false,
-    "date": "2026-03-15",
+    "date": "2026-10-24",
     "household": "Akamine",
     "world": "",
     "lot": "",
@@ -74,448 +110,155 @@
       "sim_id": 1039229847456412100
      }
     ]
+   },
+   {
+    "source": "save",
+    "file": "Slot_00000003.save",
+    "save": "Rotational",
+    "autosave": false,
+    "date": "2026-10-24",
+    "household": "Akamine",
+    "world": "",
+    "lot": "",
+    "premade": false,
+    "sims": [
+     {
+      "name": "Toshie Akamine",
+      "age": "Young Adult",
+      "sim_id": 419986362485423123
+     }
+    ]
+   },
+   {
+    "source": "save",
+    "file": "Slot_00000019.save",
+    "save": "Jemma's Sim World",
+    "autosave": false,
+    "date": "2026-10-23",
+    "household": "Akamine",
+    "world": "",
+    "lot": "",
+    "premade": false,
+    "sims": [
+     {
+      "name": "Toshie Akamine",
+      "age": "Young Adult",
+      "sim_id": 612515242715272723
+     }
+    ]
+   },
+   {
+    "source": "save",
+    "file": "Slot_00001119.save",
+    "save": "My Saved Game 4,376",
+    "autosave": false,
+    "date": "2026-10-23",
+    "household": "Akamine",
+    "world": "",
+    "lot": "",
+    "premade": true,
+    "sims": [
+     {
+      "name": "Toshie Akamine",
+      "age": "Young Adult",
+      "sim_id": 612515242715272723
+     }
+    ]
    }
   ],
   "Ciudad Enamorada|Dynamic Daters": [],
-  "Copperdale|Cheer/Football Teens": [
-   {
-    "source": "save",
-    "file": "Slot_0000000d.save",
-    "save": "Building #2",
-    "autosave": false,
-    "date": "2026-10-16",
-    "household": "Ball",
-    "world": "",
-    "lot": "",
-    "premade": false,
-    "sims": [
-     {
-      "name": "Jorge Ball",
-      "age": "Adult",
-      "sim_id": 585481034983342617
-     }
-    ]
-   },
-   {
-    "source": "save",
-    "file": "Slot_ffffffff.save",
-    "save": "Building #2",
-    "autosave": true,
-    "date": "2026-10-16",
-    "household": "Ball",
-    "world": "",
-    "lot": "",
-    "premade": false,
-    "sims": [
-     {
-      "name": "Jorge Ball",
-      "age": "Adult",
-      "sim_id": 585481034983342617
-     }
-    ]
-   },
+  "Copperdale|Nerdy Boys": [],
+  "Copperdale|Nerdy Girls": [],
+  "Copperdale|Sporty Boys": [
    {
     "source": "save",
     "file": "Slot_00000017.save",
     "save": "Season Events",
     "autosave": false,
-    "date": "2026-03-15",
-    "household": "Ball",
-    "world": "",
-    "lot": "",
+    "date": "2026-10-24",
+    "household": "Sporty Boys",
+    "world": "Copperdale",
+    "lot": "Boys Dorm",
     "premade": false,
     "sims": [
      {
-      "name": "Anderson Ball",
-      "age": "Adult",
-      "sim_id": 793782912994065919
-     }
-    ]
-   },
-   {
-    "source": "save",
-    "file": "Slot_00000016.save",
-    "save": "Horses!",
-    "autosave": false,
-    "date": "2024-01-12",
-    "household": "Ball",
-    "world": "",
-    "lot": "",
-    "premade": false,
-    "sims": [
-     {
-      "name": "Jorge Ball",
-      "age": "Adult",
-      "sim_id": 585481034983342617
-     }
-    ]
-   },
-   {
-    "source": "save",
-    "file": "Slot_00000005.save",
-    "save": "Wonder Child Challenge",
-    "autosave": false,
-    "date": "2023-12-21",
-    "household": "Ball",
-    "world": "San Myshuno",
-    "lot": "VIII Landgraab",
-    "premade": false,
-    "sims": [
-     {
-      "name": "Pamela Ball",
-      "age": "Adult",
-      "sim_id": 544942754143142080
-     },
-     {
-      "name": "Todd Ball",
-      "age": "Young Adult",
-      "sim_id": 544942754143142087
-     },
-     {
-      "name": "Heath Ball",
-      "age": "Child",
-      "sim_id": 544942754143142094
-     }
-    ]
-   },
-   {
-    "source": "save",
-    "file": "Slot_00000007.save",
-    "save": "Rosebud Challenge",
-    "autosave": false,
-    "date": "2023-12-21",
-    "household": "Ball",
-    "world": "San Myshuno",
-    "lot": "1310 21 Chic Street",
-    "premade": false,
-    "sims": [
-     {
-      "name": "Todd Ball",
-      "age": "Adult",
-      "sim_id": 544942754143142087
-     },
-     {
-      "name": "Heath Ball",
-      "age": "Young Adult",
-      "sim_id": 544942754143142094
-     },
-     {
-      "name": "Busan",
-      "age": "Elder",
-      "sim_id": 896224975825617788
-     },
-     {
-      "name": "Nacho",
-      "age": "Elder",
-      "sim_id": 896224975825617789
-     },
-     {
-      "name": "Anja Lindström",
-      "age": "Adult",
-      "sim_id": 896224975825617787
-     }
-    ]
-   },
-   {
-    "source": "save",
-    "file": "Slot_00000008.save",
-    "save": "Tiquelle Legacy Challenge",
-    "autosave": false,
-    "date": "2023-12-21",
-    "household": "Ball",
-    "world": "San Myshuno",
-    "lot": "2B Jasmine Suites",
-    "premade": false,
-    "sims": [
-     {
-      "name": "Pamela Ball",
-      "age": "Adult",
-      "sim_id": 544942754143142080
-     },
-     {
-      "name": "Todd Ball",
-      "age": "Young Adult",
-      "sim_id": 544942754143142087
-     },
-     {
-      "name": "Heath Ball",
-      "age": "Child",
-      "sim_id": 544942754143142094
-     }
-    ]
-   },
-   {
-    "source": "save",
-    "file": "Slot_00000002.save",
-    "save": "Building",
-    "autosave": false,
-    "date": "2023-12-21",
-    "household": "Ball",
-    "world": "",
-    "lot": "",
-    "premade": false,
-    "sims": [
-     {
-      "name": "Pamela Ball",
-      "age": "Adult",
-      "sim_id": 544942754143142080
-     },
-     {
-      "name": "Todd Ball",
-      "age": "Young Adult",
-      "sim_id": 544942754143142087
-     },
-     {
-      "name": "Heath Ball",
-      "age": "Child",
-      "sim_id": 544942754143142094
-     }
-    ]
-   },
-   {
-    "source": "save",
-    "file": "Slot_0000000c.save",
-    "save": "Sulani Save",
-    "autosave": false,
-    "date": "2023-12-21",
-    "household": "Ball",
-    "world": "Evergreen Harbor",
-    "lot": "Canal Corner",
-    "premade": false,
-    "sims": [
-     {
-      "name": "Pamela Ball",
-      "age": "Adult",
-      "sim_id": 544942754143142080
-     },
-     {
-      "name": "Todd Ball",
-      "age": "Young Adult",
-      "sim_id": 544942754143142087
-     },
-     {
-      "name": "Heath Ball",
-      "age": "Child",
-      "sim_id": 544942754143142094
-     },
-     {
-      "name": "Esmeralda Ball",
-      "age": "Baby",
-      "sim_id": 304006336401407021
-     }
-    ]
-   },
-   {
-    "source": "save",
-    "file": "Slot_00000012.save",
-    "save": "Will the port be Promising?",
-    "autosave": false,
-    "date": "2023-12-21",
-    "household": "Teens!",
-    "world": "Windenburg",
-    "lot": "Havisham House",
-    "premade": false,
-    "sims": [
-     {
-      "name": "Andie West",
-      "age": "Young Adult",
-      "sim_id": 972794380048195751
-     },
-     {
-      "name": "Bryce Taylor",
-      "age": "Young Adult",
-      "sim_id": 972794380048195752
-     },
-     {
-      "name": "Delilah DeSnoot",
-      "age": "Young Adult",
-      "sim_id": 972794380048195753
-     },
-     {
-      "name": "Arnie Arnold",
-      "age": "Young Adult",
-      "sim_id": 972794380048195754
-     },
-     {
-      "name": "Zora Lin",
-      "age": "Young Adult",
-      "sim_id": 972794380048195755
-     },
-     {
-      "name": "Camila Moreno",
-      "age": "Young Adult",
-      "sim_id": 972794380048195756
-     },
-     {
-      "name": "Cristian Moreno",
-      "age": "Young Adult",
-      "sim_id": 972794380048195757
-     }
-    ]
-   },
-   {
-    "source": "save",
-    "file": "Slot_0000000e.save",
-    "save": "All Universities",
-    "autosave": false,
-    "date": "2023-12-21",
-    "household": "Ball",
-    "world": "",
-    "lot": "",
-    "premade": false,
-    "sims": [
-     {
-      "name": "Jorge Ball",
-      "age": "Adult",
-      "sim_id": 585481034983342617
-     }
-    ]
-   },
-   {
-    "source": "library",
-    "file": "0x00000000!0x0d800f55a62be08f.householdbinary",
-    "creator": "lilsimsie",
-    "date": "2023-12-21",
-    "household": "Teens!",
-    "sims": [
-     {
-      "name": "April Carrillo",
+      "name": "Timothy Brice",
       "age": "Teen",
-      "sim_id": 972794380046557328
+      "sim_id": 327658375249530428
      },
      {
-      "name": "Andie West",
+      "name": "Jerry DeLong",
       "age": "Teen",
-      "sim_id": 972794380046557329
+      "sim_id": 465018182468929356
      },
      {
-      "name": "Bryce Taylor",
+      "name": "Aurelio Robles",
       "age": "Teen",
-      "sim_id": 972794380046557330
-     },
-     {
-      "name": "Delilah DeSnoot",
-      "age": "Teen",
-      "sim_id": 972794380046557331
-     },
-     {
-      "name": "Arnie Arnold",
-      "age": "Teen",
-      "sim_id": 972794380046557332
-     },
-     {
-      "name": "Zora Lin",
-      "age": "Teen",
-      "sim_id": 972794380046557333
-     },
-     {
-      "name": "Camila Moreno",
-      "age": "Teen",
-      "sim_id": 972794380046557334
-     },
-     {
-      "name": "Cristian Moreno",
-      "age": "Teen",
-      "sim_id": 972794380046557335
+      "sim_id": 779146198255863163
      }
     ]
    }
   ],
-  "Copperdale|Chess/Comp Teens": [
+  "Copperdale|Sporty Girls": [
    {
     "source": "save",
-    "file": "Slot_00000012.save",
-    "save": "Will the port be Promising?",
+    "file": "Slot_00000017.save",
+    "save": "Season Events",
     "autosave": false,
-    "date": "2023-12-21",
-    "household": "Teens!",
-    "world": "Windenburg",
-    "lot": "Havisham House",
+    "date": "2026-10-24",
+    "household": "Sporty Girls",
+    "world": "Copperdale",
+    "lot": "Girls Dorm",
     "premade": false,
     "sims": [
      {
-      "name": "Andie West",
-      "age": "Young Adult",
-      "sim_id": 972794380048195751
+      "name": "Freya Loden",
+      "age": "Teen",
+      "sim_id": 264608831487150466
      },
      {
-      "name": "Bryce Taylor",
-      "age": "Young Adult",
-      "sim_id": 972794380048195752
+      "name": "Kiara Osborne",
+      "age": "Teen",
+      "sim_id": 793782912868032279
      },
      {
-      "name": "Delilah DeSnoot",
-      "age": "Young Adult",
-      "sim_id": 972794380048195753
+      "name": "Juliette Childers",
+      "age": "Teen",
+      "sim_id": 939022823052216028
      },
      {
-      "name": "Arnie Arnold",
-      "age": "Young Adult",
-      "sim_id": 972794380048195754
-     },
-     {
-      "name": "Zora Lin",
-      "age": "Young Adult",
-      "sim_id": 972794380048195755
-     },
-     {
-      "name": "Camila Moreno",
-      "age": "Young Adult",
-      "sim_id": 972794380048195756
-     },
-     {
-      "name": "Cristian Moreno",
-      "age": "Young Adult",
-      "sim_id": 972794380048195757
+      "name": "Hope Heredia",
+      "age": "Teen",
+      "sim_id": 1039229847473715874
      }
     ]
    },
    {
     "source": "library",
-    "file": "0x00000000!0x0d800f55a62be08f.householdbinary",
-    "creator": "lilsimsie",
-    "date": "2023-12-21",
-    "household": "Teens!",
+    "file": "0x00000000!0x00a41611f738183e.householdbinary",
+    "creator": "JemmaTheSimmer",
+    "date": "2026-02-13",
+    "household": "Sporty Girls",
     "sims": [
      {
-      "name": "April Carrillo",
+      "name": "Freya Loden",
       "age": "Teen",
-      "sim_id": 972794380046557328
+      "sim_id": 622646914901874751
      },
      {
-      "name": "Andie West",
+      "name": "Kiara Osborne",
       "age": "Teen",
-      "sim_id": 972794380046557329
+      "sim_id": 622646914901874752
      },
      {
-      "name": "Bryce Taylor",
+      "name": "Juliette Childers",
       "age": "Teen",
-      "sim_id": 972794380046557330
+      "sim_id": 622646914901874753
      },
      {
-      "name": "Delilah DeSnoot",
+      "name": "Hope Heredia",
       "age": "Teen",
-      "sim_id": 972794380046557331
-     },
-     {
-      "name": "Arnie Arnold",
-      "age": "Teen",
-      "sim_id": 972794380046557332
-     },
-     {
-      "name": "Zora Lin",
-      "age": "Teen",
-      "sim_id": 972794380046557333
-     },
-     {
-      "name": "Camila Moreno",
-      "age": "Teen",
-      "sim_id": 972794380046557334
-     },
-     {
-      "name": "Cristian Moreno",
-      "age": "Teen",
-      "sim_id": 972794380046557335
+      "sim_id": 622646914901874754
      }
     ]
    }
@@ -527,25 +270,7 @@
     "file": "Slot_0000000d.save",
     "save": "Building #2",
     "autosave": false,
-    "date": "2026-10-16",
-    "household": "Chan",
-    "world": "",
-    "lot": "",
-    "premade": false,
-    "sims": [
-     {
-      "name": "Roy Chan",
-      "age": "Young Adult",
-      "sim_id": 663179277134864560
-     }
-    ]
-   },
-   {
-    "source": "save",
-    "file": "Slot_ffffffff.save",
-    "save": "Building #2",
-    "autosave": true,
-    "date": "2026-10-16",
+    "date": "2026-10-24",
     "household": "Chan",
     "world": "",
     "lot": "",
@@ -587,7 +312,7 @@
     "file": "Slot_0000000d.save",
     "save": "Building #2",
     "autosave": false,
-    "date": "2026-10-16",
+    "date": "2026-10-24",
     "household": "Kirkland",
     "world": "Newcrest",
     "lot": "Twin Oracle Point",
@@ -607,24 +332,34 @@
    },
    {
     "source": "save",
-    "file": "Slot_ffffffff.save",
+    "file": "Slot_0000000d.save",
     "save": "Building #2",
-    "autosave": true,
-    "date": "2026-10-16",
+    "autosave": false,
+    "date": "2026-10-24",
     "household": "Kirkland",
     "world": "Newcrest",
-    "lot": "Twin Oracle Point",
+    "lot": "Rippling Flats",
     "premade": false,
     "sims": [
      {
+      "name": "Kamila Kirkland",
+      "age": "Teen",
+      "sim_id": 1012209715240900079
+     },
+     {
+      "name": "Kendrick Kirkland",
+      "age": "Teen",
+      "sim_id": 1012209715240900080
+     },
+     {
       "name": "Kayleigh Kirkland",
-      "age": "Young Adult",
-      "sim_id": 510055016993325891
+      "age": "Adult",
+      "sim_id": 1012209715240900081
      },
      {
       "name": "Kennedy Kirkland",
-      "age": "Young Adult",
-      "sim_id": 510055017071182676
+      "age": "Adult",
+      "sim_id": 1012209715240900082
      }
     ]
    },
@@ -666,6 +401,35 @@
       "name": "Kolby Land",
       "age": "Young Adult",
       "sim_id": 893978989765330064
+     }
+    ]
+   },
+   {
+    "source": "library",
+    "file": "0x00000000!0x000c175f84952149.householdbinary",
+    "creator": "JemmaTheSimmer",
+    "date": "2026-10-24",
+    "household": "Kirkland",
+    "sims": [
+     {
+      "name": "Kamila Kirkland",
+      "age": "Teen",
+      "sim_id": 1012209715265216842
+     },
+     {
+      "name": "Kendrick Kirkland",
+      "age": "Teen",
+      "sim_id": 1012209715265216843
+     },
+     {
+      "name": "Kayleigh Kirkland",
+      "age": "Adult",
+      "sim_id": 1012209715265216844
+     },
+     {
+      "name": "Kennedy Kirkland",
+      "age": "Adult",
+      "sim_id": 1012209715265216845
      }
     ]
    },
@@ -720,139 +484,42 @@
   ],
   "Moonwood Mill|Rory & Friend": [],
   "Moonwood Mill|Werewolves in Training": [],
-  "Newcrest|Kirkland": [
+  "Oasis Springs|Curious": [
    {
-    "source": "save",
-    "file": "Slot_0000000d.save",
-    "save": "Building #2",
-    "autosave": false,
-    "date": "2026-10-16",
-    "household": "Kirkland",
-    "world": "Newcrest",
-    "lot": "Twin Oracle Point",
-    "premade": false,
-    "sims": [
-     {
-      "name": "Kayleigh Kirkland",
-      "age": "Young Adult",
-      "sim_id": 510055016993325891
-     },
-     {
-      "name": "Kennedy Kirkland",
-      "age": "Young Adult",
-      "sim_id": 510055017071182676
-     }
-    ]
-   },
-   {
-    "source": "save",
-    "file": "Slot_ffffffff.save",
-    "save": "Building #2",
-    "autosave": true,
-    "date": "2026-10-16",
-    "household": "Kirkland",
-    "world": "Newcrest",
-    "lot": "Twin Oracle Point",
-    "premade": false,
-    "sims": [
-     {
-      "name": "Kayleigh Kirkland",
-      "age": "Young Adult",
-      "sim_id": 510055016993325891
-     },
-     {
-      "name": "Kennedy Kirkland",
-      "age": "Young Adult",
-      "sim_id": 510055017071182676
-     }
-    ]
-   },
-   {
-    "source": "save",
-    "file": "Slot_00000018.save",
-    "save": "Not So Berry",
-    "autosave": false,
-    "date": "2025-10-11",
-    "household": "Kirkland",
-    "world": "Newcrest",
-    "lot": "Twin Oracle Point",
-    "premade": false,
-    "sims": [
-     {
-      "name": "Kamila Kirkland",
-      "age": "Young Adult",
-      "sim_id": 852329199449607695
-     },
-     {
-      "name": "Kendrick Kirkland",
-      "age": "Young Adult",
-      "sim_id": 852329199457144381
-     }
-    ]
-   },
-   {
-    "source": "save",
-    "file": "Slot_0000000e.save",
-    "save": "All Universities",
-    "autosave": false,
+    "source": "library",
+    "file": "0x00000000!0x001c095069740059.householdbinary",
+    "creator": "Maxis",
     "date": "2023-12-21",
-    "household": "Land",
-    "world": "",
-    "lot": "",
-    "premade": false,
+    "household": "Curious",
     "sims": [
      {
-      "name": "Kolby Land",
+      "name": "Vidcund Curious",
       "age": "Young Adult",
-      "sim_id": 893978989765330064
+      "sim_id": 944640262812205146
      }
     ]
    },
    {
     "source": "library",
-    "file": "0x00000000!0x00141455f02b0364.householdbinary",
-    "creator": "JemmaTheSimmer",
-    "date": "2025-03-13",
-    "household": "Kirkland",
+    "file": "0x00000000!0x0c4412d4d0b522af.householdbinary",
+    "creator": "Maxis",
+    "date": "2024-05-25",
+    "household": "The Curious Family",
     "sims": [
      {
-      "name": "Kayleigh Kirkland",
+      "name": "Pascal Curious",
       "age": "Young Adult",
-      "sim_id": 510055017133835109
+      "sim_id": 883852132115358384
      },
      {
-      "name": "Kennedy Kirkland",
+      "name": "Lazlo Curious",
       "age": "Young Adult",
-      "sim_id": 510055017133835110
-     }
-    ]
-   },
-   {
-    "source": "library",
-    "file": "0x00000000!0x00d414e41e621633.householdbinary",
-    "creator": "JemmaTheSimmer",
-    "date": "2025-06-29",
-    "household": "Kirkland",
-    "sims": [
-     {
-      "name": "Kamila Kirkland",
-      "age": "Teen",
-      "sim_id": 852329199474710068
+      "sim_id": 883852132115358385
      },
      {
-      "name": "Kendrick Kirkland",
-      "age": "Teen",
-      "sim_id": 852329199474710069
-     },
-     {
-      "name": "Kayleigh Kirkland",
-      "age": "Elder",
-      "sim_id": 852329199474710070
-     },
-     {
-      "name": "Kennedy Kirkland",
-      "age": "Elder",
-      "sim_id": 852329199474710071
+      "name": "Vidcund Curious",
+      "age": "Young Adult",
+      "sim_id": 883852132115358386
      }
     ]
    }
@@ -861,10 +528,82 @@
   "Ondarion|Alto": [
    {
     "source": "save",
+    "file": "Slot_00000011.save",
+    "save": "My Saved Game 16",
+    "autosave": false,
+    "date": "2026-10-24",
+    "household": "Alto",
+    "world": "",
+    "lot": "",
+    "premade": false,
+    "sims": [
+     {
+      "name": "Holly Alto",
+      "age": "Adult",
+      "sim_id": 355794259401011537
+     }
+    ]
+   },
+   {
+    "source": "save",
+    "file": "Slot_00000011.save",
+    "save": "My Saved Game 16",
+    "autosave": false,
+    "date": "2026-10-24",
+    "household": "Alto",
+    "world": "Ondarion",
+    "lot": "12 Lakeview Apartments",
+    "premade": false,
+    "sims": [
+     {
+      "name": "Enzo Alto",
+      "age": "Adult",
+      "sim_id": 1012209715791182499
+     }
+    ]
+   },
+   {
+    "source": "save",
+    "file": "Slot_ffffffff.save",
+    "save": "Return to the HOB",
+    "autosave": true,
+    "date": "2026-10-24",
+    "household": "Alto",
+    "world": "",
+    "lot": "",
+    "premade": false,
+    "sims": [
+     {
+      "name": "Holly Alto",
+      "age": "Adult",
+      "sim_id": 355794259401011537
+     }
+    ]
+   },
+   {
+    "source": "save",
+    "file": "Slot_ffffffff.save",
+    "save": "Return to the HOB",
+    "autosave": true,
+    "date": "2026-10-24",
+    "household": "Alto",
+    "world": "Ondarion",
+    "lot": "12 Lakeview Apartments",
+    "premade": false,
+    "sims": [
+     {
+      "name": "Enzo Alto",
+      "age": "Adult",
+      "sim_id": 1012209715791182499
+     }
+    ]
+   },
+   {
+    "source": "save",
     "file": "Slot_0000000d.save",
     "save": "Building #2",
     "autosave": false,
-    "date": "2026-10-16",
+    "date": "2026-10-24",
     "household": "Alto",
     "world": "Ondarion",
     "lot": "12 Lakeview Apartments",
@@ -879,10 +618,28 @@
    },
    {
     "source": "save",
-    "file": "Slot_ffffffff.save",
-    "save": "Building #2",
-    "autosave": true,
-    "date": "2026-10-16",
+    "file": "Slot_00000016.save",
+    "save": "Horses!",
+    "autosave": false,
+    "date": "2026-10-24",
+    "household": "Alto",
+    "world": "",
+    "lot": "",
+    "premade": false,
+    "sims": [
+     {
+      "name": "Holly Alto",
+      "age": "Young Adult",
+      "sim_id": 355794259401011537
+     }
+    ]
+   },
+   {
+    "source": "save",
+    "file": "Slot_00000016.save",
+    "save": "Horses!",
+    "autosave": false,
+    "date": "2026-10-24",
     "household": "Alto",
     "world": "Ondarion",
     "lot": "12 Lakeview Apartments",
@@ -891,7 +648,7 @@
      {
       "name": "Enzo Alto",
       "age": "Adult",
-      "sim_id": 426741616626633381
+      "sim_id": 636159146147217419
      }
     ]
    },
@@ -900,7 +657,7 @@
     "file": "Slot_00000017.save",
     "save": "Season Events",
     "autosave": false,
-    "date": "2026-03-15",
+    "date": "2026-10-24",
     "household": "Dalton",
     "world": "",
     "lot": "",
@@ -918,7 +675,7 @@
     "file": "Slot_00000017.save",
     "save": "Season Events",
     "autosave": false,
-    "date": "2026-03-15",
+    "date": "2026-10-24",
     "household": "Walton",
     "world": "",
     "lot": "",
@@ -936,7 +693,7 @@
     "file": "Slot_00000017.save",
     "save": "Season Events",
     "autosave": false,
-    "date": "2026-03-15",
+    "date": "2026-10-24",
     "household": "Alto",
     "world": "Ondarion",
     "lot": "12 Lakeview Apartments",
@@ -951,118 +708,10 @@
    },
    {
     "source": "save",
-    "file": "Slot_00001118.save",
-    "save": "My Saved Game 4,375",
-    "autosave": false,
-    "date": "2024-10-13",
-    "household": "Alto",
-    "world": "",
-    "lot": "",
-    "premade": false,
-    "sims": [
-     {
-      "name": "Holly Alto",
-      "age": "Young Adult",
-      "sim_id": 327658375188425011
-     }
-    ]
-   },
-   {
-    "source": "save",
-    "file": "Slot_00000016.save",
-    "save": "Horses!",
-    "autosave": false,
-    "date": "2024-01-12",
-    "household": "Alto",
-    "world": "",
-    "lot": "",
-    "premade": false,
-    "sims": [
-     {
-      "name": "Holly Alto",
-      "age": "Young Adult",
-      "sim_id": 355794259401011537
-     }
-    ]
-   },
-   {
-    "source": "save",
-    "file": "Slot_0000000a.save",
-    "save": "StrangerVille Playthrough",
-    "autosave": false,
-    "date": "2023-12-21",
-    "household": "Alto",
-    "world": "",
-    "lot": "",
-    "premade": false,
-    "sims": [
-     {
-      "name": "Holly Alto",
-      "age": "Young Adult",
-      "sim_id": 355794259401011537
-     }
-    ]
-   },
-   {
-    "source": "save",
-    "file": "Slot_00000002.save",
-    "save": "Building",
-    "autosave": false,
-    "date": "2023-12-21",
-    "household": "Alto",
-    "world": "",
-    "lot": "",
-    "premade": false,
-    "sims": [
-     {
-      "name": "Holly Alto",
-      "age": "Young Adult",
-      "sim_id": 355794259040013691
-     }
-    ]
-   },
-   {
-    "source": "save",
-    "file": "Slot_0000000c.save",
-    "save": "Sulani Save",
-    "autosave": false,
-    "date": "2023-12-21",
-    "household": "Alto",
-    "world": "",
-    "lot": "",
-    "premade": false,
-    "sims": [
-     {
-      "name": "Holly Alto",
-      "age": "Young Adult",
-      "sim_id": 355794259040013691
-     }
-    ]
-   },
-   {
-    "source": "save",
-    "file": "Slot_0000000c.save",
-    "save": "Sulani Save",
-    "autosave": false,
-    "date": "2023-12-21",
-    "household": "Dalton",
-    "world": "Evergreen Harbor",
-    "lot": "Pinecrest Apartments #402",
-    "premade": false,
-    "sims": [
-     {
-      "name": "Mateo Dalton",
-      "age": "Young Adult",
-      "sim_id": 304006335606889822
-     }
-    ]
-   },
-   {
-    "source": "save",
     "file": "Slot_00000003.save",
     "save": "Rotational",
     "autosave": false,
-    "date": "2023-12-21",
+    "date": "2026-10-24",
     "household": "Alto",
     "world": "San Myshuno",
     "lot": "1 Torendi Tower Penthouse",
@@ -1105,7 +754,7 @@
     "file": "Slot_00000003.save",
     "save": "Rotational",
     "autosave": false,
-    "date": "2023-12-21",
+    "date": "2026-10-24",
     "household": "Walton",
     "world": "",
     "lot": "",
@@ -1123,7 +772,7 @@
     "file": "Slot_00000003.save",
     "save": "Rotational",
     "autosave": false,
-    "date": "2023-12-21",
+    "date": "2026-10-24",
     "household": "Walton",
     "world": "",
     "lot": "",
@@ -1138,8 +787,98 @@
    },
    {
     "source": "save",
-    "file": "Slot_00001116.save",
-    "save": "My Saved Game 4,373",
+    "file": "Slot_00000003.save",
+    "save": "Rotational",
+    "autosave": false,
+    "date": "2026-10-24",
+    "household": "Alto",
+    "world": "Ondarion",
+    "lot": "12 Lakeview Apartments",
+    "premade": false,
+    "sims": [
+     {
+      "name": "Enzo Alto",
+      "age": "Adult",
+      "sim_id": 419986362485425553
+     }
+    ]
+   },
+   {
+    "source": "save",
+    "file": "Slot_00000019.save",
+    "save": "Jemma's Sim World",
+    "autosave": false,
+    "date": "2026-10-23",
+    "household": "Alto",
+    "world": "",
+    "lot": "",
+    "premade": false,
+    "sims": [
+     {
+      "name": "Holly Alto",
+      "age": "Young Adult",
+      "sim_id": 612515242714766017
+     }
+    ]
+   },
+   {
+    "source": "save",
+    "file": "Slot_00000019.save",
+    "save": "Jemma's Sim World",
+    "autosave": false,
+    "date": "2026-10-23",
+    "household": "Alto",
+    "world": "Ondarion",
+    "lot": "12 Lakeview Apartments",
+    "premade": false,
+    "sims": [
+     {
+      "name": "Enzo Alto",
+      "age": "Adult",
+      "sim_id": 612515242715274621
+     }
+    ]
+   },
+   {
+    "source": "save",
+    "file": "Slot_00001119.save",
+    "save": "My Saved Game 4,376",
+    "autosave": false,
+    "date": "2026-10-23",
+    "household": "Alto",
+    "world": "",
+    "lot": "",
+    "premade": false,
+    "sims": [
+     {
+      "name": "Holly Alto",
+      "age": "Young Adult",
+      "sim_id": 612515242714766017
+     }
+    ]
+   },
+   {
+    "source": "save",
+    "file": "Slot_00001119.save",
+    "save": "My Saved Game 4,376",
+    "autosave": false,
+    "date": "2026-10-23",
+    "household": "Alto",
+    "world": "Ondarion",
+    "lot": "12 Lakeview Apartments",
+    "premade": true,
+    "sims": [
+     {
+      "name": "Enzo Alto",
+      "age": "Adult",
+      "sim_id": 612515242715274621
+     }
+    ]
+   },
+   {
+    "source": "save",
+    "file": "Slot_0000000a.save",
+    "save": "StrangerVille Playthrough",
     "autosave": false,
     "date": "2023-12-21",
     "household": "Alto",
@@ -1150,7 +889,43 @@
      {
       "name": "Holly Alto",
       "age": "Young Adult",
-      "sim_id": 217309133054499392
+      "sim_id": 355794259401011537
+     }
+    ]
+   },
+   {
+    "source": "save",
+    "file": "Slot_0000000c.save",
+    "save": "Sulani Save",
+    "autosave": false,
+    "date": "2023-12-21",
+    "household": "Alto",
+    "world": "",
+    "lot": "",
+    "premade": false,
+    "sims": [
+     {
+      "name": "Holly Alto",
+      "age": "Young Adult",
+      "sim_id": 355794259040013691
+     }
+    ]
+   },
+   {
+    "source": "save",
+    "file": "Slot_0000000c.save",
+    "save": "Sulani Save",
+    "autosave": false,
+    "date": "2023-12-21",
+    "household": "Dalton",
+    "world": "Evergreen Harbor",
+    "lot": "Pinecrest Apartments #402",
+    "premade": false,
+    "sims": [
+     {
+      "name": "Mateo Dalton",
+      "age": "Young Adult",
+      "sim_id": 304006335606889822
      }
     ]
    },
@@ -1168,42 +943,6 @@
      {
       "name": "Holly Alto",
       "age": "Young Adult",
-      "sim_id": 355794259401011537
-     }
-    ]
-   },
-   {
-    "source": "save",
-    "file": "Slot_00001115.save",
-    "save": "Starter Save",
-    "autosave": false,
-    "date": "2023-12-21",
-    "household": "Alto",
-    "world": "",
-    "lot": "",
-    "premade": false,
-    "sims": [
-     {
-      "name": "Holly Alto",
-      "age": "Young Adult",
-      "sim_id": 355794259401011537
-     }
-    ]
-   },
-   {
-    "source": "save",
-    "file": "Slot_00000011.save",
-    "save": "Return to the HOB",
-    "autosave": false,
-    "date": "2023-12-21",
-    "household": "Alto",
-    "world": "",
-    "lot": "",
-    "premade": false,
-    "sims": [
-     {
-      "name": "Holly Alto",
-      "age": "Adult",
       "sim_id": 355794259401011537
      }
     ]
@@ -1282,24 +1021,6 @@
    },
    {
     "source": "save",
-    "file": "Slot_00001111.save",
-    "save": "MC Save 00001111",
-    "autosave": false,
-    "date": "2023-12-21",
-    "household": "Alto",
-    "world": "",
-    "lot": "",
-    "premade": false,
-    "sims": [
-     {
-      "name": "Holly Alto",
-      "age": "Young Adult",
-      "sim_id": 972794379765513847
-     }
-    ]
-   },
-   {
-    "source": "save",
     "file": "Slot_00000013.save",
     "save": "Vivian - 100 Baby Test",
     "autosave": false,
@@ -1320,10 +1041,66 @@
   "Ondarion|Monty": [
    {
     "source": "save",
+    "file": "Slot_00000011.save",
+    "save": "My Saved Game 16",
+    "autosave": false,
+    "date": "2026-10-24",
+    "household": "Monty",
+    "world": "Ondarion",
+    "lot": "Renaissance Road",
+    "premade": false,
+    "sims": [
+     {
+      "name": "Juliette Monty",
+      "age": "Adult",
+      "sim_id": 1012209715791181480
+     },
+     {
+      "name": "Romeo Monty",
+      "age": "Adult",
+      "sim_id": 1012209715791181481
+     },
+     {
+      "name": "Dante Monty",
+      "age": "Teen",
+      "sim_id": 1012209715791181482
+     }
+    ]
+   },
+   {
+    "source": "save",
+    "file": "Slot_ffffffff.save",
+    "save": "Return to the HOB",
+    "autosave": true,
+    "date": "2026-10-24",
+    "household": "Monty",
+    "world": "Ondarion",
+    "lot": "Renaissance Road",
+    "premade": false,
+    "sims": [
+     {
+      "name": "Juliette Monty",
+      "age": "Adult",
+      "sim_id": 1012209715791181480
+     },
+     {
+      "name": "Romeo Monty",
+      "age": "Adult",
+      "sim_id": 1012209715791181481
+     },
+     {
+      "name": "Dante Monty",
+      "age": "Teen",
+      "sim_id": 1012209715791181482
+     }
+    ]
+   },
+   {
+    "source": "save",
     "file": "Slot_0000000d.save",
     "save": "Building #2",
     "autosave": false,
-    "date": "2026-10-16",
+    "date": "2026-10-24",
     "household": "Monty",
     "world": "Ondarion",
     "lot": "Renaissance Road",
@@ -1348,10 +1125,10 @@
    },
    {
     "source": "save",
-    "file": "Slot_ffffffff.save",
-    "save": "Building #2",
-    "autosave": true,
-    "date": "2026-10-16",
+    "file": "Slot_00000016.save",
+    "save": "Horses!",
+    "autosave": false,
+    "date": "2026-10-24",
     "household": "Monty",
     "world": "Ondarion",
     "lot": "Renaissance Road",
@@ -1360,17 +1137,17 @@
      {
       "name": "Juliette Monty",
       "age": "Adult",
-      "sim_id": 426741616626631806
+      "sim_id": 636159146147215937
      },
      {
       "name": "Romeo Monty",
       "age": "Adult",
-      "sim_id": 426741616626631807
+      "sim_id": 636159146147215938
      },
      {
       "name": "Dante Monty",
       "age": "Teen",
-      "sim_id": 426741616626631808
+      "sim_id": 636159146147215939
      }
     ]
    },
@@ -1379,7 +1156,7 @@
     "file": "Slot_00000017.save",
     "save": "Season Events",
     "autosave": false,
-    "date": "2026-03-15",
+    "date": "2026-10-24",
     "household": "Monty",
     "world": "Ondarion",
     "lot": "Renaissance Road",
@@ -1401,15 +1178,155 @@
       "sim_id": 1142812842389931139
      }
     ]
+   },
+   {
+    "source": "save",
+    "file": "Slot_00000003.save",
+    "save": "Rotational",
+    "autosave": false,
+    "date": "2026-10-24",
+    "household": "Monty",
+    "world": "Ondarion",
+    "lot": "Renaissance Road",
+    "premade": false,
+    "sims": [
+     {
+      "name": "Juliette Monty",
+      "age": "Adult",
+      "sim_id": 419986362485424087
+     },
+     {
+      "name": "Romeo Monty",
+      "age": "Adult",
+      "sim_id": 419986362485424088
+     },
+     {
+      "name": "Dante Monty",
+      "age": "Teen",
+      "sim_id": 419986362485424089
+     }
+    ]
+   },
+   {
+    "source": "save",
+    "file": "Slot_00000019.save",
+    "save": "Jemma's Sim World",
+    "autosave": false,
+    "date": "2026-10-23",
+    "household": "Monty",
+    "world": "Ondarion",
+    "lot": "Renaissance Road",
+    "premade": false,
+    "sims": [
+     {
+      "name": "Juliette Monty",
+      "age": "Adult",
+      "sim_id": 612515242715273687
+     },
+     {
+      "name": "Romeo Monty",
+      "age": "Adult",
+      "sim_id": 612515242715273688
+     },
+     {
+      "name": "Dante Monty",
+      "age": "Teen",
+      "sim_id": 612515242715273689
+     }
+    ]
+   },
+   {
+    "source": "save",
+    "file": "Slot_00001119.save",
+    "save": "My Saved Game 4,376",
+    "autosave": false,
+    "date": "2026-10-23",
+    "household": "Monty",
+    "world": "Ondarion",
+    "lot": "Renaissance Road",
+    "premade": true,
+    "sims": [
+     {
+      "name": "Juliette Monty",
+      "age": "Adult",
+      "sim_id": 612515242715273687
+     },
+     {
+      "name": "Romeo Monty",
+      "age": "Adult",
+      "sim_id": 612515242715273688
+     },
+     {
+      "name": "Dante Monty",
+      "age": "Teen",
+      "sim_id": 612515242715273689
+     }
+    ]
    }
   ],
   "Ravenwood|Specter": [
    {
     "source": "save",
+    "file": "Slot_00000011.save",
+    "save": "My Saved Game 16",
+    "autosave": false,
+    "date": "2026-10-24",
+    "household": "Specter",
+    "world": "Ravenwood",
+    "lot": "Specter Family Manor",
+    "premade": false,
+    "sims": [
+     {
+      "name": "Layne Coffin",
+      "age": "Adult",
+      "sim_id": 1012209715791105411
+     },
+     {
+      "name": "Nyon Specter",
+      "age": "Teen",
+      "sim_id": 1012209715791105413
+     },
+     {
+      "name": "Olive Specter",
+      "age": "Adult",
+      "sim_id": 1012209715791105412
+     }
+    ]
+   },
+   {
+    "source": "save",
+    "file": "Slot_ffffffff.save",
+    "save": "Return to the HOB",
+    "autosave": true,
+    "date": "2026-10-24",
+    "household": "Specter",
+    "world": "Ravenwood",
+    "lot": "Specter Family Manor",
+    "premade": false,
+    "sims": [
+     {
+      "name": "Layne Coffin",
+      "age": "Adult",
+      "sim_id": 1012209715791105411
+     },
+     {
+      "name": "Nyon Specter",
+      "age": "Teen",
+      "sim_id": 1012209715791105413
+     },
+     {
+      "name": "Olive Specter",
+      "age": "Adult",
+      "sim_id": 1012209715791105412
+     }
+    ]
+   },
+   {
+    "source": "save",
     "file": "Slot_0000000d.save",
     "save": "Building #2",
     "autosave": false,
-    "date": "2026-10-16",
+    "date": "2026-10-24",
     "household": "Specter",
     "world": "",
     "lot": "",
@@ -1434,29 +1351,141 @@
    },
    {
     "source": "save",
-    "file": "Slot_ffffffff.save",
-    "save": "Building #2",
-    "autosave": true,
-    "date": "2026-10-16",
+    "file": "Slot_00000016.save",
+    "save": "Horses!",
+    "autosave": false,
+    "date": "2026-10-24",
     "household": "Specter",
-    "world": "",
-    "lot": "",
+    "world": "Ravenwood",
+    "lot": "Specter Family Manor",
     "premade": false,
     "sims": [
      {
       "name": "Layne Coffin",
       "age": "Adult",
-      "sim_id": 521317270662093954
+      "sim_id": 636159146147136164
      },
      {
       "name": "Nyon Specter",
       "age": "Teen",
-      "sim_id": 521317270662093956
+      "sim_id": 636159146147136166
      },
      {
       "name": "Olive Specter",
       "age": "Adult",
-      "sim_id": 521317270662093955
+      "sim_id": 636159146147136165
+     }
+    ]
+   },
+   {
+    "source": "save",
+    "file": "Slot_00000017.save",
+    "save": "Season Events",
+    "autosave": false,
+    "date": "2026-10-24",
+    "household": "Specter",
+    "world": "Ravenwood",
+    "lot": "Specter Family Manor",
+    "premade": false,
+    "sims": [
+     {
+      "name": "Layne Coffin",
+      "age": "Adult",
+      "sim_id": 1082015508637445853
+     },
+     {
+      "name": "Nyon Specter",
+      "age": "Teen",
+      "sim_id": 1082015508637445855
+     },
+     {
+      "name": "Olive Specter",
+      "age": "Adult",
+      "sim_id": 1082015508637445854
+     }
+    ]
+   },
+   {
+    "source": "save",
+    "file": "Slot_00000003.save",
+    "save": "Rotational",
+    "autosave": false,
+    "date": "2026-10-24",
+    "household": "Specter",
+    "world": "Ravenwood",
+    "lot": "Specter Family Manor",
+    "premade": false,
+    "sims": [
+     {
+      "name": "Layne Coffin",
+      "age": "Adult",
+      "sim_id": 419986362485344442
+     },
+     {
+      "name": "Nyon Specter",
+      "age": "Teen",
+      "sim_id": 419986362485344444
+     },
+     {
+      "name": "Olive Specter",
+      "age": "Adult",
+      "sim_id": 419986362485344443
+     }
+    ]
+   },
+   {
+    "source": "save",
+    "file": "Slot_00000019.save",
+    "save": "Jemma's Sim World",
+    "autosave": false,
+    "date": "2026-10-23",
+    "household": "Specter",
+    "world": "Ravenwood",
+    "lot": "Specter Family Manor",
+    "premade": false,
+    "sims": [
+     {
+      "name": "Layne Coffin",
+      "age": "Adult",
+      "sim_id": 612515242715198298
+     },
+     {
+      "name": "Nyon Specter",
+      "age": "Teen",
+      "sim_id": 612515242715198300
+     },
+     {
+      "name": "Olive Specter",
+      "age": "Adult",
+      "sim_id": 612515242715198299
+     }
+    ]
+   },
+   {
+    "source": "save",
+    "file": "Slot_00001119.save",
+    "save": "My Saved Game 4,376",
+    "autosave": false,
+    "date": "2026-10-23",
+    "household": "Specter",
+    "world": "Ravenwood",
+    "lot": "Specter Family Manor",
+    "premade": true,
+    "sims": [
+     {
+      "name": "Layne Coffin",
+      "age": "Adult",
+      "sim_id": 612515242715198298
+     },
+     {
+      "name": "Nyon Specter",
+      "age": "Teen",
+      "sim_id": 612515242715198300
+     },
+     {
+      "name": "Olive Specter",
+      "age": "Adult",
+      "sim_id": 612515242715198299
      }
     ]
    },
@@ -1480,13 +1509,57 @@
     ]
    }
   ],
+  "San Myshuno|Ferrara": [
+   {
+    "source": "save",
+    "file": "Slot_00000003.save",
+    "save": "Rotational",
+    "autosave": false,
+    "date": "2026-10-24",
+    "household": "Ferrara",
+    "world": "San Myshuno",
+    "lot": "1313 21 Chic Street",
+    "premade": false,
+    "sims": [
+     {
+      "name": "Dayna Ferrara",
+      "age": "Adult",
+      "sim_id": 646279663825454567
+     },
+     {
+      "name": "Alicia Ferrara",
+      "age": "Young Adult",
+      "sim_id": 646279663930443265
+     }
+    ]
+   },
+   {
+    "source": "library",
+    "file": "0x00000000!0x00f80bee24a20662.householdbinary",
+    "creator": "JemmaTheSimmer",
+    "date": "2023-12-21",
+    "household": "Ferrara",
+    "sims": [
+     {
+      "name": "Dayna Ferrara",
+      "age": "Young Adult",
+      "sim_id": 646279663972386403
+     },
+     {
+      "name": "Alicia Ferrara",
+      "age": "Child",
+      "sim_id": 646279663972386404
+     }
+    ]
+   }
+  ],
   "San Sequoia|Lovejoy": [
    {
     "source": "save",
     "file": "Slot_00000017.save",
     "save": "Season Events",
     "autosave": false,
-    "date": "2026-03-15",
+    "date": "2026-10-24",
     "household": "Lovejoy",
     "world": "San Sequoia",
     "lot": "23 Eucalyptus Lane",
@@ -1544,25 +1617,6 @@
    },
    {
     "source": "library",
-    "file": "0x00000000!0x00d01556e2b1103d.householdbinary",
-    "creator": "JemmaTheSimmer",
-    "date": "2025-09-24",
-    "household": "Lovejoy",
-    "sims": [
-     {
-      "name": "Aimee Lovejoy",
-      "age": "Young Adult",
-      "sim_id": 779146198449721406
-     },
-     {
-      "name": "Amit Lovejoy",
-      "age": "Young Adult",
-      "sim_id": 779146198449721407
-     }
-    ]
-   },
-   {
-    "source": "library",
     "file": "0x00000000!0x00d01556e2b41042.householdbinary",
     "creator": "JemmaTheSimmer",
     "date": "2025-09-24",
@@ -1584,10 +1638,46 @@
   "Sulani|Mine": [
    {
     "source": "save",
+    "file": "Slot_00000011.save",
+    "save": "My Saved Game 16",
+    "autosave": false,
+    "date": "2026-10-24",
+    "household": "Akamine",
+    "world": "",
+    "lot": "",
+    "premade": false,
+    "sims": [
+     {
+      "name": "Toshie Akamine",
+      "age": "Young Adult",
+      "sim_id": 1012209715791180516
+     }
+    ]
+   },
+   {
+    "source": "save",
+    "file": "Slot_ffffffff.save",
+    "save": "Return to the HOB",
+    "autosave": true,
+    "date": "2026-10-24",
+    "household": "Akamine",
+    "world": "",
+    "lot": "",
+    "premade": false,
+    "sims": [
+     {
+      "name": "Toshie Akamine",
+      "age": "Young Adult",
+      "sim_id": 1012209715791180516
+     }
+    ]
+   },
+   {
+    "source": "save",
     "file": "Slot_0000000d.save",
     "save": "Building #2",
     "autosave": false,
-    "date": "2026-10-16",
+    "date": "2026-10-24",
     "household": "Akamine",
     "world": "",
     "lot": "",
@@ -1602,10 +1692,10 @@
    },
    {
     "source": "save",
-    "file": "Slot_ffffffff.save",
-    "save": "Building #2",
-    "autosave": true,
-    "date": "2026-10-16",
+    "file": "Slot_00000016.save",
+    "save": "Horses!",
+    "autosave": false,
+    "date": "2026-10-24",
     "household": "Akamine",
     "world": "",
     "lot": "",
@@ -1614,7 +1704,7 @@
      {
       "name": "Toshie Akamine",
       "age": "Young Adult",
-      "sim_id": 1123672334440926568
+      "sim_id": 636159146147214973
      }
     ]
    },
@@ -1623,7 +1713,7 @@
     "file": "Slot_00000017.save",
     "save": "Season Events",
     "autosave": false,
-    "date": "2026-03-15",
+    "date": "2026-10-24",
     "household": "Miner",
     "world": "",
     "lot": "",
@@ -1641,7 +1731,7 @@
     "file": "Slot_00000017.save",
     "save": "Season Events",
     "autosave": false,
-    "date": "2026-03-15",
+    "date": "2026-10-24",
     "household": "Akamine",
     "world": "",
     "lot": "",
@@ -1653,6 +1743,60 @@
       "sim_id": 1039229847456412100
      }
     ]
+   },
+   {
+    "source": "save",
+    "file": "Slot_00000003.save",
+    "save": "Rotational",
+    "autosave": false,
+    "date": "2026-10-24",
+    "household": "Akamine",
+    "world": "",
+    "lot": "",
+    "premade": false,
+    "sims": [
+     {
+      "name": "Toshie Akamine",
+      "age": "Young Adult",
+      "sim_id": 419986362485423123
+     }
+    ]
+   },
+   {
+    "source": "save",
+    "file": "Slot_00000019.save",
+    "save": "Jemma's Sim World",
+    "autosave": false,
+    "date": "2026-10-23",
+    "household": "Akamine",
+    "world": "",
+    "lot": "",
+    "premade": false,
+    "sims": [
+     {
+      "name": "Toshie Akamine",
+      "age": "Young Adult",
+      "sim_id": 612515242715272723
+     }
+    ]
+   },
+   {
+    "source": "save",
+    "file": "Slot_00001119.save",
+    "save": "My Saved Game 4,376",
+    "autosave": false,
+    "date": "2026-10-23",
+    "household": "Akamine",
+    "world": "",
+    "lot": "",
+    "premade": true,
+    "sims": [
+     {
+      "name": "Toshie Akamine",
+      "age": "Young Adult",
+      "sim_id": 612515242715272723
+     }
+    ]
    }
   ],
   "Tomarang|Cadberry": [
@@ -1661,7 +1805,7 @@
     "file": "Slot_00000017.save",
     "save": "Season Events",
     "autosave": false,
-    "date": "2026-03-15",
+    "date": "2026-10-24",
     "household": "Berry",
     "world": "",
     "lot": "",
@@ -1867,235 +2011,13 @@
     ]
    }
   ],
-  "Willow Creek|Davidson": [
-   {
-    "source": "save",
-    "file": "Slot_0000000d.save",
-    "save": "Building #2",
-    "autosave": false,
-    "date": "2026-10-16",
-    "household": "Davidson",
-    "world": "",
-    "lot": "",
-    "premade": false,
-    "sims": [
-     {
-      "name": "Mckinley Davidson",
-      "age": "Adult",
-      "sim_id": 663179277134930122
-     }
-    ]
-   },
-   {
-    "source": "save",
-    "file": "Slot_ffffffff.save",
-    "save": "Building #2",
-    "autosave": true,
-    "date": "2026-10-16",
-    "household": "Davidson",
-    "world": "",
-    "lot": "",
-    "premade": false,
-    "sims": [
-     {
-      "name": "Mckinley Davidson",
-      "age": "Adult",
-      "sim_id": 663179277134930122
-     }
-    ]
-   },
-   {
-    "source": "save",
-    "file": "Slot_00000015.save",
-    "save": "100 Baby Challenge!!",
-    "autosave": false,
-    "date": "2025-09-24",
-    "household": "Davidson",
-    "world": "San Myshuno",
-    "lot": "19 Culpepper House",
-    "premade": false,
-    "sims": [
-     {
-      "name": "Colton Davidson",
-      "age": "Adult",
-      "sim_id": 506673200147208635
-     },
-     {
-      "name": "Tanvi Davidson",
-      "age": "Adult",
-      "sim_id": 235331316565286380
-     },
-     {
-      "name": "Richard Davidson",
-      "age": "Baby",
-      "sim_id": 774637390196459724
-     },
-     {
-      "name": "Murphy",
-      "age": "Adult",
-      "sim_id": 453755943422921646
-     },
-     {
-      "name": "Cashew",
-      "age": "Adult",
-      "sim_id": 622640936041414107
-     }
-    ]
-   },
-   {
-    "source": "save",
-    "file": "Slot_00001112.save",
-    "save": "My Saved Game 4,370",
-    "autosave": false,
-    "date": "2023-12-21",
-    "household": "Davidson",
-    "world": "Willow Creek",
-    "lot": "Streamlet Single",
-    "premade": false,
-    "sims": [
-     {
-      "name": "Evelyn Davidson",
-      "age": "Adult",
-      "sim_id": 638671130427326481
-     },
-     {
-      "name": "Ray Davidson",
-      "age": "Adult",
-      "sim_id": 638671130572565439
-     },
-     {
-      "name": "Lisa Davidson",
-      "age": "Teen",
-      "sim_id": 1083401604064216749
-     },
-     {
-      "name": "George Davidson",
-      "age": "Child",
-      "sim_id": 1083401604802751376
-     }
-    ]
-   },
-   {
-    "source": "save",
-    "file": "Slot_00000001.save",
-    "save": "My Saved Game 2",
-    "autosave": false,
-    "date": "2023-12-21",
-    "household": "Davidson",
-    "world": "Willow Creek",
-    "lot": "Streamlet Single",
-    "premade": false,
-    "sims": [
-     {
-      "name": "Evelyn Davidson",
-      "age": "Adult",
-      "sim_id": 638671130427326481
-     },
-     {
-      "name": "Ray Davidson",
-      "age": "Adult",
-      "sim_id": 638671130572565439
-     },
-     {
-      "name": "Lisa Davidson",
-      "age": "Teen",
-      "sim_id": 1083401604064216749
-     },
-     {
-      "name": "George Davidson",
-      "age": "Child",
-      "sim_id": 1083401604802751376
-     }
-    ]
-   },
-   {
-    "source": "save",
-    "file": "Slot_00000003.save",
-    "save": "Rotational",
-    "autosave": false,
-    "date": "2023-12-21",
-    "household": "Davidson",
-    "world": "Willow Creek",
-    "lot": "Streamlet Single",
-    "premade": false,
-    "sims": [
-     {
-      "name": "Evelyn Davidson",
-      "age": "Elder",
-      "sim_id": 638671130427326481
-     },
-     {
-      "name": "Ray Davidson",
-      "age": "Elder",
-      "sim_id": 638671130572565439
-     },
-     {
-      "name": "George Davidson",
-      "age": "Young Adult",
-      "sim_id": 1083401604802751376
-     }
-    ]
-   },
-   {
-    "source": "save",
-    "file": "Slot_00000014.save",
-    "save": "Vivian - 100 Babies Challenge",
-    "autosave": false,
-    "date": "2023-12-21",
-    "household": "Davidson",
-    "world": "San Myshuno",
-    "lot": "19 Culpepper House",
-    "premade": false,
-    "sims": [
-     {
-      "name": "Colton Davidson",
-      "age": "Adult",
-      "sim_id": 506673200147208635
-     },
-     {
-      "name": "Tanvi Davidson",
-      "age": "Adult",
-      "sim_id": 235331316565286380
-     },
-     {
-      "name": "Richard Davidson",
-      "age": "Baby",
-      "sim_id": 774637390196459724
-     },
-     {
-      "name": "Murphy",
-      "age": "Adult",
-      "sim_id": 453755943422921646
-     },
-     {
-      "name": "Cashew",
-      "age": "Adult",
-      "sim_id": 622640936041414107
-     }
-    ]
-   },
-   {
-    "source": "library",
-    "file": "0x00000000!0x00e904025eec0098.householdbinary",
-    "creator": "MissTiquelle",
-    "date": "2023-12-21",
-    "household": "Davidson",
-    "sims": [
-     {
-      "name": "Evelyn Davidson",
-      "age": "Young Adult",
-      "sim_id": 1074394394333544601
-     }
-    ]
-   }
-  ],
   "Willow Creek|Ella-Mint Cadberry": [
    {
     "source": "save",
     "file": "Slot_00000017.save",
     "save": "Season Events",
     "autosave": false,
-    "date": "2026-03-15",
+    "date": "2026-10-24",
     "household": "Berry",
     "world": "",
     "lot": "",
@@ -2302,24 +2224,6 @@
    }
   ],
   "Windenburg|Tiquelle": [
-   {
-    "source": "save",
-    "file": "Slot_00000008.save",
-    "save": "Tiquelle Legacy Challenge",
-    "autosave": false,
-    "date": "2023-12-21",
-    "household": "Tiquelle",
-    "world": "",
-    "lot": "",
-    "premade": false,
-    "sims": [
-     {
-      "name": "Louisa Tiquelle",
-      "age": "Young Adult",
-      "sim_id": 1066235963664695433
-     }
-    ]
-   },
    {
     "source": "library",
     "file": "0x00000000!0x00880d3be3af0435.householdbinary",
