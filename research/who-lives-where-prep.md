@@ -10,6 +10,8 @@ Research only. Nothing in the plan, the site or your list has changed.
 
 ---
 
+**Her notes on homes (1 Nov):** Comfy Cubby: modest, parents and one child. 1010 Alto Apartments: 2 fancy bedrooms, for 2 rich or famous Sims. Garden Essence: a bigger family home, maybe 2 kids. Fern Park Flats: every unit 1 bedroom.
+
 ## Summary
 
 **Your Sims with no home on the plan:** 17 households, 42 Sims. Ash Carrington; Kenji Mikami and Kumiko Aoki; the Fantasias; Lena Garcia; the Rosebud household; Dayna and Alicia Ferrara; the Deckers; Luis Huerta; Henri Penkridge; the Waters; Faye Evergreen’s household; and from “Building #2” the Presleys, Barnes, Faulks, Hassanis, Thorntons and Vivian Little.

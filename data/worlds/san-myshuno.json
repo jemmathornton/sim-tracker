@@ -62,7 +62,7 @@
    "mapSpot": [0.57, 0.64],
    "mapBox": [0.46, 0.48, 0.67, 0.79],
    "lots": [
-    {"lot": "1010 Alto Apartments", "myName": "1010 Alto Apartments", "type": "Apartment", "size": "N/A", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["wgO03R6kEeuOM2EZzJ8AzQ=="], "traits": ["Chef's Kitchen", "Party Place"], "beds": 3, "baths": 3},
+    {"lot": "1010 Alto Apartments", "myName": "1010 Alto Apartments", "type": "Apartment", "size": "N/A", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["wgO03R6kEeuOM2EZzJ8AzQ=="], "traits": ["Chef's Kitchen", "Party Place"], "beds": 2, "baths": 3},
     {"lot": "1020 Alto Apartments", "myName": "1020 Alto Apartments", "type": "Apartment", "size": "N/A", "residents": "Lobo", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "VIII Landgraab Apartments", "myName": "VIII Landgraab Apartments", "type": "Apartment", "size": "N/A", "residents": "Empty", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "IX Landgraab Apartments", "myName": "IX Landgraab Apartments", "type": "Apartment", "size": "N/A", "residents": "Feng", "built": false, "shared": false, "screenshots": false, "simsMade": false},
