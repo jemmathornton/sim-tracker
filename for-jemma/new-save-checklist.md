@@ -508,7 +508,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 - [ ] **Sento Senbamachi** (game’s 5-3-1 Shinrinyoku), 30x20: place “Sento Senbamachi”. Type: Onsen Bathhouse. Traits: On Ley Line, Party Place. Trait ideas (free slots): + Peace and Quiet or Natural Well.
 - [ ] **6-4-1 Hanamigawa**, 20x15: not built yet: leave the game’s lot for now. Type: Vacation Rental.
 - [ ] **Izakaya Hanamigawa Koen** (game’s Hanamigawa Koen), 30x20: place “Izakaya Hanamigawa Koen”. Search it by name (its upload has no #mtkomorebi tag). Type: Restaurant (/Park). Traits: Convivial. Trait ideas (free slots): Chef’s Kitchen, Sunny Aspect.
-- [ ] **Boba Ippai** (game’s Izakaya Ippai), 30x20: place “Boba Ippai”. Type: Thrift and Boba Store.
+- [ ] **Boba Ippai** (game’s Izakaya Ippai), 30x20: place “Boba Ippai”. Not the other copy: “Boba Ippai” (Karaoke Bar). Type: Thrift and Boba Store/Karaoke Bar.
 
 **Yukimatsu**
 

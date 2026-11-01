@@ -189,6 +189,22 @@ window.ADMIN = {
 "favourites": 2116,
 "downloads": 20260,
 "comments": 50
+},
+{
+"when": "01 Nov 2026 20:36",
+"ok": true,
+"linked": [
+"linked new upload “Boba Ippai” to Mt. Komorebi / Izakaya Ippai",
+"linked new upload “Boba Ippai” to Mt. Komorebi / Izakaya Ippai"
+],
+"notes": [
+"added a Gallery picture for Mt. Komorebi / Izakaya Ippai"
+],
+"listed": 259,
+"new": 2,
+"favourites": 2116,
+"downloads": 20265,
+"comments": 50
 }
 ],
 "checklist": [
@@ -579,12 +595,6 @@ window.ADMIN = {
 "title": "100 Babies Final House",
 "lot": null,
 "why": "New on 2026-10-24. Not Hallow Slough: it would be Ella-Mint Cadberry’s home, if she keeps it (undecided, 24 Oct)."
-},
-{
-"id": "fLQJUNmvRxyEtAc2iy6KaQ==",
-"title": "Boba Ippai",
-"lot": "Mt. Komorebi / Izakaya Ippai",
-"why": "New on 2026-11-01: another copy of this build. Which should lead (normally the latest)?"
 }
 ],
 "newSave": {
