@@ -248,6 +248,21 @@ window.ADMIN = {
 "favourites": 2117,
 "downloads": 20276,
 "comments": 50
+},
+{
+"when": "01 Nov 2026 23:02",
+"ok": true,
+"linked": [
+"linked new upload “Riverside Grove” to StrangerVille / Riverside Grove"
+],
+"notes": [
+"added a Gallery picture for StrangerVille / Riverside Grove"
+],
+"listed": 263,
+"new": 1,
+"favourites": 2117,
+"downloads": 20280,
+"comments": 50
 }
 ],
 "checklist": [

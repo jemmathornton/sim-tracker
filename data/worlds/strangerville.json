@@ -18,7 +18,7 @@
     {"lot": "Carpophagous Corner", "myName": "Carpophagous Corner", "type": "Vacation Rental", "size": "30x20", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["90dWb5T5EemIVFunJjefig=="], "traits": ["Science Lair", "Bracing Breezes"], "challenges": ["Quake Zone"]},
     {"lot": "Slip 42", "myName": "Slip 42", "type": "Residential Rental (2)", "size": "20x15", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["b5Ji8j+9EeqMyfXdRXmRsg==", "nYOqR4JwQt2h6tVnaQLT5Q=="], "challenges": ["Creepy Crawlies", "Quake Zone", "Filthy"], "units": [{"name": "1", "beds": 1, "baths": 1, "challenges": ["Creepy Crawlies", "Quake Zone", "Filthy"]}, {"name": "2"}]},
     {"lot": "Old Penelope", "myName": "Old Penelope", "type": "Residential", "size": "50x40", "residents": "Cahill", "built": false, "shared": false, "screenshots": false, "simsMade": false},
-    {"lot": "Riverside Grove", "myName": "Riverside Grove", "type": "Residential", "size": "30x20", "residents": "Sigworth", "built": true, "shared": false, "screenshots": false, "simsMade": false, "gallery": ["CbHSrsNiSI2bV/Kycw+pDA=="]}
+    {"lot": "Riverside Grove", "myName": "Riverside Grove", "type": "Residential", "size": "30x20", "residents": "Sigworth", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["CbHSrsNiSI2bV/Kycw+pDA=="]}
    ]
   },
   {
