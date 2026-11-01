@@ -69,6 +69,8 @@ def building_saves(prefix='Building'):
 # Only add a line once Jemma has confirmed it.
 STALE_COUNTS = {"Rio Verde", "Sequoia Cottage", "Spring Steppes"}   # unit 1's bedrooms/bathrooms are the whole building's (22 Oct)
 SAVE_NAMES = {
+    "Copperdale|Hillside Haven": "Hallow Slough (SoupShell)",       # her SoupShell build moved here (her word, 1 Nov)
+    "Henford-on-Bagley|4 Olde Mill Lane": "The Old Mill",            # her Olde Mill (her word, 1 Nov)
     "Oasis Springs|Cacti Casa": "Palm Spring Public Pool",            # her Palm Springs Public Pool
     "Willow Creek|Magnolia Blossom Park": "Magnolia Blossom",
     # confirmed by Jemma 13 Oct: shell-challenge builds keep their challenge names in the game, and some lots were renamed
