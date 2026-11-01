@@ -2436,7 +2436,7 @@
     "placed": false,
     "objs": 114,
     "game_objs": 114,
-    "status": "game lot"
+    "status": "to place"
    },
    {
     "lot": "Cliff Side Crest",
@@ -6380,6 +6380,12 @@
    "lot": "Fraternity Apartment",
    "household": "Bheeda",
    "goes": "122 Hakim House"
+  },
+  {
+   "world": "StrangerVille",
+   "lot": "Riverside Grove",
+   "household": "Sigworth",
+   "goes": "Riverside Grove"
   },
   {
    "world": "Britechester",

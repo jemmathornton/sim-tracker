@@ -370,7 +370,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 ### StrangerVille
 
-12 lots: 2 on the Gallery, 5 built but not shared, 5 not built.
+12 lots: 3 on the Gallery, 4 built but not shared, 5 not built.
 
 **StrangerVille Plaza**
 
@@ -379,7 +379,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 - [ ] **Carpophagous Corner**, 30x20: place “Carpophagous Corner”. Type: Vacation Rental. It comes in as Residential (its upload’s type): set it to Vacation Rental after placing. Traits: Science Lair, Bracing Breezes. Challenge: Quake Zone. Trait ideas (free slots): + Peace and Quiet.
 - [ ] **Slip 42**, 20x15: place “Slip 42”. Not the other copy: “Slip 42” (Residential). Type: Residential Rental (2). Challenges: Creepy Crawlies, Quake Zone, Filthy. Units (set after placing): 1; 2.
 - [ ] **Old Penelope**, 50x40: not built yet: leave the game’s lot for now. Type: Residential. Household: Cahill (EA).
-- [ ] **Riverside Grove**, 30x20: built but not on the Gallery: bring it over through your Library (1 copy, 21 Dec 23) (if you changed it in your Building save since, save it to your Library again from there first). Type: Residential. Household: Sigworth (EA).
+- [ ] **Riverside Grove**, 30x20: place “Riverside Grove”. Type: Residential. Household: Sigworth (EA).
 
 **Shady Acres**
 

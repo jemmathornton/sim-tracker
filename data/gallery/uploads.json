@@ -1377,7 +1377,7 @@
    "packs": [],
    "images": ["https://athena.thesims.com/v2/images/1/0x00001d8a/E5C59EDA-AE03-11EB-8913-4D68E38405F0/00.jpg", "https://athena.thesims.com/v2/images/1/0x00001d8a/E5C59EDA-AE03-11EB-8913-4D68E38405F0/01.jpg", "https://athena.thesims.com/v2/images/1/0x00001d8a/E5C59EDA-AE03-11EB-8913-4D68E38405F0/02.jpg", "https://athena.thesims.com/v2/images/1/0x00001d8a/E5C59EDA-AE03-11EB-8913-4D68E38405F0/03.jpg", "https://athena.thesims.com/v2/images/1/0x00001d8a/E5C59EDA-AE03-11EB-8913-4D68E38405F0/04.jpg"],
    "favourites": 336,
-   "downloads": 4679,
+   "downloads": 4680,
    "creator": "JemmaTheSimmer",
    "checked": "2026-11-01"
   },
@@ -4223,7 +4223,7 @@
    "packs": ["The Sims™ 4 Seasons", "Cats & Dogs", "The Sims™ 4 Dine Out", "The Sims™ 4 Get to Work", "The Sims™ 4 Jungle Adventures", "The Sims™ 4 Get Together", "The Sims™ 4 Get Famous"],
    "images": ["https://athena.thesims.com/v2/images/1/0x00001318/F8230F85-5016-4A94-BF7A-A769B4F8387F/00.jpg", "https://athena.thesims.com/v2/images/1/0x00001318/F8230F85-5016-4A94-BF7A-A769B4F8387F/01.jpg", "https://athena.thesims.com/v2/images/1/0x00001318/F8230F85-5016-4A94-BF7A-A769B4F8387F/02.jpg", "https://athena.thesims.com/v2/images/1/0x00001318/F8230F85-5016-4A94-BF7A-A769B4F8387F/03.jpg"],
    "favourites": 1,
-   "downloads": 3,
+   "downloads": 5,
    "creator": "JemmaTheSimmer",
    "checked": "2026-11-01"
   },
@@ -4240,6 +4240,22 @@
    "images": ["https://athena.thesims.com/v2/images/1/0x00000789/372FAF84-B98C-451C-A252-9C06BCBE8E83/00.jpg", "https://athena.thesims.com/v2/images/1/0x00000789/372FAF84-B98C-451C-A252-9C06BCBE8E83/01.jpg", "https://athena.thesims.com/v2/images/1/0x00000789/372FAF84-B98C-451C-A252-9C06BCBE8E83/02.jpg"],
    "favourites": 0,
    "downloads": 0,
+   "creator": "JemmaTheSimmer",
+   "checked": "2026-11-01"
+  },
+  "CbHSrsNiSI2bV/Kycw+pDA==": {
+   "title": "Riverside Grove",
+   "kind": "lot",
+   "description": "Located on a spacious corner lot in the StrangerVille Plaza The Riverside Grove is a quaint home for a small family. With only a few rumbles nearby, it's perfect for a growing family, alongside growing scientific discoveries! #riversidegrove #strangervilleplaza #strangerville #strangervilleonly #moo #nocc #playtested #playertested",
+   "lotType": "Residential",
+   "size": "30x20",
+   "price": 50631,
+   "beds": 2,
+   "baths": 2,
+   "packs": ["The Sims™ 4 Strangerville"],
+   "images": ["https://athena.thesims.com/v2/images/1/0x00001a73/09B1D2AE-C362-488D-9B57-F2B2730FA90C/00.jpg", "https://athena.thesims.com/v2/images/1/0x00001a73/09B1D2AE-C362-488D-9B57-F2B2730FA90C/01.jpg", "https://athena.thesims.com/v2/images/1/0x00001a73/09B1D2AE-C362-488D-9B57-F2B2730FA90C/02.jpg"],
+   "favourites": 0,
+   "downloads": 1,
    "creator": "JemmaTheSimmer",
    "checked": "2026-11-01"
   }

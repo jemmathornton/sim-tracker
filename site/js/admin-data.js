@@ -237,6 +237,17 @@ window.ADMIN = {
 "favourites": 2117,
 "downloads": 20276,
 "comments": 50
+},
+{
+"when": "01 Nov 2026 22:33",
+"ok": true,
+"linked": [],
+"notes": [],
+"listed": 262,
+"new": 0,
+"favourites": 2117,
+"downloads": 20276,
+"comments": 50
 }
 ],
 "checklist": [
@@ -1069,6 +1080,10 @@ window.ADMIN = {
 },
 "l-strangerville--slip-42": {
 "s": "placed",
+"fix": []
+},
+"l-strangerville--riverside-grove": {
+"s": "to place",
 "fix": []
 },
 "l-sulani--admiral-s-wreckage": {
@@ -1980,7 +1995,9 @@ window.ADMIN = {
 {
 "world": "StrangerVille",
 "placed": 2,
-"toPlace": [],
+"toPlace": [
+"Riverside Grove"
+],
 "fixes": [
 {
 "lot": "Carpophagous Corner",
@@ -1999,7 +2016,13 @@ window.ADMIN = {
 "note": null
 }
 ],
-"ahead": []
+"ahead": [
+{
+"lot": "Riverside Grove",
+"household": "Sigworth",
+"goes": "Riverside Grove"
+}
+]
 },
 {
 "world": "Sulani",
