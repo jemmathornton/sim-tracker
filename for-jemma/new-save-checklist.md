@@ -590,7 +590,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 **Hopewell Hills**
 
-- [ ] **7 Eucalyptus Lane**, 50x40: not built yet: leave the game’s lot for now. Type: Residential. Household: Michaelson (EA).
+- [ ] **7 Eucalyptus Lane**, 50x40: not built yet: leave the game’s lot for now. Type: Residential. Household: Michaelson (EA: Celeste, Christopher, Atlas and Orion; Maxis Gallery: Sebastian).
 - [ ] **23 Eucalyptus Lane**, 30x20: place “23 Eucalyptus Lane”. Type: Residential. Household: Lovejoy (Sims to come). Traits: Bracing Breezes, Child’s Play. Trait ideas (free slots): + Good Schools.
 - [ ] **36 Bayani Place**, 30x20: not built yet: leave the game’s lot for now. Type: Vet Clinic.
 - [ ] **Sequoia Cottage**, 30x20: not built yet: leave the game’s lot for now. Type: Residential Rental (2). Lovejoy (Sims to come, landlord, unit 1). Tenants: Luna-Sullivan. Units (set after placing): 1 (Bracing Breezes, Fast Internet); 2.

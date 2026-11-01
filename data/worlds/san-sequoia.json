@@ -88,7 +88,8 @@
      ],
      "partners": [
       ["christopher-michaelson", "Spouse"]
-     ]
+     ],
+     "parents": ["sebastian-michaelson"]
     },
     {
      "id": "christopher-michaelson",
@@ -134,6 +135,18 @@
      "traits": ["Wiggly"],
      "career": "",
      "parents": ["celeste-michaelson", "christopher-michaelson"]
+    },
+    {
+     "id": "sebastian-michaelson",
+     "name": "Sebastian Michaelson",
+     "sex": "m",
+     "origin": "Premade",
+     "from": "Maxis's Gallery upload",
+     "age": "Elder",
+     "aspiration": "Renaissance Sim",
+     "traits": ["Self-Assured", "Active", "Childish"],
+     "bonus": "Quick Learner",
+     "career": ""
     }
    ],
    "bio": "Celeste and Christopher met working at the same startup. They couldn't believe how much they had in common when they first went out for coffee together! After they got married, they adopted Atlas and promptly began spoiling him rotten. Now they've also adopted Orion and are hard at work raising two kids to be just as nerdy as they are.",

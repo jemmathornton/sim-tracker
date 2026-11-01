@@ -535,7 +535,7 @@ window.ADMIN = {
 {
 "section": "Households",
 "world": "",
-"text": "**Decide:** Who lives where: to go through world by world in chat; Claude's suggestions (each marked as one) are in research/who-lives-where-prep.md (31 Oct; replaces the 28 Oct proposal). As one job: about 50 homes in your plan have nobody named (Empty, “1 Bed”, “2 Bedroom”, “?”), plus empty rental units; and these Sims of yours have no home on the plan yet: Ash Carrington, the Fantasias, Lena Garcia, the Rosebud household, Henri Penkridge, and from “Building #2” Vivian Little (and the Battles, Ellsworths and Brody Conklin if they’re yours). EA’s own pack households not on the plan (the Chopras, Hoffmans, Fia Acosta, Kyle Kyleson, Akachi Onoja, Connie Fidential) stay homeless or hidden, as in the game (your call, 1 Nov). Werewolves, Enchanted by Nature, Lovestruck and Vampires Sims wait until you own those packs. Backup families, kept for filling homes later (your call, 1 Nov): the Waters, the Presleys, the Deckers, the Barnes, Gianni Faulk and Yogi, the Whitlocks; last of all, if ever, the Thorntons (made by MC Command Center, played in “Building #2”; save them to your Library before that save goes)."
+"text": "**Decide:** Who lives where: to go through world by world in chat; Claude's suggestions (each marked as one) are in research/who-lives-where-prep.md (31 Oct; replaces the 28 Oct proposal). As one job: about 50 homes in your plan have nobody named (Empty, “1 Bed”, “2 Bedroom”, “?”), plus empty rental units; and these Sims of yours have no home on the plan yet: Ash Carrington, the Fantasias, Lena Garcia, the Rosebud household, Henri Penkridge, and from “Building #2” Vivian Little (and the Battles, Ellsworths and Brody Conklin if they’re yours). EA’s own pack households not on the plan (the Chopras, Hoffmans, Fia Acosta, Kyle Kyleson, Akachi Onoja, Connie Fidential) stay homeless or hidden, as in the game (your call, 1 Nov). Werewolves, Enchanted by Nature, Lovestruck and Vampires Sims wait until you own those packs. Backup families, kept for filling homes later (your call, 1 Nov): the Waters, the Presleys, the Deckers, the Barnes, Gianni Faulk and Yogi, the Whitlocks; Maxis’s Irina Rattus; last of all, if ever, the Thorntons (made by MC Command Center, played in “Building #2”; save them to your Library before that save goes)."
 },
 {
 "section": "Households",
@@ -545,7 +545,7 @@ window.ADMIN = {
 {
 "section": "Households",
 "world": "",
-"text": "**Do:** Download Sebastian Michaelson and Merrilyn Ralston from Maxis's Gallery and pick their lots."
+"text": "**Do:** Download Sebastian Michaelson from Maxis's Gallery and merge him into the Michaelsons (7 Eucalyptus Lane) with MC Command Center, Celeste as his daughter (your call, 1 Nov). Merrilyn Ralston: later."
 },
 {
 "section": "Households",
