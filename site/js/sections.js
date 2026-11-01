@@ -215,10 +215,10 @@ function admNewSave(){
     + (N.notStarted.length ? `<p class="adm-plain">Not started: ${esc(N.notStarted.join(", "))}.</p>` : "");
 }
 function admGame(){   // her list (for-jemma/your-list.md: one list, Do or Decide, 23 Oct), with the data checks on top when something is out of step (merged, her idea, 23 Oct)
-  const checks = admChecks().filter(c => c.items.length), by = {}; ADM.checklist.forEach(c => (by[c.world || c.section] ||= []).push(c));
+  const checks = admChecks().filter(c => c.items.length), by = {}; ADM.checklist.forEach(c => ((by[c.section] ||= {})[c.world || ""] ||= []).push(c));   // by section, then by world inside it (1 Nov: her list split into before / in the new save)
   const live = admLive(), md = t => esc(t.replace(/\{(\w+)\}/g, (m, k) => k in live ? live[k] : m)).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
   const sort = ADM.toSort.length ? `<h3 class="adm-sub">Gallery uploads to <em>sort</em><small>${ADM.toSort.length}</small></h3><ul class="adm-list">${ADM.toSort.map(u => `<li><span><b>${esc(u.title)}</b>${u.lot ? ` <span class="w">· ${esc(u.lot)}</span>` : ""}</span><small>${esc(u.why)}</small></li>`).join("")}</ul>` : "";
-  return sort + (checks.length ? `<h3 class="adm-sub">Out of <em>step</em><small>in the plan</small></h3>${admChecksSec()}` : "") + admNewSave() + Object.entries(by).map(([k, cs]) => `<h3 class="adm-sub">${esc(k)}<small>${cs.length}</small></h3><ul class="adm-list">${cs.map(c => `<li><span>${md(c.text)}</span></li>`).join("")}</ul>`).join("");
+  return sort + (checks.length ? `<h3 class="adm-sub">Out of <em>step</em><small>in the plan</small></h3>${admChecksSec()}` : "") + admNewSave() + Object.entries(by).map(([k, ws]) => `<h3 class="adm-sub">${esc(k)}<small>${Object.values(ws).flat().length}</small></h3>${Object.entries(ws).map(([w, cs]) => `${w ? `<p class="adm-plain adm-world"><b>${esc(w)}</b></p>` : ""}<ul class="adm-list">${cs.map(c => `<li><span>${md(c.text)}</span></li>`).join("")}</ul>`).join("")}`).join("");
 }
 // every household, on Progress after every lot (her ask, 23 Oct), with the same filters and sorting as every lot
 let hhState = {world: "", hood: "", status: "", q: "", sort: "order", dir: 1};

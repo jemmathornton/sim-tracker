@@ -94,8 +94,8 @@ def checklist():
     for line in read("for-jemma/your-list.md").splitlines():
         if line.startswith("## "):
             section, world = re.sub(r"^##\s*(\d+\.\s*)?", "", line).strip(), ""
-        elif re.match(r"\*\*(.+)\*\*\s*$", line.strip()):
-            world = line.strip().strip("*")
+        elif not line.startswith("- ") and re.match(r"\*\*(.+?)\*\*", line.strip()):   # a world heading, maybe with a note after it ("(not owned)")
+            world = re.sub(r"\*\*(.+?)\*\*", r"\1", line.strip())
         elif line.startswith("- ") and not line.startswith("- ~~"):
             items.append({"section": section, "world": world, "text": line[2:].strip()})
     return items
