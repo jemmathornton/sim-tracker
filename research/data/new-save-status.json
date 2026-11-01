@@ -2429,7 +2429,7 @@
     "name": "Riverside Grove",
     "hood": "StrangerVille Plaza",
     "built": true,
-    "shared": false,
+    "shared": true,
     "type": "Residential",
     "issues": [],
     "save_name": "Riverside Grove",
