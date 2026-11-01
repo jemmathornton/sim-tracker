@@ -178,6 +178,17 @@ window.ADMIN = {
 "favourites": 2113,
 "downloads": 20210,
 "comments": 50
+},
+{
+"when": "01 Nov 2026 14:14",
+"ok": true,
+"linked": [],
+"notes": [],
+"listed": 257,
+"new": 0,
+"favourites": 2116,
+"downloads": 20260,
+"comments": 50
 }
 ],
 "checklist": [
@@ -524,7 +535,7 @@ window.ADMIN = {
 {
 "section": "Households",
 "world": "",
-"text": "**Decide:** Who lives where: my overnight proposal, with options for every home, is in for-jemma/homes-proposal.md (28 Oct; checked 31 Oct, Claude has corrections, e.g. Rustic Residence in Windenburg is free after all, and Luis Huerta lives there in two saves). As one job: about 50 homes in your plan have nobody named (Empty, “1 Bed”, “2 Bedroom”, “?”), plus empty rental units; and these Sims of yours have no home on the plan yet: Ash Carrington, Kenji Mikami and Kumiko Aoki (2-4-3 Wakabamori?), the Fantasias, Lena Garcia, the Rosebud household, Dayna and Alicia Ferrara, the Deckers, Luis Huerta, Henri Penkridge, the Waters, and from “Building #2” the Presleys, Barnes, Faulks, Hassanis, Thorntons and Vivian Little (and the Battles, Whitlocks, Ellsworths and Brody Conklin if they’re yours). Also EA’s own pack households that aren’t on the plan yet (her call 28 Oct; For Rent’s tenant applicants and the base game’s Create-a-Sim families stay out): the Chopras, the Hoffmans, Fia Acosta, Connie Fidential, Irina Rattus and others; the proposal says which, and leaves EA’s houseless NPCs (Corey Nyhus, Zain Amri, the merfolk, Gibbi Point’s storytellers) as they are. Werewolves, Enchanted by Nature, Lovestruck and Vampires Sims wait until you own those packs."
+"text": "**Decide:** Who lives where: to go through world by world in chat; Claude's suggestions (each marked as one) are in research/who-lives-where-prep.md (31 Oct; replaces the 28 Oct proposal). As one job: about 50 homes in your plan have nobody named (Empty, “1 Bed”, “2 Bedroom”, “?”), plus empty rental units; and these Sims of yours have no home on the plan yet: Ash Carrington, Kenji Mikami and Kumiko Aoki (2-4-3 Wakabamori?), the Fantasias, Lena Garcia, the Rosebud household, Dayna and Alicia Ferrara, the Deckers, Luis Huerta, Henri Penkridge, the Waters, and from “Building #2” the Presleys, Barnes, Faulks, Hassanis, Thorntons and Vivian Little (and the Battles, Whitlocks, Ellsworths and Brody Conklin if they’re yours). Also EA’s own pack households that aren’t on the plan yet (her call 28 Oct; For Rent’s tenant applicants and the base game’s Create-a-Sim families stay out): the Chopras, the Hoffmans, Fia Acosta, Connie Fidential, Irina Rattus and others; the proposal says which, and leaves EA’s houseless NPCs (Corey Nyhus, Zain Amri, the merfolk, Gibbi Point’s storytellers) as they are. Werewolves, Enchanted by Nature, Lovestruck and Vampires Sims wait until you own those packs."
 },
 {
 "section": "Households",
