@@ -3339,7 +3339,7 @@
     "placed": false,
     "objs": 210,
     "game_objs": 210,
-    "status": "game lot"
+    "status": "to place"
    },
    {
     "lot": "5-1-1 Kiyomatsu",
@@ -6063,9 +6063,10 @@
    "household": "Michaelson",
    "lot": "7 Eucalyptus Lane",
    "unit": "",
-   "sims": 4,
+   "sims": 5,
    "state": "home",
-   "save_ids": [612515242715120387]
+   "save_ids": [612515242715120387],
+   "note": "not in the save: Sebastian Michaelson (from the Gallery or your Library)"
   },
   {
    "world": "San Sequoia",

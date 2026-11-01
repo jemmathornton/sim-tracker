@@ -2,7 +2,7 @@
 
 Made by tools/research/new_save_check.py from a copy of the save. Lots: placed / to place / the game’s lot; anything that differs from the plan is listed. Households: who isn’t home yet.
 
-**At a glance:** 91 lots placed in 11 worlds; 80 shared lots still to place. 48 households at home, 46 to move, 30 not in the save yet.
+**At a glance:** 91 lots placed in 11 worlds; 81 shared lots still to place. 48 households at home, 46 to move, 30 not in the save yet.
 
 ## Game options
 
