@@ -498,7 +498,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 - [ ] **2-4-1 Wakabamori**, 20x15: not built yet: leave the game’s lot for now. Type: Cemetery.
 - [ ] **2-4-2 Wakabamori**, 30x20: place “2-4-2 Wakabamori”. Type: Residential. Household: Akiyama (EA). Traits: Child’s Play, Good Schools. Trait ideas (free slots): + Homey.
-- [ ] **2-4-3 Wakabamori**, 20x15: place “2-4-3 Wakabamori”. Type: Residential. Traits: Good Schools, Peace and Quiet. Trait ideas (free slots): + Homey.
+- [ ] **2-4-3 Wakabamori**, 20x15: place “2-4-3 Wakabamori”. Type: Residential. Household: Mikami (yours). Traits: Good Schools, Peace and Quiet. Trait ideas (free slots): + Homey.
 - [ ] **2-5-1 Wakabamori**, 50x50: not built yet: leave the game’s lot for now. Type: Residential. Household: Ito (EA).
 - [ ] **Hazakura Lounge**, 30x20: not built yet: leave the game’s lot for now. Type: Recreation Center.
 

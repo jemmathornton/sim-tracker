@@ -16,7 +16,7 @@
    "lots": [
     {"lot": "2-4-1 Wakabamori", "myName": "?", "type": "Cemetery", "size": "20x15", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "2-4-2 Wakabamori", "myName": "2-4-2 Wakabamori", "type": "Residential", "size": "30x20", "residents": "Akiyama", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["VbPOiqJiEe2JB1d8Dz3Yjw=="], "traits": ["Child's Play", "Good Schools"]},
-    {"lot": "2-4-3 Wakabamori", "myName": "2-4-3 Wakabamori", "type": "Residential", "size": "20x15", "residents": "Empty", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["WNVbEc9zEeuIuUhsV3GtHg=="], "traits": ["Good Schools", "Peace and Quiet"]},
+    {"lot": "2-4-3 Wakabamori", "myName": "2-4-3 Wakabamori", "type": "Residential", "size": "20x15", "residents": "Mikami", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["WNVbEc9zEeuIuUhsV3GtHg=="], "traits": ["Good Schools", "Peace and Quiet"]},
     {"lot": "2-5-1 Wakabamori", "myName": "2-5-1 Wakabamori", "type": "Residential", "size": "50x50", "residents": "Ito", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Hazakura Lounge", "myName": "?", "type": "Recreation Center", "size": "30x20", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ],
@@ -312,6 +312,53 @@
    ],
    "bio": "Rumor says the Nishidake family are sacred guardians of Mt. Komorebi. Indeed, Shigeru fumes over the Ito family's local development plans. Sachiko, however, feels warmly toward Megumi due to an old friendship with the young woman's mom. Plus, she knows what's in her granddaughter's heart... Kaori moved to Mt. Komorebi after losing her parents. She soon discovered two loves: the slopes, and the son of her grandfather's sworn enemy! If she had one wish, she’d melt her grandfather's hardened heart.",
    "bioFrom": "EA"
+  },
+  "Mikami": {
+   "sims": [
+    {
+     "id": "kenji-mikami",
+     "name": "Kenji Mikami",
+     "sex": "m",
+     "origin": "Mine",
+     "from": "save “Snowy Escape” (2023-12-21)",
+     "age": "Young Adult",
+     "aspiration": "Extreme Sports Enthusiast",
+     "bonus": "High Metabolism",
+     "traits": ["Glutton", "Adventurous", "Active"],
+     "career": "Salaryperson · Pencil Pusher (level 2)",
+     "skills": [
+      ["Charisma", 3, 10],
+      ["Snowboarding", 4, 10],
+      ["Skiing", 2, 10],
+      ["Writing", 1, 10],
+      ["Logic", 1, 10],
+      ["Comedy", 1, 10],
+      ["Fitness", 1, 10],
+      ["Rock Climbing", 2, 10],
+      ["Rock Climbing", 1, 5],
+      ["Cooking", 1, 10]
+     ]
+    },
+    {
+     "id": "kumiko-aoki",
+     "name": "Kumiko Aoki",
+     "sex": "f",
+     "origin": "Mine",
+     "from": "save “Snowy Escape” (2023-12-21)",
+     "age": "Young Adult",
+     "aspiration": "Extreme Sports Enthusiast",
+     "bonus": "High Metabolism",
+     "traits": ["Glutton", "Adventurous", "Family-Oriented"],
+     "career": "Pizza Delivery Specialist · Pizza Delivery Girl (level 1)",
+     "skills": [
+      ["Video Gaming", 2, 10],
+      ["Logic", 2, 10],
+      ["Mischief", 3, 10],
+      ["Charisma", 1, 10],
+      ["Fishing", 1, 10]
+     ]
+    }
+   ]
   }
  },
  "weatherSeasons": {
