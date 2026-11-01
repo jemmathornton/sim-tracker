@@ -522,7 +522,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 ### Henford-on-Bagley
 
-12 lots: 3 on the Gallery, 3 built but not shared, 6 not built.
+12 lots: 4 on the Gallery, 2 built but not shared, 6 not built.
 
 **Finchwick**
 
@@ -535,7 +535,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 - [ ] **2 Olde Mill Lane**, 50x40: not built yet: leave the game’s lot for now. Type: Vet Clinic. Owner (lives elsewhere): Watson-Holmes (yours).
 - [ ] **3 Olde Mill Lane**, 50x40: place “3 Olde Mill Lane”. Search it by name (its upload has no #henfordonbagley tag). Type: Residential. Household: Watson-Holmes (yours). Traits: Homey, Cat Hangout. Challenges: Wild Foxes, Simple Living. Trait ideas (free slots): + Great Soil.
-- [ ] **The Olde Mill** (game’s 4 Olde Mill Lane), 30x20: built but not on the Gallery: bring it over through your Library (2 copies, 21 Dec 23; copies named “4 Olde Mill Lane” and “The Olde Mill”) (if you changed it in your Building save since, save it to your Library again from there first). Type: Residential.
+- [ ] **The Olde Mill** (game’s 4 Olde Mill Lane), 30x20: place “The Olde Mill”. Type: Residential.
 - [ ] **Olde Mill Hill**, 64x64: not built yet: leave the game’s lot for now. Type: Residential. Household: The Watsons (EA).
 
 **The Bramblewood**

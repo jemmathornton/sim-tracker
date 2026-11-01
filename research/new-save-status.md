@@ -2,7 +2,7 @@
 
 Made by tools/research/new_save_check.py from a copy of the save. Lots: placed / to place / the game’s lot; anything that differs from the plan is listed. Households: who isn’t home yet.
 
-**At a glance:** 91 lots placed in 11 worlds; 81 shared lots still to place. 48 households at home, 46 to move, 30 not in the save yet.
+**At a glance:** 91 lots placed in 11 worlds; 82 shared lots still to place. 48 households at home, 46 to move, 30 not in the save yet.
 
 ## Game options
 
@@ -169,6 +169,7 @@ The game moves them out when you place your build. Where the plan wants them:
 - Britechester / Spring Steppes: Elderberry → Spring Steppes unit 1
 - Evergreen Harbor / The Portsmouth Promenade: Greenburg → Rockridge Springs unit 1; Knox Greenburg: Stonestreet Apartments 3
 - Mt. Komorebi / Sento Senbamachi: Akiyama → 2-4-2 Wakabamori
+- Henford-on-Bagley / The Olde Mill: New Start → Cecilia Kang: 3 Cobblebottom Street unit 3A
 - Copperdale / Copperdale Library: Harjo → Little Falls Nook
 
 ## Traits the site doesn’t show yet

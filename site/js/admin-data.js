@@ -1207,6 +1207,10 @@ window.ADMIN = {
 "s": "to place",
 "fix": []
 },
+"l-henford-on-bagley--4-olde-mill-lane": {
+"s": "to place",
+"fix": []
+},
 "l-henford-on-bagley--cordelia-s-secret-cottage": {
 "s": "to place",
 "fix": []
@@ -2077,6 +2081,20 @@ window.ADMIN = {
 "lot": "Sento Senbamachi",
 "household": "Akiyama",
 "goes": "2-4-2 Wakabamori"
+}
+]
+},
+{
+"world": "Henford-on-Bagley",
+"placed": 0,
+"toPlace": [],
+"fixes": [],
+"move": [],
+"ahead": [
+{
+"lot": "The Olde Mill",
+"household": "New Start",
+"goes": "Cecilia Kang: 3 Cobblebottom Street unit 3A"
 }
 ]
 },

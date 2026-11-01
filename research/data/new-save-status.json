@@ -3332,8 +3332,8 @@
     "name": "Boba Ippai",
     "hood": "Senbamachi",
     "built": true,
-    "shared": false,
-    "type": "Thrift and Boba Store",
+    "shared": true,
+    "type": "Thrift and Boba Store/Karaoke Bar",
     "issues": [],
     "save_name": "Izakaya Ippai",
     "placed": false,
@@ -3537,7 +3537,7 @@
     "placed": false,
     "objs": 233,
     "game_objs": 233,
-    "status": "game lot"
+    "status": "to place"
    },
    {
     "lot": "Olde Mill Hill",
@@ -6416,6 +6416,12 @@
    "lot": "Sento Senbamachi",
    "household": "Akiyama",
    "goes": "2-4-2 Wakabamori"
+  },
+  {
+   "world": "Henford-on-Bagley",
+   "lot": "The Olde Mill",
+   "household": "New Start",
+   "goes": "Cecilia Kang: 3 Cobblebottom Street unit 3A"
   },
   {
    "world": "Copperdale",

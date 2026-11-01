@@ -28,7 +28,7 @@
    "lots": [
     {"lot": "2 Olde Mill Lane", "myName": "2 Olde Mill Lane", "type": "Vet Clinic", "size": "50x40", "residents": "Watson-Holmes", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "3 Olde Mill Lane", "myName": "3 Olde Mill Lane", "type": "Residential", "size": "50x40", "residents": "Watson-Holmes", "built": true, "shared": true, "screenshots": true, "simsMade": false, "gallery": ["ifmJ+XofEeyNagW7hdRP0w=="], "traits": ["Homey", "Cat Hangout"], "challenges": ["Wild Foxes", "Simple Living"]},
-    {"lot": "4 Olde Mill Lane", "myName": "The Olde Mill", "type": "Residential", "size": "30x20", "residents": "1/2 Bed Big", "built": true, "shared": false, "screenshots": false, "simsMade": false},
+    {"lot": "4 Olde Mill Lane", "myName": "The Olde Mill", "type": "Residential", "size": "30x20", "residents": "1/2 Bed Big", "built": true, "shared": false, "screenshots": false, "simsMade": false, "gallery": ["WVPA/2DKSaClyM7THjc3xQ=="]},
     {"lot": "Olde Mill Hill", "myName": "Olde Mill Hill", "type": "Residential", "size": "64x64", "residents": "The Watsons", "built": false, "shared": false, "screenshots": false, "simsMade": false}
    ],
    "ecoStart": "Green"
