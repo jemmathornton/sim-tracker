@@ -1,5 +1,7 @@
 # Relationships the Premade Sim and Relationship Overhaul sets up (v2.10, EA Remake)
 
+**1 Nov check against the plan:** of its 143 pairs, about 105 link Sims in different households where EA's own data (the site's Sims) has no link: mostly friends and acquaintances among the Willow Creek, Oasis Springs and Newcrest premades; romances Katrina Caliente–Don Lothario, Nina Caliente–Johnny Zest, Grim–Olive Specter (and Grim as Nyon's father); dislikes Bella Goth–Eliza Pancakes, Katrina Caliente–Nancy Landgraab, Nina Caliente–Geoffrey Landgraab. Johnny Zest as the Landgraabs' son matches EA's. It touches none of her own Sims. Her call, later (1 Nov).
+
 Made by tools/research/premade_overhaul_links.py from the mod's relationship list: 143 pairs of premade Sims, each with what its setup applies (relationship bits; friendship and romance changes where given). Names are the mod's and the game's internal ones.
 
 - **AgathaCrumplebottom** and **SKL_DennisKim**: has_met; Friendship 25

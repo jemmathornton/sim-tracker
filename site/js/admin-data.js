@@ -455,7 +455,7 @@ window.ADMIN = {
 {
 "section": "Households",
 "world": "",
-"text": "**Decide:** Premade fix for the new save: **Premade Sim and Relationship Overhaul** (the “EA Remake” version, without its Vampires file; checked 31 Oct against EA's 27 Oct patch: its files and script look fine), or none (links with MCCC as planned). It also changes many premades' looks, outfits, likes, skills and money; don't install Szemoka's fix as well."
+"text": "**Decide:** Premade fix for the new save: **Premade Sim and Relationship Overhaul** (the “EA Remake” version, without its Vampires file; checked 31 Oct against EA's 27 Oct patch: its files and script look fine), or none (links with MCCC as planned). It also changes many premades' looks, outfits, likes, skills and money; don't install Szemoka's fix as well. Checked 1 Nov: nothing clashes with your plan (it doesn't touch your own Sims); it adds about 100 relationships EA doesn't set, e.g. Katrina Caliente and Don Lothario a couple, Nina Caliente and Johnny Zest a couple, Grim as Nyon Specter's father and Olive's partner. Your call, later."
 },
 {
 "section": "Households",
