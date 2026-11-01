@@ -188,7 +188,8 @@ function admLive(){
   const hs = worlds.filter(w => w.owned && w.ready).flatMap(w => homeHhs(w)), mine = hs.filter(h => hhOrigin(h) !== "Premade");
   return {toBuild: L.filter(l => l.built === false).length, toShare: L.filter(l => l.built === true && l.shared !== true).length, noShots: noShots.length,
     noShotsWorlds: Object.entries(by).sort((x, y) => y[1] - x[1]).slice(0, 4).map(([w, n]) => `${w} ${n}`).join(", "),
-    fewTraits: L.filter(l => l.shared === true && (l.traits || []).length < 3).length, yours: mine.length, yoursOnSite: mine.filter(h => h.sims.length).length};
+    noTraits: L.filter(l => l.shared === true && !(l.traits || []).length).length,   // 1 Nov, her call: 1 or 2 traits is often fine, just avoid none
+    yours: mine.length, yoursOnSite: mine.filter(h => h.sims.length).length};
 }
 // her new save against the plan, per world started (tools/research/new_save_check.py; Claude reruns it after a session, 23 Oct)
 function admNewSave(){

@@ -316,7 +316,7 @@ window.ADMIN = {
 {
 "section": "Before the new save: build and share (any save, then the Gallery)",
 "world": "",
-"text": "**Do:** {fewTraits} shared lots have fewer than 3 traits (ideas for each in research/lot-trait-ideas.md)."
+"text": "**Do:** {noTraits} shared lots have no lot traits; give each at least one (1 or 2 is often fine, your call 1 Nov; ideas in research/lot-trait-ideas.md)."
 },
 {
 "section": "Before the new save: build and share (any save, then the Gallery)",

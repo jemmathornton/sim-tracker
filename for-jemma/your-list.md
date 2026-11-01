@@ -35,7 +35,7 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 ## Before the new save: build and share (any save, then the Gallery)
 - **Do:** Build the {toBuild} lots not built yet (Admin > Progress lists them).
 - **Do:** Share the {toShare} built lots that aren't on the Gallery yet.
-- **Do:** {fewTraits} shared lots have fewer than 3 traits (ideas for each in research/lot-trait-ideas.md).
+- **Do:** {noTraits} shared lots have no lot traits; give each at least one (1 or 2 is often fine, your call 1 Nov; ideas in research/lot-trait-ideas.md).
 - **Do:** Wedding venues: check each one's lot type when you share it.
 - **Do:** Give units 2+ their own traits and bed/bath counts, then re-upload (Claude reads them from your save).
 - **Do:** Rippling Flats, Specter Row and Casa do Corsário (not built yet): set them up as units when you build them.
