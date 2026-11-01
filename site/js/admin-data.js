@@ -220,6 +220,23 @@ window.ADMIN = {
 "favourites": 2116,
 "downloads": 20268,
 "comments": 50
+},
+{
+"when": "01 Nov 2026 22:13",
+"ok": true,
+"linked": [
+"linked new upload “Paddy's Place” to Magnolia Promenade / Paddywack's Emporium",
+"linked new upload “The Caboose” to Evergreen Harbor / The Caboose"
+],
+"notes": [
+"added a Gallery picture for Magnolia Promenade / Paddywack's Emporium",
+"added a Gallery picture for Evergreen Harbor / The Caboose"
+],
+"listed": 262,
+"new": 2,
+"favourites": 2117,
+"downloads": 20276,
+"comments": 50
 }
 ],
 "checklist": [
