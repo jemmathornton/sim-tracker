@@ -76,7 +76,7 @@ The Cadberrys are parked.
   1. *Suggestion:* **the Hassanis** (Jamila, Omar, toddler Ahmed). They’re yours (Library, May 2021), and in “Building #2” they live in Oasis Springs, at Springscape, which the Curious brothers have in the plan.
   2. *Suggestion:* the Beakers (Maxis’s Gallery). They’re desert lore, next to their rivals the Curious brothers (`research/past-game-lore-families.md`).
 - **Pebble Burrow:**
-  1. *Suggestion:* **Henri Penkridge**. He’s yours (Library), and this is his home in “Sulani Save”.
+  1. *Suggestion:* **Henri Penkridge**. She’s yours (Library), and this is her home in “Sulani Save”.
   2. *Suggestion:* the Hassanis.
 - **Vista Quarry Villa:**
   1. *Suggestion:* **the Whitlocks** (Sawyer, teen Paris, Gladys, cats Nibbler and Nacho), *only if they’re yours*. This is their home in “Building #2”.
@@ -160,7 +160,7 @@ Pier Perfection and Sapphire Shores are empty. That’s part of your Sulani spli
 - Creek Side Corner (3, Gallery)
 
 - **Glimmerbrook Watch:**
-  1. *Suggestion:* **Ash Carrington**. He’s yours, and this is his home in “It’s Magic!” as a Spellcaster.
+  1. *Suggestion:* **Ash Carrington**. She’s yours, and this is her home in “It’s Magic!” as a Spellcaster.
   - Your note of 28 Oct says he might move in with someone instead. Who is open.
 - **Creek Side Corner:**
   1. *Suggestion:* Maxis’s retired Realm of Magic Sages (three Sims for three bedrooms; homes proposal), or leave it empty.
