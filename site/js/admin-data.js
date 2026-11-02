@@ -274,6 +274,21 @@ window.ADMIN = {
 "favourites": 2117,
 "downloads": 20288,
 "comments": 50
+},
+{
+"when": "02 Nov 2026 23:10",
+"ok": true,
+"linked": [
+"linked new upload “5-6-1 Shinrinyoku” to Mt. Komorebi / 5-6-1 Shinrinyoku"
+],
+"notes": [
+"added a Gallery picture for Mt. Komorebi / 5-6-1 Shinrinyoku"
+],
+"listed": 264,
+"new": 1,
+"favourites": 2120,
+"downloads": 20321,
+"comments": 50
 }
 ],
 "checklist": [
@@ -1149,6 +1164,10 @@ window.ADMIN = {
 },
 "l-sulani--journey-s-end": {
 "s": "placed",
+"fix": []
+},
+"l-sulani--pier-perfection": {
+"s": "to place",
 "fix": []
 },
 "l-sulani--sand-simoleon-beach": {
@@ -2063,7 +2082,8 @@ window.ADMIN = {
 "world": "Sulani",
 "placed": 9,
 "toPlace": [
-"Lagoon of Love"
+"Lagoon of Love",
+"Pier Perfection"
 ],
 "fixes": [
 {

@@ -2679,14 +2679,14 @@
     "name": "Pier Perfection",
     "hood": "Lani St. Taz",
     "built": true,
-    "shared": false,
+    "shared": true,
     "type": "Residential",
     "issues": [],
     "save_name": "Pier Perfection",
     "placed": false,
     "objs": 51,
     "game_objs": 51,
-    "status": "game lot"
+    "status": "to place"
    },
    {
     "lot": "Sand Simoleon Beach",

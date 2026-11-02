@@ -395,7 +395,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 ### Sulani
 
-14 lots: 10 on the Gallery, 1 built but not shared, 3 not built.
+14 lots: 11 on the Gallery, 0 built but not shared, 3 not built.
 
 **Mua Pel'am**
 
@@ -416,7 +416,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 - [ ] **Reef Finery**, 40x30: not built yet: leave the game’s lot for now. Type: Residential. Household: Ngata (EA).
 - [ ] **Journey’s End**, 40x30: place “Journey’s End”. Type: Residential. Household: Kahananui (EA). Traits: Sunny Aspect, Great Acoustics.
-- [ ] **Pier Perfection**, 30x20: built but not on the Gallery: bring it over through your Library (2 copies, 21 Dec 23) (if you changed it in your Building save since, save it to your Library again from there first). Type: Residential.
+- [ ] **Pier Perfection**, 30x20: place “Pier Perfection”. Type: Residential.
 - [ ] **Sand Simoleon Beach**, 40x30: place “Sand Simoleon Beach”. Type: Beach. Traits: Oceanic Paradise, Sunny Aspect. Trait ideas (free slots): + Bracing Breezes.
 - [ ] **Sapphire Shores**, 50x50: place “Sapphire Shores”. Type: Residential. Traits: Oceanic Paradise, Child’s Play, Sunny Aspect.
 
