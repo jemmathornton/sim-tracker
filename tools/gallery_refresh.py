@@ -14,6 +14,7 @@ from common import ROOT, SITE, GALLERY, slug, norm, load, save, world_files
 
 API = "https://drop-api.ea.com/ugx/the-sims-4"
 CREATOR = "JemmaTheSimmer"
+OWN_NAMES = {CREATOR.lower(), "mstiquelle", "misstiquelle"}   # her Library copies keep the name she had when she made them
 HEADERS = {"User-Agent": "JemmasSimWorld/1.0 (personal site, weekly refresh)"}
 KIND = {"lot": "lot", "room": "room", "household": "household"}
 TODAY = date.today().isoformat()
@@ -63,7 +64,9 @@ def list_uploads():
 
 def library_ids():
     """Gallery ids of her shared items, read from her Library (the Tray folder): the Gallery's search leaves out uploads
-    tagged as custom content (24 Oct: Palomino Junction, with her Sims' photos), but her Library copy keeps the id."""
+    tagged as custom content (24 Oct: Palomino Junction, with her Sims' photos), but her Library copy keeps the id.
+    Copies made under her old names count too (2 Nov: Pier Perfection, re-uploaded from a MsTiquelle copy, wasn't
+    in the search); main() still only adds an upload when the Gallery itself says it's hers."""
     import base64, glob
     try:
         import sims4files as s4
@@ -72,7 +75,7 @@ def library_ids():
             try: d = s4.decode(open(f, 'rb').read()[8:], '.EA.Sims4.Network.TrayMetadata', S, depth=0)
             except Exception: continue
             rid = d.get('remote_id')
-            if isinstance(rid, (bytes, bytearray)) and len(rid) == 16 and any(rid) and (d.get('creator_name') or '').lower() == CREATOR.lower():
+            if isinstance(rid, (bytes, bytearray)) and len(rid) == 16 and any(rid) and (d.get('creator_name') or '').lower() in OWN_NAMES:
                 out.append(base64.b64encode(bytes(rid)).decode())
         return list(dict.fromkeys(out))
     except Exception as e:

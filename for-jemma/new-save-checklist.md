@@ -186,7 +186,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 **Magnolia Promenade**
 
-- [ ] **Paddy’s Place** (game’s Paddywack’s Emporium), 20x20: place “Paddy’s Place”. Type: Restaurant.
+- [ ] **Paddy’s Place** (game’s Paddywack’s Emporium), 20x20: place “Paddy’s Place”. Type: Restaurant. Traits: Party Place, Teen Neighborhood.
 - [ ] **The Llama Picturehouse** (game’s JF&S Clothiers), 20x20: place “The Llama Picturehouse”. Not the other copy: “The Llama Picturehouse” (Bar). Type: Small Business Venue/Bar. Traits: Party Place, Convivial, Gnomes.
 - [ ] **Magnolia Mall** (game’s The Roadstead), 40x30: not built yet: leave the game’s lot for now. Type: Small Business Venue. Register the business and set its lot after placing. Owner (lives elsewhere): Kirkland (Sims to come).
 - [ ] **Magnolia Bowling Alley** (game’s Preeminent Domain), 30x20: place “Magnolia Bowling Alley”. Type: Bar. Traits: Teen Neighborhood, Party Place, Convivial.
@@ -379,7 +379,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 - [ ] **Carpophagous Corner**, 30x20: place “Carpophagous Corner”. Type: Vacation Rental. It comes in as Residential (its upload’s type): set it to Vacation Rental after placing. Traits: Science Lair, Bracing Breezes. Challenge: Quake Zone. Trait ideas (free slots): + Peace and Quiet.
 - [ ] **Slip 42**, 20x15: place “Slip 42”. Not the other copy: “Slip 42” (Residential). Type: Residential Rental (2). Challenges: Creepy Crawlies, Quake Zone, Filthy. Units (set after placing): 1; 2.
 - [ ] **Old Penelope**, 50x40: not built yet: leave the game’s lot for now. Type: Residential. Household: Cahill (EA).
-- [ ] **Riverside Grove**, 30x20: place “Riverside Grove”. Type: Residential. Household: Sigworth (EA).
+- [ ] **Riverside Grove**, 30x20: place “Riverside Grove”. Type: Residential. Household: Sigworth (EA). Traits: Science Lair. Challenge: Quake Zone.
 
 **Shady Acres**
 
@@ -416,7 +416,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 - [ ] **Reef Finery**, 40x30: not built yet: leave the game’s lot for now. Type: Residential. Household: Ngata (EA).
 - [ ] **Journey’s End**, 40x30: place “Journey’s End”. Type: Residential. Household: Kahananui (EA). Traits: Sunny Aspect, Great Acoustics.
-- [ ] **Pier Perfection**, 30x20: place “Pier Perfection”. Type: Residential.
+- [ ] **Pier Perfection**, 30x20: place “Pier Perfection”. Type: Residential. Traits: Homey, Peace and Quiet, Sunny Aspect.
 - [ ] **Sand Simoleon Beach**, 40x30: place “Sand Simoleon Beach”. Type: Beach. Traits: Oceanic Paradise, Sunny Aspect. Trait ideas (free slots): + Bracing Breezes.
 - [ ] **Sapphire Shores**, 50x50: place “Sapphire Shores”. Type: Residential. Traits: Oceanic Paradise, Child’s Play, Sunny Aspect.
 
@@ -485,7 +485,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 **Port Promise**
 
 - [ ] **The Old Mill**, 30x20: not built yet: leave the game’s lot for now. Type: Backroom.
-- [ ] **The Caboose**, 30x20: place “The Caboose”. Type: Bar.
+- [ ] **The Caboose**, 30x20: place “The Caboose”. Type: Bar. Traits: Convivial, Party Place, Teen Neighborhood. Challenge: Reduce and Recycle.
 - [ ] **The Old Dockyard** (game’s The Shipping Views), 30x20: place your Makers version “The Old Dockyard Makers”. Type: Community Space. Traits: Sunny Aspect, Convivial. Challenges: Reduce and Recycle, Off-the-Grid. Trait ideas (free slots): + Eco Lot (like the other community spaces).
 - [ ] **Abandoned Views** (game’s The Waterfront), 40x30: not built yet: leave the game’s lot for now. Type: Residential Rental. Household: Henley (yours).
 - [ ] **The Portsmouth Promenade**, 30x20: place “The Portsmouth Promenade”. Type: Small Business Venue. Register the business and set its lot after placing. Owner (lives elsewhere): Greenburg (EA). Traits: Study Spot. Trait ideas (free slots): Eco Lot, Home Studio (Blossom paints).
@@ -504,7 +504,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 **Senbamachi**
 
-- [ ] **5-6-1 Shinrinyoku**, 20x15: place “5-6-1 Shinrinyoku”. Type: Residential. Household: Nishidake (EA).
+- [ ] **5-6-1 Shinrinyoku**, 20x15: place “5-6-1 Shinrinyoku”. Type: Residential. Household: Nishidake (EA). Traits: Homey, Penny Pixies.
 - [ ] **Sento Senbamachi** (game’s 5-3-1 Shinrinyoku), 30x20: place “Sento Senbamachi”. Type: Onsen Bathhouse. Traits: On Ley Line, Party Place. Trait ideas (free slots): + Peace and Quiet or Natural Well.
 - [ ] **6-4-1 Hanamigawa**, 20x15: not built yet: leave the game’s lot for now. Type: Vacation Rental.
 - [ ] **Izakaya Hanamigawa Koen** (game’s Hanamigawa Koen), 30x20: place “Izakaya Hanamigawa Koen”. Search it by name (its upload has no #mtkomorebi tag). Type: Restaurant (/Park). Traits: Convivial. Trait ideas (free slots): Chef’s Kitchen, Sunny Aspect.

@@ -33,7 +33,6 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 - **Decide:** Love Highland: a Custom Venue run by the Addams as story only, or their home again?
 
 ## Before the new save: build and share (any save, then the Gallery)
-- **Do:** Pier Perfection (Sulani): check it's on your Gallery. You uploaded it on 1 Nov, but it never showed up in your uploads; upload it again if it isn't there.
 - **Do:** Build the {toBuild} lots not built yet (Admin > Progress lists them).
 - **Do:** Share the {toShare} built lots that aren't on the Gallery yet.
 - **Do:** {noTraits} shared lots have no lot traits; give each at least one (1 or 2 is often fine, your call 1 Nov; ideas in research/lot-trait-ideas.md).

@@ -289,6 +289,21 @@ window.ADMIN = {
 "favourites": 2120,
 "downloads": 20321,
 "comments": 50
+},
+{
+"when": "02 Nov 2026 23:19",
+"ok": true,
+"linked": [
+"linked new upload “Pier Perfection” to Sulani / Pier Perfection"
+],
+"notes": [
+"added a Gallery picture for Sulani / Pier Perfection"
+],
+"listed": 265,
+"new": 1,
+"favourites": 2120,
+"downloads": 20322,
+"comments": 50
 }
 ],
 "checklist": [
@@ -371,11 +386,6 @@ window.ADMIN = {
 "section": "Before the new save: decide first",
 "world": "Gibbi Point",
 "text": "**Decide:** Love Highland: a Custom Venue run by the Addams as story only, or their home again?"
-},
-{
-"section": "Before the new save: build and share (any save, then the Gallery)",
-"world": "",
-"text": "**Do:** Pier Perfection (Sulani): check it's on your Gallery. You uploaded it on 1 Nov, but it never showed up in your uploads; upload it again if it isn't there."
 },
 {
 "section": "Before the new save: build and share (any save, then the Gallery)",

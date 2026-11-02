@@ -51,6 +51,13 @@ class PackNames(unittest.TestCase):
         self.assertEqual(build.short_pack("The Sims™ 4 Dine Out"), "Dine Out")
 
 
+class GalleryNames(unittest.TestCase):
+    """Her Library copies made under her old names count as hers (2 Nov: Pier Perfection, a MsTiquelle copy)."""
+    def test_old_names(self):
+        import gallery_refresh
+        for n in ("JemmaTheSimmer", "MsTiquelle", "MissTiquelle"): self.assertIn(n.lower(), gallery_refresh.OWN_NAMES)
+
+
 class NewSaveChecklist(unittest.TestCase):
     """Her new-save checklist is made from the plan (23 Oct): every owned world has a section, nothing reads None."""
     def test_made_from_plan(self):

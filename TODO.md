@@ -12,6 +12,8 @@ Every open item carried over from the claude.ai project on 13 Oct 2026: the note
 
 **1 Nov evening:** uploads linked and marked shared: Boba Ippai (two versions), The Olde Mill, Paddy's Place, The Caboose, Riverside Grove. Pier Perfection never appeared on the Gallery (on her list to check). Corrections from the family notes: Ash Carrington and Henri Penkridge are women in the game's files; the Whitlocks are marked unplayed in “Building #2”; her list had the Whitlocks' MCCC note after the Thorntons by mistake (fixed). Overnight research: research/family-notes.md, research/homes-that-fit.md (suggestions only), research/traits-for-no-trait-lots.md.
 
+**2 Nov:** 5-6-1 Shinrinyoku (Mt. Komorebi) built and shared (her upload). Pier Perfection was on the Gallery all along (her 2 Nov re-upload): the Gallery's search for her name leaves it out, and the Library fallback only took copies credited to JemmaTheSimmer, while hers is credited to MsTiquelle. tools/gallery_refresh.py now takes her old names too (MsTiquelle, MissTiquelle), and still adds an upload only when the Gallery says it's hers. Both are linked and marked shared, and her Building save's traits are now on them and on Paddy's Place, Riverside Grove and The Caboose (1 Nov uploads). Her focus: build, playtest and share, starting with small lots. Overnight research: research/small-lots-to-build.md.
+
 **[Jemma]** = needs her decision or input. **[Claude]** = can be done without her once the app is set up. Tick items here as they're done.
 
 ## 0. Moving to the app
