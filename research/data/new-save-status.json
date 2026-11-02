@@ -3275,15 +3275,15 @@
     "lot": "5-6-1 Shinrinyoku",
     "name": "5-6-1 Shinrinyoku",
     "hood": "Senbamachi",
-    "built": false,
-    "shared": false,
+    "built": true,
+    "shared": true,
     "type": "Residential",
     "issues": [],
     "save_name": "5-6-1 Shinrinyoku",
     "placed": false,
     "objs": 192,
     "game_objs": 192,
-    "status": "game lot"
+    "status": "to place"
    },
    {
     "lot": "5-3-1 Shinrinyoku",
@@ -6416,6 +6416,12 @@
    "lot": "The Portsmouth Promenade",
    "household": "Greenburg",
    "goes": "Rockridge Springs unit 1; Knox Greenburg: Stonestreet Apartments 3"
+  },
+  {
+   "world": "Mt. Komorebi",
+   "lot": "5-6-1 Shinrinyoku",
+   "household": "Nishidake",
+   "goes": "5-6-1 Shinrinyoku"
   },
   {
    "world": "Mt. Komorebi",

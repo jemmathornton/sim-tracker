@@ -1,7 +1,7 @@
 // Built by tools/admin_data.py for the Admin pages (js/sections.js, 23 Oct). Don't edit this file.
 // For Jemma's PC only: never upload this file if the site goes online (it holds her to-dos and admin notes).
 window.ADMIN = {
-"made": "2026-11-01",
+"made": "2026-11-02",
 "refresh": [
 {
 "when": "13 Oct 2026 18:27",
@@ -262,6 +262,17 @@ window.ADMIN = {
 "new": 1,
 "favourites": 2117,
 "downloads": 20280,
+"comments": 50
+},
+{
+"when": "01 Nov 2026 23:25",
+"ok": true,
+"linked": [],
+"notes": [],
+"listed": 263,
+"new": 0,
+"favourites": 2117,
+"downloads": 20288,
 "comments": 50
 }
 ],
@@ -1254,6 +1265,10 @@ window.ADMIN = {
 "s": "to place",
 "fix": []
 },
+"l-mt-komorebi--5-6-1-shinrinyoku": {
+"s": "to place",
+"fix": []
+},
 "l-mt-komorebi--5-3-1-shinrinyoku": {
 "s": "to place",
 "fix": []
@@ -2162,6 +2177,11 @@ window.ADMIN = {
 "fixes": [],
 "move": [],
 "ahead": [
+{
+"lot": "5-6-1 Shinrinyoku",
+"household": "Nishidake",
+"goes": "5-6-1 Shinrinyoku"
+},
 {
 "lot": "Sento Senbamachi",
 "household": "Akiyama",
