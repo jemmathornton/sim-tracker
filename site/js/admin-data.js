@@ -555,12 +555,7 @@ window.ADMIN = {
 {
 "section": "In the new save: setting it up",
 "world": "",
-"text": "**Do:** First, make one untouched save: a new game, change nothing, save and quit, and tell Claude its name. Claude's new-save check compares against EA's own lots; its copy (“My Saved Game 4,376”) is from before EA's 27 Oct patch, so changed lots could read as placed. That save can go afterwards."
-},
-{
-"section": "In the new save: setting it up",
-"world": "",
-"text": "**Do:** Start the new save again once you've picked the premade fix (MCCC is updated; Premade Sim and Relationship Overhaul checked 31 Oct for EA's 27 Oct patch); the fix mod only works in a save made after it's installed (your call, 28 Oct)."
+"text": "**Do:** Start the new save again once you've picked the premade fix (MCCC is updated; Premade Sim and Relationship Overhaul checked 31 Oct for EA's 27 Oct patch); the fix mod only works in a save made after it's installed (your call, 28 Oct). One new game does both jobs (5 Nov):"
 },
 {
 "section": "In the new save: setting it up",
