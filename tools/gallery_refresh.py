@@ -109,6 +109,23 @@ def fetch_comments(i):
         time.sleep(0.3)
 
 
+AGES = {1: "Baby", 2: "Toddler", 4: "Child", 8: "Teen", 16: "Young Adult", 32: "Adult", 64: "Elder", 128: "Infant"}
+
+
+def member_check(i, h):
+    """A household upload's members against the site's Sims (6 Nov, her 24 Oct ask): '' when they match, else what differs."""
+    try: _, d = api(f"/item/{urllib.parse.quote(i, safe='')}?locale=en")
+    except Exception: return ''
+    mem = (((d or {}).get('data') or {}).get('typeDetails') or {}).get('members') or []
+    gal = {(m.get('firstName', '') + ' ' + m.get('lastName', '')).strip(): AGES.get(m.get('age'), '') for m in mem}
+    site = {s.get('name'): s.get('age') for s in h.get('sims') or []}
+    if not mem or not site: return ''
+    out = [f"only on the Gallery: {', '.join(k for k in gal if k not in site)}" if any(k not in site for k in gal) else '',
+           f"only on the site: {', '.join(k for k in site if k not in gal)}" if any(k not in gal for k in site) else '',
+           '; '.join(f"{k} is {gal[k]} on the Gallery, {site[k]} on the site" for k in gal if k in site and gal[k] and site[k] != gal[k])]
+    return '; '.join(x for x in out if x)
+
+
 def auto_link(new_ids, uploads, worlds):
     """Link a new upload to a lot when its title names exactly one lot. Anything less certain (only a hashtag
     names the lot, or several lots match) is listed in data/gallery/unlinked.json for Jemma to decide."""
@@ -125,6 +142,11 @@ def auto_link(new_ids, uploads, worlds):
             if len(hh) == 1:
                 W, n, h = hh[0]
                 if h.get('gallery'): ts[i] = {"title": u['title'], "lot": f"{W['name']} / {n} (household)", "why": f"New on {TODAY}: another copy of this household. Which should lead (normally the latest)?"}
+                diff = member_check(i, h)
+                if diff:
+                    why = (ts[i]['why'] + " Also: " if i in ts else f"New on {TODAY}: ") + f"the upload's Sims differ from the site's ({diff}). Update the site from it?"
+                    ts[i] = {"title": u['title'], "lot": f"{W['name']} / {n} (household)", "why": why}
+                    say(f"  household upload “{u['title']}” differs from the site: {diff}")
                 h.setdefault('gallery', []).append(i); linked.append(W)
                 say(f"  linked new household upload “{u['title']}” to {W['name']} / {n}")
             else:
