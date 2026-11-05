@@ -1,5 +1,7 @@
 # Build priorities
 
+> **6 Nov: replaced by research/build-order.md** (a newer order, with the builds you already have) and research/small-lots-to-build.md / bigger-lots-to-build.md. Kept for the record.
+
 > Counts are from 16–17 Oct (e.g. built but not shared is now 27, and Glimmer & Books is unshared until its Backroom upload).
 
 Written overnight 16–17 October 2026. Research only: nothing in the app, data, tools or TODO.md was changed. Suggestions only; every choice is hers.

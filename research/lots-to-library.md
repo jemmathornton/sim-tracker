@@ -1,5 +1,7 @@
 # Lots to get into your Library (23 Oct)
 
+> **6 Nov:** research/bigger-lots-to-build.md, section 1, rechecks every unbuilt lot against your Library and all 22 saves, with picture sheets in for-jemma/lot-compare/.
+
 **At a glance**
 1. Two of the three “missing” lots are in your Library after all, under other names: SU Overlook Residence is “SU Overlook Halls” (Feb 2024) and Boba Ippai is “Ippai Boba & Bar” (Mar 2023). Both are older than the copies in Building #2.
 2. FountainView Penthouse really isn’t in your Library. Your version is in the save “Rotational”, with the Santiago Ojo household living in it.
