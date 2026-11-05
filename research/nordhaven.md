@@ -1,5 +1,7 @@
 # Nordhaven: how the game ships it, and what her plan changes (15 Oct)
 
+> **6 Nov:** your plan has changed since: Inked Inlet is now a Playground and Lighthouse Lookout the Library (both not built). The rest of this note is as written on 15 Oct.
+
 For the underused-lot-types talk (gyms). Sources: the Sims Wiki's Nordhaven page, the game's own lot descriptions, her Gallery uploads, and the game's region tuning (region_Residential_EP18World).
 
 ## As the game ships it
