@@ -190,3 +190,7 @@ Sims Community (https://simscommunity.info/…):
 - Maker Pack leak (CAS and Build only): `2026/10/14/leak-of-upcoming-the-sims-4-maker-packs-oct/`
 
 Project files: `data/worlds.json` and `data/worlds/*.json` (ownership), `research/data/world-lot-types.json`, `research/plan-vs-game.md` (Mossy Lane), `research/sims-sources.md`, `research/sims-display.md`, `data/game/lot-traits.json`, `tools/lot_traits.py`.
+
+## Check, 6 Nov 2026
+
+No new world, pack or lot type announced since Royalty & Legacy (Feb 2026); EA's plans are still kits, Maker Packs and the quality-of-life roadmap (September–December: autonomy, dining and meals). The 27 Oct patch (1.129) added free elder CAS and Build/Buy items and the weight and muscle options (research/game-options.md). Simscommunity reports (29 Oct) that Project Rene is paused. Nothing here changes the plan. Sources: simscommunity.info (29 Oct 2026, 5 May 2026), ea.com Quality of Life Roadmap 2026.
