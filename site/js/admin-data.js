@@ -315,7 +315,7 @@ window.ADMIN = {
 {
 "section": "Before the new save: decide first",
 "world": "",
-"text": "**Decide:** Lagoon of Love: Wedding Venue (Claude’s pick: your Gallery text calls it a beach wedding spot, Sulani has none, and it needs no pack), Park, or Vacation Rental (its upload counts no bedrooms, but the Gallery only counts walled bedrooms, so check in game)?"
+"text": "**Decide:** Lagoon of Love: Wedding Venue (Claude’s pick: your Gallery text calls it a beach wedding spot, Sulani has none, and it needs no pack), Park, or Vacation Rental? Found 6 Nov: these are two builds. The Gallery's “Lagoon of Love” is the beach wedding spot with only a bathroom hut, so it has no bedrooms. Your Library's “Lagoon Look” (also in “Building #2”, set as a Vacation Rental) is a stilt house with 3 bedrooms and 2 bathrooms. A Vacation Rental would mean using the house; pictures side by side in for-jemma/lot-compare/lagoon-look.jpg."
 },
 {
 "section": "Before the new save: decide first",

@@ -1,5 +1,7 @@
 # Lagoon of Love: which lot type? (23 Oct)
 
+> **6 Nov:** two different builds share this lot. The Gallery's “Lagoon of Love” is the beach wedding spot: no house, a bathroom hut, 9 packs. Your Library's “Lagoon Look”, the copy in “Building #2”, is a stilt holiday house: 3 bedrooms, 2 bathrooms, set as a Vacation Rental with Sunny Aspect, Bracing Breezes and Eco Lot, Island Living only. Pictures: for-jemma/lot-compare/lagoon-look.jpg. So “check the bedrooms in game” is answered: the wedding build has none, the house has 3.
+
 Research only. Nothing in data/, the site or her files was changed.
 
 ## At a glance
