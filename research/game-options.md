@@ -111,6 +111,7 @@ Only ones that touch your goals. Names are the game’s own.
 - **Rentals (For Rent):** “Enable Rental Unit Events” (random tenant events); “If disabled, unoccupied units will no longer be hidden by default when entering Build Mode”. Taste only.
 - **Relationships:** “Allow Automatic Breakups” (I didn’t confirm which tab or pack it sits under). Off keeps your planned couples together.
 - **Businesses & Hobbies:** “Enable Small Business Dilemmas”. Taste only.
+- **New with EA's 27 Oct patch (1.129):** “Allow Weight Changes” and “Allow Muscle Changes” (the game's own settings file, GameplayOptionsData, read 30 Oct). Off keeps every Sim's body as you made it, including your Gallery households. UI Cheats Extension (v1.59.1) hides both, so take it out of Mods while you set them, then put it back (on your list). Your call.
 - **Not options:** there is no “fill empty lots” switch any more (Neighbourhood Stories replaced it) and no townie-generation switch.
 
 ---
