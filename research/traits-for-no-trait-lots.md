@@ -78,3 +78,13 @@ Checked against the game’s own trait settings (read 1 Nov): every idea below i
 **Prescott Boarding House** (Copperdale, rental, 2 units; Nerdy Girls in 1, Nerdy Boys in 2; “Dorms” in your save)
 - Suggestion, both units: **Science Lair**: chess is the Logic skill (the chess and computer teens).
 - Suggestion, both units: **Fast Internet**: programming and video gaming, for the computers.
+
+## Checked again 6 Nov
+
+All 16 above still have no traits. Two more shared lots have none:
+
+**Desert Bloom** (Oasis Springs, Park)
+- Your 1 Nov note: the lot is empty for now, waiting to be built.
+- Suggestion for when it's built: **Sunny Aspect** and **Child's Play**, both allowed on a park.
+
+**The Magic Realm** (Glimmerbrook): a special lot. Its traits are the game's own and can't be set, so it can be left out of the count.
