@@ -1,5 +1,10 @@
 # Her household uploads on the Gallery
 
+> **Update 6 Nov:** much has changed since this was written. You've now shared 26 households (20 of them between 24 and 29 Oct), and 20 of your own households on the site link to their upload.
+> - **On the site but not uploaded yet (8):** the Hassanis, Luis Huerta, the Ferraras, the Henleys, the Mikamis, and three that wait for the Cadberry job (Leah-Moon, Sylvia & Kenny, the Rochanas).
+> - **Not made or saved yet:** listed on your list ("Before the new save: households").
+> - **The four questions below are answered:** Davidson, Barraza and Ella-Mint are settled or parked, and household pictures come from your Library.
+
 Research only (18–19 Oct): nothing in `site/`, `data/` or `tools/` is changed.
 
 **Sources:** `data/gallery/uploads.json` (the weekly refresh, last 14 Oct), and the same public Gallery addresses the refresh uses (`list-items?search=JemmaTheSimmer` and `item/<id>`, read-only, no sign-in). Sim ids from the Gallery were matched against `research/data/own-households.json` (every copy in her saves and Library). Upload dates come from the Gallery id where it holds one (uploads up to March 2023); newer ones only have their place in the Gallery's newest-first list.
