@@ -53,6 +53,8 @@ None of them is on the Gallery yet. I checked your Library copies for a Gallery 
   - **The description is still EA's** ("currently undeveloped").
   - **The Custom Venue schedule** needs a proper playtest, which is slower (your note, 1 Nov).
 
+**Hashtags** (checked 5 Nov): Magnolia Mall, 8 Bells and Sequoia Cottages already carry their world's tag (#magnoliapromenade, #strangerville, #sansequoia). The in-game search needs it. Willow Creek Archive, Quad Manor and Kiyomatsu Point have no description of yours yet, so their tags (#willowcreek, #windenburg, #mtkomorebi) go in when you write them.
+
 ## 2. Suggested order
 
 **Step 1: the builds you already have** (above)

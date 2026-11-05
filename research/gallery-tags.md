@@ -1,9 +1,9 @@
 # Gallery world hashtags (23 Oct)
 
-202 uploads on the site's lots. In-game search by a world's hashtag only finds those that carry it exactly.
+212 uploads on the site's lots. In-game search by a world's hashtag only finds those that carry it exactly.
 
 - **Misspelt world tag:** 4
-- **No world tag at all:** 15
+- **No world tag at all:** 14
 - **Tagged with another world only:** 0
 
 Search these by name instead (or fix the tag if you ever re-upload).
@@ -26,7 +26,6 @@ Search these by name instead (or fix the tag if you ever re-upload).
 | Britechester | Foxbury Court | 14 tags |
 | Britechester | Mossy Lane | 16 tags |
 | Britechester | Spring Steppes | 16 tags |
-| Britechester | Spring Steppes | 19 tags |
 | Copperdale | Town Square Stores | 7 tags |
 | Glimmerbrook | The Magic Realm | 6 tags |
 | Henford-on-Bagley | 3 Olde Mill Lane | 7 tags |
