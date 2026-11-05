@@ -14,6 +14,8 @@ Every open item carried over from the claude.ai project on 13 Oct 2026: the note
 
 **2 Nov:** 5-6-1 Shinrinyoku (Mt. Komorebi) built and shared (her upload). Pier Perfection was on the Gallery all along (her 2 Nov re-upload): the Gallery's search for her name leaves it out, and the Library fallback only took copies credited to JemmaTheSimmer, while hers is credited to MsTiquelle. tools/gallery_refresh.py now takes her old names too (MsTiquelle, MissTiquelle), and still adds an upload only when the Gallery says it's hers. Both are linked and marked shared, and her Building save's traits are now on them and on Paddy's Place, Riverside Grove and The Caboose (1 Nov uploads). Her focus: build, playtest and share, starting with small lots. Overnight research: research/small-lots-to-build.md.
 
+**5 Nov:** mod check, nothing to update (no EA patch since 1.129.39 on 28 Oct; MCCC 2026.6.0, UI Cheats v1.59.1 (weerbesu's last post edit 27 Aug, no newer post), PSRO v2.10, Home Regions 8 Oct all current; no new error files). Research: research/bigger-lots-to-build.md (bigger lots, and builds she already has in her Library and saves; Kiyomatsu Point, Magnolia Mall and Sequoia Cottages look finished).
+
 **[Jemma]** = needs her decision or input. **[Claude]** = can be done without her once the app is set up. Tick items here as they're done.
 
 ## 0. Moving to the app
