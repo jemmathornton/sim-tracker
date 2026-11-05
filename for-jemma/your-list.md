@@ -37,17 +37,8 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 - **Do:** Share the {toShare} built lots that aren't on the Gallery yet.
 - **Do:** {noTraits} shared lots have no lot traits; give each at least one (1 or 2 is often fine, your call 1 Nov; ideas in research/lot-trait-ideas.md).
 - **Do:** Wedding venues: check each one's lot type when you share it.
-- **Do:** Fix before uploading (found in “Building #2”, 1 Nov, still there 6 Nov):
-  - StrangerVille Gym&Pool is set as a Pool; your plan says Gym.
-  - Lakeview and Prescott Boarding Houses are plain Residential; your plan says 2-unit rentals. Prescott also has no traits.
-  - Pinecrest Apartments #402 has no traits.
-  - Isda Riverfront's two units have no traits.
-  - Sequoia Cottages' unit 2 has no traits.
-  - Kiyomatsu Point has no traits, and its description is still EA's.
-- **Do:** Ready for your playtest (research/build-order.md):
-  - Builds you already have: Magnolia Mall, 8 Bells, Willow Creek Archive, Quad Manor.
-  - Built lots with no problems found: 1313 21 Chic Street, 1 Cobblebottom Street, Paradise Stables, StrangerVille Library, 3 Cobblebottom Street, Ravenwood Wedding Hall.
-  - The university groups, for later: Windenburg's five, StrangerVille's three.
+- **Do:** Fix before uploading (found in “Building #2”, 1 Nov, still there 6 Nov): StrangerVille Gym&Pool is set as a Pool (your plan: Gym); Lakeview and Prescott Boarding Houses are plain Residential (your plan: 2-unit rentals), and Prescott has no traits; no traits on Pinecrest Apartments #402, Isda Riverfront's two units or Sequoia Cottages' unit 2; Kiyomatsu Point has no traits and EA's description.
+- **Do:** Ready for your playtest (research/build-order.md): builds you already have (Magnolia Mall, 8 Bells, Willow Creek Archive, Quad Manor); built lots with no problems found (1313 21 Chic Street, 1 Cobblebottom Street, Paradise Stables, StrangerVille Library, 3 Cobblebottom Street, Ravenwood Wedding Hall); later, the university groups (Windenburg's five, StrangerVille's three).
 - **Do:** Give units 2+ their own traits and bed/bath counts, then re-upload (Claude reads them from your save).
 - **Do:** Rippling Flats, Specter Row and Casa do Corsário (not built yet): set them up as units when you build them.
 - **Do:** Abandoned Views and Specter Row: tell Claude the unit counts once they're built.
@@ -102,10 +93,7 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 - **Do:** UI Cheats Extension: you already have the latest, v1.59.1 (checked 1 Nov: your files are identical to the download; the version inside still says 1.59). It mostly works on EA's 27 Oct patch (weerbesu said so in the post's comments on 30 Oct), but until he makes a version for it: “Remove this workplace rival” and setting a Sim's relationship with an object won't work (EA renamed what they use), Game Options won't show EA's new Allow Weight Changes and Allow Muscle Changes (take UI Cheats out of Mods while you set them in the new save, then put it back), and moving households in Manage Worlds uses the old way, without EA's 27 Oct fix. Done 30 Oct: MCCC and MC Woohoo 2026.6.0, LittleMsSam's Dress Code (27 Aug 2025) and Pet to Pet Greeting Fix (every other LittleMsSam mod checked: already current), Ravenwood's seasons mod swapped for the patched copy (keeps its lot types); SimMattically's Remove Purchase Button rebuilt on EA's current top-right bar; Party Anywhere, the SulSul Weather App script and the Dress Code Seasons add-on removed; NateTheL0ser's thrift store mod swapped for alasEnkidu's ThrifTea one, patched for 1.129. Done 31 Oct: six mods swapped for patched copies that add back what EA added since (Zerbu's High School Spawn Fix, More Discipline, Weather NPC Death Fix, Pet to Pet Greeting Fix, Choose Your Helmet, Mermaids Can Use Dock Ladders). The old files are in “Mods backup 2026-10-30” beside your Mods folder (delete it once all works).
 
 ## In the new save: setting it up
-- **Do:** Start the new save again once you've picked the premade fix (MCCC is updated; Premade Sim and Relationship Overhaul checked 31 Oct for EA's 27 Oct patch); the fix mod only works in a save made after it's installed (your call, 28 Oct). One new game does both jobs (5 Nov):
-  1. Decide on the premade fix and install it (or not).
-  2. Start a new game and save it straight away, changing nothing: the untouched copy Claude's new-save check compares against. Tell Claude its name. (Its copy now, “My Saved Game 4,376”, is from before EA's 27 Oct patch, and “Jemma's Sim World” has builds in it, so neither will do; both can go afterwards.)
-  3. **Save As** a new name, and build in that one.
+- **Do:** Start the new save again once you've picked the premade fix (MCCC is updated; Premade Sim and Relationship Overhaul checked 31 Oct for EA's 27 Oct patch); the fix mod only works in a save made after it's installed (your call, 28 Oct). One new game does both jobs (5 Nov): (1) decide on the premade fix and install it, or not; (2) start a new game and save it straight away, changing nothing, and tell Claude its name: it's the untouched copy Claude's new-save check compares against (“My Saved Game 4,376” is from before EA's 27 Oct patch and “Jemma's Sim World” has builds in it, so neither will do; both can go afterwards); (3) **Save As** a new name, and build in that one.
 - **Do:** Set up the new save “Jemma’s Sim World” (started 23 Oct), step by step (for-jemma/new-save-checklist.md).
 - **Do:** Everything the save itself shows (game options, Neighbourhood Stories, hearting, lots to place or fix, households to move or bring in) is in the **New save** block at the top of this page; Claude refreshes it after each session. First: untick the Neighbourhood Stories rules and heart your planned households.
 - **Do:** The game crashed placing the first Britechester lot (23 Oct). Next try: save first, then place it from inside the lot in Build mode; if it crashes again, close the game and delete localthumbcache.package (Documents\Electronic Arts\The Sims 4; the game remakes it). Tell Claude which lot it was. (If it was Darby’s Den, the first on the checklist: players have reported crashes replacing that one before. Try another Britechester lot first.)

@@ -410,12 +410,12 @@ window.ADMIN = {
 {
 "section": "Before the new save: build and share (any save, then the Gallery)",
 "world": "",
-"text": "**Do:** Fix before uploading (found in “Building #2”, 1 Nov, still there 6 Nov):"
+"text": "**Do:** Fix before uploading (found in “Building #2”, 1 Nov, still there 6 Nov): StrangerVille Gym&Pool is set as a Pool (your plan: Gym); Lakeview and Prescott Boarding Houses are plain Residential (your plan: 2-unit rentals), and Prescott has no traits; no traits on Pinecrest Apartments #402, Isda Riverfront's two units or Sequoia Cottages' unit 2; Kiyomatsu Point has no traits and EA's description."
 },
 {
 "section": "Before the new save: build and share (any save, then the Gallery)",
 "world": "",
-"text": "**Do:** Ready for your playtest (research/build-order.md):"
+"text": "**Do:** Ready for your playtest (research/build-order.md): builds you already have (Magnolia Mall, 8 Bells, Willow Creek Archive, Quad Manor); built lots with no problems found (1313 21 Chic Street, 1 Cobblebottom Street, Paradise Stables, StrangerVille Library, 3 Cobblebottom Street, Ravenwood Wedding Hall); later, the university groups (Windenburg's five, StrangerVille's three)."
 },
 {
 "section": "Before the new save: build and share (any save, then the Gallery)",
@@ -565,7 +565,7 @@ window.ADMIN = {
 {
 "section": "In the new save: setting it up",
 "world": "",
-"text": "**Do:** Start the new save again once you've picked the premade fix (MCCC is updated; Premade Sim and Relationship Overhaul checked 31 Oct for EA's 27 Oct patch); the fix mod only works in a save made after it's installed (your call, 28 Oct). One new game does both jobs (5 Nov):"
+"text": "**Do:** Start the new save again once you've picked the premade fix (MCCC is updated; Premade Sim and Relationship Overhaul checked 31 Oct for EA's 27 Oct patch); the fix mod only works in a save made after it's installed (your call, 28 Oct). One new game does both jobs (5 Nov): (1) decide on the premade fix and install it, or not; (2) start a new game and save it straight away, changing nothing, and tell Claude its name: it's the untouched copy Claude's new-save check compares against (“My Saved Game 4,376” is from before EA's 27 Oct patch and “Jemma's Sim World” has builds in it, so neither will do; both can go afterwards); (3) **Save As** a new name, and build in that one."
 },
 {
 "section": "In the new save: setting it up",

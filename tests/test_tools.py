@@ -58,6 +58,13 @@ class GalleryNames(unittest.TestCase):
         for n in ("JemmaTheSimmer", "MsTiquelle", "MissTiquelle"): self.assertIn(n.lower(), gallery_refresh.OWN_NAMES)
 
 
+class HerList(unittest.TestCase):
+    """Her list is one line per item: Admin > Notes doesn't show indented lines (6 Nov: three items' sub-points were hidden)."""
+    def test_no_indented_lines(self):
+        text = open(os.path.join(ROOT, 'for-jemma', 'your-list.md'), encoding='utf-8').read()
+        self.assertEqual([l for l in text.splitlines() if re.match(r'\s+\S', l)], [])
+
+
 class NewSaveChecklist(unittest.TestCase):
     """Her new-save checklist is made from the plan (23 Oct): every owned world has a section, nothing reads None."""
     def test_made_from_plan(self):
