@@ -3,7 +3,12 @@
 > **Update 6 Nov:** much has changed since this was written. You've now shared 26 households (20 of them between 24 and 29 Oct), and 20 of your own households on the site link to their upload.
 > - **On the site but not uploaded yet (8):** the Hassanis, Luis Huerta, the Ferraras, the Henleys, the Mikamis, and three that wait for the Cadberry job (Leah-Moon, Sylvia & Kenny, the Rochanas).
 > - **Not made or saved yet:** listed on your list ("Before the new save: households").
-> - **The four questions below are answered:** Davidson, Barraza and Ella-Mint are settled or parked, and household pictures come from your Library.
+> - **The questions below, now:**
+>   - Davidson: settled; it's on the site from your upload.
+>   - Ella-Mint: parked with the Cadberrys.
+>   - Barnes: a backup family (your call, 1 Nov).
+>   - Household pictures: they come from your Library.
+>   - **Still open:** the Jamesons (Eve and Chris, 2016).
 
 Research only (18–19 Oct): nothing in `site/`, `data/` or `tools/` is changed.
 
