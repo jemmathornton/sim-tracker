@@ -37,6 +37,17 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 - **Do:** Share the {toShare} built lots that aren't on the Gallery yet.
 - **Do:** {noTraits} shared lots have no lot traits; give each at least one (1 or 2 is often fine, your call 1 Nov; ideas in research/lot-trait-ideas.md).
 - **Do:** Wedding venues: check each one's lot type when you share it.
+- **Do:** Fix before uploading (found in “Building #2”, 1 Nov, still there 6 Nov):
+  - StrangerVille Gym&Pool is set as a Pool; your plan says Gym.
+  - Lakeview and Prescott Boarding Houses are plain Residential; your plan says 2-unit rentals. Prescott also has no traits.
+  - Pinecrest Apartments #402 has no traits.
+  - Isda Riverfront's two units have no traits.
+  - Sequoia Cottages' unit 2 has no traits.
+  - Kiyomatsu Point has no traits, and its description is still EA's.
+- **Do:** Ready for your playtest (research/build-order.md):
+  - Builds you already have: Magnolia Mall, 8 Bells, Willow Creek Archive, Quad Manor.
+  - Built lots with no problems found: 1313 21 Chic Street, 1 Cobblebottom Street, Paradise Stables, StrangerVille Library, 3 Cobblebottom Street, Ravenwood Wedding Hall.
+  - The university groups, for later: Windenburg's five, StrangerVille's three.
 - **Do:** Give units 2+ their own traits and bed/bath counts, then re-upload (Claude reads them from your save).
 - **Do:** Rippling Flats, Specter Row and Casa do Corsário (not built yet): set them up as units when you build them.
 - **Do:** Abandoned Views and Specter Row: tell Claude the unit counts once they're built.

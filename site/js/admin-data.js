@@ -410,6 +410,16 @@ window.ADMIN = {
 {
 "section": "Before the new save: build and share (any save, then the Gallery)",
 "world": "",
+"text": "**Do:** Fix before uploading (found in “Building #2”, 1 Nov, still there 6 Nov):"
+},
+{
+"section": "Before the new save: build and share (any save, then the Gallery)",
+"world": "",
+"text": "**Do:** Ready for your playtest (research/build-order.md):"
+},
+{
+"section": "Before the new save: build and share (any save, then the Gallery)",
+"world": "",
 "text": "**Do:** Give units 2+ their own traits and bed/bath counts, then re-upload (Claude reads them from your save)."
 },
 {
