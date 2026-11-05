@@ -16,6 +16,11 @@ Every open item carried over from the claude.ai project on 13 Oct 2026: the note
 
 **5 Nov:** mod check, nothing to update (no EA patch since 1.129.39 on 28 Oct; MCCC 2026.6.0, UI Cheats v1.59.1 (weerbesu's last post edit 27 Aug, no newer post), PSRO v2.10, Home Regions 8 Oct all current; no new error files). Research: research/bigger-lots-to-build.md (bigger lots, and builds she already has in her Library and saves; Kiyomatsu Point, Magnolia Mall and Sequoia Cottages look finished).
 
+**Overnight 5–6 Nov:**
+- research/build-order.md: the six builds she already has, checked against the plan, with picture sheets of her Library copies in for-jemma/lot-compare/*-library.jpg. Magnolia Mall, 8 Bells, Willow Creek Archive and Quad Manor look ready to playtest; Sequoia Cottages' unit 2 has no traits; Kiyomatsu Point has no traits and EA's description. None is on the Gallery or marked as modded.
+- A suggested build order.
+- research/trait-ideas-unbuilt.md: 1–2 trait ideas for every lot still to build, checked against the game's allowed-lot-type rules (read from its zone-modifier tuning).
+
 **[Jemma]** = needs her decision or input. **[Claude]** = can be done without her once the app is set up. Tick items here as they're done.
 
 ## 0. Moving to the app
