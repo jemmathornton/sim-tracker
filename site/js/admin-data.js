@@ -344,11 +344,6 @@ window.ADMIN = {
 },
 {
 "section": "Before the new save: decide first",
-"world": "San Myshuno",
-"text": "**Decide:** FountainView Penthouse: your plan's type is “Penthouse”, which isn't one of the game's lot types (its upload says Residential). Change it to Residential, or keep “Penthouse”?"
-},
-{
-"section": "Before the new save: decide first",
 "world": "Willow Creek",
 "text": "**Decide:** Hallow Slough (Ella-Mint's home): Haunted House, On Hallowed Ground, or neither?"
 },

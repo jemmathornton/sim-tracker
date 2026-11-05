@@ -35,7 +35,7 @@
     {"lot": "930 Medina Studios", "myName": "930 Medina Studios", "type": "Apartment", "size": "N/A", "residents": "Livin' In The City", "built": true, "shared": true, "screenshots": false, "simsMade": false, "gallery": ["HNdM9n08RxymsVKGOc2c1g=="], "beds": 4, "baths": 2},
     {"lot": "121 Hakim House", "myName": "121 Hakim House", "type": "Apartment", "size": "N/A", "residents": "Jang", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "122 Hakim House", "myName": "122 Hakim House", "type": "Apartment", "size": "N/A", "residents": "Bheeda", "built": true, "shared": true, "screenshots": true, "simsMade": false, "gallery": ["Uf3EQP8MEeyKGRdS1XRQaQ=="], "beds": 2, "traits": ["Historical"], "baths": 2},
-    {"lot": "FountainView Penthouse", "myName": "FountainView Penthouse", "type": "Penthouse", "size": "N/A", "residents": "Santiago Ojo", "built": true, "shared": true, "screenshots": false, "simsMade": true, "gallery": ["DTtmi9F7Q12XvkCZwBEwNA=="], "traits": ["Great Soil", "Natural Light"]},
+    {"lot": "FountainView Penthouse", "myName": "FountainView Penthouse", "type": "Residential", "size": "N/A", "residents": "Santiago Ojo", "built": true, "shared": true, "screenshots": false, "simsMade": true, "gallery": ["DTtmi9F7Q12XvkCZwBEwNA=="], "traits": ["Great Soil", "Natural Light"]},
     {"lot": "Casbah Gallery", "myName": "Casbah Gallery", "type": "Arts Center", "size": "40x30", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
    ],
    "festivals": ["Humor and Hijinks Festival"]
