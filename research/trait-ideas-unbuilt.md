@@ -24,6 +24,9 @@ How the ideas were picked:
 - **Yuma Heights** (the Calientes): Romantic Aura, Clandestine (the sisters' schemes). EA: none.
 - **Springscape** (rebuild; Vidcund, Lazlo and Nova): Sunny Aspect, Homey, like its neighbours.
 
+## Granite Falls
+- **Granite Falls Forest** (National Park, an ordinary lot after all; research/special-lots.md): Bracing Breezes, Sunny Aspect.
+
 ## Newcrest
 - **Rippling Flats** (two uni Sims): your build has Fast Internet and Good Schools. Per unit, *suggestion*: Study Spot, Fast Internet.
 
@@ -51,6 +54,10 @@ How the ideas were picked:
 - **Torendi Tunes** (Karaoke Bar): Great Acoustics, Party Place.
 - **Planet Honey Pop!** (Thrift and Boba Store): keep EA's Great Acoustics, add Teen Neighborhood.
 - **Myshuno Meadows** (Center Park): Sunny Aspect, Child's Play.
+
+## Selvadorada
+- **Alam Museum of Archaeology** (Museum): Natural Light, Peace and Quiet.
+- **Belomisia Trailhead** (National Park): Bracing Breezes, Sunny Aspect.
 
 ## Brindleton Bay
 - **Brindleton Pawspital** (Vet Clinic): Training Ground, Peace and Quiet.
@@ -100,6 +107,7 @@ How the ideas were picked:
 - **The Gnome's Arms** (pub): keep EA's Convivial, add Homey.
 - **2 Olde Mill Lane** (Vet Clinic): Training Ground, Peace and Quiet.
 - **Olde Mill Hill** (the Watsons): keep EA's Homey and Bracing Breezes.
+- **Isle of Volpe** (National Park): Bracing Breezes, Sunny Aspect (the 17 Oct idea).
 - **13 and 14 Nettle Lane** (nobody planned yet; kept for a fairy area): Great Soil, Peace and Quiet. EA has Homey and Convivial on 14 Nettle Lane; your Library 13 Nettle Lane has its own 3.
 
 ## Copperdale
