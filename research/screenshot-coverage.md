@@ -147,3 +147,30 @@ Too thin to call (1 to 5 stray pictures): Factory One and 19 Culpepper House, Sa
 6. **Optional:** the upload dates from the Gallery ids (169 uploads) could show on lot pages, e.g. “Uploaded July 2018”. Needs her OK (TODO).
 
 Scratch scripts for this note were kept outside the project and are not needed again.
+
+## 5. Which to screenshot first (6 Nov, a suggestion)
+
+156 shared lots still have no screenshots of yours, so the site shows their Gallery pictures. If you want to start with the ones people download most, here are the top 20 by Gallery downloads (2 Nov refresh):
+
+1. The Futures Past (Oasis Springs, Museum): 4,682
+2. Oasis Springs Library: 1,472
+3. Anchorpoint Recreation Center (San Sequoia): 631
+4. Newcrest Community Space: 621
+5. Upland Trailer Park (Del Sol Valley): 531
+6. Newcrest Arts Center: 431
+7. 2-4-3 Wakabamori (Mt. Komorebi): 346
+8. Optimist's Outlook (Newcrest): 300
+9. Magnolia Bowling Alley: 234
+10. Sento Senbamachi (Mt. Komorebi): 220
+11. The Rouge Note (Nordhaven): 190
+12. Havisham House (Windenburg): 179
+13. Courtyard Lane Playground (Willow Creek): 161
+14. Fern Park Flats (Newcrest): 159
+15. Rattlesnake Juice Bar (Oasis Springs): 153
+16. Old Torget House (Nordhaven): 151
+17. Sultry Springside (Oasis Springs): 147
+18. 1010 Alto Apartments (San Myshuno): 136
+19. The Portsmouth Promenade (Evergreen Harbor): 134
+20. 5-1-1 Kiyomatsu (Mt. Komorebi): 125
+
+Newcrest (4 of the 20) and Oasis Springs (4) are where one visit covers most. In the new save you'll place these lots anyway, so it may suit to take the pictures then.
