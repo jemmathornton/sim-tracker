@@ -181,6 +181,7 @@ function admChecksSec(){
   return `<ul class="adm-list">${cs.map(c => `<li><span><b>${esc(c.name)}</b></span><span class="w"><span class="adm-pill bad">${c.items.length}</span></span>
       <small>${c.items.map(l => (l.id ? lotA(l) : esc(l.name)) + (l.world ? ` (${esc(l.world.name)})` : "")).join(" · ")}</small></li>`).join("")}</ul>`;
 }
+const NO_TRAIT_TYPES = new Set(["The Magic Realm", "Sylvan Glade", "Forgotten Grotto"]);   // hidden lots: no lot-trait slots in the game
 // live counts for her list's Big jobs ({toBuild} etc. in for-jemma/your-list.md), so they never go stale (23 Oct)
 function admLive(){
   const L = admOwned(), noShots = L.filter(l => l.shared === true && !hasShots(l)), by = {};
@@ -188,7 +189,8 @@ function admLive(){
   const hs = worlds.filter(w => w.owned && w.ready).flatMap(w => homeHhs(w)), mine = hs.filter(h => hhOrigin(h) !== "Premade");
   return {toBuild: L.filter(l => l.built === false).length, toShare: L.filter(l => l.built === true && l.shared !== true).length, noShots: noShots.length,
     noShotsWorlds: Object.entries(by).sort((x, y) => y[1] - x[1]).slice(0, 4).map(([w, n]) => `${w} ${n}`).join(", "),
-    noTraits: L.filter(l => l.shared === true && !(l.traits || []).length).length,   // 1 Nov, her call: 1 or 2 traits is often fine, just avoid none
+    // 1 Nov, her call: 1 or 2 traits is often fine, just avoid none. 6 Nov: the game's hidden lots can't take traits, so they don't count
+    noTraits: L.filter(l => l.shared === true && !(l.traits || []).length && !NO_TRAIT_TYPES.has(l.type)).length,
     yours: mine.length, yoursOnSite: mine.filter(h => h.sims.length).length};
 }
 // her new save against the plan, per world started (tools/research/new_save_check.py; Claude reruns it after a session, 23 Oct)
