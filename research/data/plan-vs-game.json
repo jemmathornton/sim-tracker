@@ -507,14 +507,16 @@
      "myName": "Dusty Turf",
      "planSize": "30x20",
      "planType": "Residential",
-     "shared": false,
+     "shared": true,
      "game": {
       "name": "Dusty Turf",
       "size": "30x20",
       "area": "SO_retroSuburbs_01",
       "id": "1802561584"
      },
-     "unitOf": null
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
     },
     {
      "neighbourhood": "Parched Prospect",
@@ -784,7 +786,7 @@
       "id": "3137142788"
      },
      "unitOf": null,
-     "typeInGame": "Residential",
+     "typeInGame": "Residential Rental",
      "typeOnGallery": "Residential Rental"
     },
     {
@@ -1165,14 +1167,16 @@
      "myName": "Paddy's Place",
      "planSize": "20x20",
      "planType": "Restaurant",
-     "shared": false,
+     "shared": true,
      "game": {
       "name": "Paddywack's Emporium",
       "size": "20x20",
       "area": "EP01_Retails_01",
       "id": "1592328195"
      },
-     "unitOf": null
+     "unitOf": null,
+     "typeInGame": "Restaurant",
+     "typeOnGallery": "Restaurant"
     },
     {
      "neighbourhood": "Magnolia Promenade",
@@ -1430,6 +1434,21 @@
      "typeOnGallery": "Museum"
     },
     {
+     "neighbourhood": "Olde Platz",
+     "lot": "Ancient Ruins",
+     "myName": "Ancient Ruins",
+     "planSize": "20x15",
+     "planType": "Ancient Ruins",
+     "shared": false,
+     "game": {
+      "name": "Ancient Ruins",
+      "size": "20x15",
+      "area": "EP02_OldTownRuins_01",
+      "id": "1391722499"
+     },
+     "unitOf": null
+    },
+    {
      "neighbourhood": "Lykke Center / University of Windenburg",
      "lot": "Bathe de Rill",
      "myName": "La Discotheque",
@@ -1603,6 +1622,21 @@
      "unitOf": null
     },
     {
+     "neighbourhood": "Windslar",
+     "lot": "Von-Haunt Estate",
+     "myName": "Von-Haunt Estate",
+     "planSize": "40x30",
+     "planType": "Chalet Gardens",
+     "shared": false,
+     "game": {
+      "name": "Von Haunt Estate",
+      "size": "40x30",
+      "area": "EP02_ChaletGarden_01",
+      "id": "996802565"
+     },
+     "unitOf": null
+    },
+    {
      "neighbourhood": "The Crumbling Isle",
      "lot": "The Lighthouse",
      "myName": "The Lighthouse",
@@ -1682,37 +1716,7 @@
      "typeOnGallery": "Residential"
     },
     {
-     "neighbourhood": "Special Lots",
-     "lot": "Von-Haunt Estate",
-     "myName": "Von-Haunt Estate",
-     "planSize": "40x30",
-     "planType": "Chalet Gardens",
-     "shared": false,
-     "game": {
-      "name": "Von Haunt Estate",
-      "size": "40x30",
-      "area": "EP02_ChaletGarden_01",
-      "id": "996802565"
-     },
-     "unitOf": null
-    },
-    {
-     "neighbourhood": "Special Lots",
-     "lot": "Ancient Ruins",
-     "myName": "Ancient Ruins",
-     "planSize": "20x15",
-     "planType": "Ancient Ruins",
-     "shared": false,
-     "game": {
-      "name": "Ancient Ruins",
-      "size": "20x15",
-      "area": "EP02_OldTownRuins_01",
-      "id": "1391722499"
-     },
-     "unitOf": null
-    },
-    {
-     "neighbourhood": "Special Lots",
+     "neighbourhood": "The Crumbling Isle",
      "lot": "The Bluffs",
      "myName": "The Bluffs",
      "planSize": "30x30",
@@ -1954,14 +1958,15 @@
      "myName": "FountainView Penthouse",
      "planSize": "N/A",
      "planType": "Penthouse",
-     "shared": false,
+     "shared": true,
      "game": {
       "name": "Fountainview Penthouse",
       "size": "30x20",
       "area": "EP03_ArtsQuarter_01",
       "id": "1729429511"
      },
-     "unitOf": null
+     "unitOf": null,
+     "typeOnGallery": "Residential"
     },
     {
      "neighbourhood": "Arts Quarter",
@@ -2623,7 +2628,7 @@
       "id": "1435500562"
      },
      "unitOf": null,
-     "typeInGame": "Residential",
+     "typeInGame": "Residential Rental",
      "typeOnGallery": "Residential Rental"
     },
     {
@@ -2765,7 +2770,7 @@
       "id": "3031564292"
      },
      "unitOf": null,
-     "typeInGame": "Residential",
+     "typeInGame": "Residential Rental",
      "typeOnGallery": "Residential Rental"
     },
     {
@@ -3035,14 +3040,16 @@
      "myName": "Riverside Grove",
      "planSize": "30x20",
      "planType": "Residential",
-     "shared": false,
+     "shared": true,
      "game": {
       "name": "Riverside Grove",
       "size": "30x20",
       "area": "GP07_Downtown_01",
       "id": "3473080362"
      },
-     "unitOf": null
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
     },
     {
      "neighbourhood": "Shady Acres",
@@ -3332,14 +3339,16 @@
      "myName": "Pier Perfection",
      "planSize": "30x20",
      "planType": "Residential",
-     "shared": false,
+     "shared": true,
      "game": {
       "name": "Pier Perfection",
       "size": "30x20",
       "area": "EP07_ResortIsland",
       "id": "2165506097"
      },
-     "unitOf": null
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
     },
     {
      "neighbourhood": "Lani St. Taz",
@@ -3458,7 +3467,7 @@
      "myName": "Glimmer & Books",
      "planSize": "30x20",
      "planType": "Backroom",
-     "shared": true,
+     "shared": false,
      "game": {
       "name": "Elixirs and Brews",
       "size": "30x20",
@@ -3466,7 +3475,6 @@
       "id": "3374055458"
      },
      "unitOf": null,
-     "typeInGame": "Library",
      "typeOnGallery": "Library"
     },
     {
@@ -3526,7 +3534,7 @@
       "id": "705167367"
      },
      "unitOf": null,
-     "typeInGame": "Retail",
+     "typeInGame": "Nightclub",
      "typeOnGallery": "Nightclub"
     },
     {
@@ -3585,7 +3593,7 @@
      "lot": "Maritime Manor",
      "myName": "Foxbury Court",
      "planSize": "30x20",
-     "planType": "Nightclub",
+     "planType": "Backroom",
      "shared": true,
      "game": {
       "name": "Maritime Manor",
@@ -3714,7 +3722,7 @@
      },
      "unitOf": null,
      "typeInGame": "Residential",
-     "typeOnGallery": "University Housing"
+     "typeOnGallery": "Residential Rental"
     }
    ],
    "gameLotsNotInPlan": [],
@@ -3903,14 +3911,16 @@
      "myName": "The Caboose",
      "planSize": "30x20",
      "planType": "Bar",
-     "shared": false,
+     "shared": true,
      "game": {
       "name": "The Caboose",
       "size": "30x20",
       "area": "EP09_Industrial_01",
       "id": "3940614167"
      },
-     "unitOf": null
+     "unitOf": null,
+     "typeInGame": "Bar",
+     "typeOnGallery": "Bar"
     },
     {
      "neighbourhood": "Port Promise",
@@ -4057,14 +4067,16 @@
      "myName": "5-6-1 Shinrinyoku",
      "planSize": "20x15",
      "planType": "Residential",
-     "shared": false,
+     "shared": true,
      "game": {
       "name": "5-6-1 Shinrinyoku",
       "size": "20x15",
       "area": "EP10_MountainTown_01",
       "id": "4055105540"
      },
-     "unitOf": null
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
     },
     {
      "neighbourhood": "Senbamachi",
@@ -4120,15 +4132,17 @@
      "lot": "Izakaya Ippai",
      "myName": "Boba Ippai",
      "planSize": "30x20",
-     "planType": "Thrift and Boba Store",
-     "shared": false,
+     "planType": "Thrift and Boba Store/Karaoke Bar",
+     "shared": true,
      "game": {
       "name": "Izakaya Ippai",
       "size": "30x20",
       "area": "EP10_MountainTown_01",
       "id": "4055957510"
      },
-     "unitOf": null
+     "unitOf": null,
+     "typeInGame": "Thrift and Bubble Tea Store",
+     "typeOnGallery": "Thrift and Bubble Tea Store"
     },
     {
      "neighbourhood": "Yukimatsu",
@@ -4199,7 +4213,7 @@
      "lot": "Mt. Komorebi Base Camp",
      "myName": null,
      "planSize": "20x15",
-     "planType": null,
+     "planType": "Mount Komorebi Summit",
      "shared": false,
      "game": {
       "name": "Mt. Komorebi Base Camp",
@@ -4214,7 +4228,7 @@
      "lot": "The Croft Icefall",
      "myName": null,
      "planSize": "20x15",
-     "planType": null,
+     "planType": "Mount Komorebi Summit",
      "shared": false,
      "game": {
       "name": "The Croft Icefall",
@@ -4353,14 +4367,16 @@
      "myName": "The Olde Mill",
      "planSize": "30x20",
      "planType": "Residential",
-     "shared": false,
+     "shared": true,
      "game": {
       "name": "4 Olde Mill Lane",
       "size": "30x20",
       "area": "EP11_Rural_01",
       "id": "3887071240"
      },
-     "unitOf": null
+     "unitOf": null,
+     "typeInGame": "Residential",
+     "typeOnGallery": "Residential"
     },
     {
      "neighbourhood": "Old New Henford",
@@ -4764,7 +4780,7 @@
      "lot": "ThrifTea",
      "myName": "Prescott Boarding House",
      "planSize": "20x15",
-     "planType": "University Housing",
+     "planType": "Residential Rental (2)",
      "shared": false,
      "game": {
       "name": "ThrifTea",
@@ -4779,7 +4795,7 @@
      "lot": "Lakeview Library",
      "myName": "Lakeview Boarding House",
      "planSize": "20x20",
-     "planType": "University Housing",
+     "planType": "Residential Rental (2)",
      "shared": false,
      "game": {
       "name": "Lakeview Library",
@@ -4869,15 +4885,17 @@
      "lot": "Hillside Haven",
      "myName": "Hillside Haven",
      "planSize": "30x20",
-     "planType": "Residential",
-     "shared": false,
+     "planType": "Haunted House Residential",
+     "shared": true,
      "game": {
       "name": "Hillside Haven",
       "size": "30x20",
       "area": "EP12_Pier_01",
       "id": "801898557"
      },
-     "unitOf": null
+     "unitOf": null,
+     "typeInGame": "Vacation Rental",
+     "typeOnGallery": "Haunted House Residential"
     }
    ],
    "gameLotsNotInPlan": [],
@@ -5405,14 +5423,16 @@
      "myName": "The Screaming Gecko",
      "planSize": "20x20",
      "planType": "Karaoke Bar",
-     "shared": false,
+     "shared": true,
      "game": {
       "name": "The Screaming Gecko",
       "size": "20x20",
       "area": "EP15_RiverDelta_01",
       "id": "3481665547"
      },
-     "unitOf": null
+     "unitOf": null,
+     "typeInGame": "Karaoke Bar",
+     "typeOnGallery": "Karaoke Bar"
     },
     {
      "neighbourhood": "Koh Sahpa",

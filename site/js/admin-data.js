@@ -1,7 +1,7 @@
 // Built by tools/admin_data.py for the Admin pages (js/sections.js, 23 Oct). Don't edit this file.
 // For Jemma's PC only: never upload this file if the site goes online (it holds her to-dos and admin notes).
 window.ADMIN = {
-"made": "2026-11-02",
+"made": "2026-11-05",
 "refresh": [
 {
 "when": "13 Oct 2026 18:27",
@@ -344,6 +344,11 @@ window.ADMIN = {
 },
 {
 "section": "Before the new save: decide first",
+"world": "San Myshuno",
+"text": "**Decide:** FountainView Penthouse: your plan's type is “Penthouse”, which isn't one of the game's lot types (its upload says Residential). Change it to Residential, or keep “Penthouse”?"
+},
+{
+"section": "Before the new save: decide first",
 "world": "Willow Creek",
 "text": "**Decide:** Hallow Slough (Ella-Mint's home): Haunted House, On Hallowed Ground, or neither?"
 },
@@ -543,9 +548,19 @@ window.ADMIN = {
 "text": "**Do:** The Cadberrys, as one job when you're ready (options in research/own-households-recommendations.md): uploading Leah-Moon (Library, take Sterling and Sylvia out first) and Sylvia & Kenny (“Not So Berry”), Ella-Mint, Isda Riverfront's family, the Rochanas (Isda Riverfront's tenants, also from “Not So Berry”: keep or drop?), the 100 Babies Final House upload (Ella-Mint's home, or not?), and their links (Leah-Moon is Sylvia's mother; Kennedy Kirkland and Sylvia are good friends)."
 },
 {
+"section": "Before the new save: households (your Library and the Gallery)",
+"world": "",
+"text": "**Do:** Old saves that can go now (checked 5 Nov): “Vivian - 100 Baby Test” and “Vivian - 100 Babies Challenge” (superseded by “100 Baby Challenge!!”), “My Saved Game 2” and Rotational's “--safe” copy (the game doesn't list them). Every other save still holds something only it has (research/saves-review.md); each one-off save above can go once its household is saved."
+},
+{
 "section": "Before the new save: mods",
 "world": "",
 "text": "**Do:** UI Cheats Extension: you already have the latest, v1.59.1 (checked 1 Nov: your files are identical to the download; the version inside still says 1.59). It mostly works on EA's 27 Oct patch (weerbesu said so in the post's comments on 30 Oct), but until he makes a version for it: “Remove this workplace rival” and setting a Sim's relationship with an object won't work (EA renamed what they use), Game Options won't show EA's new Allow Weight Changes and Allow Muscle Changes (take UI Cheats out of Mods while you set them in the new save, then put it back), and moving households in Manage Worlds uses the old way, without EA's 27 Oct fix. Done 30 Oct: MCCC and MC Woohoo 2026.6.0, LittleMsSam's Dress Code (27 Aug 2025) and Pet to Pet Greeting Fix (every other LittleMsSam mod checked: already current), Ravenwood's seasons mod swapped for the patched copy (keeps its lot types); SimMattically's Remove Purchase Button rebuilt on EA's current top-right bar; Party Anywhere, the SulSul Weather App script and the Dress Code Seasons add-on removed; NateTheL0ser's thrift store mod swapped for alasEnkidu's ThrifTea one, patched for 1.129. Done 31 Oct: six mods swapped for patched copies that add back what EA added since (Zerbu's High School Spawn Fix, More Discipline, Weather NPC Death Fix, Pet to Pet Greeting Fix, Choose Your Helmet, Mermaids Can Use Dock Ladders). The old files are in “Mods backup 2026-10-30” beside your Mods folder (delete it once all works)."
+},
+{
+"section": "In the new save: setting it up",
+"world": "",
+"text": "**Do:** First, make one untouched save: a new game, change nothing, save and quit, and tell Claude its name. Claude's new-save check compares against EA's own lots; its copy (“My Saved Game 4,376”) is from before EA's 27 Oct patch, so changed lots could read as placed. That save can go afterwards."
 },
 {
 "section": "In the new save: setting it up",

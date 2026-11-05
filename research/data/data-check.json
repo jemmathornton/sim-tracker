@@ -1,6 +1,7 @@
 {
  "name_plan_vs_gallery": [
   "Oasis Springs / Bedrock Strait / Agave Abode: her name 'Agave Abode', upload title 'Agave Above'",
+  "Newcrest / Bridgeview / Newcrest Community Space: her name 'Newcrest Community Space', upload title 'Newcrest Community Makers'",
   "Newcrest / Llama Lagoon / The Ice Pavilion: her name 'The Ice Pavilion', upload title 'The Ice Pavillion'",
   "Magnolia Promenade / Magnolia Promenade / Llama Picturehouse: her name 'Llama Picturehouse', upload title 'The Llama Picturehouse'",
   "Del Sol Valley / Mirage Park / Inner Circle: her name 'Inner Circle', upload title 'The Inner Circle'",
@@ -10,7 +11,6 @@
   "Tomarang / Morensong / Chee-wit Chee-waa Kanto: her name 'Chee-wit Chee-waa Kanto', upload title 'Chee-wít Chee-waa'"
  ],
  "no_description": [
-  "Oasis Springs / Desert Bloom Park",
   "Granite Falls / Campground",
   "Magnolia Promenade / Secret Lots",
   "Del Sol Valley / Secret Lots",
@@ -21,6 +21,7 @@
   "Granite Falls / Campground / Campground: plan Vacation Rental, upload Residential",
   "Granite Falls / Campground / Green Getaway: plan Vacation Rental, upload Residential",
   "Granite Falls / Campground / Lakeside Retreat: plan Vacation Rental, upload Residential",
+  "San Myshuno / Arts Quarter / FountainView Penthouse: plan Penthouse, upload Residential",
   "Selvadorada / Puerto Llamante Marketplace / Hillside Hideaway: plan Vacation Rental, upload Residential",
   "Selvadorada / Puerto Llamante Marketplace / Selvadorada Villa: plan Vacation Rental, upload Residential",
   "Selvadorada / Belomisia Jungle / Jungle Bungalow: plan Vacation Rental, upload Residential",
@@ -31,12 +32,9 @@
   "Britechester / University of Britechester / The Old Clocktower: plan Backroom, upload Nightclub (one of its kept versions)",
   "Britechester / Foxbury Institute / Foxbury Court: plan Backroom, upload Nightclub (one of its kept versions)",
   "Britechester / Gibbs Hill / Mossy Lane: plan University Housing, upload Residential",
-  "Britechester / Gibbs Hill / Spring Steppes: plan Residential Rental (3), upload University Housing (one of its kept versions)",
   "Mt. Komorebi / Yukimatsu / 5-1-1 Kiyomatsu: plan Vacation Rental, upload Residential",
   "Mt. Komorebi / Yukimatsu / 5-1-2 Kiyomatsu: plan Vacation Rental, upload Residential",
-  "Copperdale / Prescott Square / Town Square Stores: plan Thrift and Boba Store, upload Thrift and Bubble Tea Store",
-  "Chestnut Ridge / Galloping Gulch / Big Sky Reach: plan Vacation Rental, upload Residential",
-  "Tomarang / Morensong / Chee-wit Chee-waa Kanto: plan Thrift and Boba Store, upload Thrift and Bubble Tea Store"
+  "Chestnut Ridge / Galloping Gulch / Big Sky Reach: plan Vacation Rental, upload Residential"
  ],
  "upload_not_shared": [
   "Glimmerbrook / Glimmerbrook / Glimmer & Books (shared: False)"

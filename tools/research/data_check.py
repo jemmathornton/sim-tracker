@@ -15,6 +15,7 @@ US = {r'\bneighborhoods?\b': 'neighbourhood', r'\bfavorites?\b': 'favourite', r'
       r'\bmold\b': 'mould', r'\bpajamas\b': 'pyjamas', r'\bcatalog\b': 'catalogue', r'\bdefense\b': 'defence', r'\bcolor(s|ful)?\b': 'colour'}
 PROPER = r'Lykke Center|Information Center|Civic Center|Center Park|Recreation Center|Rec Center|Equestrian Center'   # the game's own names
 SAME_TYPE = {'small business': 'small business venue', 'rec center': 'recreation center', 'boba & thrift': 'thrift and bubble tea store',
+             'thrift and boba store': 'thrift and bubble tea store',   # her British name for the game's type (CLAUDE.md)
              'uob commons': 'ubrite commons', 'apartment': 'residential', 'small business residential': 'residential'}
 
 
