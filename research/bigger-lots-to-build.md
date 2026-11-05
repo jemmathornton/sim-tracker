@@ -196,15 +196,19 @@ Bedroom counts treat couples as sharing a room.
 - Giardino Del Grandioso (64×64): the Altos' vineyard business; the Sims are still to make.
 - La Vivace (Lounge, 40×30): add a Waltzing Dance Floor (on your list).
 
-**Special lots** (they can only be partly changed, if at all)
-- Magnolia Promenade: Police Station, FutureSim Labs, Willow Creek Hospital.
-- Del Sol Valley: Plumbob Pictures.
-- StrangerVille: the Secret Lab.
-- Ravenwood: Netherworld Department.
-- Henford-on-Bagley: Isle of Volpe.
-- Windenburg: Von-Haunt Estate and The Bluffs.
-- Selvadorada: Omiscan Royal Baths, Belomisia Trailhead and the Alam Museum of Archaeology.
-- Granite Falls: Granite Falls Forest.
+**Ordinary types after all** (corrected 6 Nov, research/special-lots.md)
+- **Alam Museum of Archaeology** (Selvadorada, Museum, 64×64).
+- **National Parks:** Granite Falls Forest, Belomisia Trailhead (Selvadorada), Isle of Volpe (Henford-on-Bagley).
+
+**Special lots** (research/special-lots.md)
+- **Can be shared, as Generic or Residential:**
+  - Magnolia Promenade: Police Station, FutureSim Labs, Willow Creek Hospital.
+  - Del Sol Valley: Plumbob Pictures.
+  - Ravenwood: Netherworld Department.
+  - Windenburg: Ancient Ruins, Von-Haunt Estate, The Bluffs.
+  - Granite Falls: Hermit's House.
+  - Sixam.
+- **Probably can't be shared:** Sylvan Glade, Forgotten Grotto, the Secret Lab, Omiscan Royal Baths and the Mt. Komorebi summit lots.
 
 ## Claude's pick (*suggestion*)
 - **Check first, they may only need a playtest:** Kiyomatsu Point, Magnolia Mall and Sequoia Cottages. All three are recent builds of yours in the Library.

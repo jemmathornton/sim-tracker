@@ -9,7 +9,7 @@ Where the facts come from:
 
 Ideas are marked *suggestion*. Every choice is yours.
 
-Left out: the special lots you can't build on (Sylvan Glade, Forgotten Grotto, Ancient Ruins, Sixam, the Mt. Komorebi summit lots), LaSuli Point (waiting on your decision), and 5-6-1 Shinrinyoku (done 2 Nov).
+(6 Nov: which special lots can be shared is now in research/special-lots.md.) Left out: the special lots you can't build on (Sylvan Glade, Forgotten Grotto, Ancient Ruins, Sixam, the Mt. Komorebi summit lots), LaSuli Point (waiting on your decision), and 5-6-1 Shinrinyoku (done 2 Nov).
 
 ## Quick to playtest: homes
 

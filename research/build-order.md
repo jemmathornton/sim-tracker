@@ -62,7 +62,7 @@ None of them is on the Gallery yet. I checked your Library copies for a Gallery 
 - Then Sequoia Cottages (unit 2's traits) and Kiyomatsu Point (traits, description, schedule).
 - Six lots for little building.
 
-**Step 2: finish a world.** These are the worlds with the fewest lots left (not counting special lots):
+**Step 2: finish a world.** These are the worlds with the fewest lots left (not counting special lots). Correction, 6 Nov: Granite Falls still has Granite Falls Forest to build, an ordinary National Park, and Selvadorada has the Alam Museum and Belomisia Trailhead (research/special-lots.md).
 - **Newcrest: 1 left**, Rippling Flats. You have it in "Building #2" (489 objects, Fast Internet and Good Schools). It still needs splitting into 2 units for Kamilla and Chris. Done, Newcrest is complete.
 - **Magnolia Promenade:** Magnolia Mall is its only buildable lot left (the rest are special lots).
 - **Oasis Springs: 2 left**, Affluista Mansion and Yuma Heights, plus the Springscape rebuild.
