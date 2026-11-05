@@ -43,6 +43,9 @@ Ideas are marked *suggestion*. Every choice is yours.
   - Still to do: split it into 2 units (on your list).
 
 ### Older builds of yours (2017–2023): your call whether they still count
+
+Picture sheets of each newest Library copy (added 6 Nov) are in `for-jemma/lot-compare/`, named after the lot plus "-library": Brook Bungalow, Rock Ridge Canyon, Studio PBP, StrangerVille Information Center, Pigulock Manor, It's A Good House, Hound's Head, Myshuno Meadows, 13 Nettle Lane, Abandoned Views, BridgeCreek Drive, Copperdale Auditorium, Affluista Mansion, 1 Torendi Tower Penthouse, Catscratch Cottage, Champion's Grove, Copperdale High School, Rippling Flats, Elixirs and Brews and Springscape. Older Library copies often record 0 bedrooms; that's the game's old count, not the build.
+
 - **Brook Bungalow** (Willow Creek, 40×30): three Library copies, 27 Apr 2021, with EA's description.
 - **Rock Ridge Canyon** (Glimmerbrook, 40×30)
   - Two Library copies, from May and Sep 2020.
