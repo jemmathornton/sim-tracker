@@ -2,6 +2,8 @@
 
 Compiled 13 October 2026 from web sources (listed at the end). The Sims Wiki (sims.fandom.com) could only be reached intermittently, so several entries rely on simscommunity.info, snootysims.com, EA's own pages and EA Forums Q&A threads.
 
+> **6 Nov:** every venue's required objects are now confirmed from the game's own files (patch 1.129): research/playtest-checklist.md. Where this page differs (older Prima lists, the ThrifTea row marked [?]), that file wins. The Thrift and Bubble Tea list below matches the game.
+
 **Confidence labels**
 - **[C]**: confirmed by at least two sources, or by an official EA source.
 - **[S]**: one reliable source only.
