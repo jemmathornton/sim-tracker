@@ -219,7 +219,7 @@ Threads EA starts and never finishes. Most cross worlds.
 2. **Kiyoshi and Kaori.** The mountain’s own Romeo and Juliet: Kaori loves Kiyoshi Ito, son of her grandfather’s sworn enemy.
    - Touches: Nishidakes, Itos. Changes: **none**.
    - Lore: [Kaori Nishidake](https://sims.fandom.com/wiki/Kaori_Nishidake)
-3. **Kaori’s parents at 2-4-1 Wakabamori.** Kaori lost both parents; your new cemetery holds their graves, and she visits with her grandparents.
+3. **Kaori’s parents at 2-4-1 Wakabamori.** Kaori lost both parents; your new cemetery holds their graves, and she visits with her grandparents. **Chosen 6 Nov:** she'll build the cemetery and add the graves later (on her list).
    - Touches: 2-4-1 Wakabamori (not built). Changes: **none** (decorative graves).
    - Lore: [Kaori Nishidake](https://sims.fandom.com/wiki/Kaori_Nishidake)
 

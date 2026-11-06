@@ -635,6 +635,11 @@ window.ADMIN = {
 {
 "section": "In the new save: households and clubs",
 "world": "",
+"text": "**Do:** Kaori Nishidake's parents (EA never names them): make them in Create a Sim as Shigeru and Sachiko's late daughter and her husband, and give them graves in a Nishidake family plot at 2-4-1 Wakabamori, the Mt. Komorebi cemetery (your call, 6 Nov; the cemetery gets built first)."
+},
+{
+"section": "In the new save: households and clubs",
+"world": "",
 "text": "**Do:** Faye Evergreen (Library, June 2025; in “Season Events” with River Evergreen, Izabella Crawley and Squee at Cordelia’s Secret Cottage): someone you’re going to turn into a fairy later."
 },
 {

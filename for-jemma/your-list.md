@@ -109,6 +109,7 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 ## In the new save: households and clubs
 - **Do:** After bringing households in, put back the links between households with MC Command Center: only EA’s own and the Watson ones, not those Neighbourhood Stories made (your call, 31 Oct; research/inter-household-relationships.md lists each one, and which the new save already has).
 - **Do:** Download Sebastian Michaelson from Maxis's Gallery and merge him into the Michaelsons (7 Eucalyptus Lane) with MC Command Center, Celeste as his daughter (your call, 1 Nov). Merrilyn Ralston: later.
+- **Do:** Kaori Nishidake's parents (EA never names them): make them in Create a Sim as Shigeru and Sachiko's late daughter and her husband, and give them graves in a Nishidake family plot at 2-4-1 Wakabamori, the Mt. Komorebi cemetery (your call, 6 Nov; the cemetery gets built first).
 - **Do:** Faye Evergreen (Library, June 2025; in “Season Events” with River Evergreen, Izabella Crawley and Squee at Cordelia’s Secret Cottage): someone you’re going to turn into a fairy later.
 - **Do:** Rippling Flats’ “current uni Sims” are Kamilla Jackson and Chris Whitmore (“All Universities”, at UoW Hare Halls; Tony Whitmore in your Library): they finish their degrees, then move in next door to each other, one unit each, maybe each with a partner or family.
 - **Do:** Owners living away (Robles, Kirklands): merge other households into theirs, never theirs into another.
