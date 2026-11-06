@@ -737,6 +737,11 @@ window.ADMIN = {
 {
 "section": "Any time",
 "world": "",
+"text": "**Decide:** Rental lot pages (since 24 Oct): the big “Who owns it” block (the landlord's whole family) is gone, and each unit now links to its household. Have a look at one (e.g. Tail's End Apartments or Rio Verde): keep it like that?"
+},
+{
+"section": "Any time",
+"world": "",
 "text": "**Decide:** Going online: only if you ever want it on other devices (free and private with Cloudflare)."
 }
 ],

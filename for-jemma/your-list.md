@@ -134,4 +134,5 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 - **Do:** Screenshot each unit of a rental to get photo tabs per unit (only Rio Verde so far).
 - **Do:** San Myshuno: make your own map adjustments, then recheck its banners and boxes.
 - **Do:** Browse the story hooks when in the mood (research/story-ideas.md).
+- **Decide:** Rental lot pages (since 24 Oct): the big “Who owns it” block (the landlord's whole family) is gone, and each unit now links to its household. Have a look at one (e.g. Tail's End Apartments or Rio Verde): keep it like that?
 - **Decide:** Going online: only if you ever want it on other devices (free and private with Cloudflare).
