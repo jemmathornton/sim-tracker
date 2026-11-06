@@ -27,7 +27,7 @@
    "mapSpot": [0.69, 0.34],
    "mapBox": [0.55, 0.25, 0.83, 0.44],
    "lots": [
-    {"lot": "Cliff Side Crest", "myName": "StrangerVille Gym&Pool", "type": "Gym", "size": "30x20", "residents": "N/A", "built": true, "shared": false, "screenshots": false, "simsMade": "N/A"},
+    {"lot": "Cliff Side Crest", "myName": "SU Sports Center", "type": "Gym", "size": "30x20", "residents": "N/A", "built": true, "shared": false, "screenshots": false, "simsMade": "N/A"},
     {"lot": "Creek Corner Cove", "myName": "Creek Corner Cove", "type": "Residential", "size": "30x20", "residents": "Roswell", "built": false, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Plateau Place", "myName": "SU Plateau Residence", "type": "University Housing", "size": "40x30", "residents": "Empty", "built": true, "shared": false, "screenshots": false, "simsMade": false},
     {"lot": "Dream Weavers Way", "myName": "StrangerVille Library", "type": "Library", "size": "30x20", "residents": "N/A", "built": true, "shared": false, "screenshots": false, "simsMade": "N/A"},

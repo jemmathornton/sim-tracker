@@ -383,7 +383,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 **Shady Acres**
 
-- [ ] **StrangerVille Gym&Pool** (game’s Cliff Side Crest), 30x20: built but not on the Gallery: bring it over through your Library (1 copy, 21 Dec 23) (if you changed it in your Building save since, save it to your Library again from there first). Type: Gym.
+- [ ] **SU Sports Center** (game’s Cliff Side Crest), 30x20: built but not on the Gallery: bring it over through your Library (if you changed it in your Building save since, save it to your Library again from there first). Type: Gym.
 - [ ] **Creek Corner Cove**, 30x20: not built yet: leave the game’s lot for now. Type: Residential. Household: Roswell (EA).
 - [ ] **SU Plateau Residence** (game’s Plateau Place), 40x30: built but not on the Gallery: bring it over through your Library (1 copy, 21 Dec 23) (if you changed it in your Building save since, save it to your Library again from there first). Type: University Housing. University: pick in game.
 - [ ] **StrangerVille Library** (game’s Dream Weavers Way), 30x20: built but not on the Gallery: bring it over through your Library (1 copy, 21 Dec 23) (if you changed it in your Building save since, save it to your Library again from there first). Type: Library.

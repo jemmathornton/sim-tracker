@@ -1,7 +1,7 @@
 // Built by tools/admin_data.py for the Admin pages (js/sections.js, 23 Oct). Don't edit this file.
 // For Jemma's PC only: never upload this file if the site goes online (it holds her to-dos and admin notes).
 window.ADMIN = {
-"made": "2026-11-05",
+"made": "2026-11-06",
 "refresh": [
 {
 "when": "13 Oct 2026 18:27",
@@ -415,7 +415,7 @@ window.ADMIN = {
 {
 "section": "Before the new save: build and share (any save, then the Gallery)",
 "world": "",
-"text": "**Do:** Fix before uploading (found in “Building #2”, 1 Nov, still there 6 Nov): StrangerVille Gym&Pool is set as a Pool (your plan: Gym); Lakeview and Prescott Boarding Houses are plain Residential (your plan: 2-unit rentals), and Prescott has no traits; no traits on Pinecrest Apartments #402, Isda Riverfront's two units or Sequoia Cottages' unit 2; Kiyomatsu Point has no traits and EA's description."
+"text": "**Do:** Fix before uploading (found in “Building #2”, 1 Nov, still there 6 Nov): SU Sports Center (StrangerVille, was Gym&Pool) is set as a Pool (your plan: Gym); Lakeview and Prescott Boarding Houses are plain Residential (your plan: 2-unit rentals), and Prescott has no traits; no traits on Pinecrest Apartments #402, Isda Riverfront's two units or Sequoia Cottages' unit 2; Kiyomatsu Point has no traits and EA's description."
 },
 {
 "section": "Before the new save: build and share (any save, then the Gallery)",
