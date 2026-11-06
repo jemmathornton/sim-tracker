@@ -13,7 +13,7 @@ Every "Decide" on your list, in an order that gets the quick ones out of the way
 8. **The 8 lots that can't be shared** (new 6 Nov, research/special-lots.md): stop counting them as "to build"? My pick: yes, show them as the game's own.
 
 ## Need a moment
-9. **Lagoon of Love** (§1, plus 6 Nov): the beach wedding spot (no bedrooms) or the stilt holiday house (3 bedrooms)? My pick: Wedding Venue, with the beach build. Sulani has no wedding venue, and it needs no pack. Pictures: for-jemma/lot-compare/lagoon-look.jpg.
+9. **Lagoon of Love** (§1, plus 6 Nov): the beach wedding spot (no bedrooms) or the stilt holiday house (3 bedrooms)? My pick: Wedding Venue, with the beach build. Sulani has no wedding venue, and the Wedding Venue lot type needs no pack (your build itself uses 9). Pictures: for-jemma/lot-compare/lagoon-look.jpg.
 10. **Key Point** (§10): a castaway hut as a Vacation Rental, or Generic (which can be Off-the-Grid)? My pick: Generic. It's your taste.
 11. **Specter Row** (§13): a 2-unit rental with On Hallowed Ground, or a Haunted House? My pick: the rental.
 12. **Love Highland** (§16): a Custom Venue run by the Addams as story only, or their home again? My pick: their home.
