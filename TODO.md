@@ -23,6 +23,13 @@ Every open item carried over from the claude.ai project on 13 Oct 2026: the note
 
 **6 Nov (her calls):** StrangerVille Gym&Pool is SU Sports Center again, a Gym, uploaded with the StrangerVille uni group (SU Plateau, SU Overlook, SU Sports Center, StrangerVille Library, already playtested). 8 Bells needs rebuilding (her 2019 build won't do). FountainView Penthouse's type is Residential. 2-4-1 Wakabamori gets built as Mt. Komorebi's cemetery; later, Kaori Nishidake's parents get made in Create a Sim with graves there (bonus story; on her list). One-tile helper rooms from the Gallery need no credit.
 
+**Overnight 6–7 Nov (her picks):**
+- research/rental-unit-traits.md: trait ideas for every rental unit with none.
+- research/uni-groups-check.md: StrangerVille's and Windenburg's uni groups. SU Overlook Halls has no university set, and the plan says "Residence" where the save says "Halls"; both are on her list.
+- research/next-builds.md: eight small lots in detail.
+- research/who-lives-where-queue.md: the order to go through homes-that-fit. homes-that-fit had "his" for Ash Carrington and Henri Penkridge; fixed.
+- Also 6 Nov: 8 Bells (rebuilt) and Wakabamori Cemetery shared.
+
 **[Jemma]** = needs her decision or input. **[Claude]** = can be done without her once the app is set up. Tick items here as they're done.
 
 ## 0. Moving to the app
