@@ -315,6 +315,10 @@ Each world now has a note: research/worlds/<world>.md (plus research/evergreen-h
 - [ ] [Claude] (24 Oct, her ask) After she uploads her households to the Library/Gallery: check each against the site (Sims, ages, who's in it; e.g. is Vivienne Barraza still there, Leah-Moon without Sterling and Sylvia), then rerun tools/own_import.py and tools/library_pictures.py --apply **6 Nov: checked the 20 uploaded so far: every one matches the site (same Sims, same life stages, from each upload's member list on the Gallery); library_pictures rerun (Mikamis, Hassanis, Ferraras added), library_update has nothing to change. Keep open for the rest.**
 - [ ] [Claude] (24 Oct: first step done, the "Who owns it" block is gone from rentals and the units list links each household; waiting for her look) Redo the rental lot page layout: drop the big "Who owns it" block (the landlord's whole family) unless there's a better idea; show who lives in each unit as a plain link to their household, no family details. Show her before keeping it (site switch, bottom right)
 - [ ] [Claude] (24 Oct, her note) Small business owners may have written-in jobs too; they're household-owned, so she'll help sort who does what. Custom jobs are read as `career` + `careerNote` (tools/own_import.py, tools/library_update.py)
+- [ ] [Claude] When she restarts the new save (her list; checklist step 1):
+  - make the baseline from her untouched copy: `tools/research/new_save_check.py --baseline <its file>`;
+  - point SAVE_NAME in that script at the new save's name (it looks for “Jemma's Sim World”);
+  - rerun the check and build.
 - [ ] [Claude] When Sims go in: key each Sim by the game’s sim id, not its name (two Sims can share a name)
 
 ### Empty homes page and filters (prototypes: for-jemma/prototypes/lots/index.html, opens from the folder)
