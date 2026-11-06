@@ -22,7 +22,7 @@ None of them is on the Gallery yet. I checked your Library copies for a Gallery 
 - **Watch out:** it uses 14 packs. On your Gallery, builds needing 5 or more packs get far fewer downloads.
 - **Owners:** your plan says the Kirklands own it. That doesn't stop an upload (your rule, 1 Nov).
 
-**8 Bells** (StrangerVille): ready to playtest
+**8 Bells** (StrangerVille): **needs rebuilding** (her call, 6 Nov: the 2019 build won't do)
 - **Library copy (MsTiquelle, 16 Jun 2019):** Bar, 20×20, Convivial and Sunny Aspect, with your own description.
 - **"Building #2"** has the same, 151 objects, using StrangerVille, Cats & Dogs and four smaller packs.
 - **Watch out:** it's from 2019, so it's worth a look for anything you'd now build differently.
@@ -58,7 +58,7 @@ None of them is on the Gallery yet. I checked your Library copies for a Gallery 
 ## 2. Suggested order
 
 **Step 1: the builds you already have** (above)
-- First Magnolia Mall, 8 Bells, Willow Creek Archive and Quad Manor.
+- First Magnolia Mall, Willow Creek Archive and Quad Manor (8 Bells needs rebuilding, your call 6 Nov).
 - Then Sequoia Cottages (unit 2's traits) and Kiyomatsu Point (traits, description, schedule).
 - Six lots for little building.
 

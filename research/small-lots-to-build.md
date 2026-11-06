@@ -177,7 +177,7 @@ Short version. Bedroom counts treat couples as sharing a room.
 ## Claude's pick, if you want one (*suggestion*)
 
 - **Quickest:**
-  - 8 Bells (you already have your own Bar).
+  - 8 Bells: a rebuild (your 2019 version won't do, your call 6 Nov).
   - StrangerVille Information Center (your Library copy plus a bar).
 - **Then:**
   - 2-4-1 Wakabamori, to go with the Nishidakes you've just done.
