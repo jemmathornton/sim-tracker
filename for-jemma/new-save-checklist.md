@@ -370,11 +370,11 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 ### StrangerVille
 
-12 lots: 3 on the Gallery, 4 built but not shared, 5 not built.
+12 lots: 4 on the Gallery, 4 built but not shared, 4 not built.
 
 **StrangerVille Plaza**
 
-- [ ] **8 Bells**, 20x20: not built yet: leave the game’s lot for now. Type: Bar.
+- [ ] **8 Bells**, 20x20: place “8 Bells”. Type: Bar.
 - [ ] **StrangerVille Information Center**, 20x20: not built yet: leave the game’s lot for now. Type: Backroom.
 - [ ] **Carpophagous Corner**, 30x20: place “Carpophagous Corner”. Type: Vacation Rental. It comes in as Residential (its upload’s type): set it to Vacation Rental after placing. Traits: Science Lair, Bracing Breezes. Challenge: Quake Zone. Trait ideas (free slots): + Peace and Quiet.
 - [ ] **Slip 42**, 20x15: place “Slip 42”. Not the other copy: “Slip 42” (Residential). Type: Residential Rental (2). Challenges: Creepy Crawlies, Quake Zone, Filthy. Units (set after placing): 1; 2.
@@ -492,11 +492,11 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 ### Mt. Komorebi
 
-17 lots: 8 on the Gallery, 0 built but not shared, 9 not built.
+17 lots: 9 on the Gallery, 0 built but not shared, 8 not built.
 
 **Wakaba**
 
-- [ ] **2-4-1 Wakabamori**, 20x15: not built yet: leave the game’s lot for now. Type: Cemetery.
+- [ ] **Wakabamori Cemetery** (game’s 2-4-1 Wakabamori), 20x15: place “Wakabamori Cemetery”. Type: Cemetery.
 - [ ] **2-4-2 Wakabamori**, 30x20: place “2-4-2 Wakabamori”. Type: Residential. Household: Akiyama (EA). Traits: Child’s Play, Good Schools. Trait ideas (free slots): + Homey.
 - [ ] **2-4-3 Wakabamori**, 20x15: place “2-4-3 Wakabamori”. Type: Residential. Household: Mikami (yours). Traits: Good Schools, Peace and Quiet. Trait ideas (free slots): + Homey.
 - [ ] **2-5-1 Wakabamori**, 50x50: not built yet: leave the game’s lot for now. Type: Residential. Household: Ito (EA).

@@ -1153,6 +1153,10 @@ window.ADMIN = {
 "s": "placed",
 "fix": []
 },
+"l-strangerville--8-bells": {
+"s": "to place",
+"fix": []
+},
 "l-strangerville--carpophagous-corner": {
 "s": "placed",
 "fix": [
@@ -1308,6 +1312,10 @@ window.ADMIN = {
 "fix": []
 },
 "l-evergreen-harbor--the-portsmouth-promenade": {
+"s": "to place",
+"fix": []
+},
+"l-mt-komorebi--2-4-1-wakabamori": {
 "s": "to place",
 "fix": []
 },
@@ -2085,6 +2093,7 @@ window.ADMIN = {
 "world": "StrangerVille",
 "placed": 2,
 "toPlace": [
+"8 Bells",
 "Riverside Grove"
 ],
 "fixes": [

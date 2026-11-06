@@ -2,7 +2,7 @@
 
 Made by tools/research/new_save_check.py from a copy of the save. Lots: placed / to place / the game’s lot; anything that differs from the plan is listed. Households: who isn’t home yet.
 
-**At a glance:** 91 lots placed in 11 worlds; 87 shared lots still to place. 48 households at home, 46 to move, 30 not in the save yet.
+**At a glance:** 91 lots placed in 11 worlds; 89 shared lots still to place. 48 households at home, 46 to move, 30 not in the save yet.
 
 ## Game options
 
@@ -104,7 +104,7 @@ Made by tools/research/new_save_check.py from a copy of the save. Lots: placed /
 
 ## StrangerVille
 
-- **To place:** Riverside Grove
+- **To place:** 8 Bells, Riverside Grove
 - **Carpophagous Corner:** lot type in the save: Residential (plan: Vacation Rental)
 - **Move Roswell** to Creek Corner Cove (now: StrangerVille Overlook)
 

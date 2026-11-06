@@ -1608,7 +1608,7 @@
     "hood": "Arts Quarter",
     "built": true,
     "shared": true,
-    "type": "Penthouse",
+    "type": "Residential",
     "issues": [],
     "save_name": "Fountainview Penthouse",
     "placed": false,
@@ -2357,15 +2357,15 @@
     "lot": "8 Bells",
     "name": "8 Bells",
     "hood": "StrangerVille Plaza",
-    "built": false,
-    "shared": false,
+    "built": true,
+    "shared": true,
     "type": "Bar",
     "issues": [],
     "save_name": "8 Bells",
     "placed": false,
     "objs": 80,
     "game_objs": 80,
-    "status": "game lot"
+    "status": "to place"
    },
    {
     "lot": "StrangerVille Information Center",
@@ -2440,7 +2440,7 @@
    },
    {
     "lot": "Cliff Side Crest",
-    "name": "StrangerVille Gym&Pool",
+    "name": "SU Sports Center",
     "hood": "Shady Acres",
     "built": true,
     "shared": false,
@@ -3203,17 +3203,17 @@
   "Mt. Komorebi": [
    {
     "lot": "2-4-1 Wakabamori",
-    "name": "2-4-1 Wakabamori",
+    "name": "Wakabamori Cemetery",
     "hood": "Wakaba",
-    "built": false,
-    "shared": false,
+    "built": true,
+    "shared": true,
     "type": "Cemetery",
     "issues": [],
     "save_name": "2-4-1 Wakabamori",
     "placed": false,
     "objs": 0,
     "game_objs": 0,
-    "status": "game lot"
+    "status": "to place"
    },
    {
     "lot": "2-4-2 Wakabamori",
