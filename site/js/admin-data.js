@@ -420,7 +420,7 @@ window.ADMIN = {
 {
 "section": "Before the new save: build and share (any save, then the Gallery)",
 "world": "",
-"text": "**Do:** Ready for your playtest (research/build-order.md): builds you already have (Magnolia Mall, 8 Bells, Willow Creek Archive, Quad Manor); built lots with no problems found (1313 21 Chic Street, 1 Cobblebottom Street, Paradise Stables, StrangerVille Library, 3 Cobblebottom Street, Ravenwood Wedding Hall); later, the university groups (Windenburg's five, StrangerVille's three)."
+"text": "**Do:** Ready for your playtest (research/build-order.md): builds you already have (Magnolia Mall, 8 Bells, Willow Creek Archive, Quad Manor); built lots with no problems found (1313 21 Chic Street, 1 Cobblebottom Street, Paradise Stables, 3 Cobblebottom Street, Ravenwood Wedding Hall); later, the university groups, each uploaded together: Windenburg (La Discotheque, UoW Hare Halls, UoW Hedgehog Halls, UoW Students Union, UoW Sports Center) and StrangerVille (SU Plateau Residence, SU Overlook Residence, SU Sports Center, and StrangerVille Library, already playtested)."
 },
 {
 "section": "Before the new save: build and share (any save, then the Gallery)",
