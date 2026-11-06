@@ -62,7 +62,7 @@ Faye (young adult, Conservationist, Eco Innovator, your future fairy), Izabella 
 
 | | Home | Bedrooms | Why |
 |---|---|---|---|
-| 1 | Glimmerbrook Watch, Glimmerbrook | 1 (Gallery) | His home in “It’s Magic!”, and your text is written for a spellcaster. On 28 Oct you noted he might move in with someone instead. |
+| 1 | Glimmerbrook Watch, Glimmerbrook | 1 (Gallery) | Her home in “It’s Magic!”, and your text is written for a spellcaster. On 28 Oct you noted she might move in with someone instead. |
 
 ### Lena Garcia
 1 young adult, the Hero of StrangerVille: Active, Loves Outdoors, Noncommittal. She has §769 in that save. (From “StrangerVille Playthrough”.)
@@ -85,7 +85,7 @@ Four adults: Rachel and Robin O’Brian, Yin Spirit and Bridgette Adams. They ne
 | | Home | Bedrooms | Why |
 |---|---|---|---|
 | 1 | 18 Culpepper House, San Myshuno | 2 (plan) | Your text says it’s “a stones throw” from restaurants and karaoke bars, and good for inviting friends back. That fits a Party Animal. |
-| 2 | Pebble Burrow, Oasis Springs | 2 (Gallery) | His home in “Sulani Save”. |
+| 2 | Pebble Burrow, Oasis Springs | 2 (Gallery) | Her home in “Sulani Save”. |
 
 ### Vivian Little
 1 young adult: Family-Oriented, Childish, Self-Assured, with the Big Happy Family aspiration, so room for children matters. (From your Library and “Building #2”.)
