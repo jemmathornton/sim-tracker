@@ -23,6 +23,23 @@ Every open item carried over from the claude.ai project on 13 Oct 2026: the note
 
 **6 Nov (her calls):** StrangerVille Gym&Pool is SU Sports Center again, a Gym, uploaded with the StrangerVille uni group (SU Plateau, SU Overlook, SU Sports Center, StrangerVille Library, already playtested). 8 Bells needs rebuilding (her 2019 build won't do). FountainView Penthouse's type is Residential. 2-4-1 Wakabamori gets built as Mt. Komorebi's cemetery; later, Kaori Nishidake's parents get made in Create a Sim with graves there (bonus story; on her list). One-tile helper rooms from the Gallery need no credit.
 
+**Later 6 Nov (her "keep on researching"):**
+- New notes: research/bigger-builds-briefs.md (48 homes), research/kaori-parents.md, research/decisions-queue.md, research/venue-requirements-check.md.
+- New tool: tools/research/venue_check.py (objects matched by their catalogue tags). In Building #2, 110 of 111 venue lots have their required objects; Desert Bloom is empty.
+- Found:
+  - the four uni halls have no stove;
+  - Mossy Lane is already University Housing (just the re-upload);
+  - Glimmer & Books has its bar but needs a stereo and 4 barstools for a Backroom;
+  - no spare horse family for Paradise Stables; Red Roan Farm's "Mine" looks like "Louisa Growing Up".
+- Typo fixes for 13 uploads since 19 Oct (her 19 Oct rule).
+- Her list gained:
+  - the ancestors-trial keep-or-remove, and the rental-page look (both waiting since Oct);
+  - the new-save checklist's first steps: premade fix, untouched copy, EA's weight and muscle options.
+- premade_family_fix:
+  - it would have turned Miko Ojo's partnership with Alicia (hers) into a one-sided marriage; fixed;
+  - its --apply would have undone the 31 Oct–1 Nov ancestor edits; it now needs --force (caught before committing; nothing lost).
+- No real pronoun mistakes found in the research notes by a scan against each Sim's sex.
+
 **Overnight 6–7 Nov (her picks):**
 - research/rental-unit-traits.md: trait ideas for every rental unit with none.
 - research/uni-groups-check.md: StrangerVille's and Windenburg's uni groups. SU Overlook Halls has no university set, and the plan says "Residence" where the save says "Halls"; both are on her list.
