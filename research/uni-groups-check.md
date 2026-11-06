@@ -34,9 +34,7 @@ Everything matches your plan.
 - **University Housing:** at least 4 beds, a toilet and a shower; a bin is optional.
   - Watch who moves in: only students enrolled at that hall's university can live there.
   - Your Library copy of SU Overlook Halls (Feb 2024) had 4 bedrooms; the save doesn't record bedroom counts for the StrangerVille halls.
-- **Stoves:** you have LittleMsSam's "Allow Stoves on University Housing" mod, so the game won't stop you placing one.
-  - Sims who download your halls without that mod would get a stove the game doesn't normally allow there.
-  - I couldn't check from the save whether the halls have one. Worth a look before uploading.
+- **Stoves: none**, checked later on 6 Nov from the objects' catalogue tags. All four halls (SU Plateau, SU Overlook, Hare, Hedgehog) have fridges and mini fridges, but no stove or oven. So downloaders without your stove mod won't hit a problem.
 - **Gym:** 4 pieces of workout equipment, a shower, a toilet and a sink.
 - **Library:** 3 bookshelves, 3 desks, 5 desk chairs, 2 computers, 2 armchairs and a chess table.
 - **Nightclub:** a bar, 3 barstools, 3 dining tables, 6 dining chairs and a stereo.
