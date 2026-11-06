@@ -304,6 +304,23 @@ window.ADMIN = {
 "favourites": 2120,
 "downloads": 20322,
 "comments": 50
+},
+{
+"when": "06 Nov 2026 21:17",
+"ok": true,
+"linked": [
+"linked new upload “8 Bells” to StrangerVille / 8 Bells",
+"linked new upload “Wakabamori Cemetery” to Mt. Komorebi / 2-4-1 Wakabamori"
+],
+"notes": [
+"added a Gallery picture for StrangerVille / 8 Bells",
+"added a Gallery picture for Mt. Komorebi / 2-4-1 Wakabamori"
+],
+"listed": 267,
+"new": 2,
+"favourites": 2129,
+"downloads": 20423,
+"comments": 51
 }
 ],
 "checklist": [
