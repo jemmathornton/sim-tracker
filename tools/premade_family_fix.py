@@ -159,4 +159,9 @@ def main(apply):
 
 
 if __name__ == '__main__':
+    # 6 Nov: --apply works the made-up relatives out again from scratch, which undid hand edits made since (the 31 Oct and
+    # 1 Nov ancestors: Consort Capp's parents, Cahya Bapak and Wulan Ibu, the Thebe and Darong unknowns). So it needs --force.
+    if '--apply' in sys.argv and '--force' not in sys.argv:
+        sys.exit("--apply rebuilds the relatives in data/people.json from scratch and would undo hand edits since 18 Oct "
+                 "(e.g. the 31 Oct–1 Nov ancestors). Add --force only after checking the report and a git diff.")
     main('--apply' in sys.argv)
