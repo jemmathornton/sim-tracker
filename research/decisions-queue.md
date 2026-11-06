@@ -12,6 +12,8 @@ Every "Decide" on your list, in an order that gets the quick ones out of the way
 7. **StrangerVille's halls** (new 6 Nov, research/uni-groups-check.md): give SU Overlook Foxbury, so there's one of each like Windenburg? And should the plan call them "Halls", as your save does? My pick: yes to both.
 8. **The 8 lots that can't be shared** (new 6 Nov, research/special-lots.md): stop counting them as "to build"? My pick: yes, show them as the game's own.
 
+8a. **The ancestors trial** (31 Oct): on Sim and household pages, a switch at the bottom right shows EA's ancestors with their own game portraits and how they died. Keep or remove? Try it on the Goths' page (Mortimer's ancestors).
+
 ## Need a moment
 9. **Lagoon of Love** (§1, plus 6 Nov): the beach wedding spot (no bedrooms) or the stilt holiday house (3 bedrooms)? My pick: Wedding Venue, with the beach build. Sulani has no wedding venue, and the Wedding Venue lot type needs no pack (your build itself uses 9). Pictures: for-jemma/lot-compare/lagoon-look.jpg.
 10. **Key Point** (§10): a castaway hut as a Vacation Rental, or Generic (which can be Off-the-Grid)? My pick: Generic. It's your taste.
