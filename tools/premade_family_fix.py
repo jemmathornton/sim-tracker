@@ -54,7 +54,8 @@ def main(apply):
     # 1. married couples, 2. no aspirations for pets and the very young
     for s in site.values():
         for pr in s.get('partners', []):
-            if pr[1] == 'Partner': pr[1] = 'Spouse'; report['Partner -> Spouse'] += 1
+            # both EA's (6 Nov: Miko Ojo, EA's, is Alicia Santiago's partner in her own household; that stays as she has it)
+            if pr[1] == 'Partner' and pr[0] in site: pr[1] = 'Spouse'; report['Partner -> Spouse'] += 1
         if s.get('state') in PETS or s.get('age') in NO_ASPIRATION:
             for f in ('aspiration', 'bonus'):
                 if s.pop(f, None): report[f'{f} removed'] += 1
