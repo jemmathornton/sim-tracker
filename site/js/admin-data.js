@@ -442,6 +442,11 @@ window.ADMIN = {
 {
 "section": "Before the new save: build and share (any save, then the Gallery)",
 "world": "",
+"text": "**Decide:** StrangerVille's halls (before the group upload; research/uni-groups-check.md): SU Overlook Halls has no university set and SU Plateau Halls is set to Britechester (Windenburg has one of each: Hare Halls Britechester, Hedgehog Halls Foxbury). Give SU Overlook Foxbury? And are they “Halls” (as in your save and Library) or “Residence” (as in your plan)?"
+},
+{
+"section": "Before the new save: build and share (any save, then the Gallery)",
+"world": "",
 "text": "**Do:** Give units 2+ their own traits and bed/bath counts, then re-upload (Claude reads them from your save). Checked 6 Nov in “Building #2”: units with no traits: Rio Verde 2–6, Fern Park Flats 2–5, Upland Trailer Park 2–4, Spring Steppes 2–3, Slip 42 both, Old Torget House all three; no bed and bath counts: Rio Verde all, Midtown Meadows all, Tail's End all, Spring Steppes all, Inner Circle 2–4, Upland Trailer Park 2–4, Rockridge Springs 2–3, Slip 42 unit 2."
 },
 {
