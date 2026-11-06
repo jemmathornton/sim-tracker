@@ -492,7 +492,7 @@ window.ADMIN = {
 {
 "section": "Before the new save: build and share (any save, then the Gallery)",
 "world": "Britechester",
-"text": "**Do:** Re-upload Mossy Lane to the Gallery as University Housing (its upload says Residential)."
+"text": "**Do:** Re-upload Mossy Lane to the Gallery as University Housing (its upload says Residential). Checked 6 Nov: in “Building #2” it's already University Housing (9 beds, 3 bathrooms, no stove; Homey, Cat Hangout), so it only needs re-uploading."
 },
 {
 "section": "Before the new save: build and share (any save, then the Gallery)",
