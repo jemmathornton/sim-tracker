@@ -59,7 +59,7 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 - **Do:** Studio PBP, when you build it: give it Hottest Spot in Town.
 
 **Glimmerbrook**
-- **Do:** Glimmer & Books: add the bar, then upload it as a Backroom (until then it shows as not built or shared).
+- **Do:** Glimmer & Books: make it a Backroom, then upload it (until then it shows as not built or shared). Checked 6 Nov in “Building #2”: it already has 2 bars and plenty of bookshelves and art; for a Backroom it still needs a stereo and 4 barstools, then switch the lot type from Library.
 
 **Britechester**
 - **Do:** Re-upload Mossy Lane to the Gallery as University Housing (its upload says Residential). Checked 6 Nov: in “Building #2” it's already University Housing (9 beds, 3 bathrooms, no stove; Homey, Cat Hangout), so it only needs re-uploading.

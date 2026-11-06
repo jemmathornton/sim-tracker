@@ -487,7 +487,7 @@ window.ADMIN = {
 {
 "section": "Before the new save: build and share (any save, then the Gallery)",
 "world": "Glimmerbrook",
-"text": "**Do:** Glimmer & Books: add the bar, then upload it as a Backroom (until then it shows as not built or shared)."
+"text": "**Do:** Glimmer & Books: make it a Backroom, then upload it (until then it shows as not built or shared). Checked 6 Nov in “Building #2”: it already has 2 bars and plenty of bookshelves and art; for a Backroom it still needs a stereo and 4 barstools, then switch the lot type from Library."
 },
 {
 "section": "Before the new save: build and share (any save, then the Gallery)",
