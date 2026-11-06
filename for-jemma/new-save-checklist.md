@@ -6,8 +6,10 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 ## 1. Before you start
 - [ ] Copy the `Saves` and `Tray` folders (Documents\Electronic Arts\The Sims 4) somewhere safe.
+- [ ] Premade fix: install Premade Sim and Relationship Overhaul (without its Vampires file), or not; it only works in a save made after it's in (your call, on your list).
 - [ ] New Game: make one throwaway Sim and move it onto a lot you’ll do last.
-- [ ] Save As “Sim World 00”.
+- [ ] Before changing anything, Save As “EA untouched” and tell Claude: it's the copy the new-save check compares your lots against (5 Nov).
+- [ ] Save As “Sim World 00”, and carry on in that one.
 
 ## 2. Options (once; your calls, 23 Oct)
 - [ ] Neighbourhood Stories on. Other Households: Move In, Move Out, Have a Baby, Adopt a Child, Adopt Cats & Dogs, Rescue Horses, Join a Career, Leave a Career and Romance Changes unticked; Retire from Career, Die in Accidents and Friendship Changes ticked. My Households: all off.
@@ -17,6 +19,7 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 - [ ] Eco Lifestyle: Enable NPC Voting off.
 - [ ] Seasons: Season Length 28 days.
 - [ ] Royalty & Legacy: Dynasty Prestige Decay off.
+- [ ] Allow Weight Changes and Allow Muscle Changes (EA's new options, 27 Oct): your call. UI Cheats Extension hides them, so take it out of Mods while you set them, then put it back.
 - [ ] Autosave and Save Reminder on (Save Settings).
 - [ ] Save As “Sim World 01 options”.
 
