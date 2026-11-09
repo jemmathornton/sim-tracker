@@ -1,0 +1,11 @@
+{
+  "name": "jemmas-sim-world-tests",
+  "private": true,
+  "description": "Test tools only (the site itself needs no Node). Run: tools/run_tests.py, which runs these too.",
+  "scripts": {
+    "test:site": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.0"
+  }
+}

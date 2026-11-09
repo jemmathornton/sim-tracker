@@ -7,3 +7,8 @@ __pycache__/
 # local logs
 logs/
 data/spreadsheet/last-import-previous.json
+# test tools (portable Node, npm packages, Playwright output)
+.tools/
+node_modules/
+test-results/
+playwright-report/

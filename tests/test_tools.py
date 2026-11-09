@@ -18,6 +18,19 @@ UPLOADS = load(os.path.join(DATA, 'gallery', 'uploads.json'))['uploads']
 UNITS_IN_TYPE = lambda l: int(m.group(1)) if (m := re.search(r'\((\d+)\)', l.get('type') or '')) else 0
 
 
+def checklist_text():
+    """The new-save checklist as main() writes it, into a temporary file (her real one, with her ticks, is never touched)."""
+    import contextlib, io, tempfile, new_save_checklist
+    d = tempfile.mkdtemp(); out = os.path.join(d, 'checklist.md'); old = new_save_checklist.OUT
+    new_save_checklist.OUT = out
+    try:
+        with contextlib.redirect_stdout(io.StringIO()): new_save_checklist.main()
+        with open(out, encoding='utf-8') as f: return f.read()
+    finally:
+        new_save_checklist.OUT = old
+        import shutil; shutil.rmtree(d, ignore_errors=True)
+
+
 class ResidentsColumn(unittest.TestCase):
     """build.residents(): her Residents column -> (household name, unsure, note)."""
     def test_no_household(self):
@@ -68,9 +81,7 @@ class HerList(unittest.TestCase):
 class NewSaveChecklist(unittest.TestCase):
     """Her new-save checklist is made from the plan (23 Oct): every owned world has a section, nothing reads None."""
     def test_made_from_plan(self):
-        import new_save_checklist
-        new_save_checklist.main()
-        text = open(new_save_checklist.OUT, encoding='utf-8').read()
+        text = checklist_text()
         self.assertIn("## 6. World by world", text)
         for p in world_files():
             W = load(p)
@@ -94,9 +105,7 @@ class NewSaveCheck(unittest.TestCase):
         self.assertIn("Vacation Rental", n.VENUES.values())
     def test_own_rental_is_landlords_home(self):
         # "Greenburg own" on a rental, with no other Greenburg home in the world: they live there (as the site reads it)
-        import new_save_checklist
-        new_save_checklist.main()
-        text = open(new_save_checklist.OUT, encoding='utf-8').read()
+        text = checklist_text()
         self.assertRegex(text, r"Rockridge Springs\*\*.*Greenburg \([^)]*landlord")
 
 
