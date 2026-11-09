@@ -717,9 +717,9 @@ Made from the site’s data by tools/new_save_checklist.py (Claude reruns it aft
 
 - [ ] **Paradise Stables** (game’s Prospector’s Paradise), 40x30: built but not on the Gallery: bring it over through your Library (1 copy, 15 Feb 26) (if you changed it in your Building save since, save it to your Library again from there first). Type: Residential.
 - [ ] **Crystal Cottage**, 30x20: not built yet: leave the game’s lot for now. Type: Onsen Bathhouse.
-- [ ] **Love Highland**, 50x50: not built yet: leave the game’s lot for now. Type: Custom Venue. Owner (lives elsewhere): Addam Commune (EA).
+- [ ] **Love Highland**, 50x50: not built yet: leave the game’s lot for now. Type: Residential. Household: Addam Commune (EA).
 - [ ] **Thrift ’n’ Fish** (game’s Fearful Fish Lounge), 20x20: not built yet: leave the game’s lot for now. Type: Thrift and Boba Store.
-- [ ] **Miner’s Manse**, 30x20: not built yet: leave the game’s lot for now. Type: Residential. Household: Addam Commune (EA).
+- [ ] **Miner’s Manse**, 30x20: not built yet: leave the game’s lot for now. Type: Residential.
 
 ### Ondarion
 

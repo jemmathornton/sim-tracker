@@ -401,11 +401,6 @@ window.ADMIN = {
 "text": "**Decide:** Paradise Stables: who lives there? A horse family of yours running Riding Stables?"
 },
 {
-"section": "Before the new save: decide first",
-"world": "Gibbi Point",
-"text": "**Decide:** Love Highland: a Custom Venue run by the Addams as story only, or their home again?"
-},
-{
 "section": "Before the new save: build and share (any save, then the Gallery)",
 "world": "",
 "text": "**Do:** Build the {toBuild} lots not built yet (Admin > Progress lists them)."

@@ -28,7 +28,6 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 
 **Gibbi Point**
 - **Decide:** Paradise Stables: who lives there? A horse family of yours running Riding Stables?
-- **Decide:** Love Highland: a Custom Venue run by the Addams as story only, or their home again?
 
 ## Before the new save: build and share (any save, then the Gallery)
 - **Do:** Build the {toBuild} lots not built yet (Admin > Progress lists them).
