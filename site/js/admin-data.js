@@ -1,7 +1,7 @@
 // Built by tools/admin_data.py for the Admin pages (js/sections.js, 23 Oct). Don't edit this file.
 // For Jemma's PC only: never upload this file if the site goes online (it holds her to-dos and admin notes).
 window.ADMIN = {
-"made": "2026-11-08",
+"made": "2026-11-09",
 "refresh": [
 {
 "when": "13 Oct 2026 18:27",
@@ -321,6 +321,17 @@ window.ADMIN = {
 "favourites": 2129,
 "downloads": 20423,
 "comments": 51
+},
+{
+"when": "08 Nov 2026 11:24",
+"ok": true,
+"linked": [],
+"notes": [],
+"listed": 267,
+"new": 0,
+"favourites": 2130,
+"downloads": 20459,
+"comments": 51
 }
 ],
 "checklist": [
@@ -447,7 +458,12 @@ window.ADMIN = {
 {
 "section": "Before the new save: build and share (any save, then the Gallery)",
 "world": "",
-"text": "**Decide:** StrangerVille's halls (before the group upload; research/uni-groups-check.md): SU Overlook Halls has no university set and SU Plateau Halls is set to Britechester (Windenburg has one of each: Hare Halls Britechester, Hedgehog Halls Foxbury). Give SU Overlook Foxbury? And are they “Halls” (as in your save and Library) or “Residence” (as in your plan)?"
+"text": "**Do:** SU Overlook (StrangerVille): set its university to Foxbury in lot info before the group upload (your call, 9 Nov: one hall per university, like Windenburg; SU Plateau stays Britechester)."
+},
+{
+"section": "Before the new save: build and share (any save, then the Gallery)",
+"world": "",
+"text": "**Decide:** StrangerVille's halls: “Halls” (as in your save and Library) or “Residence” (as in your plan)?"
 },
 {
 "section": "Before the new save: build and share (any save, then the Gallery)",
