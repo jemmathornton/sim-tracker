@@ -28,6 +28,6 @@ Every "Decide" on your list, in an order that gets the quick ones out of the way
 ## Bigger ones
 15. **Premade fix for the new save:** Premade Sim and Relationship Overhaul, or none (links with MCCC). research/mods-1129.md, Part 2, has the details. It has to be settled before you restart the save.
 16. **Paradise Stables** (§15): who lives there? A horse family of yours, running riding stables? Found 6 Nov: there's no spare horse family of yours in any save. The only horse households you've played are the Palumbos (already at Palomino Junction) and "Louisa Growing Up" at Red Roan Farm. So Paradise Stables would need a new family, or one of the households you still have to make. The Horse Elder Couple is planned for Appaloosa Stables.
-16a. **Red Roan Farm's "Mine"** (research/own-households-recommendations.md asked): in "Building #2" it's "Louisa Growing Up": Louisa Tiquelle, Peanut the horse, Merlin and Coco, a household you've played. Is that them?
+16a. (Answered 9 Nov: not them.) **Red Roan Farm's "Mine"** (research/own-households-recommendations.md asked): in "Building #2" it's "Louisa Growing Up": Louisa Tiquelle, Peanut the horse, Merlin and Coco, a household you've played. Is that them?
 17. **Empty rental units** (§21): covered by who-lives-where (research/who-lives-where-queue.md).
 18. **Going online** (§25): your call, any time.
