@@ -8,8 +8,6 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 - **Decide:** Owners: Plumbob Pictures Museum (Judith Ward?), Llama Picturehouse (LeBlancs, or a Bar), Canalside Daycare.
 - **Decide:** The 8 lots the game gives no Gallery upload type (Sylvan Glade, Forgotten Grotto, the Secret Lab, Omiscan Royal Baths, Mt. Komorebi's three summit lots), so they can probably never be shared: keep counting them as “to build”, or show them as the game's own? (research/special-lots.md; the Alam Museum and the three National Parks turn out to be ordinary lots you can build.)
 - **Decide:** The trial on Sim and household pages (switch at the bottom right, since 31 Oct): EA's ancestors shown with their own game portraits and how they died. Keep it, or take it away?
-- **Decide:** Small business lots: keep your labels (Small Business Residential), or the game's names?
-- **Decide:** Gnomes does nothing on venues (Burners & Builders, Pixel Café, Llama Picturehouse): swap it when you add them to the new save?
 - **Decide:** Empty units at Rockridge Springs, Old Torget House, Manzanita Terrace, Slip 42: who? (For Rent pets?)
 - **Decide:** Who lives where: to go through world by world in chat; Claude's suggestions (each marked as one) are in research/homes-that-fit.md (1 Nov), with the order to go through them in research/who-lives-where-queue.md (6 Nov). As one job: about 50 homes in your plan have nobody named (Empty, “1 Bed”, “2 Bedroom”, “?”), plus empty rental units; and these Sims of yours have no home on the plan yet: Ash Carrington, the Fantasias, Lena Garcia, the Rosebud household, Henri Penkridge, and from “Building #2” Vivian Little (and the Battles, Ellsworths and Brody Conklin if they’re yours). EA’s own pack households not on the plan (the Chopras, Hoffmans, Fia Acosta, Kyle Kyleson, Akachi Onoja, Connie Fidential) stay homeless or hidden, as in the game (your call, 1 Nov). Werewolves, Enchanted by Nature, Lovestruck and Vampires Sims wait until you own those packs. Backup families, kept for filling homes later (your call, 1 Nov): the Waters, the Presleys, the Deckers, the Barnes, Gianni Faulk and Yogi, the Whitlocks (made by MC Command Center, in “Building #2”; save them to your Library before that save goes); Maxis’s Irina Rattus; last of all, if ever, the Thorntons.
 
@@ -21,7 +19,6 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 
 **Sulani**
 - **Decide:** Key Point: a castaway hut as a Vacation Rental, or Generic (can be Off-the-Grid)?
-- **Decide:** Caldera Camp: add Geothermal and Natural Well (two trait slots free)?
 
 **Moonwood Mill** (not owned)
 - **Decide:** Moonwood Mill Library: Library or Backroom? (A Backroom has no librarian; Wolfgang loses his job.)

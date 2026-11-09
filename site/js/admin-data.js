@@ -363,16 +363,6 @@ window.ADMIN = {
 {
 "section": "Before the new save: decide first",
 "world": "",
-"text": "**Decide:** Small business lots: keep your labels (Small Business Residential), or the game's names?"
-},
-{
-"section": "Before the new save: decide first",
-"world": "",
-"text": "**Decide:** Gnomes does nothing on venues (Burners & Builders, Pixel Café, Llama Picturehouse): swap it when you add them to the new save?"
-},
-{
-"section": "Before the new save: decide first",
-"world": "",
 "text": "**Decide:** Empty units at Rockridge Springs, Old Torget House, Manzanita Terrace, Slip 42: who? (For Rent pets?)"
 },
 {
@@ -394,11 +384,6 @@ window.ADMIN = {
 "section": "Before the new save: decide first",
 "world": "Sulani",
 "text": "**Decide:** Key Point: a castaway hut as a Vacation Rental, or Generic (can be Off-the-Grid)?"
-},
-{
-"section": "Before the new save: decide first",
-"world": "Sulani",
-"text": "**Decide:** Caldera Camp: add Geothermal and Natural Well (two trait slots free)?"
 },
 {
 "section": "Before the new save: decide first",

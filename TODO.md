@@ -47,6 +47,8 @@ Every open item carried over from the claude.ai project on 13 Oct 2026: the note
 - research/who-lives-where-queue.md: the order to go through homes-that-fit. homes-that-fit had "his" for Ash Carrington and Henri Penkridge; fixed.
 - Also 6 Nov: 8 Bells (rebuilt) and Wakabamori Cemetery shared.
 
+**9 Nov (her calls):** SU Overlook gets Foxbury (one hall per university, like Windenburg); the StrangerVille halls are renamed in game from "Halls" to "Residence", as the plan says (to tell them apart from Windenburg's Halls). Small business labels stay (already the game's names). Uploaded lots aren't changed just for traits: Gnomes stays on Burners & Builders, Pixel Café and Llama Picturehouse, and Caldera Camp keeps just Eco Lot. Later: Mystic Crossroads' owner, LaSuli Point, Moonwood Mill Library. She asked for a thorough test suite like her budget app's, and OK'd installing Playwright for it.
+
 **[Jemma]** = needs her decision or input. **[Claude]** = can be done without her once the app is set up. Tick items here as they're done.
 
 ## 0. Moving to the app
