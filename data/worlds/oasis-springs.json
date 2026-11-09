@@ -74,7 +74,7 @@
    "mapBox": [0.4, 0.45, 0.57, 0.58],
    "lots": [
     {"lot": "Desert Bloom Park", "myName": "Desert Bloom", "type": "Park", "size": "50x50", "residents": "N/A", "built": true, "shared": true, "screenshots": false, "simsMade": "N/A", "gallery": ["7rH4P51KEeuKxvwg9JDtjA=="]},
-    {"lot": "Forgotten Grotto", "myName": null, "type": "Forgotten Grotto", "size": "15x10", "residents": "N/A", "built": false, "shared": false, "screenshots": false, "simsMade": "N/A"}
+    {"lot": "Forgotten Grotto", "myName": null, "type": "Forgotten Grotto", "size": "15x10", "residents": "N/A", "built": "N/A", "shared": "N/A", "screenshots": "N/A", "simsMade": "N/A"}
    ],
    "ecoStart": "Green"
   }

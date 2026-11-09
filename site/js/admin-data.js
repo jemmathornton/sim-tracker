@@ -353,11 +353,6 @@ window.ADMIN = {
 {
 "section": "Before the new save: decide first",
 "world": "",
-"text": "**Decide:** The 8 lots the game gives no Gallery upload type (Sylvan Glade, Forgotten Grotto, the Secret Lab, Omiscan Royal Baths, Mt. Komorebi's three summit lots), so they can probably never be shared: keep counting them as “to build”, or show them as the game's own? (research/special-lots.md; the Alam Museum and the three National Parks turn out to be ordinary lots you can build.)"
-},
-{
-"section": "Before the new save: decide first",
-"world": "",
 "text": "**Decide:** The trial on Sim and household pages (switch at the bottom right, since 31 Oct): EA's ancestors shown with their own game portraits and how they died. Keep it, or take it away?"
 },
 {
