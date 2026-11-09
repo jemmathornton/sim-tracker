@@ -458,12 +458,7 @@ window.ADMIN = {
 {
 "section": "Before the new save: build and share (any save, then the Gallery)",
 "world": "",
-"text": "**Do:** SU Overlook (StrangerVille): set its university to Foxbury in lot info before the group upload (your call, 9 Nov: one hall per university, like Windenburg; SU Plateau stays Britechester)."
-},
-{
-"section": "Before the new save: build and share (any save, then the Gallery)",
-"world": "",
-"text": "**Decide:** StrangerVille's halls: “Halls” (as in your save and Library) or “Residence” (as in your plan)?"
+"text": "**Do:** StrangerVille's halls, before the group upload (your calls, 9 Nov): set SU Overlook's university to Foxbury in lot info (one per university, like Windenburg; SU Plateau stays Britechester), and rename both from “Halls” to “SU Plateau Residence” and “SU Overlook Residence” (Residence, to tell them apart from Windenburg's Halls)."
 },
 {
 "section": "Before the new save: build and share (any save, then the Gallery)",
