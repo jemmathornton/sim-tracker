@@ -8,6 +8,9 @@ LOT_PAGES = {f"l-{ws}--{slug(l['lot'])}" for ws, W, h, l in LOTS}
 LINKED = {i for ws, W, h, l in LOTS for i in l.get('gallery', []) + [v['upload'] for v in l.get('versions', [])]}
 HH_LINKED = {i for W, hn, hh in HOUSEHOLDS for i in hh.get('gallery', [])}
 UNLINKED = load(os.path.join(GALLERY, 'unlinked.json'))['uploads']
+# partner links one Sim has and the other doesn't, where one of the two has died, so which word each side should use is
+# hers to settle (15 Nov review): remove a pair from here once both sides are set
+ONE_SIDED_FOR_JEMMA = {("gunther-goth", "cornelia-goth"), ("adekoya-darong", "imani-darong"), ("colin-sullivan", "xochitl-luna")}
 
 
 class Worlds(unittest.TestCase):
@@ -235,7 +238,8 @@ class Sims(unittest.TestCase):
             for pid, kind in s.get('partners', []):
                 o = by.get(pid)
                 back = {'Late Spouse': {'Spouse', 'Late Spouse'}, 'Spouse': {'Spouse', 'Late Spouse'}}.get(kind, {kind})
-                if o and o.get('partners') is not None and not any(q[0] == s['id'] and q[1] in back for q in o['partners']):
+                if (s['id'], pid) in ONE_SIDED_FOR_JEMMA or (o and o.get('placeholder')): continue
+                if o and not any(q[0] == s['id'] and q[1] in back for q in o.get('partners', [])):   # 15 Nov: a Sim with no partners at all is checked too
                     bad.append(f"{s['name']} → {o['name']} ({kind})")
         self.assertEqual(bad, [])
 

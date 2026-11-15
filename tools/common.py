@@ -56,8 +56,21 @@ def save(p, obj, inline=('lots',)):
     text = re.sub(r'\[\n\s*((?:(?:"(?!@@)[^"\n]*"|[-\d.]+|true|false|null),\n\s*)*(?:"(?!@@)[^"\n]*"|[-\d.]+|true|false|null))\n\s*\]',
                   lambda m: '[' + re.sub(r',\n\s*', ', ', m.group(1)) + ']', text)
     text = re.sub(r'"(@@\d+@@)"', lambda m: marks[m.group(1)], text)
-    with open(p, 'w', encoding='utf-8', newline='\n') as f:
-        f.write(text + '\n')
+    write_text(p, text + '\n')
+
+
+def write_text(p, text):
+    """Write to a temporary file next to p, then swap it in, so a crash or power cut mid-write never leaves half a file (15 Nov)."""
+    tmp = f"{p}.tmp"
+    with open(tmp, 'w', encoding='utf-8', newline='\n') as f: f.write(text)
+    os.replace(tmp, p)
+
+
+def shown_name(name_fix, world, l):
+    """A lot's name as the site shows it, from a built lot (data.js): her spelling (nameFix), then her Gallery title, then
+    her own name unless it's just "?", then the in-game name. The same order as lotName() in site/js/app.js (15 Nov: one place)."""
+    mine = (l.get('mine') or '').strip()
+    return name_fix.get(f"{world}|{l['lot']}") or (l.get('gallery') or {}).get('title') or (mine if mine.strip('?') else None) or l['lot']
 
 
 def nice_date(iso):

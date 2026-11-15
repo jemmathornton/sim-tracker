@@ -10,7 +10,14 @@ Nothing is lost if EA can't be reached: uploads that fail keep their last number
 import io, json, os, re, sys, time, urllib.parse, urllib.request
 from datetime import date, datetime
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import ROOT, SITE, GALLERY, slug, norm, load, save, world_files
+LOG = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'logs', 'gallery-refresh.log')
+try:
+    from common import ROOT, SITE, GALLERY, slug, norm, load, save, world_files
+except Exception:   # 15 Nov: a scheduled run failed with nothing in the log; even a broken setup leaves a trace now
+    if __name__ == '__main__':
+        import traceback; os.makedirs(os.path.dirname(LOG), exist_ok=True)
+        with open(LOG, 'a', encoding='utf-8') as f: f.write(f"Gallery refresh, {datetime.now():%d %b %Y %H:%M}, started\nStopped with an error:\n{traceback.format_exc()}\n")
+    raise
 
 API = "https://drop-api.ea.com/ugx/the-sims-4"
 CREATOR = "JemmaTheSimmer"
@@ -19,7 +26,15 @@ HEADERS = {"User-Agent": "JemmasSimWorld/1.0 (personal site, weekly refresh)"}
 KIND = {"lot": "lot", "room": "room", "household": "household"}
 TODAY = date.today().isoformat()
 report = []
-def say(s): report.append(s); print(s)
+LIVE = False   # True when run as the weekly refresh: each line goes into the log as it's said, so a run that's killed partway still shows
+
+
+def say(s):
+    report.append(s); print(s)
+    if LIVE:
+        try:
+            with open(LOG, 'a', encoding='utf-8') as f: f.write(s + '\n')
+        except OSError: pass
 
 
 def save_safe(p, obj):
@@ -202,7 +217,7 @@ def main():
     up_file, c_file = os.path.join(GALLERY, 'uploads.json'), os.path.join(GALLERY, 'comments.json')
     U, C = load(up_file), load(c_file)
     uploads, comments = U['uploads'], C['comments']
-    say(f"Gallery refresh, {datetime.now():%d %b %Y %H:%M}")
+    if not report: say(f"Gallery refresh, {datetime.now():%d %b %Y %H:%M}")
     listed = list_uploads()
     ids = list(dict.fromkeys(list(uploads) + listed))
     new_ids = [i for i in listed if i not in uploads]
@@ -250,32 +265,60 @@ def main():
     return not failed
 
 
-def commit_refresh():
-    """Save the refresh in the project's history (her OK, 23 Oct), so a bad week can always be undone. Only the files a
-    refresh writes are committed; anything else being worked on is left alone. Never pushes anywhere."""
+REFRESH_PATHS = ['data/gallery', 'data/worlds', 'site/js/data.js', 'site/js/admin-data.js', 'site/index.html', 'site/gallery', 'site/gallery-more',
+                 'for-jemma/new-save-checklist.md', 'research/new-save-status.md', 'research/data/new-save-status.json']
+
+
+def git(*a, stdin=None, root=None):
     import subprocess
-    paths = ['data/gallery', 'data/worlds', 'site/js/data.js', 'site/js/admin-data.js', 'site/index.html', 'site/gallery', 'site/gallery-more', 'for-jemma/new-save-checklist.md', 'research/new-save-status.md', 'research/data/new-save-status.json']
-    paths = [p for p in paths if os.path.exists(os.path.join(ROOT, p))]
-    run = lambda *a: subprocess.run(['git', *a], cwd=ROOT, stdin=subprocess.DEVNULL, capture_output=True, text=True, encoding='utf-8',
-                                     creationflags=getattr(subprocess, 'CREATE_NO_WINDOW', 0))
+    feed = {'input': stdin} if stdin is not None else {'stdin': subprocess.DEVNULL}   # the weekly task has no console stdin
+    return subprocess.run(['git', *a], cwd=root or ROOT, capture_output=True, text=True, encoding='utf-8',
+                          creationflags=getattr(subprocess, 'CREATE_NO_WINDOW', 0), **feed)
+
+
+def changed_files(root=None):
+    """Files under the refresh's folders that differ from the last commit (changed, new or deleted), as git paths."""
+    r = git('status', '--porcelain', '-z', '--untracked-files=all', '--', *REFRESH_PATHS, root=root)
+    out, parts = set(), r.stdout.split('\0')
+    k = 0
+    while k < len(parts):
+        e = parts[k]; k += 1
+        if len(e) < 4: continue
+        out.add(e[3:])
+        if e[0] in 'RC': k += 1   # a rename's old name follows; it isn't ours to commit
+    return out
+
+
+def commit_refresh(before=frozenset(), root=None):
+    """Save the refresh in the project's history (her OK, 23 Oct), so a bad week can always be undone. Only files this run
+    changed are committed: anything that already had uncommitted changes when the run started (her or Claude's work in
+    data/worlds, say) is left out and named in the log (15 Nov review). Never pushes anywhere."""
     try:
-        run('add', '--', *paths)
-        if not run('diff', '--cached', '--quiet', '--', *paths).returncode: return say("Nothing new to save in the project history")
-        r = run('commit', '-m', f"Weekly Gallery refresh, {datetime.now():%d %b %Y} (automatic)", '--', *paths)
+        mine = sorted(changed_files(root) - set(before))
+        if not mine: return say("Nothing new to save in the project history")
+        lst = '\0'.join(mine) + '\0'
+        a = git('add', '--pathspec-from-file=-', '--pathspec-file-nul', stdin=lst, root=root)
+        r = a if a.returncode else git('commit', '-m', f"Weekly Gallery refresh, {datetime.now():%d %b %Y} (automatic)", '--only',
+                                       '--pathspec-from-file=-', '--pathspec-file-nul', stdin=lst, root=root)
         say("Saved in the project history" if r.returncode == 0 else "Couldn't save in the project history: " + (r.stderr or r.stdout).strip()[:300])
+        if before: say(f"  left out of the automatic save (already being changed before the refresh): {', '.join(sorted(before)[:10])}" + (" …" if len(before) > 10 else ""))
     except Exception as e: say(f"Couldn't save in the project history: {e}")
 
 
 if __name__ == '__main__':
     ok = False
+    os.makedirs(os.path.dirname(LOG), exist_ok=True)
+    LIVE = True
+    say(f"Gallery refresh, {datetime.now():%d %b %Y %H:%M}, started")   # ", started": this run writes as it goes and ends with "Finished" (admin_data.py)
     try:
+        before = changed_files()   # work in progress in the refresh's folders, kept out of its automatic commit
         ok = main()
         if '--no-build' not in sys.argv:
             import subprocess
             # stdin=DEVNULL: the weekly task runs without a console, and Windows refuses to pass on a missing stdin
             r = subprocess.run([sys.executable, '-X', 'utf8', os.path.join(ROOT, 'tools', 'build.py')],
                                stdin=subprocess.DEVNULL, capture_output=True, text=True, encoding='utf-8')
-            say((r.stdout or r.stderr).strip())
+            say('\n'.join(x for x in ((r.stdout or '').strip(), (r.stderr or '').strip()) if x) + ('' if r.returncode == 0 else '\nBuild failed'))
             ok = ok and r.returncode == 0
             if r.returncode == 0:
                 try:   # her new save against the plan, for Admin > Notes (24 Oct); a problem here never stops the refresh
@@ -286,11 +329,10 @@ if __name__ == '__main__':
                         say("New-save check refreshed")
                     else: say("New-save check not refreshed: " + (n.stderr or n.stdout).strip()[-200:])
                 except Exception as e: say(f"New-save check not refreshed: {e}")
-                commit_refresh()
+                commit_refresh(before)
     except Exception:
         import traceback
         say("Stopped with an error:\n" + traceback.format_exc())
     finally:
-        os.makedirs(os.path.join(ROOT, 'logs'), exist_ok=True)
-        with open(os.path.join(ROOT, 'logs', 'gallery-refresh.log'), 'a', encoding='utf-8') as f: f.write('\n'.join(report) + '\n\n')
+        say(("Finished" if ok else "Finished with problems") + "\n")
     sys.exit(0 if ok else 1)

@@ -11,7 +11,7 @@ units), so the ones moved out while she placed builds can go back. Saves are rea
 import json, os, re, shutil, sys, tempfile, time, unicodedata
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 import sims4files as s4
-from common import ROOT, DATA, load, save, slug as slugify
+from common import ROOT, DATA, load, save, slug as slugify, shown_name
 
 S = s4.save_schema(); P = '.EA.Sims4.Persistence.'
 SAVE_NAME = "Jemma's Sim World"
@@ -210,7 +210,7 @@ def main():
         for h in w['hoods']:
             for l in h['lots']:
                 key = f"{wn}|{l['lot']}"
-                shown = D['nameFix'].get(key) or (l.get('gallery') or {}).get('title') or (l['mine'] if l.get('mine') and l['mine'].strip('? ') else None) or l['lot']
+                shown = shown_name(D['nameFix'], wn, l)
                 hit = locate(wn, [l['lot'], shown, l.get('mine') or ''])
                 r = {"lot": l['lot'], "name": shown, "hood": h['name'], "built": l['built'], "shared": l['shared'], "type": l.get('type'), "issues": []}
                 if hit is None: r['status'] = 'not found'; rows.append(r); continue
@@ -350,7 +350,7 @@ def main():
                 if not names: pz[1].add(norm(hn))
             if not names: continue
             got = [zone_of_sim.get(n) for n in names]
-            lot_name = D['nameFix'].get(f"{wn}|{l['lot']}") or (l.get('gallery') or {}).get('title') or (l['mine'] if l.get('mine') and l['mine'].strip('? ') else None) or l['lot']
+            lot_name = shown_name(D['nameFix'], wn, l)
             row = {"world": wn, "household": hn, "lot": lot_name, "unit": '' if unit == '*' else unit, "sims": len(names)}
             if not any(got): row['state'] = 'not in the save'; row['how'] = how(hn, hh)
             elif unit and unit != '*' and not zs.get(unit):   # its unit doesn't exist in the save yet: the rental isn't placed
@@ -489,7 +489,7 @@ def main():
             wn_, l_ = lot_name_of.get(g['place'], (None, None))
             if not l_: continue
             zz = lot_zone.get((wn_, l_['lot']), {}).get('')
-            if zz != c['zone']: hang.append(f"{club}: meets at {now}; plan: {D['nameFix'].get(wn_ + '|' + l_['lot']) or (l_.get('gallery') or {}).get('title') or l_.get('mine') or l_['lot']}")
+            if zz != c['zone']: hang.append(f"{club}: meets at {now}; plan: {shown_name(D['nameFix'], wn_, l_)}")
         elif g.get('anyType') and (c['zone'] or norm(c.get('venue') or '') != norm(g['anyType'])): hang.append(f"{club}: meets at {now}; plan: any {g['anyType']}")
     out['clubs'] = hang
     # dynasties: the save against the site's roles (data/worlds households and people.json)

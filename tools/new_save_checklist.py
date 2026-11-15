@@ -8,7 +8,7 @@ Her ticks: an existing checklist's ticked lines ("- [x]") stay ticked when it is
 """
 import json, os, re, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import ROOT, slug
+from common import ROOT, slug, write_text, shown_name
 
 OUT = os.path.join(ROOT, 'for-jemma', 'new-save-checklist.md')
 IDEAS = os.path.join(ROOT, 'research', 'data', 'new-save-trait-ideas.json')
@@ -134,7 +134,7 @@ def main():
         return (m.group(1) if m else text).strip()
     ticked = set()
     if os.path.exists(OUT):
-        ticked = {tick_key(l.strip()[6:]) for l in open(OUT, encoding='utf-8') if l.startswith('- [x] ')}
+        ticked = {tick_key(l.strip()[6:]) for l in open(OUT, encoding='utf-8') if l.lower().startswith('- [x] ')}   # [X] too (an editor may write it so; 15 Nov)
     # each holiday's traditions, as in her Rotational save (research/holidays-in-saves.md, 22 Oct)
     TRADITIONS = {"Flower Festival": "Egg Hunt, Flower Bunny, Party Spirit, Baking, Gardening",
                   "Love Day": "Go on a Date, Give Flowers, Give Gifts, Romantic Spirit",
@@ -174,7 +174,7 @@ def main():
             out.append(f"**{h['name']}**\n")
             for l in h['lots']:
                 key = f"{wn}|{l['lot']}"
-                name = D['nameFix'].get(key) or (l.get('gallery') or {}).get('title') or (l['mine'] if l.get('mine') and l['mine'].strip('? ') else None) or l['lot']
+                name = shown_name(D['nameFix'], wn, l)
                 g = l.get('gallery')
                 head = f"**{name}**" + (f" (game’s {l['lot']})" if l['lot'].replace("'", "’") != name.replace("'", "’") else "") + (f", {l['size']}" if l.get('size') and l['size'] != 'N/A' else "") + ": "
                 bits = []
@@ -236,14 +236,14 @@ def main():
     for w in D['worlds']:
         for h in w['hoods']:
             for l in h['lots']:
-                nm = D['nameFix'].get(f"{w['name']}|{l['lot']}") or (l.get('gallery') or {}).get('title') or (l['mine'] if l.get('mine') and l['mine'].strip('? ') else None) or l['lot']
+                nm = shown_name(D['nameFix'], w['name'], l)
                 names[f"l-{slug(w['name'])}--{slug(l['lot'])}"] = nm + ("" if l['built'] is True else " (when built)")
     clubs = json.load(open(os.path.join(ROOT, 'data', 'groups.json'), encoding='utf-8')).get('clubs', {})
     hang = [f"{c} → {names.get(v['place'], v['place'])}" if v.get('place') else f"{c} → any {v['anyType']}" for c, v in clubs.items() if v.get('place') or v.get('anyType')]
     out.append(TAIL.replace("{CLUBS}", "- [ ] Club hangouts (set in the Club panel; Claude's new-save check lists the ones still to change): " + "; ".join(hang) + "."))
     lines = "\n".join(out).split("\n")
     lines = [("- [x] " + x[6:]) if x.startswith("- [ ] ") and tick_key(x[6:]) in ticked else x for x in lines]
-    open(OUT, 'w', encoding='utf-8', newline='\n').write("\n".join(lines))
+    write_text(OUT, "\n".join(lines))
     print(f"wrote {os.path.relpath(OUT, ROOT)}: {sum(1 for x in out if x.startswith('- ['))} lines to tick")
 
 

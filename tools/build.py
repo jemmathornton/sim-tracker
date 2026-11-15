@@ -114,7 +114,7 @@ def gallery_for(lot):
     if len(ups) > 1:
         main = None
         if lot.get('versions'):
-            main = next((e for e in ups if not re.search(r'\b' + VERSION_END, e['title'])), None) or next(e for e in ups if e['title'].endswith('Space'))
+            main = next((e for e in ups if not re.search(r'\b' + VERSION_END, e['title'])), None) or next((e for e in ups if e['title'].endswith('Space')), ups[0])
             label = version_label
         elif lot.get('galleryVariants') or any(e['lotType'] == 'Residential Rental' for e in ups):
             # versions Jemma keeps on purpose (a rental and a regular version, a B&B as café and as home): the one matching
@@ -329,14 +329,16 @@ if __name__ == '__main__':
     gone = missing_pictures(d)
     if gone: sys.exit("Pictures missing from site/: " + ", ".join(gone[:10]) + (" …" if len(gone) > 10 else ""))
     p = write(d)
-    try:   # the Admin pages' extra data (js/sections.js, 23 Oct); a problem there never stops the build
+    problems = []   # 15 Nov: these two still don't stop the build, but it ends with an error so the weekly refresh doesn't save stale files
+    try:   # the Admin pages' extra data (js/sections.js, 23 Oct)
         import admin_data; admin_data.write()
-    except Exception as e: print('Admin data not written:', e)
-    try:   # her new-save checklist, kept in step with the plan (23 Oct); never stops the build either
+    except Exception as e: problems.append(f'Admin data not written: {e}')
+    try:   # her new-save checklist, kept in step with the plan (23 Oct)
         import io, contextlib, new_save_checklist
         with contextlib.redirect_stdout(io.StringIO()): new_save_checklist.main()
-    except Exception as e: print('New-save checklist not written:', e)
+    except Exception as e: problems.append(f'New-save checklist not written: {e}')
     stamp_page()
     lots = sum(len(h['lots']) for w in d['worlds'] for h in w['hoods'])
     print(f"Wrote {os.path.relpath(p)}: {len(d['worlds'])} worlds, {lots} lots on the site, {len(d['stats'])} in the plan, "
           f"{sum(1 for w in d['worlds'] for h in w['hoods'] for l in h['lots'] if l['gallery'])} with Gallery uploads")
+    if problems: sys.exit('\n'.join(problems))

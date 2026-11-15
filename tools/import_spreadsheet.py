@@ -14,7 +14,8 @@ copied into the spreadsheet if it stays her main copy. New lots are added; lots 
 """
 import json, os, shutil, subprocess, sys, tempfile
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import ROOT, DATA, load, save, world_files
+import copy
+from common import ROOT, DATA, load, save, world_files, write_text
 
 DEFAULT = os.path.join(os.path.expanduser('~'), 'Downloads', 'World Plans (fixed).xlsx')
 BASE = os.path.join(DATA, 'spreadsheet', 'last-import.json')
@@ -73,15 +74,32 @@ def lots_by_key(sheet):
     return {(t['tab'], l['Lot Name']): (s['name'], n, l) for t in sheet[1:] for s in t['sections'] for n, l in enumerate(s['lots'])}
 
 
+def new_base(sheet, held):
+    """The spreadsheet as it was imported, except what wasn't applied: a clashing cell keeps its old base value and a new
+    lot that couldn't be added is left out, so the next import still sees them as her edits instead of dropping them."""
+    nb = copy.deepcopy(sheet); rows = lots_by_key(nb)
+    for key, col, old in held:
+        if col == 'Owned': nb[0].setdefault('owned', {})[key] = old
+        elif col is None and key in rows:
+            hood, _, row = rows[key]
+            for t in nb[1:]:
+                if t['tab'] == key[0]:
+                    for sec in t['sections']:
+                        if sec['name'] == hood and row in sec['lots']: sec['lots'].remove(row)
+        elif key in rows: rows[key][2][col] = old
+    return nb
+
+
 def main():
     args = [a for a in sys.argv[1:] if not a.startswith('--')]
     apply = '--apply' in sys.argv
     xlsx = args[0] if args else DEFAULT
     sheet, base = with_app_names(read_sheet(xlsx)), with_app_names(load(BASE))
     S, B = lots_by_key(sheet), lots_by_key(base)
-    paths = world_files(); worlds = {load(p)['name']: (p, load(p)) for p in paths}
+    paths = world_files(); worlds = {W['name']: (p, W) for p in paths for W in [load(p)]}
     A = {(wn, l['lot']): (h['name'], l) for wn, (_, W) in worlds.items() for h in W['neighbourhoods'] for l in h['lots']}
     applied, clashes, app_only, added, missing, touched = [], [], [], [], [], set()
+    held = []   # (key, column, base value) of clashing cells, and new lots not added: kept out of the new base so they're asked about again next time (15 Nov)
     show = lambda v: '(empty)' if v in (None, '') else repr(v) if isinstance(v, str) else str(v).upper() if isinstance(v, bool) else str(v)
 
     for key, (hood, pos, row) in S.items():
@@ -94,11 +112,11 @@ def main():
             s, a, o = row.get(col), lot.get(f), b.get(col)
             if s == a: continue
             if key in B and s != o:           # she changed it in the spreadsheet
-                if a == o or key not in B:
+                if a == o:
                     applied.append(f"{key[0]} / {key[1]}: {col} {show(a)} -> {show(s)}")
                     if apply: lot[f] = s; touched.add(key[0])
                 else:
-                    clashes.append(f"{key[0]} / {key[1]}: {col}: spreadsheet {show(s)}, app {show(a)} (was {show(o)})")
+                    clashes.append(f"{key[0]} / {key[1]}: {col}: spreadsheet {show(s)}, app {show(a)} (was {show(o)})"); held.append((key, col, o))
             else:                             # changed in the app only
                 app_only.append(f"{key[0]} / {key[1]}: {col} is {show(a)} in the app, {show(s)} in the spreadsheet")
     # Owned (Overview tab): the same three-way rule as the lots; owning a world switches on all its pages
@@ -110,7 +128,7 @@ def main():
             applied.append(f"{wn}: Owned {yn(W['owned'])} -> {yn(so[wn])}" + (" (its full map is in not-shown-yet/maps/: move it back to site/maps/)" if so[wn] else ""))
             if apply: W['owned'] = so[wn]; touched.add(wn)
         elif wn in bo and so[wn] != bo[wn]:
-            clashes.append(f"{wn}: Owned: spreadsheet {yn(so[wn])}, app {yn(W['owned'])} (was {yn(bo[wn])})")
+            clashes.append(f"{wn}: Owned: spreadsheet {yn(so[wn])}, app {yn(W['owned'])} (was {yn(bo[wn])})"); held.append((wn, 'Owned', bo[wn]))
         else:
             app_only.append(f"{wn}: Owned is {yn(W['owned'])} in the app, {yn(so[wn])} in the spreadsheet")
     for key in A:
@@ -119,7 +137,7 @@ def main():
     for (wn, name), hood, pos, row in added:
         line = f"{wn} / {hood}: new lot {name!r}"
         if wn not in worlds:
-            clashes.append(line + " in a world the app doesn't have yet; add the world first"); continue
+            clashes.append(line + " in a world the app doesn't have yet; add the world first"); held.append(((wn, name), None, None)); continue
         if apply:
             W = worlds[wn][1]
             h = next((x for x in W['neighbourhoods'] if x['name'] == hood), None)
@@ -138,7 +156,7 @@ def main():
     if apply:
         for wn in touched: save(worlds[wn][0], worlds[wn][1])
         shutil.copy(BASE, BASE.replace('.json', '-previous.json'))
-        with open(BASE, 'w', encoding='utf-8', newline='\n') as f: json.dump(sheet, f, ensure_ascii=False, indent=1)
+        write_text(BASE, json.dumps(new_base(sheet, held), ensure_ascii=False, indent=1))
         r = subprocess.run([sys.executable, '-X', 'utf8', os.path.join(ROOT, 'tools', 'build.py')], stdin=subprocess.DEVNULL, capture_output=True, text=True, encoding='utf-8')
         print((r.stdout or r.stderr).strip())
 
