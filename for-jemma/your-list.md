@@ -130,4 +130,6 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 - **Do:** San Myshuno: make your own map adjustments, then recheck its banners and boxes.
 - **Do:** Browse the story hooks when in the mood (research/story-ideas.md).
 - **Decide:** Rental lot pages (since 24 Oct): the big “Who owns it” block (the landlord's whole family) is gone, and each unit now links to its household. Have a look at one (e.g. Tail's End Apartments or Rio Verde): keep it like that?
+- **Decide:** Consort and Contessa Capp (found 15 Nov): Consort's page calls Contessa his late wife, Contessa's calls him her husband. Who has died, if either?
+- **Decide:** From the 15 Nov review, small layout choices: greyed sidebar text is a little faint to read easily, and the calendar's text gets very small on a phone. Make them stronger and bigger?
 - **Decide:** Going online: only if you ever want it on other devices (free and private with Cloudflare).

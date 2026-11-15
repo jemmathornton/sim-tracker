@@ -150,7 +150,7 @@ function refreshCard(){
   return `<div class="adm-card ${bad || missed ? "warn" : "ok"}"><span class="label">${ic("refresh-cw")}Weekly Gallery refresh</span>
     <b class="big">${esc(lastOk.when.replace(/ 20\d\d/, ""))}</b>
     <p>${bad ? `<b>The last run stopped with an error</b> (${esc(last.when)}). ` : ""}${missed ? `<b>Sunday’s run hasn’t happened yet</b>; it catches up next time you’re signed in. ` : "Last good run. "}
-      ${lastOk.listed} uploads listed, ${plural(lastOk.new, "new one")}.</p><p>Runs every Sunday at 08:54 while you’re signed in.</p></div>`;
+      ${lastOk.listed} uploads listed, ${plural(lastOk.new, "new one")}.</p><p>Runs every Sunday at 07:54 (08:54 in summer time) while you’re signed in.</p></div>`;
 }
 
 const admCounts = () => { const c = admChecks().reduce((n, x) => n + x.items.length, 0), L = admOwned();

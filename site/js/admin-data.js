@@ -332,6 +332,17 @@ window.ADMIN = {
 "favourites": 2130,
 "downloads": 20459,
 "comments": 51
+},
+{
+"when": "15 Nov 2026 20:04",
+"ok": true,
+"linked": [],
+"notes": [],
+"listed": 267,
+"new": 0,
+"favourites": 2143,
+"downloads": 20590,
+"comments": 51
 }
 ],
 "checklist": [
@@ -724,6 +735,16 @@ window.ADMIN = {
 "section": "Any time",
 "world": "",
 "text": "**Decide:** Rental lot pages (since 24 Oct): the big “Who owns it” block (the landlord's whole family) is gone, and each unit now links to its household. Have a look at one (e.g. Tail's End Apartments or Rio Verde): keep it like that?"
+},
+{
+"section": "Any time",
+"world": "",
+"text": "**Decide:** Consort and Contessa Capp (found 15 Nov): Consort's page calls Contessa his late wife, Contessa's calls him her husband. Who has died, if either?"
+},
+{
+"section": "Any time",
+"world": "",
+"text": "**Decide:** From the 15 Nov review, small layout choices: greyed sidebar text is a little faint to read easily, and the calendar's text gets very small on a phone. Make them stronger and bigger?"
 },
 {
 "section": "Any time",
