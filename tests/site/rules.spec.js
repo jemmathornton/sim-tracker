@@ -109,7 +109,7 @@ test('the counts in her list on Admin, Notes are filled in live and match the pl
 test('Admin numbers add up: At a glance, the sidebar badge and Notes agree', async ({ page }) => {
   await openApp(page, 'admin');
   const r = await page.evaluate(() => { const n = admCounts(), L = admOwned();
-    return {notes: ADM.checklist.length + n.checks + ADM.toSort.length, built: L.filter(l => l.built === true).length, all: L.length,
+    return {notes: ADM.checklist.length + n.checks + ADM.toSort.length, built: L.filter(l => l.built === true).length, all: buildable(L).length,   // the game's own lots ("N/A") are not counted (15 Nov)
       shared: L.filter(l => l.shared === true).length}; });
   const notesCard = page.locator('#view .adm-card', {hasText: 'Notes'});
   await expect(notesCard.locator('b.big')).toHaveText(String(r.notes));

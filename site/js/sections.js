@@ -165,7 +165,7 @@ function admGlance(){
   const fresh = L.filter(l => newSince(l));
   return `<div class="adm-grid">${refreshCard()}
     ${card("sparkle", "New since you looked", fresh.length, fresh.length ? fresh.slice(0, 8).map(l => `${lotA(l)} <small>${esc(newTxt(newSince(l)))}</small>`).join("<br>") : "No new favourites, comments or uploads since you last opened each lot.", "")}
-    ${card("hammer", "Built", `${built}<small style="font-size:18px"> of ${L.length}</small>`, `${shared} shared.`, "progress")}
+    ${card("hammer", "Built", `${built}<small style="font-size:18px"> of ${buildable(L).length}</small>`, `${shared} shared.`, "progress")}
     ${card("camera", "Shared, no screenshots", L.filter(l => l.shared === true && !hasShots(l)).length, "Showing only their Gallery pictures.", "")}
     ${card("note", "Notes", ADM.checklist.length + n.checks + ADM.toSort.length, n.checks ? `${plural(n.checks, "thing")} out of step in the plan, and your list.` : "Your list: everything waiting on you, to do or decide.", "game", n.checks ? "warn" : "")}</div>`;
 }
@@ -235,20 +235,20 @@ function hhRows(){
     && (!st.status || (st.status === "made" && r.made) || (st.status === "notmade" && !r.made) || (st.status === "nosims" && !r.h.sims.length) || (st.status === "ea" && r.who === "EA") || (st.status === "yours" && r.who === "Yours") || (st.status === "nopic" && !r.pic))
     && (!q || [r.h.name, r.l ? r.l.name : "", r.n, r.w, ...r.h.sims.map(sm => sm.name)].join(" ").toLowerCase().includes(q)));
   const idx = new Map(all.map((h, k) => [h, k]));
-  const val = r => st.sort === "order" ? idx.get(r.h) : st.sort === "name" ? r.h.name.toLowerCase() : st.sort === "home" ? (r.l ? r.l.name.toLowerCase() : "") : st.sort === "sims" ? r.h.sims.length : st.sort === "made" ? (r.made ? 1 : 0) : (r[st.sort] || "").toLowerCase();
+  const val = r => st.sort === "order" ? idx.get(r.h) : st.sort === "name" ? r.h.name.toLowerCase() : st.sort === "home" ? (r.l ? r.l.name.toLowerCase() : "") : st.sort === "sims" ? simCount([r.h]) : st.sort === "made" ? (r.made ? 1 : 0) : (r[st.sort] || "").toLowerCase();
   rs.sort((a, b) => { const x = val(a), y = val(b); return (x > y ? 1 : x < y ? -1 : idx.get(a.h) - idx.get(b.h)) * st.dir; });
   const H = (k, t) => `<th scope="col"><button type="button" data-hsort="${k}" class="${st.sort === k ? "on" : ""}">${t}${st.sort === k ? (st.dir > 0 ? " ↑" : " ↓") : ""}</button></th>`;
   return `<p class="showing">Showing <b>${rs.length}</b> of ${all.length} households</p><div class="sheet-wrap tall"><table class="sheet lots-sheet hh-sheet"><thead><tr>${H("order", "Where")}${H("name", "Household")}${H("home", "Home")}${H("sims", "Sims")}${H("who", "EA or yours")}${H("made", "Sims made")}${H("pic", "Picture")}</tr></thead>
     <tbody>${rs.map(r => `<tr><td class="where">${esc(r.n)}<small>${esc(r.w)}</small></td><th scope="row"><a href="#${r.h.id}">${esc(r.h.name)}</a></th><td>${r.l ? `<a href="#${r.l.id}">${esc(r.l.name)}</a>` : ""}</td>
-      <td class="num">${r.h.sims.length}</td><td>${r.who}</td><td class="c">${r.made ? `<span class="t yes" title="Yes">✓</span>` : `<span class="t no" title="Not yet">–</span>`}</td><td>${r.pic}</td></tr>`).join("")}</tbody></table></div>`;
+      <td class="num">${simCount([r.h])}</td><td>${r.who}</td><td class="c">${r.made ? `<span class="t yes" title="Yes">✓</span>` : `<span class="t no" title="Not yet">–</span>`}</td><td>${r.pic}</td></tr>`).join("")}</tbody></table></div>`;
 }
 function everyHousehold(){
   const hs = hhList(), st = hhState, made = hs.filter(simsMade).length, none = hs.filter(h => !h.sims.length).length;
   const hoods = [...new Set(hs.filter(h => !st.world || h.world.name === st.world).map(h => hhHome(h)?.hood.name).filter(Boolean))];
   const opt = (v, t) => `<option value="${v}" ${st.status === v ? "selected" : ""}>${t}</option>`;
   return `<section class="block" id="hh-sheet"><div class="block-head"><h2>Every <em>household</em></h2><span class="count">${made} of ${hs.length} with Sims made · ${none} with no Sims yet</span></div>
-    <div class="filters"><label>World<select id="h-world"><option value="">All worlds</option>${worlds.filter(w => w.owned && w.ready).map(w => `<option ${st.world === w.name ? "selected" : ""}>${esc(w.name)}</option>`).join("")}</select></label>
-      <label>Neighbourhood<select id="h-hood"><option value="">All</option>${hoods.map(n => `<option ${st.hood === n ? "selected" : ""}>${esc(n)}</option>`).join("")}</select></label>
+    <div class="filters"><label>World<select id="h-world"><option value="">All worlds</option>${worlds.filter(w => w.owned && w.ready).map(w => `<option value="${escAttr(w.name)}" ${st.world === w.name ? "selected" : ""}>${esc(w.name)}</option>`).join("")}</select></label>
+      <label>Neighbourhood<select id="h-hood"><option value="">All</option>${hoods.map(n => `<option value="${escAttr(n)}" ${st.hood === n ? "selected" : ""}>${esc(n)}</option>`).join("")}</select></label>
       <label>Show<select id="h-status"><option value="">Everything</option>${opt("made", "Sims made")}${opt("notmade", "Sims not made")}${opt("nosims", "No Sims on the site yet")}${opt("ea", "EA’s")}${opt("yours", "Yours")}${opt("nopic", "No picture")}</select></label>
       <label class="grow">Search<input id="h-q" type="search" placeholder="Household, Sim, home…" value="${esc(st.q)}"></label></div>
     <div id="hh-rows">${hhRows()}</div></section>`;
@@ -403,7 +403,6 @@ function sectionPage(key){
 // for tools/check_pages.js: these sections' own pages
 const SECTION_KEYS = () => ["calendar", ...calWorlds().map(w => "calendar-" + w.id), ...ACROSS_KEYS, ...ADM_SECTIONS.map(s => s.key)];
 
-route();   // again: app.js drew the first page before this file was loaded
 
 // ---------- the New save column on Progress's every-lot table (trial 24 Oct; kept, her call 31 Oct) ----------
 // From the new-save check (tools/research/new_save_check.py, via admin-data.js): placed, placed with something to fix, or still to place.
@@ -421,7 +420,6 @@ lotRows = function(){
   t.content.querySelectorAll("tbody tr").forEach(tr => { const a = tr.querySelector("td.lotcell a"); tr.insertAdjacentHTML("beforeend", a ? nsCell(a.getAttribute("href").slice(1)) : "<td></td>"); });
   return t.innerHTML;
 };
-if (location.hash === "#admin-progress") route();   // the page was drawn before this file loaded
 
 // ---------- trial (31 Oct, overnight): EA's ancestors' own portraits and how they died ----------
 // A switch at the bottom right (Sim pages only): "As now" is the site exactly as it was; "With game pictures" shows each
@@ -454,4 +452,5 @@ document.addEventListener("click", e => { const b = e.target.closest("[data-anct
   ancApply(); ancSwitch(); const y = scrollY; route(); scrollTo(0, y); });
 addEventListener("hashchange", ancSwitch);
 ancApply(); ancSwitch();
-if (ANC_TRIAL === "on" && /^#(s-|h-)/.test(location.hash)) route();   // the page was drawn before this file loaded
+
+route();   // the first page, drawn once now that every section and trial is in place (app.js leaves it to this file, 15 Nov)

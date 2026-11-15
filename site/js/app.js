@@ -9,6 +9,10 @@ const ic = n => ICONS[n].replace("<svg ", '<svg class="i" aria-hidden="true" ');
 const curly = s => String(s ?? "").replace(/(^|[\s(])'(?=n'|Round\b|til\b|tis\b)/g, "$1’").replace(/(^|[\s(\[“"—-])'/g, "$1‘").replace(/'/g, "’")
   .replace(/(^|[\s(\[‘—-])"/g, "$1“").replace(/"/g, "”");   // double quotes too (19 Oct)
 const esc = s => curly(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+// a value that code reads back (select options): HTML-escaped but kept straight, so it still matches the data (15 Nov)
+const escAttr = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+// lots that can be built: the game's own lots ("N/A", e.g. Sylvan Glade) are left out of every "N of M built" (15 Nov)
+const buildable = ls => ls.filter(l => l.built === true || l.built === false);
 const slug = s => String(s).toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/&/g,"and").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
 // neighbourhood colours: muted jewel tones
 const HOOD_COLORS = ["#B4573E","#6A5A9E","#2F6E9C","#B98A2E","#3C8459","#AE5578","#2B8A86","#8C7A3A"];
@@ -776,7 +780,7 @@ const rentalUnits = l => { const n = unitCount(l), who = [];
   const placed = who[0] && who[0].hh === l.hh && ru > 0 && ru < n ? (out[ru] = who[0], who.slice(1)) : who;
   placed.forEach(x => { const k = out.indexOf(null); if (k >= 0) out[k] = x; });
   (l.tenants || []).filter(t => t.unit).forEach(t => { const i = t.unit - 1;   // a tenant in a given unit (Johnny Zest in trailer 4)
-    if (i < n && !out[i]) out[i] = {hh: t, role: "tenant"}; else out[out.indexOf(null)] = {hh: t, role: "tenant"}; });
+    if (i < n && !out[i]) out[i] = {hh: t, role: "tenant"}; else { const k = out.indexOf(null); if (k >= 0) out[k] = {hh: t, role: "tenant"}; } });   // no free unit: not drawn (15 Nov guard)
   return out; };
 // a unit's own pictures: photos named flat-N or unit-N
 const unitPhotos = l => { const m = {}; l.photos.forEach(p => { const r = /(?:flat|unit)[-_ ]?(\d+)/i.exec(p.thumb || p.src || ""); if (r) (m[+r[1]] ||= []).push(p); }); return m; };
@@ -830,7 +834,7 @@ function buildingCard(b){
   return `<div class="listing bcard" style="--h:${b.hood.color}"><div class="photo ${cover?"shot":""}" ${cover?`style="--img:url('${cover.photos[0].thumb}')"`:""}>${cover ? "" : plot("40x30", 120, false)}<span class="type">Apartment Building</span><span class="size">${b.units.length} Apartments</span></div>
     <h3>${esc(b.name)}</h3>
     <ul class="units">${b.units.map(l => `<li><a href="#${l.id}"><span class="unit-no">${esc(l.unit)}</span><span class="unit-who">${l.hh ? `${ic("users")}<b>${esc(l.hh.name)}</b>` : `<i>${esc(l.whoNote ? emptyNote(l.whoNote) : "No household yet")}</i>`}</span><span class="status">${statusDots(l)}</span></a></li>`).join("")}</ul>
-    <div class="meta"><span>${ic("hammer")}<b>${built} of ${b.units.length}</b> built</span></div></div>`;
+    <div class="meta"><span>${ic("hammer")}<b>${built} of ${buildable(b.units).length}</b> built</span></div></div>`;
 }
 // units of a building share one card
 const hoodItems = x => { const seen = new Set(); return x.lots.flatMap(l => { if (!l.building) return [listing(l)]; const b = l.building; if (seen.has(b)) return []; seen.add(b);
@@ -929,7 +933,7 @@ function hoodCard(x){
     <h3>${esc(((NB_BANNER[x.world.id] || {})[x.name] || {}).title || x.name)}</h3>${x.desc ? `<p class="desc">${esc(x.desc)}</p>` : ""}
     ${hh ? `<p class="home-to">${ic("users")}<span>Home to ${hhSet.map(f => `<b>${esc(f.name)}</b>`).join(", ")}</span></p>` : `<p class="home-to">${ic("pin")}<span>Community lots only</span></p>`}
     ${hoodExtras(x)}
-    <div class="meta"><span>${ic("hammer")}<b>${built} of ${x.lots.length}</b> lots built</span>${hh ? `<span>${ic("sim")}<b>${made} of ${hh}</b> with Sims made</span>` : ""}</div></a>`;
+    <div class="meta"><span>${ic("hammer")}<b>${built} of ${buildable(x.lots).length}</b> lots built</span>${hh ? `<span>${ic("sim")}<b>${made} of ${hh}</b> with Sims made</span>` : ""}</div></a>`;
 }
 function world(w){
   const s = w.stats;
@@ -959,7 +963,7 @@ function hoodPage(x){
   const [t1, ...t2] = (((NB_BANNER[w.id] || {})[x.name] || {}).title || x.name).split(" / ");   // bannerTitle: her own order for the banner
   let h = mapHero(w, `Neighbourhood · ${esc(w.name)}`, esc(t1) + (t2.length ? `<small class="h1-sub">${esc(t2.join(" / "))}</small>` : ""), x.desc ? esc(x.desc) : "", figs,
     w.hoods.filter(o => o !== x).map(o => `<a href="#n-${o.id}">${esc(hoodTitle(o))}</a>`).join(""), true, hoodHeroView(x));
-  h += `<section class="hood" style="--h:${x.color}"><div class="hood-head"><span class="label">${esc(x.name)}</span><div><h2>The <em>lots</em></h2><p>Open a home to meet the household who lives there.</p>${hoodExtras(x, true) ? `<div class="hood-extras">${hoodExtras(x, true)}</div>` : ""}<p class="dot-key"><span class="yes">${ic("hammer")}</span>Built <span class="yes">${ic("share")}</span>Shared <span class="yes">${ic("sim")}</span>Sims made <small>Faded means not yet.</small></p></div><span class="count">${built} of ${x.lots.length} built</span></div>
+  h += `<section class="hood" style="--h:${x.color}"><div class="hood-head"><span class="label">${esc(x.name)}</span><div><h2>The <em>lots</em></h2><p>Open a home to meet the household who lives there.</p>${hoodExtras(x, true) ? `<div class="hood-extras">${hoodExtras(x, true)}</div>` : ""}<p class="dot-key"><span class="yes">${ic("hammer")}</span>Built <span class="yes">${ic("share")}</span>Shared <span class="yes">${ic("sim")}</span>Sims made <small>Faded means not yet.</small></p></div><span class="count">${built} of ${buildable(x.lots).length} built</span></div>
     <div class="listings">${hoodItems(x).join("")}</div></section>`;
   return h;
 }
@@ -1053,9 +1057,10 @@ const baseGame = l => !!l.gallery && !(l.gallery.packs || []).length;
 // uploads, are marked until their page is opened. Kept in this browser only, so it's per viewer.
 const SEEN_KEY = "jsw-seen-v1";
 let seen = null; try { seen = JSON.parse(localStorage.getItem(SEEN_KEY) || "null"); } catch (e) {}
-const seenNow = l => [l.gallery.likes, theirs(l).length];
+// Community Space lots count all their versions together, whichever version tab is showing (15 Nov: counting the tab
+// shown made them "New" on a first visit)
+const seenNow = l => [l.versions ? l.versions.reduce((n, v) => n + v.likes, 0) : l.gallery.likes, theirs(l).length];
 const saveSeen = () => { try { localStorage.setItem(SEEN_KEY, JSON.stringify(seen)); } catch (e) {} };
-if (!seen) { seen = {}; Object.values(lotIndex).forEach(l => { if (l.gallery) seen[l.id] = seenNow(l); }); saveSeen(); }
 const newSince = l => { if (!l.gallery) return null; const s = seen[l.id], [f, c] = seenNow(l);
   if (!s) return {fresh: true}; return f > s[0] || c > s[1] ? {f: Math.max(0, f - s[0]), c: Math.max(0, c - s[1])} : null; };
 const markSeen = l => { if (l.gallery) { seen[l.id] = seenNow(l); saveSeen(); } };
@@ -1087,7 +1092,7 @@ const FAME_LEVELS = [null, "Rising Star", "B-Lister", "Celebrity", "Superstar", 
 const OCCULT_ICON = {Spellcaster: "cauldron", Vampire: "bat", Werewolf: "ph-moon", Ghost: "ghost", Alien: "ph-alien", Fairy: "ph-butterfly", "Plant Sim": "ph-plant", Servo: "bot", Mermaid: "trident"};
 const lifeState = (s, cls) => isAnimal(s) ? `<span class="${cls} animal">${animalIcon(s)}${esc(s.state)}</span>` : `<span class="${cls} occult">${ic(OCCULT_ICON[s.state] || "sparkle")}${esc(s.state)}</span>`;
 function hhListing(x, listed){   // listed: on the households page, one-Sim households read surname first
-  const n = x.sims.length, hc = x.lots[0].hood.color, made = simsMade(x);
+  const n = simCount([x]), hc = x.lots[0].hood.color, made = simsMade(x);   // Sims only, as on world pages (15 Nov: animals were counted)
   return `<a class="listing" href="#${x.id}" style="--h:${hc}"><div class="photo"><span class="initial">${initial(x.name)}</span><span class="type">Household</span><span class="status">${x.unsure ? `<span class="flag">unsure</span>` : ""}<span class="${made?"yes":""}" title="Sims made: ${made?"yes":"not yet"}">${ic("sim")}</span></span><span class="size">${esc(x.lots.map(l => l.name).join(" & "))}</span></div>
     <h3>${esc(listed ? hhListName(x) : x.name)}</h3><p class="desc">${esc([...new Set(x.lots.map(l => l.hood.name))].join(", "))}</p>
     <div class="meta"><span class="${made?"made":""}">${ic("sim")}<b>${made ? "Sims made" : "Sims not made yet"}</b></span>${n ? `<span>${ic("users")}${n} Sim ${n===1?"profile":"profiles"}</span>` : ""}${x.links.length ? `<span>${ic("share")}${x.links.length} connected</span>` : ""}</div></a>`;
@@ -1253,8 +1258,8 @@ function statsPage(pre){
   return `<section class="hero small" style="--c:#8E62CF"><div class="kicker"><i></i><span class="label">Behind the scenes</span></div><h1 style="margin-top:14px">The <em>stats</em></h1><p>Every world and every lot from the plan in one place, ready to sort and filter.</p></section>
     <section class="block"><div class="block-head"><h2>By <em>world</em></h2><span class="count">click a world to filter the lots below</span></div>${worldSummary()}</section>
     <section class="block" id="lot-sheet"><div class="block-head"><h2>Every <em>lot</em></h2></div>
-      <div class="filters"><label>World<select id="f-world"><option value="">All worlds</option>${worlds.map(w => `<option ${statsState.world===w.name?"selected":""}>${esc(w.name)}</option>`).join("")}</select></label>
-        <label>Neighbourhood<select id="f-hood"><option value="">All</option>${hoods.map(n => `<option ${statsState.hood===n?"selected":""}>${esc(n)}</option>`).join("")}</select></label>
+      <div class="filters"><label>World<select id="f-world"><option value="">All worlds</option>${worlds.map(w => `<option value="${escAttr(w.name)}" ${statsState.world===w.name?"selected":""}>${esc(w.name)}</option>`).join("")}</select></label>
+        <label>Neighbourhood<select id="f-hood"><option value="">All</option>${hoods.map(n => `<option value="${escAttr(n)}" ${statsState.hood===n?"selected":""}>${esc(n)}</option>`).join("")}</select></label>
         <label>Show<select id="f-status"><option value="">Everything</option><option value="notbuilt" ${statsState.status==="notbuilt"?"selected":""}>Not built yet</option><option value="notshared" ${statsState.status==="notshared"?"selected":""}>Built, not shared</option><option value="nosims" ${statsState.status==="nosims"?"selected":""}>Sims not made</option><option value="photos" ${statsState.status==="photos"?"selected":""}>Has photos</option></select></label>
         <label class="grow">Search<input id="f-q" type="search" placeholder="Lot, type, residents…" value="${esc(statsState.q)}"></label></div>
       <div id="lot-rows">${lotRows()}</div></section>
@@ -1325,7 +1330,17 @@ const lazyIO = "IntersectionObserver" in window ? new IntersectionObserver(es =>
 function showPic(el){ el.style.setProperty(el.dataset.lazy, `url('${el.dataset.src}')`); el.removeAttribute("data-lazy"); }
 function lazyPics(root){ root.querySelectorAll("[data-lazy]").forEach(el => lazyIO ? lazyIO.observe(el) : showPic(el)); }
 const open = w => w.ready;   // pages that open: owned, ready worlds
+// everything a freshly drawn page needs; also used when a Community Space version tab redraws the lot (15 Nov)
+function afterDraw(key, view){
+  if (typeof afterRoute === "function") afterRoute(key, view);   // js/sections.js: calendar links on world, neighbourhood and lot pages
+  notOwnedLinks(view);
+  initialsContrast(view);
+  lazyPics(view);
+  keyLinks(view);
+}
+let drawnOnce = false;
 function route(){
+  drawnOnce = true;
   closeLightbox();
   const key = location.hash.slice(1) || "home";
   const view = document.getElementById("view");
@@ -1349,11 +1364,7 @@ function route(){
   if (cw && cw.deep) { root.setProperty("--deep", cw.deep[0]); root.setProperty("--deep-2", cw.deep[1]); }
   else { root.removeProperty("--deep"); root.removeProperty("--deep-2"); }
   view.innerHTML = html;
-  if (typeof afterRoute === "function") afterRoute(key, view);   // js/sections.js: calendar links on world, neighbourhood and lot pages
-  notOwnedLinks(view);
-  initialsContrast(view);
-  lazyPics(view);
-  keyLinks(view);
+  afterDraw(key, view);
   clearSearch();
   renderNav(active, key, ctx);
   // keyboard users: the sidebar is redrawn, so put focus back on the link they chose
@@ -1369,6 +1380,8 @@ function applyVersion(l, i){
   l.gallery = {...l.baseGallery, title: v.title, url: v.url, likes: v.likes, downloads: v.downloads, value: v.value, packs: v.packs, description: v.description, tags: v.tags, shared: v.shared, label: v.label, others: null, beds: 0, baths: 0};
 }
 Object.values(lotIndex).forEach(l => { const vs = CS_VERSIONS[l.world.name + "|" + l.lot]; if (vs && l.gallery) { l.versions = vs; l.baseGallery = l.gallery; applyVersion(l, 0); } });
+// first visit: everything counts as seen (after the Community Space versions are in place, so their totals are used)
+if (!seen) { seen = {}; Object.values(lotIndex).forEach(l => { if (l.gallery) seen[l.id] = seenNow(l); }); saveSeen(); }
 function versionTabs(l){
   const tl = l.versions.reduce((n,v) => n + v.likes, 0), td = l.versions.reduce((n,v) => n + v.downloads, 0);
   return `<div class="versions" style="--h:${l.hood.color}"><span class="label">${l.versions.length} versions of this lot</span>
@@ -1376,7 +1389,7 @@ function versionTabs(l){
     <small class="ver-total">All ${l.versions.length} together: ${tl} favourites · ${td} downloads</small></div>`;
 }
 document.addEventListener("click", e => { const b = e.target.closest("[data-ver]"); if (!b) return; const l = lotIndex[location.hash.slice(1)]; if (!l || !l.versions) return;
-  applyVersion(l, +b.dataset.ver); const y = scrollY; document.getElementById("view").innerHTML = lot(l); lazyPics(document.getElementById("view")); window.scrollTo(0, y); document.querySelector(`[data-ver="${b.dataset.ver}"]`)?.focus(); });
+  applyVersion(l, +b.dataset.ver); const y = scrollY, view = document.getElementById("view"); view.innerHTML = lot(l); afterDraw(location.hash.slice(1), view); window.scrollTo(0, y); document.querySelector(`[data-ver="${b.dataset.ver}"]`)?.focus(); });
 /* ---------- families in worlds she doesn't own yet (her choice A, 19 Oct; ported from for-jemma/prototypes/not-owned) ----------
    Their household and Sim pages are the usual ones with a lighter banner and one plain line; they're listed under their world
    in the sidebar's Not owned list. Marks: a hollow dot or monogram, like the sidebar's not-owned worlds. Their lots,
@@ -1442,13 +1455,14 @@ renderNav = function (active, key, ctx) {
     const w = worlds.find(x => x.name === a.textContent.trim()), hhs = w ? Object.values(w.households).sort(byHh) : [];
     if (!hhs.length) return;
     const open = w === cur || NO_FOLD.has(w.id);
-    a.classList.add("has-hh"); a.dataset.nofold = w.id; a.setAttribute("role", "button"); a.setAttribute("aria-expanded", open); a.removeAttribute("aria-disabled");
+    a.classList.add("has-hh"); a.dataset.nofold = w.id; a.setAttribute("role", "button"); a.tabIndex = 0; a.setAttribute("aria-expanded", open); a.removeAttribute("aria-disabled");   // tabIndex: reachable by keyboard (15 Nov)
     a.insertAdjacentHTML("beforeend", `<span class="pct">${hhs.length}</span>`);
     a.insertAdjacentHTML("afterend", `<div class="subnav" ${open ? "" : "hidden"}>${hhs.map(hx => `<a href="#${hx.id}" class="${ctx.hh === hx ? (ctx.sim ? "path" : "cur") : ""}">${esc(hhListName(hx))}</a>${ctx.hh === hx ? `<div class="lotnav">${hx.sims.map(sm => `<a href="#s-${sm.sid}" class="${ctx.sim === sm ? "cur" : ""}">${esc(sm.name)}</a>`).join("")}</div>` : ""}`).join("")}</div>`);
   });
 };
 document.addEventListener("click", e => { const a = e.target.closest("#nav a[data-nofold]"); if (!a) return; e.preventDefault();
   const id = a.dataset.nofold, list = a.nextElementSibling, show = list.hidden; list.hidden = !show; a.setAttribute("aria-expanded", show); show ? NO_FOLD.add(id) : NO_FOLD.delete(id); });
+document.addEventListener("keydown", e => { const a = e.target.closest && e.target.closest("#nav a[data-nofold]"); if (!a || (e.key !== "Enter" && e.key !== " ")) return; e.preventDefault(); a.click(); });
 // search: their households and Sims can be found, marked "not owned"
 const searchIndexOwned = searchIndex;
 searchIndex = function () {
@@ -1508,4 +1522,5 @@ document.getElementById("nav").addEventListener("click", e => { if (e.target.clo
 addEventListener("hashchange", route);
 document.getElementById("menuBtn").addEventListener("click", () => document.body.classList.toggle("nav-open"));
 document.getElementById("scrim").addEventListener("click", () => document.body.classList.remove("nav-open"));
-route();
+// the first page is drawn once, at the end of js/sections.js, so section pages never flash "Page not found" (15 Nov)
+addEventListener("DOMContentLoaded", () => { if (!drawnOnce) route(); });   // only if js/sections.js didn't (it draws first, at its end)
