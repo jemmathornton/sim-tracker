@@ -309,7 +309,7 @@ def commit_refresh(before=frozenset(), root=None):
     data/worlds that already had uncommitted changes when the run started (her or Claude's work) is left out and named in
     the log (15 Nov review). Files only the refresh writes (Gallery data, data.js, admin-data.js, index.html, Gallery
     pictures, the checklist, the new-save status) are always taken, even if a failed run left them changed (19 Nov:
-    before, one failed build kept them out of every later weekly save). Never pushes anywhere."""
+    before, one failed build kept them out of every later weekly save). Pushing to GitHub is backup_push()'s job."""
     try:
         before = sorted(p for p in before if p.startswith(SHARED_PATHS))
         mine = sorted(changed_files(root) - set(before))
@@ -321,6 +321,20 @@ def commit_refresh(before=frozenset(), root=None):
         say("Saved in the project history" if r.returncode == 0 else "Couldn't save in the project history: " + (r.stderr or r.stdout).strip()[:300])
         if before: say(f"  left out of the automatic save (already being changed before the refresh): {', '.join(sorted(before)[:10])}" + (" …" if len(before) > 10 else ""))
     except Exception as e: say(f"Couldn't save in the project history: {e}")
+
+
+def backup_push(root=None):
+    """Weekly backup (her ask, 19 Nov): push everything committed to her GitHub repo (origin, github.com/jemmathornton/
+    sim-tracker, public by her choice). Runs every week whether or not this run saved anything, so Claude's commits go too.
+    Never forces; a failure is only a note for Admin, the refresh itself still counts."""
+    import subprocess
+    try:
+        if git('remote', 'get-url', 'origin', root=root).returncode: return say("Backup to GitHub skipped: no GitHub copy set up")
+        env = dict(os.environ, GIT_TERMINAL_PROMPT='0', GCM_INTERACTIVE='never')   # never wait for a sign-in window
+        r = subprocess.run(['git', 'push', 'origin', 'HEAD'], cwd=root or ROOT, capture_output=True, text=True, encoding='utf-8',
+                           stdin=subprocess.DEVNULL, env=env, timeout=600, creationflags=getattr(subprocess, 'CREATE_NO_WINDOW', 0))
+        say("Backed up to GitHub" if r.returncode == 0 else "Backup to GitHub didn't work: " + (r.stderr or r.stdout).strip()[-300:])
+    except Exception as e: say(f"Backup to GitHub didn't work: {e}")
 
 
 if __name__ == '__main__':
@@ -352,6 +366,7 @@ if __name__ == '__main__':
                     else: say("New-save check not refreshed: " + (n.stderr or n.stdout).strip()[-200:])
                 except Exception as e: say(f"New-save check not refreshed: {e}")
                 if rebuilt: commit_refresh(before)
+        if '--no-push' not in sys.argv: backup_push()
     except Exception:
         import traceback
         say("Stopped with an error:\n" + traceback.format_exc())
