@@ -8,7 +8,10 @@ const SCAN = () => {
   const render = (0, eval)('(' + route.toString().replace(/^function route\(\)\{/, 'function(key0){').replace('location.hash.slice(1) || "home"', 'key0') + ')');
   const keys = ['home', 'stats', ...worlds.filter(w => w.ready).flatMap(w => ['w-' + w.id, 'f-' + w.id, ...w.hoods.map(h => 'n-' + h.id)]),
     ...Object.keys(lotIndex), ...Object.keys(hhIndex), ...Object.keys(SIM_PAGES), ...Object.keys(GROUP_PAGES), ...SECTION_KEYS()];
-  const view = document.getElementById('view'), out = {pages: keys.length, straight: [], pct: [], american: [], likes: [], braces: [], title: []};
+  const view = document.getElementById('view'), out = {pages: keys.length, straight: [], pct: [], american: [], likes: [], braces: [], title: [], tipStraight: [], tipAmerican: [], tipLikes: []};
+  // tooltips, screen-reader labels, picture descriptions and placeholders, and the sidebar's own text (19 Nov)
+  const tips = () => [...document.querySelectorAll('#view [title], #view [aria-label], #view [alt], #view [placeholder], #nav [title], #nav [aria-label], #side [aria-label], #side [placeholder]')]
+    .map(el => ['title', 'aria-label', 'alt', 'placeholder'].map(a => el.getAttribute(a)).filter(Boolean).join(' / ')).join('\n') + '\n' + document.getElementById('nav').innerText;
   const add = (k, arr, t, re) => { const m = t.match(re); if (m) arr.push(k + ': ' + [...new Set(m)].slice(0, 3).join(' | ')); };
   for (const k of keys) {
     render(k); const t = view.innerText;
@@ -18,12 +21,16 @@ const SCAN = () => {
     add(k, out.likes, t, /\d[\d,]*\s+likes?\b/gi);                                  // Gallery likes are called favourites
     add(k, out.braces, t, /\{\w+\}/g);                                              // her list's {words} are always filled in
     add(k, out.title, document.title, /'/g);
+    const tt = tips();
+    add(k, out.tipStraight, tt, /.{0,15}'.{0,15}/g);
+    add(k, out.tipAmerican, tt, /.{0,15}\b([Ff]avorites?|[Oo]rganizations?|neighborhoods?|colors?)\b.{0,10}/g);   // capitalised Neighborhood/Color: the game's own names
+    add(k, out.tipLikes, tt, /\d[\d,]*\s+likes?\b/gi);
   }
   render(location.hash.slice(1) || 'home');
   return out;
 };
 
-test('every page follows the wording rules', async ({ page }) => {
+test('every page follows the wording rules, in its text, tooltips, labels and sidebar', async ({ page }) => {
   await openApp(page);
   const r = await page.evaluate(SCAN);
   expect(r.pages).toBeGreaterThan(1000);
@@ -33,6 +40,9 @@ test('every page follows the wording rules', async ({ page }) => {
   expect(r.american, 'American spellings').toEqual([]);
   expect(r.likes, '"likes" for Gallery favourites').toEqual([]);
   expect(r.braces, 'unfilled {words}').toEqual([]);
+  expect(r.tipStraight, 'straight apostrophes in tooltips, labels or the sidebar').toEqual([]);
+  expect(r.tipAmerican, 'American spellings in tooltips, labels or the sidebar').toEqual([]);
+  expect(r.tipLikes, '"likes" in tooltips, labels or the sidebar').toEqual([]);
 });
 
 test('lot names: Gallery title, then her name (not a bare "?"), then the in-game name', async ({ page }) => {
