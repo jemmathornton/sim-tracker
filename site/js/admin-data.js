@@ -749,6 +749,11 @@ window.ADMIN = {
 {
 "section": "Any time",
 "world": "",
+"text": "**Decide:** Backing up your Sims saves (19 Nov, for later): the project is on GitHub, but your saves folder isn't (24 saves, 390 MB, plus 2.5 GB of the game's own backups). Not in the repo itself (too big, and every week's copy would stay forever). Options: OneDrive (Claude's suggestion: a weekly copy, latest only), or a weekly zip on GitHub (public unless in a private repo)."
+},
+{
+"section": "Any time",
+"world": "",
 "text": "**Decide:** Going online: only if you ever want it on other devices (free and private with Cloudflare)."
 }
 ],
