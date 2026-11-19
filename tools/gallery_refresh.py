@@ -278,7 +278,7 @@ def main():
 
 
 REFRESH_PATHS = ['data/gallery', 'data/worlds', 'site/js/data.js', 'site/js/admin-data.js', 'site/index.html', 'site/gallery', 'site/gallery-more',
-                 'for-jemma/new-save-checklist.md', 'research/new-save-status.md', 'research/data/new-save-status.json']
+                 'for-jemma/new-save-checklist.md', 'research/new-save-status.md', 'research/data/new-save-status.json', 'claude-notes']
 
 
 def git(*a, stdin=None, root=None):
@@ -301,6 +301,7 @@ def changed_files(root=None):
     return out
 
 
+NOTES_SRC = None   # where Claude's notes live (None: sync_notes.MEMORY); the tests point it elsewhere
 SHARED_PATHS = ('data/worlds/',)   # the plan: hers and Claude's to edit too; everything else in REFRESH_PATHS only the refresh (and its build) writes
 
 
@@ -365,7 +366,12 @@ if __name__ == '__main__':
                             ok = rebuilt = False
                     else: say("New-save check not refreshed: " + (n.stderr or n.stdout).strip()[-200:])
                 except Exception as e: say(f"New-save check not refreshed: {e}")
-                if rebuilt: commit_refresh(before)
+                if rebuilt:
+                    try:   # Claude's notes on how she likes to work, copied in so they're backed up too (19 Nov)
+                        import sync_notes; c, d = sync_notes.sync(NOTES_SRC or sync_notes.MEMORY, os.path.join(ROOT, "claude-notes"))
+                        if c or d: say(f"Claude's notes updated: {len(c)} copied, {len(d)} removed")
+                    except Exception as e: say(f"Claude's notes not copied: {e}")
+                    commit_refresh(before)
         if '--no-push' not in sys.argv: backup_push()
     except Exception:
         import traceback

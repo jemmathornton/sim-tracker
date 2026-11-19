@@ -57,7 +57,7 @@ class MainPart(unittest.TestCase):
         keys = set(G.__dict__)
         code = None
         try:
-            with patched(G, LOG=self.log, LIVE=False, ROOT=self.d, report=[], main=main), mock.patch('subprocess.run', fake_run), argv(*flags), quiet():
+            with patched(G, LOG=self.log, LIVE=False, ROOT=self.d, report=[], main=main, NOTES_SRC=os.path.join(self.d, 'no-memory-here')), mock.patch('subprocess.run', fake_run), argv(*flags), quiet():
                 try: exec(MAIN, G.__dict__)
                 except SystemExit as e: code = e.code
         finally:

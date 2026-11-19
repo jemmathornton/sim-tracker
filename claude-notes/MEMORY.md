@@ -1,0 +1,27 @@
+- [App shows main checkout](app-shows-main-checkout.md) — worktree work invisible in her app until merged; ask before merging
+- [Whole picture, in chat](whole-picture-first.md) — mix/balance questions: break down every world and discuss here; no page, no shortlist menus
+- [Wait before the next item](wait-before-next-item.md) — discussion lists: wait for her "next"; quick yes/no lists: ask the next straight away
+- [Bonus story welcome](bonus-story-welcome.md) — her own story on top of EA's lore is a plus; flag how much an idea changes the game, not that it's invented
+- [Lots are flexible](lots-are-flexible.md) — empty homes can become venues and families can move; don't stick to the game's exact lots
+- [World geography](world-geography.md) — her 12 world areas (two cities SM+Newcrest, SS+Willow Creek; desert; spooky trio…); use nearby worlds when judging gaps
+- [Port prototypes exactly](port-prototypes-exactly.md) — approved prototype → copy its design and code into the app as is, check side by side; never rebuild simpler
+- [Gallery beats Building save](gallery-beats-building-save.md) — save/Gallery lot mismatches don't matter; she'll make a new save from the Gallery
+- [Cadberry legacy](cadberry-legacy.md) — Cadberrys = her Not So Berry legacy; every generation stays alive in its own household, across worlds
+- [No admin notes on the site](no-admin-notes.md) — no progress/source markers on story pages, no system notices (refresh failed etc.) anywhere
+- [Sims source = her Gallery](sims-source-gallery.md) — one Gallery upload per household; links between households re-added with MCCC, no save-together
+- [New save](new-save-planned.md) — "Jemma's Sim World" (23 Oct) to be restarted once mods work on patch 1.129; older saves are stand-ins
+- [Cadberrys parked](cadberry-parked.md) — don't ask which Cadberrys live where until she raises it
+- [Prototypes as site toggles](prototypes-as-site-toggles.md) — trials go in the site behind a bottom-right switch, not separate pages; summarise in chat, .md reads badly for her
+- [Bonus builds](bonus-builds.md) — Robert Piggott School and Bubble World aren't on the site; dropped from TODO 23 Oct, may return
+- [No generated text](no-generated-text.md) — site text only from her words or the game's, word for word; never write or tidy it
+- [Keep working when away](keep-working-when-away.md) — "all night" means a long backlog in one turn; a final reply stops all work
+- [Library covers: same printing](library-covers-same-printing.md) — whole series from one printing, shown as a row, ask before every change; Oxfam shop API for UK printings
+- [Pictures as they are](pictures-as-they-are.md) — household/Sim pictures exactly as the game made them: no crop, no stretch, no composing
+- [Suggestions aren't facts](suggestions-not-facts.md) — label my proposals as suggestions; never word them as settled
+- [Library server start](library-server-start.md) — restart serve.py only via explorer + Startup .lnk; from Claude's shell it dies with the session
+- [Show, don't ask, for looks](show-dont-ask-layout.md) — layout/design choices: send mock-up screenshots of each option, never text-only options
+- [Lot traits: avoid none](lot-traits-enough.md) — 1–2 traits is fine; only flag lots with no traits
+- [Playtest before upload](playtest-before-upload.md) — my checks mean "ready for her playtest", not "ready to upload"; owners don't block uploads
+- [General fixes, not per item](general-fixes-not-per-item.md) — a problem on one book means fix the rule for all; say it's general when reporting
+- [Gallery helper rooms](gallery-helper-rooms.md) — one-tile collection/display rooms from the Gallery need no credit
+- [Backups: git only](backups-git-only.md) — git/GitHub for backups; never suggest OneDrive
