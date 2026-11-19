@@ -55,15 +55,15 @@ test('family words agree both ways for every Sim: parents, grandparents, sibling
   expect(bad).toEqual([]);
 });
 
-// bug: relWord in app.js gives a sibling's spouse no word (one way only), and a late spouse's parents-in-law no word for them, because
+// fixed 19 Nov: relWord in app.js gave a sibling’s spouse no word (one way only), and a late spouse’s parents-in-law no word for them, because
 // partners are read with the kind each Sim's own record gives ("Late Spouse" on one side, "Spouse" on the other)
-test.fail('in-law words agree both ways for every Sim', async ({ page }) => {
+test('in-law words agree both ways for every Sim', async ({ page }) => {
   await openApp(page);
   const pairs = await page.evaluate(PAIRS);
   expect(check(pairs, true).slice(0, 20)).toEqual([]);
 });
 
-test.fail('in-laws both ways on a made-up family: a brother’s wife, and a late wife’s mother-in-law', async ({ page }) => {
+test('in-laws both ways on a made-up family: a brother’s wife, and a late wife’s mother-in-law', async ({ page }) => {
   await openApp(page);
   const r = await page.evaluate(() => {
     const T = {xmum: {sex: 'f'}, xkid: {sex: 'm', parents: ['xmum'], partners: [['xwife', 'Late Spouse']]}, xsis: {sex: 'f', parents: ['xmum']},

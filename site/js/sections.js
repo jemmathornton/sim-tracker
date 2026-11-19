@@ -5,7 +5,8 @@
 // option A; proto-admin.js, as pages instead of tabs). Loaded after app.js and js/admin-data.js; app.js's route() asks sectionPage()
 // for these pages and lets afterRoute() add the calendar links.
 let redrawing = false;
-const redraw = () => { const y = scrollY; redrawing = true; try { route(); } finally { redrawing = false; } scrollTo(0, y); };
+// a redraw puts keyboard focus back on the control that had it (19 Nov: calendar ticks, seasons, school chips, Progress filters)
+const redraw = () => { const y = scrollY; redrawing = true; keepFocus(() => { try { route(); } finally { redrawing = false; } }); scrollTo(0, y); };
 const ACROSS_KEYS = ["clubs", "dynasties", "organisations", "families", "businesses"];
 
 // ---------- the sidebar ----------
@@ -37,10 +38,11 @@ const calLink = w => !w ? "#calendar" : "#calendar-" + w.id;
 const evHref = e => { const w = calW(e.w), hid = w && e.hood ? w.id + "-" + slug(e.hood) : null;
   return e.link || (hid && hoodIndex[hid] ? "#n-" + hid : w ? "#w-" + w.id : ""); };
 const KIND_WORD = {festival: ["festival", "festivals"], community: ["community event", "community events"], school: ["educational event", "educational events"], lot: ["lot night", "lot nights"]};
-// a world's calendar shows every kind held there to start with (its own ticks, kept apart from the whole-save calendar's)
-const worldKinds = new Set(Object.keys(CAL_KINDS));
+// a world's calendar shows every kind held there to start with (its own ticks, kept apart from the whole-save calendar's and
+// from every other world's, 19 Nov)
+const WORLD_KINDS = {}, worldKinds = w => WORLD_KINDS[w.id] ||= new Set(Object.keys(CAL_KINDS));
 function protoCal(w){
-  const kinds = w ? worldKinds : calState.kinds, on = e => kinds.has(calKind(e)), byWorld = e => e.kind === "festival" || e.kind === "community" || e.kind === "lot";
+  const kinds = w ? worldKinds(w) : calState.kinds, on = e => kinds.has(calKind(e)), byWorld = e => e.kind === "festival" || e.kind === "community" || e.kind === "lot";
   const base = calEvents().filter(e => !w || e.w === w.name);   // a world's calendar: everything held there, school events too
   const shown = base.filter(e => on(e) && (w || !byWorld(e) || !calState.world || e.w === calState.world) && (byWorld(e) || e.kind === "lot" || !calState.school || calSub(e) === calState.school))
     .map(e => e.kind === "lot" ? {...e, label: e.where + ": " + e.name} : e);
@@ -93,7 +95,7 @@ document.addEventListener("click", e => { if (!onCalendar()) return;
   if (s) { calState.season = s.dataset.calSeason; redraw(); }
   else if (sc) { calState.school = sc.getAttribute("data-cal-school") || null; redraw(); } });
 document.addEventListener("change", e => { if (!onCalendar()) return; const k = e.target.dataset && e.target.dataset.calKind; if (!k) return;
-  const set = /^#calendar-/.test(location.hash) ? worldKinds : calState.kinds; e.target.checked ? set.add(k) : set.delete(k); if (set === calState.kinds) calKeep(); redraw(); });
+  const w = /^#calendar-(.+)$/.test(location.hash) && wById(RegExp.$1), set = w ? worldKinds(w) : calState.kinds; e.target.checked ? set.add(k) : set.delete(k); if (set === calState.kinds) calKeep(); redraw(); });
 
 // links to the Calendar from neighbourhood and lot pages (no What’s on line on world pages: tried twice, dropped, her call 23 Oct)
 function afterRoute(key, view){
@@ -141,7 +143,8 @@ function admChecks(){
 }
 
 // the weekly Gallery refresh
-const lastSunday = () => { const d = new Date(); d.setHours(8, 54, 0, 0); while (d.getDay() !== 0 || d > new Date()) d.setDate(d.getDate() - 1); return d; };
+// the Windows task runs at 07:54 UTC (07:54 in winter, 08:54 in summer, UK time), so the last Sunday run is worked out in UTC (19 Nov)
+const lastSunday = () => { const now = new Date(), d = new Date(now); d.setUTCHours(7, 54, 0, 0); while (d.getUTCDay() !== 0 || d > now) d.setUTCDate(d.getUTCDate() - 1); return d; };
 const runDate = r => new Date(r.when.replace(/^(\d+) (\w+) (\d+) (\d+):(\d+)$/, "$2 $1, $3 $4:$5"));
 function refreshCard(){
   const runs = ADM.refresh, last = runs[runs.length - 1], lastOk = [...runs].reverse().find(r => r.ok);
@@ -229,11 +232,11 @@ const hhHome = h => h.lots.find(l => !l.owned) || h.lots[0];
 const hhOrigin = h => h.origin || (h.sims.length && h.sims.every(sm => /^mine$/i.test(sm.origin || "")) ? "Mine" : h.sims.length ? "Premade" : "");
 const hhList = () => worlds.filter(w => w.owned && w.ready).flatMap(w => homeHhs(w).sort(byHh));
 function hhRows(){
-  const st = hhState, q = st.q.trim().toLowerCase(), all = hhList();
+  const st = hhState, q = fold(st.q).trim(), all = hhList();   // folded like the sidebar search (19 Nov)
   const row = h => { const l = hhHome(h), o = hhOrigin(h); return {h, l, w: h.world.name, n: l ? l.hood.name : "", who: o ? (originTag(o) === "Mine" ? "Yours" : "EA") : "", made: simsMade(h), pic: h.portrait ? "Screenshot" : h.libraryPic ? "Library" : ""}; };
   let rs = all.map(row).filter(r => (!st.world || r.w === st.world) && (!st.hood || r.n === st.hood)
     && (!st.status || (st.status === "made" && r.made) || (st.status === "notmade" && !r.made) || (st.status === "nosims" && !r.h.sims.length) || (st.status === "ea" && r.who === "EA") || (st.status === "yours" && r.who === "Yours") || (st.status === "nopic" && !r.pic))
-    && (!q || [r.h.name, r.l ? r.l.name : "", r.n, r.w, ...r.h.sims.map(sm => sm.name)].join(" ").toLowerCase().includes(q)));
+    && (!q || fold([r.h.name, r.l ? r.l.name : "", r.n, r.w, ...r.h.sims.map(sm => sm.name)].join(" ")).includes(q)));
   const idx = new Map(all.map((h, k) => [h, k]));
   const val = r => st.sort === "order" ? idx.get(r.h) : st.sort === "name" ? r.h.name.toLowerCase() : st.sort === "home" ? (r.l ? r.l.name.toLowerCase() : "") : st.sort === "sims" ? simCount([r.h]) : st.sort === "made" ? (r.made ? 1 : 0) : (r[st.sort] || "").toLowerCase();
   rs.sort((a, b) => { const x = val(a), y = val(b); return (x > y ? 1 : x < y ? -1 : idx.get(a.h) - idx.get(b.h)) * st.dir; });
@@ -253,7 +256,7 @@ function everyHousehold(){
       <label class="grow">Search<input id="h-q" type="search" placeholder="Household, Sim, home…" value="${esc(st.q)}"></label></div>
     <div id="hh-rows">${hhRows()}</div></section>`;
 }
-const hhRefresh = full => { if (full) { const el = document.getElementById("hh-sheet"); if (el) el.outerHTML = everyHousehold(); } else { const el = document.getElementById("hh-rows"); if (el) el.innerHTML = hhRows(); } };
+const hhRefresh = full => keepFocus(() => { if (full) { const el = document.getElementById("hh-sheet"); if (el) el.outerHTML = everyHousehold(); } else { const el = document.getElementById("hh-rows"); if (el) el.innerHTML = hhRows(); } });
 document.addEventListener("change", e => { if (!e.target.closest("#hh-sheet")) return;
   if (e.target.id === "h-world") { hhState.world = e.target.value; hhState.hood = ""; hhRefresh(true); }
   if (e.target.id === "h-hood") { hhState.hood = e.target.value; hhRefresh(); }
@@ -273,7 +276,7 @@ function adminPage(sec){
 const refreshStatsBase = refreshStats;
 refreshStats = function (full) {
   if (!/^#(admin-progress|stats)/.test(location.hash)) return refreshStatsBase(full);
-  if (full) redraw(); else { const el = document.getElementById("lot-rows"); if (el) el.innerHTML = lotRows(); } };
+  if (full) redraw(); else keepFocus(() => { const el = document.getElementById("lot-rows"); if (el) el.innerHTML = lotRows(); }); };
 
 /* ---------- Across the worlds: clubs, dynasties, university organisations, families, businesses ---------- */
 const grpColour = g => { const l = g.place ? lotIndex[g.place] : g.homeHh ? g.homeHh.lots[0] : null; return g.colour || (l ? (l.hood.glow || l.hood.color) : wColour(g.world)); };

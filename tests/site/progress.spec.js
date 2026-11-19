@@ -181,8 +181,8 @@ test('every household: each column sorts both ways and keeps every row; search f
   expect(await page.locator('#hh-rows tbody tr').count()).toBe(+n);
 });
 
-// bug: notOwnedLinks() runs only when a page is drawn, so after a sort or filter the not-owned worlds' lots on Progress become links to "Page not found"
-test.fail('every lot: after sorting or filtering, lots in worlds she doesn’t own are still plain text, not links', async ({ page }) => {
+// fixed 19 Nov: notOwnedLinks() runs only when a page is drawn, so after a sort or filter the not-owned worlds' lots on Progress become links to "Page not found"
+test('every lot: after sorting or filtering, lots in worlds she doesn’t own are still plain text, not links', async ({ page }) => {
   await openApp(page, 'admin-progress');
   const dead = () => page.evaluate(() => [...document.querySelectorAll('#lot-rows a[href^="#"]')].map(a => a.getAttribute('href').slice(1))
     .filter(k => !lotIndex[k] && !hhIndex[k] && !SIM_PAGES[k] && !GROUP_PAGES[k]).length);

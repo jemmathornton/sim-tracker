@@ -252,6 +252,7 @@ function blood(a, b){
   return best;
 }
 const partnerWord = kind => !TAGS[kind] ? "Partner" : kind === "ex" ? "Ex-Spouse" : TAGS[kind].name;
+const spousesOf = id => partnersOf(id).filter(([, k]) => k === "spouse" || k === "late-spouse").map(([q]) => q);
 function relWord(a, b){   // what b is to a
   const s = SIMS[b].sex, p = partnersOf(a).find(x => x[0] === b);
   if (p && p[1] === "spouse" && SIMS[b].late && !SIMS[a].late) return "Deceased spouse";
@@ -269,16 +270,12 @@ function relWord(a, b){   // what b is to a
     if (da === 2 && db === 2) return "Cousin";
     return "Relative";
   }
-  for (const [q, k] of partnersOf(a)) {   // in-laws
-    if (k !== "spouse") continue;
-    const r2 = blood(q, b);
-    if (r2 && r2[1] === 0 && r2[0] === 1) return sx(s, "Father-in-law", "Mother-in-law", "Parent-in-law");
-    if (r2 && r2[0] === 1 && r2[1] === 1) return sx(s, "Brother-in-law", "Sister-in-law", "Sibling-in-law");
-  }
-  for (const c of Object.keys(SIMS)) {   // a child's spouse
-    const r3 = blood(a, c);
-    if (r3 && r3[0] === 0 && r3[1] === 1 && partnersOf(c).some(([q, k]) => q === b && k === "spouse")) return sx(s, "Son-in-law", "Daughter-in-law", "Child-in-law");
-  }
+  // in-laws, both ways round (19 Nov): a late spouse counts as a spouse, whichever side's record says so
+  const wedA = spousesOf(a), wedB = spousesOf(b);
+  if (wedA.some(q => (r => r && r[0] === 1 && r[1] === 0)(blood(q, b)))) return sx(s, "Father-in-law", "Mother-in-law", "Parent-in-law");   // a spouse's parent
+  if (wedB.some(q => (r => r && r[0] === 0 && r[1] === 1)(blood(a, q)))) return sx(s, "Son-in-law", "Daughter-in-law", "Child-in-law");   // a child's spouse
+  if (wedA.some(q => (r => r && r[0] === 1 && r[1] === 1)(blood(q, b))) || wedB.some(q => (r => r && r[0] === 1 && r[1] === 1)(blood(a, q))))
+    return sx(s, "Brother-in-law", "Sister-in-law", "Sibling-in-law");   // a spouse's sibling, or a sibling's spouse
   return null;
 }
 // a Sim's family, closest first (partners, parents, children, siblings, then the rest)
@@ -1105,7 +1102,7 @@ function families(w){
   return h;
 }
 const lotsLabel = hh => { const o = hh.lots.some(l => l.owned), n = hh.lots.filter(l => !l.owned).length; return (n > 1 ? "Homes" : "Home") + (o ? " & business" : ""); };
-function household(hh){
+function household(hh){   // no admin notes here (19 Nov, her rule): no “Sims made in game”, “No Sims added yet” or “No story yet”
   if (hh.sims.some(sm => sm.sid)) return householdNew(hh);
   const w = hh.world, home1 = hh.lots[0], hc = home1.hood.color, homes = hh.lots.filter(l => !l.owned || hh.tenantOf === l), owns = hh.lots.filter(l => l.owned && hh.tenantOf !== l);
   const hoods = [...new Set(hh.lots.map(l => l.hood))];
@@ -1117,15 +1114,13 @@ function household(hh){
       <div><span class="label">${lotsLabel(hh)}</span><div class="home-list">${hh.lots.map(listing).join("")}</div></div>
       <div><dl class="facts"><div><dt>World</dt><dd><a href="#w-${w.id}">${esc(w.name)}</a></dd></div><div><dt>Neighbourhood</dt><dd>${hoods.map(x => `<a href="#n-${x.id}">${esc(hoodTitle(x))}</a>`).join(", ")}</dd></div>
         <div><dt>${homes.length > 1 ? "Homes" : "Home"}</dt><dd>${homes.map(l => `<a href="#${l.id}">${esc(l.name)}</a>${hh.tenantOf === l ? " (renting)" : ""}`).join(", ")}</dd></div>${(() => { const lets = owns.filter(l => /rental/i.test(l.type || "")).concat(homes.filter(l => l.tenants && l.hh === hh)), biz = owns.filter(l => !/rental/i.test(l.type || ""));
-          return (lets.length ? `<div><dt>Landlord of</dt><dd>${lets.map(l => `<a href="#${l.id}">${esc(l.name)}</a>`).join(", ")}</dd></div>` : "") + (biz.length ? `<div><dt>Owns</dt><dd>${biz.map(l => `<a href="#${l.id}">${esc(l.name)}</a> (${esc(l.type)})`).join(", ")}</dd></div>` : ""); })()}
-        <div><dt>Sims made in game</dt><dd>${simsMade(hh) ? `<span class="ok">${ic("sim")} Yes</span>` : "Not yet"}</dd></div></dl></div>
+          return (lets.length ? `<div><dt>Landlord of</dt><dd>${lets.map(l => `<a href="#${l.id}">${esc(l.name)}</a>`).join(", ")}</dd></div>` : "") + (biz.length ? `<div><dt>Owns</dt><dd>${biz.map(l => `<a href="#${l.id}">${esc(l.name)}</a> (${esc(l.type)})`).join(", ")}</dd></div>` : ""); })()}</dl></div>
     </div>
-    <section class="block" style="--h:${hc}"><div class="block-head"><h2>The <em>Sims</em></h2>${hh.sims.length ? `<span class="count">${whoCount(hh.sims)}</span>` : ""}</div>
-      ${hh.sims.length ? `<div class="sims">${hh.sims.slice().sort((a, b) => (AGE_ORDER.indexOf(a.age) + 1 || 99) - (AGE_ORDER.indexOf(b.age) + 1 || 99)).map(simCard).join("")}</div>` : `<div class="empty">${ic("sim")}No Sims added yet. Each Sim in the household will get a card here with their traits, career, skills and relationships.</div>`}
-      ${hh.source ? `<p class="source">In-game starting details from The Sims Wiki: ${hh.source.map(([n,u]) => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(n)}</a>`).join(", ")}.</p>` : ""}</section>
+    ${hh.sims.length || hh.source ? `<section class="block" style="--h:${hc}"><div class="block-head"><h2>The <em>Sims</em></h2>${hh.sims.length ? `<span class="count">${whoCount(hh.sims)}</span>` : ""}</div>
+      ${hh.sims.length ? `<div class="sims">${hh.sims.slice().sort((a, b) => (AGE_ORDER.indexOf(a.age) + 1 || 99) - (AGE_ORDER.indexOf(b.age) + 1 || 99)).map(simCard).join("")}</div>` : ""}
+      ${hh.source ? `<p class="source">In-game starting details from The Sims Wiki: ${hh.source.map(([n,u]) => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(n)}</a>`).join(", ")}.</p>` : ""}</section>` : ""}
     ${hhGallery(hh, hc)}
     ${hh.links.length ? `<section class="block" style="--h:${hc}"><div class="block-head"><h2>Connected <em>households</em></h2></div><div class="families">${hh.links.map(x => x.hh ? famCard(x.hh, x) : "").join("")}</div></section>` : ""}
-    <section class="block" style="--h:${hc}"><div class="block-head"><h2>Their <em>story</em></h2></div><div class="empty">${ic("note")}No story yet.</div></section>
     ${neighbours.length ? `<section class="block"><div class="block-head"><h2>Neighbours</h2></div><div class="families">${neighbours.map(famCard).join("")}</div></section>` : ""}`;
 }
 
@@ -1219,10 +1214,14 @@ function hhGallery(hh, hc){
 }
 
 // ---------- Stats: the spreadsheet view ----------
+// lots in worlds she doesn't own never get a page, so their rows are plain text (19 Nov: they were links to "Page not found" after a sort);
+// a Community Space lot counts all its versions together, as its lot page does (19 Nov)
 const ROWS = DATA.stats.map(r => { const wd = worlds.find(w => w.name === r.w); const id = "l-" + slug(r.w) + "--" + slug(r.lot); const live = lotIndex[id];
-  return {...r, type: (r.type || "").replace(/\s*\((?!\d+\??\))[^)]*\)?/g, "").trim(), owned: wd ? wd.owned : true, order: (wd && !wd.owned ? 100 : 0) + worlds.indexOf(wd), link: live ? id : null,
+  const vs = live && live.gallery && (DATA.csVersions || {})[live.world.name + "|" + live.lot], sum = k => vs.reduce((n, v) => n + v[k], 0);
+  return {...r, type: (r.type || "").replace(/\s*\((?!\d+\??\))[^)]*\)?/g, "").trim(), owned: wd ? wd.owned : true, order: (wd && !wd.owned ? 100 : 0) + worlds.indexOf(wd), link: live && live.world.owned ? id : null,
     name: live ? live.name : (r.mine && r.mine.trim() && r.mine.trim() !== r.lot ? r.mine.trim() : r.lot), ea: live ? (live.ea || "") : (r.mine && r.mine.trim() && r.mine.trim() !== r.lot ? r.lot : ""),
-    photos: live ? live.photos.length : 0, likes: live && live.gallery ? live.gallery.likes : null, dls: live && live.gallery ? live.gallery.downloads : null}; });
+    photos: vs ? new Set(vs.flatMap(v => v.photos.map(p => p.src))).size : live ? live.photos.length : 0,
+    likes: vs ? sum("likes") : live && live.gallery ? live.gallery.likes : null, dls: vs ? sum("downloads") : live && live.gallery ? live.gallery.downloads : null}; });
 let statsState = {world: "", hood: "", status: "", q: "", sort: "order", dir: 1};
 const yes = v => v === true, known = v => v === true || v === false;
 function worldSummary(){
@@ -1237,10 +1236,10 @@ function worldSummary(){
     <tbody>${by.map(x => row(x)).join("")}</tbody><tfoot>${row(tot, true)}</tfoot></table></div>`;
 }
 function lotRows(){
-  const st = statsState, q = st.q.trim().toLowerCase();
+  const st = statsState, q = fold(st.q).trim();   // folded like the sidebar search: Crow’s, Crow's and Crows all match (19 Nov)
   let rs = ROWS.filter(r => (!st.world || r.w === st.world) && (!st.hood || r.n === st.hood)
     && (!st.status || (st.status === "notbuilt" && r.built === false) || (st.status === "notshared" && r.built === true && r.shared === false) || (st.status === "nosims" && r.sims === false) || (st.status === "photos" && r.photos))
-    && (!q || [r.name, r.lot, r.type, r.who, r.n, r.w].join(" ").toLowerCase().includes(q)));
+    && (!q || fold([r.name, r.lot, r.type, r.who, r.n, r.w].join(" ")).includes(q)));
   const NUMS = ["likes","dls","photos"];
   const val = r => NUMS.includes(st.sort) ? (r[st.sort] == null || r[st.sort] === "" ? null : +r[st.sort]) : st.sort === "order" ? r.order * 1000 + ROWS.indexOf(r) % 1000 : st.sort === "name" ? r.name.toLowerCase() : st.sort === "size" ? (/^(\d+)x(\d+)$/.exec(r.size || "") ? RegExp.$1 * RegExp.$2 : -1) : ["built","shared","sims"].includes(st.sort) ? (r[st.sort] === true ? 2 : r[st.sort] === false ? 1 : 0) : (r[st.sort] ?? "").toString().toLowerCase();
   rs = rs.slice().sort((a, b) => { const x = val(a), y = val(b);
@@ -1294,7 +1293,17 @@ function newestComments(){
   if (!all.length) return "";
   return `<div class="g-comments newest"><span class="label">Newest comments</span><ul>${all.map(({c, l}) => `<li><div class="c-head"><b>${esc(c.u || "A simmer")}</b> on <a href="#${l.id}">${esc(l.name)}</a><small>${new Date(c.t).toLocaleDateString("en-GB", {day: "numeric", month: "short", year: "numeric"})}</small></div><p>${esc(c.m)}</p></li>`).join("")}</ul></div>`;
 }
-function refreshStats(full){ if (full) { const y = scrollY; document.getElementById("view").innerHTML = statsPage(); window.scrollTo(0, y); } else document.getElementById("lot-rows").innerHTML = lotRows(); }
+// after a redraw, keyboard focus goes back to the same control (19 Nov: the World select, sort buttons, calendar ticks); found again
+// by its id or its data- key, as the redraw makes new elements
+const FOCUS_KEYS = ["data-cal-kind", "data-cal-season", "data-cal-school", "data-sort", "data-hsort", "data-ver"];
+function keepFocus(draw){
+  const el = document.activeElement, view = document.getElementById("view");
+  const k = !el || !view || !view.contains(el) ? null : el.id ? "#" + CSS.escape(el.id) : (a => a ? `[${a}="${CSS.escape(el.getAttribute(a))}"]` : null)(FOCUS_KEYS.find(a => el.hasAttribute(a)));
+  const out = draw();
+  if (k && !view.contains(document.activeElement)) document.querySelector("#view " + k)?.focus({preventScroll: true});
+  return out;
+}
+function refreshStats(full){ keepFocus(() => { if (full) { const y = scrollY; document.getElementById("view").innerHTML = statsPage(); window.scrollTo(0, y); } else document.getElementById("lot-rows").innerHTML = lotRows(); }); }
 document.addEventListener("change", e => { if (!e.target.closest("#lot-sheet")) return;
   if (e.target.id === "f-world") { statsState.world = e.target.value; statsState.hood = ""; refreshStats(true); }
   if (e.target.id === "f-hood") { statsState.hood = e.target.value; refreshStats(); }
@@ -1344,6 +1353,7 @@ function route(){
   closeLightbox();
   const key = location.hash.slice(1) || "home";
   const view = document.getElementById("view");
+  versionsFor(key);   // Community Space lots: the version tab on its own lot page, all versions together elsewhere
   let html, active = "home"; const ctx = {};
   const wd = key.startsWith("w-") && worlds.find(w => open(w) && w.id === key.slice(2));
   const tp = typeof sectionPage === "function" ? sectionPage(key) : null;   // js/sections.js: Calendar, Across the worlds and Admin pages (old Stats links open Admin, Progress)
@@ -1356,7 +1366,7 @@ function route(){
   else if (GROUP_PAGES[key]) { const g = GROUP_PAGES[key], base = g.homeHh; ctx.group = g; if (base) { ctx.hh = base; ctx.lot = base.lots[0]; ctx.hood = ctx.lot.hood; } html = groupPage(g); active = g.world && g.world.ready && g.world.owned ? g.world.id : ""; document.title = groupTitle(g) + " · Jemma’s Sim World"; }
   else if (hhIndex[key]) { const x = hhIndex[key]; ctx.hh = x; ctx.lot = x.lots[0]; ctx.hood = x.lots[0].hood; html = household(x); active = x.world.id; document.title = hhWord(x.name) + " · " + x.world.name + " · Jemma’s Sim World"; }
   else if (key === "home") { html = home(); document.title = "Jemma’s Sim World"; }
-  else { html = `<section class="hero small" style="--c:#8E62CF"><div class="kicker"><i></i><span class="label">Page not found</span></div><h1 style="margin-top:14px">Nothing <em>here</em></h1><p>This link doesn't match any world, neighbourhood, lot or household. It may be an old link from before something was renamed.</p></section>
+  else { html = `<section class="hero small" style="--c:#8E62CF"><div class="kicker"><i></i><span class="label">Page not found</span></div><h1 style="margin-top:14px">Nothing <em>here</em></h1><p>This link doesn’t match any world, neighbourhood, lot or household. It may be an old link from before something was renamed.</p></section>
     <section class="block"><p class="notfound"><a href="#home">${ic("home")}Go to the home page</a><a href="#admin-progress">Search every lot in Admin, Progress</a></p></section>`; document.title = "Page not found · Jemma’s Sim World"; active = ""; }
   document.title = curly(document.title);   // curly apostrophes in the tab title too (Crow’s Crossing, 19 Oct check)
   const cw = tp && tp.deep ? tp : worlds.find(w => w.id === active);
@@ -1375,11 +1385,20 @@ function route(){
 
 // Community Space lots: all four versions shown as equals (12 Oct). Each version has its own Gallery pictures, notes and stats.
 const CS_VERSIONS = DATA.csVersions;
+// the tab picked (l.vi) shows on the lot page only (19 Nov): every other page shows the first version's pictures with all the
+// versions' favourites and downloads together, so cards elsewhere never follow the last tab clicked
 function applyVersion(l, i){
-  const v = l.versions[i]; l.vi = i; l.photos = v.photos;
+  const v = l.versions[i]; l.photos = v.photos;
   l.gallery = {...l.baseGallery, title: v.title, url: v.url, likes: v.likes, downloads: v.downloads, value: v.value, packs: v.packs, description: v.description, tags: v.tags, shared: v.shared, label: v.label, others: null, beds: 0, baths: 0};
 }
-Object.values(lotIndex).forEach(l => { const vs = CS_VERSIONS[l.world.name + "|" + l.lot]; if (vs && l.gallery) { l.versions = vs; l.baseGallery = l.gallery; applyVersion(l, 0); } });
+function versionsTogether(l){
+  applyVersion(l, 0);
+  l.gallery = {...l.gallery, likes: l.versions.reduce((n, v) => n + v.likes, 0), downloads: l.versions.reduce((n, v) => n + v.downloads, 0)};
+}
+const CS_LOTS = [];
+Object.values(lotIndex).forEach(l => { const vs = CS_VERSIONS[l.world.name + "|" + l.lot]; if (vs && l.gallery) { l.versions = vs; l.baseGallery = l.gallery; l.vi = 0; versionsTogether(l); CS_LOTS.push(l); } });
+// before a page is drawn: the lot page's own tab, everything else all versions together
+const versionsFor = key => CS_LOTS.forEach(l => l.id === key ? applyVersion(l, l.vi) : versionsTogether(l));
 // first visit: everything counts as seen (after the Community Space versions are in place, so their totals are used)
 if (!seen) { seen = {}; Object.values(lotIndex).forEach(l => { if (l.gallery) seen[l.id] = seenNow(l); }); saveSeen(); }
 function versionTabs(l){
@@ -1389,7 +1408,7 @@ function versionTabs(l){
     <small class="ver-total">All ${l.versions.length} together: ${tl} favourites · ${td} downloads</small></div>`;
 }
 document.addEventListener("click", e => { const b = e.target.closest("[data-ver]"); if (!b) return; const l = lotIndex[location.hash.slice(1)]; if (!l || !l.versions) return;
-  applyVersion(l, +b.dataset.ver); const y = scrollY, view = document.getElementById("view"); view.innerHTML = lot(l); afterDraw(location.hash.slice(1), view); window.scrollTo(0, y); document.querySelector(`[data-ver="${b.dataset.ver}"]`)?.focus(); });
+  l.vi = +b.dataset.ver; applyVersion(l, l.vi); const y = scrollY, view = document.getElementById("view"); view.innerHTML = lot(l); afterDraw(location.hash.slice(1), view); window.scrollTo(0, y); document.querySelector(`[data-ver="${b.dataset.ver}"]`)?.focus(); });
 /* ---------- families in worlds she doesn't own yet (her choice A, 19 Oct; ported from for-jemma/prototypes/not-owned) ----------
    Their household and Sim pages are the usual ones with a lighter banner and one plain line; they're listed under their world
    in the sidebar's Not owned list. Marks: a hollow dot or monogram, like the sidebar's not-owned worlds. Their lots,
