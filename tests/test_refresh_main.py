@@ -151,12 +151,26 @@ class Failures(MainPart):
         r = self.runs()[-1]
         self.assertTrue(any('New-save check not refreshed' in n for n in r['notes']))   # Admin shows why the check wasn't rerun
 
-    @unittest.expectedFailure   # bug: admin_data's FAILED list has "not refreshed", so a run that finished ("Finished") reads as "stopped with an error" on Admin
-    def test_new_save_check_failing_leaves_the_run_ok_on_admin(self):
+    def test_new_save_check_failing_leaves_the_run_ok_on_admin(self):   # fixed 19 Nov: a finished run with a note, not an error
         self.repo()
         def main(): done_line(); return True
         self.run_main(main, check=(1, 'no save'))
-        self.assertTrue(self.runs()[-1]['ok'])
+        r = self.runs()[-1]
+        self.assertTrue(r['ok'])
+        self.assertIn('New-save check not refreshed: no save', r['notes'])
+
+    def test_failed_build_after_the_new_save_check_is_a_failed_run_and_nothing_is_committed(self):   # 19 Nov
+        self.repo()
+        def main(): open(os.path.join(self.d, 'data/gallery/uploads.json'), 'w').write('2\n'); done_line(); return True
+        code, log = self.run_main(main, build=[0, 1])
+        self.assertEqual(code, 1)
+        self.assertEqual(self.calls, ['build.py', 'new_save_check.py', 'build.py'])
+        self.assertIn('Pictures missing from site/: a.jpg\nBuild failed (after the new-save check)\n', log)
+        self.assertNotIn('New-save check refreshed', log)
+        self.assertTrue(log.endswith('Finished with problems\n\n'))
+        self.assertEqual(self.git('rev-list', '--count', 'HEAD').stdout.strip(), '1')
+        r = self.runs()[-1]
+        self.assertFalse(r['ok']); self.assertIn('Build failed (after the new-save check)', r['notes'])
 
     def test_no_build_flag(self):
         self.repo()
@@ -185,6 +199,23 @@ class AutomaticCommit(MainPart):
         self.assertIn('left out of the automatic save (already being changed before the refresh): data/worlds/a.json', log)
         status = self.git('status', '--porcelain').stdout
         self.assertIn(' M data/worlds/a.json', status); self.assertIn(' M notes.txt', status)
+
+    def test_files_left_changed_by_a_failed_run_are_saved_next_time(self):   # 19 Nov: before, every later run skipped them
+        self.repo()
+        open(os.path.join(self.d, 'data/gallery/uploads.json'), 'w').write('from a failed run\n')   # dirty before this run
+        def main(): open(os.path.join(self.d, 'data/gallery/uploads.json'), 'w').write('new numbers\n'); done_line(); return True
+        code, log = self.run_main(main)
+        self.assertEqual(code, 0)
+        self.assertEqual(self.git('show', '--name-only', '--format=', 'HEAD').stdout.split(), ['data/gallery/uploads.json'])
+        self.assertNotIn('left out of the automatic save', log)
+        self.assertNotIn('data/gallery', self.git('status', '--porcelain').stdout)
+
+    def test_refresh_only_file_dirty_but_unchanged_this_run_is_still_saved(self):
+        self.repo()
+        open(os.path.join(self.d, 'data/gallery/uploads.json'), 'w').write('left by last week\n')
+        def main(): done_line(); return True
+        self.run_main(main)
+        self.assertEqual(self.git('show', '--name-only', '--format=', 'HEAD').stdout.split(), ['data/gallery/uploads.json'])
 
     def test_nothing_changed_nothing_committed(self):
         self.repo()

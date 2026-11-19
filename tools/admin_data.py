@@ -67,7 +67,8 @@ def new_save():
             "newTraits": [r["name"] for rows in d["worlds"].values() for r in rows if r.get("newTraits") or r.get("newUnitTraits")], "worlds": worlds, "notStarted": [wn for wn, rows in d["worlds"].items() if not any(r.get("status") == "placed" for r in rows)]}
 
 # weekly Gallery refresh: one entry per run in logs/gallery-refresh.log
-FAILED = ("Stopped with an error", "Pictures missing", "Couldn't save in the project history", "couldn't be fetched", "not refreshed",
+# "New-save check not refreshed" isn't here: that check never stops the refresh, so such a run finished and shows a note (19 Nov)
+FAILED = ("Stopped with an error", "Pictures missing", "Couldn't save in the project history", "couldn't be fetched",
           "Finished with problems", "Build failed", "not written:")
 NOTES = ("left", "not linked", "skipped", "added a Gallery picture", "linked new household upload", "household upload", "new upload", "new household upload",
          "couldn't", "Couldn't", "New-save check not refreshed", "more Gallery pictures not fetched", "her Library couldn't")
@@ -114,10 +115,10 @@ def checklist():
 
 def write():
     out = gather()
-    with open(OUT, "w", encoding="utf-8", newline="\n") as f:
-        f.write("// Built by tools/admin_data.py for the Admin pages (js/sections.js, 23 Oct). Don't edit this file.\n"
-                "// For Jemma's PC only: never upload this file if the site goes online (it holds her to-dos and admin notes).\n")
-        f.write("window.ADMIN = " + json.dumps(out, ensure_ascii=False, indent=0) + ";\n")
+    import sys; sys.path.insert(0, str(Path(__file__).resolve().parent)); from common import write_text
+    write_text(str(OUT), "// Built by tools/admin_data.py for the Admin pages (js/sections.js, 23 Oct). Don't edit this file.\n"
+               "// For Jemma's PC only: never upload this file if the site goes online (it holds her to-dos and admin notes).\n"
+               "window.ADMIN = " + json.dumps(out, ensure_ascii=False, indent=0) + ";\n")   # safe write: never half a file (19 Nov)
     return out
 
 if __name__ == "__main__":

@@ -35,9 +35,16 @@ def site_tests():
     return subprocess.run([NODE, PLAYWRIGHT, 'test'], cwd=ROOT).returncode == 0
 
 
+def summary(ok, site, python_only=False):
+    """The last line: never "All tests passed." when the site tests didn't run (19 Nov)."""
+    if not ok or site is False: return '\nSome tests FAILED.'
+    if site is None: return '\nPython tests passed; site tests ' + ('not run (--python-only).' if python_only else 'SKIPPED (see above).')
+    return '\nAll tests passed.'
+
+
 if __name__ == '__main__':
     ok = python_tests()
     site = None if '--python-only' in sys.argv else site_tests()
     if site is False: ok = False
-    print('\nAll tests passed.' if ok and site is not False else '\nSome tests FAILED.')
+    print(summary(ok, site, '--python-only' in sys.argv))
     sys.exit(0 if ok else 1)

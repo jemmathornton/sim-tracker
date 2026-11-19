@@ -14,7 +14,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import sims4files as s4
 import tuning
-from common import ROOT, load
+from common import ROOT, load, run_output
 
 REGION_WORLD = {"WillowCreek": "Willow Creek", "OasisSprings": "Oasis Springs", "Newcrest": "Newcrest", "CampingForest": "Granite Falls",
                 "Career_Retail": "Magnolia Promenade", "NorthEurope": "Windenburg", "CityLife": "San Myshuno", "VampireWorld": "Forgotten Hollow",
@@ -242,7 +242,7 @@ def apply():
     print(dict(n))
     import subprocess
     r = subprocess.run([sys.executable, '-X', 'utf8', os.path.join(ROOT, 'tools', 'build.py')], stdin=subprocess.DEVNULL, capture_output=True, text=True, encoding='utf-8')
-    print((r.stdout or r.stderr).strip())
+    print(run_output(r))
 
 
 if __name__ == '__main__' and '--apply' in sys.argv:

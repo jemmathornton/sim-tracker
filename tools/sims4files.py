@@ -170,7 +170,7 @@ def read_save(path):
         e = next(e for e in index(tmp) if e[0] == SAVEGAME)
         return read(tmp, e)
     finally:
-        os.remove(tmp)
+        shutil.rmtree(os.path.dirname(tmp), ignore_errors=True)   # the folder too, not just the copy (19 Nov)
 
 
 def save_name(data, schema):

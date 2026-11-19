@@ -109,7 +109,7 @@ def ideas_from_old():
             if m: world = m.group(1); continue
             m = re.match(r'- \[[ x]\] \*\*(.+?)\*\*.*Trait ideas \(free slots\): (.+?)\.?$', line.strip())
             if m and world: out[f"{world}|{m.group(1)}"] = m.group(2).rstrip('.')
-    json.dump(out, open(IDEAS, 'w', encoding='utf-8'), indent=1, ensure_ascii=False)
+    write_text(IDEAS, json.dumps(out, indent=1, ensure_ascii=False))   # safe write (19 Nov)
     return out
 
 

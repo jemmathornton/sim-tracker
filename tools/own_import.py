@@ -16,7 +16,7 @@ Saves are read from temporary copies; Library files are copied first. Sims get "
 import glob, json, os, re, shutil, struct, subprocess, sys, tempfile, time
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import sims4files as s4
-from common import ROOT, load, save
+from common import ROOT, load, save, write_text
 from library_update import NOT_JOBS
 
 S = s4.save_schema(); P = '.EA.Sims4.Persistence.'; N = '.EA.Sims4.Network.'
@@ -223,7 +223,7 @@ def main(apply):
                 h['sims'] = rows
                 if h.get('single') and len(rows) > 1: h.pop('single')
             save(p, W)
-        open(os.path.join(ROOT, 'research', 'own-households-review.md'), 'w', encoding='utf-8').write(text)
+        write_text(os.path.join(ROOT, 'research', 'own-households-review.md'), text)   # safe write (19 Nov)
         subprocess.run([sys.executable, '-X', 'utf8', os.path.join(ROOT, 'tools', 'build.py')], check=True)
 
 

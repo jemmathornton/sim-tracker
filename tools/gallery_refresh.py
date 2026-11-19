@@ -12,7 +12,7 @@ from datetime import date, datetime
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 LOG = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'logs', 'gallery-refresh.log')
 try:
-    from common import ROOT, SITE, GALLERY, slug, norm, load, save, world_files
+    from common import ROOT, SITE, GALLERY, slug, norm, load, save, world_files, lead_upload, first_with_pictures, picture_sources, save_picture_sources
 except Exception:   # 15 Nov: a scheduled run failed with nothing in the log; even a broken setup leaves a trace now
     if __name__ == '__main__':
         import traceback; os.makedirs(os.path.dirname(LOG), exist_ok=True)
@@ -193,24 +193,36 @@ def auto_link(new_ids, uploads, worlds):
 
 
 def add_covers(worlds, uploads):
-    """First Gallery picture for linked lots with no screenshots and no picture yet (EA's frame cropped off lot pictures)."""
+    """The first Gallery picture of the lot's lead upload (the one its Gallery card shows, common.lead_upload) for linked lots
+    with no screenshots of hers (EA's frame cropped off lot pictures). A cover from another upload is remade (19 Nov: covers
+    used to come from the first linked upload, so a few showed a different copy from the card). Which upload each cover came
+    from is kept in data/gallery/picture-sources.json."""
     from PIL import Image
+    src = picture_sources(GALLERY); before = json.dumps(src, sort_keys=True)
     for W in worlds:
         if not W['owned']: continue
         ws = slug(W['name'])
         for h in W['neighbourhoods']:
             for l in h['lots']:
                 ls = slug(l['lot']); dest = os.path.join(SITE, 'gallery', ws, ls + '.jpg')
-                if not l.get('gallery') or l.get('versions') or (os.path.isdir(os.path.join(SITE, 'shots', ws, ls)) and not l.get('galleryPhotos')) or os.path.exists(dest): continue
-                u = next((uploads[i] for i in l['gallery'] if uploads.get(i, {}).get('images')), None)
-                if not u: continue
+                if not l.get('gallery') or l.get('versions') or (os.path.isdir(os.path.join(SITE, 'shots', ws, ls)) and not l.get('galleryPhotos')): continue   # her screenshots win
+                i = lead_upload(l, uploads); u = uploads.get(i) or {}
+                if not u.get('images'): continue
+                rec = src.setdefault(f"{ws}/{ls}", {})
+                if os.path.exists(dest):
+                    was = rec.get('cover') or first_with_pictures(l, uploads)
+                    if was == i: rec['cover'] = i; continue
                 try:
                     im = Image.open(io.BytesIO(get(u['images'][0])[1])).convert('RGB')
                     if u['kind'] == 'lot' and im.size == (744, 410): im = im.crop((67, 0, 677, 410))
+                    remade = os.path.exists(dest)
                     os.makedirs(os.path.dirname(dest), exist_ok=True); im.save(dest + '.tmp', 'JPEG', quality=88); os.replace(dest + '.tmp', dest)
-                    say(f"  added a Gallery picture for {W['name']} / {l['lot']}")
+                    rec['cover'] = i
+                    say(f"  {'remade' if remade else 'added'} a Gallery picture for {W['name']} / {l['lot']}" + (f" (now from “{u['title']}”, the upload its card shows)" if remade else ""))
                 except Exception as e:
                     say(f"  couldn't get a picture for {W['name']} / {l['lot']}: {e}")
+    src = {k: v for k, v in src.items() if v}
+    if json.dumps(src, sort_keys=True) != before: save_picture_sources(src, GALLERY)
 
 
 def main():
@@ -289,11 +301,17 @@ def changed_files(root=None):
     return out
 
 
+SHARED_PATHS = ('data/worlds/',)   # the plan: hers and Claude's to edit too; everything else in REFRESH_PATHS only the refresh (and its build) writes
+
+
 def commit_refresh(before=frozenset(), root=None):
-    """Save the refresh in the project's history (her OK, 23 Oct), so a bad week can always be undone. Only files this run
-    changed are committed: anything that already had uncommitted changes when the run started (her or Claude's work in
-    data/worlds, say) is left out and named in the log (15 Nov review). Never pushes anywhere."""
+    """Save the refresh in the project's history (her OK, 23 Oct), so a bad week can always be undone. A world file in
+    data/worlds that already had uncommitted changes when the run started (her or Claude's work) is left out and named in
+    the log (15 Nov review). Files only the refresh writes (Gallery data, data.js, admin-data.js, index.html, Gallery
+    pictures, the checklist, the new-save status) are always taken, even if a failed run left them changed (19 Nov:
+    before, one failed build kept them out of every later weekly save). Never pushes anywhere."""
     try:
+        before = sorted(p for p in before if p.startswith(SHARED_PATHS))
         mine = sorted(changed_files(root) - set(before))
         if not mine: return say("Nothing new to save in the project history")
         lst = '\0'.join(mine) + '\0'
@@ -321,15 +339,19 @@ if __name__ == '__main__':
             say('\n'.join(x for x in ((r.stdout or '').strip(), (r.stderr or '').strip()) if x) + ('' if r.returncode == 0 else '\nBuild failed'))
             ok = ok and r.returncode == 0
             if r.returncode == 0:
+                rebuilt = True   # False if the build after the new-save check fails
                 try:   # her new save against the plan, for Admin > Notes (24 Oct); a problem here never stops the refresh
                     n = subprocess.run([sys.executable, '-X', 'utf8', os.path.join(ROOT, 'tools', 'research', 'new_save_check.py')],
                                        stdin=subprocess.DEVNULL, capture_output=True, text=True, encoding='utf-8', timeout=900)
                     if n.returncode == 0:
-                        subprocess.run([sys.executable, '-X', 'utf8', os.path.join(ROOT, 'tools', 'build.py')], stdin=subprocess.DEVNULL, capture_output=True, text=True, encoding='utf-8')   # build again: admin-data.js and its fingerprint in index.html
-                        say("New-save check refreshed")
+                        b = subprocess.run([sys.executable, '-X', 'utf8', os.path.join(ROOT, 'tools', 'build.py')], stdin=subprocess.DEVNULL, capture_output=True, text=True, encoding='utf-8')   # build again: admin-data.js and its fingerprint in index.html
+                        if b.returncode == 0: say("New-save check refreshed")
+                        else:   # 19 Nov: a failed second build is a failed run, and nothing is saved in the history
+                            say('\n'.join(x for x in ((b.stdout or '').strip(), (b.stderr or '').strip()) if x) + '\nBuild failed (after the new-save check)')
+                            ok = rebuilt = False
                     else: say("New-save check not refreshed: " + (n.stderr or n.stdout).strip()[-200:])
                 except Exception as e: say(f"New-save check not refreshed: {e}")
-                commit_refresh(before)
+                if rebuilt: commit_refresh(before)
     except Exception:
         import traceback
         say("Stopped with an error:\n" + traceback.format_exc())

@@ -15,7 +15,7 @@ copied into the spreadsheet if it stays her main copy. New lots are added; lots 
 import json, os, shutil, subprocess, sys, tempfile
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import copy
-from common import ROOT, DATA, load, save, world_files, write_text
+from common import ROOT, DATA, load, save, world_files, write_text, run_output
 
 DEFAULT = os.path.join(os.path.expanduser('~'), 'Downloads', 'World Plans (fixed).xlsx')
 BASE = os.path.join(DATA, 'spreadsheet', 'last-import.json')
@@ -26,9 +26,19 @@ HEAD = ["Lot Name"] + [f for f, _ in FIELDS]
 
 def read_sheet(xlsx):
     """The workbook as [{tab, title, sections: [{name, lots: [{Lot Name, My Name, ...}]}]}] (same shape as last-import.json)."""
-    import openpyxl
     tmp = os.path.join(tempfile.mkdtemp(), 'world-plans.xlsx'); shutil.copy(xlsx, tmp)   # never open her file itself
+    try: return _read_copy(tmp)
+    finally: shutil.rmtree(os.path.dirname(tmp), ignore_errors=True)   # the copy is deleted once read (19 Nov)
+
+
+def _read_copy(tmp):
+    import openpyxl
     wb = openpyxl.load_workbook(tmp, data_only=True, read_only=True)
+    try: return _workbook(wb)
+    finally: wb.close()   # a read-only workbook keeps its file open until closed: close it before the copy is deleted
+
+
+def _workbook(wb):
     out = [{"tab": "Overview", "sections": [], "owned": {}}]
     # the Overview's Owned column (Yes/No per world): which packs she has (19 Oct; before, marking a world owned there never reached the app)
     head = None
@@ -51,7 +61,6 @@ def read_sheet(xlsx):
                 tab["sections"].append(sec); continue
             i += 1
         out.append(tab)
-    wb.close()
     return out
 
 
@@ -158,7 +167,7 @@ def main():
         shutil.copy(BASE, BASE.replace('.json', '-previous.json'))
         write_text(BASE, json.dumps(new_base(sheet, held), ensure_ascii=False, indent=1))
         r = subprocess.run([sys.executable, '-X', 'utf8', os.path.join(ROOT, 'tools', 'build.py')], stdin=subprocess.DEVNULL, capture_output=True, text=True, encoding='utf-8')
-        print((r.stdout or r.stderr).strip())
+        print(run_output(r))
 
 
 if __name__ == '__main__':

@@ -66,6 +66,90 @@ def write_text(p, text):
     os.replace(tmp, p)
 
 
+def run_output(r):
+    """What a finished program said: its output and, after it, any errors (19 Nov: a build that failed partway after printing
+    showed only its output, hiding why it failed)."""
+    return '\n'.join(x for x in ((r.stdout or '').strip(), (r.stderr or '').strip()) if x)
+
+
+def write_bytes(p, data):
+    """write_text() for pictures and other binary files (19 Nov)."""
+    tmp = f"{p}.tmp"
+    with open(tmp, 'wb') as f: f.write(data)
+    os.replace(tmp, p)
+
+
+# ---------- which of a lot's Gallery uploads leads (19 Nov: one rule for the card, its cover and its other pictures) ----------
+VERSION_END = r'(Market|Gardens?|Makers|Space)$'   # Community Space versions' titles end with one of these
+
+
+def clean_title(t):
+    """"Kin-Ship [Simsie Shell]" -> "Kin-Ship"."""
+    return re.sub(r'\s*\[[^\]]*\]\s*$', '', t).strip()
+
+
+def plan_types(lot):
+    """The lot types in her plan's Type column ("Park/Cemetery" -> both; notes in brackets dropped)."""
+    return [t.strip() for t in re.sub(r'\s*\([^)]*\)', '', lot.get('type') or '').split('/')]
+
+
+def resolved_types(lot, types):
+    """The Gallery's lot types for a lot's uploads, with "Missing sims translation" (newer lot types such as Backroom have no
+    English name on the Gallery) taken to be a plan type no other upload has, so her Backroom re-uploads lead (21 Oct)."""
+    plan, out = plan_types(lot), list(types)
+    for k, t in enumerate(out):
+        if t == 'Missing sims translation': out[k] = next((p for p in plan if p not in set(out)), plan[0])
+    return out
+
+
+def lead_upload(lot, uploads):
+    """The id of the upload a lot (or household) leads with, from its `gallery` ids; None if it has none. Her rule (13 Oct):
+    the copy she chose (`galleryLead`), else the most favourited and downloaded. Community Space lots lead with the upload
+    that isn't a version; lots with versions she keeps on purpose (`galleryVariants`, rental + regular) with the one matching
+    the plan's lot type, then the rental (her chosen copy still wins). Used by the build (the Gallery card), the weekly
+    refresh (the cover picture) and tools/gallery_more.py (the other three pictures), so all three show the same upload."""
+    ids = [i for i in lot.get('gallery', []) if i in uploads]
+    if not ids: return None
+    pop = lambda i: uploads[i]['favourites'] + uploads[i]['downloads']
+    chosen = lot.get('galleryLead') if lot.get('galleryLead') in ids else None
+    if len(ids) > 1 and lot.get('versions'):
+        titles = [clean_title(uploads[i]['title']) for i in ids]
+        return (next((i for i, t in zip(ids, titles) if not re.search(r'\b' + VERSION_END, t)), None)
+                or next((i for i, t in zip(ids, titles) if t.endswith('Space')), ids[0]))
+    types = [uploads[i].get('lotType') for i in ids]
+    if len(ids) > 1 and (lot.get('galleryVariants') or 'Residential Rental' in types):
+        types, plan = resolved_types(lot, types), plan_types(lot)
+        pick = [i for i, t in zip(ids, types) if t in plan] or [i for i, t in zip(ids, types) if t == 'Residential Rental'] or ids
+        return chosen or max(pick, key=pop)
+    return chosen or max(ids, key=pop)
+
+
+# which upload each lot's Gallery pictures came from (19 Nov), so they're remade when the lead upload changes:
+# {"<world>/<lot>": {"cover": id, "more": id}}, cover = site/gallery/<world>/<lot>.jpg, more = site/gallery-more/<world>/<lot>-<n>.jpg
+def picture_sources(gallery_dir=GALLERY):
+    p = os.path.join(gallery_dir, 'picture-sources.json')
+    return load(p)['lots'] if os.path.exists(p) else {}
+
+
+def save_picture_sources(lots, gallery_dir=GALLERY):
+    save(os.path.join(gallery_dir, 'picture-sources.json'), {
+        "_note": "Which Gallery upload each lot's pictures came from (tools/gallery_refresh.py add_covers: the cover; tools/gallery_more.py: "
+                 "the other three), so they're remade when the lot's lead upload changes. Written by those tools; don't hand-edit.",
+        "lots": dict(sorted(lots.items()))}, inline=())
+
+
+def first_with_pictures(lot, uploads):
+    """The upload covers were taken from before 19 Nov (the first linked upload with pictures): what a cover with no record came from."""
+    return next((i for i in lot.get('gallery', []) if (uploads.get(i) or {}).get('images')), None)
+
+
+def popular_or_chosen(lot, uploads):
+    """The upload tools/gallery_more.py took the other three pictures from before 19 Nov (her chosen copy, else the most popular)."""
+    ids = [i for i in lot.get('gallery', []) if i in uploads]
+    if not ids: return None
+    return lot['galleryLead'] if lot.get('galleryLead') in ids else max(ids, key=lambda i: uploads[i]['favourites'] + uploads[i]['downloads'])
+
+
 def shown_name(name_fix, world, l):
     """A lot's name as the site shows it, from a built lot (data.js): her spelling (nameFix), then her Gallery title, then
     her own name unless it's just "?", then the in-game name. The same order as lotName() in site/js/app.js (15 Nov: one place)."""

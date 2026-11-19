@@ -16,7 +16,7 @@ her own name, its display name and its Gallery titles.
 """
 import glob, os, re, subprocess, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import ROOT, DATA, GALLERY, norm, load, save, world_files
+from common import ROOT, DATA, GALLERY, norm, load, save, world_files, run_output
 import sims4files as s4
 
 # For Rent's hidden markers on rental units (the game's repair-event checks: has electrics, water, a toilet, a bin); not lot traits
@@ -217,7 +217,7 @@ def main():
         print()
     if apply and changed:
         r = subprocess.run([sys.executable, '-X', 'utf8', os.path.join(ROOT, 'tools', 'build.py')], stdin=subprocess.DEVNULL, capture_output=True, text=True, encoding='utf-8')
-        print((r.stdout or r.stderr).strip())
+        print(run_output(r))
 
 
 SCHEMA = s4.save_schema()

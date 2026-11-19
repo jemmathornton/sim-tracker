@@ -21,17 +21,14 @@ def untouched_zones():
 def run(zones):
     """main() on the given zones; returns the status it would write (json) and the report text (md)."""
     got = {}
-    with temp_dir() as d:
-        real_open = builtins.open
-        def fake_open(p, *a, **k):
-            if str(p).endswith('new-save-status.md'): p = os.path.join(d, 'status.md')
-            return real_open(p, *a, **k)
-        def fake_save(p, obj, *a, **k): got['json'] = obj
-        with patched(N, read=lambda f: (("Jemma's Sim World", None), zones, [], {}), find_save=lambda: ('Slot_x.save', 0),
-                     save=fake_save, open=fake_open, OPTIONS={}, HOLIDAYS=[], CLUBS=[], DYNASTIES=[], NAPS=[], OWNERS={}, HH_NAME={}, ECO={}), \
-             argv(), quiet():
-            N.main()
-        got['md'] = open(os.path.join(d, 'status.md'), encoding='utf-8').read()
+    def fake_save(p, obj, *a, **k): got['json'] = obj
+    def fake_write(p, text):   # the report is written with common.write_text (a safe write, 19 Nov)
+        if not str(p).endswith('new-save-status.md'): raise AssertionError(f'unexpected write: {p}')
+        got['md'] = text
+    with patched(N, read=lambda f: (("Jemma's Sim World", None), zones, [], {}), find_save=lambda: ('Slot_x.save', 0),
+                 save=fake_save, write_text=fake_write, OPTIONS={}, HOLIDAYS=[], CLUBS=[], DYNASTIES=[], NAPS=[], OWNERS={}, HH_NAME={}, ECO={}), \
+         argv(), quiet():
+        N.main()
     return got
 
 

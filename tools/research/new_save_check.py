@@ -11,7 +11,7 @@ units), so the ones moved out while she placed builds can go back. Saves are rea
 import json, os, re, shutil, sys, tempfile, time, unicodedata
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 import sims4files as s4
-from common import ROOT, DATA, load, save, slug as slugify, shown_name
+from common import ROOT, DATA, load, save, slug as slugify, shown_name, write_text
 
 S = s4.save_schema(); P = '.EA.Sims4.Persistence.'
 SAVE_NAME = "Jemma's Sim World"
@@ -581,7 +581,7 @@ def main():
     if lost: L += ["## Shared lots not found in the save", "", "Their names don't match a lot in the save (tell Claude the game's name for them):", ""] + [f"- {wn} / {n}" for wn, n in lost] + [""]
     rest = [wn for wn in out['worlds'] if wn not in worlds_done]
     if rest: L += ["## Not started", "", ", ".join(rest), ""]
-    open(os.path.join(ROOT, 'research', 'new-save-status.md'), 'w', encoding='utf-8').write("\n".join(L))
+    write_text(os.path.join(ROOT, 'research', 'new-save-status.md'), "\n".join(L))   # safe write: never half a file (19 Nov)
     print("\n".join(L[:6])); print(fname, out['saved'])
 
 

@@ -11,7 +11,7 @@ import glob, io, json, os, re, sys
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import sims4files as s4, tuning as T
-from common import ROOT, load
+from common import ROOT, load, write_text, write_bytes
 from PIL import Image
 
 DDS = 0x00B2D882
@@ -89,9 +89,9 @@ def main():
         sid = ids[name]; rec = {'name': name}
         if v['death']: rec['died'] = v['death']
         if v['thumb'] in pics:
-            open(os.path.join(OUT_DIR, sid + '.png'), 'wb').write(pics[v['thumb']]); rec['portrait'] = f'ancestors/{sid}.png'
+            write_bytes(os.path.join(OUT_DIR, sid + '.png'), pics[v['thumb']]); rec['portrait'] = f'ancestors/{sid}.png'
         out[sid] = rec
-    json.dump(out, open(OUT, 'w', encoding='utf-8', newline='\n'), ensure_ascii=False, indent=1)
+    write_text(OUT, json.dumps(out, ensure_ascii=False, indent=1))   # safe writes (19 Nov)
     print('wrote', OUT, len(out), 'ancestors,', sum('portrait' in r for r in out.values()), 'portraits')
 
 

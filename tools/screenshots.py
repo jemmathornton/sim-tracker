@@ -10,7 +10,7 @@ A new Builds folder needs a line in FOLDERS saying which lot it belongs to.
 """
 import os, re, subprocess, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import ROOT, SITE
+from common import ROOT, SITE, run_output
 
 BUILDS = os.path.join(os.path.expanduser('~'), 'Documents', 'Builds')
 FOLDERS = {  # Builds folder -> (world, lot) as used in page links
@@ -51,7 +51,7 @@ def main():
     print(f"{n} new screenshots." + (f" Builds folders not linked to a lot yet: {', '.join(other)}" if other else ""))
     if n:
         r = subprocess.run([sys.executable, '-X', 'utf8', os.path.join(ROOT, 'tools', 'build.py')], stdin=subprocess.DEVNULL, capture_output=True, text=True, encoding='utf-8')
-        print((r.stdout or r.stderr).strip())
+        print(run_output(r))
 
 
 if __name__ == '__main__':

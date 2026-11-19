@@ -314,9 +314,16 @@ class TrickyText(unittest.TestCase):
         with patched(build, shared_on=lambda i: None): e = build.upload_entry('y')
         self.assertEqual((e['description'], e['tags']), ('Cosy.', ['willowcreek', 'nocc']))
 
-    @unittest.expectedFailure   # bug: a hashtag inside a sentence cuts the description there (Bubble World: "…for the #SimsieCircleShell challenge!")
-    def test_a_hashtag_inside_a_sentence_keeps_the_rest(self):
-        self.assertIn('challenge!', self.desc('Too many circles for the #SimsieCircleShell challenge! Have fun.'))
+    def test_a_hashtag_inside_a_sentence_keeps_the_rest(self):   # fixed 19 Nov (Bubble World)
+        self.assertEqual(self.desc('Too many circles for the #SimsieCircleShell challenge! Have fun. #bubbles #nocc'),
+                         'Too many circles for the #SimsieCircleShell challenge! Have fun.')
+
+    def test_trailing_block_with_loose_words_and_symbols_is_cut(self):   # Campground ("#nocc playtested #playertested"), Picturehouse (#jf&fclothiers)
+        self.assertEqual(self.desc('Eat and sleep! #campground #nocc playtested #playertested'), 'Eat and sleep!')
+        self.assertEqual(self.desc('Place it.]]   #jf&fclothiers #cinema '), 'Place it.]]')
+
+    def test_no_hashtags_leaves_text_whole(self):
+        self.assertEqual(self.desc('A cosy home. Have fun!'), 'A cosy home. Have fun!')
 
 
 # ---------- uploads that leave the Gallery ----------

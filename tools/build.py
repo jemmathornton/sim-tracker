@@ -8,7 +8,7 @@ the data it shows. Pictures are read from site/shots (Jemma's screenshots) and s
 import base64, html, os, re, sys, urllib.parse, uuid
 from datetime import date, datetime, timedelta
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import DATA, SITE, GALLERY, slug, load, nice_date, world_files
+from common import DATA, SITE, GALLERY, slug, load, nice_date, world_files, write_text, clean_title, VERSION_END, resolved_types, lead_upload
 
 GALLERY_ITEM = "https://www.ea.com/games/the-sims/the-sims-4/gallery/item/"
 
@@ -51,7 +51,6 @@ fixes = load(os.path.join(GALLERY, 'text-fixes.json'))['fixes']
 # the Gallery labels two Stuff Packs by their old slogans (checked 23 Oct against its pack codes SP06 and SP05)
 PACK_NAMES = {"Build Lush Gardens": "Romantic Garden Stuff", "Watch Movies with Friends!": "Movie Hangout Stuff"}
 def short_pack(p): p = PACK_NAMES.get(p, p); return re.sub(r'\s+(Expansion Pack|Game Pack|Stuff Pack|Kit)$', '', p.replace('The Sims™ 4 ', '')).strip()
-def clean_title(t): return re.sub(r'\s*\[[^\]]*\]\s*$', '', t).strip()     # "Kin-Ship [Simsie Shell]" -> "Kin-Ship"
 
 MONTHS = "Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split()   # short, as dates are shown elsewhere on the site
 def shared_on(i):
@@ -84,9 +83,18 @@ def british(text):
     return re.sub(r"[A-Za-z]+", swap, text)
 
 
+def without_tags(desc):
+    """A Gallery description without the block of hashtags at its end (shown as tags instead). Only the trailing block goes:
+    the first # after which nothing but hashtags and loose words (no full stop, ! or ?) follows. A hashtag inside a sentence
+    stays as she wrote it, # included (19 Nov: Bubble World's "…for the #SimsieCircleShell challenge!" was cut off there)."""
+    for m in re.finditer('#', desc):
+        if not re.search(r'[.!?]', re.sub(r'#\S*', '', desc[m.start():])): return desc[:m.start()]
+    return desc
+
+
 def upload_entry(i):
-    u = uploads[i]; desc = u['description'] or ''; k = desc.find('#')
-    text = re.sub(r'\s+', ' ', desc[:k] if k >= 0 else desc).strip().replace("''", "'")
+    u = uploads[i]; desc = u['description'] or ''
+    text = re.sub(r'\s+', ' ', without_tags(desc)).strip().replace("''", "'")
     for a, b in fixes.get(i, {}).get('description', []): text = text.replace(a, b)
     text = british(text)
     # EA sends some comment text HTML-escaped ("&lt;3"); the page escapes text itself, so turn it back into plain text first
@@ -96,7 +104,6 @@ def upload_entry(i):
             "likes": u['favourites'], "downloads": u['downloads'], "comments": len(cl), "commentList": cl,
             "beds": u['beds'], "baths": u['baths'], "lotType": u['lotType'], "checked": nice_date(u['checked']), "shared": shared_on(i), "creator": u.get('creator') or ""}
 
-VERSION_END = r'(Market|Gardens?|Makers|Space)$'
 def version_label(e):
     m = re.search(VERSION_END, e['title']); x = m.group(1) if m else 'Space'
     return {'Space': 'Community space', 'Gardens': 'Garden'}.get(x, x)
@@ -105,33 +112,20 @@ def gallery_for(lot):
     """The Gallery card for a lot. Jemma's rule (13 Oct): one upload per lot, the latest, unless the copies are versions she
     keeps on purpose: Community Space variants (tabs), rental + regular versions and `galleryVariants` lots (listed as
     "Other versions"). Lots still waiting for her choice show their most popular copy. Comments of all linked copies add up."""
-    ups = [upload_entry(i) for i in lot.get('gallery', [])]
+    ids = lot.get('gallery', [])
+    ups = [upload_entry(i) for i in ids]
     if not ups: return None
-    g = None
-    for e in ups:
-        if g is None or e['likes'] + e['downloads'] > g['likes'] + g['downloads']: g = e
-    if lot.get('galleryLead') in lot['gallery']: g = ups[lot['gallery'].index(lot['galleryLead'])]   # the copy Jemma chose to lead
+    g = ups[ids.index(lead_upload(lot, uploads))]   # common.lead_upload: the same upload as the cover and its other pictures (19 Nov)
     if len(ups) > 1:
-        main = None
-        if lot.get('versions'):
-            main = next((e for e in ups if not re.search(r'\b' + VERSION_END, e['title'])), None) or next((e for e in ups if e['title'].endswith('Space')), ups[0])
-            label = version_label
+        label = None
+        if lot.get('versions'): label = version_label
         elif lot.get('galleryVariants') or any(e['lotType'] == 'Residential Rental' for e in ups):
-            # versions Jemma keeps on purpose (a rental and a regular version, a B&B as café and as home): the one matching
-            # the lot type in her plan leads, then the rental, and the others are listed under "Other versions"
-            plan = [t.strip() for t in re.sub(r'\s*\([^)]*\)', '', lot.get('type') or '').split('/')]
-            # the Gallery has no English name for some newer lot types (Backroom, Community Space): "Missing sims translation".
-            # Such an upload is taken to be the plan's type, so her Backroom re-uploads lead (21 Oct)
-            for e in ups:
-                if e['lotType'] == 'Missing sims translation': e['lotType'] = next((t for t in plan if t not in {x['lotType'] for x in ups}), plan[0])
-            pick = [e for e in ups if e['lotType'] in plan] or [e for e in ups if e['lotType'] == 'Residential Rental'] or ups
-            main = max(pick, key=lambda e: e['likes'] + e['downloads'])
-            if lot.get('galleryLead') in lot['gallery']: main = ups[lot['gallery'].index(lot['galleryLead'])]   # her choice wins
+            # versions Jemma keeps on purpose (a rental and a regular version, a B&B as café and as home), listed under "Other versions"
+            for e, t in zip(ups, resolved_types(lot, [e['lotType'] for e in ups])): e['lotType'] = t
             label = lambda e: e['lotType'] or 'Other version'
-        if main:
-            main = dict(main, label=label(main))
-            main['others'] = [{"title": e['title'], "url": e['url'], "likes": e['likes'], "downloads": e['downloads'], "label": label(e)} for e in ups if e['url'] != main['url']]
-            g = main
+        if label:
+            g = dict(g, label=label(g))
+            g['others'] = [{"title": e['title'], "url": e['url'], "likes": e['likes'], "downloads": e['downloads'], "label": label(e)} for e in ups if e['url'] != g['url']]
     # apartments were uploaded as Rooms, which carry no bed/bath counts: those come from the plan
     if lot.get('beds') and not g.get('beds'): g['beds'] = lot['beds']; g['baths'] = lot.get('baths') or 0
     allc = [c for e in ups for c in e['commentList']]
@@ -306,9 +300,8 @@ def write(data):
     import json
     p = os.path.join(SITE, 'js', 'data.js')
     os.makedirs(os.path.dirname(p), exist_ok=True)
-    with open(p, 'w', encoding='utf-8', newline='\n') as f:
-        f.write("// Built by tools/build.py from the data/ folder. Don't edit this file: change data/ and run the build again.\n")
-        f.write("const DATA = " + json.dumps(data, ensure_ascii=False) + ";\n")
+    write_text(p, "// Built by tools/build.py from the data/ folder. Don't edit this file: change data/ and run the build again.\n"
+                  "const DATA = " + json.dumps(data, ensure_ascii=False) + ";\n")   # safe write: never half a file (19 Nov)
     return p
 
 
@@ -320,8 +313,7 @@ def stamp_page():
         f = os.path.join(SITE, m.group(2))
         return f'{m.group(1)}{m.group(2)}?v={hashlib.md5(open(f, "rb").read()).hexdigest()[:8]}"' if os.path.exists(f) else m.group(0)
     new = re.sub(r'((?:href|src)=")((?:js/[\w.-]+\.js)|site\.css)(?:\?v=\w+)?"', fp, page)
-    if new != page:
-        with open(p, 'w', encoding='utf-8', newline='\n') as f: f.write(new)
+    if new != page: write_text(p, new)
 
 
 if __name__ == '__main__':
