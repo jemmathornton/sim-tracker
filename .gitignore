@@ -12,3 +12,5 @@ data/spreadsheet/last-import-previous.json
 node_modules/
 test-results/
 playwright-report/
+# her Sims save and Library backup zip (kept here on her PC only: too big for GitHub, and the repo is public)
+Sims 4 new save and Library*.zip
