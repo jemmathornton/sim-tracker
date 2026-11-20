@@ -1541,5 +1541,9 @@ document.getElementById("nav").addEventListener("click", e => { if (e.target.clo
 addEventListener("hashchange", route);
 document.getElementById("menuBtn").addEventListener("click", () => document.body.classList.toggle("nav-open"));
 document.getElementById("scrim").addEventListener("click", () => document.body.classList.remove("nav-open"));
+// the "← Jemma’s Journals" link (index.html, 20 Nov): "/" is home once online; opened as a file from her PC, "/" would be
+// the C: drive, so it goes to her local copy of the home page instead (relative: Documents/SimTracker/site → Documents/JemmasJournals)
+const HOME_LOCAL = "../../JemmasJournals/concepts/index.html";
+if (location.protocol === "file:") document.querySelector(".home-link")?.setAttribute("href", HOME_LOCAL);
 // the first page is drawn once, at the end of js/sections.js, so section pages never flash "Page not found" (15 Nov)
 addEventListener("DOMContentLoaded", () => { if (!drawnOnce) route(); });   // only if js/sections.js didn't (it draws first, at its end)
