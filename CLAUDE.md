@@ -1,5 +1,7 @@
 # Jemma's Sim World
 
+**Where this lives (since 21 Nov 2026, her layout):** `Documents\JemmasJournals\sim-world`, a submodule of Jemma’s Journals (the parent; its own repo is unchanged on GitHub). The old folder `Documents\SimTracker` is kept for now but no longer used: work here. Node and Playwright for tests are shared in the parent (`JemmasJournals\.tools`, `JemmasJournals\node_modules`). The whole family on one address: `python tools/serve_all.py` in the parent, http://localhost:8050/sim-world/. After committing here, record the new version in the parent too.
+
 A private website about Jemma's Sims 4 save: every world in the game rebuilt lot by lot, with neighbourhoods, lots, households, her screenshots and her Sims 4 Gallery uploads. It started as a single HTML page built in claude.ai chat (Oct 2026); since 13 Oct it's an app on her PC (a static site she opens from a shortcut), built so it can go online later.
 
 Read `HANDOVER.md` once for the full story, then `TODO.md` for everything still open. This file holds the rules that apply every session.

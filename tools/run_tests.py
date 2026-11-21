@@ -15,8 +15,10 @@ Run after changing tools/, data/ or site/. Exits non-zero if anything fails.
 """
 import os, subprocess, sys, unittest, warnings
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-NODE = os.path.join(ROOT, '.tools', 'node', 'node.exe')
-PLAYWRIGHT = os.path.join(ROOT, 'node_modules', '@playwright', 'test', 'cli.js')
+# the portable Node and Playwright: in this folder, or (since 21 Nov) shared in Jemma's Journals, the parent folder
+_TOOLS = next((d for d in (ROOT, os.path.dirname(ROOT)) if os.path.exists(os.path.join(d, '.tools', 'node', 'node.exe'))), ROOT)
+NODE = os.path.join(_TOOLS, '.tools', 'node', 'node.exe')
+PLAYWRIGHT = os.path.join(_TOOLS, 'node_modules', '@playwright', 'test', 'cli.js')
 
 
 def python_tests():

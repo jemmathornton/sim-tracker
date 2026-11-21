@@ -1643,8 +1643,8 @@ document.getElementById("toTop").addEventListener("click", () => {
   document.getElementById("view").focus({preventScroll: true});   // keyboard users carry on from the top of the page
 });
 // the "← Jemma’s Journals" link (index.html, 20 Nov): "/" is home once online; opened as a file from her PC, "/" would be
-// the C: drive, so it goes to her local copy of the home page instead (relative: Documents/SimTracker/site → Documents/JemmasJournals)
-const HOME_LOCAL = "../../JemmasJournals/concepts/index.html";
+// the C: drive, so it goes to her local copy of the home page instead (relative: JemmasJournals/sim-world/site → JemmasJournals/site)
+const HOME_LOCAL = "../../site/index.html";   // since 21 Nov this app sits inside Jemma’s Journals: sim-world/site → site
 if (location.protocol === "file:") document.querySelector(".home-link")?.setAttribute("href", HOME_LOCAL);
 // the first page is drawn once, at the end of js/sections.js, so section pages never flash "Page not found" (15 Nov)
 addEventListener("DOMContentLoaded", () => { if (!drawnOnce) route(); });   // only if js/sections.js didn't (it draws first, at its end)
