@@ -1558,6 +1558,29 @@ document.getElementById("scrim").addEventListener("click", () => setNav(false, t
 addEventListener("keydown", e => { if (e.key === "Escape" && document.body.classList.contains("nav-open")) setNav(false, true); });
 phoneNav.addEventListener("change", () => setNav(false));
 setNav(false);
+// bottom of every page (21 Nov 2026, as on Jemma’s Journals): Back to top, and Dark/Light mode. The site always opens light, even when
+// the device prefers dark (her rule for all her sites); pressing the button switches and the choice is kept in localStorage "jsw-mode"
+// (read before the page is drawn by the small script in index.html's head).
+const MODE_KEY = "jsw-mode", modeBtn = document.getElementById("modeBtn");
+function showMode(){
+  const dark = document.documentElement.getAttribute("data-mode") === "dark";
+  modeBtn.querySelector(".ico").innerHTML = ic(dark ? "sun" : "moon");
+  modeBtn.querySelector(".txt").textContent = dark ? "Light mode" : "Dark mode";
+  modeBtn.setAttribute("aria-pressed", String(dark));
+  document.querySelector('meta[name="theme-color"]')?.setAttribute("content", dark ? "#1B1524" : "#EEEAF2");
+}
+modeBtn.addEventListener("click", () => {
+  const dark = document.documentElement.getAttribute("data-mode") !== "dark";
+  document.documentElement.setAttribute("data-mode", dark ? "dark" : "light");
+  try { localStorage.setItem(MODE_KEY, dark ? "dark" : "light"); } catch (e) {}
+  showMode();
+});
+showMode();
+document.querySelector("#toTop .ico").innerHTML = ic("arrow-up");
+document.getElementById("toTop").addEventListener("click", () => {
+  window.scrollTo({top: 0, behavior: SMOOTH()});
+  document.getElementById("view").focus({preventScroll: true});   // keyboard users carry on from the top of the page
+});
 // the "← Jemma’s Journals" link (index.html, 20 Nov): "/" is home once online; opened as a file from her PC, "/" would be
 // the C: drive, so it goes to her local copy of the home page instead (relative: Documents/SimTracker/site → Documents/JemmasJournals)
 const HOME_LOCAL = "../../JemmasJournals/concepts/index.html";

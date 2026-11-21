@@ -16,9 +16,11 @@
 <link rel="icon" href="icon-192.png?v=plumbob10" sizes="192x192" type="image/png">
 <link rel="icon" href="icon.png?v=plumbob10" sizes="512x512" type="image/png">
 <link rel="apple-touch-icon" href="icon.png?v=plumbob10">
-<meta name="theme-color" content="#EEEAF2" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#1B1524" media="(prefers-color-scheme: dark)">
-<link rel="stylesheet" href="site.css?v=a8c1970a">
+<meta name="theme-color" content="#EEEAF2">
+<!-- light or dark (21 Nov 2026, her rule for all her sites): always opens light, dark only once she presses "Dark mode" at the
+     bottom of a page; the choice is remembered (localStorage "jsw-mode"). Set here, before the page is drawn, so it never flashes. -->
+<script>try{if(localStorage.getItem("jsw-mode")==="dark"){document.documentElement.setAttribute("data-mode","dark");document.querySelector('meta[name="theme-color"]').setAttribute("content","#1B1524")}}catch(e){}</script>
+<link rel="stylesheet" href="site.css?v=e3613b84">
 </head>
 <body>
 <div class="topbar"><button id="menuBtn" type="button"><span id="menuIco"></span>Menu</button><b>Jemma’s Sim World</b></div>
@@ -30,11 +32,14 @@
   <div class="search"><span class="search-ico" id="searchIco"></span><input id="q" type="search" placeholder="Search…" aria-label="Search the site" autocomplete="off" spellcheck="false"></div>
   <nav class="nav" id="nav"></nav>
 </aside>
-<main id="main"><div class="wrap" id="view"></div></main>
+<main id="main"><div class="wrap" id="view" tabindex="-1"></div>
+  <!-- bottom of every page (21 Nov 2026, as on Jemma’s Journals): Back to top and Dark/Light mode; js/app.js fills the icons and wires them -->
+  <footer class="site-foot"><div class="foot-links"><button type="button" class="totop" id="toTop"><span class="ico"></span>Back to top</button><button type="button" class="mode-text" id="modeBtn" aria-pressed="false"><span class="ico"></span><span class="txt">Dark mode</span></button></div></footer>
+</main>
 
-<script src="js/icons.js?v=0af03468"></script>
+<script src="js/icons.js?v=449d1949"></script>
 <script src="js/data.js?v=aafd440c"></script>
-<script src="js/app.js?v=8ecc449b"></script>
+<script src="js/app.js?v=68d9a79e"></script>
 <!-- Admin pages' extra data (made by tools/admin_data.py): for Jemma's PC only, never upload js/admin-data.js if the site goes online -->
 <script src="js/admin-data.js?v=8832b135"></script>
 <script src="js/sections.js?v=17d60871"></script>

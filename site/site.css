@@ -139,7 +139,7 @@ img{max-width:100%}
 /* The look (her pick 21 Nov 2026, "S1f-a, town plan"): a town planner's drawing in the site's purple ink. Pale lilac sidebar and
    banners with a faint estate plan (site/townplan/, drawn by tools/make_town_plan.py), white card plates edged in the world's colour
    with a striped top edge, map-pin dots, a faint plot overlay on the map banners (whose bottom fade stays the world's deep colour).
-   Dark mode swaps the same parts to a dark lilac ink with faint plan lines. */
+   Dark mode (only when she presses the button at the bottom of a page) swaps the same parts to a dark lilac ink with faint plan lines. */
 :root{
   --paper:#F4F2EE; --surface:#FFFFFF; --ink:#2A1D40; --muted:#625A6E; --line:#DCD6E2; --soft:#ECE8F0;
   --deep:#2A1D40; --deep-2:#3D2A5C; --on-deep:#F1F4F7; --on-deep-mute:color-mix(in srgb,#fff 64%,var(--deep));
@@ -157,15 +157,8 @@ img{max-width:100%}
   --body:"Manrope", "Segoe UI", system-ui, sans-serif;
   --side:280px;
 }
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --paper:#15111B; --surface:#1E1827; --ink:#ECE7F3; --muted:#A79DB6; --line:#332B3F; --soft:#262030; --done:#5CC48A; color-scheme:dark;
-  --brass:#C9A04A; --neat:#8A78AD; --water:#B7A8F7; --plum:#C7B5EC;
-  --card-line:#41374F; --strip-pale:#1E1827; --pin-ring:rgba(236,231,243,.3); --rule:rgba(236,231,243,.16);
-  --nav:#1B1524; --side-ink:#ECE7F3; --side-mute:#A69CB6; --side-rule:rgba(236,231,243,.12); --side-hover:rgba(236,231,243,.07); --side-on:rgba(236,231,243,.09);
-  --side-field:rgba(236,231,243,.06); --side-field-line:rgba(236,231,243,.16); --side-plan:url(townplan/side-dark.svg);
-  --banner:linear-gradient(180deg,#221B2D,#1A1523); --banner-edge:rgba(199,181,236,.28); --banner-line:rgba(236,231,243,.14); --banner-plan:url(townplan/town-dark.svg);
-  --figures-bg:rgba(30,24,39,.9); --chip-line:rgba(236,231,243,.22); --chip-hover:rgba(236,231,243,.08) }}
-:root[data-theme="dark"]{
+:root[data-mode="dark"]{   /* dark only when she presses "Dark mode" at the bottom of a page (21 Nov 2026, her rule): never from the device setting */
+
   --paper:#15111B; --surface:#1E1827; --ink:#ECE7F3; --muted:#A79DB6; --line:#332B3F; --soft:#262030; --done:#5CC48A; color-scheme:dark;
   --brass:#C9A04A; --neat:#8A78AD; --water:#B7A8F7; --plum:#C7B5EC;
   --card-line:#41374F; --strip-pale:#1E1827; --pin-ring:rgba(236,231,243,.3); --rule:rgba(236,231,243,.16);
@@ -173,6 +166,15 @@ img{max-width:100%}
   --side-field:rgba(236,231,243,.06); --side-field-line:rgba(236,231,243,.16); --side-plan:url(townplan/side-dark.svg);
   --banner:linear-gradient(180deg,#221B2D,#1A1523); --banner-edge:rgba(199,181,236,.28); --banner-line:rgba(236,231,243,.14); --banner-plan:url(townplan/town-dark.svg);
   --figures-bg:rgba(30,24,39,.9); --chip-line:rgba(236,231,243,.22); --chip-hover:rgba(236,231,243,.08) }
+
+/* dark mode: words drawn in a world's or neighbourhood's own colour are lifted towards the pale ink so they read at 4.5:1 or more
+   on the dark paper (21 Nov 2026); their dots, edges and fills keep the world's colour */
+:root[data-mode="dark"] .hood-head .label,:root[data-mode="dark"] .more,:root[data-mode="dark"] .fam .rel{color:color-mix(in srgb,var(--h) 50%,var(--ink))}
+:root[data-mode="dark"] .traits span{color:color-mix(in srgb,var(--h) 50%,var(--ink))}
+:root[data-mode="dark"] .hhchip{color:color-mix(in srgb,var(--w) 50%,var(--ink))}
+:root[data-mode="dark"] .tc.notown .tm,:root[data-mode="dark"] .sim-list .card.notown .mono,:root[data-mode="dark"] .rel-card.notown .mono,:root[data-mode="dark"] .mcard.notown .tm{color:color-mix(in srgb,var(--w) 50%,var(--ink))}
+:root[data-mode="dark"] .adm-pill.bad{color:#E8A57A}
+:root[data-mode="dark"] .sheet .t.ns-fix{color:#E0B04A}
 
 *{box-sizing:border-box}
 [hidden]{display:none!important}
@@ -634,6 +636,14 @@ i.nb-none svg.i{width:30%;height:auto;color:rgba(255,255,255,.6)}
 .gal-gains .sheet-wrap{margin-top:10px}
 /* packs per world (world pages, 13 Oct) */
 footer .as-of{flex-basis:100%}
+/* bottom of every page (21 Nov 2026, as on Jemma’s Journals): Back to top and Dark/Light mode, centred, link-style in the site's purple */
+#view{outline:none}   /* Back to top moves focus here; no ring round the whole page */
+#view.wrap{padding-bottom:56px}
+.site-foot{display:block;margin:0 auto;max-width:1140px;padding:0 clamp(16px,4vw,56px) 28px;border:0;color:var(--water);font-size:13px}
+.foot-links{display:flex;gap:26px;justify-content:center;align-items:center;flex-wrap:wrap}
+.foot-links button{display:inline-flex;align-items:center;gap:6px;min-height:44px;margin:0;padding:4px 2px;border:0;background:none;font:700 13px/1 var(--body);color:var(--water);cursor:pointer}
+.foot-links button:hover{text-decoration:underline;text-underline-offset:3px}
+.foot-links .ico{display:inline-flex}.foot-links svg.i{width:14px;height:14px}
 /* site search (sidebar, 13 Oct) */
 .search{position:relative;padding:14px 12px 0}
 .search-ico{position:absolute;left:25px;top:33px;transform:translateY(-50%);display:flex;color:var(--on-deep-mute);pointer-events:none}
