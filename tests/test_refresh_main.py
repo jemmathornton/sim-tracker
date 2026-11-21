@@ -2,7 +2,7 @@
 the new-save check replaced: the log is written as the run goes, a failed build or an error shows as failed on Admin, a run
 killed partway shows as failed, and the automatic commit takes only what the run changed (in a throwaway git repo).
 Nothing in the project is touched: the log, the repo and every file live in a temporary folder."""
-import os, shutil, subprocess, textwrap, types, unittest
+import os, re, shutil, subprocess, textwrap, types, unittest
 from pathlib import Path
 from unittest import mock
 from helpers import patched, temp_dir, argv, quiet
@@ -225,8 +225,29 @@ class AutomaticCommit(MainPart):
         self.assertIn('Nothing new to save in the project history', log)
         self.assertEqual(self.git('rev-list', '--count', 'HEAD').stdout.strip(), '1')
 
-    def test_never_pushes(self):
-        self.assertNotRegex(SRC, r"git\(\s*'push'")
+    def test_commit_never_pushes(self):   # 21 Nov: pushing is backup_push()'s job alone, main only, never forced
+        commit = SRC[SRC.index('def commit_refresh'):SRC.index('def backup_push')]
+        self.assertNotIn("'push'", commit)
+        self.assertIn('NO_HOOK_PUSH', commit)                                  # the hook's own push is switched off for this commit
+        self.assertEqual(len(re.findall(r"'push'", SRC)), 1)
+        self.assertIn("['git', 'push', 'origin', 'main']", SRC)
+        self.assertNotIn('--force', SRC)
+
+    def test_hand_edits_and_what_is_built_from_them_left_out(self):
+        self.repo()
+        os.makedirs(os.path.join(self.d, 'site/js'))
+        for f in ('site/index.html', 'site/js/data.js'): open(os.path.join(self.d, f), 'w').write('1\n')
+        self.git('add', '-A'); self.git('commit', '-qm', 'site')
+        open(os.path.join(self.d, 'site/index.html'), 'w').write('her edit\n')
+        open(os.path.join(self.d, 'data/worlds/a.json'), 'w').write('her edit\n')
+        def main():
+            for f in ('site/index.html', 'site/js/data.js', 'data/gallery/uploads.json'): open(os.path.join(self.d, f), 'w').write('new\n')
+            done_line(); return True
+        code, log = self.run_main(main)
+        self.assertEqual(code, 0)
+        self.assertEqual(self.git('show', '--name-only', '--format=', 'HEAD').stdout.split(), ['data/gallery/uploads.json'])
+        self.assertIn('left out of the automatic save: site/js/data.js (built from changes not saved yet: data/worlds/a.json)', log)
+        self.assertIn('already being changed before the refresh): data/worlds/a.json, site/index.html', log)
 
 
 if __name__ == '__main__':

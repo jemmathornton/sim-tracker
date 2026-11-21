@@ -1,0 +1,19 @@
+#!/bin/sh
+# Push every commit on main to her GitHub backup straight away (19 Nov, her ask). Kept in git here (tools/git-hooks/post-commit);
+# the live copy is .git/hooks/post-commit (git doesn't keep hooks: on a new clone, copy this file there).
+# - Only the main branch: a commit on a worktree's claude/* branch never goes to the public repo (21 Nov review).
+# - Skipped when SIMWORLD_NO_HOOK_PUSH is set: the weekly refresh pushes itself afterwards (backup_push), so the two
+#   pushes never race.
+# - In the background, never asks for a sign-in, never forces. A failed push is written to logs/push.log (git-ignored);
+#   the next commit or the Sunday refresh's push catches up.
+[ -n "$SIMWORLD_NO_HOOK_PUSH" ] && exit 0
+[ "$(git rev-parse --abbrev-ref HEAD 2>/dev/null)" = "main" ] || exit 0
+top=$(git rev-parse --show-toplevel 2>/dev/null) || exit 0
+(
+  out=$(GIT_TERMINAL_PROMPT=0 GCM_INTERACTIVE=never git push -q origin main 2>&1)
+  if [ $? -ne 0 ]; then
+    mkdir -p "$top/logs"
+    printf '%s  push of %s failed:\n%s\n\n' "$(date '+%d %b %Y %H:%M')" "$(git rev-parse --short HEAD 2>/dev/null)" "$out" >> "$top/logs/push.log"
+  fi
+) </dev/null >/dev/null 2>&1 &
+exit 0

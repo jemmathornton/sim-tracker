@@ -135,6 +135,69 @@ class RefreshCommit(unittest.TestCase):
         status = self.git('status', '--porcelain').stdout
         self.assertIn('data/worlds/a.json', status); self.assertIn('notes.txt', status)
 
+    def add_files(self, *files):
+        for f in files:
+            os.makedirs(os.path.dirname(os.path.join(self.d, f)), exist_ok=True); open(os.path.join(self.d, f), 'w').write('1\n')
+        self.git('add', '-A'); self.git('commit', '-qm', 'more')
+
+    def write(self, f, text): open(os.path.join(self.d, f), 'w').write(text)
+
+    def test_hand_edited_shared_files_left_out(self):   # 21 Nov review: not just data/worlds
+        shared = ['site/index.html', 'data/gallery/unlinked.json', 'data/gallery/text-fixes.json', 'data/gallery/to-sort.json', 'claude-notes/README.md']
+        self.add_files(*shared)
+        for f in shared: self.write(f, 'her edit\n')
+        said = []
+        with patched(G, say=said.append):
+            before = G.changed_files(self.d)
+            for f in shared: self.write(f, 'her edit, then the refresh\n')
+            self.write('data/gallery/uploads.json', '2\n')
+            G.commit_refresh(before, self.d)
+        self.assertEqual(self.git('show', '--name-only', '--format=', 'HEAD').stdout.split(), ['data/gallery/uploads.json'])
+        left = next(s for s in said if 'already being changed before the refresh' in s)
+        for f in shared: self.assertIn(f, left)
+
+    def test_built_files_held_while_a_world_file_is_left_out(self):
+        built = ['site/js/data.js', 'site/js/admin-data.js', 'site/index.html']
+        self.add_files(*built)
+        self.write('data/worlds/a.json', 'her edit\n')
+        said = []
+        with patched(G, say=said.append):
+            before = G.changed_files(self.d)
+            for f in built + ['data/gallery/uploads.json']: self.write(f, 'rebuilt\n')
+            G.commit_refresh(before, self.d)
+        self.assertEqual(self.git('show', '--name-only', '--format=', 'HEAD').stdout.split(), ['data/gallery/uploads.json'])
+        held = next(s for s in said if 'built from changes not saved yet' in s)
+        for f in built: self.assertIn(f, held)
+        self.assertIn('data/worlds/a.json', held)
+
+    def test_built_files_held_while_site_code_is_uncommitted(self):
+        self.add_files('site/js/data.js', 'site/js/app.js', 'site/site.css')
+        said = []
+        with patched(G, say=said.append):
+            before = G.changed_files(self.d)
+            self.write('site/js/app.js', 'the other session, mid-change\n')   # not in the refresh's folders at all
+            self.write('site/js/data.js', 'rebuilt\n')
+            G.commit_refresh(before, self.d)
+        self.assertEqual(self.git('rev-list', '--count', 'HEAD').stdout.strip(), '2')   # nothing else to save
+        self.assertTrue(any('site/js/data.js' in s and 'site/js/app.js' in s for s in said))
+        self.assertIn(' M site/js/data.js', self.git('status', '--porcelain').stdout)
+
+    def test_built_files_saved_when_their_sources_are_clean(self):
+        self.add_files('site/js/data.js', 'site/js/app.js')
+        with patched(G, say=lambda s: None):
+            before = G.changed_files(self.d)
+            self.write('site/js/data.js', 'rebuilt\n'); self.write('data/worlds/a.json', 'linked by the refresh\n')
+            G.commit_refresh(before, self.d)
+        self.assertEqual(sorted(self.git('show', '--name-only', '--format=', 'HEAD').stdout.split()), ['data/worlds/a.json', 'site/js/data.js'])
+
+    def test_commit_tells_the_hook_not_to_push(self):   # 21 Nov review: backup_push() pushes afterwards, so the two never race
+        hook = os.path.join(self.d, '.git', 'hooks', 'post-commit')
+        with open(hook, 'w', newline='\n') as f: f.write('#!/bin/sh\necho "x$SIMWORLD_NO_HOOK_PUSH" > .git/hook-saw\n')
+        with patched(G, say=lambda s: None):
+            self.write('data/gallery/uploads.json', '2\n')
+            G.commit_refresh(frozenset(), self.d)
+        self.assertEqual(open(os.path.join(self.d, '.git', 'hook-saw')).read().strip(), 'x1')
+
     def test_nothing_new(self):
         said = []
         with patched(G, say=said.append): G.commit_refresh(frozenset(), self.d)

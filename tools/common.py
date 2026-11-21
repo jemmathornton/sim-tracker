@@ -93,6 +93,17 @@ def plan_types(lot):
     return [t.strip() for t in re.sub(r'\s*\([^)]*\)', '', lot.get('type') or '').split('/')]
 
 
+# her own names for two of the game's lot types (CLAUDE.md), used wherever a Gallery upload's lot type is shown or compared
+GALLERY_TYPE_NAMES = {"Thrift and Bubble Tea Store": "Thrift and Boba Store"}
+
+
+def her_type(t):
+    """A Gallery lot type in her words: Thrift and Bubble Tea Store -> Thrift and Boba Store, UBrite Commons -> UoB Commons."""
+    if not t: return t
+    if t.startswith('UBrite'): return 'UoB Commons'
+    return GALLERY_TYPE_NAMES.get(t, t)
+
+
 def resolved_types(lot, types):
     """The Gallery's lot types for a lot's uploads, with "Missing sims translation" (newer lot types such as Backroom have no
     English name on the Gallery) taken to be a plan type no other upload has, so her Backroom re-uploads lead (21 Oct)."""
@@ -116,7 +127,7 @@ def lead_upload(lot, uploads):
         titles = [clean_title(uploads[i]['title']) for i in ids]
         return (next((i for i, t in zip(ids, titles) if not re.search(r'\b' + VERSION_END, t)), None)
                 or next((i for i, t in zip(ids, titles) if t.endswith('Space')), ids[0]))
-    types = [uploads[i].get('lotType') for i in ids]
+    types = [her_type(uploads[i].get('lotType')) for i in ids]
     if len(ids) > 1 and (lot.get('galleryVariants') or 'Residential Rental' in types):
         types, plan = resolved_types(lot, types), plan_types(lot)
         pick = [i for i, t in zip(ids, types) if t in plan] or [i for i, t in zip(ids, types) if t == 'Residential Rental'] or ids

@@ -71,7 +71,7 @@ def new_save():
 FAILED = ("Stopped with an error", "Pictures missing", "Couldn't save in the project history", "couldn't be fetched",
           "Finished with problems", "Build failed", "not written:")
 NOTES = ("left", "not linked", "skipped", "added a Gallery picture", "linked new household upload", "household upload", "new upload", "new household upload",
-         "couldn't", "Couldn't", "New-save check not refreshed", "more Gallery pictures not fetched", "her Library couldn't", "Backup to GitHub")
+         "couldn't", "Couldn't", "New-save check not refreshed", "more Gallery pictures not fetched", "her Library couldn't", "Backup to GitHub", "Gallery looked down")
 
 def refresh_runs():
     """Since 15 Nov a run's first line ends ", started" and the run writes as it goes, ending with "Finished": one that

@@ -8,7 +8,7 @@ the data it shows. Pictures are read from site/shots (Jemma's screenshots) and s
 import base64, html, os, re, sys, urllib.parse, uuid
 from datetime import date, datetime, timedelta
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import DATA, SITE, GALLERY, slug, load, nice_date, world_files, write_text, clean_title, VERSION_END, resolved_types, lead_upload
+from common import DATA, SITE, GALLERY, slug, load, nice_date, world_files, write_text, clean_title, VERSION_END, resolved_types, lead_upload, her_type
 
 GALLERY_ITEM = "https://www.ea.com/games/the-sims/the-sims-4/gallery/item/"
 
@@ -70,7 +70,8 @@ BRITISH_ANY = {'neighborhood': 'neighbourhood', 'neighbor': 'neighbour', 'neighb
                'mom': 'mum', 'moms': 'mums', 'catalog': 'catalogue', 'aluminum': 'aluminium', 'pajamas': 'pyjamas', 'defense': 'defence',
                'mold': 'mould', 'moldy': 'mouldy', 'specialize': 'specialise', 'specialized': 'specialised', 'personalize': 'personalise',
                'personalized': 'personalised', 'modernized': 'modernised', 'modernize': 'modernise', 'center': 'centre', 'centers': 'centres',
-               'harbor': 'harbour', 'theater': 'theatre', 'theaters': 'theatres'}
+               'harbor': 'harbour', 'theater': 'theatre', 'theaters': 'theatres', 'energize': 'energise', 'energized': 'energised',
+               'energizing': 'energising', 'energizer': 'energiser', 'energizers': 'energisers'}
 BRITISH_LOWER_ONLY = {'center', 'centers', 'harbor', 'theater', 'theaters'}
 def british(text):
     def swap(m):
@@ -80,7 +81,31 @@ def british(text):
         if w[0].isupper() and (low in BRITISH_LOWER_ONLY or low + plural in BRITISH_LOWER_ONLY): return w
         out = BRITISH_ANY[low] + plural
         return out.upper() if w.isupper() and len(w) > 1 else out[0].upper() + out[1:] if w[0].isupper() else out
-    return re.sub(r"[A-Za-z]+", swap, text)
+    keep = proper_names()   # the game's own names keep their spelling (Humor and Hijinks Festival, Lykke Center)
+    parts = re.split('(' + '|'.join(re.escape(k) for k in keep) + ')', text) if keep else [text]
+    return ''.join(x if k % 2 else re.sub(r"[A-Za-z]+", swap, x) for k, x in enumerate(parts))
+
+
+# proper names from the game that british() never changes: a few by hand, plus every festival, neighbourhood and in-game lot
+# name in the plan (21 Nov review: "Humor and Hijinks Festival" is the game's name)
+KEEP_NAMES = ["Humor and Hijinks Festival", "Lykke Center", "Evergreen Harbor", "Information Center", "Rec Center", "Arts Center",
+              "Equestrian Center"]
+_proper = None
+def proper_names():
+    global _proper
+    if _proper is None:
+        names = set(KEEP_NAMES)
+        for p in world_files():
+            W = load(p)
+            for h in W['neighbourhoods']:
+                names.update(x.strip() for x in h['name'].split('/'))
+                names.update(h.get('festivals') or [])
+                names.update(l['lot'] for l in h['lots'] if l.get('lot'))
+        # only names british() would change, longest first so "Rec Center" inside a longer name never splits it
+        _proper = sorted((n for n in names if n and _changes(n)), key=len, reverse=True)
+    return _proper
+def _changes(n):
+    return any(w.lower() in BRITISH_ANY or (w.lower().endswith('s') and w.lower()[:-1] in BRITISH_ANY) for w in re.findall(r"[A-Za-z]+", n))
 
 
 def without_tags(desc):
@@ -102,7 +127,7 @@ def upload_entry(i):
     return {"url": GALLERY_ITEM + urllib.parse.quote(i, safe=''), "title": clean_title(u['title']), "description": text,
             "tags": re.findall(r'#(\w+)', desc), "packs": [short_pack(p) for p in u['packs']], "value": f"§{u['price']:,}",
             "likes": u['favourites'], "downloads": u['downloads'], "comments": len(cl), "commentList": cl,
-            "beds": u['beds'], "baths": u['baths'], "lotType": u['lotType'], "checked": nice_date(u['checked']), "shared": shared_on(i), "creator": u.get('creator') or ""}
+            "beds": u['beds'], "baths": u['baths'], "lotType": her_type(u['lotType']), "checked": nice_date(u['checked']), "shared": shared_on(i), "creator": u.get('creator') or ""}
 
 def version_label(e):
     m = re.search(VERSION_END, e['title']); x = m.group(1) if m else 'Space'

@@ -225,6 +225,14 @@ def add_covers(worlds, uploads):
     if json.dumps(src, sort_keys=True) != before: save_picture_sources(src, GALLERY)
 
 
+GONE_LIMIT = 5   # more known uploads than this (or more than a tenth of them) missing in one run: the Gallery is having a bad day
+
+
+def gallery_looked_down(missing, known):
+    """True when too many known uploads came back 'not found' at once to believe it (21 Nov review)."""
+    return missing > GONE_LIMIT or (missing > 1 and missing * 10 > known)
+
+
 def main():
     up_file, c_file = os.path.join(GALLERY, 'uploads.json'), os.path.join(GALLERY, 'comments.json')
     U, C = load(up_file), load(c_file)
@@ -250,9 +258,13 @@ def main():
         uploads[i] = rec
         if cl or i in comments: comments[i] = cl
         time.sleep(0.2)
+    known = [i for i in gone if i in uploads]
+    if gallery_looked_down(len(known), len(uploads)):   # 21 Nov review: a bad week at EA must never mark half her uploads as gone
+        say(f"Gallery looked down: {len(known)} uploads came back as not found, so none were marked as gone this time")
+        gone = [i for i in gone if i not in uploads]
     for i in gone:
         if i in uploads: uploads[i]['gone'] = True
-    if gone: say(f"{len(gone)} uploads no longer on the Gallery: " + ", ".join(uploads[i]['title'] for i in gone if i in uploads))
+    if any(i in uploads for i in gone): say(f"{len(gone)} uploads no longer on the Gallery: " + ", ".join(uploads[i]['title'] for i in gone if i in uploads))
     if failed: say(f"{len(failed)} uploads couldn't be fetched this time and keep last week's numbers")
     for rec in others.values(): say(f"  skipped “{rec['title']}” by {rec['creator'] or 'an unknown creator'}: it mentions her name but isn't her upload")
     new_ids = [i for i in new_ids if i not in others]
@@ -281,16 +293,16 @@ REFRESH_PATHS = ['data/gallery', 'data/worlds', 'site/js/data.js', 'site/js/admi
                  'for-jemma/new-save-checklist.md', 'research/new-save-status.md', 'research/data/new-save-status.json', 'claude-notes']
 
 
-def git(*a, stdin=None, root=None):
+def git(*a, stdin=None, root=None, env=None):
     import subprocess
     feed = {'input': stdin} if stdin is not None else {'stdin': subprocess.DEVNULL}   # the weekly task has no console stdin
     return subprocess.run(['git', *a], cwd=root or ROOT, capture_output=True, text=True, encoding='utf-8',
-                          creationflags=getattr(subprocess, 'CREATE_NO_WINDOW', 0), **feed)
+                          creationflags=getattr(subprocess, 'CREATE_NO_WINDOW', 0), **({'env': env} if env else {}), **feed)
 
 
-def changed_files(root=None):
-    """Files under the refresh's folders that differ from the last commit (changed, new or deleted), as git paths."""
-    r = git('status', '--porcelain', '-z', '--untracked-files=all', '--', *REFRESH_PATHS, root=root)
+def changed_files(root=None, paths=None):
+    """Files under the refresh's folders (or the paths given) that differ from the last commit (changed, new or deleted), as git paths."""
+    r = git('status', '--porcelain', '-z', '--untracked-files=all', '--', *(paths or REFRESH_PATHS), root=root)
     out, parts = set(), r.stdout.split('\0')
     k = 0
     while k < len(parts):
@@ -302,39 +314,63 @@ def changed_files(root=None):
 
 
 NOTES_SRC = None   # where Claude's notes live (None: sync_notes.MEMORY); the tests point it elsewhere
-SHARED_PATHS = ('data/worlds/',)   # the plan: hers and Claude's to edit too; everything else in REFRESH_PATHS only the refresh (and its build) writes
+# files hers and Claude's to edit too: if one already had uncommitted changes when the run started, the refresh leaves it out
+# (21 Nov review: index.html, the Gallery lists she sorts by hand and the notes README joined the plan's world files)
+SHARED_PATHS = ('data/worlds/', 'site/index.html', 'data/gallery/unlinked.json', 'data/gallery/text-fixes.json',
+                'data/gallery/to-sort.json', 'claude-notes/README.md')
+# what the build makes, and what it makes them from: never saved while one of those sources holds uncommitted work
+BUILT = ('site/js/data.js', 'site/js/admin-data.js', 'site/index.html')
+BUILD_SOURCES = ['data', 'site/js/app.js', 'site/js/sections.js', 'site/js/icons.js', 'site/site.css', 'for-jemma/your-list.md']
+NO_HOOK_PUSH = 'SIMWORLD_NO_HOOK_PUSH'   # tells .git/hooks/post-commit not to push: backup_push() does it, once
 
 
 def commit_refresh(before=frozenset(), root=None):
-    """Save the refresh in the project's history (her OK, 23 Oct), so a bad week can always be undone. A world file in
-    data/worlds that already had uncommitted changes when the run started (her or Claude's work) is left out and named in
-    the log (15 Nov review). Files only the refresh writes (Gallery data, data.js, admin-data.js, index.html, Gallery
-    pictures, the checklist, the new-save status) are always taken, even if a failed run left them changed (19 Nov:
-    before, one failed build kept them out of every later weekly save). Pushing to GitHub is backup_push()'s job."""
+    """Save the refresh in the project's history (her OK, 23 Oct), so a bad week can always be undone. Files hers and Claude's
+    to edit (SHARED_PATHS: the plan's world files, index.html, unlinked.json, text-fixes.json, to-sort.json, the notes README)
+    that already had uncommitted changes when the run started are left out and named in the log (15 Nov, 21 Nov reviews).
+    Files only the refresh writes (Gallery numbers and pictures, the checklist, the new-save status) are always taken, even if
+    a failed run left them changed (19 Nov). data.js, admin-data.js and index.html are built from data/ and the site's code:
+    if any of those sources is left out or uncommitted, they're left out too (they'd hold work not in the history) and the
+    log says why. The commit doesn't fire the post-commit hook's push; pushing to GitHub is backup_push()'s job."""
     try:
         before = sorted(p for p in before if p.startswith(SHARED_PATHS))
-        mine = sorted(changed_files(root) - set(before))
+        mine = changed_files(root) - set(before)
+        dirty_sources = sorted(changed_files(root, BUILD_SOURCES) - mine)
+        held = sorted(p for p in mine if p in BUILT) if dirty_sources else []
+        mine = sorted(mine - set(held))
+        if held: say(f"  left out of the automatic save: {', '.join(held)} (built from changes not saved yet: {', '.join(dirty_sources[:10])}" + (" …" if len(dirty_sources) > 10 else "") + ")")
         if not mine: return say("Nothing new to save in the project history")
         lst = '\0'.join(mine) + '\0'
         a = git('add', '--pathspec-from-file=-', '--pathspec-file-nul', stdin=lst, root=root)
         r = a if a.returncode else git('commit', '-m', f"Weekly Gallery refresh, {datetime.now():%d %b %Y} (automatic)", '--only',
-                                       '--pathspec-from-file=-', '--pathspec-file-nul', stdin=lst, root=root)
+                                       '--pathspec-from-file=-', '--pathspec-file-nul', stdin=lst, root=root, env=dict(os.environ, **{NO_HOOK_PUSH: '1'}))
         say("Saved in the project history" if r.returncode == 0 else "Couldn't save in the project history: " + (r.stderr or r.stdout).strip()[:300])
         if before: say(f"  left out of the automatic save (already being changed before the refresh): {', '.join(sorted(before)[:10])}" + (" …" if len(before) > 10 else ""))
     except Exception as e: say(f"Couldn't save in the project history: {e}")
 
 
+PUSH_RETRY_WAIT = 20   # seconds before the one retry (the tests set 0)
+TRANSIENT = ('lock', 'fetch first', 'non-fast-forward', 'timed out', 'hung up', 'Could not resolve host', 'Connection reset')
+
+
 def backup_push(root=None):
-    """Weekly backup (her ask, 19 Nov): push everything committed to her GitHub repo (origin, github.com/jemmathornton/
-    sim-tracker, public by her choice). Runs every week whether or not this run saved anything, so Claude's commits go too.
-    Never forces; a failure is only a note for Admin, the refresh itself still counts."""
+    """Weekly backup (her ask, 19 Nov): push the main branch to her GitHub repo (origin, github.com/jemmathornton/sim-tracker,
+    public by her choice). Runs every week whether or not this run saved anything, so Claude's commits go too. Only main is
+    pushed (never a worktree's claude/* branch). A push that fails for a passing reason (a lock left by the post-commit hook's
+    own push, "fetch first", a dropped connection) is tried once more after a short wait. Never forces; a failure is only a
+    note for Admin, the refresh itself still counts."""
     import subprocess
     try:
         if git('remote', 'get-url', 'origin', root=root).returncode: return say("Backup to GitHub skipped: no GitHub copy set up")
+        if git('rev-parse', '--abbrev-ref', 'HEAD', root=root).stdout.strip() != 'main': return say("Backup to GitHub skipped: the project isn't on its main branch")
         env = dict(os.environ, GIT_TERMINAL_PROMPT='0', GCM_INTERACTIVE='never')   # never wait for a sign-in window
-        r = subprocess.run(['git', 'push', 'origin', 'HEAD'], cwd=root or ROOT, capture_output=True, text=True, encoding='utf-8',
-                           stdin=subprocess.DEVNULL, env=env, timeout=600, creationflags=getattr(subprocess, 'CREATE_NO_WINDOW', 0))
-        say("Backed up to GitHub" if r.returncode == 0 else "Backup to GitHub didn't work: " + (r.stderr or r.stdout).strip()[-300:])
+        for attempt in (1, 2):
+            r = subprocess.run(['git', 'push', 'origin', 'main'], cwd=root or ROOT, capture_output=True, text=True, encoding='utf-8',
+                               stdin=subprocess.DEVNULL, env=env, timeout=600, creationflags=getattr(subprocess, 'CREATE_NO_WINDOW', 0))
+            err = (r.stderr or r.stdout).strip()
+            if r.returncode == 0 or attempt == 2 or not any(x.lower() in err.lower() for x in TRANSIENT): break
+            time.sleep(PUSH_RETRY_WAIT)
+        say("Backed up to GitHub" if r.returncode == 0 else "Backup to GitHub didn't work: " + err[-300:])
     except Exception as e: say(f"Backup to GitHub didn't work: {e}")
 
 

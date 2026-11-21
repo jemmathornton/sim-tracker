@@ -13,7 +13,12 @@ US = {r'\bneighborhoods?\b': 'neighbourhood', r'\bfavorites?\b': 'favourite', r'
       r'\btheaters?\b': 'theatre', r'\bhonors?\b': 'honour', r'\bhumor\b': 'humour', r'\bcozy\b': 'cosy', r'\bgray\b': 'grey',
       r'\borganiz\w+': 'organis…', r'\brealiz\w+': 'realis…', r'\btraveling\b': 'travelling', r'\bjewelry\b': 'jewellery',
       r'\bmold\b': 'mould', r'\bpajamas\b': 'pyjamas', r'\bcatalog\b': 'catalogue', r'\bdefense\b': 'defence', r'\bcolor(s|ful)?\b': 'colour'}
-PROPER = r'Lykke Center|Information Center|Civic Center|Center Park|Recreation Center|Rec Center|Equestrian Center'   # the game's own names
+PROPER = r'Lykke Center|Information Center|Civic Center|Center Park|Recreation Center|Rec Center|Equestrian Center|Humor and Hijinks Festival'   # the game's own names
+
+
+def in_proper(text, m):
+    """True when a match sits inside one of the game's own names (21 Nov: a short window around it missed longer names)."""
+    return any(p.start() <= m.start() and m.end() <= p.end() for p in re.finditer(PROPER, text))
 SAME_TYPE = {'small business': 'small business venue', 'rec center': 'recreation center', 'boba & thrift': 'thrift and bubble tea store',
              'thrift and boba store': 'thrift and bubble tea store',   # her British name for the game's type (CLAUDE.md)
              'uob commons': 'ubrite commons', 'apartment': 'residential', 'small business residential': 'residential'}
@@ -54,7 +59,7 @@ def main():
             for text, where in [(h.get('desc', ''), f"{wn} / {h['name']} (description)")]:
                 for pat, uk in US.items():
                     for m in re.finditer(pat, text, re.I):
-                        if not re.search(PROPER, text[max(0, m.start() - 12):m.end() + 6]):
+                        if not in_proper(text, m):
                             out['us_spelling'].append(f"{where}: “{m.group(0)}”")
             for l in h['lots']:
                 label = f"{wn} / {h['name']} / {l.get('displayName') or l.get('myName') or l['lot']}"
@@ -105,8 +110,7 @@ def main():
         W = load(wf)
         for pat in US:
             for m in re.finditer(pat, W.get('blurb', ''), re.I):
-                ctx = W['blurb'][max(0, m.start() - 12):m.end() + 6]
-                if not re.search(PROPER, ctx):
+                if not in_proper(W['blurb'], m):
                     out['us_spelling'].append(f"{W['name']} (world blurb): “{m.group(0)}”")
     with open(os.path.join(ROOT, 'research', 'data', 'data-check.json'), 'w', encoding='utf-8', newline='\n') as f:
         json.dump(out, f, ensure_ascii=False, indent=1)

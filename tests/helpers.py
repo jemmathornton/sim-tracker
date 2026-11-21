@@ -23,13 +23,15 @@ SIMS = [s for W, hn, hh in HOUSEHOLDS for s in hh.get('sims', [])]
 # what "the project" is for the checks that nothing was written: everything but git's own folder, the test tools, Playwright's
 # output, Python's caches and the refresh log (the weekly task may write it while the tests run)
 SKIP_DIRS = {'.git', 'node_modules', '.tools', 'test-results', 'playwright-report', '__pycache__', 'logs'}
+# and other Claude sessions' work going on at the same time (21 Nov review): their worktrees and scratch folders
+SKIP_PATHS = {'.claude/worktrees', '.claude/scratch', '.claude/tmp'}
 
 
 def snapshot():
     """{path: (modified time, size)} for every project file."""
     out = {}
     for d, ds, fs in os.walk(ROOT):
-        ds[:] = [x for x in ds if x not in SKIP_DIRS]
+        ds[:] = [x for x in ds if x not in SKIP_DIRS and os.path.relpath(os.path.join(d, x), ROOT).replace(os.sep, '/') not in SKIP_PATHS]
         for f in fs:
             p = os.path.join(d, f)
             try: st = os.stat(p)
@@ -89,6 +91,18 @@ def temp_dir():
         yield d
     finally:
         remove_tree(d)
+
+
+@contextlib.contextmanager
+def tools_copy(*files):
+    """A temporary copy of tools/ (its own scripts, not research/ or one-off/), plus any project files named (read-only inputs
+    a tool loads on start), so a tool can be run as a program without the real project anywhere near: its ROOT is the
+    temporary folder (21 Nov review)."""
+    with temp_dir() as d:
+        shutil.copytree(TOOLS, os.path.join(d, 'tools'), ignore=shutil.ignore_patterns('__pycache__', 'one-off', 'research', 'git-hooks'))
+        for f in files:
+            os.makedirs(os.path.dirname(os.path.join(d, f)), exist_ok=True); shutil.copy(os.path.join(ROOT, f), os.path.join(d, f))
+        yield os.path.join(d, 'tools')
 
 
 @contextlib.contextmanager

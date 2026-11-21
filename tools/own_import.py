@@ -6,6 +6,10 @@
     python tools/own_import.py --apply --only "<household>" [...]   only those households (1 Nov: a bare --apply
                                          would refill households she has split or updated since, e.g. Curious, and
                                          redo the PREFER ones over her Library updates; so --apply needs --only, or --all)
+    ... --replace                        also refill households that already have Sims (21 Nov: without it, a household
+                                         with Sims is never touched, PREFER, SPLIT and TARGET ones included). Sims already
+                                         on the site keep their ids (matched by name) and what was added by hand (dynasty,
+                                         clubs, orgs, born, …; their parents and partners too, where set)
 
 Her spreadsheet says which households exist and where; this only fills in their Sims. Only exact name matches are used
 (research/data/own-households.json, from tools/research/own_households.py). The newest copy wins, her Building save
@@ -145,19 +149,22 @@ def main(apply):
         return t['career'], title, c.get('user_display_level') or i + 1
 
     worlds = {load(p)['name']: p for p in glob.glob(os.path.join(ROOT, 'data', 'worlds', '*.json'))}
-    used = set()
+    used, existing = set(), {}   # every Sim id on the site; each household's Sims as they are now
     for p in worlds.values():
         W0 = load(p)
         for hn0, hh in (W0.get('households') or {}).items():
-            if f"{W0['name']}|{hn0}" in PREFER or f"{W0['name']}|{hn0}" in PREFER_LIBRARY or any(f"{W0['name']}|{k}" in TARGET and TARGET[f"{W0['name']}|{k}"] == hn0 for k in [hn0.rsplit(' ', 1)[0]]): continue   # being replaced
+            existing[f"{W0['name']}|{hn0}"] = hh.get('sims') or []
             used.update(s.get('id') for s in hh.get('sims', []) if s.get('id'))
     out_by_world = {}
     for key, sims in full.items():
         w, hn = key.split('|', 1); c, want = plan[key]
         src = f"{'Library' if c['source'] == 'library' else 'save “' + c['save'] + '”'} ({c['date']})"
         idmap = {}
+        had = {s.get('name'): s.get('id') for s in existing.get(f"{w}|{TARGET.get(key, hn)}", []) if s.get('id')}
         for s in sims:
             nm = f"{s.get('first_name', '')} {s.get('last_name', '')}".strip()
+            if had.get(nm):   # a Sim already on the site keeps its id (21 Nov review: reruns minted new ones, breaking Sim pages and parent links)
+                idmap[s.get('sim_id')] = (had[nm], nm); continue
             sid = re.sub(r'[^a-z0-9]+', '-', nm.lower()).strip('-') or 'sim'
             while sid in used: sid += '-' + re.sub(r'[^a-z]+', '-', w.lower()).strip('-')
             used.add(sid); idmap[s.get('sim_id')] = (sid, nm)
@@ -219,7 +226,12 @@ def main(apply):
             for hn, (rows, src) in hhs.items():
                 if ONLY is not None and hn not in ONLY: continue
                 h = W.setdefault('households', {}).setdefault(hn, {})
-                if h.get('sims') and f"{w}|{hn}" not in PREFER and f"{w}|{hn}" not in PREFER_LIBRARY and f"{w}|{hn}" not in SPLIT and hn not in TARGET.values(): continue
+                if h.get('sims') and not REPLACE:   # 21 Nov review: never replaced without being asked, PREFER and SPLIT ones too
+                    print(f"{w} / {hn}: already has Sims, left alone (--replace to refill it from this copy)"); continue
+                if h.get('sims'):
+                    rows = merged(h['sims'], rows)
+                    gone = [s['name'] for s in h['sims'] if s.get('name') not in {r['name'] for r in rows}]
+                    if gone: print(f"{w} / {hn}: not in this copy, so no longer in the household: {', '.join(gone)}")
                 h['sims'] = rows
                 if h.get('single') and len(rows) > 1: h.pop('single')
             save(p, W)
@@ -227,9 +239,28 @@ def main(apply):
         subprocess.run([sys.executable, '-X', 'utf8', os.path.join(ROOT, 'tools', 'build.py')], check=True)
 
 
+# what the importer writes for a Sim; anything else on a Sim (dynasty, clubs, orgs, born, died, a portrait…) was added by hand
+IMPORTED = {"id", "name", "sex", "origin", "from", "age", "state", "aspiration", "traits", "bonus", "career", "careerNote", "school", "skills", "parents", "partners"}
+HAND_WINS = ("parents", "partners")   # family links fixed by hand beat the copy's
+
+
+def merged(old, rows):
+    """--replace: the copy's Sims, each keeping what was added to it by hand (matched by name; ids were kept already)."""
+    by_name = {s.get('name'): s for s in old}
+    out = []
+    for d in rows:
+        o = by_name.get(d['name'])
+        if o:
+            d = {**d, **{k: v for k, v in o.items() if k not in IMPORTED or (k in HAND_WINS and v)}}
+        out.append(d)
+    return out
+
+
 ONLY = None
+REPLACE = False   # --replace: refill households that already have Sims (keeping ids and hand-added fields)
 
 if __name__ == '__main__':
-    ONLY = sys.argv[sys.argv.index('--only') + 1:] if '--only' in sys.argv else None
+    REPLACE = '--replace' in sys.argv
+    ONLY = [a for a in sys.argv[sys.argv.index('--only') + 1:] if a != '--replace'] if '--only' in sys.argv else None
     if '--apply' in sys.argv and ONLY is None and '--all' not in sys.argv: sys.exit('name the households: --only "<household>" (or --all)')
     main('--apply' in sys.argv)

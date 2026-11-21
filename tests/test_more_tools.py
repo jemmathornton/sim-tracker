@@ -6,7 +6,7 @@ Everything a tool would write goes to a temporary folder; saves, the game and th
 exception is ReportModes, which runs the read-only report modes on the real project and checks no project file changed
 (the ones reading her saves only when SIMWORLD_TEST_SAVES=1)."""
 import concurrent.futures, json, os, struct, subprocess, sys, types, unittest
-from helpers import ROOT, DATA, SITE, WORLDS, patched, temp_dir, world, lot, argv, quiet, snapshot
+from helpers import ROOT, DATA, SITE, WORLDS, patched, temp_dir, world, lot, argv, quiet, snapshot, tools_copy
 from common import save, load, slug
 import build, gallery_refresh as G, import_spreadsheet as IS, premade_import as PI
 import test_import_spreadsheet as TIS   # the module, not its TestCase classes (they would run twice)
@@ -85,8 +85,9 @@ class PremadeImport(unittest.TestCase):
         self.assertEqual(W['households']['Goth']['sims'], self.EXISTING)
 
     def test_apply_needs_names(self):
-        r = subprocess.run([sys.executable, '-X', 'utf8', os.path.join(ROOT, 'tools', 'premade_import.py'), '--apply'],
-                           capture_output=True, text=True, encoding='utf-8', stdin=subprocess.DEVNULL, timeout=60)
+        with tools_copy() as tools:   # never the real project, even though it stops before writing anything
+            r = subprocess.run([sys.executable, '-X', 'utf8', os.path.join(tools, 'premade_import.py'), '--apply'],
+                               capture_output=True, text=True, encoding='utf-8', stdin=subprocess.DEVNULL, timeout=60)
         self.assertNotEqual(r.returncode, 0)
         self.assertIn('--only', r.stderr)
 
@@ -99,12 +100,12 @@ class OwnImport(unittest.TestCase):
                       {"first_name": "Joe", "last_name": "Kim", "sim_id": 2, "gender": 4096, "age": 32}],
              b'lee': [{"first_name": "Bo", "last_name": "Lee", "sim_id": 3, "gender": 4096, "age": 8}]}
 
-    def run_tool(self, apply=True, only=None):
+    def run_tool(self, apply=True, only=None, replace=False, existing=None, prefer=None):
         with temp_dir() as d:
             tray = os.path.join(d, 'Tray'); os.makedirs(tray)
             for k in self.FILES: open(os.path.join(tray, k.decode() + '.householdbinary'), 'wb').write(struct.pack('<II', 1, len(k)) + k)
             os.makedirs(os.path.join(d, 'data', 'worlds')); os.makedirs(os.path.join(d, 'research', 'data'))
-            save(os.path.join(d, 'data', 'worlds', 'testville.json'), world('Testville', households={"Kim": {"sims": [dict(s) for s in self.EXISTING]}, "Lee": {}}))
+            save(os.path.join(d, 'data', 'worlds', 'testville.json'), world('Testville', households={"Kim": {"sims": [dict(s) for s in existing or self.EXISTING]}, "Lee": {}}))
             save(os.path.join(d, 'research', 'data', 'game-names.json'), {"skills": {}, "skill_levels": {"MAJOR": [1] * 10}, "tracks": {}, "aspirations": {}, "traits": {}})
             copy = lambda f, hh, names: {"source": "library", "file": f, "household": hh, "date": "2026-10-01", "sims": [{"name": n, "sim_id": i} for i, n in enumerate(names)]}
             save(os.path.join(d, 'research', 'data', 'own-households.json'), {"found": {
@@ -115,8 +116,8 @@ class OwnImport(unittest.TestCase):
             fake_oh = types.ModuleType('own_households'); fake_oh.plan_households = lambda: {}
             old = sys.modules.get('own_households'); sys.modules['own_households'] = fake_oh
             try:
-                with patched(OI, ROOT=d, TRAY=tray, s4=fake_s4, SPLIT={}, SKIP={}, EA=set(), PREFER={}, PREFER_LIBRARY={}, TARGET={}, AGE_DOWN={},
-                             PREMADE_COPY=set(), ONLY=only, subprocess=types.SimpleNamespace(run=lambda *a, **k: ran.append(a))), quiet() as out:
+                with patched(OI, ROOT=d, TRAY=tray, s4=fake_s4, SPLIT={}, SKIP={}, EA=set(), PREFER={}, PREFER_LIBRARY=prefer or {}, TARGET={}, AGE_DOWN={},
+                             PREMADE_COPY=set(), ONLY=only, REPLACE=replace, subprocess=types.SimpleNamespace(run=lambda *a, **k: ran.append(a))), quiet() as out:
                     OI.main(apply)
             finally:
                 if old: sys.modules['own_households'] = old
@@ -133,6 +134,33 @@ class OwnImport(unittest.TestCase):
         self.assertIn('**Lee** (Testville): filled from Library', review)
         self.assertEqual(len(ran), 1)
 
+    def test_preferred_copy_never_replaces_sims_without_replace(self):   # 21 Nov review: PREFER households used to be replaced outright
+        text, W, review, ran = self.run_tool(prefer={"Testville|Kim": "Kim"})
+        self.assertEqual(W['households']['Kim']['sims'], self.EXISTING)
+        self.assertIn('Testville / Kim: already has Sims, left alone (--replace to refill it from this copy)', text)
+
+    HAND = [{"id": "ann-kim-testville", "name": "Ann Kim", "sex": "f", "origin": "Mine", "age": "Elder", "from": "her pick",
+             "dynasty": {"name": "Kim", "role": "head"}, "clubs": [{"name": "Gardeners", "role": "leader"}], "born": "Park",
+             "parents": ["old-mum"], "partners": [["someone", "Spouse"]]},
+            {"id": "sue-kim", "name": "Sue Kim", "sex": "f", "origin": "Mine", "age": "Teen"}]
+
+    def test_replace_keeps_ids_and_hand_added_fields(self):
+        text, W, review, ran = self.run_tool(replace=True, existing=self.HAND)
+        sims = {s['name']: s for s in W['households']['Kim']['sims']}
+        self.assertEqual(list(sims), ['Ann Kim', 'Joe Kim'])
+        ann = sims['Ann Kim']
+        self.assertEqual(ann['id'], 'ann-kim-testville')                       # not minted again
+        self.assertEqual(ann['age'], 'Adult')                                  # the copy's own details are refreshed
+        self.assertEqual((ann['dynasty'], ann['clubs'], ann['born']), (self.HAND[0]['dynasty'], self.HAND[0]['clubs'], 'Park'))
+        self.assertEqual((ann['parents'], ann['partners']), (['old-mum'], [["someone", "Spouse"]]))
+        self.assertEqual(sims['Joe Kim']['id'], 'joe-kim')
+        self.assertIn('Testville / Kim: not in this copy, so no longer in the household: Sue Kim', text)
+
+    def test_replace_twice_gives_the_same_ids(self):
+        _, W1, _, _ = self.run_tool(replace=True, existing=self.HAND)
+        _, W2, _, _ = self.run_tool(replace=True, existing=W1['households']['Kim']['sims'])
+        self.assertEqual([s['id'] for s in W2['households']['Kim']['sims']], [s['id'] for s in W1['households']['Kim']['sims']])
+
     def test_report_changes_nothing(self):
         text, W, review, ran = self.run_tool(apply=False)
         self.assertEqual(W['households']['Lee'], {})
@@ -144,8 +172,9 @@ class OwnImport(unittest.TestCase):
         self.assertEqual(W['households']['Lee'], {})
 
     def test_apply_needs_names(self):
-        r = subprocess.run([sys.executable, '-X', 'utf8', os.path.join(ROOT, 'tools', 'own_import.py'), '--apply'],
-                           capture_output=True, text=True, encoding='utf-8', stdin=subprocess.DEVNULL, timeout=120)
+        with tools_copy('research/data/game-names.json') as tools:   # never the real project, even though it stops before writing anything
+            r = subprocess.run([sys.executable, '-X', 'utf8', os.path.join(tools, 'own_import.py'), '--apply'],
+                               capture_output=True, text=True, encoding='utf-8', stdin=subprocess.DEVNULL, timeout=120)
         self.assertNotEqual(r.returncode, 0)
         self.assertIn('--only', r.stderr)
 
@@ -367,6 +396,23 @@ class GoneUploads(unittest.TestCase):
         self.assertEqual(U['a']['favourites'], 8)
         self.assertFalse(any('no longer on the Gallery' in s for s in said))
         self.assertIn(f'{TODAY},a,8,0,0', hist)
+
+    def test_many_missing_at_once_marks_none_as_gone(self):   # 21 Nov review: a bad day at EA isn't her uploads leaving
+        uploads = {f"u{k}": up(f'House {k}', fav=k) for k in range(20)}
+        fresh = {i: u for i, u in uploads.items() if int(i[1:]) >= 7}          # seven known uploads come back "not found"
+        with temp_dir() as d:
+            ok, U, hist, said, _ = self.refresh(d, fresh, uploads, list(fresh))
+        self.assertFalse(any(u.get('gone') for u in U.values()))
+        self.assertIn('Gallery looked down: 7 uploads came back as not found, so none were marked as gone this time', said)
+        self.assertFalse(any('no longer on the Gallery' in s for s in said))
+        self.assertEqual(U['u0']['favourites'], 0); self.assertEqual(U['u3']['favourites'], 3)   # last numbers kept
+
+    def test_looked_down_rule(self):
+        self.assertFalse(G.gallery_looked_down(1, 3))      # one upload taken down: believed
+        self.assertFalse(G.gallery_looked_down(5, 221))
+        self.assertTrue(G.gallery_looked_down(6, 221))     # more than a handful
+        self.assertTrue(G.gallery_looked_down(3, 20))      # more than a tenth
+        self.assertFalse(G.gallery_looked_down(0, 0))
 
 
 # ---------- every report mode runs without changing anything ----------
