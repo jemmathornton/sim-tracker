@@ -48,6 +48,8 @@ test('phone drawer: closed it is out of the Tab order; the button says open or c
   await page.keyboard.press('Enter');
   await expect(btn).toHaveAttribute('aria-expanded', 'true');
   expect(await page.evaluate(() => document.getElementById('side').contains(document.activeElement))).toBe(true);
+  // it starts on Home, not on the Jemma's Journals link (her call 21 Nov: one Enter shouldn't leave the site)
+  expect(await page.evaluate(() => [document.activeElement.getAttribute('href'), document.activeElement.closest('.nav-group') != null])).toEqual(['#home', true]);
   await page.keyboard.press('Escape');
   await expect(btn).toHaveAttribute('aria-expanded', 'false');
   expect(await page.evaluate(() => document.activeElement.id)).toBe('menuBtn');

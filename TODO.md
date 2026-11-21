@@ -47,6 +47,8 @@ Every open item carried over from the claude.ai project on 13 Oct 2026: the note
 - research/who-lives-where-queue.md: the order to go through homes-that-fit. homes-that-fit had "his" for Ash Carrington and Henri Penkridge; fixed.
 - Also 6 Nov: 8 Bells (rebuilt) and Wakabamori Cemetery shared.
 
+**21 Nov (her calls, later):** the phone menu opens on Home (not the Journals link); Consort and Contessa Capp are both dead (Consort a ghost, R&L; Sims 2 lore: Contessa died first), so each is the other's Late Spouse; dark mode across her sites is her own general job; printing not needed.
+
 **21 Nov (her picks):** ancestors trial kept with game pictures (switch removed); look trial: banner boxes in the world's colour; cards and not-owned text as they were.
 
 **19 Nov (her ask): GitHub backup.** Everything pushed to github.com/jemmathornton/sim-tracker (public, her choice; she knows the commits show her git email and that the maps and EA portraits are included). The weekly refresh now pushes everything committed after its own save (backup_push; a failed push is a note on Admin).

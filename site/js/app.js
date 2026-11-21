@@ -1568,7 +1568,7 @@ function setNav(open, focus){
   const lock = phoneNav.matches && open;
   document.querySelectorAll("body > *:not(#side):not(.topbar):not(#scrim):not(script)").forEach(el => { el.inert = lock; });
   document.documentElement.classList.toggle("nav-lock", lock);
-  if (open && focus) sideEl.querySelector("a,input")?.focus({preventScroll: true});
+  if (open && focus) (sideEl.querySelector('.nav-group a[href="#home"]') || sideEl.querySelector("a,input"))?.focus({preventScroll: true});   // starts on Home, not "← Jemma's Journals" (her call 21 Nov: one Enter shouldn't leave the site)
   if (!open && phoneNav.matches && (focus || wasIn)) menuBtn.focus({preventScroll: true});
 }
 menuBtn.setAttribute("aria-controls", "side");

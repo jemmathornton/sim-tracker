@@ -734,11 +734,6 @@ window.ADMIN = {
 {
 "section": "Any time",
 "world": "",
-"text": "**Decide:** Consort and Contessa Capp (found 15 Nov): Consort's page calls Contessa his late wife, Contessa's calls him her husband. Who has died, if either?"
-},
-{
-"section": "Any time",
-"world": "",
 "text": "**Decide:** From the 15 Nov review, small layout choices: greyed sidebar text is a little faint to read easily, and the calendar's text gets very small on a phone. Make them stronger and bigger?"
 },
 {
@@ -780,11 +775,6 @@ window.ADMIN = {
 "section": "Any time",
 "world": "",
 "text": "**Decide:** Wording: EA's own typos in game bios (“convservation”, “The Roswell's”, American spellings like “Rumor”): leave word for word, or fix?"
-},
-{
-"section": "Any time",
-"world": "",
-"text": "**Decide:** Phone menu: it opens with “← Jemma's Journals” selected, so one Enter leaves the site: start on the search box instead?"
 },
 {
 "section": "Any time",
