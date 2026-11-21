@@ -426,62 +426,17 @@ lotRows = function(){
   return t.innerHTML;
 };
 
-// the bottom-right corner where trial switches sit, stacked so none covers another (21 Nov: the look trial joined the ancestors one)
-function trialDock(){ let k = document.getElementById("trial-dock"); if (!k) { k = document.createElement("div"); k.id = "trial-dock"; k.className = "trial-dock"; document.body.appendChild(k); } return k; }
-
-// ---------- trial (31 Oct, overnight): EA's ancestors' own portraits and how they died ----------
-// A switch at the bottom right (Sim pages only): "As now" is the site exactly as it was; "With game pictures" shows each
-// ancestor's 48-pixel portrait from the game (tools/research/ancestors.py, never stretched) on their page and in family
-// trees, and how they died, in the game's words. Remove this block (and its CSS) once she picks.
-const ANC_KEY = "jsw-ancestors-trial";
-let ANC_TRIAL = (() => { try { return localStorage.getItem(ANC_KEY) === "on" ? "on" : "now"; } catch (e) { return "now"; } })();
-const ANC = DATA.ancestors || {}, ANC_WAS = {};
-function ancApply(){
-  Object.entries(ANC).forEach(([id, a]) => { const s = SIMS[id]; if (!s) return;
-    if (!(id in ANC_WAS)) ANC_WAS[id] = {libraryPic: s.libraryPic, died: s.died};
-    if (ANC_TRIAL === "on") { if (!s.portrait && !ANC_WAS[id].libraryPic && a.portrait) s.libraryPic = a.portrait; if (!ANC_WAS[id].died && a.died) s.died = a.died; }
-    else { s.libraryPic = ANC_WAS[id].libraryPic; s.died = ANC_WAS[id].died; if (s.libraryPic === undefined) delete s.libraryPic; if (s.died === undefined) delete s.died; } });
-}
+// ---------- EA's ancestors (a trial from 31 Oct; kept, her pick 21 Nov) ----------
+// Each ancestor's 48-pixel portrait from the game (tools/research/ancestors.py, never stretched) on their page and in family
+// trees, and how they died, in the game's words. Her own screenshots, Library pictures and causes of death typed in data/ win.
+const ANC = DATA.ancestors || {};
+Object.entries(ANC).forEach(([id, a]) => { const s = SIMS[id]; if (!s) return;
+  if (!s.portrait && !s.libraryPic && a.portrait) s.libraryPic = a.portrait;
+  if (!s.died && a.died) s.died = a.died; });
 function ancTrees(){
-  if (ANC_TRIAL !== "on") return;
   document.querySelectorAll("#view .tc[data-sim]").forEach(c => { const a = ANC[c.dataset.sim], m = c.querySelector(".tm");
     if (a && a.portrait && m && !m.querySelector("img")) { m.classList.add("anc-pic"); m.innerHTML = `<img src="${a.portrait}" alt="">`; } });
 }
-function ancSwitch(){
-  if (!Object.keys(ANC).length) return;
-  let d = document.getElementById("anc-switch");
-  if (!d) { d = document.createElement("div"); d.id = "anc-switch"; d.className = "trial-switch"; d.setAttribute("role", "group"); d.setAttribute("aria-label", "Ancestors’ pictures (trial)"); trialDock().prepend(d); }
-  d.hidden = !/^(s-|h-)/.test(location.hash.slice(1));
-  d.innerHTML = `<b>EA’s ancestors (trial)</b><div>${[["now", "As now"], ["on", "With game pictures"]].map(([k, t]) => `<button type="button" data-anctrial="${k}" class="${ANC_TRIAL === k ? "on" : ""}" aria-pressed="${ANC_TRIAL === k}">${t}</button>`).join("")}</div>`;
-}
 new MutationObserver(ancTrees).observe(document.getElementById("view"), {childList: true, subtree: true});
-document.addEventListener("click", e => { const b = e.target.closest("[data-anctrial]"); if (!b || b.dataset.anctrial === ANC_TRIAL) return;
-  ANC_TRIAL = b.dataset.anctrial; try { localStorage.setItem(ANC_KEY, ANC_TRIAL); } catch (err) {}
-  ancApply(); ancSwitch(); const y = scrollY; route(); scrollTo(0, y); });
-addEventListener("hashchange", ancSwitch);
-ancApply(); ancSwitch();
-
-// ---------- trial (21 Nov, her ask): three look options from the 21 Nov review, each "As now" or "Suggestion" ----------
-// Cards: the old rounded cards (family trees, relatives, club members, Families) as town-plan plates; Banner boxes: the figures
-// box and neighbourhood tags on map banners in the world's own deep colour instead of Sim World purple; Not owned: grey text
-// instead of faded. Each "Suggestion" is a class on <html> (lt-cards, lt-boxes, lt-notowned; CSS near the end of site.css), set
-// before the page is drawn by the script in index.html; "As now" adds nothing. Remove this switch once she picks (keep the
-// chosen CSS, unscoped). Choices kept in localStorage "jsw-look-trial".
-const LT_KEY = "jsw-look-trial", LT_ROWS = [["cards", "Cards"], ["boxes", "Banner boxes"], ["notowned", "Not owned"]];
-let LT = (() => { try { const v = JSON.parse(localStorage.getItem(LT_KEY) || "{}"); return v && typeof v === "object" && !Array.isArray(v) ? v : {}; } catch (e) { return {}; } })();
-function ltApply(){ LT_ROWS.forEach(([k]) => document.documentElement.classList.toggle("lt-" + k, !!LT[k])); }
-function ltSwitch(){
-  let d = document.getElementById("look-trial");
-  if (!d) { d = document.createElement("details"); d.id = "look-trial"; d.className = "trial-switch look-trial";
-    if (matchMedia("(min-width:701px)").matches) d.open = true;   // on a phone it starts as a small tab
-    trialDock().appendChild(d); }
-  d.innerHTML = `<summary>Look trial</summary>${LT_ROWS.map(([k, t]) => `<div role="group" aria-label="${t}"><span>${t}</span>${[[0, "As now"], [1, "Suggestion"]].map(([v, l]) => `<button type="button" data-looktrial="${k}" data-v="${v}" class="${!!LT[k] === !!v ? "on" : ""}" aria-pressed="${!!LT[k] === !!v}">${l}</button>`).join("")}</div>`).join("")}`;
-}
-document.addEventListener("click", e => { const b = e.target.closest("[data-looktrial]"); if (!b) return;
-  const k = b.dataset.looktrial, v = b.dataset.v === "1"; if (!!LT[k] === v) return;
-  if (v) LT[k] = 1; else delete LT[k];
-  try { localStorage.setItem(LT_KEY, JSON.stringify(LT)); } catch (err) {}
-  ltApply(); ltSwitch(); });
-ltApply(); ltSwitch();
 
 route();   // the first page, drawn once now that every section and trial is in place (app.js leaves it to this file, 15 Nov)

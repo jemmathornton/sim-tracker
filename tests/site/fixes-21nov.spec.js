@@ -102,7 +102,7 @@ const CONTRAST = () => {
   };
 };
 
-test('light mode: small words in a world’s colour, calendar holidays and markers, and the trial switch read at 4.5:1', async ({ page }) => {
+test('light mode: small words in a world’s colour, calendar holidays and markers read at 4.5:1', async ({ page }) => {
   await openApp(page);
   await page.evaluate(CONTRAST);
   const keys = await page.evaluate(() => ['businesses', 'families', 'calendar', ...Object.values(GROUP_PAGES).filter(g => g.kind === 'organisation' || /organi/i.test(g.kind)).map(g => g.id),
@@ -121,15 +121,6 @@ test('light mode: small words in a world’s colour, calendar holidays and marke
     document.querySelectorAll('#view .m-hol').forEach(el => out.push([sn, el.textContent.trim().slice(0, 20), __contrast(el)])); } return out; });
   expect(pills.length).toBeGreaterThan(0);
   expect(pills.filter(x => x[2] < 4.5)).toEqual([]);
-  // the trial switch, light and dark
-  const sim = await page.evaluate(() => Object.keys(SIM_PAGES)[0]);
-  await go(page, sim);
-  for (const mode of ['light', 'dark']) {
-    await page.evaluate(m => document.documentElement.setAttribute('data-mode', m), mode);
-    const r = await page.evaluate(() => [...document.querySelectorAll('#anc-switch button')].map(b => [b.textContent, __contrast(b)]));
-    if (r.length) expect(r.filter(x => x[1] < 4.5), mode).toEqual([]);
-  }
-  expect(await page.evaluate(() => document.getElementById('anc-switch')?.getAttribute('aria-label') ?? 'Ancestors’ pictures (trial)')).toBe('Ancestors’ pictures (trial)');
 });
 
 test('a career with a branch of the same name shows it once; the New save column’s date is written as the site writes dates', async ({ page }) => {

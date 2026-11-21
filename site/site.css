@@ -262,7 +262,7 @@ main{margin-left:var(--side);min-height:100vh;container-type:inline-size}   /* l
 .hero.mapped:not(.lot-hero) h1,.hero.mapped:not(.lot-hero) p,.hero.mapped:not(.lot-hero) .kicker .label{text-shadow:0 1px 3px rgba(0,0,0,.75),0 0 16px rgba(0,0,0,.5)}
 .hero.mapped .kicker i{color:#F4F1E8}
 .hero.mapped .hero-foot{border-top-color:rgba(255,255,255,.25)}
-.hero.mapped .figures{background:rgba(42,29,64,.45);border-color:rgba(255,255,255,.4)}
+.hero.mapped .figures{background:color-mix(in srgb,var(--deep) 62%,transparent);border-color:rgba(255,255,255,.4)}   /* the world's own deep colour (her pick 21 Nov) */
 .hero.mapped .figures div{border-left-color:rgba(255,255,255,.35)}
 .hero.mapped .figures b{color:#fff}
 .credit{position:absolute;right:calc(clamp(16px,4vw,56px) + 10px);top:30px;font-size:11.5px;color:#2A1D40;background:rgba(251,248,240,.9);padding:4px 10px;border-radius:2px;backdrop-filter:blur(4px)}
@@ -416,8 +416,8 @@ a.count{text-decoration:none}a.count:hover{color:var(--ink)}
 .chapters a{display:inline-flex;align-items:center;gap:8px;font-size:11.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:2px;border:1px solid var(--chip-line);background:var(--chip-hover);text-decoration:none}
 .chapters a::before{content:"";width:8px;height:8px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:radial-gradient(circle,rgba(0,0,0,.4) 0 1.2px,currentColor 1.6px)}
 .chapters a:hover{background:color-mix(in srgb,var(--chip-hover) 50%,var(--chip-line))}
-.hero.mapped .chapters a{background:rgba(42,29,64,.4);border-color:rgba(255,255,255,.4)}
-.hero.mapped .chapters a:hover{background:rgba(42,29,64,.6)}
+.hero.mapped .chapters a{background:color-mix(in srgb,var(--deep) 55%,transparent);border-color:rgba(255,255,255,.4)}   /* the world's own deep colour (her pick 21 Nov) */
+.hero.mapped .chapters a:hover{background:color-mix(in srgb,var(--deep) 75%,transparent)}
 .crumbs a svg{opacity:.85}
 .home-to{display:flex;gap:8px;align-items:flex-start;margin:0;font-size:13.5px;color:var(--muted)}
 .home-to svg{margin-top:3px;color:var(--h)}
@@ -1117,44 +1117,7 @@ details.adm-more summary{cursor:pointer;font-weight:700;font-size:14px;color:var
 .sheet .t.ns-fix{color:#9A6A00;font-weight:800}
 .sheet th.ns-th{white-space:normal;line-height:1.1;font-size:inherit}
 .sheet.ns-on th,.sheet.ns-on td{padding-left:4px;padding-right:4px}
-/* trial switch (31 Oct, overnight; js/sections.js, EA's ancestors' pictures): remove with the trial */
-.trial-dock{position:fixed;right:18px;bottom:18px;z-index:60;display:flex;flex-direction:column;align-items:flex-end;gap:10px;pointer-events:none}   /* trial switches stacked (21 Nov) */
-.trial-dock>*{pointer-events:auto}
-.trial-switch{background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:16px;padding:12px 14px;box-shadow:0 10px 30px rgba(0,0,0,.18);display:grid;gap:8px;font-size:13px;max-width:430px}
-.trial-switch[hidden]{display:none}
-.trial-switch div{display:flex;flex-wrap:wrap;gap:6px}
-.trial-switch button{border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:5px 11px;cursor:pointer;font-weight:600;font-size:12.5px;color:var(--ink)}
-.trial-switch button.on{background:color-mix(in srgb,var(--brass) 75%,#000);border-color:transparent;color:#fff}   /* deeper brass, 4.5:1 with white (21 Nov) */
-:root[data-mode="dark"] .trial-switch button.on{background:var(--brass);color:#1A1F1C}
-.trial-switch button:focus-visible{outline:2px solid var(--brass)}
-/* look trial (21 Nov, her ask; js/sections.js): three options, each scoped under a class on <html>; "As now" is untouched.
-   Remove the switch once she picks, and keep the chosen block without its html.lt-… prefix */
-.look-trial{gap:6px}
-.look-trial summary{font-weight:700;cursor:pointer}
-.look-trial div{align-items:center}
-.look-trial div span{min-width:96px;font-weight:600;color:var(--muted)}
-/* Cards: the old rounded cards as town-plan plates (square corners, edge in the world colour, striped top edge) */
-html.lt-cards .tc,html.lt-cards .mcard,html.lt-cards .sim-list .card,html.lt-cards .fam,html.lt-cards .memb,html.lt-cards .rel-card{--k:var(--w,var(--h));border-radius:2px!important;border:1px solid color-mix(in srgb,var(--k) 45%,var(--card-line))!important;box-shadow:3px 4px 0 color-mix(in srgb,var(--k) 18%,transparent)!important}
-html.lt-cards .mcard,html.lt-cards .sim-list .card,html.lt-cards .fam,html.lt-cards .memb,html.lt-cards .rel-card{position:relative;padding-top:18px!important}
-html.lt-cards .tc.here,html.lt-cards .mcard.here{border-width:2px!important;border-color:var(--k)!important}
-html.lt-cards .tc:not(.ph)::before,html.lt-cards .mcard::before,html.lt-cards .sim-list .card:not(.ph)::before,html.lt-cards .fam::before,html.lt-cards .memb::before,html.lt-cards .rel-card::before{content:"";position:absolute;left:-1px;right:-1px;top:-1px;height:6px;border:1px solid color-mix(in srgb,var(--k) 70%,#1F2B33);
-  background:repeating-linear-gradient(90deg,var(--k) 0 20px,color-mix(in srgb,var(--k) 35%,var(--strip-pale)) 20px 40px);pointer-events:none}
-html.lt-cards .tc.here::before,html.lt-cards .mcard.here::before{left:-2px;right:-2px;top:-2px}
-html.lt-cards .tc.late::before,html.lt-cards .sim-list .card.late::before{filter:grayscale(1);opacity:.6}
-html.lt-cards .tc.ph,html.lt-cards .sim-list .card.ph{border-style:dashed!important;box-shadow:none!important}
-html.lt-cards .tree-box{border-radius:2px!important}
-html.lt-cards .fam:hover{transform:none}
-/* Banner boxes: the figures box and neighbourhood tags on map banners in the world's own deep colour */
-html.lt-boxes .hero.mapped .figures{background:color-mix(in srgb,var(--deep) 62%,transparent)!important}
-html.lt-boxes .hero.mapped .chapters a{background:color-mix(in srgb,var(--deep) 55%,transparent)!important}
-html.lt-boxes .hero.mapped .chapters a:hover{background:color-mix(in srgb,var(--deep) 75%,transparent)!important}
-/* Not owned: grey text instead of faded (sidebar group and Progress rows), 5:1 or more in light and dark */
-html.lt-notowned .nav-group.dim{opacity:1!important}
-html.lt-notowned .nav-group.dim>.label,html.lt-notowned .nav-group.dim>a,html.lt-notowned .nav-group.dim .pct,html.lt-notowned .nav-group.dim .subnav a{color:var(--side-mute)!important;opacity:1!important}
-html.lt-notowned .nav-group.dim .dot{filter:grayscale(.8);opacity:.55}
-html.lt-notowned .sheet tr.dim{opacity:1!important}
-html.lt-notowned .sheet tr.dim th,html.lt-notowned .sheet tr.dim td,html.lt-notowned .sheet tr.dim th .linkish,html.lt-notowned .sheet tr.dim small{color:var(--muted)!important}
-html.lt-notowned .sheet tr.dim .mini-bar{opacity:.45}
+/* EA's ancestors' game portraits in family trees (js/sections.js; a trial from 31 Oct, kept 21 Nov) */
 .tc .tm.anc-pic{padding:0;overflow:hidden}
 .tc .tm.anc-pic img{display:block;width:100%;height:100%;object-fit:cover}
 @media (max-width:700px){

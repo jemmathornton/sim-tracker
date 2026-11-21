@@ -1,5 +1,5 @@
 // Her rules (CLAUDE.md) as the pages show them: lot names, curly apostrophes, British words, percentages only on the
-// Stats/Progress page, live counts in her list, bedrooms, rental units, the New save column and the ancestors trial.
+// Stats/Progress page, live counts in her list, bedrooms, rental units, the New save column, EA’s ancestors and the banner boxes.
 const { test } = require('@playwright/test');
 const { openApp, go, viewText, expect } = require('./helpers');
 
@@ -139,23 +139,35 @@ test('Progress has the New save column, one cell per lot row', async ({ page }) 
   expect(r.rows.filter(n => n !== r.head)).toEqual([]);
 });
 
-test('the ancestors trial: the switch shows on Sim pages only and swaps the pictures in and out', async ({ page }) => {
+test('EA’s ancestors (kept 21 Nov): their game portraits and how they died show with no switch', async ({ page }) => {
   await openApp(page);
-  const id = await page.evaluate(() => Object.keys(ANC).find(id => SIMS[id] && SIM_PAGES['s-' + id] && ANC[id].portrait && !SIMS[id].portrait && !ANC_WAS[id].libraryPic));
-  test.skip(!id, 'no ancestor with a game portrait');
-  await go(page, 'home');
-  await expect(page.locator('#anc-switch')).toBeHidden();
+  await expect(page.locator('#anc-switch, .trial-switch, #look-trial')).toHaveCount(0);   // no trial switch anywhere
+  const id = await page.evaluate(() => Object.keys(ANC).find(id => SIMS[id] && SIM_PAGES['s-' + id] && ANC[id].portrait && SIMS[id].libraryPic === ANC[id].portrait));
+  test.skip(!id, 'no ancestor shown with a game portrait');
   await go(page, 's-' + id);
-  const sw = page.locator('#anc-switch');
-  await expect(sw).toBeVisible();
-  await expect(sw.locator('[data-anctrial="now"]')).toHaveAttribute('aria-pressed', 'true');
-  expect(await page.evaluate(i => SIMS[i].libraryPic || null, id)).toBeNull();
-  await sw.locator('[data-anctrial="on"]').click();
-  await expect(sw.locator('[data-anctrial="on"]')).toHaveAttribute('aria-pressed', 'true');
-  expect(await page.evaluate(i => SIMS[i].libraryPic === ANC[i].portrait, id)).toBe(true);
-  await expect(page.locator(`#view img[src="${await page.evaluate(i => ANC[i].portrait, id)}"], #view [style*="${await page.evaluate(i => ANC[i].portrait, id)}"]`).first()).toBeAttached();
-  expect(await page.evaluate(() => localStorage.getItem('jsw-ancestors-trial'))).toBe('on');
-  await sw.locator('[data-anctrial="now"]').click();
-  await expect(sw.locator('[data-anctrial="now"]')).toHaveAttribute('aria-pressed', 'true');
-  expect(await page.evaluate(i => SIMS[i].libraryPic || null, id)).toBeNull();
+  const pic = await page.evaluate(i => ANC[i].portrait, id);
+  await expect(page.locator(`#view img[src="${pic}"], #view [style*="${pic}"]`).first()).toBeAttached();
+  const died = await page.evaluate(i => ANC[i].died || null, id);
+  if (died) expect(await page.locator('#view').innerText()).toContain(died);
+  // in family trees too: a tree with this ancestor in it shows the portrait in their box
+  const tree = await page.evaluate(i => Object.keys(SIM_PAGES).find(k => k !== 's-' + i && (SIM_PAGES[k].parents || []).includes(i)), id);
+  if (tree) { await go(page, tree); await expect(page.locator(`#view .tc[data-sim="${id}"] .tm.anc-pic img`)).toHaveCount(1); }
+});
+
+test('map banners: the figures box and neighbourhood tags are in the world’s own deep colour (her pick 21 Nov)', async ({ page }) => {
+  await openApp(page);
+  for (const w of await page.evaluate(() => worlds.filter(x => x.ready && x.owned && x.deep).slice(0, 4).map(x => x.id))) {
+    await go(page, 'w-' + w);
+    const r = await page.evaluate(() => { const deep = getComputedStyle(document.documentElement).getPropertyValue('--deep').trim();
+      const probe = document.createElement('i'); probe.style.color = deep; document.body.appendChild(probe); const want = getComputedStyle(probe).color.match(/[\d.]+/g).slice(0, 3).map(Number); probe.remove();
+      const bg = el => { if (!el) return null; const t = getComputedStyle(el).backgroundColor, n = t.match(/[\d.]+/g).map(Number);
+        return t.startsWith('color(') ? n.slice(0, 3).map(v => v * 255) : n.slice(0, 3); };   // color(srgb r g b / a) is 0–1
+      return {want, fig: bg(document.querySelector('#view .hero.mapped .figures')), tag: bg(document.querySelector('#view .hero.mapped .chapters a'))}; });
+    for (const [k, c] of [['figures', r.fig], ['tag', r.tag]]) {
+      if (!c) continue;
+      // a see-through layer of the deep colour: its colour channels are the world's (within rounding), never Sim World purple
+      const rgb = c;
+      expect(rgb.map((v, i) => Math.abs(v - r.want[i]) <= 3), `${w} ${k} ${c} vs ${r.want}`).toEqual([true, true, true]);
+    }
+  }
 });

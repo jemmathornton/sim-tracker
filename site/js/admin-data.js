@@ -364,11 +364,6 @@ window.ADMIN = {
 {
 "section": "Before the new save: decide first",
 "world": "",
-"text": "**Decide:** The trial on Sim and household pages (switch at the bottom right, since 31 Oct): EA's ancestors shown with their own game portraits and how they died. Keep it, or take it away?"
-},
-{
-"section": "Before the new save: decide first",
-"world": "",
 "text": "**Decide:** Empty units at Rockridge Springs, Old Torget House, Manzanita Terrace, Slip 42: who? (For Rent pets?)"
 },
 {
