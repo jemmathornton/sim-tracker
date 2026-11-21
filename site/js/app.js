@@ -1575,6 +1575,13 @@ menuBtn.setAttribute("aria-controls", "side");
 menuBtn.addEventListener("click", () => setNav(!document.body.classList.contains("nav-open"), true));
 document.getElementById("scrim").addEventListener("click", () => setNav(false, true));
 addEventListener("keydown", e => { if (e.key === "Escape" && document.body.classList.contains("nav-open")) setNav(false, true); });
+// Tab wraps round inside the open drawer (the Menu button, then the drawer's links), so focus never leaves it for the browser's own bar
+addEventListener("keydown", e => {
+  if (e.key !== "Tab" || !phoneNav.matches || !document.body.classList.contains("nav-open")) return;
+  const all = [menuBtn, ...sideEl.querySelectorAll('a[href],button,input,select,[tabindex]:not([tabindex="-1"])')].filter(el => !el.disabled && el.getClientRects().length);
+  const k = all.indexOf(document.activeElement), last = all.length - 1;
+  if (e.shiftKey ? k <= 0 : k === last || k < 0) { e.preventDefault(); all[e.shiftKey ? last : 0].focus(); }
+});
 phoneNav.addEventListener("change", () => setNav(false));
 setNav(false);
 // bottom of every page (21 Nov 2026, as on Jemma’s Journals): Back to top, and Dark/Light mode. The site always opens light, even when
