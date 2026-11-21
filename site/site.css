@@ -136,17 +136,43 @@ img{max-width:100%}
 
 /* Concept: an interiors-magazine / property-listing site for a Sims save. Deep world colour for the sidebar and hero, elegant serif display,
    lots presented as listings with a photo area (lot plan until screenshots exist). Icons: Lucide (ISC). No illustrations. */
+/* The look (her pick 21 Nov 2026, "S1f-a, town plan"): a town planner's drawing in the site's purple ink. Pale lilac sidebar and
+   banners with a faint estate plan (site/townplan/, drawn by tools/make_town_plan.py), white card plates edged in the world's colour
+   with a striped top edge, map-pin dots, a faint plot overlay on the map banners (whose bottom fade stays the world's deep colour).
+   Dark mode swaps the same parts to a dark lilac ink with faint plan lines. */
 :root{
-  --paper:#F1F2EE; --surface:#FFFFFF; --ink:#1A1F1C; --muted:#5F6862; --line:#DFE3DD; --soft:#E8EBE6;
-  --nav:#2A1D40; --deep:#2A1D40; --deep-2:#3D2A5C; --on-deep:#F1F4F7; --on-deep-mute:color-mix(in srgb,#fff 64%,var(--deep));
-  --brass:#C9A04A; --done:#2E8B57;
+  --paper:#F4F2EE; --surface:#FFFFFF; --ink:#2A1D40; --muted:#625A6E; --line:#DCD6E2; --soft:#ECE8F0;
+  --deep:#2A1D40; --deep-2:#3D2A5C; --on-deep:#F1F4F7; --on-deep-mute:color-mix(in srgb,#fff 64%,var(--deep));
+  --brass:#A47A24; --done:#2E8B57;
+  --neat:#6B5A8A; --water:#5B4BB0; --plum:#3D2A5C;                     /* drawing lines, hovered card titles, the purple accents */
+  --card-line:#CFC7DA; --strip-pale:#FBF8F0; --pin-ring:rgba(31,43,51,.3);   /* card plates: edge mixed with the world colour, the stripe's pale squares */
+  --rule:rgba(61,42,92,.25);                                            /* section heading rules */
+  /* sidebar (and the phone's top bar) */
+  --nav:#EEEAF2; --side-ink:#2A1D40; --side-mute:#6A6078; --side-rule:rgba(61,42,92,.18); --side-hover:rgba(61,42,92,.07); --side-on:#fff;
+  --side-field:#fff; --side-field-line:#C6BCD3; --side-plan:url(townplan/side.svg);
+  /* plain banners (home, Sims, Admin, …): pale lilac with the plan fading in from the right */
+  --banner:linear-gradient(180deg,#F7F5FA,#EFEBF4); --banner-edge:rgba(61,42,92,.35); --banner-line:rgba(61,42,92,.18); --banner-plan:url(townplan/town.svg);
+  --figures-bg:rgba(255,255,255,.9); --chip-line:rgba(61,42,92,.28); --chip-hover:rgba(61,42,92,.07);
   --display:"Instrument Serif", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
   --body:"Manrope", "Segoe UI", system-ui, sans-serif;
   --side:280px;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --paper:#101412; --surface:#181D1A; --ink:#E9EEEA; --muted:#A3AEA7; --line:#29312D; --soft:#202723; --done:#5CC48A; color-scheme:dark }}
-:root[data-theme="dark"]{ --paper:#101412; --surface:#181D1A; --ink:#E9EEEA; --muted:#A3AEA7; --line:#29312D; --soft:#202723; --done:#5CC48A; color-scheme:dark }
+  --paper:#15111B; --surface:#1E1827; --ink:#ECE7F3; --muted:#A79DB6; --line:#332B3F; --soft:#262030; --done:#5CC48A; color-scheme:dark;
+  --brass:#C9A04A; --neat:#8A78AD; --water:#B7A8F7; --plum:#C7B5EC;
+  --card-line:#41374F; --strip-pale:#1E1827; --pin-ring:rgba(236,231,243,.3); --rule:rgba(236,231,243,.16);
+  --nav:#1B1524; --side-ink:#ECE7F3; --side-mute:#A69CB6; --side-rule:rgba(236,231,243,.12); --side-hover:rgba(236,231,243,.07); --side-on:rgba(236,231,243,.09);
+  --side-field:rgba(236,231,243,.06); --side-field-line:rgba(236,231,243,.16); --side-plan:url(townplan/side-dark.svg);
+  --banner:linear-gradient(180deg,#221B2D,#1A1523); --banner-edge:rgba(199,181,236,.28); --banner-line:rgba(236,231,243,.14); --banner-plan:url(townplan/town-dark.svg);
+  --figures-bg:rgba(30,24,39,.9); --chip-line:rgba(236,231,243,.22); --chip-hover:rgba(236,231,243,.08) }}
+:root[data-theme="dark"]{
+  --paper:#15111B; --surface:#1E1827; --ink:#ECE7F3; --muted:#A79DB6; --line:#332B3F; --soft:#262030; --done:#5CC48A; color-scheme:dark;
+  --brass:#C9A04A; --neat:#8A78AD; --water:#B7A8F7; --plum:#C7B5EC;
+  --card-line:#41374F; --strip-pale:#1E1827; --pin-ring:rgba(236,231,243,.3); --rule:rgba(236,231,243,.16);
+  --nav:#1B1524; --side-ink:#ECE7F3; --side-mute:#A69CB6; --side-rule:rgba(236,231,243,.12); --side-hover:rgba(236,231,243,.07); --side-on:rgba(236,231,243,.09);
+  --side-field:rgba(236,231,243,.06); --side-field-line:rgba(236,231,243,.16); --side-plan:url(townplan/side-dark.svg);
+  --banner:linear-gradient(180deg,#221B2D,#1A1523); --banner-edge:rgba(199,181,236,.28); --banner-line:rgba(236,231,243,.14); --banner-plan:url(townplan/town-dark.svg);
+  --figures-bg:rgba(30,24,39,.9); --chip-line:rgba(236,231,243,.22); --chip-hover:rgba(236,231,243,.08) }
 
 *{box-sizing:border-box}
 [hidden]{display:none!important}
@@ -159,30 +185,32 @@ h1,h2,h3{font-family:var(--display);font-weight:400;text-wrap:balance;margin:0;l
 em{font-style:italic}
 .label{font:700 11px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 
-/* ---------- sidebar (deep) ---------- */
-.side{position:fixed;inset:0 auto 0 0;width:var(--side);background:var(--nav);--deep:var(--nav);color:var(--on-deep);display:flex;flex-direction:column;z-index:20;padding-top:env(safe-area-inset-top,0px)}
+/* ---------- sidebar: a pale drafting sheet with a faint estate plan, purple ink, a single rule (dark lilac in dark mode) ---------- */
+.side{position:fixed;inset:0 auto 0 0;width:var(--side);background:var(--side-plan) 0 0/196px 294px repeat,var(--nav);--on-deep:var(--side-ink);--on-deep-mute:var(--side-mute);
+  color:var(--on-deep);border-right:1px solid var(--neat);display:flex;flex-direction:column;z-index:20;padding-top:env(safe-area-inset-top,0px)}
 /* small way back to Jemma’s Journals at the very top of the sidebar (and so of the phone's Worlds drawer); subtle, under the brand in weight (20 Nov) */
 .home-link{align-self:flex-start;margin:14px 0 0 20px;padding:2px 4px;font:600 10px/1.4 var(--body);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--on-deep-mute);border-radius:4px}
 .home-link:hover,.home-link:focus-visible{color:var(--on-deep)}
 .home-link:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
-.brand{display:block;padding:14px 24px 22px;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.08)}
+.brand{display:block;padding:14px 24px 22px;text-decoration:none;border-bottom:1px solid var(--side-rule)}
 .brand b{font:400 30px/1 var(--display);display:block}
 .brand b em{color:var(--brass)}
 .brand small{display:block;margin-top:8px;color:var(--on-deep-mute);font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700}
-.nav{overflow-y:auto;padding:14px 12px 28px;flex:1;display:grid;gap:18px;align-content:start;scrollbar-color:rgba(255,255,255,.2) transparent}
+.nav{overflow-y:auto;padding:14px 12px 28px;flex:1;display:grid;gap:18px;align-content:start;scrollbar-color:var(--side-rule) transparent}
 .nav-group{display:grid;gap:1px}
 .nav-group .label{padding:6px 12px 8px;color:var(--on-deep-mute)}
-.nav a{display:flex;align-items:center;gap:10px;padding:7px 12px;border-radius:8px;text-decoration:none;font-size:14.5px;font-weight:600}
-.nav a:not(.soon):hover{background:rgba(255,255,255,.07)}
-.nav a.on{background:rgba(255,255,255,.12)}
-.dot{width:9px;height:9px;border-radius:50%;background:var(--c);flex:none;box-shadow:0 0 0 2px rgba(255,255,255,.12)}
+.nav a{display:flex;align-items:center;gap:10px;padding:7px 12px;border-radius:3px;text-decoration:none;font-size:14.5px;font-weight:600}
+.nav a:not(.soon):hover{background:var(--side-hover)}
+.nav a.on{background:var(--side-on);box-shadow:inset 0 0 0 1px var(--neat),inset 3px 0 0 var(--plum)}
+/* map pins for the worlds, in each world's colour */
+.dot{width:10px;height:10px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:radial-gradient(circle,#FBF8F0 0 1.6px,var(--c) 2.1px);flex:none;box-shadow:0 0 0 1px var(--pin-ring)}
 .nav .pct{margin-left:auto;font-size:12px;color:var(--on-deep-mute);font-variant-numeric:tabular-nums}
-.nav a.soon{color:rgba(234,242,236,.45);font-weight:500;cursor:default}
-.nav a.soon .dot{background:transparent;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.3)}
-.nav a.soon .pct{color:rgba(234,242,236,.35)}
-.subnav{display:grid;margin:4px 0 8px 16px;padding-left:12px;border-left:1px solid rgba(255,255,255,.14)}
-.subnav button{all:unset;cursor:pointer;padding:5px 10px;font-size:13.5px;color:var(--on-deep-mute);border-radius:6px}
-.subnav button:hover{color:#fff;background:rgba(255,255,255,.07)}
+.nav a.soon{color:color-mix(in srgb,var(--side-ink) 45%,transparent);font-weight:500;cursor:default}
+.nav a.soon .dot{background:transparent;box-shadow:inset 0 0 0 1.5px color-mix(in srgb,var(--side-ink) 35%,transparent)}
+.nav a.soon .pct{color:color-mix(in srgb,var(--side-ink) 35%,transparent)}
+.subnav{display:grid;margin:4px 0 8px 16px;padding-left:12px;border-left:1px dashed color-mix(in srgb,var(--side-ink) 30%,transparent)}
+.subnav button{all:unset;cursor:pointer;padding:5px 10px;font-size:13.5px;color:var(--on-deep-mute);border-radius:3px}
+.subnav button:hover{color:var(--on-deep);background:var(--side-hover)}
 .subnav button:focus-visible{outline:2px solid var(--brass)}
 .topbar,.scrim{display:none}
 
@@ -190,63 +218,77 @@ em{font-style:italic}
 main{margin-left:var(--side);min-height:100vh;container-type:inline-size}   /* lets banners reach main's edges on wide windows */
 .wrap{max-width:1140px;margin:0 auto;padding-inline:clamp(16px,4vw,56px);padding-block:0 110px}
 
-/* hero */
-.hero{margin-inline:min(calc(-1 * clamp(16px,4vw,56px)),calc((100% - 100cqw) / 2));padding:72px max(clamp(16px,4vw,56px),calc((100cqw - 100%) / 2)) 46px;color:var(--on-deep);position:relative;overflow:hidden;
-  background:radial-gradient(120% 90% at 85% 10%,color-mix(in srgb,var(--c) 75%,#fff 8%) 0%,transparent 55%),linear-gradient(160deg,var(--deep-2),var(--deep) 70%)}
-.hero::before{content:"";position:absolute;right:-60px;top:-30px;width:520px;height:520px;opacity:.16;
-  background-image:linear-gradient(rgba(255,255,255,.9) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.9) 1px,transparent 1px);background-size:26px 26px;
-  mask-image:radial-gradient(closest-side,#000 30%,transparent);-webkit-mask-image:radial-gradient(closest-side,#000 30%,transparent);transform:rotate(-8deg)}
+/* hero: plain banners are a pale lilac sheet with an estate plan drawn in purple, fading in from the right */
+.hero{margin-inline:min(calc(-1 * clamp(16px,4vw,56px)),calc((100% - 100cqw) / 2));padding:72px max(clamp(16px,4vw,56px),calc((100cqw - 100%) / 2)) 46px;position:relative;overflow:hidden;
+  --on-deep:var(--ink);--on-deep-mute:var(--muted);color:var(--on-deep);background:var(--banner);border-bottom:1px solid var(--banner-edge)}
+.hero::before{content:"";position:absolute;inset:0 0 0 auto;width:72%;background:var(--banner-plan) right -40px top -30px/1000px 512px no-repeat;
+  mask-image:linear-gradient(90deg,transparent,#000 40%);-webkit-mask-image:linear-gradient(90deg,transparent,#000 40%)}
 .hero>*{position:relative}
 .kicker{display:flex;align-items:center;gap:10px;color:var(--on-deep-mute)}
-.kicker .label{color:var(--on-deep-mute)}
-.kicker i{width:28px;height:1px;background:var(--brass)}
+.kicker .label{color:var(--on-deep-mute);letter-spacing:.2em;font-variant-numeric:tabular-nums}
+.kicker i{width:14px;height:14px;border-radius:50%;color:var(--plum);box-shadow:inset 0 0 0 1.5px currentColor;   /* a surveyor's cross-hair */
+  background:linear-gradient(currentColor,currentColor) center/1px 100% no-repeat,linear-gradient(currentColor,currentColor) center/100% 1px no-repeat}
 .hero h1{font-size:clamp(64px,10vw,132px);line-height:.88;margin-top:18px;letter-spacing:-.02em}
 .hero h1 em{color:var(--brass)}
-.hero p{margin:22px 0 0;font-size:18px;max-width:56ch;color:color-mix(in srgb,var(--on-deep) 88%,transparent)}
-.hero-foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px;margin-top:40px;padding-top:24px;border-top:1px solid rgba(255,255,255,.14)}
-.figures{display:flex;flex-wrap:wrap;gap:12px 40px}
-.figures div{display:grid}
-.figures b{font:400 44px/1 var(--display);font-variant-numeric:tabular-nums}
-.figures span{font-size:12.5px;color:var(--on-deep-mute);font-weight:600}
+.hero p{margin:22px 0 0;font-size:18px;max-width:56ch;color:color-mix(in srgb,var(--on-deep) 82%,transparent)}
+.hero-foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px;margin-top:40px;padding-top:24px;border-top:1px solid var(--banner-line)}
+/* the figures sit in a ruled box, like a plan's title block */
+.figures{display:flex;flex-wrap:wrap;gap:0;padding:12px 0;border:1px solid var(--neat);background:var(--figures-bg)}
+.figures div{display:grid;padding:0 26px;border-left:1px solid var(--banner-line)}
+.figures div:first-child{border-left:0}
+.figures b{font:400 40px/1 var(--display);font-variant-numeric:tabular-nums;color:var(--plum)}
+.figures span{font-size:10.5px;color:var(--on-deep-mute);font-weight:700;text-transform:uppercase;letter-spacing:.12em}
 .chapters{display:flex;flex-wrap:wrap;gap:8px;max-width:520px;justify-content:flex-end}
-.chapters button{all:unset;cursor:pointer;font-size:13px;font-weight:600;padding:6px 12px;border-radius:99px;border:1px solid rgba(255,255,255,.22);display:inline-flex;align-items:center;gap:7px}
+.chapters button{all:unset;cursor:pointer;font-size:13px;font-weight:600;padding:6px 12px;border-radius:99px;border:1px solid var(--chip-line);display:inline-flex;align-items:center;gap:7px}
 .chapters button i{width:7px;height:7px;border-radius:50%;background:var(--h)}
-.chapters button:hover{background:rgba(255,255,255,.1)}
+.chapters button:hover{background:var(--chip-hover)}
 .chapters button:focus-visible{outline:2px solid var(--brass)}
 
-/* hero with a world map photo */
-.hero.mapped{min-height:min(56vh,520px);display:flex;flex-direction:column;justify-content:flex-end;padding-top:64px;
+/* hero with a world map photo: the map, a faint plot overlay and a single frame; the fade at the bottom is the world's deep colour */
+.hero.mapped{min-height:min(56vh,520px);display:flex;flex-direction:column;justify-content:flex-end;padding-top:64px;border-bottom:0;
+  --on-deep:#F4F1E8;--on-deep-mute:rgba(244,241,232,.78);--chip-line:rgba(255,255,255,.22);--chip-hover:rgba(255,255,255,.1);
   background:linear-gradient(180deg,color-mix(in srgb,var(--deep) 5%,transparent) 0%,color-mix(in srgb,var(--deep) 25%,transparent) 40%,color-mix(in srgb,var(--deep) 86%,transparent) 78%,var(--deep) 100%),var(--map) var(--mapview,center 35%/cover)}
-.hero.mapped::before{display:none}
+.hero.mapped::before{inset:0;width:auto;mask-image:none;-webkit-mask-image:none;background:url(townplan/town-light.svg) center/1000px 500px repeat;opacity:.18}   /* paler over the map (her ask, 21 Nov) */
+.hero.mapped::after{content:"";position:absolute;inset:16px;border:1px solid rgba(255,255,255,.45);pointer-events:none}
 .hero.mapped h1{text-shadow:0 4px 30px rgba(0,0,0,.35)}
-.credit{position:absolute;right:clamp(16px,4vw,56px);top:18px;font-size:11.5px;color:rgba(255,255,255,.85);background:rgba(0,0,0,.35);padding:4px 10px;border-radius:99px;backdrop-filter:blur(4px)}
+.hero.mapped .kicker i{color:#F4F1E8}
+.hero.mapped .hero-foot{border-top-color:rgba(255,255,255,.25)}
+.hero.mapped .figures{background:rgba(42,29,64,.45);border-color:rgba(255,255,255,.4)}
+.hero.mapped .figures div{border-left-color:rgba(255,255,255,.35)}
+.hero.mapped .figures b{color:#fff}
+.credit{position:absolute;right:calc(clamp(16px,4vw,56px) + 10px);top:30px;font-size:11.5px;color:#2A1D40;background:rgba(251,248,240,.9);padding:4px 10px;border-radius:2px;backdrop-filter:blur(4px)}
 .wt .photo.pic{background:var(--map) center/cover}
 .wt .photo.pic .big{display:none}
 
 /* neighbourhood */
 .hood{margin-top:80px;scroll-margin-top:24px}
 .hood-head{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 24px;align-items:end;margin-bottom:26px}
-.hood-head .label{color:var(--h);grid-column:1/-1;display:flex;align-items:center;gap:10px}
+.hood-head .label{color:var(--h);grid-column:1/-1;display:flex;align-items:center;gap:10px;letter-spacing:.2em}
 .hood-head .label::before{content:"";width:22px;height:2px;background:var(--h)}
 .hood-head h2{font-size:clamp(40px,5vw,58px);line-height:1}
 .hood-head p{margin:10px 0 0;color:var(--muted);max-width:56ch;font-size:16px}
 .hood-head .count{font:400 22px var(--display);font-style:italic;color:var(--muted);white-space:nowrap}
-.listings{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:28px 22px}
-.listing{display:grid;gap:12px;text-decoration:none}
+.listings{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:26px 22px}
 .photo{aspect-ratio:4/3;max-width:100%;border-radius:14px;position:relative;overflow:hidden;display:grid;place-items:center;
   background:radial-gradient(90% 80% at 20% 15%,color-mix(in srgb,var(--h) 55%,#fff) 0%,transparent 60%),linear-gradient(145deg,color-mix(in srgb,var(--h) 80%,#000 5%),color-mix(in srgb,var(--h) 55%,#000 35%))}
 .photo .plot-svg{width:62%;height:auto;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
 .listing:hover .plot-svg{transform:scale(1.06) rotate(-1.5deg)}
-.photo .type{position:absolute;left:12px;top:12px;font-size:11.5px;font-weight:700;padding:5px 10px;border-radius:99px;background:rgba(255,255,255,.92);color:#1A1F1C;letter-spacing:.02em}
+/* the lot type as a map legend entry: a square of the world's colour in a ruled box */
+.photo .type{position:absolute;z-index:2;left:10px;top:10px;display:inline-flex;align-items:center;gap:7px;padding:4px 8px;border-radius:0;border:1px solid var(--ink);
+  background:var(--surface);color:var(--ink);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.photo .type::before{content:"";width:10px;height:10px;background:var(--k,var(--c,var(--h)));box-shadow:0 0 0 1px rgba(31,43,51,.55)}
 .photo .status{position:absolute;right:12px;bottom:10px;display:flex;gap:5px}
-.photo .status span{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:rgba(0,0,0,.28);color:rgba(255,255,255,.55);font-size:13px;backdrop-filter:blur(4px)}
+.photo .status span{width:26px;height:26px;border-radius:2px;display:grid;place-items:center;background:rgba(0,0,0,.28);color:rgba(255,255,255,.55);font-size:13px;backdrop-filter:blur(4px)}
 .photo .status span.yes{background:#fff;color:var(--done)}
-.photo .size{position:absolute;left:12px;bottom:10px;color:#fff;font:400 20px var(--display);font-style:italic;opacity:.92}
-.listing h3{font-size:27px;line-height:1.05}
-.listing .meta{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:13.5px;color:var(--muted)}
+/* the lot size as a dimension mark  |—— 30 × 20 ——| */
+.photo .size{position:absolute;left:16px;bottom:16px;display:flex;align-items:center;gap:6px;color:#fff;font:700 11.5px/1 var(--body);letter-spacing:.06em;font-variant-numeric:tabular-nums;text-shadow:0 1px 3px rgba(0,0,0,.6)}
+.photo .size::before,.photo .size::after{content:"";width:22px;height:9px;border-inline:1.5px solid #fff;background:linear-gradient(#fff,#fff) center/100% 1.5px no-repeat;filter:drop-shadow(0 1px 2px rgba(0,0,0,.5))}
+.listing .photo{aspect-ratio:16/10}
+.listing .photo .size{left:12px;bottom:13px}
+.listing .photo .size::before,.listing .photo .size::after{width:14px}
+.listing .meta{display:flex;flex-wrap:wrap;gap:4px 14px;color:var(--muted)}
 .listing .meta span{display:inline-flex;align-items:center;gap:6px}
 .listing .meta b{color:var(--ink);font-weight:700}
-.listing:hover h3{text-decoration:underline;text-decoration-color:var(--h);text-decoration-thickness:1px;text-underline-offset:5px}
 
 /* plot diagram (white line drawing on the colour) */
 .plot-svg .frame{fill:none;stroke:rgba(255,255,255,.35);stroke-dasharray:2 4}
@@ -258,27 +300,42 @@ main{margin-left:var(--side);min-height:100vh;container-type:inline-size}   /* l
 
 /* home */
 .worlds{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:26px 22px}
-.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin:72px 0 22px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:12px}
+.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin:72px 0 22px;flex-wrap:wrap;padding-bottom:12px;
+  border-bottom:1px solid var(--rule);background:linear-gradient(var(--plum),var(--plum)) left bottom/56px 3px no-repeat}   /* a single rule with a purple start */
 .section-head h2{font-size:44px;line-height:1}
 .section-head .count{font:400 20px var(--display);font-style:italic;color:var(--muted)}
-.wt{display:grid;gap:10px;text-decoration:none}
+/* cards (worlds on the home page, neighbourhoods and lots): white plates edged in the world's colour, with a striped top edge
+   in that colour like a map's graduated border, a map pin before the name and the figures under a dashed line */
+.wt,.listing{--k:var(--c,var(--h));position:relative;display:grid;gap:10px;padding:18px 8px 14px;text-decoration:none;background:var(--surface);
+  border:1px solid color-mix(in srgb,var(--k) 45%,var(--card-line));border-radius:2px;box-shadow:3px 4px 0 color-mix(in srgb,var(--k) 18%,transparent)}
+.listing{--k:var(--h)}
+.wt::before,.listing::before{content:"";position:absolute;left:-1px;right:-1px;top:-1px;height:9px;border:1px solid color-mix(in srgb,var(--k) 70%,#1F2B33);
+  background:repeating-linear-gradient(90deg,var(--k) 0 28px,color-mix(in srgb,var(--k) 35%,var(--strip-pale)) 28px 56px)}
+.wt .photo,.listing .photo{border-radius:1px;box-shadow:inset 0 0 0 1px rgba(31,43,51,.35)}
+.wt .photo .type{--k:var(--c)}
+.wt h3,.listing h3{display:flex;align-items:center;gap:10px;padding:0 4px;font-size:20px;line-height:1.1;text-transform:uppercase;letter-spacing:.11em}
+.wt h3::before,.listing h3::before{content:"";flex:none;width:13px;height:13px;margin-top:-3px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);
+  background:radial-gradient(circle,#FBF8F0 0 2px,var(--k) 2.6px);box-shadow:0 0 0 1px var(--pin-ring)}
+.listing h3::before{background:radial-gradient(circle,#FBF8F0 0 1.7px,var(--k) 2.2px)}
+.wt .meta,.listing .meta{padding:6px 4px 0;margin:0;border-top:1px dashed var(--line);font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;font-variant-numeric:tabular-nums}
+a.wt:hover h3,.listing:hover h3{color:var(--water)}
 .wt .photo{--h:var(--c);aspect-ratio:16/10}
 .wt .photo .big{font:400 54px/1 var(--display);color:#fff;opacity:.9;font-style:italic}
-.wt h3{font-size:26px;line-height:1.05}
-.wt .meta{font-size:13.5px;color:var(--muted);display:flex;justify-content:space-between;gap:8px}
+.wt .meta{margin-top:-2px;color:var(--muted);display:flex;justify-content:space-between;gap:8px}
+.wt.off{box-shadow:none;background:transparent;border-style:dashed}
+.wt.off::before{opacity:.35}
 .wt.off .photo{filter:saturate(.55) brightness(.92)}
 .wt.off.notown .photo{filter:grayscale(1);opacity:.5}
 .wt.off .photo::after{content:"Coming soon";position:absolute;right:12px;bottom:10px;color:#fff;font:400 18px var(--display);font-style:italic;text-shadow:0 1px 8px rgba(0,0,0,.5)}
 .wt.off.notown .photo::after{content:"Not owned"}
 .wt.off h3{color:var(--muted)}
-a.wt:hover h3{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px;text-decoration-color:var(--c)}
 
 /* detail pages */
 .hero.small{padding-top:56px;padding-bottom:40px}
 .hero.small h1{font-size:clamp(52px,8vw,100px)}
 .crumbs{display:flex;flex-wrap:wrap;gap:8px}
-.crumbs a,.crumbs span{display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border-radius:99px;border:1px solid rgba(255,255,255,.22);font-weight:600;font-size:13px;text-decoration:none}
-.crumbs a:hover{background:rgba(255,255,255,.1)}
+.crumbs a,.crumbs span{display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border-radius:99px;border:1px solid var(--chip-line);font-weight:600;font-size:13px;text-decoration:none}
+.crumbs a:hover{background:var(--chip-hover)}
 .detail{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:28px;margin-top:36px;align-items:start}
 .detail .photo{aspect-ratio:1/1}
 .detail .photo .plot-svg{width:84%}
@@ -307,7 +364,7 @@ a.wt:hover h3{text-decoration:underline;text-decoration-thickness:1px;text-under
 .mini b{font:400 22px/1.1 var(--display)}
 .mini small{color:var(--muted);font-size:13px;margin-top:-4px}
 .note{margin-top:22px;padding:14px 18px;border-radius:12px;border:1px solid color-mix(in srgb,var(--brass) 50%,var(--line));background:color-mix(in srgb,var(--brass) 10%,var(--surface));font-weight:600;font-size:14.5px}
-.monogram{width:96px;height:96px;border-radius:50%;border:1px solid rgba(255,255,255,.35);display:grid;place-items:center;font:400 54px var(--display);font-style:italic;color:var(--brass);flex:none}
+.monogram{width:96px;height:96px;border-radius:50%;border:1px solid var(--chip-line);display:grid;place-items:center;font:400 54px var(--display);font-style:italic;color:var(--brass);flex:none}
 footer{margin-top:90px;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:18px}
 
 /* households */
@@ -323,12 +380,12 @@ footer{margin-top:90px;color:var(--muted);font-size:13px;display:flex;justify-co
 .hero.small p{margin-top:14px}
 a.count{text-decoration:none}a.count:hover{color:var(--ink)}
 .subnav button i{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--h);margin-right:8px;vertical-align:middle}
-.subnav a:not(.sublabel-link){padding:4px 10px;font-size:13.5px;color:var(--on-deep-mute);border-radius:6px;font-weight:500;text-decoration:none}
-.subnav a.cur,.subnav a:not(.sublabel-link):hover{color:#fff;background:rgba(255,255,255,.08)}
+.subnav a:not(.sublabel-link){padding:4px 10px;font-size:13.5px;color:var(--on-deep-mute);border-radius:3px;font-weight:500;text-decoration:none}
+.subnav a.cur,.subnav a:not(.sublabel-link):hover{color:var(--on-deep);background:var(--side-hover)}
 .nav-group.dim{opacity:.55}
 .subnav button{padding:4px 10px!important;font-size:13.5px!important;font-weight:500;color:var(--on-deep-mute)!important}
-.subnav button:hover,.subnav button.cur{color:#fff!important;background:rgba(255,255,255,.08)}
-.lotnav{display:grid;margin:0 0 4px 12px;padding-left:8px;border-left:1px solid rgba(255,255,255,.1)}
+.subnav button:hover,.subnav button.cur{color:var(--on-deep)!important;background:var(--side-hover)}
+.lotnav{display:grid;margin:0 0 4px 12px;padding-left:8px;border-left:1px dashed var(--side-rule)}
 .subnav .lotnav a{font-size:13px;padding:3px 10px}
 
 /* household listing cards */
@@ -343,15 +400,19 @@ a.count{text-decoration:none}a.count:hover{color:var(--ink)}
 .listing .meta .made,.facts .ok{color:var(--done)}
 .facts .ok{display:inline-flex;align-items:center;gap:6px}
 
-.chapters a{font-size:13px;font-weight:600;padding:6px 12px;border-radius:99px;border:1px solid rgba(255,255,255,.22);text-decoration:none}
-.chapters a:hover{background:rgba(255,255,255,.1)}
+/* a banner's neighbourhood links: ruled tags with a pin */
+.chapters a{display:inline-flex;align-items:center;gap:8px;font-size:11.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:2px;border:1px solid var(--chip-line);background:var(--chip-hover);text-decoration:none}
+.chapters a::before{content:"";width:8px;height:8px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:radial-gradient(circle,rgba(0,0,0,.4) 0 1.2px,currentColor 1.6px)}
+.chapters a:hover{background:color-mix(in srgb,var(--chip-hover) 50%,var(--chip-line))}
+.hero.mapped .chapters a{background:rgba(42,29,64,.4);border-color:rgba(255,255,255,.4)}
+.hero.mapped .chapters a:hover{background:rgba(42,29,64,.6)}
 .crumbs a svg{opacity:.85}
 .home-to{display:flex;gap:8px;align-items:flex-start;margin:0;font-size:13.5px;color:var(--muted)}
 .home-to svg{margin-top:3px;color:var(--h)}
 .home-to b{color:var(--ink);font-weight:700}
-.subnav a.hh-link{display:flex!important;align-items:center;gap:8px;margin-top:6px;padding-top:8px!important;border-top:1px solid rgba(255,255,255,.1);border-radius:0 0 6px 6px!important}
+.subnav a.hh-link{display:flex!important;align-items:center;gap:8px;margin-top:6px;padding-top:8px!important;border-top:1px solid var(--side-rule);border-radius:0 0 3px 3px!important}
 .nav a.folded{opacity:.85}
-.subnav a.path{color:#fff!important;font-weight:600!important}
+.subnav a.path{color:var(--on-deep)!important;font-weight:600!important}
 .subnav .fam-link{display:flex!important;align-items:center;gap:7px}
 .lives{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:28px;margin-top:20px;align-items:start}
 .sim-list{list-style:none;margin:12px 0 18px;padding:0;display:grid;gap:8px}
@@ -367,6 +428,7 @@ a.count{text-decoration:none}a.count:hover{color:var(--ink)}
 /* photos */
 .photo.shot{background:var(--img) center/cover}
 .photo.shot::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.18),transparent 35%,transparent 60%,rgba(0,0,0,.45))}
+.listing .photo.shot::before{background:linear-gradient(180deg,rgba(0,0,0,.12),transparent 35%,transparent 62%,rgba(0,0,0,.40))}
 .photo.shot>*{position:relative}.photo.shot .type,.photo.shot .status,.photo.shot .size{position:absolute}
 .listing:hover .photo.shot{filter:brightness(1.05)}
 .hero.lot-hero{min-height:min(46vh,440px)}
@@ -546,18 +608,23 @@ i.nb-none svg.i{width:30%;height:auto;color:rgba(255,255,255,.6)}
 .ver-total{color:var(--muted);font-size:12.5px}
 /* phones */
 @media (max-width:900px){
-  .side{transform:translateX(-102%);transition:transform .25s ease;box-shadow:0 0 40px rgba(0,0,0,.3)}
-  body.nav-open .side{transform:none}
+  .side{transform:translateX(-102%);transition:transform .25s ease}
+  body.nav-open .side{transform:none;box-shadow:0 0 40px rgba(0,0,0,.3)}   /* shadow only while open, so no edge shows when closed */
   body.nav-open .scrim{display:block;position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:15}
   main{margin-left:0}
-  .topbar{display:flex;align-items:center;gap:12px;position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--nav);color:var(--on-deep);padding:10px 16px}
-  .topbar button{display:flex;align-items:center;gap:8px;padding:7px 12px;border-radius:99px;border:1px solid rgba(255,255,255,.25);background:transparent;cursor:pointer;font-weight:700;color:var(--on-deep)}
+  .topbar{display:flex;align-items:center;gap:12px;position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--nav);color:var(--side-ink);border-bottom:1px solid var(--neat);padding:10px 16px}
+  .topbar button{display:flex;align-items:center;gap:8px;padding:7px 12px;border-radius:3px;border:1px solid color-mix(in srgb,var(--side-ink) 35%,transparent);background:transparent;cursor:pointer;font-weight:700;color:var(--side-ink)}
   .topbar b{font:400 22px var(--display)}
   .detail{grid-template-columns:1fr}
   .chapters{justify-content:flex-start}
   .hero{padding-top:48px}
+  .hero::before{width:100%;background-position:right -360px top -40px;opacity:.6}
+  .hero.mapped::before{width:auto;opacity:.18}
+  .figures{padding:10px 0}
+  .figures div{padding:4px 16px}
+  .figures b{font-size:32px}
 }
-@media (max-width:440px){ .listings,.worlds{grid-template-columns:1fr} .hood-head{grid-template-columns:1fr} }
+@media (max-width:440px){ .listings,.worlds{grid-template-columns:1fr} .hood-head{grid-template-columns:1fr} .figures div:nth-child(4){border-left:0} }
 @media (prefers-reduced-motion:reduce){ *{transition:none!important} }
 /* Gallery numbers over time (Stats page, 13 Oct) */
 .gal-gains{margin-top:28px}
@@ -567,14 +634,14 @@ footer .as-of{flex-basis:100%}
 /* site search (sidebar, 13 Oct) */
 .search{position:relative;padding:14px 12px 0}
 .search-ico{position:absolute;left:25px;top:33px;transform:translateY(-50%);display:flex;color:var(--on-deep-mute);pointer-events:none}
-.search input{width:100%;padding:9px 12px 9px 36px;border-radius:10px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.07);color:var(--on-deep);font:500 14px var(--body)}
+.search input{width:100%;padding:9px 12px 9px 36px;border-radius:4px;border:1px solid var(--side-field-line);background:var(--side-field);color:var(--on-deep);font:500 14px var(--body)}
 .search input::placeholder{color:var(--on-deep-mute)}
-.search input:focus{outline:none;border-color:var(--brass);background:rgba(255,255,255,.1)}
+.search input:focus{outline:none;border-color:var(--brass)}
 .nav a.hit{align-items:flex-start}
 .nav a.hit>span{display:grid;gap:1px;min-width:0}
 .nav a.hit b{font-weight:600}
 .nav a.hit small{font-weight:500;font-size:12px;line-height:1.35;color:var(--on-deep-mute)}
-.nav a.hit.on{background:rgba(255,255,255,.12)}
+.nav a.hit.on{background:var(--side-on)}
 /* world extras from the game (14 Oct): weather line, highlights, festivals and eco start */
 .world-weather{margin-top:16px;font-size:15px}
 .world-strip{padding:18px 0 4px;margin-bottom:6px;border-bottom:1px solid var(--line)}
@@ -618,7 +685,7 @@ footer .as-of{flex-basis:100%}
 .listing .meta .hh-link{cursor:pointer}
 .listing .meta .hh-link:hover{text-decoration:underline;text-underline-offset:2px}
 .listing.bfront{cursor:default}
-.listing.bfront:hover h3{text-decoration:none}.listing.bfront:hover .plot-svg{transform:none}.listing.bfront:hover .photo.shot{filter:none}
+.listing.bfront:hover h3{color:inherit}.listing.bfront:hover .plot-svg{transform:none}.listing.bfront:hover .photo.shot{filter:none}
 .listing .meta .unit-list li.free{font-style:italic}
 .u-traits{font-size:12.5px;color:var(--muted);text-align:right}
 /* ---------- Sim pages, household pages with Sims, group pages (17 Oct): the prototype's design (for-jemma/prototypes/sims/proto.css) ---------- */
@@ -719,7 +786,7 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 .k-box.away{background:color-mix(in srgb,var(--paper) 70%,var(--surface))}
 /* Sim page: header chips, about, family, groups, homes */
 .sim-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;align-items:center}
-.sim-chips>span:not(.otag){display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border-radius:99px;border:1px solid rgba(255,255,255,.22);font-weight:600;font-size:13px}
+.sim-chips>span:not(.otag){display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border-radius:99px;border:1px solid var(--chip-line);font-weight:600;font-size:13px}
 .sim-chips .occult{border-color:rgba(190,170,255,.6)}
 .sim-chips .animal{border-color:rgba(230,200,160,.6)}
 .sim-about{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:28px;margin-top:20px;align-items:start}
@@ -815,18 +882,21 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 .nav-group.dim{opacity:1}
 .nav-group.dim .label{opacity:.55}
 .nav-group.dim a.soon.has-hh{cursor:pointer}
-.nav-group.dim a.soon.has-hh:hover{background:rgba(255,255,255,.05);color:rgba(234,242,236,.7)}
+.nav-group.dim a.soon.has-hh:hover{background:var(--side-hover);color:color-mix(in srgb,var(--side-ink) 70%,transparent)}
 .nav-group.dim .subnav a{opacity:.8}
 .nav-group.dim .subnav a.cur,.nav-group.dim .subnav a.path{opacity:1}
 .hero h1 .h1-sub{display:block;font-size:.42em;line-height:1.15;margin-top:.25em;font-style:italic;color:var(--on-deep-mute)}
 /* every map banner the same height (her request, 19 Oct): long titles a size smaller, descriptions at most three lines */
 .hero.mapped{height:min(62vh,560px);min-height:0}
-.hero.mapped h1.long{font-size:clamp(52px,7vw,96px)}
-.hero.mapped p{display:-webkit-box;-webkit-line-clamp:3;line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+/* map banner titles in spaced capitals, like names on a plan (21 Nov); long ones a size smaller */
+.hero.mapped h1{font-size:clamp(48px,6.2vw,96px);line-height:.95;text-transform:uppercase;letter-spacing:.09em}
+.hero.mapped h1.long{font-size:clamp(40px,4.8vw,74px)}
+.hero.mapped h1 .h1-sub{text-transform:none;letter-spacing:0}
+.hero.mapped p{display:-webkit-box;-webkit-line-clamp:3;line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;color:rgba(244,241,232,.92)}
 /* pets and horses (trial, 19 Oct) */
 .sub-h{font:400 26px/1.1 var(--display);margin:30px 0 12px}
 .champ{display:inline-flex;align-items:center;gap:5px;color:#8A6A12}
-.sim-chips .champ{color:#F1D58A;border-color:rgba(241,213,138,.6)}
+.sim-chips .champ{color:var(--brass);border-color:color-mix(in srgb,var(--brass) 60%,transparent)}
 .champ svg{width:14px;height:14px}
 .champ.small{margin-left:6px}
 /* the Sims and animals tables line up column for column (her ask, 24 Oct): name, life state, life stage, traits, then career or breed */
@@ -946,7 +1016,7 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 /* ---------- sidebar sections (23 Oct; js/sections.js): the Calendar, Admin and Across the worlds pages.
    Ported from for-jemma/prototypes/calendar-admin/proto.css. ---------- */
 .nav-group.across-nav,.nav-group.admin-nav{margin-top:6px}
-.nav-group.admin-nav{border-top:1px solid rgba(255,255,255,.1);padding-top:10px}
+.nav-group.admin-nav{border-top:1px solid var(--side-rule);padding-top:10px}
 .nav-group.across-nav a svg,.nav-group.admin-nav a svg{opacity:.8}
 /* seasons in the calendar banner, like a world's neighbourhoods */
 .hero .chapters button.on{background:rgba(255,255,255,.92);color:#1A1F1C;border-color:transparent}
@@ -976,7 +1046,7 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 a.fest-link{color:inherit;text-decoration-color:var(--line);text-underline-offset:3px}
 /* admin */
 .adm-hero{--c:#7A8A80}
-.adm-lock{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:700;color:var(--on-deep);background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);padding:4px 11px;border-radius:99px;margin-left:8px}
+.adm-lock{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:700;color:var(--on-deep);background:var(--chip-hover);border:1px solid var(--chip-line);padding:4px 11px;border-radius:99px;margin-left:8px}
 .adm-lock svg{width:14px;height:14px}
 .adm-body{margin-top:28px}
 .adm-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin-top:18px}
@@ -1044,4 +1114,5 @@ details.adm-more summary{cursor:pointer;font-weight:700;font-size:14px;color:var
   .detail>.carousel{order:1}   /* the banner already shows the first photo, so the facts come before the photos */
   .lots-sheet td.lotcell{position:sticky;left:0;z-index:1;background:var(--surface);box-shadow:1px 0 0 var(--line)}   /* the lot's name stays in view while the table scrolls sideways */
   .lots-sheet thead th:nth-child(2){position:sticky;left:0;z-index:3;box-shadow:1px 0 0 var(--line)}
+  .hero.mapped{height:auto;min-height:min(62vh,560px);padding-top:84px}   /* 21 Nov: the town-plan figures box is taller, so a phone's map banner grows to fit instead of hiding its title under the map credit */
 }
