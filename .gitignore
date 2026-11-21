@@ -14,3 +14,7 @@ test-results/
 playwright-report/
 # her Sims save and Library backup zip (kept here on her PC only: too big for GitHub, and the repo is public)
 Sims 4 new save and Library*.zip
+# temporary files from safe writes left by a crash
+*.tmp
+# patched mod copies made for her to swap in (other people's mods: kept on her PC only, never on GitHub; 21 Nov)
+for-jemma/mods/
