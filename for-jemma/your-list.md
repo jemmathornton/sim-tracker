@@ -132,4 +132,15 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 - **Decide:** Consort and Contessa Capp (found 15 Nov): Consort's page calls Contessa his late wife, Contessa's calls him her husband. Who has died, if either?
 - **Decide:** From the 15 Nov review, small layout choices: greyed sidebar text is a little faint to read easily, and the calendar's text gets very small on a phone. Make them stronger and bigger?
 - **Decide:** Backing up your Sims saves (19 Nov, for later): the project is on GitHub, but your saves folder isn't (24 saves, 390 MB, plus 2.5 GB of the game's own backups). Git and GitHub only, no OneDrive (your call, 19 Nov). Not in the project repo itself (too big, and every week's copy would stay forever). Options: a weekly zip attached to the repo as a GitHub release download (public on a public repo), or a separate private repo for saves.
+- **Decide:** Wording, from the 21 Nov review (your call, later): household pages all show “Played: Not yet” and “Neighbourhood Stories: Not set” (none are filled in): remove those rows, like the other admin notes?
+- **Decide:** Wording: the “Never in the game (named on the Sims Wiki)” labels on family trees and some Sims: keep or remove?
+- **Decide:** Wording: families in worlds you don't own have a note Claude wrote (“…a world you don't own yet. Their home and the world will open once the pack is in.”): keep or remove?
+- **Decide:** Wording: the home page intro and footer come from the old chat version, and the footer is now wrong about lot names (“Lot names are my own…”): remove, or your own words?
+- **Decide:** Wording: 19 neighbourhood descriptions aren't the game's own text (e.g. Magnolia Blossom Park, Desert Bloom Park, Mourningvale; all listed in research/hood-descriptions-check.md, with 37 near-matches): keep, swap for the game's text where there is one, or leave blank?
+- **Decide:** Wording: your notes in lot types (“Restaurant (Diner)”) show on lot pages but not on neighbourhood cards: show them on the cards too?
+- **Decide:** Wording: EA's own typos in game bios (“convservation”, “The Roswell's”, American spellings like “Rumor”): leave word for word, or fix?
+- **Decide:** Phone menu: it opens with “← Jemma's Journals” selected, so one Enter leaves the site: start on the search box instead?
+- **Decide:** If an upload ever disappears from the Gallery, how should the site show it (hide it, or keep it marked as gone)?
+- **Decide:** Four household uploads aren't on any household yet: Spectra, Jameson (two copies) and Barnes. Where do they go (and which Jameson)?
+- **Decide:** Public on GitHub (your choice of a public repo): your to-do list and the refresh log (in site/js/admin-data.js) and Claude's notes (claude-notes/). Fine as is?
 - **Decide:** Going online: only if you ever want it on other devices (free and private with Cloudflare).
