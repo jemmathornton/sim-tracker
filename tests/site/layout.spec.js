@@ -37,7 +37,9 @@ test('the phone block changes nothing at 1280px (same layout with it taken out)'
   const keys = await page.evaluate(() => { const l = Object.values(lotIndex).find(l => l.world.owned && l.world.ready && l.gallery && unitCount(l));
     const h = Object.values(hhIndex).find(h => h.world.owned && h.world.ready && h.sims.length > 2);
     return ['home', 'w-' + l.world.id, 'n-' + l.hood.id, l.id, h.id, 'admin-progress', 'admin-game', 'calendar']; });
-  const boxes = () => page.evaluate(() => [...document.querySelectorAll('#view *')].slice(0, 400).map(e => { const r = e.getBoundingClientRect(); return [r.x, r.y, r.width, r.height].map(Math.round).join(','); }).join(';'));
+  // every picture loaded and decoded first: one still loading measures 0×0 instead of 1×1 (21 Nov: the test failed now and then)
+  const boxes = () => page.evaluate(async () => { await Promise.all([...document.querySelectorAll('#view img')].map(i => i.decode().catch(() => {})).map(p => Promise.race([p, new Promise(r => setTimeout(r, 3000))])));
+    await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r))); return [...document.querySelectorAll('#view *')].slice(0, 400).map(e => { const r = e.getBoundingClientRect(); return [r.x, r.y, r.width, r.height].map(Math.round).join(','); }).join(';'); });
   const dropPhone = () => page.evaluate(() => { for (const sh of document.styleSheets) { if (!/site\.css/.test(sh.href || '')) continue;
     for (let i = sh.cssRules.length - 1; i >= 0; i--) { const r = sh.cssRules[i]; if (r.media && /max-width:\s*700px/.test(r.conditionText) && r.cssRules.length > 3) { sh.deleteRule(i); return true; } } } return false; });
   const withIt = {};

@@ -296,6 +296,8 @@ const AGE_ORDER = ["Elder", "Adult", "Young Adult", "Teen", "Child", "Toddler", 
 const byAge = ids => ids.slice().sort((a, b) => (AGE_ORDER.indexOf(SIMS[a].age) + 1 || 99) - (AGE_ORDER.indexOf(SIMS[b].age) + 1 || 99) || (SIMS[b].ageDays ?? -1) - (SIMS[a].ageDays ?? -1));
 // the game's own label for a Sim with no job who has a child, teen or younger in their household (careers/career_unemployment):
 // "Stay-at-Home Mom/Dad" (24 Oct, her ask)
+// a career whose branch has the same name says it once: "Freelance Programmer (level 1)", not "Freelance Programmer · Freelance Programmer (level 1)"
+const careerText = c => c ? String(c).replace(/^(.+?) · \1(?= \(|$)/, "$1") : c;
 const stayAtHome = s => { if (s.career || s.late || isAnimal(s) || !s.hh || !["Young Adult", "Adult", "Elder"].includes(s.age)) return "";
   const kids = membersOf(s.hh).filter(id => ["Teen", "Child", "Toddler", "Infant", "Baby"].includes(SIMS[id].age) && (SIMS[id].parents || []).includes(s.id));
   return kids.length ? `Stay-at-Home ${s.sex === "f" ? "Mom" : s.sex === "m" ? "Dad" : "Parent"}` : ""; };
@@ -553,7 +555,7 @@ function simPage(s){
     <div class="sim-chips">${s.state ? lifeState(s, "") : `<span>${ic("sim")}Human</span>`}${stage ? `<span>${esc(stage.charAt(0).toUpperCase() + stage.slice(1))}</span>` : ""}${isChampion(s) ? `<span class="champ">${ic("ph-trophy")}Champion</span>` : ""}${s.noHome ? `<span>No home</span>` : ""}${s.notInGame ? `<span title="Named on the Sims Wiki">Never in the game</span>` : ""}${s.galleryOnly ? `<span title="A Maxis upload on the Gallery, not placed in any world">On EA’s Gallery</span>` : ""}${s.notInGame ? "" : `<span>${originTag(s.origin)}</span>`}</div></section>`;
   // details
   // top right: where they live and what they do; who they are (aspiration, quirks, lifestyles, likes, fame) sits with traits and skills below (her ask, 19 Oct)
-  const facts = [["Breed", s.breed], ["Cause of death", s.state === "Ghost" ? s.death : null], ["Career", s.career || stayAtHome(s)], ["About the job", s.careerNote], ["School", s.school], ["Died", s.died]].filter(([, v]) => v);
+  const facts = [["Breed", s.breed], ["Cause of death", s.state === "Ghost" ? s.death : null], ["Career", careerText(s.career) || stayAtHome(s)], ["About the job", s.careerNote], ["School", s.school], ["Died", s.died]].filter(([, v]) => v);
   const chipRow = (label, xs, cls) => xs && xs.length ? `<span class="label">${label}</span><div class="traits${cls ? " " + cls : ""}">${xs.map(t => `<span>${esc(t)}</span>`).join("")}</div>` : "";
   const aboutMore = chipRow("Aspiration", s.aspiration ? [s.aspiration] : []) + chipRow("Quirks", s.quirks) + chipRow("Lifestyles", s.lifestyles) + chipRow("Likes", s.likes);
   const fameRow = s.fame ? `<span class="label">Fame</span><div class="skill"><span>${esc(FAME_LEVELS[s.fame])}</span><div class="pips" style="--max:5">${[1, 2, 3, 4, 5].map(i => `<i class="${i <= s.fame ? "on" : ""}"></i>`).join("")}</div><b>${s.fame}</b></div>` : "";
@@ -679,11 +681,12 @@ document.addEventListener("click", e => {
   if (list && here) { e.preventDefault(); list.hidden = !list.hidden; a.classList.toggle("folded", list.hidden); return; }
   // a world whose list is open (with a household or Sim open under it, say) closes completely in one click (her ask, 19 Oct); click again to go to the world
   if (list && list.classList.contains("subnav") && !list.hidden && a.closest(".nav-group") && !a.closest(".subnav")) { e.preventDefault(); list.hidden = true; a.classList.add("folded"); return; }
-  if (here) window.scrollTo({top:0, behavior: SMOOTH()});
+  if (here) { window.scrollTo({top:0, behavior: SMOOTH()}); if (document.body.classList.contains("nav-open")) setNav(false); }   // on a phone the drawer closes too
 });
 // ---------- search (13 Oct): lots by any of their names, households, Sims, neighbourhoods and worlds; results take the sidebar's place while typing ----------
 const fold = s => String(s ?? "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[‘’'.]/g, "").replace(/&/g, "and").replace(/\s+/g, " ");
 const KINDS = ["World", "Neighbourhood", "Lot", "Household", "Sim"];
+const kindRank = k => { const i = KINDS.indexOf(k); return i < 0 ? KINDS.length : i; };   // groups (dynasties, clubs, organisations) after these
 let searchList = null, hits = [], hit = 0;
 function searchIndex(){
   const out = [], add = (kind, name, where, href, also, sim) => out.push({kind, name, where, href, sim, keys: [name, ...also].filter(Boolean).map(k => [k, fold(k)])});
@@ -706,7 +709,7 @@ function search(q){
       const s = (i ? 3 : 0) + (at === 0 ? 0 : k[at - 1] === " " || k[at - 1] === "-" ? 1 : 2);
       if (!best || s < best.s) best = {s, also: i && fold(raw) !== fold(r.name) ? raw : null}; });
     return best && {...r, ...best}; }).filter(Boolean)
-    .sort((a, b) => a.s - b.s || KINDS.indexOf(a.kind) - KINDS.indexOf(b.kind) || a.name.localeCompare(b.name)).slice(0, 40);
+    .sort((a, b) => a.s - b.s || kindRank(a.kind) - kindRank(b.kind) || a.name.localeCompare(b.name)).slice(0, 40);
 }
 function showSearch(){
   const q = document.getElementById("q").value, nav = document.getElementById("nav");
@@ -719,7 +722,7 @@ function showSearch(){
 const clearSearch = () => { const q = document.getElementById("q"); if (q.value) { q.value = ""; hits = []; } };
 document.getElementById("q").addEventListener("input", () => { hit = 0; showSearch(); });
 document.getElementById("q").addEventListener("keydown", e => {
-  if (e.key === "Escape") { clearSearch(); showSearch(); return; }
+  if (e.key === "Escape") { if (e.target.value) e.stopPropagation(); clearSearch(); showSearch(); return; }   // with words typed, Escape only clears them (the phone drawer stays open)
   if (!hits.length || !["ArrowDown", "ArrowUp", "Enter"].includes(e.key)) return;
   e.preventDefault();
   if (e.key === "Enter") { document.querySelector(".nav a.hit.on")?.click(); return; }
@@ -1038,7 +1041,7 @@ function simCard(sm){
   return `<article class="sim" id="${sm.id}">
     <header><span class="mono">${initial(sm.name)}</span><div><h3>${esc(sm.name)}</h3><div class="sim-sub">${[sm.age, sm.aspiration && "Aspiration: " + sm.aspiration].filter(Boolean).map(esc).join(" · ")}</div></div></header>
     ${sm.traits?.length ? `<div class="traits">${sm.traits.map(t => `<span>${esc(t)}</span>`).join("")}${sm.bonus ? `<span class="bonus">${esc(sm.bonus)}</span>` : ""}</div>` : ""}
-    <dl class="sim-facts"><div><dt>Career</dt><dd>${esc(sm.career || "None")}</dd></div>${sm.school ? `<div><dt>School</dt><dd>${esc(sm.school)}</dd></div>` : ""}</dl>
+    <dl class="sim-facts"><div><dt>Career</dt><dd>${esc(careerText(sm.career) || "None")}</dd></div>${sm.school ? `<div><dt>School</dt><dd>${esc(sm.school)}</dd></div>` : ""}</dl>
     ${skills ? `<div class="skills"><span class="label">Skills</span>${skills}</div>` : ""}
     ${rels ? `<div class="rels"><span class="label">Relationships</span><ul>${rels}</ul></div>` : ""}
     ${sm.notes ? `<p class="sim-note">${esc(sm.notes)}</p>` : ""}
@@ -1054,6 +1057,7 @@ const baseGame = l => !!l.gallery && !(l.gallery.packs || []).length;
 // uploads, are marked until their page is opened. Kept in this browser only, so it's per viewer.
 const SEEN_KEY = "jsw-seen-v1";
 let seen = null; try { seen = JSON.parse(localStorage.getItem(SEEN_KEY) || "null"); } catch (e) {}
+if (!seen || typeof seen !== "object" || Array.isArray(seen)) seen = null;   // anything but a saved list counts as a first visit
 // Community Space lots count all their versions together, whichever version tab is showing (15 Nov: counting the tab
 // shown made them "New" on a first visit)
 const seenNow = l => [l.versions ? l.versions.reduce((n, v) => n + v.likes, 0) : l.gallery.likes, theirs(l).length];
@@ -1349,7 +1353,7 @@ function afterDraw(key, view){
   lazyPics(view);
   keyLinks(view);
 }
-let drawnOnce = false;
+let drawnOnce = false, routeY = 0;   // routeY: where Back or Forward returns to on the page (scrollBack below)
 function route(){
   drawnOnce = true;
   closeLightbox();
@@ -1381,7 +1385,7 @@ function route(){
   renderNav(active, key, ctx);
   // keyboard users: the sidebar is redrawn, so put focus back on the link they chose
   if (navChosen) { document.querySelector("#nav a.cur, #nav a.path")?.focus({preventScroll: true}); navChosen = false; }
-  window.scrollTo(0, 0);
+  window.scrollTo(0, +routeY || 0); routeY = 0;   // a new page starts at the top; Back and Forward return to where that page was
   if (document.body.classList.contains("nav-open")) setNav(false);
 }
 
@@ -1522,8 +1526,11 @@ function calEvents(){
   return CAL_ALL = all.filter(e => calW(e.w) && calW(e.w).owned).map(e => ({...e, order: worlds.indexOf(calW(e.w))}));
 }
 const calState = {kinds: new Set(["holiday", "festival", "community"]), world: null, school: null};
-try { const s = JSON.parse(localStorage.getItem("calendar-4") || "{}"); if (s.kinds) calState.kinds = new Set(s.kinds.filter(k => CAL_KINDS[k])); } catch (e) {}
-const calKeep = () => { try { localStorage.setItem("calendar-4", JSON.stringify({kinds: [...calState.kinds]})); } catch (e) {} };
+// kept as "jsw-calendar-4" (21 Nov: every key of this site starts jsw-); a value kept under the old name "calendar-4" moves across once
+const CAL_KEY = "jsw-calendar-4";
+try { const old = localStorage.getItem("calendar-4"); if (old !== null) { if (localStorage.getItem(CAL_KEY) === null) localStorage.setItem(CAL_KEY, old); localStorage.removeItem("calendar-4"); } } catch (e) {}
+try { const s = JSON.parse(localStorage.getItem(CAL_KEY) || "{}"); if (s && Array.isArray(s.kinds)) calState.kinds = new Set(s.kinds.filter(k => CAL_KINDS[k])); } catch (e) {}
+const calKeep = () => { try { localStorage.setItem(CAL_KEY, JSON.stringify({kinds: [...calState.kinds]})); } catch (e) {} };
 const calPlace = e => { const w = calW(e.w), hid = w && e.hood ? w.id + "-" + slug(e.hood) : null;
   return e.link ? `<a href="${e.link}">${esc(e.where)}</a>` : hid && hoodIndex[hid] ? `<a href="#n-${hid}">${esc(e.where || e.hood)}</a>` : esc(e.where || e.hood || ""); };
 const calTag = e => e.often === "fortnight" ? `<span class="often">${ic("repeat")}every other week</span>` : e.often === "third" ? `<span class="often">${ic("repeat")}every third week</span>` : "";
@@ -1540,7 +1547,15 @@ document.getElementById("menuIco").innerHTML = ic("menu");
 document.getElementById("searchIco").innerHTML = ic("search");
 let navChosen = false;
 document.getElementById("nav").addEventListener("click", e => { if (e.target.closest("a[href^='#']") && e.detail === 0) navChosen = true; });   // a keyboard "click" (Enter) has detail 0
-addEventListener("hashchange", route);
+// Back and Forward (21 Nov): each history entry keeps how far down its page was scrolled (in history.state), so going back
+// returns there; a new entry has none, so a link still opens its page at the top
+if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+let scrollKeep = 0;
+const keepScroll = () => { clearTimeout(scrollKeep); try { history.replaceState({...(history.state || {}), y: scrollY}, ""); } catch (e) {} };
+addEventListener("scroll", () => { clearTimeout(scrollKeep); scrollKeep = setTimeout(keepScroll, 120); }, {passive: true});
+document.addEventListener("click", e => { if (e.target.closest && e.target.closest("a[href^='#'], [data-lot-link]")) keepScroll(); }, true);
+const scrollBack = () => { routeY = history.state && history.state.y; route(); };
+addEventListener("hashchange", scrollBack);
 // the phone's Worlds drawer (21 Nov): the button says whether it's open, a closed drawer can't be reached with Tab (inert),
 // opening it moves focus in, and Escape or the scrim closes it with focus back on the button
 const sideEl = document.getElementById("side"), menuBtn = document.getElementById("menuBtn"), phoneNav = matchMedia("(max-width:900px)");
@@ -1549,6 +1564,10 @@ function setNav(open, focus){
   document.body.classList.toggle("nav-open", open);
   menuBtn.setAttribute("aria-expanded", String(open));
   sideEl.inert = phoneNav.matches && !open;
+  // while it's open on a phone, the page behind can't be reached with Tab or scrolled (focus stays in the drawer and the top bar's button)
+  const lock = phoneNav.matches && open;
+  document.querySelectorAll("body > *:not(#side):not(.topbar):not(#scrim):not(script)").forEach(el => { el.inert = lock; });
+  document.documentElement.classList.toggle("nav-lock", lock);
   if (open && focus) sideEl.querySelector("a,input")?.focus({preventScroll: true});
   if (!open && phoneNav.matches && (focus || wasIn)) menuBtn.focus({preventScroll: true});
 }
@@ -1576,6 +1595,8 @@ modeBtn.addEventListener("click", () => {
   showMode();
 });
 showMode();
+// another window of the site switched mode: follow it
+addEventListener("storage", e => { if (e.key !== MODE_KEY) return; document.documentElement.setAttribute("data-mode", e.newValue === "dark" ? "dark" : "light"); showMode(); });
 document.querySelector("#toTop .ico").innerHTML = ic("arrow-up");
 document.getElementById("toTop").addEventListener("click", () => {
   window.scrollTo({top: 0, behavior: SMOOTH()});

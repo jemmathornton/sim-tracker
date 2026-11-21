@@ -197,9 +197,11 @@ function admLive(){
     yours: mine.length, yoursOnSite: mine.filter(h => h.sims.length).length};
 }
 // her new save against the plan, per world started (tools/research/new_save_check.py; Claude reruns it after a session, 23 Oct)
+// when the new save was saved, as the site writes dates: "23 Oct 22:48"
+const nsWhen = s => String(s || "").replace(/^(\d{4})-(\d\d)-(\d\d) (\d\d:\d\d)$/, (m, y, mo, d, t) => `${+d} ${["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][mo - 1]} ${t}`);
 function admNewSave(){
   const N = ADM.newSave; if (!N || !N.worlds.length) return "";
-  const when = N.saved.replace(/^(\d{4})-(\d\d)-(\d\d) (\d\d:\d\d)$/, (m, y, mo, d, t) => `${+d} ${["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][mo - 1]} ${t}`);
+  const when = nsWhen(N.saved);
   const li = w => { const bits = [];
     if (w.toPlace.length) bits.push(`<b>To place:</b> ${esc(w.toPlace.join(", "))}`);
     w.fixes.forEach(f => bits.push(`<b>${esc(f.lot)}:</b> ${esc(f.what.join("; "))}`));
@@ -419,7 +421,7 @@ lotRows = function(){
   if (!(ADM.newSave && ADM.newSave.lots)) return html;
   const t = document.createElement("template"); t.innerHTML = html;
   t.content.querySelector("table")?.classList.add("ns-on");   // a little less padding, so the extra column fits at 1280px
-  const head = t.content.querySelector("thead tr"); if (head) head.insertAdjacentHTML("beforeend", `<th scope="col" class="ns-th" title="From your new save, ${esc(ADM.newSave.saved)}: ✓ placed, ! placed with something to fix (hover), – to place">New<br>save</th>`);
+  const head = t.content.querySelector("thead tr"); if (head) head.insertAdjacentHTML("beforeend", `<th scope="col" class="ns-th" title="From your new save, ${esc(nsWhen(ADM.newSave.saved))}: ✓ placed, ! placed with something to fix (hover), – to place">New<br>save</th>`);
   t.content.querySelectorAll("tbody tr").forEach(tr => { const a = tr.querySelector("td.lotcell a"); tr.insertAdjacentHTML("beforeend", a ? nsCell(a.getAttribute("href").slice(1)) : "<td></td>"); });
   return t.innerHTML;
 };
@@ -445,7 +447,7 @@ function ancTrees(){
 function ancSwitch(){
   if (!Object.keys(ANC).length) return;
   let d = document.getElementById("anc-switch");
-  if (!d) { d = document.createElement("div"); d.id = "anc-switch"; d.className = "trial-switch"; d.setAttribute("role", "group"); d.setAttribute("aria-label", "Ancestors' pictures (trial)"); document.body.appendChild(d); }
+  if (!d) { d = document.createElement("div"); d.id = "anc-switch"; d.className = "trial-switch"; d.setAttribute("role", "group"); d.setAttribute("aria-label", "Ancestors’ pictures (trial)"); document.body.appendChild(d); }
   d.hidden = !/^(s-|h-)/.test(location.hash.slice(1));
   d.innerHTML = `<b>EA’s ancestors (trial)</b><div>${[["now", "As now"], ["on", "With game pictures"]].map(([k, t]) => `<button type="button" data-anctrial="${k}" class="${ANC_TRIAL === k ? "on" : ""}" aria-pressed="${ANC_TRIAL === k}">${t}</button>`).join("")}</div>`;
 }

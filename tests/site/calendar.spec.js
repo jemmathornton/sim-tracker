@@ -69,7 +69,7 @@ test('the kinds she ticks are remembered in this browser; a world’s calendar k
   const kinds = await page.evaluate(() => Object.keys(CAL_KINDS));
   const off = await page.locator('#view [data-cal-kind]:checked').first().getAttribute('data-cal-kind');
   await page.locator(`#view [data-cal-kind="${off}"]`).uncheck();
-  expect(JSON.parse(await page.evaluate(() => localStorage.getItem('calendar-4'))).kinds).not.toContain(off);
+  expect(JSON.parse(await page.evaluate(() => localStorage.getItem('jsw-calendar-4'))).kinds).not.toContain(off);
   const n = await evs(page).count();
   await page.reload();
   await page.waitForFunction(() => typeof SECTION_KEYS === 'function' && document.querySelector('#view').innerHTML.length > 0);
