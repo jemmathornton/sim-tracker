@@ -19,8 +19,10 @@
 <meta name="theme-color" content="#EEEAF2">
 <!-- light or dark (21 Nov 2026, her rule for all her sites): always opens light, dark only once she presses "Dark mode" at the
      bottom of a page; the choice is remembered (localStorage "jsw-mode"). Set here, before the page is drawn, so it never flashes. -->
+<!-- look trial (21 Nov; js/sections.js): her picked options as classes on <html> before the page is drawn; remove with the trial -->
+<script>try{var lt=JSON.parse(localStorage.getItem("jsw-look-trial")||"{}");if(lt&&typeof lt==="object")["cards","boxes","notowned"].forEach(function(k){if(lt[k])document.documentElement.classList.add("lt-"+k)})}catch(e){}</script>
 <script>try{if(localStorage.getItem("jsw-mode")==="dark"){document.documentElement.setAttribute("data-mode","dark");document.querySelector('meta[name="theme-color"]').setAttribute("content","#1B1524")}}catch(e){}</script>
-<link rel="stylesheet" href="site.css?v=d498e147">
+<link rel="stylesheet" href="site.css?v=279fd5af">
 </head>
 <body>
 <div class="topbar"><button id="menuBtn" type="button"><span id="menuIco"></span>Menu</button><b>Jemma’s Sim World</b></div>
@@ -42,6 +44,6 @@
 <script src="js/app.js?v=a8719eab"></script>
 <!-- Admin pages' extra data (made by tools/admin_data.py): for Jemma's PC only, never upload js/admin-data.js if the site goes online -->
 <script src="js/admin-data.js?v=8832b135"></script>
-<script src="js/sections.js?v=9b0b5988"></script>
+<script src="js/sections.js?v=5f1233b3"></script>
 </body>
 </html>
