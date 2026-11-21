@@ -23,7 +23,7 @@
      bottom of a page; the choice is remembered in localStorage "jj-mode", one key for every site (the old "jsw-mode" is moved over once).
      Set here, before the page is drawn, so it never flashes; data-mode is always "light" or "dark" (family rules). -->
 <script>try{var m=localStorage.getItem("jj-mode");if(m===null){m=localStorage.getItem("jsw-mode");if(m)localStorage.setItem("jj-mode",m)}localStorage.removeItem("jsw-mode");m=m==="dark"?"dark":"light";document.documentElement.setAttribute("data-mode",m);if(m==="dark")document.querySelector('meta[name="theme-color"]').setAttribute("content","#1B1524")}catch(e){document.documentElement.setAttribute("data-mode","light")}</script>
-<link rel="stylesheet" href="site.css?v=51e8cbe6">
+<link rel="stylesheet" href="site.css?v=5f82f584">
 </head>
 <body>
 <div class="topbar"><button id="menuBtn" type="button"><span id="menuIco"></span>Menu</button><a class="brand-bar" href="#home">Jemma’s <em>Sim World</em></a></div>
@@ -46,11 +46,9 @@
 
 <script src="js/icons.js?v=449d1949"></script>
 <script src="js/data.js?v=f69dc43a"></script>
-<script src="js/app.js?v=1066b30c"></script>
+<script src="js/app.js?v=d2b03ae0"></script>
 <!-- Admin pages' extra data (made by tools/admin_data.py): for Jemma's PC only, never upload js/admin-data.js if the site goes online -->
 <script src="js/admin-data.js?v=0bca35d9"></script>
 <script src="js/sections.js?v=d1541500"></script>
-<!-- TEMPORARY TRIAL (21 Nov 2026): the "Try" switch, bottom right, while Jemma chooses; remove this line and js/trial.js once she has picked -->
-<script src="js/trial.js?v=3e4c0dd6"></script>
 </body>
 </html>

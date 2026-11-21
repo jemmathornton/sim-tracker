@@ -1391,6 +1391,7 @@ function route(){
   const root = document.documentElement.style;
   if (cw && cw.deep) { root.setProperty("--deep", cw.deep[0]); root.setProperty("--deep-2", cw.deep[1]); }
   else { root.removeProperty("--deep"); root.removeProperty("--deep-2"); }
+  document.documentElement.toggleAttribute("data-inner", !!(lotIndex[key] || SIM_PAGES[key] || hhIndex[key]));   // lot, Sim and household pages: the town-plan look (her pick, 21 Nov)
   view.innerHTML = html;
   afterDraw(key, view);
   clearSearch();

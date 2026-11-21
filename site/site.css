@@ -1159,3 +1159,35 @@ details.adm-more summary{cursor:pointer;font-weight:700;font-size:14px;color:var
   .hero.mapped{height:auto;min-height:min(62vh,560px);padding-top:84px}   /* 21 Nov: the town-plan figures box is taller, so a phone's map banner grows to fit instead of hiding its title under the map credit */
   .about-site .sep{display:none} .about-site .cr{display:block;white-space:normal}   /* footer credits one per line (family rules, 21 Nov) */
 }
+
+/* Town plan on lot, Sim and household pages (her pick, 21 Nov, from the Try switch): white plates edged in the neighbourhood colour with the striped top edge, section rules with a purple start, squared tags, and "Also in" lot cards like the neighbourhood page's. html[data-inner] is set by route() on those pages. */
+html[data-inner] .block-head{border-bottom:1px solid var(--rule);padding-bottom:12px;background:linear-gradient(var(--plum),var(--plum)) left bottom/56px 3px no-repeat}
+html[data-inner] .crumbs a,html[data-inner] .crumbs span,html[data-inner] .sim-chips>span:not(.otag){border-radius:2px}
+html[data-inner] .detail .facts{border-radius:2px;border:1px solid color-mix(in srgb,var(--h) 45%,var(--card-line));box-shadow:3px 4px 0 color-mix(in srgb,var(--h) 18%,transparent);background:repeating-linear-gradient(90deg,var(--h) 0 28px,color-mix(in srgb,var(--h) 35%,var(--strip-pale)) 28px 56px) 0 0/100% 9px no-repeat,linear-gradient(color-mix(in srgb,var(--h) 70%,#1F2B33),color-mix(in srgb,var(--h) 70%,#1F2B33)) 0 9px/100% 1px no-repeat,var(--surface);padding:10px 16px 0}
+html[data-inner] .detail .facts div:last-child{border-bottom:0}
+html[data-inner] .detail .facts dt{flex:none}
+html[data-inner] .detail .facts div{border-bottom-style:dashed}
+html[data-inner] .gallery-card,html[data-inner] .tree-box,html[data-inner] .sim{border-radius:2px;border:1px solid color-mix(in srgb,var(--h) 45%,var(--card-line));box-shadow:3px 4px 0 color-mix(in srgb,var(--h) 18%,transparent);background:repeating-linear-gradient(90deg,var(--h) 0 28px,color-mix(in srgb,var(--h) 35%,var(--strip-pale)) 28px 56px) 0 0/100% 9px no-repeat,linear-gradient(color-mix(in srgb,var(--h) 70%,#1F2B33),color-mix(in srgb,var(--h) 70%,#1F2B33)) 0 9px/100% 1px no-repeat,var(--surface);padding-top:26px}
+html[data-inner] .sheet-wrap{border-radius:2px;border:1px solid color-mix(in srgb,var(--h) 45%,var(--card-line));box-shadow:3px 4px 0 color-mix(in srgb,var(--h) 18%,transparent);background:var(--surface)}
+html[data-inner] .car-view,html[data-inner] .shot-btn,html[data-inner] .hh-pic,html[data-inner] .portrait{border-radius:2px;border:1px solid color-mix(in srgb,var(--h) 45%,var(--card-line));box-shadow:3px 4px 0 color-mix(in srgb,var(--h) 18%,transparent);border-radius:2px}
+html[data-inner] .hh-pic.none{border-style:dashed;box-shadow:none}
+html[data-inner] .car-thumbs button{border-radius:1px}
+html[data-inner] .sim-list a,html[data-inner] .fam,html[data-inner] .homes li,html[data-inner] .g-comments li,html[data-inner] .g-others a,html[data-inner] .bcard .units a{border-radius:2px;border:1px solid color-mix(in srgb,var(--h) 40%,var(--card-line));box-shadow:2px 3px 0 color-mix(in srgb,var(--h) 14%,transparent)}
+html[data-inner] .rel-card{border-radius:2px;border:1px solid color-mix(in srgb,var(--h) 40%,var(--card-line));box-shadow:2px 3px 0 color-mix(in srgb,var(--h) 14%,transparent);border-left:3px solid var(--g)}
+html[data-inner] .g-comments li{border-left:3px solid var(--h)}
+html[data-inner] .fam:hover,html[data-inner] .sim-list a:hover{transform:none;border-color:color-mix(in srgb,var(--h) 70%,var(--card-line))}
+html[data-inner] .traits span,html[data-inner] .tags span,html[data-inner] .packs span,html[data-inner] .roster .lvl,html[data-inner] .state{border-radius:2px}
+html[data-inner] .traits span{box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--h) 28%,transparent)}
+html[data-inner] .gal-link,html[data-inner] .tick,html[data-inner] .empty,html[data-inner] .note{border-radius:2px}
+html[data-inner] .mini a{--k:var(--h);position:relative;gap:8px;padding:18px 8px 12px;background:var(--surface);border-radius:2px;border:1px solid color-mix(in srgb,var(--k) 40%,var(--card-line));box-shadow:2px 3px 0 color-mix(in srgb,var(--k) 14%,transparent)}
+html[data-inner] .mini a::before{content:"";position:absolute;left:-1px;right:-1px;top:-1px;height:9px;border:1px solid color-mix(in srgb,var(--k) 70%,#1F2B33);
+  background:repeating-linear-gradient(90deg,var(--k) 0 28px,color-mix(in srgb,var(--k) 35%,var(--strip-pale)) 28px 56px)}
+html[data-inner] .mini .photo{border-radius:1px;box-shadow:inset 0 0 0 1px rgba(31,43,51,.35)}
+html[data-inner] .mini b{display:flex;align-items:center;gap:9px;padding:0 4px;font-size:17px;text-transform:uppercase;letter-spacing:.11em}
+html[data-inner] .mini b::before{content:"";flex:none;width:11px;height:11px;margin-top:-3px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);
+  background:radial-gradient(circle,#FBF8F0 0 1.6px,var(--k) 2.1px);box-shadow:0 0 0 1px var(--pin-ring)}
+html[data-inner] .mini a:hover b{color:var(--water)}
+html[data-inner] .mini small{margin:0;padding:6px 4px 0;border-top:1px dashed var(--line);font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:600}
+/* The second word of the name in the sidebar and Menu bar: purple (her pick, 21 Nov; was gold) */
+.brand b em,.topbar .brand-bar em{color:#5B4BB0}
+:root[data-mode="dark"] .brand b em,:root[data-mode="dark"] .topbar .brand-bar em{color:#B7A8F7}
