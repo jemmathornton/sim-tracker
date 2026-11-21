@@ -140,5 +140,4 @@ Everything waiting on you, in one place (it replaced the in-game checklist and t
 - **Decide:** Wording: EA's own typos in game bios (“convservation”, “The Roswell's”, American spellings like “Rumor”): leave word for word, or fix?
 - **Decide:** If an upload ever disappears from the Gallery, how should the site show it (hide it, or keep it marked as gone)?
 - **Decide:** Four household uploads aren't on any household yet: Spectra, Jameson (two copies) and Barnes. Where do they go (and which Jameson)?
-- **Decide:** Public on GitHub (your choice of a public repo): your to-do list and the refresh log (in site/js/admin-data.js) and Claude's notes (claude-notes/). Fine as is?
 - **Decide:** Going online: only if you ever want it on other devices (free and private with Cloudflare).

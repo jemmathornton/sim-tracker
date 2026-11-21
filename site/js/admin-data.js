@@ -789,11 +789,6 @@ window.ADMIN = {
 {
 "section": "Any time",
 "world": "",
-"text": "**Decide:** Public on GitHub (your choice of a public repo): your to-do list and the refresh log (in site/js/admin-data.js) and Claude's notes (claude-notes/). Fine as is?"
-},
-{
-"section": "Any time",
-"world": "",
 "text": "**Decide:** Going online: only if you ever want it on other devices (free and private with Cloudflare)."
 }
 ],
