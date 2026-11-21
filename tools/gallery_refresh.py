@@ -354,7 +354,7 @@ TRANSIENT = ('lock', 'fetch first', 'non-fast-forward', 'timed out', 'hung up', 
 
 
 def backup_push(root=None):
-    """Weekly backup (her ask, 19 Nov): push the main branch to her GitHub repo (origin, github.com/jemmathornton/sim-tracker,
+    """Weekly backup (her ask, 19 Nov): push the main branch to her GitHub repo (origin, github.com/jemmathornton/sim-world,
     public by her choice). Runs every week whether or not this run saved anything, so Claude's commits go too. Only main is
     pushed (never a worktree's claude/* branch). A push that fails for a passing reason (a lock left by the post-commit hook's
     own push, "fetch first", a dropped connection) is tried once more after a short wait. Never forces; a failure is only a
