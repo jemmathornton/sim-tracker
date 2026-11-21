@@ -21,7 +21,7 @@ test('every Community Space lot: a tab per version, each showing its own upload,
       await page.locator(`#view [data-ver="${i}"]`).click();
       await expect(page.locator(`#view [data-ver="${i}"]`)).toHaveAttribute('aria-selected', 'true');
       await expect(page.locator('#view .ver-tabs [aria-selected="true"]')).toHaveCount(1);
-      await expect(page.locator(`#view [data-ver="${i}"] .ver-txt`)).toContainText(`${v.likes} favourites · ${v.dls} downloads`);
+      await expect(page.locator(`#view [data-ver="${i}"] .ver-txt`)).toContainText(`${v.likes} favourite${v.likes === 1 ? '' : 's'} · ${v.dls} download${v.dls === 1 ? '' : 's'}`);
       await expect(page.locator(`#view [data-ver="${i}"] .ver-txt b`)).toHaveText(v.label);
       const card = page.locator('#view .gallery-card');
       await expect(card.locator('a[href^="http"]').first()).toHaveAttribute('href', v.url);                 // "View on the Gallery": this version's upload

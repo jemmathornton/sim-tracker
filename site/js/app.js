@@ -823,7 +823,7 @@ function listing(l){
   const cover = l.photos[0];
   return `<a class="listing" href="#${l.id}" style="--h:${l.hood.color}"><div class="photo ${cover?"shot":""}" ${cover?`data-lazy="--img" data-src="${cover.thumb}"`:""}>${cover ? "" : lotArt(l)}${unitCount(l) ? `<span class="nb-bubbles${unitCount(l) > 5 ? " many" : ""}">${rentalBubbles(l)}</span>` : ""}<span class="type">${unitCount(l) ? `Residential Rental · ${unitCount(l)} units` : esc(l.type || "Lot")}</span><span class="status">${statusDots(l)}</span>${sizeTxt(l.size) && !isApt(l) ? `<span class="size">${sizeTxt(l.size)}</span>` : ""}${cardPills(l)}</div>
     <h3>${esc(l.name)}</h3>
-    <div class="meta">${unitCount(l) ? rentalMeta(l) : l.hh ? `<span>${ic("users")}${hhLink(l.hh)}${l.hh.unsure?" (unsure)":""}</span>` : l.whoNote ? `<span>${ic("users")}${esc(emptyNote(l.whoNote))}</span>` : ""}${l.gallery ? `<span title="Downloads on the Sims 4 Gallery">${ic("share")}${l.gallery.downloads} downloads</span>` : ""}</div></a>`;
+    <div class="meta">${unitCount(l) ? rentalMeta(l) : l.hh ? `<span>${ic("users")}${hhLink(l.hh)}${l.hh.unsure?" (unsure)":""}</span>` : l.whoNote ? `<span>${ic("users")}${esc(emptyNote(l.whoNote))}</span>` : ""}${l.gallery ? `<span title="Downloads on the Sims 4 Gallery">${ic("share")}${countOf(l.gallery.downloads, "download")}</span>` : ""}</div></a>`;
 }
 
 function buildingCard(b){
@@ -938,7 +938,7 @@ function world(w){
     w.hoods.map(x => `<a href="#n-${x.id}">${esc(hoodTitle(x))}</a>`).join(""));
   h += worldAbout(w);   // weather and highlights first, small (her call, 19 Oct)
   h += `<section class="hood" style="--h:${w.color}"><div class="hood-head"><span class="label">Explore</span><div><h2>Neighbourhoods</h2><p>Open a neighbourhood to see its lots, then a home to meet the household living there.</p></div><a class="count" href="#f-${w.id}">All ${s.hh} households</a></div>
-    <div class="listings">${w.hoods.map(hoodCard).join("")}</div></section>`;
+    <div class="listings hoods">${w.hoods.map(hoodCard).join("")}</div></section>`;
   return h;
 }
 const SEASON_ICON = {Spring: "flower", Summer: "sun", Autumn: "leaf", Winter: "snowflake"}, CAL_SEASONS = ["Spring", "Summer", "Autumn", "Winter"];
@@ -1020,7 +1020,7 @@ function lot(l){
           ${l.gallery.packs?.length ? `<span class="label">Packs used</span><div class="packs">${l.gallery.packs.map(p => `<span>${esc(p)}</span>`).join("")}</div>` : `<span class="label">Packs used</span><div class="packs"><span>Base game only</span></div>`}
           ${l.gallery.old ? `<p class="g-old">${ic("note")}This Gallery upload is an older version of the build.</p>` : ""}
           <a class="gal-link" style="color:${textOn(l.hood.color)}" href="${esc(l.gallery.url)}" target="_blank" rel="noopener">View on the Gallery${l.gallery.others?.length ? ` · ${esc(l.gallery.label)}` : ""} ${ic("arrow")}</a>
-          ${l.gallery.others?.length ? `<span class="label">Other versions</span><ul class="g-others">${l.gallery.others.map(o => `<li><a href="${esc(o.url)}" target="_blank" rel="noopener"><b>${esc(o.label)}</b><small>${esc(o.title)} · ${o.likes} favourites · ${o.downloads} downloads</small></a></li>`).join("")}</ul>` : ""}
+          ${l.gallery.others?.length ? `<span class="label">Other versions</span><ul class="g-others">${l.gallery.others.map(o => `<li><a href="${esc(o.url)}" target="_blank" rel="noopener"><b>${esc(o.label)}</b><small>${esc(o.title)} · ${countOf(o.likes, "favourite")} · ${countOf(o.downloads, "download")}</small></a></li>`).join("")}</ul>` : ""}
           <small>Favourites, downloads and comments as of ${esc(l.gallery.checked)}</small></aside></div>`
       : `<div class="empty">${ic("note")}No notes yet.</div>`}</section>
     ${mates.length ? `<section class="block" style="--h:${hc}"><div class="block-head"><h2>Also in <em>${esc(l.building.name)}</em></h2></div><div class="mini">${mates.map(n => `<a href="#${n.id}" style="--h:${hc}"><div class="photo ${n.photos[0]?"shot":""}" ${n.photos[0]?`style="--img:url('${n.photos[0].thumb}')"`:""}>${n.photos[0] ? "" : lotArt(n)}</div><b>${esc(n.name)}</b><small>${esc([n.type, isApt(n) ? "" : sizeTxt(n.size)].filter(Boolean).join(" · "))}</small></a>`).join("")}</div></section>` : ""}
@@ -1061,6 +1061,8 @@ const saveSeen = () => { try { localStorage.setItem(SEEN_KEY, JSON.stringify(see
 const newSince = l => { if (!l.gallery) return null; const s = seen[l.id], [f, c] = seenNow(l);
   if (!s) return {fresh: true}; return f > s[0] || c > s[1] ? {f: Math.max(0, f - s[0]), c: Math.max(0, c - s[1])} : null; };
 const markSeen = l => { if (l.gallery) { seen[l.id] = seenNow(l); saveSeen(); } };
+// a count with its word, singular for one ("1 download", "2 downloads"; 21 Nov)
+const countOf = (n, one, many) => `${n} ${n === 1 ? one : many || one + "s"}`;
 const newTxt = n => n.fresh ? "New on the Gallery" : [n.f && `${n.f} new ${n.f === 1 ? "favourite" : "favourites"}`, n.c && `${n.c} new ${n.c === 1 ? "comment" : "comments"}`].filter(Boolean).join(", ");
 // a home with no household yet: bed-size planning notes just read "Empty" (bed counts live in the Gallery card)
 // dark text on light colours (Sulani yellow etc.), white on dark ones: whichever reads better
@@ -1090,7 +1092,7 @@ const OCCULT_ICON = {Spellcaster: "cauldron", Vampire: "bat", Werewolf: "ph-moon
 const lifeState = (s, cls) => isAnimal(s) ? `<span class="${cls} animal">${animalIcon(s)}${esc(s.state)}</span>` : `<span class="${cls} occult">${ic(OCCULT_ICON[s.state] || "sparkle")}${esc(s.state)}</span>`;
 function hhListing(x, listed){   // listed: on the households page, one-Sim households read surname first
   const n = simCount([x]), hc = x.lots[0].hood.color, made = simsMade(x);   // Sims only, as on world pages (15 Nov: animals were counted)
-  return `<a class="listing" href="#${x.id}" style="--h:${hc}"><div class="photo"><span class="initial">${initial(x.name)}</span><span class="type">Household</span><span class="status">${x.unsure ? `<span class="flag">unsure</span>` : ""}<span class="${made?"yes":""}" title="Sims made: ${made?"yes":"not yet"}">${ic("sim")}</span></span><span class="size">${esc(x.lots.map(l => l.name).join(" & "))}</span></div>
+  return `<a class="listing" href="#${x.id}" style="--h:${hc}"><div class="photo"><span class="initial">${initial(x.name)}</span><span class="type">Household</span><span class="status">${x.unsure ? `<span class="flag">unsure</span>` : ""}<span class="${made?"yes":""}" title="Sims made: ${made?"yes":"not yet"}">${ic("sim")}</span></span><span class="size home">${esc(x.lots.map(l => l.name).join(" & "))}</span></div>
     <h3>${esc(listed ? hhListName(x) : x.name)}</h3><p class="desc">${esc([...new Set(x.lots.map(l => l.hood.name))].join(", "))}</p>
     <div class="meta"><span class="${made?"made":""}">${ic("sim")}<b>${made ? "Sims made" : "Sims not made yet"}</b></span>${n ? `<span>${ic("users")}${n} Sim ${n===1?"profile":"profiles"}</span>` : ""}${x.links.length ? `<span>${ic("share")}${x.links.length} connected</span>` : ""}</div></a>`;
 }
@@ -1284,7 +1286,7 @@ function galleryBest(){
   const loved = ls.filter(l => l.gallery.downloads >= 50).sort((a, b) => b.gallery.likes / b.gallery.downloads - a.gallery.likes / a.gallery.downloads).slice(0, 8);
   const table = (title, head, rows) => `<div><span class="label">${title}</span><div class="sheet-wrap"><table class="sheet lots-sheet"><thead><tr><th scope="col">Build</th><th scope="col">World</th><th scope="col">${head}</th></tr></thead><tbody>${rows}</tbody></table></div></div>`;
   return `<div class="gal-best">${table("Most downloaded", "Downloads", most.map(l => row(l, l.gallery.downloads)).join(""))}
-    ${table("Most loved", "Favourites", loved.map(l => row(l, `${Math.round(100 * l.gallery.likes / l.gallery.downloads)}%<small> of ${l.gallery.downloads} downloads</small>`)).join(""))}</div>
+    ${table("Most loved", "Favourites", loved.map(l => row(l, `${Math.round(100 * l.gallery.likes / l.gallery.downloads)}%<small> of ${countOf(l.gallery.downloads, "download")}</small>`)).join(""))}</div>
     <p class="showing">Most loved: the share of downloads that also got a favourite, for builds with at least 50 downloads.</p>`;
 }
 // the latest comments other simmers left on her builds, 15 Oct
@@ -1380,7 +1382,7 @@ function route(){
   // keyboard users: the sidebar is redrawn, so put focus back on the link they chose
   if (navChosen) { document.querySelector("#nav a.cur, #nav a.path")?.focus({preventScroll: true}); navChosen = false; }
   window.scrollTo(0, 0);
-  document.body.classList.remove("nav-open");
+  if (document.body.classList.contains("nav-open")) setNav(false);
 }
 
 // Community Space lots: all four versions shown as equals (12 Oct). Each version has its own Gallery pictures, notes and stats.
@@ -1404,8 +1406,8 @@ if (!seen) { seen = {}; Object.values(lotIndex).forEach(l => { if (l.gallery) se
 function versionTabs(l){
   const tl = l.versions.reduce((n,v) => n + v.likes, 0), td = l.versions.reduce((n,v) => n + v.downloads, 0);
   return `<div class="versions" style="--h:${l.hood.color}"><span class="label">${l.versions.length} versions of this lot</span>
-    <div class="ver-tabs" role="tablist">${l.versions.map((v,i) => `<button type="button" role="tab" data-ver="${i}" aria-selected="${i===l.vi}" class="${i===l.vi?"on":""}"><span class="ver-pic" style="background-image:url('${v.photos[0].thumb}')"></span><span class="ver-txt"><b>${esc(v.label)}</b><small>${v.likes} favourites · ${v.downloads} downloads</small></span></button>`).join("")}</div>
-    <small class="ver-total">All ${l.versions.length} together: ${tl} favourites · ${td} downloads</small></div>`;
+    <div class="ver-tabs" role="tablist">${l.versions.map((v,i) => `<button type="button" role="tab" data-ver="${i}" aria-selected="${i===l.vi}" class="${i===l.vi?"on":""}"><span class="ver-pic" style="background-image:url('${v.photos[0].thumb}')"></span><span class="ver-txt"><b>${esc(v.label)}</b><small>${countOf(v.likes, "favourite")} · ${countOf(v.downloads, "download")}</small></span></button>`).join("")}</div>
+    <small class="ver-total">All ${l.versions.length} together: ${countOf(tl, "favourite")} · ${countOf(td, "download")}</small></div>`;
 }
 document.addEventListener("click", e => { const b = e.target.closest("[data-ver]"); if (!b) return; const l = lotIndex[location.hash.slice(1)]; if (!l || !l.versions) return;
   l.vi = +b.dataset.ver; applyVersion(l, l.vi); const y = scrollY, view = document.getElementById("view"); view.innerHTML = lot(l); afterDraw(location.hash.slice(1), view); window.scrollTo(0, y); document.querySelector(`[data-ver="${b.dataset.ver}"]`)?.focus(); });
@@ -1539,8 +1541,23 @@ document.getElementById("searchIco").innerHTML = ic("search");
 let navChosen = false;
 document.getElementById("nav").addEventListener("click", e => { if (e.target.closest("a[href^='#']") && e.detail === 0) navChosen = true; });   // a keyboard "click" (Enter) has detail 0
 addEventListener("hashchange", route);
-document.getElementById("menuBtn").addEventListener("click", () => document.body.classList.toggle("nav-open"));
-document.getElementById("scrim").addEventListener("click", () => document.body.classList.remove("nav-open"));
+// the phone's Worlds drawer (21 Nov): the button says whether it's open, a closed drawer can't be reached with Tab (inert),
+// opening it moves focus in, and Escape or the scrim closes it with focus back on the button
+const sideEl = document.getElementById("side"), menuBtn = document.getElementById("menuBtn"), phoneNav = matchMedia("(max-width:900px)");
+function setNav(open, focus){
+  const wasIn = sideEl.contains(document.activeElement);
+  document.body.classList.toggle("nav-open", open);
+  menuBtn.setAttribute("aria-expanded", String(open));
+  sideEl.inert = phoneNav.matches && !open;
+  if (open && focus) sideEl.querySelector("a,input")?.focus({preventScroll: true});
+  if (!open && phoneNav.matches && (focus || wasIn)) menuBtn.focus({preventScroll: true});
+}
+menuBtn.setAttribute("aria-controls", "side");
+menuBtn.addEventListener("click", () => setNav(!document.body.classList.contains("nav-open"), true));
+document.getElementById("scrim").addEventListener("click", () => setNav(false, true));
+addEventListener("keydown", e => { if (e.key === "Escape" && document.body.classList.contains("nav-open")) setNav(false, true); });
+phoneNav.addEventListener("change", () => setNav(false));
+setNav(false);
 // the "← Jemma’s Journals" link (index.html, 20 Nov): "/" is home once online; opened as a file from her PC, "/" would be
 // the C: drive, so it goes to her local copy of the home page instead (relative: Documents/SimTracker/site → Documents/JemmasJournals)
 const HOME_LOCAL = "../../JemmasJournals/concepts/index.html";

@@ -286,6 +286,9 @@ main{margin-left:var(--side);min-height:100vh;container-type:inline-size}   /* l
 .listing .photo{aspect-ratio:16/10}
 .listing .photo .size{left:12px;bottom:13px}
 .listing .photo .size::before,.listing .photo .size::after{width:14px}
+.photo .size.home{left:12px;bottom:12px}
+.photo .size.home::before,.photo .size.home::after{display:none}   /* a household card's home name: no lot-size brackets */
+.listings.hoods{grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}   /* neighbourhood cards: three to a row at 1600, as before 21 Nov */
 .listing .meta{display:flex;flex-wrap:wrap;gap:4px 14px;color:var(--muted)}
 .listing .meta span{display:inline-flex;align-items:center;gap:6px}
 .listing .meta b{color:var(--ink);font-weight:700}
@@ -636,7 +639,7 @@ footer .as-of{flex-basis:100%}
 .search-ico{position:absolute;left:25px;top:33px;transform:translateY(-50%);display:flex;color:var(--on-deep-mute);pointer-events:none}
 .search input{width:100%;padding:9px 12px 9px 36px;border-radius:4px;border:1px solid var(--side-field-line);background:var(--side-field);color:var(--on-deep);font:500 14px var(--body)}
 .search input::placeholder{color:var(--on-deep-mute)}
-.search input:focus{outline:none;border-color:var(--brass)}
+.search input:focus{outline:2px solid var(--brass);outline-offset:1px;border-color:var(--brass)}
 .nav a.hit{align-items:flex-start}
 .nav a.hit>span{display:grid;gap:1px;min-width:0}
 .nav a.hit b{font-weight:600}
@@ -859,12 +862,12 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 .membs{margin-top:18px}
 /* role badges, the same on trees and group pages: gold getting stronger with rank; outcasts grey (17 Oct) */
 .badge.r-head{background:var(--brass);color:#1A1F1C;border:1px solid var(--brass)}
-.badge.r-heir{background:color-mix(in srgb,var(--brass) 32%,var(--surface));color:#1A1F1C;border:1px solid var(--brass)}
-.badge.r-member{background:color-mix(in srgb,var(--brass) 5%,var(--surface));color:#1A1F1C;border:1px solid var(--brass)}
+.badge.r-heir{background:color-mix(in srgb,var(--brass) 32%,var(--surface));color:var(--ink);border:1px solid var(--brass)}
+.badge.r-member{background:color-mix(in srgb,var(--brass) 5%,var(--surface));color:var(--ink);border:1px solid var(--brass)}
 .badge.r-outcast{background:color-mix(in srgb,var(--muted) 12%,var(--surface));color:var(--muted);border:1px solid color-mix(in srgb,var(--muted) 70%,var(--surface))}
 /* club badges: silver, so they never read as dynasty roles (trial, 17 Oct) */
 .badge.c-leader{background:linear-gradient(#D9DDE0,#AEB5BA);color:#1A1F1C;border:1px solid #9AA2A8}
-.badge.c-member{background:color-mix(in srgb,#AEB5BA 22%,var(--surface));color:#1A1F1C;border:1px solid #9AA2A8}
+.badge.c-member{background:color-mix(in srgb,#AEB5BA 22%,var(--surface));color:var(--ink);border:1px solid #9AA2A8}
 .monogram.silver{color:#D3D8DC}   /* a club page’s flag: silver, as dynasty pages are gold (her ask, 19 Oct) */
 /* university organisation badges: the university's colour with its gold trim, as on the game's banners (dark purple for the secret society) */
 .badge.o-badge{background:var(--u);color:#fff;border:1.5px solid var(--t)}
@@ -887,7 +890,7 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 .nav-group.dim .subnav a.cur,.nav-group.dim .subnav a.path{opacity:1}
 .hero h1 .h1-sub{display:block;font-size:.42em;line-height:1.15;margin-top:.25em;font-style:italic;color:var(--on-deep-mute)}
 /* every map banner the same height (her request, 19 Oct): long titles a size smaller, descriptions at most three lines */
-.hero.mapped{height:min(62vh,560px);min-height:0}
+.hero.mapped{height:auto;min-height:min(62vh,560px)}   /* 21 Nov: the same height for every banner, but one with many neighbourhood tags grows instead of hiding its description */
 /* map banner titles in spaced capitals, like names on a plan (21 Nov); long ones a size smaller */
 .hero.mapped h1{font-size:clamp(48px,6.2vw,96px);line-height:.95;text-transform:uppercase;letter-spacing:.09em}
 .hero.mapped h1.long{font-size:clamp(40px,4.8vw,74px)}
@@ -922,8 +925,8 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 .cal .wchip{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:7px;padding:4px 11px;border-radius:99px;border:1.5px solid var(--line);background:var(--surface);font-size:12.5px;font-weight:600}
 .cal .wchip i{width:8px;height:8px;border-radius:50%;background:var(--h)}
 .cal .wchip:hover{border-color:color-mix(in srgb,var(--h,var(--ink)) 60%,var(--line))}
-.cal .wchip.on{background:var(--h,var(--ink));border-color:var(--h,var(--ink));color:var(--on,#fff)}
-.cal .wchip.on i{background:var(--on,#fff)}
+.cal .wchip.on{background:var(--h,var(--ink));border-color:var(--h,var(--ink));color:var(--on,var(--paper))}
+.cal .wchip.on i{background:var(--on,var(--paper))}
 .cal .wchip:focus-visible{outline:2px solid var(--brass)}
 .cal .week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px}
 .cal .day{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 8px 12px;display:grid;align-content:start;gap:6px;min-height:180px}
@@ -1041,7 +1044,7 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 .cal a.m-ev{text-decoration:none;color:inherit;display:flex}
 .cal a.m-ev:hover span{text-decoration:underline}
 .cal a.wchip{color:inherit}
-.cal a.wchip.on{color:var(--on,#fff)}
+.cal a.wchip.on{color:var(--on,var(--paper))}
 /* world pages: a "What's on" line in the strip under the banner */
 a.fest-link{color:inherit;text-decoration-color:var(--line);text-underline-offset:3px}
 /* admin */
