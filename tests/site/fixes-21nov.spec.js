@@ -56,7 +56,7 @@ test('phone drawer: focus stays inside, the page behind doesn’t scroll, Escape
   expect(await page.evaluate(() => document.getElementById('main').inert)).toBe(true);
   for (let i = 0; i < 40; i++) {
     await page.keyboard.press('Tab');
-    expect(await page.evaluate(() => !!document.activeElement.closest('#side, .topbar')), `Tab ${i + 1}`).toBe(true);
+    expect(await page.evaluate(() => !!document.activeElement.closest('#side')), `Tab ${i + 1}`).toBe(true);   // the top bar is inert too (family rules)
   }
   const y0 = await page.evaluate(() => scrollY);
   await page.mouse.move(360, 500); await page.mouse.wheel(0, 600); await page.waitForTimeout(300);   // a swipe on the page behind

@@ -9,7 +9,7 @@ const theme = page => page.evaluate(() => document.querySelector('meta[name="the
 test('opens light with the device set to dark; the button switches, saves jj-mode, changes the bar colour, and a reload keeps it', async ({ page }) => {
   await page.emulateMedia({ colorScheme: 'dark' });
   await openApp(page);
-  expect(await page.evaluate(() => [document.documentElement.getAttribute('data-mode'), localStorage.getItem('jj-mode')])).toEqual([null, null]);
+  expect(await page.evaluate(() => [document.documentElement.getAttribute('data-mode'), localStorage.getItem('jj-mode')])).toEqual(['light', null]);
   expect(await theme(page)).toBe('#EEEAF2');
   await expect(page.locator('#modeBtn')).toHaveAttribute('aria-pressed', 'false');
   await page.click('#modeBtn');
@@ -24,7 +24,7 @@ test('opens light with the device set to dark; the button switches, saves jj-mod
   await page.evaluate(() => localStorage.setItem('jj-mode', 'light'));
   await page.reload();
   await page.waitForFunction(() => document.querySelector('#view').innerHTML.length > 0);
-  expect(await page.evaluate(() => document.documentElement.getAttribute('data-mode'))).toBeNull();
+  expect(await page.evaluate(() => document.documentElement.getAttribute('data-mode'))).toBe('light');
   await expect(page.locator('#modeBtn .txt')).toHaveText('Dark mode');
 });
 
@@ -95,13 +95,17 @@ test('the drawer: button, Escape, scrim and a link close it; focus goes in and b
   const open = () => page.evaluate(() => document.body.classList.contains('nav-open'));
   const inSide = () => page.evaluate(() => document.getElementById('side').contains(document.activeElement));
   const focusId = () => page.evaluate(() => document.activeElement.id);
-  // the button opens it (and, reached with Tab, closes it again: the open drawer covers it on screen)
+  // the button opens it; while open, everything outside it is inert (the top bar it covers too: no hidden focus stops)
   await page.click('#menuBtn');
   expect([await open(), await inSide()]).toEqual([true, true]);
-  expect(await page.evaluate(() => [document.getElementById('main').inert, getComputedStyle(document.documentElement).overflow])).toEqual([true, 'hidden']);
-  await page.locator('#menuBtn').focus(); await page.keyboard.press('Enter');
+  expect(await page.evaluate(() => [document.getElementById('main').inert, document.querySelector('.topbar').inert, getComputedStyle(document.documentElement).overflow])).toEqual([true, true, 'hidden']);
+  for (const key of ['Tab', 'Shift+Tab']) for (let i = 0; i < 30; i++) {
+    await page.keyboard.press(key);
+    expect(await inSide(), `${key} ${i + 1}`).toBe(true);
+  }
+  await page.keyboard.press('Escape');
   expect([await open(), await focusId()]).toEqual([false, 'menuBtn']);
-  expect(await page.evaluate(() => document.getElementById('side').inert)).toBe(true);
+  expect(await page.evaluate(() => [document.getElementById('side').inert, document.querySelector('.topbar').inert])).toEqual([true, false]);
   // Escape
   await page.click('#menuBtn'); await page.keyboard.press('Escape');
   expect([await open(), await focusId()]).toEqual([false, 'menuBtn']);
@@ -120,4 +124,81 @@ test('the drawer: button, Escape, scrim and a link close it; focus goes in and b
   await expect.poll(open).toBe(false);
   expect(await page.evaluate(() => [document.getElementById('side').inert, document.getElementById('main').inert,
     document.documentElement.classList.contains('nav-lock'), document.getElementById('menuBtn').getAttribute('aria-expanded')])).toEqual([false, false, false, 'false']);
+});
+
+// second review (21 Nov evening) and the tightened family rules (sections 2–4)
+test('opening the drawer starts on the current page’s link (Home if the page has none), never on “← Jemma’s Journals”', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await openApp(page);
+  const start = async () => { await page.click('#menuBtn'); const h = await page.evaluate(() => document.activeElement.getAttribute('href')); await page.keyboard.press('Escape'); return h; };
+  expect(await start()).toBe('#home');
+  const w = await page.evaluate(() => worlds.find(x => x.ready && x.owned).id);
+  for (const k of ['calendar', 'w-' + w]) { await go(page, k); expect(await start(), k).toBe('#' + k); }
+  await go(page, 'no-such-page');
+  expect(await start()).toBe('#home');
+});
+
+test('family sizes and small things: Menu button 44px, bar name 26px, scrim 45% black, back link 24px, robots meta, data-mode always set', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await openApp(page);
+  await page.click('#menuBtn');
+  const r = await page.evaluate(() => ({ btn: document.getElementById('menuBtn').getBoundingClientRect().height,
+    name: getComputedStyle(document.querySelector('.topbar .brand-bar')).fontSize, scrim: getComputedStyle(document.getElementById('scrim')).backgroundColor,
+    back: document.querySelector('.home-link').getBoundingClientRect().height, robots: document.querySelector('meta[name="robots"]')?.content,
+    mode: document.documentElement.getAttribute('data-mode') }));
+  expect(r.btn).toBeGreaterThanOrEqual(44);
+  expect(r.name).toBe('26px');
+  expect(r.scrim).toBe('rgba(0, 0, 0, 0.45)');
+  expect(r.back).toBeGreaterThanOrEqual(24);
+  expect([r.robots, r.mode]).toEqual(['noindex, noai, noimageai', 'light']);
+});
+
+test('footer credits: a “·” never starts or ends a line, at any laptop width; 12.5px on phones too', async ({ page }) => {
+  await openApp(page);
+  for (const width of [1600, 1440, 1280, 1100, 1024, 950, 901, 800, 701]) {
+    await page.setViewportSize({ width, height: 800 });
+    await page.waitForTimeout(200);
+    const bad = await page.evaluate(() => [...document.querySelectorAll('.about-site .sep')].filter(s => getComputedStyle(s).visibility !== 'hidden').filter(s => {
+      const t = s.getBoundingClientRect(), prev = s.previousElementSibling.getBoundingClientRect(), next = s.nextElementSibling.getBoundingClientRect();
+      return Math.abs(prev.bottom - t.bottom) > 3 || Math.abs(next.bottom - t.bottom) > 3; }).map(s => s.nextElementSibling.textContent));
+    expect(bad, `${width}px`).toEqual([]);
+  }
+  await page.setViewportSize({ width: 390, height: 844 });
+  expect(await page.evaluate(() => [...document.querySelectorAll('.site-foot .about-site p')].map(p => getComputedStyle(p).fontSize))).toEqual(['12.5px', '12.5px']);
+});
+
+test('second review: no sideways scroll on Community Space lots just over 900px; white focus ring on map banners; Secret Lots has no “0 of 0”', async ({ page }) => {
+  await openApp(page);
+  const cs = await page.evaluate(() => Object.values(lotIndex).find(l => l.versions && l.versions.length > 1).id);
+  for (const width of [901, 920, 955]) {
+    await page.setViewportSize({ width, height: 800 });
+    await go(page, cs);
+    expect(await page.evaluate(() => document.documentElement.scrollWidth - innerWidth), `${width}px`).toBeLessThanOrEqual(0);
+  }
+  await page.setViewportSize({ width: 1280, height: 800 });
+  await go(page, 'w-britechester');
+  const ring = await page.evaluate(() => { const a = document.querySelector('.hero.mapped a[href], .hero.mapped button'); a.focus(); return getComputedStyle(a).outlineColor; });
+  expect(ring).toBe('rgb(255, 255, 255)');
+  await go(page, 'w-strangerville');
+  expect(await page.locator('#view').innerText()).not.toMatch(/\b0 of 0\b/);
+});
+
+test('second review: Gallery buttons and gold badges read at 4.5:1; phone banners put four figures 2 × 2; household Sims stack on a phone', async ({ page }) => {
+  await openApp(page);
+  const contrast = () => page.evaluate(() => {
+    const lum = c => { const k = c.startsWith('color(') ? 1 : 255, m = c.match(/[\d.]+/g).map(Number); return m.slice(0, 3).map(v => { v /= k; return v <= .03928 ? v / 12.92 : Math.pow((v + .055) / 1.055, 2.4); }).reduce((s, v, i) => s + v * [.2126, .7152, .0722][i], 0); };
+    return [...document.querySelectorAll('.gal-link, .badge.r-head, .badge.o-badge')].map(el => { const st = getComputedStyle(el), a = lum(st.color), b = lum(st.backgroundColor);
+      return +((Math.max(a, b) + .05) / (Math.min(a, b) + .05)).toFixed(2); });
+  });
+  const keys = await page.evaluate(() => [...Object.values(lotIndex).filter(l => l.gallery).map(l => l.id), ...Object.keys(GROUP_PAGES).filter(k => /org|dyn/.test(k)).slice(0, 12)]);
+  let seen = 0;
+  for (const k of keys) { await go(page, k); const c = await contrast(); seen += c.length; for (const x of c) expect(x, k).toBeGreaterThanOrEqual(4.5); }
+  expect(seen).toBeGreaterThan(20);
+  await page.setViewportSize({ width: 390, height: 844 });
+  await go(page, 'w-willow-creek');
+  const rows = await page.evaluate(() => new Set([...document.querySelectorAll('.hero .figures > div')].map(d => Math.round(d.getBoundingClientRect().top))).size);
+  expect(rows).toBe(2);
+  await go(page, 'h-willow-creek--goth');
+  const r = await page.evaluate(() => { const t = document.querySelector('.roster'); return [t.getBoundingClientRect().width <= innerWidth, t.closest('.sheet-wrap').scrollWidth <= t.closest('.sheet-wrap').clientWidth]; });
+  expect(r).toEqual([true, true]);
 });

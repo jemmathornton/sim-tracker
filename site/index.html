@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en-GB">
+<html lang="en-GB" data-mode="light">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -17,11 +17,13 @@
 <link rel="icon" href="icon.png?v=plumbob10" sizes="512x512" type="image/png">
 <link rel="apple-touch-icon" href="icon.png?v=plumbob10">
 <meta name="theme-color" content="#EEEAF2">
+<!-- kept out of search engines and AI crawlers (her decision 20 Nov; family rules) -->
+<meta name="robots" content="noindex, noai, noimageai">
 <!-- light or dark (21 Nov 2026, the family rules shared by all her sites): always opens light, dark only once she presses "Dark mode" at the
      bottom of a page; the choice is remembered in localStorage "jj-mode", one key for every site (the old "jsw-mode" is moved over once).
-     Set here, before the page is drawn, so it never flashes. -->
-<script>try{var m=localStorage.getItem("jj-mode");if(m===null){m=localStorage.getItem("jsw-mode");if(m)localStorage.setItem("jj-mode",m)}localStorage.removeItem("jsw-mode");if(m==="dark"){document.documentElement.setAttribute("data-mode","dark");document.querySelector('meta[name="theme-color"]').setAttribute("content","#1B1524")}}catch(e){}</script>
-<link rel="stylesheet" href="site.css?v=6d0b8eb2">
+     Set here, before the page is drawn, so it never flashes; data-mode is always "light" or "dark" (family rules). -->
+<script>try{var m=localStorage.getItem("jj-mode");if(m===null){m=localStorage.getItem("jsw-mode");if(m)localStorage.setItem("jj-mode",m)}localStorage.removeItem("jsw-mode");m=m==="dark"?"dark":"light";document.documentElement.setAttribute("data-mode",m);if(m==="dark")document.querySelector('meta[name="theme-color"]').setAttribute("content","#1B1524")}catch(e){document.documentElement.setAttribute("data-mode","light")}</script>
+<link rel="stylesheet" href="site.css?v=51e8cbe6">
 </head>
 <body>
 <div class="topbar"><button id="menuBtn" type="button"><span id="menuIco"></span>Menu</button><a class="brand-bar" href="#home">Jemma’s <em>Sim World</em></a></div>
@@ -38,13 +40,13 @@
        (line 1 the same on every site; line 2 Sim World's own credits), then Back to top and Dark/Light mode; js/app.js fills the icons and wires them -->
   <footer class="site-foot"><div class="foot-rule" aria-hidden="true"><span class="dot"></span></div><b class="foot-name">Jemma’s Sim World</b>
     <div class="about-site"><p>No cookies, no tracking, no ads. Made with plain HTML and CSS, kept on GitHub.</p>
-      <p><span class="cr">World maps by 20th Century Plumbob</span> <span class="sep" aria-hidden="true">·</span> <span class="cr">Screenshots and Gallery pictures are my own</span> <span class="sep" aria-hidden="true">·</span> <span class="cr">Ancestors’ portraits from the game</span> <span class="sep" aria-hidden="true">·</span> <span class="cr">Fonts: Instrument Serif and Manrope</span> <span class="sep" aria-hidden="true">·</span> <span class="cr">Icons by Lucide, Lucide Lab, Tabler and Phosphor</span></p></div>
+      <p><span class="cr">World maps by 20th Century Plumbob</span><span class="sep" aria-hidden="true">&nbsp;·</span> <span class="cr">Screenshots and Gallery pictures are my own</span><span class="sep" aria-hidden="true">&nbsp;·</span> <span class="cr">Ancestors’ portraits from the game</span><span class="sep" aria-hidden="true">&nbsp;·</span> <span class="cr">Fonts: Instrument Serif and Manrope</span><span class="sep" aria-hidden="true">&nbsp;·</span> <span class="cr">Icons by Lucide, Lucide Lab, Tabler and Phosphor</span></p></div>
     <div class="foot-links"><button type="button" class="totop" id="toTop"><span class="ico"></span>Back to top</button><button type="button" class="mode-text" id="modeBtn" aria-pressed="false"><span class="ico"></span><span class="txt">Dark mode</span></button></div></footer>
 </main>
 
 <script src="js/icons.js?v=449d1949"></script>
 <script src="js/data.js?v=f69dc43a"></script>
-<script src="js/app.js?v=0d35049c"></script>
+<script src="js/app.js?v=1066b30c"></script>
 <!-- Admin pages' extra data (made by tools/admin_data.py): for Jemma's PC only, never upload js/admin-data.js if the site goes online -->
 <script src="js/admin-data.js?v=0bca35d9"></script>
 <script src="js/sections.js?v=d1541500"></script>

@@ -928,12 +928,13 @@ const hoodHouseholds = x => [...new Set(x.lots.flatMap(l => unitCount(l) ? renta
 // there) or the Secret Lots groups
 const ecoOf = x => x.ecoStart || (x.world.id === "strangerville" || /secret lots/i.test(x.name) ? "" : "Neutral");
 function hoodCard(x){
-  const hhSet = hoodHouseholds(x), hh = hhSet.length, built = x.lots.filter(l => l.built === true).length, made = hhSet.filter(simsMade).length;
+  const hhSet = hoodHouseholds(x), hh = hhSet.length, built = x.lots.filter(l => l.built === true).length, made = hhSet.filter(simsMade).length, nb = buildable(x.lots).length;
+  const meta = [nb ? `<span>${ic("hammer")}<b>${built} of ${nb}</b> lots built</span>` : "", hh ? `<span>${ic("sim")}<b>${made} of ${hh}</b> with Sims made</span>` : ""].join("");   // no "0 of 0" (StrangerVille's Secret Lots can't be built)
   return `<a class="listing" href="#n-${x.id}" style="--h:${x.color}">${hoodArt(x)}
     <h3>${esc(((NB_BANNER[x.world.id] || {})[x.name] || {}).title || x.name)}</h3>${x.desc ? `<p class="desc">${esc(x.desc)}</p>` : ""}
     ${hh ? `<p class="home-to">${ic("users")}<span>Home to ${hhSet.map(f => `<b>${esc(f.name)}</b>`).join(", ")}</span></p>` : `<p class="home-to">${ic("pin")}<span>Community lots only</span></p>`}
     ${hoodExtras(x)}
-    <div class="meta"><span>${ic("hammer")}<b>${built} of ${buildable(x.lots).length}</b> lots built</span>${hh ? `<span>${ic("sim")}<b>${made} of ${hh}</b> with Sims made</span>` : ""}</div></a>`;
+    ${meta ? `<div class="meta">${meta}</div>` : ""}</a>`;
 }
 function world(w){
   const s = w.stats;
@@ -1022,7 +1023,7 @@ function lot(l){
           <dl><div><dt>Value</dt><dd>${esc(l.gallery.value)}</dd></div><div><dt>Favourites</dt><dd>${l.gallery.likes}</dd></div><div><dt>Downloads</dt><dd>${l.gallery.downloads}</dd></div>${l.gallery.beds ? `<div><dt>Bedrooms</dt><dd>${l.gallery.beds}</dd></div>` : ""}${l.gallery.baths ? `<div><dt>Bathrooms</dt><dd>${l.gallery.baths}</dd></div>` : ""}<div><dt>Comments</dt><dd>${l.gallery.comments || 0}</dd></div>${l.gallery.shared ? `<div><dt>Shared</dt><dd>${esc(l.gallery.shared)}</dd></div>` : ""}</dl>
           ${l.gallery.packs?.length ? `<span class="label">Packs used</span><div class="packs">${l.gallery.packs.map(p => `<span>${esc(p)}</span>`).join("")}</div>` : `<span class="label">Packs used</span><div class="packs"><span>Base game only</span></div>`}
           ${l.gallery.old ? `<p class="g-old">${ic("note")}This Gallery upload is an older version of the build.</p>` : ""}
-          <a class="gal-link" style="color:${textOn(l.hood.color)}" href="${esc(l.gallery.url)}" target="_blank" rel="noopener">View on the Gallery${l.gallery.others?.length ? ` · ${esc(l.gallery.label)}` : ""} ${ic("arrow")}</a>
+          <a class="gal-link" style="${galColours(l.hood.color)}" href="${esc(l.gallery.url)}" target="_blank" rel="noopener">View on the Gallery${l.gallery.others?.length ? ` · ${esc(l.gallery.label)}` : ""} ${ic("arrow")}</a>
           ${l.gallery.others?.length ? `<span class="label">Other versions</span><ul class="g-others">${l.gallery.others.map(o => `<li><a href="${esc(o.url)}" target="_blank" rel="noopener"><b>${esc(o.label)}</b><small>${esc(o.title)} · ${countOf(o.likes, "favourite")} · ${countOf(o.downloads, "download")}</small></a></li>`).join("")}</ul>` : ""}
           <small>Favourites, downloads and comments as of ${esc(l.gallery.checked)}</small></aside></div>`
       : `<div class="empty">${ic("note")}No notes yet.</div>`}</section>
@@ -1080,6 +1081,17 @@ function initialsContrast(root){
 }
 function textOn(hex){ const c = (hex || "#000").replace("#",""), L = [0,2,4].map(i => { const v = parseInt(c.slice(i,i+2),16)/255; return v <= .03928 ? v/12.92 : Math.pow((v+.055)/1.055, 2.4); }), Y = .2126*L[0] + .7152*L[1] + .0722*L[2];
   return (1.05)/(Y+.05) >= (Y+.05)/(.0185+.05) ? "#fff" : "#1A1F1C"; }
+// "View on the Gallery" buttons (21 Nov, second review): the neighbourhood's colour with white or dark words, whichever reads better; a
+// middling colour where neither reaches 4.5:1 is taken a little darker (white words) or lighter (dark words) until it does
+function galColours(hex){
+  const rgb = h => [0,2,4].map(i => parseInt((h || "#000").replace("#","").slice(i,i+2),16));
+  const lum = c => { const L = c.map(v => { v /= 255; return v <= .03928 ? v/12.92 : Math.pow((v+.055)/1.055, 2.4); }); return .2126*L[0] + .7152*L[1] + .0722*L[2]; };
+  const fg = textOn(hex), white = fg === "#fff", to = white ? 0 : 255, ink = lum(white ? [255,255,255] : rgb("#1A1F1C"));
+  let c = rgb(hex);
+  const ratio = () => { const a = lum(c), b = ink; return (Math.max(a,b)+.05)/(Math.min(a,b)+.05); };
+  for (let k = 0; k < 20 && ratio() < 4.6; k++) c = c.map(v => Math.round(v + (to - v) * .04));
+  return `color:${fg};background:rgb(${c.join(",")})`;
+}
 const emptyNote = n => /bed|empty/i.test(n) ? "Empty" : n;
 const simsMade = x => x.lots.some(l => l.sims === true);
 const simCount = hhs => hhs.reduce((n, x) => n + x.sims.filter(sm => !isAnimal(sm)).length, 0);
@@ -1167,14 +1179,14 @@ function simRoster(ids){
         job = [(s.career || stayAtHome(s)).split(" · ")[0], sch].filter(Boolean).join(" · ");   // a job and a school both show, with the grade (her ask, 24 Oct)
       return `<tr><td><span class="who"><span class="mono">${initial(s.name)}</span><a href="#s-${id}">${esc(s.name)}</a></span></td>
         <td>${s.state ? lifeState(s, "state") : `<span class="state">${ic("sim")}Human</span>`}</td><td>${esc(s.age)}</td>
-        <td class="tlist">${s.traits && s.traits.length ? esc(s.traits.join(", ")) : `<span class="muted">—</span>`}</td><td>${job ? esc(job) : `<span class="muted">—</span>`}</td></tr>`; }).join("")}</tbody></table></div>`;
+        <td class="tlist" data-label="Traits">${s.traits && s.traits.length ? esc(s.traits.join(", ")) : `<span class="muted">—</span>`}</td><td data-label="Career or school">${job ? esc(job) : `<span class="muted">—</span>`}</td></tr>`; }).join("")}</tbody></table></div>`;
 }
 function animalRoster(ids){
   return `<div class="sheet-wrap"><table class="sheet roster animals"><thead><tr><th scope="col">Name</th><th scope="col">Animal</th><th scope="col">Life stage</th><th scope="col">Traits</th><th scope="col">Breed</th></tr></thead><tbody>
     ${ids.map(id => { const s = SIMS[id], dash = `<span class="muted">—</span>`;
       return `<tr><td><span class="who"><span class="mono">${initial(s.name)}</span><a href="#s-${id}">${esc(s.name)}</a>${isChampion(s) ? `<span class="champ small" title="Champion">${ic("ph-trophy")}</span>` : ""}</span></td>
-        <td><span class="state animal">${animalIcon(s)}${esc(s.state)}</span></td><td>${esc(stageOf(s) || "")}</td><td class="tlist">${s.traits && s.traits.length ? esc(s.traits.join(", ")) : dash}</td>
-        <td>${s.breed ? esc(s.breed) : dash}</td></tr>`; }).join("")}</tbody></table></div>`;
+        <td><span class="state animal">${animalIcon(s)}${esc(s.state)}</span></td><td>${esc(stageOf(s) || "")}</td><td class="tlist" data-label="Traits">${s.traits && s.traits.length ? esc(s.traits.join(", ")) : dash}</td>
+        <td data-label="Breed">${s.breed ? esc(s.breed) : dash}</td></tr>`; }).join("")}</tbody></table></div>`;
 }
 function householdNew(hh){
   const w = hh.world, home1 = hh.lots[0], hc = home1.hood.color, all = membersOf(hh), ids = byAge(all.filter(id => !isAnimal(SIMS[id]))), pets = all.filter(id => isAnimal(SIMS[id])), n = ids.length, hoods = [...new Set(hh.lots.map(l => l.hood))];
@@ -1215,7 +1227,7 @@ function hhGallery(hh, hc){
     <aside class="gallery-card"><span class="label">On the Sims 4 Gallery</span>
       <dl><div><dt>Favourites</dt><dd>${g.likes}</dd></div><div><dt>Downloads</dt><dd>${g.downloads}</dd></div><div><dt>Comments</dt><dd>${g.comments || 0}</dd></div>${g.shared ? `<div><dt>Shared</dt><dd>${esc(g.shared)}</dd></div>` : ""}</dl>
       ${g.packs?.length ? `<span class="label">Packs used</span><div class="packs">${g.packs.map(p => `<span>${esc(p)}</span>`).join("")}</div>` : `<span class="label">Packs used</span><div class="packs"><span>Base game only</span></div>`}
-      <a class="gal-link" style="color:${textOn(hc)}" href="${esc(g.url)}" target="_blank" rel="noopener">View on the Gallery ${ic("arrow")}</a>
+      <a class="gal-link" style="${galColours(hc)}" href="${esc(g.url)}" target="_blank" rel="noopener">View on the Gallery ${ic("arrow")}</a>
       <small>Favourites, downloads and comments as of ${esc(g.checked)}</small></aside></div></section>`;
 }
 
@@ -1559,26 +1571,34 @@ addEventListener("hashchange", scrollBack);
 // the phone's Menu drawer (21 Nov; family rules): the button says whether it's open, a closed drawer can't be reached with Tab (inert),
 // opening it moves focus in, and Escape or the scrim closes it with focus back on the button
 const sideEl = document.getElementById("side"), menuBtn = document.getElementById("menuBtn"), phoneNav = matchMedia("(max-width:900px)");
+// where focus starts in the opened drawer: the current page's own link, or Home if the page has none; never "← Jemma's Journals"
+// (her call 21 Nov: one Enter shouldn't leave the site; now the family rule)
+function drawerStart(){
+  const here = location.hash && location.hash !== "#" ? location.hash : "#home";
+  const mine = [...sideEl.querySelectorAll("#nav a[href]")].find(a => a.getAttribute("href") === here && a.getClientRects().length);
+  return mine || sideEl.querySelector('.nav-group a[href="#home"]') || sideEl.querySelector("#nav a,input");
+}
 function setNav(open, focus){
   const wasIn = sideEl.contains(document.activeElement);
   document.body.classList.toggle("nav-open", open);
   menuBtn.setAttribute("aria-expanded", String(open));
   sideEl.inert = phoneNav.matches && !open;
-  // while it's open on a phone, the page behind can't be reached with Tab or scrolled (focus stays in the drawer and the top bar's button)
+  // while it's open on a phone, everything outside it (the top bar, which it covers, and the page) can't be reached with Tab or scrolled,
+  // so focus stays inside the drawer (family rules, tightened 21 Nov after the second review); Escape and the scrim still close it
   const lock = phoneNav.matches && open;
-  document.querySelectorAll("body > *:not(#side):not(.topbar):not(#scrim):not(script)").forEach(el => { el.inert = lock; });
+  document.querySelectorAll("body > *:not(#side):not(#scrim):not(script)").forEach(el => { el.inert = lock; });
   document.documentElement.classList.toggle("nav-lock", lock);
-  if (open && focus) (sideEl.querySelector('.nav-group a[href="#home"]') || sideEl.querySelector("a,input"))?.focus({preventScroll: true});   // starts on Home, not "← Jemma's Journals" (her call 21 Nov: one Enter shouldn't leave the site)
+  if (open && focus) drawerStart()?.focus({preventScroll: true});
   if (!open && phoneNav.matches && (focus || wasIn)) menuBtn.focus({preventScroll: true});
 }
 menuBtn.setAttribute("aria-controls", "side");
 menuBtn.addEventListener("click", () => setNav(!document.body.classList.contains("nav-open"), true));
 document.getElementById("scrim").addEventListener("click", () => setNav(false, true));
 addEventListener("keydown", e => { if (e.key === "Escape" && document.body.classList.contains("nav-open")) setNav(false, true); });
-// Tab wraps round inside the open drawer (the Menu button, then the drawer's links), so focus never leaves it for the browser's own bar
+// Tab wraps round inside the open drawer (its own links only: the Menu button is under it and inert), so focus never leaves it for the browser's own bar
 addEventListener("keydown", e => {
   if (e.key !== "Tab" || !phoneNav.matches || !document.body.classList.contains("nav-open")) return;
-  const all = [menuBtn, ...sideEl.querySelectorAll('a[href],button,input,select,[tabindex]:not([tabindex="-1"])')].filter(el => !el.disabled && el.getClientRects().length);
+  const all = [...sideEl.querySelectorAll('a[href],button,input,select,[tabindex]:not([tabindex="-1"])')].filter(el => !el.disabled && el.getClientRects().length);
   const k = all.indexOf(document.activeElement), last = all.length - 1;
   if (e.shiftKey ? k <= 0 : k === last || k < 0) { e.preventDefault(); all[e.shiftKey ? last : 0].focus(); }
 });
@@ -1605,6 +1625,17 @@ modeBtn.addEventListener("click", () => {
 showMode();
 // another window of the site switched mode: follow it
 addEventListener("storage", e => { if (e.key !== MODE_KEY) return; document.documentElement.setAttribute("data-mode", e.newValue === "dark" ? "dark" : "light"); showMode(); });
+// footer credits (family rules): each "·" is glued to the credit before it (a no-break space), so it never starts a line; one that would end
+// a line is hidden instead, so it never ends one either (checked again whenever the footer's width changes)
+const credits = document.querySelector(".about-site p:last-child");
+function tidyCredits(){
+  credits.querySelectorAll(".sep").forEach(s => {
+    s.style.visibility = "";
+    const next = s.nextElementSibling;
+    if (next && s.getClientRects().length && next.getBoundingClientRect().top > s.getBoundingClientRect().bottom - 4) s.style.visibility = "hidden";
+  });
+}
+if (credits) { new ResizeObserver(tidyCredits).observe(credits); document.fonts?.ready.then(tidyCredits); }
 document.querySelector("#toTop .ico").innerHTML = ic("arrow-up");
 document.getElementById("toTop").addEventListener("click", () => {
   window.scrollTo({top: 0, behavior: SMOOTH()});

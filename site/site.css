@@ -195,7 +195,7 @@ em{font-style:italic}
 .side{position:fixed;inset:0 auto 0 0;width:var(--side);background:var(--side-plan) 0 0/196px 294px repeat,var(--nav);--on-deep:var(--side-ink);--on-deep-mute:var(--side-mute);
   color:var(--on-deep);border-right:1px solid var(--neat);display:flex;flex-direction:column;z-index:20;padding-top:env(safe-area-inset-top,0px)}
 /* small way back to Jemma’s Journals at the very top of the sidebar (and so of the phone's Worlds drawer); subtle, under the brand in weight (20 Nov) */
-.home-link{align-self:flex-start;margin:14px 0 0 20px;padding:2px 4px;font:600 10px/1.4 var(--body);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--on-deep-mute);border-radius:4px}
+.home-link{align-self:flex-start;margin:10px 0 0 20px;padding:6px 4px;min-height:24px;font:600 10px/1.4 var(--body);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--on-deep-mute);border-radius:4px}
 .home-link:hover,.home-link:focus-visible{color:var(--on-deep)}
 .home-link:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
 .brand{display:block;padding:14px 24px 22px;text-decoration:none;border-bottom:1px solid var(--side-rule)}
@@ -610,8 +610,8 @@ i.nb-none svg.i{width:30%;height:auto;color:rgba(255,255,255,.6)}
 .notfound a:hover{border-color:var(--ink)}.notfound a svg{width:16px;height:16px}
 /* Community Space versions */
 .versions{margin-top:22px;display:grid;gap:8px}
-.ver-tabs{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.ver-tabs button{all:unset;cursor:pointer;display:flex;align-items:center;gap:10px;padding:8px 12px 8px 8px;border-radius:14px;border:1.5px solid var(--line);background:var(--surface);transition:border-color .15s,box-shadow .15s}
+.ver-tabs{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}   /* two across, one when the column is narrow (901–955px had sideways scroll, 21 Nov) */
+.ver-tabs button{all:unset;min-width:0;cursor:pointer;display:flex;align-items:center;gap:10px;padding:8px 12px 8px 8px;border-radius:14px;border:1.5px solid var(--line);background:var(--surface);transition:border-color .15s,box-shadow .15s}
 .ver-tabs button:hover{border-color:color-mix(in srgb,var(--h) 60%,var(--line))}
 .ver-tabs button.on{border-color:var(--h);box-shadow:0 0 0 3px color-mix(in srgb,var(--h) 22%,transparent)}
 .ver-tabs button:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
@@ -622,13 +622,13 @@ i.nb-none svg.i{width:30%;height:auto;color:rgba(255,255,255,.6)}
 @media (max-width:900px){
   .side{transform:translateX(-102%);transition:transform .25s ease}
   body.nav-open .side{transform:none;box-shadow:0 0 40px rgba(0,0,0,.3)}   /* shadow only while open, so no edge shows when closed */
-  body.nav-open .scrim{display:block;position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:15}
+  body.nav-open .scrim{display:block;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:15}   /* family rules: black at about 45% */
   html.nav-lock{overflow:hidden}   /* the page behind the open drawer doesn't scroll (21 Nov) */
   .side{overscroll-behavior:contain}
   main{margin-left:0}
   .topbar{display:flex;align-items:center;gap:12px;position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--nav);color:var(--side-ink);border-bottom:1px solid var(--neat);padding:10px 16px}
-  .topbar button{display:flex;align-items:center;gap:8px;padding:7px 12px;border-radius:3px;border:1px solid color-mix(in srgb,var(--side-ink) 35%,transparent);background:transparent;cursor:pointer;font-weight:700;color:var(--side-ink)}
-  .topbar .brand-bar{font:400 22px/1 var(--display);text-decoration:none;color:var(--side-ink);padding:4px 2px;border-radius:3px}
+  .topbar button{display:flex;align-items:center;gap:8px;min-height:44px;padding:7px 12px;border-radius:3px;border:1px solid color-mix(in srgb,var(--side-ink) 35%,transparent);background:transparent;cursor:pointer;font-weight:700;color:var(--side-ink)}
+  .topbar .brand-bar{font:400 26px/1 var(--display);text-decoration:none;color:var(--side-ink);padding:4px 2px;border-radius:3px}
   .topbar .brand-bar em{color:var(--brass)}
   .detail{grid-template-columns:1fr}
   .chapters{justify-content:flex-start}
@@ -657,7 +657,7 @@ i.nb-none svg.i{width:30%;height:auto;color:rgba(255,255,255,.6)}
 .foot-rule .dot{--c:var(--neat)}
 .foot-name{font:400 24px/1 var(--display);color:var(--ink)}
 .about-site{max-width:none;line-height:1.7;color:var(--muted)}
-.about-site p{margin:0}
+.about-site p{margin:0;text-wrap:balance}
 .about-site .sep{margin:0 3px;color:color-mix(in srgb,var(--water) 60%,transparent)}
 .about-site .cr{white-space:nowrap}   /* each credit stays in one piece when the line wraps */
 .foot-links{display:flex;gap:26px;justify-content:center;align-items:center;flex-wrap:wrap;margin-top:2px}
@@ -790,7 +790,7 @@ a.rel-card:hover{border-color:color-mix(in srgb,var(--g) 60%,var(--line));border
 .tc .tn a{color:inherit;text-decoration-color:var(--w);text-underline-offset:3px}
 .tc .ts{font-size:12px;color:var(--muted);line-height:1.3}
 .tc .tchip{grid-column:1/-1;margin-top:6px;justify-self:start;max-width:100%}
-.tc .badge{position:absolute;right:8px;top:-12px;display:inline-flex;align-items:center;gap:4px;font-size:10.5px;font-weight:800;letter-spacing:.04em;padding:2px 8px;border-radius:99px;background:var(--brass);color:#1A1F1C}
+.tc .badge{position:absolute;right:8px;top:-12px;display:inline-flex;align-items:center;gap:4px;font-size:10.5px;font-weight:800;letter-spacing:.04em;padding:2px 8px;border-radius:99px;background:color-mix(in srgb,var(--brass) 88%,#fff);color:#1A1F1C}
 .tc .badge svg{width:11px;height:11px}
 .tc.late{background:color-mix(in srgb,var(--soft) 55%,var(--surface))}
 .tc.late .tm{background:#A3AAA5}
@@ -872,7 +872,7 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 .mcard .tn a{color:inherit;text-decoration-color:var(--w);text-underline-offset:3px}
 .mcard .ts{font-size:12px;color:var(--muted)}
 .mcard .tchip{grid-column:1/-1;margin-top:6px;min-width:0}
-.mcard .badge{position:absolute;right:10px;top:-11px;display:inline-flex;align-items:center;gap:4px;font-size:10.5px;font-weight:800;letter-spacing:.04em;padding:2px 8px;border-radius:99px;background:var(--brass);color:#1A1F1C}
+.mcard .badge{position:absolute;right:10px;top:-11px;display:inline-flex;align-items:center;gap:4px;font-size:10.5px;font-weight:800;letter-spacing:.04em;padding:2px 8px;border-radius:99px;background:color-mix(in srgb,var(--brass) 88%,#fff);color:#1A1F1C}
 .mcard .badge svg{width:11px;height:11px}
 .mcard.here{border:2px solid var(--w);background:color-mix(in srgb,var(--w) 10%,var(--surface))}
 .mcard.away{background:color-mix(in srgb,var(--paper) 70%,var(--surface))}
@@ -891,7 +891,7 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 .tc .hhchip::before{display:inline-block;margin-right:4px;vertical-align:0}
 .membs{margin-top:18px}
 /* role badges, the same on trees and group pages: gold getting stronger with rank; outcasts grey (17 Oct) */
-.badge.r-head{background:var(--brass);color:#1A1F1C;border:1px solid var(--brass)}
+.badge.r-head{background:color-mix(in srgb,var(--brass) 88%,#fff);color:#1A1F1C;border:1px solid var(--brass)}
 .badge.r-heir{background:color-mix(in srgb,var(--brass) 32%,var(--surface));color:var(--ink);border:1px solid var(--brass)}
 .badge.r-member{background:color-mix(in srgb,var(--brass) 5%,var(--surface));color:var(--ink);border:1px solid var(--brass)}
 .badge.r-outcast{background:color-mix(in srgb,var(--muted) 12%,var(--surface));color:var(--muted);border:1px solid color-mix(in srgb,var(--muted) 70%,var(--surface))}
@@ -900,7 +900,7 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 .badge.c-member{background:color-mix(in srgb,#AEB5BA 22%,var(--surface));color:var(--ink);border:1px solid #9AA2A8}
 .monogram.silver{color:#D3D8DC}   /* a club page’s flag: silver, as dynasty pages are gold (her ask, 19 Oct) */
 /* university organisation badges: the university's colour with its gold trim, as on the game's banners (dark purple for the secret society) */
-.badge.o-badge{background:var(--u);color:#fff;border:1.5px solid var(--t)}
+.badge.o-badge{background:color-mix(in srgb,var(--u) 88%,#000);color:#fff;border:1.5px solid var(--t)}
 /* relatives who were never in the game (named on the Sims Wiki): dashed outline */
 .tc.nig{border:1.5px dashed color-mix(in srgb,var(--muted) 75%,var(--surface))}
 .tree-key .nig-k{border:1.5px dashed var(--muted);background:transparent}
@@ -1045,6 +1045,7 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 .hero.mapped .kicker .label{color:color-mix(in srgb,#fff 90%,var(--deep));text-shadow:0 1px 2px rgba(0,0,0,.6),0 0 10px rgba(0,0,0,.45)}
 .hero.mapped h1{color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.4),0 2px 12px rgba(0,0,0,.35),0 4px 30px rgba(0,0,0,.4)}
 .hero.mapped h1 em{color:var(--brass-light)}
+.hero.mapped :focus-visible{outline-color:#fff}   /* the gold ring vanished on some maps (Britechester's olive fade); white shows on all of them (21 Nov) */
 .hero.mapped>p{text-shadow:0 1px 2px rgba(0,0,0,.55),0 0 12px rgba(0,0,0,.4)}
 .hero.mapped .figures span{text-shadow:0 1px 2px rgba(0,0,0,.45)}
 .u-name small{display:block;font-weight:400;font-size:12px;margin-top:2px}
@@ -1132,7 +1133,19 @@ details.adm-more summary{cursor:pointer;font-weight:700;font-size:14px;color:var
 .tc .tm.anc-pic{padding:0;overflow:hidden}
 .tc .tm.anc-pic img{display:block;width:100%;height:100%;object-fit:cover}
 @media (max-width:700px){
-  .roster{min-width:720px}   /* the lined-up Sims and animals tables scroll sideways on a phone instead of squashing */
+  /* the household's Sims and animals tables become a stacked list on a phone (21 Nov, second review; was a 720px table scrolling sideways) */
+  .roster,.roster tbody{display:block}
+  .roster thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+  .roster tr{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;padding:10px 12px;border-bottom:1px solid var(--line)}
+  .roster tr:last-child{border-bottom:0}
+  .roster td{display:block;padding:0;border:0;white-space:normal}
+  .roster td:nth-child(1),.roster td:nth-child(4),.roster td:nth-child(5){flex-basis:100%}
+  .roster td:nth-child(2),.roster td:nth-child(4),.roster td:nth-child(5){margin-left:40px}
+  .roster td[data-label]::before{content:attr(data-label) ": ";font-weight:700;color:var(--muted)}
+  .figures:has(>div:nth-child(4):last-child){display:grid;grid-template-columns:repeat(2,minmax(0,1fr));row-gap:8px}   /* four figures sit 2 × 2, not three and one alone */
+  .figures:has(>div:nth-child(4):last-child) div:nth-child(3){border-left:0}
+  .figures:has(>div:nth-child(4):last-child) div:nth-child(4){border-left:1px solid var(--banner-line)}
+  .hero.mapped .figures:has(>div:nth-child(4):last-child) div:nth-child(4){border-left-color:rgba(255,255,255,.35)}
   .adm-two{grid-template-columns:1fr}
   .cal-hero .patch a span{display:none}
   .adm-list li{grid-template-columns:minmax(0,1fr)}
@@ -1144,5 +1157,5 @@ details.adm-more summary{cursor:pointer;font-weight:700;font-size:14px;color:var
   .lots-sheet td.lotcell{position:sticky;left:0;z-index:1;background:var(--surface);box-shadow:1px 0 0 var(--line)}   /* the lot's name stays in view while the table scrolls sideways */
   .lots-sheet thead th:nth-child(2){position:sticky;left:0;z-index:3;box-shadow:1px 0 0 var(--line)}
   .hero.mapped{height:auto;min-height:min(62vh,560px);padding-top:84px}   /* 21 Nov: the town-plan figures box is taller, so a phone's map banner grows to fit instead of hiding its title under the map credit */
-  .about-site{font-size:12px} .about-site .sep{display:none} .about-site .cr{display:block;white-space:normal}   /* footer credits one per line (family rules, 21 Nov) */
+  .about-site .sep{display:none} .about-site .cr{display:block;white-space:normal}   /* footer credits one per line (family rules, 21 Nov) */
 }

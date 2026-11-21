@@ -50,7 +50,7 @@ test('the site opens light even when the device prefers dark', async ({ page }) 
   await page.emulateMedia({ colorScheme: 'dark' });
   await openApp(page);
   const r = await page.evaluate(() => ({ mode: document.documentElement.getAttribute('data-mode'), paper: getComputedStyle(document.body).backgroundColor }));
-  expect(r.mode).toBeNull();
+  expect(r.mode).toBe('light');   // always set, light or dark (family rules)
   expect(r.paper).toBe('rgb(244, 242, 238)');
   await expect(page.locator('#modeBtn')).toHaveText('Dark mode');
 });
