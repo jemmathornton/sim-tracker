@@ -752,8 +752,8 @@ function home(){
     <div class="hero-foot"><div class="figures">${[[ready.length, ready.length===1?"world":"worlds"],[ready.reduce((n,w)=>n+w.hoods.length,0),"neighbourhoods"],[ready.reduce((n,w)=>n+w.stats.lots,0),"lots"],[ready.reduce((n,w)=>n+w.stats.hh,0),"households"],[simCount(ready.flatMap(homeHhs)),"Sims"]].map(([n,t]) => `<div><b>${n}</b><span>${t}</span></div>`).join("")}</div></div></section>
     <div class="section-head"><h2>The <em>worlds</em></h2><span class="count">in the order they arrived</span></div><div class="worlds">${owned.map(worldTile).join("")}</div>
     <div class="section-head"><h2>Not owned</h2><span class="count">${notOwned.length} worlds</span></div><div class="worlds">${notOwned.map(worldTile).join("")}</div>
-    <footer><span>Lot names are my own; each lot page also shows its in-game name. Types and sizes follow the game.</span><span>World maps by 20th Century Plumbob · Icons by Lucide</span>
-      <span class="as-of">Lots and households as of ${asOf(DATA.meta.built)} · Gallery numbers as of ${asOf(DATA.meta.galleryChecked)}${DATA.meta.game ? ` · Game version ${esc(DATA.meta.game)}` : ""}</span></footer>`;
+    <div class="page-notes"><span>Lot names are my own; each lot page also shows its in-game name. Types and sizes follow the game.</span>
+      <span class="as-of">Lots and households as of ${asOf(DATA.meta.built)} · Gallery numbers as of ${asOf(DATA.meta.galleryChecked)}${DATA.meta.game ? ` · Game version ${esc(DATA.meta.game)}` : ""}</span></div>`;   // the credits are in the footer of every page (family rules, 21 Nov)
 }
 const asOf = iso => iso ? new Date(iso + "T12:00").toLocaleDateString("en-GB", {day: "numeric", month: "short", year: "numeric"}) : "not yet";
 
@@ -1556,7 +1556,7 @@ addEventListener("scroll", () => { clearTimeout(scrollKeep); scrollKeep = setTim
 document.addEventListener("click", e => { if (e.target.closest && e.target.closest("a[href^='#'], [data-lot-link]")) keepScroll(); }, true);
 const scrollBack = () => { routeY = history.state && history.state.y; route(); };
 addEventListener("hashchange", scrollBack);
-// the phone's Worlds drawer (21 Nov): the button says whether it's open, a closed drawer can't be reached with Tab (inert),
+// the phone's Menu drawer (21 Nov; family rules): the button says whether it's open, a closed drawer can't be reached with Tab (inert),
 // opening it moves focus in, and Escape or the scrim closes it with focus back on the button
 const sideEl = document.getElementById("side"), menuBtn = document.getElementById("menuBtn"), phoneNav = matchMedia("(max-width:900px)");
 function setNav(open, focus){
@@ -1584,10 +1584,11 @@ addEventListener("keydown", e => {
 });
 phoneNav.addEventListener("change", () => setNav(false));
 setNav(false);
-// bottom of every page (21 Nov 2026, as on Jemma’s Journals): Back to top, and Dark/Light mode. The site always opens light, even when
-// the device prefers dark (her rule for all her sites); pressing the button switches and the choice is kept in localStorage "jsw-mode"
-// (read before the page is drawn by the small script in index.html's head).
-const MODE_KEY = "jsw-mode", modeBtn = document.getElementById("modeBtn");
+// bottom of every page (21 Nov 2026, the family rules shared by all her sites, as on Jemma’s Journals): Back to top, and Dark/Light mode.
+// The site always opens light, even when the device prefers dark; pressing the button switches and the choice is kept in localStorage
+// "jj-mode", the one key every site in the family shares, so it carries across them once they share an address (read before the page
+// is drawn by the small script in index.html's head, which also moves over the old "jsw-mode" once).
+const MODE_KEY = "jj-mode", modeBtn = document.getElementById("modeBtn");
 function showMode(){
   const dark = document.documentElement.getAttribute("data-mode") === "dark";
   modeBtn.querySelector(".ico").innerHTML = ic(dark ? "sun" : "moon");

@@ -1,5 +1,6 @@
 // Bottom of every page (21 Nov 2026, her ask for all her sites, as on Jemma’s Journals): "Back to top" and "Dark mode".
-// The site opens light even when the device prefers dark; the button switches it, and the choice is remembered ("jsw-mode").
+// The site opens light even when the device prefers dark; the button switches it, and the choice is remembered ("jj-mode", the key
+// every site in the family shares; family rules 21 Nov, tests/site/family-rules.spec.js).
 const { test } = require('@playwright/test');
 const { openApp, go, expect } = require('./helpers');
 
@@ -58,7 +59,7 @@ test('Dark mode switches the page, says Light mode, and is remembered after a re
   await openApp(page);
   await page.locator('#modeBtn').click();
   const dark = await page.evaluate(() => ({ mode: document.documentElement.getAttribute('data-mode'), paper: getComputedStyle(document.body).backgroundColor,
-    saved: localStorage.getItem('jsw-mode'), pressed: document.getElementById('modeBtn').getAttribute('aria-pressed') }));
+    saved: localStorage.getItem('jj-mode'), pressed: document.getElementById('modeBtn').getAttribute('aria-pressed') }));
   expect(dark).toEqual({ mode: 'dark', paper: 'rgb(21, 17, 27)', saved: 'dark', pressed: 'true' });
   await expect(page.locator('#modeBtn')).toHaveText('Light mode');
   await page.reload();

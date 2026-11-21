@@ -17,13 +17,14 @@
 <link rel="icon" href="icon.png?v=plumbob10" sizes="512x512" type="image/png">
 <link rel="apple-touch-icon" href="icon.png?v=plumbob10">
 <meta name="theme-color" content="#EEEAF2">
-<!-- light or dark (21 Nov 2026, her rule for all her sites): always opens light, dark only once she presses "Dark mode" at the
-     bottom of a page; the choice is remembered (localStorage "jsw-mode"). Set here, before the page is drawn, so it never flashes. -->
-<script>try{if(localStorage.getItem("jsw-mode")==="dark"){document.documentElement.setAttribute("data-mode","dark");document.querySelector('meta[name="theme-color"]').setAttribute("content","#1B1524")}}catch(e){}</script>
-<link rel="stylesheet" href="site.css?v=a2967835">
+<!-- light or dark (21 Nov 2026, the family rules shared by all her sites): always opens light, dark only once she presses "Dark mode" at the
+     bottom of a page; the choice is remembered in localStorage "jj-mode", one key for every site (the old "jsw-mode" is moved over once).
+     Set here, before the page is drawn, so it never flashes. -->
+<script>try{var m=localStorage.getItem("jj-mode");if(m===null){m=localStorage.getItem("jsw-mode");if(m)localStorage.setItem("jj-mode",m)}localStorage.removeItem("jsw-mode");if(m==="dark"){document.documentElement.setAttribute("data-mode","dark");document.querySelector('meta[name="theme-color"]').setAttribute("content","#1B1524")}}catch(e){}</script>
+<link rel="stylesheet" href="site.css?v=6d0b8eb2">
 </head>
 <body>
-<div class="topbar"><button id="menuBtn" type="button"><span id="menuIco"></span>Menu</button><b>Jemma’s Sim World</b></div>
+<div class="topbar"><button id="menuBtn" type="button"><span id="menuIco"></span>Menu</button><a class="brand-bar" href="#home">Jemma’s <em>Sim World</em></a></div>
 <div class="scrim" id="scrim"></div>
 <aside class="side" id="side" aria-label="Worlds">
   <!-- Back to Jemma’s Journals, her home site (option A, her pick 20 Nov 2026). href "/" = the shared address's root, where the home page will live once the sites are online (apps under it); opened as a file from her PC, js/app.js points it at her local home page instead (HOME_LOCAL). Change the online address here only. -->
@@ -33,13 +34,17 @@
   <nav class="nav" id="nav"></nav>
 </aside>
 <main id="main"><div class="wrap" id="view" tabindex="-1"></div>
-  <!-- bottom of every page (21 Nov 2026, as on Jemma’s Journals): Back to top and Dark/Light mode; js/app.js fills the icons and wires them -->
-  <footer class="site-foot"><div class="foot-links"><button type="button" class="totop" id="toTop"><span class="ico"></span>Back to top</button><button type="button" class="mode-text" id="modeBtn" aria-pressed="false"><span class="ico"></span><span class="txt">Dark mode</span></button></div></footer>
+  <!-- bottom of every page (21 Nov 2026, the family rules shared by all her sites, as on Jemma’s Journals): the name, the About lines
+       (line 1 the same on every site; line 2 Sim World's own credits), then Back to top and Dark/Light mode; js/app.js fills the icons and wires them -->
+  <footer class="site-foot"><div class="foot-rule" aria-hidden="true"><span class="dot"></span></div><b class="foot-name">Jemma’s Sim World</b>
+    <div class="about-site"><p>No cookies, no tracking, no ads. Made with plain HTML and CSS, kept on GitHub.</p>
+      <p><span class="cr">World maps by 20th Century Plumbob</span> <span class="sep" aria-hidden="true">·</span> <span class="cr">Screenshots and Gallery pictures are my own</span> <span class="sep" aria-hidden="true">·</span> <span class="cr">Ancestors’ portraits from the game</span> <span class="sep" aria-hidden="true">·</span> <span class="cr">Fonts: Instrument Serif and Manrope</span> <span class="sep" aria-hidden="true">·</span> <span class="cr">Icons by Lucide, Lucide Lab, Tabler and Phosphor</span></p></div>
+    <div class="foot-links"><button type="button" class="totop" id="toTop"><span class="ico"></span>Back to top</button><button type="button" class="mode-text" id="modeBtn" aria-pressed="false"><span class="ico"></span><span class="txt">Dark mode</span></button></div></footer>
 </main>
 
 <script src="js/icons.js?v=449d1949"></script>
 <script src="js/data.js?v=f69dc43a"></script>
-<script src="js/app.js?v=268fa486"></script>
+<script src="js/app.js?v=0d35049c"></script>
 <!-- Admin pages' extra data (made by tools/admin_data.py): for Jemma's PC only, never upload js/admin-data.js if the site goes online -->
 <script src="js/admin-data.js?v=0bca35d9"></script>
 <script src="js/sections.js?v=d1541500"></script>
