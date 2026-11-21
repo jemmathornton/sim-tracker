@@ -257,6 +257,9 @@ main{margin-left:var(--side);min-height:100vh;container-type:inline-size}   /* l
 .hero.mapped::before{inset:0;width:auto;mask-image:none;-webkit-mask-image:none;background:url(townplan/town-light.svg) center/1000px 500px repeat;opacity:.18}   /* paler over the map (her ask, 21 Nov) */
 .hero.mapped::after{content:"";position:absolute;inset:16px;border:1px solid rgba(255,255,255,.45);pointer-events:none}
 .hero.mapped h1{text-shadow:0 4px 30px rgba(0,0,0,.35)}
+/* words on a light map (21 Nov, her pick "in between"): a light fade behind the words only, from the left, and a soft shadow round the letters; the rest of the map stays as it is (not on lot pictures) */
+.hero.mapped:not(.lot-hero){background:linear-gradient(90deg,color-mix(in srgb,var(--deep) 45%,transparent) 0%,color-mix(in srgb,var(--deep) 25%,transparent) 42%,transparent 68%),linear-gradient(180deg,color-mix(in srgb,var(--deep) 5%,transparent) 0%,color-mix(in srgb,var(--deep) 25%,transparent) 40%,color-mix(in srgb,var(--deep) 86%,transparent) 78%,var(--deep) 100%),var(--map) var(--mapview,center 35%/cover)}
+.hero.mapped:not(.lot-hero) h1,.hero.mapped:not(.lot-hero) p,.hero.mapped:not(.lot-hero) .kicker .label{text-shadow:0 1px 3px rgba(0,0,0,.75),0 0 16px rgba(0,0,0,.5)}
 .hero.mapped .kicker i{color:#F4F1E8}
 .hero.mapped .hero-foot{border-top-color:rgba(255,255,255,.25)}
 .hero.mapped .figures{background:rgba(42,29,64,.45);border-color:rgba(255,255,255,.4)}
