@@ -763,7 +763,7 @@ function home(){
   const b = all.filter(l => l.built === true).length, sh = all.filter(l => l.shared === true).length;
   const hhAll = ready.reduce((n,w) => n + w.stats.hh, 0), hhMade = ready.reduce((n,w) => n + w.stats.hhMade, 0);
   const owned = worlds.filter(w => w.owned), notOwned = worlds.filter(w => !w.owned);
-  return `<section class="hero" style="--c:#8E62CF"><div class="kicker"><i></i><span class="label">A Sims 4 save, rebuilt by hand</span></div>
+  return `<section class="hero home-hero" style="--c:#8E62CF"><div class="kicker"><i></i><span class="label">A Sims 4 save, rebuilt by hand</span></div>
     <h1>Jemma’s <em>Sim World</em></h1>
     <p>Every world in the game, rebuilt one lot at a time. Wander the neighbourhoods, look around the homes and venues, and meet the households who live in them.</p>
     <div class="hero-foot"><div class="figures">${[[ready.length, ready.length===1?"world":"worlds"],[ready.reduce((n,w)=>n+w.hoods.length,0),"neighbourhoods"],[ready.reduce((n,w)=>n+w.stats.lots,0),"lots"],[ready.reduce((n,w)=>n+w.stats.hh,0),"households"],[simCount(ready.flatMap(homeHhs)),"Sims"]].map(([n,t]) => `<div><b>${n}</b><span>${t}</span></div>`).join("")}</div></div></section>

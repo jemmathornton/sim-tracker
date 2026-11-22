@@ -1188,3 +1188,15 @@ html[data-inner] .mini a:hover b{color:var(--water)}
 html[data-inner] .mini small{margin:0;padding:6px 4px 0;border-top:1px dashed var(--line);font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:600}
 /* The second word of the name in the sidebar and Menu bar: purple (her pick, 21 Nov; was gold): --water, #5B4BB0 light, #B7A8F7 dark */
 .brand b em,.topbar .brand-bar em{color:var(--water)}
+/* The home banner's "Sim World": purple like the sidebar name (her pick, 22 Nov; was gold). --water on the banner: 5.9:1 light, 7.7:1 dark */
+.hero.home-hero h1 em{color:var(--water)}
+/* The rest of the Sim, household and lot pages in the town-plan style (her pick, 22 Nov): the family tree's person cards, the "Their groups" cards and the dynasty, club and organisation badges become squared plates like the others */
+html[data-inner] .tc{border-radius:2px;border-color:color-mix(in srgb,var(--h) 40%,var(--card-line));box-shadow:2px 3px 0 color-mix(in srgb,var(--h) 14%,transparent)}
+html[data-inner] .tc.here{border:2px solid var(--w);box-shadow:3px 4px 0 color-mix(in srgb,var(--w) 22%,transparent)}
+html[data-inner] .tc.away{border-color:color-mix(in srgb,var(--h) 25%,var(--card-line));box-shadow:none}
+html[data-inner] .tc.ph{border-style:dashed;box-shadow:none}
+html[data-inner] .tc.nig{border:1.5px dashed color-mix(in srgb,var(--muted) 75%,var(--surface));box-shadow:none}
+html[data-inner] .tc .hhchip{border-radius:2px}
+html[data-inner] .memb{border-radius:2px;border:1px solid color-mix(in srgb,var(--h) 40%,var(--card-line));box-shadow:2px 3px 0 color-mix(in srgb,var(--h) 14%,transparent)}
+html[data-inner] .memb:hover{border-color:color-mix(in srgb,var(--h) 70%,var(--card-line))}
+html[data-inner] .badge{border-radius:2px}
