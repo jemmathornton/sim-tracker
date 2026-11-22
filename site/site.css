@@ -226,10 +226,12 @@ em{font-style:italic}
 
 /* ---------- main ---------- */
 main{margin-left:var(--side);min-height:100vh;container-type:inline-size}   /* lets banners reach main's edges on wide windows */
-.wrap{max-width:1140px;margin:0 auto;padding-inline:clamp(16px,4vw,56px);padding-block:0 110px}
+/* the page gutter, and at least the notch in phone landscape (safe areas, round 5; env() is 0 on laptops, so nothing moves there) */
+:root{--gut:clamp(16px,4vw,56px);--gut-l:max(var(--gut),env(safe-area-inset-left,0px));--gut-r:max(var(--gut),env(safe-area-inset-right,0px))}
+.wrap{max-width:1140px;margin:0 auto;padding-left:var(--gut-l);padding-right:var(--gut-r);padding-block:0 110px}
 
 /* hero: plain banners are a pale lilac sheet with an estate plan drawn in purple, fading in from the right */
-.hero{margin-inline:min(calc(-1 * clamp(16px,4vw,56px)),calc((100% - 100cqw) / 2));padding:72px max(clamp(16px,4vw,56px),calc((100cqw - 100%) / 2)) 46px;position:relative;overflow:hidden;
+.hero{margin-left:min(calc(-1 * var(--gut-l)),calc((100% - 100cqw) / 2));margin-right:min(calc(-1 * var(--gut-r)),calc((100% - 100cqw) / 2));padding:72px max(var(--gut-r),calc((100cqw - 100%) / 2)) 46px max(var(--gut-l),calc((100cqw - 100%) / 2));position:relative;overflow:hidden;
   --on-deep:var(--ink);--on-deep-mute:var(--muted);color:var(--on-deep);background:var(--banner);border-bottom:1px solid var(--banner-edge)}
 .hero::before{content:"";position:absolute;inset:0 0 0 auto;width:72%;background:var(--banner-plan) right -40px top -30px/1000px 512px no-repeat;
   mask-image:linear-gradient(90deg,transparent,#000 40%);-webkit-mask-image:linear-gradient(90deg,transparent,#000 40%)}
@@ -269,7 +271,7 @@ main{margin-left:var(--side);min-height:100vh;container-type:inline-size}   /* l
 .hero.mapped .figures{background:color-mix(in srgb,var(--deep) 62%,transparent);border-color:rgba(255,255,255,.4)}   /* the world's own deep colour (her pick 21 Nov) */
 .hero.mapped .figures div{border-left-color:rgba(255,255,255,.35)}
 .hero.mapped .figures b{color:#fff}
-.credit{position:absolute;right:calc(clamp(16px,4vw,56px) + 10px);top:30px;font-size:11.5px;color:#2A1D40;background:rgba(251,248,240,.9);padding:4px 10px;border-radius:2px;backdrop-filter:blur(4px)}
+.credit{position:absolute;right:calc(var(--gut-r) + 10px);top:30px;font-size:11.5px;color:#2A1D40;background:rgba(251,248,240,.9);padding:4px 10px;border-radius:2px;backdrop-filter:blur(4px)}
 .wt .photo.pic{background:var(--map) center/cover}
 .wt .photo.pic .big{display:none}
 
@@ -624,7 +626,9 @@ i.nb-none svg.i{width:30%;height:auto;color:rgba(255,255,255,.6)}
 .ver-total{color:var(--muted);font-size:12.5px}
 /* phones */
 @media (max-width:900px){
-  .side{transform:translateX(-102%);transition:transform .25s ease}
+  .side{transform:translateX(-102%);transition:transform .25s ease;width:calc(min(300px,86vw) + env(safe-area-inset-left,0px));padding-left:env(safe-area-inset-left,0px)}   /* the family's drawer width (round 5; was 280px), plus the notch in phone landscape */
+  .side .search input{font-size:16px}
+  html:not(.no-family) .home-link{margin-top:1px}html:not(.no-family) .home-link+.brand{padding-top:5px}   /* family.css's .jj-home-link makes the way home 44px tall with 12.5px text in the drawer (round 5): it sits where it did, and the name doesn't move */   /* 16px or iPhone Safari zooms in when the box is tapped, and stays zoomed (round 5) */
   .side.jj-open{transform:none;box-shadow:0 0 40px rgba(0,0,0,.3)}   /* open (the family's drawer, JJFamily.menu): shadow only while open, so no edge shows when closed */
   .scrim:not([hidden]){display:block;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:15}   /* family rules: black at about 45%; hidden in the markup and whenever the drawer is closed (family.js), so it never covers the page if the family code is missing. The page behind doesn't scroll (html.jj-menu-open, family.css) */
   html.no-family .topbar{display:none}   /* the family code didn't load (opened as a file): no drawer, so no Menu bar; the sidebar sits above the page instead */
@@ -632,7 +636,7 @@ i.nb-none svg.i{width:30%;height:auto;color:rgba(255,255,255,.6)}
   html.no-family .nav{overflow:visible}
   .side{overscroll-behavior:contain}
   main{margin-left:0}
-  .topbar{display:flex;align-items:center;gap:12px;position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--nav);color:var(--side-ink);border-bottom:1px solid var(--neat);padding:10px 16px}
+  .topbar{display:flex;align-items:center;gap:12px;position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--nav);color:var(--side-ink);border-bottom:1px solid var(--neat);padding:10px max(16px,env(safe-area-inset-right,0px)) 10px max(16px,env(safe-area-inset-left,0px))}
   .topbar button{display:flex;align-items:center;gap:8px;min-height:44px;padding:7px 12px;border-radius:3px;border:1px solid color-mix(in srgb,var(--side-ink) 35%,transparent);background:transparent;cursor:pointer;font-weight:700;color:var(--side-ink)}
   .topbar .brand-bar{font:400 26px/1 var(--display);text-decoration:none;color:var(--side-ink);padding:4px 2px;border-radius:3px}
   .detail{grid-template-columns:1fr}
@@ -643,6 +647,18 @@ i.nb-none svg.i{width:30%;height:auto;color:rgba(255,255,255,.6)}
   .figures{padding:10px 0}
   .figures div{padding:4px 16px}
   .figures b{font-size:32px}
+}
+/* touch targets of at least 24px (round 5): small links in running text get invisible padding above and below; the negative margin
+   keeps every line where it was (the links are inline, or flex items in a row), so nothing moves on laptops or phones */
+.hh-link,.roster td .who a,.facts dd a,.tc .tn a,.mcard .tn a{padding-block:4px;margin-block:-4px}
+/* what the lot cards' Built / Shared / Sims made dots mean, in words, and "bonus trait" on a Sim's traits: only on touch screens, where
+   a title can't be seen (round 5; js/app.js statusWords). Laptops (a mouse can hover) keep the dots alone; screen readers get the dots' labels */
+.status-words,.listing .meta .status-words{display:none}   /* stronger than .listing .meta span */
+.status-words i{font-style:normal;color:var(--muted)}
+.tap-cap{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+@media (hover:none){
+  .listing .meta .status-words{display:flex;flex-wrap:wrap;gap:2px 12px;flex-basis:100%}
+  .tap-cap{position:static;width:auto;height:auto;overflow:visible;clip-path:none;font-size:.85em;font-weight:500}
 }
 @media (max-width:440px){ .listings,.worlds{grid-template-columns:1fr} .hood-head{grid-template-columns:1fr} .figures div:nth-child(4){border-left:0} }
 @media (prefers-reduced-motion:reduce){ *{transition:none!important} }
@@ -656,7 +672,7 @@ i.nb-none svg.i{width:30%;height:auto;color:rgba(255,255,255,.6)}
    (the town-plan look), its spacing, and its icons drawn at 1.5 like the rest of the site */
 #view{outline:none}   /* Back to top moves focus here; no ring round the whole page */
 #view.wrap{padding-bottom:56px}
-.site-foot{display:flex;flex-direction:column;align-items:center;gap:10px;margin:0 auto;max-width:1140px;padding:0 clamp(16px,4vw,56px) 28px;border:0}
+.site-foot{display:flex;flex-direction:column;align-items:center;gap:10px;margin:0 auto;max-width:1140px;padding:0 var(--gut-r) 28px var(--gut-l);border:0}
 .foot-rule{display:flex;align-items:center;gap:12px;width:min(200px,60%);margin-bottom:4px}
 .foot-rule::before,.foot-rule::after{content:"";flex:1;border-top:1px dashed color-mix(in srgb,var(--neat) 60%,transparent)}
 .foot-rule .dot{--c:var(--neat)}   /* the map pin (family.css only touches the dots inside the credits, so it shows on phones too) */

@@ -565,7 +565,7 @@ function simPage(s){
   const home = hh ? `<a href="#${hh.id}">${esc(hhWord(hh.name))}</a>` : `<a href="#${base.id}">${hhCrumb}</a>`;
   h += `<div class="detail" style="--h:${hc}">${simPicture(s)}<div><dl class="facts"><div><dt>${hh ? "Household" : "Family"}</dt><dd>${home}</dd></div>${facts.map(([t, v]) => `<div><dt>${t}</dt><dd>${esc(v)}</dd></div>`).join("")}</dl></div></div>`;
   if (hasTraits || skills || s.notes) h += `<section class="block" style="--h:${hc}"><div class="block-head"><h2>About <em>${esc(first)}</em></h2></div>
-    <div class="sim-about"><div>${s.traits && s.traits.length ? `<span class="label">Traits</span><div class="traits">${s.traits.map(t => `<span>${esc(t)}</span>`).join("")}${s.bonus ? `<span class="bonus" title="Bonus trait">${esc(s.bonus)}</span>` : ""}</div>` : ""}${aboutMore}${s.notes ? `<p class="sim-note">${esc(s.notes)}</p>` : ""}</div>
+    <div class="sim-about"><div>${s.traits && s.traits.length ? `<span class="label">Traits</span><div class="traits">${s.traits.map(t => `<span>${esc(t)}</span>`).join("")}${s.bonus ? `<span class="bonus" title="Bonus trait">${esc(s.bonus)}<small class="tap-cap"> · bonus trait</small></span>` : ""}</div>` : ""}${aboutMore}${s.notes ? `<p class="sim-note">${esc(s.notes)}</p>` : ""}</div>
       ${skills || fameRow ? `<div class="skills">${skills ? `<span class="label">Skills</span>${skills}` : ""}${fameRow}</div>` : "<div></div>"}</div></section>`;
   // a horse's competitions: best place at each level (her ask, 19 Oct)
   if (s.state === "Horse") h += `<section class="block" style="--h:${hc}"><div class="block-head"><h2>Competitions</h2></div>${horseComps(s)}</section>`;
@@ -775,7 +775,10 @@ function home(){
 const asOf = iso => iso ? new Date(iso + "T12:00").toLocaleDateString("en-GB", {day: "numeric", month: "short", year: "numeric"}) : "not yet";
 
 const statusDots = l => [["built","hammer","Built"],["shared","share","Shared"],["sims","sim","Sims made"]]
-  .filter(([k]) => l[k] === true || l[k] === false).map(([k,n,t]) => `<span class="${l[k]?"yes":""}" title="${t}: ${l[k]?"yes":"not yet"}">${ic(n)}</span>`).join("");
+  .filter(([k]) => l[k] === true || l[k] === false).map(([k,n,t]) => `<span class="${l[k]?"yes":""}" title="${t}: ${l[k]?"yes":"not yet"}" role="img" aria-label="${t}: ${l[k]?"yes":"not yet"}">${ic(n)}</span>`).join("");
+// the same in words, shown only on touch screens (site.css .status-words, @media (hover:none)), where the dots' titles can't be seen (round 5)
+const statusWords = l => { const p = [["built","Built"],["shared","Shared"],["sims","Sims made"]].filter(([k]) => l[k] === true || l[k] === false);
+  return p.length ? `<span class="status-words" aria-hidden="true">${p.map(([k,t]) => `<i class="${l[k]?"yes":""}">${l[k]?"✓":"–"} ${t}${l[k]?"":" not yet"}</i>`).join("")}</span>` : ""; };
 
 const progressRow = l => { const parts = [["built","Built"],["shared","Shared"],["sims","Sims made"]].filter(([k]) => l[k] === true || l[k] === false);
   return parts.length ? `<div><dt>Progress</dt><dd class="progress">${parts.map(([k,t]) => `<span class="${l[k]?"yes":"no"}">${l[k]?"✓":"–"} ${t}${l[k]?"":" not yet"}</span>`).join("")}</dd></div>` : ""; };
@@ -843,7 +846,7 @@ function listing(l){
   const cover = l.photos[0];
   return `<a class="listing" href="#${l.id}" style="--h:${l.hood.color}"><div class="photo ${cover?"shot":""}" ${cover?`data-lazy="--img" data-src="${cover.thumb}"`:""}>${cover ? "" : lotArt(l)}${unitCount(l) ? `<span class="nb-bubbles${unitCount(l) > 5 ? " many" : ""}">${rentalBubbles(l)}</span>` : ""}<span class="type">${unitCount(l) ? `Residential Rental · ${unitCount(l)} units` : esc(l.type || "Lot")}</span><span class="status">${statusDots(l)}</span>${sizeTxt(l.size) && !isApt(l) ? `<span class="size">${sizeTxt(l.size)}</span>` : ""}${cardPills(l)}</div>
     <h3>${esc(l.name)}</h3>
-    <div class="meta">${unitCount(l) ? rentalMeta(l) : l.hh ? `<span>${ic("users")}${hhLink(l.hh)}${l.hh.unsure?" (unsure)":""}</span>` : l.whoNote ? `<span>${ic("users")}${esc(emptyNote(l.whoNote))}</span>` : ""}${l.gallery ? `<span title="Downloads on the Sims 4 Gallery">${ic("share")}${countOf(l.gallery.downloads, "download")}</span>` : ""}</div></a>`;
+    <div class="meta">${unitCount(l) ? rentalMeta(l) : l.hh ? `<span>${ic("users")}${hhLink(l.hh)}${l.hh.unsure?" (unsure)":""}</span>` : l.whoNote ? `<span>${ic("users")}${esc(emptyNote(l.whoNote))}</span>` : ""}${l.gallery ? `<span title="Downloads on the Sims 4 Gallery">${ic("share")}${countOf(l.gallery.downloads, "download")}</span>` : ""}${statusWords(l)}</div></a>`;
 }
 
 function buildingCard(b){
@@ -856,8 +859,12 @@ function buildingCard(b){
 // units of a building share one card
 const hoodItems = x => { const seen = new Set(); return x.lots.flatMap(l => { if (!l.building) return [listing(l)]; const b = l.building; if (seen.has(b)) return []; seen.add(b);
   return [buildingFront(b)]; }); };
+// on phones (700px or less) every map picture is the phone-sized copy (tools/phone_maps.py, round 5: 2400px WebP, Willow Creek 831 KB to about 285 KB),
+// still twice as sharp as needed where neighbourhood banners and cards zoom in 3x; laptops and tablets keep the full map
+const PHONE = matchMedia("(max-width:700px)");
+const mapSrc = w => w.mapPhone && PHONE.matches ? w.mapPhone : w.map;
 function mapHero(w, kicker, title, text, figures, chapters, small, view){
-  return `<section class="hero ${w.map?"mapped":""} ${small?"hh-hero":""}" style="--c:${w.glow||w.color};${w.map?`--map:url('${w.map}')`:""}${view ? `;--mapview:${view}` : w.heroY != null ? `;--mapview:center ${w.heroY}%/cover` : ""}">${w.map?`<span class="credit">Map by 20th Century Plumbob</span>`:""}<div class="kicker"><i></i><span class="label">${kicker}</span></div>
+  return `<section class="hero ${w.map?"mapped":""} ${small?"hh-hero":""}" style="--c:${w.glow||w.color};${w.map?`--map:url('${mapSrc(w)}')`:""}${view ? `;--mapview:${view}` : w.heroY != null ? `;--mapview:center ${w.heroY}%/cover` : ""}">${w.map?`<span class="credit">Map by 20th Century Plumbob</span>`:""}<div class="kicker"><i></i><span class="label">${kicker}</span></div>
     <h1 class="${title.replace(/<small[\s\S]*$/, "").replace(/<[^>]+>/g, "").length > 16 ? "long" : ""}">${title}</h1>${text ? `<p>${text}</p>` : ""}
     <div class="hero-foot"><div class="figures">${figures.map(([n,t]) => `<div><b>${n}</b><span>${t}</span></div>`).join("")}</div><div class="chapters">${chapters}</div></div></section>`;
 }
@@ -929,7 +936,7 @@ function hoodArt(x){
   const cs = (nudge && nudge.card) || [0, 0];   // cardShift: a little extra for the card only
   const z = hero ? Math.max(CARD_RATIO / MAP_RATIO + .01, hero.z * Math.sqrt(CARD_RATIO / hero.ratio)) : box ? boxZoom(box) * ((NB_ZOOM[x.world.id] || {})[x.name] || 1) : 0;   // her own closer zoom for a card (14 Oct: Whispering Glen)
   const v = hero ? nbView([hero.c[0] + cs[0], hero.c[1] + cs[1]], z) : box ? nbView(boxCentre(box, z, others), z) : spot ? nbView(spot) : null;
-  const bg = !x.world.map ? "" : v ? `background:url('${x.world.map}') ${v.bg}` : `background:url('${x.world.map}') center 45%/cover`;
+  const bg = !x.world.map ? "" : v ? `background:url('${mapSrc(x.world)}') ${v.bg}` : `background:url('${mapSrc(x.world)}') center 45%/cover`;
   const circles = x.lots.map(l => nbTile(l).replace("<i ", `<i data-lot-link="${l.id}" aria-label="${esc(l.name)}" `).replace(/ title="[^"]*"/, ` data-name="${esc(l.name)}"`)).join("");
   return `<div class="photo nb-map" style="${bg}"><span class="nb-bubbles${n > 5 ? " many" : ""}">${circles}</span><span class="type">Neighbourhood</span></div>`;
 }
@@ -1142,7 +1149,7 @@ const OCCULT_ICON = {Spellcaster: "cauldron", Vampire: "bat", Werewolf: "ph-moon
 const lifeState = (s, cls) => isAnimal(s) ? `<span class="${cls} animal">${animalIcon(s)}${esc(s.state)}</span>` : `<span class="${cls} occult">${ic(OCCULT_ICON[s.state] || "sparkle")}${esc(s.state)}</span>`;
 function hhListing(x, listed){   // listed: on the households page, one-Sim households read surname first
   const n = simCount([x]), hc = x.lots[0].hood.color, made = simsMade(x);   // Sims only, as on world pages (15 Nov: animals were counted)
-  return `<a class="listing" href="#${x.id}" style="--h:${hc}"><div class="photo"><span class="initial">${initial(x.name)}</span><span class="type">Household</span><span class="status">${x.unsure ? `<span class="flag">unsure</span>` : ""}<span class="${made?"yes":""}" title="Sims made: ${made?"yes":"not yet"}">${ic("sim")}</span></span><span class="size home">${esc(x.lots.map(l => l.name).join(" & "))}</span></div>
+  return `<a class="listing" href="#${x.id}" style="--h:${hc}"><div class="photo"><span class="initial">${initial(x.name)}</span><span class="type">Household</span><span class="status">${x.unsure ? `<span class="flag">unsure</span>` : ""}<span class="${made?"yes":""}" title="Sims made: ${made?"yes":"not yet"}" role="img" aria-label="Sims made: ${made?"yes":"not yet"}">${ic("sim")}</span></span><span class="size home">${esc(x.lots.map(l => l.name).join(" & "))}</span></div>
     <h3>${esc(listed ? hhListName(x) : x.name)}</h3><p class="desc">${esc([...new Set(x.lots.map(l => l.hood.name))].join(", "))}</p>
     <div class="meta"><span class="${made?"made":""}">${ic("sim")}<b>${made ? "Sims made" : "Sims not made yet"}</b></span>${n ? `<span>${ic("users")}${n} Sim ${n===1?"profile":"profiles"}</span>` : ""}${x.links.length ? `<span>${ic("share")}${x.links.length} connected</span>` : ""}</div></a>`;
 }

@@ -9,6 +9,7 @@ import base64, html, os, re, sys, urllib.parse, uuid
 from datetime import date, datetime, timedelta
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import DATA, SITE, GALLERY, slug, load, nice_date, world_files, write_text, clean_title, VERSION_END, resolved_types, lead_upload, her_type
+import phone_maps
 
 GALLERY_ITEM = "https://www.ea.com/games/the-sims/the-sims-4/gallery/item/"
 
@@ -231,6 +232,7 @@ def build():
         w = {"name": n, "pack": W['pack'], "owned": owned, "color": W['colour'], "deep": W.get('deep'), "ready": owned,
              "map": stamped(f"maps/{ws}.jpg") if owned and os.path.exists(os.path.join(SITE, 'maps', ws + '.jpg')) else "",
              "mapW": map_width(ws),
+             "mapPhone": stamped(f"maps/{ws}.phone.webp") if owned and phone_maps.is_fresh(ws, os.path.join(SITE, 'maps')) else "",   # world banner on phones (tools/phone_maps.py; round 5)
              "thumb": stamped(f"maps/{ws}.thumb.jpg") if os.path.exists(os.path.join(SITE, 'maps', ws + '.thumb.jpg')) else "",
              "blurb": W.get('blurb', ''), "hoods": []}
         if W.get('glow'): w["glow"] = W['glow']
@@ -313,7 +315,7 @@ def missing_pictures(data):
     def walk(o):
         if isinstance(o, dict):
             for k, v in o.items():
-                if k in ('src', 'thumb', 'map', 'libraryPic') and isinstance(v, str) and v: found.add(v.split('?')[0])   # fingerprinted maps carry ?v=
+                if k in ('src', 'thumb', 'map', 'mapPhone', 'libraryPic') and isinstance(v, str) and v: found.add(v.split('?')[0])   # fingerprinted maps carry ?v=
                 else: walk(v)
         elif isinstance(o, list):
             for x in o: walk(x)
