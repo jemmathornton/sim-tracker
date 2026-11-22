@@ -156,6 +156,8 @@ img{max-width:100%}
   --display:"Instrument Serif", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
   --body:"Manrope", "Segoe UI", system-ui, sans-serif;
   --side:280px;
+  /* the family's shared footer and drawer (/family/family.css) take Sim World's own fonts and colours (they follow dark mode with these) */
+  --jj-display:var(--display); --jj-body:var(--body); --jj-ink:var(--ink); --jj-muted:var(--muted); --jj-accent:var(--water); --jj-drawer-bg:var(--nav);
 }
 :root[data-mode="dark"]{   /* dark only when she presses "Dark mode" at the bottom of a page (21 Nov 2026, her rule): never from the device setting */
 
@@ -211,9 +213,9 @@ em{font-style:italic}
 /* map pins for the worlds, in each world's colour */
 .dot{width:10px;height:10px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:radial-gradient(circle,#FBF8F0 0 1.6px,var(--c) 2.1px);flex:none;box-shadow:0 0 0 1px var(--pin-ring)}
 .nav .pct{margin-left:auto;font-size:12px;color:var(--on-deep-mute);font-variant-numeric:tabular-nums}
-.nav a.soon{color:color-mix(in srgb,var(--side-ink) 45%,transparent);font-weight:500;cursor:default}
+.nav a.soon{color:color-mix(in srgb,var(--side-ink) 70%,transparent);font-weight:500;cursor:default}   /* 70%: about 4.5:1 on the lilac (round 3 review; was 45%) */
 .nav a.soon .dot{background:transparent;box-shadow:inset 0 0 0 1.5px color-mix(in srgb,var(--side-ink) 35%,transparent)}
-.nav a.soon .pct{color:color-mix(in srgb,var(--side-ink) 35%,transparent)}
+.nav a.soon .pct{color:color-mix(in srgb,var(--side-ink) 68%,transparent)}
 .subnav{display:grid;margin:4px 0 8px 16px;padding-left:12px;border-left:1px dashed color-mix(in srgb,var(--side-ink) 30%,transparent)}
 .subnav button{all:unset;cursor:pointer;padding:5px 10px;font-size:13.5px;color:var(--on-deep-mute);border-radius:3px}
 .subnav button:hover{color:var(--on-deep);background:var(--side-hover)}
@@ -621,15 +623,13 @@ i.nb-none svg.i{width:30%;height:auto;color:rgba(255,255,255,.6)}
 /* phones */
 @media (max-width:900px){
   .side{transform:translateX(-102%);transition:transform .25s ease}
-  body.nav-open .side{transform:none;box-shadow:0 0 40px rgba(0,0,0,.3)}   /* shadow only while open, so no edge shows when closed */
-  body.nav-open .scrim{display:block;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:15}   /* family rules: black at about 45% */
-  html.nav-lock{overflow:hidden}   /* the page behind the open drawer doesn't scroll (21 Nov) */
+  .side.jj-open{transform:none;box-shadow:0 0 40px rgba(0,0,0,.3)}   /* open (the family's drawer, JJFamily.menu): shadow only while open, so no edge shows when closed */
+  .scrim:not([hidden]){display:block;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:15}   /* family rules: black at about 45%; family.js hides it when closed. The page behind doesn't scroll (html.jj-menu-open, family.css) */
   .side{overscroll-behavior:contain}
   main{margin-left:0}
   .topbar{display:flex;align-items:center;gap:12px;position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--nav);color:var(--side-ink);border-bottom:1px solid var(--neat);padding:10px 16px}
   .topbar button{display:flex;align-items:center;gap:8px;min-height:44px;padding:7px 12px;border-radius:3px;border:1px solid color-mix(in srgb,var(--side-ink) 35%,transparent);background:transparent;cursor:pointer;font-weight:700;color:var(--side-ink)}
   .topbar .brand-bar{font:400 26px/1 var(--display);text-decoration:none;color:var(--side-ink);padding:4px 2px;border-radius:3px}
-  .topbar .brand-bar em{color:var(--brass)}
   .detail{grid-template-columns:1fr}
   .chapters{justify-content:flex-start}
   .hero{padding-top:48px}
@@ -646,24 +646,19 @@ i.nb-none svg.i{width:30%;height:auto;color:rgba(255,255,255,.6)}
 .gal-gains .sheet-wrap{margin-top:10px}
 /* packs per world (world pages, 13 Oct) */
 .page-notes .as-of{flex-basis:100%}
-/* bottom of every page (21 Nov 2026, as on Jemma’s Journals): Back to top and Dark/Light mode, centred, link-style in the site's purple */
+/* bottom of every page (the family rules): the shared footer (markup and behaviour from /family/, layout in family.css, coloured by the
+   --jj-* tokens above); below, only what is Sim World's own: centred in the page column on a faint plan rule with a map-pin in the middle
+   (the town-plan look), its spacing, and its icons drawn at 1.5 like the rest of the site */
 #view{outline:none}   /* Back to top moves focus here; no ring round the whole page */
 #view.wrap{padding-bottom:56px}
-/* family rules (21 Nov): the site's name, the two About lines (the same first line on every site, then Sim World's own credits), then the
-   two buttons; centred, on a faint plan rule with a map-pin in the middle (the town-plan look) */
-.site-foot{display:flex;flex-direction:column;align-items:center;gap:10px;margin:0 auto;max-width:1140px;padding:0 clamp(16px,4vw,56px) 28px;border:0;text-align:center;color:var(--muted);font-size:12.5px}
+.site-foot{display:flex;flex-direction:column;align-items:center;gap:10px;margin:0 auto;max-width:1140px;padding:0 clamp(16px,4vw,56px) 28px;border:0}
 .foot-rule{display:flex;align-items:center;gap:12px;width:min(200px,60%);margin-bottom:4px}
 .foot-rule::before,.foot-rule::after{content:"";flex:1;border-top:1px dashed color-mix(in srgb,var(--neat) 60%,transparent)}
-.foot-rule .dot{--c:var(--neat)}
-.foot-name{font:400 24px/1 var(--display);color:var(--ink)}
-.about-site{max-width:none;line-height:1.7;color:var(--muted)}
-.about-site p{margin:0;text-wrap:balance}
-.about-site .sep{margin:0 3px;color:color-mix(in srgb,var(--water) 60%,transparent)}
-.about-site .cr{white-space:nowrap}   /* each credit stays in one piece when the line wraps */
-.foot-links{display:flex;gap:26px;justify-content:center;align-items:center;flex-wrap:wrap;margin-top:2px}
-.foot-links button{display:inline-flex;align-items:center;gap:6px;min-height:44px;margin:0;padding:4px 2px;border:0;background:none;font:700 13px/1 var(--body);color:var(--water);cursor:pointer}
-.foot-links button:hover{text-decoration:underline;text-underline-offset:3px}
-.foot-links .ico{display:inline-flex}.foot-links svg.i{width:14px;height:14px}
+.foot-rule .dot{--c:var(--neat);display:block;margin:0}   /* the map pin (family.css hides and spaces its own credit dots, also called .dot) */
+.site-foot .jj-name{line-height:1;margin:0}
+.site-foot .jj-foot-links{margin-top:2px}
+.site-foot .jj-foot-links a,.site-foot .jj-foot-links button{font:700 13px/1 var(--body);color:var(--water)}   /* site.css's own a/button reset (inherit) would otherwise win over family.css */
+.site-foot .jj-i{stroke-width:1.5}
 /* site search (sidebar, 13 Oct) */
 .search{position:relative;padding:14px 12px 0}
 .search-ico{position:absolute;left:25px;top:33px;transform:translateY(-50%);display:flex;color:var(--on-deep-mute);pointer-events:none}
@@ -913,7 +908,6 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 .homes li .nolink{font:400 21px/1.1 var(--display)}
 /* the Not owned list: still lighter, but a world with families unfolds to them */
 .nav-group.dim{opacity:1}
-.nav-group.dim .label{opacity:.55}
 .nav-group.dim a.soon.has-hh{cursor:pointer}
 .nav-group.dim a.soon.has-hh:hover{background:var(--side-hover);color:color-mix(in srgb,var(--side-ink) 70%,transparent)}
 .nav-group.dim .subnav a{opacity:.8}
@@ -1157,7 +1151,7 @@ details.adm-more summary{cursor:pointer;font-weight:700;font-size:14px;color:var
   .lots-sheet td.lotcell{position:sticky;left:0;z-index:1;background:var(--surface);box-shadow:1px 0 0 var(--line)}   /* the lot's name stays in view while the table scrolls sideways */
   .lots-sheet thead th:nth-child(2){position:sticky;left:0;z-index:3;box-shadow:1px 0 0 var(--line)}
   .hero.mapped{height:auto;min-height:min(62vh,560px);padding-top:84px}   /* 21 Nov: the town-plan figures box is taller, so a phone's map banner grows to fit instead of hiding its title under the map credit */
-  .about-site .sep{display:none} .about-site .cr{display:block;white-space:normal}   /* footer credits one per line (family rules, 21 Nov) */
+  .site-foot .jj-dot{display:none} .site-foot .cr{display:block;white-space:normal}   /* footer credits one per line (family rules, 21 Nov; from 700px, Sim World's phone width, not family.css's 600) */
 }
 
 /* Town plan on lot, Sim and household pages (her pick, 21 Nov, from the Try switch): white plates edged in the neighbourhood colour with the striped top edge, section rules with a purple start, squared tags, and "Also in" lot cards like the neighbourhood page's. html[data-inner] is set by route() on those pages. */
@@ -1188,6 +1182,5 @@ html[data-inner] .mini b::before{content:"";flex:none;width:11px;height:11px;mar
   background:radial-gradient(circle,#FBF8F0 0 1.6px,var(--k) 2.1px);box-shadow:0 0 0 1px var(--pin-ring)}
 html[data-inner] .mini a:hover b{color:var(--water)}
 html[data-inner] .mini small{margin:0;padding:6px 4px 0;border-top:1px dashed var(--line);font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:600}
-/* The second word of the name in the sidebar and Menu bar: purple (her pick, 21 Nov; was gold) */
-.brand b em,.topbar .brand-bar em{color:#5B4BB0}
-:root[data-mode="dark"] .brand b em,:root[data-mode="dark"] .topbar .brand-bar em{color:#B7A8F7}
+/* The second word of the name in the sidebar and Menu bar: purple (her pick, 21 Nov; was gold): --water, #5B4BB0 light, #B7A8F7 dark */
+.brand b em,.topbar .brand-bar em{color:var(--water)}

@@ -25,7 +25,7 @@ test('opens light with the device set to dark; the button switches, saves jj-mod
   await page.reload();
   await page.waitForFunction(() => document.querySelector('#view').innerHTML.length > 0);
   expect(await page.evaluate(() => document.documentElement.getAttribute('data-mode'))).toBe('light');
-  await expect(page.locator('#modeBtn .txt')).toHaveText('Dark mode');
+  await expect(page.locator('#modeBtn')).toHaveText('Dark mode');
 });
 
 test('her old choice ("jsw-mode") is kept once, moved to jj-mode; no dark styles hang off the device setting', async ({ page }) => {
@@ -52,13 +52,13 @@ for (const [name, width] of [['laptop', 1600], ['phone', 390]]) {
         const f = document.querySelector('.site-foot'), kids = [...f.children].map(e => e.className);
         const ps = [...f.querySelectorAll('.about-site p')], crs = [...ps[1].querySelectorAll('.cr')];
         const tops = crs.map(c => Math.round(c.getBoundingClientRect().top));
-        return { footers: document.querySelectorAll('footer').length, order: kids, name: f.querySelector('.foot-name').textContent,
-          nameItalic: getComputedStyle(f.querySelector('.foot-name')).fontStyle, line1: ps[0].textContent, credits: crs.map(c => c.textContent),
+        return { footers: document.querySelectorAll('footer').length, order: kids, name: f.querySelector('.jj-name').textContent,
+          nameItalic: getComputedStyle(f.querySelector('.jj-name')).fontStyle, line1: ps[0].textContent, credits: crs.map(c => c.textContent),
           capitals: crs.every(c => /^[A-Z]/.test(c.textContent)), oneRow: new Set(tops).size, size: getComputedStyle(ps[0]).fontSize,
           sideways: document.documentElement.scrollWidth > innerWidth };
       });
       expect(r.footers, k).toBe(1);
-      expect(r.order, k).toEqual(['foot-rule', 'foot-name', 'about-site', 'foot-links']);
+      expect(r.order, k).toEqual(['foot-rule', 'jj-name', 'about-site', 'jj-foot-links']);
       expect([r.name, r.nameItalic, r.line1, r.capitals, r.sideways], k).toEqual(['Jemma’s Sim World', 'normal', LINE1, true, false]);
       expect(r.credits[0], k).toBe('World maps by 20th Century Plumbob');
       expect(r.credits.join(' ')).toMatch(/Instrument Serif and Manrope.*Lucide/);
@@ -92,7 +92,7 @@ test('the Menu bar shows at 899px and the sidebar at 901px; the bar has the Menu
 test('the drawer: button, Escape, scrim and a link close it; focus goes in and back; closed it is inert; crossing 900px resets it', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await openApp(page);
-  const open = () => page.evaluate(() => document.body.classList.contains('nav-open'));
+  const open = () => page.evaluate(() => document.getElementById('side').classList.contains('jj-open'));
   const inSide = () => page.evaluate(() => document.getElementById('side').contains(document.activeElement));
   const focusId = () => page.evaluate(() => document.activeElement.id);
   // the button opens it; while open, everything outside it is inert (the top bar it covers too: no hidden focus stops)
@@ -123,7 +123,7 @@ test('the drawer: button, Escape, scrim and a link close it; focus goes in and b
   await page.setViewportSize({ width: 1280, height: 800 });
   await expect.poll(open).toBe(false);
   expect(await page.evaluate(() => [document.getElementById('side').inert, document.getElementById('main').inert,
-    document.documentElement.classList.contains('nav-lock'), document.getElementById('menuBtn').getAttribute('aria-expanded')])).toEqual([false, false, false, 'false']);
+    document.documentElement.classList.contains('jj-menu-open'), document.getElementById('menuBtn').getAttribute('aria-expanded')])).toEqual([false, false, false, 'false']);
 });
 
 // second review (21 Nov evening) and the tightened family rules (sections 2–4)
@@ -158,7 +158,7 @@ test('footer credits: a “·” never starts or ends a line, at any laptop widt
   for (const width of [1600, 1440, 1280, 1100, 1024, 950, 901, 800, 701]) {
     await page.setViewportSize({ width, height: 800 });
     await page.waitForTimeout(200);
-    const bad = await page.evaluate(() => [...document.querySelectorAll('.about-site .sep')].filter(s => getComputedStyle(s).visibility !== 'hidden').filter(s => {
+    const bad = await page.evaluate(() => [...document.querySelectorAll('.about-site .jj-dot')].filter(s => getComputedStyle(s).visibility !== 'hidden').filter(s => {
       const t = s.getBoundingClientRect(), prev = s.previousElementSibling.getBoundingClientRect(), next = s.nextElementSibling.getBoundingClientRect();
       return Math.abs(prev.bottom - t.bottom) > 3 || Math.abs(next.bottom - t.bottom) > 3; }).map(s => s.nextElementSibling.textContent));
     expect(bad, `${width}px`).toEqual([]);
@@ -201,4 +201,78 @@ test('second review: Gallery buttons and gold badges read at 4.5:1; phone banner
   await go(page, 'h-willow-creek--goth');
   const r = await page.evaluate(() => { const t = document.querySelector('.roster'); return [t.getBoundingClientRect().width <= innerWidth, t.closest('.sheet-wrap').scrollWidth <= t.closest('.sheet-wrap').clientWidth]; });
   expect(r).toEqual([true, true]);
+});
+
+// 22 Nov 2026 (her decision): the shared parts are one copy of code in Jemma’s Journals (site/family/), loaded at /family/
+test('the family’s shared code loads from /family/ and does the shared parts (no own copies left)', async ({ page, request }) => {
+  for (const f of ['mode.js', 'family.css', 'family.js']) {
+    const r = await request.get('/family/' + f);
+    expect(r.status(), f).toBe(200);
+  }
+  expect((await request.get('/family/..%2findex.html')).status()).not.toBe(200);   // only the family folder of the parent
+  expect((await request.get('/family/')).status()).toBe(404);
+  const errors = await openApp(page);
+  expect(errors).toEqual([]);
+  const r = await page.evaluate(() => ({
+    family: typeof window.JJFamily === 'object' && typeof JJFamily.menu === 'function',
+    head: [...document.head.querySelectorAll('script[src], link[rel="stylesheet"]')].map(e => (e.getAttribute('src') || e.getAttribute('href')).split('?')[0]),
+    oldKey: document.querySelector('script[src="/family/mode.js"]').dataset.oldKey,
+    inline: [...document.head.querySelectorAll('script:not([src])')].length,
+    line1: document.querySelector('[data-jj-line1]').textContent === JJFamily.LINE1,
+    painted: document.getElementById('modeBtn').getAttribute('data-jj-painted'),
+    themeDark: document.querySelector('meta[name="theme-color"]').dataset.dark }));
+  expect(r.family).toBe(true);
+  expect(r.head).toEqual(['/family/mode.js', '/family/family.css', '/family/family.js', 'site.css']);   // mode.js and family.css before Sim World's own stylesheet
+  expect([r.oldKey, r.inline, r.line1, r.painted, r.themeDark]).toEqual(['jsw-mode', 0, true, 'light', '#1B1524']);
+});
+
+test('round 3 review: a link chosen by keyboard keeps focus on it on a laptop (Home, worlds, Calendar too); in the phone’s drawer focus goes to the page', async ({ page }) => {
+  await openApp(page);
+  const w = await page.evaluate(() => worlds.find(x => x.ready && x.owned).id);
+  for (const href of ['#calendar', '#w-' + w, '#admin', '#home']) {
+    await page.locator(`#nav a[href="${href}"]`).focus();
+    await page.keyboard.press('Enter');
+    await expect(page).toHaveURL(new RegExp(href + '$'));
+    await expect.poll(() => page.evaluate(() => document.activeElement.getAttribute('href')), href).toBe(href);
+  }
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.click('#menuBtn');
+  await page.locator('#nav a[href="#calendar"]').focus();
+  await page.keyboard.press('Enter');
+  await expect(page).toHaveURL(/#calendar$/);
+  await expect.poll(() => page.evaluate(() => document.activeElement.id)).toBe('view');
+  await page.keyboard.press('Tab');
+  expect(await page.evaluate(() => document.getElementById('view').contains(document.activeElement))).toBe(true);
+});
+
+test('round 3 review: the open page’s link in the sidebar says so to screen readers (aria-current="page", one at a time)', async ({ page }) => {
+  await openApp(page);
+  const keys = await page.evaluate(() => { const l = Object.values(lotIndex)[0];
+    return ['home', 'w-' + l.world.id, 'n-' + l.hood.id, l.id, 'f-' + l.world.id, Object.keys(hhIndex)[0], Object.keys(SIM_PAGES)[0], 'calendar', 'admin-progress']; });
+  for (const k of keys) {
+    await go(page, k);
+    const cur = await page.evaluate(() => [...document.querySelectorAll('#nav [aria-current]')].map(a => [a.getAttribute('aria-current'), a.getAttribute('href')]));
+    expect(cur, k).toEqual([['page', '#' + k]]);
+  }
+  await go(page, 'no-such-page');
+  expect(await page.locator('#nav [aria-current]').count()).toBe(0);
+});
+
+test('round 3 review: the Not owned worlds in the sidebar read at 4.5:1, light and dark', async ({ page }) => {
+  await openApp(page);
+  for (const mode of ['light', 'dark']) {
+    await page.evaluate(m => document.documentElement.setAttribute('data-mode', m), mode);
+    const r = await page.evaluate(() => {
+      const P = s => { const n = s.match(/[\d.]+/g).map(Number); return s.startsWith('color(') ? [n[0] * 255, n[1] * 255, n[2] * 255, n[3] ?? 1] : [n[0], n[1], n[2], n[3] ?? 1]; };
+      const L = ([r, g, b]) => { const f = c => { c /= 255; return c <= .03928 ? c / 12.92 : ((c + .055) / 1.055) ** 2.4; }; return .2126 * f(r) + .7152 * f(g) + .0722 * f(b); };
+      const bg = P(getComputedStyle(document.documentElement).getPropertyValue('--nav').trim().replace(/^#(..)(..)(..)$/, (_, a, b, c) => `rgb(${parseInt(a, 16)}, ${parseInt(b, 16)}, ${parseInt(c, 16)})`));
+      const over = (fg) => { const a = fg[3]; return [0, 1, 2].map(i => fg[i] * a + bg[i] * (1 - a)); };
+      const ratio = el => { const st = getComputedStyle(el), fg = over(P(st.color)), op = +st.opacity; const c = [0, 1, 2].map(i => fg[i] * op + bg[i] * (1 - op));
+        const x = L(c), y = L(bg); return +((Math.max(x, y) + .05) / (Math.min(x, y) + .05)).toFixed(2); };
+      const g = document.querySelector('.nav-group.dim');
+      return [ratio(g.querySelector('.label')), ...[...g.querySelectorAll('a.soon')].map(ratio), ...[...g.querySelectorAll('a.soon .pct')].map(ratio)];
+    });
+    expect(r.length, mode).toBeGreaterThan(3);
+    for (const x of r) expect(x, mode).toBeGreaterThanOrEqual(4.5);
+  }
 });

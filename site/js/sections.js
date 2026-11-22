@@ -27,7 +27,7 @@ function sectionsNav(active){
   nav.insertAdjacentHTML("beforeend", admin);
 }
 const renderNavBase = renderNav;
-renderNav = function (active, key, ctx) { renderNavBase(active, key, ctx); sectionsNav(active); };
+renderNav = function (active, key, ctx) { renderNavBase(active, key, ctx); sectionsNav(active); markCurrent(); };   // markCurrent (app.js): aria-current on this page's link
 
 /* ---------- the Calendar (prototype option A, her pick): one calendar, a map banner of the worlds with something on; pick a world and
    the banner becomes its map and colours (#calendar-<world>). Every event in the month opens its lot or neighbourhood. ---------- */

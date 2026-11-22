@@ -672,16 +672,27 @@ function renderNav(active, key, ctx){
   h += `</div><div class="nav-group dim"><div class="label">Not owned</div>${notOwned.map(w => navWorld(w, true)).join("")}</div>`;   // Across the worlds and Admin are added by js/sections.js
   nav.innerHTML = h;
 }
+// the link for the page that's open (round 3 review: screen readers are told with aria-current="page", not only by colour): the one whose
+// address is this page's, else the one marked "cur" (a lot, household or Sim) or "on" (Home, a world, a section page such as a world's calendar)
+function navCurrent(){
+  const here = location.hash && location.hash !== "#" ? location.hash : "#home", links = [...document.querySelectorAll("#nav a[href]:not([data-sim])")];
+  return links.find(a => a.getAttribute("href") === here) || links.find(a => a.classList.contains("cur")) || links.find(a => a.classList.contains("on") && !a.classList.contains("hit"));
+}
+function markCurrent(){
+  document.querySelectorAll('#nav [aria-current]').forEach(a => a.removeAttribute("aria-current"));
+  navCurrent()?.setAttribute("aria-current", "page");
+}
 // clicking the page you're already on goes back to its top
 // clicking the item for the page you are on folds its list (click again to unfold); anything else takes you to its page
-document.addEventListener("click", e => {
+// (on #nav, not the document: a fold stops there, so inside the phone's drawer it doesn't count as choosing a link and the drawer stays open)
+document.getElementById("nav").addEventListener("click", e => {
   const a = e.target.closest('.nav a[href]'); if (!a || a.dataset.sim) return;
   const next = a.nextElementSibling, list = next && (next.classList.contains("lotnav") || next.classList.contains("subnav")) ? next : null;
   const here = location.hash === a.getAttribute("href") || (location.hash === "" && a.getAttribute("href") === "#home");
-  if (list && here) { e.preventDefault(); list.hidden = !list.hidden; a.classList.toggle("folded", list.hidden); return; }
+  if (list && here) { e.preventDefault(); e.stopPropagation(); list.hidden = !list.hidden; a.classList.toggle("folded", list.hidden); return; }
   // a world whose list is open (with a household or Sim open under it, say) closes completely in one click (her ask, 19 Oct); click again to go to the world
-  if (list && list.classList.contains("subnav") && !list.hidden && a.closest(".nav-group") && !a.closest(".subnav")) { e.preventDefault(); list.hidden = true; a.classList.add("folded"); return; }
-  if (here) { window.scrollTo({top:0, behavior: SMOOTH()}); if (document.body.classList.contains("nav-open")) setNav(false); }   // on a phone the drawer closes too
+  if (list && list.classList.contains("subnav") && !list.hidden && a.closest(".nav-group") && !a.closest(".subnav")) { e.preventDefault(); e.stopPropagation(); list.hidden = true; a.classList.add("folded"); return; }
+  if (here) window.scrollTo({top:0, behavior: SMOOTH()});   // on a phone the drawer closes too (the family's drawer closes on any link)
 });
 // ---------- search (13 Oct): lots by any of their names, households, Sims, neighbourhoods and worlds; results take the sidebar's place while typing ----------
 const fold = s => String(s ?? "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[‘’'.]/g, "").replace(/&/g, "and").replace(/\s+/g, " ");
@@ -1396,10 +1407,15 @@ function route(){
   afterDraw(key, view);
   clearSearch();
   renderNav(active, key, ctx);
-  // keyboard users: the sidebar is redrawn, so put focus back on the link they chose
-  if (navChosen) { document.querySelector("#nav a.cur, #nav a.path")?.focus({preventScroll: true}); navChosen = false; }
+  // keyboard users: the sidebar is redrawn, so put focus back on the link they chose (the one for this page; Home, worlds, Calendar and the
+  // Across-the-worlds and Admin pages are marked "on", not "cur": round 3 review). In the phone's drawer, which closes, focus goes to the page.
+  if (navChosen) {
+    if (phoneNav.matches) document.getElementById("view").focus({preventScroll: true});
+    else (navCurrent() || document.querySelector("#nav a.cur, #nav a.path, #nav a.on"))?.focus({preventScroll: true});
+    navChosen = false;
+  }
   window.scrollTo(0, +routeY || 0); routeY = 0;   // a new page starts at the top; Back and Forward return to where that page was
-  if (document.body.classList.contains("nav-open")) setNav(false);
+  if (drawerOpen()) drawer.close("link");   // e.g. a search result chosen with Enter
 }
 
 // Community Space lots: all four versions shown as equals (12 Oct). Each version has its own Gallery pictures, notes and stats.
@@ -1556,7 +1572,7 @@ const calWeeks = e => e.often === "fortnight" ? (e.pair && e.name.toLowerCase() 
 const calHolidays = sn => [...(CAL.gameHolidays || []).filter(x => !CAL.holidays.some(y => y.replaces === x.name)), ...CAL.holidays].filter(x => x.season === sn);
 calState.season ||= "Spring";
 
-document.getElementById("menuIco").innerHTML = ic("menu");
+document.getElementById("menuIco").innerHTML = ic("menu");   // Sim World draws its own Menu button (family.js only fills an empty one)
 document.getElementById("searchIco").innerHTML = ic("search");
 let navChosen = false;
 document.getElementById("nav").addEventListener("click", e => { if (e.target.closest("a[href^='#']") && e.detail === 0) navChosen = true; });   // a keyboard "click" (Enter) has detail 0
@@ -1569,79 +1585,40 @@ addEventListener("scroll", () => { clearTimeout(scrollKeep); scrollKeep = setTim
 document.addEventListener("click", e => { if (e.target.closest && e.target.closest("a[href^='#'], [data-lot-link]")) keepScroll(); }, true);
 const scrollBack = () => { routeY = history.state && history.state.y; route(); };
 addEventListener("hashchange", scrollBack);
-// the phone's Menu drawer (21 Nov; family rules): the button says whether it's open, a closed drawer can't be reached with Tab (inert),
-// opening it moves focus in, and Escape or the scrim closes it with focus back on the button
+// the phone's Menu drawer (family rules): the family's shared controller, JJFamily.menu in /family/family.js (one copy in Jemma’s
+// Journals, 22 Nov). It gives the button aria-expanded/aria-controls, keeps a closed drawer inert, makes everything else inert while it's
+// open (so Tab stays inside), closes it on Escape, the scrim or a link, and resets it across 900px. Sim World says where focus starts:
+// the current page's own link, or Home if the page has none; never "← Jemma's Journals" (her call 21 Nov: one Enter shouldn't leave the site).
+// Its look (the bar, the slide, the scrim) is Sim World's own, in site.css (.side.jj-open, .scrim).
 const sideEl = document.getElementById("side"), menuBtn = document.getElementById("menuBtn"), phoneNav = matchMedia("(max-width:900px)");
-// where focus starts in the opened drawer: the current page's own link, or Home if the page has none; never "← Jemma's Journals"
-// (her call 21 Nov: one Enter shouldn't leave the site; now the family rule)
+let drawer = null;   // the family's controller, once /family/family.js has loaded (it is deferred)
+const drawerOpen = () => !!(drawer && drawer.isOpen());
 function drawerStart(){
   const here = location.hash && location.hash !== "#" ? location.hash : "#home";
-  const mine = [...sideEl.querySelectorAll("#nav a[href]")].find(a => a.getAttribute("href") === here && a.getClientRects().length);
+  const mine = [...sideEl.querySelectorAll("#nav a[href]")].find(a => a.getAttribute("href") === here && !a.dataset.sim && a.getClientRects().length);
   return mine || sideEl.querySelector('.nav-group a[href="#home"]') || sideEl.querySelector("#nav a,input");
 }
-function setNav(open, focus){
-  const wasIn = sideEl.contains(document.activeElement);
-  document.body.classList.toggle("nav-open", open);
-  menuBtn.setAttribute("aria-expanded", String(open));
-  sideEl.inert = phoneNav.matches && !open;
-  // while it's open on a phone, everything outside it (the top bar, which it covers, and the page) can't be reached with Tab or scrolled,
-  // so focus stays inside the drawer (family rules, tightened 21 Nov after the second review); Escape and the scrim still close it
-  const lock = phoneNav.matches && open;
-  document.querySelectorAll("body > *:not(#side):not(#scrim):not(script)").forEach(el => { el.inert = lock; });
-  document.documentElement.classList.toggle("nav-lock", lock);
-  if (open && focus) drawerStart()?.focus({preventScroll: true});
-  if (!open && phoneNav.matches && (focus || wasIn)) menuBtn.focus({preventScroll: true});
-}
-menuBtn.setAttribute("aria-controls", "side");
-menuBtn.addEventListener("click", () => setNav(!document.body.classList.contains("nav-open"), true));
-document.getElementById("scrim").addEventListener("click", () => setNav(false, true));
-addEventListener("keydown", e => { if (e.key === "Escape" && document.body.classList.contains("nav-open")) setNav(false, true); });
-// Tab wraps round inside the open drawer (its own links only: the Menu button is under it and inert), so focus never leaves it for the browser's own bar
+// Tab wraps round inside the open drawer (its own links only), so focus never leaves it for the browser's own bar (kept from 21 Nov)
 addEventListener("keydown", e => {
-  if (e.key !== "Tab" || !phoneNav.matches || !document.body.classList.contains("nav-open")) return;
+  if (e.key !== "Tab" || !phoneNav.matches || !drawerOpen()) return;
   const all = [...sideEl.querySelectorAll('a[href],button,input,select,[tabindex]:not([tabindex="-1"])')].filter(el => !el.disabled && el.getClientRects().length);
   const k = all.indexOf(document.activeElement), last = all.length - 1;
   if (e.shiftKey ? k <= 0 : k === last || k < 0) { e.preventDefault(); all[e.shiftKey ? last : 0].focus(); }
 });
-phoneNav.addEventListener("change", () => setNav(false));
-setNav(false);
-// bottom of every page (21 Nov 2026, the family rules shared by all her sites, as on Jemma’s Journals): Back to top, and Dark/Light mode.
-// The site always opens light, even when the device prefers dark; pressing the button switches and the choice is kept in localStorage
-// "jj-mode", the one key every site in the family shares, so it carries across them once they share an address (read before the page
-// is drawn by the small script in index.html's head, which also moves over the old "jsw-mode" once).
-const MODE_KEY = "jj-mode", modeBtn = document.getElementById("modeBtn");
-function showMode(){
-  const dark = document.documentElement.getAttribute("data-mode") === "dark";
-  modeBtn.querySelector(".ico").innerHTML = ic(dark ? "sun" : "moon");
-  modeBtn.querySelector(".txt").textContent = dark ? "Light mode" : "Dark mode";
-  modeBtn.setAttribute("aria-pressed", String(dark));
-  document.querySelector('meta[name="theme-color"]')?.setAttribute("content", dark ? "#1B1524" : "#EEEAF2");
-}
-modeBtn.addEventListener("click", () => {
-  const dark = document.documentElement.getAttribute("data-mode") !== "dark";
-  document.documentElement.setAttribute("data-mode", dark ? "dark" : "light");
-  try { localStorage.setItem(MODE_KEY, dark ? "dark" : "light"); } catch (e) {}
-  showMode();
-});
-showMode();
-// another window of the site switched mode: follow it
-addEventListener("storage", e => { if (e.key !== MODE_KEY) return; document.documentElement.setAttribute("data-mode", e.newValue === "dark" ? "dark" : "light"); showMode(); });
-// footer credits (family rules): each "·" is glued to the credit before it (a no-break space), so it never starts a line; one that would end
-// a line is hidden instead, so it never ends one either (checked again whenever the footer's width changes)
-const credits = document.querySelector(".about-site p:last-child");
-function tidyCredits(){
-  credits.querySelectorAll(".sep").forEach(s => {
-    s.style.visibility = "";
-    const next = s.nextElementSibling;
-    if (next && s.getClientRects().length && next.getBoundingClientRect().top > s.getBoundingClientRect().bottom - 4) s.style.visibility = "hidden";
+// the bottom of every page (family rules): the footer's Back to top and Dark/Light mode, its first line and the credit dots are drawn and
+// wired by /family/family.js (Back to top moves focus to #view, data-jj-top in index.html), dark mode by /family/mode.js before the page
+// draws. Opened as a file (not supported since 22 Nov: she opens it through the family, http://localhost:8050/sim-world/) neither loads,
+// so the two buttons are hidden there rather than left empty, and the page stays light.
+function familyReady(){
+  if (!window.JJFamily) { document.querySelector(".jj-foot-links")?.setAttribute("hidden", ""); return; }
+  drawer = JJFamily.menu({
+    button: menuBtn, drawer: sideEl, scrim: document.getElementById("scrim"),
+    outside: () => [...document.body.children].filter(el => el !== sideEl && el.id !== "scrim" && el.tagName !== "SCRIPT"),   // the top bar and the page
+    current: drawerStart,
+    main: () => document.getElementById("view"),
   });
 }
-if (credits) { new ResizeObserver(tidyCredits).observe(credits); document.fonts?.ready.then(tidyCredits); }
-document.querySelector("#toTop .ico").innerHTML = ic("arrow-up");
-document.getElementById("toTop").addEventListener("click", () => {
-  window.scrollTo({top: 0, behavior: SMOOTH()});
-  document.getElementById("view").focus({preventScroll: true});   // keyboard users carry on from the top of the page
-});
+if (document.readyState === "loading") addEventListener("DOMContentLoaded", familyReady); else familyReady();
 // the "← Jemma’s Journals" link (index.html, 20 Nov): "/" is home once online; opened as a file from her PC, "/" would be
 // the C: drive, so it goes to her local copy of the home page instead (relative: JemmasJournals/sim-world/site → JemmasJournals/site)
 const HOME_LOCAL = "../../site/index.html";   // since 21 Nov this app sits inside Jemma’s Journals: sim-world/site → site

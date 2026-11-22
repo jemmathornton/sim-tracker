@@ -15,7 +15,7 @@
   for (const k of keys) {
     const p = {k};
     try { render(k); } catch (e) { p.error = e.message; }
-    const bad = [...document.querySelectorAll('a[href^="#"]')].map(a => a.getAttribute('href').slice(1)).filter(h => h && !valid.has(h));
+    const bad = [...document.querySelectorAll('a[href^="#"]:not([data-jj-top])')].map(a => a.getAttribute('href').slice(1)).filter(h => h && !valid.has(h));   // the footer's Back to top (data-jj-top, the family's) scrolls, it never opens #top
     if (bad.length) p.badLinks = [...new Set(bad)].slice(0, 5);
     const junk = view.innerText.match(/\b(undefined|NaN|null|\[object Object\])\b/g);
     if (junk) p.junk = junk.slice(0, 3);

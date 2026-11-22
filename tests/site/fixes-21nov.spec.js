@@ -52,7 +52,7 @@ test('phone drawer: focus stays inside, the page behind doesn’t scroll, Escape
   await openApp(page);
   await go(page, 'calendar');
   await page.click('#menuBtn');
-  await expect(page.locator('body')).toHaveClass(/nav-open/);
+  await expect(page.locator('#side')).toHaveClass(/jj-open/);
   expect(await page.evaluate(() => document.getElementById('main').inert)).toBe(true);
   for (let i = 0; i < 40; i++) {
     await page.keyboard.press('Tab');
@@ -64,9 +64,9 @@ test('phone drawer: focus stays inside, the page behind doesn’t scroll, Escape
   await page.fill('#q', 'goth');
   await page.press('#q', 'Escape');
   await expect(page.locator('#q')).toHaveValue('');
-  await expect(page.locator('body')).toHaveClass(/nav-open/);
+  await expect(page.locator('#side')).toHaveClass(/jj-open/);
   await page.locator('#nav a[href="#calendar"]').click();
-  await expect(page.locator('body')).not.toHaveClass(/nav-open/);
+  await expect(page.locator('#side')).not.toHaveClass(/jj-open/);
   expect(await page.evaluate(() => [document.getElementById('main').inert, getComputedStyle(document.documentElement).overflow])).toEqual([false, 'visible']);
 });
 
@@ -84,7 +84,7 @@ test('browser storage: the calendar key moves to jsw-calendar-4, a broken “see
   await page.click('#modeBtn');
   await expect(page.locator('html')).toHaveAttribute('data-mode', 'dark');
   await expect(other.locator('html')).toHaveAttribute('data-mode', 'dark');
-  await expect(other.locator('#modeBtn .txt')).toHaveText('Light mode');
+  await expect(other.locator('#modeBtn')).toHaveText('Light mode');
   await page.click('#modeBtn');
   await expect(other.locator('html')).toHaveAttribute('data-mode', 'light');
 });

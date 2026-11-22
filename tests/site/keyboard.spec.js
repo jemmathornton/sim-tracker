@@ -53,12 +53,12 @@ test('on a phone, the menu button opens the sidebar from the keyboard and a link
   await openApp(page);
   await page.locator('#menuBtn').focus();
   await page.keyboard.press('Enter');
-  await expect(page.locator('body')).toHaveClass(/nav-open/);
+  await expect(page.locator('#side')).toHaveClass(/jj-open/);
   expect(await page.locator('#menuBtn').evaluate(b => b.tagName === 'BUTTON' || b.getAttribute('role') === 'button')).toBe(true);
   expect(await page.locator('#menuBtn').evaluate(b => (b.getAttribute('aria-label') || b.innerText || '').trim().length)).toBeGreaterThan(0);
   const w = await page.evaluate(() => worlds.find(w => w.owned && w.ready).id);
   await page.locator(`#nav a[href="#w-${w}"]`).focus();
   await page.keyboard.press('Enter');
   await expect(page).toHaveURL(new RegExp(`#w-${w}$`));
-  await expect(page.locator('body')).not.toHaveClass(/nav-open/);
+  await expect(page.locator('#side')).not.toHaveClass(/jj-open/);
 });

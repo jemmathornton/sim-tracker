@@ -55,14 +55,14 @@ test('on a phone the sidebar slides in from the menu button and the scrim closes
   await expect(page.locator('#menuBtn')).toBeVisible();
   expect(await sideX()).toBeLessThanOrEqual(0);
   await page.click('#menuBtn');
-  await expect(page.locator('body')).toHaveClass(/nav-open/);
+  await expect(page.locator('#side')).toHaveClass(/jj-open/);
   await expect.poll(sideX).toBeGreaterThan(200);
   await page.mouse.click(360, 400);   // the scrim, to the right of the sidebar
-  await expect(page.locator('body')).not.toHaveClass(/nav-open/);
+  await expect(page.locator('#side')).not.toHaveClass(/jj-open/);
   // choosing a page closes it too
   await page.click('#menuBtn');
   const w = await page.evaluate(() => worlds.find(w => w.owned && w.ready).id);
   await page.locator(`#nav a[href="#w-${w}"]`).click();
   await expect(page).toHaveURL(new RegExp(`#w-${w}$`));
-  await expect(page.locator('body')).not.toHaveClass(/nav-open/);
+  await expect(page.locator('#side')).not.toHaveClass(/jj-open/);
 });
