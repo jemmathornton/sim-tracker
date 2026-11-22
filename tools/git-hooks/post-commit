@@ -1,6 +1,7 @@
 #!/bin/sh
 # Push every commit on main to her GitHub backup straight away (19 Nov, her ask). Kept in git here (tools/git-hooks/post-commit);
-# the live copy is .git/hooks/post-commit (git doesn't keep hooks: on a new clone, copy this file there).
+# the live copy is in git's hooks folder (git doesn't keep hooks: on a new clone, copy this file there). Inside Jemma's
+# Journals (21 Nov) .git is a file, and the folder is JemmasJournals/.git/modules/sim-world/hooks: `git rev-parse --git-path hooks`.
 # - Only the main branch: a commit on a worktree's claude/* branch never goes to the public repo (21 Nov review).
 # - Skipped when SIMWORLD_NO_HOOK_PUSH is set: the weekly refresh pushes itself afterwards (backup_push), so the two
 #   pushes never race.

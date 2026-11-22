@@ -2,16 +2,25 @@
 
     python -X utf8 tools/sync_notes.py
 
-Claude Code keeps them outside the project (C:\\Users\\Jemma\\.claude\\projects\\<this project>\\memory\\*.md). This mirrors that
+Claude Code keeps them outside the project (C:\\Users\\Jemma\\.claude\\projects\\<this project>\\memory\\*.md; since the move to
+Jemma's Journals, 21 Nov: C--Users-Jemma-Documents-JemmasJournals-sim-world, worked out from where the project is). This mirrors that
 folder into claude-notes/: new and changed notes are copied, notes deleted there are deleted here (claude-notes/README.md stays).
 The weekly Gallery refresh runs it before its automatic save. To restore on a new PC, copy claude-notes/*.md (not README.md)
 back into that memory folder.
 """
-import os, sys
+import os, re, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import ROOT, write_text
 
-MEMORY = os.path.join(os.path.expanduser('~'), '.claude', 'projects', 'C--Users-Jemma-Documents-SimTracker', 'memory')
+
+def memory_folder(root=ROOT):
+    """Claude Code's memory folder for a project: its full path with every character that isn't a letter or digit turned into
+    "-" (C:\\Users\\Jemma\\Documents\\JemmasJournals\\sim-world -> C--Users-Jemma-Documents-JemmasJournals-sim-world). Worked out
+    from where the project is, so it follows a move (22 Nov review: it still read the old SimTracker folder after the move)."""
+    return os.path.join(os.path.expanduser('~'), '.claude', 'projects', re.sub(r'[^A-Za-z0-9]', '-', os.path.abspath(root)), 'memory')
+
+
+MEMORY = memory_folder()
 OUT = os.path.join(ROOT, 'claude-notes')
 KEEP = {'README.md'}
 

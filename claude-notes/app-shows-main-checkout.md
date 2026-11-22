@@ -8,7 +8,7 @@ metadata:
   modified: 2026-10-13T18:10:18.646Z
 ---
 
-The "Jemma's Sim World" shortcut opens `C:\Users\Jemma\Documents\SimTracker\site\index.html` (main checkout) in its own Chrome window via file://. Work done on a worktree branch doesn't show in her app until it's merged into main.
+The "Jemma's Sim World" shortcut opens the main checkout's site in its own Chrome window: since 22 Nov 2026 through the family server, http://localhost:8050/sim-world/ (Jemma's Journals' tools/open_site.pyw sim-world), which serves `C:\Users\Jemma\Documents\JemmasJournals\sim-world\site` (before the move: `Documents\SimTracker\site\index.html` via file://). Work done on a worktree branch doesn't show in her app until it's merged into main.
 
 **Why:** On 13 Oct 2026 two sessions ran in parallel (one on main, one in a worktree) and both made gridded maps and edited TODO.md. Merging the worktree into main was blocked by auto mode until she said "ok merge now".
 

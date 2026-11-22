@@ -22,6 +22,12 @@ class SyncNotes(unittest.TestCase):
         self.assertEqual(self.read('a.md'), 'one'); self.assertEqual(self.read('README.md'), 'mine')
         self.assertEqual(sync_notes.sync(self.src, self.out), ([], []))   # nothing changed: nothing written
 
+    def test_memory_folder_follows_the_project(self):   # 22 Nov review: after the move it still read the old SimTracker folder
+        self.assertEqual(sync_notes.memory_folder(r'C:\Users\Jemma\Documents\JemmasJournals\sim-world'),
+                         os.path.join(os.path.expanduser('~'), '.claude', 'projects', 'C--Users-Jemma-Documents-JemmasJournals-sim-world', 'memory'))
+        self.assertEqual(sync_notes.MEMORY, sync_notes.memory_folder(sync_notes.ROOT))
+        self.assertNotIn('SimTracker', sync_notes.MEMORY)
+
     def test_no_memory_folder_does_nothing(self):
         self.assertEqual(sync_notes.sync(os.path.join(self.tmp, 'nope'), self.out), ([], []))
 

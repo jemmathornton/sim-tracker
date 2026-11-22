@@ -76,6 +76,38 @@ class Backup(unittest.TestCase):
         self.assertEqual(self.said, ["Backed up to GitHub"])
         self.assertTrue(all('--force' not in a and '-f' not in a for a in runs))
 
+    def test_says_whether_it_pushed(self):   # 22 Nov: only a good push goes on to record the version in Jemma's Journals
+        self.assertFalse(G.backup_push(root=self.repo))   # no GitHub copy
+        self.g('remote', 'add', 'origin', os.path.join(self.tmp, 'missing.git'))
+        self.assertFalse(G.backup_push(root=self.repo))
+        self.g('remote', 'set-url', 'origin', self.remote); self.g('init', '-q', '--bare', self.remote, cwd=self.tmp)
+        self.assertTrue(G.backup_push(root=self.repo))
+
+    def test_records_in_the_parent_after_a_good_push_only(self):
+        src = Path(G.__file__).read_text(encoding='utf-8')
+        self.assertIn("if '--no-push' not in sys.argv and backup_push(): record_in_parent()", src)
+        self.assertEqual(os.path.normpath(G.RECORD_APPS), os.path.normpath(os.path.join(G.ROOT, '..', 'tools', 'record_apps.py')))
+
+    def parent_tool(self, body):
+        tools = os.path.join(self.tmp, 'parent', 'tools'); os.makedirs(tools)
+        p = os.path.join(tools, 'record_apps.py'); Path(p).write_text(body, encoding='utf-8'); return p
+
+    def test_parent_tool_output_goes_in_the_log(self):
+        p = self.parent_tool("import os\nprint('Recorded sim-world'); print('pushed')\nopen('ran-here.txt', 'w').close()\n")
+        G.record_in_parent(p)
+        self.assertEqual(self.said, ["Jemma's Journals: Recorded sim-world; pushed"])
+        self.assertTrue(os.path.exists(os.path.join(self.tmp, 'parent', 'ran-here.txt')))   # run from the parent's folder
+
+    def test_parent_tool_failing_is_only_a_note(self):
+        G.record_in_parent(self.parent_tool("import sys\nprint('nope'); sys.exit(1)\n"))
+        self.assertEqual(self.said, ["Couldn't record the new version in Jemma's Journals: nope"])
+        self.assertTrue(self.said[0].startswith(admin_data.NOTES))
+        self.assertFalse(any(f in self.said[0] for f in admin_data.FAILED))
+
+    def test_no_parent_tool_does_nothing(self):   # a lone clone of Sim World, not inside Jemma's Journals
+        G.record_in_parent(os.path.join(self.tmp, 'nowhere', 'record_apps.py'))
+        self.assertEqual(self.said, [])
+
     def test_lasting_failure_is_not_retried(self):
         self.g('remote', 'add', 'origin', os.path.join(self.tmp, 'missing.git'))
         runs, real = [], subprocess.run
@@ -148,7 +180,11 @@ class PostCommitHook(unittest.TestCase):
         self.assertNotIn('--force', text); self.assertNotRegex(text, r'push.* -f\b')
 
     def test_live_hook_is_this_one(self):
-        live = os.path.join(ROOT, '.git', 'hooks', 'post-commit')
+        # ask git where the hooks are: inside Jemma's Journals (21 Nov) .git is a file pointing at ../.git/modules/sim-world
+        r = subprocess.run(['git', 'rev-parse', '--git-path', 'hooks'], cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
+        self.assertEqual(r.returncode, 0, r.stderr)
+        hooks = r.stdout.strip()
+        live = os.path.join(hooks if os.path.isabs(hooks) else os.path.join(ROOT, hooks), 'post-commit')
         if not os.path.exists(live): self.skipTest('no live hook (a fresh clone)')
         self.assertEqual(Path(live).read_text(encoding='utf-8'), Path(HOOK).read_text(encoding='utf-8'))
 

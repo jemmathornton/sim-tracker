@@ -371,7 +371,29 @@ def backup_push(root=None):
             if r.returncode == 0 or attempt == 2 or not any(x.lower() in err.lower() for x in TRANSIENT): break
             time.sleep(PUSH_RETRY_WAIT)
         say("Backed up to GitHub" if r.returncode == 0 else "Backup to GitHub didn't work: " + err[-300:])
+        return r.returncode == 0
     except Exception as e: say(f"Backup to GitHub didn't work: {e}")
+    return False
+
+
+RECORD_APPS = os.path.join(ROOT, '..', 'tools', 'record_apps.py')   # Jemma's Journals' (the parent's) own tool
+
+
+def record_in_parent(script=None):
+    """After a good weekly push (22 Nov): Jemma's Journals, the parent, still points at Sim World's older version until it
+    records the new one, so run the parent's tools/record_apps.py (only if it's there, e.g. not in a lone clone). Its output
+    goes in the log; a problem is only a note, never a failed refresh."""
+    import subprocess
+    script = script or RECORD_APPS
+    try:
+        if not os.path.exists(script): return
+        r = subprocess.run([sys.executable, '-X', 'utf8', script], cwd=os.path.dirname(os.path.dirname(os.path.abspath(script))),
+                           stdin=subprocess.DEVNULL, capture_output=True, text=True, encoding='utf-8', errors='replace', timeout=600,
+                           creationflags=getattr(subprocess, 'CREATE_NO_WINDOW', 0))
+        out = '; '.join(x.strip() for x in ((r.stdout or '') + '\n' + (r.stderr or '')).splitlines() if x.strip())[-600:]
+        if r.returncode == 0: say("Jemma's Journals: " + (out or 'done'))
+        else: say("Couldn't record the new version in Jemma's Journals: " + (out or f'exit code {r.returncode}'))   # a note on Admin
+    except Exception as e: say(f"Couldn't record the new version in Jemma's Journals: {e}")
 
 
 if __name__ == '__main__':
@@ -408,7 +430,7 @@ if __name__ == '__main__':
                         if c or d: say(f"Claude's notes updated: {len(c)} copied, {len(d)} removed")
                     except Exception as e: say(f"Claude's notes not copied: {e}")
                     commit_refresh(before)
-        if '--no-push' not in sys.argv: backup_push()
+        if '--no-push' not in sys.argv and backup_push(): record_in_parent()   # then Jemma's Journals records the new version
     except Exception:
         import traceback
         say("Stopped with an error:\n" + traceback.format_exc())

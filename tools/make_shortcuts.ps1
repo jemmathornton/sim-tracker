@@ -1,18 +1,22 @@
 # Shortcuts that open Jemma's Sim World in its own Chrome window (no tabs or address bar).
-# Run:  powershell -ExecutionPolicy Bypass -File tools\make_shortcuts.ps1
-# Makes "Jemma's Sim World" in the project folder, on the Desktop and in the Start menu. Delete them any time.
+# Run:  powershell -ExecutionPolicy Bypass -File tools\make_shortcuts.ps1              (the one in the project folder only)
+#       powershell -ExecutionPolicy Bypass -File tools\make_shortcuts.ps1 -Everywhere  (also on the Desktop and in the Start menu)
+# Since 22 Nov 2026 (her choice: the apps load the family's shared code from Jemma's Journals) Sim World opens through the
+# family's one address: the shortcut runs Jemma's Journals' tools\open_site.pyw sim-world, which starts the family server
+# (http://localhost:8050) if needed and opens http://localhost:8050/sim-world/. Delete the shortcuts any time.
+param([switch]$Everywhere)
 
-$root   = Split-Path -Parent $PSScriptRoot
-$page   = 'file:///' + ((Join-Path $root 'site\index.html') -replace '\\', '/')
-$icon   = Join-Path $root 'site\icon.ico'
-$chrome = @("$env:ProgramFiles\Google\Chrome\Application\chrome.exe", "${env:ProgramFiles(x86)}\Google\Chrome\Application\chrome.exe",
-            "$env:LOCALAPPDATA\Google\Chrome\Application\chrome.exe", "${env:ProgramFiles(x86)}\Microsoft\Edge\Application\msedge.exe") |
-          Where-Object { Test-Path $_ } | Select-Object -First 1
-if (-not $chrome) { throw 'Neither Chrome nor Edge was found.' }
+$root    = Split-Path -Parent $PSScriptRoot                  # sim-world
+$parent  = Split-Path -Parent $root                          # Jemma's Journals
+$opener  = Join-Path $parent 'tools\open_site.pyw'
+$icon    = Join-Path $root 'site\icon.ico'
+$pythonw = Join-Path $env:LOCALAPPDATA 'Programs\Python\Python313\pythonw.exe'
+if (-not (Test-Path $opener))  { throw "Jemma's Journals' tools\open_site.pyw was not found (is sim-world inside JemmasJournals?)." }
+if (-not (Test-Path $pythonw)) { throw 'pythonw.exe (Python 3.13) was not found.' }
 
 # Windows knows the window by the app id Chrome gives it: "Chrome." + the page's address as Chrome shortens it (read from
 # the open window, 18 Oct). The shortcuts carry the same id, so Windows uses their sharp icon on the taskbar instead of
-# Chrome's stretched 32px tab icon (the same fix as Jemma's Library).
+# Chrome's stretched 32px tab icon (the same fix as Jemma's Library). Kept as it was: her Desktop and Start-menu shortcuts carry it too.
 $appId = 'Chrome._/C:/Users/Jemm/site/index.html'
 Add-Type -TypeDefinition @'
 using System; using System.Runtime.InteropServices;
@@ -39,12 +43,14 @@ public static class ShortcutAppId {
 '@
 
 $shell = New-Object -ComObject WScript.Shell
-foreach ($dir in @($root, [Environment]::GetFolderPath('Desktop'), [Environment]::GetFolderPath('Programs'))) {
+$dirs = @($root)
+if ($Everywhere) { $dirs += [Environment]::GetFolderPath('Desktop'), [Environment]::GetFolderPath('Programs') }
+foreach ($dir in $dirs) {
     $lnk = $shell.CreateShortcut((Join-Path $dir "Jemma's Sim World.lnk"))
-    $lnk.TargetPath       = $chrome
-    $lnk.Arguments        = "--app=`"$page`""
+    $lnk.TargetPath       = $pythonw
+    $lnk.Arguments        = "`"$opener`" sim-world"
     $lnk.IconLocation     = "$icon,0"
-    $lnk.WorkingDirectory = Join-Path $root 'site'
+    $lnk.WorkingDirectory = $parent
     $lnk.Description      = "Jemma's Sim World"
     $lnk.Save()
     [ShortcutAppId]::Set($lnk.FullName, $appId)
