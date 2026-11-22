@@ -1,130 +1,28 @@
 // The family rules (21 Nov 2026, her decision for all her sites; JemmasJournals/research/family-rules.md): dark mode works the same on
 // every site and carries across them (localStorage "jj-mode"), the same footer on every page, the same Menu drawer under 900px.
+// Since 22 Nov the family rules themselves (dark mode, jj-mode and the old key, footer layout and sizes, credit dots, the Menu
+// drawer at 899/901, robots, the shared code) are tested once for every site in the parent: JemmasJournals/tests/family/family.test.js.
+// What stays here is Sim World's own: its credits on every kind of page, where the drawer starts, its test server's /family/.
 const { test } = require('@playwright/test');
 const { openApp, go, expect } = require('./helpers');
 
-const LINE1 = 'No cookies, no tracking, no ads. Made with HTML, CSS, JavaScript and Python, kept on GitHub.';
-const theme = page => page.evaluate(() => document.querySelector('meta[name="theme-color"]').getAttribute('content'));
-
-test('opens light with the device set to dark; the button switches, saves jj-mode, changes the bar colour, and a reload keeps it', async ({ page }) => {
-  await page.emulateMedia({ colorScheme: 'dark' });
-  await openApp(page);
-  expect(await page.evaluate(() => [document.documentElement.getAttribute('data-mode'), localStorage.getItem('jj-mode')])).toEqual(['light', null]);
-  expect(await theme(page)).toBe('#EEEAF2');
-  await expect(page.locator('#modeBtn')).toHaveAttribute('aria-pressed', 'false');
-  await page.click('#modeBtn');
-  expect(await page.evaluate(() => [document.documentElement.getAttribute('data-mode'), localStorage.getItem('jj-mode')])).toEqual(['dark', 'dark']);
-  expect(await theme(page)).toBe('#1B1524');
-  await expect(page.locator('#modeBtn')).toHaveAttribute('aria-pressed', 'true');
-  await page.reload();
-  await page.waitForFunction(() => document.querySelector('#view').innerHTML.length > 0);
-  expect(await page.evaluate(() => document.documentElement.getAttribute('data-mode'))).toBe('dark');
-  expect(await theme(page)).toBe('#1B1524');
-  // the same key set by another site in the family is followed (light from there means light here)
-  await page.evaluate(() => localStorage.setItem('jj-mode', 'light'));
-  await page.reload();
-  await page.waitForFunction(() => document.querySelector('#view').innerHTML.length > 0);
-  expect(await page.evaluate(() => document.documentElement.getAttribute('data-mode'))).toBe('light');
-  await expect(page.locator('#modeBtn')).toHaveText('Dark mode');
-});
-
-test('her old choice ("jsw-mode") is kept once, moved to jj-mode; no dark styles hang off the device setting', async ({ page }) => {
-  await openApp(page);
-  await page.evaluate(() => { localStorage.removeItem('jj-mode'); localStorage.setItem('jsw-mode', 'dark'); });
-  await page.reload();
-  await page.waitForFunction(() => document.querySelector('#view').innerHTML.length > 0);
-  expect(await page.evaluate(() => [document.documentElement.getAttribute('data-mode'), localStorage.getItem('jj-mode'), localStorage.getItem('jsw-mode')]))
-    .toEqual(['dark', 'dark', null]);
-  const media = await page.evaluate(() => [...document.styleSheets].flatMap(s => { try { return [...s.cssRules]; } catch (e) { return []; } })
-    .filter(r => r.media && /prefers-color-scheme/.test(r.media.mediaText)).length);
-  expect(media).toBe(0);
-});
-
 for (const [name, width] of [['laptop', 1600], ['phone', 390]]) {
-  test(`the footer, in the family layout, on several kinds of page (${name})`, async ({ page }) => {
+  test(`the footer carries Sim World’s own credits on several kinds of page (${name})`, async ({ page }) => {
     await page.setViewportSize({ width, height: 900 });
     await openApp(page);
     const keys = await page.evaluate(() => { const w = worlds.find(x => x.ready && x.owned), l = Object.values(lotIndex)[0];
       return ['home', 'w-' + w.id, 'n-' + l.hood.id, l.id, Object.keys(SIM_PAGES)[0], 'calendar', 'no-such-page']; });
     for (const k of keys) {
       await go(page, k);
-      const r = await page.evaluate(() => {
-        const f = document.querySelector('.site-foot'), kids = [...f.children].map(e => e.className);
-        const ps = [...f.querySelectorAll('.about-site p')], crs = [...ps[1].querySelectorAll('.cr')];
-        const tops = crs.map(c => Math.round(c.getBoundingClientRect().top));
-        return { footers: document.querySelectorAll('footer').length, order: kids, name: f.querySelector('.jj-name').textContent,
-          nameItalic: getComputedStyle(f.querySelector('.jj-name')).fontStyle, line1: ps[0].textContent, credits: crs.map(c => c.textContent),
-          capitals: crs.every(c => /^[A-Z]/.test(c.textContent)), oneRow: new Set(tops).size, size: getComputedStyle(ps[0]).fontSize,
-          sideways: document.documentElement.scrollWidth > innerWidth };
-      });
-      expect(r.footers, k).toBe(1);
-      expect(r.order, k).toEqual(['foot-rule', 'jj-name', 'about-site', 'jj-foot-links']);
-      expect([r.name, r.nameItalic, r.line1, r.capitals, r.sideways], k).toEqual(['Jemma’s Sim World', 'normal', LINE1, true, false]);
+      const r = await page.evaluate(() => ({ footers: document.querySelectorAll('footer').length,
+        credits: [...document.querySelectorAll('.site-foot [data-jj-credits] .cr')].map(c => c.textContent),
+        sideways: document.documentElement.scrollWidth > innerWidth }));
+      expect([r.footers, r.sideways], k).toEqual([1, false]);
       expect(r.credits[0], k).toBe('World maps by 20th Century Plumbob');
-      expect(r.credits.join(' ')).toMatch(/Instrument Serif and Manrope.*Lucide/);
-      if (width < 700) expect(r.oneRow, k + ': one credit per line').toBe(r.credits.length);
-      else expect(r.size, k).toBe('12.5px');
+      expect(r.credits.join(' '), k).toMatch(/Instrument Serif and Manrope.*Lucide/);
     }
   });
 }
-
-test('the Menu bar shows at 899px and the sidebar at 901px; the bar has the Menu button and the name as a link home', async ({ page }) => {
-  await page.setViewportSize({ width: 901, height: 800 });
-  await openApp(page, 'calendar');
-  const state = () => page.evaluate(() => ({ bar: getComputedStyle(document.querySelector('.topbar')).display !== 'none',
-    side: document.getElementById('side').getBoundingClientRect().left >= 0 && !document.getElementById('side').inert }));
-  expect(await state()).toEqual({ bar: false, side: true });
-  await page.setViewportSize({ width: 899, height: 800 });
-  await expect.poll(state).toEqual({ bar: true, side: false });
-  const btn = page.locator('#menuBtn');
-  await expect(btn).toHaveText('Menu');
-  expect(await btn.evaluate(b => [!!b.querySelector('svg'), b.getAttribute('aria-controls'), b.getAttribute('aria-expanded')])).toEqual([true, 'side', 'false']);
-  const lockup = page.locator('.topbar a.brand-bar');
-  await expect(lockup).toHaveText('Jemma’s Sim World');
-  expect(await lockup.evaluate(a => [a.getAttribute('href'), getComputedStyle(a.querySelector('em')).fontStyle, a.querySelector('em').textContent]))
-    .toEqual(['#home', 'italic', 'Sim World']);
-  await lockup.click();
-  await expect(page).toHaveURL(/#home$/);
-  // ← Jemma’s Journals is the very first thing in the drawer
-  expect(await page.evaluate(() => document.getElementById('side').firstElementChild.textContent.trim())).toBe('← Jemma’s Journals');
-});
-
-test('the drawer: button, Escape, scrim and a link close it; focus goes in and back; closed it is inert; crossing 900px resets it', async ({ page }) => {
-  await page.setViewportSize({ width: 390, height: 844 });
-  await openApp(page);
-  const open = () => page.evaluate(() => document.getElementById('side').classList.contains('jj-open'));
-  const inSide = () => page.evaluate(() => document.getElementById('side').contains(document.activeElement));
-  const focusId = () => page.evaluate(() => document.activeElement.id);
-  // the button opens it; while open, everything outside it is inert (the top bar it covers too: no hidden focus stops)
-  await page.click('#menuBtn');
-  expect([await open(), await inSide()]).toEqual([true, true]);
-  expect(await page.evaluate(() => [document.getElementById('main').inert, document.querySelector('.topbar').inert, getComputedStyle(document.documentElement).overflow])).toEqual([true, true, 'hidden']);
-  for (const key of ['Tab', 'Shift+Tab']) for (let i = 0; i < 30; i++) {
-    await page.keyboard.press(key);
-    expect(await inSide(), `${key} ${i + 1}`).toBe(true);
-  }
-  await page.keyboard.press('Escape');
-  expect([await open(), await focusId()]).toEqual([false, 'menuBtn']);
-  expect(await page.evaluate(() => [document.getElementById('side').inert, document.querySelector('.topbar').inert])).toEqual([true, false]);
-  // Escape
-  await page.click('#menuBtn'); await page.keyboard.press('Escape');
-  expect([await open(), await focusId()]).toEqual([false, 'menuBtn']);
-  // the scrim
-  await page.click('#menuBtn'); await page.mouse.click(370, 500);
-  expect([await open(), await focusId()]).toEqual([false, 'menuBtn']);
-  // a link
-  await page.click('#menuBtn'); await page.locator('#nav a[href="#calendar"]').click();
-  await expect(page).toHaveURL(/#calendar$/);
-  expect(await open()).toBe(false);
-  // Tab can't reach the closed drawer
-  for (let i = 0; i < 15; i++) { await page.keyboard.press('Tab'); expect(await inSide(), `Tab ${i + 1}`).toBe(false); }
-  // open, then widen past 900px: it resets (no scrim, page unlocked, sidebar reachable)
-  await page.click('#menuBtn');
-  await page.setViewportSize({ width: 1280, height: 800 });
-  await expect.poll(open).toBe(false);
-  expect(await page.evaluate(() => [document.getElementById('side').inert, document.getElementById('main').inert,
-    document.documentElement.classList.contains('jj-menu-open'), document.getElementById('menuBtn').getAttribute('aria-expanded')])).toEqual([false, false, false, 'false']);
-});
 
 // second review (21 Nov evening) and the tightened family rules (sections 2–4)
 test('opening the drawer starts on the current page’s link (Home if the page has none), never on “← Jemma’s Journals”', async ({ page }) => {
@@ -136,35 +34,6 @@ test('opening the drawer starts on the current page’s link (Home if the page h
   for (const k of ['calendar', 'w-' + w]) { await go(page, k); expect(await start(), k).toBe('#' + k); }
   await go(page, 'no-such-page');
   expect(await start()).toBe('#home');
-});
-
-test('family sizes and small things: Menu button 44px, bar name 26px, scrim 45% black, back link 24px, robots meta, data-mode always set', async ({ page }) => {
-  await page.setViewportSize({ width: 390, height: 844 });
-  await openApp(page);
-  await page.click('#menuBtn');
-  const r = await page.evaluate(() => ({ btn: document.getElementById('menuBtn').getBoundingClientRect().height,
-    name: getComputedStyle(document.querySelector('.topbar .brand-bar')).fontSize, scrim: getComputedStyle(document.getElementById('scrim')).backgroundColor,
-    back: document.querySelector('.home-link').getBoundingClientRect().height, robots: document.querySelector('meta[name="robots"]')?.content,
-    mode: document.documentElement.getAttribute('data-mode') }));
-  expect(r.btn).toBeGreaterThanOrEqual(44);
-  expect(r.name).toBe('26px');
-  expect(r.scrim).toBe('rgba(0, 0, 0, 0.45)');
-  expect(r.back).toBeGreaterThanOrEqual(24);
-  expect([r.robots, r.mode]).toEqual(['noindex, noai, noimageai', 'light']);
-});
-
-test('footer credits: a “·” never starts or ends a line, at any laptop width; 12.5px on phones too', async ({ page }) => {
-  await openApp(page);
-  for (const width of [1600, 1440, 1280, 1100, 1024, 950, 901, 800, 701]) {
-    await page.setViewportSize({ width, height: 800 });
-    await page.waitForTimeout(200);
-    const bad = await page.evaluate(() => [...document.querySelectorAll('.about-site .jj-dot')].filter(s => getComputedStyle(s).visibility !== 'hidden' && getComputedStyle(s).display !== 'none').filter(s => {   // a dot at a break is taken out (family.js)
-      const t = s.getBoundingClientRect(), prev = s.previousElementSibling.getBoundingClientRect(), next = s.nextElementSibling.getBoundingClientRect();
-      return Math.abs(prev.bottom - t.bottom) > 3 || Math.abs(next.bottom - t.bottom) > 3; }).map(s => s.nextElementSibling.textContent));
-    expect(bad, `${width}px`).toEqual([]);
-  }
-  await page.setViewportSize({ width: 390, height: 844 });
-  expect(await page.evaluate(() => [...document.querySelectorAll('.site-foot .about-site p')].map(p => getComputedStyle(p).fontSize))).toEqual(['12.5px', '12.5px']);
 });
 
 test('second review: no sideways scroll on Community Space lots just over 900px; white focus ring on map banners; Secret Lots has no “0 of 0”', async ({ page }) => {
@@ -203,27 +72,15 @@ test('second review: Gallery buttons and gold badges read at 4.5:1; phone banner
   expect(r).toEqual([true, true]);
 });
 
-// 22 Nov 2026 (her decision): the shared parts are one copy of code in Jemma’s Journals (site/family/), loaded at /family/
-test('the family’s shared code loads from /family/ and does the shared parts (no own copies left)', async ({ page, request }) => {
+// 22 Nov 2026 (her decision): the shared code is one copy in Jemma’s Journals (site/family/); Sim World's own test server serves it
+// at /family/ and nothing else of the parent (what the code does is tested in the parent's family suite)
+test('the test server serves the family’s shared code at /family/, and nothing else of the parent', async ({ request }) => {
   for (const f of ['mode.js', 'family.css', 'family.js']) {
     const r = await request.get('/family/' + f);
     expect(r.status(), f).toBe(200);
   }
   expect((await request.get('/family/..%2findex.html')).status()).not.toBe(200);   // only the family folder of the parent
   expect((await request.get('/family/')).status()).toBe(404);
-  const errors = await openApp(page);
-  expect(errors).toEqual([]);
-  const r = await page.evaluate(() => ({
-    family: typeof window.JJFamily === 'object' && typeof JJFamily.menu === 'function',
-    head: [...document.head.querySelectorAll('script[src], link[rel="stylesheet"]')].map(e => (e.getAttribute('src') || e.getAttribute('href')).split('?')[0]),
-    oldKey: document.querySelector('script[src="/family/mode.js"]').dataset.oldKey,
-    inline: [...document.head.querySelectorAll('script:not([src])')].length,
-    line1: document.querySelector('[data-jj-line1]').textContent === JJFamily.LINE1,
-    painted: document.getElementById('modeBtn').getAttribute('data-jj-painted'),
-    themeDark: document.querySelector('meta[name="theme-color"]').dataset.dark }));
-  expect(r.family).toBe(true);
-  expect(r.head).toEqual(['/family/mode.js', '/family/family.css', '/family/family.js', 'site.css']);   // mode.js and family.css before Sim World's own stylesheet
-  expect([r.oldKey, r.inline, r.line1, r.painted, r.themeDark]).toEqual(['jsw-mode', 0, true, 'light', '#1B1524']);
 });
 
 test('round 3 review: a link chosen by keyboard keeps focus on it on a laptop (Home, worlds, Calendar too); in the phone’s drawer focus goes to the page', async ({ page }) => {

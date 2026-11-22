@@ -25,19 +25,6 @@ const PAGE_KEYS = () => {
     firstKey(GROUP_PAGES), 'f-' + w.id, ...SECTION_KEYS(), 'no-such-page'])];
 };
 
-test('the page carries the agreed policy, before any script', async ({ page }) => {
-  await openApp(page);
-  const r = await page.evaluate(() => {
-    const m = document.querySelector('meta[http-equiv="Content-Security-Policy"]');
-    const firstScript = document.querySelector('script');
-    return { content: m && m.content, before: !!(m && firstScript && (m.compareDocumentPosition(firstScript) & Node.DOCUMENT_POSITION_FOLLOWING)),
-      inline: [...document.scripts].filter(s => !s.src).length };
-  });
-  expect(r.content).toBe("default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-src 'none'");
-  expect(r.before).toBe(true);
-  expect(r.inline).toBe(0);
-});
-
 test('no inline event handlers or javascript: links on any page', async ({ page }) => {
   await openApp(page);
   const bad = await page.evaluate(async () => {

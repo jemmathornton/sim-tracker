@@ -37,23 +37,3 @@ test('household cards show the home name without the lot-size brackets', async (
   expect(marks.length).toBeGreaterThan(0);
   expect(marks.every(d => d === 'none')).toBe(true);
 });
-
-test('phone drawer: closed it is out of the Tab order; the button says open or closed; Escape closes it and focus returns', async ({ page }) => {
-  await page.setViewportSize({width: 390, height: 844});
-  await openApp(page);
-  const btn = page.locator('#menuBtn');
-  await expect(btn).toHaveAttribute('aria-expanded', 'false');
-  expect(await page.evaluate(() => document.getElementById('side').inert)).toBe(true);
-  await btn.focus();
-  await page.keyboard.press('Enter');
-  await expect(btn).toHaveAttribute('aria-expanded', 'true');
-  expect(await page.evaluate(() => document.getElementById('side').contains(document.activeElement))).toBe(true);
-  // it starts on Home, not on the Jemma's Journals link (her call 21 Nov: one Enter shouldn't leave the site)
-  expect(await page.evaluate(() => [document.activeElement.getAttribute('href'), document.activeElement.closest('.nav-group') != null])).toEqual(['#home', true]);
-  await page.keyboard.press('Escape');
-  await expect(btn).toHaveAttribute('aria-expanded', 'false');
-  expect(await page.evaluate(() => document.activeElement.id)).toBe('menuBtn');
-  // at laptop width the sidebar is always reachable
-  await page.setViewportSize({width: 1280, height: 800});
-  expect(await page.evaluate(() => document.getElementById('side').inert)).toBe(false);
-});

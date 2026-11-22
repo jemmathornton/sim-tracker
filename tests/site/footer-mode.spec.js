@@ -1,6 +1,7 @@
 // Bottom of every page (21 Nov 2026, her ask for all her sites, as on Jemma’s Journals): "Back to top" and "Dark mode".
 // The site opens light even when the device prefers dark; the button switches it, and the choice is remembered ("jj-mode", the key
-// every site in the family shares; family rules 21 Nov, tests/site/family-rules.spec.js).
+// every site in the family shares). What the buttons do, their words, icons and sizes are tested once for every site in the parent
+// (JemmasJournals/tests/family/family.test.js); here only Sim World's routing (every kind of page) and its dark-mode contrast.
 const { test } = require('@playwright/test');
 const { openApp, go, expect } = require('./helpers');
 
@@ -13,65 +14,19 @@ const pageKeys = page => page.evaluate(() => {
 });
 
 for (const [name, width] of [['laptop', 1280], ['phone', 375]]) {
-  test(`Back to top and Dark mode sit at the bottom of every kind of page (${name})`, async ({ page }) => {
+  test(`Back to top and Dark mode sit below the page on every kind of page (${name})`, async ({ page }) => {
     await page.setViewportSize({ width, height: 800 });
     await openApp(page);
     for (const k of await pageKeys(page)) {
       await go(page, k);
       const r = await page.evaluate(() => {
-        const top = document.getElementById('toTop'), mode = document.getElementById('modeBtn'), view = document.getElementById('view');
-        const t = top.getBoundingClientRect(), m = mode.getBoundingClientRect(), v = view.getBoundingClientRect();
-        return { top: top.innerText.trim(), mode: mode.innerText.trim(), icons: !!top.querySelector('svg') && !!mode.querySelector('svg'),
-          below: t.top >= v.bottom - 1 && m.top >= v.bottom - 1, tall: Math.min(t.height, m.height), sameRow: Math.abs(t.top - m.top) < 2,
-          last: document.querySelector('main').lastElementChild.classList.contains('site-foot') };
+        const t = document.getElementById('toTop').getBoundingClientRect(), m = document.getElementById('modeBtn').getBoundingClientRect(), v = document.getElementById('view').getBoundingClientRect();
+        return { below: t.top >= v.bottom - 1 && m.top >= v.bottom - 1, last: document.querySelector('main').lastElementChild.classList.contains('site-foot') };
       });
-      expect(r, k).toEqual({ top: 'Back to top', mode: 'Dark mode', icons: true, below: true, tall: r.tall, sameRow: true, last: true });
-      expect(r.tall, k).toBeGreaterThanOrEqual(44);
+      expect(r, k).toEqual({ below: true, last: true });
     }
   });
 }
-
-test('Back to top goes to the top and moves keyboard focus to the start of the page', async ({ page }) => {
-  await openApp(page);
-  const w = await page.evaluate(() => worlds.find(x => x.ready && x.owned).id);
-  await go(page, 'w-' + w);
-  await page.locator('#toTop').scrollIntoViewIfNeeded();
-  expect(await page.evaluate(() => scrollY)).toBeGreaterThan(200);
-  await page.locator('#toTop').focus();
-  await page.keyboard.press('Enter');
-  await page.waitForFunction(() => scrollY === 0, null, { timeout: 5000 });
-  expect(await page.evaluate(() => document.activeElement.id)).toBe('view');
-  expect(page.url()).toContain('#w-' + w);   // the page stays the same (no hash change)
-  await page.keyboard.press('Tab');           // the next Tab lands inside the page, not back at the bottom
-  expect(await page.evaluate(() => document.getElementById('view').contains(document.activeElement))).toBe(true);
-});
-
-test('the site opens light even when the device prefers dark', async ({ page }) => {
-  await page.emulateMedia({ colorScheme: 'dark' });
-  await openApp(page);
-  const r = await page.evaluate(() => ({ mode: document.documentElement.getAttribute('data-mode'), paper: getComputedStyle(document.body).backgroundColor }));
-  expect(r.mode).toBe('light');   // always set, light or dark (family rules)
-  expect(r.paper).toBe('rgb(244, 242, 238)');
-  await expect(page.locator('#modeBtn')).toHaveText('Dark mode');
-});
-
-test('Dark mode switches the page, says Light mode, and is remembered after a reload', async ({ page }) => {
-  await openApp(page);
-  await page.locator('#modeBtn').click();
-  const dark = await page.evaluate(() => ({ mode: document.documentElement.getAttribute('data-mode'), paper: getComputedStyle(document.body).backgroundColor,
-    saved: localStorage.getItem('jj-mode'), pressed: document.getElementById('modeBtn').getAttribute('aria-pressed') }));
-  expect(dark).toEqual({ mode: 'dark', paper: 'rgb(21, 17, 27)', saved: 'dark', pressed: 'true' });
-  await expect(page.locator('#modeBtn')).toHaveText('Light mode');
-  await page.reload();
-  await page.waitForFunction(() => document.querySelector('#view').innerHTML.length > 0);
-  expect(await page.evaluate(() => document.documentElement.getAttribute('data-mode'))).toBe('dark');
-  await expect(page.locator('#modeBtn')).toHaveText('Light mode');
-  await page.locator('#modeBtn').click();   // and back to light, remembered too
-  await page.reload();
-  await page.waitForFunction(() => document.querySelector('#view').innerHTML.length > 0);
-  expect(await page.evaluate(() => getComputedStyle(document.body).backgroundColor)).toBe('rgb(244, 242, 238)');
-  await expect(page.locator('#modeBtn')).toHaveText('Dark mode');
-});
 
 // text contrast in dark mode: the colour tokens for words against the backgrounds they sit on, at least 4.5:1
 test('dark mode text colours read at 4.5:1 or more', async ({ page }) => {

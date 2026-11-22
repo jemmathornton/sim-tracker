@@ -65,25 +65,6 @@ test('aria-current="page" only on the page’s own link: none on club, dynasty, 
   await go(page, sim); expect(await start(), sim).toBe('#' + sim);
 });
 
-test('the drawer: Tab and Shift+Tab stay inside for 30 presses each on several pages (the family’s one rule; no copy of Sim World’s own)', async ({ page }) => {
-  await page.setViewportSize({ width: 899, height: 844 });
-  await openApp(page);
-  const keys = await page.evaluate(() => ['home', 'w-' + worlds.find(x => x.ready && x.owned).id, Object.keys(SIM_PAGES)[0], Object.values(GROUP_PAGES)[0].id, 'calendar', 'no-such-page']);
-  const inSide = () => page.evaluate(() => document.getElementById('side').contains(document.activeElement));
-  for (const k of keys) {
-    await go(page, k);
-    await page.click('#menuBtn');
-    for (const key of ['Tab', 'Shift+Tab']) for (let i = 0; i < 30; i++) {
-      await page.keyboard.press(key);
-      expect(await inSide(), `${k}: ${key} ${i + 1}`).toBe(true);
-    }
-    await page.keyboard.press('Escape');
-  }
-  const src = await (await page.request.get('/js/app.js')).text();
-  expect(src).not.toMatch(/function drawerStart/);
-  expect(src).not.toMatch(/e\.key !== "Tab"/);
-});
-
 test('the footer’s map pin shows on phones (the family only hides the dots inside the credits)', async ({ page }) => {
   for (const width of [390, 899, 1280]) {
     await page.setViewportSize({ width, height: 844 });

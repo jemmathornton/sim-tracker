@@ -70,7 +70,7 @@ test('phone drawer: focus stays inside, the page behind doesn’t scroll, Escape
   expect(await page.evaluate(() => [document.getElementById('main').inert, getComputedStyle(document.documentElement).overflow])).toEqual([false, 'visible']);
 });
 
-test('browser storage: the calendar key moves to jsw-calendar-4, a broken “seen” list is a first visit, dark mode follows another window', async ({ page, context }) => {
+test('browser storage: the calendar key moves to jsw-calendar-4, a broken “seen” list is a first visit (dark mode following another window is the family’s, tested in the parent)', async ({ page }) => {
   await openApp(page);
   await page.evaluate(() => { localStorage.removeItem('jsw-calendar-4'); localStorage.setItem('calendar-4', JSON.stringify({kinds: ['holiday', 'school']})); localStorage.setItem('jsw-seen-v1', '[1,2,3]'); });
   const errors = await openApp(page);
@@ -79,14 +79,6 @@ test('browser storage: the calendar key moves to jsw-calendar-4, a broken “see
     typeof seen === 'object' && !Array.isArray(seen) && Object.keys(seen).length > 0])).toEqual([null, ['holiday', 'school'], ['holiday', 'school'], true]);
   await page.evaluate(() => localStorage.setItem('jsw-seen-v1', '7'));
   expect(await openApp(page)).toEqual([]);
-  const other = await context.newPage();
-  await openApp(other);
-  await page.click('#modeBtn');
-  await expect(page.locator('html')).toHaveAttribute('data-mode', 'dark');
-  await expect(other.locator('html')).toHaveAttribute('data-mode', 'dark');
-  await expect(other.locator('#modeBtn')).toHaveText('Light mode');
-  await page.click('#modeBtn');
-  await expect(other.locator('html')).toHaveAttribute('data-mode', 'light');
 });
 
 // WCAG contrast of an element's text against the first solid background behind it

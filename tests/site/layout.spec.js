@@ -19,16 +19,16 @@ test('the phone fixes are one block at the end of site.css, and no width rule re
   expect([...CSS.matchAll(/@media[^{]*min-width/g)]).toEqual([]);
 });
 
-test('at 1280px the sidebar sits beside the page and the menu button is hidden', async ({ page }) => {
+// the Menu bar's own show/hide at 899/901 is the family's, tested in the parent (JemmasJournals/tests/family/family.test.js)
+test('at 1280px the sidebar sits beside the page', async ({ page }) => {
   await openApp(page);
   const r = await page.evaluate(() => { const s = document.getElementById('side').getBoundingClientRect(), m = document.getElementById('main').getBoundingClientRect();
-    return {sideLeft: s.left, sideW: s.width, mainLeft: m.left, mainRight: m.right, menu: getComputedStyle(document.getElementById('menuBtn')).display,
-      topbar: getComputedStyle(document.querySelector('.topbar')).display, over: document.documentElement.scrollWidth - document.documentElement.clientWidth}; });
+    return {sideLeft: s.left, sideW: s.width, mainLeft: m.left, mainRight: m.right,
+      over: document.documentElement.scrollWidth - document.documentElement.clientWidth}; });
   expect(r.sideLeft).toBe(0);
   expect(r.sideW).toBeGreaterThan(200);
   expect(r.mainLeft).toBeGreaterThanOrEqual(r.sideW - 1);
   expect(r.mainRight).toBeLessThanOrEqual(1280);
-  expect(r.topbar === 'none' || r.menu === 'none').toBe(true);
   expect(r.over).toBeLessThanOrEqual(1);
 });
 
@@ -46,23 +46,4 @@ test('the phone block changes nothing at 1280px (same layout with it taken out)'
   for (const k of keys) { await go(page, k); withIt[k] = await boxes(); }
   expect(await dropPhone()).toBe(true);
   for (const k of keys) { await go(page, k + '?'); await go(page, k); expect(await boxes(), k).toBe(withIt[k]); }
-});
-
-test('on a phone the sidebar slides in from the menu button and the scrim closes it', async ({ page }) => {
-  await page.setViewportSize({width: 375, height: 800});
-  await openApp(page);
-  const sideX = () => page.evaluate(() => document.getElementById('side').getBoundingClientRect().right);
-  await expect(page.locator('#menuBtn')).toBeVisible();
-  expect(await sideX()).toBeLessThanOrEqual(0);
-  await page.click('#menuBtn');
-  await expect(page.locator('#side')).toHaveClass(/jj-open/);
-  await expect.poll(sideX).toBeGreaterThan(200);
-  await page.mouse.click(360, 400);   // the scrim, to the right of the sidebar
-  await expect(page.locator('#side')).not.toHaveClass(/jj-open/);
-  // choosing a page closes it too
-  await page.click('#menuBtn');
-  const w = await page.evaluate(() => worlds.find(w => w.owned && w.ready).id);
-  await page.locator(`#nav a[href="#w-${w}"]`).click();
-  await expect(page).toHaveURL(new RegExp(`#w-${w}$`));
-  await expect(page.locator('#side')).not.toHaveClass(/jj-open/);
 });
