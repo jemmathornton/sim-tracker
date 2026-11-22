@@ -400,7 +400,7 @@ function sectionPage(key){
   if (pages[key]) return {html: pages[key][0](), active: key, title: T(pages[key][1])};
   const st = /^stats(?:-(.+))?$/.exec(key);   // old Stats links open Admin's Progress page
   if (st) { const w = worlds.find(x => x.id === st[1]); if (!redrawing) statsPage(w ? w.name : null); const s = ADM_SECTIONS[1];
-    return {html: adminPage(s), active: s.key, title: T("Progress · Admin")}; }
+    return {html: adminPage(s), active: s.key, self: "#" + s.key, title: T("Progress · Admin")}; }
   const s = ADM_SECTIONS.find(x => x.key === key);
   if (s) return {html: adminPage(s), active: s.key, title: T(s.name + " · Admin")};
   return null;

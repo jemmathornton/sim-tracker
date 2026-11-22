@@ -672,11 +672,17 @@ function renderNav(active, key, ctx){
   h += `</div><div class="nav-group dim"><div class="label">Not owned</div>${notOwned.map(w => navWorld(w, true)).join("")}</div>`;   // Across the worlds and Admin are added by js/sections.js
   nav.innerHTML = h;
 }
-// the link for the page that's open (round 3 review: screen readers are told with aria-current="page", not only by colour): the one whose
-// address is this page's, else the one marked "cur" (a lot, household or Sim) or "on" (Home, a world, a section page such as a world's calendar)
-function navCurrent(){
-  const here = location.hash && location.hash !== "#" ? location.hash : "#home", links = [...document.querySelectorAll("#nav a[href]:not([data-sim])")];
-  return links.find(a => a.getAttribute("href") === here) || links.find(a => a.classList.contains("cur")) || links.find(a => a.classList.contains("on") && !a.classList.contains("hit"));
+// the link for the page that's open: one rule for screen readers (aria-current="page", round 3 review) and for where focus starts in the
+// phone's drawer. It is the link whose address is this page's (or the page it opens: old Stats links open Progress, navSelf), else the one
+// marked "cur" (a lot, household or Sim). A page with no link of its own (a club, dynasty or organisation, a world's calendar, the missing
+// page) has none: the world or Calendar link marked "on" there only shows where the page belongs (round 4 review). For the drawer (shown),
+// a link in a folded list doesn't count and Home stands in (never "← Jemma's Journals": her call 21 Nov, one Enter shouldn't leave the site).
+let navSelf = "";   // set by route()
+function navCurrent(shown){
+  const here = location.hash && location.hash !== "#" ? location.hash : "#home";
+  const links = [...document.querySelectorAll("#nav a[href]:not([data-sim]):not(.hit)")].filter(a => !shown || a.getClientRects().length);
+  const mine = links.find(a => a.getAttribute("href") === here || (navSelf && a.getAttribute("href") === navSelf)) || links.find(a => a.classList.contains("cur"));
+  return shown ? mine || document.querySelector('#nav .nav-group a[href="#home"]') : mine;
 }
 function markCurrent(){
   document.querySelectorAll('#nav [aria-current]').forEach(a => a.removeAttribute("aria-current"));
@@ -1082,27 +1088,31 @@ const countOf = (n, one, many) => `${n} ${n === 1 ? one : many || one + "s"}`;
 const newTxt = n => n.fresh ? "New on the Gallery" : [n.f && `${n.f} new ${n.f === 1 ? "favourite" : "favourites"}`, n.c && `${n.c} new ${n.c === 1 ? "comment" : "comments"}`].filter(Boolean).join(", ");
 // a home with no household yet: bed-size planning notes just read "Empty" (bed counts live in the Gallery card)
 // dark text on light colours (Sulani yellow etc.), white on dark ones: whichever reads better
-// white initials are hard to read on pale world and neighbourhood colours: give each coloured element its readable text colour
+// white initials are hard to read on pale world and neighbourhood colours: give each coloured element its readable text colour, and where
+// neither white nor dark words reach 4.5:1 (Tomarang, Gibbi Point, StrangerVille…) the initials' disc takes the colour a little darker or
+// lighter, as the Gallery buttons do (--w-disc / --h-disc; round 4 review)
 function initialsContrast(root){
   root.querySelectorAll('[style*="--w:"],[style*="--h:"]').forEach(el => {
     const w = /--w:\s*(#[0-9a-fA-F]{6})/.exec(el.getAttribute("style")), h = /--h:\s*(#[0-9a-fA-F]{6})/.exec(el.getAttribute("style"));
-    if (w) el.style.setProperty("--on-w", textOn(w[1]));
-    if (h) el.style.setProperty("--on-h", textOn(h[1]));
+    for (const [m, k] of [[w, "w"], [h, "h"]]) { if (!m) continue;
+      const r = readable(m[1]); el.style.setProperty("--on-" + k, r.fg); if (r.moved) el.style.setProperty("--" + k + "-disc", r.bg); }
   });
 }
 function textOn(hex){ const c = (hex || "#000").replace("#",""), L = [0,2,4].map(i => { const v = parseInt(c.slice(i,i+2),16)/255; return v <= .03928 ? v/12.92 : Math.pow((v+.055)/1.055, 2.4); }), Y = .2126*L[0] + .7152*L[1] + .0722*L[2];
   return (1.05)/(Y+.05) >= (Y+.05)/(.0185+.05) ? "#fff" : "#1A1F1C"; }
-// "View on the Gallery" buttons (21 Nov, second review): the neighbourhood's colour with white or dark words, whichever reads better; a
-// middling colour where neither reaches 4.5:1 is taken a little darker (white words) or lighter (dark words) until it does
-function galColours(hex){
+// a colour with white or dark words, whichever reads better; a middling colour where neither reaches 4.5:1 is taken a little darker (white
+// words) or lighter (dark words) until it does
+function readable(hex){
   const rgb = h => [0,2,4].map(i => parseInt((h || "#000").replace("#","").slice(i,i+2),16));
   const lum = c => { const L = c.map(v => { v /= 255; return v <= .03928 ? v/12.92 : Math.pow((v+.055)/1.055, 2.4); }); return .2126*L[0] + .7152*L[1] + .0722*L[2]; };
   const fg = textOn(hex), white = fg === "#fff", to = white ? 0 : 255, ink = lum(white ? [255,255,255] : rgb("#1A1F1C"));
-  let c = rgb(hex);
+  let c = rgb(hex), k = 0;
   const ratio = () => { const a = lum(c), b = ink; return (Math.max(a,b)+.05)/(Math.min(a,b)+.05); };
-  for (let k = 0; k < 20 && ratio() < 4.6; k++) c = c.map(v => Math.round(v + (to - v) * .04));
-  return `color:${fg};background:rgb(${c.join(",")})`;
+  for (; k < 20 && ratio() < 4.6; k++) c = c.map(v => Math.round(v + (to - v) * .04));
+  return {fg, bg: `rgb(${c.join(",")})`, moved: k > 0};
 }
+// "View on the Gallery" buttons (21 Nov, second review): the neighbourhood's colour, made readable
+function galColours(hex){ const r = readable(hex); return `color:${r.fg};background:${r.bg}`; }
 const emptyNote = n => /bed|empty/i.test(n) ? "Empty" : n;
 const simsMade = x => x.lots.some(l => l.sims === true);
 const simCount = hhs => hhs.reduce((n, x) => n + x.sims.filter(sm => !isAnimal(sm)).length, 0);
@@ -1386,6 +1396,7 @@ function route(){
   let html, active = "home"; const ctx = {};
   const wd = key.startsWith("w-") && worlds.find(w => open(w) && w.id === key.slice(2));
   const tp = typeof sectionPage === "function" ? sectionPage(key) : null;   // js/sections.js: Calendar, Across the worlds and Admin pages (old Stats links open Admin, Progress)
+  navSelf = tp && tp.self || "";
   if (tp) { html = tp.html; active = tp.active; document.title = tp.title; }
   else if (wd) { html = world(wd); active = wd.id; document.title = wd.name + " · Jemma’s Sim World"; }
   else if (lotIndex[key]) { const l = lotIndex[key]; ctx.hood = l.hood; ctx.lot = l; html = lot(l); markSeen(l); active = l.world.id; document.title = l.name + " · Jemma’s Sim World"; }
@@ -1511,7 +1522,7 @@ renderNav = function (active, key, ctx) {
     const open = w === cur || NO_FOLD.has(w.id);
     a.classList.add("has-hh"); a.dataset.nofold = w.id; a.setAttribute("role", "button"); a.tabIndex = 0; a.setAttribute("aria-expanded", open); a.removeAttribute("aria-disabled");   // tabIndex: reachable by keyboard (15 Nov)
     a.insertAdjacentHTML("beforeend", `<span class="pct">${hhs.length}</span>`);
-    a.insertAdjacentHTML("afterend", `<div class="subnav" ${open ? "" : "hidden"}>${hhs.map(hx => `<a href="#${hx.id}" class="${ctx.hh === hx ? (ctx.sim ? "path" : "cur") : ""}">${esc(hhListName(hx))}</a>${ctx.hh === hx ? `<div class="lotnav">${hx.sims.map(sm => `<a href="#s-${sm.sid}" class="${ctx.sim === sm ? "cur" : ""}">${esc(sm.name)}</a>`).join("")}</div>` : ""}`).join("")}</div>`);
+    a.insertAdjacentHTML("afterend", `<div class="subnav" ${open ? "" : "hidden"}>${hhs.map(hx => `<a href="#${hx.id}" class="${ctx.hh === hx ? (ctx.sim || ctx.group ? "path" : "cur") : ""}">${esc(hhListName(hx))}</a>${ctx.hh === hx ? `<div class="lotnav">${hx.sims.map(sm => `<a href="#s-${sm.sid}" class="${ctx.sim === sm ? "cur" : ""}">${esc(sm.name)}</a>`).join("")}</div>` : ""}`).join("")}</div>`);
   });
 };
 document.addEventListener("click", e => { const a = e.target.closest("#nav a[data-nofold]"); if (!a) return; e.preventDefault();
@@ -1587,34 +1598,23 @@ const scrollBack = () => { routeY = history.state && history.state.y; route(); }
 addEventListener("hashchange", scrollBack);
 // the phone's Menu drawer (family rules): the family's shared controller, JJFamily.menu in /family/family.js (one copy in Jemma’s
 // Journals, 22 Nov). It gives the button aria-expanded/aria-controls, keeps a closed drawer inert, makes everything else inert while it's
-// open (so Tab stays inside), closes it on Escape, the scrim or a link, and resets it across 900px. Sim World says where focus starts:
-// the current page's own link, or Home if the page has none; never "← Jemma's Journals" (her call 21 Nov: one Enter shouldn't leave the site).
+// open, keeps Tab and Shift+Tab going round the drawer's own links (round 4: one copy, there), closes it on Escape, the scrim or a link,
+// and resets it across 900px. Sim World says where focus starts: navCurrent(true), the current page's own link, or Home if it has none.
 // Its look (the bar, the slide, the scrim) is Sim World's own, in site.css (.side.jj-open, .scrim).
 const sideEl = document.getElementById("side"), menuBtn = document.getElementById("menuBtn"), phoneNav = matchMedia("(max-width:900px)");
 let drawer = null;   // the family's controller, once /family/family.js has loaded (it is deferred)
 const drawerOpen = () => !!(drawer && drawer.isOpen());
-function drawerStart(){
-  const here = location.hash && location.hash !== "#" ? location.hash : "#home";
-  const mine = [...sideEl.querySelectorAll("#nav a[href]")].find(a => a.getAttribute("href") === here && !a.dataset.sim && a.getClientRects().length);
-  return mine || sideEl.querySelector('.nav-group a[href="#home"]') || sideEl.querySelector("#nav a,input");
-}
-// Tab wraps round inside the open drawer (its own links only), so focus never leaves it for the browser's own bar (kept from 21 Nov)
-addEventListener("keydown", e => {
-  if (e.key !== "Tab" || !phoneNav.matches || !drawerOpen()) return;
-  const all = [...sideEl.querySelectorAll('a[href],button,input,select,[tabindex]:not([tabindex="-1"])')].filter(el => !el.disabled && el.getClientRects().length);
-  const k = all.indexOf(document.activeElement), last = all.length - 1;
-  if (e.shiftKey ? k <= 0 : k === last || k < 0) { e.preventDefault(); all[e.shiftKey ? last : 0].focus(); }
-});
 // the bottom of every page (family rules): the footer's Back to top and Dark/Light mode, its first line and the credit dots are drawn and
 // wired by /family/family.js (Back to top moves focus to #view, data-jj-top in index.html), dark mode by /family/mode.js before the page
 // draws. Opened as a file (not supported since 22 Nov: she opens it through the family, http://localhost:8050/sim-world/) neither loads,
-// so the two buttons are hidden there rather than left empty, and the page stays light.
+// so the two buttons are hidden there rather than left empty, and the page stays light. With no drawer, the page stays usable on a narrow
+// window too: html.no-family hides the Menu bar and puts the sidebar above the page (site.css); the scrim is hidden in the markup.
 function familyReady(){
-  if (!window.JJFamily) { document.querySelector(".jj-foot-links")?.setAttribute("hidden", ""); return; }
+  if (!window.JJFamily) { document.querySelector(".jj-foot-links")?.setAttribute("hidden", ""); document.documentElement.classList.add("no-family"); return; }
   drawer = JJFamily.menu({
     button: menuBtn, drawer: sideEl, scrim: document.getElementById("scrim"),
     outside: () => [...document.body.children].filter(el => el !== sideEl && el.id !== "scrim" && el.tagName !== "SCRIPT"),   // the top bar and the page
-    current: drawerStart,
+    current: () => navCurrent(true),   // the same link as aria-current, or Home
     main: () => document.getElementById("view"),
   });
 }

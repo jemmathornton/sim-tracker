@@ -181,6 +181,7 @@ img{max-width:100%}
    Families' world names, household chips) are taken towards the dark ink so even the palest world colours read at 4.5:1 on the light paper */
 :root:not([data-mode="dark"]) .hood-head .label,:root:not([data-mode="dark"]) .fam .rel{color:color-mix(in srgb,var(--h) 40%,var(--ink))}
 :root:not([data-mode="dark"]) .hhchip{color:color-mix(in srgb,var(--w) 40%,var(--ink))}
+:root:not([data-mode="dark"]) .tc.notown .tm,:root:not([data-mode="dark"]) .sim-list .card.notown .mono,:root:not([data-mode="dark"]) .rel-card.notown .mono,:root:not([data-mode="dark"]) .mcard.notown .tm{color:color-mix(in srgb,var(--w) 60%,var(--ink))}   /* not-owned initials: 4.5:1 on white (round 4 review) */
 
 *{box-sizing:border-box}
 [hidden]{display:none!important}
@@ -386,7 +387,7 @@ a.wt:hover h3,.listing:hover h3{color:var(--water)}
 .hood .families{margin-top:0}
 .fam{display:flex;gap:14px;align-items:center;padding:14px 16px;border-radius:14px;background:var(--surface);border:1px solid var(--line);text-decoration:none;transition:border-color .2s ease,transform .2s ease}
 .fam:hover{border-color:color-mix(in srgb,var(--h) 60%,var(--line));transform:translateY(-2px)}
-.fam .mono{width:46px;height:46px;border-radius:50%;background:var(--h);color:var(--on-h,#fff);display:grid;place-items:center;font:400 26px var(--display);font-style:italic;flex:none}
+.fam .mono{width:46px;height:46px;border-radius:50%;background:var(--h-disc,var(--h));color:var(--on-h,#fff);display:grid;place-items:center;font:400 26px var(--display);font-style:italic;flex:none}
 .fam b{font:400 22px/1.1 var(--display);display:block}
 .fam small{display:block;color:var(--muted);font-size:13px;margin-top:2px}
 .fam small.unsure{display:inline;color:var(--brass);font-weight:700}
@@ -432,7 +433,7 @@ a.count{text-decoration:none}a.count:hover{color:var(--ink)}
 .sim-list{list-style:none;margin:12px 0 18px;padding:0;display:grid;gap:8px}
 .sim-list a{display:flex;gap:12px;align-items:center;padding:10px 14px;border-radius:14px;background:var(--surface);border:1px solid var(--line);text-decoration:none}
 .sim-list a:hover{border-color:color-mix(in srgb,var(--h) 60%,var(--line))}
-.sim-list .mono{width:38px;height:38px;border-radius:50%;background:var(--h);color:var(--on-h,#fff);display:grid;place-items:center;font:400 22px var(--display);font-style:italic;flex:none}
+.sim-list .mono{width:38px;height:38px;border-radius:50%;background:var(--h-disc,var(--h));color:var(--on-h,#fff);display:grid;place-items:center;font:400 22px var(--display);font-style:italic;flex:none}
 .sim-list b{font:400 21px/1.1 var(--display);display:block}
 .sim-list small{color:var(--muted);font-size:13px}
 .more{display:inline-flex;align-items:center;gap:8px;font-weight:700;text-decoration:none;color:var(--h);margin-top:4px}
@@ -519,13 +520,13 @@ a.count{text-decoration:none}a.count:hover{color:var(--ink)}
 .sheet thead button{all:unset;cursor:pointer}.sheet thead button.on{color:var(--ink)}
 .sheet thead button:focus-visible{outline:2px solid var(--brass)}
 .sheet tbody tr:hover{background:color-mix(in srgb,var(--soft) 60%,transparent)}
-.sheet tr.dim{opacity:.5}
+.sheet tr.dim>*{color:var(--muted)}   /* not-owned rows: muted words, not see-through, so they read at 4.5:1 (round 4 review; was opacity .5) */
 .sheet small{color:var(--muted);font-size:12px}
 .sheet .lotcell small{display:block}
 .sheet .lotcell a{font-weight:700;text-decoration-color:var(--line);text-underline-offset:3px}
 .sheet td.c{text-align:center}.sheet td.num{text-align:right}
 .sheet tfoot td,.sheet tfoot th,.sheet tr.total th,.sheet tr.total td{font-weight:700;background:var(--soft)}
-.t.yes{color:var(--done);font-weight:800}.t.no{color:var(--muted)}.t.na{color:var(--muted);font-size:11px;opacity:.6}
+.t.yes{color:var(--done);font-weight:800}.t.no{color:var(--muted)}.t.na{color:var(--muted);font-size:11px}
 .sheet.summary td{white-space:nowrap;min-width:52px}
 .sheet.summary thead th{white-space:normal;vertical-align:bottom;max-width:96px}
 .sheet.summary th,.sheet.summary td{padding:9px 9px}
@@ -550,7 +551,7 @@ a.count{text-decoration:none}a.count:hover{color:var(--ink)}
 .sims{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:18px;margin-top:18px}
 .sim{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px;display:grid;gap:16px;align-content:start;scroll-margin-top:24px}
 .sim header{display:flex;gap:14px;align-items:center}
-.sim .mono{width:54px;height:54px;border-radius:50%;background:var(--h);color:var(--on-h,#fff);display:grid;place-items:center;font:400 30px var(--display);font-style:italic;flex:none}
+.sim .mono{width:54px;height:54px;border-radius:50%;background:var(--h-disc,var(--h));color:var(--on-h,#fff);display:grid;place-items:center;font:400 30px var(--display);font-style:italic;flex:none}
 .sim h3{font-size:30px;line-height:1}
 .sim-sub{color:var(--muted);font-size:13.5px;margin-top:4px}
 .traits{display:flex;flex-wrap:wrap;gap:6px}
@@ -624,7 +625,10 @@ i.nb-none svg.i{width:30%;height:auto;color:rgba(255,255,255,.6)}
 @media (max-width:900px){
   .side{transform:translateX(-102%);transition:transform .25s ease}
   .side.jj-open{transform:none;box-shadow:0 0 40px rgba(0,0,0,.3)}   /* open (the family's drawer, JJFamily.menu): shadow only while open, so no edge shows when closed */
-  .scrim:not([hidden]){display:block;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:15}   /* family rules: black at about 45%; family.js hides it when closed. The page behind doesn't scroll (html.jj-menu-open, family.css) */
+  .scrim:not([hidden]){display:block;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:15}   /* family rules: black at about 45%; hidden in the markup and whenever the drawer is closed (family.js), so it never covers the page if the family code is missing. The page behind doesn't scroll (html.jj-menu-open, family.css) */
+  html.no-family .topbar{display:none}   /* the family code didn't load (opened as a file): no drawer, so no Menu bar; the sidebar sits above the page instead */
+  html.no-family .side{position:static;transform:none;width:auto;transition:none;border-right:0;border-bottom:1px solid var(--neat)}
+  html.no-family .nav{overflow:visible}
   .side{overscroll-behavior:contain}
   main{margin-left:0}
   .topbar{display:flex;align-items:center;gap:12px;position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--nav);color:var(--side-ink);border-bottom:1px solid var(--neat);padding:10px 16px}
@@ -654,7 +658,7 @@ i.nb-none svg.i{width:30%;height:auto;color:rgba(255,255,255,.6)}
 .site-foot{display:flex;flex-direction:column;align-items:center;gap:10px;margin:0 auto;max-width:1140px;padding:0 clamp(16px,4vw,56px) 28px;border:0}
 .foot-rule{display:flex;align-items:center;gap:12px;width:min(200px,60%);margin-bottom:4px}
 .foot-rule::before,.foot-rule::after{content:"";flex:1;border-top:1px dashed color-mix(in srgb,var(--neat) 60%,transparent)}
-.foot-rule .dot{--c:var(--neat);display:block;margin:0}   /* the map pin (family.css hides and spaces its own credit dots, also called .dot) */
+.foot-rule .dot{--c:var(--neat)}   /* the map pin (family.css only touches the dots inside the credits, so it shows on phones too) */
 .site-foot .jj-name{line-height:1;margin:0}
 .site-foot .jj-foot-links{margin-top:2px}
 .site-foot .jj-foot-links a,.site-foot .jj-foot-links button{font:700 13px/1 var(--body);color:var(--water)}   /* site.css's own a/button reset (inherit) would otherwise win over family.css */
@@ -737,7 +741,7 @@ i.nb-none svg.i{width:30%;height:auto;color:rgba(255,255,255,.6)}
 .rel-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:10px}
 .rel-card{display:grid;grid-template-columns:46px minmax(0,1fr);gap:4px 14px;align-items:start;padding:14px 16px;border-radius:14px;background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--g);text-decoration:none;color:inherit}
 a.rel-card:hover{border-color:color-mix(in srgb,var(--g) 60%,var(--line));border-left-color:var(--g)}
-.rel-card .mono{width:46px;height:46px;border-radius:50%;background:var(--w,#888);color:var(--on-w,#fff);display:grid;place-items:center;font:italic 400 26px var(--display);grid-row:span 4}
+.rel-card .mono{width:46px;height:46px;border-radius:50%;background:var(--w-disc,var(--w,#888));color:var(--on-w,#fff);display:grid;place-items:center;font:italic 400 26px var(--display);grid-row:span 4}
 .rel-card b{font:400 22px/1.1 var(--display)}
 .rel-card .where{font-size:12.5px;color:var(--muted)}
 .rel-card>:not(.mono){grid-column:2;min-width:0}
@@ -748,7 +752,7 @@ a.rel-card:hover{border-color:color-mix(in srgb,var(--g) 60%,var(--line));border
 .roster td .who{display:flex;align-items:center;gap:10px}
 .roster td .who a{font-weight:700;text-decoration-color:var(--line);text-underline-offset:3px}
 .roster td .who a:hover{text-decoration-color:var(--h)}
-.roster .mono{width:30px;height:30px;border-radius:50%;background:var(--h);color:var(--on-h,#fff);display:grid;place-items:center;font:italic 400 17px var(--display);flex:none}
+.roster .mono{width:30px;height:30px;border-radius:50%;background:var(--h-disc,var(--h));color:var(--on-h,#fff);display:grid;place-items:center;font:italic 400 17px var(--display);flex:none}
 .roster td b{font-weight:700}
 .roster .muted{color:var(--muted)}
 .roster .lvl{font-size:12px;font-weight:700;padding:2px 9px;border-radius:99px;background:var(--soft);color:var(--muted)}
@@ -780,7 +784,7 @@ a.rel-card:hover{border-color:color-mix(in srgb,var(--g) 60%,var(--line));border
 .tree svg.lines{position:absolute;left:0;top:0;overflow:visible;pointer-events:none}
 .tree .gen{position:absolute;left:2px;font:700 10px/1.3 var(--body);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);width:86px}
 .tc{position:absolute;box-sizing:border-box;border:1px solid var(--line);border-radius:14px;background:var(--surface);padding:10px 11px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:2px 9px;align-content:start;box-shadow:0 1px 0 rgba(0,0,0,.03)}
-.tc .tm{width:34px;height:34px;border-radius:50%;background:var(--w,#8A918C);color:var(--on-w,#fff);display:grid;place-items:center;font:italic 400 19px var(--display);grid-row:span 2}
+.tc .tm{width:34px;height:34px;border-radius:50%;background:var(--w-disc,var(--w,#8A918C));color:var(--on-w,#fff);display:grid;place-items:center;font:italic 400 19px var(--display);grid-row:span 2}
 .tc .tn{font:400 18px/1.08 var(--display);overflow-wrap:break-word;hyphens:auto}
 .tc .tn a{color:inherit;text-decoration-color:var(--w);text-underline-offset:3px}
 .tc .ts{font-size:12px;color:var(--muted);line-height:1.3}
@@ -788,7 +792,7 @@ a.rel-card:hover{border-color:color-mix(in srgb,var(--g) 60%,var(--line));border
 .tc .badge{position:absolute;right:8px;top:-12px;display:inline-flex;align-items:center;gap:4px;font-size:10.5px;font-weight:800;letter-spacing:.04em;padding:2px 8px;border-radius:99px;background:color-mix(in srgb,var(--brass) 88%,#fff);color:#1A1F1C}
 .tc .badge svg{width:11px;height:11px}
 .tc.late{background:color-mix(in srgb,var(--soft) 55%,var(--surface))}
-.tc.late .tm{background:#A3AAA5}
+.tc.late .tm{background:#A3AAA5;color:#1A1F1C}   /* dark initials on the late grey: 7.9:1 (white was 2.37, round 4 review) */
 .tc.late .tn{color:var(--muted)}
 .tc.ph{border-style:dashed;background:transparent}
 .tc.ph .tm{background:transparent;border:1.5px dashed var(--line);color:var(--muted)}
@@ -799,7 +803,7 @@ a.rel-card:hover{border-color:color-mix(in srgb,var(--g) 60%,var(--line));border
 .tc.compact .ts{font-size:11.5px}
 .tc.here{border:2px solid var(--w);background:color-mix(in srgb,var(--w) 10%,var(--surface));box-shadow:0 2px 10px color-mix(in srgb,var(--w) 22%,transparent)}
 .tc.away{background:color-mix(in srgb,var(--paper) 70%,var(--surface));border-color:color-mix(in srgb,var(--line) 80%,transparent);box-shadow:none}
-.tc.away .tm{opacity:.75}
+
 .hhchip{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:700;padding:3px 9px 3px 7px;border-radius:99px;background:color-mix(in srgb,var(--w) 13%,var(--surface));color:color-mix(in srgb,var(--w) 70%,var(--ink));text-decoration:none;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .hhchip::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--w);flex:none}
 a.hhchip:hover{text-decoration:underline}
@@ -829,7 +833,7 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 .sim-list.cols{grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
 .sim-list .card{display:flex;gap:12px;align-items:center;padding:10px 14px;border-radius:14px;background:var(--surface);border:1px solid var(--line);text-decoration:none;color:inherit}
 .sim-list a.card:hover{border-color:color-mix(in srgb,var(--h) 60%,var(--line))}
-.sim-list .card .mono{background:var(--w,var(--h))}
+.sim-list .card .mono{background:var(--w-disc,var(--w,var(--h-disc,var(--h))));color:var(--on-w,var(--on-h,#fff))}   /* the words colour that goes with --w (white or dark, initialsContrast): a late relative's grey takes dark letters (round 4 review) */
 .sim-list .card small{display:block}
 .sim-list .card.late b{color:var(--muted)}
 .sim-list .card.ph{border-style:dashed;background:transparent}
@@ -862,7 +866,7 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 /* group pages: members as boxes, like the tree cards */
 .mcards{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:22px 14px;margin-top:22px}
 .mcard{position:relative;border:1px solid var(--line);border-radius:14px;background:var(--surface);padding:12px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:2px 10px;align-content:start;min-height:96px}
-.mcard .tm{width:36px;height:36px;border-radius:50%;background:var(--w,#8A918C);color:var(--on-w,#fff);display:grid;place-items:center;font:italic 400 20px var(--display);grid-row:span 2}
+.mcard .tm{width:36px;height:36px;border-radius:50%;background:var(--w-disc,var(--w,#8A918C));color:var(--on-w,#fff);display:grid;place-items:center;font:italic 400 20px var(--display);grid-row:span 2}
 .mcard .tn{font:400 19px/1.1 var(--display)}
 .mcard .tn a{color:inherit;text-decoration-color:var(--w);text-underline-offset:3px}
 .mcard .ts{font-size:12px;color:var(--muted)}
@@ -871,8 +875,8 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 .mcard .badge svg{width:11px;height:11px}
 .mcard.here{border:2px solid var(--w);background:color-mix(in srgb,var(--w) 10%,var(--surface))}
 .mcard.away{background:color-mix(in srgb,var(--paper) 70%,var(--surface))}
-.mcard.away .tm{opacity:.75}
-.mcard.late .tm{background:#A3AAA5}
+
+.mcard.late .tm{background:#A3AAA5;color:#1A1F1C}
 .monogram.ico-mono svg{width:42px;height:42px}
 @media (max-width:1000px){.sim-about,.fam-groups{grid-template-columns:1fr}}
 .tc .dead{position:absolute;top:5px;right:9px;color:var(--muted);font:400 17px/1 var(--display)}
