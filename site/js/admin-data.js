@@ -346,11 +346,9 @@ window.ADMIN = {
 },
 {
 "when": "22 Nov 2026 11:28",
-"ok": false,
+"ok": true,
 "linked": [],
-"notes": [
-"stopped before it finished"
-],
+"notes": [],
 "listed": 267,
 "new": 0,
 "favourites": 2147,

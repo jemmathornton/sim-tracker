@@ -3,7 +3,7 @@
 const { test } = require('@playwright/test');
 const { openApp, go, expect } = require('./helpers');
 
-const LINE1 = 'No cookies, no tracking, no ads. Made with HTML, CSS and JavaScript, kept on GitHub.';
+const LINE1 = 'No cookies, no tracking, no ads. Made with HTML, CSS, JavaScript and Python, kept on GitHub.';
 const theme = page => page.evaluate(() => document.querySelector('meta[name="theme-color"]').getAttribute('content'));
 
 test('opens light with the device set to dark; the button switches, saves jj-mode, changes the bar colour, and a reload keeps it', async ({ page }) => {

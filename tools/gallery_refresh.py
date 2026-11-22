@@ -364,6 +364,9 @@ def backup_push(root=None):
         if git('remote', 'get-url', 'origin', root=root).returncode: return say("Backup to GitHub skipped: no GitHub copy set up")
         if git('rev-parse', '--abbrev-ref', 'HEAD', root=root).stdout.strip() != 'main': return say("Backup to GitHub skipped: the project isn't on its main branch")
         env = dict(os.environ, GIT_TERMINAL_PROMPT='0', GCM_INTERACTIVE='never')   # never wait for a sign-in window
+        gh = 'C:/Program Files/GitHub CLI/gh.exe'   # sign in through the GitHub CLI, never Windows' sign-in window (her ask, 22 Nov)
+        if os.path.exists(gh):   # git reads these as config: no helper from Windows, then the GitHub CLI's
+            env.update(GIT_CONFIG_COUNT='2', GIT_CONFIG_KEY_0='credential.helper', GIT_CONFIG_VALUE_0='', GIT_CONFIG_KEY_1='credential.helper', GIT_CONFIG_VALUE_1=f"!'{gh}' auth git-credential")
         for attempt in (1, 2):
             r = subprocess.run(['git', 'push', 'origin', 'main'], cwd=root or ROOT, capture_output=True, text=True, encoding='utf-8',
                                stdin=subprocess.DEVNULL, env=env, timeout=600, creationflags=getattr(subprocess, 'CREATE_NO_WINDOW', 0))
