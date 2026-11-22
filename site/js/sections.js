@@ -143,17 +143,20 @@ function admChecks(){
 }
 
 // the weekly Gallery refresh
-// the Windows task runs at 07:54 UTC (07:54 in winter, 08:54 in summer, UK time), so the last Sunday run is worked out in UTC (19 Nov)
-const lastSunday = () => { const now = new Date(), d = new Date(now); d.setUTCHours(7, 54, 0, 0); while (d.getUTCDay() !== 0 || d > now) d.setUTCDate(d.getUTCDate() - 1); return d; };
+// since 22 Nov it runs from Jemma's Journals' daily backup (tools/weekly.py, task "Jemma's Journals - backup", 09:30, catches up after):
+// on Sundays, or any day its last good run is more than 6 days old, so a Sunday with the PC off is made up the next day it's on.
+// The card nudges only when there has been no good run for more than 7 days (round 5 review; log times are her PC's own time).
+const REFRESH_DAYS = 7;
 const runDate = r => new Date(r.when.replace(/^(\d+) (\w+) (\d+) (\d+):(\d+)$/, "$2 $1, $3 $4:$5"));
+const refreshOverdue = (r, now = new Date()) => now - runDate(r) > REFRESH_DAYS * 24 * 60 * 60 * 1000;
 function refreshCard(){
   const runs = ADM.refresh, last = runs[runs.length - 1], lastOk = [...runs].reverse().find(r => r.ok);
   if (!last || !lastOk) return `<div class="adm-card"><span class="label">${ic("refresh-cw")}Weekly Gallery refresh</span><p>No runs logged yet.</p></div>`;
-  const missed = runDate(lastOk) < lastSunday(), bad = !last.ok;
+  const missed = refreshOverdue(lastOk), bad = !last.ok;
   return `<div class="adm-card ${bad || missed ? "warn" : "ok"}"><span class="label">${ic("refresh-cw")}Weekly Gallery refresh</span>
     <b class="big">${esc(lastOk.when.replace(/ 20\d\d/, ""))}</b>
-    <p>${bad ? `<b>The last run stopped with an error</b> (${esc(last.when)}). ` : ""}${missed ? `<b>Sunday’s run hasn’t happened yet</b>; it catches up next time you’re signed in. ` : "Last good run. "}
-      ${lastOk.listed} uploads listed, ${plural(lastOk.new, "new one")}.</p><p>Runs every Sunday at 07:54 (08:54 in summer time) while you’re signed in.</p></div>`;
+    <p>${bad ? `<b>The last run stopped with an error</b> (${esc(last.when)}). ` : ""}${missed ? `<b>No good run for over a week</b>; it runs the next time the PC is on. ` : "Last good run. "}
+      ${lastOk.listed} uploads listed, ${plural(lastOk.new, "new one")}.</p><p>Runs with the daily backup at 09:30: on Sundays, or the next day the PC is on.</p></div>`;
 }
 
 const admCounts = () => { const c = admChecks().reduce((n, x) => n + x.items.length, 0), L = admOwned();

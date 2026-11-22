@@ -1,4 +1,4 @@
-// Fixes from the 19 Nov review: the refresh card's Sunday time, Community Space totals and tabs, focus after redraws, each world's own
+// Fixes from the 19 Nov review: the refresh card's timing (now: overdue after 7 days), Community Space totals and tabs, focus after redraws, each world's own
 // calendar ticks, Progress searches folded like the sidebar's, a curly "Page not found", no admin notes on old-layout household pages.
 // (Not-owned rows after a sort: progress.spec.js; in-law words both ways: family.spec.js.)
 const { test } = require('@playwright/test');
@@ -6,18 +6,19 @@ const { openApp, go, viewText, expect } = require('./helpers');
 
 test.use({ timezoneId: 'Europe/London' });
 
-test('the refresh card: the Sunday run is at 07:54 UTC, so a good 07:56 run in winter is not "hasn’t happened yet"', async ({ page }) => {
+test('the refresh card: no nudge within 7 days of a good run, a nudge after more than 7 (round 5: run from the daily backup)', async ({ page }) => {
   await openApp(page, 'admin');
-  const at = async iso => { await page.clock.setFixedTime(new Date(iso)); return page.evaluate(() => lastSunday().toISOString()); };
-  expect(await at('2026-11-22T09:00:00Z')).toBe('2026-11-22T07:54:00.000Z');   // winter: 07:54 UK time
-  expect(await at('2026-11-22T07:50:00Z')).toBe('2026-11-15T07:54:00.000Z');   // before the run: the Sunday before
-  expect(await at('2026-07-05T08:30:00Z')).toBe('2026-07-05T07:54:00.000Z');   // summer: 08:54 UK time
-  await page.evaluate(() => ADM.refresh.push({when: '22 Nov 2026 07:56', ok: true, listed: 200, new: 0}));
-  await page.clock.setFixedTime(new Date('2026-11-22T10:00:00Z'));
+  const over = async (when, iso) => { await page.clock.setFixedTime(new Date(iso)); return page.evaluate(w => refreshOverdue({when: w}), when); };
+  expect(await over('22 Nov 2026 09:31', '2026-11-29T09:00:00Z')).toBe(false);   // a week later, before the next Sunday's run
+  expect(await over('22 Nov 2026 09:31', '2026-11-29T09:40:00Z')).toBe(true);    // just over 7 days
+  expect(await over('22 Nov 2026 09:31', '2026-11-30T09:40:00Z')).toBe(true);    // Sunday missed (PC off): Monday still nudges until it runs
+  await page.evaluate(() => ADM.refresh.push({when: '22 Nov 2026 09:31', ok: true, listed: 200, new: 0}));
+  await page.clock.setFixedTime(new Date('2026-11-28T10:00:00Z'));
   await go(page, 'home'); await go(page, 'admin');
   const card = page.locator('#view .adm-card', {hasText: 'Weekly Gallery refresh'});
-  await expect(card).not.toContainText('hasn’t happened yet');
+  await expect(card).not.toContainText('No good run');
   await expect(card).toHaveClass(/\bok\b/);
+  await expect(card).toContainText('Runs with the daily backup at 09:30: on Sundays, or the next day the PC is on.');
 });
 
 test('Community Space lots: Progress counts every version together, and a tab picked on the lot page changes no other page', async ({ page }) => {

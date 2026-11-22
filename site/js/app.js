@@ -988,11 +988,15 @@ function hoodPage(x){
 
 
 // screenshot carousel (replaces the lot plan); click the photo for full screen
+// Only the photo shown and its two neighbours get their full-size picture; the rest wait in data-src until the carousel moves
+// near them (round 5 review: loading="lazy" does nothing inside the sliding track, so every 1920px photo used to load at once)
+const carNear = (k, i, n) => n < 4 || k === i || k === (i + 1) % n || k === (i + n - 1) % n;
+function carLoad(car, i){ const s = car.querySelectorAll(".car-slide img"); s.forEach((im, k) => { if (im.dataset.src && carNear(k, i, s.length)) { im.src = im.dataset.src; im.removeAttribute("data-src"); } }); }
 function carousel(l){
   if (!l.photos.length) return `<div class="carousel empty-car"><div class="empty" style="margin:0;height:100%">${ic("image")}No screenshots yet.</div></div>`;
   const many = l.photos.length > 1;
   return `<div class="carousel" data-car="${l.id}" data-i="0">
-    <div class="car-view"><div class="car-track">${l.photos.map((ph,i) => `<button type="button" class="car-slide shot-btn" data-lot="${l.id}" data-i="${i}" ${i?'tabindex="-1"':""} aria-label="Open ${esc(ph.caption)} full screen"><img src="${ph.src}" alt="${esc(l.name)}: ${esc(ph.caption)}" ${i?'loading="lazy"':""}></button>`).join("")}</div>
+    <div class="car-view"><div class="car-track">${l.photos.map((ph,i) => `<button type="button" class="car-slide shot-btn" data-lot="${l.id}" data-i="${i}" ${i?'tabindex="-1"':""} aria-label="Open ${esc(ph.caption)} full screen"><img ${carNear(i, 0, l.photos.length) ? "src" : "data-src"}="${ph.src}" alt="${esc(l.name)}: ${esc(ph.caption)}"></button>`).join("")}</div>
       ${many ? `<button type="button" class="car-arrow prev" data-step="-1" aria-label="Previous photo">‹</button><button type="button" class="car-arrow next" data-step="1" aria-label="Next photo">›</button>` : ""}
       <div class="car-cap"><b>${esc(l.photos[0].caption)}</b>${many ? `<span>1 / ${l.photos.length}</span>` : ""}</div></div>
     ${many ? `<div class="car-thumbs">${l.photos.map((ph,i) => `<button type="button" data-go="${i}" class="${i?"":"on"}" aria-label="Show ${esc(ph.caption)}"><img src="${ph.thumb}" alt=""></button>`).join("")}</div>` : ""}
@@ -1000,6 +1004,7 @@ function carousel(l){
 }
 function carGo(car, i){
   const l = lotIndex[car.dataset.car], n = l.photos.length; i = (i + n) % n; car.dataset.i = i;
+  carLoad(car, i);
   car.querySelector(".car-track").style.transform = `translateX(-${i*100}%)`;
   car.querySelector(".car-cap").innerHTML = `<b>${esc(l.photos[i].caption)}</b><span>${i+1} / ${n}</span>`;
   car.querySelectorAll(".car-slide").forEach((b,k) => b.tabIndex = k === i ? 0 : -1);
@@ -1430,7 +1435,7 @@ function route(){
   // Across-the-worlds and Admin pages are marked "on", not "cur": round 3 review). In the phone's drawer, which closes, focus goes to the page.
   if (navChosen) {
     if (phoneNav.matches) document.getElementById("view").focus({preventScroll: true});
-    else (navCurrent() || document.querySelector("#nav a.cur, #nav a.path, #nav a.on"))?.focus({preventScroll: true});
+    else (navCurrent() || document.getElementById("view")).focus({preventScroll: true});   // no link of its own (a club, dynasty, organisation or world calendar): the page, not the world link (round 5 review)
     navChosen = false;
   }
   window.scrollTo(0, +routeY || 0); routeY = 0;   // a new page starts at the top; Back and Forward return to where that page was

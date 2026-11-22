@@ -181,6 +181,7 @@ img{max-width:100%}
    Families' world names, household chips) are taken towards the dark ink so even the palest world colours read at 4.5:1 on the light paper */
 :root:not([data-mode="dark"]) .hood-head .label,:root:not([data-mode="dark"]) .fam .rel{color:color-mix(in srgb,var(--h) 40%,var(--ink))}
 :root:not([data-mode="dark"]) .hhchip{color:color-mix(in srgb,var(--w) 40%,var(--ink))}
+:root:not([data-mode="dark"]) .traits span{color:color-mix(in srgb,var(--h) 45%,var(--ink))}   /* trait chips: 5:1 or more for every world colour, Sulani’s yellow included (round 5 review; 75% gave 4.2:1 in Ondarion) */
 :root:not([data-mode="dark"]) .tc.notown .tm,:root:not([data-mode="dark"]) .sim-list .card.notown .mono,:root:not([data-mode="dark"]) .rel-card.notown .mono,:root:not([data-mode="dark"]) .mcard.notown .tm{color:color-mix(in srgb,var(--w) 60%,var(--ink))}   /* not-owned initials: 4.5:1 on white (round 4 review) */
 
 *{box-sizing:border-box}
@@ -428,7 +429,6 @@ a.count{text-decoration:none}a.count:hover{color:var(--ink)}
 .subnav a.hh-link{display:flex!important;align-items:center;gap:8px;margin-top:6px;padding-top:8px!important;border-top:1px solid var(--side-rule);border-radius:0 0 3px 3px!important}
 .nav a.folded{opacity:.85}
 .subnav a.path{color:var(--on-deep)!important;font-weight:600!important}
-.subnav .fam-link{display:flex!important;align-items:center;gap:7px}
 .lives{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:28px;margin-top:20px;align-items:start}
 .sim-list{list-style:none;margin:12px 0 18px;padding:0;display:grid;gap:8px}
 .sim-list a{display:flex;gap:12px;align-items:center;padding:10px 14px;border-radius:14px;background:var(--surface);border:1px solid var(--line);text-decoration:none}
@@ -607,6 +607,7 @@ i.nb-none svg.i{width:30%;height:auto;color:rgba(255,255,255,.6)}
 .facts dd.progress{display:flex;flex-wrap:wrap;gap:6px;justify-content:flex-end}
 .facts dd.progress span{font-size:13px;font-weight:600;padding:3px 10px;border-radius:99px;background:var(--soft)}
 .facts dd.progress span.yes{color:var(--done)}
+:root:not([data-mode="dark"]) .facts dd.progress span.yes{color:color-mix(in srgb,var(--done) 70%,var(--ink))}   /* “✓ Built”, “✓ Shared”: 5.3:1 on the lilac plate (round 5 review; was 3.5:1) */
 .facts dd.progress span.no{color:var(--muted);font-weight:500}
 .notfound{display:flex;flex-wrap:wrap;gap:12px}
 .notfound a{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:99px;border:1px solid var(--line);background:var(--surface);font-weight:600;text-decoration:none;color:var(--ink)}
@@ -755,11 +756,10 @@ a.rel-card:hover{border-color:color-mix(in srgb,var(--g) 60%,var(--line));border
 .roster .mono{width:30px;height:30px;border-radius:50%;background:var(--h-disc,var(--h));color:var(--on-h,#fff);display:grid;place-items:center;font:italic 400 17px var(--display);flex:none}
 .roster td b{font-weight:700}
 .roster .muted{color:var(--muted)}
-.roster .lvl{font-size:12px;font-weight:700;padding:2px 9px;border-radius:99px;background:var(--soft);color:var(--muted)}
-.roster .lvl.profile{background:color-mix(in srgb,var(--h) 14%,var(--surface));color:color-mix(in srgb,var(--h) 75%,var(--ink))}
 .state{font-size:12px;font-weight:700;padding:2px 9px;border-radius:99px;border:1px solid var(--line);color:var(--muted);display:inline-flex;align-items:center;gap:5px}
 .state.occult{border-color:color-mix(in srgb,#7C62D6 50%,var(--line));color:#7C62D6}
 .state.animal{border-color:color-mix(in srgb,#9A6B3F 50%,var(--line));color:#9A6B3F}   /* pets and horses: a paw, not an occult (19 Oct) */
+:root[data-mode="dark"] .state.occult{color:color-mix(in srgb,#7C62D6 60%,var(--ink))}:root[data-mode="dark"] .state.animal{color:color-mix(in srgb,#9A6B3F 60%,var(--ink))}   /* lifted to 6.8:1 on dark plates (round 5 review; were 3.8:1) */
 .state svg{width:12px;height:12px}
 .pets{display:flex;align-items:center;gap:8px;margin-top:12px;color:var(--muted);font-size:14px}
 .pets svg{color:var(--h)}
@@ -809,7 +809,6 @@ a.rel-card:hover{border-color:color-mix(in srgb,var(--g) 60%,var(--line));border
 a.hhchip:hover{text-decoration:underline}
 .tc .hhchip{font-size:10.5px;padding:2px 7px 2px 5px;gap:4px;white-space:normal;text-overflow:clip;line-height:1.25}
 .tc .hhchip::before{width:7px;height:7px}
-span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3px;font-size:11px;font-weight:700;padding:3px 7px 3px 8px;border-radius:99px;border:1px dashed var(--line);color:var(--muted);cursor:default;white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis}
 .tree-key{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:12px;font-size:12.5px;color:var(--muted);align-items:center}
 .tree-key span{display:inline-flex;align-items:center;gap:6px}
 .tree-key svg.k{width:34px;height:10px}
@@ -825,11 +824,6 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 .sim-about .label{display:block;margin-bottom:10px}
 .sim-about .traits + .label,.sim-about .skill + .label{margin-top:20px}
 .sim-about .traits span{font-size:14px;padding:6px 14px}
-.sim-about .hint{margin:10px 0 0;font-size:12.5px;color:var(--muted)}
-.fam-groups{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 28px}
-.fam-group .label{display:block;margin-bottom:8px}
-.fam-group .sim-list{margin:0}
-.fam-group.wide{margin-top:24px}
 .sim-list.cols{grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
 .sim-list .card{display:flex;gap:12px;align-items:center;padding:10px 14px;border-radius:14px;background:var(--surface);border:1px solid var(--line);text-decoration:none;color:inherit}
 .sim-list a.card:hover{border-color:color-mix(in srgb,var(--h) 60%,var(--line))}
@@ -839,8 +833,6 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 .sim-list .card.ph{border-style:dashed;background:transparent}
 .sim-list .card.ph .mono{background:transparent;border:1.5px dashed var(--line);color:var(--muted)}
 .sim-list .card.ph b{font:600 14px var(--body);color:var(--muted)}
-.fam-group .none,.rel-none{margin:0;color:var(--muted);font-size:14px;font-style:italic}
-.rel-none{margin-top:14px}
 .membs{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
 .memb{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:14px;background:var(--surface);border:1px solid var(--line);text-decoration:none;color:inherit}
 .memb:hover{border-color:var(--brass)}
@@ -878,7 +870,7 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 
 .mcard.late .tm{background:#A3AAA5;color:#1A1F1C}
 .monogram.ico-mono svg{width:42px;height:42px}
-@media (max-width:1000px){.sim-about,.fam-groups{grid-template-columns:1fr}}
+@media (max-width:1000px){.sim-about{grid-template-columns:1fr}}
 .tc .dead{position:absolute;top:5px;right:9px;color:var(--muted);font:400 17px/1 var(--display)}
 .tree-key .dead-k{font:400 17px/1 var(--display);color:var(--muted);margin-right:2px}
 .tree-key svg.i{width:14px;height:14px;vertical-align:-2px}
@@ -925,7 +917,6 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 .hero.mapped h1 .h1-sub{text-transform:none;letter-spacing:0}
 .hero.mapped p{display:-webkit-box;-webkit-line-clamp:3;line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;color:rgba(244,241,232,.92)}
 /* pets and horses (trial, 19 Oct) */
-.sub-h{font:400 26px/1.1 var(--display);margin:30px 0 12px}
 .champ{display:inline-flex;align-items:center;gap:5px;color:#8A6A12}
 .sim-chips .champ{color:var(--brass);border-color:color-mix(in srgb,var(--brass) 60%,transparent)}
 .champ svg{width:14px;height:14px}
@@ -945,7 +936,6 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 .medal.m3{background:linear-gradient(#E3A877,#B87333);border:1px solid #9C5F28;color:#fff}
 .comps tbody tr:hover{background:none}   /* nothing to click in the medals table (her feedback, 19 Oct) */
 /* the Calendar page (19 Oct, ported from for-jemma/prototypes/calendar, option A; seasons of four weeks) */
-.cal .a-filters{display:grid;gap:12px;margin-bottom:16px}
 .cal .kinds{display:flex;flex-wrap:wrap;gap:8px 22px}
 .cal .kinds label{display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:600;cursor:pointer}
 .cal .kinds input{accent-color:var(--brass);width:16px;height:16px}
@@ -958,9 +948,6 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 .cal .wchip:focus-visible{outline:2px solid var(--brass)}
 .cal .week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px}
 .cal .day{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 8px 12px;display:grid;align-content:start;gap:6px;min-height:180px}
-.cal .day-h{display:flex;justify-content:space-between;align-items:baseline;padding:0 4px 6px;border-bottom:1px solid var(--line);margin-bottom:2px}
-.cal .day-h b{font:400 21px/1 var(--display)}
-.cal .day-h small{color:var(--muted);font-weight:700;font-size:12px}
 .cal .none{margin:6px 4px;color:var(--muted);font-size:13px;font-style:italic}
 .cal .ev{position:relative;display:grid;gap:1px;padding:7px 9px 8px 11px;border-radius:9px;background:color-mix(in srgb,var(--h) 9%,var(--surface));border:1.5px solid color-mix(in srgb,var(--h) 28%,transparent);font-size:12.5px;line-height:1.35}
 .cal .ev::before{content:"";position:absolute;left:-1.5px;top:7px;bottom:7px;width:3px;border-radius:3px;background:var(--h)}
@@ -983,7 +970,6 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 .cal .key{display:flex;flex-wrap:wrap;gap:6px 20px;margin-top:12px;color:var(--muted);font-size:12.5px}
 .cal .key span{display:inline-flex;align-items:center;gap:6px}
 .cal .key i{width:22px;height:12px;border-radius:4px;border:1.5px solid var(--muted)}
-.cal .key i.k2{border-style:dashed}.key i.k3{border-style:dotted}
 .cal .year{margin-top:30px}
 .cal .year h3{font-size:30px;line-height:1;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
 .cal .year h3 em{color:var(--brass)}
@@ -1003,15 +989,10 @@ span.bornchip{box-sizing:border-box;display:inline-flex;align-items:center;gap:3
 .cal .yr-note b{color:var(--ink)}
 .cal .days{display:none}
 .cal .mini{grid-template-columns:22px repeat(7,1fr);gap:3px}
-.cal .mini .dh{font-size:10.5px;font-weight:800;color:var(--muted);text-align:center;text-transform:uppercase;letter-spacing:.04em}
 .cal .mini .wk{font-size:10.5px;font-weight:800;color:var(--muted);display:grid;place-items:center}
 .cal .wchips{margin-bottom:6px}
 /* the Calendar as a month: four weeks, Monday first (her ask, 19 Oct) */
 .cal .cal-top{display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px;margin-bottom:12px}
-.cal .seg{display:inline-flex;flex-wrap:wrap;border:1px solid var(--line);border-radius:99px;background:var(--surface);padding:3px}
-.cal .seg button{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:6px;padding:7px 15px;border-radius:99px;font-weight:700;font-size:14px;color:var(--muted)}
-.cal .seg button.on{background:var(--ink);color:var(--paper)}
-.cal .seg button:focus-visible{outline:2px solid var(--brass)}
 .cal .month{--s:#5FA34E;margin-top:14px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--surface)}
 .cal .month.s-summer{--s:#E3BC1E}.cal .month.s-autumn{--s:#C27416}.cal .month.s-winter{--s:#5E8FB8}
 .cal .m-head,.cal .m-week{display:grid;grid-template-columns:34px repeat(7,minmax(0,1fr))}
@@ -1105,9 +1086,6 @@ a.fest-link{color:inherit;text-decoration-color:var(--line);text-underline-offse
 .adm-sub em{color:var(--brass)}
 .adm-sub small{font:600 13px var(--body);color:var(--muted)}
 .adm-intro{margin:10px 0 0;color:var(--muted);font-size:14.5px;max-width:70ch}
-details.adm-more{margin-top:12px}
-details.adm-more summary{cursor:pointer;font-weight:700;font-size:14px;color:var(--muted)}
-.adm-two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px}
 .adm-pill{display:inline-block;font-size:11.5px;font-weight:800;padding:2px 8px;border-radius:99px;background:var(--soft);color:var(--muted);margin-left:6px;vertical-align:1px}
 .adm-pill.ok{background:color-mix(in srgb,var(--done) 18%,var(--surface));color:var(--done)}
 .adm-pill.bad{background:color-mix(in srgb,#C2703D 18%,var(--surface));color:#A55A2C}
@@ -1144,7 +1122,6 @@ details.adm-more summary{cursor:pointer;font-weight:700;font-size:14px;color:var
   .figures:has(>div:nth-child(4):last-child) div:nth-child(3){border-left:0}
   .figures:has(>div:nth-child(4):last-child) div:nth-child(4){border-left:1px solid var(--banner-line)}
   .hero.mapped .figures:has(>div:nth-child(4):last-child) div:nth-child(4){border-left-color:rgba(255,255,255,.35)}
-  .adm-two{grid-template-columns:1fr}
   .cal-hero .patch a span{display:none}
   .adm-list li{grid-template-columns:minmax(0,1fr)}
   .adm-list li .w{white-space:normal}
@@ -1174,7 +1151,7 @@ html[data-inner] .sim-list a,html[data-inner] .fam,html[data-inner] .homes li,ht
 html[data-inner] .rel-card{border-radius:2px;border:1px solid color-mix(in srgb,var(--h) 40%,var(--card-line));box-shadow:2px 3px 0 color-mix(in srgb,var(--h) 14%,transparent);border-left:3px solid var(--g)}
 html[data-inner] .g-comments li{border-left:3px solid var(--h)}
 html[data-inner] .fam:hover,html[data-inner] .sim-list a:hover{transform:none;border-color:color-mix(in srgb,var(--h) 70%,var(--card-line))}
-html[data-inner] .traits span,html[data-inner] .tags span,html[data-inner] .packs span,html[data-inner] .roster .lvl,html[data-inner] .state{border-radius:2px}
+html[data-inner] .traits span,html[data-inner] .tags span,html[data-inner] .packs span,html[data-inner] .state{border-radius:2px}
 html[data-inner] .traits span{box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--h) 28%,transparent)}
 html[data-inner] .gal-link,html[data-inner] .tick,html[data-inner] .empty,html[data-inner] .note{border-radius:2px}
 html[data-inner] .mini a{--k:var(--h);position:relative;gap:8px;padding:18px 8px 12px;background:var(--surface);border-radius:2px;border:1px solid color-mix(in srgb,var(--k) 40%,var(--card-line));box-shadow:2px 3px 0 color-mix(in srgb,var(--k) 14%,transparent)}

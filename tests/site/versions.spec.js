@@ -34,7 +34,7 @@ test('every Community Space lot: a tab per version, each showing its own upload,
   }
 });
 
-test('Admin’s refresh card: fine just after a good Sunday run, a nudge once the next Sunday has passed without one', async ({ page }) => {
+test('Admin’s refresh card: fine just after a good run, a nudge once more than 7 days pass without one', async ({ page }) => {
   await openApp(page, 'admin');
   const last = await page.evaluate(() => { const ok = [...ADM.refresh].reverse().find(r => r.ok); return ok && {when: ok.when, t: runDate(ok).getTime()}; });
   test.skip(!last, 'no good refresh logged yet');
@@ -42,11 +42,11 @@ test('Admin’s refresh card: fine just after a good Sunday run, a nudge once th
   await page.clock.setFixedTime(new Date(last.t + 60 * 60 * 1000));          // an hour after the last good run
   await go(page, 'home'); await go(page, 'admin');
   const lastBad = await page.evaluate(() => !ADM.refresh[ADM.refresh.length - 1].ok);
-  await expect(card).not.toContainText('hasn’t happened yet');
+  await expect(card).not.toContainText('No good run');
   if (!lastBad) await expect(card).toHaveClass(/\bok\b/);
   await expect(card.locator('b.big')).toHaveText(last.when.replace(/ 20\d\d/, ''));
-  await page.clock.setFixedTime(new Date(last.t + 9 * 24 * 60 * 60 * 1000));  // nine days later: a Sunday has gone by
+  await page.clock.setFixedTime(new Date(last.t + 9 * 24 * 60 * 60 * 1000));  // nine days later: a Sunday has gone by without a run
   await go(page, 'home'); await go(page, 'admin');
-  await expect(card).toContainText('Sunday’s run hasn’t happened yet');
+  await expect(card).toContainText('No good run for over a week');
   await expect(card).toHaveClass(/\bwarn\b/);
 });

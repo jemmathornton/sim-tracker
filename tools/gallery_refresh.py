@@ -399,6 +399,20 @@ def record_in_parent(script=None):
     except Exception as e: say(f"Couldn't record the new version in Jemma's Journals: {e}")
 
 
+BUILD_LIMIT = 600   # seconds: a build normally takes well under a minute; a hung one is stopped and logged as failed (round 5 review)
+
+
+def run_build(limit=None):
+    """tools/build.py, with a time limit; a build that runs over comes back as a failed one (return code 1) with a note."""
+    import subprocess
+    cmd = [sys.executable, '-X', 'utf8', os.path.join(ROOT, 'tools', 'build.py')]
+    limit = limit or BUILD_LIMIT
+    try:   # stdin=DEVNULL: the weekly task runs without a console, and Windows refuses to pass on a missing stdin
+        return subprocess.run(cmd, stdin=subprocess.DEVNULL, capture_output=True, text=True, encoding='utf-8', timeout=limit)
+    except subprocess.TimeoutExpired:
+        return subprocess.CompletedProcess(cmd, 1, '', f'Build stopped: still running after {limit // 60} minutes')
+
+
 if __name__ == '__main__':
     ok = False
     os.makedirs(os.path.dirname(LOG), exist_ok=True)
@@ -410,8 +424,7 @@ if __name__ == '__main__':
         if '--no-build' not in sys.argv:
             import subprocess
             # stdin=DEVNULL: the weekly task runs without a console, and Windows refuses to pass on a missing stdin
-            r = subprocess.run([sys.executable, '-X', 'utf8', os.path.join(ROOT, 'tools', 'build.py')],
-                               stdin=subprocess.DEVNULL, capture_output=True, text=True, encoding='utf-8')
+            r = run_build()
             say('\n'.join(x for x in ((r.stdout or '').strip(), (r.stderr or '').strip()) if x) + ('' if r.returncode == 0 else '\nBuild failed'))
             ok = ok and r.returncode == 0
             if r.returncode == 0:
@@ -420,7 +433,7 @@ if __name__ == '__main__':
                     n = subprocess.run([sys.executable, '-X', 'utf8', os.path.join(ROOT, 'tools', 'research', 'new_save_check.py')],
                                        stdin=subprocess.DEVNULL, capture_output=True, text=True, encoding='utf-8', timeout=900)
                     if n.returncode == 0:
-                        b = subprocess.run([sys.executable, '-X', 'utf8', os.path.join(ROOT, 'tools', 'build.py')], stdin=subprocess.DEVNULL, capture_output=True, text=True, encoding='utf-8')   # build again: admin-data.js and its fingerprint in index.html
+                        b = run_build()   # build again: admin-data.js and its fingerprint in index.html
                         if b.returncode == 0: say("New-save check refreshed")
                         else:   # 19 Nov: a failed second build is a failed run, and nothing is saved in the history
                             say('\n'.join(x for x in ((b.stdout or '').strip(), (b.stderr or '').strip()) if x) + '\nBuild failed (after the new-save check)')
