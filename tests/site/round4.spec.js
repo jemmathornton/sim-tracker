@@ -135,3 +135,35 @@ test('low contrast leftovers read at 4.5:1 in both modes: late relatives’ init
     expect(prog.low, mode).toEqual([]);
   }
 });
+
+test('initial discs in the five worlds whose colour can’t carry letters take the world’s deep colour (her pick 22 Nov); other worlds keep their colour', async ({ page }) => {
+  await page.setViewportSize({ width: 1600, height: 930 });
+  await openApp(page);
+  const plan = await page.evaluate(() => {
+    const rgb = h => `rgb(${[1, 3, 5].map(i => parseInt(h.slice(i, i + 2), 16)).join(', ')})`;
+    return ['tomarang', 'gibbi-point', 'strangerville', 'henford-on-bagley', 'willow-creek'].map(id => {
+      const w = worlds.find(x => x.id === id), keys = Object.entries(SIM_PAGES).filter(([, s]) => s.hh && s.hh.world.id === id).map(([k]) => k);
+      for (const k of ['s-bua-bun-ma', 's-sara-chavez-ralston', 's-jess-sigworth', 's-sara-scott']) if (keys.includes(k)) keys.unshift(k);
+      return { id, keys: keys.slice(0, 6), deep: id === 'willow-creek' ? null : rgb(w.deep[0]), colour: rgb(w.glow || w.color), moved: readable(w.glow || w.color).moved };
+    });
+  });
+  for (const p of plan) {
+    expect(p.keys.length, p.id).toBeGreaterThan(0);
+    expect(p.moved, p.id).toBe(p.id !== 'willow-creek');
+    for (const mode of ['light', 'dark']) {
+      await page.evaluate(m => document.documentElement.setAttribute('data-mode', m), mode);
+      let bgs = [];
+      for (const k of p.keys) {   // the first of the world's Sim pages with filled discs in the world's colour
+        await go(page, k);
+        bgs = await page.evaluate(() => [...document.querySelectorAll('#view .tm, #view .mono')]
+          .filter(el => el.getClientRects().length && el.textContent.trim().length === 1 && !el.closest('.notown, .late, .ph'))
+          .map(el => getComputedStyle(el).backgroundColor));
+        if (bgs.includes(p.deep || p.colour)) break;
+      }
+      if (p.deep) {
+        expect(bgs, `${mode} ${p.id}`).toContain(p.deep);
+        expect(bgs.filter(b => b === p.colour), `${mode} ${p.id}`).toEqual([]);
+      } else expect(bgs, `${mode} ${p.id}`).toContain(p.colour);
+    }
+  }
+});

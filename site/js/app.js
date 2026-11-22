@@ -1088,14 +1088,22 @@ const countOf = (n, one, many) => `${n} ${n === 1 ? one : many || one + "s"}`;
 const newTxt = n => n.fresh ? "New on the Gallery" : [n.f && `${n.f} new ${n.f === 1 ? "favourite" : "favourites"}`, n.c && `${n.c} new ${n.c === 1 ? "comment" : "comments"}`].filter(Boolean).join(", ");
 // a home with no household yet: bed-size planning notes just read "Empty" (bed counts live in the Gallery card)
 // dark text on light colours (Sulani yellow etc.), white on dark ones: whichever reads better
-// white initials are hard to read on pale world and neighbourhood colours: give each coloured element its readable text colour, and where
-// neither white nor dark words reach 4.5:1 (Tomarang, Gibbi Point, StrangerVille…) the initials' disc takes the colour a little darker or
-// lighter, as the Gallery buttons do (--w-disc / --h-disc; round 4 review)
+// white initials are hard to read on pale world and neighbourhood colours: give each coloured element its readable text colour. Where
+// neither white nor dark words reach 4.5:1 on the world's colour (Tomarang, Gibbi Point, StrangerVille, Henford-on-Bagley, Tartosa), the
+// initials' disc takes the world's own deep colour instead, with white or dark letters, whichever reads (--w-disc / --h-disc; her pick 22 Nov,
+// replacing the round 4 nudge lighter or darker)
+const DISC_DEEP = (() => { const m = {};
+  worlds.forEach(w => { const d = w.deep ? w.deep[0] : null; [w.color, w.glow].filter(Boolean).forEach(c => { m[c.toUpperCase()] = d; }); });
+  return m; })();
+// a world with no deep colour in its data (Tartosa, not owned): its colour taken most of the way to black, like the others' deep shades
+const deepOf = hex => DISC_DEEP[hex.toUpperCase()] || "#" + [0,2,4].map(i => Math.round(parseInt(hex.slice(1).slice(i,i+2),16) * .37).toString(16).padStart(2,"0")).join("");
 function initialsContrast(root){
   root.querySelectorAll('[style*="--w:"],[style*="--h:"]').forEach(el => {
     const w = /--w:\s*(#[0-9a-fA-F]{6})/.exec(el.getAttribute("style")), h = /--h:\s*(#[0-9a-fA-F]{6})/.exec(el.getAttribute("style"));
     for (const [m, k] of [[w, "w"], [h, "h"]]) { if (!m) continue;
-      const r = readable(m[1]); el.style.setProperty("--on-" + k, r.fg); if (r.moved) el.style.setProperty("--" + k + "-disc", r.bg); }
+      const r = readable(m[1]);
+      if (!r.moved) { el.style.setProperty("--on-" + k, r.fg); continue; }
+      const d = deepOf(m[1]); el.style.setProperty("--" + k + "-disc", d); el.style.setProperty("--on-" + k, readable(d).fg); }
   });
 }
 function textOn(hex){ const c = (hex || "#000").replace("#",""), L = [0,2,4].map(i => { const v = parseInt(c.slice(i,i+2),16)/255; return v <= .03928 ? v/12.92 : Math.pow((v+.055)/1.055, 2.4); }), Y = .2126*L[0] + .7152*L[1] + .0722*L[2];
