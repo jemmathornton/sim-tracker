@@ -3,6 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<!-- Content Security Policy (her decision, 22 Nov 2026): the browser runs only this site's own code, from its own address (the family's
+     /family/ code is the same address). So: no inline <script>, no onclick= style handlers (wire events in js/ with addEventListener),
+     no javascript: links, no eval. Inline style attributes are allowed. Tested in tests/site/csp.spec.js. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-src 'none'">
 <title>Jemma’s Sim World</title>
 <link rel="icon" href="icon-16.png?v=plumbob10" sizes="16x16" type="image/png">
 <link rel="icon" href="icon-24.png?v=plumbob10" sizes="24x24" type="image/png">
