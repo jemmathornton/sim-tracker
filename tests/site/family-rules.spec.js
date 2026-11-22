@@ -158,7 +158,7 @@ test('footer credits: a “·” never starts or ends a line, at any laptop widt
   for (const width of [1600, 1440, 1280, 1100, 1024, 950, 901, 800, 701]) {
     await page.setViewportSize({ width, height: 800 });
     await page.waitForTimeout(200);
-    const bad = await page.evaluate(() => [...document.querySelectorAll('.about-site .jj-dot')].filter(s => getComputedStyle(s).visibility !== 'hidden').filter(s => {
+    const bad = await page.evaluate(() => [...document.querySelectorAll('.about-site .jj-dot')].filter(s => getComputedStyle(s).visibility !== 'hidden' && getComputedStyle(s).display !== 'none').filter(s => {   // a dot at a break is taken out (family.js)
       const t = s.getBoundingClientRect(), prev = s.previousElementSibling.getBoundingClientRect(), next = s.nextElementSibling.getBoundingClientRect();
       return Math.abs(prev.bottom - t.bottom) > 3 || Math.abs(next.bottom - t.bottom) > 3; }).map(s => s.nextElementSibling.textContent));
     expect(bad, `${width}px`).toEqual([]);
