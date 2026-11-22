@@ -1,0 +1,479 @@
+{
+ "_note": "Which Gallery upload each lot's pictures came from (tools/gallery_refresh.py add_covers: the cover; tools/gallery_more.py: the other three), so they're remade when the lot's lead upload changes. Written by those tools; don't hand-edit.",
+ "lots": {
+  "brindleton-bay/bedlington-boathouse": {
+   "cover": "98RpXiA8TIaxkspATvE/5w=="
+  },
+  "brindleton-bay/club-calico": {
+   "cover": "TBbktz3AEemOU3ldy2Ruvw=="
+  },
+  "brindleton-bay/dachshund-s-creek": {
+   "cover": "TG3zMCVJEeiGvGUCaOyRNg=="
+  },
+  "brindleton-bay/domus-familiaris": {
+   "cover": "zmRNX/egEeqEegj3LsIbeA=="
+  },
+  "brindleton-bay/hindquarter-hideaway": {
+   "cover": "ZRB3u+jIEeeCjfk5Gb/cmg=="
+  },
+  "brindleton-bay/pupperstone-park": {
+   "cover": "St7XdvkYEeqHReAP1tcFHw=="
+  },
+  "brindleton-bay/ragdoll-refurb": {
+   "cover": "4PImECUzEeiJE2UCaOyRNg=="
+  },
+  "brindleton-bay/salty-paws-saloon": {
+   "cover": "Sa/c+Av6EeuBi5LGvPH+KA=="
+  },
+  "brindleton-bay/sporting-space": {
+   "cover": "A/9iCxIxEeqI+SSV4rtE9w=="
+  },
+  "brindleton-bay/tail-s-end": {
+   "cover": "+A+x1l7bRQqBZ6ykyVWG+g=="
+  },
+  "britechester/briny-tower": {
+   "cover": "dUmUl8fLSFC7Tb8ux2J66Q=="
+  },
+  "britechester/darby-s-den": {
+   "cover": "C0fsDxFmEeqHo0u/SNc3OA=="
+  },
+  "britechester/darkwing-house": {
+   "cover": "kH82AzqOSYuNO98i6uAJEw==",
+   "more": "kH82AzqOSYuNO98i6uAJEw=="
+  },
+  "britechester/drake-hall": {
+   "cover": "xwKW8hFmEeqKVku/SNc3OA=="
+  },
+  "britechester/honeydew-fields": {
+   "cover": "RwfD0bUaEeuB0ucawTB/JA=="
+  },
+  "britechester/larry-s-lagoon": {
+   "cover": "J5N3RfOPEeqCCcLb66ZsmA=="
+  },
+  "britechester/laurel-library": {
+   "cover": "421u6vYLEeqOjQj3LsIbeA=="
+  },
+  "britechester/maritime-manor": {
+   "cover": "eX31QAPZRGWol4Ud/k4bRA==",
+   "more": "eX31QAPZRGWol4Ud/k4bRA=="
+  },
+  "britechester/mossy-lane": {
+   "cover": "+1TuKO1OEeqP5iQfmaYcsw=="
+  },
+  "britechester/pepper-s-pub": {
+   "cover": "RQVL6vebEeqB6gj3LsIbeA=="
+  },
+  "britechester/spring-steppes": {
+   "cover": "KSt/tE6iQq2vZ7znirZsAw=="
+  },
+  "britechester/tidal-tower": {
+   "cover": "hZKnQAU9RVSEhAqGTS7yyQ=="
+  },
+  "britechester/wyvern-hall": {
+   "cover": "yJusUxFnEeqOJ0u/SNc3OA=="
+  },
+  "chestnut-ridge/big-sky-reach": {
+   "cover": "W6J+tA4mQGS/Zrj6G+qdpw=="
+  },
+  "chestnut-ridge/duke-s-hall": {
+   "cover": "W2doWBlGRk+vBVPnU2Y6aQ=="
+  },
+  "chestnut-ridge/palomino-junction": {
+   "cover": "ipwuBzgzQyeSG54cdK9/lw=="
+  },
+  "chestnut-ridge/red-roan-field": {
+   "cover": "NmY0ps4JQs+b2oePMFcq1w=="
+  },
+  "chestnut-ridge/the-oak-barrel": {
+   "cover": "1Q66JxbkTmSxL/yKFObuBg=="
+  },
+  "copperdale/hillside-haven": {
+   "cover": "BUWHjh9/Tm+e+htaKAsJNw=="
+  },
+  "copperdale/water-tower-way": {
+   "cover": "nFAht7I4Sdu8iwDUqLc6WA=="
+  },
+  "del-sol-valley/inner-circle": {
+   "cover": "loFJviHeSPiqw5EI645QUg=="
+  },
+  "del-sol-valley/orchid-a-go-go": {
+   "cover": "F9KVZ6FaEeuHNfwg9JDtjA=="
+  },
+  "del-sol-valley/the-ward-den": {
+   "cover": "xqUlDKYSEeuFF/wg9JDtjA=="
+  },
+  "del-sol-valley/upland-place": {
+   "cover": "sf2Tcm6GSAOVENYPoOEwGw=="
+  },
+  "del-sol-valley/vacuous-green": {
+   "cover": "+RyMyQ0wEeqC+TQshgnHrQ=="
+  },
+  "del-sol-valley/ward-park": {
+   "cover": "lRs1caFSEeuGj/wg9JDtjA=="
+  },
+  "evergreen-harbor/pinecrest-apartments-404": {
+   "cover": "rZY+UsMqEeuDL+WcoywPdA=="
+  },
+  "evergreen-harbor/rockridge-springs": {
+   "cover": "7qor1/qySJOuKuOZ5Tq/Tg=="
+  },
+  "evergreen-harbor/stonestreet-apartments-3": {
+   "cover": "jfISOaR8EeuMrecawTB/JA=="
+  },
+  "evergreen-harbor/stonestreet-apartments-4": {
+   "cover": "mVpx+qSLEeuE+/wg9JDtjA=="
+  },
+  "evergreen-harbor/the-caboose": {
+   "cover": "Ny+vhLmMRRyiUpwGvL6Ogw=="
+  },
+  "evergreen-harbor/the-portsmouth-promenade": {
+   "cover": "WzZP/f/sT6inGdN6AXBE6Q=="
+  },
+  "gibbi-point/fletcher-s-cottage": {
+   "cover": "pKnwlfeXRiGGVi/QvTc7TQ=="
+  },
+  "gibbi-point/hothead-rock-hideaway": {
+   "cover": "bVV01Nz1Soi3smD/Qv6Z/w=="
+  },
+  "gibbi-point/revive-and-thrive-retreat": {
+   "cover": "R7mzaO9GS5atpQCbFz9dlw=="
+  },
+  "glimmerbrook/brooks-bridge-borough": {
+   "cover": "H04iZgvxRb6FF++S6ssRlg=="
+  },
+  "glimmerbrook/creek-side-corner": {
+   "cover": "xr995/SGEeqJ1e5FdmbmdA=="
+  },
+  "glimmerbrook/elixirs-and-brews": {
+   "cover": "+aNzE+BWEeyIaxrwo9vsUA=="
+  },
+  "glimmerbrook/glimmerbrook-watch": {
+   "cover": "odr5dwNmEeuHqnCrzml8yA=="
+  },
+  "glimmerbrook/the-magic-realm": {
+   "cover": "PopQBuBAEeyONXVMsZWocA=="
+  },
+  "granite-falls/campground": {
+   "cover": "CteLgi2OSyWWdZNQihdhuQ=="
+  },
+  "granite-falls/green-getaway": {
+   "cover": "rMPNtHy3EeiDtMw4VFS7Iw=="
+  },
+  "henford-on-bagley/4-olde-mill-lane": {
+   "cover": "WVPA/2DKSaClyM7THjc3xQ=="
+  },
+  "henford-on-bagley/cordelia-s-secret-cottage": {
+   "cover": "9qzpljoJSjOu1Y1zWOxe+Q=="
+  },
+  "magnolia-promenade/jfands-clothiers": {
+   "cover": "35iC4eIXRFOkqzUXYq8Dig=="
+  },
+  "magnolia-promenade/paddywack-s-emporium": {
+   "cover": "+CMPhVAWSpS/eqdptPg4fw=="
+  },
+  "magnolia-promenade/preeminent-domain": {
+   "cover": "xNEy4XPlEeeBQSkfayV2UA=="
+  },
+  "mt-komorebi/2-4-1-wakabamori": {
+   "cover": "PnRNxnnqRjmBcnPGG3SNpQ=="
+  },
+  "mt-komorebi/2-4-2-wakabamori": {
+   "cover": "VbPOiqJiEe2JB1d8Dz3Yjw=="
+  },
+  "mt-komorebi/2-4-3-wakabamori": {
+   "cover": "WNVbEc9zEeuIuUhsV3GtHg=="
+  },
+  "mt-komorebi/5-1-1-kiyomatsu": {
+   "cover": "DalrQoxKT2WT8gFfb+JCuA=="
+  },
+  "mt-komorebi/5-1-2-kiyomatsu": {
+   "cover": "N+vsiXPfSiyLfiA9VWRa3Q=="
+  },
+  "mt-komorebi/5-3-1-shinrinyoku": {
+   "cover": "HA1X7avPEe2KmInwBMy2Ww=="
+  },
+  "mt-komorebi/5-6-1-shinrinyoku": {
+   "cover": "sfBNEa+MRT+2VV92N4zEEg=="
+  },
+  "mt-komorebi/izakaya-ippai": {
+   "cover": "fLQJUNmvRxyEtAc2iy6KaQ=="
+  },
+  "newcrest/asphalt-abodes": {
+   "cover": "6DxqqjzOQTCrmkXX5Ym/tQ=="
+  },
+  "newcrest/avarice-acres": {
+   "cover": "H5W5eU6+EeeKGWZWSBao2A=="
+  },
+  "newcrest/civic-cliffs": {
+   "cover": "10bAnPbrEeaEQtF92RUZ9w=="
+  },
+  "newcrest/fern-park": {
+   "cover": "RiP+5wQ8RJK3hotf53yaQw=="
+  },
+  "newcrest/hillside-highlands": {
+   "cover": "5IgKUz28EemN+Hldy2Ruvw=="
+  },
+  "newcrest/midtown-meadows": {
+   "cover": "hUU2PF35R4KCXaGXOvgXJg=="
+  },
+  "newcrest/oak-alcove": {
+   "cover": "cLsfSGyvSaGNLEzFcgePxQ=="
+  },
+  "newcrest/optimist-s-outlook": {
+   "cover": "b8CLGvj5QeOG99APW33WlQ=="
+  },
+  "newcrest/sandy-run": {
+   "cover": "9T/CGgyvEeqBoLqJHNbwJw=="
+  },
+  "newcrest/tranquil-crescent": {
+   "cover": "+DAFcj27EemJdXldy2Ruvw=="
+  },
+  "newcrest/twin-oracle-point": {
+   "cover": "m35FmzjdEeeOtKP4YfS2mA=="
+  },
+  "nordhaven/comfortably-canalside": {
+   "cover": "4gCiLpEpQf284z6512WwEA=="
+  },
+  "nordhaven/fisher-s-horizon": {
+   "cover": "eBW0HHlhR+aMEYGS2IRYfA=="
+  },
+  "nordhaven/old-torget-house": {
+   "cover": "EMetavynTOqQjkFpJaa3Yw=="
+  },
+  "nordhaven/the-rouge-note": {
+   "cover": "ed6i66jPTSu6+5lsSvpp5w=="
+  },
+  "oasis-springs/agave-abode": {
+   "cover": "y+FpyTStEeqB4aX7uid5MQ=="
+  },
+  "oasis-springs/arid-ridge": {
+   "cover": "k9wU7gLyEe2GTnUsHjDJmA=="
+  },
+  "oasis-springs/burners-and-builders": {
+   "cover": "IfhanfMkEeeNZDTk/zkpCA=="
+  },
+  "oasis-springs/cacti-casa": {
+   "cover": "T4xX5K02EeuEt01o44QF8A=="
+  },
+  "oasis-springs/desert-bloom-park": {
+   "cover": "7rH4P51KEeuKxvwg9JDtjA=="
+  },
+  "oasis-springs/dusty-turf": {
+   "cover": "nW4ni8CtQDKTVf7tUUxoqw=="
+  },
+  "oasis-springs/granada-place": {
+   "cover": "91JnkAJZEeuMZ399sA1LjA=="
+  },
+  "oasis-springs/nookstone": {
+   "cover": "UZsaW3zJSzmBiMnwHmQ0Kw=="
+  },
+  "oasis-springs/pebble-burrow": {
+   "cover": "wa3+U+DCEemKKyZ9R8et5A=="
+  },
+  "oasis-springs/rattlesnake-juice": {
+   "cover": "SIZIFmaSR2quQEzJQQ9HUA=="
+  },
+  "oasis-springs/sandtrap-flat": {
+   "cover": "k+ArWsHmEe2CoYnwBMy2Ww=="
+  },
+  "oasis-springs/slipshod-mesquite": {
+   "cover": "mItnq8rfRW2dSUiQsM1RIw=="
+  },
+  "oasis-springs/springscape": {
+   "cover": "hYfhA752EeuOnL8NB92BJw=="
+  },
+  "oasis-springs/sultry-springside": {
+   "cover": "wPMUJgKdEeuGMnCrzml8yA=="
+  },
+  "oasis-springs/the-futures-past": {
+   "cover": "5cWe2q4DEeuJE01o44QF8A=="
+  },
+  "oasis-springs/the-solar-flare": {
+   "cover": "X3UEJms3EeeEnaGw/5dQ7w=="
+  },
+  "oasis-springs/vista-quarry": {
+   "cover": "D3pjU723EeuN9fwg9JDtjA=="
+  },
+  "ravenwood/crow-s-perch": {
+   "cover": "LSNKN6V/Sjaa8F6nEgj9Vw=="
+  },
+  "san-myshuno/1010-alto-apartments": {
+   "cover": "wgO03R6kEeuOM2EZzJ8AzQ=="
+  },
+  "san-myshuno/1310-21-chic-street": {
+   "cover": "IJqDYJjGEeiBKjwldOHC9g=="
+  },
+  "san-myshuno/17-culpepper-house": {
+   "cover": "Vk2VHIiVEemPc9x2YPRdRQ=="
+  },
+  "san-myshuno/18-culpepper-house": {
+   "cover": "wcXFyz21EemNHnldy2Ruvw=="
+  },
+  "san-myshuno/19-culpepper-house": {
+   "cover": "8+qh5iODEeeKPGUH0XaZxA=="
+  },
+  "san-myshuno/2a-jasmine-suites": {
+   "cover": "jvRimu1VEeqLZil86hsCPw=="
+  },
+  "san-myshuno/2b-jasmine-suites": {
+   "cover": "/1AOQu1PEeqCUCl86hsCPw=="
+  },
+  "san-myshuno/930-medina-studios": {
+   "cover": "HNdM9n08RxymsVKGOc2c1g=="
+  },
+  "san-myshuno/fountainview-penthouse": {
+   "cover": "DTtmi9F7Q12XvkCZwBEwNA=="
+  },
+  "san-myshuno/skye-fitness": {
+   "cover": "TKz5fD8MEeqGF0Ftv2M37A=="
+  },
+  "san-myshuno/stargazer-lounge": {
+   "cover": "/QOT/EWBEeeCgKP4YfS2mA=="
+  },
+  "san-myshuno/the-old-salt-house": {
+   "cover": "jVD2MEWBEeeBOqP4YfS2mA=="
+  },
+  "san-myshuno/waterside-warble": {
+   "cover": "cm8k9PS2EeeKFZymIxmfvg=="
+  },
+  "san-sequoia/23-eucalyptus-lane": {
+   "cover": "1WpsEz1aTLyFuTNaFCmhLA=="
+  },
+  "san-sequoia/anchorpoint-abode": {
+   "cover": "z2mjougaSg2qJMlf9cbGpw=="
+  },
+  "san-sequoia/anchorpoint-library": {
+   "cover": "UXbB7/eiRbWJZnZEclMjpA=="
+  },
+  "san-sequoia/manzanita-terrace": {
+   "cover": "VQFgXtugQYOnRKBloF2q8w=="
+  },
+  "san-sequoia/parkside-place": {
+   "cover": "HMOwRBrIQuedlPG5caBw8A=="
+  },
+  "selvadorada/belomisia-field-station": {
+   "cover": "XpBSeY8IRSGZ4EaA0S8D/A=="
+  },
+  "selvadorada/cantina-el-arbol-del-jaguar": {
+   "cover": "aqDVugmrEeuPyZLGvPH+KA=="
+  },
+  "selvadorada/hillview-hideaway": {
+   "cover": "335sZpKTEeyL94KVX4KDoA=="
+  },
+  "selvadorada/jungle-bungalow": {
+   "cover": "3nHPkj3IEemMPXldy2Ruvw=="
+  },
+  "selvadorada/selvadorada-villa": {
+   "cover": "ofQVeJT5EemF/FunJjefig=="
+  },
+  "strangerville/8-bells": {
+   "cover": "dV63BxDCQQmKnlsIMpc0lQ=="
+  },
+  "strangerville/carpophagous-corner": {
+   "cover": "90dWb5T5EemIVFunJjefig=="
+  },
+  "strangerville/riverside-grove": {
+   "cover": "CbHSrsNiSI2bV/Kycw+pDA=="
+  },
+  "strangerville/slip-42": {
+   "cover": "nYOqR4JwQt2h6tVnaQLT5Q==",
+   "more": "nYOqR4JwQt2h6tVnaQLT5Q=="
+  },
+  "sulani/caldera-camp": {
+   "cover": "bTN95hlYEeuNKWEZzJ8AzQ=="
+  },
+  "sulani/journey-s-end": {
+   "cover": "hix5Gu1OEeqN7CQfmaYcsw=="
+  },
+  "sulani/kin-ship": {
+   "cover": "4poh5Z5/Ee2LeKFUkPHwsA=="
+  },
+  "sulani/lagoon-look": {
+   "cover": "qgIHHu1NEeqKTiQfmaYcsw=="
+  },
+  "sulani/ohan-ali-beach": {
+   "cover": "nYH8Hu1NEeqKESQfmaYcsw=="
+  },
+  "sulani/pier-perfection": {
+   "cover": "r8+kZQj2RZOgy/KUvgCA0g=="
+  },
+  "sulani/sand-simoleon-beach": {
+   "cover": "o96LYe1NEeqKMCQfmaYcsw=="
+  },
+  "sulani/sapphire-shores": {
+   "cover": "2laHTe1NEeqLICQfmaYcsw=="
+  },
+  "sulani/tangled-flat": {
+   "cover": "twCTOO1NEeqKkCQfmaYcsw=="
+  },
+  "sulani/the-sand-bar": {
+   "cover": "r8/jiu1NEeqKZyQfmaYcsw=="
+  },
+  "tomarang/chee-wit-chee-waa-kanto": {
+   "cover": "JnppkuUEQPS6bRavGX505Q=="
+  },
+  "tomarang/the-screaming-gecko": {
+   "cover": "eSlCIc1aR5KpAQHEuQo8OA=="
+  },
+  "willow-creek/crick-cabana": {
+   "cover": "2giAjpTyEemJ3lunJjefig=="
+  },
+  "willow-creek/daisy-hovel": {
+   "cover": "fUcTYJT3EemHwlunJjefig=="
+  },
+  "willow-creek/garden-essence": {
+   "cover": "bbq1/qh3EeuCcfwg9JDtjA=="
+  },
+  "willow-creek/magnolia-blossom-park": {
+   "cover": "Py7Ecqn9EeuLTucawTB/JA=="
+  },
+  "willow-creek/municipal-muses": {
+   "cover": "3uTcvsTNEeeHdWHJsaQqWQ=="
+  },
+  "willow-creek/oakenstead": {
+   "cover": "IY91nQcwEeqP3/Ao7taYVg=="
+  },
+  "willow-creek/pique-hearth": {
+   "cover": "vOvZf6/kT+qX4dUGnWHUqw=="
+  },
+  "willow-creek/potters-splay": {
+   "cover": "OBqTB/JNQoWaRjjn+Z01wA=="
+  },
+  "willow-creek/rindle-rose": {
+   "cover": "zDXCdVD6R0qgz6j/cCBarg=="
+  },
+  "willow-creek/riverside-roost": {
+   "cover": "QRrjnco2EeuNga3kS5H9ag=="
+  },
+  "willow-creek/streamlet-single": {
+   "cover": "CSLbZoTMRWCn8KKc9D6ysA=="
+  },
+  "willow-creek/the-blue-velvet": {
+   "cover": "P5LkNP5KRd+K9PSzz+WEvQ=="
+  },
+  "windenburg/factory-one": {
+   "cover": "zdQ3QSN9EeeFiWUH0XaZxA=="
+  },
+  "windenburg/havisham-house": {
+   "cover": "GsrjSQceEeqGNEu/SNc3OA=="
+  },
+  "windenburg/mid-nowhere": {
+   "cover": "KjklhciHEeuF3a3kS5H9ag=="
+  },
+  "windenburg/old-quarter-inn": {
+   "cover": "TEsvlFq8EeeK+MnL0U6IYw=="
+  },
+  "windenburg/proprietor-s-square": {
+   "cover": "fCk9D0WAEeeOAaP4YfS2mA=="
+  },
+  "windenburg/rustic-residence": {
+   "cover": "XCNL0nuzEeyN+AW7hdRP0w=="
+  },
+  "windenburg/south-square-coffee": {
+   "cover": "lU27jsitEeeLcr+KYzr9wA=="
+  },
+  "windenburg/the-shrieking-llama": {
+   "cover": "hQY3dKXnEeuB2+cawTB/JA=="
+  }
+ }
+}
