@@ -21,25 +21,18 @@ DOWNLOADS = os.path.join(os.path.expanduser('~'), 'Downloads')
 MAPS = {
     'brindleton-bay': 'BrindletonBay_MAP', 'britechester': 'Britechester_MAP', 'chestnut-ridge': 'ChestnutRidge_MAP',
     'ciudad-enamorada': 'CiudadEnamorada_MAP', 'copperdale': 'Copperdale_MAP', 'del-sol-valley': 'DelSolValley_HD_MAP',
-    'evergreen-harbor': 'EvergreenHarbor_HD_MAP', 'henford-on-bagley': 'HenfordOnBagley_MAP', 'innisgreen': 'Innisgreen_MAP',
+    'evergreen-harbor': 'EvergreenHarbor_NAP_HD_MAP', 'henford-on-bagley': 'HenfordOnBagley_MAP', 'innisgreen': 'Innisgreen_MAP',
     'magnolia-promenade': 'MagnoliaPromenade_MAP', 'mt-komorebi': 'MtKomorebi_MAP', 'newcrest': 'Newcrest_MAP',
     'nordhaven': 'Nordhaven_MAP', 'oasis-springs': 'OasisSprings_MAP', 'san-myshuno': 'SanMyshuno_MAP',
     'san-sequoia': 'SanSequoia_MAP', 'sulani': 'Sulani_HD_MAP', 'tartosa': 'Tartosa_MAP', 'tomarang': 'Tomarang_MAP',
     'willow-creek': 'WillowCreek_MAP', 'windenburg': 'Windenburg_MAP',
 }
 
-# Worlds filipesims made in more than one version: she picks on the Try switch (js/trial.js, 23 Nov). The first is the one in
-# MAPS; the others go to site/maps/try/<world>--<key>.jpg (and .thumb.jpg). Once she has picked: set MAPS, empty this,
-# delete site/maps/try/ and js/trial.js (and its script tag and site.css block).
-VARIANTS = {
-    'willow-creek': [('full', 'WillowCreek_MAP'), ('lite', 'WillowCreek_MAP_lite')],
-    'oasis-springs': [('full', 'OasisSprings_MAP'), ('lite', 'OasisSprings_MAP_lite')],
-    'newcrest': [('full', 'Newcrest_MAP'), ('lite', 'Newcrest_MAP_lite')],
-    'san-myshuno': [('day', 'SanMyshuno_MAP'), ('midnight', 'SanMyshunoMidnight_MAP'), ('sunset', 'SanMyshunoSunset_MAP')],
-    'evergreen-harbor': [('hd', 'EvergreenHarbor_HD_MAP'), ('nap', 'EvergreenHarbor_NAP_HD_MAP')],
-    'san-sequoia': [('grey', 'SanSequoia_MAP'), ('red', 'SanSequoiaRedBridge_MAP')],
-    'tartosa': [('day', 'Tartosa_MAP'), ('sunset', 'TartosaSunset_MAP')],
-}
+# Worlds filipesims made in more than one version, for a Try switch while she picks (the first is the one in MAPS; the others
+# go to site/maps/try/<world>--<key>.jpg with --try). Her picks, 23 Nov: the first version everywhere (Willow Creek, Oasis
+# Springs and Newcrest full, not lite; San Myshuno day; San Sequoia grey bridge; Tartosa day), except Evergreen Harbor: NAP
+# (three apartment blocks by the harbour). Switch removed; add entries here again to offer a new choice.
+VARIANTS = {}
 
 
 def owned(ws):
