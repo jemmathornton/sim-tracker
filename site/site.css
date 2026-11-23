@@ -263,18 +263,10 @@ main{margin-left:var(--side);min-height:100vh;container-type:inline-size}   /* l
 .hero.mapped::before{inset:0;width:auto;mask-image:none;-webkit-mask-image:none;background:url(townplan/town-light.svg) center/1000px 500px repeat;opacity:.18}   /* paler over the map (her ask, 21 Nov) */
 .hero.mapped::after{content:"";position:absolute;inset:16px;border:1px solid rgba(255,255,255,.45);pointer-events:none}
 .hero.mapped h1{text-shadow:0 4px 30px rgba(0,0,0,.35)}
-/* words on a light map (21 Nov, her pick "in between"): a light fade behind the words only, from the left, and a soft shadow round the letters; the rest of the map stays as it is (not on lot pictures) */
-.hero.mapped:not(.lot-hero){background:linear-gradient(90deg,color-mix(in srgb,var(--deep) 45%,transparent) 0%,color-mix(in srgb,var(--deep) 25%,transparent) 42%,transparent 68%),linear-gradient(180deg,color-mix(in srgb,var(--deep) 5%,transparent) 0%,color-mix(in srgb,var(--deep) 25%,transparent) 40%,color-mix(in srgb,var(--deep) 86%,transparent) 78%,var(--deep) 100%),var(--map) var(--mapview,center 35%/cover)}
+/* words on a light map (21 Nov, her pick "in between"; 23 Nov, her pick "Clear top right" from the Try switch, after the swap to filipesims' maps, whose hazy tops read grey under the old fade): a soft shade down the left behind the words and a fade along the bottom, both in the world's deep colour; the top right shows the map as painted, without the town-plan lines (not on lot pictures) */
+.hero.mapped:not(.lot-hero){background:linear-gradient(90deg,color-mix(in srgb,var(--deep) 40%,transparent) 0%,color-mix(in srgb,var(--deep) 20%,transparent) 38%,transparent 60%),linear-gradient(0deg,color-mix(in srgb,var(--deep) 78%,transparent) 0%,color-mix(in srgb,var(--deep) 50%,transparent) 18%,color-mix(in srgb,var(--deep) 15%,transparent) 38%,transparent 55%),var(--map) var(--mapview,center 35%/cover)}
+.hero.mapped:not(.lot-hero)::before{mask-image:linear-gradient(to top right,#000 25%,transparent 60%);-webkit-mask-image:linear-gradient(to top right,#000 25%,transparent 60%)}
 .hero.mapped:not(.lot-hero) h1,.hero.mapped:not(.lot-hero) p,.hero.mapped:not(.lot-hero) .kicker .label{text-shadow:0 1px 3px rgba(0,0,0,.75),0 0 16px rgba(0,0,0,.5)}
-/* Try switch (23 Nov, js/trial.js; temporary): filipesims' maps have a pale haze at the top, so the overlay reads as a grey wash there.
-   Her ideas: no overlay over the top right, a bit less over the bottom left; then less on the left too, mostly on the bottom.
-   clear = top right clear; less-left = top right clear, a lighter band on the left; bottom = bottom only; bottom-light = bottom only, lighter. */
-:root[data-try-overlay="clear"] .hero.mapped:not(.lot-hero){background:linear-gradient(90deg,color-mix(in srgb,var(--deep) 40%,transparent) 0%,color-mix(in srgb,var(--deep) 20%,transparent) 38%,transparent 60%),linear-gradient(0deg,color-mix(in srgb,var(--deep) 78%,transparent) 0%,color-mix(in srgb,var(--deep) 50%,transparent) 18%,color-mix(in srgb,var(--deep) 15%,transparent) 38%,transparent 55%),var(--map) var(--mapview,center 35%/cover)}
-:root[data-try-overlay="less-left"] .hero.mapped:not(.lot-hero){background:linear-gradient(90deg,color-mix(in srgb,var(--deep) 22%,transparent) 0%,color-mix(in srgb,var(--deep) 10%,transparent) 30%,transparent 48%),linear-gradient(0deg,color-mix(in srgb,var(--deep) 80%,transparent) 0%,color-mix(in srgb,var(--deep) 52%,transparent) 18%,color-mix(in srgb,var(--deep) 16%,transparent) 38%,transparent 55%),var(--map) var(--mapview,center 35%/cover)}
-:root[data-try-overlay="bottom"] .hero.mapped:not(.lot-hero){background:linear-gradient(0deg,color-mix(in srgb,var(--deep) 82%,transparent) 0%,color-mix(in srgb,var(--deep) 55%,transparent) 20%,color-mix(in srgb,var(--deep) 18%,transparent) 42%,transparent 60%),var(--map) var(--mapview,center 35%/cover)}
-:root[data-try-overlay="bottom-light"] .hero.mapped:not(.lot-hero){background:linear-gradient(0deg,color-mix(in srgb,var(--deep) 66%,transparent) 0%,color-mix(in srgb,var(--deep) 38%,transparent) 20%,color-mix(in srgb,var(--deep) 10%,transparent) 40%,transparent 55%),var(--map) var(--mapview,center 35%/cover)}
-:root[data-try-overlay="clear"] .hero.mapped:not(.lot-hero)::before,:root[data-try-overlay="less-left"] .hero.mapped:not(.lot-hero)::before{mask-image:linear-gradient(to top right,#000 25%,transparent 60%);-webkit-mask-image:linear-gradient(to top right,#000 25%,transparent 60%)}
-:root[data-try-overlay="bottom"] .hero.mapped:not(.lot-hero)::before,:root[data-try-overlay="bottom-light"] .hero.mapped:not(.lot-hero)::before{mask-image:linear-gradient(to top,#000 20%,transparent 55%);-webkit-mask-image:linear-gradient(to top,#000 20%,transparent 55%)}
 .hero.mapped .kicker i{color:#F4F1E8}
 .hero.mapped .hero-foot{border-top-color:rgba(255,255,255,.25)}
 .hero.mapped .figures{background:color-mix(in srgb,var(--deep) 62%,transparent);border-color:rgba(255,255,255,.4)}   /* the world's own deep colour (her pick 21 Nov) */
@@ -1127,16 +1119,6 @@ a.fest-link{color:inherit;text-decoration-color:var(--line);text-underline-offse
 /* EA's ancestors' game portraits in family trees (js/sections.js; a trial from 31 Oct, kept 21 Nov) */
 .tc .tm.anc-pic{padding:0;overflow:hidden}
 .tc .tm.anc-pic img{display:block;width:100%;height:100%;object-fit:cover}
-/* Try switch: the map banner overlay (js/trial.js, 23 Nov 2026). Temporary: delete with js/trial.js once she has picked */
-.try{position:fixed;right:16px;bottom:16px;z-index:12;max-width:min(380px,calc(100vw - 32px));background:var(--surface);color:var(--ink);border:1px solid var(--neat);box-shadow:0 10px 30px rgba(0,0,0,.25);font-size:13.5px}
-.try-toggle{display:block;width:100%;text-align:left;font:inherit;font-weight:700;padding:9px 12px;background:var(--water);color:#fff;border:0;cursor:pointer}
-.try-body{padding:8px 12px 10px}
-.try-body p{margin:0 0 8px;color:var(--muted);font-size:12.5px}
-.try-opts{display:flex;gap:4px;flex-wrap:wrap}
-.try-opts button{font:inherit;font-size:12.5px;padding:5px 10px;min-height:30px;border:1px solid var(--line);background:var(--paper);color:var(--ink);cursor:pointer}
-.try-opts button[aria-pressed="true"]{background:var(--water);border-color:var(--water);color:#fff}
-:root[data-mode="dark"] .try-toggle,:root[data-mode="dark"] .try-opts button[aria-pressed="true"]{color:#15111B}
-body.has-try{padding-bottom:64px}   /* room under the footer, so Back to top and Dark mode never sit under the folded switch */
 @media (max-width:700px){
   /* the household's Sims and animals tables become a stacked list on a phone (21 Nov, second review; was a 720px table scrolling sideways) */
   .roster,.roster tbody{display:block}
