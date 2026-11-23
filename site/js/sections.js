@@ -158,6 +158,21 @@ function refreshCard(){
       ${lastOk.listed} uploads listed, ${plural(lastOk.new, "new one")}.</p><p>Runs with the daily backup at 09:30: on Sundays, or the next day the PC is on.</p></div>`;
 }
 
+// filipesims' new world maps or map updates (tools/research/filipesims_check.py, weekly with the Gallery refresh; 23 Nov, her ask).
+// Shown only when there's something to do: news, or no check for over two weeks. Claude takes an item out once it's dealt with.
+const MAPS_STALE_DAYS = 14;
+function mapsCard(now = new Date()){
+  const m = ADM.maps; if (!m) return "";
+  const news = m.news || [], stale = !m.checked || now - new Date(m.checked) > MAPS_STALE_DAYS * 24 * 60 * 60 * 1000;
+  if (!news.length && !stale) return "";
+  const what = n => n.kind === "world" ? `<b>New map for ${esc(n.worlds.join(" and "))}</b> (here it’s still 20th Century Plumbob’s): `
+    : n.kind === "update" ? `<b>Maps updated</b> (download them again): ` : "";
+  const items = news.map(n => `${what(n)}<a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.title)}</a>${n.date ? ` <small>${esc(n.date)}</small>` : ""}`).join("<br>");
+  return `<div class="adm-card ${news.length ? "warn" : ""}"><span class="label">${ic("map")}World maps from filipesims</span>
+    ${news.length ? `<b class="big">${news.length}</b><p>${items}</p><p>Download it from filipesims’ Patreon, then ask Claude to swap it in.</p>`
+      : `<p><b>Not checked since ${esc(m.checked || "never")}</b>; it runs with the weekly Gallery refresh.</p>`}</div>`;
+}
+
 const admCounts = () => { const c = admChecks().reduce((n, x) => n + x.items.length, 0), L = admOwned();
   return {checks: c, next: L.filter(l => l.built === true && l.shared === false).length, game: ADM.checklist.length,
     gallery: L.filter(l => newSince(l)).length, sims: worlds.filter(w => w.owned && w.ready).flatMap(homeHhs).filter(h => !h.sims.length).length}; };   // households with no Sims yet
@@ -168,7 +183,7 @@ function admGlance(){
   const card = (icon, label, big, text, sec, cls = "") => { const x = ADM_SECTIONS.find(y => y.k === sec);
     return `<div class="adm-card ${cls}"><span class="label">${ic(icon)}${label}</span><b class="big">${big}</b><p>${text}</p>${x ? `<a class="linkish" href="#${x.key}">Open ${esc(x.name)} ${ic("arrow")}</a>` : ""}</div>`; };
   const fresh = L.filter(l => newSince(l));
-  return `<div class="adm-grid">${refreshCard()}
+  return `<div class="adm-grid">${refreshCard()}${mapsCard()}
     ${card("sparkle", "New since you looked", fresh.length, fresh.length ? fresh.slice(0, 8).map(l => `${lotA(l)} <small>${esc(newTxt(newSince(l)))}</small>`).join("<br>") : "No new favourites, comments or uploads since you last opened each lot.", "")}
     ${card("hammer", "Built", `${built}<small style="font-size:18px"> of ${buildable(L).length}</small>`, `${shared} shared.`, "progress")}
     ${card("camera", "Shared, no screenshots", L.filter(l => l.shared === true && !hasShots(l)).length, "Showing only their Gallery pictures.", "")}

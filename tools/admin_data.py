@@ -4,7 +4,7 @@
 
 Reads only: logs/gallery-refresh.log (the weekly refresh's runs), data/gallery/to-sort.json (new uploads for her to sort),
 for-jemma/your-list.md (her list), research/data/new-save-status.json and research/data/relationships.json (the new save
-against the plan). Ported from for-jemma/prototypes/calendar-admin/make_admin_data.py.
+against the plan), research/data/filipesims-check.json (new world maps from filipesims, 23 Nov). Ported from for-jemma/prototypes/calendar-admin/make_admin_data.py.
 
 site/js/admin-data.js is for Jemma's PC only: it holds her to-dos and admin notes. It must NOT be uploaded if the site
 ever goes online (leave it out of the upload, or move Admin out of site/ first; research/calendar-and-admin.md §3).
@@ -30,7 +30,16 @@ def gather():
     except Exception as e: print("admin data: her list not read:", e)
     try: out["newSave"] = new_save()
     except Exception as e: print("admin data: new-save check not read:", e)
+    try: out["maps"] = maps_news()
+    except Exception as e: print("admin data: filipesims check not read:", e)
     return out
+
+# filipesims' new world maps or map updates (tools/research/filipesims_check.py, weekly with the Gallery refresh; 23 Nov)
+def maps_news():
+    p = ROOT / "research" / "data" / "filipesims-check.json"
+    if not p.exists(): return None
+    d = json.loads(p.read_text(encoding="utf-8"))
+    return {"checked": d.get("checked"), "news": [{k: n.get(k) for k in ("title", "url", "date", "kind", "worlds", "found")} for n in d.get("news", [])]}
 
 # her new save against the plan (tools/research/new_save_check.py, 23 Oct): per world, what's left to place, fix or move
 def links_to_add():
@@ -71,7 +80,8 @@ def new_save():
 FAILED = ("Stopped with an error", "Pictures missing", "Couldn't save in the project history", "couldn't be fetched",
           "Finished with problems", "Build failed", "not written:")
 NOTES = ("left", "not linked", "skipped", "added a Gallery picture", "linked new household upload", "household upload", "new upload", "new household upload",
-         "couldn't", "Couldn't", "New-save check not refreshed", "more Gallery pictures not fetched", "her Library couldn't", "Backup to GitHub", "Gallery looked down")
+         "couldn't", "Couldn't", "New-save check not refreshed", "more Gallery pictures not fetched", "her Library couldn't", "Backup to GitHub", "Gallery looked down",
+         "filipesims not checked")
 
 def refresh_runs():
     """Since 15 Nov a run's first line ends ", started" and the run writes as it goes, ending with "Finished": one that

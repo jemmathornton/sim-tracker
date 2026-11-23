@@ -44,11 +44,15 @@ class MainPart(unittest.TestCase):
 
     def repo(self): shutil.copytree(self.template, self.d, dirs_exist_ok=True)
 
-    def run_main(self, main, build=0, check=(0, ''), flags=()):
-        """build: the build's exit code (or a list, one per build); check: the new-save check's (exit code, message)."""
+    def run_main(self, main, build=0, check=(0, ''), flags=(), maps=(0, 'filipesims: 25 posts, 0 new map news')):
+        """build: the build's exit code (or a list, one per build); check: the new-save check's (exit code, message);
+        maps: the filipesims check's (exit code, message), kept apart in self.maps_calls (23 Nov)."""
         builds = list(build) if isinstance(build, (list, tuple)) else [build] * 3
+        self.maps_calls = []
         def fake_run(args, **kw):
             if args and args[0] == 'git': return REAL_RUN(args, **kw)   # git runs for real, in the temporary repo
+            if os.path.basename(args[-1]) == 'filipesims_check.py':
+                self.maps_calls.append(1); return types.SimpleNamespace(returncode=maps[0], stdout=maps[1] if maps[0] == 0 else '', stderr='' if maps[0] == 0 else maps[1])
             name = os.path.basename(args[-1]); self.calls.append(name)
             if name == 'build.py':
                 rc = builds.pop(0); return types.SimpleNamespace(returncode=rc, stdout='Wrote site\\js\\data.js: ok' if rc == 0 else '', stderr='' if rc == 0 else 'Pictures missing from site/: a.jpg')
@@ -150,6 +154,19 @@ class Failures(MainPart):
         self.assertTrue(log.endswith('Finished\n\n'))
         r = self.runs()[-1]
         self.assertTrue(any('New-save check not refreshed' in n for n in r['notes']))   # Admin shows why the check wasn't rerun
+
+    def test_filipesims_check_runs_each_time_and_failing_never_stops_the_refresh(self):   # 23 Nov
+        self.repo()
+        def main(): done_line(); return True
+        code, log = self.run_main(main)
+        self.assertEqual((code, self.maps_calls), (0, [1]))
+        self.assertIn('filipesims: 25 posts, 0 new map news', log)
+        code, log = self.run_main(main, maps=(1, 'urlopen error: no internet'))
+        self.assertEqual(code, 0)
+        self.assertIn('filipesims not checked: urlopen error: no internet', log)
+        self.assertEqual(self.calls[-3:], ['build.py', 'new_save_check.py', 'build.py'])   # the rest of the refresh as usual
+        r = self.runs()[-1]
+        self.assertTrue(r['ok']); self.assertTrue(any('filipesims not checked' in n for n in r['notes']))   # a note on Admin, not a failed run
 
     def test_new_save_check_failing_leaves_the_run_ok_on_admin(self):   # fixed 19 Nov: a finished run with a note, not an error
         self.repo()

@@ -1,0 +1,33 @@
+{
+ "_about": "tools/research/filipesims_check.py: filipesims' posts already seen, and map news for Admin (take an entry out of \"news\" once dealt with)",
+ "checked": "2026-11-23",
+ "posts": 25,
+ "seen": {
+  "150881207": "Map Replacement Mod - Overview & Status",
+  "162188998": "Chestnut Ridge - Map Replacement Mod",
+  "153789843": "Brindleton Bay - Map Replacement Mod",
+  "153352418": "March Patch - Mod Update",
+  "149881792": "February Patch - Mod Update",
+  "146101359": "Classic Maps - Map Replacement Mod",
+  "145619654": "Copperdale - Map Replacement Mod",
+  "144922165": "December Patch - Mod Update",
+  "141405724": "Mt. Komorebi - Map Replacement Mod",
+  "140498779": "Tomarang - Map Replacement Mod",
+  "137595839": "Nordhaven - Map Replacement Mod",
+  "134974465": "Henford-on-Bagley - Map Replacement Mod",
+  "134498724": "Innisgreen - Map Replacement Mod",
+  "133296945": "Britechester - Map Replacement Mod",
+  "132537419": "San Sequoia - Map Replacement Mod",
+  "131897473": "San Myshuno (Midnight & Sunset)",
+  "131740518": "Tartosa - Map Replacement Mod",
+  "130314348": "Testing 🔧",
+  "130179213": "Map Replacement Mod - Preview (16:9 only)",
+  "130107673": "Batuu - Map Replacement Mod",
+  "130058253": "Windenburg - Map Replacement Mod",
+  "130057774": "San Myshuno - Map Replacement Mod",
+  "130057359": "Ciudad Enamorada - Map Replacement Mod",
+  "130054972": "Magnolia Promenade - Map Replacement Mod",
+  "130042969": "Willow Creek, Oasis Springs & Newcrest - Map Replacement Mod"
+ },
+ "news": []
+}

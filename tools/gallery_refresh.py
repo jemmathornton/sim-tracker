@@ -290,7 +290,8 @@ def main():
 
 
 REFRESH_PATHS = ['data/gallery', 'data/worlds', 'site/js/data.js', 'site/js/admin-data.js', 'site/index.html', 'site/gallery', 'site/gallery-more',
-                 'for-jemma/new-save-checklist.md', 'research/new-save-status.md', 'research/data/new-save-status.json', 'claude-notes']
+                 'for-jemma/new-save-checklist.md', 'research/new-save-status.md', 'research/data/new-save-status.json', 'claude-notes',
+                 'research/data/filipesims-check.json']
 
 
 def git(*a, stdin=None, root=None, env=None):
@@ -421,6 +422,12 @@ if __name__ == '__main__':
     try:
         before = changed_files()   # work in progress in the refresh's folders, kept out of its automatic commit
         ok = main()
+        try:   # filipesims' new world maps or map updates, for Admin > At a glance (23 Nov, her ask); a problem here never stops the refresh
+            import subprocess
+            f = subprocess.run([sys.executable, '-X', 'utf8', os.path.join(ROOT, 'tools', 'research', 'filipesims_check.py')],
+                               stdin=subprocess.DEVNULL, capture_output=True, text=True, encoding='utf-8', timeout=120)
+            say((f.stdout or '').strip() or 'filipesims checked' if f.returncode == 0 else 'filipesims not checked: ' + (f.stderr or f.stdout or '').strip()[-200:])
+        except Exception as e: say(f"filipesims not checked: {e}")
         if '--no-build' not in sys.argv:
             import subprocess
             # stdin=DEVNULL: the weekly task runs without a console, and Windows refuses to pass on a missing stdin

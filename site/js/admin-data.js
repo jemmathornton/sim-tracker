@@ -2388,5 +2388,9 @@ window.ADMIN = {
 "Gibbi Point",
 "Ondarion"
 ]
+},
+"maps": {
+"checked": "2026-11-23",
+"news": []
 }
 };
