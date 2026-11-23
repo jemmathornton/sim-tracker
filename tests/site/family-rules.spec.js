@@ -16,9 +16,11 @@ for (const [name, width] of [['laptop', 1600], ['phone', 390]]) {
       await go(page, k);
       const r = await page.evaluate(() => ({ footers: document.querySelectorAll('footer').length,
         credits: [...document.querySelectorAll('.site-foot [data-jj-credits] .cr')].map(c => c.textContent),
+        onPictures: document.querySelectorAll('.hero .credit, .hero [class*="credit"]').length,
         sideways: document.documentElement.scrollWidth > innerWidth }));
       expect([r.footers, r.sideways], k).toEqual([1, false]);
-      expect(r.credits[0], k).toBe('World maps by 20th Century Plumbob');
+      expect(r.credits[0], k).toBe('World maps by filipesims and 20th Century Plumbob');   // 23 Nov, her pick
+      expect(r.onPictures, k).toBe(0);   // 23 Nov, her rule: no credit on the map pictures, only in the footer
       expect(r.credits.join(' '), k).toMatch(/Instrument Serif and Manrope.*Lucide/);
     }
   });

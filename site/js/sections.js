@@ -64,7 +64,7 @@ function protoCal(w){
     h = h.replace('<div class="kicker">', `<a class="cal-back" href="#calendar">${ic("arrow")}All worlds</a><div class="kicker">`);
   } else {
     const strip = withEv.map(x => `<a href="${calLink(x)}" style="background-image:url('${x.thumb}');--h:${x.glow || x.color}" title="${esc(x.name)}"><span>${esc(x.name)}</span></a>`).join("");
-    h = `<section class="hero mapped cal-hero" style="--c:#C9A04A"><div class="patch">${strip}</div><div class="patch-fade"></div><span class="credit">Maps by 20th Century Plumbob</span>
+    h = `<section class="hero mapped cal-hero" style="--c:#C9A04A"><div class="patch">${strip}</div><div class="patch-fade"></div>
       <div class="kicker"><i></i><span class="label">Across the save · ${withEv.length} worlds with something on</span></div>
       <h1>The <em>calendar</em><small class="h1-sub">${esc(sn)}, four weeks, Monday to Sunday</small></h1>
       <div class="hero-foot"><div class="figures">${figs.map(([n, t]) => `<div><b>${n}</b><span>${t}</span></div>`).join("")}</div><div class="chapters">${seasons}</div></div></section>`;
