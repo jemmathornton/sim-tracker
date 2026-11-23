@@ -37,8 +37,8 @@ class Maps(unittest.TestCase):
         names = {ws for ws, W in WORLDS}
         self.assertEqual(set(filipesims_maps.MAPS) - names, set())
         self.assertEqual(len(filipesims_maps.MAPS), 21)
-        self.assertEqual(filipesims_maps.VARIANTS, {})   # no Try switch left behind (js/trial.js was removed with it)
-        self.assertFalse(os.path.exists(os.path.join(common.SITE, 'js', 'trial.js')))
+        self.assertEqual(filipesims_maps.VARIANTS, {})   # no map Try switch left behind (its other versions lived in site/maps/try/)
+        self.assertFalse(os.path.exists(os.path.join(common.SITE, 'maps', 'try')))
 
 
 if __name__ == '__main__':
