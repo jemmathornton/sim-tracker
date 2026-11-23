@@ -371,8 +371,6 @@ a.wt:hover h3,.listing:hover h3{color:var(--water)}
 .block-head h2{font-size:38px;line-height:1}
 .empty{margin-top:18px;border-radius:16px;padding:40px 20px;text-align:center;color:var(--muted);background:var(--surface);border:1px dashed color-mix(in srgb,var(--h) 45%,var(--line));display:grid;justify-items:center;gap:10px}
 .empty svg{font-size:26px;color:var(--h)}
-.bcard{grid-column:span 2}.bcard .photo{aspect-ratio:auto;height:190px}.bcard .units{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:6px}.bcard .units a{display:grid;grid-template-columns:44px 1fr auto;align-items:center;gap:10px;padding:8px 12px;border:1px solid var(--line);border-radius:12px;text-decoration:none;color:inherit;background:var(--surface)}.bcard .units a:hover{border-color:var(--h)}.bcard .unit-no{font:400 22px var(--display);color:var(--h)}.bcard .unit-who{display:flex;align-items:center;gap:6px;font-size:14px;min-width:0}.bcard .unit-who i{color:var(--muted)}.bcard .units .status{position:static;display:flex;gap:6px}.bcard .units .status span{opacity:.3;display:flex}.bcard .units .status span.yes{opacity:1;color:var(--done)}
-@media (max-width:640px){.bcard{grid-column:auto}}
 .subnav .bld-label{display:flex;align-items:center;gap:6px;font-size:13px;padding:3px 10px;color:var(--on-deep-mute)}.subnav .bld-label.path{color:var(--on-deep)}.subnav .bld-label svg{width:13px;height:13px}
 .apt-art{position:absolute;inset:0;display:grid;place-items:center;color:rgba(255,255,255,.55)}.apt-art svg{width:42px;height:42px}
 .mini{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:18px;margin-top:20px}
@@ -718,8 +716,6 @@ i.nb-none svg.i{width:30%;height:auto;color:rgba(255,255,255,.6)}
 .new-since{display:flex;gap:8px;align-items:center;margin:8px 0 0;padding:8px 12px;border-radius:10px;background:color-mix(in srgb,var(--brass) 18%,transparent);font-size:13.5px;font-weight:600}
 .new-since svg{color:var(--brass)}
 
-/* rental layout trial (16 Oct): unit-list cards for single rentals link their name */
-.bcard h3 a{text-decoration:none}
 .nb-bubbles i.unit-no-pic{display:grid;place-items:center}
 .nb-bubbles i.unit-no-pic b{font:700 14px var(--body);color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.5)}
 .unit-table{display:grid;gap:8px}
@@ -1163,7 +1159,7 @@ html[data-inner] .sheet-wrap{border-radius:2px;border:1px solid color-mix(in srg
 html[data-inner] .car-view,html[data-inner] .shot-btn,html[data-inner] .hh-pic,html[data-inner] .portrait{border-radius:2px;border:1px solid color-mix(in srgb,var(--h) 45%,var(--card-line));box-shadow:3px 4px 0 color-mix(in srgb,var(--h) 18%,transparent);border-radius:2px}
 html[data-inner] .hh-pic.none{border-style:dashed;box-shadow:none}
 html[data-inner] .car-thumbs button{border-radius:1px}
-html[data-inner] .sim-list a,html[data-inner] .fam,html[data-inner] .homes li,html[data-inner] .g-comments li,html[data-inner] .g-others a,html[data-inner] .bcard .units a{border-radius:2px;border:1px solid color-mix(in srgb,var(--h) 40%,var(--card-line));box-shadow:2px 3px 0 color-mix(in srgb,var(--h) 14%,transparent)}
+html[data-inner] .sim-list a,html[data-inner] .fam,html[data-inner] .homes li,html[data-inner] .g-comments li,html[data-inner] .g-others a{border-radius:2px;border:1px solid color-mix(in srgb,var(--h) 40%,var(--card-line));box-shadow:2px 3px 0 color-mix(in srgb,var(--h) 14%,transparent)}
 html[data-inner] .rel-card{border-radius:2px;border:1px solid color-mix(in srgb,var(--h) 40%,var(--card-line));box-shadow:2px 3px 0 color-mix(in srgb,var(--h) 14%,transparent);border-left:3px solid var(--g)}
 html[data-inner] .g-comments li{border-left:3px solid var(--h)}
 html[data-inner] .fam:hover,html[data-inner] .sim-list a:hover{transform:none;border-color:color-mix(in srgb,var(--h) 70%,var(--card-line))}

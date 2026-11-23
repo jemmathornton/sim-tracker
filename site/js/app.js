@@ -139,7 +139,6 @@ const FAMILY_CACHE = {partners: new Map(), ancestors: new Map()};   // see partn
 const sx = (s, m, f, x) => s === "m" ? m : s === "f" ? f : x;
 const surname = n => n.trim().split(/\s+/).slice(1).join(" ") || n.trim();
 const firstName = s => s.name.trim().split(/\s+/)[0];
-const aAn = n => /^[aeiou]/i.test(n) ? "an" : "a";
 function addSim(id, s, hh){
   const sur = surname(s.name), born = s.born || sur, line = slug(born), into = s.born && slug(s.born) !== slug(sur) ? slug(sur) : null;
   FAMILIES[line] ||= {name: born}; if (into) FAMILIES[into] ||= {name: sur};
@@ -849,13 +848,6 @@ function listing(l){
     <div class="meta">${unitCount(l) ? rentalMeta(l) : l.hh ? `<span>${ic("users")}${hhLink(l.hh)}${l.hh.unsure?" (unsure)":""}</span>` : l.whoNote ? `<span>${ic("users")}${esc(emptyNote(l.whoNote))}</span>` : ""}${l.gallery ? `<span title="Downloads on the Sims 4 Gallery">${ic("share")}${countOf(l.gallery.downloads, "download")}</span>` : ""}${statusWords(l)}</div></a>`;
 }
 
-function buildingCard(b){
-  const cover = b.units.find(l => l.photos[0]), built = b.units.filter(l => l.built === true).length;
-  return `<div class="listing bcard" style="--h:${b.hood.color}"><div class="photo ${cover?"shot":""}" ${cover?`style="--img:url('${cover.photos[0].thumb}')"`:""}>${cover ? "" : plot("40x30", 120, false)}<span class="type">Apartment Building</span><span class="size">${b.units.length} Apartments</span></div>
-    <h3>${esc(b.name)}</h3>
-    <ul class="units">${b.units.map(l => `<li><a href="#${l.id}"><span class="unit-no">${esc(l.unit)}</span><span class="unit-who">${l.hh ? `${ic("users")}<b>${esc(l.hh.name)}</b>` : `<i>${esc(l.whoNote ? emptyNote(l.whoNote) : "No household yet")}</i>`}</span><span class="status">${statusDots(l)}</span></a></li>`).join("")}</ul>
-    <div class="meta"><span>${ic("hammer")}<b>${built} of ${buildable(b.units).length}</b> built</span></div></div>`;
-}
 // units of a building share one card
 const hoodItems = x => { const seen = new Set(); return x.lots.flatMap(l => { if (!l.building) return [listing(l)]; const b = l.building; if (seen.has(b)) return []; seen.add(b);
   return [buildingFront(b)]; }); };

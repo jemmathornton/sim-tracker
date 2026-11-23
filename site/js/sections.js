@@ -113,7 +113,6 @@ function afterRoute(key, view){
 const ADM = window.ADMIN || {refresh: [], checklist: [], toSort: []};
 const admOwned = () => Object.values(lotIndex).filter(l => l.world.owned && l.world.ready);
 const lotA = l => `<a href="#${l.id}">${esc(l.name)}</a>`;
-const wDot = w => `<span class="dot" style="--h:${w.glow || w.color}"></span>`;
 const hasShots = l => l.photos.some(p => /^shots\//.test(p.src));
 const plural = (n, one, many) => `${n} ${n === 1 ? one : many || one + "s"}`;
 // her own British names and the game's blank labels aren't mismatches (CLAUDE.md: Thrift and Boba Store, UoB Commons; EA's "Missing sims translation")

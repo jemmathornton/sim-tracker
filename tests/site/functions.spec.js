@@ -107,13 +107,11 @@ test('text helpers: curly apostrophes, safe HTML, slugs and household words', as
     esc: esc('Tom & Jerry\'s "best" <b>'),
     slug: [slug('Admiral’s Wreckage'), slug('Café & Bar'), slug('  San Myshuno  ')],
     hh: [hhWord('Goth'), hhWord('Urbane Housesharers household'), theHh('Goth'), theHh('The Scotts')],
-    aAn: [aAn('Elder'), aAn('Teen')],
   }));
   expect(r.curly).toEqual(['Crow’s Crossing', '’Round the Bend', 'rock ’n’ roll', 'say ‘hello’']);
   expect(r.esc).toBe('Tom &amp; Jerry’s “best” &lt;b&gt;');
   expect(r.slug).toEqual(['admiral-s-wreckage', 'cafe-and-bar', 'san-myshuno']);
   expect(r.hh).toEqual(['Goth household', 'Urbane Housesharers household', 'the Goth household', 'The Scotts household']);
-  expect(r.aAn).toEqual(['an', 'a']);
 });
 
 test('“new since you looked”: a lot is new until opened, then again only when favourites or comments go up', async ({ page }) => {
