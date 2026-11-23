@@ -23,15 +23,17 @@ MAPS = {
     'ciudad-enamorada': 'CiudadEnamorada_MAP', 'copperdale': 'Copperdale_MAP', 'del-sol-valley': 'DelSolValley_HD_MAP',
     'evergreen-harbor': 'EvergreenHarbor_NAP_HD_MAP', 'henford-on-bagley': 'HenfordOnBagley_MAP', 'innisgreen': 'Innisgreen_MAP',
     'magnolia-promenade': 'MagnoliaPromenade_MAP', 'mt-komorebi': 'MtKomorebi_MAP', 'newcrest': 'Newcrest_MAP',
-    'nordhaven': 'Nordhaven_MAP', 'oasis-springs': 'OasisSprings_MAP', 'san-myshuno': 'SanMyshuno_MAP',
+    'nordhaven': 'Nordhaven_MAP', 'oasis-springs': 'OasisSprings_MAP', 'san-myshuno': 'SanMyshunoMidnight_MAP',
     'san-sequoia': 'SanSequoia_MAP', 'sulani': 'Sulani_HD_MAP', 'tartosa': 'Tartosa_MAP', 'tomarang': 'Tomarang_MAP',
     'willow-creek': 'WillowCreek_MAP', 'windenburg': 'Windenburg_MAP',
 }
 
 # Worlds filipesims made in more than one version, for a Try switch while she picks (the first is the one in MAPS; the others
 # go to site/maps/try/<world>--<key>.jpg with --try). Her picks, 23 Nov: the first version everywhere (Willow Creek, Oasis
-# Springs and Newcrest full, not lite; San Myshuno day; San Sequoia grey bridge; Tartosa day), except Evergreen Harbor: NAP
-# (three apartment blocks by the harbour). Switch removed; add entries here again to offer a new choice.
+# Springs and Newcrest full, not lite; San Sequoia grey bridge; Tartosa day), except Evergreen Harbor: NAP
+# (three apartment blocks by the harbour), and San Myshuno: Midnight (her pick, 23 Nov, from the colours page; its tall buildings are
+# separate pictures the game draws on top, so every San Myshuno map has gaps there, which she's happy to live with). Switch removed;
+# add entries here again to offer a new choice.
 VARIANTS = {}
 
 

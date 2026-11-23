@@ -2,9 +2,9 @@
  "name": "Willow Creek",
  "pack": "Base Game",
  "owned": true,
- "colour": "#2E6F80",
+ "colour": "#3F696F",
  "heroY": 45,
- "deep": ["#123A4B", "#1B5468"],
+ "deep": ["#1E3B3F", "#2B5258"],
  "blurb": "Willow Creek is a lush bayou of rolling hills intertwined with marshy riverways. It's home to long-standing reputations and simple lifestyles full of coastal hospitality. Convenient with town comforts, lively neighbours, and a grandeur of property possibilities, Willow Creek is the idyllic place to settle down and settle in.",
  "neighbourhoods": [
   {

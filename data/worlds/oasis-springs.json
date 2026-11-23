@@ -2,9 +2,9 @@
  "name": "Oasis Springs",
  "pack": "Base Game",
  "owned": true,
- "colour": "#C08440",
+ "colour": "#D1982F",
  "heroY": 40,
- "deep": ["#43280F", "#5E3A18"],
+ "deep": ["#4A3308", "#67480F"],
  "blurb": "An oasis nestled in the austere beauty of the western desert, this haven of eclectic culture is fringed by countless soaring palms, and lent vibrant colour through impossibly lush landscaping. Oasis Springs offers relaxing retreats from the sun to any traveller who discovers it.",
  "neighbourhoods": [
   {

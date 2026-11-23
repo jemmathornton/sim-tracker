@@ -2,9 +2,9 @@
  "name": "Henford-on-Bagley",
  "pack": "Cottage Living",
  "owned": true,
- "colour": "#6E8B5E",
+ "colour": "#7A8E5B",
  "heroY": 45,
- "deep": ["#232E1F", "#33432D"],
+ "deep": ["#282F1E", "#3B442C"],
  "blurb": "From the natural beauty of Cordelia Falls to the clear, brisk currents of the River Bagley, the mingling of earth and water makes Henford-on-Bagley a lovely place to visit, but perhaps an even lovelier place to live. Villagers here connect with the history of the land while finding friendship in the furry and feathery creatures that inhabit the woods.",
  "neighbourhoods": [
   {

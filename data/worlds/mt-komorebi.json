@@ -2,10 +2,10 @@
  "name": "Mt. Komorebi",
  "pack": "Snowy Escape",
  "owned": true,
- "colour": "#7F8FA0",
+ "colour": "#949EA8",
  "heroY": 41,
- "deep": ["#5A6573", "#8E9BAA"],
- "glow": "#AAB9C8",
+ "deep": ["#5E666F", "#929CA6"],
+ "glow": "#AFB9C3",
  "blurb": "Locals have enjoyed the healing hot springs of Mt. Komorebi for centuries. Now, thanks to the modern snow sports resort in Yukimatsu, everyone else can, too! The region has become a hotspot for tourists looking for a vacation that's equal parts relaxing and adventurous.",
  "neighbourhoods": [
   {

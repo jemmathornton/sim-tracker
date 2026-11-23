@@ -117,20 +117,21 @@ test('low contrast leftovers read at 4.5:1 in both modes: late relatives’ init
   }
 });
 
-test('initial discs in the five worlds whose colour can’t carry letters take the world’s deep colour (her pick 22 Nov); other worlds keep their colour', async ({ page }) => {
+test('initial discs in the worlds whose colour can’t carry letters (Tomarang, Gibbi Point, StrangerVille) take the world’s deep colour (her pick 22 Nov); other worlds keep their colour (Henford-on-Bagley’s and Tartosa’s new colours, 23 Nov, carry dark letters)', async ({ page }) => {
   await page.setViewportSize({ width: 1600, height: 930 });
   await openApp(page);
   const plan = await page.evaluate(() => {
     const rgb = h => `rgb(${[1, 3, 5].map(i => parseInt(h.slice(i, i + 2), 16)).join(', ')})`;
-    return ['tomarang', 'gibbi-point', 'strangerville', 'henford-on-bagley', 'willow-creek'].map(id => {
+    const keep = ['willow-creek', 'henford-on-bagley'];   // colours that carry letters: their discs stay in the world's colour
+    return ['tomarang', 'gibbi-point', 'strangerville', ...keep].map(id => {
       const w = worlds.find(x => x.id === id), keys = Object.entries(SIM_PAGES).filter(([, s]) => s.hh && s.hh.world.id === id).map(([k]) => k);
       for (const k of ['s-bua-bun-ma', 's-sara-chavez-ralston', 's-jess-sigworth', 's-sara-scott']) if (keys.includes(k)) keys.unshift(k);
-      return { id, keys: keys.slice(0, 6), deep: id === 'willow-creek' ? null : rgb(w.deep[0]), colour: rgb(w.glow || w.color), moved: readable(w.glow || w.color).moved };
+      return { id, keys: keys.slice(0, 6), deep: keep.includes(id) ? null : rgb(w.deep[0]), colour: rgb(w.glow || w.color), moved: readable(w.glow || w.color).moved, keep: keep.includes(id) };
     });
   });
   for (const p of plan) {
     expect(p.keys.length, p.id).toBeGreaterThan(0);
-    expect(p.moved, p.id).toBe(p.id !== 'willow-creek');
+    expect(p.moved, p.id).toBe(!p.keep);
     for (const mode of ['light', 'dark']) {
       await page.evaluate(m => document.documentElement.setAttribute('data-mode', m), mode);
       let bgs = [];

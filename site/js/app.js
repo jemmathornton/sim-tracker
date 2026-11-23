@@ -1093,7 +1093,7 @@ const newTxt = n => n.fresh ? "New on the Gallery" : [n.f && `${n.f} new ${n.f =
 // a home with no household yet: bed-size planning notes just read "Empty" (bed counts live in the Gallery card)
 // dark text on light colours (Sulani yellow etc.), white on dark ones: whichever reads better
 // white initials are hard to read on pale world and neighbourhood colours: give each coloured element its readable text colour. Where
-// neither white nor dark words reach 4.5:1 on the world's colour (Tomarang, Gibbi Point, StrangerVille, Henford-on-Bagley, Tartosa), the
+// neither white nor dark words reach 4.5:1 on the world's colour (Tomarang, Gibbi Point, StrangerVille; Henford-on-Bagley's and Tartosa's new colours, 23 Nov, carry dark letters), the
 // initials' disc takes the world's own deep colour instead, with white or dark letters, whichever reads (--w-disc / --h-disc; her pick 22 Nov,
 // replacing the round 4 nudge lighter or darker)
 const DISC_DEEP = (() => { const m = {};

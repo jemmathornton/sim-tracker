@@ -2,9 +2,9 @@
  "name": "Magnolia Promenade",
  "pack": "Get To Work",
  "owned": true,
- "colour": "#A2574F",
+ "colour": "#C48A64",
  "heroY": 40,
- "deep": ["#3E1F1E", "#57302D"],
+ "deep": ["#432A19", "#5D3C27"],
  "blurb": "Welcome to a world in which beautiful scenery meets metropolitan life! Magnolia Promenade offers fantastic views and a top of the line shopping experience for customers and entrepreneurs alike.",
  "neighbourhoods": [
   {
